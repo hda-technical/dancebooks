@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sbornik-bib}[2009/05/11 Special package for formatting of BIB labels]
+
+\RequirePackage[square]{natbib}
+%\bibpunct{[}{]}{,}{a}{,}{,}
+\let\cite=\citep
+% format lengths
+\renewcommand\NAT@bibsetup[1]{%
+   \setlength{\labelwidth}{3em}%
+   \setlength{\leftmargin}{\labelwidth}%
+%   \setlength{\itemindent}{0pt}%
+   \addtolength{\leftmargin}{\labelsep}%
+   \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
+}
+
+\def\@sbb@biblabel#1#2#3{[#3\if\relax#2\relax\else,~#2\fi]}
+\newcommand\sbb@biblabel{\expandafter\@sbb@biblabel}
+
+\def\@lbibitem[#1]#2{%
+  \if\relax\@extra@b@citeb\relax\else
+    \@ifundefined{br@#2\@extra@b@citeb}{}{%
+     \@namedef{br@#2}{\@nameuse{br@#2\@extra@b@citeb}}}\fi
+   \@ifundefined{b@#2\@extra@b@citeb}{\def\NAT@num{}}{\NAT@parse{#2}}%
+   \item[\hfil\hyper@natanchorstart{#2\@extra@b@citeb}%
+% here was just
+%\@biblabel{\NAT@num}%
+% I replaced it with:
+    \@ifundefined{b@#2\@extra@binfo}{[{\bfseries{}??}]}
+		{\expandafter\sbb@biblabel\csname b@#2\@extra@binfo\endcsname}\hfil
+%end
+    \hyper@natanchorend]%
+    \NAT@ifcmd#1(@)(@)\@nil{#2}}
+

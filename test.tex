@@ -1,0 +1,37 @@
+\documentclass[a4paper,fontsize=12pt,pdftex,DIV16,final]{scrartcl}
+
+\usepackage[cp1251]{inputenc}
+\usepackage{ucs}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{style}
+\usepackage[X2,T1]{fontenc}
+
+\typearea{last}
+
+%начало определений
+%определение специфических кириллических символов
+\newcommand{\И}{{\fontencoding{X2}\selectfont\CYRII}}
+\newcommand{\и}{{\fontencoding{X2}\selectfont\cyrii}}
+\newcommand{\Е}{{\fontencoding{X2}\selectfont\CYRYAT}}
+\newcommand{\е}{{\fontencoding{X2}\selectfont\cyryat}}
+\newcommand{\Ф}{{\fontencoding{X2}\selectfont\CYROTLD}} 
+\newcommand{\ф}{{\fontencoding{X2}\selectfont\cyrotld}}
+\newcommand{\Ы}{{\fontencoding{X2}\selectfont\CYRIZH}}
+\newcommand{\ы}{{\fontencoding{X2}\selectfont\cyrizh}}
+
+%определение команд верхнего и нижнего индекса без написания курсивом
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+%конец определений
+
+\sloppy
+
+\begin{document}
+\nocite*
+\bibliographystyle{style}
+\bibliography{dutch,french,russian,german,english,spanish,italian,danish,portuguese,rothenfelser,spbconf,american,australian,czech,polish}
+\end{document}
