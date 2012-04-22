@@ -30,4 +30,4 @@ purge: clean
 	rm *.pdf
 	
 clean:
-	rm -f *.blg *.log *.aux *.bbl
+	rm -f *.blg *.log *.aux *.bbl *.swp
