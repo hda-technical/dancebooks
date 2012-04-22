@@ -16,12 +16,15 @@
 %определение команд верхнего и нижнего индекса без написания курсивом
 \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
 \newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
-
 %конец определений
 
-Подключение файлов осуществляется следующим (пока что нерабочим образом):
+Подключение файлов осуществляется следующим образом:
+%задаем произвольную папку для файлов библиографии (в пути меняем все обратные слеши на прямые, следим чтобы в пути не было знаков подчеркивани)
+\def\bibroot{C:/blah-blah-blah/dancebooks-bibtex/}
+%подключаем стили для библиографии
+\usepackage{\bibroot style}
 \addcontentsline{toc}{section}{Список литературы}
-\bibliographystyle{gost780s-local}
-\bibliography{bib/literature,bib/dutch,bib/french,bib/russian,bib/deutch,bib/english,bib/spanish,bib/italian,bib/danish,bib/portuguese,bib/rothenfelser,bib/american,bib/australian,bib/czech}
+\bibliographystyle{\bibroot style}
+\bibliography{\bibroot dutch,\bibroot french,\bibroot russian,\bibroot german,\bibroot english,\bibroot spanish,\bibroot italian,\bibroot danish,\bibroot portuguese,\bibroot rothenfelser,\bibroot spbconf,\bibroot american,\bibroot australian,\bibroot czech,\bibroot polish}
 
 Сюда же через запятую можно добавить любые дополнительные bib-файлы.
