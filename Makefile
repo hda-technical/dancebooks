@@ -1,19 +1,21 @@
 BIB_FILES=\
-	russian.bib \
-	german.bib \
-	french.bib \
-	english.bib \
-	spanish.bib \
-	italian.bib \
-	danish.bib \
-	portuguese.bib \
-	rothenfelser.bib \
-	spbconf.bib \
-	dutch.bib \
 	american.bib \
 	australian.bib \
-	polish.bib \
 	czech.bib \
+	danish.bib \
+	dutch.bib \
+	english.bib \
+	french.bib \
+	german.bib \
+	images.bib \
+	italian.bib \
+	polish.bib \
+	portuguese.bib \
+	problems.bib \
+	rothenfelser.bib \
+	russian.bib \
+	spanish.bib \
+	spbconf.bib \
 
 ANC_FILES=\
 	style.bst \

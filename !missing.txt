@@ -1,41 +1,9 @@
-﻿[17??] Giovanni-Andrea Gallini - Requeil de cotillons
-	Книга была взята у Глорфа и потеряна мною вместе с флешкой.
+﻿[1808] Georg Voss - ??
+	
+[1823] Брошюра Коллине
+	В брошюре, по утверждению Гильшера, упоминаются котильоны XIX века.
 
-[1717] Gottfried Taubert - Rechtschaffener Tanzmeister
-	Книга есть в бумажном виде у Глорфа и в позорно посканированном вариант на Google Books: 
-	http://books.google.ru/books?id=XgQ5AAAAIAA
+[1816?] Franz Anton Roller, утверждающий, что котильон входит в моду в 1816/1817 году. 
+	На сайте hda есть описание Немецкого лендлера авторства этого самого Роллера.
 
-[1768] Theodorus Franciscus Petersen
-	Отсутствуют страницы 46, 47. Музыкальное приложение сильно обрезано. Книга не скачивается с google books.
-
-[1796] Johann Gottfried Phannenberg
-	Отсутствуют страницы 8 и 9.
-
-[1822] Thomas Wilson - Danciad
-	Отсутствует последняя страница. В том числе, данная страница отсутствует в бумажном варианте, хранящемся в Библиотеке Конгресса.
-	
-[1836] Theodor Hentschke - Allgemeine Tanzkunst
-	Книга есть в бумажном виде у Глорфа.
-	
-[1891] В. Ф. Яцковский - 100 фигур мазурки
-	Страницы с 58 по 81 посканированы (или сфотографированы) с отвратительным качеством.
-	
-[1808] Georg Voss - ??
-
-[1718] Jaque Dezais - Second requeil des meilleures entrees de ballets
-	Книга есть в электронном виде у Глорфа.
-	
-[1718] Jaque Dezais - Autre requeil contentant Canaries de madame la Dauphine
-	Книга есть в электронном виде у Глорфа.
-	
-[1718] Jaque Dezais - Autre requeil contentant Bransle Allemand et Venisienne
-	Книга есть в электронном виде у Глорфа.
-	
-[1719] Jaque Dezais - IIIe requeil pour 1719 contentant La Biscavenne et La Vandageuse
-	Книга есть в электронном виде у Глорфа.
-	
-[1712] Gaudrau - Nouveau rec{\"u}eil de dance de Bal et cette de Ballet
-	Книга есть в электронном виде у Глорфа, но в ней отсутствует танец "La Royalle"
-	
-[1828] Собрание фигур для котильона
-	По ссылке http://historicaldance.spb.ru/index/articles/books/aid/403 доступен только отсканированный текст
+[1820?] Кристиан Лангер, в 1820 году оставляющий отрицательный отзыв о котильонах XIX века.

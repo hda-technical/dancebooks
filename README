@@ -1,33 +1,33 @@
-п»їHere is some info files:
+Here is some info files:
 !changelog.txt contains version info.
 !license.txt contains BSD license.
 !missing.txt contains info about books missing in this bibliography.
 
-Р”Р»СЏ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р±РѕС‚С‹ РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕРґРєР»СЋС‡РёС‚СЊ РјР°РєСЂРѕСЃС‹ (РїРµСЂРµРґ \begin{document}:
+Для корректной работы необходимо подключить макросы (перед \begin{document}:
 
-%РЅР°С‡Р°Р»Рѕ РѕРїСЂРµРґРµР»РµРЅРёР№
-%РѕРїСЂРµРґРµР»РµРЅРёРµ СЃРїРµС†РёС„РёС‡РµСЃРєРёС… РєРёСЂРёР»Р»РёС‡РµСЃРєРёС… СЃРёРјРІРѕР»РѕРІ
-\newcommand{\Р}{{\fontencoding{X2}\selectfont\CYRII}}
-\newcommand{\Рё}{{\fontencoding{X2}\selectfont\cyrii}}
-\newcommand{\Р•}{{\fontencoding{X2}\selectfont\CYRYAT}}
-\newcommand{\Рµ}{{\fontencoding{X2}\selectfont\cyryat}}
-\newcommand{\Р¤}{{\fontencoding{X2}\selectfont\CYROTLD}} 
-\newcommand{\С„}{{\fontencoding{X2}\selectfont\cyrotld}}
-\newcommand{\Р«}{{\fontencoding{X2}\selectfont\CYRIZH}}
-\newcommand{\С‹}{{\fontencoding{X2}\selectfont\cyrizh}}
+%начало определений
+%определение специфических кириллических символов
+\newcommand{\И}{{\fontencoding{X2}\selectfont\CYRII}}
+\newcommand{\и}{{\fontencoding{X2}\selectfont\cyrii}}
+\newcommand{\Е}{{\fontencoding{X2}\selectfont\CYRYAT}}
+\newcommand{\е}{{\fontencoding{X2}\selectfont\cyryat}}
+\newcommand{\Ф}{{\fontencoding{X2}\selectfont\CYROTLD}} 
+\newcommand{\ф}{{\fontencoding{X2}\selectfont\cyrotld}}
+\newcommand{\Ы}{{\fontencoding{X2}\selectfont\CYRIZH}}
+\newcommand{\ы}{{\fontencoding{X2}\selectfont\cyrizh}}
 
-%РѕРїСЂРµРґРµР»РµРЅРёРµ РєРѕРјР°РЅРґ РІРµСЂС…РЅРµРіРѕ Рё РЅРёР¶РЅРµРіРѕ РёРЅРґРµРєСЃР° Р±РµР· РЅР°РїРёСЃР°РЅРёСЏ РєСѓСЂСЃРёРІРѕРј
+%определение команд верхнего и нижнего индекса без написания курсивом
 \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
 \newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
-%РєРѕРЅРµС† РѕРїСЂРµРґРµР»РµРЅРёР№
+%конец определений
 
-РџРѕРґРєР»СЋС‡РµРЅРёРµ С„Р°Р№Р»РѕРІ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ СЃР»РµРґСѓСЋС‰РёРј РѕР±СЂР°Р·РѕРј:
-%Р·Р°РґР°РµРј РїСЂРѕРёР·РІРѕР»СЊРЅСѓСЋ РїР°РїРєСѓ РґР»СЏ С„Р°Р№Р»РѕРІ Р±РёР±Р»РёРѕРіСЂР°С„РёРё (РІ РїСѓС‚Рё РјРµРЅСЏРµРј РІСЃРµ РѕР±СЂР°С‚РЅС‹Рµ СЃР»РµС€Рё РЅР° РїСЂСЏРјС‹Рµ, СЃР»РµРґРёРј С‡С‚РѕР±С‹ РІ РїСѓС‚Рё РЅРµ Р±С‹Р»Рѕ Р·РЅР°РєРѕРІ РїРѕРґС‡РµСЂРєРёРІР°РЅРё)
+Подключение файлов осуществляется следующим образом:
+%задаем произвольную папку для файлов библиографии (в пути меняем все обратные слеши на прямые, следим чтобы в пути не было знаков подчеркивани)
 \def\bibroot{C:/blah-blah-blah/dancebooks-bibtex/}
-%РїРѕРґРєР»СЋС‡Р°РµРј СЃС‚РёР»Рё РґР»СЏ Р±РёР±Р»РёРѕРіСЂР°С„РёРё
+%подключаем стили для библиографии
 \usepackage{\bibroot style}
-\addcontentsline{toc}{section}{РЎРїРёСЃРѕРє Р»РёС‚РµСЂР°С‚СѓСЂС‹}
+\addcontentsline{toc}{section}{Список литературы}
 \bibliographystyle{\bibroot style}
-\bibliography{\bibroot dutch,\bibroot french,\bibroot russian,\bibroot german,\bibroot english,\bibroot spanish,\bibroot italian,\bibroot danish,\bibroot portuguese,\bibroot rothenfelser,\bibroot spbconf,\bibroot american,\bibroot australian,\bibroot czech,\bibroot polish}
+\bibliography{\bibroot american,\bibroot australian,\bibroot czech,\bibroot danish,\bibroot dutch,\bibroot english,\bibroot french,\bibroot german,\bibroot images,\bibroot italian,\bibroot polish,\bibroot portuguese,\bibroot rothenfelser,\bibroot russian,\bibroot spanish,\bibroot spbconf}
 
-РЎСЋРґР° Р¶Рµ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ РјРѕР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ Р»СЋР±С‹Рµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ bib-С„Р°Р№Р»С‹.
+Сюда же через запятую можно добавить любые дополнительные bib-файлы.
