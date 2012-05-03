@@ -3,26 +3,8 @@ Here is some info files:
 !license.txt contains BSD license.
 !missing.txt contains info about books missing in this bibliography.
 
-Для корректной работы необходимо подключить макросы (перед \begin{document}:
-
-%начало определений
-%определение специфических кириллических символов
-\newcommand{\И}{{\fontencoding{X2}\selectfont\CYRII}}
-\newcommand{\и}{{\fontencoding{X2}\selectfont\cyrii}}
-\newcommand{\Е}{{\fontencoding{X2}\selectfont\CYRYAT}}
-\newcommand{\е}{{\fontencoding{X2}\selectfont\cyryat}}
-\newcommand{\Ф}{{\fontencoding{X2}\selectfont\CYROTLD}} 
-\newcommand{\ф}{{\fontencoding{X2}\selectfont\cyrotld}}
-\newcommand{\Ы}{{\fontencoding{X2}\selectfont\CYRIZH}}
-\newcommand{\ы}{{\fontencoding{X2}\selectfont\cyrizh}}
-
-%определение команд верхнего и нижнего индекса без написания курсивом
-\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
-\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
-%конец определений
-
 Подключение файлов осуществляется следующим образом:
-%задаем произвольную папку для файлов библиографии (в пути меняем все обратные слеши на прямые, следим чтобы в пути не было знаков подчеркивани)
+%задаем произвольную папку для файлов библиографии (в пути меняем все обратные слеши на прямые, следим чтобы в пути не было знаков подчеркивания, шляпочек, фигурных скобочек и тому подобного)
 \def\bibroot{C:/blah-blah-blah/dancebooks-bibtex/}
 %подключаем стили для библиографии
 \usepackage{\bibroot style}
@@ -30,4 +12,4 @@ Here is some info files:
 \bibliographystyle{\bibroot style}
 \bibliography{\bibroot american,\bibroot australian,\bibroot czech,\bibroot danish,\bibroot dutch,\bibroot english,\bibroot french,\bibroot german,\bibroot images,\bibroot italian,\bibroot polish,\bibroot portuguese,\bibroot rothenfelser,\bibroot russian,\bibroot spanish,\bibroot spbconf}
 
-Сюда же через запятую можно добавить любые дополнительные bib-файлы.
+Сюда же через запятую можно добавить любые дополнительные bib-файлы (после запятых не нужно ставить пробелы!).

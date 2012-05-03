@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{sbornik-bib}[2009/05/11 Special package for formatting of BIB labels]
+\ProvidesPackage{style}[2009/05/11 Special package for formatting of BIB labels]
 
 \RequirePackage[square]{natbib}
 %\bibpunct{[}{]}{,}{a}{,}{,}
@@ -30,4 +30,19 @@
 %end
     \hyper@natanchorend]%
     \NAT@ifcmd#1(@)(@)\@nil{#2}}
+	
+%начало определений
+%определение специфических кириллических символов
+\newcommand{\И}{{\fontencoding{X2}\selectfont\CYRII}}
+\newcommand{\и}{{\fontencoding{X2}\selectfont\cyrii}}
+\newcommand{\Е}{{\fontencoding{X2}\selectfont\CYRYAT}}
+\newcommand{\е}{{\fontencoding{X2}\selectfont\cyryat}}
+\newcommand{\Ф}{{\fontencoding{X2}\selectfont\CYROTLD}} 
+\newcommand{\ф}{{\fontencoding{X2}\selectfont\cyrotld}}
+\newcommand{\Ы}{{\fontencoding{X2}\selectfont\CYRIZH}}
+\newcommand{\ы}{{\fontencoding{X2}\selectfont\cyrizh}}
 
+%определение команд верхнего и нижнего индекса без написания курсивом
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+%конец определений

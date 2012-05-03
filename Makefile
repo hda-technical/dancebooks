@@ -7,6 +7,7 @@ BIB_FILES=\
 	english.bib \
 	french.bib \
 	german.bib \
+	hda.bib \
 	images.bib \
 	italian.bib \
 	polish.bib \

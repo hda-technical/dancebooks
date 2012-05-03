@@ -1618,6 +1618,20 @@ FUNCTION {unpublished}
   fin.entry
 }
 
+FUNCTION {online}
+{
+	output.bibitem
+	author.before
+	format.btitle "title" output.check
+	author.after
+	new.block
+	note "note" output.check
+	new.sentence
+	format.url output
+	format.annote output
+	fin.entry
+}
+
 FUNCTION {default.type} { misc }
 
 MACRO {jan} {"\bbljan{}"}
