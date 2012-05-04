@@ -957,10 +957,7 @@ FUNCTION {output.bibitem}
   "}" write$
   "\raggedright{}" write$
   newline$
-  language empty$
-    {"english" 'curlanguage :=}
-    {language  'curlanguage :=}
-  if$
+  language  'curlanguage :=
   "\selectlanguageifdefined{" write$
   curlanguage write$
   "}" write$ newline$
