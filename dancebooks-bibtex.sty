@@ -1,0 +1,71 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dancebooks-bibtex}[2012/12/31 Special package for formatting of BIB labels]
+
+\RequirePackage[square]{natbib}
+\RequirePackage{ifthen}
+%\bibpunct{[}{]}{,}{a}{,}{,}
+\let\cite=\citep
+% format lengths
+\renewcommand\NAT@bibsetup[1]{%
+   \setlength{\labelwidth}{3em}%
+   \setlength{\leftmargin}{\labelwidth}%
+%   \setlength{\itemindent}{0pt}%
+   \addtolength{\leftmargin}{\labelsep}%
+   \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
+}
+
+\def\@sbb@biblabel#1#2#3{[#3\if\relax#2\relax\else,~#2\fi]}
+\newcommand\sbb@biblabel{\expandafter\@sbb@biblabel}
+
+\def\@lbibitem[#1]#2{%
+  \if\relax\@extra@b@citeb\relax\else
+    \@ifundefined{br@#2\@extra@b@citeb}{}{%
+     \@namedef{br@#2}{\@nameuse{br@#2\@extra@b@citeb}}}\fi
+   \@ifundefined{b@#2\@extra@b@citeb}{\def\NAT@num{}}{\NAT@parse{#2}}%
+   \item[\hfil\hyper@natanchorstart{#2\@extra@b@citeb}%
+% here was just
+%\@biblabel{\NAT@num}%
+% I replaced it with:
+    \@ifundefined{b@#2\@extra@binfo}{[{\bfseries{}??}]}
+		{\expandafter\sbb@biblabel\csname b@#2\@extra@binfo\endcsname}\hfil
+%end
+    \hyper@natanchorend]%
+    \NAT@ifcmd#1(@)(@)\@nil{#2}}
+
+%кириллические символы
+\newcommand{\И}{{\fontencoding{X2}\selectfont\CYRII}}
+\newcommand{\и}{{\fontencoding{X2}\selectfont\cyrii}}
+\newcommand{\Е}{{\fontencoding{X2}\selectfont\CYRYAT}}
+\newcommand{\е}{{\fontencoding{X2}\selectfont\cyryat}}
+\newcommand{\Ф}{{\fontencoding{X2}\selectfont\CYROTLD}} 
+\newcommand{\ф}{{\fontencoding{X2}\selectfont\cyrotld}}
+\newcommand{\Ы}{{\fontencoding{X2}\selectfont\CYRIZH}}
+\newcommand{\ы}{{\fontencoding{X2}\selectfont\cyrizh}}
+
+%верхний и нижний индексы
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+
+%подключение библиографии в одну строку
+\newcommand{\includedancebooks}[2][empty]{%
+\bibliography{%
+#2/american,%
+#2/australian,%
+#2/czech,%
+#2/danish,%
+#2/dutch,%
+#2/english,%
+#2/french,%
+#2/german,%
+#2/hda,%
+#2/images,%
+#2/italian,%
+#2/polish,%
+#2/portuguese,%
+#2/problems,%
+#2/rothenfelser,%
+#2/russian,%
+#2/spanish,%
+#2/spbconf,%
+#1%
+}}

@@ -10,6 +10,6 @@ Here is some info files:
 \usepackage{\bibroot style}
 \addcontentsline{toc}{section}{—писок литературы}
 \bibliographystyle{\bibroot style}
-\bibliography{\bibroot american,\bibroot australian,\bibroot czech,\bibroot danish,\bibroot dutch,\bibroot english,\bibroot french,\bibroot german,\bibroot images,\bibroot italian,\bibroot polish,\bibroot portuguese,\bibroot rothenfelser,\bibroot russian,\bibroot spanish,\bibroot spbconf}
+\includedancebooks[optional extrafiles]{\bibroot}
 
 —юда же через зап€тую можно добавить любые дополнительные bib-файлы (после зап€тых не нужно ставить пробелы!).

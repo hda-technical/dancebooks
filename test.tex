@@ -7,14 +7,15 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\usepackage{style}
 \usepackage[X2,T1]{fontenc}
+\def\bibroot{.}
+\usepackage{dancebooks-bibtex}
 
 \typearea{last}
 \sloppy
 
 \begin{document}
 \nocite*
-\bibliographystyle{style}
-\bibliography{american,australian,czech,danish,dutch,english,french,german,hda,images,italian,polish,portuguese,problems,rothenfelser,russian,spanish,spbconf}
+\bibliographystyle{\bibroot/style}
+\includedancebooks{\bibroot}
 \end{document}
