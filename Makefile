@@ -20,17 +20,20 @@ BIB_FILES=\
 
 ANC_FILES=\
 	style.bst \
-	Makefile
+	dancebooks-bibtex.sty \
+	Makefile \
 
-test: test.tex $(BIB_FILES) $(ANC_FILES)
-	rm -f test.bbl
-	pdflatex test.tex
-	bibtex8 --mwizfuns 4000 -c cp1251 test
-	pdflatex test.tex
-	pdflatex test.tex
+test.pdf: test.tex $(BIB_FILES) $(ANC_FILES)
+	@rm -f test.bbl
+	@pdflatex test.tex
+	@bibtex8 --mwizfuns 4000 -c cp1251 test
+	@pdflatex test.tex
+	@pdflatex test.tex
 	
 purge: clean
-	rm *.pdf
+	@rm *.pdf
+	@echo "Purge completed"
 	
 clean:
-	rm -f *.blg *.log *.aux *.bbl *.swp
+	@rm -f *.blg *.log *.aux *.bbl *.swp
+	@echo "Clean completed"

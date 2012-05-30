@@ -274,12 +274,12 @@ FUNCTION {bbl.edby} % {"\bbledby{}"}
     {
 		curlanguage "ukrainian" =
         {
-			"{\cyr\CYRP\cyrii\cyrd\ \cyrr\cyre\cyrd.\ }"
+			"{\cyr\CYRR\cyrå\cyrd\cyra\cyrk\cyrt\cyro\cyrr\ }"
 		}
         { 
 			curlanguage "russian" =
 			{
-				"{\cyr\CYRP\cyro\cyrd\ \cyrr\cyre\cyrd.\ }"
+				"{\cyr\CYRR\cyrå\cyrd\cyra\cyrk\cyrt\cyro\cyrr\ }"
 			}			
 			{
 				curlanguage "german" = 
@@ -338,7 +338,21 @@ FUNCTION {bbl.edition} %  { "\bbledition{}" }
 						"edizione"
 					}
 					{
-						"language is not defined: " language  "edition" * * warning$ "edition"
+						curlanguage "german" =
+						{
+							"Auflage"
+						}
+						{
+							curlanguage "spanish" = 
+							{
+								"edici{\'o}n"
+							}
+							{
+								"language is not defined: " language " edition " * * warning$ " edition "
+							}
+							if$
+						}
+						if$
 					}
 					if$
 				}
@@ -406,7 +420,21 @@ FUNCTION {bbl.vvol}    %  { "\bblVol{}" }
 					"Vol."
 				}
 				{
-					"language is not defined: " language  "Vol." * * warning$ "Vol."
+					curlanguage "spanish" = 
+					{
+						"Tomo"
+					}
+					{
+						curlanguage "italian" =
+						{
+							"Vol."
+						}
+						{
+							"language is not defined: " language  "Vol." * * warning$ "Vol."
+						}
+						if$
+					}
+					if$
 				}
 				if$
 			}
@@ -548,10 +576,17 @@ FUNCTION {bbl.pages}    % { "\bblpp." }
 			{
 				curlanguage "german" =
 				{
-					"Ss."
+					"S."
 				}
 				{
-					"language is not defined: " language  "pp." * * warning$ "pp."
+					curlanguage "spanish" =
+					{
+						"p."
+					}
+					{
+						"language is not defined: " language  "pp." * * warning$ "pp."
+					}
+					if$
 				}
 				if$
 			}
@@ -584,7 +619,14 @@ FUNCTION {bbl.page}   %   { "\bblp." }
 					"S."
 				}
 				{
-					"language is not defined: " language  "p." * * warning$ "p."
+					curlanguage "spanish" =
+					{
+						"p."
+					}
+					{
+						"language is not defined: " language  "p." * * warning$ "p."
+					}
+					if$
 				}
 				if$
 			}
@@ -614,10 +656,17 @@ FUNCTION {bbl.ppages}%    { "\bblPp." }
 			{
 				curlanguage "german" =
 				{
-					"Ss."
+					"S."
 				}
 				{
-					"language is not defined: " language  "Pp." * * warning$ "Pp."
+					curlanguage "spanish" =
+					{
+						"P."
+					}
+					{
+						"language is not defined: " language  "Pp." * * warning$ "Pp."
+					}
+					if$
 				}
 				if$
 			}
@@ -650,7 +699,14 @@ FUNCTION {bbl.ppage}  %   { "\bblP." }
 					"S."
 				}
 				{
-					"language is not defined: " language  "P." * * warning$ "P."
+					curlanguage "spanish" =
+					{
+						"P."
+					}
+					{
+						"language is not defined: " language  "P." * * warning$ "P."
+					}
+					if$
 				}
 				if$
 			}
