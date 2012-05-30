@@ -1327,7 +1327,7 @@ FUNCTION {format.url}
 { url empty$
     { "" }
     { after.sentence 'output.state :=
-      "\ignorespaces{}\BibUrl{" url * "}" *
+      "\ignorespaces{}\url{" url * "}" *
     }
   if$
 }
