@@ -26,14 +26,15 @@ ANC_FILES=\
 test.pdf: test.tex $(BIB_FILES) $(ANC_FILES)
 	@rm -f test.bbl
 	@pdflatex test.tex
-	@bibtex8 --mwizfuns 4000 -c cp1251 test
+	@bibtex8 --wolfgang -c cp1251 test
 	@pdflatex test.tex
 	@pdflatex test.tex
+	@echo "Build completed"
 	
 purge: clean
-	@rm *.pdf
+	@rm -f *.pdf
 	@echo "Purge completed"
 	
 clean:
-	@rm -f *.blg *.log *.aux *.bbl *.swp
+	@rm -f *.blg *.log *.aux *.bbl *.swp *.bcf *.toc
 	@echo "Clean completed"

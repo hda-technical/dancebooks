@@ -3,8 +3,9 @@
 
 \RequirePackage[square]{natbib}
 \RequirePackage{ifthen}
-%\bibpunct{[}{]}{,}{a}{,}{,}
-\let\cite=\citep
+\RequirePackage{url}
+\RequirePackage[english,russian]{babel}
+
 % format lengths
 \renewcommand\NAT@bibsetup[1]{%
    \setlength{\labelwidth}{3em}%
@@ -31,8 +32,6 @@
 %end
     \hyper@natanchorend]%
     \NAT@ifcmd#1(@)(@)\@nil{#2}}
-
-\usepackage{url}
 
 %верхний и нижний индексы
 \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}

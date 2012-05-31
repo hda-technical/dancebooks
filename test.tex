@@ -2,9 +2,8 @@
 
 \usepackage[cp1251]{inputenc}
 \usepackage{ucs}
-\usepackage[english,russian]{babel}
 \usepackage{indentfirst}
-\usepackage[X2,T1]{fontenc}
+\usepackage[T2A]{fontenc}
 \def\bibroot{.}
 \usepackage{\bibroot/dancebooks-bibtex}
 
@@ -13,7 +12,7 @@
 \sloppy
 
 \begin{document}
-\nocite*
+\nocite{*}
 \bibliographystyle{\bibroot/style}
 \includedancebooks{\bibroot}
 \end{document}
