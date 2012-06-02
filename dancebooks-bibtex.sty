@@ -3,8 +3,11 @@
 
 \RequirePackage[square]{natbib}
 \RequirePackage{ifthen}
-\RequirePackage{url}
+\RequirePackage[hyphens]{url}
+\RequirePackage[unicode]{hyperref}
 \RequirePackage[english,russian]{babel}
+
+\let\cite=\citep
 
 % format lengths
 \renewcommand\NAT@bibsetup[1]{%
@@ -34,11 +37,11 @@
     \NAT@ifcmd#1(@)(@)\@nil{#2}}
 
 %верхний и нижний индексы
-\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
-\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\providecommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\providecommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
 
 %подключение библиографии в одну строку
-\newcommand{\includedancebooks}[2][empty]{%
+\providecommand{\printbibliography}[2][empty]{%
 \bibliography{%
 #2/american,%
 #2/anuario-musical,%
