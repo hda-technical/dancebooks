@@ -3,3 +3,6 @@
 *.log
 *.swp
 *.aux
+*.out
+lang.pl
+do_it.sh

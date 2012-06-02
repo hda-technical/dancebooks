@@ -381,7 +381,14 @@ FUNCTION {bbl.vvolume} %  { "\bblVolume{}" }
 					"Volume"
 				}
 				{
-					"language is not defined: " language  "Volume" * * warning$ "Volume"
+					curlanguage "german" = 
+					{
+						"Band"
+					}
+					{
+						"language is not defined: " language  "Volume" * * warning$ "Volume"
+					}
+					if$
 				}
 				if$
 			}
@@ -424,7 +431,14 @@ FUNCTION {bbl.vvol}    %  { "\bblVol{}" }
 							"Vol."
 						}
 						{
-							"language is not defined: " language  "Vol." * * warning$ "Vol."
+							curlanguage "german" = 
+							{
+								"Band"
+							}
+							{
+								"language is not defined: " language  "Vol." * * warning$ "Vol."
+							}
+							if$
 						}
 						if$
 					}
