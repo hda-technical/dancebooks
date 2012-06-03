@@ -4,8 +4,7 @@
 \usepackage{indentfirst}
 \usepackage[T2A]{fontenc}
 
-\def\bibroot{.}
-\usepackage{\bibroot/dancebooks-bibtex}
+\usepackage[root=.]{./dancebooks-bibtex}
 
 \typearea{last}
 
@@ -17,5 +16,5 @@
 \cite{fraisier_1796}
 
 \nocite{*}
-\printbibliography{\bibroot}
+\printbibliography
 \end{document}
