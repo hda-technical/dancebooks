@@ -21,20 +21,32 @@ BIB_FILES=\
 ANC_FILES=\
 	style.bst \
 	dancebooks-bibtex.sty \
+	dancebooks-biblatex.sty \
 	Makefile \
 
-test.pdf: test.tex $(BIB_FILES) $(ANC_FILES)
-	@rm -f test.bbl
-	@pdflatex test.tex
-	@bibtex8 --wolfgang -c cp1251 test
-	@pdflatex test.tex
-	@pdflatex test.tex
-	@echo "Build completed"
+all: purge biblatex bibtex
+	@echo "Build all completed"
+
+biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES)
+	rm -f test-biblatex.bbl
+	pdflatex test-biblatex.tex
+	biber test-biblatex
+	pdflatex test-biblatex.tex
+	pdflatex test-biblatex.tex
+	echo "Build completed"
+	
+bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES)
+	rm -f test-bibtex.bbl
+	pdflatex test-bibtex.tex
+	bibtex8 --wolfgang -c cp1251 test-bibtex
+	pdflatex test-bibtex.tex
+	pdflatex test-bibtex.tex
+	echo "Build completed"
 	
 purge: clean
-	@rm -f *.pdf
-	@echo "Purge completed"
+	rm -f *.pdf
+	echo "Purge completed"
 	
 clean:
-	@rm -f *.blg *.log *.aux *.bbl *.swp *.bcf *.toc
-	@echo "Clean completed"
+	rm -f *.blg *.log *.aux *.bbl *.swp *.bcf *.toc
+	echo "Clean completed"

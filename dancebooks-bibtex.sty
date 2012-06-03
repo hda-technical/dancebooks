@@ -42,8 +42,8 @@
 
 %подключение библиографии в одну строку
 \providecommand{\printbibliography}[2][empty]{%
-\bibliography{%
-#2/american,%
+\bibliographystyle{#2/style}%
+\bibliography{#2/american,%
 #2/anuario-musical,%
 #2/australian,%
 #2/czech,%
@@ -63,5 +63,4 @@
 #2/russian,%
 #2/spanish,%
 #2/spbconf,%
-#1%
-}}
+#1}}

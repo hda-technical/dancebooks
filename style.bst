@@ -268,12 +268,12 @@ FUNCTION {bbl.edby} % {"\bbledby{}"}
     {
 		curlanguage "ukrainian" =
         {
-			"{\cyr\CYRR\cyrå\cyrd\cyra\cyrk\cyrt\cyro\cyrr\ }"
+			"{\CYRP\cyro\cyrd. \cyrr\cyre\cyrd. }"
 		}
         { 
 			curlanguage "russian" =
 			{
-				"{\cyr\CYRR\cyrå\cyrd\cyra\cyrk\cyrt\cyro\cyrr\ }"
+				"{\CYRP\cyro\cyrd. \cyrr\cyre\cyrd. }"
 			}			
 			{
 				curlanguage "german" = 

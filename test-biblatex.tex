@@ -1,0 +1,22 @@
+\documentclass[a4paper,fontsize=12pt,pdftex,DIV16,final]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage[T2A]{fontenc}
+
+\def\bibroot{.}
+\usepackage{\bibroot/dancebooks-biblatex}
+\dancebibliography{\bibroot}
+
+\typearea{last}
+
+\sloppy
+
+\begin{document}
+\cite{savanna_1790}
+
+\cite{fraisier_1796}
+
+\nocite{*}
+\printbibliography[title=Список литературы]
+\end{document}

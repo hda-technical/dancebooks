@@ -8,3 +8,6 @@
 \includedancebooks[optional extrafiles]{\bibroot}
 
 Сюда же через запятую можно добавить любые дополнительные bib-файлы (после запятых не нужно ставить пробелы!).
+
+Список используемых языков по алфавиту:
+czech,danish,english,french,german,italian,polish,portuguese,russian,spanish

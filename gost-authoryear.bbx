@@ -1,0 +1,170 @@
+% $Id: gost-authoryear.bbx 68 2012-04-21 07:29:50Z odomanov $
+
+\ProvidesFile{gost-authoryear.bbx}
+[\abx@bbxid $Id: gost-authoryear.bbx 68 2012-04-21 07:29:50Z odomanov $]
+
+%derived from authoryear
+
+\RequireBibliographyStyle{gost-standard}
+
+\DeclareBibliographyOption{mergedate}[true]{%
+  \ifcsdef{bbx@opt@mergedate@#1}
+    {\csuse{bbx@opt@mergedate@#1}}
+    {\PackageError{biblatex}
+       {Invalid option 'mergedate=#1'}
+       {Valid values are 'maximum', 'compact', 'basic', 'minimum',\MessageBreak
+        'goststrict', 'gostletter', 'true' (=compact), and 'false'.}}}
+
+\providebibmacro*{date+extrayear}{}
+
+\def\bbx@opt@mergedate@true{\bbx@opt@mergedate@compact}
+
+\def\bbx@opt@mergedate@maximum{%
+  \renewbibmacro*{date+extrayear}{%
+    \iffieldundef{year}
+      {}
+      {\printtext[parens]{%
+         \printfield{issue}%
+	 \setunit*{\addspace}%
+	 \printdateextra}}}%
+  \renewbibmacro*{date}{}%
+  \renewbibmacro*{issue+date}{}%
+}
+
+\def\bbx@opt@mergedate@compact{%
+  \renewbibmacro*{date+extrayear}{%
+    \iffieldundef{year}
+      {}
+      {\printtext[parens]{\printdateextra}}}%
+  \renewbibmacro*{date}{}%
+  \renewbibmacro*{issue+date}{%
+    \iffieldundef{issue}
+      {}
+      {\printtext[parens]{\printfield{issue}}}%
+    \newunit}%
+}
+
+\def\bbx@opt@mergedate@basic{%
+  \renewbibmacro*{date+extrayear}{%
+    \iffieldundef{labelyear}
+      {}
+      {\printtext[parens]{%
+	 \printfield{labelyear}%
+	 \printfield{extrayear}}}}%
+  \renewbibmacro*{date}{%
+    \iffieldundef{month}
+      {}
+      {\printdate}}%
+  \renewbibmacro*{issue+date}{%
+    \ifboolexpr{
+      test {\iffieldundef{issue}}
+      and
+      test {\iffieldundef{month}}
+    }
+      {}
+      {\printtext[parens]{%
+	 \printfield{issue}%
+	 \setunit*{\addspace}%
+	 \printdate}}%
+    \newunit}%
+}
+
+\def\bbx@opt@mergedate@minimum{%
+  \renewbibmacro*{date+extrayear}{%
+    \iffieldundef{labelyear}
+      {}
+      {\printtext[parens]{%
+	 \printfield{labelyear}%
+	 \printfield{extrayear}}}}%
+  \renewbibmacro*{date}{%
+    \ifboolexpr{
+      test {\iffieldundef{month}}
+      and
+      test {\iffieldundef{extrayear}}
+    }
+      {}
+      {\printdate}}%
+  \renewbibmacro*{issue+date}{%
+    \ifboolexpr{
+      test {\iffieldundef{issue}}
+      and
+      test {\iffieldundef{month}}
+      and
+      test {\iffieldundef{extrayear}}
+    }
+      {}
+      {\printtext[parens]{%
+	 \printfield{issue}%
+	 \setunit*{\addspace}%
+	 \printdate}}%
+    \newunit}%
+}
+
+\def\bbx@opt@mergedate@false{%
+  \renewbibmacro*{date+extrayear}{%
+    \iffieldundef{labelyear}
+      {}
+      {\printtext[parens]{%
+	 \printfield{labelyear}%
+	 \printfield{extrayear}}}}%
+  \renewbibmacro*{date}{\printdate}%
+  \renewbibmacro*{issue+date}{%
+    \printtext[parens]{%
+      \printfield{issue}%
+      \setunit*{\addspace}%
+      \printdate}%
+    \newunit}%
+}
+
+\def\bbx@opt@mergedate@goststrict{%
+  \DeclareFieldFormat{extrayear}{}%
+  \renewbibmacro*{date+extrayear}{}%
+}
+
+\def\bbx@opt@mergedate@gostletter{%
+  \renewbibmacro*{date+extrayear}{}%
+  \renewbibmacro*{date}{\printdateextra}%
+  \renewbibmacro*{year}{\printfield{year}\printfield{extrayear}}
+}
+
+\ExecuteBibliographyOptions{labelyear,sorting=nyt,pagetracker,mergedate=gostletter}
+
+\DeclareFieldFormat{shorthandwidth}{#1}
+\setlength{\bibitemsep}{0pt}
+
+\defbibenvironment{bibliography}
+  {\list
+     {}
+     {\setlength{\leftmargin}{\bibhang}%
+      \setlength{\itemindent}{-\leftmargin}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
+
+\defbibenvironment{shorthands}
+  {\list
+     {\printfield[shorthandwidth]{shorthand}}
+     {\setlength{\labelwidth}{\shorthandwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}%
+      \renewcommand*{\makelabel}[1]{##1\hss}}}
+  {\endlist}
+  {\item}
+
+\newbibmacro*{labeltitle}{%
+  \iffieldundef{label}
+    {}
+    {\printfield{label}}}
+
+%\def\blx@numalph\blx@asbuk%
+%\def\blx@asbuk#1{%
+%  \ifcase#1\relax\blx@warning@entry{Value out of range}\number#1\or
+%  à\or á\or â\or ã\or ä\or å\or æ\or ç\or è\or ê\or ë\or ì\or í\or
+%  î\or ï\or ð\or ñ\or ò\or ó\or ô\or õ\or ö\or ÷\or ø\or ù\or û\else
+%  \blx@warning@entry{Value out of range}\number#1\fi}
+
+\endinput
