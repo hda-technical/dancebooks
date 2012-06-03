@@ -1,7 +1,9 @@
+*.aux
 *.bbl
+*.bcf
 *.blg
 *.log
-*.swp
-*.aux
 *.out
-*.xml
+*.swp
+*.toc
+*.run.xml

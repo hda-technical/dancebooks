@@ -18,16 +18,23 @@ BIB_FILES=\
 	spanish.bib \
 	spbconf.bib \
 
-ANC_FILES=\
-	style.bst \
+ANC_FILES_BIBTEX=\
+	gost-authoryear.bst \
 	dancebooks-bibtex.sty \
-	dancebooks-biblatex.sty \
 	Makefile \
-
+	
+ANC_FILES_BIBLATEX=\
+	dancebooks-biblatex.sty \
+	gost-authoryear.bbx \
+	gost-authoryear.cbx \
+	gost-standard.bbx \
+	Makefile \
+	russian-gost.lbx \
+	
 all: purge biblatex bibtex
 	@echo "Build all completed"
 
-biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES)
+biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
 	rm -f test-biblatex.bbl
 	pdflatex test-biblatex.tex
 	biber test-biblatex
@@ -35,7 +42,7 @@ biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES)
 	pdflatex test-biblatex.tex
 	echo "Build completed"
 	
-bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES)
+bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	rm -f test-bibtex.bbl
 	pdflatex test-bibtex.tex
 	bibtex8 --wolfgang -c cp1251 test-bibtex
@@ -48,5 +55,5 @@ purge: clean
 	echo "Purge completed"
 	
 clean:
-	rm -f *.blg *.log *.aux *.bbl *.swp *.bcf *.toc
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.out *.swp  *.toc *.run.xml 
 	echo "Clean completed"
