@@ -55,5 +55,5 @@ purge: clean
 	echo "Purge completed"
 	
 clean:
-	rm -f *.aux *.bbl *.bcf *.blg *.log *.out *.swp  *.toc *.run.xml 
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml 
 	echo "Clean completed"

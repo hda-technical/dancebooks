@@ -13,12 +13,24 @@
 \ProcessKeyvalOptions{dancebooks}
 
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,russian,spanish]{babel}
-\RequirePackage[bibencoding=cp1251,style=\dancebooks@root/gost-authoryear,backend=biber,natbib=true,babel=other]{biblatex}
+\RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,natbib=true,babel=other]{biblatex}
 
-\let\cite=\parencite
+\renewbibmacro*{begentry}{%
+\brackettext{%
+\iffieldundef{shorthand}%
+{\ifthenelse{\ifnameundef{labelname}\OR\iffieldundef{labelyear}}%
+{\iffieldundef{label}%
+{\usebibmacro{cite:maintitle/labeltitle+parts}}%
+{\printfield{label}}}%
+{\printnames{labelname}}%
+\setunit{\nameyeardelim}%
+\usebibmacro{date}}%
+{\printfield{shorthand}\setunit{\nameyeardelim}\usebibmacro{date}}}%
+\addnbspace
+}
 
-\providecommand{\superscript}[1]{\ensuremath{^{\textrm{\dancebooks@root}}}}
-\providecommand{\subscript}[1]{\ensuremath{_{\textrm{\dancebooks@root}}}}
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{\dancebooks@root}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{\dancebooks@root}}}}
 
 \addbibresource{\dancebooks@root/american.bib}
 \addbibresource{\dancebooks@root/anuario-musical.bib}
