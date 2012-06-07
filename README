@@ -1,13 +1,9 @@
-﻿Подключение файлов осуществляется следующим образом:
-%задаем произвольную папку для файлов библиографии (в пути меняем все обратные слеши на прямые, следим чтобы в пути не было знаков подчеркивания, шляпочек, фигурных скобочек и тому подобного)
-\def\bibroot{C:/blah-blah-blah/dancebooks-bibtex/}
-%подключаем стили для библиографии
-\usepackage{\bibroot style}
-\addcontentsline{toc}{section}{Список литературы}
-\bibliographystyle{\bibroot style}
-\includedancebooks[optional extrafiles]{\bibroot}
-
-Сюда же через запятую можно добавить любые дополнительные bib-файлы (после запятых не нужно ставить пробелы!).
-
-Список используемых языков по алфавиту:
+﻿Список используемых языков по алфавиту:
 czech,danish,english,french,german,italian,polish,portuguese,russian,spanish
+
+Краткий todo-list:
+Написать мануал по подключению библиотеки (после того, как определится фреймворк natbib+bibtex8/biblatex+biber)
+Добавит в поле note барочных книг кода каталогов Francine Lancelot и Little-Marsh
+Выкачать Anuario Musical
+Заполнить информацию по Anuario Musical
+Заполнить информация по Journal of Musicology

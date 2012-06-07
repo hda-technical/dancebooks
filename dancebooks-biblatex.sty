@@ -1,33 +1,31 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{dancebooks-biblatex}[2012/12/31 Special package for formatting of BIB labels]
 
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T2A]{fontenc}
 \RequirePackage{csquotes}
 \RequirePackage[hyphens]{url}
 \RequirePackage[unicode]{hyperref}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[T2A]{fontenc}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
 \ProcessKeyvalOptions{dancebooks}
 
-\RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,russian,spanish]{babel}
-\RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,natbib=true,babel=other]{biblatex}
+\RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
+\RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false]{biblatex}
 
-\renewbibmacro*{begentry}{%
-\brackettext{%
+\renewbibmacro*{cite}{%
 \iffieldundef{shorthand}%
-{\ifthenelse{\ifnameundef{labelname}\OR\iffieldundef{labelyear}}%
-{\iffieldundef{label}%
-{\usebibmacro{cite:maintitle/labeltitle+parts}}%
-{\printfield{label}}}%
-{\printnames{labelname}}%
-\setunit{\nameyeardelim}%
-\usebibmacro{date}}%
-{\printfield{shorthand}\setunit{\nameyeardelim}\usebibmacro{date}}}%
-\addnbspace
+{\printnames{labelname}\setunit{\nameyeardelim}\usebibmacro{date}}%
+{\printfield{shorthand}\setunit{\nameyeardelim}\usebibmacro{date}}%
 }
+
+\renewbibmacro*{begentry}{\brackettext{%
+\iffieldundef{shorthand}%
+{\printnames{labelname}\setunit{\nameyeardelim}\usebibmacro{date}}%
+{\printfield{shorthand}\setunit{\nameyeardelim}\usebibmacro{date}}%
+}\addnbspace}
 
 \addbibresource{\dancebooks@root/american.bib}
 \addbibresource{\dancebooks@root/anuario-musical.bib}
