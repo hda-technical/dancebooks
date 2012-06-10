@@ -15,16 +15,19 @@
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
 \RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false]{biblatex}
 
+\renewbibmacro*{date}{\printdate}%
+\renewbibmacro*{year}{\printfield{year}}
+
 \renewbibmacro*{cite}{%
 \iffieldundef{shorthand}%
-{\printnames{labelname}\setunit{\nameyeardelim}\usebibmacro{date}}%
-{\printfield{shorthand}\setunit{\nameyeardelim}\usebibmacro{date}}%
+{\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
+{\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }
 
 \renewbibmacro*{begentry}{\brackettext{%
 \iffieldundef{shorthand}%
-{\printnames{labelname}\setunit{\nameyeardelim}\usebibmacro{date}}%
-{\printfield{shorthand}\setunit{\nameyeardelim}\usebibmacro{date}}%
+{\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
+{\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
 
 \addbibresource{\dancebooks@root/american.bib}
