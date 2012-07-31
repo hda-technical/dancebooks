@@ -46,6 +46,7 @@ bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	pdflatex test-bibtex.tex
 	bibtex8 --wolfgang -c cp1251 test-bibtex
 	pdflatex test-bibtex.tex
+	pdflatex test-bibtex.tex
 	echo "Build completed"
 
 rebuild: purge all

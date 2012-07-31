@@ -493,16 +493,36 @@ FUNCTION {bbl.of}      %  { "\bblof{}" }
 }
 
 FUNCTION {bbl.etal}      %  { "\bblof{}" }
-{  curlanguage "english" =
-    {"et~al."}
-    { curlanguage "ukrainian" =
-        {"{\cyr\cyrt\cyra~\cyrii\cyrn.}"}
-        { curlanguage "russian" =
-           {"{\cyr\cyri~\cyrd\cyrr.}"}
-           {"language is not defined: " language  "at al" * * warning$ "at al."}
-         if$}
-      if$}
-  if$
+{  
+	curlanguage "english" =
+    {
+		"et~al."
+	}
+    { 
+		curlanguage "ukrainian" =
+        {
+			"{\cyr\cyrt\cyra~\cyrii\cyrn.}"
+		}
+        {
+			curlanguage "russian" =
+			{
+				"{\cyr\cyri~\cyrd\cyrr.}"
+			}
+			{
+				curlanguage "german" =
+				{
+					"und and."
+				}
+				{
+					"language is not defined: " language  "at al" * * warning$ "at al."
+				}
+				if$
+			}
+			if$
+		}
+		if$
+	}
+	if$
 }
 
 FUNCTION {bbl.nnumber} %  { "\bblNumber{}" }
