@@ -1,10 +1,12 @@
-\documentclass[a4paper,fontsize=12pt,pdftex,DIV16,final]{scrartcl}
+\documentclass[a4paper,pdftex,final]{scrartcl}
 
 \usepackage[cp1251]{inputenc}
 \usepackage{indentfirst}
 \usepackage[T2A]{fontenc}
+\usepackage{fullpage}
 
-\usepackage[root=.]{./dancebooks-bibtex}
+\newcommand{\bibroot}{.}
+\usepackage[root=\bibroot]{\bibroot/dancebooks-bibtex}
 
 \typearea{last}
 
