@@ -1,5 +1,4 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{dancebooks-bibtex}[2012/12/31 Special package for formatting of BIB labels]
 
 \RequirePackage[square]{natbib}
 \RequirePackage{ifthen}
@@ -12,6 +11,8 @@
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
 \ProcessKeyvalOptions{dancebooks}
+
+\ProvidesPackage{\dancebooks@root/dancebooks-bibtex}[2012/12/31 Special package for formatting of BIB labels]
 
 % format lengths
 \renewcommand\NAT@bibsetup[1]{%

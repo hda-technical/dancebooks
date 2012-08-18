@@ -1,5 +1,4 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{dancebooks-biblatex}[2012/12/31 Special package for formatting of BIB labels]
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T2A]{fontenc}
@@ -11,6 +10,8 @@
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
 \ProcessKeyvalOptions{dancebooks}
+
+\ProvidesPackage{\dancebooks@root/dancebooks-biblatex}[2012/12/31 Special package for formatting of BIB labels]
 
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
 \RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false]{biblatex}
