@@ -19,43 +19,41 @@ BIB_FILES=\
 	spbconf.bib \
 
 ANC_FILES_BIBTEX=\
-	gost-authoryear.bst \
+	bst/gost-authoryear.bst \
 	dancebooks-bibtex.sty \
 	Makefile \
 	
 ANC_FILES_BIBLATEX=\
 	dancebooks-biblatex.sty \
-	gost-authoryear.bbx \
-	gost-authoryear.cbx \
-	gost-standard.bbx \
+	lbx/czech.lbx \
 	Makefile \
-	russian-gost.lbx \
 	
 all: purge biblatex bibtex
 	@echo "Build all completed"
 
 biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
-	rm -f test-biblatex.bbl
-	pdflatex test-biblatex.tex
-	biber test-biblatex
-	pdflatex test-biblatex.tex
-	echo "Build completed"
+	@rm -f test-biblatex.bbl
+	@pdflatex test-biblatex.tex 2>&1 #| cat > /dev/null
+	@biber test-biblatex 2>&1 #| grep -q  -E "INFO|WARN|ERR" || true
+	@pdflatex test-biblatex.tex 2>&1 #| grep -q -E "Warning|Error" || true
+	@echo "Build completed"
 	
 bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
-	rm -f test-bibtex.bbl
-	pdflatex test-bibtex.tex
-	bibtex8 --wolfgang -c cp1251 test-bibtex
-	pdflatex test-bibtex.tex
-	pdflatex test-bibtex.tex
-	echo "Build completed"
+	@rm -f test-bibtex.bbl
+	@pdflatex test-bibtex.tex 2>&1 | cat > /dev/null
+	@bibtex8 --wolfgang -c cp1251 test-bibtex
+	@pdflatex test-bibtex.tex 2>&1 | cat > /dev/null
+	@pdflatex test-bibtex.tex 2>&1  | grep -q -E "Warning|Error" || true
+	@echo "Build completed"
 
 rebuild: purge all
-	echo "Rebuild completed"
+	@echo "Rebuild completed"
 
 purge: clean
-	rm -f *.pdf
-	echo "Purge completed"
+	@rm -f *.pdf
+	@echo "Purge completed"
 	
 clean:
-	rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml 
-	echo "Clean completed"
+	@rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml 
+	@echo "Clean completed"
+	

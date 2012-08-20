@@ -19,7 +19,7 @@
 \DeclareFieldFormat{extrayear}{\mknumalph{#1}}
 
 \renewbibmacro*{date}{\printdate}%
-\renewbibmacro*{year}{\printfield{year}}
+\renewbibmacro*{year}{\printfield{year}}%
 
 \renewbibmacro*{cite}{%
 \iffieldundef{shorthand}%
@@ -32,7 +32,6 @@
 {\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
-
 
 \addbibresource{\dancebooks@root/american.bib}
 \addbibresource{\dancebooks@root/anuario-musical.bib}
