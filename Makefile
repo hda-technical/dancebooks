@@ -33,9 +33,9 @@ all: purge biblatex bibtex
 
 biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
 	@rm -f test-biblatex.bbl
-	@pdflatex test-biblatex.tex 2>&1 #| cat > /dev/null
-	@biber test-biblatex 2>&1 #| grep -q  -E "INFO|WARN|ERR" || true
-	@pdflatex test-biblatex.tex 2>&1 #| grep -q -E "Warning|Error" || true
+	@pdflatex test-biblatex.tex 2>&1 | cat > /dev/null
+	@biber test-biblatex 2>&1 | grep -q  -E "INFO|WARN|ERR" || true
+	@pdflatex test-biblatex.tex 2>&1 | grep -q -E "Warning|Error" || true
 	@echo "Build completed"
 	
 bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
