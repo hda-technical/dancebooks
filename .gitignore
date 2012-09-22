@@ -2,11 +2,16 @@
 *.bbl
 *.bcf
 *.blg
+*.csv
+*.dot
 *.log
 *.nav
 *.out
 *.pdf
+*.png
 *.snm
 *.swp
 *.toc
+*.txt
+*.zip
 *.run.xml

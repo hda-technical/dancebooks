@@ -1,30 +1,29 @@
 BIB_FILES=\
-	american.bib \
-	australian.bib \
-	czech.bib \
-	danish.bib \
-	dutch.bib \
-	english.bib \
-	french.bib \
-	german.bib \
-	hda.bib \
-	images.bib \
-	italian.bib \
-	polish.bib \
-	portuguese.bib \
-	problems.bib \
-	rothenfelser.bib \
-	russian.bib \
-	spanish.bib \
-	spbconf.bib \
+	bib/american.bib \
+	bib/australian.bib \
+	bib/czech.bib \
+	bib/danish.bib \
+	bib/dutch.bib \
+	bib/english.bib \
+	bib/french.bib \
+	bib/german.bib \
+	bib/hda.bib \
+	bib/italian.bib \
+	bib/polish.bib \
+	bib/portuguese.bib \
+	bib/problems.bib \
+	bib/rothenfelser.bib \
+	bib/russian.bib \
+	bib/spanish.bib \
+	bib/spbconf.bib \
 
 ANC_FILES_BIBTEX=\
 	bst/gost-authoryear.bst \
-	dancebooks-bibtex.sty \
+	sty/dancebooks-bibtex.sty \
 	Makefile \
 	
 ANC_FILES_BIBLATEX=\
-	dancebooks-biblatex.sty \
+	sty/dancebooks-biblatex.sty \
 	lbx/czech.lbx \
 	Makefile \
 	
@@ -33,17 +32,17 @@ all: purge biblatex bibtex
 
 biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
 	@rm -f test-biblatex.bbl
-	@pdflatex test-biblatex.tex 2>&1 | cat > /dev/null
-	@biber test-biblatex 2>&1 | grep -q  -E "INFO|WARN|ERR" || true
-	@pdflatex test-biblatex.tex 2>&1 | grep -q -E "Warning|Error" || true
+	@pdflatex test-biblatex.tex
+	@biber test-biblatex
+	@pdflatex test-biblatex.tex
 	@echo "Build completed"
 	
 bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	@rm -f test-bibtex.bbl
-	@pdflatex test-bibtex.tex 2>&1 | cat > /dev/null
+	@pdflatex test-bibtex.tex
 	@bibtex8 --wolfgang -c cp1251 test-bibtex
-	@pdflatex test-bibtex.tex 2>&1 | cat > /dev/null
-	@pdflatex test-bibtex.tex 2>&1  | grep -q -E "Warning|Error" || true
+	@pdflatex test-bibtex.tex
+	@pdflatex test-bibtex.tex
 	@echo "Build completed"
 
 rebuild: purge all

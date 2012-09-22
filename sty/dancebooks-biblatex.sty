@@ -1,17 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}
 
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[T2A]{fontenc}
 \RequirePackage{csquotes}
 \RequirePackage[hyphens]{url}
 \RequirePackage[unicode]{hyperref}
+\RequirePackage[T2A]{fontenc}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
 \ProcessKeyvalOptions{dancebooks}
 
-\ProvidesPackage{\dancebooks@root/dancebooks-biblatex}[2012/12/31 Special package for formatting of BIB labels]
+\ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2012/12/31 Special package for formatting of BIB labels]
 
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
 \RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false]{biblatex}
@@ -33,23 +33,22 @@
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
 
-\addbibresource{\dancebooks@root/american.bib}
-\addbibresource{\dancebooks@root/anuario-musical.bib}
-\addbibresource{\dancebooks@root/australian.bib}
-\addbibresource{\dancebooks@root/czech.bib}
-\addbibresource{\dancebooks@root/danish.bib}
-\addbibresource{\dancebooks@root/dutch.bib}
-\addbibresource{\dancebooks@root/english.bib}
-\addbibresource{\dancebooks@root/french.bib}
-\addbibresource{\dancebooks@root/german.bib}
-\addbibresource{\dancebooks@root/hda.bib}
-\addbibresource{\dancebooks@root/images.bib}
-\addbibresource{\dancebooks@root/italian.bib}
-%\addbibresource{\dancebooks@root/journal-of-musicology.bib}
-\addbibresource{\dancebooks@root/polish.bib}
-\addbibresource{\dancebooks@root/portuguese.bib}
-\addbibresource{\dancebooks@root/problems.bib}
-\addbibresource{\dancebooks@root/rothenfelser.bib}
-\addbibresource{\dancebooks@root/russian.bib}
-\addbibresource{\dancebooks@root/spanish.bib}
-\addbibresource{\dancebooks@root/spbconf.bib}
+\addbibresource{\dancebooks@root/bib/american.bib}
+\addbibresource{\dancebooks@root/bib/anuario-musical.bib}
+\addbibresource{\dancebooks@root/bib/australian.bib}
+\addbibresource{\dancebooks@root/bib/czech.bib}
+\addbibresource{\dancebooks@root/bib/danish.bib}
+\addbibresource{\dancebooks@root/bib/dutch.bib}
+\addbibresource{\dancebooks@root/bib/english.bib}
+\addbibresource{\dancebooks@root/bib/french.bib}
+\addbibresource{\dancebooks@root/bib/german.bib}
+\addbibresource{\dancebooks@root/bib/hda.bib}
+\addbibresource{\dancebooks@root/bib/italian.bib}
+%\addbibresource{\dancebooks@root/bib/journal-of-musicology.bib}
+\addbibresource{\dancebooks@root/bib/polish.bib}
+\addbibresource{\dancebooks@root/bib/portuguese.bib}
+\addbibresource{\dancebooks@root/bib/problems.bib}
+\addbibresource{\dancebooks@root/bib/rothenfelser.bib}
+\addbibresource{\dancebooks@root/bib/russian.bib}
+\addbibresource{\dancebooks@root/bib/spanish.bib}
+\addbibresource{\dancebooks@root/bib/spbconf.bib}

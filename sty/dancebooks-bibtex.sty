@@ -6,6 +6,7 @@
 \RequirePackage[unicode]{hyperref}
 \RequirePackage[T2A]{fontenc}
 \RequirePackage[english,russian]{babel}
+\RequirePackage{mathscinet}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
@@ -42,26 +43,26 @@
     \NAT@ifcmd#1(@)(@)\@nil{#2}}
 
 %подключение библиографии в одну строку
-\providecommand{\printbibliography}[1][\dancebooks@root/empty]{%
-\bibliographystyle{\dancebooks@root/gost-authoryear}%
-\bibliography{\dancebooks@root/american,%
-\dancebooks@root/anuario-musical,%
-\dancebooks@root/australian,%
-\dancebooks@root/czech,%
-\dancebooks@root/danish,%
-\dancebooks@root/dutch,%
-\dancebooks@root/english,%
-\dancebooks@root/french,%
-\dancebooks@root/german,%
-\dancebooks@root/hda,%
-\dancebooks@root/images,%
-\dancebooks@root/italian,%
-\dancebooks@root/journal-of-musicology,%
-\dancebooks@root/polish,%
-\dancebooks@root/portuguese,%
-\dancebooks@root/problems,%
-\dancebooks@root/rothenfelser,%
-\dancebooks@root/russian,%
-\dancebooks@root/spanish,%
-\dancebooks@root/spbconf,%
+\providecommand{\printbibliography}[1][\dancebooks@root/bib/empty]{%
+\bibliographystyle{\dancebooks@root/bst/gost-authoryear}%
+\bibliography{%
+\dancebooks@root/bib/american,%
+\dancebooks@root/bib/anuario-musical,%
+\dancebooks@root/bib/australian,%
+\dancebooks@root/bib/czech,%
+\dancebooks@root/bib/danish,%
+\dancebooks@root/bib/dutch,%
+\dancebooks@root/bib/english,%
+\dancebooks@root/bib/french,%
+\dancebooks@root/bib/german,%
+\dancebooks@root/bib/hda,%
+\dancebooks@root/bib/italian,%
+\dancebooks@root/bib/journal-of-musicology,%
+\dancebooks@root/bib/polish,%
+\dancebooks@root/bib/portuguese,%
+\dancebooks@root/bib/problems,%
+\dancebooks@root/bib/rothenfelser,%
+\dancebooks@root/bib/russian,%
+\dancebooks@root/bib/spanish,%
+\dancebooks@root/bib/spbconf,%
 #1}}
