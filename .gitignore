@@ -15,3 +15,4 @@
 *.txt
 *.zip
 *.run.xml
+.DS_Store
