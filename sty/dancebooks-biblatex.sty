@@ -5,6 +5,8 @@
 \RequirePackage[hyphens]{url}
 \RequirePackage[unicode]{hyperref}
 \RequirePackage[T2A]{fontenc}
+\RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
+\RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false]{biblatex}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
@@ -12,9 +14,7 @@
 \ProcessKeyvalOptions{dancebooks}
 
 \ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2012/12/31 Special package for formatting of BIB labels]
-
-\RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
-\RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false]{biblatex}
+\fontfamily{cmr}\selectfont
 
 \DeclareFieldFormat{extrayear}{\mknumalph{#1}}
 

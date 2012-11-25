@@ -13,6 +13,9 @@
 \ProcessKeyvalOptions{dancebooks}
 
 \ProvidesPackage{\dancebooks@root/sty/dancebooks-bibtex}[2012/12/31 Special package for formatting of BIB labels]
+\fontfamily{cmr}\selectfont
+
+\newcommand\parencite{\citep}
 
 % format lengths
 \renewcommand\NAT@bibsetup[1]{%
@@ -56,7 +59,7 @@
 \dancebooks@root/bib/german,%
 \dancebooks@root/bib/hda,%
 \dancebooks@root/bib/italian,%
-\dancebooks@root/bib/journal-of-musicology,%
+%\dancebooks@root/bib/journal-of-musicology,%
 \dancebooks@root/bib/polish,%
 \dancebooks@root/bib/portuguese,%
 \dancebooks@root/bib/problems,%

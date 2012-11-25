@@ -27,17 +27,17 @@ ANC_FILES_BIBLATEX=\
 	lbx/czech.lbx \
 	Makefile \
 	
-all: purge biblatex bibtex
+all: purge test-biblatex.pdf test-bibtex.pdf
 	@echo "Build all completed"
 
-biblatex: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
+test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
 	@rm -f test-biblatex.bbl
 	@pdflatex test-biblatex.tex
 	@biber test-biblatex
 	@pdflatex test-biblatex.tex
 	@echo "Build completed"
 	
-bibtex: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
+test-bibtex.pdf: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	@rm -f test-bibtex.bbl
 	@pdflatex test-bibtex.tex
 	@bibtex8 --wolfgang -c cp1251 test-bibtex
