@@ -1,18 +1,52 @@
+# compiler output files and executables
+# win32
+*.obj
+*.exe
+*.dll
+# unix
+*.o
+*.so
+# scriptable languages
+*.pyc
+
+# archives: should be unpacked
+*.7z
+*.gz
+*.rar
+*.tgz
+*.zip
+
+# log files
+*.log
+
+# debug files
+*.stackdump
+*.core
+
+# temporary editor files
+*.swp
+*~
+
+# latex specific files
 *.aux
 *.bbl
 *.bcf
 *.blg
-*.csv
-*.dot
-*.log
 *.nav
 *.out
+*.snm
+*.toc
+*.run.xml
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+# This project specific files
+*.csv
+*.dot
 *.pdf
 *.png
-*.snm
-*.swp
-*.toc
 *.txt
-*.zip
-*.run.xml
-.DS_Store
