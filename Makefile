@@ -1,6 +1,7 @@
 BIB_FILES=\
 	bib/american.bib \
 	bib/australian.bib \
+	bib/canadian.bib \
 	bib/czech.bib \
 	bib/danish.bib \
 	bib/dutch.bib \
