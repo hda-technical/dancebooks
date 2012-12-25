@@ -20,7 +20,6 @@
 \renewcommand\NAT@bibsetup[1]{%
    \setlength{\labelwidth}{3em}%
    \setlength{\leftmargin}{\labelwidth}%
-%   \setlength{\itemindent}{0pt}%
    \addtolength{\leftmargin}{\labelsep}%
    \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
 }
@@ -34,12 +33,8 @@
      \@namedef{br@#2}{\@nameuse{br@#2\@extra@b@citeb}}}\fi
    \@ifundefined{b@#2\@extra@b@citeb}{\def\NAT@num{}}{\NAT@parse{#2}}%
    \item[\hfil\hyper@natanchorstart{#2\@extra@b@citeb}%
-% here was just
-%\@biblabel{\NAT@num}%
-% I replaced it with:
     \@ifundefined{b@#2\@extra@binfo}{[{\bfseries{}??}]}
 		{\expandafter\sbb@biblabel\csname b@#2\@extra@binfo\endcsname}\hfil
-%end
     \hyper@natanchorend]%
     \NAT@ifcmd#1(@)(@)\@nil{#2}}
 
