@@ -1,4 +1,4 @@
-BIB_FILES=\
+	BIB_FILES=\
 	bib/american.bib \
 	bib/australian.bib \
 	bib/canadian.bib \
@@ -34,7 +34,7 @@ all: purge test-biblatex.pdf test-bibtex.pdf
 test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
 	@rm -f test-biblatex.bbl
 	@pdflatex test-biblatex.tex
-	@biber test-biblatex
+	@biber --quiet test-biblatex
 	@pdflatex test-biblatex.tex
 	@echo "Build completed"
 	
