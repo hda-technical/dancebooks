@@ -1,4 +1,4 @@
-	BIB_FILES=\
+BIB_FILES=\
 	bib/american.bib \
 	bib/australian.bib \
 	bib/canadian.bib \
@@ -21,21 +21,37 @@
 ANC_FILES_BIBTEX=\
 	bst/gost-authoryear.bst \
 	sty/dancebooks-bibtex.sty \
+	sty/dancebooks-bibtex.sty \
 	Makefile \
 	
 ANC_FILES_BIBLATEX=\
 	sty/dancebooks-biblatex.sty \
 	Makefile \
-	
-all: purge test-biblatex.pdf test-bibtex.pdf
+
+default: test-biblatex.pdf test-bibtex.pdf
+	@echo "Default build completed"
+
+all: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
 	@echo "Build all completed"
 	
 upload: all
 	chmod 644 test-biblatex.pdf
+	chmod 644 test-biblatex-detailed.pdf
 	chmod 644 test-bibtex.pdf
-	scp -p test-bibtex.pdf test-biblatex.pdf georg@iley.ru:/home/georg/leftparagraphs/static/files/
+	scp -p \
+		test-bibtex.pdf \
+		test-biblatex.pdf \
+		test-biblatex-detailed.pdf \
+		georg@iley.ru:/home/georg/leftparagraphs/static/files/
+
+test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
+	@rm -f test-biblatex-detailed.bbl
+	@pdflatex test-biblatex-detailed.tex
+	@biber --quiet test-biblatex-detailed
+	@pdflatex test-biblatex-detailed.tex
+	@echo "Build completed"
 	
-test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
+test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f test-biblatex.bbl
 	@pdflatex test-biblatex.tex
 	@biber --quiet test-biblatex
@@ -46,7 +62,6 @@ test-bibtex.pdf: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	@rm -f test-bibtex.bbl
 	@pdflatex test-bibtex.tex
 	@bibtex8 --wolfgang -c cp1251 test-bibtex
-	@pdflatex test-bibtex.tex
 	@pdflatex test-bibtex.tex
 	@echo "Build completed"
 

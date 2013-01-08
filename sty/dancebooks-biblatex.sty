@@ -7,11 +7,13 @@
 \RequirePackage[T2A]{fontenc}
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
 \RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false]{biblatex}
+\RequirePackage{xpatch}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
-\ProcessKeyvalOptions{dancebooks}
+\DeclareBoolOption{detailed}
+\ProcessKeyvalOptions*
 
 \ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2012/12/31 Special package for formatting of BIB labels]
 
@@ -31,6 +33,15 @@
 {\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
+
+\ifdancebooks@detailed%
+\xapptobibmacro{url+urldate+note}{%
+\iffieldundef{annotation}%
+{}%
+{\usebibmacro{annotation}}%
+}{}{}%
+\else
+\fi
 
 \renewbibmacro*{finentry}{\finentry\newline}
 

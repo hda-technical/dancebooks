@@ -31,6 +31,11 @@
 
 	\newcommand{\rootfolder}{%folderpath%}
 	\usepackage[root=\rootfolder]{\rootfolder/dancebooks-biblatex}
+	
+Опционально доступен параметр detailed, принимающий значения `true` и `false`. При указании значения `true` включается печать служебной информации (наличие транскрипций, уточнение датировки и так далее). Значение по умолчанию – `false`. Пример использования опции:
+
+	\newcommand{\rootfolder}{%folderpath%}
+	\usepackage[detailed=true,root=\rootfolder]{\rootfolder/dancebooks-biblatex}
 
 После подключения становятся доступны макросы цитирования `\cite{id}`, `\footcite{id}`, `\parencite{id}`, `\nocite{id}`. Стандартный макрос печати библиографии в `biblatex` -- `\printbibliography`, без параметров. Дополнительные библиографические источники можно добавить стандартной командой `\addbibresource{hello.bib}` (расширение `.bib` необходимо указывать явно).
 
