@@ -45,6 +45,7 @@ upload: all
 		georg@iley.ru:/home/georg/leftparagraphs/static/files/
 
 test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
+	#double pdflatex run is required
 	@rm -f test-biblatex-detailed.bbl
 	@pdflatex test-biblatex-detailed.tex
 	@biber --quiet test-biblatex-detailed
@@ -52,6 +53,7 @@ test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_
 	@echo "Build completed"
 	
 test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
+	#double pdflatex run is required
 	@rm -f test-biblatex.bbl
 	@pdflatex test-biblatex.tex
 	@biber --quiet test-biblatex
@@ -59,9 +61,11 @@ test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@echo "Build completed"
 	
 test-bibtex.pdf: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
+	#triple pdflatex run is required
 	@rm -f test-bibtex.bbl
 	@pdflatex test-bibtex.tex
 	@bibtex8 --wolfgang -c cp1251 test-bibtex
+	@pdflatex test-bibtex.tex
 	@pdflatex test-bibtex.tex
 	@echo "Build completed"
 
