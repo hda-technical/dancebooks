@@ -25,12 +25,16 @@ ANC_FILES_BIBTEX=\
 	
 ANC_FILES_BIBLATEX=\
 	sty/dancebooks-biblatex.sty \
-	lbx/czech.lbx \
 	Makefile \
 	
 all: purge test-biblatex.pdf test-bibtex.pdf
 	@echo "Build all completed"
-
+	
+upload: all
+	chmod 644 test-biblatex.pdf
+	chmod 644 test-bibtex.pdf
+	scp -p test-bibtex.pdf test-biblatex.pdf georg@iley.ru:/home/georg/leftparagraphs/static/files/
+	
 test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES-BIBLATEX)
 	@rm -f test-biblatex.bbl
 	@pdflatex test-biblatex.tex
