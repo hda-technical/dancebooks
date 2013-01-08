@@ -23,18 +23,20 @@ ANC_FILES_BIBTEX=\
 	sty/dancebooks-bibtex.sty \
 	sty/dancebooks-bibtex.sty \
 	Makefile \
-	
+
 ANC_FILES_BIBLATEX=\
 	sty/dancebooks-biblatex.sty \
 	Makefile \
 
-default: test-biblatex.pdf test-bibtex.pdf
+default.dependency: test-biblatex.pdf test-bibtex.pdf
 	@echo "Default build completed"
+	@touch default.dependency
 
-all: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
+all.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
 	@echo "Build all completed"
-	
-upload: all
+	@touch all.dependency
+
+upload.dependency: all.dependency
 	chmod 644 test-biblatex.pdf
 	chmod 644 test-biblatex-detailed.pdf
 	chmod 644 test-bibtex.pdf
@@ -43,6 +45,7 @@ upload: all
 		test-biblatex.pdf \
 		test-biblatex-detailed.pdf \
 		georg@iley.ru:/home/georg/leftparagraphs/static/files/
+	@touch upload.dependency
 
 test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	#double pdflatex run is required
@@ -51,7 +54,7 @@ test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_
 	@biber --quiet test-biblatex-detailed
 	@pdflatex test-biblatex-detailed.tex
 	@echo "Build completed"
-	
+
 test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	#double pdflatex run is required
 	@rm -f test-biblatex.bbl
@@ -59,7 +62,7 @@ test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@biber --quiet test-biblatex
 	@pdflatex test-biblatex.tex
 	@echo "Build completed"
-	
+
 test-bibtex.pdf: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	#triple pdflatex run is required
 	@rm -f test-bibtex.bbl
@@ -69,14 +72,13 @@ test-bibtex.pdf: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	@pdflatex test-bibtex.tex
 	@echo "Build completed"
 
-rebuild: purge all
+rebuild: purge all.dependency
 	@echo "Rebuild completed"
 
 purge: clean
-	@rm -f *.pdf
+	@rm -f *.pdf *.dependency
 	@echo "Purge completed"
-	
+
 clean:
-	@rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml 
+	@rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml
 	@echo "Clean completed"
-	

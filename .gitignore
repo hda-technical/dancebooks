@@ -23,8 +23,9 @@
 *.stackdump
 *.core
 
-# temporary editor files
+# temporary files
 *.swp
+*.dependency
 *~
 
 # latex specific files
