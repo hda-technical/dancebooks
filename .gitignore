@@ -1,13 +1,27 @@
-# compiler output files and executables
-# win32
+# latest copy of this very magic .gitignore file can be downloaded from there:
+# https://github.com/georgthegreat/profile
+
+# win32 compiler output files and executables
 *.obj
 *.exe
 *.dll
-# unix
+
+# unix compiler output files and executables
 *.o
 *.so
-# scriptable languages
+
+# scriptable languages compiler output files and executables
 *.pyc
+
+# microsoft visual studio generated files
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.suo
+*.user
+UpgradeLog.XML
+_UpgradeReport_Files
 
 # archives: should be unpacked
 *.7z
@@ -23,9 +37,8 @@
 *.stackdump
 *.core
 
-# temporary files
+# temporary editor files
 *.swp
-*.dependency
 *~
 
 # latex specific files
@@ -38,6 +51,8 @@
 *.snm
 *.toc
 *.run.xml
+# latex output files - this is quite ambiguous line
+*.pdf
 
 # OS generated files
 .DS_Store
@@ -45,9 +60,15 @@
 Thumbs.db
 desktop.ini
 
-# This project specific files
-*.csv
-*.dot
-*.pdf
-*.png
-*.txt
+# other version control system
+.svn
+.hg
+*.scc
+*.vssscc
+*.vspscc
+
+# make/automake/autoconfigure
+.deps
+.lib
+# myself make extension - this files can be used as a targets/dependencies - this is quite ambiguous line
+*.dependency
