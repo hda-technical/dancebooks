@@ -13,14 +13,13 @@ BIB_FILES=\
 	bib/polish.bib \
 	bib/portuguese.bib \
 	bib/problems.bib \
-	bib/rothenfelser.bib \
+	bib/proceedings-rothenfelser.bib \
+	bib/proceedings-spb.bib \
 	bib/russian.bib \
 	bib/spanish.bib \
-	bib/spbconf.bib \
 
 ANC_FILES_BIBTEX=\
 	bst/gost-authoryear.bst \
-	sty/dancebooks-bibtex.sty \
 	sty/dancebooks-bibtex.sty \
 	Makefile \
 
@@ -36,7 +35,7 @@ all.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
 	@echo "Build all completed"
 	@touch all.dependency
 
-upload.dependency: all.dependency
+upload.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
 	chmod 644 test-biblatex.pdf
 	chmod 644 test-biblatex-detailed.pdf
 	chmod 644 test-bibtex.pdf
