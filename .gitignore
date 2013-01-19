@@ -12,6 +12,8 @@
 
 # scriptable languages compiler output files and executables
 *.pyc
+*.pyo
+*.pyd
 
 # microsoft visual studio generated files
 *.aps
@@ -51,8 +53,6 @@ _UpgradeReport_Files
 *.snm
 *.toc
 *.run.xml
-# latex output files - this is quite ambiguous line
-*.pdf
 
 # OS generated files
 .DS_Store
@@ -72,3 +72,6 @@ desktop.ini
 .lib
 # myself make extension - this files can be used as a targets/dependencies - this is quite ambiguous line
 *.dependency
+
+# put your own ignores below this line
+*.pdf
