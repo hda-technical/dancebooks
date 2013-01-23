@@ -12,7 +12,7 @@
 \DeclareStringOption{root}
 \ProcessKeyvalOptions{dancebooks}
 
-\ProvidesPackage{\dancebooks@root/sty/dancebooks-bibtex}[2012/12/31 Special package for formatting of BIB labels]
+\ProvidesPackage{\dancebooks@root/sty/dancebooks-bibtex}[2013/12/31 Special package for formatting of bibliography]
 
 \newcommand\parencite{\citep}
 
@@ -21,7 +21,8 @@
    \setlength{\labelwidth}{3em}%
    \setlength{\leftmargin}{\labelwidth}%
    \addtolength{\leftmargin}{\labelsep}%
-   \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
+   \setlength{\itemsep}{\bibsep}%
+   \setlength{\parsep}{\z@}%
 }
 
 \def\@sbb@biblabel#1#2#3{[#3\if\relax#2\relax\else,~#2\fi]}
