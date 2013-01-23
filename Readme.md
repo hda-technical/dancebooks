@@ -75,3 +75,4 @@
 1. pdflatex project.tex
 2. biber project
 3. pdflatex project.tex
+4. pdflatex project.tex (в Makefile из библиографии этот пункт отсутсвует, поскольку в выходных файлах нет содержания)
