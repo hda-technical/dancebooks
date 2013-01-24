@@ -1,0 +1,47 @@
+/* importing fonts from google */
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,cyrillic);
+/* resetting default browser styles */
+@import url(/css/reset.css);
+
+body {
+	color: #000000;
+	background-color: #ffffff;
+	margin: 0px 0px 100px 0px;
+	font-size: 100%;
+    font-family: "PT Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "PT Sans Caption", sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+h1 {
+	font-size: 200%;
+}
+
+
+h1 {
+	font-size: 150%;
+}
+
+h1 {
+	font-size: 120%;
+}
+
+p {
+	text-align: left;
+	text-indent: 20px;
+	margin: 0px 0px 5px 0px;
+}
+
+ul, ol {
+	text-align: left;
+	text-indent: 20px;
+}
+
+blockquote {
+	font-style: italic;
+}
