@@ -17,23 +17,25 @@
 
 \ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
 
-\DeclareFieldFormat{extrayear}{\mknumalph{#1}}
-
-\renewbibmacro*{date}{\printdate}
-\renewbibmacro*{year}{\printfield{year}}
-
+% переопределяем макрос cite
+% в списке литературы добавляем метку в квадратных скобках
 \renewbibmacro*{cite}{%
 \iffieldundef{shorthand}%
 {\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }
 
+% добавляем поддержку поля shorthand
+% аналог key в bibtex
+% форсируем его использование вместо автосгенерённого значения
 \renewbibmacro*{begentry}{\brackettext{%
 \iffieldundef{shorthand}%
 {\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
 
+% добавляем поддержку поля annotation
+% только если указан флаг в параметрах
 \ifdancebooks@detailed%
 \xapptobibmacro{url+urldate+note}{%
 \iffieldundef{annotation}%
@@ -43,6 +45,33 @@
 \else
 \fi
 
+% макрос переформатирования для года
+% убираем букву после года в библиографической записи
+\DeclareFieldFormat{extrayear}{\mknumalph{#1}}
+\renewbibmacro*{date}{\printdate}
+\renewbibmacro*{year}{\printfield{year}}
+
+% макрос переформатирования для поля isbn
+% добавляем поддержку нескольких значений isbn, перечисленных через and
+\DeclareListFormat{isbn}{%
+\ifnumequal{\value{listcount}}{\value{liststart}}%
+{\mkbibacro{ISBN}\addcolon\addspace}%
+{}%
+\ifnumgreater{\value{listcount}}{\value{liststart}}%
+{\addcomma\addspace}%
+{\addcomma\addspace}%
+#1}
+
+\renewbibmacro*{isbn}{%
+\ifcitation%
+{\iftoggle{cbx:isbn}%
+{\printlist{isbn}}%
+{}}%
+{\iftoggle{bbx:isbn}%
+{\printlist{isbn}}%
+{}}}
+
+% добавляем пустую строчку после каждой книги
 \renewbibmacro*{finentry}{\finentry\newline}
 
 \addbibresource{\dancebooks@root/bib/american.bib}
