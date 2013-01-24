@@ -75,3 +75,4 @@ desktop.ini
 
 # put your own ignores below this line
 *.pdf
+transcriptions/*.html
