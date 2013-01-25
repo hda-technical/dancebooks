@@ -14,7 +14,7 @@ However, I shall have little to fear, if I am so happy as to merit that generous
 
 I know it is the Custom of Dedicators, to launch forth into the Praises of the Virtues and Parts of their Patrons; but I know Mr. Isaac too well, to think I can render my self more acceptable to him, by entertaining him with his own Deserts, since they are too well known to all your Acquaintance, to need a Publication in this place. Not but that it would be a Theme infinitely grateful to me; but I shall curb that Inclination, and deny my self a Pleasure that would be disgustful to you. It is enough, that by spreading the Knowledge which the following Book conveys, your Excellence in the Art, your admirable Compositions will more easily, and more largely encrease the Number of your Admirers; among which, there never will be one more truly devoted to your Service, than,
 
-_Sir, your most Obliged Humble Servant, John Weaver.
+_Sir, your most Obliged Humble Servant, John Weaver._
 
 ### PREFACE.
 
