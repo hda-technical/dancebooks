@@ -28,15 +28,18 @@ ANC_FILES_BIBLATEX=\
 	Makefile \
 
 MARKDOWN_FILES=\
+	transcriptions/[15--,\ it]\ Giovanni\ e\ Il\ Lanzino\ e\ Il\ Papa\ -\ Manuscritto\ di\ baletti.md
 	transcriptions/[1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ The\ Art\ of\ Dancing.md \
+	transcriptions/[1819,\ fr]\ J.\ H.\ Gourdoux-Doux\ -\ Requeil\ de\ genre\ nouveau\ de\ contredanses\ et\ walses.md \
 	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md \
+	transcriptions/[1828,\ ru]\ Собрание\ фигур\ для\ котильона.md \
+	transcriptions/[183-,\ uk]\ The\ Fashionable\ Quadrille\ Preceptor.md \
 	transcriptions/[2011,\ ru]\ Оксана\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
 
 ANC_MARKDOWN_FILES=\
 	transcriptions/_markdown2.py \
 	transcriptions/_reset.css \
 	transcriptions/_style.css \
-	Makefile \
 	
 HTML_FILES=$(MARKDOWN_FILES:.md=.html)
 
