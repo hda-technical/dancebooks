@@ -21,16 +21,14 @@ BIB_FILES=\
 ANC_FILES_BIBTEX=\
 	bst/gost-authoryear.bst \
 	sty/dancebooks-bibtex.sty \
-	Makefile \
 
 ANC_FILES_BIBLATEX=\
 	sty/dancebooks-biblatex.sty \
-	Makefile \
 
 MARKDOWN_FILES=\
-	transcriptions/[15--,\ it]\ Giovanni\ e\ Il\ Lanzino\ e\ Il\ Papa\ -\ Manuscritto\ di\ baletti.md
+	transcriptions/[15--,\ it]\ Giovanni\ e\ Il\ Lanzino\ e\ Il\ Papa\ -\ Manuscritto\ di\ baletti.md \
 	transcriptions/[1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ The\ Art\ of\ Dancing.md \
-	transcriptions/[1819,\ fr]\ J.\ H.\ Gourdoux-Doux\ -\ Requeil\ de\ genre\ nouveau\ de\ contredanses\ et\ walses.md \
+	transcriptions/[1819,\ fr]\ J.\ H.\ Gourdoux-Daux\ -\ Requeil\ de\ genre\ nouveau\ de\ contredanses\ et\ walses.md \
 	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md \
 	transcriptions/[1828,\ ru]\ Собрание\ фигур\ для\ котильона.md \
 	transcriptions/[183-,\ uk]\ The\ Fashionable\ Quadrille\ Preceptor.md \
