@@ -31,6 +31,14 @@ h1 {
 	font-size: 120%;
 }
 
+hr {
+	width: 100%;
+	height: 2px;
+	border: none;
+	color: #000000;
+	background-color: #cccccc;
+}
+
 p {
 	text-align: left;
 	text-indent: 20px;

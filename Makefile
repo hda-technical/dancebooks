@@ -27,6 +27,18 @@ ANC_FILES_BIBLATEX=\
 	sty/dancebooks-biblatex.sty \
 	Makefile \
 
+MARKDOWN_FILES=\
+	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md\
+	transcriptions/[2011,\ ru]\ Оксана\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md\
+
+ANC_MARKDOWN_FILES=\
+	transcriptions/_markdown2.py \
+	transcriptions/_reset.css \
+	transcriptions/_style.css \
+	Makefile \
+	
+HTML_FILES=$(MARKDOWN_FILES:.md=.html)
+
 test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	#double pdflatex run is required
 	@rm -f test-biblatex.bbl
@@ -34,7 +46,7 @@ test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@biber --quiet test-biblatex
 	@pdflatex test-biblatex.tex
 	@echo "Build completed"
-	
+
 test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	#double pdflatex run is required
 	@rm -f test-biblatex-detailed.bbl
@@ -66,6 +78,12 @@ upload.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
 		test-biblatex-detailed.pdf \
 		georg@iley.ru:/home/georg/leftparagraphs/static/files/
 	@touch upload.dependency
+
+%.html: %.md $(ANC_MARKDOWN_FILES)
+	./transcriptions/_markdown2.py --input "$<" --output "$@"
+
+transcriptions: $(HTML_FILES)
+	@echo "Compiling transcriptions completed"
 
 rebuild: purge all.dependency
 	@echo "Rebuild completed"
