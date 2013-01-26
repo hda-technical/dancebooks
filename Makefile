@@ -66,7 +66,7 @@ test-bibtex.pdf: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
 	@pdflatex test-bibtex.tex
 	@echo "Build completed"
 
-all.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
+all.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf transcriptions
 	@echo "Build all completed"
 	@touch all.dependency
 
