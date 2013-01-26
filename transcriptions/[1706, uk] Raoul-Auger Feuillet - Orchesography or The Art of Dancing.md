@@ -16,7 +16,7 @@ I know it is the Custom of Dedicators, to launch forth into the Praises of the V
 
 _Sir, your most Obliged Humble Servant, John Weaver._
 
-### PREFACE.
+### Preface.
 
 I Perswade my self, that before so useful a Curiosity as the following Treatise, it would not be disagreeable to the Reader, to give him an Account of the Origin and Progress of the Art of Orchesography. Furetier, in his Historical Dictionary, tells us of a curious Treatise of this Art by one Thoinet Arbeau, printed 1588, at Langres, from whom Monsieur Feuillet, in his Preface, supposes this Art to date its first Rise and Birth, tho' he could never procure a Sight of it, as not to be found in Paris. But this very Book falling into my Hands, I took Care to peruse it with some Attention, but found it far short of that Expectation, which such Recommendation had rais'd in me: For tho' it might perhaps have given the Hint to Mr. Beauchamp; yet it is nothing but an imperfect rough Draught, nor if it confin'd to Dancing, since it treats besides of beating the Drum, playing on the Pipe, and the like.
 
@@ -50,7 +50,7 @@ I shall not therefore detain the Reader any longer in the Porch, but leave him n
 ### Orchesography or, the Art of Dacing by Characters and Demonstrative Figures.
 ### By which any Person, who understands Dancing, may of himself easily learn all manner of Dances.
 
-The Explanation of the Terms belonging to DANCING, seem to be altogether needless, since they are so plain and intelligible of themselves: But lest the Reader should put wrong Constructions on those Terms of Art which the Dancing-Masters make use of, I shall give the following Explanation of them.
+The Explanation of the Terms belonging to Dancing, seem to be altogether needless, since they are so plain and intelligible of themselves: But lest the Reader should put wrong Constructions on those Terms of Art which the Dancing-Masters make use of, I shall give the following Explanation of them.
 
 Dancing is composed of Positions, Steps, Sinkings, Risings, Springings, Capers, Fallings, Slidings, Turnings of the Body, Cadence or Time, Figures, &c.
 
@@ -556,4 +556,4 @@ You will find these are perform'd without the Dancers moving out of their Places
 
 If in the Dances in the second Volume, you find some of the Steps longer than others, you must have no Regard to them, as to their Length in the Description of them, but judge of their Extension by the Distance of Positions, (as I have already shewn in the Termination of the Steps, in their Positions;) so that you are not to conclude any thing from the Length or Shortness of Steps.
 
-### FINIS.
+### Finis.
