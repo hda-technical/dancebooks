@@ -4,16 +4,31 @@ import markdown2
 import codecs
 import optparse
 import os.path
+import sys
 
 dirname = os.path.dirname(__file__)
 resetCssFile = open(dirname + "/_reset.css")
 styleCssPath = dirname + "/_style.css"
 
-parser = optparse.OptionParser()
+usage = u"Usage: %prog [options]"
+
+parser = optparse.OptionParser(usage=usage)
 parser.add_option(u"-i", u"--input", dest=u"inputFilename", help=u"Read markdown from FILE", metavar=u"FILE")
 parser.add_option(u"-o", u"--output", dest=u"outputFilename", help=u"Write xhtml to FILE", metavar=u"FILE")
 parser.add_option(u"-c", u"--css", dest=u"cssFilename", default=styleCssPath, help=u"Read css from FILE", metavar=u"FILE")
 (options, args) = parser.parse_args()
+
+if ((options.inputFilename is None) or (not os.path.isfile(options.inputFilename))):
+	print "Error: input file is not defined\n"
+	sys.exit(1)
+	
+if ((options.outputFilename is None) or (not os.path.isfile(options.outputFilename))):
+	print "Error: output file is not defined\n"
+	sys.exit(1)
+	
+if ((options.cssFilename is None) or (not os.path.isfile(options.cssFilename))):
+	print "Error: style file is not defined\n"
+	sys.exit(1)
 
 title = os.path.basename(options.inputFilename)
 title = unicode(os.path.splitext(title)[0], u"utf-8")
@@ -39,5 +54,5 @@ html = u"""
 </html>
 """
 
-with codecs.open(options.outputFilename, u"w", encoding=u"utf-8") as outputFile:
-	outputFile.write(html)
+outputFile = codecs.open(options.outputFilename, u"w", encoding=u"utf-8")
+outputFile.write(html)
