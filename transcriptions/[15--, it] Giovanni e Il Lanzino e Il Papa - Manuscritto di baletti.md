@@ -1,6 +1,5 @@
 ﻿# Manoscritto di balletti composti da
-## Giovannino e Il Lanzino e Il Papa;
-### scritto da Cosimo Ticcio.
+## Giovannino e Il Lanzino e Il Papa
 
 Il Papa che i(n)segnia ballar di Balletti a sua scholariConsiderando io, uirtuossissimi e nobilissimi giouani, con che honore con che pegnio o, co(n) che i(n)dustriaio potessi farui conoscere la grande affectione d la-nimo mio uerso di uoi mi e uenuto i(n) animo difarui un bello et honoreuole dono poi che di bel-lissimi et honoreuolissimi siete degni offerendouiipassi di balletti i(n)sieme co(n)le parole agiugniendolordine e uia che di(n)segniargli tengo Ne ui p(re)se(n)toquesto accio da uoi gli possiate i(m)parare ch(e) sarebbe(credete a me) i(m)possibile ma perche ui serua mentreda me gli imparate et anchora se p(er) il no(n) ballare spessodi alcuna cosa ui dime(n)ticassi con u(n) solo squardo inquesto mio thesoro di passi subito ui tornera a,memoria ne a, me adomandarne ui sara bisognioe cosi ui conseruerete questa nobile e, gentil uirtuMa p(er)che io e di doctrina e, dingegnio mi sento i(n)ferioreacosi grande animo mio et co(n) lento passo lo seguoco(n) leloque(n)tia di dire et eleganza di parlare no(n) honella faculta del mio i(n)gegnio cosa che io possadarui seno(n) una notabile igniorantia et e, dimodoopresso lingegnio mio dallo sdegnio della fortuna miach(e) p(er) tal cosa quasi mille uolte so(n) stato tentato tormida si fatta i(m)presa, pur poi considerando la gentilezza et humanita u(ost)ra ta(n)to ho preso fidanza
 
