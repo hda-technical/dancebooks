@@ -91,7 +91,7 @@ rebuild: purge all.dependency
 	@echo "Rebuild completed"
 
 purge: clean
-	@rm -f *.pdf *.dependency
+	@rm -f *.pdf *.dependency transcriptions/*.html
 	@echo "Purge completed"
 
 clean:
