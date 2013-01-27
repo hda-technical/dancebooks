@@ -83,6 +83,9 @@ upload.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
 transcriptions: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
 
+entrycount: $(BIB_FILES)
+	@cat $(BIB_FILES) | grep -c --color '@'
+	
 rebuild: purge all.dependency
 	@echo "Rebuild completed"
 
