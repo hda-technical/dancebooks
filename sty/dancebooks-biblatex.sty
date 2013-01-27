@@ -14,6 +14,7 @@
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
 \DeclareBoolOption{detailed}
+\DeclareBoolOption[true]{usedefaults}
 \ProcessKeyvalOptions*
 
 \ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
@@ -75,6 +76,8 @@
 % добавляем пустую строчку после каждой книги
 \renewbibmacro*{finentry}{\finentry\newline}
 
+% добавляем возможность исключить источники библиографии по умолчанию
+\ifdancebooks@usedefaults
 \addbibresource{\dancebooks@root/bib/american.bib}
 \addbibresource{\dancebooks@root/bib/anuario-musical.bib}
 \addbibresource{\dancebooks@root/bib/australian.bib}
@@ -95,3 +98,5 @@
 \addbibresource{\dancebooks@root/bib/proceedings-spb.bib}
 \addbibresource{\dancebooks@root/bib/russian.bib}
 \addbibresource{\dancebooks@root/bib/spanish.bib}
+\else
+\fi
