@@ -40,6 +40,14 @@ hr {
 	background-color: #cccccc;
 }
 
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
 p {
 	text-align: left;
 	text-indent: 20px;

@@ -9,12 +9,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 
-ol {
-	list-style-type: decimal;
-}
-
-ul {
-	list-style-type: disc;
+ol, ul {
+	list-style-type: none;
 }
 
 body {
