@@ -9,15 +9,20 @@
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
 \RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false,maxitems=5]{biblatex}
 \RequirePackage{xpatch}
+\RequirePackage{filecontents}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
-\DeclareBoolOption{detailed}
+\DeclareBoolOption[false]{detailed}
 \DeclareBoolOption[true]{usedefaults}
 \ProcessKeyvalOptions*
 
 \ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
+
+\begin{filecontents}{biblatex-dm.cfg}
+\DeclareDatamodelFields[type=list, datatype=literal]{isbn}
+\end{filecontents}
 
 % переопределяем макрос cite
 % в списке литературы добавляем метку в квадратных скобках

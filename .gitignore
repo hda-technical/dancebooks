@@ -43,6 +43,55 @@ _UpgradeReport_Files
 *.swp
 *~
 
+# latest copy of this very magic .gitignore file can be downloaded from there:
+# https://github.com/georgthegreat/profile
+
+# win32 compiler output files and executables
+*.obj
+*.exe
+*.dll
+
+# unix compiler output files and executables
+*.o
+*.so
+
+# scriptable languages compiler output files and executables
+*.pyc
+*.pyo
+*.pyd
+
+# microsoft visual studio generated files
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.suo
+*.user
+UpgradeLog.XML
+_UpgradeReport_Files
+
+# archives: should be unpacked
+*.7z
+*.gz
+*.rar
+*.tgz
+*.zip
+
+# log files
+*.log
+
+# configuration files
+*.ini
+*.cfg
+
+# debug files
+*.stackdump
+*.core
+
+# temporary editor files
+*.swp
+*~
+
 # latex specific files
 *.aux
 *.bbl
@@ -70,6 +119,8 @@ desktop.ini
 # make/automake/autoconfigure
 .deps
 .lib
+# de facto standard extension for deps.mk file
+*.mk
 # myself make extension - this files can be used as a targets/dependencies - this is quite ambiguous line
 *.dependency
 
