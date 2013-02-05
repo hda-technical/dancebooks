@@ -1448,6 +1448,31 @@ FUNCTION {book}
   fin.entry
 }
 
+FUNCTION {mvbook}
+{ output.bibitem
+  author.before
+  format.btitle "title" output.check
+  new.slash
+  author.after
+  editor.organization.after
+  new.sentence
+  format.number.series output
+  new.block
+  format.edition output
+  new.block
+  output.address.publisher.date
+  new.block
+  format.bvolume output
+  new.block
+  format.pages.page output
+  new.block
+  note output
+  new.sentence
+  format.url output
+  format.annote output
+  fin.entry
+}
+
 FUNCTION {booklet}
 { output.bibitem
   author.before
