@@ -20,10 +20,6 @@ BIB_FILES=\
 	bib/russian.bib \
 	bib/spanish.bib \
 
-ANC_FILES_BIBTEX=\
-	bst/gost-authoryear.bst \
-	sty/dancebooks-bibtex.sty \
-
 ANC_FILES_BIBLATEX=\
 	sty/dancebooks-biblatex.sty \
 
@@ -55,25 +51,14 @@ test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_
 	@pdflatex test-biblatex-detailed.tex
 	@echo "Build completed"
 
-test-bibtex.pdf: test-bibtex.tex $(BIB_FILES) $(ANC_FILES_BIBTEX)
-#triple pdflatex run is required
-	@rm -f test-bibtex.bbl
-	@pdflatex test-bibtex.tex
-	@bibtex8 --wolfgang -c cp1251 test-bibtex
-	@pdflatex test-bibtex.tex
-	@pdflatex test-bibtex.tex
-	@echo "Build completed"
-
-all.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf transcriptions
+all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
 	@echo "Build all completed"
 	@touch all.dependency
 
-upload.dependency: test-biblatex.pdf test-bibtex.pdf test-biblatex-detailed.pdf
+upload.dependency: test-biblatex.pdf test-biblatex-detailed.pdf
 	chmod 644 test-biblatex.pdf
 	chmod 644 test-biblatex-detailed.pdf
-	chmod 644 test-bibtex.pdf
 	scp -p \
-		test-bibtex.pdf \
 		test-biblatex.pdf \
 		test-biblatex-detailed.pdf \
 		georg@iley.ru:/home/georg/leftparagraphs/static/files/
