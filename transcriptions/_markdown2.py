@@ -22,7 +22,7 @@ if ((options.inputFilename is None) or (not os.path.isfile(options.inputFilename
 	print "Error: input file is not defined\n"
 	sys.exit(1)
 	
-if ((options.outputFilename is None) or (not os.path.isfile(options.outputFilename))):
+if (options.outputFilename is None):
 	print "Error: output file is not defined\n"
 	sys.exit(1)
 	
