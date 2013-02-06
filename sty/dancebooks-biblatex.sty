@@ -20,8 +20,11 @@
 
 \ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
 
+\renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
+
 \begin{filecontents}{biblatex-dm.cfg}
-\DeclareDatamodelFields[type=list, datatype=literal]{isbn}
+\DeclareDatamodelFields[type=list,datatype=literal]{isbn}
+\DeclareDatamodelConstraints[article,book,journal,inproceedings,proceedings,unpublished]{\constraint[type=mandatory]{\constraintfield{hyphenation}}}
 \end{filecontents}
 
 % переопредел€ем макрос cite
@@ -62,7 +65,7 @@
 % добавл€ем поддержку нескольких значений isbn, перечисленных через and
 \DeclareListFormat{isbn}{%
 \ifnumequal{\value{listcount}}{\value{liststart}}%
-{\mkbibacro{ISBN}\addcolon\addspace}%
+{\mkbibacro{isbn}\addcolon\addspace}%
 {}%
 \ifnumgreater{\value{listcount}}{\value{liststart}}%
 {\addcomma\addspace}%
