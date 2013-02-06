@@ -46,7 +46,7 @@
 	\newcommand{\rootfolder}{%folderpath%}
 	\usepackage[usedefaults=false,root=\rootfolder]{\rootfolder/dancebooks-biblatex}
 
-После подключения становятся доступны макросы цитирования `\cite{id}`, `\footcite{id}`, `\parencite{id}`, `\nocite{id}`. Стандартный макрос печати библиографии в `biblatex` -- `\printbibliography`, без параметров. Дополнительные библиографические источники можно добавить стандартной командой `\addbibresource{hello.bib}` (расширение `.bib` необходимо указывать явно).
+После подключения становятся доступны макросы цитирования `\cite`, `\footcite`, `\parencite`, `\nocite`, `\volcite`. Работа макросов описана в [biblatex manual](http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf). Стандартный макрос печати библиографии в `biblatex` -- `\printbibliography`, без параметров. Дополнительные библиографические источники можно добавить стандартной командой `\addbibresource{hello.bib}` (расширение `.bib` необходимо указывать явно).
 
 Порядок компиляции такой:
 
