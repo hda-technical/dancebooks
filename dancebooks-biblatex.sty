@@ -18,13 +18,25 @@
 \DeclareBoolOption[true]{usedefaults}
 \ProcessKeyvalOptions*
 
-\ProvidesPackage{\dancebooks@root/sty/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
+\ProvidesPackage{\dancebooks@root/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
 
 \renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
 
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-\DeclareDatamodelConstraints[article,book,journal,inproceedings,proceedings,unpublished]{\constraint[type=mandatory]{\constraintfield{hyphenation}}}
+%list matches the biblatex.pdf
+\DeclareDatamodelConstraints[%
+  article,%
+  book,mvbook,inbook,bookinbook,suppbook,booklet,%
+  collection,mvcollection,incollection,%
+  manual,misc,online,patent,periodical,suppperiodical,%
+  proceedings,mvproceedings,inproceedings,%
+  reference,mvreference,inreference,
+  report,set,thesis,
+  unpublished,xdata]{\constraint[type=mandatory]{\constraintfield{hyphenation}}
+}
+  
+%сообщаем, что поле language нужно копировать из поля hyphenation (если, оно, конечно, не указано явно)
 \end{filecontents}
 
 % переопределяем макрос cite

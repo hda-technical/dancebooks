@@ -21,7 +21,7 @@ BIB_FILES=\
 	bib/spanish.bib \
 
 ANC_FILES_BIBLATEX=\
-	sty/dancebooks-biblatex.sty \
+	dancebooks-biblatex.sty \
 
 MARKDOWN_FILES=\
 	transcriptions/[1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ The\ Art\ of\ Dancing.md \
@@ -37,15 +37,15 @@ HTML_FILES=$(MARKDOWN_FILES:.md=.html)
 
 test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 #double pdflatex run is required
-	@rm -f test-biblatex.bbl
+	@rm -f test-biblatex.bbl biblatex-dm.cfg
 	@pdflatex test-biblatex.tex
-	@biber --validate_datamodel --quiet test-biblatex
+	@biber-1.6 --validate_datamodel --quiet test-biblatex
 	@pdflatex test-biblatex.tex
 	@echo "Build completed"
 
 test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 #double pdflatex run is required
-	@rm -f test-biblatex-detailed.bbl
+	@rm -f test-biblatex-detailed.bbl biblatex-dm.cfg
 	@pdflatex test-biblatex-detailed.tex
 	@biber --validate_datamodel --quiet test-biblatex-detailed
 	@pdflatex test-biblatex-detailed.tex
