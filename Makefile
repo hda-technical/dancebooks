@@ -39,7 +39,7 @@ test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 #double pdflatex run is required
 	@rm -f test-biblatex.bbl biblatex-dm.cfg
 	@pdflatex test-biblatex.tex
-	@biber-1.6 --validate_datamodel --quiet test-biblatex
+	@biber --validate_datamodel --quiet test-biblatex
 	@pdflatex test-biblatex.tex
 	@echo "Build completed"
 

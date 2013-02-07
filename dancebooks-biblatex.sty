@@ -35,9 +35,17 @@
   report,set,thesis,
   unpublished,xdata]{\constraint[type=mandatory]{\constraintfield{hyphenation}}
 }
-  
-%сообщаем, что поле language нужно копировать из поля hyphenation (если, оно, конечно, не указано явно)
 \end{filecontents}
+  
+%сообщаем, что поле language нужно копировать из поля hyphenation
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+	\map{
+	  \step[fieldsource=language]
+	  \step[fieldset=hyphenation, origfieldval]
+	}
+  }
+}
 
 % переопределяем макрос cite
 % в списке литературы добавляем метку в квадратных скобках
