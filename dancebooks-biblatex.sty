@@ -24,17 +24,7 @@
 
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-%list matches the biblatex.pdf
-\DeclareDatamodelConstraints[%
-  article,%
-  book,mvbook,inbook,bookinbook,suppbook,booklet,%
-  collection,mvcollection,incollection,%
-  manual,misc,online,patent,periodical,suppperiodical,%
-  proceedings,mvproceedings,inproceedings,%
-  reference,mvreference,inreference,
-  report,set,thesis,
-  unpublished,xdata]{\constraint[type=mandatory]{\constraintfield{hyphenation}}
-}
+\DeclareDatamodelConstraints{\constraint[type=mandatory]{\constraintfield{hyphenation}}}
 \end{filecontents}
   
 %сообщаем, что поле language нужно копировать из поля hyphenation
