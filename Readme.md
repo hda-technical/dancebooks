@@ -18,7 +18,7 @@
 	\newcommand{\rootfolder}{%folderpath%}
 	\usepackage[detailed=true,root=\rootfolder]{\rootfolder/dancebooks-biblatex}
 	
-Опционально доступен параметр `usedefaults`, принимающий значения `true` и `false. При указании значения `false` источники танцевальной библиографии (`.bib`-файлы из состава проекта) не подключаются. Позволяет использовать стилевой файл из дистрибутива в других проектах. Пример использования опции:
+Опционально доступен параметр `usedefaults`, принимающий значения `true` и `false`. При указании значения `false` источники танцевальной библиографии (`.bib`-файлы из состава проекта) не подключаются. Позволяет использовать стилевой файл из дистрибутива в других проектах. Пример использования опции:
 
 	\newcommand{\rootfolder}{%folderpath%}
 	\usepackage[usedefaults=false,root=\rootfolder]{\rootfolder/dancebooks-biblatex}
