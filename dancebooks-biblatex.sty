@@ -7,6 +7,8 @@
 \DeclareDatamodelConstraints{
 	\constraint[type=mandatory]{
 		\constraintfield{hyphenation}
+	}
+	\constraint[type=mandatory]{
 		\constraintfieldsor{
 			\constraintfield{author}
 			\constraintfield{shorthand}
@@ -42,6 +44,7 @@
 
 \ProvidesPackage{\dancebooks@root/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
 
+% пишем слова URL и ISBN капителью
 \renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
   
 %сообщаем, что поле language нужно копировать из поля hyphenation
@@ -113,25 +116,25 @@
 
 % добавляем возможность исключить источники библиографии по умолчанию
 \ifdancebooks@usedefaults
-\addbibresource{\dancebooks@root/bib/american.bib}
-\addbibresource{\dancebooks@root/bib/anuario-musical.bib}
-\addbibresource{\dancebooks@root/bib/australian.bib}
-\addbibresource{\dancebooks@root/bib/canadian.bib}
-\addbibresource{\dancebooks@root/bib/czech.bib}
-\addbibresource{\dancebooks@root/bib/danish.bib}
-\addbibresource{\dancebooks@root/bib/dutch.bib}
-\addbibresource{\dancebooks@root/bib/english.bib}
-\addbibresource{\dancebooks@root/bib/french.bib}
-\addbibresource{\dancebooks@root/bib/german.bib}
-\addbibresource{\dancebooks@root/bib/hda.bib}
-\addbibresource{\dancebooks@root/bib/italian.bib}
-%\addbibresource{\dancebooks@root/bib/journal-of-musicology.bib}
-\addbibresource{\dancebooks@root/bib/polish.bib}
-\addbibresource{\dancebooks@root/bib/portuguese.bib}
-\addbibresource{\dancebooks@root/bib/problems.bib}
-\addbibresource{\dancebooks@root/bib/proceedings-rothenfelser.bib}
-\addbibresource{\dancebooks@root/bib/proceedings-spb.bib}
-\addbibresource{\dancebooks@root/bib/russian.bib}
-\addbibresource{\dancebooks@root/bib/spanish.bib}
+	\addbibresource{\dancebooks@root/bib/american.bib}
+	\addbibresource{\dancebooks@root/bib/anuario-musical.bib}
+	\addbibresource{\dancebooks@root/bib/australian.bib}
+	\addbibresource{\dancebooks@root/bib/canadian.bib}
+	\addbibresource{\dancebooks@root/bib/czech.bib}
+	\addbibresource{\dancebooks@root/bib/danish.bib}
+	\addbibresource{\dancebooks@root/bib/dutch.bib}
+	\addbibresource{\dancebooks@root/bib/english.bib}
+	\addbibresource{\dancebooks@root/bib/french.bib}
+	\addbibresource{\dancebooks@root/bib/german.bib}
+	\addbibresource{\dancebooks@root/bib/hda.bib}
+	\addbibresource{\dancebooks@root/bib/italian.bib}
+	%\addbibresource{\dancebooks@root/bib/journal-of-musicology.bib}
+	\addbibresource{\dancebooks@root/bib/polish.bib}
+	\addbibresource{\dancebooks@root/bib/portuguese.bib}
+	\addbibresource{\dancebooks@root/bib/problems.bib}
+	\addbibresource{\dancebooks@root/bib/proceedings-rothenfelser.bib}
+	\addbibresource{\dancebooks@root/bib/proceedings-spb.bib}
+	\addbibresource{\dancebooks@root/bib/russian.bib}
+	\addbibresource{\dancebooks@root/bib/spanish.bib}
 \else
 \fi
