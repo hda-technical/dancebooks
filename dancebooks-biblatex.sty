@@ -1,5 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 
+% файл biblatex-dm.cfg необходимо писать в самом начале
+\RequirePackage{filecontents}
+\begin{filecontents}{biblatex-dm.cfg}
+\DeclareDatamodelFields[type=list,datatype=literal]{isbn}
+\DeclareDatamodelConstraints{\constraint[type=mandatory]{\constraintfield{hyphenation}}}
+\end{filecontents}
+
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{csquotes}
 \RequirePackage[hyphens]{url}
@@ -9,7 +16,6 @@
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
 \RequirePackage[bibencoding=cp1251,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false,maxitems=5]{biblatex}
 \RequirePackage{xpatch}
-\RequirePackage{filecontents}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
@@ -21,11 +27,6 @@
 \ProvidesPackage{\dancebooks@root/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
 
 \renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
-
-\begin{filecontents}{biblatex-dm.cfg}
-\DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-\DeclareDatamodelConstraints{\constraint[type=mandatory]{\constraintfield{hyphenation}}}
-\end{filecontents}
   
 %сообщаем, что поле language нужно копировать из поля hyphenation
 \DeclareSourcemap{
