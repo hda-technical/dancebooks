@@ -4,7 +4,11 @@
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-\DeclareDatamodelConstraints{\constraint[type=mandatory]{\constraintfield{hyphenation}}}
+\DeclareDatamodelConstraints{
+	\constraint[type=mandatory]{
+		\constraintfield{hyphenation}
+	}
+}
 \end{filecontents}
 
 \RequirePackage[utf8]{inputenc}
