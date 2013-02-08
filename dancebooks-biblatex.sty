@@ -11,12 +11,12 @@
 			\constraintfield{author}
 			\constraintfield{shorthand}
 		}
-	}	
+	}
 	\constraint[type=conditional]{
-		\antecedent{
+		\consequent[quantifier=all]{
 			\constraintfield{location}
 		}
-		\consequent{
+		\antecedent[quantifier=all]{
 			\constraintfield{publisher}
 		}
 	}
