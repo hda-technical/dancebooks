@@ -7,6 +7,18 @@
 \DeclareDatamodelConstraints{
 	\constraint[type=mandatory]{
 		\constraintfield{hyphenation}
+		\constraintfieldsor{
+			\constraintfield{author}
+			\constraintfield{shorthand}
+		}
+	}	
+	\constraint[type=conditional]{
+		\antecedent{
+			\constraintfield{location}
+		}
+		\consequent{
+			\constraintfield{publisher}
+		}
 	}
 }
 \end{filecontents}
