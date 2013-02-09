@@ -22,6 +22,14 @@
 			\constraintfield{publisher}
 		}
 	}
+	\constraint[type=conditional]{
+		\consequent[quantifier=all]{
+			\constraintfield{origlanguage}
+		}
+		\antecedent[quantifier=all]{
+			\constraintfield{translator}
+		}
+	}
 }
 \end{filecontents}
 
@@ -117,7 +125,7 @@
 % добавляем возможность исключить источники библиографии по умолчанию
 \ifdancebooks@usedefaults
 	\addbibresource{\dancebooks@root/bib/american.bib}
-	\addbibresource{\dancebooks@root/bib/anuario-musical.bib}
+	%\addbibresource{\dancebooks@root/bib/anuario-musical.bib}
 	\addbibresource{\dancebooks@root/bib/australian.bib}
 	\addbibresource{\dancebooks@root/bib/canadian.bib}
 	\addbibresource{\dancebooks@root/bib/czech.bib}
