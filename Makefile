@@ -26,6 +26,7 @@ ANC_FILES_BIBLATEX=\
 MARKDOWN_FILES=\
 	transcriptions/[1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ The\ Art\ of\ Dancing.md \
 	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md \
+	transcriptions/[2007,\ ru]\ Жан\ Жорж\ Новерр\ -\ Письма\ о\ танце.md \
 	transcriptions/[2011,\ ru]\ Оксана\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
 
 ANC_MARKDOWN_FILES=\
@@ -35,18 +36,13 @@ ANC_MARKDOWN_FILES=\
 	
 HTML_FILES=$(MARKDOWN_FILES:.md=.html)
 
-test-biblatex.pdf: test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
-	@rm -f test-biblatex.bbl biblatex-dm.cfg
-	@pdflatex test-biblatex.tex
-	@biber --validate_datamodel --quiet test-biblatex
-	@pdflatex test-biblatex.tex
-	@echo "Build completed"
+default: test-biblatex.pdf
 
-test-biblatex-detailed.pdf: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
-	@rm -f test-biblatex-detailed.bbl biblatex-dm.cfg
-	@pdflatex test-biblatex-detailed.tex
-	@biber --validate_datamodel --quiet test-biblatex-detailed
-	@pdflatex test-biblatex-detailed.tex
+%.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
+	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
+	@pdflatex $<
+	@biber --validate_datamodel --quiet ${@:.pdf=}
+	@pdflatex $<
 	@echo "Build completed"
 
 all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
@@ -54,12 +50,8 @@ all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
 	@touch all.dependency
 
 upload.dependency: test-biblatex.pdf test-biblatex-detailed.pdf
-	chmod 644 test-biblatex.pdf
-	chmod 644 test-biblatex-detailed.pdf
-	scp -p \
-		test-biblatex.pdf \
-		test-biblatex-detailed.pdf \
-		georg@iley.ru:/home/georg/leftparagraphs/static/files/
+	chmod 644 $^
+		scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
 	@touch upload.dependency
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
