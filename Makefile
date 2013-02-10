@@ -47,9 +47,9 @@ default: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@pdflatex $<
+	@pdflatex --max-print-line=150 $<
 	@biber --validate_datamodel --quiet ${@:.pdf=}
-	@pdflatex $<
+	@pdflatex --max-print-line=150 $<
 	@echo "Build completed"
 
 all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
