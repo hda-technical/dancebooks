@@ -19,6 +19,7 @@ BIB_FILES=\
 	bib/proceedings-spb.bib \
 	bib/russian.bib \
 	bib/spanish.bib \
+	bib/swiss.bib \
 
 ANC_FILES_BIBLATEX=\
 	dancebooks-biblatex.sty \
