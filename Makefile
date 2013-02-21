@@ -50,7 +50,9 @@ default: test-biblatex.pdf
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@pdflatex --max-print-line=150 $<
 	@biber --validate_datamodel --quiet ${@:.pdf=}
-	@pdflatex --max-print-line=150 $<
+	@pdflatex --max-print-line=150 $< 2>/dev/null 1>/dev/null
+	@echo "Build log contains:"
+	@grep -iE "\(biblatex\)" ${@:.pdf=.log} | grep -viE "with" 
 	@echo "Build completed"
 
 all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
