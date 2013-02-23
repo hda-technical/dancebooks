@@ -30,6 +30,14 @@
 			\constraintfield{translator}
 		}
 	}
+	\constraint[type=conditional]{
+		\consequent[quantifier=all]{
+			\constraintfield{translator}
+		}
+		\antecedent[quantifier=all]{
+			\constraintfield{origlanguage}
+		}
+	}
 }
 \end{filecontents}
 
