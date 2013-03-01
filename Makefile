@@ -9,7 +9,6 @@ BIB_FILES=\
 	bib/english.bib \
 	bib/french.bib \
 	bib/german.bib \
-	bib/hda.bib \
 	bib/italian.bib \
 	bib/journal-of-musicology.bib \
 	bib/polish.bib \
