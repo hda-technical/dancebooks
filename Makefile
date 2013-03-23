@@ -1,4 +1,6 @@
 BIB_FILES=\
+	bib/!missing.bib \
+	bib/!problems.bib \
 	bib/american.bib \
 	bib/anuario-musical.bib \
 	bib/australian.bib \
@@ -13,7 +15,6 @@ BIB_FILES=\
 	bib/journal-of-musicology.bib \
 	bib/polish.bib \
 	bib/portuguese.bib \
-	bib/problems.bib \
 	bib/proceedings-rothenfelser.bib \
 	bib/proceedings-spb.bib \
 	bib/russian.bib \
