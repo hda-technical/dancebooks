@@ -5,15 +5,18 @@
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
 \DeclareDatamodelConstraints{
+	% обязательно должно присутствовать полу hyphenation
 	\constraint[type=mandatory]{
 		\constraintfield{hyphenation}
 	}
+	% обязательно должен присутствовать author или shorthand
 	\constraint[type=mandatory]{
 		\constraintfieldsor{
 			\constraintfield{author}
 			\constraintfield{shorthand}
 		}
 	}
+	% если есть publisher, должен быть задан location
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
 			\constraintfield{location}
@@ -22,20 +25,24 @@
 			\constraintfield{publisher}
 		}
 	}
+	% если есть хотя бы одно из полей {origlanguage, translator}, то должны присутствовать обы
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
+			\constraintfield{translator}
 			\constraintfield{origlanguage}
 		}
-		\antecedent[quantifier=all]{
+		\antecedent[quantifier=one]{
 			\constraintfield{translator}
+			\constraintfield{origlanguage}
 		}
 	}
+	% если задан volume, должно быть известно общее число томов volumes
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
-			\constraintfield{translator}
+			\constraintfield{volumes}
 		}
 		\antecedent[quantifier=all]{
-			\constraintfield{origlanguage}
+			\constraintfield{volume}
 		}
 	}
 }
@@ -62,16 +69,6 @@
 
 % пишем слова URL и ISBN капителью
 \renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
-  
-%сообщаем, что поле language нужно копировать из поля hyphenation
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{
-	\map{
-	  \step[fieldsource=hyphenation]
-	  \step[fieldset=language]
-	}
-  }
-}
 
 % переопределяем макрос cite
 % в списке литературы добавляем метку в квадратных скобках
