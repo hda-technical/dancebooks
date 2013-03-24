@@ -4,7 +4,8 @@
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-\DeclareDatamodelEntryfields[MVBOOK]{part}
+\DeclareDatamodelEntryfields[mvbook]{part}
+\DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelConstraints{
 	% обязательно должно присутствовать полу hyphenation
 	\constraint[type=mandatory]{
