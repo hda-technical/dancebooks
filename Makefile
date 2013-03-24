@@ -48,18 +48,18 @@ default: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@pdflatex --max-print-line=150 $<
+	@pdflatex --max-print-line=200 $<
 	@biber --validate_datamodel --quiet ${@:.pdf=}
-	@pdflatex --max-print-line=150 $< 2>/dev/null 1>/dev/null
+	@pdflatex --max-print-line=200 $< 2>/dev/null 1>/dev/null
 	@echo "Build log contains:"
 	@grep -iE "\(biblatex\)" ${@:.pdf=.log}
 	@echo "Build completed"
 	
 debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@pdflatex --max-print-line=150 test-biblatex.tex
+	@pdflatex --max-print-line=200 test-biblatex.tex
 	@biber --validate_datamodel test-biblatex
-	@pdflatex --max-print-line=150 test-biblatex.tex
+	@pdflatex --max-print-line=200 test-biblatex.tex
 	@echo "Build completed"
 
 all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
