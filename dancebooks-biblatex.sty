@@ -4,6 +4,7 @@
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
+\DeclareDatamodelEntryfields[MVBOOK]{part}
 \DeclareDatamodelConstraints{
 	% обязательно должно присутствовать полу hyphenation
 	\constraint[type=mandatory]{
@@ -36,7 +37,9 @@
 			\constraintfield{origlanguage}
 		}
 	}
-	% если задан volume, должно быть известно общее число томов volumes
+}
+\DeclareDatamodelConstraints[book,mvbook]{
+	% только для книг и многотомных изданий: если задан volume, должно быть известно общее число томов volumes
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
 			\constraintfield{volumes}
