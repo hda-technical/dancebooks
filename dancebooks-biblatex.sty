@@ -4,6 +4,7 @@
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
+\DeclareDatamodelFields[type=list,datatype=literal]{keywords}
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelConstraints{
@@ -83,7 +84,6 @@
 }
 
 % добавляем поддержку поля shorthand
-% аналог key в bibtex
 % форсируем его использование вместо автосгенерённого значения
 \renewbibmacro*{begentry}{\brackettext{%
 \iffieldundef{shorthand}%
@@ -91,14 +91,28 @@
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
 
-% добавляем поддержку поля annotation
+% макрос для печати поля keywords
+\renewbibmacro*{keywords}{%
+\ifcitation%
+{\iftoggle{cbx:isbn}%
+{\printlist{keywords}}%
+{}}%
+{\iftoggle{bbx:isbn}%
+{\printlist{keywords}}%
+{}}}
+
+% добавляем поля annotation и keywords
 % только если указан флаг в параметрах
 \ifdancebooks@detailed%
 \xapptobibmacro{url+urldate+note}{%
 \iffieldundef{annotation}%
 {}%
-{\usebibmacro{annotation}}%
-}{}{}%
+{\newline\mkbibacro{NOTE:}\addspace\usebibmacro{annotation}}%
+\iffieldundef{keywords}%
+{}%
+{\newline\mkbibacro{KEYWORDS}:\addspace\usebibmacro{keywords}}%
+}
+{}{}%
 \else
 \fi
 
