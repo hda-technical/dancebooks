@@ -1,5 +1,5 @@
 # The Fashionable Quadrille Preceptor containing Paine’s Sets, Lancers, Caledonians, Waltz Cotillon, Gallopades, Mazurkas, &c
-## Professor of Dancing From the King’s Theatre
+## Thomas Wilson
 
 ### Preliminary Directions
 
