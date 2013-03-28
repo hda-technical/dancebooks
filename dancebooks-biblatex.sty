@@ -4,7 +4,6 @@
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-\DeclareDatamodelFields[type=list,datatype=literal]{keywords}
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelConstraints{
@@ -75,6 +74,18 @@
 % пишем слова URL и ISBN капителью
 \renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
 
+\DeclareSourcemap{
+	\maps[datatype=bibtex]{
+		\map{
+			\step[fieldsource=keywords]
+			\step[fieldset=lista, origfieldval]
+			\step[fieldsource=lista,
+				match=\regexp{\s*,\s*},
+				replace=\regexp{\x20and\x20}]
+		}
+	}
+}
+
 % переопределяем макрос cite
 % в списке литературы добавляем метку в квадратных скобках
 \renewbibmacro*{cite}{%
@@ -91,16 +102,6 @@
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
 
-% макрос для печати поля keywords
-\renewbibmacro*{keywords}{%
-\ifcitation%
-{\iftoggle{cbx:isbn}%
-{\printlist{keywords}}%
-{}}%
-{\iftoggle{bbx:isbn}%
-{\printlist{keywords}}%
-{}}}
-
 % добавляем поля annotation и keywords
 % только если указан флаг в параметрах
 \ifdancebooks@detailed%
@@ -110,7 +111,7 @@
 {\newline\mkbibacro{NOTE:}\addspace\usebibmacro{annotation}}%
 \iffieldundef{keywords}%
 {}%
-{\newline\mkbibacro{KEYWORDS}:\addspace\usebibmacro{keywords}}%
+{\newline\mkbibacro{KEYWORDS}:\addspace\usebibmacro{lista}}%
 }
 {}{}%
 \else
@@ -133,14 +134,13 @@
 {\addcomma\addspace}%
 #1}
 
-\renewbibmacro*{isbn}{%
-\ifcitation%
-{\iftoggle{cbx:isbn}%
-{\printlist{isbn}}%
-{}}%
-{\iftoggle{bbx:isbn}%
-{\printlist{isbn}}%
-{}}}
+%определяем формат для печати списка ISBN
+\renewbibmacro*{isbn}{\printlist{isbn}}
+
+%определяем формат для печати списка lista
+%выше мы сказали, что будем использовать это поле для хранения keywords
+%используем \newbibmacro* вместо \renewbibmacro*, чтобы избавиться от warning'а
+\newbibmacro*{lista}{\printlist{lista}}
 
 % добавляем пустую строчку после каждой книги
 \renewbibmacro*{finentry}{\finentry\newline}
