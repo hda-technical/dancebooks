@@ -13,6 +13,7 @@ BIB_FILES=\
 	bib/german.bib \
 	bib/italian.bib \
 	bib/journal-of-musicology.bib \
+	bib/mexican.bib \
 	bib/polish.bib \
 	bib/portuguese.bib \
 	bib/proceedings-rothenfelser.bib \
