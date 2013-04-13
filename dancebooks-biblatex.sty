@@ -50,6 +50,12 @@
 		}
 	}
 }
+\DeclareDatamodelConstraints[thesis,phdthesis,masterthesis]{
+	% для разного рода диссертаций: обязательно присутствие ссылки (все диссертации, кажется, выкладываются в интернет)
+	\constraint[type=mandatory]{
+		\constraintfield{url}
+	}
+}
 \end{filecontents}
 
 \RequirePackage[utf8]{inputenc}
