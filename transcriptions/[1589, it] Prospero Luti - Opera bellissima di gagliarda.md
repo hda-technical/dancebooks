@@ -41,7 +41,7 @@ Il passeggio è mutanza di un fioretto da un piede con un tracacciar di piedi co
 
 ### Partita 2
 
-Doi zoppetti col piede in terra per fianco, il groppetto di tre botte, girando la vita, la cadenza; due passi, cioe uno per fianco & l'altro, che dà la volta sopra il piede;&fà un passo à dietro con l'altro piede, che fà tempo due passi, cioe uno inanti & altro à dietro che fá tempo, gira la gamba, che resta a dietro sopra l'altra gamba con due fioretti girando la vita, giostra, e ritirata diritta, & cadenza.
+Doi zoppetti col piede in terra per fianco, il groppetto di tre botte, girando la vita, la cadenza; due passi, cioe uno per fianco & l'altro, che dà la volta sopra il piede; & fà un passo à dietro con l'altro piede, che fà tempo due passi, cioe uno inanti & altro à dietro che fá tempo, gira la gamba, che resta a dietro sopra l'altra gamba con due fioretti girando la vita, giostra, e ritirata diritta, & cadenza.
 
 ### Passegio 3
 
@@ -49,11 +49,11 @@ Il passeggio è mutanza di due balzetti à pie pari col groppetto di tre botte, 
 
 ### Partita 3
 
-Doi fioretti finti con doi finte adagio, & congratia, tutte ferme, la prima finta fà tempo, & un sotto piede con un salto riverscio à pie pari in terra tutto adagio&con gratia, che fà tempo presto una capriola levata in aria con tutti doi li piedi; un passo per lo inanti, & metti li piedi in terra in disparte,&una capriola in crociata, che fà tempo.
+Doi fioretti finti con doi finte adagio, & congratia, tutte ferme, la prima finta fà tempo, & un sotto piede con un salto riverscio à pie pari in terra tutto adagio & con gratia, che fà tempo presto una capriola levata in aria con tutti doi li piedi; un passo per lo inanti, & metti li piedi in terra in disparte, & una capriola in crociata, che fà tempo.
 
 ### Passegio 4
 
-Il passeggio è mutanza di un fioretto girando la vita,&serpeggiando la sala.
+Il passeggio è mutanza di un fioretto girando la vita, & serpeggiando la sala.
 
 ### Partita 4
 
@@ -73,11 +73,11 @@ Il passeggio è mutanza di due cadenze fatto intorno la sala, adagio & con grati
 
 ### Partita 6
 
-Due passatine per fianco con un passo dentro & adretto, che fà tempo; un zoppetto col pie, che è inanti, & caccisi inanti il pie che è à dietro in aria, volta la gamba che è alta di riverscio,&metti il piede in terra; un passo à dietro con l'altro piede, che fà tempo, tre zoppetti à dietro, cioe un per piede, un sotto piede fermo; due passi à dietro balzando il piede, che è in terra, il primo passo fà tempo; un zoppetto col piede, che è inanti, un sotto piede fermo, & cadenza.
+Due passatine per fianco con un passo dentro & adretto, che fà tempo; un zoppetto col pie, che è inanti, & caccisi inanti il pie che è à dietro in aria, volta la gamba che è alta di riverscio, & metti il piede in terra; un passo à dietro con l'altro piede, che fà tempo, tre zoppetti à dietro, cioe un per piede, un sotto piede fermo; due passi à dietro balzando il piede, che è in terra, il primo passo fà tempo; un zoppetto col piede, che è inanti, un sotto piede fermo, & cadenza.
 
 ### Passegio 7
 
-Il passeggio è mutanza di tre botte con un pie solo, cioè una dietro la gambam l'altrp fuora di riverscio,&l'altro per diritto dinanti la gamba, tutte in contra tempo, & metti quel piede in terra dinanti la gamba, finisce con li cinque passi.
+Il passeggio è mutanza di tre botte con un pie solo, cioè una dietro la gambam l'altrp fuora di riverscio, & l'altro per diritto dinanti la gamba, tutte in contra tempo, & metti quel piede in terra dinanti la gamba, finisce con li cinque passi.
 
 ### Partita 7
 
@@ -85,7 +85,7 @@ Due ripresette in sotto piede per fianco battendo li piedi disuguali; un balzett
 
 ### Passegio 8
 
-Il passeggio è mutanza di una passatina in contra tempo,&passare inanti il pie, che è adietro, un sotto piede fermo: finisce coi cinque passi.
+Il passeggio è mutanza di una passatina in contra tempo, & passare inanti il pie, che è adietro, un sotto piede fermo: finisce coi cinque passi.
 
 ### Partita 8
 
@@ -101,11 +101,11 @@ Tre balzetti à pie pari per fianco il gruppo di tre botte girando la vita; rest
 
 ### Passegio 10
 
-Il passeggio è mutanza di una botta di piedi inanti in aria,&una sopra la gamba, un sotto piede ricacciato col medesimo piede una cadenza.
+Il passeggio è mutanza di una botta di piedi inanti in aria, & una sopra la gamba, un sotto piede ricacciato col medesimo piede una cadenza.
 
 ### Partita 10
 
-Una passata per lo inanti&presto. Due pessetti sdrucciolati, con un sotto piede fermo; con un salto di riverscio à pie pari in terra, che fátempo. Tre zoppetti da ogni piede, e fermi. Un passo inanti col piede, che è alto, che fà tempo et alzare il piè, che e à dietro, inanti; un passo a dietro con quel piede, presto due passetti fenti per lo inanti, un sotto piede fermo, con un salto di riverscio à pie pari in terra, che fa tempo.
+Una passata per lo inanti & presto. Due pessetti sdrucciolati, con un sotto piede fermo; con un salto di riverscio à pie pari in terra, che fátempo. Tre zoppetti da ogni piede, e fermi. Un passo inanti col piede, che è alto, che fà tempo et alzare il piè, che e à dietro, inanti; un passo a dietro con quel piede, presto due passetti fenti per lo inanti, un sotto piede fermo, con un salto di riverscio à pie pari in terra, che fa tempo.
 
 ### Passegio 11
 
@@ -141,7 +141,7 @@ Le riprese in sotto piede per fianco. Due passetti fermi, e presto, che fà temp
 
 ### Passegio 15
 
-Il passeggio è mutanza di una botta di piedi sopra la gamba,&col medesimo piede un sotto piede ricacciato, un passo in aria con l'altro piede, un fioretto con l'altro piede, che resta in aria fatto serpeggiando la sala.
+Il passeggio è mutanza di una botta di piedi sopra la gamba, & col medesimo piede un sotto piede ricacciato, un passo in aria con l'altro piede, un fioretto con l'altro piede, che resta in aria fatto serpeggiando la sala.
 
 ### Partita 15
 
@@ -154,14 +154,14 @@ Il passeggio è; mutanza di un balzetto à pie pari, il groppetto di tre botte g
 ### Queste quatro partite, che seguitano sono ritratte di capriole.
 ### Partita 17
 
-Doi zoppetti col piede alto per lo inanti con un tracacciar di piedi, due passi per lo inanti, adagio,&con gratia, il primo passo fà tempo, un saltino à pie pari in terra, una capriola diritta, che fà tempo; un balzetto à pie pari à dietro&una cavalcata girando la vita, due capriole diritte la prima fà tempo un zoppetto da un piede, con un saltino à pie pari in terra girando la vita, due capriole diritte la prima fà tempo, un zoppetto da un piede con un saltino à pie pari in terra, girando la vita; una capriola diritta, che fà tempo.
+Doi zoppetti col piede alto per lo inanti con un tracacciar di piedi, due passi per lo inanti, adagio, & con gratia, il primo passo fà tempo, un saltino à pie pari in terra, una capriola diritta, che fà tempo; un balzetto à pie pari à dietro & una cavalcata girando la vita, due capriole diritte la prima fà tempo un zoppetto da un piede, con un saltino à pie pari in terra girando la vita, due capriole diritte la prima fà tempo, un zoppetto da un piede con un saltino à pie pari in terra, girando la vita; una capriola diritta, che fà tempo.
 
 ### Partita 18
 
-Una ripresetta in sotto piede battendo, i, piedi disuguali; un sotto piede ricacciato, tutte ferme, doi passi per lo inanti, adagio&con gratia il primo passo fà tempo metti li piedi in terra in disparte, una capriola incruciata, che fà tempo, un balzetto à pie pari a dietro con un saltino, girando la vita, una capriola che fà tempo, due zoppetti per lo inanti cioè uno per piede, metti li piedi in disparte, una capriola in cruciata che fà tempo.
+Una ripresetta in sotto piede battendo, i, piedi disuguali; un sotto piede ricacciato, tutte ferme, doi passi per lo inanti, adagio & con gratia il primo passo fà tempo metti li piedi in terra in disparte, una capriola incruciata, che fà tempo, un balzetto à pie pari a dietro con un saltino, girando la vita, una capriola che fà tempo, due zoppetti per lo inanti cioè uno per piede, metti li piedi in disparte, una capriola in cruciata che fà tempo.
 
 ### Partita 19
-Una passatina per lo inanti, un sotto piede fermo, un saltino à pie pari in terra, una capriola diritta che fà tempo, un balzetto à pie pari a dietro girando la gamba che resta á dietro sopra quella che e inanti, una capriola incruciata che fà tempo; un balzetto à pie pari à dietro con un passo girando la vita, e la gamba adagio,&con gratia, che fà tempo, due passi per lo inanti adagio,&con gratia, metti li piedi in disparte una capriola incrociata che fà tempo.
+Una passatina per lo inanti, un sotto piede fermo, un saltino à pie pari in terra, una capriola diritta che fà tempo, un balzetto à pie pari a dietro girando la gamba che resta á dietro sopra quella che e inanti, una capriola incruciata che fà tempo; un balzetto à pie pari à dietro con un passo girando la vita, e la gamba adagio, & con gratia, che fà tempo, due passi per lo inanti adagio, & con gratia, metti li piedi in disparte una capriola incrociata che fà tempo.
 
 ### Partita 20
 Tre mezze capriole cioè una per piede, girando la vita, un saltino coi piedi in disparte due capriole incruciate, che fan tempo.
@@ -172,7 +172,7 @@ Il passeggio è mutanza di una ripresetta in sotto piede battendo in terra, i, p
 
 ### Partita 21
 
-Due zoppetti col piede alto, e fermo, volta la gamba di riverscio,&con essa fà un passo à dietro adagio, che fà tempo, un altro passo a dietro, quattro passetti presto girando la vita, che fà tempo, il pirolotto, il groppetto di quattro botte, resta col piede alto, che fà tempo, due passatine per lo inanti un sotto piede fermo; un zoppetto col piede ch'è in terra volteggiando la gamba, ch'è alta, che fà tempo, una ripresetta in sotto piede, battendo li piedi, disuguali, il groppeto di quattro botte, che resta col piede alto.
+Due zoppetti col piede alto, e fermo, volta la gamba di riverscio, & con essa fà un passo à dietro adagio, che fà tempo, un altro passo a dietro, quattro passetti presto girando la vita, che fà tempo, il pirolotto, il groppetto di quattro botte, resta col piede alto, che fà tempo, due passatine per lo inanti un sotto piede fermo; un zoppetto col piede ch'è in terra volteggiando la gamba, ch'è alta, che fà tempo, una ripresetta in sotto piede, battendo li piedi, disuguali, il groppeto di quattro botte, che resta col piede alto.
 
 ### Passegio 18
 
@@ -184,14 +184,14 @@ Trito minuto per fianco, che fà tempo; un passo balzato a dietro, un sotto pied
 
 ### Passegio 19
 
-Il passeggio è mutanza di due fioretti presto per lo inanti, tre passi adagio,&con gratia girando la vita in contra tempo.
+Il passeggio è mutanza di due fioretti presto per lo inanti, tre passi adagio, & con gratia girando la vita in contra tempo.
 
 ### Partita 23
-Un fioretto per fianco; due riprese in sotto piede, che fà tempo; due passi per lo inanti adagio & con gratia, che fà tempo, quattro botte da un piede solo, cioe una in aria, innanti,&l'altra addietro in terra girando la vita,&la gamba; queste quattro botte si fanno col piede, che resta addietro, due passetti fermi, e presti; groppetto di otto botte girando la vita.
+Un fioretto per fianco; due riprese in sotto piede, che fà tempo; due passi per lo inanti adagio & con gratia, che fà tempo, quattro botte da un piede solo, cioe una in aria, innanti, & l'altra addietro in terra girando la vita, & la gamba; queste quattro botte si fanno col piede, che resta addietro, due passetti fermi, e presti; groppetto di otto botte girando la vita.
 
 ### Passegio 20
 
-Il passeggio è mutanza di quattro passi semplici, un balzetto à pie pari,&presto; passa il piede, ch'è addietro, un sotto piede fermo, tutto in contra tempo.
+Il passeggio è mutanza di quattro passi semplici, un balzetto à pie pari, & presto; passa il piede, ch'è addietro, un sotto piede fermo, tutto in contra tempo.
 
 ### Partita 24
 
@@ -199,27 +199,27 @@ Una passata per fianco, il groppetto di tre botte girando la vita, doi passi à 
 
 ### Passegio 21
 
-Il passeggio è mutanza di dare una botta di piede dietro la gamba,&con quel medesimo dare una botta in aria innanti, un'altra botta addietro in terra, un'altra innanti in aria, una botta in aria con l'altro piede, la cadenza.
+Il passeggio è mutanza di dare una botta di piede dietro la gamba, & con quel medesimo dare una botta in aria innanti, un'altra botta addietro in terra, un'altra innanti in aria, una botta in aria con l'altro piede, la cadenza.
 
 ### Partita 25
 
-Doi zoppetti col piede alto di riverscio, girando la vita,&la gamba, ch'è alta; metti quel piede in terra, due passi addietro, il primo passo fà tempo un zoppetto col piede, ch'è innanti, un sotto piede col piede, ch'è addietro, due passi adagio, & con gratia per lo innanti, il groppetto di tre botte girando la vita doi fioretti finti, doi altri fioretti girando la vita resta col piede alto, che fà tempo; due passi balzati addietro cioè uno per piede, & adagio che fà tempo,&balzo col piede, ch'è addietro innanti girando l'altra gamba, un altro balzo col piede, ch'è addietro innanti girando l'altra gamba, doi fioretti finti,&alzare l'altro piede che fà tempo.
+Doi zoppetti col piede alto di riverscio, girando la vita, & la gamba, ch'è alta; metti quel piede in terra, due passi addietro, il primo passo fà tempo un zoppetto col piede, ch'è innanti, un sotto piede col piede, ch'è addietro, due passi adagio, & con gratia per lo innanti, il groppetto di tre botte girando la vita doi fioretti finti, doi altri fioretti girando la vita resta col piede alto, che fà tempo; due passi balzati addietro cioè uno per piede, & adagio che fà tempo, & balzo col piede, ch'è addietro innanti girando l'altra gamba, un altro balzo col piede, ch'è addietro innanti girando l'altra gamba, doi fioretti finti, & alzare l'altro piede che fà tempo.
 
 ### Passegio 22
 
-Il passeggio è mutanza di tre botte con una gamba cioè, una addietro, l'altra per fianco,&l'altra dinanti in terra, un sotto piede fermo il groppetto di tre botte girando la vita di riverso la cadenza.
+Il passeggio è mutanza di tre botte con una gamba cioè, una addietro, l'altra per fianco, & l'altra dinanti in terra, un sotto piede fermo il groppetto di tre botte girando la vita di riverso la cadenza.
 
 ### Partita 26
 
-La volta della gamba alta di riverso, metti il piede in terra, un sotto piede fermo, un zoppetto col piede, ch'è in terra volteggiando la gamba ch'è alta, che fà tempo, doi passi adagio,&con gratia ogni passo per il suo fianco,&alzare innanti il piede ch'è addietro, due fioretti finti,&presto, due passi finti innanti,&uno addietro, che fà tempo; il pirolotto, metti li piedi in terra; una capriola diritta che fà tempo.
+La volta della gamba alta di riverso, metti il piede in terra, un sotto piede fermo, un zoppetto col piede, ch'è in terra volteggiando la gamba ch'è alta, che fà tempo, doi passi adagio, & con gratia ogni passo per il suo fianco, & alzare innanti il piede ch'è addietro, due fioretti finti, & presto, due passi finti innanti, & uno addietro, che fà tempo; il pirolotto, metti li piedi in terra; una capriola diritta che fà tempo.
 
 ### Passegio 23
 
-Il passeggio è mutanza di tre ripresette in sotto piede, battendo li piedi disuguali, due sotto piedi ricacciati, girando la vita di riverso,&cadenza. 
+Il passeggio è mutanza di tre ripresette in sotto piede, battendo li piedi disuguali, due sotto piedi ricacciati, girando la vita di riverso, & cadenza. 
 
 ### Partita 27
 
-Trito minuto per lo innanti,&presto, fà un passo addietro, voltando la vita honestamente, un passo addietro volteggiando la gamba. tre zoppetti, cioè uno per piede, un sotto piede fermo, due passi balzati addietro, il primo passo fà tempo, un zoppetto col piede ch'è innanti, un sotto piede, la cadenza.
+Trito minuto per lo innanti, & presto, fà un passo addietro, voltando la vita honestamente, un passo addietro volteggiando la gamba. tre zoppetti, cioè uno per piede, un sotto piede fermo, due passi balzati addietro, il primo passo fà tempo, un zoppetto col piede ch'è innanti, un sotto piede, la cadenza.
 
 ### Passegio 24
 
@@ -227,7 +227,7 @@ Il passeggio è mutanza di un groppetto di tre botte girando la vita finisce coi
 
 ### Partita 28
 
-Due passi cioè uno per lo innanti,&l'altro per fianco che fà tempo, il pirolotto,&metti in terra il piede, ch'è alto, un passo innanti con l'altro piede, che fà tempo, due passetti presti e fermi, il groppetto di tre botte girando la vita, un passo innanti col piede, che resta addietro, due passi addietro, che fà tempo, che comincia col piede, che resta addietro tutti adagio,&con garbo; presto doi passi finti per lo innanti; il groppetto di tre botte girando la vita, la cadenza.
+Due passi cioè uno per lo innanti, & l'altro per fianco che fà tempo, il pirolotto, & metti in terra il piede, ch'è alto, un passo innanti con l'altro piede, che fà tempo, due passetti presti e fermi, il groppetto di tre botte girando la vita, un passo innanti col piede, che resta addietro, due passi addietro, che fà tempo, che comincia col piede, che resta addietro tutti adagio, & con garbo; presto doi passi finti per lo innanti; il groppetto di tre botte girando la vita, la cadenza.
 
 ### Partita 29
 
@@ -236,11 +236,11 @@ et resta col piede alto.
 
 ### Partita 30
 
-Una ripresetta in sotto piede, battendo i piedi disuguali, un sotto piede ricacci[a]to, un passo avanti, che fa tempo, un altro passo per lo innanti adagio,&con gratia,&alzare l'altro piede un fioretto con l'altro piede,&con quello fà un passo addietro, che fà tempo, un altro passo addietro con un sotto piede ricacciato; la cadenza, un passo addietro col piede, ch'è innanti,&con quello fà un balzetto sopra il piede, che resta innanti, un sotto piede fermo, un fioretto, girando la vita, che fà tempo.
+Una ripresetta in sotto piede, battendo i piedi disuguali, un sotto piede ricacci[a]to, un passo avanti, che fa tempo, un altro passo per lo innanti adagio, & con gratia, & alzare l'altro piede un fioretto con l'altro piede, & con quello fà un passo addietro, che fà tempo, un altro passo addietro con un sotto piede ricacciato; la cadenza, un passo addietro col piede, ch'è innanti, & con quello fà un balzetto sopra il piede, che resta innanti, un sotto piede fermo, un fioretto, girando la vita, che fà tempo.
 
 ### Partita 31 
 
-Doi balzetti à pie pari per fianco, un sotto piede fermo,&alzare avanti l'altro piede,&con quello fà un passo addietro, che fà tempo, un passo avanti per fianco col piede, ch'è addietro; un altro passo con l'altro piede pure per quel fianco, girando la gamba, e non la vita, un passo avanti col piede, ch'è addietro per l'altro fianco, un passo con l'altro piede; pure per quel fianco, girando la gamba, ma non la vita, tutti presto,&con gratia, che fà tempo, il pirolotto, tre passi in aria, che fà tempo, sempre girando la vita, una ripresetta in sotto piede ricacciato; due balzetti à pie pari per lo innanti, un sotto piede fermo, un sotto piede ricacciato, e girando la vita tutto in contra tempo, un passo in aria, &la cadenza.
+Doi balzetti à pie pari per fianco, un sotto piede fermo, & alzare avanti l'altro piede, & con quello fà un passo addietro, che fà tempo, un passo avanti per fianco col piede, ch'è addietro; un altro passo con l'altro piede pure per quel fianco, girando la gamba, e non la vita, un passo avanti col piede, ch'è addietro per l'altro fianco, un passo con l'altro piede; pure per quel fianco, girando la gamba, ma non la vita, tutti presto, & con gratia, che fà tempo, il pirolotto, tre passi in aria, che fà tempo, sempre girando la vita, una ripresetta in sotto piede ricacciato; due balzetti à pie pari per lo innanti, un sotto piede fermo, un sotto piede ricacciato, e girando la vita tutto in contra tempo, un passo in aria, &la cadenza.
 
 ### Partita 32
 
