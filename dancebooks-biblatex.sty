@@ -52,8 +52,10 @@
 }
 \DeclareDatamodelConstraints[thesis,phdthesis,masterthesis]{
 	% для разного рода диссертаций: обязательно присутствие ссылки (все диссертации, кажется, выкладываются в интернет)
+	% кроме этого, обязательно присутствие поля type (степень, для соискания которой подана диссертация)
 	\constraint[type=mandatory]{
 		\constraintfield{url}
+		\constraintfield{type}
 	}
 }
 \end{filecontents}
@@ -114,10 +116,10 @@
 \xapptobibmacro{url+urldate+note}{%
 \iffieldundef{annotation}%
 {}%
-{\newline\mkbibacro{NOTE:}\addspace\usebibmacro{annotation}}%
+{\newline\mkbibacro{note}\addcolon\addspace\usebibmacro{annotation}}%
 \iffieldundef{keywords}%
 {}%
-{\newline\mkbibacro{KEYWORDS}:\addspace\usebibmacro{lista}}%
+{\newline\mkbibacro{keywords}\addcolon\addspace\usebibmacro{lista}}%
 }
 {}{}%
 \else
@@ -140,12 +142,12 @@
 {\addcomma\addspace}%
 #1}
 
-%определяем формат для печати списка ISBN
+% определяем формат для печати списка ISBN
 \renewbibmacro*{isbn}{\printlist{isbn}}
 
-%определяем формат для печати списка lista
-%выше мы сказали, что будем использовать это поле для хранения keywords
-%используем \newbibmacro* вместо \renewbibmacro*, чтобы избавиться от warning'а
+% определяем формат для печати списка lista
+% выше мы сказали, что будем использовать это поле для хранения keywords
+% используем \newbibmacro* вместо \renewbibmacro*, чтобы избавиться от warning'а
 \newbibmacro*{lista}{\printlist{lista}}
 
 % добавляем пустую строчку после каждой книги
