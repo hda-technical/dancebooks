@@ -17,56 +17,23 @@
 
 # microsoft visual studio generated files
 *.aps
+*.idb
+*.ilk
+*.ipch
+*.exp
+*.filters
+*.lastbuildstate
+*.lib
+*.manifest
 *.ncb
 *.opensdf
+*.pdb
 *.sdf
 *.suo
+*.tlog
 *.user
-UpgradeLog.XML
-_UpgradeReport_Files
-
-# archives: should be unpacked
-*.7z
-*.gz
-*.rar
-*.tgz
-*.zip
-
-# log files
-*.log
-
-# debug files
-*.stackdump
-*.core
-
-# temporary editor files
-*.swp
-*~
-
-# latest copy of this very magic .gitignore file can be downloaded from there:
-# https://github.com/georgthegreat/profile
-
-# win32 compiler output files and executables
-*.obj
-*.exe
-*.dll
-
-# unix compiler output files and executables
-*.o
-*.so
-
-# scriptable languages compiler output files and executables
-*.pyc
-*.pyo
-*.pyd
-
-# microsoft visual studio generated files
-*.aps
-*.ncb
-*.opensdf
-*.sdf
-*.suo
-*.user
+Debug
+Release
 UpgradeLog.XML
 _UpgradeReport_Files
 
@@ -89,7 +56,9 @@ _UpgradeReport_Files
 *.core
 
 # temporary editor files
+*.cache
 *.swp
+*.tmp
 *~
 
 # latex specific files
