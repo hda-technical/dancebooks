@@ -24,6 +24,19 @@ BIB_FILES=\
 
 ANC_FILES_BIBLATEX=\
 	dancebooks-biblatex.sty \
+	
+URL_FILES=\
+	urls/[1690,_fr]_Andre_Philidor.txt \
+	urls/[175-,_fr]_Denis_Diderot,_Jean_d_Alembert.txt \
+	urls/[1803,_fr]_Jean-Georges_Noverre.txt \
+	urls/[1823,_uk]_The_Harmonicon.txt \
+	urls/[1824,_uk]_The_Harmonicon.txt \
+	urls/[1884,_uk]_Jane_Austen.txt \
+	urls/[1701,_fr]_S.-I.txt \
+	urls/[1791,_fr]_Nicolas_Etienne_Framery.txt \
+	urls/[1824,_uk]_A_Dictionary_of_Musicians.txt \
+	urls/[1827,_uk]_A_Dictionary_of_Musicians.txt \
+	urls/[1913,_fr]_Rudolf_Apponyi.txt \
 
 MARKDOWN_FILES=\
 	transcriptions/[1589,\ it]\ Prospero\ Luti\ -\ Opera\ bellissima\ di\ gagliarda.md \
@@ -40,7 +53,6 @@ MARKDOWN_FILES=\
 	transcriptions/[2007,\ ru]\ Жан\ Жорж\ Новерр\ -\ Письма\ о\ танце.md \
 	transcriptions/[2011,\ ru]\ Оксана\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
 	
-
 ANC_MARKDOWN_FILES=\
 	transcriptions/_markdown2.py \
 	transcriptions/_reset.css \
@@ -68,18 +80,24 @@ debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 
 all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
 	@echo "Build all completed"
-	@touch all.dependency
+	@touch $@
 
-upload.dependency: test-biblatex.pdf test-biblatex-detailed.pdf
+upload-urls.dependency:	$(URL_FILES)
 	chmod 644 $^
-		scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
-	@touch upload.dependency
+	scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
+	touch $@
+	
+upload-pdfs.dependency: test-biblatex.pdf test-biblatex-detailed.pdf
+	chmod 644 $^
+	scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
+	@touch $@
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
 	./transcriptions/_markdown2.py --input "$<" --output "$@"
 
-transcriptions: $(HTML_FILES)
+transcriptions.dependency: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
+	@touch $@
 
 entrycount: $(BIB_FILES)
 	@cat $(BIB_FILES) | grep -c --color '@'
