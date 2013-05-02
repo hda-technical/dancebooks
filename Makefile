@@ -28,6 +28,7 @@ ANC_FILES_BIBLATEX=\
 URL_FILES=\
 	urls/[1690,_fr]_Andre_Philidor.txt \
 	urls/[175-,_fr]_Denis_Diderot,_Jean_d_Alembert.txt \
+	urls/[1800,_de]_Johann_Heinrich_Kattfuss.txt \
 	urls/[1803,_fr]_Jean-Georges_Noverre.txt \
 	urls/[1823,_uk]_The_Harmonicon.txt \
 	urls/[1824,_uk]_The_Harmonicon.txt \
