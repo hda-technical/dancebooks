@@ -2,8 +2,8 @@ BIB_FILES=\
 	bib/!missing.bib \
 	bib/!problems.bib \
 	bib/american.bib \
-	bib/anuario-musical.bib \
 	bib/australian.bib \
+	bib/austrian.bib \
 	bib/canadian.bib \
 	bib/czech.bib \
 	bib/danish.bib \
@@ -12,7 +12,6 @@ BIB_FILES=\
 	bib/french.bib \
 	bib/german.bib \
 	bib/italian.bib \
-	bib/journal-of-musicology.bib \
 	bib/mexican.bib \
 	bib/polish.bib \
 	bib/portuguese.bib \
