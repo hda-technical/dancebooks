@@ -29,13 +29,14 @@ URL_FILES=\
 	urls/[175-,_fr]_Denis_Diderot,_Jean_d_Alembert.txt \
 	urls/[1800,_de]_Johann_Heinrich_Kattfuss.txt \
 	urls/[1803,_fr]_Jean-Georges_Noverre.txt \
-	urls/[1823,_uk]_The_Harmonicon.txt \
-	urls/[1824,_uk]_The_Harmonicon.txt \
-	urls/[1884,_uk]_Jane_Austen.txt \
+	urls/[1823,_en]_The_Harmonicon.txt \
+	urls/[1824,_en]_The_Harmonicon.txt \
+	urls/[1824,_en]_Skene.txt \
+	urls/[1884,_en]_Jane_Austen.txt \
 	urls/[1701,_fr]_S.-I.txt \
 	urls/[1791,_fr]_Nicolas_Etienne_Framery.txt \
-	urls/[1824,_uk]_A_Dictionary_of_Musicians.txt \
-	urls/[1827,_uk]_A_Dictionary_of_Musicians.txt \
+	urls/[1824,_en]_A_Dictionary_of_Musicians.txt \
+	urls/[1827,_en]_A_Dictionary_of_Musicians.txt \
 	urls/[1913,_fr]_Rudolf_Apponyi.txt \
 
 MARKDOWN_FILES=\
