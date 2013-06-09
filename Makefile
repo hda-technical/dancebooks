@@ -23,7 +23,7 @@ BIB_FILES=\
 
 ANC_FILES_BIBLATEX=\
 	dancebooks-biblatex.sty \
-	
+
 URL_FILES=\
 	urls/[1690,_fr]_Andre_Philidor.txt \
 	urls/[175-,_fr]_Denis_Diderot,_Jean_d_Alembert.txt \
@@ -41,9 +41,10 @@ URL_FILES=\
 
 MARKDOWN_FILES=\
 	transcriptions/[1589,\ it]\ Prospero\ Luti\ -\ Opera\ bellissima\ di\ gagliarda.md \
-	transcriptions/[1620,\ fr]\ François\ de\ Lauze\ -\ Louange\ de\ la\ danse.md \
+	transcriptions/[1620,\ fr]\ Barthélémy\ de\ Montagut\ -\ Louange\ de\ la\ danse.md \
 	transcriptions/[1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ The\ Art\ of\ Dancing.md \
 	transcriptions/[1819,\ fr]\ J.\ H.\ Gourdoux-Daux\ -\ Requeil\ de\ genre\ nouveau\ de\ contredanses\ et\ walses.md \
+	transcriptions/[1824,\ uk]\ Thomas\ Wilson\ -\ Danciad.md \
 	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md \
 	transcriptions/[1828,\ ru]\ Собрание\ фигур\ для\ котильона.md \
 	transcriptions/[183-,\ uk]\ Thomas\ Wilson\ -\ The\ Fashionable\ Quadrille\ Preceptor.md \
@@ -54,12 +55,12 @@ MARKDOWN_FILES=\
 	transcriptions/[2000,\ ru]\ Филипп\ Филиппович\ Вигель\ -\ Записки.md \
 	transcriptions/[2007,\ ru]\ Жан\ Жорж\ Новерр\ -\ Письма\ о\ танце.md \
 	transcriptions/[2011,\ ru]\ Оксана\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
-	
+
 ANC_MARKDOWN_FILES=\
 	transcriptions/_markdown2.py \
 	transcriptions/_reset.css \
 	transcriptions/_style.css \
-	
+
 HTML_FILES=$(MARKDOWN_FILES:.md=.html)
 
 default: test-biblatex.pdf
@@ -72,7 +73,7 @@ default: test-biblatex.pdf
 	@echo "Build log contains:"
 	@grep -iE "Datamodel" ${@:.pdf=.log} > validation.log
 	@echo "Build completed"
-	
+
 debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@pdflatex --max-print-line=200 test-biblatex.tex
@@ -80,35 +81,36 @@ debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@pdflatex --max-print-line=200 test-biblatex.tex
 	@echo "Build completed"
 
-all.dependency: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions
+all.mk: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions.mk
 	@echo "Build all completed"
 	@touch $@
 
-upload-urls.dependency:	$(URL_FILES)
-	chmod 644 $^
-	scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
-	touch $@
-	
-upload-pdfs.dependency: test-biblatex.pdf test-biblatex-detailed.pdf
-	chmod 644 $^
-	scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
+upload-urls.mk:	$(URL_FILES)
+	@chmod 644 $^
+	@scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
+	@touch $@
+
+upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
+	@chmod 644 $^
+	@scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
 	@touch $@
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
-	./transcriptions/_markdown2.py --input "$<" --output "$@"
+	@echo "Compiling \"$<\""
+	@./transcriptions/_markdown2.py --input "$<" --output "$@"
 
-transcriptions.dependency: $(HTML_FILES)
+transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
 	@touch $@
 
 entrycount: $(BIB_FILES)
 	@cat $(BIB_FILES) | grep -c --color '@'
-	
-rebuild: purge all.dependency
+
+rebuild: purge all.mk
 	@echo "Rebuild completed"
 
 purge: clean
-	@rm -f *.pdf *.dependency transcriptions/*.html
+	@rm -f *.pdf *.mk transcriptions/*.html
 	@echo "Purge completed"
 
 clean:

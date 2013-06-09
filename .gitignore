@@ -90,8 +90,6 @@ desktop.ini
 .lib
 # de facto standard extension for deps.mk file
 *.mk
-# myself make extension - this files can be used as a targets/dependencies - this is quite ambiguous line
-*.dependency
 
 # put your own ignores below this line (don't forget about the newline in the end of file)
 *.pdf
