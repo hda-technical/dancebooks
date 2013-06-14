@@ -57,7 +57,7 @@ MARKDOWN_FILES=\
 	transcriptions/[2011,\ ru]\ Оксана\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
 
 ANC_MARKDOWN_FILES=\
-	transcriptions/_markdown2.py \
+	transcriptions/_markdown2.py3k \
 	transcriptions/_reset.css \
 	transcriptions/_style.css \
 
