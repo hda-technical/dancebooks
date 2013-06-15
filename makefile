@@ -72,6 +72,7 @@ default: test-biblatex.pdf
 	@pdflatex --max-print-line=250 $<
 	@echo "Build log contains:"
 	@grep -iE "Datamodel" ${@:.pdf=.log} > validation.log
+	@cat validation.log
 	@echo "Build completed"
 
 debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
