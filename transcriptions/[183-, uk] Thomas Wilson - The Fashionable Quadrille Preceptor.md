@@ -1,4 +1,4 @@
-# The Fashionable Quadrille Preceptor containing Paine’s Sets, Lancers, Caledonians, Waltz Cotillon, Gallopades, Mazurkas, &c
+# The Fashionable Quadrille Preceptor containing Paine’s Sets, Lancers, Caledonians, Waltz cotillon, Gallopades, Mazurkas, &c
 ## Thomas Wilson
 
 ### Preliminary Directions
@@ -7,13 +7,13 @@ It will be necessary to observe the order of Dancing the First Set, as follows:
 
 Le pantalon is performed twice; first, the top and bottom couples perform the figure, and then the side couples do the same.
 
-L'ete is performed four times; first, the leading lady and opposite gentleman perform the figure; second, the first gentleman and opposite lady third, the lady at the right of top and opposite gentleman; and lastly, the gentleman at the right of top and opposite lady.
+L'été is performed four times; first, the leading lady and opposite gentleman perform the figure; second, the first gentleman and opposite lady third, the lady at the right of top and opposite gentleman; and lastly, the gentleman at the right of top and opposite lady.
 
-La poule is performed four times, in the same order as L’Ete’.
+La poule is performed four times, in the same order as L’été.
 
 La trenise is performed four times; first, the top couple perform the figure; second, the bottom couple; third, the couple at right of top; and lastly, the fourth couple.
 
-La pastorale is performed four times, in the same order as La Trenise.
+La pastorale is performed four times, in the same order as La trenise.
 
 La finale is performed four times, in the same order as L’Ete’.
 
@@ -35,7 +35,7 @@ _Those Quadrilles which are not contained in the following Pages are danced to P
 
 	Half right and left.
 
-2. L'ete.
+2. L'été.
 
 	First lady and opposite gentleman advance and retire,
 
@@ -59,7 +59,7 @@ _Those Quadrilles which are not contained in the following Pages are danced to P
 
 	Half promenade,
 
-	two advace and retre,
+	two advance and retire,
 
 	back to back,
 
@@ -355,9 +355,9 @@ This dance is a great favourite in the Northern Courts, and is of Polish origin;
 
 In the Polonaise a gentleman by presenting himself at the head of the file, and clapping his hands becomes the partner of the first lady; the gentleman who is thus superseded, takes the hand of the next lady, and so on through all the couples. The last gentleman who is by this means deprived of a partner, either retires, or advances to the head of the dance to lead off in his turn.
 
-### Waltz Cotillon
+### Waltz cotillon
 
-This dance commences by six or eight couples waltzing round the room, a chair is then introduced into the center, in which the first gentleman seats his partner. He then leads up and presents each of the other gentlemen in succession. If the lady rejects, the discarded suitor retires behind the chair; but when the “favoured one” arrives, she springs up, the tone and accent of the music are accelerated, and off she waltzes with the elected – the other gentlemen then resume their partners and the circle is continued. All in turn go through the ceremony of presentation. That being concluded, three chairs are then placed, in which a lady (in succession) is seated between two gentlemen, who ardently solicit her reluctant regard, till at length she decides in favour of one, with whom she waltzes off, followed by the other couples, as before. A gentleman is now seated in the center chair, blindfolded, and a lady takes the place on each side; in this perplexity of choice the Tantalus of the mirth remains, till by a sudden resolution, he decides for right or left, uncovers his eyes, and waltzes away with the chance-directed partner, followed as before. The chairs are now placed triangularly, dos a\ dos, and three ladies are thus seated. The gentlemen pace round them in a circle, till each of the fair ones throws her handkerchief and away they again whirl. The gentlemen then appear to deliver to each, but to one alone is given, a ring, and the dance concludes by the ladies passing hand in hand through arches made by the extended arms of the gentlemen, and each takes his partner and once more waltzes round the circle.
+This dance commences by six or eight couples waltzing round the room, a chair is then introduced into the centre, in which the first gentleman seats his partner. He then leads up and presents each of the other gentlemen in succession. If the lady rejects, the discarded suitor retires behind the chair; but when the “favoured one” arrives, she springs up, the tone and accent of the music are accelerated, and off she waltzes with the elected – the other gentlemen then resume their partners and the circle is continued. All in turn go through the ceremony of presentation. That being concluded, three chairs are then placed, in which a lady (in succession) is seated between two gentlemen, who ardently solicit her reluctant regard, till at length she decides in favour of one, with whom she waltzes off, followed by the other couples, as before. A gentleman is now seated in the centre chair, blindfolded, and a lady takes the place on each side; in this perplexity of choice the Tantalus of the mirth remains, till by a sudden resolution, he decides for right or left, uncovers his eyes, and waltzes away with the chance-directed partner, followed as before. The chairs are now placed triangularly, dos a\ dos, and three ladies are thus seated. The gentlemen pace round them in a circle, till each of the fair ones throws her handkerchief and away they again whirl. The gentlemen then appear to deliver to each, but to one alone is given, a ring, and the dance concludes by the ladies passing hand in hand through arches made by the extended arms of the gentlemen, and each takes his partner and once more waltzes round the circle.
 
 ### Lancers – First set (By Duval, of Dublin)
 
@@ -371,7 +371,7 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	The gentlemen join their left hands in the centre, and right to partners,
 
-	change places with partnes,
+	change places with partners,
 
 	ladies join right and left hands forming a cage,
 
@@ -411,7 +411,7 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	The first couple turn half round facing top,
 
-	then the couple at right advance behind the top coule;
+	then the couple at right advance behind the top couple;
 
 	the couple at left & the opposite couple do the same forming two lines,
 
@@ -465,7 +465,7 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	all resume partners and places.
 
-4. 	L'etoile.
+4. 	L'étoile.
 
 	First couple set to couple at right,
 
@@ -719,7 +719,7 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	grand square.
 
-### The  Mazurka of Cotillon Russe (From the Court Journal)
+### The mazurka or cotillon russe (From "The Court Journal")
 
 The Mazurka is a dance of Polish origin, and was introduced into this country by the Duke of Devonshire, the English Ambassador to Russia.
 
@@ -729,7 +729,7 @@ The dance consists of what may be described as twelve different movements, and a
 
 The first movement may be considered as preparatory, and has no figure, since it consists merely of a motion from right to left, and then from left to right, by each person, four times repeated. The steps in this first movement are three, and of a character, that at once gives an eccentric air to the dance, and as it were, excites and stirs up a corresponding spirit in those who are engaged in it; they consist of a stamp, a hop, and a sliding step, or glissade.
 
-In the next movement, the leading cavalier describes a circle round each lady, to his right (beginning with his own partner, who accompanies him throughout this movement) and is followed in this by all the party, the step being still the stamp, hop, and glissarde. This movement in the course of sixteen bars brings each couple to the spot whence they started.
+In the next movement, the leading cavalier describes a circle round each lady, to his right (beginning with his own partner, who accompanies him throughout this movement) and is followed in this by all the party, the step being still the stamp, hop, and glissade. This movement in the course of sixteen bars brings each couple to the spot whence they started.
 
 A movement now commences, which also occupies sixteen bars, and in the course of which, the dancers set to each other with their left shoulders forward, clap the hands once, and assume that pretty and naive attitude, which consists in placing the back of the hands on the hips, and pointing the elbows forward. The next movements include some of those which are well known by their use in dances that have been naturalized in this Country, the Quadrille and the Waltz. These continue till about the middle of the dance, when the chief and most characteristic and striking parts of the movements commence, and which consist in each lady turning first round her partner and successively round every other gentlemen of the set; each couple passing under the raised arms of all the other couples; each gentleman kneeling on one knee, while his partner passes round him, holding his hand; and finally, some of the first movements having been repeated, and the first couple having regained their original place, the first gentleman has the privilege as leader, of moving forward wherever he pleases, (even into a different room,) all the other couples being required to follow, and repeat his movements – "Follow my leader" fashion.
 
@@ -811,7 +811,7 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	Finish with promenade.
 
-### Royal Devonshire Mazurkas
+### Royal Devonshire mazurkas
 
 1. 	Mazurka step to right and left.
 
@@ -833,7 +833,7 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	ladies change places,
 
-	half ladies’ chain,
+	half ladies' chain,
 
 	half right and left,
 
@@ -843,7 +843,7 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	Second and Fourth same figure,
 
-	ladies’ hands across half round,
+	ladies' hands across half round,
 
 	set,
 
@@ -867,13 +867,13 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	turn partners.
 
-### Explanation and Figures of La Gallopage
+### Explanation and figures of La gallopade
 
-La Gallopade is a dance in which eight, twelve, or sixteen may join; the steps are easy and may be classed amongst the graceful dances in chassez. With two it should assume a bold attitude – the gentleman holding the lady with his left hand, the other round her waist (similar to waltzing.) They commence with the Gallopade a\-la-chassez round the room, till in their places. The right foot must be gracefully placed forward, and the left foot to balance the body. All perform the first figure at the same time.
+La gallopade is a dance in which eight, twelve, or sixteen may join; the steps are easy and may be classed amongst the graceful dances in chassez. With two it should assume a bold attitude – the gentleman holding the lady with his left hand, the other round her waist (similar to waltzing.) They commence with the gallopade à-la-chassez round the room, till in their places. The right foot must be gracefully placed forward, and the left foot to balance the body. All perform the first figure at the same time.
 
 ### La Gallopage
 
-1.	Round the room with Gallopade à-la-chassez till in your places.
+1.	Round the room with gallopade à-la-chassez till in your places.
 
 	Right and left,
 
@@ -963,7 +963,7 @@ This Dance is generally composed of Three Figures, but in some Parties the Fourt
 
 	turn partners.
 
-2. 	Grand promenade with Gallopade à-la-chassez.
+2. 	Grand promenade with gallopade à-la-chassez.
 
 	Top and bottom couples lead to right and set,
 
@@ -977,7 +977,7 @@ This Dance is generally composed of Three Figures, but in some Parties the Fourt
 
 	and return outside.
 
-	Finish with quick Gallopade step.
+	Finish with quick gallopade step.
 
 3. 	All turn with right hand to partners,
 
@@ -1003,7 +1003,7 @@ This Dance is generally composed of Three Figures, but in some Parties the Fourt
 
 	repeat same to places.
 
-4. Waltz Finale.
+4. Waltz finale.
 
 	Set and turn corners,
 
@@ -1025,9 +1025,9 @@ This Dance is generally composed of Three Figures, but in some Parties the Fourt
 
 	waltz to places.
 
-### Quadrille Country Dances
+### Quadrille country dances
 
-The following may be danced to any Quadrille Music containing the requisite number of Parts.
+The following may be danced to any quadrille music containing the requisite number of parts.
 
 1. [Three part tune]
 
@@ -1087,7 +1087,7 @@ The following may be danced to any Quadrille Music containing the requisite numb
 
 	and half right and left with the second couple, bringing them a couple lower.
 
-6. (Pastorale Figure)
+6. (Pastorale figure)
 
 	[Four part tune]
 
@@ -1113,7 +1113,7 @@ The following may be danced to any Quadrille Music containing the requisite numb
 
 	poussette.
 
-8. (TRENISE FIGURE)
+8. (Trenise figure)
 
 	[Three part tune]
 
@@ -1130,25 +1130,25 @@ The following may be danced to any Quadrille Music containing the requisite numb
 ### Explanation of the French Terms Used in Quadrille Dancing
 
 * Balancez – Set
-* Chaine Anglaise – Right and Left
-* Demie Chaine Anglaise – Half right and left
-* Chaine des Dames – Ladies’ Chain
-* Demie Queue du Chat – Half promenade
-* En avant deux et en arrière – The Lady and opposite Gentleman advance and retire.
-* Assortment du Quadrille – A set of Quadrilles
-* La Dame – The Lady
-* Le Cavalier – The Gentleman
-* Les Dames – The Ladies
-* Les Cavaliers – The Gentlemen
-* Le grand rond – All eight join hands and advance twice
+* Chaine anglaise – Right and left
+* Demie chaine Anglaise – Half right and left
+* Chaine des dames – Ladies' chain
+* Demie queue du Chat – Half promenade
+* En avant deux et en arrière – The lady and opposite gentleman advance and retire.
+* Assortment du quadrille – A set of quadrilles
+* La dame – The lady
+* Le cavalier – The gentleman
+* Les dames – The ladies
+* Les cavaliers – The Gentlemen
+* Le grand rond	 – All eight join hands and advance twice
 * Moulinet – Ladies’ hands across and back
 * Cavalier seul – The gentleman advances alone
 * Chassez croisez – Change sides with partners, the ladies passing in front of the gentlemen & back to places.
 * Chassez et déchassez – Move to right and left
 * Dos-à-dos – The lady and gentleman advance and pass round each other to places
-* La grande Promenade – All promenade quite round to places, leading to the right
+* La grande promenade – All promenade quite round to places, leading to the right
 * Le tiroir – Top couple lead between opposite couple, return leading outside
-* Tour de mans – Turn, giving both hands
+* Tour de mains – Turn, giving both hands
 * Balancez aux coins – Set at the corners
 * Traversez – Cross over
 * Re-traversez – Re-cross to places
