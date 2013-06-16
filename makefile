@@ -98,7 +98,7 @@ upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
 	@echo "Compiling \"$<\""
-	@./transcriptions/_markdown2.py --input "$<" --output "$@"
+	@./transcriptions/_markdown2.py3k --input "$<" --output "$@"
 
 transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
