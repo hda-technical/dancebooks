@@ -1,10 +1,10 @@
 # The Danciad or, Dancer's Monitor
-# Being a descriptive Sketch in Verse on the different Styles and Methods of dancing Quadrilles, Waltzes, Country Dances, &c. &c. as practised at various Public Balls and Assemblies; also on the Pretensions of certain Professors and Teachers of Dancing to that Title; on the Mode of Admission to, and of conducting various Places, termed Academies for Dancing; likewise On the Nature and Quality of what are frequently called Grand, Free, Select, Fancy Dress, Friendly, Characteristic, Charity, and Dress Balls. Together with Observations on the Laws regarding Dancing, with Extracts from the Acts of Parliament relating thereto.
+# Being a descriptive Sketch in Verse on the different Styles and Methods of dancing Quadrilles, Waltzes, Country Dances, &c. &c. as practised at various Public Balls and Assemblies; also on the Pretensions of certain Professors and Teachers of Dancing to that Title; on the Mode of Admission to, and of conducting various Places, termed Académies for Dancing; likewise On the Nature and Quality of what are frequently called Grand, Free, Select, Fancy Dress, Friendly, Characteristic, Charity, and Dress Balls. Together with Observations on the Laws regarding Dancing, with Extracts from the Acts of Parliament relating thereto.
 ## Thomas Wilson
 
 ### Dedication
 
-To teachers of merit, (particularly those at whose request the danciad was composed, and who are most capable of deciding how far the author has done justice to the subject) he respectfully dedicates this work,
+To teachers of merit, (particularly those at whose request the Danciad was composed, and who are most capable of deciding how far the author has done justice to the subject) he respectfully dedicates this work,
 
 Academy of Dancing, 3, Kirby Street, Hatton Garden.
 
@@ -16,11 +16,11 @@ The Danciad is founded on a dramatic prelude to the Author's 89th Public Ball, h
 
 The sketch being approved, was afterwards shown, in manuscript, to several eminent teachers, who strongly advised the author to continue the subject; as the various puffs and delusive advertisements of certain persons styling themselves "Professors of Dancing" tended to bring even the art itself into disrepute, and loudly called for exposure and reprehension; however, what was every body's business was no-body's; though all continued to complain of injuries sustained in consequence of such practices, yet none attempted to draw on them the attention of the public. The author was therefore urged to continue and extend his sketch; he in vain represented the difficulty of making it into a poem without new-modelling the subject, a task that he had neither time nor ability to execute. It was replied, that regularity of form was not regarded by them. "Go on (they exclaimed) we care not about form", and to their suggestion he yielded.
 
-So the author endeavoured to take up the cause By exposing mean tricks and explaining the laws; To caution the public against some impostors, Those self-named "Professors" 'yclept Dancing Masters. How the task is performed, must be judged of by those Who well know the art, and such quackery oppose:
+So the author endeavoured to take up the cause by exposing mean tricks and explaining the laws; to caution the public against some impostors, Those self-named "professors" yclept dancing masters. How the task is performed, must be judged of by those Who well know the art, and such quackery oppose:
 
-He has now explained his motives for writing, and the circumstances which gave rise to this little work, the object of which is to investigate the merits and claims of certain professors and teachers of dancing to that title ; to expose the delusive tricks and stratagems employed to obtain pupils ; also to explain the mode of admission to, and method of conducting certain rooms termed " Academies for Dancing", and to show the nature and quality of what are frequently called "Grand, Select, Characteristic, Friendly, Dress, Free, Subscription, and Charity Balls; likewise to enable teachers and the public Clearly to understand the laws relative to dancing, which are stated very fully in the work, and are also copied in the notes verbatim; from the act of parliament.
+He has now explained his motives for writing, and the circumstances which gave rise to this little work, the object of which is to investigate the merits and claims of certain professors and teachers of dancing to that title ; to expose the delusive tricks and stratagems employed to obtain pupils ; also to explain the mode of admission to, and method of conducting certain rooms termed " Académies for Dancing", and to show the nature and quality of what are frequently called "Grand, Select, Characteristic, Friendly, Dress, Free, Subscription, and Charity Balls; likewise to enable teachers and the public Clearly to understand the laws relative to dancing, which are stated very fully in the work, and are also copied in the notes verbatim; from the act of parliament.
 
-> Tho' he narrates in verse, no modern poet
+> Though he narrates in verse, no modern poet
 >
 > Deals less in fiction—(he has proofs to show if);
 >
@@ -28,7 +28,7 @@ He has now explained his motives for writing, and the circumstances which gave r
 >
 > He trusts his documents will bear him out,
 >
-> And show 'tis not invention, nor from spleen,
+> And show it is not invention, nor from spleen,
 >
 > But what exists, has been, or may be seen.
 
@@ -64,7 +64,7 @@ He is aware that the Danciad, in its present form, is not either a satyric poem 
 
 Should his attempt succeed, it will be some consolation risking the censure of critics, for having deviated from established rules, but which, from the peculiar nature of the work, he considered it was sometimes necessary ; and that usual methods would have been ineffectual in exposing those sharks who have too long remained undiscovered, feasting on the silly gudgeons which come in their way.
 
-Independent of the author's own knowledge on the subject, he has been supplied, during the progress of the work, through the medium of several professional persons, with accounts of various stratagems and devices of those selfcreated, self-entitled "Professors" till then unknown to him; and still
+Independent of the author's own knowledge on the subject, he has been supplied, during the progress of the work, through the medium of several professional persons, with accounts of various stratagems and devices of those self-created, self-entitled "Professors" till then unknown to him; and still
 
 > There's some, who're not to justice yet been brought,
 >
@@ -78,7 +78,7 @@ He has withheld, for the present, the names of the parties alluded to; but, if h
 
 > The Author yet, has not disclosed the name
 >
-> Of those in fault, howe'er they've been to blame;
+> Of those in fault, however they've been to blame;
 >
 > But should they think that their true picture's shown,
 >
@@ -92,7 +92,7 @@ But although he has refrained from naming the parties, yet, he trusts they will 
 
 > If he's condemned by those he meant to hit,
 >
-> 'Twill he a proof he has made his caps to fit,
+> It will he a proof he has made his caps to fit,
 >
 > For when fools bark, and rogues begin to cry,
 >
@@ -144,7 +144,7 @@ The Author's motives for this publication will probably be attributed to various
 >
 > And for the stage, strove something to supply;
 >
-> To this was prompted, as he'd heard it said,
+> To this was prompted, as heed heard it said,
 >
 > A thousand pounds for many a piece was paid;
 >
@@ -162,7 +162,7 @@ The Author's motives for this publication will probably be attributed to various
 >
 > Like many authors, now, of self renown,
 >
-> Curses the taste and judgment of the town;
+> Curses the taste and judgement of the town;
 >
 > Yet still writes on, and, for excuse, pretends
 >
@@ -180,7 +180,7 @@ The Author's motives for this publication will probably be attributed to various
 >
 > And runs to Pope and Byron for supplies;
 >
-> For good examples, and what words to chuse,
+> For good examples, and what words to choose,
 >
 > And also how, and when, and where to use
 >
@@ -200,7 +200,7 @@ The Author's motives for this publication will probably be attributed to various
 >
 > Some time ago, he warned them to desist,
 >
-> Or he'd expose such plans as did exist
+> Or heed expose such plans as did exist
 >
 > To trick the public; but they still persist,
 >
@@ -210,7 +210,7 @@ The Author's motives for this publication will probably be attributed to various
 >
 > His book will neither sell nor read, but soon
 >
-> Make paper lanthorns to assist the moon".
+> Make paper lanterns to assist the moon".
 >
 > Should this take place, there's few with hopes of gain
 >
@@ -238,7 +238,7 @@ Nor has he the expectation of a dedication fee. As the Danciad comes forth, with
 >
 > Enough of current cola to answer all
 >
-> 'The rude demands of those who chance to call,
+> The rude demands of those who chance to call,
 >
 > And free his door from those alarming knocks
 >
@@ -256,7 +256,7 @@ He fears his purse will not be the only sufferer, by the omission of a suitable 
 >
 > How his great patron was for wisdom famed,
 >
-> Whose modest virtues all the town proclaim'd;
+> Whose modest virtues all the town proclaimed;
 >
 > Whose genius, talents, and acquirements, were
 >
@@ -290,7 +290,7 @@ The Author can assure the Public, that he did not withhold the dedication, nor d
 >
 > Some of whom were and still may be his foes.
 >
-> He has been told 'tis prudent to be civil,
+> He has been told it is prudent to be civil,
 >
 > And sometimes hold a candle to the Devil.
 
@@ -332,7 +332,7 @@ This expectation, he fears, is only one of the poet's golden dreams, which perha
 >
 > Nor envies dancers better than himself;
 >
-> Is not abash'd a former friend to meet,
+> Is not abashed a former friend to meet,
 >
 > Because they knew each other in the Fleet.
 >
@@ -342,7 +342,7 @@ This expectation, he fears, is only one of the poet's golden dreams, which perha
 >
 > Nor brags of means when be does hardly know
 >
-> Which way to turn, to 'scape from Richard Roe.
+> Which way to turn, to escape from Richard Roe.
 
 Although, after making this declaration, the author might be acquitted of either interest or vanity, yet there are some who might perhaps attribute this work to splenetic motives; but this he can affirm, (and, like many other authors, hopes to be believed too), that spleen has not in the least influenced him, not having any individual pique or personal animosity against any person alluded to in the work, only that natural indignation excited by the conduct of those who have resorted to the various deceptive tricks and unfair practices complained of, but must confess he cannot say quite so much for himself on the score of envy, as
 
@@ -364,7 +364,7 @@ Although, after making this declaration, the author might be acquitted of either
 >
 > And some great teachers, who do scarce know how
 >
-> To teach the chassée , or to make the bow
+> To teach the chassée, or to make the bow
 >
 > Who never drudged for excellence or fame,
 >
@@ -386,7 +386,7 @@ Although, after making this declaration, the author might be acquitted of either
 >
 > "You now dance well, can ease and grace display".
 
-These and the several other super-human acquirements said to be possessed by certain professors of dancing, have excited the author's envy. In his defence, the calls on those eminent teachers who know the fallibility of human nature, to read these extraordinary professions, and then say whether they do not also envy those great professors such rare qualifications, and to this subject he particularly intreats the attention of eminent foreign dancers, who have so long laughed at our want of genius in the art of dancing.
+These and the several other super-human acquirements said to be possessed by certain professors of dancing, have excited the author's envy. In his defence, the calls on those eminent teachers who know the fallibility of human nature, to read these extraordinary professions, and then say whether they do not also envy those great professors such rare qualifications, and to this subject he particularly entreats the attention of eminent foreign dancers, who have so long laughed at our want of genius in the art of dancing.
 
 > Read this, ye Opera principals, and own.
 >
@@ -422,7 +422,7 @@ The Author's further remarks and opinions on these matters must be reserved for 
 >
 > Gave digressions a lift;
 >
-> And in Byron 'tis found
+> And in Byron it is found
 >
 > That they often abound;
 >
@@ -460,7 +460,7 @@ Should neither precedents nor apologies prevail	— with some critics, who think
 >
 > And neither look aside nor stray,
 >
-> Whate'er the prospect may present,
+> Whatever the prospect may present,
 >
 > But keep the road that others went.
 >
@@ -470,19 +470,19 @@ Should neither precedents nor apologies prevail	— with some critics, who think
 >
 > And often runs through thorns and briars,
 >
-> T' expose impostors, rogues, fools, and liars.
+> It expose impostors, rogues, fools, and liars.
 
 That an author is not the best judge of his own performance, is generally admitted: whether the digressions into which the Author of the Danciad has been led are justifiable or not, and with what portion of ability he has executed the task assigned to him, he presumes not to determine; but, whatever opinion his readers may form on that subject, he at least hopes to be acquitted of unworthy motives. In yielding to the request of his subscribers, he has been influenced only by the wish of guarding the public against impositions, and of rescuing the honourable part of the profession from sharing in the odium that ought not to be indiscriminately attached. With such patrons and encouragers of his work, it may be doubted, whether he can say, like others, "he was prompted to the undertaking by the advice of his friends , for the old adage says, "two of a trade", &c.
 
 He also hopes the unpoetical diction, as well as the want of smoothness in some of the lines, will be excused, the subject being rather argumentative than poetical, and the work abounding with technical terms and expressions, and it being requisite to quote, as closely as possibly, not only the modes of expression in particular advertisements, bills, and cards, but even clauses of the act of parliament relative to dancing.
 
-> The critics, he hopes, will remember 'twas writ
+> The critics, he hopes, will remember it was writ
 >
 > By a dancer, and they are not famed for their wit.
 >
 > Of the truth of this axiom to all he appeals,
 >
-> Per their merit, 'tis said, mostly lies in their heels
+> Per their merit, it is said, mostly lies in their heels
 >
 > And by one who has neither much leisure nor pelf,
 >
@@ -496,7 +496,7 @@ He also hopes the unpoetical diction, as well as the want of smoothness in some 
 >
 > "Till, we've got something better we can introduce";
 >
-> And, should you dispute that they judgment did lack,
+> And, should you dispute that they judgement did lack,
 >
 > You'll have Gifford, Southey, and Moore on your back;
 >
@@ -544,7 +544,7 @@ He also apprehends, that it may not please a respectable portion of the professi
 >
 > He hopes with justice to maintain his cause.
 >
-> Though on him hurl'd Ernulphus's dread curse,
+> Though on him hurled Ernulphus's dread curse,
 >
 > If he's traduced or slandered, which is worse.
 >
@@ -560,15 +560,15 @@ Notwithstanding which, he is, however, quite Willing to submit with deference to
 
 > He'll not be quietly condemned by fools,
 >
-> Or coster-monger teachers, or their tools,
+> Or costermonger teachers, or their tools,
 >
-> But will reply, ay, o'er and o'er again,
+> But will reply, aye, over and over again,
 >
 > And prove he has grounds and reason to complain.
 >
 > Yet to be judged will willingly submit,
 >
-> By those who have candour, judgment, taste, and wit;
+> By those who have candour, judgement, taste, and wit;
 >
 > And such as can the subject comprehend,
 >
@@ -602,24 +602,24 @@ The author fears, that with apologies, comparisons, defences, confessions, allus
 
 _T. W._
 
-_Academy for Dancing,_
+_Academy for dancing,_
 
 _Kirby Street, Hatton Garden,_
 
 _7th June, 1824_
 
-### The Danciad; or, Dancer's monitor
+### The Danciad; or dancer's monitor
 ### Characters:
 
  Belinda,
  Jemima,
  Aunt Frump,
  Lucy (a servant),
- Chassee (a dancing-master),
+ Chassée (a dancing-master),
 
 ### Scene—A Parlour at ----------'s Assembly Rooms
 
-Enter Lucy, shewing in Belinda , disguised as an Old Woman.
+Enter Lucy, showing in Belinda , disguised as an Old Woman.
 
 > Lucy. This way Madam, — this way, — pray walk in,
 >
@@ -649,7 +649,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. If that should my niece Frolic chance to be,
 >
-> Say her aunt's here, and shew her into me (Knocking again heard. Lucy going).
+> Say her aunt's here, and show her into me (Knocking again heard. Lucy going).
 >
 > Here, Lucy, stop, I've something more to say.
 >
@@ -667,7 +667,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To watch my spark and his fine lady in:
 >
-> 'Twas quite by accident I chanced to hear,
+> It was quite by accident I chanced to hear,
 >
 > That he was coming with his creature here;
 >
@@ -685,9 +685,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > I think he'll never know me in this dress,
 >
-> 'Tis prim and formal, that I must confess,
+> It is prim and formal, that I must confess,
 >
-> And like those worn in time of good Queen Bess.
+> And like those worn in time of good queen Bess.
 >
 > I'll at his letter take another look,
 >
@@ -703,9 +703,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > I'll put it up, for were I once again
 >
-> To read such perfidy — 'twould turn my brain. (Walks up the stage agitated, Jemima comes forward).
+> To read such perfidy — it would turn my brain. (Walks up the stage agitated, Jemima comes forward).
 >
-> Jem. (Aside) Who's this? 'twas like Belinda's voice I heard,
+> Jem. (Aside) Who's this? it was like Belinda's voice I heard,
 >
 > It cannot be, the dress is too absurd;
 >
@@ -713,7 +713,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And cross and see her face, I then shall know.
 >
-> Mercy, Belinda t'is it you my dear?
+> Mercy, Belinda, is it you my dear?
 >
 > In this disguise whatever brought you here?
 >
@@ -735,7 +735,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Jem. Were he my beau, I this revenge should take,
 >
-> Would try if I cou'dn't some new conquest make;
+> Would try if I couldn't some new conquest make;
 >
 > There's beaux in plenty left, if you'll but try,
 >
@@ -743,7 +743,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. In such a frolic some would take delight,
 >
-> And I confess I think 'twould serve him right;
+> And I confess I think it would serve him right;
 >
 > I scarce know how to act; let me reflect —
 >
@@ -803,7 +803,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And in five minutes will their love declare.
 >
-> Jem. They're just the sort of sparks that I should chuse,
+> Jem. They're just the sort of sparks that I should choose,
 >
 > To make him jealous and myself amuse.
 >
@@ -835,7 +835,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > On him I'll be revenged before I've done.
 >
-> Jem. You'll find, depend on't, that's the only plan,
+> Jem. You'll find, depend on it, that's the only plan,
 >
 > You can adopt, to punish your false man.
 >
@@ -865,7 +865,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Jem. I never was at ----------'s I protest,
 >
-> Tho' he has twenty years the art professed;
+> Though he has twenty years the art professed;
 >
 > But from most other teachers more or less,
 >
@@ -919,9 +919,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. Your knowledge of the art none can deny,
 >
-> On your good judgment I can well rely;
+> On your good judgement I can well rely;
 >
-> Tho' no great dancer, yet I plainly see,
+> Though no great dancer, yet I plainly see,
 >
 > What mere imposters many teachers be;
 >
@@ -933,7 +933,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Fine execution, and the whole combine
 >
-> With taste and judgment, and can well impart
+> With taste and judgement, and can well impart
 >
 > The various branches of this pleasing art.
 >
@@ -947,7 +947,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Whose teaching is a libel on those elves,
 >
-> Disgraceful to thier pupils and themselves;
+> Disgraceful to their pupils and themselves;
 >
 > Who cheat all persons they attempt to show,
 >
@@ -1047,7 +1047,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Some new Professor's bill of fare you meet;
 >
-> Go round or thro' the town which way you will,
+> Go round or through the town which way you will,
 >
 > You're sure to see some dancing master's bill;
 >
@@ -1055,7 +1055,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > From east to west, from Bow to Turnham Green;
 >
-> They teach for prices any dance you chuse,
+> They teach for prices any dance you choose,
 >
 > For less than shoe-blacks charge for blacking shoes;
 >
@@ -1129,21 +1129,21 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Each teacher shows great talent by his bill,
 >
-> Just read it o'er, you'll wonder at his skill,
+> Just read it over, you'll wonder at his skill,
 >
 > There every dance is named, and they engage,
 >
 > To make their pupils wonders of the age;
 >
-> In a few lessons and at small expence,
+> In a few lessons and at small expense,
 >
-> One guinea is all they ask us recompence.
+> One guinea is all they ask us recompense.
 >
 > Bel. With these proposals they must all deceive,
 >
 > Who in their bills implicitly believe.
 >
-> Jem. 'Tis only those they catch who have never been,
+> Jem. It is only those they catch who have never been,
 >
 > At balls or theatres, where good dancing's seen;
 >
@@ -1161,7 +1161,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > These great professors often want a grain,
 >
-> Tho' they in others of this want complain;
+> Though they in others of this want complain;
 >
 > Their usual candour, if you've any doubt,
 >
@@ -1169,7 +1169,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Ask them what sort of teachers others be,
 >
-> If Mr. A or B, or C or D,
+> If Mister A or B, or C or D,
 >
 > Are not good teachers? — this candid tribe will say,
 >
@@ -1237,7 +1237,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Jem. That's just the case, Belinda, I well know,
 >
-> And can the truth of your assertions shew;
+> And can the truth of your assertions show;
 >
 > I heard a jabbering coxcomb once affect
 >
@@ -1251,7 +1251,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The quadrille figures at his last grand ball,
 >
-> "Twas neither French nor English that I heard.
+> "It was neither French nor English that I heard.
 >
 > But jargon quite nonsensically absurd,
 >
@@ -1307,7 +1307,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Of certain dances that they advertise,
 >
-> That ne'er before met those professors eyes;
+> That never before met those professors eyes;
 >
 > And what's still more, they canvass while they're there,
 >
@@ -1321,7 +1321,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. Some knowledge of their balls I wish to gain.
 >
-> Jem. 'Twould be digressing should I here explain,
+> Jem. It would be digressing should I here explain,
 >
 > But I will soon their nature fully state,
 >
@@ -1339,9 +1339,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And who, with them, have any dancing brought,
 >
-> From such they learn; what they ne'er knew before,
+> From such they learn; what they never knew before,
 >
-> Although they've advertised it o'er and o'er.
+> Although they've advertised it over and over.
 >
 > If pupils badly dance, or from neglect,
 >
@@ -1371,7 +1371,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To show his pupils his fine attic taste.
 >
-> He'd be offended, should he hear you say,
+> Heed be offended, should he hear you say,
 >
 > He is not the greatest dustman of the day.
 >
@@ -1411,7 +1411,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And promises the Graces to impart.
 >
-> Bel. 'Tis strange, if those in Graces can excel,
+> Bel. It is strange, if those in Graces can excel,
 >
 > Whose motto is, "the basket and the bell".
 >
@@ -1453,7 +1453,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > He prints (in letters nearly one foot high)
 >
-> The following puff, design'd to catch the eye.
+> The following puff, designed to catch the eye.
 >
 > "Quadrilles by him are in six lessons taught",
 >
@@ -1499,7 +1499,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Scraping aloud some fiddle, bass, or kit,
 >
-> Just to collect a croud about the door,
+> Just to collect a crowd about the door,
 >
 > To gape up at the first or second floor;
 >
@@ -1509,7 +1509,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > They have no regard for strict propriety,
 >
-> Their onty aim is notoriety;
+> Their only aim is notoriety;
 >
 > Walk in who will, they're never very nice,
 >
@@ -1543,13 +1543,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > But e'er to see the Royal Guest dance there,
 >
-> Credulity itself would ev'n despair.
+> Credulity itself would even despair.
 >
 > Bel. Perhaps he to the palace often goes,
 >
 > To drill the monarch and to point his toes.
 >
-> Jem. He, at the royal residence, 'tis said,
+> Jem. He, at the royal residence, it is said,
 >
 > Was never seen — to knock would be afraid,
 >
@@ -1559,7 +1559,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And make him soon be glad to stir his stumps,
 >
-> Thro' mud and water in his dancing pumps.
+> Through mud and water in his dancing pumps.
 >
 > Bel. And yet, perhaps, that lady who of late,
 >
@@ -1575,17 +1575,17 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And granted licence which must all surprise.
 >
-> Jem. If, 'tis not so, he must, to 'scape disgrace,
+> Jem. If, it is not so, he must, to escape disgrace,
 >
 > Just take a mop and smudge his lion's face.
 >
-> The same professor says, (tho' I've not seen),
+> The same professor says, (though I've not seen),
 >
 > He has invented a rare new machine,
 >
 > To teach the waltz without a master's aid,
 >
-> And with it he has several waltzers made.
+> And with it he has several waltzes made.
 >
 > Bel. Well; after this, there's nothing strange can seem,
 >
@@ -1595,7 +1595,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > As other great advantages are gained;
 >
-> He says 'twill make deformity quite straight,
+> He says it will make deformity quite straight,
 >
 > And awkward persons have a genteel gait;
 >
@@ -1679,7 +1679,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > That they enjoy the royal patronage;
 >
-> "Tis libellous on Majesty to see
+> "It is libellous on majesty to see
 >
 > Each Jack O'Noaks make free with royalty:
 >
@@ -1783,7 +1783,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Put them in heaps; or place them in a row,
 >
-> Tho' old and torn, they serve to make a show
+> Though old and torn, they serve to make a show
 >
 > Of business: ask them what pupils they
 >
@@ -1815,7 +1815,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > They on those masters must attendance dance;
 >
-> They follow close, but daren't one step-advance;
+> They follow close, but dare not one step-advance;
 >
 > They send forth works on dancing stole from those
 >
@@ -1857,7 +1857,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > From Day and Martin they their cautions take,
 >
-> Tho' trite, they hope they may impression make;
+> Though trite, they hope they may impression make;
 >
 > Like Warren and Dyson, these professors cry,
 >
@@ -1883,9 +1883,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Their spacious bills of fare of every kind;
 >
-> They think if they could echo thro' the town
+> They think if they could echo through the town
 >
-> Their names, 'twould stamp them teachers of renown.
+> Their names, it would stamp them teachers of renown.
 >
 > Bel. I've often heard what there's no room to doubt,
 >
@@ -1909,7 +1909,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Three notes of admiration meet your eyes,
 >
-> Just like a panish prince, of whom I've heard,
+> Just like a Spanish prince, of whom I've heard,
 >
 > Who had fifty names most pompous and absurd;
 >
@@ -1929,7 +1929,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And 'mongst the great, disseminate his name;
 >
-> 'Tis not the money they extort alone,
+> It is not the money they extort alone,
 >
 > From pupils I complain of, but you must own,
 >
@@ -1951,7 +1951,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To qualify them for the ball or stage;
 >
-> Tho' they've no talent to fulfil the task
+> Though they've no talent to fulfil the task
 >
 > They undertake, yet they great premiums ask;
 >
@@ -1959,7 +1959,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The master's objects, to obtain the pelf;
 >
-> Should any donee be advertised that's known
+> Should any dance be advertised that's known
 >
 > To the inventor, and to him alone,
 >
@@ -1967,7 +1967,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > But they will advertise to teach the same.
 >
-> They say, 'twill show they have professional skill,
+> They say, it will show they have professional skill,
 >
 > And make a leading feature in their bill;
 >
@@ -1985,19 +1985,19 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Should you detect the cheat you may complain,
 >
-> But 'twill not get your money back again;
+> But it will not get your money back again;
 >
 > They're silly elves who think they will recover;
 >
 > When fools bethink themselves, the market's over.
 >
-> Refunding's what these teachers don't profess,
+> Refunding is what these teachers don't profess,
 >
 > That is a virtue which but few possess;
 >
 > They're not so conscientious as to go
 >
-> At midnight, thro' a bitter frost and snow,
+> At midnight, through a bitter frost and snow,
 >
 > To make amends to those who may complain,
 >
@@ -2005,17 +2005,17 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > If in the balance there was fairly laid.
 >
-> Their honor, and their grace, and both were weighed,
+> Their honour, and their grace, and both were weighed,
 >
 > The difference then you hardly would discern,
 >
-> As 'twould be doubtful which the scale would turn;
+> As it would be doubtful which the scale would turn;
 >
 > Respecting grace, observe I am not confined,
 >
 > In my remarks to graces of the mind.
 >
-> 'Tis thought by some that dancing masters are
+> It is thought by some that dancing masters are
 >
 > For grace and etiquette beyond compare,
 >
@@ -2049,7 +2049,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Was by the master kicked from out the place;
 >
-> 'Twas not in motions, graceful, soft, and slow,
+> It was not in motions, graceful, soft, and slow,
 >
 > Performed, as Vestris would have raised his toe;
 >
@@ -2061,15 +2061,15 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > But were applied all to a nameless place;
 >
-> No stings of conscience did the suttler feel,
+> No stings of conscience did the sutler feel,
 >
-> Tho' the professor cried — "twas ungenteel":
+> Though the professor cried — "it was ungenteel":
 >
 > The cause was this, so void of grace was he,
 >
 > He dared insult a lady while at tea;
 >
-> Remonstrance was in vain, he bounc'd and swore,
+> Remonstrance was in vain, he bounced and swore,
 >
 > But got chastised, and put without the door.
 >
@@ -2089,7 +2089,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > But really thought they did exaggerate.
 >
-> Jem. 'Tis true, depend on't, for it came to me,
+> Jem. It is true, depend on it, for it came to me,
 >
 > From one that played there, who the whole did see;
 >
@@ -2099,7 +2099,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > But read his bills, and see what there's professed,
 >
-> And if you knew what dancing he possesed,
+> And if you knew what dancing he possessed,
 >
 > A great professor is easy made, you'd own,
 >
@@ -2137,7 +2137,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > That we are now much greater fools than they;
 >
-> For self-opinion with our pride combin'd,
+> For self-opinion with our pride combined,
 >
 > Too often makes us to our interest blind;
 >
@@ -2211,19 +2211,19 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > However, dull, these teachers all agree,
 >
-> In any dance you shall compleated be,
+> In any dance you shall completed be,
 >
 > And for one guinea only, that is all,
 >
 > You need expend to fit you for a ball;
 >
-> Should you have doubts, and say, great time 'twould take
+> Should you have doubts, and say, great time it would take
 >
 > Before you could a graceful dancer make;
 >
 > To sooth your fears these teachers will foretell,
 >
-> (Ev'n to a minute) when you shall dance well;
+> (Even to a minute) when you shall dance well;
 >
 > They name what lessons pupils ought to take,
 >
@@ -2255,7 +2255,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Jem. Some in those lessons find they have been cheated,
 >
-> As with six lessons they are not half compleated.
+> As with six lessons they are not half completed.
 >
 > Bel. What, says the master, when they plainly show,
 >
@@ -2269,9 +2269,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Or else your time and money's thrown away.
 >
-> 'Tis found these courses oft must be repeated,
+> It is found these courses oft must be repeated,
 >
-> Before the pupils in the dance compleated;
+> Before the pupils in the dance completed;
 >
 > Experience then will whisper in their ear,
 >
@@ -2287,7 +2287,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Till then, and not till then, can pupils be
 >
-> Compleated does their completion then agree
+> Completed does their completion then agree
 >
 > With this? have pupils, too, the privilege shown
 >
@@ -2317,7 +2317,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > They, by this practice, many guineas gain,
 >
-> Which by fair dealings, they would ne'er obtain.
+> Which by fair dealings, they would never obtain.
 >
 > Bel. What plan, what means, do these quack teachers try,
 >
@@ -2333,7 +2333,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Which will admit as many ladies more,
 >
-> As chuse to come, should it be half a score!
+> As choose to come, should it be half a score!
 >
 > Welcome are all who come, there's no selection
 >
@@ -2345,7 +2345,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Will men entice, and likewise make them stay;
 >
-> 'Tis men that they make pay, ladies they know
+> It is men that they make pay, ladies they know
 >
 > To balls without their purses often go.
 >
@@ -2369,7 +2369,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To feed their passion, or extend their fame:
 >
-> Tho' often jilted, and tho' they complain
+> Though often jilted, and though they complain
 >
 > Of broken vows, yet still they'll try again.
 >
@@ -2383,7 +2383,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The gentlemen for interest, or for love:
 >
-> 'Tis known each have magnetic powers, which they
+> It is known each have magnetic powers, which they
 >
 > As suits their purposes bring into play;
 >
@@ -2399,7 +2399,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Besides, that dancing's a pretext to see
 >
-> The favorite Mr. A----------, or else Miss B----------,
+> The favourite Mister A----------, or else Miss B----------,
 >
 > These rooms are places made for assignation.
 >
@@ -2441,11 +2441,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > They often change, and so transpose their name;
 >
-> To point ont who they are by their address,
+> To point on it who they are by their address,
 >
-> Some Secret magic power you must possess;
+> Some secret magic power you must possess;
 >
-> If they're employed 'tis ten to one the case,
+> If they're employed it is ten to one the case,
 >
 > But their exposure prove the schools disgrace;
 >
@@ -2471,7 +2471,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The usual charge, in hopes they may obtain
 >
-> By cheapness what their merit ne'er could gain:
+> By cheapness what their merit never could gain:
 >
 > They know that governesses and masters are
 >
@@ -2499,13 +2499,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > If they can't thus succeed, another aim
 >
-> They take; 'tis to traduce the teacher's fame;
+> They take; it is to traduce the teacher's fame;
 >
 > To calumny they then resort, to gain
 >
 > What they by merit never could obtain;
 >
-> With inuendos of "what people say",
+> With innuendos of "what people say",
 >
 > They strive to get their teachers turned away;
 >
@@ -2549,7 +2549,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Jem. What most digressors do, I've oft heard say.
 >
-> Bel. Oh! now I recollect 'twas teachers you
+> Bel. Oh! now I recollect it was teachers you
 >
 > Were then describing, and had brought to view
 >
@@ -2561,7 +2561,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > I recollect a circumstance or two,
 >
-> Tho' strange, yet I can vouch they're likewise true.
+> Though strange, yet I can vouch they're likewise true.
 >
 > They may be trifles, but perhaps you'll say,
 >
@@ -2619,7 +2619,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Too slippery to be held by any law;
 >
-> But surely the professor ne'er reflected,
+> But surely the professor never reflected,
 >
 > When he this showman's trite device selected.
 >
@@ -2649,9 +2649,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > This sage professor puffs himself so well,
 >
-> No bottle conjuror can't him excel.
+> No bottle conjurer can't him excel.
 >
-> Bel. Whate'er he says, from this there's no retreating,
+> Bel. Whatever he says, from this there's no retreating,
 >
 > Folks always prove the pudding by the eating;
 >
@@ -2671,7 +2671,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Which, although true, is equally absurd;
 >
-> 'Tis of a great professor, that's well known,
+> It is of a great professor, that's well known,
 >
 > Who stiles himself inferior to none;
 >
@@ -2693,9 +2693,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > This the professor dreads, for, strange to tell!
 >
-> 'Tis only Tyros whom he can excel;
+> It is only Tyros whom he can excel;
 >
-> And ev'n by those he has incurred disgrace,
+> And even by those he has incurred disgrace,
 >
 > As they've exposed professor to his face,
 >
@@ -2703,7 +2703,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. A circumstance, like this, I lately heard,
 >
-> Am anxious now to know how it occurr'd.
+> Am anxious now to know how it occurred.
 >
 > Jem. I'll tell you as I heard it, word for word,
 >
@@ -2711,19 +2711,19 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And by what means in his own trap was caught,
 >
-> 'Twas by a tyro, who, by chance went there,
+> It was by a tyro, who, by chance went there,
 >
 > Attracted by professor's bill of fare,
 >
-> Who told professor, he'd some lessons had;
+> Who told professor, heed some lessons had;
 >
-> But really fear'd that he danced very bad.
+> But really feared that he danced very bad.
 >
 > Quack doctor like, professor shook his head,
 >
-> Cried", 'Twoul'd be well if half who taught were dead;
+> Cried", It would be well if half who taught were dead;
 >
-> Depend, on't, sir, if you one guinea pay,
+> Depend, on it, sir, if you one guinea pay,
 >
 > You in quadrilles shall ease and grace display".
 >
@@ -2767,7 +2767,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > So asked him various questions on the art,
 >
-> But he'd no dancing knowledge to impart;
+> But heed no dancing knowledge to impart;
 >
 > This proved him not quite what he had professed,
 >
@@ -2779,7 +2779,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > These were strange sounds in our professor's ear,
 >
-> Which he before had ne'er been used to hear;
+> Which he before had never been used to hear;
 >
 > He seemed alarmed (for pupils talked together),
 >
@@ -2787,7 +2787,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Scraped his fiddle, cried "Order! keep your places",
 >
-> Howe'er, respectful, none could keep their faces,
+> However, respectful, none could keep their faces,
 >
 > And some laughed loud, whilst others did proclaim,
 >
@@ -2849,7 +2849,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Like Billy Waters, in a tap-room play;
 >
-> And hop about to please his Wapping friends,
+> And hop about to please his wapping friends,
 >
 > And cap in hand may make himself amends.
 >
@@ -2859,7 +2859,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To make amends, he on a project hit,
 >
-> Tho' old and trite it savour'd of his wit;
+> Though old and trite it savoured of his wit;
 >
 > So hailed the thought, and cried — "this scheme will fit".
 >
@@ -2893,7 +2893,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > That's worshipped now eastward of Temple Bar;
 >
-> From this he augur'd that a specious bill,
+> From this he augured that a specious bill,
 >
 > Saying, "Supper, Gratis", might his ball-room fill.
 >
@@ -2917,9 +2917,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > In striking lines, on which he does rely;
 >
-> Read all his bill, you'll find his specious treat is, O
->
-> nly to give a card of dances gratis;
+> Read all his bill, you'll find his specious treat is, 
+> 
+> Only to give a card of dances gratis;
 >
 > Those guests, who had, not read his bill with care.
 >
@@ -2955,7 +2955,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Jem. One great professor gives the town a treat,
 >
-> In what he calls "a grand and annual fete";
+> In what he calls "a grand and annual fête";
 >
 > He thinks the title frenchified and grand,
 >
@@ -2971,7 +2971,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Like some professors who, to make a bounce,
 >
-> Instead of ball, a carnival annouce.
+> Instead of ball, a carnival announce.
 >
 > Their carnival like our professor's treat,
 >
@@ -2979,7 +2979,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The master of the ceremonies, I am told,
 >
-> At this grand fete was only seven years old.
+> At this grand fête was only seven years old.
 >
 > Bel. A child, of seven years old, that's very strange!
 >
@@ -2997,9 +2997,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The child was-made director is unknown,
 >
-> Professor's motives I'have never heard.
+> Professor's motives I have never heard.
 >
-> Bel. Whate'er the motives were, the things absurd,
+> Bel. Whatever the motives were, the things absurd,
 >
 > Does he the duties of that office know?
 >
@@ -3049,7 +3049,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Would have such folly in a trice rejected.
 >
-> Jem. 'Tis said he herds with some low challenge planners,
+> Jem. It is said he herds with some low challenge planners,
 >
 > And such connection must corrupt his manners;
 >
@@ -3073,7 +3073,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > But be contented in Duke's Place to reign.
 >
-> Jem. This showman's practice, tho' extended far,
+> Jem. This showman's practice, though extended far,
 >
 > Has not, thank Heaven, reached west of Temple Bar.
 >
@@ -3083,13 +3083,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And keep such vulgar notions to amuse.
 >
-> Butchers, sailors, wapping girls, and jews.
+> Butchers, sailors, wapping girls, and Jews.
 >
-> Jem. One thought he'd something monstrous advertise,
+> Jem. One thought heed something monstrous advertise,
 >
 > That should at once the gaping town surprise,
 >
-> But ne'er reflected on what there is no doubt,
+> But never reflected on what there is no doubt,
 >
 > That fools, like cats: are by their noise found out;
 >
@@ -3137,13 +3137,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > For, like old Shandy some philosophize
 >
-> On christian names and changes in cat's eyes.
+> On Christian names and changes in cat's eyes.
 >
 > There's many on philosophy, I've known,
 >
 > Have wrote large tomes you'd be ashamed to own;
 >
-> Tho' censured, scorn the judgment of the town,
+> Though censured, scorn the judgement of the town,
 >
 > And still write on, in hopes to gain renown;
 >
@@ -3151,7 +3151,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > For those who've little knowledge in their skull.
 >
-> Some will a mopstick gravely culogize,
+> Some will a mop-stick gravely eulogize,
 >
 > And on a broomstick quite philosophize;
 >
@@ -3167,7 +3167,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Like Gall and Spursheim, all his art display
 >
-> And publish, too; in hopes to gain eclat,
+> And publish, too; in hopes to gain éclat,
 >
 > On subjects dancers value not a straw.
 >
@@ -3187,7 +3187,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Will tickets gratis give to all that go;
 >
-> And for as many friends you chuse to take,
+> And for as many friends you choose to take,
 >
 > Be who they may will no objection make;
 >
@@ -3195,9 +3195,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Either next week, or else a month to come.
 >
-> Not only may you dance without expence,
+> Not only may you dance without expense,
 >
-> But, mark me! go at your cenvenience;
+> But, mark me! go at your convenience;
 >
 > Hear this ye teachers of repute, and own;
 >
@@ -3205,7 +3205,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Yet he'll maintain his company's select,
 >
-> And ev'n restrictive niceties affect;
+> And even restrictive niceties affect;
 >
 > Like some great judges who pretend to cry,
 >
@@ -3245,7 +3245,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Until the painter wrote it on the wall;
 >
-> Who were before (moingst millions) lost in trade,
+> Who were before (amongst millions) lost in trade,
 >
 > And were professors by the painter made;
 >
@@ -3309,19 +3309,19 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Some think them skilled in antiquarian lore,
 >
-> That they have Speed and Stow read o'er and o'er,
+> That they have Speed and Stow read over and over,
 >
 > And know all ancient places in the town
 >
 > When built, who dwelt there, and of what renown,
 >
-> Can prove the scite where these professors dwell,
+> Can prove the site where these professors dwell,
 >
-> Has been as famous as St. Ronan's well;
+> Has been as famous as Saint Ronan's well;
 >
 > If Whittington, Wat Tylor, or Jack Straw,
 >
-> Had e'er been there to give the place eclat.
+> Had e'er been there to give the place éclat.
 >
 > Jem. I am told that our professors seldom read,
 >
@@ -3335,13 +3335,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > You've little chance, as I can plainly show;
 >
-> For they are by professors both baptized,
+> For they are by professors both baptised,
 >
 > If inappropriate, pray don't he surprised;
 >
 > For the great sapient teachers of our days,
 >
-> Have none of Mr. Shandy's cautious ways,
+> Have none of Mister Shandy's cautious ways,
 >
 > Who cried all names by dictionaries and grammars,
 >
@@ -3397,11 +3397,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Read how inquiring Shandy's fancy itches,
 >
-> When he's in search of christian names and breeches.
+> When he's in search of Christian names and breeches.
 >
 > Though these are trifles to some men of letters,
 >
-> To Mr. Shandy they were weighty matters;
+> To Mister Shandy they were weighty matters;
 >
 > So may what you call trifles prove to be
 >
@@ -3423,7 +3423,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > When he's disposed of his dead men he goes
 >
-> From dough anad raspings to turn out his toes;
+> From dough and raspings to turn out his toes;
 >
 > His dancing room, termed "his academy".
 >
@@ -3433,11 +3433,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Who learn must for a pot of porter pay
 >
-> The landlord to remumerate; what's spent
+> The landlord to renumerate; what's spent
 >
 > Is all he has in lieu of weekly rent.
 >
-> Bel. Such teachers and their plans I reporbate,
+> Bel. Such teachers and their plans I reprobate,
 >
 > Their practices bad morals inculcate,
 >
@@ -3455,7 +3455,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > They're dropped down areas, and crammed under doors,
 >
-> And ev'n sent to first and second floors;
+> And even sent to first and second floors;
 >
 > Each knocker's loaded-house by house he'll take,
 >
@@ -3467,9 +3467,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Who takes it up, conceives it smells of law,
 >
-> And little dreams 'tis from a man of straw,
+> And little dreams it is from a man of straw,
 >
-> Believes 'tis business, plea, or proposition,
+> Believes it is business, plea, or proposition,
 >
 > (Whose itching palm can't brook the imposition);
 >
@@ -3487,9 +3487,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > From Tom and Jerry takes the hint, where you
 >
-> May in one scene famed Almacks' ball-rooms view.
+> May in one scene famed Almack's' ball-rooms view.
 >
-> Bel. If this was the spoutaneous act of those
+> Bel. If this was the spontaneous act of those
 >
 > Who managed the concern, you might suppose
 >
@@ -3497,7 +3497,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And, with his room, had long acquired renown.
 >
-> Jem. Aye, that indeed! — but 'twas to make a hit,
+> Jem. Aye, that indeed! — but it was to make a hit,
 >
 > Painted for our professor's benefit —
 >
@@ -3505,19 +3505,19 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > As some suppose, but rather philosophic,
 >
-> And only foster merit, when 'tis plain
+> And only foster merit, when it is plain
 >
 > That by their patronage they are sure to gain;
 >
-> He thinks, poor soul! his room with Almacks' vies,
+> He thinks, poor soul! his room with Almack's' vies,
 >
-> And on his name, tho' little known, relies;
+> And on his name, though little known, relies;
 >
 > Thinks "elegant", a captivating phrase,
 >
 > And "room", instead of "dancing", he displays.
 >
-> Bel. He vie with Almacks! — nay, he can as soon
+> Bel. He vie with Almack's! — nay, he can as soon
 >
 > Tell us who teaches dancing in the Moon;
 >
@@ -3539,21 +3539,21 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > These teachers here remind us of the ass,
 >
-> Who thought he could for a great favorite pass;
+> Who thought he could for a great favourite pass;
 >
 > So, when he saw his master fondle pug,
 >
 > Grew quite conceited, brayed, and gave a shrug,
 >
-> Thought he'd be fondled too, and so he jumped,
+> Thought heed be fondled too, and so he jumped,
 >
 > Into his master's lap, but got well thumped
 >
 > For his presumption; and was heard to say,
 >
-> "All are not favorites who can kick and bray".
+> "All are not favourites who can kick and bray".
 >
-> And lectured well his long — ear'd generation,
+> And lectured well his long — eared generation,
 >
 > To rest contented in their lotted station.
 >
@@ -3565,11 +3565,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > I'll one more fable in his ears rehearse;
 >
-> 'Tis one of Æsop's and God knows how old,
+> It is one of Æsop's and God knows how old,
 >
 > And often has been read and often told;
 >
-> But tho' its been so often told before,
+> But though its been so often told before,
 >
 > It suits me now to tell the tale once more,
 >
@@ -3603,7 +3603,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And with their books, they sometimes globes combine,
 >
-> Tho' their poor noddies don't contain one line:
+> Though their poor noddles don't contain one line:
 >
 > Nor can they tell you one celestial sign;
 >
@@ -3659,9 +3659,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > He brought the sentence just to suit his mouth;
 >
-> Tho' 'tis not what Lord Chesterfield would use,
+> Though it is not what Lord Chesterfield would use,
 >
-> Yet 'tis is keeping with Bob's taste and views;
+> Yet it is is keeping with Bob's taste and views;
 >
 > And well accords with what he's used to hear,
 >
@@ -3673,7 +3673,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > For he don't know he sins against the graces,
 >
-> Altho' he has done it, aye, in fifty places.
+> Although he has done it, aye, in fifty places.
 >
 > Bel. O, Terpsichore! forgive our dusting friend,
 >
@@ -3743,7 +3743,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Remind me of the mountain and the mouse;
 >
-> 'Twas noised throughout the world by friend and neighbour,
+> It was noised throughout the world by friend and neighbour,
 >
 > That the great mountains were at last in labour,
 >
@@ -3751,9 +3751,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The wonder came, and lo! out crept a mouse!
 >
-> "Great cry and little wool", they all exclaim'd.
+> "Great cry and little wool", they all exclaimed.
 >
-> Thus the great talkers were then justly sham'd,
+> Thus the great talkers were then justly shamed,
 >
 > The well known adage in this case goes home,
 >
@@ -3809,11 +3809,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 
 ### Exit Lucy.
 
-> Ha! ha! 'tis one who always speaks to me,
+> Ha! ha! it is one who always speaks to me,
 >
 > A quack professor, as you soon shall see,
 >
-> 'Tis that pragmatic Chassee, a disgrace
+> It is that pragmatic Chassée, a disgrace
 >
 > To dancing masters, and to every place
 >
@@ -3829,11 +3829,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Shrugs and grimaces like the fops of France,
 >
-> And calls himself "Un Maitre de la Danse".
+> And calls himself "Un maitre de la danse".
 >
-> Tho' all assumption, knows no more than they
+> Though all assumption, knows no more than they
 >
-> Who go to learn, altho' he makes them pay.
+> Who go to learn, although he makes them pay.
 >
 > Jem. I have seen this coxcomb, but he knows me not,
 >
@@ -3855,25 +3855,25 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > His gait and manners I will show likewise,
 >
-> And all his borrowed steps will analyze,
+> And all his borrowed steps will analyse,
 >
 > And so exposed him that he dare not stay,
 >
-> Tho' impudent I'll make him run away.
+> Though impudent I'll make him run away.
 
-### Enter Mr. Chassee. Belinda and Jemima walk up the stage.
+### Enter Mister Chassée. Belinda and Jemima walk up the stage.
 
-> Chassee. Two ladies here! — Hey! — Who is that I see
+> Chassée. Two ladies here! — Hey! — Who is that I see
 >
-> Disguised; 'tis like Belinda. It cannot be.
+> Disguised; it is like Belinda. It cannot be.
 
 ### Belinda and Jemima discover themselves.
 
-> Bel. Miss Jemima, Sir. — Mr. Chassee, whose fame
+> Bel. Miss Jemima, Sir. — Mister Chassée, whose fame
 >
 > You have no doubt heard full half the town proclaim.
 >
-> Chassee. G. M. S. Chassee now I print my name.
+> Chassée. G. M. S. Chassée now I print my name.
 >
 > Didn't I near Temple Bar Belinda meet?
 >
@@ -3881,9 +3881,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Your parson's hat and dress to me were new,
 >
-> And strange at first I could not believe 'twas you.
+> And strange at first I could not believe it was you.
 >
-> Chassee. That dress and hat are all my own design,
+> Chassée. That dress and hat are all my own design,
 >
 > There's not another in the town like mine;
 >
@@ -3893,11 +3893,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. You're known for taste and singularity;
 >
-> But, Mr. Chassee, you really me surprise,
+> But, Mister Chassée, you really me surprise,
 >
 > To see you here I scarce believe my eyes.
 >
-> Chassee. Surprise is mutual, that I must confess,
+> Chassée. Surprise is mutual, that I must confess,
 >
 > To see Belinda here in such a dress!
 >
@@ -3905,7 +3905,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Me now, as it would confidence abuse.
 >
-> Chassee. Pardon me, madam, I've no wish to pry
+> Chassée. Pardon me, madam, I've no wish to pry
 >
 > Into your motives, that you may rely.
 >
@@ -3927,7 +3927,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To show your stile, and our new dances quiz.
 >
-> Chassee. Their usual stile's, most wretched, you must say,
+> Chassée. Their usual stile's, most wretched, you must say,
 >
 > Why my dog Towsor has more grace than they:
 >
@@ -3945,11 +3945,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. I hear that several of them copy you.
 >
-> Chassee. And by my merit live. Ah, Sacre Dieu!
+> Chassée. And by my merit live. Ah, Sacre Dieu!
 >
 > Bel. They say that you're a teacher of renown.
 >
-> Chassee. I'll challenge any master in the town,
+> Chassée. I'll challenge any master in the town,
 >
 > And dance with him in any dance he will
 >
@@ -3957,15 +3957,15 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. There's many dancers too of great repute.
 >
-> Chassee. With them for precedence I dare dispute.
+> Chassée. With them for precedence I dare dispute.
 >
-> Bel. You ought to know the art, 'tis very plain,
+> Bel. You ought to know the art, it is very plain,
 >
 > As you the technic terms of art explain.
 >
-> Chassee. I find you've read my bill by what you've said,
+> Chassée. I find you've read my bill by what you've said,
 >
-> In red and blue you'll see I've there display'd,
+> In red and blue you'll see I've there displayed,
 >
 > The different things I teach, and likewise those
 >
@@ -3985,7 +3985,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > No wonder that you've been so justly famed.
 >
-> Chassee. Trifles! mere trifles! I know ten times more,
+> Chassée. Trifles! mere trifles! I know ten times more,
 >
 > In my next bills you'll find I'll name a score,
 >
@@ -4011,9 +4011,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. You must allow a bill of fare's the least
 >
-> Substantial proof there will be a plenteouus feast;
+> Substantial proof there will be a plenteous feast;
 >
-> 'Tis not what's promised in a bill of fare
+> It is not what's promised in a bill of fare
 >
 > That we commend, but viands we find there;
 >
@@ -4021,11 +4021,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > The greatest promisers perform the least:
 >
-> 'Tis so with many teachers, I well know,
+> It is so with many teachers, I well know,
 >
 > An instance of it I'll now plainly show.
 >
-> Chassee. Oh! wretches! true and palpable enough,
+> Chassée. Oh! wretches! true and palpable enough,
 >
 > Their bills are nothing but a glaring puff;
 >
@@ -4041,7 +4041,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > See how I'm imitated line by line;
 >
-> They're so alike, 'tis only in the name
+> They're so alike, it is only in the name
 >
 > They're different: in fact, they seem the same.
 >
@@ -4071,7 +4071,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > No proof or satisfaction could I again,
 >
-> Altho' I urged his credit was at stake,
+> Although I urged his credit was at stake,
 >
 > He would not dance, but this excuse did make;
 >
@@ -4093,7 +4093,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Excused himself from all he had professed.
 >
-> Chassee. A usual practice which these teachers use,
+> Chassée. A usual practice which these teachers use,
 >
 > To gull the town and confidence abuse.
 >
@@ -4123,7 +4123,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To make himself the more believed he swore,
 >
-> That all he said he'd prove, and ten times more;
+> That all he said heed prove, and ten times more;
 >
 > But one, who was a Rhodian, rose and said,
 >
@@ -4141,7 +4141,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > When in such falsehoods and such boastings caught.
 >
-> Chassee. These quacks, I've challenged, aye, in every way,
+> Chassée. These quacks, I've challenged, aye, in every way,
 >
 > To dance with me, and their great skill display;
 >
@@ -4155,7 +4155,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > What dancing really is, and who can show
 >
-> They've execution, judgment, taste, and skill,
+> They've execution, judgement, taste, and skill,
 >
 > And can their public promise well fulfil.
 >
@@ -4169,7 +4169,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > With one who prints "professor" in his bill,
 >
-> 'Twas done to try the great professor's skill.
+> It was done to try the great professor's skill.
 >
 > With this proposal, he directly closed,
 >
@@ -4181,7 +4181,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > As he knew neither figures, steps, nor grace,
 >
-> For when he moved 'twas always out of place:
+> For when he moved it was always out of place:
 >
 > His feet seemed quite confused, and not to know
 >
@@ -4197,9 +4197,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Then took her seat, and to herself exclaimed,
 >
-> "This to the' public ought to be proclaimed".
+> "This to the public ought to be proclaimed".
 >
-> Chassee. These creatures I'd expose in every way,
+> Chassée. These creatures I'd expose in every way,
 >
 > All these, I mean, who can't do what they say.
 >
@@ -4207,19 +4207,19 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Something respecting you that has occurred,
 >
-> Twas told to me by those well known to you.
+> It was told to me by those well known to you.
 >
-> Chassee. The world's censorious! all we hear's not true.
+> Chassée. The world's censorious! all we hear is not true.
 >
 > Bel. The other day I heard some persons state,
 >
 > That you've not opened your grand balls of late.
 >
-> Chassee. With opening dances I have been quite cloyed.
+> Chassée. With opening dances I have been quite cloyed.
 >
 > Bel. I'm told at several you were much annoyed.
 >
-> Chassee. I must confess, at one some time ago,
+> Chassée. I must confess, at one some time ago,
 >
 > Some envious wretched teachers whom I know,
 >
@@ -4251,7 +4251,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. To some teachers, if such a thing took place,
 >
-> 'Twould serious prove, and bring them to disgrace;
+> It would serious prove, and bring them to disgrace;
 >
 > But this and several circumstances more
 >
@@ -4263,13 +4263,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > I cannot recollect the place or day,
 >
-> But 'tis the same you mean, from what you say:
+> But it is the same you mean, from what you say:
 >
 > Pray let me hear from you how it occurred;
 >
 > No doubt but I've exaggerations heard.
 >
-> Chassee. Oh! oh! Mon Dieu! 'tis scandal every word,
+> Chassée. Oh! oh! Mon Dieu! it is scandal every word,
 >
 > Perverted thus, for calumny to handle,
 >
@@ -4281,7 +4281,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > While opening with a fine specimen dance,
 >
-> Where I pourtray'd some dances de la France,
+> Where I portrayed some dances de la France,
 >
 > My style and talents drew forth every praise,
 >
@@ -4299,13 +4299,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > From whom or how it came so much depends.
 >
-> Chassee. 'Twas alt from strangers, as I understand.
+> Chassée. It was alt from strangers, as I understand.
 >
 > My friends were neuter, didn't give a hand.
 >
-> Bel. 'Twas very different as 'twas told to me.
+> Bel. It was very different as it was told to me.
 >
-> Chassee. Two of a trade you know can ne'er agree.
+> Chassée. Two of a trade you know can never agree.
 >
 > Bel. So I've been often told, and I presume,
 >
@@ -4313,17 +4313,17 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > There's something mere I heard the other night,
 >
-> If, 'tis mis-stated, you can set me right.
+> If, it is misstated, you can set me right.
 >
-> Chassee. I am known for candour, no artifice conceal,
+> Chassée. I am known for candour, no artifice conceal,
 >
-> Ev'n my own faults and failings I reveal.
+> Even my own faults and failings I reveal.
 >
-> Bel. Did you e'er join E. W. or Mr. T.?
+> Bel. Did you e'er join E. W. or Mister T.?
 >
-> Or e'er take lessons from a Mr. B.?
+> Or e'er take lessons from a Mister B.?
 >
-> Chassee. What! I take lessons from a sorry crew.
+> Chassée. What! I take lessons from a sorry crew.
 >
 > Who only copy me. — Oh! Sacre Dieu!
 >
@@ -4341,9 +4341,9 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. Do you to J----------'s Well as usual go?
 >
-> And are you still with Mr. H. in Co?
+> And are you still with Mister H. in Co?
 >
-> Chassee. Sacre Dieu =! I have cut the Tonsor long ago;
+> Chassée. Sacre Dieu! I have cut the Tonsor long ago;
 >
 > Nor have I lately danced at J----------'s W----------ll
 >
@@ -4361,13 +4361,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Jem. Real modest merit, I shall e'er befriend.
 >
-> Chassee. My modesty and merit, I presume,
+> Chassée. My modesty and merit, I presume,
 >
 > Are real; nothing false do I assume;
 >
 > Mine is the fashionable Stile you'll find,
 >
-> In which there,S grace and elegance combin'd;
+> In which there,S grace and elegance combined;
 >
 > Here are some brilliant steps, I trust you'll say,
 >
@@ -4379,7 +4379,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > I fear too difficult to teach to me.
 >
-> Chassee. I made those steps myself, to me alone.
+> Chassée. I made those steps myself, to me alone.
 >
 > These brilliant graceful steps are only known;
 >
@@ -4399,13 +4399,13 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > You all these methods, likewise all you know.
 >
-> Chassee. My knowledge from instinct and real genius came,
+> Chassée. My knowledge from instinct and real genius came,
 >
 > Not from such quacks as now aspire to fame.
 >
 > For all they know, I at one glance could take;
 >
-> My Towzor he could better dances make;
+> My Towsor he could better dances make;
 >
 > These creatures can do little more than talk,
 >
@@ -4419,7 +4419,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > As you their stile of dancing seem to know.
 >
-> Chassee. I, from their pupils, who now come to me,
+> Chassée. I, from their pupils, who now come to me,
 >
 > Acquire their methods, and by this, you see,
 >
@@ -4435,11 +4435,11 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > To come to me to profit by my name.
 >
-> Bel. You must be skilled, why ev'n your bill of fare,
+> Bel. You must be skilled, why even your bill of fare,
 >
 > Contains such things, as makes most people stare.
 >
-> Chassee. I fifty dances teach, not mentioned there,
+> Chassée. I fifty dances teach, not mentioned there,
 >
 > Besides those composition of my own,
 >
@@ -4457,7 +4457,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > I've really quite forgot your own address.
 >
-> Chassee. This card, Mademoiselle, does my address contain,
+> Chassée. This card, Mademoiselle, does my address contain,
 >
 > And all the various dances will explain,
 >
@@ -4473,7 +4473,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > And then by royalty you're patronized.
 >
-> Chassee. I have that honour, and am proud to say
+> Chassée. I have that honour, and am proud to say
 >
 > I merit it: the reward's not thrown away:
 >
@@ -4485,39 +4485,39 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > If so, I very awkward shall appear.
 >
-> Chassee. Do you know — La chaine, des dames et chassee croissee,
+> Chassée. Do you know — La chaine des dames et chassée croisée,
 >
-> Chassee ouvert, queu du chat et ballancez.
+> Chassée ouvert, queue du chat et balancez.
 >
 > Bel. I cannot say I understand them all,
 >
 > Although I danced them once at Almack's ball,
 >
-> I wish you would, sir, just perform L'Ete,
+> I wish you would, sir, just perform L'été,
 >
 > And that will better put me in the way.
 >
-> Chassee. With pleasure, a quadrille I now will dance,
+> Chassée. With pleasure, a quadrille I now will dance,
 >
 > With any in this country or in France.
 >
 > Bel. None can dispute it, sir, you're very kind.
 >
-> Chassee. This is the figure and the steps combin'd.
+> Chassée. This is the figure and the steps combined.
 
-### Dances L'Ete. Belinda and Jemima laugh aside.
+### Dances L’été. Belinda and Jemima laugh aside.
 
 > Bel. Thank you, sir. Now, Jemima, try my dear!
 >
 > How you can do it, for you need not fear
 >
-> Mr. Chassee; I'm sure, he will excuse your dancing.
+> Mister Chassée; I'm sure, he will excuse your dancing.
 >
 > Come, Jemima, don't refuse.
 >
-> Chassee. Don't be afraid, miss. Come, now, let me see,
+> Chassée. Don't be afraid, miss. Come, now, let me see,
 >
-> 'Tis not expected you should dance like me;
+> It is not expected you should dance like me;
 >
 > From one, like you, miss, I cannot expect,
 >
@@ -4527,15 +4527,15 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > Bel. I've many teachers seen, who can't dance well.
 >
-> Chassee. Very true, miss, there's many great impostors,
+> Chassée. Very true, miss, there's many great impostors,
 >
 > Who always call themselves great dancing masters.
 >
 > Bel. In their exposure, I should take delight,
 >
-> 'Twould serve such barefaced gross impostors right.
+> It would serve such barefaced gross impostors right.
 >
-> Chassee. If I could see them well exposed, 'twould be
+> Chassée. If I could see them well exposed, it would be
 >
 > The greatest pleasure you could give to me.
 >
@@ -4545,7 +4545,7 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > My grace and manners: I will once again
 >
-> Dance it over, 'twill make it clear and plain;
+> Dance it over, it will make it clear and plain;
 >
 > Then, give me your, opinion, and observe,
 >
@@ -4557,18 +4557,18 @@ Enter Lucy, shewing in Belinda , disguised as an Old Woman.
 >
 > For flattery often makes bad dancers vain.
 
-Chassee. Don't flatter, me, for flattery I disdain.
+Chassée. Don't flatter, me, for flattery I disdain.
 >
 > Jem. Of that you'll have no reason, to complain.
 
-### Chassee dances; Jemima imitates.
+### Chassée dances; Jemima imitates.
 
 
-> Chassee. That is the modern fashionable style;
+> Chassée. That is the modern fashionable style;
 >
 > Now, miss, begin, I'll tune to you the while.
 
-### Jemima dances; Chassee surprised and confused.
+### Jemima dances; Chassée surprised and confused.
 
 > Jem. Now, Sir, excuse the liberty I take,
 >
@@ -4582,13 +4582,13 @@ Chassee. Don't flatter, me, for flattery I disdain.
 >
 > And have for years had practice on the stage,
 >
-> From false' positions all your steps you take;
+> From false positions all your steps you take;
 >
-> Third for fifth, and when the ballote you make,
+> Third for fifth, and when the balloté you make,
 >
 > Your feet are so confined with turned up toes,
 >
-> That 'tis ballote, none could suppose;
+> That it is balloté, none could suppose;
 >
 > Your arms ungraceful then you bend your back
 >
@@ -4602,9 +4602,9 @@ Chassee. Don't flatter, me, for flattery I disdain.
 >
 > Woe be to those who are under your tuition.
 
-### Chassee walks about agitated taking snuff.
+### Chassée walks about agitated taking snuff.
 
-> Chassee. Mercy! here's scandal, you're employed by those,
+> Chassée. Mercy! here's scandal, you're employed by those,
 >
 > Poor envious teachers, who my fame oppose.
 >
@@ -4620,9 +4620,9 @@ Chassee. Don't flatter, me, for flattery I disdain.
 
 ### Takes out a card.
 
-> Chassee. Madam! I'll stay no longer in this place,
+> Chassée. Madam! I'll stay no longer in this place,
 >
-> As your transcendant merit would disgrace,
+> As your transcendent merit would disgrace,
 >
 > By daring a professor to impeach,
 >
@@ -4640,7 +4640,7 @@ Chassee. Don't flatter, me, for flattery I disdain.
 >
 > One of those novelties you had from France.
 
-### Exit Chassee in a rage.
+### Exit Chassée in a rage.
 
 > Bel. Ha! ha! ha! I said you soon would-see,
 >
@@ -4656,14 +4656,14 @@ Chassee. Don't flatter, me, for flattery I disdain.
 >
 > There's one who keeps a gallimaufry hop,
 >
-> Thinks all his gagging brethren to o'ertop,
+> Thinks all his gagging brethren to overtop,
 >
-> Sends forth a bill of fare, "comme un Francois",
+> Sends forth a bill of fare, "comme un François",
 >
 >
 Not to bring folks to dance, but fools to pay.
 >
-> "Academic Royale" meets the wand'ring eye,
+> "Academic Royale" meets the wandering eye,
 >
 > And "Paris" stands in capitals just by.
 >
@@ -4673,9 +4673,9 @@ Not to bring folks to dance, but fools to pay.
 >
 > But what surprise, when once you see the name —
 >
-> 'Tis one who's long been kicked about by fame;
+> It is one who's long been kicked about by fame;
 >
-> Who has been treated like a common w----------,
+> Who has been treated like a common W----------,
 >
 > And, at Fame's temple, skulks about the door:
 >
@@ -4687,7 +4687,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > And rigidly fulfil all he says there,
 >
-> Or else "Academie Royale" shall erase,
+> Or else "Académie Royale" shall erase,
 >
 > To save his credit, and avoid disgrace.
 >
@@ -4703,7 +4703,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Teaches his pupils in a different way.
 >
-> He never means his promise to fulfill,
+> He never means his promise to fulfil,
 >
 > And laughs at fools who would believe his bill.
 >
@@ -4721,13 +4721,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > Will be mistaken: our professor's plan
 >
-> Is "hop and go forward", get thro' how you can.
+> Is "hop and go forward", get through how you can.
 >
 > No turning at the handle or the knees,
 >
 > To gain command, that attitudes may please;
 >
-> No bettements made there, either close or grand,
+> No battements made there, either close or grand,
 >
 > From which the hips and knees may gain command.
 >
@@ -4817,13 +4817,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > (Attracted by professor's bill of fare),
 >
-> To analyze this "Royale Academie",
+> To analyse this "Royale Académie",
 >
-> And learn if 'tis what it is said to be.
+> And learn if it is what it is said to be.
 >
 > He knows the various methods of Coulon,
 >
-> And on that plan he teaches 'tis well known,
+> And on that plan he teaches it is well known,
 >
 > And well explain the technic of art,
 >
@@ -4833,7 +4833,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Who tread the stage, or figure at the ball:
 >
-> His genius and his judgment none dispute,
+> His genius and his judgement none dispute,
 >
 > Except some quacks beneath him to refute.
 >
@@ -4841,7 +4841,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Were I his, — I really should complain,
 >
-> And almost, think' what some old ladies say,
+> And almost, think what some old ladies say,
 >
 > "There's something more than friendship in the way".
 >
@@ -4887,19 +4887,19 @@ Not to bring folks to dance, but fools to pay.
 >
 > As a composer would himself compare,
 >
-> And ev'n dispute with D'Egville or Aumer.
+> And even dispute with d'Egville or Aumer.
 >
 > Belinda. What! has he effrontery to advance,
 >
 > He can compose, or with those masters dance?
 >
-> Jemima. Though he may not excell Le Blond in flying,
+> Jemima. Though he may not excel le Blond in flying,
 >
 > He'll beat him, aye, and all the world, in lying:
 >
 > Not sylph like Ronzi's light fantastic toe,
 >
-> Nor classic Julia, nor agile Le Gros,
+> Nor classic Julia, nor agile le Gros,
 >
 > Nor even Noblet's pure attic grace,
 >
@@ -4941,7 +4941,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > And read, with wonder, items in their bill.
 >
-> They give their dances names to gain eclat,
+> They give their dances names to gain éclat,
 >
 > Which vulgar people say, "will crack your jaw"
 >
@@ -5025,7 +5025,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > "Danced by the Court and First Nobility,
 >
-> Likewise at Bath and Almack's", tho' 'tis known
+> Likewise at Bath and Almack's", though it is known
 >
 > That petty hops such dances would disown;
 >
@@ -5083,7 +5083,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Is likewise praised by all the fools in town;
 >
-> Not that they've read or seen, nor can they shew
+> Not that they've read or seen, nor can they show
 >
 > They've reasons for it, but that — said so;
 >
@@ -5107,7 +5107,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > So give some pieces names which few can read;
 >
-> As they find coptic or some hieroglyphic,
+> As they find Coptic or some hieroglyphic,
 >
 > To gather fools attractive and prolific,
 >
@@ -5131,9 +5131,9 @@ Not to bring folks to dance, but fools to pay.
 >
 > Professor's want, or they want intellect;
 >
-> Who ne'er discover right or wrong they do,
+> Who never discover right or wrong they do,
 >
-> But seem delighted, if they're told 'tis new;
+> But seem delighted, if they're told it is new;
 >
 > So these professors dances try to make,
 >
@@ -5159,11 +5159,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > And says, he teaches as they do in France,
 >
-> Upon the plan of "l'Academie Royal",
+> Upon the plan of "l'Académie Royal",
 >
-> That's so well known it dont require a trial,
+> That's so well known it don't require a trial,
 >
-> And trusts chat his academie alone
+> And trusts chat his Académie alone
 >
 > Is where the art is to perfection known;
 >
@@ -5171,11 +5171,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > Facilities of all and every kind;
 >
-> That, to enumerate them all, 'twould be
+> That, to enumerate them all, it would be
 >
 > Almost next to an impossibility.
 >
-> But cannot prove its fame's encreased by years,
+> But cannot prove its fame's increased by years,
 >
 > For twenty moons at most its age appears;
 >
@@ -5183,7 +5183,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > In six short lessons, what would take six months:
 >
-> He next proclaims, tho' not with modest grace,
+> He next proclaims, though not with modest grace,
 >
 > What some folks think a little out of place,
 >
@@ -5193,7 +5193,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > He tells you he has great "urbanity"
 >
-> And "assiduity" (hearen bless his modesty),
+> And "assiduity" (heaven bless his modesty),
 >
 > For that almost exceeds his vanity;
 >
@@ -5203,7 +5203,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Are now acknowledged both by old and young.
 >
-> Bel. And may perhaps in doggrel verse be sung.
+> Bel. And may perhaps in doggerel verse be sung.
 >
 > Jem. He, like some actors I've known on the stage,
 >
@@ -5211,7 +5211,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Yet never tells you who these patrons are,
 >
-> But still sends out new tricking' bills of fare.
+> But still sends out new tricking bills of fare.
 >
 > One democratic rogue well known to you,
 >
@@ -5221,13 +5221,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > Neither in bills does he his name display,
 >
-> But takes a cheaper way t' announce his ball,
+> But takes a cheaper way to announce his ball,
 >
-> Like dr. Eady, chalks it on the wall;
+> Like Dr. Eady, chalks it on the wall;
 >
 > His only trouble is a lengthy walk,
 >
-> And his expence one pennyworth of chalk.
+> And his expense one pennyworth of chalk.
 >
 > Bel. This he admits; but says, that meaner things
 >
@@ -5249,7 +5249,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > By throwing lazaroni in the sea.
 >
-> Bel. 'Tis fair to state to those who do complain,
+> Bel. It is fair to state to those who do complain,
 >
 > He plunges in, and brings them out again.
 >
@@ -5269,7 +5269,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Sometimes kills hogs, and forges horses shoes;
 >
-> And what's mere strange, perhaps to gain eclat,
+> And what's mere strange, perhaps to gain éclat,
 >
 > When he eats hog's flesh, likes it hot and raw.
 >
@@ -5289,7 +5289,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Some foolish act, done by some foolish king.
 >
-> Many of these new dancing Jerm'y Diddlers,
+> Many of these new dancing Jeremy Diddlers,
 >
 > Are nothing more than sorry green hag fiddlers.
 >
@@ -5337,7 +5337,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Likewise the buckles in the knees and shoes;
 >
-> They now wear colours, strings, and trowsers wide,
+> They now wear colours, strings, and trousers wide,
 >
 > Which, with their own, would hold two legs beside;
 >
@@ -5351,15 +5351,15 @@ Not to bring folks to dance, but fools to pay.
 >
 > Jem. Their conversation you cannot compare,
 >
-> With what has passed 'twixt Congreve and Voltaire;
+> With what has passed betwixt Congreve and Voltaire;
 >
-> Or 'twixt Aspasia and great Socrates,
+> Or betwixt Aspasia and great Socrates,
 >
 > Which did the hearers both instruct and please.
 >
 > But is composed of Tom and Jerry flash,
 >
-> For wit they substitute low batderdash.
+> For wit they substitute low balderdash.
 >
 > Their technic slang is, "Well, how goes the shop?"
 >
@@ -5385,7 +5385,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > And grin like monkeys dressed up at a show.
 >
-> Jem. Professor Chassee, I forgot to state,
+> Jem. Professor Chassée, I forgot to state,
 >
 > Has put his phiz on a new copper plate,
 >
@@ -5395,11 +5395,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > Lest with his Works his name with him should die;
 >
-> As children have a cut to shew the ass,
+> As children have a cut to show the ass,
 >
 > So he sends portraits to the adult class
 >
-> They're sent to huxters, green shops, nay to all,
+> They're sent to hucksters, green shops, nay to all,
 >
 > As invitation tickets to his ball.
 >
@@ -5427,11 +5427,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > Who are the guests that to his dances go;
 >
-> For tickets are transferred, aye ten times o'er,
+> For tickets are transferred, aye ten times over,
 >
 > And some I'm told, have changed hands with a score:
 >
-> Then he bids huxters not themselves confine,
+> Then he bids hucksters not themselves confine,
 >
 > But if they want more tickets, drop a line.
 >
@@ -5467,7 +5467,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Who scoffs at dancers for their want of sense;
 >
-> Tho' he his rivals' faults so plainly sees,
+> Though he his rivals' faults so plainly sees,
 >
 > Is not himself a perfect Socrates;
 >
@@ -5511,7 +5511,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > As some M. P.'s who're lately come from college.
 >
-> They know no more of Hume, Des Cartes, or Locke,
+> They know no more of Hume, des Cartes, or Locke,
 >
 > Than if each head had been a barber's block.
 >
@@ -5519,7 +5519,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > And feels delight to search his cat for fleas;
 >
-> Ev'n Rabelais' Bishop, who made sport with wigs,
+> Even Rabelais' bishop, who made sport with wigs,
 >
 > And died with laughter when the ass ate figs,
 >
@@ -5537,9 +5537,9 @@ Not to bring folks to dance, but fools to pay.
 >
 > He quits the stocks to play with childish toys,
 >
-> Leaves chassees to blow babbles with the boys;
+> Leaves chassées to blow babbles with the boys;
 >
-> And makes turks' caps, and pigs and geese with paper,
+> And makes Turks' caps, and pigs and geese with paper,
 >
 > And says, he taught an old tom eat to caper:
 >
@@ -5555,7 +5555,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Still strives in print to publish his own fame;
 >
-> For tho' he's been so scooted by the muses,
+> For though he's been so scooted by the muses,
 >
 > He still writes on, and good advice refuses
 >
@@ -5563,7 +5563,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > But the real author's name with care cone conceals,
 >
-> And puts his own, to what he slily steals.
+> And puts his own, to what he silly steals.
 >
 > To say that he's an improvisatore,
 >
@@ -5571,17 +5571,17 @@ Not to bring folks to dance, but fools to pay.
 >
 > You might as soon a comet hope to see,
 >
-> As our professor rhime extempore.
+> As our professor rhyme extempore.
 >
-> Jem. Tho' he to taste and verse has no pretence,
+> Jem. Though he to taste and verse has no pretence,
 >
 > You must allow he has some common sense;
 >
 > His wit and stories, when you hear their source,
 >
-> Perhaps yon'll say, are rather trite and coarse;
+> Perhaps you'll say, are rather trite and coarse;
 >
-> 'Tis not from "Congreve", Rabelais, or Swift,
+> It is not from "Congreve", Rabelais, or Swift,
 >
 > He brings his wit, to give his tales a lift
 >
@@ -5599,13 +5599,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > Bel. Hop Merchant is a term with which these elves,
 >
-> Tho' 'tis sarcastic, often dub themselves;
+> Though it is sarcastic, often dub themselves;
 >
-> The term they think sounds well, and tho' a quiz,
+> The term they think sounds well, and though a quiz,
 >
 > Know few can tell them what the difference is,
 >
-> 'Twixt arts, trades, callings, and the sciences.
+> Betwixt arts, trades, callings, and the sciences.
 >
 > Nay, some I'm told believe, who cannot dance,
 >
@@ -5631,7 +5631,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Thinks merchant will his sooty calling deck;
 >
-> Writes up, "Coal Merchant", tho' he cannot boast
+> Writes up, "Coal Merchant", though he cannot boast
 >
 > He ever sold a bushel at the most.
 >
@@ -5655,7 +5655,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Now writes up "carpenter and undertaker":
 >
-> A pop-gun maker, tho' on Saffron-hill,
+> A pop-gun maker, though on Saffron-hill,
 >
 > Will write up "builder", to proclaim his skill.
 >
@@ -5669,7 +5669,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Which he writes up, his rivals to excel,
 >
-> And tho' no clients, has an "office bell".
+> And though no clients, has an "office bell".
 >
 > To credit all we see, and all we're told,
 >
@@ -5683,7 +5683,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > And tricks of trade, and customs of our days).
 >
-> There's "Working Cutlers", who ne'er used a tool,
+> There's "Working Cutlers", who never used a tool,
 >
 > And "real hat-makers" qualified at school;
 >
@@ -5697,9 +5697,9 @@ Not to bring folks to dance, but fools to pay.
 >
 > There's many sale shops this device prefer,
 >
-> Tho' nothing make, write "Manufacturer".
+> Though nothing make, write "Manufacturer".
 >
-> The retail dealer, without' hesitation,
+> The retail dealer, without hesitation,
 >
 > Now "wholesale" writes, and "goods for exportation":
 >
@@ -5717,7 +5717,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Hopes these devises will great sales announce,
 >
-> Tho' these great "Hongs", ne'er weighed beyond an ounce.
+> Though these great "hongs", never weighed beyond an ounce.
 >
 > Each petty trader uses sounding; phrases,
 >
@@ -5755,7 +5755,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > But go to change, they wish you at the devil;
 >
-> When you complain, they sometimes' will declare,
+> When you complain, they sometimes will declare,
 >
 > They know you not, nor were the goods bought there:
 >
@@ -5799,13 +5799,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > Who would the authors of such tricks be named,
 >
-> As 'tis degrading, when they imitate
+> As it is degrading, when they imitate
 >
 > What they professionally should reprobate;
 >
 > For in opinion great distinction's made
 >
-> 'Twixt artists and the tricking sons of trade.
+> Betwixt artists and the tricking sons of trade.
 >
 > Jem. Of honesty in trade no one believes,
 >
@@ -5819,11 +5819,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > From whom, or what they are, can't be described;
 >
-> Another box, to show he's justin trade,
+> Another box, to show he's just in trade,
 >
 > Will meet your eyes, on which is wrote "bills paid".
 >
-> This they conceive will confidence encrease,
+> This they conceive will confidence increase,
 >
 > And will with doubtful traders make their peace:
 >
@@ -5831,7 +5831,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > With empty Ledgers piled up six feet high;
 >
-> And at the door, to give the thing eclat,
+> And at the door, to give the thing éclat,
 >
 > Are tubs of stones, and packages of straw.
 >
@@ -5839,17 +5839,17 @@ Not to bring folks to dance, but fools to pay.
 >
 > And hopes in time to have a gown and wig;
 >
-> Tho' without clients, and unknown in Court,
+> Though without clients, and unknown in Court,
 >
 > And terms all end and he makes no report,
 >
 > Has clerk and of office and a letter-box
 >
-> And inner door to drown n intrussive knocks,
+> And inner door to drown n intrusive knocks,
 >
 > He writes up offices and bell,
 >
-> Tho' without business, thinks the term sounds well;
+> Though without business, thinks the term sounds well;
 >
 > Has boxes marked with names, and places in view;
 >
@@ -5865,11 +5865,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > And ask his clerk if Thompson does defend.
 >
-> To know the person he calls. Mr. Thompson,
+> To know the person he calls. Mister Thompson,
 >
-> You may as well enquire of Mons. Tonson;
+> You may as well enquire of Monsieur Tonson;
 >
-> Bat when they're gone, the clerk and Mr. Flaw
+> Bat when they're gone, the clerk and Mister Flaw
 >
 > Take draughts of Intire, and leave drafts of law.
 >
@@ -5889,11 +5889,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > Sometimes "Old Tom's" above, and "X" below,
 >
-> And "Double XX" the largest tub will grace,
+> And "Double X" the largest tub will grace,
 >
-> And mighty "SAMPSON" stares you in the face.
+> And mighty "Sampson" stares you in the face.
 >
-> These doughty heroes, tho' they're large and, tall,
+> These doughty heroes, though they're large and, tall,
 >
 > Are harmless as the giants in Guildhall;
 >
@@ -5905,7 +5905,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > As his 'munition's from "New river head".
 >
-> Their names would, fright a frenchman from the bar,
+> Their names would, fright a Frenchman from the bar,
 >
 > As "Nelson, Waterloo, and Trafalgar";
 >
@@ -5925,9 +5925,9 @@ Not to bring folks to dance, but fools to pay.
 >
 > That words and meanings oft are misapplied:
 >
-> 'Tis not from accidents these slips are made,
+> It is not from accidents these slips are made,
 >
-> But thro' design, for all's thought fair in trade.
+> But through design, for all's thought fair in trade.
 >
 > Bel. To live in faith, we find it to our cost,
 >
@@ -5943,9 +5943,9 @@ Not to bring folks to dance, but fools to pay.
 >
 > Milk's genuine from the cow and always new,
 >
-> The' water'd thrice, and made to took sky blue;
+> They watered thrice, and made to took sky blue;
 >
-> Wine's always neat, tho' it be mixed with sloes,
+> Wine's always neat, though it be mixed with sloes,
 >
 > And genuine tea in England often grows
 >
@@ -5953,7 +5953,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > And new-laid eggs we've seen a month before
 >
-> There's wheaten bread from 'tatoes sold in shops,
+> There's wheaten bread from potatoes sold in shops,
 >
 > And real Intire made sans malt or hops:
 >
@@ -5971,7 +5971,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > The porter now becomes a man of taste,
 >
-> Wears monstrous trowsers pucker'd at the waist,
+> Wears monstrous trousers puckered at the waist,
 >
 > Carries a snuff box, sports a ring and broach —
 >
@@ -5981,39 +5981,39 @@ Not to bring folks to dance, but fools to pay.
 >
 > Carries his weekly wash beneath his coat:
 >
-> To sweep the shop, some shopmen will refuse,
+> To sweep the shop, some shop-men will refuse,
 >
 > Who are at home obliged to black their shoes
 >
 > The printed card the porter now disuses,
 >
-> And "Mr." now instead of "John" he chuses:
+> And "Mister" now instead of "John" he chooses:
 >
 > Street fiddlers have a copper-plate address,
 >
 > And dustmen now gentility profess
 >
-> Shopmen to write "Esq". feel no shame,
+> Shop-men to write "Esquire" feel no shame,
 >
-> And courtezans take some romantic name.
+> And courtesans take some romantic name.
 >
 > You're not to judge from what you hear or see,
 >
 > For people are not what they seem to be;
 >
-> In hackney'd terms, they bills and placards word,
+> In hackneyed terms, they bills and placards word,
 >
 > And many of them foolish and absurd:
 >
 > Some "to the public do their thanks return,
 >
-> For patronage" which they could ne'er discern,
+> For patronage" which they could never discern,
 >
 > Which has been so extensively obtained,
 >
 > And beg continuance of these favours gained —
 >
-> Tho' they've such "numerous friends", oft, with surprize,
+> Though they've such "numerous friends", oft, with surprise,
 >
 > In the gazette these traders meet your eyes.
 >
@@ -6025,7 +6025,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > "For price and quality that none can match":
 >
-> "To serve you cheap", some say 'tis their intent,
+> "To serve you cheap", some say it is their intent,
 >
 > "And under prime cost sell full ten per cent";
 >
@@ -6045,7 +6045,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Who live in faith, and all they read believe.
 >
-> All are not bargains, tho' they may appear,
+> All are not bargains, though they may appear,
 >
 > For many buy good pennyworths too dear.
 >
@@ -6059,13 +6059,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > The man of wax is punctual, so he says,
 >
-> Altho' he keeps your shoes to mend, ten days.
+> Although he keeps your shoes to mend, ten days.
 >
 > Jem. Punctuality is sometimes taken ill,
 >
 > I mean when traders promptly bring their bill.
 >
-> Tho' we've in traders pointed out deceptions,
+> Though we've in traders pointed out deceptions,
 >
 > Yet I know some for whom I'll plead exceptions;
 >
@@ -6095,7 +6095,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Like some who caution never took before —
 >
-> When " obbin's lost, they shut the stable door".
+> When "dobbin's lost, they shut the stable door".
 >
 > Some blacking makers have their house in print,
 >
@@ -6139,13 +6139,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > If you complain and prove you've been mistaken,
 >
-> They shew the little "as" to save their bacon.
+> They show the little "as" to save their bacon.
 >
 > In trades and callings, and in every art,
 >
 > They something new and wonderful impart:
 >
-> 'Tis not to dancing only we're confin'd,
+> It is not to dancing only we're confined,
 >
 > But have strange projects now of every kind,
 >
@@ -6163,13 +6163,13 @@ Not to bring folks to dance, but fools to pay.
 >
 > Balloons will shortly navigate the sky,
 >
-> And loaded waggons with the mail will vie;
+> And loaded wagons with the mail will vie;
 >
-> Now on the main, columbian castles float,
+> Now on the main, Columbian castles float,
 >
-> And in steam coaches — there's a table d'hote,
+> And in steam coaches — there's a table d'hôte,
 >
-> Where not as usual, cranimed up toes to toes,
+> Where not as usual, crammed up toes to toes,
 >
 > But room to promenade, and take repose.
 >
@@ -6221,7 +6221,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Read the professions of each stage-buffoon,
 >
-> Who'll teach you grace, tho' he's a pantaloon;
+> Who'll teach you grace, though he's a pantalon;
 >
 > You'll find each sorry down, who makes wry faces,
 >
@@ -6241,7 +6241,7 @@ Not to bring folks to dance, but fools to pay.
 
 ### Ball room dancers
 
-> 'Tis not those teachers only that I blame,
+> It is not those teachers only that I blame,
 >
 > But many private persons I could name.
 >
@@ -6263,7 +6263,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Ability is not what they request —
 >
-> Pay the admission — you,'re a welcome guest
+> Pay the admission — you're a welcome guest
 >
 > To run, and kick, and flounce about at ease
 >
@@ -6279,7 +6279,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > That neither rule nor reason could devise,
 >
-> Such stuff as all good dancer's must surprize.
+> Such stuff as all good dancer's must surprise.
 >
 > Bel. There's persons that will any nonsense call
 >
@@ -6289,7 +6289,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Styles of all sorts, and steps of every kind;
 >
-> They stamp and scrape, and kick about and skuffle —
+> They stamp and scrape, and kick about and scuffle —
 >
 > Some jump, some rap their heels, whilst others shuffle;
 >
@@ -6299,7 +6299,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Jem. Call a quadrille, all scramble for a place,
 >
-> And few but would the post of honor grace,
+> And few but would the post of honour grace,
 >
 > Perhaps I should say, would themselves disgrace.
 >
@@ -6313,7 +6313,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > They've this advantage — as you mostly find
 >
-> In such form'd sets, the blind there lead the blind.
+> In such formed sets, the blind there lead the blind.
 >
 > Bel. With such directors, I'm induced to ask,
 >
@@ -6403,7 +6403,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > Some use their toes, and others trust to heels;
 >
-> Some drag their legs like cripples o'er the stones,
+> Some drag their legs like cripples over the stones,
 >
 > Whilst others hop as if they'd broken bones
 >
@@ -6417,11 +6417,11 @@ Not to bring folks to dance, but fools to pay.
 >
 > Should any dance be called, be what it will,
 >
-> A spanish dance, a waltz, or a quadrille,
+> A Spanish dance, a waltz, or a quadrille,
 >
 > Numbers stand up, and confidence will show,
 >
-> Tho' they the steps nor figures either know,
+> Though they the steps nor figures either know,
 >
 > If a quadrille, and some don't know the dance,
 >
@@ -6457,7 +6457,7 @@ Not to bring folks to dance, but fools to pay.
 >
 > "A little learning, is a dangerous thing";
 >
-> 'Tis so in dancing; those who little know,
+> It is so in dancing; those who little know,
 >
 > Expose themselves a consequence to show;
 >
@@ -6477,7 +6477,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > What they in others did as faults proclaim.
 >
-> Bel. Vanity in some's incureable, they say,
+> Bel. Vanity in some's incurable, they say,
 >
 > For that commodity, fools dearly pay.
 >
@@ -6513,9 +6513,9 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Which would the scientific artist please;
 >
-> These precepts should be clearly shewn to all,
+> These precepts should be clearly shown to all,
 >
-> As the perfections look'd for at a ball;
+> As the perfections looked for at a ball;
 >
 > This is a duty that all teachers owe
 >
@@ -6549,7 +6549,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Think they've grown clever, and can teach themselves;
 >
-> Tho' they one perfect step can't even show,
+> Though they one perfect step can't even show,
 >
 > Or scarcely do the five positions know;
 >
@@ -6557,7 +6557,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > As many who in dancing do excel
 >
-> If they can thro' the figures go, they'll say,
+> If they can through the figures go, they'll say,
 >
 > "I think I now can dance as well as they
 >
@@ -6569,13 +6569,13 @@ Jem. This is a proof of ignorance you'll find,
 >
 > These are their notions, this is what they say,
 >
-> These are opinions utter'd every day;
+> These are opinions uttered every day;
 >
 > I mean by those conceited silly guests,
 >
 > Who every public ball room now infest —
 >
-> Teachers have been encouragers, 'tis plain,
+> Teachers have been encouragers, it is plain,
 >
 > Of all the innovations we complain;
 >
@@ -6603,17 +6603,17 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Lucy. They cannot come till they their clothes have dried,
 >
-> By getting wet, poor Mr. Strummer died;
+> By getting wet, poor Mister Strummer died;
 >
 > He played in his wet clothes one night, I'm told,
 >
-> At Caper's ball, and died thro' getting cold;
+> At Caper's ball, and died through getting cold;
 >
 > Alas! poor man! he often said, that he,
 >
-> When mrs. Strummer died, would marry me.
+> When Mistress Strummer died, would marry me.
 >
-> Jem. Pho', never mind, if mr. Strummer's gone,
+> Jem. Pho', never mind, if Mister Strummer's gone,
 >
 > I warrant you'll soon get as good a one;
 >
@@ -6649,9 +6649,9 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Their schemes, by whom got up, of whom composed,
 >
-> I can explain, 'tis time they were exposed.
+> I can explain, it is time they were exposed.
 >
-> 'Tis not intended these remarks should be
+> It is not intended these remarks should be
 >
 > Applied to dancers of celebrity;
 >
@@ -6669,7 +6669,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > I've been to all that I've seen advertised,
 >
-> When I describe them, you will be surprized.
+> When I describe them, you will be surprised.
 >
 > Bel. Perhaps you're not aware that I have been
 >
@@ -6703,23 +6703,23 @@ Jem. This is a proof of ignorance you'll find,
 >
 > To use great teachers' names, and say they've been
 >
-> Pupils, tho' they've such persons never seen;
+> Pupils, though they've such persons never seen;
 >
 > Or at some theatre of great renown,
 >
-> Declare they've danc'd, and thus they gull the town;
+> Declare they've danced, and thus they gull the town;
 >
 > Or, if they ever have been taught, you'll find
 >
-> 'Tis hornpipes, reels, or dances of that kind.
+> It is hornpipes, reels, or dances of that kind.
 >
 > Or else a quarter's dancing at the most,
 >
 > Is all these great professors e'er can boast;
 >
-> Yet at their Balls they often advertize,
+> Yet at their Balls they often advertise,
 >
-> Such strange anomalies, as must surprize
+> Such strange anomalies, as must surprise
 >
 > All those who've etiquette and dancing seen,
 >
@@ -6779,7 +6779,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > By way of interlude, they often chase,
 >
-> To shew their skill and their dear selves amuse,
+> To show their skill and their dear selves amuse,
 >
 > To dance in fetters, or in wooden shoes.
 >
@@ -6789,7 +6789,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > They scraped about, as children do at school,
 >
-> For bows, they bobb'd, like dab chicks in a pool:
+> For bows, they bobbed, like dab chicks in a pool:
 >
 > Their arms when raised, how shall I them define?
 >
@@ -6797,7 +6797,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Their fingers were devoid of grace and ease,
 >
-> And stiff, projecting like a chevaux de frize;
+> And stiff, projecting like a chevaux de frieze;
 >
 > And their poor feet, for want of turning, went —
 >
@@ -6805,7 +6805,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Whether from fear, or knowing all not right,
 >
-> They look'd like hares, when started in a fright:
+> They looked like hares, when started in a fright:
 >
 > And in the face, from doubt or some such cause,
 >
@@ -6815,17 +6815,17 @@ Jem. This is a proof of ignorance you'll find,
 >
 > That would a d'Egville, or a Vestris please;
 >
-> 'Twas pure methodic, nothing like mishap,
+> It was pure methodic, nothing like mishap,
 >
 > Just as a bear herd holds his cadging cap.
 >
-> They danc'd, not as our Shakespeare wish'd to see,
+> They danced, not as our Shakespeare wished to see,
 >
 > To sink and rise like waving of the sea;
 >
-> For they the gentle waving line ne'er used,
+> For they the gentle waving line never used,
 >
-> But all the laws of art and grace abus'd.
+> But all the laws of art and grace abused.
 >
 > This surely is enough to make yon say,
 >
@@ -6845,7 +6845,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > At these grand balls I've seen strange people dance,
 >
-> Not quite au fait , as I have seen in France;
+> Not quite au fait, as I have seen in France;
 >
 > But quite devoid of figures, steps, and grace,
 >
@@ -6863,11 +6863,11 @@ Jem. This is a proof of ignorance you'll find,
 >
 > How awkward or how foolish guests appear.
 >
-> Such teachers say their companies they chuse,
+> Such teachers say their companies they choose,
 >
-> "And Balls are quite select" — ye ne'er refuse
+> "And Balls are quite select" — ye never refuse
 >
-> For pay, servants, 'prentices, or peddling jews;
+> For pay, servants, apprentices, or peddling Jews;
 >
 > Take all who come, money's their only aim,
 >
@@ -6877,7 +6877,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And ask of them admission to their ball,
 >
-> He'd be refused, for those imposing elves,
+> Heed be refused, for those imposing elves,
 >
 > Keep out all dancers better than themselves;
 >
@@ -6897,11 +6897,11 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Abuse and scandal's all they would obtain.
 >
-> I know an instance where the like occur'd,
+> I know an instance where the like occurred,
 >
 > Where the professor to declare was heard,
 >
-> He'd let no dancers in, in any way,
+> Heed let no dancers in, in any way,
 >
 > Whether they'd tickets, or proposed to pay.
 >
@@ -6911,9 +6911,9 @@ Jem. This is a proof of ignorance you'll find,
 >
 > From pride and envy these quacks can't agree,
 >
-> Tho' all are of the same fraternity
+> Though all are of the same fraternity
 >
-> Tho' each would trick all those within their reach,
+> Though each would trick all those within their reach,
 >
 > They'd yet like thieves their brother rogues impeach;
 >
@@ -6923,15 +6923,15 @@ Jem. This is a proof of ignorance you'll find,
 >
 > With envy they hypocrisy unite,
 >
-> And oft shake hands, when each from spleen cou'd fight;
+> And oft shake hands, when each from spleen coued fight;
 >
-> Will how at passing, and cry, how d'ye do?
+> Will how at passing, and cry, how do you do?
 >
-> Tho' tacitly each other Sacre Dieu!
+> Though tacitly each other Sacre Dieu!
 >
 > Jem. To advertise new rooms, some feel no shame,
 >
-> Tho' they for thirty years have been the same.
+> Though they for thirty years have been the same.
 >
 > Bel. With some folks now, a handsome room is all
 >
@@ -6945,7 +6945,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And with it "New embellishments" combine;
 >
-> Chassees nor coupees dare not show their face,
+> Chassées nor coupées dare not show their face,
 >
 > Nor can you find one single line on grace:
 >
@@ -6961,9 +6961,9 @@ Jem. This is a proof of ignorance you'll find,
 >
 > If only white-washed, that will prove it true.
 >
-> Tho' they themselves should wield the brush, they'll say
+> Though they themselves should wield the brush, they'll say
 >
-> 'Twas done by some great artist of the day;
+> It was done by some great artist of the day;
 >
 > Sometimes they tell you what the rooms have cost,
 >
@@ -6989,7 +6989,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And make a crooked line seem straight on paper.
 >
-> Therefore don't wonder, if these mean tactitians,
+> Therefore don't wonder, if these mean tacticians,
 >
 > Are not ashamed of such trite impositions.
 >
@@ -6997,15 +6997,15 @@ Jem. This is a proof of ignorance you'll find,
 >
 > How these ball holders do such numbers gain;
 >
-> To visit their grand balls, as 'tis well known,
+> To visit their grand balls, as it is well known,
 >
 > That most of them are to the town unknown.
 >
-> Jem. 'Tis from good souls who've neither taste nor wit,
+> Jem. It is from good souls who've neither taste nor wit,
 >
 > Who think a teacher's bill's like holy writ;
 >
-> Who ne'er reflect, but say as others say,
+> Who never reflect, but say as others say,
 >
 > And are by hearsay stories led away.
 >
@@ -7035,7 +7035,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Of numbers and connection they will boast,
 >
-> Tho' not to half a dozen known at most.
+> Though not to half a dozen known at most.
 >
 > Some give to girls (I ladies should them call),
 >
@@ -7057,9 +7057,9 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Whilst they make parties for professor's ball;
 >
-> 'Tis always ladies who perform this task,
+> It is always ladies who perform this task,
 >
-> Not such as dare'nt of men a favour ask;
+> Not such as dare not of men a favour ask;
 >
 > Who run and scream, and muffle up their eyes,
 >
@@ -7077,7 +7077,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > They search for those who can, or try to dance,
 >
-> Set down their names, where'er they have a chance
+> Set down their names, wherever they have a chance
 >
 > Of bringing one their viands to partake,
 >
@@ -7085,7 +7085,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > They gain addresses, invitations send
 >
-> For their grand balls, to mr. A----------, and friend
+> For their grand balls, to Mister A----------, and friend
 >
 > Who reads and wonders how these tickets came,
 >
@@ -7097,13 +7097,13 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Or by what means such friendship he deserved.
 >
-> He yet conceives, tho' he don't recollect,
+> He yet conceives, though he don't recollect,
 >
-> It must be sent thro' knowledge and respect;
+> It must be sent through knowledge and respect;
 >
 > He goes determined, if he dance or not,
 >
-> To see some old acquaintance he'd forgot:
+> To see some old acquaintance heed forgot:
 >
 > Expects professor will some notice take,
 >
@@ -7111,7 +7111,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > But what must be the visitor's surprise,
 >
-> Professor ne'er before had met his eyes;
+> Professor never before had met his eyes;
 >
 > Nor does he come to meet congratulation,
 >
@@ -7159,7 +7159,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > As they to hops at public houses go,
 >
-> And there become a sort of raree show;
+> And there become a sort of rare show;
 >
 > Yet not as guests do they such balls attend,
 >
@@ -7179,7 +7179,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Confined to dancing, and the most refined,
 >
-> Which was, and is, with etiquette combin'd:
+> Which was, and is, with etiquette combined:
 >
 > For at these balls, where our professors go,
 >
@@ -7195,7 +7195,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Daffers, duffers, mop-stick weavers, and undertakers,
 >
-> Oft' constitute the guests at these grand balls,
+> Oft constitute the guests at these grand balls,
 >
 > Dispute precedence, and demand the calls.
 >
@@ -7229,7 +7229,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > To make a benefit, as well as sport
 >
-> Poor Terpischore would here in sackloth weep,
+> Poor Terpsichore would here in sackcloth weep,
 >
 > To see such dancing, as would shame a sweep.
 >
@@ -7253,13 +7253,13 @@ Jem. This is a proof of ignorance you'll find,
 >
 > They're all "grand balls", for so they say in print,
 >
-> Whether they're in St. Giles's, or the Mint.
+> Whether they're in Saint Giles's, or the Mint.
 >
 > Bel. And some of those whom our professor graces,
 >
 > Are often held there, or in such like places,
 >
-> They every thing nicname' and magnify,
+> They every thing nickname and magnify,
 >
 > That on their words in print you can't rely.
 >
@@ -7271,15 +7271,15 @@ Jem. This is a proof of ignorance you'll find,
 >
 > She to the wolf the peevish child would throw;
 >
-> The wolf o'er heard it, and believed the nurse,
+> The wolf over heard it, and believed the nurse,
 >
 > But in the end her lying tongue did curse;
 >
-> For she ne'er mean't to do as she proposed,
+> For she never meant to do as she proposed,
 >
 > So on the wolf's credulity imposed
 >
-> Who, tir'd of waiting, hungry walk'd away,
+> Who, tired of waiting, hungry walked away,
 >
 > And curses lies and liars to this day.
 >
@@ -7311,7 +7311,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Jem. I could name scores that ball rooms now infest.
 >
-> Bel. 'Tis done to make fools think there'll be a crowd,
+> Bel. It is done to make fools think there'll be a crowd,
 >
 > Where human voice can't reach, however loud;
 >
@@ -7329,21 +7329,21 @@ Jem. This is a proof of ignorance you'll find,
 >
 > But in the ball room, there's no such pretence,
 >
-> 'Tis done to make their ball of consequence.
+> It is done to make their ball of consequence.
 >
 > There's one professor, aye, of whom you've heard,
 >
 > Put out a ball bill, pompous and absurd;
 >
-> 'Twas an attempt at wit, but such rare stuff,
+> It was an attempt at wit, but such rare stuff,
 >
 > To read it you would find three lines enough;
 >
-> And say 'twas only fit (the muse may weep)
+> And say it was only fit (the muse may weep)
 >
 > To read, to lull an Alderman to sleep,
 >
-> Professor said 'twas meant to make a hit,
+> Professor said it was meant to make a hit,
 >
 > But as some phrase it, here "it did not fit".
 >
@@ -7351,9 +7351,9 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Some future day, produce you this choice bill;
 >
-> But 'tis such wit, and so devoid of sense,
+> But it is such wit, and so devoid of sense,
 >
-> To read it thro' you need have recompense.
+> To read it through you need have recompense.
 >
 > Bel. There's few you'll find, but really think they've wit,
 >
@@ -7381,7 +7381,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > As they've so small a stock, and no supply,
 >
-> Justlike some springs in summer, often dry;
+> Just like some springs in summer, often dry;
 >
 > And what they borrow you with ease may know,
 >
@@ -7393,7 +7393,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Then strike his head (to cry out "fool" not willing),
 >
-> Whch being empty, rings like a cracked shilling.
+> Which being empty, rings like a cracked shilling.
 >
 > To find real wit you need adopt the plan,
 >
@@ -7401,17 +7401,17 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Bel. Balls have like churches lately multiplied,
 >
-> Tho' not with equal pious guests supplied.
+> Though not with equal pious guests supplied.
 >
 > Jem. Balls formerly were places of resort,
 >
 > For only the genteel, and better sort
 >
-> Of company, where strict decorum reign'd,
+> Of company, where strict decorum reigned,
 >
 > And where admission was not easy gained;
 >
-> Where none were seen you'd be asham'd to own,
+> Where none were seen you'd be ashamed to own,
 >
 > Where rudeness and ill manners were unknown.
 >
@@ -7421,7 +7421,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > We've yet some balls that well deserve the name,
 >
-> Which have unsullied still preserv'd their fame;
+> Which have unsullied still preserved their fame;
 >
 > This these Professors know and use their wit,
 >
@@ -7443,13 +7443,13 @@ Jem. This is a proof of ignorance you'll find,
 >
 > By friendly titles, dancers to befriend.
 >
-> Some are "Free balls" term'd — some they "friendly call",
+> Some are "Free balls" termed — some they "friendly call",
 >
 > These are but lures to get you to the ball;
 >
 > Direct, or indirect, you pay at all.
 >
-> How, and by what means 'tis done I'll clearly show,
+> How, and by what means it is done I'll clearly show,
 >
 > As I the system of these gentry know.
 >
@@ -7471,7 +7471,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > By which they slyly cozen the excise,
 >
-> By mixing liquors without licens'd leave
+> By mixing liquors without licensed leave
 >
 > To sack the profit and excise deceive.
 >
@@ -7485,9 +7485,9 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Bel. To sell without a license, I suppose,
 >
-> Would any vender to some fine expose.
+> Would any vendor to some fine expose.
 >
-> Jem. To sell what I have nam'd and be secure,
+> Jem. To sell what I have named and be secure,
 >
 > Three separate licenses you must procure;
 >
@@ -7531,7 +7531,7 @@ Jem. This is a proof of ignorance you'll find,
 >
 > If they can plenty of refreshments sell
 >
-> That's their main object, tho' it's not confest,
+> That's their main object, though it's not confessed,
 >
 > For that they strive to fill their room with guests.
 >
@@ -7543,7 +7543,7 @@ This to effect they tickets give to all
 >
 > To show their consequence and cut a dash;
 >
-> Who ask the ladies what they like to chuse,
+> Who ask the ladies what they like to choose,
 >
 > And seem offended when the belles refuse.
 >
@@ -7559,7 +7559,7 @@ This to effect they tickets give to all
 >
 > If wrong cast up — who never takes it ill
 >
-> Who ne'er reflect, and whose resolves are vain,
+> Who never reflect, and whose resolves are vain,
 >
 > Who, ranger like, — next night return again.
 >
@@ -7587,7 +7587,7 @@ This to effect they tickets give to all
 >
 > Beyond an orange, or some trifling cake.
 >
-> They at their rooms ne'er want such guests as these,
+> They at their rooms never want such guests as these,
 >
 > Who bring no profit, therefore cannot please.
 >
@@ -7597,7 +7597,7 @@ This to effect they tickets give to all
 >
 > Such prudent frugal guests will never pay".
 >
-> Bel. We've here digress'd, but this digression's shown
+> Bel. We've here digressed, but this digression's shown
 >
 > Me some strange practices till now unknown.
 
@@ -7611,9 +7611,9 @@ This to effect they tickets give to all
 >
 > Good company, with elegance combined.
 >
-> But at those balls you must not be surpriz'd,
+> But at those balls you must not be surprised,
 >
-> If expectations are not realiz'd.
+> If expectations are not realized.
 >
 > To one of those dress balls one night I went,
 >
@@ -7639,13 +7639,13 @@ This to effect they tickets give to all
 >
 > Of those they vainly strove to imitate.
 >
-> There was not one well dress'd amongst them all,
+> There was not one well dressed amongst them all,
 >
-> 'Twas quite a mockery of a grand dress ball;
+> It was quite a mockery of a grand dress ball;
 >
 > Nothing like rule or order found I there,
 >
-> 'Twas noise, dust, drinking, just like Greenwich fair.
+> It was noise, dust, drinking, just like Greenwich fair.
 
 ### Grand balls
 
@@ -7677,9 +7677,9 @@ This to effect they tickets give to all
 >
 > A rabble, only fit to grace a fair.
 >
-> A fight's as usual now at such a ball,
+> A fight is as usual now at such a ball,
 >
-> As to see herrings reta'l'd at a stall.
+> As to see herrings retailed at a stall.
 >
 > Bel. You from their titles really might expect
 >
@@ -7695,13 +7695,13 @@ This to effect they tickets give to all
 >
 > Therefore should you find genteel people there,
 >
-> 'Tis those impos'd on by their bills of fare.
+> It is those imposed on by their bills of fare.
 >
 > The dancing which you'll find at their grand balls,
 >
 > Next for remarks and reprehension calls;
 >
-> Quadrilles well danc'd, the waltz perform'd with ease,
+> Quadrilles well danced, the waltz performed with ease,
 >
 > And grace that would the most fastidious please
 >
@@ -7717,11 +7717,11 @@ This to effect they tickets give to all
 >
 > Stand up and hop about in their own way;
 >
-> Wrong for right, which ever way they chuse,
+> Wrong for right, which ever way they choose,
 >
 > And every rule of science may abuse;
 >
-> For dancing they such hotch potch substitute,
+> For dancing they such hotch-potch substitute,
 >
 > That brings this polite art to disrepute.
 >
@@ -7733,11 +7733,11 @@ This to effect they tickets give to all
 >
 > And many who had steps in great profusion,
 >
-> But wrong applied, whose feet seem'd all confusion.
+> But wrong applied, whose feet seemed all confusion.
 >
 > Jem. The appropriate steps these dancers never use,
 >
-> But hop, and run about like wrangling jews;
+> But hop, and run about like wrangling Jews;
 >
 > With bawling, "this way, sir", through there, "begin again",
 >
@@ -7747,7 +7747,7 @@ This to effect they tickets give to all
 >
 > And often treat professor with contempt.
 >
-> Bel. Without connection, 'tis the strangest thing,
+> Bel. Without connection, it is the strangest thing,
 >
 > How to these balls they can such numbers bring.
 >
@@ -7767,7 +7767,7 @@ This to effect they tickets give to all
 >
 > On strangers who too frequently suppose
 >
-> 'Tis all connection, but not half a score,
+> It is all connection, but not half a score,
 >
 > To these Professors have been known before.
 >
@@ -7833,37 +7833,37 @@ This to effect they tickets give to all
 >
 > Fit gentlemen to visit a grand ball:
 >
-> Who ne'er contend nor scramble for a place,
+> Who never contend nor scramble for a place,
 >
 > Who take and leave their partners with a grace;
 >
 > Who would five hours in the rain or cold,
 >
-> Wait for their partners, and ne'er frown or scold.
+> Wait for their partners, and never frown or scold.
 >
 > They don't resemble those, I fear you'll say,
 >
 > They clap and hiss like dustmen at a play;
 >
-> Dictate the hand, and 'midst quadrilles call reels,
+> Dictate the hand, and amidst quadrilles call reels,
 >
 > And silence claim, by rattling with their heels:
 >
 > Contend for places, claim the top by right,
 >
-> And when prov'd wrong, maintain the place by might.
+> And when proved wrong, maintain the place by might.
 >
-> Demand a call, but when it's nam'd can't show
+> Demand a call, but when it's named can't show
 >
 > That they the figures, steps, or music know;
 >
 > They less politeness to each other employ,
 >
-> Than our old foes show'd us, at Fontenoy.
+> Than our old foes showed us, at Fontenoy.
 >
-> Bel. There's this excuse, if it can he allow'd,
+> Bel. There's this excuse, if it can he allowed,
 >
-> They to politeness never yet have bow'd,
+> They to politeness never yet have bowed,
 >
 > On men and manners they've no strictures made,
 >
@@ -7873,9 +7873,9 @@ This to effect they tickets give to all
 >
 > And Rochefaucault's a name they never heard;
 >
-> You might as well to them in coptic preach,
+> You might as well to them in Coptic preach,
 >
-> As fam'd Galateo's genteel precepts teach.
+> As famed Galateo's genteel precepts teach.
 >
 > They never heard of Bacon, West, or Locke,
 >
@@ -7887,7 +7887,7 @@ This to effect they tickets give to all
 >
 > The dancing at these balls you'll seldom find,
 >
-> Either to rule or reason is confin'd;
+> Either to rule or reason is confined;
 >
 > Professor's object's not who may excel
 >
@@ -7899,21 +7899,21 @@ This to effect they tickets give to all
 >
 > Nor recommends the guests to pause, add think
 >
-> Of home, and of long reckonings 'ere they drink.
+> Of home, and of long reckonings there they drink.
 >
 > If with his viands they increase his bill,
 >
 > And should get tipsy, he'll not take it ill —
 >
-> Such are the guests they always like to chuse,
+> Such are the guests they always like to choose,
 >
 > And thus they do the term "select" abuse.
 >
-> The public with these balls they oft' deceive,
+> The public with these balls they oft deceive,
 >
-> For strangers by their titles oft' believe
+> For strangers by their titles oft believe
 >
-> That they with scrupulous nicety do chuse
+> That they with scrupulous nicety do choose
 >
 > Their company, and at these balls refuse
 >
@@ -7935,15 +7935,15 @@ This to effect they tickets give to all
 >
 > Without a question, pay but at the door,
 >
-> They will admit you, tho' ne'er seen before.
+> They will admit you, though never seen before.
 >
 > They're not concerned when they've your money got,
 >
 > How you can dance, or if you dance or not
 >
-> A stranger at these balls might be surpris'd,
+> A stranger at these balls might be surprised,
 >
-> To find them only common hops disguis'd.
+> To find them only common hops disguised.
 
 ### Characteristic balls
 
@@ -7961,7 +7961,7 @@ This to effect they tickets give to all
 >
 > But "Masquerade" they dare not advertise,
 >
-> As that at once the Police would apprize
+> As that at once the Police would apprise
 >
 > Of their illegal tricks, which might perchance
 >
@@ -8005,13 +8005,13 @@ This to effect they tickets give to all
 >
 > They bring upon the company, or the place.
 >
-> Altho' they call their company select,
+> Although they call their company select,
 >
 > Yet their good word alone will not protect
 >
 > Them always — two instances I have seen,
 >
-> At Bow street, and St. Martin's lane,
+> At Bow street, and Saint Martin's lane,
 >
 > I mean: Where the whole company were lately caught,
 >
@@ -8065,7 +8065,7 @@ This to effect they tickets give to all
 >
 > To undertake an action to defend;
 >
-> 'Tis the provisions of the act that I
+> It is the provisions of the act that I
 >
 > Shall here explain, but wholly must rely
 >
@@ -8099,11 +8099,11 @@ This to effect they tickets give to all
 >
 > Disorderly houses also fare the same.
 >
-> Bel. It seems a complicated act, combin'd
+> Bel. It seems a complicated act, combined
 >
-> With other things; to dancing not confin'd;
+> With other things; to dancing not confined;
 >
-> I'm told 'tis arbitrary, and too severe.
+> I'm told it is arbitrary, and too severe.
 >
 > Jem. The pains and penalties you now shall hear,
 >
@@ -8123,7 +8123,7 @@ This to effect they tickets give to all
 >
 > To pains and penalties, who do oppose
 >
-> The law, for strange to say, but 'tis the fact,
+> The law, for strange to say, but it is the fact,
 >
 > You may be punished by the Vagrant act;
 >
@@ -8135,7 +8135,7 @@ This to effect they tickets give to all
 >
 > Those parties, that such practices pursue.
 >
-> Bel. 'Tis too severe an act to he unknown,
+> Bel. It is too severe an act to he unknown,
 >
 > It wants repealing, every one must own.
 >
@@ -8167,7 +8167,7 @@ This to effect they tickets give to all
 >
 > As rogues and vagabonds, can them commit
 >
-> To prison — 'tis also left to his discretion,
+> To prison — it is also left to his discretion,
 >
 > To hind them over to the quarter session,
 >
@@ -8181,7 +8181,7 @@ This to effect they tickets give to all
 >
 > Jem. Offences call them! what, dancing an offence! —
 >
-> This act's a stretch of power, a mere pretense
+> This act's a stretch of power, a mere pretence
 >
 > To abridge the amusements of the middling class
 >
@@ -8199,9 +8199,9 @@ This to effect they tickets give to all
 >
 > But now I am anxious just to hear you state
 >
-> When, where, and how, are licenses obtain'd,
+> When, where, and how, are licenses obtained,
 >
-> For public dancing — this you've not explain'd.
+> For public dancing — this you've not explained.
 >
 > Jem. If you for dancing would a license take,
 >
@@ -8211,11 +8211,11 @@ This to effect they tickets give to all
 >
 > When all the justices of peace are there;
 >
-> Four oustices at least must seal and sign,
+> Four justices at least must seal and sign,
 >
 > In open court, not privately combine
 >
-> At adjourn'd sittings, but in open court,
+> At adjourned sittings, but in open court,
 >
 > The clerk their names must publicly report,
 >
@@ -8225,7 +8225,7 @@ This to effect they tickets give to all
 >
 > A license, unto which they all agree".
 >
-> 'Tis likewise requisite to mention here,
+> It is likewise requisite to mention here,
 >
 > The license then will only last one year;
 >
@@ -8243,11 +8243,11 @@ This to effect they tickets give to all
 >
 > Then should you fail for to renew the grant,
 >
-> Your place is clos'd, and you to gaol are sent.
+> Your place is closed, and you to gaol are sent.
 >
 > When you've the license got, there's one thing more
 >
-> Must be attended to — you o'er the door
+> Must be attended to — you over the door
 >
 > Must an inscription have in characters
 >
@@ -8269,11 +8269,11 @@ This to effect they tickets give to all
 >
 > They've licensed leave to let folks dance and pay;
 >
-> 'Till five P. M. the music dare not play.
+> Until five P. M. the music dare not play.
 >
 > On those who keep these rooms you'll find
 >
-> Other restrictions, with those nam'd combin'd;
+> Other restrictions, with those named combined;
 >
 > In case of breach, the Magistrates may send
 >
@@ -8283,9 +8283,9 @@ This to effect they tickets give to all
 >
 > Another license to that party give.
 >
-> To my best judgment, now, I think I have nam'd
+> To my best judgement, now, I think I have named
 >
-> The clauses, how and when the act was fram'd;
+> The clauses, how and when the act was framed;
 >
 > With all the pains and penalties thereto,
 >
@@ -8301,29 +8301,29 @@ This to effect they tickets give to all
 >
 > Me that disgrace, which I might e'er repent;
 >
-> Perhaps I should, if I'd not been appriz'd,
+> Perhaps I should, if I'd not been apprised,
 >
-> Have gone to some grand ball that's advertis'd,
+> Have gone to some grand ball that's advertised,
 >
-> And held at some unlicens'd house or place,
+> And held at some unlicensed house or place,
 >
-> And might have been imprison'd with disgrace.
+> And might have been imprisoned with disgrace.
 >
 > For want of knowledge, I must now confess,
 >
 > Against the laws I often did transgress;
 >
-> There's scarce a licens'd place in all the town,
+> There's scarce a licensed place in all the town,
 >
 > Not e'en those halls and taverns of renown,
 >
 > Where balls are frequent held, I must confess,
 >
-> 'Tis with surprize I see them all transgress;
+> It is with surprise I see them all transgress;
 >
 > And so do half the town without intent
 >
-> Of breaking thro' the act of Parliament
+> Of breaking through the act of Parliament
 >
 > For not one in a hundred, who now go
 >
@@ -8347,11 +8347,11 @@ This to effect they tickets give to all
 >
 > Publicans oft unconscious of offence,
 >
-> Transgress the law, likewise incur expence,
+> Transgress the law, likewise incur expense,
 >
 > From persons taking of their rooms, who say
 >
-> 'Tis for a private party, yet for pay
+> It is for a private party, yet for pay
 >
 > Let people in — this is enough; in fact,
 >
@@ -8359,7 +8359,7 @@ This to effect they tickets give to all
 >
 > Not knowing of this act, they only try
 >
-> To avoid what is term'd disorderly;
+> To avoid what is termed disorderly;
 >
 > To avert the danger, should it e'er accrue,
 >
@@ -8373,7 +8373,7 @@ This to effect they tickets give to all
 >
 > He then can satisfy his doubts and fears;
 >
-> Assure him 'twas respectable and quiet,
+> Assure him it was respectable and quiet,
 >
 > No naughty women, tippling, brawl, or riot;
 >
@@ -8395,7 +8395,7 @@ This to effect they tickets give to all
 >
 > And petty constables you'll often find,
 >
-> If you enquire, are rogues and fools combin'd;
+> If you enquire, are rogues and fools combined;
 >
 > Like "Dogberry" of old, they're just the same,
 >
@@ -8407,35 +8407,35 @@ This to effect they tickets give to all
 >
 > Know all proceedings, and what acts did pass,
 >
-> But tis at public houses o'er a glass;
+> But it is at public houses over a glass;
 >
-> Whoe'er takes their advice will surely fail,
+> Whoever takes their advice will surely fail,
 >
 > Lose suits and costs, and curse them in a jail.
 >
 > There's many a publican, as I've heard say,
 >
-> Thro' such advice has had the fine to pay;
+> Through such advice has had the fine to pay;
 >
 > At almost every public house, you'll find
 >
 > They've had a dance, or something of the kind;
 >
-> Have all unwittingly transgress'd the act,
+> Have all unwittingly transgressed the act,
 >
 > And may be sued by those who'll prove the fact.
 >
 > There's one thing more, of which they're not aware,
 >
-> They're not ev'n privileged at Bartholomew fair;
+> They're not even privileged at Bartholomew fair;
 >
 > No saving clause, that lady Holland's guest
 >
-> May privileg'd dance; they're class'd among the rest;
+> May privileged dance; they're classed among the rest;
 >
 > Before the court of pie poudre, may be
 >
-> Arraign'd, and punished for their jollity.
+> Arraigned, and punished for their jollity.
 >
 > Bel. There's one thing more, before we go,
 >
@@ -8449,7 +8449,7 @@ This to effect they tickets give to all
 >
 > Or is it doubtful how the law decides?
 >
-> Jem. 'Tis public dancing, music, and the like
+> Jem. It is public dancing, music, and the like
 >
 > Amusements, where you'll find the law does strike.
 >
@@ -8461,13 +8461,13 @@ This to effect they tickets give to all
 >
 > I am not sufficient lawyer now to show;
 >
-> Tho' they may at the door no money take,
+> Though they may at the door no money take,
 >
-> 'Tis plain these balls are for amusement sake;
+> It is plain these balls are for amusement sake;
 >
 > Public amusement you must know, is meant
 >
-> To he suppress'd by act of Parliament,
+> To he suppressed by act of Parliament,
 >
 > Without you have a license for the same,
 >
@@ -8507,11 +8507,11 @@ This to effect they tickets give to all
 >
 > Informers often with a gang combine
 >
-> 'Gainst publicans, and thus obtain the fine.
+> Against publicans, and thus obtain the fine.
 >
 > One hires a room and holds a dance, in fact
 >
-> 'Tis done to prove the breaking of the act;
+> It is done to prove the breaking of the act;
 >
 > One pays his money at the door, that he
 >
@@ -8567,7 +8567,7 @@ This to effect they tickets give to all
 >
 > In vain he pleads the act he never knew,
 >
-> Yet he must pay the fine, tho' it be true.
+> Yet he must pay the fine, though it be true.
 >
 > Bel. By tickets of admission are you sure,
 >
@@ -8579,19 +8579,19 @@ This to effect they tickets give to all
 >
 > Nay, magistrates have late decisions made,
 >
-> That they've contriv'd the statute to evade,
+> That they've contrived the statute to evade,
 >
-> For at unlicens'd rooms, be where they may,
+> For at unlicensed rooms, be where they may,
 >
 > You dare not dance, if you presume to pay,
 >
 > Without being open to the Vagrant act,
 >
-> And may be fin'd by those who'll prove the fact.
+> And may be fined by those who'll prove the fact.
 >
 > Bel. I must confess I now have heard from you,
 >
-> More dancing law than I suppos'd you knew.
+> More dancing law than I supposed you knew.
 >
 > Jem. I have not exaggerated, but stated fact,
 >
@@ -8617,7 +8617,7 @@ This to effect they tickets give to all
 >
 > And treats them as the spiders do the flies.
 >
-> Jem. Though 'tis irrelevant and retrograding,
+> Jem. Though it is irrelevant and retrograding,
 >
 > And may be thought the subject "balls" invading;
 >
@@ -8627,11 +8627,11 @@ This to effect they tickets give to all
 >
 > Bel l. The greatest generals often retrograde,
 >
-> To gain new strength 'gainst those whom they invade;
+> To gain new strength against those whom they invade;
 >
 > And then return with renovated powers,
 >
-> Refresh'd like sun-burnt earth from falling showers.
+> Refreshed like sun-burnt earth from falling showers.
 >
 > Therefore relate it now — you know, my love,
 >
@@ -8661,11 +8661,11 @@ This to effect they tickets give to all
 >
 > To attract the crowd, and catch the passers by;
 >
-> Bel. Names sometimes are for reasons kept conceal'd,
+> Bel. Names sometimes are for reasons kept concealed,
 >
-> And only are from circumstance reveal'd.
+> And only are from circumstance revealed.
 >
-> I've known some persons who remain'd in cog:
+> I've known some persons who remained in cog:
 >
 > For reasons why some donkeys wear a clog:
 >
@@ -8681,9 +8681,9 @@ This to effect they tickets give to all
 >
 > Break forth, and his astounding name display;
 >
-> His rivals will be in the distance hurl'd,
+> His rivals will be in the distance hurled,
 >
-> And our professor poze the dancing world.
+> And our professor pose the dancing world.
 >
 > The town will then no doubt a deference show
 >
@@ -8711,7 +8711,7 @@ This to effect they tickets give to all
 >
 > If to these balls you should gain free admission,
 >
-> You'll not (depend on't) also get permission
+> You'll not (depend on it) also get permission
 >
 > To place your hat or cloak just where you please,
 >
@@ -8737,11 +8737,11 @@ This to effect they tickets give to all
 >
 > To pay it ere you dance, you must agree.
 >
-> This they pretend's the perquisite of those,
+> This they pretend is the perquisite of those,
 >
 > Who have the care of bonnets, hats, and clothes;
 >
-> A mere pretence! the proprietor 'tis known,
+> A mere pretence! the proprietor it is known,
 >
 > Gives only poundage, makes the rest his own.
 >
@@ -8763,17 +8763,17 @@ This to effect they tickets give to all
 >
 > For gentlemen to pay for those they bring;
 >
-> Such regulations 'tis but fair to state,
+> Such regulations it is but fair to state,
 >
 > Do chiefly to the gentlemen relate —
 >
 > For these professors do a difference show
 >
-> 'Twixt ladies and gentlemen — ladies, they know,
+> Betwixt ladies and gentlemen — ladies, they know,
 >
 > To dances unprovided often go.
 >
-> They therefore are let off at small expence,
+> They therefore are let off at small expense,
 >
 > And only pay by way of recompense,
 >
@@ -8785,7 +8785,7 @@ This to effect they tickets give to all
 >
 > Trust each will treat his partner and her friend;
 >
-> For at refreshment, 'tis the usual plan,
+> For at refreshment, it is the usual plan,
 >
 > To place two ladies to each gentleman;
 >
@@ -8809,7 +8809,7 @@ This to effect they tickets give to all
 >
 > Because some thousands still in errors die,
 >
-> Nor listen to advice from Mrs. Fry.
+> Nor listen to advice from Mistress Fry.
 >
 > But many can (oh! shocking!) curse and damn,
 >
@@ -8851,13 +8851,13 @@ This to effect they tickets give to all
 >
 > And dread eleven, lest they in vain should knock;
 >
-> Apply for hat or shoes, they're often shock'd,
+> Apply for hat or shoes, they're often shocked,
 >
-> To hear of "servants out, and closet lock'd";
+> To hear of "servants out, and closet locked";
 >
 > And if they should the consequence explain,
 >
-> Professor swears and trys some keys in vain,
+> Professor swears and tries some keys in vain,
 >
 > And nods condolence, whilst he counts the gain.
 >
@@ -8877,11 +8877,11 @@ This to effect they tickets give to all
 >
 > Which in Professors should have been related.
 >
-> Bel. Let's hear it — time and place shall be excus'd,
+> Bel. Let's hear it — time and place shall be excused,
 >
-> I seek to be instructed and amus'd.
+> I seek to be instructed and amused.
 >
-> Jem. To pass off damaged ware, street huxters cry,
+> Jem. To pass off damaged ware, street hucksters cry,
 >
 > (To ease your doubts) come, "taste before you buy";
 >
@@ -8889,7 +8889,7 @@ This to effect they tickets give to all
 >
 > You'll soon the merits of their candour feel.
 >
-> Bel. That's very true — 'tis what they call a lay:
+> Bel. That's very true — it is what they call a lay:
 >
 > For those who taste, are always made to pay.
 >
@@ -8901,7 +8901,7 @@ This to effect they tickets give to all
 >
 > "Two lessons gratis if you join our ball".
 >
-> 'Tis meant to rival (may be plainly seen)
+> It is meant to rival (may be plainly seen)
 >
 > The "Supper gratis", and the trumpet scheme;
 >
@@ -8919,11 +8919,11 @@ This to effect they tickets give to all
 >
 > "Stoney Batter" to Macadamizers,
 >
-> Or with a board turn'd walking advertisers;
+> Or with a board turned walking advertisers;
 >
-> Or using steps (not chassees, more's the pity)
+> Or using steps (not chassées, more is the pity)
 >
-> To hawk some golden bubble thro' the city.
+> To hawk some golden bubble through the city.
 
 ### Free balls
 
@@ -8933,9 +8933,9 @@ This to effect they tickets give to all
 >
 > Concerning them; for I've heard many say,
 >
-> Though they're call'd free balls, you are made to pay.
+> Though they're called free balls, you are made to pay.
 >
-> Jem. Those miscall'd free balls often do disgrace
+> Jem. Those miscalled free balls often do disgrace
 >
 > Their title, the proprietor, and place
 >
@@ -8987,15 +8987,15 @@ This to effect they tickets give to all
 >
 > Are not of the reflecting squeamish kind;
 >
-> They're used to fights, to tipling, noise, and riot,
+> They're used to fights, to tippling, noise, and riot,
 >
-> And quite unus'd to order, rule, and quiet.
+> And quite unused to order, rule, and quiet.
 >
 > Bel. Such rude fracas their belles must terrify!
 >
 > Jem. By no means, they have more philosophy.
 >
-> They're not those squeamish dames who'd be asham'd
+> They're not those squeamish dames who'd be ashamed
 >
 > To hear an oath, or "ladies garters" named;
 >
@@ -9027,7 +9027,7 @@ This to effect they tickets give to all
 >
 > Than go to balls and dance to quadrille airs;
 >
-> Who never slander'd rivals friends or foes,
+> Who never slandered rivals friends or foes,
 >
 > Nor envied others jewels or fine clothes;
 >
@@ -9075,9 +9075,9 @@ This to effect they tickets give to all
 >
 > a fancy dress balls that, where every guest
 >
-> Is in appropriate costume strictly dres't;
+> Is in appropriate costume strictly dressed;
 >
-> The face to shew the character, and age
+> The face to show the character, and age
 >
 > They paint, as is the custom of the stage;
 >
@@ -9085,9 +9085,9 @@ This to effect they tickets give to all
 >
 > For "fancy ball" means not a "masquerade".
 >
-> Grand fancy balls have oft' been given at court,
+> Grand fancy balls have oft been given at court,
 >
-> Where royalty has sometimes deign'd to sport,
+> Where royalty has sometimes deigned to sport,
 >
 > Like those which Bath and Almack's now supply,
 >
@@ -9111,7 +9111,7 @@ This to effect they tickets give to all
 >
 > Instead of various characters arrayed
 >
-> In strict costume, where fancy has display'd
+> In strict costume, where fancy has displayed
 >
 > Her boundless whim, to variegate the scene,
 >
@@ -9133,21 +9133,21 @@ This to effect they tickets give to all
 >
 > In costumes worn three thousand years ago.
 >
-> (When these were nations the most fam'd on earth,
+> (When these were nations the most famed on earth,
 >
 > Where science, arts, and learning had their birth;
 >
-> But, strange reverse! they're now in darkness hurl'd,
+> But, strange reverse! they're now in darkness hurled,
 >
 > Who once gave laws and learning to the world).
 >
 > Here the swift Parthians your eyes will meet,
 >
-> So fam'd for victory in their feign'd retreat;
+> So famed for victory in their feigned retreat;
 >
 > In the mind's eye here Marathon you see,
 >
-> And Salamis and fam'd Thermopolae;
+> And Salamis and famed Thermopolae;
 >
 > And gay Palmyra's palaces (no more),
 >
@@ -9167,13 +9167,13 @@ This to effect they tickets give to all
 >
 > The wonder and the terror of their day;
 >
-> With other wonders history has display'd,
+> With other wonders history has displayed,
 >
-> By art produc'd, and by old time decay'd —
+> By art produced, and by old time decayed —
 >
-> At balls like these all may be entertain'd,
+> At balls like these all may be entertained,
 >
-> As characters are generally sustain'd
+> As characters are generally sustained
 >
 > By those of talent, who can represent
 >
@@ -9181,9 +9181,9 @@ This to effect they tickets give to all
 >
 > But at these teachers balls there's not the kind
 >
-> Of costume I've describ'd — their guests you'll find
+> Of costume I've described — their guests you'll find
 >
-> Are mostly dress'd in their own walking clothes,
+> Are mostly dressed in their own walking clothes,
 >
 > Not Fancy Dresses, as you might suppose.
 >
@@ -9199,7 +9199,7 @@ This to effect they tickets give to all
 >
 > Not even one in strange costume was seen.
 >
-> Bel. Such balls are meant as catch penneys, by those
+> Bel. Such balls are meant as catch pennies, by those
 >
 > Who laugh at all on whom they do impose.
 >
@@ -9207,7 +9207,7 @@ This to effect they tickets give to all
 >
 > Their placards, like themselves, are filled with lies;
 >
-> Bel. But strangers oft' too readily believe
+> Bel. But strangers oft too readily believe
 >
 > In all they hear and see, and thus deceive
 >
@@ -9235,7 +9235,7 @@ This to effect they tickets give to all
 >
 > How that's effected, I will now explain,
 >
-> 'Tis done to feed the vanity of those
+> It is done to feed the vanity of those
 >
 > Fair ladies, who the company compose,
 >
@@ -9247,7 +9247,7 @@ This to effect they tickets give to all
 >
 > How their election's made, I've never heard;
 >
-> No doubt the greatest talent is preferr'd.
+> No doubt the greatest talent is preferred.
 >
 > Jem. You are mistaken, talent has no avail,
 >
@@ -9265,11 +9265,11 @@ This to effect they tickets give to all
 >
 > With these professors meet with no support.
 >
-> As proof this office is bestow'd for gain,
+> As proof this office is bestowed for gain,
 >
 > A child for once this honour did obtain.
 >
-> Bel. These selfish wights 'tis plain now to perceive,
+> Bel. These selfish wights it is plain now to perceive,
 >
 > Entirely live by those whom they deceive;
 >
@@ -9297,7 +9297,7 @@ This to effect they tickets give to all
 >
 > But have no power to perform the same;
 >
-> 'Tis true they have the title for the night,
+> It is true they have the title for the night,
 >
 > But, mark me! these fair ladies have no right
 >
@@ -9343,9 +9343,9 @@ This to effect they tickets give to all
 >
 > Of all the various dances now in use,
 >
-> Quadrilles, the spanish dances and Batteuse,
+> Quadrilles, the Spanish dances and batteuse,
 >
-> With english country dances, ecosoise,
+> With English country dances, ecosoise,
 >
 > The figured reels and stately polonoise?
 >
@@ -9373,7 +9373,7 @@ This to effect they tickets give to all
 >
 > Not only have to make the bill of fare,
 >
-> But chuse as guests such as they may think fit;
+> But choose as guests such as they may think fit;
 >
 > None but those patronized will they admit;
 >
@@ -9393,13 +9393,13 @@ This to effect they tickets give to all
 >
 > The holders of these balls not only state
 >
-> Some direful tale, but oft' exaggerate;
+> Some direful tale, but oft exaggerate;
 >
 > They have different methods, yet they all agree
 >
 > In calling on the world for charity.
 >
-> "Fire and famine" oft' their placards head,
+> "Fire and famine" oft their placards head,
 >
 > Or else the name of same good soul just dead;
 >
@@ -9419,7 +9419,7 @@ This to effect they tickets give to all
 >
 > When charity by them is really meant.
 >
-> Jem. 'Tis praiseworthy and kind, all must confess,
+> Jem. It is praiseworthy and kind, all must confess,
 >
 > To give to objects really in distress.
 >
@@ -9429,7 +9429,7 @@ This to effect they tickets give to all
 >
 > Whilst modest merit often starves unknown,
 >
-> Afraid to ask, asham'd their case to own;
+> Afraid to ask, ashamed their case to own;
 >
 > While insolent and public paupers share,
 >
@@ -9443,11 +9443,11 @@ This to effect they tickets give to all
 >
 > To those wire as impostors wholly live.
 >
-> I have known some cases, which at balls occurr'd,
+> I have known some cases, which at balls occurred,
 >
-> The truth of which by many is averr'd,
+> The truth of which by many is averred,
 >
-> How persons have obey'd a widow's call,
+> How persons have obeyed a widow's call,
 >
 > And taken tickets to support her ball;
 >
@@ -9467,7 +9467,7 @@ This to effect they tickets give to all
 >
 > Nor does their charity that name deserve.
 >
-> Bel. 'Tis not all gold that glitters, you well know,
+> Bel. It is not all gold that glitters, you well know,
 >
 > For half their charity's mere outside show.
 >
@@ -9475,7 +9475,7 @@ This to effect they tickets give to all
 >
 > And make their charity a sort of bribe.
 >
-> As some subscribe thro' vanity alone,
+> As some subscribe through vanity alone,
 >
 > And others hope for faults they shall atone;
 >
@@ -9505,11 +9505,11 @@ This to effect they tickets give to all
 >
 > Give free admissions to their friends, that they
 >
-> May dance, tho' they've no charity to pay,
+> May dance, though they've no charity to pay,
 >
 > The dancing at these balls, in general, is
 >
-> Nice sport for dancers, if they chuse to quiz:
+> Nice sport for dancers, if they choose to quiz:
 >
 > Many stand up to dance, though they don't know
 >
@@ -9551,15 +9551,15 @@ This to effect they tickets give to all
 >
 > Can gain admission, though they seldom pay.
 >
-> Tho' I've made these remarks, do not suppose
+> Though I've made these remarks, do not suppose
 >
-> 'Tis done that I may charity oppose;
+> It is done that I may charity oppose;
 >
 > For I applaud the philanthropic zeal
 >
 > Of those who for their fellow creatures feel:
 >
-> 'Tis in defence of dancing I exclaim,
+> It is in defence of dancing I exclaim,
 >
 > All other views and motives I disclaim.
 
@@ -9575,7 +9575,7 @@ This to effect they tickets give to all
 >
 > Some teachers have their annual balls, which are
 >
-> Thus nam'd, you'll find, the public to ensnare;
+> Thus named, you'll find, the public to ensnare;
 >
 > They call them thus in hopes it may appear
 >
@@ -9583,7 +9583,7 @@ This to effect they tickets give to all
 >
 > To miss it, some couldn't satisfied remain,
 >
-> 'Till that day twelvemonth should come round again;
+> Until that day twelve month should come round again;
 >
 > But when they've been, what must he their surprise!
 >
@@ -9611,7 +9611,7 @@ This to effect they tickets give to all
 >
 > Were never known to have a ball before;
 >
-> They think 'twill pass them off upon the town,
+> They think it will pass them off upon the town,
 >
 > As long established and of some renown.
 >
@@ -9647,9 +9647,9 @@ This to effect they tickets give to all
 >
 > Bel. In title only, for their plans you'll find,
 >
-> When they're compar'd, are of a different kind;
+> When they're compared, are of a different kind;
 >
-> 'Tis true that they Subscribers strive to gain,
+> It is true that they Subscribers strive to gain,
 >
 > And try all means their money to obtain.
 >
@@ -9667,7 +9667,7 @@ This to effect they tickets give to all
 >
 > If they're not of high birth, rank, and station,
 >
-> And oft' refuse great lords of the creation,
+> And oft refuse great lords of the creation,
 >
 > Because they are not the noblesse of the nation.
 >
@@ -9721,7 +9721,7 @@ This to effect they tickets give to all
 >
 > No matter how or whence the money came
 >
-> The rich are ne'er refus'd, be who they may,
+> The rich are never refused, be who they may,
 >
 > But needy men of science walk away.
 >
@@ -9805,7 +9805,7 @@ This to effect they tickets give to all
 >
 > With odd fantastic strides about they hop,
 >
-> Like a tame jack daw in a barber's shop
+> Like a tame Jack Daw in a barber's shop
 >
 > They flounce about, draw up their knees like those
 >
@@ -9817,7 +9817,7 @@ This to effect they tickets give to all
 >
 > Go wrong for right, dance out of time, then say
 >
-> "'Tis all the fiddler's fault that they don't play
+> "It is all the fiddler's fault that they don't play
 >
 > Right, or else the dancers no attention pay".
 >
@@ -9825,7 +9825,7 @@ This to effect they tickets give to all
 >
 > Find fault with all but what they do themselves;
 >
-> 'Tis these I wish to see now imitated,
+> It is these I wish to see now imitated,
 >
 > And others of that class whom I've not stated.
 >
@@ -9887,7 +9887,7 @@ This to effect they tickets give to all
 >
 > Bel. The cause of this may easily be seen,
 >
-> The english country dance has lately been
+> The English country dance has lately been
 >
 > Neglected for a foreign substitute;
 >
@@ -9905,43 +9905,333 @@ This to effect they tickets give to all
 >
 > "Who'll watch the figure and attention pay".
 >
-> Jem. What they say's true, if figure's all you need,
+> Jem. What they say is true, if figure's all you need,
 >
-> But that, as dancing's, sorry stuff indeed
+> But that, as dancing is, sorry stuff indeed
 >
 > Till these strange notions are exploded, we
 >
 > Shall never more good country dancing see.
 
-### The english country dance
+### The English country dance
 
 ***
 
 ### A country dance
 
-As it is named, (or more properly an English country dance) almost universally known as the national dance of English, is constructed on mathematical principles, clearly displayed in its operative effect, when properly and well performed. It is formed of two principal features, viz. figures and steps, which, for the executon, government and display of their several movements and evolutions, are united with their indespensable auxillary, music: but independent of the scientific structure of the dance, there are secondary features, named ornaments and embellishments, and which are necessary to the performance of the figures and steps to the music, as they apply and are connected with each other in a graceful and easy manner. The figures, which form various evolutionary movements in circular, serpentive, angular, and straight lines, are formed into a variety of different lengths, (as shown by the diagrams in the complete system of english country dancing) and require a variety of different steps or movements of the feet in their performance to music appropriately adapted thereto. A country dance is formed of an indefinite number of ladies and gentlemen, not less than six. The ladies and gentelmen are placed in two rows of lines parallel with each other; the one consisting of ladies, which is called the ladies' side; and the other of gentlemen; which is called the gentlemen's side; every lady is opposite a gentleman, who are called partners. The couples being so placed, form which is termed "a set", and are demonstrated by different technical appelations, according to their situatuons, or the manner in which they are employed in the dance. The subjoined sketch will more clearly eludicate the form and construction of an english country dance, as formed into various sets, as Set A, Set B, Set C; also the formation of the major and minor sets, of the 1st, 2nd and 3rd or top, central, and bottom couples; likewise the leading, neutral and auxillary couples, top and bottom of the set, &c.
+As it is named, (or more properly an English country dance) almost universally known as the national dance of English, is constructed on mathematical principles, clearly displayed in its operative effect, when properly and well performed. It is formed of two principal features, videlicet figures and steps, which, for the execution, government and display of their several movements and evolutions, are united with their indispensable auxiliary, music: but independent of the scientific structure of the dance, there are secondary features, named ornaments and embellishments, and which are necessary to the performance of the figures and steps to the music, as they apply and are connected with each other in a graceful and easy manner. The figures, which form various evolutionary movements in circular, serpentine, angular, and straight lines, are formed into a variety of different lengths, (as shown by the diagrams in the complete system of English country dancing) and require a variety of different steps or movements of the feet in their performance to music appropriately adapted thereto. A country dance is formed of an indefinite number of ladies and gentlemen, not less than six. The ladies and gentlemen are placed in two rows of lines parallel with each other; the one consisting of ladies, which is called the ladies' side; and the other of gentlemen; which is called the gentlemen's side; every lady is opposite a gentleman, who are called partners. The couples being so placed, form which is termed "a set", and are demonstrated by different technical appellations, according to their situations, or the manner in which they are employed in the dance. The subjoined sketch will more clearly elucidate the form and construction of an English country dance, as formed into various sets, as Set A, Set B, Set C; also the formation of the major and minor sets, of the 1st, 2nd and 3rd or top, central, and bottom couples; likewise the leading, neutral and auxiliary couples, top and bottom of the set, &c.
 
-*Figure 1 omitted*
+*Figure 1 omitted.*
 
-### Explanation of the diagrams and characters contained in the above form and contruction of a country dance
+### Explanation of the diagrams and characters contained in the above form and construction of a country dance
 * Leading set is that set, however many there may be, which is privileged to call the first dance, and is generally called the first set, of Set A, see figure 1 and the article "Sets and divisions of the dance".
 * Minor set; any three couples in the general set performing the figure within themselves is termed "Minor set"; how these sets are formed and the number every dance will admit of, may be seen by the diagrams and article "Minor set".
-* Ladies and gentlemen's side, is shewn in the 1st of the Set A, and is known by, the ladies always having the top of the room or set on their right hand, and the genlemen on their left.
+* Ladies and gentlemen's side, is shown in the 1st of the Set A, and is known by, the ladies always having the top of the room or set on their right hand, and the gentlemen on their left.
 * Across the dance, means across the set.
 * Top of the dance or set, is from whence the dancing commences (see the form and construction of a country dance), and is on the right hand of the ladies, and on the left of the gentlemen. Should the room be square, instead of placing 3 sets parallel with each other, 4 sets might be formed, as shown at figure 12.
 * Top couple is the same as first couple; there are the top couple in general and in the minor set, see the article "Minor set".
-* Auxillary couples are those that assist the leading couple in the performance of the dance, they are active and inactive; see diagram 3 and 10, and the article "Auxillary couples".
-*
+* Auxiliary couples are those that assist the leading couple in the performance of the dance, they are active and inactive; see diagram 3 and 10, and the article "Auxiliary couples".
+* Lady and gentleman: when the appellations of lady and gentleman are made use of in a minor set, the leading couple (whether at top, centre and bottom), is meant, if no other lady or gentleman are otherwise particularly alluded to.
+* Neutral couple, is an inactive couple not required in the performance of the figure; they generally divide the minor set, but are sometimes included in it. See Figures 1 and 4 and the article "Neutral couple".
+* Central couple; when the leading couple is acting in the centre of a minor set, it is called the central couple, that title never belongs to the second couple: see "Minor set".
+* Whole figure, is a figure that is whole, perfect and indivisible, beginning and ending in the same place; see diagram 10 and the article "Whole figures".
+* Down the middle, is a movement made between the couples, in the direction of from top to bottom; see figure 2.
+* The set: when a number of ladies and gentlemen, their partners, stand opposite each other in two parallel lines, in dancing order, whey a called a set, as shown in the plan of a country dance, and in the article "Sets and divisions of the dance".
+* Set or setting, dancing in one place; frequently called foot or footing.
+
+### Sets or divisions of the dance
+
+A country dance is formed into different sets or divisions when the company are too numerous for one set, not only that a greater variety of calls may be had, but also to prevent the fatigue occasioned by the too great length of the set, a set containing in length, or in one line,thirty or forty couples may be divided into two sets, by placing a form or drawing line across the middle of the set.
+
+The following diagram is the form and construction of a country dance, composed of two sets, formed in one straight line or row.
+
+*Figure omitted.*
+
+When the width of the room will admit, and the company are sufficiently numerous, they may be divided into different divisions and placed in parallel lines, at a convenient distance from each other, having respectively the top of the set at the same end or part of the room: they may be distinguished from each other by numerical figures or letters, as Set 1 or Set A, Set 2 or Set B, &c. Notwithstanding that that they all branch from Set 1 or Set A, and are properly but a continuation of that set formed into divisions according to room, yet they have their respective privileges respecting the "calls". Set 1 or A call the first dance, Set 2 or B the second, Set 3 of 3 the third, &c. Should there be no more than three sets, after the call of Set 3 or C, the call goes back to Set 1 or A, and No. 2 in that set call the fourth dance; then No. 2 in Set 2 or B the fifth dance, &c. Whatever dance is called, and in which ever set it may be, the other sets are governed by it respecting tune and figures, thus: if Set C has the call, Sets A and B must consult them respecting the figure, and perform it precisely in the same manner; any alteration or deviation being considered as a mark of disrespect to the lady who calls the dance. The manner of forming this sets or divisions may be seen by "The construction of a country dance", p. 159. In forming them, they must be divided as equally as possible with respect to the number of couples, that the respective sets may finish the dance as nearly as possible at the same time. The ladies being each furnished with a ticket, bearing the name of the set to which they belong, with the number thereon inscribed according to their situation in the dance, as A No. 1, B No. 2, &c.: should place them in a conspicuous part of their dress to prevent disputes respecting places, (videlicet the "Etiquette of the ball room", in "The complete system of English country dancing"). It frequently occurs, that gentlemen's side, which ought to be avoided (except where there are not an equal number of ladies and gentlemen present) as it destroys the appearance of the construction of the dance, and tends to produce mistakes in the performance of the figures, particularly with those persons not thoroughly acquainted with the figure of the dance.
+
+### Distance of standing
+
+The proper distance of the lines formed by the ladies and gentlemen from each other is about four feet and a half, and the distance of the respective couples from each other is about two feet and a half. The proper distance and the keeping of the lines truly parallel is necessary to the correct performance of the figures, every person in the set having thereby an opportunity of seeing the various evolutions of the figure performed by the leading couples, which very frequently proves of the greatest utility to those persons in the dance unacquainted with the figures, and prevents the confusion that would otherwise occur. Should the company be numerous, or the room not of sufficient length to admit the whole of the persons to stand up in one set, they may be arranged and formed according to the width of the room into other sets parallel with each other (ride "Construction of the country dance", and the article "Division of sets"), and numbered in succession, Set 1, Set 2, &c.; or distinguished by letters as Set A, Set B, &c. These divisions may be considered as the parts of first set, being properly a continuation of that set, formed into divisions for the sake of convenience. In performing the dance, the couples, by changing situations, lose the original name or character attached to them, and acquire another, according to the situation they become placed in, or the operative principle of the dance. The technical names of characters attached to the respective couples occur in every country dance, and are permanent in certain situations, and the names of many of the figures are derived from them. The learner must therefore understand them ere he can be supposed properly to connect and apply them in the formation of a country dance. The principal of them are the "minor set", the "leading couple", the "neutral couple", the "auxiliary couples", the "top", "bottom", and "central couples", or "first", "second", and "third couples".
+
+### The minor set
+
+Is formed of three couples, which is sufficient for the performance of any country dance figure constituting in themselves a perfect set, so that every three couples in a general set performing a figure within themselves, is properly termed a minor set, having a top, bottom and central couple, enabling them to perform every figure from every given situation in the dance; the minor set is formed and varied by the progressive motion of the dance, and are more or less numerous, according to the number of persons composing the dance; for instance, a general set consisting of twenty-four couples (the dance being in full action) will have (when the fourth, or couple below the minor set is the neutral couple, as seen at figure 1) six minor sets; if the neutral couple is included in the minor set (as in figure 7), then there will be eight minor sets in a dance of twenty-four couples. Minor sets may be formed in any part of the general set, where it shall occur that the leading or top couple of the minor set have two couples below; videlicet a second and a third couple to act with them or where the leading couple are performing a figure in the centre; in which case, the couples forming the minor set are differently termed, the leading couple being called the central; the third the bottom; and the couple who stand second at the commencement of the figure will then be the first or top couple (see figure 5 in "The construction of a county dance"), thereby losing their original names or characters, immediately the leading couple perform the progressive figure. When first, second, and third couples, or top, centre, and bottom, are mentioned, the dancer should be acquainted as to which of two they should belong (the general or minor set) or he will be otherwise misled. In the general set, the numerical order is regulated accordingly as they are given out at the calling up of the dance; and top and bottom only relate to the top and bottom couple of the dance or general set. When the leading couple is at the top, the second couple is properly the central couple (yet it never assumes that name), being reserved for the leading couple, when they in the performance of the figure occupy the place of the second couple, who consequently become the top couple, and therefore, when the central couple is named, the leading couple alluded to are acting in the centre. The third couple become the bottom couple, immediately on the leading couple becoming the central one, and perform any figure or figures required from that situation; the minor set thereby have no nominal central couple. Such are those that finish the figure with a progressive one, and have no figure performed from the centre by the leading couple.
+
+### Leading couple
+
+Is the couple going down the dance; and there will be as many leading couples as minor sets in a dance, so that a dance of sixty couples would have twenty leading couples, the dance being in full activity.
+
+### Auxiliary couples
+
+Are those couples in a minor that that assist the leading couple in the performance of the figures, either actively or inactively. Some minor sets contain one, others two; but no dance can be formed without one. Their numbers are governed by the direction of figures, and the couples they employ or require in their performance. When a dance contains but one auxiliary couple, it will be composed of figures that in their performance require and employ the leading and the second couple only, or contain a neutral couple within the minor set, hence the second couple becomes the auxiliary couple, whether active or inactive: and every dance containing a figure or figures employing a whole minor set, or by any means connecting themselves with the bottom or third couples, and the neutral couple being the fourth or couple below, the minor set will have two auxiliary couples, active or inactive, according the the nature of the figures. There are some individual figures, that in their performance do no require an auxiliary couple, such as "allemande", "turn your partner", &c.; but every dance must contain one at least as no dance can be performed without a progressive figure, requiring for its performance the second couple. The third couple may be an auxiliary one at one part of the figure, and not at another; but whenever it is employed or required, it is considered as belonging to the dance, the second couple being always auxiliary.
+
+### Active auxiliary couples
+
+Are those couples that actively assist the leading couple in the performance of the figures, as "right and left", "set and change sides", — "hey", — "hands six round", where the figure of the dance cannot be performed without the active assistance of the other couple or couples; for were they to remain stationary, the figure could not be completely performed. A dance may contain either one or two, or be composed of inactive auxiliary couples, according to the nature of the figures of which it may be composed (see "The complete system of English country dancing", where it is shown how the figures employ the couples, and where they begin and end). In "Sir David hunter blair" single figure, there will be one active auxiliary couple, which will be in "set and hands across and back again" (videlicet "Companion to the ball-room"). In "Nancy Dawson" there will be two active auxiliary couples employs in the figure "hey".
+
+### Inactive auxiliary couples
+
+Are those couples which, although auxiliary couples, and required in the performance of the figure, yet remain wholly stationary and inactive; as in "whole figure at top", — "cast off two couple", — "whole figure on your own sides", — "lead through top and bottom", &c. A dance may contain either one or two, or be composed wholly of active figures, according to the selection. In "the Campbell's are coming", single figure (see "Companion to the ball-room") but one auxiliary couple is required (which is inactive) that is used in the performance of the progressive figure, which employ only the leading couple. In the "Rakish highlandman", (single figure) there are two inactive auxiliary couples.
+
+### Neutral couple
+
+A neutral couple is an inactive couple, not required in the figure, and one that divides the minor sets, by its being the fourth or couple below a minor set; yet it is sometimes the third or bottom couple of and included in the minor set, and is constituted, by affording space, to prevent confusion in the dance, too frequently occasioned by the figures interfering and becoming entangled with each other. Those are neutral couples to which no figure extends. When the dance is in full activity, the number of neutral couples will be in proportion to the number of minor sets contained therein, whether included in the minor set or below it. A dance consisting of thirty couples, the neutral couples included in the minor set will contain ten neutral couples, but if the neutral couple be the fourth, or couple below the minor set, then the dance will contain but seven minor sets, with seven neutral couples attached to them additionally (videlicet "The construction of a country dance"). Every minor set must have a neutral couple either included in it, or attached to it. When the neutral couple is included in the minor set, it is always formed of the third or bottom couple. The constituting of the neutral couple depends entirely on the figures employed in the dance, as all those figures which employ the whole of the minor set constitute the fourth or couple below it; the neutral couple (See "The construction of a country dance", figures 1 & 9). In the performance of "Speed the plough" (see "Companion to the ball-room") either single or double figure, the fourth or couple below the minor set would be the neutral one; the whole of the minor set being employed in one of the figures. In the "Haunter tower", single figure, the neutral couple is included in the minor set, as the figure only employs two couple out of the minor set. The above examples, it is trusted, will be found sufficient.
+
+### Motion and progression of the dance
+
+The dance being constructed, the figure set, &c., the music properly adapted there to must be selected and played to put the dance in motion; the action and progressive motion in the performance of the dance must be understood, in order that every person in it may move progressively towards the bottom and the top regularly, that equal opportunity may be afforded to each to perform their respective parts. The top couple of the general set commence the dance, and after performing the various figures set to the same tune, finish a couple nearer the bottom; and the second will by moving up, become the top couple. The dance commences again, and the leading couple each time the figure is repeated, will progressively gain a couple towards the bottom, and will repeat or perform the figure at many times, as there are couples standing up in the set, not being permitted to gain more that one couple towards the bottom each time they finish the figure, but obliged to gain one couple to preserve the progressive motion of the dance. The progressing movement does not alone belong to the leading couple, but to all persons composing the dance, either moving a couple up or down as all the couples going down the dance progressively gain a couple towards the bottom every time the figure is performed, and all the other couples forming the set will at the same time progressively move up a couple towards the top of the dance, so that the whole of the couples in the set change this situation every time the figure is performed. As soon as the top couple cat form a minor set, that is, as soon as the leading couple or couples going down the dance have gone down three couples, or performed the figure three ties, then the couple left at the top of the general set, or of any minor set, must commence. When it relates to the general set, only then each couple will, according as they stand in rotation in the dance, become successively the top couple, and so on till all the couples forming the set have in succession (what is termed) "gone down the dance", and the couple that stood at the bottom at the beginning of the dance, has progressively "worked up" to the top, and afterwards gone down three couple; that the couple called the dance begin again, and go down within three couples of the bottom, which will finish the dance. The couple that called the dance stand at the bottom for the next dance.
+
+### Country dance figures
+
+Are of different form and length, and take the dancer in various directions (shown by the diagrams in "The complete system of English country dancing"), before they can be of use in the systematic composition of a dance, the length of all the individual figures must be shown, and their application to the music, and also the different between long and short figures.
+
+### Long and short figures
+
+For the convenience of the dancer in the application of the figures to the music, and for setting country dance figures, all the different figures, as fas as regards their length, are brought under two heads, "long" and "short figures"; of which there are several qualities enumerated and treated on under their respective heads.
+
+### Long figures
+
+Are so named, from their requiring to their performance a strain of music of eight bars, which is the longest that should be used in English country dances (videlicet the article "Strains"): they are the longest also that can be applied to the use of the tables for the systematic composition of figures. Long figures are adapted for different uses in the dance, and receive additional names from the different situations in which they are performed in the dance; shown in "The complete system of English country dancing" in the article long figures, performed at top, in the centre, and at bottom of any minor set and long progressive figures. They are as nearly as possible of the same length, and occupy the same time in their performance, whether wholly composed of figure or movement, or whether a post consists of "setting", as, for instance, "hey on your sides" consists entirely of figure movement; and "set and change sides" of half figure and half setting, yet both are performed in the same time. When a dance is wholly composed of long figures, a figure is required to each strain of eight bars, as a tune of three strains with eight bar each, would require three long figures, either with or without setting, as may best suit the nature of the dance, or the taste of the company. Where the figures in this list to which setting is attached as "set and change sides" — "set and half right and left", &c. to be performed without setting, they would require but one half or four bars of the music for their performance, and would then be constituted short figures. Hence arises the impropriety of performing them without setting. While and long figures are deemed the same, though they widely differ from each other (videlicet whole figures). The following are a list of the principle long figures used in English country dancing: as
+
+* Swing corners 
+* Turn corners 
+* Set contrary corners 
+* Lead outsides
+* Lead through bottom and top
+* Hands six round
+* Promenade third couple
+* Whole poussette
+* Set and change sides and back
+* Set and change places and back again
+* Set and half right and left and back again
+* Round bottom and up
+* Round top and bottom
+* The hey
+* Set three across, and set three in your places
+* Cast of two couple, and back again
+* Cast over two couple
+* Whole figure at top
+* Whole figure at bottom
+* While figure on your on side
+* Chase round two couple
+* Chain figure six round
+* The three ladies and three gentlemen lead through and back again
+* Swing with right hands round the second couple, and back again
+* Swing with right hands round two couple
+* The first lady turns the second gentleman, the 1st gentleman turns the second lady
+* Hands three round with second lady, hands three with second gentleman
+* Top lady sets between the second and third ladies
+* Hands three round with second lady, who passes under to her place
+* Hands three with second gentleman, who passes under to his place
+* The double triangle
+* The first lady leads down the second gentleman, the first gentleman leads down the second lady
+* Lead down the middle and up again, this figure though in reality a short one, has been latterly (by the practice of galloping down a dozen couple, instead of confining its performance to three, the proper limits of every figure in English country dancing) made to require eight bars to its performance instead of four, and consequently converted into a long figure. It will, however, be given in the list of short figures to which class it properly belongs; the foregoing are the principle old country dance figures.
+
+There are some few others, also a variety of new figures composed by the author, and shown by diagrams in "The complete system of English country dancing".
+
+### Double long figures
+
+This class of figures receive their name from their being double or twice the length of those called long figures; as "the three ladies lead round the three gentlemen", and "the thee gentlemen lead round the three ladies"; they require twice the length of music in their performance, videlicet: a stain of eight bars repeated, or two strains played straight through, as they cannot be divided. Some of them require setting, and some are progressive as may be seen by the diagrams in "The system of English country dancing", where their use and applications to the dance are shown.
+
+### Short figures
+
+Are as nearly as possible one half of the length of the long figures, and require to their performance four bars of the music; the half figures are of the same length, but used differently. The names of the principle short figures are given in the following list in which the half figures are included. The manner in which they are used, and the direction they take in the dance may be seen by the diagrams and classes of figures for the use of the tables for composing country dances, in "The complete system of English country dancing". When these figures are applied, two are substituted for a long one, which are frequently applied to give variety and complexity to the dance. Short and half figures were formerly very much used in the composition of dances. In the old dance books many dances are composed wholly or nearly so, of short and half figures, to render the dances complex and difficult in their performance. These figures may be applied either at the top, bottom, or in the centre, of a minor set. Short figures, although only half the length of long figures, are perfect (with the exception of short progressive figures) ending where they begin, and have no setting attached to them. Some "half figures" have setting attached to them; and in this respect differ from short figures (videlicet "Half figures"). A dance may be composed wholly of short figures videlicet the dance entitled the "Caledonian rant", contained in the "Companion to the ball room", composed of four short figures. Formerly, when proper steps were not generally applied to the performance of the figure, it was the custom to divide and sub-divide figures; but to ender them systematically applicable to the strains of country dance music, only one division has been made; this the long or whole figures require a strain of eight bars; and the short or half require only four bars, or half a strain. The following list is a list of the principle short figures: as,
+
+* Allemande
+* Right and left
+* Turn your partner
+* Hands four round
+* Half poussette
+* Swing round your partner
+* Lead through the bottom
+* Lead through the top
+* Cross over one couple
+* Round the bottom
+* Round the top
+* Hands across half round
+* Lead down the middle and up again
+* Swing round one couple
+* Cast off one couple
+* The three gentlemen turn the three ladies
+* And chase round one couple.
+
+### Whole figures
+
+The terms "whole" and "long figures" are generally confused with each other, having been considered as the same; though they have quire a different meaning, there being short whole figures, and long whole figures. The term "whole figure" does not relate to the length of the figure so names, but to their being themselves finished, perfect, and indivisible, beginning and ending in the same place. These figures are of different length: "whole figure at top" requires double the music for its performance to either "allemande" or "turn your partner"; yet they are all whole figures. The last-mentioned figures are always arranged in the class of short figures; although they might be termed while figures, as they are perfect in themselves. Head a great many of the short figures been classed with those under the head long figures (except the progressive ones which are an exception to this rile, as they should always be considered as long and short, not ending where they begin, although "whole", and "half poussette" hear a different name), they might together have been termed "whole figures". To prevent as much as possible any confusion calculated to mislead the dancer, and the different figures are separated in "The Complete System of English Country Dancing".
+
+### Half figures
+
+Are portions of certain long or whole figures divided into halves, and followed by a different figure, instead of completing the long or whole figure, and are therefore names "half figures". Those long figures are taken,and generally termed whole figures, and may be danced as "whole or perfect figures", or divided into half figures, at the pleasure of the dancer; there being whole figures at top, bottom, on your own sides, and half figures, bearing the same names formed out of them: they are generally applied to five variety and complexity to the dance in their performance; as they leave the dancer on the wrong side, they must be followed by some other half or short figure to bring the dancers back again to their own sides; but their uses are fully explained in the class of irregular figures to which they belong (in "The complete system of English country dancing"). The same time is required in their performance as in the short figures, videlicet a strain of short measure unrepeated, or half a strain of eight bars.
+
+### Progressive figures
+
+Are those figures which in their performance leave the dancers or leading couples in the second couples place, every time the figure of the dance is finished; see the plate of the "Progressive motion of a country dance" in "The system of English country dancing",and the article "Motion and progression of the dance". They derived their names from the progressive movement towards the bottom of the dance, by bringing the top or leading couple in the place of the second couples every time one of these figures is performed in any minor set, and which progressive movement of the top or leading couple bring the second couple into, or to occupy the place of the top couple. Thus it will be seen that every dance must have at least one progressive figure to take each couple in regular succession to the bottom of the dance, to enable the couples placed at the bottom gradually to move up the couple that commenced it, although one progressive figure is sufficient for the correct performance of any English country dance, yet dances may be composed of two or even three progressive figures (see "The complete system of English country dancing", p. 232), though it very rarely occurs that more than one figure of this description is used. These are a very indispensable class of figures, as no dance can be performed without one, either short or long. They are always performed from or at the top of a minor set, but never bring the dancer back to the place from which they are taken — they are therefore called progressive figures, their performance bringing the top couple progressively to the bottom of the dance by gaining a couple every time the figure is performed; thus in a set of twenty couples, nineteen progressive figures must be performed to bring every top couple in the general set to the bottom of the dance. There are fewer progressive figures that of any other class; the following progressive figures, they are as follows:
+
+* Swing with right hands round second couple, then with left
+* Swing with right hands top and centre
+* Lead down the middle and up again
+* Whole poussette
+* Swing round one couple
+* Cast off one couple
+* Set and change places with second couple
+
+The length of these figures, and the directions they make in the dance may be seen in "The complete system of English country dancing", by the diagrams and classes of figures for the use of the tables.
+
+### Irregular figures
+
+Are those figures that in their application to the dance either leave the performer on the wrong or opposite side, or below the third or bottom couple of a minor set. They are of different length: some have setting attached to them, and some are progressive figures; their length, uses, and properties are explained in "The complete system of English country dancing",
+
+### Figures with setting attached to them
+
+Those figures to which setting is attached, derive their name partly from the movement, and partly from the setting, the setting is generally mentioned first: as "set and change sides" — "set contrary corners" — "set and half right an left", &c. The figure employs but half the time allowed in the music, and the setting the other half.
+
+### Of joining or connecting figures
+
+The uses, names, and characters used, and relative to a minor set, and the method of performing each individual figure, with their length, &c. as applied to the different parts of the dance and to the music, being known to the learner, he will be able to join and connect figures together so as to form a dance. The smallest number of figures that can be employed in the formation of a dance is two. The quantity of figures either in length or number, depends on the music to which they are set; the number of figures is governed by the number of bars or stains of the music (videlicet the scheme  showing the number of figures that may be set to any tune adapted to country dancing, videlicet p. 178). Single or double figures depend on whether the strains of the music are played once or repeated, and how many times repeated, videlicet p. 177. Treble figures may be set by repeating the strains or by playing them straight through. When short or half figures are set to strains of eight bars long measure, great attention must be paid to the playing of the music, two being required to one strain, one of which must end and the other begin in the middle of the strain; and frequently where there is little or no accent in the music to guide the dancer; the time  must however be kept, and the figures joined together on the proper note, without any hesitation or innovation on the time. Short measure (that is strain of four bars repeated) is better adapted to short or half figures, as the figures end with the strain. A perfect knowledge must be had of the beginning and ending of every strain, and their number, to enable the learner properly to begin, end, and join figures in time and place, also of what figures every dance requires, or will admit of, either long or short, and how to blend them together, so as to produce either short or easy, long or complex, single or double figures, to suit trait own taste, or to accommodate the talent of the company. There is no resting in the dance for the leading couple, till they get to the bottom, and the music is the only guide for the beginning and ending of every individual figure, as well as to the figure of the dance; however great a number of individual figures it may contain, they must all be united and connected together, so as to lose the appearance of many parts being connected, and product that of one true mathematical figure. A knowledge of the steps and their divisions, applicable to the music, is also necessary to be known and attended to.
+
+### Long and short measure
+
+Are terms the author has adopted to regulate the length of the strains, as applying to English country dance music, in order to ascertain whet quantity of music is contained in each strain or tune, as to length and number of bars; the whole of the tunes applicable to English country dancing, according to the present system, are brought under two heads, long and short measure, the long containing eight full bars of music, the short containing but four full bars of music; stains have been thus regulated, in order to render them systematically applicable to the various classes of figures, which are also classed and divided into suitable lengths, to correspond with those measures, and which when well understood, will enable the dancer with a knowledge of the number and repetitions of the strains, and with the use of the tables, in "The system of English country dancing" not only to ascertain correctly how many figures any dance will require, but of what length, quality, and different variety dances may be composed; also to ascertain how many figures long or short any dance may contain. See the article entitled "The number of figures possible to be set to any country dance tune".
+
+### The figure bar
+
+The figure bar marked thus
+<svg version="1.2" baseProfile="tiny" width="17.158px" height="10.611px">
+<line fill="none" stroke="#000000" stroke-width="1.1581" stroke-linecap="round" stroke-miterlimit="10" x1="16.579" y1="5.306" x2="0.579" y2="5.306"/>
+<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="8.579" cy="9.137" r="1.126"/>
+</svg>
+, or thus
+<svg version="1.2" baseProfile="tiny" width="17.158px" height="10.612px">
+<line fill="none" stroke="#000000" stroke-width="1.1581" stroke-linecap="round" stroke-miterlimit="10" x1="0.579" y1="5.304" x2="16.579" y2="5.304"/>
+<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="12.166" cy="1.473" r="1.126"/>
+<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="4.991" cy="1.473" r="1.126"/>
+<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="12.166" cy="9.139" r="1.126"/>
+<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="4.991" cy="9.139" r="1.126"/>
+</svg> 
+, is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
+
+### Figure of the dance
+
+Although every country dance is composed of a number of individual figures, which may consist of 
+
+* set and change sides,
+* whole figure at top,
+* lead down the middle, and up again,
+* allemande,
+* lead through the bottom,
+* right and left at top,
+
+&c. yet the whole movement united is called the figure of the dance. The number and length of the various individual figures depend on the length of the music, the smallest number is two, and the greatest number is sixteen. The scheme at page 178, will show what number of long or short figures can be used to all country dance tunes, of whatever length or measure.
+
+### Stains or parts
+
+A strain is that part of an air terminator by a double bar, and usually consists in country dances, of four, eight, or sixteen single bars; sometimes it contains twelve bars. In cotillons, we find occasionally strains of six bars; but this latter strain is extremely unfit for a country dance figure. Country dance tunes usually consist of two strains, though they frequently called parts, by those who are unacquainted with music; as, for instance, by a tune of two parts, they mean one of two strains. Part are only the arrangement of some air for different instruments, as the horn part, the trumpet part, &c. and have no relation to strains whatever. In some airs, particularly Scottish, the last strain will frequently extend to sixteen bars in long measure; but in reality, it is only eight bars repeated, with a small alteration in the last, or two last bars of the last strain, which has been written thus, for the sake of variety in the composition. While the regularity of figure at present established is adhered to, eight bars is the greatest length to which any strain can with propriety be extended, as long figures require no more. Some strains, as have been mentioned before, contain sixteen bars, without a division, as the "Caledonian laddie" (see "Companion to the ball room"), for instance, which of course require two long figures; the author has therefore, throughout his works placed a bar with s single dot, showing the dancer the middle of the strain, to denote the quantity of figure necessary to be performed in the first eight bars, so dividing it for the convenience of the dancer, as if it were two strains of eight bar each. He has equally taken this precaution in short measure, when a strain of sixteen bars occurs, and where he considered the dancer required a guide, as much as in the article "Long measure". See the article "Long and short measure" in "The complete system of English country dancing".
+
+### The length of strains used in country dance music
+
+The length of strains in country dance music seems never to have been attended to, either by composers, dances, or those who set the figures to the tunes, not has any thing systematic ever been adopted for their regulation, this is one of the reasons why figures are so irregularly performed, ans so litter understood. Numberless tunes formerly used, may be found not only containing strains of various lengths, but consisting of an odd number of bars, these dances could only be performed by the introduction of such pantomimical absurdities, as were formerly introduces in the old country dances (see the ancient and original state and style of English country dancing in "The complete system of English country dancing". As no regular figures could be set to them with any certainty, notwithstanding country dancing has since become more regular, and tunes containing an odd number of bars have been rejected, yet there are frequently found tunes containing strains of a variety of lengths, better calculated to puzzle that direct the dancer, some are so long as to reader it difficult, during its performance to divide the tunes exactly in the middle, when there is no sensible accent or signal to guide the ear, until the terminations of the strain. Formerly some well-known country dances contained twelve, sixteen, eighteen, twenty, twenty four, thirty two bars in a strain &c. Now since figures are systematically divided into different length and classes, it has been found requisite also to adopt suitable length and measures in the music, to make them correspond; as there, with regard to length, are reduced to two classes, as long and short figures, therefore the terms long and short measure, are terms the author has adopted in the music, to correspond with those figures. The irregular length of strains as the result of composers not being dancers themselves, in which case they would have seen the propriety of not extending their strains beyond eight bars, which would have rendered their compositions more useful to dancers, suitable to the figures, and convenient to musicians, by an uniform length of strains. All tunes not corresponding with these regular measures, should either be rejected, or if given, should be accompanied with suitable directions for their performance; the length of these strains in long or short measure, will be found under their respective heads, in "The complete system of English country dancing". There are some persons who imaging that a strain of country dance music consists uniformly of eight bars, that is incorrect, although it ought to be so to suit the figures, yes there are many to be found consisting of sixteen bars, and other of only found, for although they are generally the case formally, would totally exclude all single figures, from tines with eight bars in a strain in long measure, see next article, "Single and double figures".
+
+### Single and double figures
+
+Are terms used to express the quantity of figure required in a country dance; and these depend invariable on the respective air to which they are danced. A single figure us the smallest quantity of figure that can possible be selected in one portion (or according to the usual term, set) to the tune; single figures can only be performed to short measure repeated, or to strains of long measure not repeated. To constitute what is termed a double figure, several figures must be placed together equal to twice the number of quantity required for a single figure; and the music, to admit of a double figure, will require the strains of eight bars to be repeated, and the strains of four bars to be played twice through with repeats.
+
+### The number of figures possible to be set to any country dance tune either long or short
+
+Every country dance is composed of several different figures, teen, the usual number are from three to eight; the following scheme will show what number of long and short figures can  possibly be set to all the country dance tunes, by which it will be also seen that every tune will take as many long, and twice as many short figures as there are strain in the music. The length of strains alluded to, are those of eight bars unrepeated, or if four bars repeated, which is the proper length for English country dances.
+
+* Tunes of sixteen bars composed of two strains of eight bars each, with single figures, may have set to them two long figures, or one long and two short, of four short figures.
+* Tunes with three strains or two strains, and da capo, with single figures, may have set to them three long figures, or two long figures and two short, or one long and four short, or six short figures,
+* Tunes with four strains or thirty two bars with single figures, may have set to them four long figures, or three long and two short, or two long and four short, or one ling and six short, or eight short.
+* Tunes of four strains of eight bars each repeated, with double figures, may have set to them four long figures, or three long figures and two short, or two long and two long and four short, or one long and six short, or eight short.
+* Tunes of three strains repeated, or two strains and da capo played twice thought with double figures, may have set to them six long figures, or give long and two short, or four long an four short, or three long and six short, or two long and eight short, or one long and ten short, or twelve short figures.
+* Tunes containing sixty four bars, composed of four strains repeated, or of three strains an da capo played twice straight through with double figures, may have set to them eight long figures, or seven long and two short, or six long and four short, or three long and ten short, or two long and twelve short, on one long and fourteen short, or sixteen short figures.
+* Tunes of four strains and da capo with single figures, may have set to them five long figures, or four long figures and two short, or three long and four short, or two long and six short, or one long and eight short, or ten short figures.
+
+### Country dance music
+
+Country dances are performed to tunes of various length, divided into strains or parts, by upright double bars, thus ||, and when the strain is repeated, two dots are added thus :||:. These usual numbers being gour, eight, and sometimes sixteen bars, which is the greatest number, and sometimes for the sake of variety in the composition of the music, instead of repeating a strain of eight bars, the whole sixteen will be written straight through, this is sometimes done for the purpose of introducing a small alteration in the last, or two last bars, when this is the case, it generally occurs in the last strain of a tune, and may frequently be found in old Scotch tunes. A tune may sometimes be found to contain a strain with twelve bars, which measure is now seldom used. The strains in country dance tunes ought never to contain more that eight bars each, although, as has been before observed, sixteen bars are frequently written straight through, instead of repeating the strain of eight bars, and yet where this is the case, so near is it in reality to a repetition of eight bars, that with the exception of a few notes in the last, or two last bars, the music is note for note the same , and notwithstanding that many tunes are to be found particularly in the old country dance books, which contain a much greater number of bars in each strain, they must be never taken as authorities, as no dependence whatever can be placed in them, most of them having originally been songs, and introduced into country dance books, by persons totally unacquainted with the system of English country dancing. For a further elucidation of this subject, the the articles "Length of strains" and "Stains or parts".
+
+### Da capo
+
+When it occurs, signifies that the tine to which it is attached ends with the first strain, and is used as a reference to prevent the trouble of writing the strain again, and thus an air of two strains of eight bars each, that is in long measure, with da capo attached to it, consists really of three strains, and a tune of three strains and da capo is equal to four strains. In short measure it seldom makes any addition to the length of tune, as the first strain is usually played twice, the second but once, and then the da cope or first strains again, which together make but four short strains, which would be so without the da capo, as in the case the second strain would necessarily be repeated.
+
+### Progressive movements
+
+Of "Lead down and up again", — "Whole poussette", — "Swing with the right hand round one couple", &c. when performed, attention to the music is necessary, as the couples must move up the the leading couple's place, as they progressively move down, to keep the proper distance between the couples, and give the leading couple room to perform the succeeding figures, or to commence the dance again.
+
+### Of selecting figures, and applying the to the dance
+
+In the selecting of figures for the composition of English country dances, it is necessary that a knowledge should be had of their various effects in the dance, notwithstanding that many of them are of the same length, and performed from the same situation, an though directed at or from the top, are yet not so well adapted to the commencement of the dance: it is the same with figures adapted to the conclusion of the dance. Care should be taken not to choose all such figures as bear too great a similarity in appearance to each other, either in form or effect, or such figures that only employ the leading couple (unless there be particular reason) the other couples being consequently unemployed, render it irksome to them, particularly if the set be numerous. One reason for their being introduced has been that the company generally being bad dancers, and not understanding figures, they have been chosen, to enable couple calling the dance to display their abilities; and by thus preventing confusion in the dance, have been in no danger of having their exclusive evolutions broken into, or spoiled, though the inability of others, they being little more that silent spectators. When a company consists of tolerably good dancers, they should be so united as to give activity and employment to the company, according to the length of the music. A dance ought not to be wholly composed of circular figures as they tend to excite giddiness in the dancers, and produce a sameness of appearance. When a dance is intended to be rendered difficult and complex, let it be composed principally of short or half figures, set to tunes in long measure; there being little or no accent in this measure for the direction of the joining of the figures. To enable good dancers to display their abilities, choose principally those figures, which bad dancers most fear, as they seldom have any steps properly adapted thereto. Slow music also tends to expose bad dancers. The most difficult figures for indifferent dancers to perform are
+
+* right and left,
+* set and half right and left,
+* chain figure six round, and
+* four round,
+* swing right hand round one couple, then with the left,
+* set contrary corners, &c. &c.
+
+Therefore, when a dance is called to be performed amongst indifferent dancers, such figures ought to be avoided, to prevent confusion. Double, and even treble figures, should be practised by the learner; but not called, unless in companies of good dancers. In selecting the figures for a dance, it is not advisable to take too many from one class, or of those performed from one situation; but to take some from each, and give them as much variety as the length of the tune and the talent of the company will admit.
+
+### Of the performing figures within their proper compass
+
+As three couples constitute a country dance, as to number of persons, the figures are so composed as to be kept within their distance of standing. A great error, committed by many persons, particularly to be avoided, is, that a couple in "going down the middle", and in "cast off two couple", instead of confining themselves to the distance of three couple, frequently extend the figures beyond six couples, and consequently interfere with the preceding couples.
+
+### Persons calling the dance
+
+Should possess the necessary requisites for performing the duty they may have to execute, in setting the company an example, and dire ting them (when required) in the performance of the dance. Such a dance should be called, as they thoroughly understand, and are able to perform with facility. When part of the company are indifferent dancers, the persons forming the dance should be selected and placed according to their talent and knowledge of dancing; the best couples at and near the top, that by their performance the others may become instructed in the figure, previous to their having to lead off, otherwise it frequently happens, that the dance is obliged to be changed.
+
+### Silence in the dance
+
+Should invariably be observed; but it too frequently occurs, that one half of the persons composing the dance are in conversations on subjects generally unconnected with the dance; their attention so frequently required, not only thereby becomes diverted, but the music, which is the guide for the dancer, is prevented from being distinctly heard.
+
+### Crowding to the top
+
+Is too frequently practised, but should be prevented by those whose province it may be to see that due respect is paid to the person calling the dance; it being impossible to perform the figure of the dance with effect, or correctly, when the couples stand to near to each other.
+
+### Attention to the figure
+
+While the figure is performing, it is requisite for every person in the dance to observe, whether any of the figures require their attention and assistance for their correct performance, and what number of couples they may require; otherwise, for want of proper attentions, part of the music becomes lost, and the music and figure cannot then be finished together without much bustle, as the music must not wait on the dancers, but the dancers perform the figures and steps as properly adapted thereto.
+
+### Finishing the figures in their proper places
+
+Whatever figure is performed, it should be finished in its proper place before another is commenced; the regularity of the dance must otherwise be completely destroyed. The progressive figures should be finished in the centre; and those at top, &c. that bring the dancer back to the same place, should finish in the straight line with the other couples, always observing to finish the figure with the last note of the music.
+
+### Paradoxical observations
+
+For the purpose of blending amusement with instruction, and to facilitate the learner's acquirement of something more that a superficial knowledge of country dancing, as well as to convince those persons of the error who hold country dancing as simple trifling art, very easily attainable, the following positions are laid down, to show the nature, extent, and variety, of which country dancing consists, though to some persons, particularly to learners, they may appear paradoxical; yes they are self-evident truth, capable of being clearly explained by good dancers, and rendered easily demonstrable, by an attention to those parts of the work on country dancing, to which they more immediately relate. 
+
+* An English country dance may be composed either of three couples or one hundred, and its parts equally complete in both.
+* A dance may be set with either two, or twenty figures.
+* A dance may be selected so as to afford  dancing only to the lading couples.
+* A dance may be set to the same music so as to actively employ the whole company.
+* A dance may be rendered either very easy or very difficult, though performed to the same music.
+* A dance may be selected, that requires a variety of different steps; and one may be chosen, that may be danced with the greatest propriety with only one step, and require no more.
+* A dance may be chosen, that will keep the whole company in motion, or one that renders two-thirds of the couples inactive.
+* A dance may be composed wholly of short figures; or wholly of long figures.
+* A dance may be chosen, where all the figures except one finish on the wrong side.
+* Another may be selected, where good dancers may show their dancing off the the greatest advantage; and another may be set to the same tune, and danced in the same company, where they will be unable to perform one figure correctly.
+* One dance may contain but one progressive figure, or set with four, and both equally correct.
+* A dance may be formed in the same room four different ways.
+* A dance may be formed wholly of gentlemen, or wholly of ladies; or of an equal number of certain portion of each.
+* A dance may be set actively to employ either one, two, or three couples.
+* A dance may be formed, that will require an hour for its performance; and one to the same music, that may be completed in five minutes.
+* A dance may be formed to contain ten neutral couples.
+* And one may be composed to the same tune, so as not to contain any neutral couple.
+* A dance may be composed wholly of swinging motions, or wholly without them.
+* A dance may be composed wholly of figures that require setting, or of figures where no setting is required.
+* A dance may be formed so as to make the third (which is the last couple of the minor set) or the couple below it, a neutral couple.
+* A dance may contain either one or two minor sets.
+* A dance may have at one and the same time either one... *Text incomplete here*.
 
 ***
 
 > A country dance would be a pleasing sight,
 >
-> If all perform'd the steps and figures right.
+> If all performed the steps and figures right.
 >
-> This dance for sociability is fam'd,
+> This dance for sociability is famed,
 >
-> And for construction few have yet been nam'd
+> And for construction few have yet been named
 >
 > To equal it. The scale progressive takes
 >
@@ -9985,7 +10275,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Exceeded all the dances made in France;
 >
-> 'I was danced at foreign courts, and at our own,
+> It was danced at foreign courts, and at our own,
 >
 > In every clime where England e'er was known.
 >
@@ -9995,11 +10285,11 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Jem. On mathematic principles, you'll find
 >
-> This dance composed, with science well combin'd:
+> This dance composed, with science well combined:
 >
-> Of major and of minor sets 'tis form'd,
+> Of major and of minor sets it is formed,
 >
-> And may by fifty couples be perform'd:
+> And may by fifty couples be performed:
 >
 > Has couples neutral and auxiliary,
 >
@@ -10009,9 +10299,9 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > May in their turn as leaders, lead the way.
 >
-> Bel. I've often seen a country dance, when form'd
+> Bel. I've often seen a country dance, when formed
 >
-> In the same room, by several sets perform'd;
+> In the same room, by several sets performed;
 >
 > Are they all different dances, or the same?
 >
@@ -10023,7 +10313,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > However many rows or sets you find,
 >
-> To the same figure they are all confin'd,
+> To the same figure they are all confined,
 >
 > And formed numerically as 1, 2, 3,
 >
@@ -10033,7 +10323,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Divide them into sets as C, B, A;
 >
-> 'Twill save much time and less fatiguing prove,
+> It will save much time and less fatiguing prove,
 >
 > To those who don't long country dances love;
 >
@@ -10041,11 +10331,11 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > You may have several sets, if you think fit,
 >
-> All formed in parellel lines that branch from A,
+> All formed in parallel lines that branch from A,
 >
-> Or the first set, which means the same, you'll say; T
+> Or the first set, which means the same, you'll say;
 >
-> hey're but continuations of one line,
+> They're but continuations of one line,
 >
 > Where want of length the dancers does confine.
 >
@@ -10053,27 +10343,27 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > To these denominations all belong,
 >
-> And they are in six different classes form'd,
+> And they are in six different classes formed,
 >
-> Which show their use and how they are perform'd.
+> Which show their use and how they are performed.
 >
 > Irregular figures too you'll likewise find,
 >
-> And some have setting steps with them combin'd,
+> And some have setting steps with them combined,
 >
-> No correct knowledge of them can be gain'd,
+> No correct knowledge of them can be gained,
 >
-> Unless they are by diagrams explain'd;
+> Unless they are by diagrams explained;
 >
 > There's whole, and half figures, but then you'll find,
 >
-> From length some whole are with the short combin'd;
+> From length some whole are with the short combined;
 >
 > Single and double figures must be known,
 >
 > Their uses and construction clearly shown
 >
-> 'Ere you compose know every figures use,
+> There you compose know every figures use,
 >
 > Their evolutions, simple or abstruse,
 >
@@ -10081,7 +10371,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > As give the dances interest and effect,
 >
-> 'Ere you can dances make, you ought to show;
+> There you can dances make, you ought to show;
 >
 > With dancing you a little music know:
 >
@@ -10097,7 +10387,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The figure of the dance, and figure bar,
 >
-> You must explain, and know like ev'ning star;
+> You must explain, and know like evening star;
 >
 > And likewise know what figures to select,
 >
@@ -10125,7 +10415,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The crowding to the top you should avoid,
 >
-> And know how every dancer is employ'd;
+> And know how every dancer is employed;
 >
 > When in the set, at proper distance stand,
 >
@@ -10137,25 +10427,25 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > In leading down, you should know where to stop,
 >
-> And mind you're skill'd before you take the top,
+> And mind you're skilled before you take the top,
 >
 > With other matters I could here advance,
 >
-> 'Ere you can dance the English country dance:
+> There you can dance the English country dance:
 >
 > I mean to dance it scientifically,
 >
 > And understand it systematically.
 >
-> There's other terms and technicallities,
+> There's other terms and technicalities,
 >
 > And characters with figures and their qualities,
 >
 > Which must be known with proper steps, and they
 >
-> When they're perform'd, must ease and grace display;
+> When they're performed, must ease and grace display;
 >
-> 'Till this is done, no persons shou'd advance,
+> Till this is done, no persons showed advance,
 >
 > That they well understand a country dance.
 >
@@ -10163,7 +10453,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > What may be done and what you ought to know;
 >
-> Which when explain'd, I have no doubt, you'll own,
+> Which when explained, I have no doubt, you'll own,
 >
 > That English country dancing's little known.
 
@@ -10179,21 +10469,21 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Jem. Now for a Country Dance, a set we'll make,
 >
-> I for my partner, will miss Coupee take.
+> I for my partner, will miss Coupée take.
 >
-> Play us "The Merry Thought", altho' not new,
+> Play us "The Merry Thought", although not new,
 >
-> 'Twill bring reflection strange, and pleasant too;
+> It will bring reflection strange, and pleasant too;
 >
-> 'Twill what they call a merry sprightly air,
+> It will what they call a merry sprightly air,
 >
-> 'Twill raise the spirits, also banish care.
+> It will raise the spirits, also banish care.
 >
 > Bel. Let's have it by all means, for you must know,
 >
 > My spark's base conduct's made me very low.
 >
-> We are ready, sirs, 'tis time we have begun.
+> We are ready, sirs, it is time we have begun.
 >
 > Jem. Stop, sirs — we, for a country dance want one,
 >
@@ -10205,7 +10495,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > She once was at a ball two nights and days,
 >
-> Danc'd out three pair of shoes at that great ball;
+> Danced out three pair of shoes at that great ball;
 >
 > That fifty couples stood up to her call:
 >
@@ -10223,13 +10513,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Some lessons in quadrilles and waltzing, she
 >
-> Once took, when courted by young mr. B.;
+> Once took, when courted by young Mister B.;
 >
 > She lost her lover at a grand waltz ball,
 >
 > So now hates modern dances, one and all.
 >
-> 'Twixt you and me, her imitations are
+> Betwixt you and me, her imitations are
 >
 > True pictures, for she's got them to a hair;
 >
@@ -10239,7 +10529,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > She's stiff and formal, sails along like those
 >
-> Stiff jointless puppets, seen at penny shows.
+> Stiff joint-less puppets, seen at penny shows.
 >
 > Her steps, her style, her manner now displays,
 >
@@ -10249,13 +10539,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Dance like her, who learnt fifty years ago.
 >
-> I'll call her up — 'twill please her to a hair;
+> I'll call her up — it will please her to a hair;
 >
 > She'll be delighted in a dance to share.
 
-### Exit Jemina.
+### Exit Jemima.
 
-### To the Musicians.
+### To the musicians.
 
 > Bel. Now, gentleman, I have one request to make,
 >
@@ -10285,11 +10575,11 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Can run the hey — can figure out or in.
 >
-> Bel. 'Tis growing late — Jemima, let's begin.
+> Bel. It is growing late — Jemima, let's begin.
 >
 > Jem. You know its ball night, aunt, and ten to one,
 >
-> Had it not rain'd, before this we'd begun.
+> Had it not rained, before this weed begun.
 >
 > Miss Frump. My toes are itching to begin; now say
 >
@@ -10301,19 +10591,19 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > New fangled dances, waltzes and quadrilles,
 >
-> And those queer modern dancing jacks and jills.
+> And those queer modern dancing Jacks and Jills.
 >
-> Miss Frump. You may say jacks and jills, for such queer guests
+> Miss Frump. You may say Jacks and Jills, for such queer guests
 >
-> I never saw, as Ball rooms now infest.
+> I never saw, as ball rooms now infest.
 >
-> If I could see them well expos'd, 'twould be
+> If I could see them well exposed, it would be
 >
 > The greatest pleasure you could give to me;
 >
 > I shall be happy to make one, and show
 >
-> That I the auties of these gentry know.
+> That I the antics of these gentry know.
 >
 > Bel. We'll now begin; here are miss Frump and I,
 >
@@ -10325,25 +10615,25 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Miss Frump (to Jemima). What is the true? Have you the music brought?
 >
-> Jem. 'Tis you old favourite, aunt "The Merry Thought".
+> Jem. It is you old favourite, aunt "The Merry Thought".
 >
 > Miss Frump. A charming tune "The Merry Thought" I love;
 >
-> If it's well play'd, ah! that will make you move.
+> If it's well played, ah! that will make you move.
 >
 > I'm for a merry tune; at our last ball,
 >
-> I "Butter'd Peas" and "Jack's Alive" did call.
+> I "Buttered Peas" and "Jack's Alive" did call.
 >
 > Jem. If you don't recollect "The Merry Thought", now play
 >
-> The last new tune, call'd "Buxom, Young, and Gay".
+> The last new tune, called "Buxom, Young, and Gay".
 >
 > We're ready, sirs — three chords, and then begin;
 >
 > Come to your places, children — now stand in.
 >
-> Bel. Dance as you've just describ'd them, then 'twill be
+> Bel. Dance as you've just described them, then it will be
 >
 > Instruction and amusement both for me.
 >
@@ -10351,7 +10641,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Dance country dances, at your modern hops.
 
-### They Dance.
+### They dance.
 
 > Bel. This is just like them, and I wish these elves
 >
@@ -10361,7 +10651,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Foreigners would call such stuff a caricature.
 >
-> Jem. To see them dance, 'twould never be supposed
+> Jem. To see them dance, it would never be supposed
 >
 > The dance was on true principles composed;
 >
@@ -10379,11 +10669,598 @@ As it is named, (or more properly an English country dance) almost universally k
 
 ### Quadrilles
 
+***
+
+### The Caledonians
+
+1.	The first and opposite couples hands across and back,
+
+	set and turn partners,
+	
+	ladies chain,
+	
+	half promenade,
+	
+	half right and left.
+	
+2.	First gentleman advance twice,
+	
+	the four ladies  set to gentleman at their right, and turn with both hands, each taking next lady's place,
+	
+	promenade quite round.
+	
+3.	First lady and opposite gentleman advance and retire,
+
+	back to back,
+	
+	top couple lead between the opposite couple,
+	
+	return leading outside,
+	
+	set at the corners, and turn with both hands to places,
+	
+	all set in a circle.
+	
+4.	First lady and opposite gentleman advance and stop, then their partners advance,
+
+	turn partners to places,
+	
+	the four ladies move to right, each taking the next lady's place and stop,
+	
+	the four gentlemen move to left, each taking the next gentleman's place and stop,
+	
+	the ladies repeat the same to the right,
+	
+	then the gentlemen to the left,
+	
+	all join hands and lead half round to places,
+	
+	all turn partners.
+	
+5.	First gentleman lead his partner round inside the figure,
+	
+	the four ladies advance, join right hands and retire,
+	
+	the the gentlemen perform the same,
+	
+	all set and turn partners,
+	
+	chain figure of eight half round and set,
+	
+	all promenade to places and turn partners,
+	
+	all change sides, join right hands at corners and set,
+	
+	back again to places,
+	
+	(all promenade at the finish).
+	
+The following is a set of what the author terms "Scotch quadrilles", which are adapted to Scotch steps, and he submits them to the judgement of those, who are acquainted with the national characteristic — they are entitled
+
+### The royal Scotch quadrilles
+
+1.	The top couple half figure, contrary sides and hands across with bottom couple,
+
+	half figure back on your own sides, and turn partner to places,
+	
+	swing partners with right hands into straight line long-ways, as in a reel,
+	
+	and set,
+	
+	hey and return to places,
+	
+	the other three couples do the same.
+	
+2.	Top and bottom couples meet and set,
+
+	then each gentleman leas the opposite lady to the couple on his left, and set,
+	
+	each four right and left,
+	
+	swing side couples to places, and turn partners all eight,
+	
+	the other two couple o the same.
+	
+3.	The top lady and bottom gentleman meet, set and pass round partners to places, 
+
+	then the top gentleman and bottom lady do the same,
+	
+	top and bottom couples meet,
+	
+	each gentleman leads opposite lady to the couple on his left,
+	
+	set, forming two straight lines cross-ways,
+	
+	then hey,
+	
+	lead through the sides,
+	
+	return to places and turn partners, all eight,
+	
+	the other three couples do the same.
+	
+4.	The top lady sets to the gentleman on her right, at same time the top gentleman sets to the lady on his left, and each hands three with the couple on their own side,
+
+	the top lady and bottom gentleman advance and retire, and chassez right and left,
+	
+	the top gentleman and bottom lady do the same,
+	
+	all eight half round and set,
+	
+	continue round to places and set,
+	
+	the other three couples do the same.
+	
+5.	Hey on your own sides,
+
+	the star,
+	
+	ladies moulinet while gentlemen chassez round,
+	
+	all set, holding hands and turn to places,
+	
+	chassez croissez,
+	
+	and promenade all eight,
+	
+	the other three couples do the same.
+	
+### The original, or, old first set of French quadrilles.
+
+1.	Le pantalon.
+	
+	Top an bottom couple right and left,
+	
+	ladies chain,
+	
+	half promenade,
+	
+	and half right and left,
+	
+	the others two couples do the same.
+	
+2.	L'été.
+
+	The top lady and bottom gentleman advance and retire,
+	
+	chassez to right and left, cross over,
+	
+	chassez right and left,
+	
+	return to places,
+	
+	set and turn partners,
+	
+	the other three couples do the same.
+	
+3.	La poule.
+
+	The top lady and opposite gentleman cross over on the right hand, and set,
+	
+	back on the left, and set four in line,
+	
+	half promenade, 
+	
+	the leading lady and opposite gentleman advance or retire and back to back,
+	
+	top and bottom couples advance and retire, and half right and left to places,
+	
+	the other three couples do the same.
+	
+4.	Trenise.
+
+	Ladies chain, with top and bottom ladies, 
+	
+	set and turn partners,
+	
+	first couple advance twice, leaving the lady on the left of the opposite gentleman,
+	
+	the two ladies cross and change sides, while the gentleman passes between and sets,
+	
+	the same repeated,
+	
+	the other three couples do the same.
+	
+5.	La pastourelle.
+
+	The first couple advance twice, leaving the lady on the left of the opposite gentleman,
+	
+	the three advance and retire,
+	
+	hands three round,
+	
+	the the gentleman advances twice,
+	
+	hands four round, and half right and left,
+	
+	the other three couples do the same.
+	
+	When the figure is repeated, the gentleman is left on the right of the opposite lady, the the leading lady man have the pas seul.
+	
+5.	Finale.
+
+	Promenade all eight,
+	
+	L'été figure,
+	
+	ladies moulinet,
+	
+	and all eight set and turn,
+	
+	the other three couples do the same,
+	
+	finish with chassez croissez.
+	
+N. B. La pastourelle is sometimes omitted, as it was not originally in the first set, but subsequently introduced, and short finales are sometimes danced, which generally consist only of promenade eight, and L'été figure.
+
+### The lancers
+
+1.	The first gentleman and opposite lady advance and set,
+	
+	turn with both hands, retiring to places,
+	
+	top couple lead between opposite couple,
+	
+	return leading outside,
+	
+	set and turn at corners.
+	
+2.	First couple advance twice, leaving lady on left of opposite gentleman,
+
+	set in the centre,
+	
+	turn to places,
+	
+	all advance in two lines,
+	
+	all turn partners.
+	
+3.	First lady advance and stop, the the opposite gentleman,
+
+	both retire turning round,
+	
+	the ladies' hands across quite round, at the same time the gentlemen lead round outside to the right, all resume partners and places.
+	
+4.	First couple set to couple at right, 
+
+	set to couple at left,	
+
+	change places with partners and set,
+	
+	turn partners to places,
+	
+	right and left with opposite couple.
+	
+5.	Chain figure of eight all quite round to places,
+
+	the first couple advance and turn facing the top,
+	
+	then couple at right advance behind the top couple,
+	
+	then the couple at left and opposite couple do the same, forming two lines,
+	
+	all change places with partners,
+	
+	back again,
+	
+	the ladies cast off the their right, while the gentlemen cast off to their left,
+	
+	meet and lead your partners up the centre,
+	
+	set in two lines, the ladies in one line, and gentlemen in the other,
+	
+	turn partners to places, 
+	
+	all promenade at the finish.
+	
+### Der Freichutz
+
+1.	La resolue.
+
+	Chassez croissez, four cross immediately and remain; the other four do the same,
+	
+	half promenade to places,
+	
+	turn your partner,
+	
+	ladies chain,
+	
+	the ladies set to gentlemen on their right, the gentlemen to ladies on their left, and turn to places.
+	
+2.	La divine
+	
+	The first couple set to the couple on their right,
+	
+	hands four round, 
+	
+	the same couple set on their left,
+	
+	hands four round,
+	
+	half promenade, and half right and left with opposite couple,
+	
+	the other dancers do the same.
+	
+3.	L'elegante.
+
+	The first couple advance between the opposite couple, in returning lead outside,
+	
+	first lady and opposite gentleman chassez,
+	
+	turn in the centre to their places,
+	
+	the ladies moulinet,
+	
+	the gentlemen take their partners left hand, and promenade to places,
+	
+	the other dancers do the same.
+	
+4.	Der Freichutz.
+
+	Chassez croissez quatre,
+	
+	pastourelle.
+	
+5.	La finale.
+
+	La grande ronde,
+	
+	l'été.
+	
+Country dance quadrilles, so called from blending in a particular manner both these forms of dancing.
+
+The reader is here presented with the figures of the
+
+### Waltz quadrilles, "Les allemandes"
+
+1.	The top lady and bottom gentleman advance and retire, and chassez right and left,
+
+	top and bottom couples waltz round each other twice,
+	
+	and grand chain,
+	
+	the other three couples do the same.
+	
+2.	Top lady pas seul,
+
+	bottom gentleman ditto,
+	
+	each gentleman turns the lady on his left, his partner,
+	
+	all eight waltz round to places,
+	
+	and chassez croissez,
+	
+	the other three couples do the same.
+	
+3.	The four ladies meet in the centre set, and pass round their partners on the left,
+
+	top and bottom couples half promenade, side couples ditto,
+	
+	all eight hands half round to places and turn partners,
+	
+	top couple waltz round within the circle,
+	
+	the other three couples successively do the same, and the grand round,
+	
+	the other three couples do the same.
+	
+4.	Pastourelle figure, 
+	
+	(single) top couple serpentine waltz (between the couples),
+	
+	and grand promenade.
+	
+5.	The top lady and bottom gentleman advance and retire twice,
+
+	top and bottom couples waltz round each other twice,
+	
+	all eight waltz round to places,
+	
+	each gentleman changes places with the lady on his left, set and back again,
+	
+	all eight sauteuse waltz round,
+	
+	top and bottom couples advance, honour to opposites, return to places, and honours to partners,
+	
+	the other three couples do the same.
+	
+The reader is here likewise presented with
+
+### A set of country dance quadrilles. The Albions.
+
+1.	Whole figure at top (or round the second gentleman and fourth lady),
+
+	ladies chain,
+	
+	half promenade and half right and left,
+	
+	the other three couples do the same.
+	
+2.	Set and change place with bottom couple, and back again,
+
+	top and bottom couples meet, set and draw poussette,
+	
+	each gentleman leads the opposite lady through the sides, return to places and turn partners,
+	
+	the other two couples do the same.
+	
+3.	All eight hands completely round, 
+
+	top and bottom couples lead through and change places,
+	
+	half figure on their own sides back to places,
+	
+	and grand promenade,
+	
+	the other two couples do the same.
+	
+4.	The top couple hands three with the lady on the left, then with the gentleman on the right,
+
+	the top lade advances to and places herself between the couple on her left, and the gentleman between the couple on his right,
+	
+	set three and three, back to back, turn and set face to face,
+	
+	all allemande and turn partners to places,
+	
+	the other three couples do the same.
+	
+5.	The top lady with her right hand swings the gentleman on her right, while the top gentleman with his left hand swings the lady on his left, and turn partners,
+
+	hey on your own sides,
+	
+	and grand chain,
+	
+	the other three couples do the same.
+	
+### The second set of quadrilles
+
+The first, second and third dances as in first set.
+
+4.	Ladies chain,
+
+	double,
+	
+	set and turn partners,
+	
+	advance two, chasse right and left,
+	
+	cross, 
+	
+	chassez right and left,
+	
+	cross,
+	
+	turn partners, 
+	
+	half promenade,
+	
+	half right and left.
+	
+5.	All round,
+
+	advance four,
+	
+	set,
+	
+	change ladies,
+	
+	advance,
+	
+	set,
+	
+	and resume ladies,
+	
+	set and turn partners,
+	
+	right and left,
+	
+	the four promenade to places.
+	
+6.	Right and left,
+
+	gentleman advance twice,
+	
+	lady the same,
+	
+	set an turn partners,
+	
+	ladies hands across,
+	
+	and back,
+	
+	all eight set and turn partners,
+	
+	and finish with promenade all eight.
+	
+This and the other following figures are described by diagrams in "The quadrille panorama". In describing these terms where the English translation is not litera, the technical meaning is given.	
+	
+* Promenade — The gentleman and lady cross hands, the gentleman with his right hand takes the lady's right, and with his left, takes her left hand and leads her round in a circle; there are several promenades, (videlicet) grand promenade, whole promenade, and half promenade
+* Balancez — Set
+* Grand chaine — Great chain
+* Dos à dos — Back to back
+* Les lignes — The lines
+* Grand rond — Great round
+* Traversez — Cross over
+* Tour de mains — Turn your partner with both hands
+* Chassez croissez — Chassez across, change places
+* Queue du chat — Promenade
+* Grand quarrée — The great squares
+* Moulinet — Cross hands
+* Chaine de dames — Ladies chain
+* Tiroir — The top couple join both hands and take the place of the bottom couple, who pass sideways into the top couple's place — then the bottom couple join both hands, and pass between the top couple — all return to places
+* Chassez ouvert — Open chassez
+* Chassez en avant, et en arrière — Chassez forward and backward
+* Chaine anglaise — English chain
+* Les olivettes — The hey
+* L'étoile — The star
+* Poussette — Is formed by two couples: each gentleman takes the opposite lady's hand, and they then move round each other to places
+
+The above terms are, it is presumed,sufficiently correct for the purpose of this work, though perhaps not secure against the observations of the critical French scholar. The want of accents in some instances, will not, it is hoped, be too minutely noticed by the liberal reader, who will bear in mind the only object of the author, videlicet to give an English explanation of the French terms, in general use, in quadrille dancing.
+
+### Long and short sets
+
+When these terms are used in quadrille dancing, they allude to the number of dances in the set; a long set generally consists of six, and a short set is usually of five. The first is considered a short set, and when la pastourelle is add, it is then termed a long set. A short set consists not only of a smaller number of quadrilles, but various figures are omitted in certain quadrilles, as the ladies chain in trenise, and the finale, is likewise abridged.
+
+### Trenise simple
+
+Is when the trenise figure is performed without the chaine des dames.
+
+### The gavotte quadrille
+
+The honours to first strain of minuet de la cour.
+
+The top and bottom couples set opposite to each other à la gavotte — eight bars.
+
+Side couples do the same — eight bars.
+
+Set to partners, giving the right and left hands alternately, and go round your partners on the right to places — twelve bars.
+
+Each gentleman gives his right hand to the lady on the left, and his left alternately to his partner, then pass round with the lady on the right — twelve bars.
+
+Top and bottom couples advance twice with pas de basque, and retire with emboitées — eight bars.
+
+The side couples do the same — eight bars.
+
+Top and bottom ladies advance round each other à la gavotte — twelve bars.
+
+The ladies on the sides do the same - twelve bars.
+
+Top and bottom couples set opposite each other as in figure 1, while the side couples chassez croissez — eight bars.
+
+Vice versa — eight bars.
+
+Pas de quatre four ladies — twelve bars.
+
+Each gentleman takes his partner's left hand and moves completely round to places with grand balloté; jetée back, and coupée entrechat à la fin.
+
+The author of this work will always feel it is duty to expose and reprobate all mean attempts al literary piracy and plagiarism, whether affecting his own compositions or those of others.
+
+### Waiting eight bars
+
+The set being formed, the dancers should wait the first eight bars, and begin the dance with the second strains, if the first is not repeated, this interval of time should be filled up with the performances of the honours. To every quadrille in the set they should wait the first eight bars.
+
+### The honours (i. e.) the bow and courtesy
+
+In quadrille dancing these honours should always be made to your partner and the opposite, and to the first eight bars if music, before you begin the figure. The honours should not only be made at the commencement of each set, but likewise of each individual quadrilles, however many there may be in a set, and also at the conclusion of every set, and finally by every gentleman when he has led his partner to her seat.
+
+### Positions of the dancers in quadrilles composed of four, eight, twelve, and sixteen persons
+
+Figure omitted.
+
+Some teachers call the bottom the second couple, and the couple on the right of the leading couple, the third couple, but the usual method is to reckon numerically round on the right of the top couple, as shown in the diagram for eight persons.
+
+### Direction for performing the quadrilles.
+
+In sets composed of eight persons (see figure 1) the first and third couples generally dance together, as do the sends and fourth. When the figure begins with two persons, as in l'été, is it performed with the first lady and third gentleman, then with the first gentleman and third lady, then the second lady and fourth gentleman, and is finished with the second gentleman and fourth lady. Is a quadrille of twelve (see figure 2) when the first and fourth couple have performed the danse... *Text incomplete here*.
+
+***
+
 > So slow, they lose the time; whilst those who run,
 >
-> Will end the figures 'ere the tune's hand done.
+> Will end the figures here the tune's hand done.
 >
-> The music seems no guide, tho' all advance,
+> The music seems no guide, though all advance,
 >
 > Without good music they can never dance;
 >
@@ -10425,7 +11302,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > To make them cramp and difficult to play.
 >
-> Bel. There's many of them if play'd e'en so well,
+> Bel. There's many of them if played e'en so well,
 >
 > Will never please the ear, nor ever sell;
 >
@@ -10441,7 +11318,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > And every crotched-monger now composes;
 >
-> Each on the town his own chef d'ouvre imposes.
+> Each on the town his own chef d'oeuvre imposes.
 >
 > Numbers we have — but numbers you well know,
 >
@@ -10449,7 +11326,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Experience always quality prefers,
 >
-> And says one lion's worthfull 20 curs;
+> And says one lion's worthfull twenty curs;
 >
 > That half the new quadrilles — I proof can bring,
 >
@@ -10477,9 +11354,9 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Examine them; and those they'd pass as new
 >
-> Would make a frenchman shrug and "sacre dieu".
+> Would make a Frenchman shrug and "Sacre Dieu".
 >
-> They're immethodical and not combin'd,
+> They're immethodical and not combined,
 >
 > And of a species of no national kind;
 >
@@ -10503,7 +11380,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > A striking title they've been told will tell,
 >
-> And oft' will make the sorriest rubbish sell;
+> And oft will make the sorriest rubbish sell;
 >
 > Therefore you'll find we've Cameronians,
 >
@@ -10521,13 +11398,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Is but mere imitation at the best;
 >
-> What they call Scotch, auld reckie would disown,
+> What they call Scotch, old reckie would disown,
 >
 > Their steps nor figures would as Scotch be known;
 >
 > Of these there's various sets — yet all declare
 >
-> Their's are original — others spurious ware;
+> Theirs are original — others spurious ware;
 >
 > The tunes they in these new quadrilles display,
 >
@@ -10535,9 +11412,9 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > When e'en a set is danced that gains a name,
 >
-> A dozen sets tho' different bear the same.
+> A dozen sets though different bear the same.
 >
-> Those term'd "Hibernians", the town beguile,
+> Those termed "Hibernians", the town beguile,
 >
 > Which are not Irish in their form or stile;
 >
@@ -10553,7 +11430,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > That they stand up to what they do not know;
 >
-> For time, length, figures, it is now confest,
+> For time, length, figures, it is now confessed,
 >
 > The old first set's a guide to all the rest,
 >
@@ -10569,7 +11446,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Are as to memory, not quite so au fait
 >
-> As Caesar, who could recollect, 'tis said,
+> As Caesar, who could recollect, it is said,
 >
 > Five hundred soldiers names on the parade;
 >
@@ -10605,7 +11482,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > They something new select and mostly botch it:
 >
-> Musicians will too oft, to shew their skill,
+> Musicians will too oft, to show their skill,
 >
 > Play strange new sets, but then perform them ill.
 >
@@ -10639,7 +11516,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Jem. There's some quadrilles so difficult to play,
 >
-> They would quite poze some fiddlers of the day,
+> They would quite pose some fiddlers of the day,
 >
 > Bel. Is all the music of these sets composed,
 >
@@ -10659,7 +11536,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Some crotchet splitters who cannot (I've heard)
 >
-> An octave count, or reck up a third;
+> An octave count, or wreck up a third;
 >
 > Hearing "The Lancers" produced pelf and fame,
 >
@@ -10693,17 +11570,17 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > And may be harmonized with great propriety.
 >
-> Quadrilles our ball room music have improv'd,
+> Quadrilles our ball room music have improved,
 >
-> The country dance monotony's remov'd.
+> The country dance monotony's removed.
 >
 > Bel. Besides those new quadrilles composed in France,
 >
 > What other sets in public do they dance?
 >
-> Jem. The Lancers and Der Freischutz stand confess'd
+> Jem. The Lancers and Der Freichutz stand confessed
 >
-> To be most known altho' they're not the best:
+> To be most known although they're not the best:
 >
 > Some foreigners, who want not taste or skill,
 >
@@ -10717,7 +11594,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > In which no dancers can their skill display,
 >
-> A sort of heretogeneous childrens play.
+> A sort of heterogeneous children's play.
 >
 > Ability and steps are not required,
 >
@@ -10743,7 +11620,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The other two from the first set be took;
 >
-> And thos are not perhaps what some expected,
+> And those are not perhaps what some expected,
 >
 > They're from the Lancers and first set selected;
 >
@@ -10761,11 +11638,11 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Composers are not always here to blame,
 >
-> The fault's oft' dancers, (say it to their shame)
+> The fault's oft dancers, (say it to their shame)
 >
-> For when that something new should he propos'd,
+> For when that something new should he proposed,
 >
-> From fear or ignorance the thing's oppos'd;
+> From fear or ignorance the thing's opposed;
 >
 > And if attempted, those stand up to try,
 >
@@ -10795,7 +11672,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > To make you think they're really national.
 >
-> Bel. Whatever's popular is thread-bare worn,
+> Bel. Whatever is popular is thread-bare worn,
 >
 > Aye, turned and twisted, and to atoms torn;
 >
@@ -10811,9 +11688,9 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Quadrilles will of the popular surfeit die;
 >
-> The term quadrille's not to that dance confin'd,
+> The term quadrille's not to that dance confined,
 >
-> For they with other dances are combin'd
+> For they with other dances are combined
 >
 > Some of the waltz and country dance partake,
 >
@@ -10845,7 +11722,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The old first set is all that thousands know,
 >
-> Tho' they to quadrille balls do constant go;
+> Though they to quadrille balls do constant go;
 >
 > From them you'll find some hundred sets are made,
 >
@@ -10855,7 +11732,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > In forming dolls and curling ladies hair
 >
-> Of "Paine's, of Almacks", sixteen sets I'm told,
+> Of "Paine's, of Almack's", sixteen sets I'm told,
 >
 > Or more were published if they were not sold;
 >
@@ -10863,7 +11740,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The town supplied, or were danced at a ball;
 >
-> Tho' in them there's not much variety,
+> Though in them there's not much variety,
 >
 > The figures are composed with some propriety
 >
@@ -10873,7 +11750,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > To these succeeded sets of every kind,
 >
-> To nation, style — nor character confin'd.
+> To nation, style — nor character confined.
 >
 > Bel. The "Old First Set", I must confess to you,
 >
@@ -10899,7 +11776,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Every old figure has been turned and twisted;
 >
-> And many figures are fresh nam'd by those
+> And many figures are fresh named by those
 >
 > Who would as new — them on the town impose,
 >
@@ -10953,13 +11830,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The technic terms of art you well should know,
 >
-> 'Ere you to quadrille balls attempt to go
+> There you to quadrille balls attempt to go
 >
 > Learn them by heart, that when you dance, you may
 >
-> Know what comes next, and be what's term'd au fait.
+> Know what comes next, and be what's termed au fait.
 >
-> Quadrilles are form'd in octagons and squares,
+> Quadrilles are formed in octagons and squares,
 >
 > The couples stand quite opposite in pairs;
 >
@@ -10969,7 +11846,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The top is where the dance begins, and may
 >
-> If dancers please, be form'd a different way;
+> If dancers please, be formed a different way;
 >
 > Four tops and bottoms has each dance in turn,
 >
@@ -11003,19 +11880,19 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > And give the names of those I recollect.
 >
-> There's promenade, grand chaine, ballancez,
+> There's promenade, grand chaine, balancez,
 >
-> Dos a dos, les lignes, grand rend, traversez,
+> Dos a dos, les lignes, grand rond, traversez,
 >
 > Chaine des dames, le tiroir, chassez ouvert,
 >
-> Chassez en avant et en arriere,
+> Chassez en avant et en arrière,
 >
-> Tours de mains, pousette, chassez croissez,
+> Tours de mains, poussette, chassez croissez,
 >
-> Quen du chat, grand quarree, moulinet,
+> Queue du chat, grand quarrée, moulinet,
 >
-> Chaine auglaise, lei olivettes, l'etoile,
+> Chaine anglaise, les olivettes, l'étoile,
 >
 > And others I can't now to memory call,
 >
@@ -11033,13 +11910,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Bel. Tell me the steps you in quadrilles may use,
 >
-> That I may know their names, and which to chuse.
+> That I may know their names, and which to choose.
 >
-> Jem. There's chassez, jettée, assemblée,
+> Jem. There's chassez, jeté, assemblée,
 >
-> Rigadon, pas de basque, emboitée,
+> Rigaudon, pas de basque, emboitée,
 >
-> Coupeè entrechats, balancez,
+> Coupée entrechats, balancez,
 >
 > Besides the French, for persons, names, and things,
 >
@@ -11059,9 +11936,9 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Jem. Of various numbers quadrille sets they make,
 >
-> As 4, 8, 12, and some 16 will take;
+> As four, eight, twelve, and some sixteen will take;
 >
-> How to form sets of 12, likewise 16,
+> How to form sets of twelve, likewise sixteen,
 >
 > And how they act may by the plans be seen.
 >
@@ -11073,13 +11950,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Make every figure, and the dance display.
 >
-> There's sometimes sets of 12 and 16 form'd,
+> There's sometimes sets of 12 and 16 formed,
 >
-> Which in oblique directions are perform'd.
+> Which in oblique directions are performed.
 >
-> Bel. I never lik'd quadrilles perform'd this way,
+> Bel. I never liked quadrilles performed this way,
 >
-> To me they seem'd confus'd, I needs must say,
+> To me they seemed confused, I needs must say,
 >
 > Upon the stage perhaps the plan may be
 >
@@ -11101,13 +11978,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > To make a set the form's to represent,
 >
-> By persons plac'd in couples, so that they
+> By persons placed in couples, so that they
 >
 > The quadrille form may in a square display.
 >
-> When sets are nam'd, as "the first set", you'll find
+> When sets are named, as "the first set", you'll find
 >
-> To tune and figure then the term's confin'd.
+> To tune and figure then the term's confined.
 >
 > Bel. There's one thing more I wish you would explain,
 >
@@ -11121,9 +11998,9 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > To this some extra figure they append.
 >
-> What's term'd short sets are not alone, you'll find,
+> What's termed short sets are not alone, you'll find,
 >
-> Unto the number of quadrilles confin'd,
+> Unto the number of quadrilles confined,
 >
 > For in some dances figures are left out,
 >
@@ -11131,13 +12008,13 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Or else some idle dancer's whim to please,
 >
-> As in Finale, and in "La Trenise".
+> As in Finale, and in "La trenise".
 >
 > Bel. There's short and long finales, I've heard say;
 >
-> What are they? are they danc'd a different way?
+> What are they? are they danced a different way?
 >
-> Jem. A short finale's "Grand Rond and l'Été",
+> Jem. A short finale's "Grand rond and L'été",
 >
 > To make a long one add "Le Moulinet";
 >
@@ -11147,11 +12024,11 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Bel. Are those correct, for I've heard people say,
 >
-> That piracy's the or'der of the day;
+> That piracy's the order of the day;
 >
 > Some dancers from this charge are not exempt,
 >
-> Who treat fair dealing with a mark'd contempt,
+> Who treat fair dealing with a marked contempt,
 >
 > For what they steal they do not hesitate
 >
@@ -11175,7 +12052,7 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Avoid the bottom too, for that's a place
 >
-> Where would be dancers oft' incur disgrace,
+> Where would be dancers oft incur disgrace,
 >
 > For they act mostly with the top, so they
 >
@@ -11189,19 +12066,19 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > The honours in that interval should be
 >
-> Perform'd — the usual mark of courtesy.
+> Performed — the usual mark of courtesy.
 >
 > Not the first only, but in every dance,
 >
 > You wait 8 bars before you should advance,
 >
-> And in that time the honors should repeat,
+> And in that time the honours should repeat,
 >
 > And at the end, and ere you take your seat.
 >
-> Bel. How many bars of music are conntain'd
+> Bel. How many bars of music are contained
 >
-> In each quadrille, you have not yet explain'd.
+> In each quadrille, you have not yet explained.
 >
 > Jem. Each dance contains of music bars I'll say
 >
@@ -11209,36 +12086,38 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > Be 56 — but 8 the dancers take
 >
-> 'Ere they begin the honours for to make.
+> There they begin the honours for to make.
 >
 > Bel. The quadrille figure bar I've often seen;
 >
 > Can you explain those dots, and what they mean?
 >
-> Jem. 'Tis given to show what music figures take,
+> Jem. It is given to show what music figures take,
 >
 > And to divide them for the dancer's sake;
 >
-> Each dot plac'd thus
-<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="17.158px" height="10.612px">
+> Each dot placed thus
+<svg version="1.2" baseProfile="tiny" width="17.158px" height="10.612px">
 <line fill="none" stroke="#000000" stroke-width="1.1581" stroke-linecap="round" stroke-miterlimit="10" x1="0.579" y1="5.304" x2="16.579" y2="5.304"/>
 <circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="8.579" cy="1.473" r="1.126"/>
-</svg> four bars does represent-
+</svg> 
+four bars does represent-
 >
 > When there are four
-<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="17.158px" height="10.612px">
+<svg version="1.2" baseProfile="tiny" width="17.158px" height="10.612px">
 <line fill="none" stroke="#000000" stroke-width="1.1581" stroke-linecap="round" stroke-miterlimit="10" x1="0.579" y1="5.304" x2="16.579" y2="5.304"/>
 <circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="12.166" cy="1.473" r="1.126"/>
 <circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="4.991" cy="1.473" r="1.126"/>
 <circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="12.166" cy="9.139" r="1.126"/>
 <circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="4.991" cy="9.139" r="1.126"/>
-</svg> then sixteen bars is meant.
+</svg> 
+then sixteen bars is meant.
 >
 > Bel. When you stand up, by what rule do you go,
 >
 > That you the top of the quadrille may know?
 >
-> Jem. When the set's form'd, the dancers then agree
+> Jem. When the set's formed, the dancers then agree
 >
 > Which takes the lead, and which the top shall be;
 >
@@ -11250,6 +12129,6 @@ As it is named, (or more properly an English country dance) almost universally k
 >
 > At many balls, to call the figures out.
 >
-> Jem. 'Tis dune for those who cannot recollect.
+> Jem. It is dune for those who cannot recollect.
 >
 > Bel. You'll own it has a school-boy like effect.

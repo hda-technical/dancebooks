@@ -1,4 +1,4 @@
-# The Fashionable Quadrille Preceptor containing Paine’s Sets, Lancers, Caledonians, Waltz Cotillon, Gallopades, Mazurkas, &c
+# The Fashionable Quadrille Preceptor containing Paine's Sets, Lancers, Caledonians, Waltz Cotillon, Gallopades, Mazurkas, &c
 ## Thomas Wilson
 
 ### Preliminary Directions
@@ -9,31 +9,31 @@ It will be necessary to observe the order of Dancing the First Set, as follows:
 
 "L'été" is performed four times; first, the leading lady and opposite gentleman perform the figure; second, the first gentleman and opposite lady third, the lady at the right of top and opposite gentleman; and lastly, the gentleman at the right of top and opposite lady.
 
-"La poule" is performed four times, in the same order as L’été.
+"La poule" is performed four times, in the same order as L'été.
 
 "La trenise" is performed four times; first, the top couple perform the figure; second, the bottom couple; third, the couple at right of top; and lastly, the fourth couple.
 
 "La pastorale" is performed four times, in the same order as La trenise.
 
-"La finale" is performed four times, in the same order as L’Ete’.
+"La finale" is performed four times, in the same order as L'été.
 
 Prior to the commencement of the figure, the first part of the tune should be played over. It is usual in dancing this set, to omit either "Trenise" or "Pastorale".
 
-_Those quadrilles which are not contained in the following pages are danced to Paine’s first set._
+_Those quadrilles which are not contained in the following pages are danced to Paine's first set._
 
 ### Paine's first set
 
 1. Pantalon.
 
-	Right and left
+	Right and left,
 
-	Set and turn partners.
+	set and turn partners,
 
-	Ladies chain.
+	ladies chain,
 
-	Half promenade
+	half promenade,
 
-	Half right and left.
+	half right and left.
 
 2. L'été.
 
@@ -55,27 +55,27 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	back with left,
 
-	set four in a line.
+	set four in a line,
 
-	Half promenade,
+	half promenade,
 
 	two advance and retire,
 
 	back to back,
 
-	four advance and retire
+	four advance and retire,
 
 	half right and left.
 
 4. Trenise.
 
-	Ladies’ chain,
+	Ladies' chain,
 
-	set and turn partners.
+	set and turn partners,
 
-	First couple advance twice, leaving the lady at left of opposite gentleman, and first gentleman retires.
+	first couple advance twice, leaving the lady at left of opposite gentleman, and first gentleman retires,
 
-	Two ladies cross over and change sides, while first gentleman passes between them,
+	two ladies cross over and change sides, while first gentleman passes between them,
 
 	the same repeated to places,
 
@@ -83,21 +83,21 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 5. La pastorale.
 
-	First couple advance twice, leaving the lady at left of opposite gentleman, and first gentleman retires.
+	First couple advance twice, leaving the lady at left of opposite gentleman, and first gentleman retires,
 
-	Three advance twice and set.
+	three advance twice and set,
 
-	First gentleman advance twice and set.
+	first gentleman advance twice and set,
 
-	Hands four half round,
+	hands four half round,
 
 	half right and left.
 
 6. La finale.
 
-	All change sides and back.
+	All change sides and back,
 
-	First lady and opposite gentleman advance and retire,
+	first lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -107,29 +107,29 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	re-cross,
 
-	and turn partners.
+	and turn partners,
 
-	Ladies’ hands across and back,
+	ladies' hands across and back,
 
 	all set in a cross, gentlemen outside,
 
-	all turn partners to places.
+	all turn partners to places,
 
-	Finish with promenade.
+	finish with promenade.
 
 ### The fashionable second set
 
-1.	Right and left
+1.	Right and left,
 
-	Set and turn partners
+	set and turn partners,
 
-	Ladies’ chain
+	ladies' chain,
 
-	Half promenade.
+	half promenade,
 
-	Half right and left.
+	half right and left,
 
-2. 	First lady and opposite gentleman advance and retire,
+2.	First lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -139,13 +139,13 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	re-cross and turn partners.
 
-3. 	First lady and opposite gentleman cross giving right hands,
+3.	First lady and opposite gentleman cross giving right hands,
 
 	back with left,
 
-	set four in a line.
+	set four in a line,
 
-	Half promenade,
+	half promenade,
 
 	two advance and retire,
 
@@ -155,11 +155,11 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	half right and left.
 
-4. 	Ladies chain double.
+4.	Ladies chain double,
 
-	All set and turn partners.
+	all set and turn partners,
 
-	The first lady and opposite gentleman advance and retire,
+	the first lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -167,13 +167,15 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	chassez right and left,
 
-	re-cross and turn partners.
+	re-cross and turn partners,
 
-	Half promenade – half right and left.
+	half promenade,
 
-5. 	All join hands and set in a circle.
+	half right and left.
 
-	Advance four and set,
+5.	All join hands and set in a circle,
+
+	advance four and set,
 
 	change ladies and retire,
 
@@ -181,41 +183,41 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	resume partners and retire to place,
 
-	set and turn partners.
+	set and turn partners,
 
-	Right and left.
+	right and left,
 
-	Four opposite promenade all round.
+	four opposite promenade all round,
 
-6. 	Right and left.
+6.	Right and left,
 
-	First gentleman advance twice and retire.
+	first gentleman advance twice and retire,
+	
+	opposite lady the same,
 
-	Opposite lady the same.
+	set and turn partners,
 
-	Set and turn partners.
+	ladies hands across and back,
 
-	Ladies hands across and back.
+	all set in a cross, gentlemen outside,
 
-	All set in a cross, gentlemen outside,
+	all turn partners to places,
 
-	all turn partners to places.
-
-	Finish with grand promenade.
+	finish with grand promenade.
 
 ### Third set
 
-1. 	Right and left,
+1.	Right and left,
 
-	set and turn partners.
+	set and turn partners,
 
-	Ladies chain.
+	ladies chain,
 
-	Half promenade,
+	half promenade,
 
 	half right and left.
 
-2. 	First lady and opposite gentleman advance and retire,
+2.	First lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -225,15 +227,15 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	re-cross and turn partners.
 
-3. 	First lady and opposite gentleman cross,
+3.	First lady and opposite gentleman cross,
 
 	giving right hands,
 
 	back with left,
 
-	set four in a line.
+	set four in a line,
 
-	Half promenade,
+	half promenade,
 
 	two advance and retire,
 
@@ -243,27 +245,27 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	half right and left.
 
-4. 	First couple advance twice, leaving the lady at left of opposite gentleman, and first gentleman retires.
+4.	First couple advance twice, leaving the lady at left of opposite gentleman, and first gentleman retires,
 
-	Two ladies cross and change sides, while the first gentleman passes between them, the same repeated to places,
+	two ladies cross and change sides, while the first gentleman passes between them, the same repeated to places,
 
-	set and turn partners.
+	set and turn partners,
 
-	Ladies chain.
+	ladies chain,
 
-	Half promenade,
+	half promenade,
 
 	half right and left.
 
-5. 	First gentleman with his partner and lady at left advance twice
+5.	First gentleman with his partner and lady at left advance twice,
 
-	Allemand with the two ladies,
+	allemand with the two ladies,
 
 	hands three round and back to places.
 
-6. 	All set in a circle,
+6.	All set in a circle,
 
-	Advance two,
+	advance two,
 
 	chassez right and left,
 
@@ -271,27 +273,27 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	chassez right and left,
 
-	re-cross and turn partners.
+	re-cross and turn partners,
 
-	Ladies’ hands across,
+	ladies' hands across,
 
-	all eight set and turn partners.
+	all eight set and turn partners,
 
-	Finish with change sides.
+	finish with change sides.
 
 ### Fourth set
 
-1. 	Right and left,
+1.	Right and left,
 
-	set and turn partners.
+	set and turn partners,
 
-	Ladies chain.
+	ladies chain,
 
-	Half promenade,
+	half promenade,
 
 	half right and left.
 
-2. 	First lady and opposite gentleman advance and retire,
+2.	First lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -301,13 +303,13 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	re-cross and turn partners.
 
-3. 	Cross with right hands,
+3.	Cross with right hands,
 
 	back with left,
 
-	set in a line.
+	set in a line,
 
-	Half promenade,
+	half promenade,
 
 	two advance and retire,
 
@@ -317,21 +319,21 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	half right and left.
 
-4. 	First couple advance twice, leaving the lady at left of the opposite gentleman, and first gentleman retires.
+4.	First couple advance twice, leaving the lady at left of the opposite gentleman, and first gentleman retires,
 
-	Hands three round,
+	hands three round,
 
-	first gentleman advances twice and retires.
+	first gentleman advances twice and retires,
 
-	Three advance twice and set,
+	three advance twice and set,
 
-	Hands four half round,
+	hands four half round,
 
 	half right and left.
 
-5. 	All change sides and back again.
+5.	All change sides and back again,
 
-	First lady and opposite gentleman advance and retire,
+	first lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -341,19 +343,19 @@ _Those quadrilles which are not contained in the following pages are danced to P
 
 	re-cross and turn partners.
 
-	Turn at the corners, forming two lines,
+	turn at the corners, forming two lines,
 
 	advance in two lines and retire,
 
-	all set and turn partners.
+	all set and turn partners,
 
-	All promenade.
+	all promenade.
 
-### The description of the polonaise (from "The Court Journal")
+### The description of the polonaise (from "The court journal")
 
-This dance is a great favourite in the Northern Courts, and is of Polish origin; it is in reality merely a dignified and graceful march and is performed by a file of couples, to those charming musical compositions called polonaises, on which the most eminent composers have exercised their talents. This dance possesses the recommendation of being exceedingly social, the couples advance, lightly marking the time with their feet, while they enjoy every opportunity for agreeable conversation, and for displaying without effort the most elegant motion. The only figure which varies this dance is a change of hands, resembling a movement of the Minuet, and which requires only to be seen to be easily imitated.
+This dance is a great favourite in the northern courts, and is of Polish origin; it is in reality merely a dignified and graceful march and is performed by a file of couples, to those charming musical compositions called polonaises, on which the most eminent composers have exercised their talents. This dance possesses the recommendation of being exceedingly social, the couples advance, lightly marking the time with their feet, while they enjoy every opportunity for agreeable conversation, and for displaying without effort the most elegant motion. The only figure which varies this dance is a change of hands, resembling a movement of the minuet, and which requires only to be seen to be easily imitated.
 
-In the Polonaise a gentleman by presenting himself at the head of the file, and clapping his hands becomes the partner of the first lady; the gentleman who is thus superseded, takes the hand of the next lady, and so on through all the couples. The last gentleman who is by this means deprived of a partner, either retires, or advances to the head of the dance to lead off in his turn.
+In the polonaise a gentleman by presenting himself at the head of the file, and clapping his hands becomes the partner of the first lady; the gentleman who is thus superseded, takes the hand of the next lady, and so on through all the couples. The last gentleman who is by this means deprived of a partner, either retires, or advances to the head of the dance to lead off in his turn.
 
 ### Waltz cotillon
 
@@ -361,15 +363,15 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 ### Lancers – First set (By Duval, of Dublin)
 
-1. 	Lady and opposite gentleman chassez right and left,
+1.	Lady and opposite gentleman chassez right and left,
 
-	Then swing quite round with right hands to places
+	then swing quite round with right hands to places,
 
-	The top couple lead between the opposite couple,
+	the top couple lead between the opposite couple,
 
-	return leading outside.
+	return leading outside,
 
-	The gentlemen join their left hands in the centre, and right to partners,
+	the gentlemen join their left hands in the centre, and right to partners,
 
 	change places with partners,
 
@@ -381,15 +383,15 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	turn partners to places.
 
-2. 	First couple advance twice, leaving the lady at left of the opposite gentleman.
+2.	First couple advance twice, leaving the lady at left of the opposite gentleman,
 
-	Set and turn partners,
+	set and turn partners,
 
-	Advance in two lines,
+	advance in two lines,
 
 	all turn partners.
 
-3. 	First lady advance and stop,
+3.	First lady advance and stop,
 
 	the opposite gentleman the same,
 
@@ -397,19 +399,19 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	ladies join right hands across, at the same time gentlemen join hands with partners, all lead round,
 
-	Turn partners to places.
+	turn partners to places.
 
-4. 	First couple, with lady at left, advance twice.
+4.	First couple, with lady at left, advance twice,
 
-	Set and pass between the two ladies,
+	set and pass between the two ladies,
 
 	hands three round,
 
 	back to places.
 
-5. 	The grand chain.
+5.	The grand chain,
 
-	The first couple turn half round facing top,
+	the first couple turn half round facing top,
 
 	then the couple at right advance behind the top couple;
 
@@ -419,15 +421,15 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	back again.
 
-	The ladies turn in a line on the right, the gentlemen in a line on the left.
+	the ladies turn in a line on the right, the gentlemen in a line on the left.
 
-	Each couple meet up the centre,
+	each couple meet up the centre,
 
-	Advance in two lines, ladies on one side, and gentlemen on the other.
+	advance in two lines, ladies on one side, and gentlemen on the other.
 
-	Turn partners to places,
+	turn partners to places,
 
-	Finish with the grand square.
+	finish with the grand square.
 
 ### Lancers - Second set (Usually known as Hart's set)
 
@@ -443,11 +445,11 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	set and turn at corners.
 
-2. 	La lodoiska.
+2.	La lodoiska.
 
-	First couple advance twice, leaving the lady in the centre.
+	First couple advance twice, leaving the lady in the centre,
 
-	Set in the centre,
+	set in the centre,
 
 	turn to places,
 
@@ -455,17 +457,17 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	all turn partners.
 
-3. 	La dorset.
+3.	La dorset.
 
 	First lady advance and stop, then the opposite gentleman,
 
 	both retire turning round,
 
-	ladies’ hands across quite round, the same time the gentlemen lead round outside to the right,
+	ladies' hands across quite round, the same time the gentlemen lead round outside to the right,
 
 	all resume partners and places.
 
-4. 	L'étoile.
+4.	L'étoile.
 
 	First couple set to couple at right,
 
@@ -477,49 +479,49 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	right and left with opposite couple.
 
-5. 	Les lanciers.
+5.	Les lanciers.
 
-	The grand chain.
+	The grand chain,
 
-	The first couple advance and turn facing the top,
+	the first couple advance and turn facing the top,
 
 	then the couple at right advance behind the top couple,
 
-	then the couple at left, and the opposite couple do the same, forming two lines.
+	then the couple at left, and the opposite couple do the same, forming two lines,
 
-	All change places with partners and back again.
+	all change places with partners and back again.
 
-	The ladies turn in a line of the right, the gentlemen in a line on the left.
+	the ladies turn in a line of the right, the gentlemen in a line on the left,
 
-	Each couple meet up the centre.
+	each couple meet up the centre,
 
-	Set in two lines, the ladies in one line, and the gentlemen in the other.
+	set in two lines, the ladies in one line, and the gentlemen in the other,
 
-	Turn partners to places
+	turn partners to places,
 
-	Finish with the grand chain.
+	finish with the grand chain.
 
 ### Caledonians - First set
 
-1. 	The first and opposite couples hands across and back again.
+1.	The first and opposite couples hands across and back again,
 
-	Set and turn partners.
+	set and turn partners,
 
-	Ladies’ chain.
+	ladies' chain,
 
-	Half promenade,
+	half promenade,
 
 	half right and left.
 
-2. 	First gentleman advance twice.
+2.	First gentleman advance twice,
 
-	The four ladies set to gentlemen at their right,
+	the four ladies set to gentlemen at their right,
 
-	and turn with both hands, each taking next lady’s place,
+	and turn with both hands, each taking next lady's place,
 
-	promenade quite round
+	promenade quite round.
 
-3. 	First lady and opposite gentleman advance and retire,
+3.	First lady and opposite gentleman advance and retire,
 
 	back to back,
 
@@ -529,61 +531,61 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	set at the corners,
 
-	and turn with both hands to places.
+	and turn with both hands to places,
 
-	All set in a circle.
+	all set in a circle.
 
-4. 	First lady and opposite gentleman advance and stop,
+4.	First lady and opposite gentleman advance and stop,
 
 	then their partners advance,
 
-	turn partners to places.
+	turn partners to places,
 
-	The four ladies move to right, each taking the next lady’s place and stop,
+	the four ladies move to right, each taking the next lady's place and stop,
 
-	the four gentlemen move to left, each taking the next gentleman’s place and stop,
+	the four gentlemen move to left, each taking the next gentleman's place and stop,
 
 	the ladies repeat the same to the right,
 
-	then the gentlemen to the left.
+	then the gentlemen to the left,
 
-	All join hands and promenade round to places and turn partners.
+	all join hands and promenade round to places and turn partners.
 
-5. 	First gentleman lead his partner round inside the figure.
+5.	First gentleman lead his partner round inside the figure,
 
-	The four ladies advance, join right hands and retire,
+	the four ladies advance, join right hands and retire,
 
 	then the gentlemen perform the same,
 
 	all set
 
-	and turn partners.
+	and turn partners,
 
-	Chain figure of eight half round and set.
+	chain figure of eight half round and set,
 
-	All promenade to places and turn partners.
+	all promenade to places and turn partners,
 
-	All change sides, join right hands at corners and set,
+	all change sides, join right hands at corners and set,
 
-	back again to places.
+	back again to places,
 
-	Finish with grand promenade.
+	finish with grand promenade.
 
 ### Caledonians - Second set
 
-1. 	Ladies chain.
+1.	Ladies chain,
 
-	First and opposite couple advance and retire.
+	first and opposite couple advance and retire,
 
-	Half right and left,
+	half right and left,
 
-	then the side couples perform the same.
+	then the side couples perform the same,
 
-	All promenade to places and turn partners.
+	all promenade to places and turn partners.
 
-2. 	First gentleman advance twice.
+2.	First gentleman advance twice,
 
-	First and opposite lady advance and retire,
+	first and opposite lady advance and retire,
 
 	then change places,
 
@@ -591,27 +593,27 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	resume partners and turn to places.
 
-3. 	First lady and opposite gentleman advance and set,
+3.	First lady and opposite gentleman advance and set,
 
 	then turn with both hands to places,
 
 	first and opposite couple advance and retire,
 
-	then turn partners, and, at the same time, the side couples change sides and back again.
+	then turn partners, and, at the same time, the side couples change sides and back again,
 
-	All set at corners,
+	all set at corners,
 
-	joining right hands, and turn to places.
+	joining right hands, and turn to places,
 
-	All set in a circle and turn partners.
+	all set in a circle and turn partners.
 
-4. 	First lady and opposite gentleman advance and retire,
+4.	First lady and opposite gentleman advance and retire,
 
 	back to back,
 
-	set and turn partners.
+	set and turn partners,
 
-	Half promenade,
+	half promenade,
 
 	half right and left,
 
@@ -623,11 +625,11 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	all turn partners to places.
 
-5. 	All change sides, join right hands at corners and back again.
+5.	All change sides, join right hands at corners and back again,
 
-	First lady advance twice.
+	first lady advance twice,
 
-	All the gentlemen advance and retire, all set to partners,
+	all the gentlemen advance and retire, all set to partners,
 
 	all chain figure a quarter round and set,
 
@@ -635,17 +637,17 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	chain figure again into opposite places,
 
-	swing partners with right hands quite round.
+	swing partners with right hands quite round,
 
-	All promenade to places and turn partners.
+	all promenade to places and turn partners,
 
-	Finish with change sides.
+	finish with change sides.
 
 ### The union quadrilles
 
 1. Scotch.
 
-	First Lady change places with fourth,
+	First lady change places with fourth,
 
 	second and third same figure,
 
@@ -655,7 +657,7 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	all advance and set,
 
-	chasséez croisséez to places,
+	chassez croissez to places,
 
 	set and turn partners,
 
@@ -693,9 +695,9 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	retire to places,
 
-	ladies’ hands across,
+	ladies' hands across,
 
-	chasséez croisséez.
+	chassez croissez.
 
 4. German.
 
@@ -719,13 +721,13 @@ This dance commences by six or eight couples waltzing round the room, a chair is
 
 	grand square.
 
-### The mazurka or cotillon russe (from "The Court Journal")
+### The mazurka or cotillon russe (from "The court journal")
 
-The Mazurka is a dance of Polish origin, and was introduced into this country by the Duke of Devonshire, the English Ambassador to Russia.
+The mazurka is a dance of Polish origin, and was introduced into this country by the duke of Devonshire, the English ambassador to Russia.
 
-The Mazurka resembles the Quadrille, in so far as it is danced by sets of eight persons, four of either sex, who arrange themselves in couples, the lady in each couple taking the place to the right of the gentleman, and the first and second couple, and the third and fourth couple face each other.
+The mazurka resembles the quadrille, in so far as it is danced by sets of eight persons, four of either sex, who arrange themselves in couples, the lady in each couple taking the place to the right of the gentleman, and the first and second couple, and the third and fourth couple face each other.
 
-The dance consists of what may be described as twelve different movements, and as in the Quadrille, the first eight bars of the music are played before the first movement commences.
+The dance consists of what may be described as twelve different movements, and as in the quadrille, the first eight bars of the music are played before the first movement commences.
 
 The first movement may be considered as preparatory, and has no figure, since it consists merely of a motion from right to left, and then from left to right, by each person, four times repeated. The steps in this first movement are three, and of a character, that at once gives an eccentric air to the dance, and as it were, excites and stirs up a corresponding spirit in those who are engaged in it; they consist of a stamp, a hop, and a sliding step, or glissade.
 
@@ -735,15 +737,15 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 ### Royal blue jackets
 
-1. 	Right and left,
+1.	Right and left,
 
-	set and turn partners
+	set and turn partners,
 
-	Ladies’ chain.
+	ladies' chain,
 
-	Half promenade, half right and left.
+	half promenade, half right and left.
 
-2. 	First lady and opposite gentleman advance and retire,
+2.	First lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -755,15 +757,15 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	and turn partners.
 
-3. 	First lady and opposite gentleman cross,
+3.	First lady and opposite gentleman cross,
 
 	giving right hands,
 
 	back with left,
 
-	set four in a line.
+	set four in a line,
 
-	Half promenade,
+	half promenade,
 
 	two advance and retire,
 
@@ -773,25 +775,25 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	half right and left.
 
-4. 	Ladies’ chain,
+4.	Ladies' chain,
 
-	set and turn partners.
+	set and turn partners,
 
-	First couple advance twice,
+	first couple advance twice,
 
 	leaving the lady at left of opposite gentleman,
 
-	and first gentleman retires.
+	and first gentleman retires,
 
-	Two ladies cross over and change sides, while first gentleman passes between them,
+	two ladies cross over and change sides, while first gentleman passes between them,
 
 	the same repeated to places,
 
 	set and turn partners.
 
-5. 	All join hands and set in a circle.
+5.	All join hands and set in a circle,
 
-	First lady and opposite gentleman advance and retire,
+	first lady and opposite gentleman advance and retire,
 
 	chassez right and left,
 
@@ -801,35 +803,35 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	re-cross,
 
-	and turn partners.
+	and turn partners,
 
-	Ladies’ hands across and back,
+	ladies' hands across and back,
 
 	all set in a cross, gentlemen outside,
 
-	all turn partners to places.
+	all turn partners to places,
 
-	Finish with promenade.
+	finish with promenade.
 
 ### Royal Devonshire mazurkas
 
-1. 	Mazurka step to right and left.
+1.	Mazurka step to right and left,
 
-	Promenade,
+	promenade,
 
 	turn partners,
 
-	each gentleman Mazurka step to next lady and set,
+	each gentleman mazurka step to next lady and set,
 
 	same all round,
 
-	lead round to opposite couple’s place,
+	lead round to opposite couple's place,
 
 	half tiroir,
 
 	turn partners.
 
-2. 	All advance, cross partners, cross to opposite couple’s place,
+2.	All advance, cross partners, cross to opposite couple's place,
 
 	ladies change places,
 
@@ -839,9 +841,9 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	turn partners.
 
-3. 	First and third couples advance to centre, change places,
+3.	First and third couples advance to centre, change places,
 
-	Second and Fourth same figure,
+	second and fourth same figure,
 
 	ladies' hands across half round,
 
@@ -855,9 +857,9 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 	repeat the same,
 
-	all advance.
+	all advance,
 
-	First and second couples half chasséez croisséez,
+	first and second couples half chassez croissez,
 
 	each gentleman waltz with his own partner to places,
 
@@ -869,13 +871,13 @@ A movement now commences, which also occupies sixteen bars, and in the course of
 
 ### Explanation and figures of "La gallopade"
 
-La gallopade is a dance in which eight, twelve, or sixteen may join; the steps are easy and may be classed amongst the graceful dances in chassez. With two it should assume a bold attitude – the gentleman holding the lady with his left hand, the other round her waist (similar to waltzing.) They commence with the gallopade à-la-chassez round the room, till in their places. The right foot must be gracefully placed forward, and the left foot to balance the body. All perform the first figure at the same time.
+La gallopade is a dance in which eight, twelve, or sixteen may join; the steps are easy and may be classed amongst the graceful dances in chassez. With two it should assume a bold attitude – the gentleman holding the lady with his left hand, the other round her waist (similar to waltzing). They commence with the gallopade à-la-chassez round the room, till in their places. The right foot must be gracefully placed forward, and the left foot to balance the body. All perform the first figure at the same time.
 
 ### La gallopade
 
-1.	Round the room with gallopade à-la-chassez till in your places.
+1.	Round the room with gallopade à-la-chassez till in your places,
 
-	Right and left,
+	right and left,
 
 	side couples do the same,
 
@@ -883,25 +885,25 @@ La gallopade is a dance in which eight, twelve, or sixteen may join; the steps a
 
 	chassez to the right and left,
 
-	turn partners.
+	turn partners,
 
-	Gallopade à-la-chassez to your places.
+	gallopade à-la-chassez to your places.
 
-2. 	The first gentleman with the opposite lady turn in the centre to their places,
+2.	The first gentleman with the opposite lady turn in the centre to their places,
 
 	they advance between the opposite couple,
 
 	in returning, they lead outside,
 
-	all the ladies facing their partners and chassez to right and left.
+	all the ladies facing their partners and chassez to right and left,
 
-	Turn partners.
+	turn partners,
 
-	The other six do the same.
+	the other six do the same,
 
-	Finish with the Gallopade à-la-chassez to your places.
+	finish with the gallopade à-la-chassez to your places.
 
-3. 	Hands across with the ladies only,
+3.	Hands across with the ladies only,
 
 	with their right hands,
 
@@ -913,15 +915,15 @@ La gallopade is a dance in which eight, twelve, or sixteen may join; the steps a
 
 	the ladies facing their partners,
 
-	chassez to the right and left.
+	chassez to the right and left,
 
-	Turn partners,
+	turn partners,
 
-	set and turn at the corners.
+	set and turn at the corners,
 
-	Gallopade à-la-chassez to places.
+	gallopade à-la-chassez to places.
 
-4. 	Grand promenade,
+4.	Grand promenade,
 
 	first lady and opposite gentleman advance and retire,
 
@@ -929,19 +931,19 @@ La gallopade is a dance in which eight, twelve, or sixteen may join; the steps a
 
 	cross, chassez right and left,
 
-	recross and turn partners.
+	recross and turn partners,
 
-	Finish with gallopade à-la-chassez quite round to places.
+	finish with gallopade à-la-chassez quite round to places.
 
-This Dance is generally composed of Three Figures, but in some parties the fourth is introduced.
+This dance is generally composed of three figures, but in some parties the fourth is introduced.
 
 ### Gallopade quadrilles
 
-1. 	Half double ladies chain,
+1.	Half double ladies chain,
 
-	turn corners.
+	turn corners,
 
-	First couple advance and salute,
+	first couple advance and salute,
 
 	same with opposite partners,
 
@@ -951,21 +953,21 @@ This Dance is generally composed of Three Figures, but in some parties the fourt
 
 	fourth, ditto,
 
-	half double ladies’ chain,
+	half double ladies' chain,
 
-	turn corners.
+	turn corners,
 
-	Four ladies advance to centre and salute to left.
+	four ladies advance to centre and salute to left,
 
-	Four gentlemen same figure,
+	four gentlemen same figure,
 
 	half promenade to places,
 
 	turn partners.
 
-2. 	Grand promenade with gallopade à-la-chassez.
+2.	Grand promenade with gallopade à-la-chassez,
 
-	Top and bottom couples lead to right and set,
+	top and bottom couples lead to right and set,
 
 	hands four round,
 
@@ -975,51 +977,51 @@ This Dance is generally composed of Three Figures, but in some parties the fourt
 
 	other couples following,
 
-	and return outside.
+	and return outside,
 
-	Finish with quick gallopade step.
+	finish with quick gallopade step.
 
-3. 	All turn with right hand to partners,
+3.	All turn with right hand to partners,
 
 	set in a circle
 
-	and turn to places.
+	and turn to places,
 
-	First couple advance and leave the lady at left of opposite gentleman,
+	first couple advance and leave the lady at left of opposite gentleman,
 
 	first gentleman salute round with second,
 
 	salute round with partner,
 
-	then with opposite lady.
+	then with opposite lady,
 
-	Hands four round to places,
+	hands four round to places,
 
 	turn partners,
 
-	half chasséez croisséez,
+	half chassez croissez,
 
 	turn corners,
 
 	repeat same to places.
 
-4. Waltz finale.
+4.	Waltz finale.
 
-	Set and turn corners,
+	set and turn corners,
 
-	each lady taking next lady’s place,
+	each lady taking next lady's place,
 
-	repeat the figure until each lady is with her partner.
+	repeat the figure until each lady is with her partner,
 
-	First couple advance and retire with the lady on the left,
+	first couple advance and retire with the lady on the left,
 
 	reel with the same lady,
 
 	ladies waltz to the right completely round,
 
-	gentlemen at the same time waltz half round to the left.
+	gentlemen at the same time waltz half round to the left,
 
-	Ladies’ hands across half round,
+	ladies' hands across half round,
 
 	give left hand to partner, set and turn partners,
 
@@ -1033,7 +1035,7 @@ The following may be danced to any quadrille music containing the requisite numb
 
 	Right hands across and back with the left,
 
-	balancéz and turn your partners,
+	balancez and turn your partners,
 
 	advance and retire,
 
@@ -1057,9 +1059,9 @@ The following may be danced to any quadrille music containing the requisite numb
 
 3. [Four part tune]
 
-	Top couple chasséez croisséez,
+	Top couple chassez croissez,
 
-	balancéz and turn partners,
+	balancez and turn partners,
 
 	ladies chain with the second couple, advance and retire,
 
@@ -1069,7 +1071,7 @@ The following may be danced to any quadrille music containing the requisite numb
 
 	Right and left,
 
-	balancéz and turn partners,
+	balancez and turn partners,
 
 	top couple advance and retire to second couple
 
@@ -1083,7 +1085,7 @@ The following may be danced to any quadrille music containing the requisite numb
 
 	set four in a line,
 
-	top couple chasséez croisséez, facing the bottom,
+	top couple chassez croissez, facing the bottom,
 
 	and half right and left with the second couple, bringing them a couple lower.
 
@@ -1127,9 +1129,9 @@ The following may be danced to any quadrille music containing the requisite numb
 
 	poussette.
 
-### Explanation of the French Terms Used in Quadrille Dancing
+### Explanation of the French terms used in quadrille dancing
 
-* Balancéz – Set
+* Balancez – Set
 * Chaine anglaise – Right and left
 * Demi chaine Anglaise – Half right and left
 * Chaine des dames – Ladies' chain
@@ -1139,28 +1141,28 @@ The following may be danced to any quadrille music containing the requisite numb
 * La dame – The lady
 * Le cavalier – The gentleman
 * Les dames – The ladies
-* Les cavaliers – The Gentlemen
+* Les cavaliers – The gentlemen
 * Le grand rond	 – All eight join hands and advance twice
-* Moulinet – Ladies’ hands across and back
+* Moulinet – Ladies' hands across and back
 * Cavalier seul – The gentleman advances alone
-* Chasséez croisséez – Change sides with partners, the ladies passing in front of the gentlemen & back to places.
-* Chassez et déchasséez – Move to right and left
+* Chassez croissez – Change sides with partners, the ladies passing in front of the gentlemen & back to places.
+* Chassez et dechassez – Move to right and left
 * Dos-à-dos – The lady and gentleman advance and pass round each other to places
 * La grande promenade – All promenade quite round to places, leading to the right
 * Le tiroir – Top couple lead between opposite couple, return leading outside
 * Tour de mains – Turn, giving both hands
-* Balancéz aux coins – Set at the corners
-* Traverséz – Cross over
-* Re-traverséz – Re-cross to places
-* La grande Chaine - All eight chassez quite round, giving alternately right and left hands to partners, beginning with the right.
+* Balancez aux coins – Set at the corners
+* Traversez – Cross over
+* Retraversez – Re-cross to places
+* La grande chaine - All eight chassez quite round, giving alternately right and left hands to partners, beginning with the right.
 * La main droite --- The right hand
 * La main gauche - The left hand
 * En avant quatre – The first and opposite couple advance and retire
-* Balancéz quatre en ligne – Set four in a line
-* Balancéz et tour des mains – Set and turn partners
-* Pas d’Allemande – The gentleman turns the lady under his arm
+* Balancez quatre en ligne – Set four in a line
+* Balancez et tour des mains – Set and turn partners
+* Pas d'allemande – The gentleman turns the lady under his arm
 * Le grand quarré – All eight form squares
-* Traverséz deux, en donnant la main droite – The first lady and opposite gentleman cross, giving right hands.
-* Re-traverséz en donnant la main gauche – Re-cross, giving left hands
+* Traversez deux, en donnant la main droite – The first lady and opposite gentleman cross, giving right hands.
+* Retraversez en donnant la main gauche – Re-cross, giving left hands
 * Chaine des dames double – Performed by all the ladies at the same time
 * Chaine anglaise double – All perform the figure at the same time
