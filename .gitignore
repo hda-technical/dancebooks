@@ -88,11 +88,11 @@ desktop.ini
 # make/automake/autoconfigure
 .deps
 .lib
-# de facto standard extension for deps.mk file
+# de facto standard extension for additional makefile targets
 *.mk
 
 # put your own ignores below this line (don't forget about the newline in the end of file)
 *.pdf
 transcriptions/*.html
 transcriptions/*.rtf
-transcriptions/*.pdf
+test.bib
