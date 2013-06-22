@@ -63,6 +63,8 @@ ANC_MARKDOWN_FILES=\
 
 HTML_FILES=$(MARKDOWN_FILES:.md=.html)
 
+# PDF files related targets
+
 default: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
@@ -70,9 +72,7 @@ default: test-biblatex.pdf
 	@pdflatex --max-print-line=250 $<
 	@biber --listsep=\| --validate_datamodel --quiet ${@:.pdf=}
 	@pdflatex --max-print-line=250 $<
-	@echo "Build log contains:"
-	@grep -iE "Datamodel" ${@:.pdf=.log} > validation.log
-	@cat validation.log
+	@grep -iqE "Datamodel" ${@:.pdf=.log}
 	@echo "Build completed"
 
 debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
@@ -82,19 +82,20 @@ debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@pdflatex --max-print-line=200 test-biblatex.tex
 	@echo "Build completed"
 
-all.mk: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions.mk
-	@echo "Build all completed"
-	@touch $@
-
-upload-urls.mk:	$(URL_FILES)
-	@chmod 644 $^
-	@scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
-	@touch $@
-
 upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
 	@chmod 644 $^
 	@scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
 	@touch $@
+
+clean-pdfs:
+	@rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.cfg
+	@echo "Clean pdfs completed"
+
+purge-pdfs: clean-pdfs
+	@rm -f *.pdf all.mk upload-pdfs.mk
+	@echo "Purge pdfs completed"
+	
+# Transcriptions related targets
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
 	@echo "Compiling \"$<\""
@@ -103,17 +104,26 @@ upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
 transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
 	@touch $@
+	
+purge-transcriptions: clean
+	@rm -f transcriptions/*.html transriptions.mk
+	
+# Ancillary targets
 
-entrycount: $(BIB_FILES)
+all.mk: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions.mk
+	@echo "Build all completed"
+	@touch $@
+
+upload-urls.mk:	$(URL_FILES)
+	@chmod 644 $^
+	@scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
+	@touch $@
+	
+entry-count: $(BIB_FILES)
 	@cat $(BIB_FILES) | grep -c --color '@'
 
-rebuild: purge all.mk
+clean: clean-pdfs
+	@true
+	
+rebuild: purge-pdfs purge-transcriptions all.mk
 	@echo "Rebuild completed"
-
-purge: clean
-	@rm -f *.pdf *.mk transcriptions/*.html
-	@echo "Purge completed"
-
-clean:
-	@rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.cfg
-	@echo "Clean completed"
