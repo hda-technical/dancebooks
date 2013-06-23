@@ -1,24 +1,24 @@
 \NeedsTeXFormat{LaTeX2e}
 
-% файл biblatex-dm.cfg необходимо писать в самом начале
+% biblatex-dm.cfg should be written in the very beginning
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelConstraints{
-	% обязательно должно присутствовать полу hyphenation
+	% {hyphenation} must be present
 	\constraint[type=mandatory]{
 		\constraintfield{hyphenation}
 	}
-	% обязательно должен присутствовать author или shorthand
+	% one of the {author, shorthand} must be present
 	\constraint[type=mandatory]{
 		\constraintfieldsor{
 			\constraintfield{author}
 			\constraintfield{shorthand}
 		}
 	}
-	% если есть publisher, должен быть задан location
+	% if {publisher} exists, then {location} must be present
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
 			\constraintfield{location}
@@ -27,7 +27,7 @@
 			\constraintfield{publisher}
 		}
 	}
-	% если есть хотя бы одно из полей {origlanguage, translator}, то должны присутствовать обы
+	% if any of {origlanguage, translator} exists, both must be present
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
 			\constraintfield{translator}
@@ -40,19 +40,23 @@
 	}
 }
 \DeclareDatamodelConstraints[book,mvbook]{
-	% только для книг и многотомных изданий: если задан volume, должно быть известно общее число томов volumes
+	% for books and multi-volume books: 
+	% if one of {volume, volumes} exitst, both must be present
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
+			\constraintfield{volume}
 			\constraintfield{volumes}
 		}
 		\antecedent[quantifier=all]{
 			\constraintfield{volume}
+			\constraintfield{volumes}
 		}
 	}
 }
 \DeclareDatamodelConstraints[thesis,phdthesis,masterthesis]{
-	% для разного рода диссертаций: обязательно присутствие ссылки (все диссертации, кажется, выкладываются в интернет)
-	% кроме этого, обязательно присутствие поля type (степень, для соискания которой подана диссертация)
+	% since all thesises are published online (seems to be true),
+	% {url} must be present,
+	% {type} containing a degree must be also present
 	\constraint[type=mandatory]{
 		\constraintfield{url}
 		\constraintfield{type}
@@ -79,7 +83,7 @@
 
 \ProvidesPackage{\dancebooks@root/dancebooks-biblatex}[2013/12/31 Special package for formatting of bibliography]
 
-% пишем слова URL и ISBN капителью
+% using small caps for URL and ISBN terms
 \renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
 
 \DeclareSourcemap{
@@ -94,24 +98,23 @@
 	}
 }
 
-% переопределяем макрос cite
-% в списке литературы добавляем метку в квадратных скобках
+% adding [label] before each bibliography entry
 \renewbibmacro*{cite}{%
 \iffieldundef{shorthand}%
 {\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }
 
-% добавляем поддержку поля shorthand
-% форсируем его использование вместо автосгенерённого значения
+% adding shorthand field support
+% forcing it's usage in label insstead of generated one
 \renewbibmacro*{begentry}{\brackettext{%
 \iffieldundef{shorthand}%
 {\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
 
-% добавляем поля annotation и keywords
-% только если указан флаг в параметрах
+% adding annotation and keywords fields
+% only if option was specified
 \ifdancebooks@detailed%
 \xapptobibmacro{url+urldate+note}{%
 \iffieldundef{annotation}%
@@ -125,14 +128,12 @@
 \else
 \fi
 
-% макрос переформатирования для года
-% убираем букву после года в библиографической записи
+% removing letter from the year in the bibliography entry text (not label)
 \DeclareFieldFormat{extrayear}{\mknumalph{#1}}
 \renewbibmacro*{date}{\printdate}
 \renewbibmacro*{year}{\printfield{year}}
 
-% макрос переформатирования для поля isbn
-% добавляем поддержку нескольких значений isbn, перечисленных через and
+% adding support for ISBN list
 \DeclareListFormat{isbn}{%
 \ifnumequal{\value{listcount}}{\value{liststart}}%
 {\mkbibacro{isbn}\addcolon\addspace}%
@@ -142,18 +143,18 @@
 {\addcomma\addspace}%
 #1}
 
-% определяем формат для печати списка ISBN
+% defining ISBN list printing format
 \renewbibmacro*{isbn}{\printlist{isbn}}
 
-% определяем формат для печати списка lista
-% выше мы сказали, что будем использовать это поле для хранения keywords
-% используем \newbibmacro* вместо \renewbibmacro*, чтобы избавиться от warning'а
+% defining lista printing fortat
+% as already sayd, this macro will be used for keywords storage
+% using \newbibmacro* instead of \renewbibmacro* to remove warning
 \newbibmacro*{lista}{\printlist{lista}}
 
-% добавляем пустую строчку после каждой книги
+% adding empty line at the end of each entry
 \renewbibmacro*{finentry}{\finentry\newline}
 
-% добавляем возможность исключить источники библиографии по умолчанию
+% adding option to ignore bibliography source included by default
 \ifdancebooks@usedefaults
 	\addbibresource{\dancebooks@root/bib/!missing.bib}
 	\addbibresource{\dancebooks@root/bib/!problems.bib}
