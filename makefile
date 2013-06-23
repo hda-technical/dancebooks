@@ -72,7 +72,7 @@ default: test-biblatex.pdf
 	@pdflatex --max-print-line=250 $<
 	@biber --listsep=\| --validate_datamodel --quiet ${@:.pdf=}
 	@pdflatex --max-print-line=250 $<
-	@grep -iqE "Datamodel" ${@:.pdf=.log}
+	@grep -iqE "Datamodel" ${@:.pdf=.log} || true
 	@echo "Build completed"
 
 debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
