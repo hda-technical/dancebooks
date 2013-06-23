@@ -54,7 +54,7 @@ MARKDOWN_FILES=\
 	transcriptions/[2000,\ ru]\ Агриппина\ Яковлевна\ Ваганова\ -\ Основы\ классического\ танца.md \
 	transcriptions/[2000,\ ru]\ Филипп\ Филиппович\ Вигель\ -\ Записки.md \
 	transcriptions/[2007,\ ru]\ Жан\ Жорж\ Новерр\ -\ Письма\ о\ танце.md \
-	transcriptions/[2011,\ ru]\ Оксана\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
+	transcriptions/[2011,\ ru]\ Оксана\ Юрьевна\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
 
 ANC_MARKDOWN_FILES=\
 	transcriptions/_markdown2.py3k \
