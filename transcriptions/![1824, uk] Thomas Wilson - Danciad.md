@@ -4485,7 +4485,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > If so, I very awkward shall appear.
 >
-> Chassée. Do you know — La chaine des dames et chassée croisée,
+> Chassée. Do you know — La chaîne des dames et chassée croisée,
 >
 > Chassée ouvert, queue du chat et balancez.
 >
@@ -11177,7 +11177,7 @@ This and the other following figures are described by diagrams in "The quadrille
 	
 * Promenade — The gentleman and lady cross hands, the gentleman with his right hand takes the lady's right, and with his left, takes her left hand and leads her round in a circle; there are several promenades, (videlicet) grand promenade, whole promenade, and half promenade
 * Balancez — Set
-* Grand chaine — Great chain
+* Grand chaîne — Great chain
 * Dos à dos — Back to back
 * Les lignes — The lines
 * Grand rond — Great round
@@ -11187,11 +11187,11 @@ This and the other following figures are described by diagrams in "The quadrille
 * Queue du chat — Promenade
 * Grand quarrée — The great squares
 * Moulinet — Cross hands
-* Chaine de dames — Ladies chain
+* Chaîne de dames — Ladies chain
 * Tiroir — The top couple join both hands and take the place of the bottom couple, who pass sideways into the top couple's place — then the bottom couple join both hands, and pass between the top couple — all return to places
 * Chassez ouvert — Open chassez
 * Chassez en avant, et en arrière — Chassez forward and backward
-* Chaine anglaise — English chain
+* Chaîne anglaise — English chain
 * Les olivettes — The hey
 * L'étoile — The star
 * Poussette — Is formed by two couples: each gentleman takes the opposite lady's hand, and they then move round each other to places
@@ -11204,7 +11204,7 @@ When these terms are used in quadrille dancing, they allude to the number of dan
 
 ### Trenise simple
 
-Is when the trenise figure is performed without the chaine des dames.
+Is when the trenise figure is performed without the chaîne des dames.
 
 ### The gavotte quadrille
 
@@ -11880,11 +11880,11 @@ In sets composed of eight persons (see figure 1) the first and third couples gen
 >
 > And give the names of those I recollect.
 >
-> There's promenade, grand chaine, balancez,
+> There's promenade, grand chaîne, balancez,
 >
 > Dos a dos, les lignes, grand rond, traversez,
 >
-> Chaine des dames, le tiroir, chassez ouvert,
+> chaîne des dames, le tiroir, chassez ouvert,
 >
 > Chassez en avant et en arrière,
 >
@@ -11892,7 +11892,7 @@ In sets composed of eight persons (see figure 1) the first and third couples gen
 >
 > Queue du chat, grand quarrée, moulinet,
 >
-> Chaine anglaise, les olivettes, l'étoile,
+> chaîne anglaise, les olivettes, l'étoile,
 >
 > And others I can't now to memory call,
 >

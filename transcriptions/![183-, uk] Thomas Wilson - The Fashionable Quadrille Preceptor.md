@@ -1132,9 +1132,9 @@ The following may be danced to any quadrille music containing the requisite numb
 ### Explanation of the French terms used in quadrille dancing
 
 * Balancez – Set
-* Chaine anglaise – Right and left
-* Demi chaine Anglaise – Half right and left
-* Chaine des dames – Ladies' chain
+* Chaîne anglaise – Right and left
+* Demi chaîne Anglaise – Half right and left
+* Chaîne des dames – Ladies' chain
 * Demi queue du Chat – Half promenade
 * En avant deux et en arrière – The lady and opposite gentleman advance and retire.
 * Assortment du quadrille – A set of quadrilles
@@ -1154,7 +1154,7 @@ The following may be danced to any quadrille music containing the requisite numb
 * Balancez aux coins – Set at the corners
 * Traversez – Cross over
 * Retraversez – Re-cross to places
-* La grande chaine - All eight chassez quite round, giving alternately right and left hands to partners, beginning with the right.
+* La grande chaîne - All eight chassez quite round, giving alternately right and left hands to partners, beginning with the right.
 * La main droite --- The right hand
 * La main gauche - The left hand
 * En avant quatre – The first and opposite couple advance and retire
@@ -1164,5 +1164,5 @@ The following may be danced to any quadrille music containing the requisite numb
 * Le grand quarré – All eight form squares
 * Traversez deux, en donnant la main droite – The first lady and opposite gentleman cross, giving right hands.
 * Retraversez en donnant la main gauche – Re-cross, giving left hands
-* Chaine des dames double – Performed by all the ladies at the same time
-* Chaine anglaise double – All perform the figure at the same time
+* Chaîne des dames double – Performed by all the ladies at the same time
+* Chaîne anglaise double – All perform the figure at the same time
