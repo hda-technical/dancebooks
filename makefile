@@ -40,7 +40,7 @@ URL_FILES=\
 	urls/[1913,_fr]_Rudolf_Apponyi.txt \
 
 MARKDOWN_FILES=\
-	transcriptions/[155-,\ it]\ Giovanni\ e\ Il\ Lanzino\ e\ Il\ Papa\ -\ Manuscritto\ di\ baletti.md \
+	transcriptions/[155-,\ it]\ Giovannino\ e\ Il\ Lanzino\ e\ Il\ Papa\ -\ Manuscritto\ di\ baletti.md \
 	transcriptions/[1589,\ it]\ Prospero\ Luti\ -\ Opera\ bellissima\ di\ gagliarda.md \
 	transcriptions/[1620,\ fr]\ Barthélémy\ de\ Montagut\ -\ Louange\ de\ la\ danse.md \
 	transcriptions/![1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ the\ Art\ of\ Dancing.md \
