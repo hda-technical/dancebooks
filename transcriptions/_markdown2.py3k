@@ -36,7 +36,13 @@ title = os.path.splitext(title)[0]
 styleCssFile = open(options.cssFilename)
 css = resetCssFile.read() + styleCssFile.read()
 
-html = markdown2.markdown_path(options.inputFilename)
+with open(options.inputFilename, "r+b") as inputFile:
+	markdown = inputFile.read()
+	#trimming utf-8 byte order mark
+	if markdown.startswith(codecs.BOM_UTF8):
+		markdown = markdown[len(codecs.BOM_UTF8):]
+
+html = markdown2.markdown(markdown)
 html = """
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>

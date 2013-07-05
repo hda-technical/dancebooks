@@ -1,4 +1,4 @@
-# Louange de la danse avec les observations nécessaires pour en acquérir la perfection.
+﻿# Louange de la danse avec les observations nécessaires pour en acquérir la perfection.
 ## Barthélémy de Montagut
 
 A très haut et très puissant Seigneur George, Marquis de Buckingham, vicomte de Villiers, Baron de Waddon, Grand Amiral d'Angleterre, Grand Veneur, Grand Fauconnier, et Grand Écuyer de sa Majesté, Gentilhomme de la Chambre du Lict, Chevalier du très noble Ordre de la Jarretière et Conseiller du Roy en ses Conseils d'État d'Angleterre, et d'Écosse.

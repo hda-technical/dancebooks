@@ -1,4 +1,4 @@
-# The Fashionable Quadrille Preceptor containing Paine's Sets, Lancers, Caledonians, Waltz Cotillon, Gallopades, Mazurkas, &c
+﻿# The Fashionable Quadrille Preceptor containing Paine's Sets, Lancers, Caledonians, Waltz Cotillon, Gallopades, Mazurkas, &c
 ## Thomas Wilson
 
 ### Preliminary Directions
