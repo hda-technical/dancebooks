@@ -68,11 +68,14 @@ HTML_FILES=$(MARKDOWN_FILES:.md=.html)
 
 default: test-biblatex.pdf
 
+# \filecontents isn't treadsafe — disabling parallelism here
+test-biblatex-detailed.pdf: test-biblatex.pdf
+
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@pdflatex --max-print-line=250 $<
+	@pdflatex --max-print-line=250 $< >/dev/null
 	@biber --listsep=\| --validate_datamodel --quiet ${@:.pdf=}
-	@pdflatex --max-print-line=250 $<
+	@pdflatex --max-print-line=250 $< >/dev/null
 	@grep -iqE "Datamodel" ${@:.pdf=.log} || true
 	@echo "Build completed"
 
@@ -111,7 +114,7 @@ purge-transcriptions: clean
 	
 # Ancillary targets
 
-all.mk: test-biblatex.pdf test-biblatex-detailed.pdf transcriptions.mk
+all.mk: test-biblatex.pdf test-biblatex-detailed.pdf $(HTML_FILES)
 	@echo "Build all completed"
 	@touch $@
 
