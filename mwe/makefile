@@ -1,6 +1,6 @@
 mwe.pdf: mwe.tex
 	pdflatex $<
-	biber '--listsep=|' --validate_datamodel --quiet ${@:.pdf=}
+	biber --listsep=\| --namesep=\| --validate_datamodel ${@:.pdf=}
 	pdflatex $<
 	echo "Build completed"
 	
