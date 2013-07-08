@@ -74,7 +74,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@pdflatex --max-print-line=250 $< >/dev/null
-	@biber --listsep=\| --validate_datamodel --quiet ${@:.pdf=}
+	@biber '--listsep=|' --validate_datamodel --quiet ${@:.pdf=}
 	@pdflatex --max-print-line=250 $< >/dev/null
 	@grep -iqE "Datamodel" ${@:.pdf=.log} || true
 	@echo "Build completed"
@@ -82,7 +82,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@pdflatex --max-print-line=200 test-biblatex.tex
-	@biber --listsep=\| --validate_datamodel test-biblatex
+	@biber '--listsep=|' --validate_datamodel test-biblatex
 	@pdflatex --max-print-line=200 test-biblatex.tex
 	@echo "Build completed"
 
@@ -111,6 +111,7 @@ transcriptions.mk: $(HTML_FILES)
 	
 purge-transcriptions: clean
 	@rm -f transcriptions/*.html transriptions.mk
+	@echo "Cleaning transcriptions completed"
 	
 # Ancillary targets
 
@@ -125,7 +126,7 @@ upload-urls.mk:	$(URL_FILES)
 	
 entry-count: $(BIB_FILES)
 	@cat $(BIB_FILES) | grep -c --color '@'
-
+	
 clean: clean-pdfs
 	@true
 	
