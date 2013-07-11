@@ -44,6 +44,7 @@ MARKDOWN_FILES=\
 	transcriptions/[1589,\ it]\ Prospero\ Luti\ -\ Opera\ bellissima\ di\ gagliarda.md \
 	transcriptions/[1620,\ fr]\ Barthélémy\ de\ Montagut\ -\ Louange\ de\ la\ danse.md \
 	transcriptions/![1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ the\ Art\ of\ Dancing.md \
+	transcriptions/[1749,\ sc]\ The\ Register\ of\ Dances\ at\ Castle\ Menzies.md \
 	transcriptions/[1819,\ fr]\ J.\ H.\ Gourdoux-Daux\ -\ Requeil\ de\ genre\ nouveau\ de\ contredanses\ et\ walses.md \
 	transcriptions/![1824,\ uk]\ Thomas\ Wilson\ -\ Danciad.md \
 	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md \
@@ -79,7 +80,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 	@grep -iqE "Datamodel" ${@:.pdf=.log} || true
 	@echo "Build completed"
 
-debug: purge test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
+debug: purge-pdfs test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@pdflatex --max-print-line=200 test-biblatex.tex
 	@biber '--listsep=|' --validate_datamodel test-biblatex
