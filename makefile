@@ -82,9 +82,9 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 
 debug: purge-pdfs test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@pdflatex --max-print-line=200 test-biblatex.tex
-	@biber '--listsep=|' --validate_datamodel test-biblatex
-	@pdflatex --max-print-line=200 test-biblatex.tex
+	@pdflatex --max-print-line=250 test-biblatex.tex
+	@biber --listsep=\| --namesep=\| --validate_datamodel test-biblatex
+	@pdflatex --max-print-line=250 test-biblatex.tex
 	@echo "Build completed"
 
 upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf

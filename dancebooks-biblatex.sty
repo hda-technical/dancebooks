@@ -4,6 +4,10 @@
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
+\DeclareDatamodelFields[type=list,datatype=key]{
+	origlanguage,
+	bookoriglanguage
+}
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelConstraints{
@@ -71,7 +75,7 @@
 \RequirePackage{bookmark}
 \RequirePackage[T1,T2A]{fontenc}
 \RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
-\RequirePackage[bibencoding=utf-8,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false,maxitems=5]{biblatex}
+\RequirePackage[bibencoding=utf-8,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false,maxitems=5,maxnames=5]{biblatex}
 \RequirePackage{xpatch}
 
 \RequirePackage{kvoptions}
@@ -143,11 +147,34 @@
 {\addcomma\addspace}%
 #1}
 
+% adding support for origlanguage list
+\DeclareListFormat{origlanguage}{%
+\usebibmacro{list:delim}{#1}%
+\ifnumequal{\value{listcount}}{\value{liststart}}%
+{\bibsstring{from#1}}%
+{\bibsstring{lang#1}}%
+\usebibmacro{list:andothers}}
+
+\renewcommand*{\lbx@gost@lfromlang}[1]{%
+\iflistundef{#1}%
+{\unspace}%
+{\printlist[origlanguage]{#1}}}
+	
+\renewcommand*{\lbx@gost@sfromlang}[1]{%
+\iflistundef{#1}%
+{\space}%
+{\printlist[origlanguage]{#1}}}
+	
+\renewcommand*{\lbx@lfromlang}{\lbx@gost@lfromlang{origlanguage}}
+\renewcommand*{\lbx@sfromlang}{\lbx@gost@sfromlang{origlanguage}}
+\renewcommand*{\blx@gost@iflangundef}[3]{\iflistundef{#1}{#2}{#3}}
+\renewcommand*{\blx@gost@iflangsequal}[4]{\iflistsequal{#1}{#2}{#3}{#4}}
+
 % defining ISBN list printing format
 \renewbibmacro*{isbn}{\printlist{isbn}}
 
 % defining lista printing fortat
-% as already sayd, this macro will be used for keywords storage
+% as already said, this macro will be used for keywords storage
 % using \newbibmacro* instead of \renewbibmacro* to remove warning
 \newbibmacro*{lista}{\printlist{lista}}
 
