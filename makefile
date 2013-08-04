@@ -43,20 +43,19 @@ MARKDOWN_FILES=\
 	transcriptions/[155-,\ it]\ Giovannino\ e\ Il\ Lanzino\ e\ Il\ Papa\ -\ Manuscritto\ di\ baletti.md \
 	transcriptions/[1589,\ it]\ Prospero\ Luti\ -\ Opera\ bellissima\ di\ gagliarda.md \
 	transcriptions/[1620,\ fr]\ Barthélémy\ de\ Montagut\ -\ Louange\ de\ la\ danse.md \
-	transcriptions/![1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ the\ Art\ of\ Dancing.md \
+	transcriptions/[1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ the\ Art\ of\ Dancing.md \
 	transcriptions/[1749,\ sc]\ The\ Register\ of\ Dances\ at\ Castle\ Menzies.md \
 	transcriptions/[1819,\ fr]\ J.\ H.\ Gourdoux-Daux\ -\ Requeil\ de\ genre\ nouveau\ de\ contredanses\ et\ walses.md \
-	transcriptions/![1824,\ uk]\ Thomas\ Wilson\ -\ Danciad.md \
+	transcriptions/[1824,\ uk]\ Thomas\ Wilson\ -\ Danciad.md \
 	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md \
-	transcriptions/![1828,\ ru]\ Собрание\ фигур\ для\ котильона.md \
-	transcriptions/![183-,\ uk]\ Thomas\ Wilson\ -\ The\ Fashionable\ Quadrille\ Preceptor.md \
-	transcriptions/![1902,\ ru]\ Николай\ Людвигович\ Гавликовский\ -\ Руководство\ для\ изучения\ танцев,\ édition\ 2.md \
+	transcriptions/[1828,\ ru]\ Собрание\ фигур\ для\ котильона.md \
+	transcriptions/[183-,\ uk]\ Thomas\ Wilson\ -\ The\ Fashionable\ Quadrille\ Preceptor.md \
+	transcriptions/[1902,\ ru]\ Николай\ Людвигович\ Гавликовский\ -\ Руководство\ для\ изучения\ танцев,\ édition\ 2.md \
 	transcriptions/[1965,\ ru]\ Юрий\ Алексеевич\ Бахрушин\ -\ История\ русского\ балета.md \
-	transcriptions/[1987,\ ru]\ Людмила\ Дмитриевна\ Блок\ -\ Классический\ танец.\ История\ и\ современность.md \
-	transcriptions/![2000,\ ru]\ Агриппина\ Яковлевна\ Ваганова\ -\ Основы\ классического\ танца.md \
+	transcriptions/[2000,\ ru]\ Агриппина\ Яковлевна\ Ваганова\ -\ Основы\ классического\ танца.md \
 	transcriptions/[2000,\ ru]\ Филипп\ Филиппович\ Вигель\ -\ Записки.md \
-	transcriptions/![2007,\ ru]\ Жан\ Жорж\ Новерр\ -\ Письма\ о\ танце.md \
-	transcriptions/![2011,\ ru]\ Оксана\ Юрьевна\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
+	transcriptions/[2007,\ ru]\ Жан\ Жорж\ Новерр\ -\ Письма\ о\ танце.md \
+	transcriptions/[2011,\ ru]\ Оксана\ Юрьевна\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
 
 ANC_MARKDOWN_FILES=\
 	transcriptions/_markdown2.py3k \
