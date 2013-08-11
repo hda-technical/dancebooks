@@ -23,7 +23,7 @@
 	\newcommand{\rootfolder}{%folderpath%}
 	\usepackage[usedefaults=false,root=\rootfolder]{\rootfolder/dancebooks-biblatex}
 
-После подключения становятся доступны макросы цитирования `\cite`, `\footcite`, `\parencite`, `\nocite`, `\volcite`. Работа макросов описана в [biblatex manual](http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf). Стандартный макрос печати библиографии в `biblatex` -- `\printbibliography`, без параметров. Дополнительные библиографические источники можно добавить стандартной командой `\addbibresource{hello.bib}` (расширение `.bib` необходимо указывать явно).
+После подключения становятся доступны макросы цитирования `\cite`, `\footcite`, `\parencite`, `\nocite`, `\volcite`. Работа макросов описана в [руководстве по biblatex](http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf). Стандартный макрос печати библиографии в `biblatex` -- `\printbibliography`, без параметров. Дополнительные библиографические источники можно добавить стандартной командой `\addbibresource{hello.bib}` (расширение `.bib` необходимо указывать явно).
 
 Порядок компиляции такой:
 
@@ -34,13 +34,13 @@
 
 ### Установка дополнительных пакетов. `biblatex`:
 
-Скачать можно [по этому адресу](http://sourceforge.net/projects/biblatex/files/).
+Скачать можно [по этому адресу](http://sourceforge.net/projects/biblatex/files/), вот [прямая ссылка на последнюю версию](http://sourceforge.net/projects/biblatex/files/latest/download).
 
 Пакет есть в стандартном репозитории.
 
 ### Установка дополнительных пакетов. `biber`:
 
-Скачать бэкэнд можно [по этому адресу](http://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/). Внимание! Не всякая версия biber подходит для конкретной версии biblatex. Изучите, пожалуйста, информацию о необходимой вам версии biber.
+Скачать бэкэнд можно [по этому адресу](http://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/), вот [прямая ссылка на последнюю версию](http://sourceforge.net/projects/biblatex-biber/files/latest/download). Внимание! Не всякая версия biber подходит для конкретной версии biblatex. Изучите, пожалуйста, информацию о необходимой вам версии biber.
 
 Необходимо положить исполняемый файл в любую папку, после чего добавить эту папку в `%PATH%`, если этого не было сделано раньше.
 
@@ -48,7 +48,7 @@
 
 ### Установка дополнительных пакетов. `biblatex-gost`:
 
-Скачать последнюю версию гостовских стилей можно [по этому адресу](http://sourceforge.net/projects/biblatexgost/files/).
+Скачать последнюю версию гостовских стилей можно [по этому адресу](http://sourceforge.net/projects/biblatexgost/files/), вот [прямая ссылка на последнюю версию](http://sourceforge.net/projects/biblatexgost/files/latest/download).
 
 Скачанный архив нужно распаковать (с сохранением структуры директорий) в любую из корневых папок вашего дистрибутива.
 
