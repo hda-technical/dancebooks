@@ -28,7 +28,7 @@
 Порядок компиляции такой:
 
 1. pdflatex project.tex
-2. biber --quiet project
+2. biber --listsep=\| --namesep=\| --quiet project
 3. pdflatex project.tex
 4. pdflatex project.tex
 
