@@ -27,10 +27,12 @@
 
 Порядок компиляции такой:
 
-1. pdflatex project.tex
-2. biber --listsep=\| --namesep=\| --quiet project
-3. pdflatex project.tex
-4. pdflatex project.tex
+1. `pdflatex project.tex`
+2.	`biber --listsep=\| --namesep=\| --quiet project` (в POSIX окружении)
+	
+	`biber "--listsep=|" "--namesep=|" "test-biblatex"` (в Windows)
+3. `pdflatex project.tex`
+4. `pdflatex project.tex`
 
 ### Установка дополнительных пакетов. `biblatex`:
 
