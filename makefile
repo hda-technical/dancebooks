@@ -73,10 +73,10 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@pdflatex --max-print-line=250 $< >/dev/null
+	@pdflatex --max-print-line=250 $< &>/dev/null
 	@biber --listsep=\| --namesep=\| --validate_datamodel --quiet ${@:.pdf=}
-	@pdflatex --max-print-line=250 $< >/dev/null
-	@grep -iqE "Datamodel" ${@:.pdf=.log} || true
+	@pdflatex --max-print-line=250 $< &>/dev/null
+	@grep -iE "Datamodel" ${@:.pdf=.log} || true
 	@echo "Build completed"
 
 debug: purge-pdfs test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
