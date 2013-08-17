@@ -8,8 +8,10 @@
 	origlanguage,
 	bookoriglanguage
 }
+\DeclareDatamodelFields[type=field,datatype=literal]{pagesize}
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
+\DeclareDatamodelEntryfields{pagesize}
 \DeclareDatamodelConstraints{
 	% {hyphenation} must be present
 	\constraint[type=mandatory]{
