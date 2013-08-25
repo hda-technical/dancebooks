@@ -1,43 +1,44 @@
 #!/usr/bin/env python3
 
-import markdown2
 import codecs
 import optparse
 import os.path
 import sys
 
+import markdown2
+
 dirname = os.path.dirname(__file__)
-resetCssFile = open(dirname + "/_reset.css")
-styleCssPath = dirname + "/_style.css"
+reset_css_file = open(os.path.join(dirname, "_reset.css"))
+style_css_path = os.path.join(dirname, "_style.css")
 
 usage = "Usage: %prog [options]"
 
 parser = optparse.OptionParser(usage=usage)
-parser.add_option("-i", "--input", dest="inputFilename", help="Read markdown from FILE", metavar="FILE")
-parser.add_option("-o", "--output", dest="outputFilename", help="Write xhtml to FILE", metavar="FILE")
-parser.add_option("-c", "--css", dest="cssFilename", default=styleCssPath, help="Read css from FILE", metavar="FILE")
+parser.add_option("-i", "--input", dest="input_filename", help="Read markdown from FILE", metavar="FILE")
+parser.add_option("-o", "--output", dest="output_filename", help="Write xhtml to FILE", metavar="FILE")
+parser.add_option("-c", "--css", dest="css_filename", default=style_css_path, help="Read css from FILE", metavar="FILE")
 (options, args) = parser.parse_args()
 
-if ((options.inputFilename is None) or (not os.path.isfile(options.inputFilename))):
+if (options.input_filename is None) or (not os.path.isfile(options.input_filename)):
 	print("Error: input file is not defined\n")
 	sys.exit(1)
 	
-if (options.outputFilename is None):
+if options.output_filename is None:
 	print("Error: output file is not defined\n")
 	sys.exit(1)
 	
-if ((options.cssFilename is None) or (not os.path.isfile(options.cssFilename))):
+if (options.css_filename is None) or (not os.path.isfile(options.css_filename)):
 	print("Error: style file is not defined\n")
 	sys.exit(1)
 
-title = os.path.basename(options.inputFilename)
+title = os.path.basename(options.input_filename)
 title = os.path.splitext(title)[0]
 
-styleCssFile = open(options.cssFilename)
-css = resetCssFile.read() + styleCssFile.read()
+style_css_file = open(options.css_filename)
+css = reset_css_file.read() + style_css_file.read()
 
-with open(options.inputFilename, "r+b") as inputFile:
-	markdown = inputFile.read()
+with open(options.input_filename, "r+b") as input_file:
+	markdown = input_file.read()
 	#trimming utf-8 byte order mark
 	if markdown.startswith(codecs.BOM_UTF8):
 		markdown = markdown[len(codecs.BOM_UTF8):]
@@ -59,5 +60,5 @@ html = """
 </html>
 """
 
-outputFile = codecs.open(options.outputFilename, "w", encoding="utf-8")
-outputFile.write(html)
+output_file = codecs.open(options.output_filename, "w", encoding="utf-8")
+output_file.write(html)
