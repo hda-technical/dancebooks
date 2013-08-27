@@ -1,4 +1,4 @@
-BIB_FILES=\
+BIB_FILES := \
 	bib/!missing.bib \
 	bib/!problems.bib \
 	bib/american.bib \
@@ -21,10 +21,10 @@ BIB_FILES=\
 	bib/spanish.bib \
 	bib/swiss.bib \
 
-ANC_FILES_BIBLATEX=\
+ANC_FILES_BIBLATEX := \
 	dancebooks-biblatex.sty \
 
-URL_FILES=\
+URL_FILES := \
 	urls/[1690,_fr]_Andre_Philidor.txt \
 	urls/[175-,_fr]_Denis_Diderot,_Jean_d_Alembert.txt \
 	urls/[1800,_de]_Johann_Heinrich_Kattfuss.txt \
@@ -39,30 +39,29 @@ URL_FILES=\
 	urls/[1827,_en]_A_Dictionary_of_Musicians.txt \
 	urls/[1913,_fr]_Rudolf_Apponyi.txt \
 
-MARKDOWN_FILES=\
-	transcriptions/[155-,\ it]\ Giovannino\ e\ Il\ Lanzino\ e\ Il\ Papa\ -\ Manuscritto\ di\ baletti.md \
-	transcriptions/[1589,\ it]\ Prospero\ Luti\ -\ Opera\ bellissima\ di\ gagliarda.md \
-	transcriptions/[1620,\ fr]\ Barthélémy\ de\ Montagut\ -\ Louange\ de\ la\ danse.md \
-	transcriptions/[1706,\ uk]\ Raoul-Auger\ Feuillet\ -\ Orchesography\ or\ the\ Art\ of\ Dancing.md \
-	transcriptions/[1749,\ sc]\ The\ Register\ of\ Dances\ at\ Castle\ Menzies.md \
-	transcriptions/[1819,\ fr]\ J.\ H.\ Gourdoux-Daux\ -\ Requeil\ de\ genre\ nouveau\ de\ contredanses\ et\ walses.md \
-	transcriptions/[1824,\ uk]\ Thomas\ Wilson\ -\ Danciad.md \
-	transcriptions/[1825,\ ru]\ Людовик\ Петровский\ -\ Правила\ для\ благородных\ общественных\ танцев.md \
-	transcriptions/[1828,\ ru]\ Собрание\ фигур\ для\ котильона.md \
-	transcriptions/[183-,\ uk]\ Thomas\ Wilson\ -\ The\ Fashionable\ Quadrille\ Preceptor.md \
-	transcriptions/[1902,\ ru]\ Николай\ Людвигович\ Гавликовский\ -\ Руководство\ для\ изучения\ танцев,\ édition\ 2.md \
-	transcriptions/[1965,\ ru]\ Юрий\ Алексеевич\ Бахрушин\ -\ История\ русского\ балета.md \
-	transcriptions/[2000,\ ru]\ Агриппина\ Яковлевна\ Ваганова\ -\ Основы\ классического\ танца.md \
-	transcriptions/[2000,\ ru]\ Филипп\ Филиппович\ Вигель\ -\ Записки.md \
-	transcriptions/[2007,\ ru]\ Жан\ Жорж\ Новерр\ -\ Письма\ о\ танце.md \
-	transcriptions/[2011,\ ru]\ Оксана\ Юрьевна\ Захарова\ -\ Русский\ бал\ XVIII\ -\ начала\ XX\ века.md \
+MARKDOWN_FILES := \
+	transcriptions/[155-,_it]_Giovannino_e_Il_Lanzino_e_Il_Papa_-_Manuscritto_di_baletti.md \
+	transcriptions/[1589,_it]_Prospero_Luti_-_Opera_bellissima_di_gagliarda.md \
+	transcriptions/[1706,_uk]_Raoul-Auger_Feuillet_-_Orchesography_or_the_Art_of_Dancing.md \
+	transcriptions/[1749,_sc]_The_Register_of_Dances_at_Castle_Menzies.md \
+	transcriptions/[1819,_fr]_J._H._Gourdoux-Daux_-_Requeil_de_genre_nouveau_de_contredanses_et_walses.md \
+	transcriptions/[1824,_uk]_Thomas_Wilson_-_Danciad.md \
+	transcriptions/[1825,_ru]_Людовик_Петровский_-_Правила_для_благородных_общественных_танцев.md \
+	transcriptions/[1828,_ru]_Собрание_фигур_для_котильона.md \
+	transcriptions/[183-,_uk]_Thomas_Wilson_-_The_Fashionable_Quadrille_Preceptor.md \
+	transcriptions/[1902,_ru]_Николай_Людвигович_Гавликовский_-_Руководство_для_изучения_танцев,_édition_2.md \
+	transcriptions/[1965,_ru]_Юрий_Алексеевич_Бахрушин_-_История_русского_балета.md \
+	transcriptions/[2000,_ru]_Агриппина_Яковлевна_Ваганова_-_Основы_классического_танца.md \
+	transcriptions/[2000,_ru]_Филипп_Филиппович_Вигель_-_Записки.md \
+	transcriptions/[2007,_ru]_Жан_Жорж_Новерр_-_Письма_о_танце.md \
+	transcriptions/[2011,_ru]_Оксана_Юрьевна_Захарова_-_Русский_бал_XVIII_-_начала_XX_века.md \
 
-ANC_MARKDOWN_FILES=\
+ANC_MARKDOWN_FILES := \
 	transcriptions/_markdown2.py3k \
 	transcriptions/_reset.css \
 	transcriptions/_style.css \
 
-HTML_FILES=$(MARKDOWN_FILES:.md=.html)
+HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
 # PDF files related targets
 
@@ -108,6 +107,17 @@ purge-pdfs: clean-pdfs
 transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
 	@touch $@
+
+BASE_TRANSCRIPTION_URL := https://github.com/georgthegreat/dancebooks-bibtex/blob/master/transcriptions/
+update-wiki: $(MARKDOWN_FILES)
+	@echo "Updating wiki"
+	@rm -f wiki/Transcriptions.md
+	@for MARKDOWN_FILE in $^; \
+	do \
+		BASENAME=`basename $$MARKDOWN_FILE .md`; \
+		echo "* [$$BASENAME]($(BASE_TRANSCRIPTION_URL)$$BASENAME.md)" >> wiki/Transcriptions.md; \
+	done
+	cd wiki && git commit -am "Updated wiki" && git push origin master
 	
 purge-transcriptions: clean
 	@rm -f transcriptions/*.html transriptions.mk
