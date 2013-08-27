@@ -108,7 +108,7 @@ transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
 	@touch $@
 
-BASE_TRANSCRIPTION_URL := https://github.com/georgthegreat/dancebooks-bibtex/blob/master/transcriptions/
+BASE_TRANSCRIPTION_URL := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
 update-wiki: $(MARKDOWN_FILES)
 	@echo "Updating wiki"
 	@rm -f wiki/Transcriptions.md
