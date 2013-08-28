@@ -39,7 +39,7 @@ URL_FILES := \
 	urls/[1827,_en]_A_Dictionary_of_Musicians.txt \
 	urls/[1913,_fr]_Rudolf_Apponyi.txt \
 
-MARKDOWN_FILES := $(wildcard transcriptions/*.md)
+MARKDOWN_FILES := $(shell ls transcriptions/*.md)
 
 ANC_MARKDOWN_FILES := \
 	transcriptions/_markdown2.py3k \
