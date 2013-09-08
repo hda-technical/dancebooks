@@ -42,7 +42,7 @@ URL_FILES := \
 MARKDOWN_FILES := $(shell ls transcriptions/*.md)
 
 ANC_MARKDOWN_FILES := \
-	transcriptions/_markdown2.py3k \
+	transcriptions/_markdown2.py \
 	transcriptions/_reset.css \
 	transcriptions/_style.css \
 
@@ -87,7 +87,7 @@ purge-pdfs: clean-pdfs
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
 	@echo "Compiling \"$<\""
-	@./transcriptions/_markdown2.py3k --input "$<" --output "$@"
+	@./transcriptions/_markdown2.py --input "$<" --output "$@"
 
 transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
