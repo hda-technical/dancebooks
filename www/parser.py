@@ -116,7 +116,7 @@ class BibParser(object):
 		"""
 		if not os.path.isdir(path):
 			raise Exception("Path to folder expected")
-			
+
 		items = []
 		for filename in os.listdir(path):
 			if fnmatch(filename, "*.bib"):
@@ -133,6 +133,7 @@ class BibParser(object):
 		"""
 		if not os.path.isfile(path):
 			raise Exception("Path to file expected")
+		
 		with open(path, "r+b") as input_file:
 			str_data = input_file.read()
 			#trimming utf-8 byte order mark

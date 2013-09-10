@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+	<head>
+{% include "components/head.html" %}	
+		<title>Библиография танцевальных источников — веб-интерфейс</title>
+	</head>
+	<body>
+		<h1>Библиография танцевальных источников — веб-интерфейс</h1>
+		<h2>Вот всё, что есть:</h1>
+		<div class="content">
+			<table class="books">
+				{% for item in items %}
+{% include "components/item.html" %}
+				{% endfor %}
+			</table>
+		</div>
+	</body>
+</html>

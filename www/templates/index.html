@@ -1,8 +1,72 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 	<head>
-		<title>������������ ������������ ���������� � ���-���������</title>
+{% include "components/head.html" %}	
+		<title>Библиография танцевальных источников — веб-интерфейс</title>
 	</head>
 	<body>
+		<h1>Библиография танцевальных источников — веб-интерфейс</h1>
+		{% if items %}
+		<h2>Всего записей: {{ items|length }}</h1>
+		{% endif %}
+		{% if found_items %}
+		<h2>Наш лось записей: {{ found_items|length }}</h2>
+		{% endif %}
+		{% if search_params and not found_items %}
+		<h2>Не наш лось</h2>
+		{% endif %}
+		{% if not search_params %}
+			{% set search_params = {} %}
+		{% endif %}
+		<h2>Можно <a href="/bib/all.html">показать всё</a> или воспользоваться поиском:</h2>
+		<div class="content">
+			<form>
+				<table>
+					<tr>
+						<td>Автор:</td>
+						<td>
+							{% set value = search_params["author"] if search_params["author"] else "" %}
+							<input type="text" name="author" value="{{value}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Заглавие:</td>
+						<td>
+							{% set value = search_params["title"] if search_params["title"] else "" %}
+							<input type="text" name="title" value="{{value}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Язык:</td>
+						<td>
+							{% set value = search_params["hyphenation"] if search_params["hyphenation"] else "" %}
+							<input type="text" name="hyphenation" value="{{value}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Издатель:</td>
+						<td>
+							{% set value = search_params["publisher"] if search_params["publisher"] else "" %}
+							<input type="text" name="publisher" value="{{value}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Место издания:</td>
+						<td>
+							{% set value = search_params["location"] if search_params["location"] else "" %}
+							<input type="text" name="location" value="{{value}}"/>
+						</td>
+					</tr>
+				</table>
+				<div class="center"><button>Искать</button><div>
+			</form>
+		</div>
+		{% if found_items %}
+		<table>
+			{% for item in found_items %}
+{% include "components/item.html" %}
+			{% endfor %}
+		</table>
+		{% endif %}
 	</body>
 </html>
