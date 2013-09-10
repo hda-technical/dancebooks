@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8
 
 import codecs
 from fnmatch import fnmatch
@@ -23,18 +23,29 @@ class BibItem(object):
 			return self.__id__
 		else:
 			raise Exception("Id is not set")
+		
+	def source(self, value = None):
+		if value is not None:
+			self.__source__ = value
+		elif self.__source__ is not None:
+			return self.__source__
+		else:
+			raise Exception("Source is not set")
 
 	def param(self, key, value = None):
 		if value is None:
-			if key in self.params:
-				return self.params[key]
+			if key in self.__params__:
+				return self.__params__[key]
 			else:
 				return None
 		else:
-			if key not in self.params:
+			if key not in self.__params__:
 				self.params[key] = value
 			else:
 				raise Exception("Can't set the same parameter twice")
+				
+	def params(self):
+		return self.__params__
 
 
 class BibParser(object):
