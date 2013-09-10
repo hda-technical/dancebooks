@@ -2,11 +2,12 @@
 
 import codecs
 from fnmatch import fnmatch
+import json
 import os.path
 
 class BibItem(object):
 	def __init__(self):
-		self.params = {}
+		self.__params__ = {}
 
 	def type(self, value = None):
 		if value is not None:
@@ -40,12 +41,20 @@ class BibItem(object):
 				return None
 		else:
 			if key not in self.__params__:
-				self.params[key] = value
+				self.__params__[key] = value
 			else:
 				raise Exception("Can't set the same parameter twice")
 				
 	def params(self):
 		return self.__params__
+		
+	def json(self):
+		data = {}
+		data["type"] = self.type()
+		data["id"] = self.id()
+		data["source_file"] = self.source()
+		data["params"] = self.params()		
+		return json.dumps(data)
 
 
 class BibParser(object):
@@ -134,7 +143,10 @@ class BibParser(object):
 				str_data = str_data.decode()
 				
 			try:
-				return self.parse_string(str_data)
+				items = self.parse_string(str_data)
+				for item in items:
+					item.source(os.path.basename(path))
+				return items				
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
 
