@@ -106,7 +106,10 @@ input[type="text"] {
 
 input[type="number"] {
 	width: 40px;
-	padding-right: 10px;
+}
+
+select {
+	width: 400px;
 }
 
 table tr td:first-child {
@@ -128,6 +131,7 @@ table tr td {
 .center {
 	text-align: center;
 }
+
 .content {
 	margin: 0% 20%;
 }

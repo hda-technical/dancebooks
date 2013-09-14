@@ -6,76 +6,84 @@
 	</head>
 	<body>
 		<h1>Библиография танцевальных источников — веб-интерфейс</h1>
-		{% if items %}
+{% if items %}
 		<h2>Всего записей: {{ items|length }}</h1>
 		{% endif %}
 		{% if found_items %}
 		<h2>Нашлось записей: {{ found_items|length }}</h2>
-		{% endif %}
-		{% if search_params and not found_items %}
+{% endif %}
+{% if search_params and not found_items %}
 		<h2>Ничего не найдено. Попробуйте задать менее строгие условия</h2>
-		{% endif %}
-		{% if not search_params %}
-			{% set search_params = {} %}
-		{% endif %}
+{% endif %}
+{% if not search_params %}
+{% set search_params = {} %}
+{% endif %}
 		<h2>Можно <a href="/bib/all.html">показать всё</a> или воспользоваться поиском:</h2>
 		<div class="content">
-			<form>
+			<form action="/bib/index.html">
 				<table>
 					<tr>
 						<td>Автор:</td>
 						<td>
-							{% set value = search_params["author"] or "" %}
+{% set value = search_params["author"] or "" %}
 							<input type="text" name="author" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Заглавие:</td>
 						<td>
-							{% set value = search_params["title"] or "" %}
+{% set value = search_params["title"] or "" %}
 							<input type="text" name="title" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Год издания:</td>
 						<td>
-							{% set value = search_params["year_from"] or "" %}
+{% set value = search_params["year_from"] or "" %}
 							С <input type="number" name="year_from" value="{{value}}"/>
-							{% set value = search_params["year_to"] or "" %}
+{% set value = search_params["year_to"] or "" %}
 							до <input type="number" name="year_to" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Язык:</td>
 						<td>
-							{% set value = search_params["hyphenation"] if search_params["hyphenation"] else "" %}
-							<input type="text" name="hyphenation" value="{{value}}"/>
+{% set value = search_params["hyphenation"] if search_params["hyphenation"] else "" %}
+							<select name="hyphenation">
+{% for language in languages %}
+{% if language == value %}
+								<option selected="selected" value="{{language}}">{{language}}</option>
+{% else %}
+								<option value="{{language}}">{{language}}</option>
+{% endif %}
+{% endfor %}
+							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>Издатель:</td>
-						<td>
-							{% set value = search_params["publisher"] if search_params["publisher"] else "" %}
+					<td>
+{% set value = search_params["publisher"] if search_params["publisher"] else "" %}
 							<input type="text" name="publisher" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Место издания:</td>
 						<td>
-							{% set value = search_params["location"] if search_params["location"] else "" %}
+{% set value = search_params["location"] if search_params["location"] else "" %}
 							<input type="text" name="location" value="{{value}}"/>
 						</td>
 					</tr>
 				</table>
-				<div class="center"><button>Искать</button><div>
+				<div class="center"><button>Искать</button></div>
 			</form>
 		</div>
-		{% if found_items %}
-		<table>
-			{% for item in found_items %}
+{% if found_items %}
+		<table class="content">
+{% for item in found_items %}
 {% include "components/item.html" %}
-			{% endfor %}
+{% endfor %}
 		</table>
-		{% endif %}
+{% endif %}
 	</body>
 </html>

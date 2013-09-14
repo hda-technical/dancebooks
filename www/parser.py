@@ -170,9 +170,7 @@ class BibParser(object):
 	PARAM_KEY_VALUE_SEP = "="
 	
 	# parser option keys
-	(LISTSEP, NAMESEP, KEYWORDSEP) = (0, 1, 2)
-
-	
+	(LISTSEP, NAMESEP, KEYWORDSEP, SCANFIELDS) = (0, 1, 2, 3)
 
 
 	STATE = \
@@ -182,14 +180,31 @@ class BibParser(object):
 
 	def __init__(self, options):
 		"""
-		Expects options passed as dictionary
+		Expects options passed as dictionary:
+
+		* LISTSEP, NAMESEP and KEYWORDSEP (strings) will be used during parsing 
+		  to split corresponding fields.
+
+		* SCANFIELDS (iterable of strings) option will tell parser to scan 
+		  specified fields during parsing, joining found values into a set.
 		"""
 		self.listsep = options[self.LISTSEP]
 		self.keywordsep = options[self.KEYWORDSEP]
 		self.namesep = options[self.NAMESEP]
 
+		if self.SCANFIELDS in options:
+			scan_fields = options[self.SCANFIELDS]
+			# just another python hacker  
+			self.scanned_fields = dict(zip(scan_fields, [set() for i in scan_fields]))
+		else:
+			self.scanned_fields = set()
+
 		self.state = self.S_NO_ITEM
 		self.reset_lexeme()
+
+
+	def get_scanned_fields(self, key):
+		return self.scanned_fields[key]
 		
 		
 	def state_string(self):
@@ -246,6 +261,8 @@ class BibParser(object):
 			item.param(key, BibParser.strip_split_list(value, self.keywordsep))
 		else:
 			item.param(key, value)
+		if key in self.scanned_fields:
+			self.scanned_fields[key].add(value)
 
 	
 	def parse_folder(self, path):
