@@ -1,14 +1,58 @@
+				{% if item.author() %}
 				<tr>
-					<td>type:</td><td>{{ item.type() }}</td>
+					<td>author:</td><td>{{ item.author() }}</td>
 				</tr>
+				{% endif %}
+				{% if item.shorthand() %}
+				<tr>
+					<td>shorthand:</td><td>{{ item.shorthand() }}</td>
+				</tr>
+				{% endif %}
+				{% if item.title() %}
+				<tr>
+					<td>title:</td><td>{{ item.title() }}</td>
+				</tr>
+				{% endif %}
+				{% if item.id() %}
 				<tr>
 					<td>id:</td><td>{{ item.id() }}</td>
 				</tr>
-				{% for (key, value) in item.params().items() %}
+				{% endif %}
+				{% if item.source() %}
 				<tr>
-					<td>{{ key }}:</td><td>{{ value }}</td>
+					<td>source:</td><td>{{ item.source() }}:{{ item.source_line() }}</td>
 				</tr>
-				{% endfor %}
+				{% endif %}
+				{% if item.booktype() %}
+				<tr>
+					<td>booktype:</td><td>{{ item.booktype() }}</td>
+				</tr>
+				{% endif %}
+				{% if item.year() %}
+				<tr>
+					<td>year:</td><td>{{ item.year() }}</td>
+				</tr>
+				{% endif %}
+				{% if item.publisher() %}
+				<tr>
+					<td>publisher:</td><td>{{ item.publisher() }}</td>
+				</tr>
+				{% endif %}
+				{% if item.location() %}
+				<tr>
+					<td>location:</td><td>{{ item.location() }}</td>
+				</tr>
+				{% endif %}
+				{% if item.url() %} 
+				<tr>
+					<td>url:</td><td>{{ item.url() }}</td>
+				</tr>
+				{% endif %}
+				{% if item.note() %} 
+				<tr>
+					<td>note:</td><td>{{ item.note() }}</td>
+				</tr>
+				{% endif %}
 				<tr>
 					<td colspan="2"><hr/><td>
 				</tr>

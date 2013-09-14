@@ -4,34 +4,107 @@ import codecs
 from fnmatch import fnmatch
 import json
 import os.path
+import re
+
+from interval import Interval
+
+class SearchGenerator(object):
+	"""
+	Class for generating context-safe lambdas 
+	for filtering lists of BibItem()
+	"""
+	def string(key, value):
+		regexp = re.compile(value)
+		return lambda item, key = key, regexp = regexp: \
+						item.param(key) and \
+						regexp.search(item.param(key))
+
+
+	def year(interval):	
+		return lambda item, interval = interval: \
+						item.published_between(interval)
+
 
 class BibItem(object):
+	"""
+	Class for bibliography item representation
+	"""
 	def __init__(self):
 		self.__params__ = {}
+		self.__year_interval__ = None
 
-	def type(self, value = None):
-		if value is not None:
-			self.__type__ = value.lower()
-		elif self.__type__ is not None:
-			return self.__type__
-		else:
-			raise Exception("Type is not set")
+	# ancillary fields
+	def booktype(self):
+		return self.param("booktype")
 
-	def id(self, value = None):
-		if value is not None:
-			self.__id__ = value.lower()
-		elif self.__id__ is not None:
-			return self.__id__
-		else:
-			raise Exception("Id is not set")
+	def id(self):
+		return self.param("id")
+
+	def source(self):
+		return self.param("source")
+
+	def source_line(self):
+		return self.param("source_line")
+
+	# data fields
+	def author(self):
+		return self.param("author")
+
+	def shorthand(self):
+		return self.param("shorthand")
+
+	def title(self):
+		return self.param("title")
+	
+	def publisher(self):
+		return self.param("publisher")
+
+	def location(self):
+		return self.param("location")
+
+	def year(self):
+		return self.param("year")
+
+	def url(self):
+		return self.param("url")
+
+	def note(self):
+		return self.param("note")
+
+	#not-implemented params
+	#
+	#annotation
+	#series
+	#number
+	#volume
+	#volumes
+	#type (thesis type)
+	#institution
+	#isbn
+	#edition
+	#part
+	#pages
+	#crossref
+	#booktitle
+
+	# search helpers
+	YEAR_RE = re.compile(r"(?P<start>\d+)([-–—]+(?P<end>\d+)\?)?")
+	def published_between(self, search_interval):
+		if self.__year_interval__ is None:
+			# parsing year field
+			match = self.YEAR_RE.match(self.year())
+			if match:
+				start = int(match.group("start"))
+				end = int(match.group("end") or start)
+				print(start, end)
+			self.__year_interval__ = Interval(start, end)
 		
-	def source(self, value = None):
-		if value is not None:
-			self.__source__ = value
-		elif self.__source__ is not None:
-			return self.__source__
-		else:
-			raise Exception("Source is not set")
+		# Interval писали криворукие дебилы
+		return (search_interval.lower_bound in self.__year_interval__ or
+				search_interval.upper_bound in self.__year_interval__ or
+				self.__year_interval__.lower_bound in search_interval or
+				self.__year_interval__.upper_bound in search_interval)
+
 
 	def param(self, key, value = None):
 		if value is None:
@@ -44,20 +117,20 @@ class BibItem(object):
 				self.__params__[key] = value
 			else:
 				raise Exception("Can't set the same parameter twice")
-				
+		
+
 	def params(self):
 		return self.__params__
 		
+
 	def json(self):
-		data = {}
-		data["type"] = self.type()
-		data["id"] = self.id()
-		data["source_file"] = self.source()
-		data["params"] = self.params()		
-		return json.dumps(data)
+		return json.dumps(self.__params__)
 
 
 class BibParser(object):
+	"""
+	Class for parsing .bib files, folders and multiline strings
+	"""
 	ITEM_OPEN_PARENTHESIS = set(["{", "("])
 	FIELD_SEP = ","
 	PARAM_KEY_VALUE_SEP = "="
@@ -144,9 +217,10 @@ class BibParser(object):
 				str_data = str_data.decode()
 				
 			try:
+				source = os.path.basename(path)
 				items = self.parse_string(str_data)
 				for item in items:
-					item.source(os.path.basename(path))
+					item.param("source", source)
 				return items				
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
@@ -183,7 +257,8 @@ class BibParser(object):
 					self.lexeme_started = True
 				elif c in self.ITEM_OPEN_PARENTHESIS and (self.lexeme_started or self.lexeme_finished):
 					self.closing_parenthesis = ("}" if c == "{" else ")")
-					item.type(self.lexeme)
+					item.param("booktype", self.lexeme)
+					item.param("source_line", str(line_in_file))
 
 					self.state = self.S_ITEM_NO_ID
 					self.reset_lexeme()
@@ -198,7 +273,7 @@ class BibParser(object):
 					self.lexeme += c
 					self.lexeme_started = True
 				elif c == self.FIELD_SEP and (self.lexeme_started or self.lexeme_finished):
-					item.id(self.lexeme)
+					item.param("id", self.lexeme)
 
 					self.state = self.S_PARAM_KEY
 					self.reset_lexeme()

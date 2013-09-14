@@ -25,15 +25,24 @@
 					<tr>
 						<td>Автор:</td>
 						<td>
-							{% set value = search_params["author"] if search_params["author"] else "" %}
+							{% set value = search_params["author"] or "" %}
 							<input type="text" name="author" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Заглавие:</td>
 						<td>
-							{% set value = search_params["title"] if search_params["title"] else "" %}
+							{% set value = search_params["title"] or "" %}
 							<input type="text" name="title" value="{{value}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Год издания:</td>
+						<td>
+							{% set value = search_params["year_from"] or "" %}
+							С <input type="number" name="year_from" value="{{value}}"/>
+							{% set value = search_params["year_to"] or "" %}
+							до <input type="number" name="year_to" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
