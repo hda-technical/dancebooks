@@ -14,7 +14,7 @@ class SearchGenerator(object):
 	for filtering lists of BibItem()
 	"""
 	def string(key, value):
-		regexp = re.compile(value)
+		regexp = re.compile(value, flags = re.IGNORECASE)
 		return lambda item, key = key, regexp = regexp: \
 						item.param(key) and \
 						regexp.search(item.param(key))
