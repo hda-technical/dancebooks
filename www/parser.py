@@ -7,6 +7,11 @@ import os.path
 import re
 
 from interval import Interval
+	
+LIST_PARAMS = set(["location", "isbn", "origlanguage"])
+NAME_PARAMS = set(["author", "publisher", "translator"])
+KEYWORD_PARAMS = set(["keywords"])
+OUTPUT_LISTSEP = ", "
 
 class SearchGenerator(object):
 	"""
@@ -14,15 +19,31 @@ class SearchGenerator(object):
 	for filtering lists of BibItem()
 	"""
 	def string(key, value):
+		"""
+		Creates filters for both string and list(string)
+		"""
 		regexp = re.compile(value, flags = re.IGNORECASE)
-		return lambda item, key = key, regexp = regexp: \
-						item.param(key) and \
-						regexp.search(item.param(key))
+		if (key in LIST_PARAMS) or \
+			(key in NAME_PARAMS) or \
+			(key in KEYWORD_PARAMS):
+			return lambda item, key = key, regexp = regexp: \
+							item.param(key) and \
+							any([regexp.search(word) for word in 
+								item.param(key, as_string = False)])
+		else:
+			return lambda item, key = key, regexp = regexp: \
+							item.param(key) and \
+							regexp.search(item.param(key))
 
 
-	def year(interval):	
+	def year(interval):
+		"""
+		Creates filters for year intervals
+		"""
 		return lambda item, interval = interval: \
 						item.published_between(interval)
+
+
 
 
 class BibItem(object):
@@ -86,6 +107,7 @@ class BibItem(object):
 	#pages
 	#crossref
 	#booktitle
+	#origlanguage
 
 	# search helpers
 	YEAR_RE = re.compile(r"(?P<start>\d+)([-–—]+(?P<end>\d+)\?)?")
@@ -96,20 +118,31 @@ class BibItem(object):
 			if match:
 				start = int(match.group("start"))
 				end = int(match.group("end") or start)
-				print(start, end)
-			self.__year_interval__ = Interval(start, end)
+				self.__year_interval__ = Interval(start, end)
+			else:
+				return False
 		
-		# Interval писали криворукие дебилы
+		# Interval fails to intersect [a, a] with [a, a],
+		# but "in" operator works fine
 		return (search_interval.lower_bound in self.__year_interval__ or
 				search_interval.upper_bound in self.__year_interval__ or
 				self.__year_interval__.lower_bound in search_interval or
 				self.__year_interval__.upper_bound in search_interval)
 
 
-	def param(self, key, value = None):
+	def param(self, key, value = None, as_string = True):
 		if value is None:
 			if key in self.__params__:
-				return self.__params__[key]
+				value = self.__params__[key]
+				if as_string:
+					if (key in LIST_PARAMS) or \
+						(key in KEYWORD_PARAMS) or \
+						(key in NAME_PARAMS):
+						return OUTPUT_LISTSEP.join(value)
+					else:
+						return value
+				else:
+					return value
 			else:
 				return None
 		else:
@@ -117,7 +150,7 @@ class BibItem(object):
 				self.__params__[key] = value
 			else:
 				raise Exception("Can't set the same parameter twice")
-		
+
 
 	def params(self):
 		return self.__params__
@@ -131,15 +164,30 @@ class BibParser(object):
 	"""
 	Class for parsing .bib files, folders and multiline strings
 	"""
+	# static parser constants
 	ITEM_OPEN_PARENTHESIS = set(["{", "("])
 	FIELD_SEP = ","
 	PARAM_KEY_VALUE_SEP = "="
+	
+	# parser option keys
+	(LISTSEP, NAMESEP, KEYWORDSEP) = (0, 1, 2)
+
+	
+
+
 	STATE = \
 		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
 		(0,         1,           2,            3,           4,             5)
 
 
-	def __init__(self):
+	def __init__(self, options):
+		"""
+		Expects options passed as dictionary
+		"""
+		self.listsep = options[self.LISTSEP]
+		self.keywordsep = options[self.KEYWORDSEP]
+		self.namesep = options[self.NAMESEP]
+
 		self.state = self.S_NO_ITEM
 		self.reset_lexeme()
 		
@@ -180,6 +228,24 @@ class BibParser(object):
 		self.lexeme_finished = False
 		self.parenthesis_depth = 0
 		self.closing_param_parenthesis = ""
+	
+	
+	def strip_split_list(value, sep):
+		return [word.strip() for word in value.split(sep)]
+
+
+	def set_item_param(self, item, key, value):
+		"""
+		Sets item param, applying additional conversion if needed.
+		"""
+		if key in LIST_PARAMS:
+			item.param(key, BibParser.strip_split_list(value, self.listsep))
+		elif key in NAME_PARAMS:
+			item.param(key, BibParser.strip_split_list(value, self.namesep))
+		elif key in KEYWORD_PARAMS:
+			item.param(key, BibParser.strip_split_list(value, self.keywordsep))
+		else:
+			item.param(key, value)
 
 	
 	def parse_folder(self, path):
@@ -220,7 +286,7 @@ class BibParser(object):
 				source = os.path.basename(path)
 				items = self.parse_string(str_data)
 				for item in items:
-					item.param("source", source)
+					self.set_item_param(item, "source", source)
 				return items				
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
@@ -233,8 +299,8 @@ class BibParser(object):
 		"""
 		item = BibItem()
 		items = []
-		line_in_file = 0
-		char_in_line = 0
+		line_in_file = 1
+		char_in_line = 1
 		for index in range(len(str_data)):
 			c = str_data[index]
 			if c == '\n':
@@ -257,8 +323,8 @@ class BibParser(object):
 					self.lexeme_started = True
 				elif c in self.ITEM_OPEN_PARENTHESIS and (self.lexeme_started or self.lexeme_finished):
 					self.closing_parenthesis = ("}" if c == "{" else ")")
-					item.param("booktype", self.lexeme)
-					item.param("source_line", str(line_in_file))
+					self.set_item_param(item, "booktype", self.lexeme)
+					self.set_item_param(item, "source_line", line_in_file)
 
 					self.state = self.S_ITEM_NO_ID
 					self.reset_lexeme()
@@ -273,7 +339,7 @@ class BibParser(object):
 					self.lexeme += c
 					self.lexeme_started = True
 				elif c == self.FIELD_SEP and (self.lexeme_started or self.lexeme_finished):
-					item.param("id", self.lexeme)
+					self.set_item_param(item, "id", self.lexeme)
 
 					self.state = self.S_PARAM_KEY
 					self.reset_lexeme()
@@ -301,7 +367,7 @@ class BibParser(object):
 					if self.lexeme_started:
 						#only values without spaces can be written without spaces
 						if self.closing_param_parenthesis == "":
-							item.param(self.key, self.lexeme)
+							self.set_item_param(item, self.key, self.lexeme)
 
 							self.state = self.S_PARAM_READ
 							self.key = ""
@@ -311,13 +377,13 @@ class BibParser(object):
 								self.lexeme += " "
 				elif (c == self.FIELD_SEP) and self.lexeme_started and self.closing_param_parenthesis == "":
 					#only values without spaces can be written without spaces
-					item.param(self.key, self.lexeme)
+					self.set_item_param(item, self.key, self.lexeme)
 
 					self.state = self.S_PARAM_KEY
 					self.key = ""
 					self.reset_lexeme()
 				elif (c == self.closing_parenthesis) and self.lexeme_started and self.closing_param_parenthesis == "":					
-					item.param(self.key, self.lexeme)
+					self.set_item_param(item, self.key, self.lexeme)
 					items.append(item)
 					item = BibItem()
 					
@@ -336,7 +402,7 @@ class BibParser(object):
 						self.parenthesis_depth -= 1
 						self.lexeme += c
 					else:
-						item.param(self.key, self.lexeme)
+						self.set_item_param(item, self.key, self.lexeme)
 
 						self.state = self.S_PARAM_READ
 						self.key = ""

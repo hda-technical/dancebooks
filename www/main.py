@@ -8,7 +8,8 @@ from interval import Interval
 
 from parser import BibParser, SearchGenerator
 
-parser = BibParser()
+parser_options = {BibParser.LISTSEP : "|", BibParser.NAMESEP : "|", BibParser.KEYWORDSEP : ","}
+parser = BibParser(parser_options)
 items = parser.parse_folder(os.path.abspath("../bib"))
 
 APP_PREFIX = "/bib"
@@ -41,6 +42,7 @@ def filter_for_year(search_params):
 	search_params["year_to"] = year_to
 	search_params["year_from"] = year_from
 
+
 	if len(year_from) == 0:
 		year_from = year_to
 
@@ -50,7 +52,10 @@ def filter_for_year(search_params):
 	if (len(year_from) == 0) and (len(year_to) == 0):
 		return None
 	else:
-		return SearchGenerator.year(Interval(int(year_from), int(year_to)))
+		try:
+			return SearchGenerator.year(Interval(int(year_from), int(year_to)))
+		except Exception:
+			abort(400, "Wrong year_from or year_to value")
 	
 
 @app.route(APP_PREFIX + "/index.html")
@@ -74,9 +79,7 @@ def root():
 
 	found_items = items
 	for f in filters:
-		print("Items before filter: " + str(len(found_items)))
 		found_items = [item for item in found_items if f(item)]
-		print("Items after filter: " + str(len(found_items)))
 
 	return render_template("index.html", 
 		found_items=found_items,
@@ -99,4 +102,5 @@ def everything_else(filename):
 
 
 if __name__ == "__main__":
+	app.debug = True
 	app.run(host="0.0.0.0")

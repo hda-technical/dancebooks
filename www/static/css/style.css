@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,cyrillic);
 /* resetting default browser styles */
-@import url(/css/reset.css);
+@import url(/bib/css/reset.css);
 
 body {
 	color: #000000;
