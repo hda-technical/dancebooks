@@ -15,7 +15,6 @@ APP_PREFIX = "/bib"
 
 app = Flask(__name__)
 
-app.debug = True
 app.jinja_env.trim_blocks = True
 	
 AVAILABLE_SEARCHES_STRING = ["author", "title", "hyphenation", "publisher", "location"]
