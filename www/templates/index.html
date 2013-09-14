@@ -10,10 +10,10 @@
 		<h2>Всего записей: {{ items|length }}</h1>
 		{% endif %}
 		{% if found_items %}
-		<h2>Наш лось записей: {{ found_items|length }}</h2>
+		<h2>Нашлось записей: {{ found_items|length }}</h2>
 		{% endif %}
 		{% if search_params and not found_items %}
-		<h2>Не наш лось</h2>
+		<h2>Ничего не найдено. Попробуйте задать менее строгие условия</h2>
 		{% endif %}
 		{% if not search_params %}
 			{% set search_params = {} %}
