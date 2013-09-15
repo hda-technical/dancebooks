@@ -50,12 +50,9 @@
 						<td>
 {% set value = search_params["hyphenation"] if search_params["hyphenation"] else "" %}
 							<select name="hyphenation">
-{% for language in languages %}
-{% if language == value %}
-								<option selected="selected" value="{{language}}">{{language}}</option>
-{% else %}
-								<option value="{{language}}">{{language}}</option>
-{% endif %}
+								<option {{ "selected=\"selected\"" if value == "" else "" }} value="">any</option>
+{% for language in languages|sort %}
+								<option {{ "selected=\"selected\"" if language == value else "" }} value="{{language}}">{{language}}</option>
 {% endfor %}
 							</select>
 						</td>
