@@ -52,7 +52,7 @@ HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
 default: test-biblatex.pdf
 
-# \filecontents isn't treadsafe — disabling parallelism here
+# LaTeX \filecontents isn't treadsafe — disabling parallelism here
 test-biblatex-detailed.pdf: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
@@ -63,6 +63,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 	@grep -iE "Datamodel" ${@:.pdf=.log} || true
 	@echo "Build completed"
 
+# Target which doesn't hide LaTeX output - useful for debugging stuff
 debug: purge-pdfs test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@pdflatex --max-print-line=250 test-biblatex.tex
