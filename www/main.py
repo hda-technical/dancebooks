@@ -16,6 +16,7 @@ parser_options = {
 }
 parser = BibParser(parser_options)
 items = parser.parse_folder(os.path.abspath("../bib"))
+languages = parser.get_scanned_fields("hyphenation")
 
 APP_PREFIX = "/bib"
 
@@ -24,7 +25,7 @@ app = Flask(__name__)
 app.jinja_env.trim_blocks = True
 	
 AVAILABLE_SEARCHES_STRING = ["author", "title", "hyphenation", "publisher", "location"]
-SELECTION_SEARCHES = ["hyphenation"]
+SELECTION_SEARCHES = ["hyphenation", "keywords"]
 
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
@@ -87,7 +88,7 @@ def root():
 	if (len(filters) == 0):
 		return render_template("index.html", 
 			items=items, 
-			languages=parser.get_scanned_fields("hyphenation"))
+			languages=languages)
 
 	found_items = items
 	for f in filters:
@@ -96,7 +97,7 @@ def root():
 	return render_template("index.html", 
 		found_items=found_items,
 		search_params=search_params,
-		languages=parser.get_scanned_fields("hyphenation"))
+		languages=languages)
 
 
 @app.route(APP_PREFIX + "/all.html")

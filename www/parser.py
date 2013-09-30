@@ -22,7 +22,7 @@ class SearchGenerator(object):
 		"""
 		Creates filters for both string and list(string)
 		"""
-		regexp = re.compile(value, flags = re.IGNORECASE)
+		regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
 		if (key in LIST_PARAMS) or \
 			(key in NAME_PARAMS) or \
 			(key in KEYWORD_PARAMS):
@@ -253,16 +253,17 @@ class BibParser(object):
 		"""
 		Sets item param, applying additional conversion if needed.
 		"""
+		parsed_value = value
 		if key in LIST_PARAMS:
-			item.param(key, BibParser.strip_split_list(value, self.listsep))
+			parsed_value = BibParser.strip_split_list(value, self.listsep)
 		elif key in NAME_PARAMS:
-			item.param(key, BibParser.strip_split_list(value, self.namesep))
+			parsed_value = BibParser.strip_split_list(value, self.namesep)
 		elif key in KEYWORD_PARAMS:
-			item.param(key, BibParser.strip_split_list(value, self.keywordsep))
-		else:
-			item.param(key, value)
+			parsed_value = BibParser.strip_split_list(value, self.keywordsep)
+		item.param(key, parsed_value)
+
 		if key in self.scanned_fields:
-			self.scanned_fields[key].add(value)
+			self.scanned_fields[key].add(parsed_value)
 
 	
 	def parse_folder(self, path):
