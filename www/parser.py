@@ -57,11 +57,17 @@ class BibItem(object):
 	def year(self):
 		return self.param("year")
 
+	def keywords(self):
+		return self.param("keywords")
+
 	def url(self):
 		return self.param("url")
 
 	def note(self):
 		return self.param("note")
+
+	def annotation(self):
+		return self.param("annotation")
 
 	#not-implemented params
 	#

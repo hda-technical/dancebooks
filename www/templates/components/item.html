@@ -44,6 +44,11 @@
 					<td>location:</td><td>{{ item.location() }}</td>
 				</tr>
 {% endif %}
+{% if item.keywords() %} 
+				<tr>
+					<td>keywords:</td><td>{{ item.keywords() }}</td>
+				<tr>
+{% endif %}
 {% if item.url() %} 
 				<tr>
 					<td>url:</td><td><a href="{{ item.url() }}">{{ item.url() }}</a></td>
@@ -54,6 +59,10 @@
 					<td>note:</td><td>{{ item.note() }}</td>
 				</tr>
 {% endif %}
+{% if item.annotation() %} 
 				<tr>
+					<td>annotation:</td><td>{{ item.annotation() }}</td>
+				<tr>
+{% endif %}
 					<td colspan="2"><hr/></td>
 				</tr>
