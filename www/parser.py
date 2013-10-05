@@ -11,39 +11,10 @@ from interval import Interval
 LIST_PARAMS = set(["location", "isbn", "origlanguage"])
 NAME_PARAMS = set(["author", "publisher", "translator"])
 KEYWORD_PARAMS = set(["keywords"])
+YEAR_PARAM = "year"
+YEAR_TO_PARAM = "year_to"
+YEAR_FROM_PARAM = "year_from"
 OUTPUT_LISTSEP = ", "
-
-class SearchGenerator(object):
-	"""
-	Class for generating context-safe lambdas 
-	for filtering lists of BibItem()
-	"""
-	def string(key, value):
-		"""
-		Creates filters for both string and list(string)
-		"""
-		regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
-		if (key in LIST_PARAMS) or \
-			(key in NAME_PARAMS) or \
-			(key in KEYWORD_PARAMS):
-			return lambda item, key = key, regexp = regexp: \
-							item.param(key) and \
-							any([regexp.search(word) for word in 
-								item.param(key, as_string = False)])
-		else:
-			return lambda item, key = key, regexp = regexp: \
-							item.param(key) and \
-							regexp.search(item.param(key))
-
-
-	def year(interval):
-		"""
-		Creates filters for year intervals
-		"""
-		return lambda item, interval = interval: \
-						item.published_between(interval)
-
-
 
 
 class BibItem(object):
@@ -129,7 +100,6 @@ class BibItem(object):
 				self.__year_interval__.lower_bound in search_interval or
 				self.__year_interval__.upper_bound in search_interval)
 
-
 	def param(self, key, value = None, as_string = True):
 		if value is None:
 			if key in self.__params__:
@@ -151,11 +121,9 @@ class BibItem(object):
 			else:
 				raise Exception("Can't set the same parameter twice")
 
-
 	def params(self):
 		return self.__params__
 		
-
 	def json(self):
 		return json.dumps(self.__params__)
 
@@ -172,11 +140,9 @@ class BibParser(object):
 	# parser option keys
 	(LISTSEP, NAMESEP, KEYWORDSEP, SCANFIELDS) = (0, 1, 2, 3)
 
-
 	STATE = \
 		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
 		(0,         1,           2,            3,           4,             5)
-
 
 	def __init__(self, options):
 		"""
@@ -197,15 +163,13 @@ class BibParser(object):
 			# just another python hacker  
 			self.scanned_fields = dict(zip(scan_fields, [set() for i in scan_fields]))
 		else:
-			self.scanned_fields = set()
+			self.scanned_fields = dict()
 
 		self.state = self.S_NO_ITEM
 		self.reset_lexeme()
 
-
 	def get_scanned_fields(self, key):
 		return self.scanned_fields[key]
-		
 		
 	def state_string(self):
 		"""
@@ -224,7 +188,6 @@ class BibParser(object):
 		elif self.state == self.S_PARAM_READ:
 				return "looking for next parameter / item end"
 
-				
 	def raise_error(self, c, line_in_file, char_in_line):
 		"""
 		Raises human-readable Exception based on parser state and current file position
@@ -232,7 +195,6 @@ class BibParser(object):
 		raise Exception("While {0}: wrong syntax at char [{1}] (line {2}, #{3})"\
 				.format(self.state_string(), c, line_in_file, char_in_line))
 
-		
 	def reset_lexeme(self):
 		"""
 		Resets some internal parser variables.
@@ -244,10 +206,8 @@ class BibParser(object):
 		self.parenthesis_depth = 0
 		self.closing_param_parenthesis = ""
 	
-	
 	def strip_split_list(value, sep):
 		return [word.strip() for word in value.split(sep)]
-
 
 	def set_item_param(self, item, key, value):
 		"""
@@ -259,13 +219,15 @@ class BibParser(object):
 		elif key in NAME_PARAMS:
 			parsed_value = BibParser.strip_split_list(value, self.namesep)
 		elif key in KEYWORD_PARAMS:
-			parsed_value = BibParser.strip_split_list(value, self.keywordsep)
+			parsed_value = set(BibParser.strip_split_list(value, self.keywordsep))
 		item.param(key, parsed_value)
 
 		if key in self.scanned_fields:
-			self.scanned_fields[key].add(parsed_value)
+			if isinstance(parsed_value, set):
+				self.scanned_fields[key] |= parsed_value
+			else:
+				self.scanned_fields[key].add(parsed_value)
 
-	
 	def parse_folder(self, path):
 		"""
 		Parses all .bib files in given folder.
@@ -282,7 +244,6 @@ class BibParser(object):
 					items.extend(parsed_items)
 		return items
 		
-
 	def parse_file(self, path):
 		"""
 		Parses file at given path, handling utf-8-bom correctly.
@@ -308,7 +269,6 @@ class BibParser(object):
 				return items				
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
-
 
 	def parse_string(self, str_data):
 		"""

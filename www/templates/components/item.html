@@ -16,7 +16,7 @@
 {% endif %}
 {% if item.id() %}
 				<tr>
-					<td>id:</td><td>{{ item.id() }}</td>
+					<td>id:</td><td><a href="/bib/book/{{ item.id() }}">{{ item.id() }}</a></td>
 				</tr>
 {% endif %}
 {% if item.source() %}
@@ -46,7 +46,7 @@
 {% endif %}
 {% if item.url() %} 
 				<tr>
-					<td>url:</td><td>{{ item.url() }}</td>
+					<td>url:</td><td><a href="{{ item.url() }}">{{ item.url() }}</a></td>
 				</tr>
 {% endif %}
 {% if item.note() %} 

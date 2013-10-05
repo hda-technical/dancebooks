@@ -51,7 +51,7 @@
 {% set value = search_params["hyphenation"] if search_params["hyphenation"] else "" %}
 							<select name="hyphenation">
 								<option {{ "selected=\"selected\"" if value == "" else "" }} value="">any</option>
-{% for language in languages|sort %}
+{% for language in languages %}
 								<option {{ "selected=\"selected\"" if language == value else "" }} value="{{language}}">{{language}}</option>
 {% endfor %}
 							</select>
@@ -69,6 +69,13 @@
 						<td>
 {% set value = search_params["location"] if search_params["location"] else "" %}
 							<input type="text" name="location" value="{{value}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Ключевые слова (через запятую):</td>
+						<td>
+{% set value = search_params["keywords"] if search_params["keywords"] else "" %}
+							<input type="text" name="keywords" value="{{value}}"/>
 						</td>
 					</tr>
 				</table>

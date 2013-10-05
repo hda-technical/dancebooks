@@ -6,17 +6,18 @@ import os.path
 from flask import Flask, render_template, abort, request, redirect
 from interval import Interval
 
-from parser import BibParser, SearchGenerator
+from parser import BibParser, YEAR_PARAM
+from search import search_for, search_for_string_exact
 
 parser_options = {
 	BibParser.LISTSEP : "|", 
 	BibParser.NAMESEP : "|", 
 	BibParser.KEYWORDSEP : ",",
-	BibParser.SCANFIELDS : set(["hyphenation"])
+	BibParser.SCANFIELDS : set(["hyphenation", "keywords"])
 }
 parser = BibParser(parser_options)
 items = parser.parse_folder(os.path.abspath("../bib"))
-languages = parser.get_scanned_fields("hyphenation")
+languages = sorted(parser.get_scanned_fields("hyphenation"))
 
 APP_PREFIX = "/bib"
 
@@ -24,8 +25,9 @@ app = Flask(__name__)
 
 app.jinja_env.trim_blocks = True
 	
-AVAILABLE_SEARCHES_STRING = ["author", "title", "hyphenation", "publisher", "location"]
-SELECTION_SEARCHES = ["hyphenation", "keywords"]
+AVAILABLE_SEARCH_KEYS = [
+	"author", "title", "hyphenation", "publisher", "location", "keywords"
+	]
 
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
@@ -37,72 +39,58 @@ def redirect_root():
 	return redirect(APP_PREFIX + "/index.html")
 	
 
-def filter_for_year(search_params):
-	"""
-	Generates filter for filtering publishing year interval.
-	Modifies search_params to include year-specific search parameters,
-	so they can be returned to user.
-	"""
-	year_from = request.args.get("year_from", "")
-	year_to = request.args.get("year_to", "")
-
-	search_params["year_to"] = year_to
-	search_params["year_from"] = year_from
-
-
-	if len(year_from) == 0:
-		year_from = year_to
-
-	if len(year_to) == 0:
-		year_to = year_from
-
-	if (len(year_from) == 0) and (len(year_to) == 0):
-		return None
-	else:
-		try:
-			return SearchGenerator.year(Interval(int(year_from), int(year_to)))
-		except Exception:
-			abort(400, "Wrong year_from or year_to value")
-	
-
 @app.route(APP_PREFIX + "/index.html")
 def root():
 	filters = []
 	search_params = dict()
-	for search_key in AVAILABLE_SEARCHES_STRING:
-		# argument can be missing or be empty
-		# both cases should be ignored during search
-		search_param = request.args.get(search_key, "")
-		if len(search_param) > 0:
-			if search_key in SELECTION_SEARCHES:
-				if search_param not in parser.get_scanned_fields(search_key):
-					abort(400, "You must select value from a given list")
 
-			filters.append(SearchGenerator.string(search_key, search_param))
-			search_params[search_key] = search_param
+	try:
+		for search_key in AVAILABLE_SEARCH_KEYS:
+			# argument can be missing or be empty
+			# both cases should be ignored during search
+			search_param = request.values.get(search_key, "")
+			if len(search_param) > 0:
+				if search_key in parser_options[BibParser.SCANFIELDS]:
+					param_filter = search_for(search_key, request.values, 
+						parser.get_scanned_fields(search_key))
+				else:
+					param_filter = search_for(search_key, request.values)
+				if param_filter is not None:
+					filters.append(param_filter)
 
-	year_filter = filter_for_year(search_params)
-	if year_filter is not None:
-		filters.append(year_filter)
+		year_filter = search_for(YEAR_PARAM, request.values)
+		if year_filter is not None:
+			filters.append(year_filter)
+	except:
+		abort(400, "Some of search parameters are wrong")
 
-	if (len(filters) == 0):
+	if not filters:
 		return render_template("index.html", 
-			items=items, 
-			languages=languages)
+			items = items, 
+			languages = languages)
 
 	found_items = items
 	for f in filters:
 		found_items = [item for item in found_items if f(item)]
 
 	return render_template("index.html", 
-		found_items=found_items,
-		search_params=search_params,
-		languages=languages)
+		found_items = found_items,
+		search_params = request.args,
+		languages = languages)
 
 
 @app.route(APP_PREFIX + "/all.html")
 def search():
-	return render_template("all.html", items=items)
+	return render_template("all.html", items = items)
+
+
+@app.route(APP_PREFIX + "/book/<string:id>")
+def book(id):
+	f = search_for_string_exact("id", id)
+	found_items = [item for item in items if f(item)]
+	if len(found_items) == 0:
+		abort(404, "Book was not found")
+	return render_template("book.html", items = found_items)
 
 
 @app.route(APP_PREFIX + "/<path:filename>")
