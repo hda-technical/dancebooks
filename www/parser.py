@@ -211,7 +211,8 @@ class BibParser(object):
 		self.lexeme_finished = False
 		self.parenthesis_depth = 0
 		self.closing_param_parenthesis = ""
-	
+
+	@staticmethod
 	def strip_split_list(value, sep):
 		return [word.strip() for word in value.split(sep)]
 
