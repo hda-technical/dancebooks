@@ -1,4 +1,3 @@
-
 {% if item.author() %}
 				<tr>
 					<td>author:</td><td>{{ item.author() }}</td>
@@ -19,9 +18,9 @@
 					<td>id:</td><td><a href="/bib/book/{{ item.id() }}">{{ item.id() }}</a></td>
 				</tr>
 {% endif %}
-{% if item.source() %}
+{% if item.source_file() and item.source_line() %}
 				<tr>
-					<td>source:</td><td>{{ item.source() }}:{{ item.source_line() }}</td>
+					<td>source:</td><td>{{ item.source_file() }}:{{ item.source_line() }}</td>
 				</tr>
 {% endif %}
 {% if item.booktype() %}
@@ -37,6 +36,16 @@
 {% if item.publisher() %}
 				<tr>
 					<td>publisher:</td><td>{{ item.publisher() }}</td>
+				</tr>
+{% endif %}
+{% if item.series() and item.number() %}
+				<tr>
+					<td>series:</td><td>{{ item.series() }}: №{{ item.number() }}</td>
+				</tr>
+{% endif %}
+{% if item.edition() %}
+				<tr>
+					<td>edition:</td><td>{{ item.edition() }}<td/>
 				</tr>
 {% endif %}
 {% if item.location() %}

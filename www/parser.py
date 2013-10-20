@@ -32,8 +32,8 @@ class BibItem(object):
 	def id(self):
 		return self.param("id")
 
-	def source(self):
-		return self.param("source")
+	def source_file(self):
+		return self.param("source_file")
 
 	def source_line(self):
 		return self.param("source_line")
@@ -50,6 +50,21 @@ class BibItem(object):
 	
 	def publisher(self):
 		return self.param("publisher")
+
+	def series(self):
+		return self.param("series")
+
+	def number(self):
+		return self.param("number")
+
+	def edition(self):
+		return self.param("edition")
+
+	def volume(self):
+		return self.param("volume")
+
+	def volumes(self):
+		return self.param("volumes")
 
 	def location(self):
 		return self.param("location")
@@ -71,15 +86,9 @@ class BibItem(object):
 
 	#not-implemented params
 	#
-	#annotation
-	#series
-	#number
-	#volume
-	#volumes
 	#type (thesis type)
 	#institution
 	#isbn
-	#edition
 	#part
 	#pages
 	#crossref
@@ -272,7 +281,7 @@ class BibParser(object):
 				source = os.path.basename(path)
 				items = self.parse_string(str_data)
 				for item in items:
-					self.set_item_param(item, "source", source)
+					self.set_item_param(item, "source_file", source)
 				return items				
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
