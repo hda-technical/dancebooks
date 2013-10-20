@@ -56,11 +56,11 @@ default: test-biblatex.pdf
 test-biblatex-detailed.pdf: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
-	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
+	@rm -f $(@:.pdf=.bbl) biblatex-dm.cfg
 	@pdflatex --max-print-line=250 $< &>/dev/null
-	@biber --listsep=\| --namesep=\| --validate_datamodel --quiet ${@:.pdf=}
+	@biber --listsep=\| --namesep=\| --validate_datamodel --quiet $(@:.pdf=)
 	@pdflatex --max-print-line=250 $< &>/dev/null
-	@grep -iE "Datamodel" ${@:.pdf=.log} || true
+	@(grep -iE "Datamodel" $(@:.pdf=.log) || true) | tee validation-$(@:.pdf=.log)
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
@@ -97,13 +97,8 @@ transcriptions.mk: $(HTML_FILES)
 BASE_TRANSCRIPTION_URL := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
 update-wiki: $(MARKDOWN_FILES)
 	@echo "Updating wiki"
-	@rm -f wiki/Transcriptions.md
-	@for MARKDOWN_FILE in $^; \
-	do \
-		BASENAME=`basename $$MARKDOWN_FILE .md`; \
-		echo "* [$$BASENAME]($(BASE_TRANSCRIPTION_URL)$$BASENAME.md)" >> wiki/Transcriptions.md; \
-	done
-	cd wiki && git commit -am "Updated wiki" && git push origin master
+	@./transcriptions/_generate_wiki.py $(MARKDOWN_FILES)
+	@cd wiki && git commit -am "Updated wiki" && git push origin master
 	
 purge-transcriptions: clean
 	@rm -f transcriptions/*.html transriptions.mk
@@ -121,7 +116,7 @@ upload-urls.mk:	$(URL_FILES)
 	@touch $@
 	
 entry-count: $(BIB_FILES)
-	@cat $(BIB_FILES) | grep -c --color '@'
+	@cat $(BIB_FILES) | grep -c "@"
 	
 clean: clean-pdfs
 	@true
