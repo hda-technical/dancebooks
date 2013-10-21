@@ -1,50 +1,14 @@
-BIB_FILES := \
-	bib/!missing.bib \
-	bib/!problems.bib \
-	bib/american.bib \
-	bib/australian.bib \
-	bib/austrian.bib \
-	bib/canadian.bib \
-	bib/czech.bib \
-	bib/danish.bib \
-	bib/dutch.bib \
-	bib/english.bib \
-	bib/french.bib \
-	bib/german.bib \
-	bib/italian.bib \
-	bib/mexican.bib \
-	bib/polish.bib \
-	bib/portuguese.bib \
-	bib/proceedings-rothenfelser.bib \
-	bib/proceedings-spb.bib \
-	bib/russian.bib \
-	bib/spanish.bib \
-	bib/swiss.bib \
+BIB_FILES := $(wildcard bib/*.bib)
+URL_FILES := $(wildcard urls/*.txt)
+MARKDOWN_FILES := $(wildcard transcriptions/*.md)
 
-ANC_FILES_BIBLATEX := \
-	dancebooks-biblatex.sty \
-
-URL_FILES := \
-	urls/[1690,_fr]_Andre_Philidor.txt \
-	urls/[175-,_fr]_Denis_Diderot,_Jean_d_Alembert.txt \
-	urls/[1800,_de]_Johann_Heinrich_Kattfuss.txt \
-	urls/[1803,_fr]_Jean-Georges_Noverre.txt \
-	urls/[1823,_en]_The_Harmonicon.txt \
-	urls/[1824,_en]_The_Harmonicon.txt \
-	urls/[1838,_en]_Skene.txt \
-	urls/[1884,_en]_Jane_Austen.txt \
-	urls/[1701,_fr]_S.-I.txt \
-	urls/[1791,_fr]_Nicolas_Etienne_Framery.txt \
-	urls/[1824,_en]_A_Dictionary_of_Musicians.txt \
-	urls/[1827,_en]_A_Dictionary_of_Musicians.txt \
-	urls/[1913,_fr]_Rudolf_Apponyi.txt \
-
-MARKDOWN_FILES := $(shell ls transcriptions/*.md)
+ANC_BIBLATEX_FILES := \
+	dancebooks-biblatex.sty
 
 ANC_MARKDOWN_FILES := \
 	transcriptions/_markdown2.py \
 	transcriptions/_reset.css \
-	transcriptions/_style.css \
+	transcriptions/_style.css
 
 HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
@@ -55,7 +19,7 @@ default: test-biblatex.pdf
 # LaTeX \filecontents isn't treadsafe — disabling parallelism here
 test-biblatex-detailed.pdf: test-biblatex.pdf
 
-%.pdf: %.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
+%.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f $(@:.pdf=.bbl) biblatex-dm.cfg
 	@pdflatex --max-print-line=250 $< &>/dev/null
 	@biber --listsep=\| --namesep=\| --validate_datamodel --quiet $(@:.pdf=)
@@ -64,7 +28,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
-debug: purge-pdfs test-biblatex.tex $(BIB_FILES) $(ANC_FILES_BIBLATEX)
+debug: purge-pdfs test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@pdflatex --max-print-line=250 test-biblatex.tex
 	@biber --listsep=\| --namesep=\| --validate_datamodel test-biblatex
@@ -94,7 +58,6 @@ transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
 	@touch $@
 
-BASE_TRANSCRIPTION_URL := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
 update-wiki: $(MARKDOWN_FILES)
 	@echo "Updating wiki"
 	@./transcriptions/_generate_wiki.py $(MARKDOWN_FILES)
@@ -116,7 +79,7 @@ upload-urls.mk:	$(URL_FILES)
 	@touch $@
 	
 entry-count: $(BIB_FILES)
-	@cat $(BIB_FILES) | grep -c "@"
+	@cat $^ | grep -c "@"
 	
 clean: clean-pdfs
 	@true
