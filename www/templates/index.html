@@ -7,7 +7,7 @@
 	<body>
 		<h1>Библиография танцевальных источников — веб-интерфейс</h1>
 {% if items %}
-		<h2>Всего записей: {{ items|length }}</h1>
+		<h2>Всего записей: {{ items|length }}</h2>
 		{% endif %}
 		{% if found_items %}
 		<h2>Нашлось записей: {{ found_items|length }}</h2>
@@ -50,9 +50,17 @@
 						<td>
 {% set value = search_params["hyphenation"] if search_params["hyphenation"] else "" %}
 							<select name="hyphenation">
-								<option {{ "selected=\"selected\"" if value == "" else "" }} value="">any</option>
+{% if value == "" %}
+								<option selected="selected" value="">any</option>
+{% else %}
+								<option value="">any</option>
+{% endif %}
 {% for language in languages %}
-								<option {{ "selected=\"selected\"" if language == value else "" }} value="{{language}}">{{language}}</option>
+{% if value == language %}
+								<option selected="selected" value="{{language}}">{{language}}</option>
+{% else %}
+								<option value="{{language}}">{{language}}</option>
+{% endif %}
 {% endfor %}
 							</select>
 						</td>
