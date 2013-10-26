@@ -2,9 +2,9 @@
 # coding: utf-8
 
 import os.path
+import sys
 
 from flask import Flask, render_template, abort, request, redirect
-from interval import Interval
 
 from parser import BibParser, YEAR_PARAM
 from search import search_for, search_for_string_exact
@@ -42,7 +42,6 @@ def redirect_root():
 @app.route(APP_PREFIX + "/index.html")
 def root():
 	filters = []
-	search_params = dict()
 
 	try:
 		for search_key in AVAILABLE_SEARCH_KEYS:
