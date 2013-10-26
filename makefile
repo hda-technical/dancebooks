@@ -9,6 +9,9 @@ ANC_MARKDOWN_FILES := \
 	transcriptions/_markdown2.py \
 	transcriptions/_reset.css \
 	transcriptions/_style.css
+	
+ANC_WIKI_FILES := \
+	transcriptions/_generate_wiki.py
 
 HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
@@ -58,10 +61,11 @@ transcriptions.mk: $(HTML_FILES)
 	@echo "Compiling transcriptions completed"
 	@touch $@
 
-update-wiki: $(MARKDOWN_FILES)
+update-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 	@echo "Updating wiki"
 	@./transcriptions/_generate_wiki.py $(MARKDOWN_FILES)
 	@cd wiki && git commit -am "Updated wiki" && git push origin master
+	@touch $@
 	
 purge-transcriptions: clean
 	@rm -f transcriptions/*.html transriptions.mk
