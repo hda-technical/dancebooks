@@ -60,11 +60,11 @@
 
 ## О транскрипциях
 
-Все транскрипции хранятся в формате (`markdown`)[http://daringfireball.net/projects/markdown/syntax].
+Все транскрипции хранятся в формате [`markdown`](http://daringfireball.net/projects/markdown/syntax).
 
 Файлы транскрипций находятся в кодировке utf-8-with-BOM.
 
-Для просмотра файлов можно установить расширения браузера: [Firefox Markdown Viewer](https://addons.mozilla.org/en-US/firefox/addon/markdown-viewer/) (стоит отметить, что для больших файлов расширение работает довольно медленно), или использовать скрипт `transcriptions/_markdown2.py3k` (потребуется `python3` с установленным модулем `markdown2`).
+Для просмотра файлов можно установить расширения браузера: [Firefox Markdown Viewer](https://addons.mozilla.org/en-US/firefox/addon/markdown-viewer/) (стоит отметить, что для больших файлов расширение работает довольно медленно), или использовать скрипт `transcriptions/_markdown2.py3k` (потребуется `python3` с установленным модулем [`markdown2`](https://pypi.python.org/pypi/markdown2)).
 
 Доступен и альтернативный способ просмотра транскрицпий — прямо на [github.com](https://github.com/georgthegreat/dancebooks-bibtex/wiki/Transcriptions).
 
