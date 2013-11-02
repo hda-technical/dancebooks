@@ -13,11 +13,11 @@ parser_options = {
 	BibParser.LISTSEP : "|", 
 	BibParser.NAMESEP : "|", 
 	BibParser.KEYWORDSEP : ",",
-	BibParser.SCANFIELDS : set(["hyphenation", "keywords"])
+	BibParser.SCANFIELDS : set(["langid", "keywords"])
 }
 parser = BibParser(parser_options)
 items = parser.parse_folder(os.path.abspath("../bib"))
-languages = sorted(parser.get_scanned_fields("hyphenation"))
+languages = sorted(parser.get_scanned_fields("langid"))
 
 APP_PREFIX = "/bib"
 
@@ -26,7 +26,7 @@ app = Flask(__name__)
 app.jinja_env.trim_blocks = True
 	
 AVAILABLE_SEARCH_KEYS = [
-	"author", "title", "hyphenation", "publisher", "location", "keywords"
+	"author", "title", "langid", "publisher", "location", "keywords"
 	]
 
 if (not os.path.exists("templates")):
