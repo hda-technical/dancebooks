@@ -10,7 +10,7 @@
 
 ## (biblatex + biber):
 
-Нужно установить `biblatex-2.7`, `biblatex-gost-0.9` и `biber-1.7` (про установку данных пакетов можно будет прочесть ниже. Стилевой файл подключается так:
+Нужно установить `biblatex-2.8`, `biblatex-gost-0.9` и `biber-1.8` (про установку данных пакетов можно будет прочесть ниже. Стилевой файл подключается так:
 
 	\newcommand{\rootfolder}{%folderpath%}
 	\usepackage[root=\rootfolder]{\rootfolder/dancebooks-biblatex}
