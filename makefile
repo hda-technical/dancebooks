@@ -79,6 +79,9 @@ purge-transcriptions: clean
 	
 # Ancillary targets
 
+test-www:
+	@cd www && nosetests tests
+
 all.mk: test-biblatex.pdf test-biblatex-detailed.pdf $(HTML_FILES)
 	@echo "Build all completed"
 	@touch $@
