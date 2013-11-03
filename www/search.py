@@ -12,18 +12,16 @@ def search_for_string(key, value):
 	"""
 	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
 	return lambda item, key = key, regexp = regexp: \
-					item.param(key) and \
-					regexp.search(item.param(key))
+					item.param(key, as_string = False) and \
+					regexp.search(item.param(key, as_string = False))
 
 
 def search_for_string_exact(key, value):
 	"""
 	Creates filter for string (searches for exact match)
 	"""
-	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
-	return lambda item, key = key, regexp = regexp: \
-					item.param(key) and \
-					regexp.match(item.param(key))
+	return lambda item, key = key, value = value: \
+					item.param(key, as_string = False) == value
 
 
 def search_for_iterable(key, value):
@@ -32,19 +30,18 @@ def search_for_iterable(key, value):
 	"""
 	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
 	return lambda item, key = key, regexp = regexp: \
-					item.param(key) and \
+					item.param(key, as_string = False) and \
 					any([regexp.search(word) for word in 
 						item.param(key, as_string = False)])
-	
-def search_for_iterable_exact(key, value):
+
+
+def search_for_iterable_set(key, value):
 	"""
-	Creates filter for iterable(string) (searches for exact match)
+	Creates filter for iterable (string) (searches for subset match)
 	"""
-	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
-	return lambda item, key = key, regexp = regexp: \
-					item.param(key) and \
-					any([regexp.match(word) for word in
-						item.param(key, as_string = False)])
+	return lambda item, key = key, value = value: \
+					item.param(key, as_string = False) and \
+					item.param(key, as_string = False).issuperset(value)
 
 
 def search_for_year(key, values):
@@ -102,7 +99,7 @@ def search_for(key, values, possible_values = None):
 			not prepared_values.issubset(possible_values):
 			return search_empty()
 			
-		return search_for_iterable_exact(key, values[key])
+		return search_for_iterable_set(key, prepared_values)
 	elif (key == YEAR_PARAM):
 		return search_for_year(key, values)
 	else:

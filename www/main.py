@@ -9,10 +9,14 @@ from flask import Flask, render_template, abort, request, redirect
 from parser import BibParser, YEAR_PARAM
 from search import search_for, search_for_string_exact
 
+LISTSEP = "|"
+NAMESEP = "|"
+KEYWORDSEP = ","
+
 parser_options = {
-	BibParser.LISTSEP : "|", 
-	BibParser.NAMESEP : "|", 
-	BibParser.KEYWORDSEP : ",",
+	BibParser.LISTSEP : LISTSEP, 
+	BibParser.NAMESEP : NAMESEP, 
+	BibParser.KEYWORDSEP : KEYWORDSEP,
 	BibParser.SCANFIELDS : set(["langid", "keywords"])
 }
 parser = BibParser(parser_options)
