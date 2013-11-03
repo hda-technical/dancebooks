@@ -28,12 +28,14 @@ default: test-biblatex.pdf
 # LaTeX \filecontents isn't treadsafe — disabling parallelism here
 test-biblatex-detailed.pdf: test-biblatex.pdf
 
+%.pdf: JOBNAME = $(@:.pdf=)
+
 %.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
-	@rm -f $(@:.pdf=.bbl) biblatex-dm.cfg
+	@rm -f $(JOBNAME).bbl biblatex-dm.cfg
 	@$(LATEX) $< &>/dev/null
-	@$(BIBER) --quiet $(<:.tex=)
+	@$(BIBER) --onlylog $(JOBNAME)
 	@$(LATEX) $< &>/dev/null
-	@(grep --after-context=1 -iE "Datamodel" $(@:.pdf=.log) || true) | tee validation-$(@:.pdf=.log)
+	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | tee $(JOBNAME).validation.log
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
