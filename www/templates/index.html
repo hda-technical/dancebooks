@@ -48,8 +48,8 @@
 					<tr>
 						<td>Язык:</td>
 						<td>
-{% set value = search_params["hyphenation"] if search_params["hyphenation"] else "" %}
-							<select name="hyphenation">
+{% set value = search_params["langid"] if search_params["langid"] else "" %}
+							<select name="langid">
 {% if value == "" %}
 								<option selected="selected" value="">any</option>
 {% else %}
