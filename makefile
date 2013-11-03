@@ -15,6 +15,12 @@ ANC_WIKI_FILES := \
 
 HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
+PDFLATEX := pdflatex --max-print-line=250 --shell-escape
+LUALATEX := lualatex --shell-escape
+LATEX := $(LUALATEX)
+
+BIBER := biber --listsep=\| --namesep=\| --validate_datamodel
+
 # PDF files related targets
 
 default: test-biblatex.pdf
@@ -24,18 +30,18 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f $(@:.pdf=.bbl) biblatex-dm.cfg
-	@pdflatex --max-print-line=250 $< &>/dev/null
-	@biber --listsep=\| --namesep=\| --validate_datamodel --quiet $(@:.pdf=)
-	@pdflatex --max-print-line=250 $< &>/dev/null
+	@$(LATEX) $< &>/dev/null
+	@$(BIBER) --quiet $(<:.tex=)
+	@$(LATEX) $< &>/dev/null
 	@(grep -iE "Datamodel" $(@:.pdf=.log) || true) | tee validation-$(@:.pdf=.log)
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
-debug: purge-pdfs test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
+debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@pdflatex --max-print-line=250 test-biblatex.tex
-	@biber --listsep=\| --namesep=\| --validate_datamodel test-biblatex
-	@pdflatex --max-print-line=250 test-biblatex.tex
+	@$(LATEX) $<
+	@$(BIBER) $(<:.tex=)
+	@$(LATEX) $<
 	@echo "Build completed"
 
 upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
@@ -44,7 +50,7 @@ upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
 	@touch $@
 
 clean-pdfs:
-	@rm -f *.aux *.bbl *.bcf *.blg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.cfg
+	@rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
 	@echo "Clean pdfs completed"
 
 purge-pdfs: clean-pdfs

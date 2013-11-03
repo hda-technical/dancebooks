@@ -13,9 +13,9 @@
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelEntryfields{pagesize}
 \DeclareDatamodelConstraints{
-	% {hyphenation} must be present
+	% {langid} must be present
 	\constraint[type=mandatory]{
-		\constraintfield{hyphenation}
+		\constraintfield{langid}
 	}
 	% one of the {author, shorthand} must be present
 	\constraint[type=mandatory]{
@@ -70,16 +70,32 @@
 }
 \end{filecontents}
 
+\RequirePackage{ifluatex,ifxetex,ifpdf}
+
+\ifluatex
+
+\RequirePackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguages{czech, danish, english, french, german, italian, polish, portuguese, spanish, russian}
+
+\RequirePackage{fontspec}
+\setmainfont[Ligatures={NoCommon}]{CMU Serif}
+
+\else\ifpdf
+
 \RequirePackage[utf8]{inputenc}
+\RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
+\RequirePackage{cmap}
+\RequirePackage[T1,T2A]{fontenc}
+
+\fi\fi
+
 \RequirePackage{csquotes}
 \RequirePackage[hyphens]{url}
 \RequirePackage[unicode]{hyperref}
 \RequirePackage{bookmark}
-\RequirePackage[T1,T2A]{fontenc}
-\RequirePackage[czech,danish,english,french,german,italian,polish,portuguese,spanish,russian]{babel}
-\RequirePackage[bibencoding=utf-8,style=gost-authoryear,backend=biber,babel=other,ibidtracker=false,maxitems=5,maxnames=5]{biblatex}
+\RequirePackage[bibencoding=utf-8,style=gost-authoryear,backend=biber,autolang=other,ibidtracker=false,maxitems=5,maxnames=5]{biblatex}
 \RequirePackage{xpatch}
-\RequirePackage{cmap}
 
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
