@@ -74,11 +74,11 @@ def root():
 
 	found_items = items
 	for f in filters:
-		found_items = [item for item in found_items if f(item)]
+		found_items = filter(f, found_items)
 
 	return render_template("index.html", 
-		found_items = found_items,
-		search_params = request.args,
+		found_items = list(found_items),
+		search_params = request.values,
 		languages = languages)
 
 
