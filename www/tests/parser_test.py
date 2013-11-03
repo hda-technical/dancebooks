@@ -62,9 +62,6 @@ def search_items_test():
 	parser = BibParser(TEST_OPTIONS)
 	items = parser.parse_string(TEST_ITEMS)
 
-	for item in items:
-		print(item.param("keywords", as_string = False))
-	
 	author_search = search.search_for_iterable("author", "Петров")
 	filtered_items = filter(author_search, items)
 	eq_(len(list(filtered_items)), 1)
@@ -92,6 +89,21 @@ def search_items_test():
 	
 def app_test():
 	from main import app, APP_PREFIX
-	rq = app.head(APP_FREFIX + "/all.html")
+	client = app.test_client()
+
+	rq = client.get(APP_PREFIX, follow_redirects = True)
 	eq_(rq.status_code, 200)
 
+	rq = client.get(APP_PREFIX + "/index.html")
+	eq_(rq.status_code, 200)
+
+	rq = client.get(APP_PREFIX + "/index.html?"
+		"author=Wilson&"
+		"title=Ecossoise&"
+		"year_from=1800&"
+		"year_to=1900")
+	eq_(rq.status_code, 200)
+
+	rq = client.get(APP_PREFIX + "/all.html")
+	eq_(rq.status_code, 200)
+	
