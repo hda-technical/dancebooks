@@ -33,7 +33,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 	@$(LATEX) $< &>/dev/null
 	@$(BIBER) --quiet $(<:.tex=)
 	@$(LATEX) $< &>/dev/null
-	@(grep -iE "Datamodel" $(@:.pdf=.log) || true) | tee validation-$(@:.pdf=.log)
+	@(grep --after-context=1 -iE "Datamodel" $(@:.pdf=.log) || true) | tee validation-$(@:.pdf=.log)
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
