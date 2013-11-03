@@ -36,6 +36,17 @@
 3. `pdflatex project.tex`
 4. `pdflatex project.tex`
 
+В версии 1.9 была добавлена поддержка `lualatex` (в качестве лингвистического фреймворка используется `Πολυγλωσσια` (`Polyglossia`)). Порядок компиляции аналогичен:
+
+1. `lualatex project.tex`
+2.	`biber --listsep=\| --namesep=\| --quiet project` (в POSIX окружении)
+	
+	`biber "--listsep=|" "--namesep=|" "test-biblatex"` (в Windows)
+3. `lualatex project.tex`
+4. `lualatex project.tex`
+
+Пункт №4 может быть опущен в случае документов без оглавления.
+
 ### Установка дополнительных пакетов. `biblatex`:
 
 Скачать можно [по этому адресу](http://sourceforge.net/projects/biblatex/files/), вот [прямая ссылка на последнюю версию](http://sourceforge.net/projects/biblatex/files/latest/download).
