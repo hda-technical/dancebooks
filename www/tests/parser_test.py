@@ -88,5 +88,10 @@ def search_items_test():
 		set(["cinquecento", "historical dance"]))
 	filtered_items = filter(keyword_search, items)
 	eq_(len(list(filtered_items)), 1)
-
+	
+	
+def app_test():
+	from main import app, APP_PREFIX
+	rq = app.head(APP_FREFIX + "/all.html")
+	eq_(rq.status_code, 200)
 
