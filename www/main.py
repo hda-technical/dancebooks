@@ -51,13 +51,13 @@ def root():
 		for search_key in AVAILABLE_SEARCH_KEYS:
 			# argument can be missing or be empty
 			# both cases should be ignored during search
-			search_param = request.values.get(search_key, "")
+			search_param = request.args.get(search_key, "")
 			if len(search_param) > 0:
 				if search_key in parser_options[BibParser.SCANFIELDS]:
-					param_filter = search_for(search_key, request.values, 
+					param_filter = search_for(search_key, request.args, 
 						parser.get_scanned_fields(search_key))
 				else:
-					param_filter = search_for(search_key, request.values)
+					param_filter = search_for(search_key, request.args)
 				if param_filter is not None:
 					filters.append(param_filter)
 
@@ -78,7 +78,7 @@ def root():
 
 	return render_template("index.html", 
 		found_items = list(found_items),
-		search_params = request.values,
+		search_params = request.args,
 		languages = languages)
 
 
