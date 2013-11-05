@@ -35,7 +35,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 	@$(LATEX) $< &>/dev/null
 	@$(BIBER) --onlylog $(JOBNAME)
 	@$(LATEX) $< &>/dev/null
-	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | tee $(JOBNAME).validation.log
+	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
