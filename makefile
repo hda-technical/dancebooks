@@ -15,9 +15,10 @@ ANC_WIKI_FILES := \
 
 HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
-PDFLATEX := pdflatex --max-print-line=250 --shell-escape
-LUALATEX := lualatex --shell-escape
-LATEX := $(LUALATEX)
+PDFLATEX := pdflatex --shell-escape --max-print-line=250
+LUALATEX := lualatex --shell-escape --max-print-line=250
+XELATEX  := xelatex  --shell-escape --max-print-line=250
+LATEX := $(PDFLATEX)
 
 BIBER := biber --listsep=\| --namesep=\| --validate_datamodel
 
