@@ -18,7 +18,7 @@ HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 PDFLATEX := pdflatex --shell-escape --max-print-line=250
 LUALATEX := lualatex --shell-escape --max-print-line=250
 XELATEX  := xelatex  --shell-escape --max-print-line=250
-LATEX := $(PDFLATEX)
+LATEX := $(LUALATEX)
 
 BIBER := biber --listsep=\| --namesep=\| --validate_datamodel
 
@@ -26,7 +26,10 @@ BIBER := biber --listsep=\| --namesep=\| --validate_datamodel
 
 default: test-biblatex.pdf
 
-# LaTeX \filecontents isn't treadsafe — disabling parallelism here
+# LaTeX \filecontents isn't tread-safe
+# LuaLaTeX requires to much memory
+#
+# Disabling parallel compilation
 test-biblatex-detailed.pdf: test-biblatex.pdf
 
 %.pdf: JOBNAME = $(@:.pdf=)
@@ -40,7 +43,7 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
-debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
+debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES) clean-pdfs
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@$(LATEX) $<
 	@$(BIBER) $(<:.tex=)
