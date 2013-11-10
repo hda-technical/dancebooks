@@ -36,19 +36,28 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f $(JOBNAME).bbl biblatex-dm.cfg
-	@$(LATEX) $< &>/dev/null
+	@$(LATEX) $<
 	@$(BIBER) --onlylog $(JOBNAME)
-	@$(LATEX) $< &>/dev/null
+	@$(LATEX) $<
 	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
 	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
-debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES) clean-pdfs
+debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
+	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
+	@$(LATEX) $<
+	@$(BIBER) $(<:.tex=)
+	@$(LATEX) $<
+	@echo "Build completed"	
+	
+# Target which doesn't hide LaTeX output - useful for debugging stuff
+debug-detailed: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@$(LATEX) $<
 	@$(BIBER) $(<:.tex=)
 	@$(LATEX) $<
 	@echo "Build completed"
+
 
 upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
 	@chmod 644 $^

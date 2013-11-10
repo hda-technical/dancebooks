@@ -1,5 +1,6 @@
 \documentclass[10pt,a4paper]{article}
 
+\RequirePackage{ifluatex,ifxetex,ifpdf}
 
 \newcommand{\bibroot}{.}
 \RequirePackage[detailed=true,root=\bibroot]{\bibroot/dancebooks-biblatex}
@@ -15,14 +16,13 @@
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1,T2A]{fontenc}
-	
+
 \fi\fi
 
 \RequirePackage{indentfirst}
 \RequirePackage{calc}
 \RequirePackage[margin=2cm]{geometry}
-
-\sloppy
+\RequirePackage{hologo}
 
 \begin{document}
 
@@ -32,14 +32,15 @@ Search within bibliography entries available at \href{http://leftparagraphs.com/
 
 \ifluatex
 
-Built with Lua\LaTeX
+Built with \hologo{LuaLaTeX}.
 
 \else\ifpdf
 
-Built with \LaTeX
+Built with \hologo{LaTeX}.
 
 \fi\fi
 
 \nocite{*}
 \printbibliography
+
 \end{document}
