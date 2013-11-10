@@ -44,6 +44,17 @@
 			\constraintfield{origlanguage}
 		}
 	}
+	% if any of {series, number} exists, both must be present
+	\constraint[type=conditional]{
+		\consequent[quantifier=all]{
+			\constraintfield{series}
+			\constraintfield{number}
+		}
+		\antecedent[quantifier=one]{
+			\constraintfield{series}
+			\constraintfield{number}
+		}
+	}
 }
 \DeclareDatamodelConstraints[book,mvbook]{
 	% for books and multi-volume books: 
