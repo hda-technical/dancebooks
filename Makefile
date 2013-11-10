@@ -36,9 +36,9 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f $(JOBNAME).bbl biblatex-dm.cfg
-	@$(LATEX) $<
+	@$(LATEX) $< &>/dev/null
 	@$(BIBER) --onlylog $(JOBNAME)
-	@$(LATEX) $<
+	@$(LATEX) $< &>/dev/null
 	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
 	@echo "Build completed"
 
