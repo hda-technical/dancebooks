@@ -1,22 +1,21 @@
-{% 
-	set author = item.author()
-	set shorthand = item.shorthand()
-	set title = item.title()
-	set id = item.id()
-	set source_file = item.source_file()
-	set source_line = item.source_line()
-	set booktype = item.booktype()
-	set year = item.year()
-	set publisher = item.publisher()
-	set location = item.location()
-	set edition = item.edition()
-	set series = item.series()
-	set number = item.number()
-	set keywords = item.keywords()
-	set url = item.url()
-	set note = item.note()
-	set annotation = item.annotation()
-%}
+{% set author = item.author() %}
+{% set shorthand = item.shorthand() %}
+{% set title = item.title() %}
+{% set id = item.id() %}
+{% set source_file = item.source_file() %}
+{% set source_line = item.source_line() %}
+{% set booktype = item.booktype() %}
+{% set year = item.year() %}
+{% set publisher = item.publisher() %}
+{% set location = item.location() %}
+{% set edition = item.edition() %}
+{% set series = item.series() %}
+{% set number = item.number() %}
+{% set keywords = item.keywords() %}
+{% set url = item.url() %}
+{% set note = item.note() %}
+{% set annotation = item.annotation() %}
+
 {% if author %}
 				<tr>
 					<td>author:</td><td>{{ author }}</td>

@@ -12,8 +12,8 @@ def search_for_string(key, value):
 	"""
 	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
 	return lambda item, key = key, regexp = regexp: \
-					item.param(key, as_string = False) and \
-					regexp.search(item.param(key, as_string = False))
+					item.get(key) and \
+					regexp.search(item.get(key))
 
 
 def search_for_string_exact(key, value):
@@ -21,7 +21,7 @@ def search_for_string_exact(key, value):
 	Creates filter for string (searches for exact match)
 	"""
 	return lambda item, key = key, value = value: \
-					item.param(key, as_string = False) == value
+					item.get(key) == value
 
 
 def search_for_iterable(key, value):
@@ -30,9 +30,9 @@ def search_for_iterable(key, value):
 	"""
 	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
 	return lambda item, key = key, regexp = regexp: \
-					item.param(key, as_string = False) and \
+					item.get(key) and \
 					any([regexp.search(word) for word in 
-						item.param(key, as_string = False)])
+						item.get(key)])
 
 
 def search_for_iterable_set(key, value):
@@ -40,8 +40,8 @@ def search_for_iterable_set(key, value):
 	Creates filter for iterable (string) (searches for subset match)
 	"""
 	return lambda item, key = key, value = value: \
-					item.param(key, as_string = False) and \
-					item.param(key, as_string = False).issuperset(value)
+					item.get(key) and \
+					item.get(key).issuperset(value)
 
 
 def search_for_year(key, values):

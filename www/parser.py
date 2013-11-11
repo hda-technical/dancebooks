@@ -2,7 +2,6 @@
 
 import codecs
 from fnmatch import fnmatch
-import json
 import os.path
 import re
 
@@ -27,69 +26,68 @@ class BibItem(object):
 
 	# ancillary fields
 	def booktype(self):
-		return self.param("booktype")
+		return self.get_as_string("booktype")
 
 	def id(self):
-		return self.param("id")
+		return self.get_as_string("id")
 
 	def source_file(self):
-		return self.param("source_file")
+		return self.get_as_string("source_file")
 
 	def source_line(self):
-		return self.param("source_line")
+		return self.get_as_string("source_line")
 
 	# data fields
 	def author(self):
-		return self.param("author")
+		return self.get_as_string("author")
 
 	def shorthand(self):
-		return self.param("shorthand")
+		return self.get_as_string("shorthand")
 
 	def title(self):
-		return self.param("title")
+		return self.get_as_string("title")
 	
 	def publisher(self):
-		return self.param("publisher")
+		return self.get_as_string("publisher")
 
 	def series(self):
-		return self.param("series")
+		return self.get_as_string("series")
 
 	def number(self):
-		return self.param("number")
+		return self.get_as_string("number")
 
 	def edition(self):
-		return self.param("edition")
+		return self.get_as_string("edition")
 
 	def volume(self):
-		return self.param("volume")
+		return self.get_as_string("volume")
 
 	def volumes(self):
-		return self.param("volumes")
+		return self.get_as_string("volumes")
 
 	def location(self):
-		return self.param("location")
+		return self.get_as_string("location")
 
 	def year(self):
-		return self.param("year")
+		return self.get_as_string("year")
 
 	def keywords(self):
-		return self.param("keywords")
+		return self.get_as_string("keywords")
 
 	def url(self):
-		return self.param("url")
+		return self.get_as_string("url")
 
 	def note(self):
-		return self.param("note")
+		return self.get_as_string("note")
 
 	def annotation(self):
-		return self.param("annotation")
+		return self.get_as_string("annotation")
 
 	#not-implemented params
 	#
 	#type (thesis type)
 	#institution
 	#isbn
-	#part
 	#pages
 	#crossref
 	#booktitle
@@ -115,32 +113,28 @@ class BibItem(object):
 				self.__year_interval__.lower_bound in search_interval or
 				self.__year_interval__.upper_bound in search_interval)
 
-	def param(self, key, value = None, as_string = True):
-		if value is None:
-			if key in self.__params__:
-				value = self.__params__[key]
-				if as_string:
-					if (key in LIST_PARAMS) or \
-						(key in KEYWORD_PARAMS) or \
-						(key in NAME_PARAMS):
-						return OUTPUT_LISTSEP.join(value)
-					else:
-						return value
-				else:
-					return value
+	def get_as_string(self, key):
+		if key in self.__params__:
+			value = self.__params__[key]
+			if (key in LIST_PARAMS) or \
+				(key in KEYWORD_PARAMS) or \
+				(key in NAME_PARAMS):
+				return OUTPUT_LISTSEP.join(value)
 			else:
-				return None
+				return value
 		else:
-			if key not in self.__params__:
-				self.__params__[key] = value
-			else:
-				raise Exception("Can't set the same parameter twice")
+			return None
 
-	def params(self):
-		return self.__params__
-		
-	def json(self):
-		return json.dumps(self.__params__)
+	def get(self, key, value = None, as_string = True):
+		if key in self.__params__:
+			return self.__params__[key]
+		else:
+			return None
+			
+	def set(self, key, value):
+		if key in self.__params__:
+			raise Exception("Can't set the same parameter twice")
+		self.__params__[key] = value
 
 
 class BibParser(object):
@@ -236,7 +230,7 @@ class BibParser(object):
 			parsed_value = BibParser.strip_split_list(value, self.namesep)
 		elif key in KEYWORD_PARAMS:
 			parsed_value = set(BibParser.strip_split_list(value, self.keywordsep))
-		item.param(key, parsed_value)
+		item.set(key, parsed_value)
 
 		if key in self.scanned_fields:
 			if isinstance(parsed_value, set):
