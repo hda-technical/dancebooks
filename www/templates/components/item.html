@@ -1,76 +1,95 @@
-{% if item.author() %}
+{% 
+	set author = item.author()
+	set shorthand = item.shorthand()
+	set title = item.title()
+	set id = item.id()
+	set source_file = item.source_file()
+	set source_line = item.source_line()
+	set booktype = item.booktype()
+	set year = item.year()
+	set publisher = item.publisher()
+	set location = item.location()
+	set edition = item.edition()
+	set series = item.series()
+	set number = item.number()
+	set keywords = item.keywords()
+	set url = item.url()
+	set note = item.note()
+	set annotation = item.annotation()
+%}
+{% if author %}
 				<tr>
-					<td>author:</td><td>{{ item.author() }}</td>
+					<td>author:</td><td>{{ author }}</td>
 				</tr>
 {% endif %}
-{% if item.shorthand() %}
+{% if shorthand %}
 				<tr>
-					<td>shorthand:</td><td>{{ item.shorthand() }}</td>
+					<td>shorthand:</td><td>{{ shorthand }}</td>
 				</tr>
 {% endif %}
-{% if item.title() %}
+{% if title %}
 				<tr>
-					<td>title:</td><td>{{ item.title() }}</td>
+					<td>title:</td><td>{{ title }}</td>
 				</tr>
 {% endif %}
-{% if item.id() %}
+{% if id %}
 				<tr>
-					<td>id:</td><td><a href="/bib/book/{{ item.id() }}">{{ item.id() }}</a></td>
+					<td>id:</td><td><a href="/bib/book/{{ item.id() }}">{{ id }}</a></td>
 				</tr>
 {% endif %}
-{% if item.source_file() and item.source_line() %}
+{% if source_file and source_line %}
 				<tr>
-					<td>source:</td><td>{{ item.source_file() }}:{{ item.source_line() }}</td>
+					<td>source:</td><td>{{ source_file }}:{{ source_line }}</td>
 				</tr>
 {% endif %}
-{% if item.booktype() %}
+{% if booktype %}
 				<tr>
-					<td>booktype:</td><td>{{ item.booktype() }}</td>
+					<td>booktype:</td><td>{{ booktype }}</td>
 				</tr>
 {% endif %}
-{% if item.year() %}
+{% if year %}
 				<tr>
-					<td>year:</td><td>{{ item.year() }}</td>
+					<td>year:</td><td>{{ year }}</td>
 				</tr>
 {% endif %}
-{% if item.publisher() %}
+{% if location %}
 				<tr>
-					<td>publisher:</td><td>{{ item.publisher() }}</td>
+					<td>location:</td><td>{{ location }}</td>
 				</tr>
 {% endif %}
-{% if item.series() and item.number() %}
+{% if publisher %}
 				<tr>
-					<td>series:</td><td>{{ item.series() }}: №{{ item.number() }}</td>
+					<td>publisher:</td><td>{{ publisher }}</td>
 				</tr>
 {% endif %}
-{% if item.edition() %}
+{% if edition %}
 				<tr>
-					<td>edition:</td><td>{{ item.edition() }}</td>
+					<td>edition:</td><td>{{ edition }}</td>
 				</tr>
 {% endif %}
-{% if item.location() %}
+{% if series and number %}
 				<tr>
-					<td>location:</td><td>{{ item.location() }}</td>
+					<td>series:</td><td>{{ series }}: №{{ number }}</td>
 				</tr>
 {% endif %}
-{% if item.keywords() %} 
+{% if keywords %} 
 				<tr>
-					<td>keywords:</td><td>{{ item.keywords() }}</td>
+					<td>keywords:</td><td>{{ keywords }}</td>
 				</tr>
 {% endif %}
-{% if item.url() %} 
+{% if url %} 
 				<tr>
-					<td>url:</td><td><a href="{{ item.url() }}">{{ item.url() }}</a></td>
+					<td>url:</td><td><a href="{{ item.url() }}">{{ url }}</a></td>
 				</tr>
 {% endif %}
-{% if item.note() %} 
+{% if note %} 
 				<tr>
-					<td>note:</td><td>{{ item.note() }}</td>
+					<td>note:</td><td>{{ note }}</td>
 				</tr>
 {% endif %}
-{% if item.annotation() %} 
+{% if annotation %} 
 				<tr>
-					<td>annotation:</td><td>{{ item.annotation() }}</td>
+					<td>annotation:</td><td>{{ annotation }}</td>
 				</tr>
 {% endif %}
 				<tr>
