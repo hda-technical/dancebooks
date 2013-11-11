@@ -1,10 +1,13 @@
 # coding: utf-8
 
-from nose.tools import eq_, ok_
+from nose.tools import eq_ 
 
+from main import app, APP_PREFIX
 from parser import BibParser
 from parser import YEAR_FROM_PARAM, YEAR_TO_PARAM
 import search
+
+client = app.test_client()
 
 TEST_OPTIONS = {
 	BibParser.LISTSEP : "|", 
@@ -88,9 +91,6 @@ def search_items_test():
 	
 	
 def app_test():
-	from main import app, APP_PREFIX
-	client = app.test_client()
-
 	rq = client.get(APP_PREFIX, follow_redirects = True)
 	eq_(rq.status_code, 200)
 

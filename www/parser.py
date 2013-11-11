@@ -291,7 +291,7 @@ class BibParser(object):
 		char_in_line = 1
 		for index in range(len(str_data)):
 			c = str_data[index]
-			if c == '\n':
+			if c == os.linesep:
 				line_in_file += 1
 				char_in_line = 0
 			else:
