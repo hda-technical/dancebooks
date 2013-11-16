@@ -85,7 +85,7 @@ transcriptions.mk: $(HTML_FILES)
 update-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 	@echo "Updating wiki"
 	@./transcriptions/_generate_wiki.py $(MARKDOWN_FILES)
-	@cd wiki && git commit -am "Updated wiki" && git push origin master
+	@cd wiki && (git commit -am "Updated wiki" || true) && git push origin master
 	@touch $@
 	
 purge-transcriptions: clean
