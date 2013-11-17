@@ -60,4 +60,5 @@ def search_profile():
 if __name__ == "__main__":
 	#all_profile()
 	#parsing_profile()
-	search_profile()
+	#search_profile()
+	pass
