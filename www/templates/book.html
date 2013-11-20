@@ -5,7 +5,7 @@
 		<title>Библиография танцевальных источников — веб-интерфейс</title>
 	</head>
 	<body>
-		<h1>Библиография танцевальных источников — веб-интерфейс</h1>
+{% include "components/header.html" %}
 		<h2>Вот книга с идентификатором {{ items[0].id() }}</h1>
 		<div class="content">
 			<table class="books">
@@ -13,6 +13,7 @@
 {% include "components/item.html" %}
 {% endfor %}
 			</table>
+{% include "components/footer.html" %}
 		</div>
 	</body>
 </html>
