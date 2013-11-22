@@ -13,6 +13,10 @@ LISTSEP = "|"
 NAMESEP = "|"
 KEYWORDSEP = ","
 
+AVAILABLE_SEARCH_KEYS = [
+	"author", "title", "langid", "publisher", "location", "keywords"
+	]
+
 parser_options = {
 	BibParser.LISTSEP : LISTSEP, 
 	BibParser.NAMESEP : NAMESEP, 
@@ -29,10 +33,6 @@ app = Flask(__name__)
 
 app.jinja_env.trim_blocks = True
 	
-AVAILABLE_SEARCH_KEYS = [
-	"author", "title", "langid", "publisher", "location", "keywords"
-	]
-
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
 	sys.exit()
