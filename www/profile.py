@@ -6,17 +6,16 @@ import io
 import os.path
 import pstats
 
-from main import APP_PREFIX
-from main import app, parser_options
-from parser import BibParser
+import main
+import parser
 
-client = app.test_client()
+client = main.app.test_client()
 
 def all_profile():
 	profiler = cProfile.Profile()
 	profiler.enable()
 
-	client.get(APP_PREFIX + "/all.html")
+	client.get(main.APP_PREFIX + "/all.html")
 	
 	profiler.disable()
 	string_io = io.StringIO()
@@ -26,12 +25,12 @@ def all_profile():
 
 
 def parsing_profile():
-	parser = BibParser(parser_options)
+	bib_parser = parser.BibParser()
 	
 	profiler = cProfile.Profile()
 	profiler.enable()
 
-	parser.parse_folder(os.path.abspath("../bib"))
+	bib_parser.parse_folder(os.path.abspath("../bib"))
 
 	profiler.disable()
 	string_io = io.StringIO()
@@ -58,7 +57,7 @@ def search_profile():
 
 
 if __name__ == "__main__":
-	#all_profile()
+	all_profile()
 	#parsing_profile()
 	#search_profile()
 	pass

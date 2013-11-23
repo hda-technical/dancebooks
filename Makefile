@@ -97,6 +97,9 @@ purge-transcriptions: clean
 test-www:
 	@cd www && nosetests tests
 
+profile-www:
+	@cd www && ./profile.py
+
 translations-update-www:
 	@cd www && \
 	pybabel -q extract -F babel.cfg -o messages.pot . && \
