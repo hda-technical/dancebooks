@@ -1,21 +1,14 @@
 # coding: utf-8
-
 import codecs
 from fnmatch import fnmatch
 import os.path
 import re
 
 from interval import Interval
+
+import constants
+import utils
 	
-LIST_PARAMS = set(["location", "isbn", "origlanguage"])
-NAME_PARAMS = set(["author", "publisher", "translator"])
-KEYWORD_PARAMS = set(["keywords"])
-YEAR_PARAM = "year"
-YEAR_TO_PARAM = "year_to"
-YEAR_FROM_PARAM = "year_from"
-OUTPUT_LISTSEP = ", "
-
-
 class BibItem(object):
 	"""
 	Class for bibliography item representation
@@ -116,10 +109,8 @@ class BibItem(object):
 	def get_as_string(self, key):
 		if key in self.__params__:
 			value = self.__params__[key]
-			if (key in LIST_PARAMS) or \
-				(key in KEYWORD_PARAMS) or \
-				(key in NAME_PARAMS):
-				return OUTPUT_LISTSEP.join(value)
+			if key in constants.MULTI_VALUE_PARAMS:
+				return constants.OUTPUT_LISTSEP.join(value)
 			else:
 				return value
 		else:
@@ -146,34 +137,18 @@ class BibParser(object):
 	FIELD_SEP = ","
 	PARAM_KEY_VALUE_SEP = "="
 	
-	# parser option keys
-	(LISTSEP, NAMESEP, KEYWORDSEP, SCANFIELDS) = (0, 1, 2, 3)
-
 	STATE = \
 		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
 		(0,         1,           2,            3,           4,             5)
 
-	def __init__(self, options):
+	def __init__(self):
 		"""
-		Expects options passed as dictionary:
-
-		* LISTSEP, NAMESEP and KEYWORDSEP (strings) will be used during parsing 
-		  to split corresponding fields.
-
-		* SCANFIELDS (iterable of strings) option will tell parser to scan 
-		  specified fields during parsing, joining found values into a set.
+		Default ctor
 		"""
-		self.listsep = options[self.LISTSEP]
-		self.keywordsep = options[self.KEYWORDSEP]
-		self.namesep = options[self.NAMESEP]
-
-		if self.SCANFIELDS in options:
-			scan_fields = options[self.SCANFIELDS]
-			# just another python hacker  
-			self.scanned_fields = dict(zip(scan_fields, [set() for i in scan_fields]))
-		else:
-			self.scanned_fields = dict()
-
+		self.scanned_fields = dict()
+		for scan_field in constants.SCAN_FIELDS:
+			self.scanned_fields[scan_field] = set()
+			
 		self.state = self.S_NO_ITEM
 		self.reset_lexeme()
 
@@ -215,21 +190,17 @@ class BibParser(object):
 		self.parenthesis_depth = 0
 		self.closing_param_parenthesis = ""
 
-	@staticmethod
-	def strip_split_list(value, sep):
-		return [word.strip() for word in value.split(sep)]
-
 	def set_item_param(self, item, key, value):
 		"""
 		Sets item param, applying additional conversion if needed.
 		"""
 		parsed_value = value
-		if key in LIST_PARAMS:
-			parsed_value = BibParser.strip_split_list(value, self.listsep)
-		elif key in NAME_PARAMS:
-			parsed_value = BibParser.strip_split_list(value, self.namesep)
-		elif key in KEYWORD_PARAMS:
-			parsed_value = set(BibParser.strip_split_list(value, self.keywordsep))
+		if key in constants.LIST_PARAMS:
+			parsed_value = utils.strip_split_list(value, constants.LISTSEP)
+		elif key in constants.NAME_PARAMS:
+			parsed_value = utils.strip_split_list(value, constants.NAMESEP)
+		elif key in constants.KEYWORD_PARAMS:
+			parsed_value = set(utils.strip_split_list(value, constants.KEYWORDSEP))
 		item.set(key, parsed_value)
 
 		if key in self.scanned_fields:
