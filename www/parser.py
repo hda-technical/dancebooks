@@ -4,8 +4,6 @@ from fnmatch import fnmatch
 import os.path
 import re
 
-from interval import Interval
-
 import constants
 import utils
 	
@@ -92,17 +90,18 @@ class BibItem(object):
 			if match:
 				start = int(match.group("start"))
 				end = int(match.group("end") or start)
-				self.__year_interval__ = Interval(start, end)
+				self._year_interval = (start, end)
 			else:
 				return False
 		
-		# Interval fails to intersect [a, a] with [a, a],
-		# but "in" operator works fine
-		return (search_interval.lower_bound in self.__year_interval__ or
-				search_interval.upper_bound in self.__year_interval__ or
-				self.__year_interval__.lower_bound in search_interval or
-				self.__year_interval__.upper_bound in search_interval)
-
+		return (
+			self._year_interval[0] <= search_interval[0] <= self._year_interval[1] or
+			self._year_interval[0] <= search_interval[1] <= self._year_interval[1] or
+			search_interval[0] <= self._year_interval[0] <= search_interval[1] or
+			search_interval[0] <= self._year_interval[1] <= search_interval[1]
+			)
+	
+	# getters / setters
 	def get_as_string(self, key):
 		if key in self.__params__:
 			value = self.__params__[key]

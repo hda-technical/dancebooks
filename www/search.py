@@ -1,8 +1,6 @@
 # coding: utf-8
 import re
 
-from interval import Interval
-
 import constants
 import utils
 
@@ -11,7 +9,7 @@ def search_for_string(key, value):
 	Creates filter for string (searches for substrings)
 	"""
 	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
-	return lambda item, key = key, regexp = regexp: \
+	return lambda item, key=key, regexp=regexp: \
 					item.get(key) and \
 					regexp.search(item.get(key))
 
@@ -20,7 +18,7 @@ def search_for_string_exact(key, value):
 	"""
 	Creates filter for string (searches for exact match)
 	"""
-	return lambda item, key = key, value = value: \
+	return lambda item, key=key, value=value: \
 					item.get(key) == value
 
 
@@ -29,7 +27,7 @@ def search_for_iterable(key, value):
 	Creates filter for iterable(string) (searches for substrings)
 	"""
 	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
-	return lambda item, key = key, regexp = regexp: \
+	return lambda item, key=key, regexp=regexp: \
 					item.get(key) and \
 					any([regexp.search(word) for word in 
 						item.get(key)])
@@ -65,9 +63,9 @@ def search_for_year(key, values):
 		if (year_to < year_from):
 			return search_empty()
 
-		interval = Interval(year_from, year_to)
+		interval = (year_from, year_to)
 	
-	return lambda item, interval = interval: \
+	return lambda item, interval=interval: \
 					item.published_between(interval)
 
 def search_empty():
@@ -77,7 +75,7 @@ def search_empty():
 	return lambda item: False
 
 
-def search_for(key, values, possible_values = None):
+def search_for(key, values, possible_values=None):
 	"""
 	Creates filter for a given key.
 	Returnis None if something is bad
