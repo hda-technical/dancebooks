@@ -92,10 +92,21 @@ purge-transcriptions: clean
 	@rm -f transcriptions/*.html transriptions.mk
 	@echo "Cleaning transcriptions completed"
 	
-# Ancillary targets
+# www-related targets
 
 test-www:
 	@cd www && nosetests tests
+
+translations-update-www:
+	@cd www && \
+	pybabel -q extract -F babel.cfg -o messages.pot . && \
+	pybabel -q update -i messages.pot -d translations
+
+translations-compile-www:
+	@cd www && \
+	pybabel -q compile -d translations
+
+# Ancillary targets
 
 all.mk: test-biblatex.pdf test-biblatex-detailed.pdf $(HTML_FILES)
 	@echo "Build all completed"

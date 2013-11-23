@@ -24,11 +24,8 @@ class BibItem(object):
 	def id(self):
 		return self.get_as_string("id")
 
-	def source_file(self):
-		return self.get_as_string("source_file")
-
-	def source_line(self):
-		return self.get_as_string("source_line")
+	def source(self):
+		return self.get_as_string("source")
 
 	# data fields
 	def author(self):
@@ -123,8 +120,6 @@ class BibItem(object):
 			return None
 			
 	def set(self, key, value):
-		if key in self.__params__:
-			raise Exception("Can't set the same parameter twice")
 		self.__params__[key] = value
 
 
@@ -243,10 +238,11 @@ class BibParser(object):
 				str_data = str_data.decode()
 				
 			try:
-				source = os.path.basename(path)
+				source_file = os.path.basename(path)
 				items = self.parse_string(str_data)
 				for item in items:
-					self.set_item_param(item, "source_file", source)
+					self.set_item_param(item, "source", "{file}:{line}".format(
+						file=source_file, line=item.get("source")))
 				return items				
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
@@ -283,7 +279,7 @@ class BibParser(object):
 				elif c in self.ITEM_OPEN_PARENTHESIS and (self.lexeme_started or self.lexeme_finished):
 					self.closing_parenthesis = ("}" if c == "{" else ")")
 					self.set_item_param(item, "booktype", self.lexeme)
-					self.set_item_param(item, "source_line", line_in_file)
+					self.set_item_param(item, "source", line_in_file)
 
 					self.state = self.S_ITEM_NO_ID
 					self.reset_lexeme()

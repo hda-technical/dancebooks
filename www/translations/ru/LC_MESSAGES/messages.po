@@ -1,0 +1,149 @@
+# Russian translations for dancebooks-bibtex.
+# Copyright (C) 2013 Yuriy Chernyshov
+# This file is distributed under the same license as the dancebooks-bibtex
+# project.
+# Yuriy Chernyshov <georgthegreat@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.9\n"
+"Report-Msgid-Bugs-To: georgthegreat@gmail.com\n"
+"POT-Creation-Date: 2013-11-23 14:28+0000\n"
+"PO-Revision-Date: 2013-11-23 14:17+0000\n"
+"Last-Translator: Yuriy Chernyshov <georgthegreat@gmail.com>\n"
+"Language-Team: ru <georgthegreat@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: templates/all.html:6
+msgid "displaying everything"
+msgstr "Вот всё, что есть"
+
+#: templates/book.html:6
+msgid "entry with id"
+msgstr "Вот запись с идентификатором"
+
+#: templates/index.html:7
+#, python-format
+msgid "total %(num)d entry"
+msgid_plural "total %(num)d entries"
+msgstr[0] "Всего %(num)d запись"
+msgstr[1] "Всего %(num)d записи"
+msgstr[2] "Всего %(num)d записей"
+
+#: templates/index.html:10
+#, python-format
+msgid "found %(num)d entry"
+msgid_plural "found %(num)d entries"
+msgstr[0] "Найдена %(num)d запись"
+msgstr[1] "Найдены %(num)d записи"
+msgstr[2] "Найдено %(num)d записей"
+
+#: templates/index.html:13
+msgid "nothing found"
+msgstr "Ничего не найдено"
+
+#: templates/index.html:18
+msgid "can"
+msgstr "Можно"
+
+#: templates/index.html:18
+msgid "display everything"
+msgstr "Показать всё"
+
+#: templates/index.html:18
+msgid "or use the search"
+msgstr "или воспользоваться поиском"
+
+#: templates/index.html:23 templates/components/item.html:19
+msgid "author"
+msgstr "Автор"
+
+#: templates/index.html:30 templates/components/item.html:29
+msgid "title"
+msgstr "Заглавие"
+
+#: templates/index.html:37 templates/components/item.html:49
+msgid "year"
+msgstr "Год публикации"
+
+#: templates/index.html:40
+msgid "year_from"
+msgstr "с"
+
+#: templates/index.html:42
+msgid "year_to"
+msgstr "по"
+
+#: templates/index.html:46
+msgid "language"
+msgstr "Язык"
+
+#: templates/index.html:66 templates/components/item.html:59
+msgid "publisher"
+msgstr "Издатель"
+
+#: templates/index.html:73 templates/components/item.html:54
+msgid "location"
+msgstr "Место издания"
+
+#: templates/index.html:80 templates/components/item.html:74
+msgid "keywords"
+msgstr "Теги"
+
+#: templates/index.html:80
+msgid "comma separated"
+msgstr "через запятую"
+
+#: templates/index.html:87
+msgid "search"
+msgstr "Искать"
+
+#: templates/components/head.html:7 templates/components/header.html:1
+msgid "dancing books bibliography"
+msgstr "Библиография танцевальных источников"
+
+#: templates/components/item.html:24
+msgid "shorthand"
+msgstr "Сокращённое название"
+
+#: templates/components/item.html:34
+msgid "id"
+msgstr "Идентификатор"
+
+#: templates/components/item.html:39
+msgid "source"
+msgstr "Строка в файле"
+
+#: templates/components/item.html:44
+msgid "booktype"
+msgstr "Тип записи"
+
+#: templates/components/item.html:64
+msgid "edition"
+msgstr "Издание"
+
+#: templates/components/item.html:69
+msgid "series"
+msgstr "Серия"
+
+#: templates/components/item.html:69
+msgid "number"
+msgstr "№"
+
+#: templates/components/item.html:79
+msgid "url"
+msgstr "Ссылка"
+
+#: templates/components/item.html:84
+msgid "note"
+msgstr "Примечание"
+
+#: templates/components/item.html:89
+msgid "annotation"
+msgstr "Служебное примечание"
+

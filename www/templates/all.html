@@ -1,14 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
-	<head>
 {% include "components/head.html" %}	
-		<title>Библиография танцевальных источников</title>
-	</head>
 	<body>
 {% include "components/header.html" %}
-		<h2>Вот всё, что есть:</h2>
+		<h2>{{ _("displaying everything") }}:</h2>
 		<div class="content">
-			<table class="books">
+			<table>
 {% for item in items %}
 {% include "components/item.html" %}
 {% endfor %}

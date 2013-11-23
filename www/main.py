@@ -4,6 +4,7 @@ import os.path
 import sys
 
 import flask
+from flask.ext import babel
 
 import constants
 import parser
@@ -15,21 +16,31 @@ languages = sorted(bib_parser.get_scanned_fields("langid"))
 
 APP_PREFIX = "/bib"
 
-app = flask.Flask(__name__)
+flask_app = flask.Flask(__name__)
+flask_app.config["BABEL_DEFAULT_LOCALE"] = "en"
+babel_app = babel.Babel(flask_app)
 
-app.jinja_env.trim_blocks = True
+flask_app.jinja_env.trim_blocks = True
 	
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
 	sys.exit()
 
 
-@app.route(APP_PREFIX + "/")
+@babel_app.localeselector
+def get_locale():
+	"""
+	Extracts locale from request
+	"""
+	return flask.request.accept_languages.best_match(constants.LANGUAGES)
+
+
+@flask_app.route(APP_PREFIX + "/")
 def redirect_root():
 	return flask.redirect(APP_PREFIX + "/index.html")
 	
 
-@app.route(APP_PREFIX + "/index.html")
+@flask_app.route(APP_PREFIX + "/index.html")
 def root():
 	filters = []
 
@@ -70,30 +81,30 @@ def root():
 		languages=languages)
 
 
-@app.route(APP_PREFIX + "/all.html")
+@flask_app.route(APP_PREFIX + "/all.html")
 def show_all():
 	return flask.render_template("all.html", items=items)
 
 
-@app.route(APP_PREFIX + "/book/<string:id>")
+@flask_app.route(APP_PREFIX + "/book/<string:id>")
 def book(id):
 	f = search.search_for_string_exact("id", id)
 	found_items = [item for item in items if f(item)]
 	if len(found_items) == 0:
 		flask.abort(404, "Book was not found")
-	return flask.render_template("book.html", items=found_items)
+	return flask.render_template("book.html", item=found_items[0])
 
 
-@app.route(APP_PREFIX + "/<path:filename>")
+@flask_app.route(APP_PREFIX + "/<path:filename>")
 def everything_else(filename):
 	if (os.path.isfile("templates/" + filename)):
 		return flask.render_template(filename)
 	elif (os.path.isfile("static/" + filename)):
-		return app.send_static_file(filename)
+		return flask_app.send_static_file(filename)
 	else:
 		flask.abort(404)
 
 
 if __name__ == "__main__":
-	app.debug = True
-	app.run(host="0.0.0.0")
+	flask_app.debug = True
+	flask_app.run(host="0.0.0.0")

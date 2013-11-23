@@ -1,52 +1,49 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
-	<head>
 {% include "components/head.html" %}	
-		<title>Библиография танцевальных источников</title>
-	</head>
 	<body>
 {% include "components/header.html" %}
 {% if items %}
-		<h2>Всего записей: {{ items|length }}</h2>
+		<h2>{{ ngettext("total %(num)d entry", "total %(num)d entries", items|length) }}</h2>
 {% endif %}
 {% if found_items %}
-		<h2>Нашлось записей: {{ found_items|length }}</h2>
+		<h2>{{ ngettext("found %(num)d entry", "found %(num)d entries", found_items|length) }}</h2>
 {% endif %}
 {% if search_params and not found_items %}
-		<h2>Ничего не найдено. Попробуйте задать менее строгие условия</h2>
+		<h2>{{ _("nothing found") }}</h2>
 {% endif %}
 {% if not search_params %}
 {% set search_params = {} %}
 {% endif %}
-		<h2>Можно <a href="/bib/all.html">показать всё</a> или воспользоваться поиском:</h2>
+		<h2>{{ _("can") }} <a href="/bib/all.html">{{ _("display everything") }}</a> {{ _("or use the search") }}:</h2>
 		<div class="content">
 			<form action="/bib/index.html">
 				<table>
 					<tr>
-						<td>Автор:</td>
+						<td>{{ _("author") }}:</td>
 						<td>
 {% set value = search_params["author"] or "" %}
 							<input type="text" name="author" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Заглавие:</td>
+						<td>{{ _("title") }}:</td>
 						<td>
 {% set value = search_params["title"] or "" %}
 							<input type="text" name="title" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Год издания:</td>
+						<td>{{ _("year") }}:</td>
 						<td>
 {% set value = search_params["year_from"] or "" %}
-							С <input type="number" name="year_from" value="{{value}}"/>
+							{{ _("year_from") }} <input type="number" name="year_from" value="{{value}}"/>
 {% set value = search_params["year_to"] or "" %}
-							до <input type="number" name="year_to" value="{{value}}"/>
+							{{ _("year_to") }} <input type="number" name="year_to" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Язык:</td>
+						<td>{{ _("language") }}:</td>
 						<td>
 {% set value = search_params["langid"] if search_params["langid"] else "" %}
 							<select name="langid">
@@ -66,28 +63,28 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Издатель:</td>
+						<td>{{ _("publisher") }}:</td>
 					<td>
 {% set value = search_params["publisher"] if search_params["publisher"] else "" %}
 							<input type="text" name="publisher" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Место издания:</td>
+						<td>{{ _("location") }}:</td>
 						<td>
 {% set value = search_params["location"] if search_params["location"] else "" %}
 							<input type="text" name="location" value="{{value}}"/>
 						</td>
 					</tr>
 					<tr>
-						<td>Ключевые слова (через запятую):</td>
+						<td>{{ _("keywords") }} ({{ _("comma separated") }}):</td>
 						<td>
 {% set value = search_params["keywords"] if search_params["keywords"] else "" %}
 							<input type="text" name="keywords" value="{{value}}"/>
 						</td>
 					</tr>
 				</table>
-				<div class="center"><button>Искать</button></div>
+				<div class="center"><button>{{ _("search") }}</button></div>
 			</form>
 {% if found_items %}
 			<table>

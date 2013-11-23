@@ -34,4 +34,5 @@ YEAR_FROM_PARAM = "year_from"
 #output list separator
 OUTPUT_LISTSEP = ", "
 
-
+#languages, supported by this website
+LANGUAGES = ["en", "ru"]
