@@ -53,7 +53,7 @@ msgstr "Можно"
 
 #: templates/index.html:18
 msgid "display everything"
-msgstr "Показать всё"
+msgstr "показать всё"
 
 #: templates/index.html:18
 msgid "or use the search"
