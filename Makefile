@@ -40,7 +40,6 @@ test-biblatex-detailed.pdf: test-biblatex.pdf
 	@$(BIBER) --onlylog $(JOBNAME)
 	@$(LATEX) $< &>/dev/null
 	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
-	@echo "Build completed"
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
 debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
@@ -48,7 +47,6 @@ debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@$(LATEX) $<
 	@$(BIBER) $(<:.tex=)
 	@$(LATEX) $<
-	@echo "Build completed"	
 	
 # Target which doesn't hide LaTeX output - useful for debugging stuff
 debug-detailed: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
@@ -56,7 +54,6 @@ debug-detailed: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@$(LATEX) $<
 	@$(BIBER) $(<:.tex=)
 	@$(LATEX) $<
-	@echo "Build completed"
 
 
 upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
@@ -66,32 +63,26 @@ upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
 
 clean-pdfs:
 	@rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
-	@echo "Clean pdfs completed"
 
 purge-pdfs: clean-pdfs
 	@rm -f *.pdf all.mk upload-pdfs.mk
-	@echo "Purge pdfs completed"
 	
 # Transcriptions related targets
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
-	@echo "Compiling \"$<\""
 	@./transcriptions/_markdown2.py --input "$<" --output "$@"
 
 transcriptions.mk: $(HTML_FILES)
-	@echo "Compiling transcriptions completed"
 	@touch $@
 
 update-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
-	@echo "Updating wiki"
 	@./transcriptions/_generate_wiki.py $(MARKDOWN_FILES)
 	@cd wiki && (git commit -am "Updated wiki" || true) && git push origin master
 	@touch $@
 	
 purge-transcriptions: clean
 	@rm -f transcriptions/*.html transriptions.mk
-	@echo "Cleaning transcriptions completed"
-	
+
 # www-related targets
 
 test-www:
@@ -112,7 +103,6 @@ translations-compile-www:
 # Ancillary targets
 
 all.mk: test-biblatex.pdf test-biblatex-detailed.pdf $(HTML_FILES)
-	@echo "Build all completed"
 	@touch $@
 
 upload-urls.mk:	$(URL_FILES)
@@ -123,8 +113,6 @@ upload-urls.mk:	$(URL_FILES)
 entry-count: $(BIB_FILES)
 	@cat $^ | grep -c "@"
 	
-clean: clean-pdfs
-	@true
+clean: clean-pdfs;
 	
-rebuild: purge-pdfs purge-transcriptions all.mk
-	@echo "Rebuild completed"
+rebuild: purge-pdfs purge-transcriptions all.mk;
