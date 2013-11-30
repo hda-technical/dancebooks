@@ -4,13 +4,13 @@
 	<body>
 {% include "components/header.html" %}
 {% if items %}
-		<h2>{{ ngettext("total %(num)d entry", "total %(num)d entries", items|length) }}</h2>
+		<h2>{{ ngettext("total %(num)d entry", "total %(num)d entries", items|length) }}.</h2>
 {% endif %}
 {% if found_items %}
-		<h2>{{ ngettext("found %(num)d entry", "found %(num)d entries", found_items|length) }}</h2>
+		<h2>{{ ngettext("found %(num)d entry", "found %(num)d entries", found_items|length) }}.</h2>
 {% endif %}
 {% if search_params and not found_items %}
-		<h2>{{ _("nothing found") }}</h2>
+		<h2>{{ _("nothing found") }}.</h2>
 {% endif %}
 {% if not search_params %}
 {% set search_params = {} %}
