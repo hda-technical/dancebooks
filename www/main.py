@@ -32,13 +32,31 @@ def get_locale():
 	"""
 	Extracts locale from request
 	"""
-	return flask.request.accept_languages.best_match(constants.LANGUAGES)
+	lang = flask.request.cookies.get("lang", None)
+	if (lang is not None) and \
+		(lang in constants.LANGUAGES):
+		return lang
+	else:	
+		return flask.request.accept_languages.best_match(constants.LANGUAGES)
 
 
 @app.route(APP_PREFIX + "/")
 def redirect_root():
-	return flask.redirect(APP_PREFIX + "/index.html")
-	
+	desired_language = flask.request.values.get("lang", None)
+	next_url = APP_PREFIX + "/index.html"
+
+	#if lang param is set, redirecting user back to the page he came from
+	if (desired_language is not None) and \
+		(desired_language in constants.LANGUAGES):
+		referrer = flask.request.referrer
+		if referrer is not None:
+			next_url = referrer
+		response = flask.make_response(flask.redirect(next_url))
+		response.set_cookie("lang", value=desired_language)
+		return response
+	else:	
+		return flask.redirect(next_url)
+
 
 @app.route(APP_PREFIX + "/index.html")
 def root():
