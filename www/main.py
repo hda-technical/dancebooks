@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
+import datetime
 import os.path
 import sys
 
@@ -52,7 +53,8 @@ def redirect_root():
 		if referrer is not None:
 			next_url = referrer
 		response = flask.make_response(flask.redirect(next_url))
-		response.set_cookie("lang", value=desired_language)
+		response.set_cookie("lang", value=desired_language,  
+			expires=datetime.datetime(2100, 1, 1))
 		return response
 	else:	
 		return flask.redirect(next_url)
