@@ -3,144 +3,136 @@
 # This file is distributed under the same license as the dancebooks-bibtex
 # project.
 # Yuriy Chernyshov <georgthegreat@gmail.com>, 2013.
-#
-msgid ""
-msgstr ""
-"Project-Id-Version:  1.9\n"
-"Report-Msgid-Bugs-To: georgthegreat@gmail.com\n"
-"POT-Creation-Date: 2013-11-23 14:28+0000\n"
-"PO-Revision-Date: 2013-11-23 16:00+0400\n"
-"Last-Translator: Yuriy Chernsyhov <georgthegreat@gmail.com>\n"
-"Language-Team: en <georgthegreat@gmail.com>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
 
-#: templates/all.html:6
+#: Interface strings
 msgid "displaying everything"
 msgstr "Displaying everything"
 
-#: templates/book.html:6
 msgid "entry with id"
 msgstr "Entry with id"
 
-#: templates/index.html:7
 #, python-format
 msgid "total %(num)d entry"
 msgid_plural "total %(num)d entries"
 msgstr[0] "In database: %(num)d entry"
 msgstr[1] "In database: %(num)d entries"
 
-#: templates/index.html:10
 #, python-format
 msgid "found %(num)d entry"
 msgid_plural "found %(num)d entries"
 msgstr[0] "Found %(num)d entry"
 msgstr[1] "Found %(num)d entries"
 
-#: templates/index.html:13
 msgid "nothing found"
 msgstr "Nothing found. Try another search"
 
-#: templates/index.html:18
 msgid "can"
 msgstr "You can"
 
-#: templates/index.html:18
 msgid "display everything"
 msgstr "display everything"
 
-#: templates/index.html:18
 msgid "or use the search"
 msgstr "or use the search"
 
-#: templates/index.html:23 templates/components/item.html:19
-msgid "author"
-msgstr "Author"
-
-#: templates/index.html:30 templates/components/item.html:29
-msgid "title"
-msgstr "Title"
-
-#: templates/index.html:37 templates/components/item.html:49
-msgid "year"
-msgstr "Year of publication"
-
-#: templates/index.html:40
-msgid "year_from"
-msgstr "from"
-
-#: templates/index.html:42
-msgid "year_to"
-msgstr "to"
-
-#: templates/index.html:46
-msgid "language"
-msgstr "Language"
-
-#: templates/index.html:66 templates/components/item.html:59
-msgid "publisher"
-msgstr "Publisher"
-
-#: templates/index.html:73 templates/components/item.html:54
-msgid "location"
-msgstr "Place of publication"
-
-#: templates/index.html:80 templates/components/item.html:74
-msgid "keywords"
-msgstr "Tags"
-
-#: templates/index.html:80
-msgid "comma separated"
-msgstr "comma separated"
-
-#: templates/index.html:87
-msgid "search"
-msgstr "Search"
-
-#: templates/components/head.html:7 templates/components/header.html:1
 msgid "dancing books bibliography"
 msgstr "Dancing books bibliography"
 
-#: templates/components/item.html:24
+#: Search form
+msgid "author"
+msgstr "Author"
+
+msgid "title"
+msgstr "Title"
+
+msgid "year"
+msgstr "Year of publication"
+
+msgid "year_from"
+msgstr "from"
+
+msgid "year_to"
+msgstr "to"
+
+msgid "langid"
+msgstr "Language"
+
+msgid "publisher"
+msgstr "Publisher"
+
+msgid "location"
+msgstr "Place of publication"
+
+msgid "keywords"
+msgstr "Tags"
+
+msgid "comma separated"
+msgstr "comma separated"
+
+msgid "search"
+msgstr "Search"
+
 msgid "shorthand"
 msgstr "Shorthand"
 
-#: templates/components/item.html:34
 msgid "id"
 msgstr "Id"
 
-#: templates/components/item.html:39
 msgid "source"
 msgstr "Source"
 
-#: templates/components/item.html:44
 msgid "booktype"
 msgstr "Entry type"
 
-#: templates/components/item.html:64
 msgid "edition"
 msgstr "Edition"
 
-#: templates/components/item.html:69
 msgid "series"
 msgstr "Series"
 
-#: templates/components/item.html:69
 msgid "number"
 msgstr "No. "
 
-#: templates/components/item.html:79
 msgid "url"
 msgstr "URL"
 
-#: templates/components/item.html:84
 msgid "note"
 msgstr "Note"
 
-#: templates/components/item.html:89
 msgid "annotation"
 msgstr "Auxilliary note"
+
+#: Languages
+msgid "any"
+msgstr "Any"
+
+msgid "czech"
+msgstr "Czech"
+
+msgid "danish"
+msgstr "Danish"
+
+msgid "english"
+msgstr "English"
+
+msgid "french"
+msgstr "French"
+
+msgid "german"
+msgstr "German"
+
+msgid "italian"
+msgstr "Italian"
+
+msgid "polish"
+msgstr "Polish"
+
+msgid "portuguese"
+msgstr "Portuguese"
+
+msgid "russian"
+msgstr "Russian"
+
+msgid "spanish"
+msgstr "Spanish"
 

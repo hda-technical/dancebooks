@@ -74,7 +74,7 @@ def root():
 					param_filter = search.search_for(
 						search_key, 
 						flask.request.args, 
-						parser.get_scanned_fields(search_key))
+						bib_parser.get_scanned_fields(search_key))
 				else:
 					param_filter = search.search_for(search_key, flask.request.args)
 				if param_filter is not None:

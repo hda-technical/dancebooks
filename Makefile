@@ -91,12 +91,7 @@ test-www:
 profile-www:
 	@cd www && ./profile.py
 
-translations-update-www:
-	@cd www && \
-	pybabel -q extract -F babel.cfg -o messages.pot . && \
-	pybabel -q update -i messages.pot -d translations
-
-translations-compile-www:
+translations-www:
 	@cd www && \
 	pybabel -q compile -d translations
 

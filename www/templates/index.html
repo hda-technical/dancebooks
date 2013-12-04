@@ -44,20 +44,20 @@
 						</td>
 					</tr>
 					<tr>
-						<td>{{ _("language") }}:</td>
+						<td>{{ _("langid") }}:</td>
 						<td>
 {% set value = search_params["langid"] if search_params["langid"] else "" %}
 							<select name="langid">
 {% if value == "" %}
-								<option selected="selected" value="">any</option>
+								<option selected="selected" value="">{{ _("any") }}</option>
 {% else %}
-								<option value="">any</option>
+								<option value="">{{ _("any") }}</option>
 {% endif %}
 {% for language in languages %}
 {% if value == language %}
-								<option selected="selected" value="{{language}}">{{language}}</option>
+								<option selected="selected" value="{{language}}">{{ _(language) }}</option>
 {% else %}
-								<option value="{{language}}">{{language}}</option>
+								<option value="{{language}}">{{ _(language) }}</option>
 {% endif %}
 {% endfor %}
 							</select>

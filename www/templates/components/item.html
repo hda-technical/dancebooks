@@ -2,6 +2,7 @@
 	"author", 
 	"shorthand", 
 	"title", 
+	"langid",
 	"id",
 	"source",
 	"booktype",
@@ -28,7 +29,9 @@
 						<a href="{{ value }}">{{ value}}</a>
 {% elif param == "series" %}
 {% set extra_value = item.get_as_string("number") %}
-						{{ value }} {{ _("number") }}{{ extra_value }}
+						{{ value }} {{ _("number") }}{{ extra_value }}i
+{% elif param == "langid" %}
+						{{ _(value) }}
 {% else %}
 						{{ value }}
 {% endif %}
