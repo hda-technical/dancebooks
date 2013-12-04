@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 {% include "components/head.html" %}	
 	<body>
+{% include "components/choose-lang.html" %}
 {% include "components/header.html" %}
 {% if items %}
 		<h2>{{ ngettext("total %(num)d entry", "total %(num)d entries", items|length) }}.</h2>

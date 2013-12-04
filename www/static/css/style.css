@@ -135,3 +135,10 @@ table tr td {
 .content {
 	margin: 0% 20%;
 }
+
+.choose_lang {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	white-space: nowrap;
+}
