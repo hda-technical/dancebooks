@@ -88,11 +88,9 @@
 				<div class="center"><button>{{ _("search") }}</button></div>
 			</form>
 {% if found_items %}
-			<table>
 {% for item in found_items %}
 {% include "components/item.html" %}
 {% endfor %}
-			</table>
 {% else %}
 			<hr/>
 {% endif %}

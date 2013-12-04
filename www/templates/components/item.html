@@ -1,95 +1,41 @@
-{% set author = item.author() %}
-{% set shorthand = item.shorthand() %}
-{% set title = item.title() %}
-{% set id = item.id() %}
-{% set source = item.source() %}
-{% set booktype = item.booktype() %}
-{% set year = item.year() %}
-{% set publisher = item.publisher() %}
-{% set location = item.location() %}
-{% set edition = item.edition() %}
-{% set series = item.series() %}
-{% set number = item.number() %}
-{% set keywords = item.keywords() %}
-{% set url = item.url() %}
-{% set note = item.note() %}
-{% set annotation = item.annotation() %}
-{% if author %}
-				<tr>
-					<td>{{ _("author") }}:</td><td>{{ author }}</td>
-				</tr>
+{% set fields = [
+	"author", 
+	"shorthand", 
+	"title", 
+	"id",
+	"source",
+	"booktype",
+	"year",
+	"publisher",
+	"location",
+	"edition",
+	"series",
+	"keywords",
+	"url",
+	"note",
+	"annotation"
+] %}
+			<div class="bib_item">
+{% for param in fields %}
+{% set value = item.get_as_string(param) %}
+{% if value %}
+				<div class="bib_item_row">
+					<div class="bib_item_cell_left">{{ _(param) }}:</div>
+					<div class="bib_item_cell_right">
+{% if param == "id" %}
+						<a href="/bib/book/{{ value }}">{{ value }}</a>
+{% elif param == "url" %}
+						<a href="{{ value }}">{{ value}}</a>
+{% elif param == "series" %}
+{% set extra_value = item.get_as_string("number") %}
+						{{ value }} {{ _("number") }}{{ extra_value }}
+{% else %}
+						{{ value }}
 {% endif %}
-{% if shorthand %}
-				<tr>
-					<td>{{ _("shorthand") }}:</td><td>{{ shorthand }}</td>
-				</tr>
+					</div>
+				</div>
 {% endif %}
-{% if title %}
-				<tr>
-					<td>{{ _("title") }}:</td><td>{{ title }}</td>
-				</tr>
-{% endif %}
-{% if id %}
-				<tr>
-					<td>{{ _("id") }}:</td><td><a href="/bib/book/{{ item.id() }}">{{ id }}</a></td>
-				</tr>
-{% endif %}
-{% if source %}
-				<tr>
-					<td>{{ _("source") }}:</td><td>{{ source }}</td>
-				</tr>
-{% endif %}
-{% if booktype %}
-				<tr>
-					<td>{{ _("booktype") }}:</td><td>{{ booktype }}</td>
-				</tr>
-{% endif %}
-{% if year %}
-				<tr>
-					<td>{{ _("year") }}:</td><td>{{ year }}</td>
-				</tr>
-{% endif %}
-{% if location %}
-				<tr>
-					<td>{{ _("location") }}:</td><td>{{ location }}</td>
-				</tr>
-{% endif %}
-{% if publisher %}
-				<tr>
-					<td>{{ _("publisher") }}:</td><td>{{ publisher }}</td>
-				</tr>
-{% endif %}
-{% if edition %}
-				<tr>
-					<td>{{ _("edition") }}:</td><td>{{ edition }}</td>
-				</tr>
-{% endif %}
-{% if series and number %}
-				<tr>
-					<td>{{ _("series") }}:</td><td>{{ series }}: {{ _("number") }}{{ number }}</td>
-				</tr>
-{% endif %}
-{% if keywords %} 
-				<tr>
-					<td>{{ _("keywords") }}:</td><td>{{ keywords }}</td>
-				</tr>
-{% endif %}
-{% if url %} 
-				<tr>
-					<td>{{ _("url") }}:</td><td><a href="{{ item.url() }}">{{ url }}</a></td>
-				</tr>
-{% endif %}
-{% if note %} 
-				<tr>
-					<td>{{ _("note") }}:</td><td>{{ note }}</td>
-				</tr>
-{% endif %}
-{% if annotation %} 
-				<tr>
-					<td>{{ _("annotation") }}:</td><td>{{ annotation }}</td>
-				</tr>
-{% endif %}
-				<tr>
-					<td colspan="2"><hr/></td>
-				</tr>
+{% endfor %}
+			</div>
+			<hr/>
 

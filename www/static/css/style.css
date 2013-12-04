@@ -74,32 +74,6 @@ ul, ol {
 	text-indent: 20px;
 }
 
-ul#menu li.inactive {
-	width: 20%;
-	float: left;
-	background-color: #cccccc;
-	color: #000000;
-}
-
-ul#menu li.active {
-	width: 20%;
-	float: left;
-	background-color: #888888;
-	color: #000000;
-}
-
-ul#menu li a, ul#menu li span  {
-	display: block;
-	padding: 0px 4px;
-	border-right: solid 1px #000000;
-	color: #000000;
-	line-height: 24px;
-}
-
-li img {
-	padding: 2px;
-}
-
 input[type="text"] {
 	width: 400px;
 }
@@ -141,4 +115,17 @@ table tr td {
 	top: 0px;
 	right: 0px;
 	white-space: nowrap;
+}
+
+.bib_item_row div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.bib_item_cell_left {
+	width: 20%;
+}
+
+.bib_item_cell_right {
+	width: 79%;
 }
