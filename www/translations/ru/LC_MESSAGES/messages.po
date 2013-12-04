@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the dancebooks-bibtex
 # project.
 # Yuriy Chernyshov <georgthegreat@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
 
 #: Inteface
 msgid "displaying everything"

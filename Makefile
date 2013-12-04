@@ -92,8 +92,7 @@ profile-www:
 	@cd www && ./profile.py
 
 translations-www:
-	@cd www && \
-	pybabel -q compile -d translations
+	@pybabel -q compile -d www/translations
 
 # Ancillary targets
 
