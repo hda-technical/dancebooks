@@ -17,11 +17,11 @@ languages = sorted(bib_parser.get_scanned_fields("langid"))
 
 APP_PREFIX = "/bib"
 
-app = flask.Flask(__name__)
-app.config["BABEL_DEFAULT_LOCALE"] = "en"
-babel_app = babel.Babel(app)
+flask_app = flask.Flask(__name__)
+flask_app.config["BABEL_DEFAULT_LOCALE"] = "en"
+babel_app = babel.Babel(flask_app)
 
-app.jinja_env.trim_blocks = True
+flask_app.jinja_env.trim_blocks = True
 	
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
@@ -41,7 +41,7 @@ def get_locale():
 		return flask.request.accept_languages.best_match(constants.LANGUAGES)
 
 
-@app.route(APP_PREFIX + "/")
+@flask_app.route(APP_PREFIX + "/")
 def redirect_root():
 	desired_language = flask.request.values.get("lang", None)
 	next_url = APP_PREFIX + "/index.html"
@@ -60,7 +60,7 @@ def redirect_root():
 		return flask.redirect(next_url)
 
 
-@app.route(APP_PREFIX + "/index.html")
+@flask_app.route(APP_PREFIX + "/index.html")
 def root():
 	filters = []
 
@@ -101,12 +101,12 @@ def root():
 		languages=languages)
 
 
-@app.route(APP_PREFIX + "/all.html")
+@flask_app.route(APP_PREFIX + "/all.html")
 def show_all():
 	return flask.render_template("all.html", items=items)
 
 
-@app.route(APP_PREFIX + "/book/<string:id>")
+@flask_app.route(APP_PREFIX + "/book/<string:id>")
 def book(id):
 	f = search.search_for_string_exact("id", id)
 	found_items = [item for item in items if f(item)]
@@ -115,7 +115,7 @@ def book(id):
 	return flask.render_template("book.html", item=found_items[0])
 
 
-@app.route(APP_PREFIX + "/<path:filename>")
+@flask_app.route(APP_PREFIX + "/<path:filename>")
 def everything_else(filename):
 	if (os.path.isfile("templates/" + filename)):
 		return flask.render_template(filename)
@@ -126,5 +126,8 @@ def everything_else(filename):
 
 
 if __name__ == "__main__":
-	app.debug = True
-	app.run(host="0.0.0.0")
+	flask_app.debug = True
+	flask_app.run(host="0.0.0.0")
+
+#backward compatibility stuff
+app = flask_app	
