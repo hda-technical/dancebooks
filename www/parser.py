@@ -154,17 +154,17 @@ class BibParser(object):
 		Returns human-readable error message
 		"""
 		if self.state == self.S_NO_ITEM:
-				return "looking for item"
+			return "looking for item"
 		elif self.state == self.S_ITEM_TYPE:
-				return "looking for item type"
+			return "looking for item type"
 		elif self.state == self.S_ITEM_NO_ID:
-				return "looking for item id"
+			return "looking for item id"
 		elif self.state == self.S_PARAM_KEY:
-				return "looking for parameter key"
+			return "looking for parameter key"
 		elif self.state == self.S_PARAM_VALUE:
-				return "looking for parameter [{0}] value".format(self.key)
+			return "looking for parameter [{0}] value".format(self.key)
 		elif self.state == self.S_PARAM_READ:
-				return "looking for next parameter / item end"
+			return "looking for next parameter / item end"
 
 	def raise_error(self, c, line_in_file, char_in_line):
 		"""
@@ -188,20 +188,21 @@ class BibParser(object):
 		"""
 		Sets item param, applying additional conversion if needed.
 		"""
-		parsed_value = value
+		value = utils.parse_latex(value)
+		
 		if key in constants.LIST_PARAMS:
-			parsed_value = utils.strip_split_list(value, constants.LISTSEP)
+			value = utils.strip_split_list(value, constants.LISTSEP)
 		elif key in constants.NAME_PARAMS:
-			parsed_value = utils.strip_split_list(value, constants.NAMESEP)
+			value = utils.strip_split_list(value, constants.NAMESEP)
 		elif key in constants.KEYWORD_PARAMS:
-			parsed_value = set(utils.strip_split_list(value, constants.KEYWORDSEP))
-		item.set(key, parsed_value)
+			value = set(utils.strip_split_list(value, constants.KEYWORDSEP))
+		item.set(key, value)
 
 		if key in self.scanned_fields:
-			if isinstance(parsed_value, set):
-				self.scanned_fields[key] |= parsed_value
+			if isinstance(value, set):
+				self.scanned_fields[key] |= value
 			else:
-				self.scanned_fields[key].add(parsed_value)
+				self.scanned_fields[key].add(value)
 
 	def parse_folder(self, path):
 		"""
