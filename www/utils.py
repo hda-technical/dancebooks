@@ -1,5 +1,7 @@
 import re
 
+import constants
+
 def strip_split_list(value, sep):
 	"""
 	Splits string on a given sep(arator), strips spaces from resulting words
@@ -10,7 +12,7 @@ def strip_split_list(value, sep):
 LATEX_GROUPING_RE = re.compile(r"(\s|^)\{([^\s]*)\}(\s|$)")
 LATEX_URL_RE = re.compile(r"\\url\{([^\s]*)\}")
 LATEX_PARENCITE_RE = re.compile(r"\\parencite\{([a-z_\d]*)\}")
-PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'
+PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(constants.BOOK_PREFIX)
 def parse_latex(value):
 	"""
 	Attempts to remove LaTeX formatting from string
