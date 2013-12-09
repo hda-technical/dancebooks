@@ -24,8 +24,10 @@ def parse_latex(value):
 	if isinstance(value, str):
 		value = value.replace(r"\&", "&")
 		value = LATEX_GROUPING_RE.sub(r"\1\2\3", value)
-		value = LATEX_URL_RE.sub(r'<a href="\1">\1</a>', value)
-		value = LATEX_PARENCITE_RE.sub(PARENCITE_SUBST, value)
+		#requires autoescape to be turned off
+		#but this is a break in is security wall
+		#value = LATEX_URL_RE.sub(r'<a href="\1">\1</a>', value)
+		#value = LATEX_PARENCITE_RE.sub(PARENCITE_SUBST, value)
 		return value
 	else:
 		return value
