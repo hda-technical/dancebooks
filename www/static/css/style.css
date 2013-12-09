@@ -117,15 +117,14 @@ table tr td {
 	white-space: nowrap;
 }
 
-.bib_item_row div {
+.bib_item_left {
+	width: 25%;
 	display: inline-block;
 	vertical-align: top;
 }
 
-.bib_item_cell_left {
-	width: 20%;
-}
-
-.bib_item_cell_right {
-	width: 79%;
+.bib_item_right {
+	width: 74%;
+	display: inline-block;
+	vertical-align: top;
 }

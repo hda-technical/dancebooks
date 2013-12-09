@@ -119,7 +119,7 @@ def everything_else(filename):
 	if (os.path.isfile("templates/" + filename)):
 		return flask.render_template(filename)
 	elif (os.path.isfile("static/" + filename)):
-		return app.send_static_file(filename)
+		return flask_app.send_static_file(filename)
 	else:
 		flask.abort(404)
 

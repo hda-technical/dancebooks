@@ -16,29 +16,26 @@
 	"note",
 	"annotation"
 ] %}
-			<div class="bib_item">
 {% for param in fields %}
 {% set value = item.get_as_string(param) %}
 {% if value %}
-				<div class="bib_item_row">
-					<div class="bib_item_cell_left">{{ _(param) }}:</div>
-					<div class="bib_item_cell_right">
+			<div class="bib_item_left">{{ _(param) }}:</div>
+			<div class="bib_item_right">
 {% if param == "id" %}
-						<a href="/bib/book/{{ value }}">{{ value }}</a>
+				<a href="/bib/book/{{ value }}">{{ value }}</a>
 {% elif param == "url" %}
-						<a href="{{ value }}">{{ value}}</a>
+				<a href="{{ value }}">{{ value}}</a>
 {% elif param == "series" %}
 {% set extra_value = item.get_as_string("number") %}
-						{{ value }} {{ _("number") }}{{ extra_value }}i
+				{{ value }} {{ _("number") }}{{ extra_value }}i
 {% elif param == "langid" %}
-						{{ _(value) }}
+				{{ _(value) }}
 {% else %}
-						{{ value }}
+				{{ value }}
 {% endif %}
-					</div>
-				</div>
+			</div>
+			<br/>
 {% endif %}
 {% endfor %}
-			</div>
 			<hr/>
 
