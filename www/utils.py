@@ -1,4 +1,8 @@
+import cProfile, pstats, io
+import functools
 import re
+
+import jinja2
 
 import constants
 
@@ -25,3 +29,40 @@ def parse_latex(value):
 		return value
 	else:
 		return value
+
+
+class MemoryCache(jinja2.BytecodeCache):
+
+	def __init__(self):
+		self.cache = dict()
+
+	def load_bytecode(self, bucket):
+		if bucket.key in self.cache:
+			bucket.bytecode_from_string(self.cache[bucket.key])
+	
+	def dump_bytecode(self, bucket):
+		self.cache[bucket.key] = bucket.bytecode_to_string()
+
+
+def profile(sort="time"):
+	"""
+	Decorator to make profiling easy
+	"""
+	def profile_decorator(func):
+		"""
+		Real decorator to be returned
+		"""
+		@functools.wraps(func)
+		def wrapper(*args, **kwargs):
+			profiler = cProfile.Profile()
+			profiler.enable()
+
+			func(*args, **kwargs)
+
+			profiler.disable()
+			string_io = io.StringIO()
+			stats = pstats.Stats(profiler, stream=string_io).sort_stats(sort)
+			stats.print_stats(50)
+			print(string_io.getvalue())
+		return wrapper
+	return profile_decorator
