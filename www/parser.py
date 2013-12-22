@@ -16,59 +16,59 @@ class BibItem(object):
 		self.__year_interval__ = None
 
 	# ancillary fields
-	def booktype(self):
+	def booktype(self) -> str:
 		return self.get_as_string("booktype")
 
-	def id(self):
+	def id(self) -> str:
 		return self.get_as_string("id")
 
-	def source(self):
+	def source(self) -> str:
 		return self.get_as_string("source")
 
 	# data fields
-	def author(self):
+	def author(self) -> str:
 		return self.get_as_string("author")
 
-	def shorthand(self):
+	def shorthand(self) -> str:
 		return self.get_as_string("shorthand")
 
-	def title(self):
+	def title(self) -> str:
 		return self.get_as_string("title")
 	
-	def publisher(self):
+	def publisher(self) -> str:
 		return self.get_as_string("publisher")
 
-	def series(self):
+	def series(self) -> str:
 		return self.get_as_string("series")
 
-	def number(self):
+	def number(self) -> str:
 		return self.get_as_string("number")
 
-	def edition(self):
+	def edition(self) -> str:
 		return self.get_as_string("edition")
 
-	def volume(self):
+	def volume(self) -> str:
 		return self.get_as_string("volume")
 
-	def volumes(self):
+	def volumes(self) -> str:
 		return self.get_as_string("volumes")
 
-	def location(self):
+	def location(self) -> str:
 		return self.get_as_string("location")
 
-	def year(self):
+	def year(self) -> str:
 		return self.get_as_string("year")
 
-	def keywords(self):
+	def keywords(self) -> str:
 		return self.get_as_string("keywords")
 
-	def url(self):
+	def url(self) -> str:
 		return self.get_as_string("url")
 
-	def note(self):
+	def note(self) -> str:
 		return self.get_as_string("note")
 
-	def annotation(self):
+	def annotation(self) -> str:
 		return self.get_as_string("annotation")
 
 	#not-implemented params
@@ -80,29 +80,34 @@ class BibItem(object):
 	#crossref
 	#booktitle
 	#origlanguage
+	#translator
+	#commentator
+	#editor
 
 	# search helpers
 	YEAR_RE = re.compile(r"(?P<start>\d+)([-–—]+(?P<end>\d+)\?)?")
-	def published_between(self, search_interval):
-		if self.__year_interval__ is None:
+	YEAR_INTERVAL_PARAM = "_year_interval"
+	def published_between(self, search_interval: tuple(int)) -> bool:
+		if not hasattr(self, self.YEAR_INTERVAL_PARAM):
 			# parsing year field
 			match = self.YEAR_RE.match(self.year())
 			if match:
 				start = int(match.group("start"))
 				end = int(match.group("end") or start)
-				self._year_interval = (start, end)
+				setattr(self.YEAR_INTERVAL_PARAM)
 			else:
-				return False
+				raise ValueError("Parsing year interval failed for entry with {0}".format(self.id()))
 		
+		year_interval = getattr(self, self.YEAR_INTERVAL_PARAM)
 		return (
-			self._year_interval[0] <= search_interval[0] <= self._year_interval[1] or
-			self._year_interval[0] <= search_interval[1] <= self._year_interval[1] or
-			search_interval[0] <= self._year_interval[0] <= search_interval[1] or
-			search_interval[0] <= self._year_interval[1] <= search_interval[1]
+			year_interval <= search_interval[0] <= year_interval[1] or
+			year_interval <= search_interval[1] <= year_interval[1] or
+			search_interval[0] <= year_interval[0] <= search_interval[1] or
+			search_interval[0] <= year_interval[1] <= search_interval[1]
 			)
 	
 	# getters / setters
-	def get_as_string(self, key):
+	def get_as_string(self, key: str) -> str:
 		if key in self.__params__:
 			value = self.__params__[key]
 			if key in constants.MULTI_VALUE_PARAMS:
@@ -112,13 +117,13 @@ class BibItem(object):
 		else:
 			return None
 
-	def get(self, key, value = None, as_string = True):
+	def get(self, key: str) -> str or list or set:
 		if key in self.__params__:
 			return self.__params__[key]
 		else:
 			return None
 			
-	def set(self, key, value):
+	def set(self, key: str, value: str or list or set):
 		self.__params__[key] = value
 
 
@@ -146,7 +151,7 @@ class BibParser(object):
 		self.state = self.S_NO_ITEM
 		self.reset_lexeme()
 
-	def get_scanned_fields(self, key):
+	def get_scanned_fields(self, key: str) -> {str}:
 		return self.scanned_fields[key]
 		
 	def state_string(self):
@@ -166,12 +171,12 @@ class BibParser(object):
 		elif self.state == self.S_PARAM_READ:
 			return "looking for next parameter / item end"
 
-	def raise_error(self, c, line_in_file, char_in_line):
+	def raise_error(self, char: str, line_in_file: int, char_in_line: int):
 		"""
 		Raises human-readable Exception based on parser state and current file position
 		"""
 		raise Exception("While {0}: wrong syntax at char [{1}] (line {2}, #{3})"\
-				.format(self.state_string(), c, line_in_file, char_in_line))
+				.format(self.state_string(), char, line_in_file, char_in_line))
 
 	def reset_lexeme(self):
 		"""
@@ -184,7 +189,7 @@ class BibParser(object):
 		self.parenthesis_depth = 0
 		self.closing_param_parenthesis = ""
 
-	def set_item_param(self, item, key, value):
+	def set_item_param(self, item: BibItem, key: str, value: str):
 		"""
 		Sets item param, applying additional conversion if needed.
 		"""
@@ -204,7 +209,7 @@ class BibParser(object):
 			else:
 				self.scanned_fields[key].add(value)
 
-	def parse_folder(self, path):
+	def parse_folder(self, path: str) -> [BibItem]:
 		"""
 		Parses all .bib files in given folder.
 		Returns list containing all items found
@@ -220,7 +225,7 @@ class BibParser(object):
 					items.extend(parsed_items)
 		return items
 		
-	def parse_file(self, path):
+	def parse_file(self, path: str) -> [BibItem]:
 		"""
 		Parses file at given path, handling utf-8-bom correctly.
 		@returns list of parsed BibItem
@@ -247,7 +252,7 @@ class BibParser(object):
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
 
-	def parse_string(self, str_data):
+	def parse_string(self, str_data: str) -> [BibItem]:
 		"""
 		Parses utf-8 encoded string.
 		@returns list of parsed BibItem

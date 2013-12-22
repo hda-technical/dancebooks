@@ -6,9 +6,9 @@ import jinja2
 
 import constants
 
-def strip_split_list(value, sep):
+def strip_split_list(value: str, sep: str) -> [str]:
 	"""
-	Splits string on a given sep(arator), strips spaces from resulting words
+	Splits string on a given separator, strips spaces from resulting words
 	"""
 	return [word.strip() for word in value.split(sep)]
 
@@ -17,7 +17,7 @@ LATEX_GROUPING_RE = re.compile(r"(\s|^)\{([^\s]*)\}(\s|$)")
 LATEX_URL_RE = re.compile(r"\\url\{([^\s]*)\}")
 LATEX_PARENCITE_RE = re.compile(r"\\parencite\{([a-z_\d]*)\}")
 PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(constants.BOOK_PREFIX)
-def parse_latex(value):
+def parse_latex(value: str) -> str:
 	"""
 	Attempts to remove LaTeX formatting from string
 	"""
@@ -34,7 +34,6 @@ def parse_latex(value):
 
 
 class MemoryCache(jinja2.BytecodeCache):
-
 	def __init__(self):
 		self.cache = dict()
 
@@ -46,7 +45,7 @@ class MemoryCache(jinja2.BytecodeCache):
 		self.cache[bucket.key] = bucket.bytecode_to_string()
 
 
-def profile(sort="time"):
+def profile(sort: str = "time", limits: str or int = 50) -> function:
 	"""
 	Decorator to make profiling easy
 	"""
@@ -64,7 +63,7 @@ def profile(sort="time"):
 			profiler.disable()
 			string_io = io.StringIO()
 			stats = pstats.Stats(profiler, stream=string_io).sort_stats(sort)
-			stats.print_stats(50)
+			stats.print_stats(limits)
 			print(string_io.getvalue())
 		return wrapper
 	return profile_decorator
