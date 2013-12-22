@@ -87,19 +87,19 @@ def search_items_test():
 	
 	
 def app_test():
-	rq = client.get(main.APP_PREFIX, follow_redirects = True)
+	rq = client.get(constants.APP_PREFIX, follow_redirects = True)
 	eq_(rq.status_code, 200)
 
-	rq = client.get(main.APP_PREFIX + "/index.html")
+	rq = client.get(constants.APP_PREFIX + "/index.html")
 	eq_(rq.status_code, 200)
 
-	rq = client.get(main.APP_PREFIX + "/index.html?"
+	rq = client.get(constants.APP_PREFIX + "/index.html?"
 		"author=Wilson&"
 		"title=Ecossoise&"
 		"year_from=1800&"
 		"year_to=1900")
 	eq_(rq.status_code, 200)
 
-	rq = client.get(main.APP_PREFIX + "/all.html")
+	rq = client.get(constants.APP_PREFIX + "/all.html")
 	eq_(rq.status_code, 200)
 	

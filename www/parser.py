@@ -87,21 +87,21 @@ class BibItem(object):
 	# search helpers
 	YEAR_RE = re.compile(r"(?P<start>\d+)([-–—]+(?P<end>\d+)\?)?")
 	YEAR_INTERVAL_PARAM = "_year_interval"
-	def published_between(self, search_interval: tuple(int)) -> bool:
+	def published_between(self, search_interval: (int, int)) -> bool:
 		if not hasattr(self, self.YEAR_INTERVAL_PARAM):
 			# parsing year field
 			match = self.YEAR_RE.match(self.year())
 			if match:
 				start = int(match.group("start"))
 				end = int(match.group("end") or start)
-				setattr(self.YEAR_INTERVAL_PARAM)
+				setattr(self, self.YEAR_INTERVAL_PARAM, (start, end))
 			else:
 				raise ValueError("Parsing year interval failed for entry with {0}".format(self.id()))
 		
 		year_interval = getattr(self, self.YEAR_INTERVAL_PARAM)
 		return (
-			year_interval <= search_interval[0] <= year_interval[1] or
-			year_interval <= search_interval[1] <= year_interval[1] or
+			year_interval[0] <= search_interval[0] <= year_interval[1] or
+			year_interval[0] <= search_interval[1] <= year_interval[1] or
 			search_interval[0] <= year_interval[0] <= search_interval[1] or
 			search_interval[0] <= year_interval[1] <= search_interval[1]
 			)

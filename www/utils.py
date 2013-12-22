@@ -45,7 +45,7 @@ class MemoryCache(jinja2.BytecodeCache):
 		self.cache[bucket.key] = bucket.bytecode_to_string()
 
 
-def profile(sort: str = "time", limits: str or int = 50) -> function:
+def profile(sort: str = "time", limits: str or int = 50) -> callable:
 	"""
 	Decorator to make profiling easy
 	"""
