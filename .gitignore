@@ -8,12 +8,16 @@
 
 # unix compiler output files and executables
 *.o
+*.a
 *.so
+#.so.$version
+*.so.*
 
 # scriptable languages compiler output files and executables
 *.pyc
 *.pyo
 *.pyd
+*.egg-info
 
 # microsoft visual studio generated files
 *.aps
@@ -43,13 +47,19 @@ _UpgradeReport_Files
 *.rar
 *.tgz
 *.zip
+# deb packages specific files (deb are like archives)
+*.deb
+*.dsc
+*.changes
 
 # log files
 *.log
+*.upload
 
 # configuration files
 *.ini
 *.cfg
+*.conf
 
 # debug files
 *.stackdump
@@ -60,6 +70,10 @@ _UpgradeReport_Files
 *.swp
 *.tmp
 *~
+
+#temporary unix files
+*.pid
+*.sock
 
 # latex specific files
 *.aux
@@ -91,7 +105,11 @@ desktop.ini
 # de facto standard extension for additional makefile targets
 *.mk
 
-# put your own ignores below this line (don't forget about the newline in the end of file)
+# GNU babel files
+*.mo
+*.pot
+
+# put your own ignores below this line (don't forget about new line in the end of file)
 *.pdf
 transcriptions/*.html
 mwe/mwe.bib
