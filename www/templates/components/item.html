@@ -27,7 +27,7 @@
 				<a href="{{ value }}">{{ value}}</a>
 {% elif param == "series" %}
 {% set extra_value = item.get_as_string("number") %}
-				{{ value }} {{ _("number") }}{{ extra_value }}i
+				{{ value }} {{ _("number") }}{{ extra_value }}
 {% elif param == "langid" %}
 				{{ _(value) }}
 {% else %}
