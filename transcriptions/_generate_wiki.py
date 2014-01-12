@@ -4,7 +4,7 @@ import os.path
 import sys
 
 WIKI_PAGE = "wiki/Transcriptions.md"
-URL_PREFIX = "https://github.com/georgthegreat/dancebooks-bibtex/blob/master/transcriptions/"
+URL_PREFIX = "https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/"
 
 with open(WIKI_PAGE, "w") as wiki_file:
 	for tr in sorted(sys.argv[1:]):
