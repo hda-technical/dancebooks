@@ -117,11 +117,8 @@ class BibItem(object):
 		else:
 			return None
 
-	def get(self, key: str) -> str or list or set:
-		if key in self.__params__:
-			return self.__params__[key]
-		else:
-			return None
+	def get(self, key: str) -> str or list or set or None:
+		return self.__params__.get(key, None)
 			
 	def set(self, key: str, value: str or list or set):
 		self.__params__[key] = value
