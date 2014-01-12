@@ -13,11 +13,11 @@ style_css_path = os.path.join(dirname, "_style.css")
 
 usage = "Usage: %prog [options]"
 
-parser = optparse.OptionParser(usage=usage)
-parser.add_option("-i", "--input", dest="input_filename", help="Read markdown from FILE", metavar="FILE")
-parser.add_option("-o", "--output", dest="output_filename", help="Write xhtml to FILE", metavar="FILE")
-parser.add_option("-c", "--css", dest="css_filename", default=style_css_path, help="Read css from FILE", metavar="FILE")
-(options, args) = parser.parse_args()
+opt_parser = optparse.OptionParser(usage=usage)
+opt_parser.add_option("-i", "--input", dest="input_filename", help="Read markdown from FILE", metavar="FILE")
+opt_parser.add_option("-o", "--output", dest="output_filename", help="Write xhtml to FILE", metavar="FILE")
+opt_parser.add_option("-c", "--css", dest="css_filename", default=style_css_path, help="Read css from FILE", metavar="FILE")
+(options, args) = opt_parser.parse_args()
 
 if (options.input_filename is None) or (not os.path.isfile(options.input_filename)):
 	print("Error: input file is not defined\n")

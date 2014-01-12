@@ -89,7 +89,7 @@ test-www:
 	@cd www && nosetests tests
 
 profile-www:
-	@cd www && ./profile.py
+	@cd www && ./_profile.py
 
 translations-www:
 	@pybabel -q compile -d www/translations
