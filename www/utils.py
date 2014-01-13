@@ -1,5 +1,9 @@
-import cProfile, pstats, io
+import cProfile
 import functools
+import io
+import os
+import fnmatch
+import pstats
 import re
 
 import jinja2
@@ -67,3 +71,18 @@ def profile(sort: str = "time", limits: str or int = 50) -> callable:
 			print(string_io.getvalue())
 		return wrapper
 	return profile_decorator
+
+
+def files_in_folder(path, pattern):
+	"""
+	Iterates over folder yielding files matching pattern
+	"""
+	result_files = []
+	
+	for root, dirs, files in os.walk(path):
+		for file_ in files:
+			if fnmatch.fnmatch(file_, pattern):
+				result_files.append(file_)
+
+	return result_files
+			

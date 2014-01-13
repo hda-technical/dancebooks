@@ -18,7 +18,7 @@ KEYWORD_PARAMS = frozenset(["keywords"])
 MULTI_VALUE_PARAMS = LIST_PARAMS | NAME_PARAMS | KEYWORD_PARAMS
 
 #parameters to be scanned (returned as a union)
-SCAN_FIELDS = set(["langid", "keywords"])
+SCAN_FIELDS = set(["langid", "keywords", "filename"])
 
 #options actual for searching
 
