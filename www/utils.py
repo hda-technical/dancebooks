@@ -6,8 +6,6 @@ import fnmatch
 import pstats
 import re
 
-import jinja2
-
 import constants
 
 def strip_split_list(value: str, sep: str) -> [str]:
@@ -37,18 +35,6 @@ def parse_latex(value: str) -> str:
 		return value
 
 
-class MemoryCache(jinja2.BytecodeCache):
-	def __init__(self):
-		self.cache = dict()
-
-	def load_bytecode(self, bucket):
-		if bucket.key in self.cache:
-			bucket.bytecode_from_string(self.cache[bucket.key])
-	
-	def dump_bytecode(self, bucket):
-		self.cache[bucket.key] = bucket.bytecode_to_string()
-
-
 def profile(sort: str = "time", limits: str or int = 50) -> callable:
 	"""
 	Decorator to make profiling easy
@@ -73,16 +59,25 @@ def profile(sort: str = "time", limits: str or int = 50) -> callable:
 	return profile_decorator
 
 
-def files_in_folder(path, pattern):
+def files_in_folder(path: str, pattern: str, excludes: set = set()):
 	"""
 	Iterates over folder yielding files matching pattern
 	"""
 	result_files = []
 	
 	for root, dirs, files in os.walk(path):
+		skip = False
+		
+		#processing excludes
+		for excl in excludes:
+			excl_with_sep = "/" + excl + "/"
+			if excl_with_sep in root:
+				skip = True
+		if skip:
+			continue
+		
 		for file_ in files:
 			if fnmatch.fnmatch(file_, pattern):
-				result_files.append(file_)
+				result_files.append(os.path.join(root, file_))
 
 	return result_files
-			

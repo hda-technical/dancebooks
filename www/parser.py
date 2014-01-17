@@ -12,9 +12,11 @@ class BibItem(object):
 	Class for bibliography item representation
 	"""
 	def __init__(self):
-		self.__params__ = {}
-		self.__year_interval__ = None
-
+		self._params = {}
+	
+	def __hash__(self):
+		return hash(self.get("id"))
+	
 	# ancillary fields
 	def booktype(self) -> str:
 		return self.get_as_string("booktype")
@@ -85,7 +87,7 @@ class BibItem(object):
 	#editor
 
 	# search helpers
-	YEAR_RE = re.compile(r"(?P<start>\d+)([-–—]+(?P<end>\d+)\?)?")
+	YEAR_RE = re.compile(r"(?P<start>\d+)(?:[-–—]+(?P<end>\d+)\??)?")
 	YEAR_INTERVAL_PARAM = "_year_interval"
 	def published_between(self, search_interval: (int, int)) -> bool:
 		if not hasattr(self, self.YEAR_INTERVAL_PARAM):
@@ -108,8 +110,8 @@ class BibItem(object):
 	
 	# getters / setters
 	def get_as_string(self, key: str) -> str:
-		if key in self.__params__:
-			value = self.__params__[key]
+		if key in self._params:
+			value = self._params[key]
 			if key in constants.MULTI_VALUE_PARAMS:
 				return constants.OUTPUT_LISTSEP.join(value)
 			else:
@@ -118,10 +120,10 @@ class BibItem(object):
 			return None
 
 	def get(self, key: str) -> str or list or set or None:
-		return self.__params__.get(key, None)
+		return self._params.get(key, None)
 			
 	def set(self, key: str, value: str or list or set):
-		self.__params__[key] = value
+		self._params[key] = value
 
 
 class BibParser(object):
@@ -203,6 +205,8 @@ class BibParser(object):
 		if key in self.scanned_fields:
 			if isinstance(value, set):
 				self.scanned_fields[key] |= value
+			elif isinstance(value, list):
+				self.scanned_fields[key] |= set(value)
 			else:
 				self.scanned_fields[key].add(value)
 
@@ -243,8 +247,9 @@ class BibParser(object):
 				source_file = os.path.basename(path)
 				items = self.parse_string(str_data)
 				for item in items:
-					self.set_item_param(item, "source", "{file}:{line}".format(
-						file=source_file, line=item.get("source")))
+					self.set_item_param(item, "source", "{source}:{line:04d}".format(
+						source=source_file, 
+						line=item.get("source")))
 				return items				
 			except Exception as ex:
 				raise Exception("While parsing {0}: {1}".format(path, ex))
@@ -319,7 +324,9 @@ class BibParser(object):
 					self.raise_error(c, line_in_file, char_in_line)
 
 			elif self.state == self.S_PARAM_VALUE:
-				if c.isspace():
+				if c == os.linesep and self.lexeme_started and self.closing_param_parenthesis != "":
+					self.raise_error(c, line_in_file, char_in_line)
+				elif c.isspace():
 					#any space character sequence is considered as a single space
 					if self.lexeme_started:
 						#only values without spaces can be written without spaces
@@ -333,7 +340,7 @@ class BibParser(object):
 							if not self.lexeme.endswith(" "):
 								self.lexeme += " "
 				elif (c == self.FIELD_SEP) and self.lexeme_started and self.closing_param_parenthesis == "":
-					#only values without spaces can be written without spaces
+					#values without spaces can be written without parentheses
 					self.set_item_param(item, self.key, self.lexeme)
 
 					self.state = self.S_PARAM_KEY

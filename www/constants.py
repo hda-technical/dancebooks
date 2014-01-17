@@ -3,7 +3,7 @@ APP_PREFIX = "/bib"
 BOOK_PREFIX = APP_PREFIX + "/book"
 
 #parameters containing lists
-LIST_PARAMS = frozenset(["location", "isbn", "origlanguage"])
+LIST_PARAMS = frozenset(["location", "isbn", "origlanguage", "filename"])
 LISTSEP = "|"
 
 #parameters containing names

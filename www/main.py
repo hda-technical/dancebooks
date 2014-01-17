@@ -11,6 +11,7 @@ import constants
 import parser
 import search
 import utils
+import utils_flask
 
 bib_parser = parser.BibParser()
 items = bib_parser.parse_folder(os.path.abspath("../bib"))
@@ -21,7 +22,7 @@ flask_app.config["BABEL_DEFAULT_LOCALE"] = "en"
 babel_app = babel.Babel(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
-flask_app.jinja_env.bytecode_cache = utils.MemoryCache()
+flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 	
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
