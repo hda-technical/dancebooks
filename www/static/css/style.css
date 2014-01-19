@@ -26,6 +26,18 @@ h2 {
 	font-size: 135%;
 }
 
+h2.annoying {
+    animation: blink 1s steps(5, start) infinite;
+	color: #ff0000;
+	background-color: #ffffff;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
 h3 {
     font-size: 120%;
     margin: 30px 10px 0px 10px;
