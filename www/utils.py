@@ -70,7 +70,7 @@ def files_in_folder(path: str, pattern: str, excludes: set = set()):
 		
 		#processing excludes
 		for excl in excludes:
-			excl_with_sep = "/" + excl + "/"
+			excl_with_sep = "/" + excl
 			if excl_with_sep in root:
 				skip = True
 		if skip:

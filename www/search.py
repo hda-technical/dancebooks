@@ -51,6 +51,15 @@ def search_for_iterable_set(key, value):
 					set(item.get(key)).issuperset(value)
 
 
+def search_for_iterable_set_exact(key, value):
+	"""
+	Creates filter for iterable (string) (searches for subset match)
+	"""
+	return lambda item, key=key, value=value: \
+					item.get(key) and \
+					set(item.get(key)) == set(value)
+
+
 def search_for_year(year_from, year_to):
 	"""
 	Generates filter for year intervals.

@@ -13,11 +13,16 @@
 	"series",
 	"keywords",
 	"url",
+	"filename",
 	"note",
 	"annotation"
 ] %}
 {% for param in fields %}
+{% if param == "filename" %}
+{% set value = item.get(param) %}
+{% else %}
 {% set value = item.get_as_string(param) %}
+{% endif %}
 {% if value %}
 			<div class="bib_item_left">{{ _(param) }}:</div>
 			<div class="bib_item_right">
@@ -25,6 +30,12 @@
 				<a href="/bib/book/{{ value }}">{{ value }}</a>
 {% elif param == "url" %}
 				<a href="{{ value }}">{{ value}}</a>
+{% elif param == "filename% %}
+				<ul>
+{% for filename in value %}
+					<li>{% filename %}</li>
+{% endfor %}
+				</ul>
 {% elif param == "series" %}
 {% set extra_value = item.get_as_string("number") %}
 				{{ value }} {{ _("number") }}{{ extra_value }}

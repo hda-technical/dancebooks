@@ -18,6 +18,7 @@ languages = sorted(bib_parser.get_scanned_fields("langid"))
 
 language_map = {
 	"au": "english",
+	"ca": "english",
 	"cz": "czech",
 	"de": "german",
 	"dk": "danish",
@@ -67,7 +68,7 @@ file_pattern = (
 	r"(?P<lang>[a-z]{2})\] "
 	#author: optional, can contain 
 	#   spaces (Thomas Wilson),
-	#   dots (N. Malpied), 
+	#   dots (N. Malpied),
 	#   commas (Louis Pécour, Jacque Dezais)	
 	#(question mark at the end makes regexp non-greedy)
 	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
@@ -77,11 +78,13 @@ file_pattern = (
 	#metadata: optional sequence of predefined values
 	#   tome (, tome 2)
 	#   edition (, édition 10)
+	#   part(, partie 1)
 	#	comma-separated list of meta_pattern in parentheses
 	#   (something copy) — for books with multiple different copies known 
 	r"(?:"
 		r"(?:, tome \d+)|"
 		r"(?:, édition \d+)|"
+		r"(?:, partie \d+)|"
 		r"(?: \(" + meta_pattern + r"(?:, " + meta_pattern + r")*\))|"
 		r"(?: \([\w]+ copy\))"
 	r")*"
@@ -114,7 +117,7 @@ for file_ in files:
 	search_for_lang = search.search_for_string_exact("langid", lang)
 	search_for_year = search.search_for_year(year_from, year_to)
 	search_for_title = search.search_for_string_regexp("title", title_regexp)
-	search_for_author = search.search_for_iterable_set(
+	search_for_author = search.search_for_iterable_set_exact(
 		"author", 
 		set(utils.strip_split_list(author, constants.OUTPUT_LISTSEP))
 	) if author else search.search_true()
@@ -138,6 +141,7 @@ for file_ in files:
 		))
 	elif found_count == 1:
 		item = found_items[0]
+		items.remove(item)
 		if item in output_dict:
 			output_dict[item].add(relpath)
 		else:
@@ -163,3 +167,10 @@ for item, paths in sorted(output_dict.items(), key=sort_key):
 	print("filename = {{{relpath}}}".format(
 		relpath=" {0} ".format(constants.LISTSEP).join(sorted(paths))
 	))
+
+sort_key = lambda item: item.source()
+if len(items) < MAX_OUTPUT_COUNT:
+	for item in sorted(items, key=sort_key):
+		print("Item isn't digitized: {id} ({source})".format(
+			id=item.id(),
+			source=item.source()))

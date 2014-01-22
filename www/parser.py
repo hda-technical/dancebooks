@@ -66,6 +66,9 @@ class BibItem(object):
 
 	def url(self) -> str:
 		return self.get_as_string("url")
+		
+	def filename(self) -> str:
+		return self.get_as_string("filename")
 
 	def note(self) -> str:
 		return self.get_as_string("note")
@@ -123,6 +126,10 @@ class BibItem(object):
 		return self._params.get(key, None)
 			
 	def set(self, key: str, value: str or list or set):
+		if key is self._params:
+			raise RuntimeError("Can't set the parameter '{key}' twice for item {id}".format(
+				key=key,
+				id=self._params.get("id", None)))
 		self._params[key] = value
 
 
