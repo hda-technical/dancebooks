@@ -99,6 +99,9 @@ msgstr "No. "
 msgid "url"
 msgstr "URL"
 
+msgid "filename"
+msgstr "Paths to files"
+
 msgid "note"
 msgstr "Note"
 

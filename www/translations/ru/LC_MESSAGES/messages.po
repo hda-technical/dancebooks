@@ -101,6 +101,9 @@ msgstr "№"
 msgid "url"
 msgstr "Ссылка"
 
+msgid "url"
+msgstr "Пути к файлам"
+
 msgid "note"
 msgstr "Примечание"
 
