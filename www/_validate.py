@@ -44,7 +44,9 @@ VALID_BOOKTYPES = set([
 ])
 NON_MULTIVOLUME_BOOKTYPES = set(["article", "periodical"])
 MULTIVOLUME_BOOKTYPES = set(["mvbook", "mvreference"])
+SHORTHAND_LIMIT = 25
 
+erroneous_entries = 0
 for item in items:
 	errors = []
 	#datamodel validation
@@ -238,6 +240,18 @@ for item in items:
 	#series validation empty
 	
 	#shorthand validation empty
+	if shorthand is not None:
+		length = len(shorthand)
+		if length > SHORTHAND_LIMIT:
+			errors.append("The length of shorthand ({length}) should not exceed limit ({limit})".format(
+				length=length,
+				limit=SHORTHAND_LIMIT
+			))
+		if (author is None) and (not title.startswith(shorthand)):
+			errors.append("Title ({title}) should begin with from shorthand ({shorthand})".format(
+				title=title,
+				shorthand=shorthand
+			))
 	
 	#source validation empty
 	
@@ -264,6 +278,7 @@ for item in items:
 	
 	#printing errors
 	if len(errors) > 0:
+		erroneous_entries += 1
 		print("Errors for {id} ({source})".format(
 			id=id,
 			source=source
@@ -271,3 +286,6 @@ for item in items:
 		for error in errors:
 			print("    " + error)
 	
+print("Found {count} erroneous entries".format(
+	count=erroneous_entries
+))
