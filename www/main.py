@@ -126,7 +126,7 @@ def show_all():
 
 @flask_app.route(constants.BOOK_PREFIX + "/<string:id>")
 def book(id):
-	items = item_index["id"].get(id, None)
+	items = list(item_index["id"].get(id, None))
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
