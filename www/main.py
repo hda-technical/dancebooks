@@ -10,12 +10,15 @@ from flask.ext import babel
 import constants
 import parser
 import search
+import index
 import utils
 import utils_flask
 
-bib_parser = parser.BibParser()
-items = bib_parser.parse_folder(os.path.abspath("../bib"))
-languages = sorted(bib_parser.get_scanned_fields("langid"))
+items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+item_index = index.create_index(items, constants.INDEX_KEYS)
+
+languages = sorted(item_index["langid"].keys())
+keywords = sorted(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = "en"
@@ -27,7 +30,6 @@ flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
 	sys.exit()
-
 
 @babel_app.localeselector
 def get_locale():
@@ -63,43 +65,62 @@ def redirect_root():
 
 @flask_app.route(constants.APP_PREFIX + "/index.html")
 def root():
-	filters = []
+	#if request.args is empty, we should render empty search form
+	if len(flask.request.args) == 0:
+		return flask.render_template("index.html", items=items, languages=languages)
 
+	found_items = None
+
+	indices_to_use = constants.INDEXED_SEARCH_KEYS & set(flask.request.args.keys())
+	for index_to_use in indices_to_use:
+		value_to_use = flask.request.args[index_to_use]
+		if len(value_to_use) == 0:
+			continue
+
+		if index_to_use in constants.MULTI_VALUE_PARAMS:
+			values_to_use = utils.strip_split_list(value_to_use, constants.OUTPUT_LISTSEP)
+		else:
+			values_to_use = [value_to_use]
+
+		for value in values_to_use:
+			indexed_items = item_index[index_to_use].get(value, set([]))
+			if found_items is None:
+				found_items = indexed_items
+			else:
+				found_items &= indexed_items
+	
+	#index search returned empty result
+	if found_items is None:
+		return flask.render_template("index.html", 
+			found_items=found_items,
+			search_params=flask.request.args,
+			languages=languages
+		)
+
+	searches = []
 	try:
-		for search_key in constants.AVAILABLE_SEARCH_KEYS:
+		for search_key in constants.NONINDEXED_SEARCH_KEYS:
 			# argument can be missing or be empty
 			# both cases should be ignored during search
 			search_param = flask.request.args.get(search_key, "")
 			if len(search_param) > 0:
-				if search_key in constants.SCAN_FIELDS:
-					param_filter = search.search_for(
-						search_key, 
-						flask.request.args, 
-						bib_parser.get_scanned_fields(search_key))
-				else:
-					param_filter = search.search_for(search_key, flask.request.args)
+				param_filter = search.search_for(search_key, flask.request.args)
 				if param_filter is not None:
-					filters.append(param_filter)
+					searches.append(param_filter)
 
 		year_filter = search.search_for(constants.YEAR_PARAM, flask.request.args)
 		if year_filter is not None:
-			filters.append(year_filter)
+			searches.append(year_filter)
 	except Exception as ex:
 		flask.abort(400, "Some of search parameters are wrong: {0}".format(ex))
 
-	if not filters:
-		return flask.render_template("index.html", 
-			items=items, 
-			languages=languages)
-
-	found_items = items
-	for f in filters:
-		found_items = filter(f, found_items)
+	found_items = list(filter(search.and_(searches), found_items))
 
 	return flask.render_template("index.html", 
-		found_items=list(found_items),
+		found_items=found_items,
 		search_params=flask.request.args,
-		languages=languages)
+		languages=languages
+	)
 
 
 @flask_app.route(constants.APP_PREFIX + "/all.html")
@@ -109,11 +130,12 @@ def show_all():
 
 @flask_app.route(constants.BOOK_PREFIX + "/<string:id>")
 def book(id):
-	f = search.search_for_eq("id", id)
-	found_items = [item for item in items if f(item)]
-	if len(found_items) == 0:
-		flask.abort(404, "Book was not found")
-	return flask.render_template("book.html", item=found_items[0])
+	items = item_index["id"].get(id, None)
+	if items is None:
+		flask.abort(404, "Book with id {id} was not found".format(id=id))
+	elif len(items) != 1:
+		flask.abort(500, "Multiple entries with id {id}".format(id=id))
+	return flask.render_template("book.html", item=items[0])
 
 
 @flask_app.route(constants.APP_PREFIX + "/<path:filename>")

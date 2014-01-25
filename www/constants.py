@@ -1,34 +1,36 @@
-#options actual for parsing
+#web app options
 APP_PREFIX = "/bib"
 BOOK_PREFIX = APP_PREFIX + "/book"
 
+#options actual for parsing
 #parameters containing lists
-LIST_PARAMS = frozenset(["location", "isbn", "origlanguage", "filename"])
+LIST_PARAMS = set(["location", "isbn", "origlanguage", "filename"])
 LISTSEP = "|"
 
 #parameters containing names
 NAMESEP = "|"
-NAME_PARAMS = frozenset(["author", "publisher", "translator"])
+NAME_PARAMS = set(["author", "publisher", "translator"])
 
 #parameters containing keywords
 KEYWORDSEP = ","
-KEYWORD_PARAMS = frozenset(["keywords"])
+KEYWORD_PARAMS = set(["keywords"])
 
 #parameters containing integers
-INT_PARAMS = frozenset(["volume", "volumes", "edition", "part", "number"])
+INT_PARAMS = set(["volume", "volumes", "edition", "part", "number"])
 
 #union of all the above
 MULTI_VALUE_PARAMS = LIST_PARAMS | NAME_PARAMS | KEYWORD_PARAMS
 
-#parameters to be scanned (returned as a union)
-SCAN_FIELDS = set(["langid", "keywords", "filename"])
+#indices to be created
+INDEX_KEYS = set(["id", "langid", "keywords", "filename"])
 
 #options actual for searching
-
 #available search keys
-AVAILABLE_SEARCH_KEYS = [
+AVAILABLE_SEARCH_KEYS = set([
 	"author", "title", "langid", "publisher", "location", "keywords"
-	]
+])
+INDEXED_SEARCH_KEYS = AVAILABLE_SEARCH_KEYS & INDEX_KEYS
+NONINDEXED_SEARCH_KEYS = AVAILABLE_SEARCH_KEYS - INDEX_KEYS
 
 #parameters for year searching
 YEAR_PARAM = "year"

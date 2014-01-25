@@ -150,15 +150,8 @@ class BibParser(object):
 		"""
 		Default ctor
 		"""
-		self.scanned_fields = dict()
-		for scan_field in constants.SCAN_FIELDS:
-			self.scanned_fields[scan_field] = set()
-			
 		self.state = self.S_NO_ITEM
 		self.reset_lexeme()
-
-	def get_scanned_fields(self, key: str) -> {str}:
-		return self.scanned_fields[key]
 		
 	def state_string(self):
 		"""
@@ -217,14 +210,6 @@ class BibParser(object):
 				self.raise_error()
 				
 		item.set(key, value)
-
-		if key in self.scanned_fields:
-			if isinstance(value, set):
-				self.scanned_fields[key] |= value
-			elif isinstance(value, list):
-				self.scanned_fields[key] |= set(value)
-			else:
-				self.scanned_fields[key].add(value)
 
 	def parse_folder(self, path: str) -> [BibItem]:
 		"""

@@ -2,7 +2,6 @@
 import re
 
 import constants
-import utils
 
 def search_for_string(key, value):
 	"""
@@ -32,24 +31,6 @@ def search_for_iterable(key, value):
 		item.get(key) and \
 		any([regexp.search(word) for word in 
 			item.get(key)])
-
-
-def search_for_iterable_set(key, value):
-	"""
-	Creates filter for iterable (string) (searches for subset match)
-	"""
-	return lambda item, key=key, value=value: \
-		item.get(key) and \
-		set(item.get(key)).issuperset(value)
-
-
-def search_for_iterable_set_exact(key, value):
-	"""
-	Creates filter for iterable (string) (searches for subset match)
-	"""
-	return lambda item, key=key, value=value: \
-		item.get(key) and \
-		set(item.get(key)) == set(value)
 
 
 def search_for_eq(key, value):
@@ -134,35 +115,19 @@ def or_(searches):
 	"""
 	return lambda item, searches=searches: \
 		any([s(item) for s in searches])
+		
 	
-	
-def search_for(key, values, possible_values=None):
+def search_for(key, values):
 	"""
 	Creates filter for a given key.
-	Returnis None if something is bad
+	Returns None if something is bad
 	"""
-	if (key in constants.LIST_PARAMS) or (key in constants.NAME_PARAMS):
-		prepared_values = set([values[key]])
-		if possible_values is not None and \
-			not prepared_values.issubset(possible_values):
-			return search_false()
-			
+	if key in (constants.LIST_PARAMS) or (key in constants.NAME_PARAMS):
 		return search_for_iterable(key, values[key])
-	elif (key in constants.KEYWORD_PARAMS):
-		prepared_values = set(utils.strip_split_list(values[key], ","))
-		if possible_values is not None and \
-			not prepared_values.issubset(possible_values):
-			return search_false()
-			
-		return search_for_iterable_set(key, prepared_values)
 	elif (key == constants.YEAR_PARAM):
 		return search_for_year(
 			values.get(constants.YEAR_FROM_PARAM, ""),
 			values.get(constants.YEAR_TO_PARAM, "")
 		)
 	else:
-		prepared_values = set([values[key]])
-		if possible_values is not None and \
-			not prepared_values.issubset(possible_values):
-			return search_false()
 		return search_for_string(key, values[key])
