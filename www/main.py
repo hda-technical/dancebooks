@@ -15,7 +15,10 @@ import utils
 import utils_flask
 
 items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
-item_index = index.create_index(items, constants.INDEX_KEYS)
+item_index = index.Index(items, constants.INDEX_KEYS)
+for item in items:
+	item.process_crossrefs(item_index)
+item_index.update(items, constants.INDEX_KEYS)
 
 languages = sorted(item_index["langid"].keys())
 keywords = sorted(item_index["keywords"].keys())

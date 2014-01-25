@@ -1,35 +1,38 @@
-import parser
+class Index(object):
+	def __init__(self, items, keys):
+		self.update(items, keys)
 
-def create_index(items: [parser.BibItem], keys: [str]):
-	"""
-	Creates index for a given list of BibItems.
-	Returns {key: {possible value: set([BibItem])}} dictionary
-	"""
-	def append_to_subindex(subindex, item, value):
+	def __getitem__(self, key):
+		return self._dict[key]
+
+	def update(self, items, keys):
 		"""
-		Appends an item to subindex. Changes subindex.
+		Creates index for a given list of BibItems.
+		Returns {key: {possible value: set([BibItem])}} dictionary
 		"""
-		if isinstance(value, (list, set)):
-			for subvalue in value:
-				if subvalue in subindex:
-					subindex[subvalue].add(item)
-				else:
-					subindex[subvalue] = set([item])
-		else:
-			if value in subindex:
-				subindex[value].add(item)
+		def append_to_subindex(subindex, item, value):
+			"""
+			Appends an item to subindex. Changes subindex.
+			"""
+			if isinstance(value, (list, set)):
+				for subvalue in value:
+					if subvalue in subindex:
+						subindex[subvalue].add(item)
+					else:
+						subindex[subvalue] = set([item])
 			else:
-				subindex[value] = set([item])
-					
-	index = dict()
-	for key in keys:
-		index[key] = dict()
+				if value in subindex:
+					subindex[value].add(item)
+				else:
+					subindex[value] = set([item])
+						
+		self._dict = dict()
+		for key in keys:
+			self._dict[key] = dict()
 
-	for key in keys:
-		subindex = index[key]
-		for item in items:
-			value = item.get(key)
-			if value is not None:
-				append_to_subindex(subindex, item, value)
-
-	return index
+		for key in keys:
+			subindex = self._dict[key]
+			for item in items:
+				value = item.get(key)
+				if value is not None:
+					append_to_subindex(subindex, item, value)

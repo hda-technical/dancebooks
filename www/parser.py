@@ -132,6 +132,27 @@ class BibItem(object):
 				id=self._params.get("id", None)))
 		self._params[key] = value
 
+	def params(self):
+		return self._params
+
+	def process_crossrefs(self, index):
+		"""
+		Processes crossref tag, merges _params of currect entry and parent one
+		"""
+		crossref = self.get("crossref")
+		if crossref is not None:
+			parent = index["id"][crossref]
+			if len(parent) == 0:
+				raise ValueError("Crossref {crossref} was not found for item {id}".format(
+					crossref=crossref,
+					id=self.id()
+				))
+			parent = list(parent)[0]
+			new_params = dict(parent.params())
+			new_params.update(self._params)
+			del self._params["crossref"]
+			self._params = new_params
+
 
 class BibParser(object):
 	"""

@@ -42,7 +42,10 @@ def parse_string_test():
 	Tests if string can be succesfully parsed by BibParser
 	"""
 	items = parser.BibParser().parse_string(TEST_ITEMS)
-	item_index = index.create_index(items, constants.INDEX_KEYS)
+	item_index = index.Index(items, constants.INDEX_KEYS)
+	for item in items:
+		item.process_crossrefs(item_index)
+	item_index.update(items, constants.INDEX_KEYS)
 	
 	languages = set(item_index["langid"].keys())
 	keywords = set(item_index["keywords"].keys())
@@ -57,7 +60,10 @@ def search_items_test():
 	Tests if parsed items can be searched by a bunch of parameters
 	"""
 	items = parser.BibParser().parse_string(TEST_ITEMS)
-	item_index = index.create_index(items, constants.INDEX_KEYS)
+	item_index = index.Index(items, constants.INDEX_KEYS)
+	for item in items:
+		item.process_crossrefs(item_index)
+	item_index.update(items, constants.INDEX_KEYS)
 
 	author_search = search.search_for_iterable("author", "Петров")
 	filtered_items = filter(author_search, items)
