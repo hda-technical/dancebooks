@@ -86,7 +86,7 @@ def files_in_folder(path: str, pattern: str, excludes: set = set()):
 
 #any of [incomplete, commentary, translation, facsimile]
 METADATA_PATTERN = r"(?:(?:incomplete)|(?:commentary)|(?:translation)|(?:facsimile)|(?:transcription))"
-FILANAME_PATTERN = (
+FILENAME_PATTERN = (
 	#year: digits can be replaced by dashes
 	r"\[(?P<year>[\d\-]+), "
 	#lang: two-letter code
@@ -116,7 +116,7 @@ FILANAME_PATTERN = (
 	#extension: .pdf
 	r"\.pdf"
 )
-FILENAME_REGEXP = re.compile(FILANAME_PATTERN)	
+FILENAME_REGEXP = re.compile(FILENAME_PATTERN)	
 def extract_metadata_from_file(path: str) -> {"str": str}:
 	"""
 	Extracts dictionary contating the following fields:
@@ -200,7 +200,7 @@ def create_search_from_metadata(metadata: {"str": str}) -> callable:
 	]
 	
 	if author is not None:
-		search_for_author = search.search_for_iterable_set_exact(
+		search_for_author = search.search_for_eq(
 			"author", 
 			set(author)
 		)

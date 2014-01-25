@@ -197,12 +197,10 @@ class BibParser(object):
 		"""
 		value = utils.parse_latex(value)
 		
-		if key in constants.LIST_PARAMS:
-			value = utils.strip_split_list(value, constants.LISTSEP)
-		elif key in constants.NAME_PARAMS:
-			value = utils.strip_split_list(value, constants.NAMESEP)
+		if (key in constants.LIST_PARAMS) or (key in constants.NAME_PARAMS):
+			value = set(utils.strip_split_list(value, constants.GENERAL_SEP))
 		elif key in constants.KEYWORD_PARAMS:
-			value = set(utils.strip_split_list(value, constants.KEYWORDSEP))
+			value = set(utils.strip_split_list(value, constants.KEYWORD_SEP))
 		elif key in constants.INT_PARAMS:
 			try:
 				value = int(value)

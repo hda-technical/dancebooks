@@ -26,7 +26,7 @@ def search_for_iterable(key, value):
 	"""
 	Creates filter for iterable(string) (searches for substrings)
 	"""
-	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
+	regexp = re.compile(re.escape(value), flags=re.IGNORECASE)
 	return lambda item, key=key, regexp=regexp: \
 		item.get(key) and \
 		any([regexp.search(word) for word in 

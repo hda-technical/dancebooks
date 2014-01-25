@@ -5,15 +5,13 @@ BOOK_PREFIX = APP_PREFIX + "/book"
 #options actual for parsing
 #parameters containing lists
 LIST_PARAMS = set(["location", "isbn", "origlanguage", "filename"])
-LISTSEP = "|"
-
 #parameters containing names
-NAMESEP = "|"
 NAME_PARAMS = set(["author", "publisher", "translator"])
+GENERAL_SEP = "|"
 
 #parameters containing keywords
-KEYWORDSEP = ","
 KEYWORD_PARAMS = set(["keywords"])
+KEYWORD_SEP = ","
 
 #parameters containing integers
 INT_PARAMS = set(["volume", "volumes", "edition", "part", "number"])

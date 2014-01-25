@@ -5,14 +5,16 @@ import os.path
 import sys
 
 import constants
+import index
 import parser
 import utils
 
 MAX_OUTPUT_COUNT = 100
 
-bib_parser = parser.BibParser()
-items = bib_parser.parse_folder(os.path.abspath("../bib"))
-languages = sorted(bib_parser.get_scanned_fields("langid"))
+items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+item_index = index.create_index(items, constants.INDEX_KEYS)
+
+languages = sorted(item_index["langid"].keys())
 
 usage = "Usage: %prog [options]"
 
@@ -28,7 +30,7 @@ options.root = os.path.abspath(options.root)
 
 #filename in database is relative, but begins from /
 file_modifier = lambda file_, root=options.root: os.path.join(root, file_[1:])
-filenames = set(map(file_modifier, bib_parser.get_scanned_fields("filename")))
+filenames = set(map(file_modifier, item_index["filename"].keys()))
 
 items_filter = lambda item: item.get("filename") is None
 files_filter = lambda file_: file_ not in filenames
@@ -80,7 +82,7 @@ for item, paths in sorted(output_dict.items(), key=sort_key):
 		source=item.source(),
 	))
 	print("filename = {{{relpath}}}".format(
-		relpath=" {0} ".format(constants.LISTSEP).join(sorted(paths))
+		relpath=" {0} ".format(constants.GENERAL_SEP).join(sorted(paths))
 	))
 
 sort_key = lambda item: item.source()

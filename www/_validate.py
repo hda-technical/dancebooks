@@ -5,14 +5,16 @@ import re
 import sys
 
 import constants
+import index
 import parser
 import utils
 
 MAX_OUTPUT_COUNT = 100
 
-bib_parser = parser.BibParser()
-items = bib_parser.parse_folder(os.path.abspath("../bib"))
-languages = sorted(bib_parser.get_scanned_fields("langid"))
+items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+item_index = index.create_index(items, constants.INDEX_KEYS)
+
+languages = sorted(item_index["langid"].keys())
 
 usage = "Usage: %prog [options]"
 
