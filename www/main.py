@@ -109,7 +109,7 @@ def show_all():
 
 @flask_app.route(constants.BOOK_PREFIX + "/<string:id>")
 def book(id):
-	f = search.search_for_string_exact("id", id)
+	f = search.search_for_eq("id", id)
 	found_items = [item for item in items if f(item)]
 	if len(found_items) == 0:
 		flask.abort(404, "Book was not found")

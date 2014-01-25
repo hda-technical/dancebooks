@@ -14,6 +14,9 @@ NAME_PARAMS = frozenset(["author", "publisher", "translator"])
 KEYWORDSEP = ","
 KEYWORD_PARAMS = frozenset(["keywords"])
 
+#parameters containing integers
+INT_PARAMS = frozenset(["volume", "volumes", "edition", "part", "number"])
+
 #union of all the above
 MULTI_VALUE_PARAMS = LIST_PARAMS | NAME_PARAMS | KEYWORD_PARAMS
 
@@ -38,3 +41,42 @@ OUTPUT_LISTSEP = ", "
 
 #languages, supported by this website
 LANGUAGES = ["en", "ru"]
+
+#two-letter country codes mapped to langid
+SHORT_LANG_MAP = {
+	"au": "english",
+	"ca": "english",
+	"cz": "czech",
+	"de": "german",
+	"dk": "danish",
+	"en": "english",
+	"es": "spanish",
+	"fr": "french",
+	"ie": "english",
+	"it": "italian",
+	"pl": "polish",
+	"pt": "portuguese",
+	"ru": "russian",
+	"sc": "english",
+	"us": "english"
+}
+
+#country as adjective mapped to langid
+LONG_LANG_MAP = {
+	"american": "english",
+	"australian": "english",
+	"austrian": "german",
+	"canadian": "english",
+	"czech": "czech",
+	"danish": "danish",
+	"english": "english",
+	"french": "french",
+	"german": "german",
+	"italian": "italian",
+	"mexican": "spanish",
+	"polish": "polish",
+	"portuguese": "portuguese",
+	"russian": "russian",
+	"spanish": "spanish"
+}
+

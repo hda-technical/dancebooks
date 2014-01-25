@@ -109,7 +109,7 @@ class BibItem(object):
 			year_interval[0] <= search_interval[1] <= year_interval[1] or
 			search_interval[0] <= year_interval[0] <= search_interval[1] or
 			search_interval[0] <= year_interval[1] <= search_interval[1]
-			)
+		)
 	
 	# getters / setters
 	def get_as_string(self, key: str) -> str:
@@ -177,12 +177,15 @@ class BibParser(object):
 		elif self.state == self.S_PARAM_READ:
 			return "looking for next parameter / item end"
 
-	def raise_error(self, char: str, line_in_file: int, char_in_line: int):
+	def raise_error(self):
 		"""
 		Raises human-readable Exception based on parser state and current file position
 		"""
-		raise Exception("While {0}: wrong syntax at char [{1}] (line {2}, #{3})"\
-				.format(self.state_string(), char, line_in_file, char_in_line))
+		raise ValueError("While {state}: wrong syntax at (line {line}, #{char})".format(
+			state=self.state_string(), 
+			line=self.line, 
+			char=self.char
+		))
 
 	def reset_lexeme(self):
 		"""
@@ -207,6 +210,12 @@ class BibParser(object):
 			value = utils.strip_split_list(value, constants.NAMESEP)
 		elif key in constants.KEYWORD_PARAMS:
 			value = set(utils.strip_split_list(value, constants.KEYWORDSEP))
+		elif key in constants.INT_PARAMS:
+			try:
+				value = int(value)
+			except ValueError:
+				self.raise_error()
+				
 		item.set(key, value)
 
 		if key in self.scanned_fields:
@@ -268,15 +277,15 @@ class BibParser(object):
 		"""
 		item = BibItem()
 		items = []
-		line_in_file = 1
-		char_in_line = 1
+		self.line = 1
+		self.char = 1
 		for index in range(len(str_data)):
 			c = str_data[index]
 			if c == os.linesep:
-				line_in_file += 1
-				char_in_line = 0
+				self.line += 1
+				self.char = 0
 			else:
-				char_in_line += 1
+				self.char += 1
 				
 			if self.state == self.S_NO_ITEM:
 				if c == "@":
@@ -293,12 +302,12 @@ class BibParser(object):
 				elif c in self.ITEM_OPEN_PARENTHESIS and (self.lexeme_started or self.lexeme_finished):
 					self.closing_parenthesis = ("}" if c == "{" else ")")
 					self.set_item_param(item, "booktype", self.lexeme)
-					self.set_item_param(item, "source", line_in_file)
+					self.set_item_param(item, "source", self.line)
 
 					self.state = self.S_ITEM_NO_ID
 					self.reset_lexeme()
 				else:
-					self.raise_error(c, line_in_file, char_in_line)
+					self.raise_error()
 
 			elif self.state == self.S_ITEM_NO_ID:
 				if c.isspace():
@@ -313,7 +322,7 @@ class BibParser(object):
 					self.state = self.S_PARAM_KEY
 					self.reset_lexeme()
 				else:
-					self.raise_error(c, line_in_file, char_in_line)
+					self.raise_error()
 
 			elif self.state == self.S_PARAM_KEY:
 				if c.isspace():
@@ -328,11 +337,11 @@ class BibParser(object):
 					self.state = self.S_PARAM_VALUE
 					self.reset_lexeme()
 				else:
-					self.raise_error(c, line_in_file, char_in_line)
+					self.raise_error()
 
 			elif self.state == self.S_PARAM_VALUE:
 				if c == os.linesep and self.lexeme_started and self.closing_param_parenthesis != "":
-					self.raise_error(c, line_in_file, char_in_line)
+					self.raise_error()
 				elif c.isspace():
 					#any space character sequence is considered as a single space
 					if self.lexeme_started:
@@ -382,7 +391,7 @@ class BibParser(object):
 					self.lexeme_started = True
 					self.lexeme += c
 				else:
-					self.raise_error(c, line_in_file, char_in_line)
+					self.raise_error()
 
 			elif self.state == self.S_PARAM_READ:
 				if c.isspace():
@@ -394,10 +403,10 @@ class BibParser(object):
 				elif c == self.FIELD_SEP:
 					self.state = self.S_PARAM_KEY
 				else:
-					self.raise_error(c, line_in_file, char_in_line)
+					self.raise_error()
 
 			else:
-				self.raise_error(c, line_in_file, char_in_line)
+				self.raise_error()
 		
 		#giant for cycle ends here
 		return items

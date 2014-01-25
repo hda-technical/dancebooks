@@ -3,6 +3,9 @@
 % biblatex-dm.cfg should be written in the very beginning
 \RequirePackage{filecontents}
 \begin{filecontents}{biblatex-dm.cfg}
+
+%Datamodel constraints
+%Do not change without changing _validate.py correspondingly
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
 \DeclareDatamodelFields[type=list,datatype=key]{
 	origlanguage,
@@ -10,14 +13,18 @@
 }
 \DeclareDatamodelFields[type=field,datatype=literal]{pagesize}
 \DeclareDatamodelFields[type=list,datatype=literal]{filename}
+
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelEntryfields{pagesize}
 \DeclareDatamodelEntryfields{filename}
+
 \DeclareDatamodelConstraints{
-	% {langid} must be present
+	% {langid, title, year} must be present
 	\constraint[type=mandatory]{
 		\constraintfield{langid}
+		\constraintfield{title}
+		\constraintfield{year}
 	}
 	% one of the {author, shorthand} must be present
 	\constraint[type=mandatory]{
@@ -58,17 +65,15 @@
 		}
 	}
 }
-\DeclareDatamodelConstraints[book,mvbook]{
+\DeclareDatamodelConstraints[book,mvbook,reference,mvreference]{
 	% for books and multi-volume books: 
 	% if one of {volume, volumes} exitst, both must be present
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
-			\constraintfield{volume}
 			\constraintfield{volumes}
 		}
-		\antecedent[quantifier=all]{
+		\antecedent[quantifier=one]{
 			\constraintfield{volume}
-			\constraintfield{volumes}
 		}
 	}
 }
@@ -79,6 +84,7 @@
 	\constraint[type=mandatory]{
 		\constraintfield{url}
 		\constraintfield{type}
+		\constraintfield{institution}
 	}
 }
 \end{filecontents}
@@ -217,7 +223,6 @@
 	\addbibresource{\dancebooks@root/bib/canadian.bib}
 	\addbibresource{\dancebooks@root/bib/czech.bib}
 	\addbibresource{\dancebooks@root/bib/danish.bib}
-	\addbibresource{\dancebooks@root/bib/dutch.bib}
 	\addbibresource{\dancebooks@root/bib/english.bib}
 	\addbibresource{\dancebooks@root/bib/french.bib}
 	\addbibresource{\dancebooks@root/bib/german.bib}
@@ -229,6 +234,5 @@
 	\addbibresource{\dancebooks@root/bib/proceedings-spb.bib}
 	\addbibresource{\dancebooks@root/bib/russian.bib}
 	\addbibresource{\dancebooks@root/bib/spanish.bib}
-	\addbibresource{\dancebooks@root/bib/swiss.bib}
 \else
 \fi

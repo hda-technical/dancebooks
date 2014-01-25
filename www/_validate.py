@@ -1,0 +1,267 @@
+#!/usr/bin/env python3
+import optparse
+import os.path
+import re
+import sys
+
+import constants
+import parser
+import utils
+
+MAX_OUTPUT_COUNT = 100
+
+bib_parser = parser.BibParser()
+items = bib_parser.parse_folder(os.path.abspath("../bib"))
+languages = sorted(bib_parser.get_scanned_fields("langid"))
+
+usage = "Usage: %prog [options]"
+
+opt_parser = optparse.OptionParser(usage=usage)
+opt_parser.add_option("-r", "--root", dest="root", help="E-library root FOLDER", metavar="FOLDER")
+(options, args) = opt_parser.parse_args()
+
+if options.root is None:
+	print("Root folder must be specified")
+	sys.exit(1)
+
+options.root = os.path.abspath(options.root)
+
+print("Going to process {0} items".format(len(items)))
+
+SOURCE_REGEXP = re.compile("(?P<basename>[_\-\w\.]+).bib:\d+")
+MULTILANG_FILES = set(["proceedings-spb", "proceedings-rothenfelser", "_missing", "_problems"])
+VALID_BOOKTYPES = set([
+	"book",
+	"mvbook",
+	"inproceedings",
+	"proceedings",
+	"reference",
+	"mvreference",
+	"periodical",
+	"unpublished",
+	"thesis",
+	"article"
+])
+NON_MULTIVOLUME_BOOKTYPES = set(["article", "periodical"])
+MULTIVOLUME_BOOKTYPES = set(["mvbook", "mvreference"])
+
+for item in items:
+	errors = []
+	#datamodel validation
+	author = item.get("author")
+	booktype = item.get("booktype")
+	booktitle = item.get("booktitle")
+	edition = item.get("edition")
+	filename = item.get("filename")
+	id = item.get("id")
+	isbn = item.get("isbn")
+	institution = item.get("institution")
+	journaltitle = item.get("journaltitle")
+	langid = item.get("langid")
+	location = item.get("location")
+	number = item.get("number")
+	origlanguage = item.get("origlanguage")
+	publisher = item.get("publisher")
+	series = item.get("series")
+	shorthand = item.get("shorthand")
+	source = item.get("source")
+	title = item.get("title")
+	translator = item.get("translator")
+	type = item.get("type")
+	url = item.get("url")
+	volume = item.get("volume")
+	volumes = item.get("volumes")
+	year = item.get("year")
+	
+	parser_obligatory = [id, booktype, source]
+	if not all(parser_obligatory):
+		raise RuntimeError("Parser hasn't generated all required auxiliary fields ([id, booktype, source])")
+	
+	general_obligatory = [langid, year, title]
+	if not all(general_obligatory):
+		errors.append("Item doesn't define one of [langid, year, title]")
+	
+	translation_obligatory = [origlanguage, translator]
+	if not utils.all_or_none(translation_obligatory):
+		errors.append("All of [origlanguage, translator] must be present for translations")
+	
+	series_obligatory = [series, number]
+	if not utils.all_or_none(series_obligatory):
+		errors.append("All of [series, number] must be present for serial books")
+	
+	if not any([author, shorthand]):
+		errors.append("'author' or 'shorthand' must be present")
+	
+	if (publisher is not None) and (location is None):
+		errors.append("If publisher present, location must be present")
+		
+	booktype = booktype.lower()
+	if booktype not in VALID_BOOKTYPES:
+		errors.append("Invalid booktype ({booktype})".format(
+			booktype=booktype
+		))
+	
+	if (booktype not in NON_MULTIVOLUME_BOOKTYPES):
+		if (volume is not None) and (volumes is None):
+			errors.append("If volume present, volumes must be present")
+	
+	if (booktype in MULTIVOLUME_BOOKTYPES):
+		if volumes is None:
+			errors.append("volumes must be present for @{0}".format(booktype))
+	
+	if (booktype == "article"):
+		if journaltitle is None:
+			error.append("journaltitle must be present for @article")
+	
+	if (booktype == "inproceedings"):
+		if booktitle is None:
+			error.append("bootitle must be present for @inprocessing")
+	
+	if (booktype == "thesis"):
+		if url is None:
+			error.append("url must be present for @thesis")
+		if type is None:
+			error.append("type must be present for @thesis")
+		if institution is None:
+			error.append("institution must be present for @thesis")
+	
+	#data validation
+	#author validation empty
+	
+	#booktype validated above
+	
+	#booktitle validation empty
+	
+	#filename validation
+	if edition is not None:
+		#edition should be greater than 1
+		if edition <= 1:
+			errors.append("Wrong edition {edition}".format(
+				edition=edition
+			))
+	
+	if volume is not None:
+		#volume should be positive integer
+		if volume <= 0:
+			errors.append("Wrong volume {volume}".format(
+				volume=volume
+			))
+		if volumes is not None:
+			if volume > volumes:
+				errors.append("Volume ({volume}) can't be greater than volumes ({volumes})".format(
+					volume=volume,
+					volumes=volumes
+				))
+	
+	#filename validation
+	if filename is not None:
+		for filename_ in filename:
+			#filename starts with "/" which will mix os.path.join up
+			abspath = os.path.join(options.root, filename_[1:])
+			#each filename should be accessible
+			if not os.path.isfile(abspath):
+				errors.append("File {filename_} is not accessible".format(
+					filename_=filename_
+				))
+				
+			#item should be searchable by its filename metadata
+			metadata = utils.extract_metadata_from_file(filename_)
+			
+			#validating optional author, edition, tome
+			#in case when item specifies value, but filename doesn't
+			if (metadata.get("author", None) is not None) and (author is None):
+				errors.append("File {filename_} specifies author, but entry doesn't".format(
+					filename_=filename_
+				))
+				
+			if (metadata.get("edition", None) is not None) and (edition is None):
+				errors.append("File {filename_} specifies edition, but entry doesn't".format(
+					filename_=filename_
+				))
+				
+			if (metadata.get("tome", None) is not None) and (volumes is None) and (volume is None):
+				errors.append("File {filename_} specifies volume, but entry doesn't".format(
+					filename_=filename_
+				))
+			
+			search_ = utils.create_search_from_metadata(metadata)
+			if not search_(item):
+				errors.append("File {filename_} is not searchable by extracted params".format(
+					filename_=filename_
+				))
+	
+	#id validation empty
+	
+	#isbn validation
+	if isbn is not None:
+		for isbn_ in isbn:
+			correct, msg = utils.is_isbn_valid(isbn_)
+			if not correct:
+				errors.append("ISBN {isbn_} isn't valid: {msg}".format(
+					isbn_=isbn_,
+					msg=msg
+				))
+	
+	#institution validation empty
+	
+	#journaltitle validation empty
+	
+	#langid validation
+	match = SOURCE_REGEXP.match(source)
+	if not match:
+		raise RuntimeError("Failed to parse 'source' for item ({id})".format(
+			id=id
+		))
+	source_basename = match.group("basename")
+	if source_basename not in MULTILANG_FILES:
+		source_lang = constants.LONG_LANG_MAP[source_basename]
+		#item language should match source language
+		if langid != source_lang:
+			errors.append("Source language ({source_lang}) doesn't match item language ({langid})".format(
+				source_lang=source_lang,
+				langid=langid
+			))
+	#location validation empty
+	
+	#number validation empty
+	
+	#origlanguage validation empty
+	
+	#publisher validation empty
+	
+	#series validation empty
+	
+	#shorthand validation empty
+	
+	#source validation empty
+	
+	#title validation empty
+	
+	#translator validation empty
+	
+	#type validation empty
+	
+	#url validation empty
+	if url is not None:
+		correct, msg = utils.is_url_valid(url)
+		if not correct:
+			errors.append("URL {url} isn't valid: {msg}".format(
+				url=url,
+				msg=msg
+			))
+		
+	#volume validation empty
+	
+	#volumes validation empty
+	
+	#year validation empty
+	
+	#printing errors
+	if len(errors) > 0:
+		print("Errors for {id} ({source})".format(
+			id=id,
+			source=source
+		))
+		for error in errors:
+			print("    " + error)
+	

@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #coding: utf-8
 import optparse
 import os.path
-import re
 import sys
 
 import constants
 import parser
-import search
 import utils
 
 MAX_OUTPUT_COUNT = 100
@@ -15,24 +13,6 @@ MAX_OUTPUT_COUNT = 100
 bib_parser = parser.BibParser()
 items = bib_parser.parse_folder(os.path.abspath("../bib"))
 languages = sorted(bib_parser.get_scanned_fields("langid"))
-
-language_map = {
-	"au": "english",
-	"ca": "english",
-	"cz": "czech",
-	"de": "german",
-	"dk": "danish",
-	"en": "english",
-	"es": "spanish",
-	"fr": "french",
-	"ie": "english",
-	"it": "italian",
-	"pl": "polish",
-	"pt": "portuguese",
-	"ru": "russian",
-	"sc": "english",
-	"us": "english"
-}
 
 usage = "Usage: %prog [options]"
 
@@ -59,89 +39,24 @@ files = utils.files_in_folder(options.root, "*.pdf", excludes=excluded_folders)
 files = list(filter(files_filter, files))
 items = list(filter(items_filter, items))
 
-#any of [incomplete, commentary, translation, facsimile]
-meta_pattern = r"(?:(?:incomplete)|(?:commentary)|(?:translation)|(?:facsimile)|(?:transcription))"
-file_pattern = (
-	#year: digits can be replaced by dashes
-	r"\[(?P<year>[\d-]+), "
-	#lang: two-letter code
-	r"(?P<lang>[a-z]{2})\] "
-	#author: optional, can contain 
-	#   spaces (Thomas Wilson),
-	#   dots (N. Malpied),
-	#   commas (Louis Pécour, Jacque Dezais)	
-	#(question mark at the end makes regexp non-greedy)
-	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
-	#title: sequence of words, digits, spaces, punctuation
-	#(question mark at the end makes regexp non-greedy)
-	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”№\(\)]+?)"
-	#metadata: optional sequence of predefined values
-	#   tome (, tome 2)
-	#   edition (, édition 10)
-	#   part(, partie 1)
-	#	comma-separated list of meta_pattern in parentheses
-	#   (something copy) — for books with multiple different copies known 
-	r"(?:"
-		r"(?:, tome \d+)|"
-		r"(?:, édition \d+)|"
-		r"(?:, partie \d+)|"
-		r"(?: \(" + meta_pattern + r"(?:, " + meta_pattern + r")*\))|"
-		r"(?: \([\w]+ copy\))"
-	r")*"
-	#extension: .pdf
-	r"\.pdf"
-)
-file_re = re.compile(file_pattern)
-
 print("Going to process {0} items".format(len(items)))
 print("Going to process {0} files".format(len(files)))
 output_count = 0
 output_dict = dict()
 for file_ in files:
-	basename = os.path.basename(file_)
 	relpath = "/" + os.path.relpath(file_, options.root)
-	match = file_re.match(basename)
-	if not match:
-		print("File {0} didn't match the regexp".format(relpath))
-		sys.exit(1)
 		
-	year = match.group("year")
-	lang = language_map[match.group("lang")]
-	author = match.group("author")
-	title = match.group("title")
+	metadata = utils.extract_metadata_from_file(file_)	
+	item_search = utils.create_search_from_metadata(metadata)
 	
-	year_from = year.replace("-", "0")
-	year_to = year.replace("-", "9")
-	title_regexp = re.compile("^" + re.escape(title))
-	
-	search_for_lang = search.search_for_string_exact("langid", lang)
-	search_for_year = search.search_for_year(year_from, year_to)
-	search_for_title = search.search_for_string_regexp("title", title_regexp)
-	search_for_author = search.search_for_iterable_set_exact(
-		"author", 
-		set(utils.strip_split_list(author, constants.OUTPUT_LISTSEP))
-	) if author else search.search_true()
-	
-	searches = [
-		search_for_lang,
-		search_for_year,
-		search_for_title,
-		search_for_author
-	]
-	
-	found_items = list(filter(search.and_(searches), items))
+	found_items = list(filter(item_search, items))
 	found_count = len(found_items)
 	if found_count == 0:
-		print("Nothing found for file '{relpath} ({year}, {lang}, {author}, {title})'".format(
+		print("Nothing found for file '{relpath}'".format(
 			relpath=relpath,
-			year=year,
-			lang=lang,
-			author=author,
-			title=title
 		))
 	elif found_count == 1:
 		item = found_items[0]
-		items.remove(item)
 		if item in output_dict:
 			output_dict[item].add(relpath)
 		else:
