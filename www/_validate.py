@@ -256,6 +256,13 @@ for item in items:
 	#source validation empty
 	
 	#title validation empty
+	if title is not None:
+		if ("  " in title):
+			errors.append("Consecutive spaces in title")
+		if ("\t" in title):
+			errors.append("Tabs in title")
+		if title.startswith(" ") or title.endswith(" "):
+			errors.append("Title isn't stripped")
 	
 	#translator validation empty
 	
