@@ -88,9 +88,9 @@ def files_in_folder(path: str, pattern: str, excludes: set = set()):
 METADATA_PATTERN = r"(?:(?:incomplete)|(?:commentary)|(?:translation)|(?:facsimile)|(?:transcription))"
 FILANAME_PATTERN = (
 	#year: digits can be replaced by dashes
-	r"\[(?P<year>[\d-]+), "
+	r"\[(?P<year>[\d\-]+), "
 	#lang: two-letter code
-	r"(?P<lang>[a-z]{2})\] "
+	r"(?P<lang>\w{2})\] "
 	#author: optional, can contain 
 	#   spaces (Thomas Wilson),
 	#   dots (N. Malpied),
