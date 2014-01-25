@@ -73,6 +73,13 @@ for item in items:
 	volumes = item.get("volumes")
 	year = item.get("year")
 	
+	match = SOURCE_REGEXP.match(source)
+	if not match:
+		raise RuntimeError("Failed to parse 'source' for item ({id})".format(
+			id=id
+		))
+	source_basename = match.group("basename")
+	
 	parser_obligatory = [id, booktype, source]
 	if not all(parser_obligatory):
 		raise RuntimeError("Parser hasn't generated all required auxiliary fields ([id, booktype, source])")
@@ -184,6 +191,11 @@ for item in items:
 					filename_=filename_
 				))
 			
+			keywords = metadata.get("keywords", None)
+			if source_basename == "_problems" and keywords is not None:
+				if "incomplete" not in keywords:
+					errors.append("Incomplete books should be stored in _problems.bib")
+			
 			search_ = utils.create_search_from_metadata(metadata)
 			if not search_(item):
 				errors.append("File {filename_} is not searchable by extracted params".format(
@@ -207,12 +219,6 @@ for item in items:
 	#journaltitle validation empty
 	
 	#langid validation
-	match = SOURCE_REGEXP.match(source)
-	if not match:
-		raise RuntimeError("Failed to parse 'source' for item ({id})".format(
-			id=id
-		))
-	source_basename = match.group("basename")
 	if source_basename not in MULTILANG_FILES:
 		source_lang = constants.LONG_LANG_MAP[source_basename]
 		#item language should match source language

@@ -109,8 +109,8 @@ FILANAME_PATTERN = (
 	r"(?:"
 		r"(?:, tome (?P<tome>\d+))|"
 		r"(?:, édition (?P<edition>\d+))|"
-		r"(?:, partie \d+)|"
-		r"(?: \(" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*\))|"
+		r"(?:, partie (?P<part>\d+))|"
+		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))|"
 		r"(?: \([\w]+ copy\))"
 	r")*"
 	#extension: .pdf
@@ -127,6 +127,8 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	* title (string)
 	* tome (integer)
 	* edition (integer)
+	* part (integer)
+	* keywords ([string])
 	"""
 	basename = os.path.basename(path)
 	match = FILENAME_REGEXP.match(basename)
@@ -156,7 +158,15 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	edition = match.group("edition")
 	if edition is not None:
 		result["edition"] = int(edition)
-		
+	
+	part = match.group("part")
+	if part is not None:
+		result["part"] = int(part)
+	
+	keywords = match.group("keywords")
+	if keywords is not None:
+		result["keywords"] = set(strip_split_list(keywords, constants.OUTPUT_LISTSEP))
+	
 	return result
 	
 	
@@ -171,6 +181,8 @@ def create_search_from_metadata(metadata: {"str": str}) -> callable:
 	author = metadata.get("author", None)
 	tome = metadata.get("tome", None)
 	edition = metadata.get("edition", None)
+	part = metadata.get("part", None)
+	keywords = metadata.get("keywords", None)
 	
 	title_regexp = re.compile("^" + re.escape(title))
 	
@@ -212,6 +224,15 @@ def create_search_from_metadata(metadata: {"str": str}) -> callable:
 		)
 		searches.append(search_for_edition)
 		
+	if part is not None:
+		search_for_part = search.search_for_eq(
+			"part",
+			part
+		)
+		searches.append(search_for_part)
+
+	#keywords aren't counted
+	
 	return search.and_(searches)
 	
 	
