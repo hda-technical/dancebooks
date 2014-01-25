@@ -29,7 +29,7 @@ flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 	
 if (not os.path.exists("templates")):
 	print("Should run from root folder")
-	sys.exit()
+	sys.exit(1)
 
 @babel_app.localeselector
 def get_locale():
@@ -83,21 +83,17 @@ def root():
 			values_to_use = [value_to_use]
 
 		for value in values_to_use:
-			indexed_items = item_index[index_to_use].get(value, set([]))
+			indexed_items = set(item_index[index_to_use].get(value, set()))
 			if found_items is None:
 				found_items = indexed_items
 			else:
 				found_items &= indexed_items
 	
-	#index search returned empty result
-	if found_items is None:
-		return flask.render_template("index.html", 
-			found_items=found_items,
-			search_params=flask.request.args,
-			languages=languages
-		)
-
 	searches = []
+	if found_items is None:
+		#no index was applied
+		found_items = items
+	
 	try:
 		for search_key in constants.NONINDEXED_SEARCH_KEYS:
 			# argument can be missing or be empty

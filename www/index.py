@@ -30,8 +30,6 @@ def create_index(items: [parser.BibItem], keys: [str]):
 		for item in items:
 			value = item.get(key)
 			if value is not None:
-				if key == "keywords":
-					print("Adding {value} to keyword index".format(value=value))
 				append_to_subindex(subindex, item, value)
 
 	return index
