@@ -68,17 +68,18 @@ def redirect_root():
 
 @flask_app.route(constants.APP_PREFIX + "/index.html")
 def root():
-	#if request.args is empty, we should render empty search form
-	if len(flask.request.args) == 0:
+	args_filter = lambda pair: len(pair[1]) > 0
+	request_args = dict(filter(args_filter, flask.request.args.items()))
+	request_keys = set(request_args.keys())
+
+	#if request_args is empty, we should render empty search form
+	if len(request_args) == 0:
 		return flask.render_template("index.html", items=items, languages=languages)
 
 	found_items = None
 
-	indices_to_use = constants.INDEXED_SEARCH_KEYS & set(flask.request.args.keys())
-	for index_to_use in indices_to_use:
-		value_to_use = flask.request.args[index_to_use]
-		if len(value_to_use) == 0:
-			continue
+	for index_to_use in (constants.INDEXED_SEARCH_KEYS & request_keys):
+		value_to_use = request_args[index_to_use]
 
 		if index_to_use in constants.MULTI_VALUE_PARAMS:
 			values_to_use = utils.strip_split_list(value_to_use, constants.OUTPUT_LISTSEP)
@@ -98,10 +99,10 @@ def root():
 		found_items = items
 	
 	try:
-		for search_key in constants.NONINDEXED_SEARCH_KEYS:
+		for search_key in (constants.NONINDEXED_SEARCH_KEYS & request_keys):
 			# argument can be missing or be empty
 			# both cases should be ignored during search
-			search_param = flask.request.args.get(search_key, "")
+			search_param = request_args[search_key]
 			if len(search_param) > 0:
 				param_filter = search.search_for(search_key, flask.request.args)
 				if param_filter is not None:
