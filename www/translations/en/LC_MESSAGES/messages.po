@@ -72,9 +72,6 @@ msgstr "Tags"
 msgid "comma separated"
 msgstr "comma separated"
 
-msgid "search"
-msgstr "Search"
-
 msgid "shorthand"
 msgstr "Shorthand"
 
@@ -107,6 +104,12 @@ msgstr "Note"
 
 msgid "annotation"
 msgstr "Auxilliary note"
+
+msgid "search"
+msgstr "Search"
+
+msgid "clear"3yy
+msgstr "Clear"
 
 #: Languages
 msgid "any"

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 import datetime
+import json
 import os.path
 import sys
 
@@ -20,7 +21,7 @@ for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items, constants.INDEX_KEYS)
 
-languages = sorted(item_index["langid"].keys())
+languages = ["any"] + sorted(item_index["langid"].keys())
 keywords = sorted(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -74,7 +75,7 @@ def root():
 
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
-		return flask.render_template("index.html", items=items, languages=languages)
+		return flask.render_template("index.html", items=items)
 
 	found_items = None
 
@@ -114,13 +115,10 @@ def root():
 	except Exception as ex:
 		flask.abort(400, "Some of search parameters are wrong: {0}".format(ex))
 
-	found_items = list(filter(search.and_(searches), found_items))
+	if len(searches) > 0:
+		found_items = list(filter(search.and_(searches), found_items))
 
-	return flask.render_template("index.html", 
-		found_items=found_items,
-		search_params=flask.request.args,
-		languages=languages
-	)
+	return flask.render_template("index.html", found_items=found_items)
 
 
 @flask_app.route(constants.APP_PREFIX + "/all.html")
@@ -128,14 +126,24 @@ def show_all():
 	return flask.render_template("all.html", items=items)
 
 
-@flask_app.route(constants.BOOK_PREFIX + "/<string:id>")
-def book(id):
+@flask_app.route(constants.BOOK_PREFIX + "/<string:id>", methods=["GET"])
+def get_book(id):
 	items = list(item_index["id"].get(id, None))
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
 	return flask.render_template("book.html", item=items[0])
+
+
+@flask_app.route(constants.APP_PREFIX + "/language", methods=["GET"])
+def get_languages():
+	data = dict()
+	for lang in languages:
+		data[lang] = babel.gettext(lang)
+	response = flask.make_response(json.dumps(data, ensure_ascii=False))
+	response.headers["Content-Type"] = "application/json; charset=utf-8"
+	return response
 
 
 @flask_app.route(constants.APP_PREFIX + "/<path:filename>")

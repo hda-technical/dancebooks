@@ -74,9 +74,6 @@ msgstr "Теги"
 msgid "comma separated"
 msgstr "через запятую"
 
-msgid "search"
-msgstr "Искать"
-
 msgid "shorthand"
 msgstr "Сокращённое название"
 
@@ -109,6 +106,12 @@ msgstr "Примечание"
 
 msgid "annotation"
 msgstr "Служебное примечание"
+
+msgid "search"
+msgstr "Искать"
+
+msgid "clear"
+msgstr "Сбросить"
 
 #: Languages
 msgid "any"

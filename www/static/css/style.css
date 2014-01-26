@@ -86,16 +86,12 @@ ul, ol {
 	text-indent: 20px;
 }
 
-input[type="text"] {
+input[type="text"], select {
 	width: 400px;
 }
 
 input[type="number"] {
 	width: 40px;
-}
-
-select {
-	width: 400px;
 }
 
 table tr td:first-child {
