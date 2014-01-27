@@ -21,7 +21,7 @@ for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items, constants.INDEX_KEYS)
 
-languages = ["any"] + sorted(item_index["langid"].keys())
+languages = sorted(item_index["langid"].keys())
 keywords = sorted(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -141,6 +141,13 @@ def get_languages():
 	data = dict()
 	for lang in languages:
 		data[lang] = babel.gettext(lang)
+	response = flask.make_response(json.dumps(data, ensure_ascii=False))
+	response.headers["Content-Type"] = "application/json; charset=utf-8"
+	return response
+
+@flask_app.route(constants.APP_PREFIX + "/keywords", methods=["GET"])
+def get_keywords():
+	data = keywords
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
 	response.headers["Content-Type"] = "application/json; charset=utf-8"
 	return response
