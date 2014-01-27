@@ -27,7 +27,7 @@ function setInputFromLocation() {
 function loadSearchParams() {
 	$('#search input').map(setInputFromLocation);
 
-	$.get('/bib/language', 
+	$.get('/bib/langid', 
 		function(data, textStatus, jqXHR) {
 			selected = extractFromLocation("langid")
 			html = '';
@@ -39,6 +39,7 @@ function loadSearchParams() {
 				}
 			}
 			$('#langid option[value=""]').after(html);
+			$('#langid option[value="empty"]').remove();
 		}
 	)
 }

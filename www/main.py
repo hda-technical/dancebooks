@@ -21,7 +21,7 @@ for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items, constants.INDEX_KEYS)
 
-languages = sorted(item_index["langid"].keys())
+langid = sorted(item_index["langid"].keys())
 keywords = sorted(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -136,11 +136,9 @@ def get_book(id):
 	return flask.render_template("book.html", item=items[0])
 
 
-@flask_app.route(constants.APP_PREFIX + "/language", methods=["GET"])
+@flask_app.route(constants.APP_PREFIX + "/langid", methods=["GET"])
 def get_languages():
-	data = dict()
-	for lang in languages:
-		data[lang] = babel.gettext(lang)
+	data = dict(zip(langid, map(babel.gettext, langid)))
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
 	response.headers["Content-Type"] = "application/json; charset=utf-8"
 	return response

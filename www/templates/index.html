@@ -43,6 +43,8 @@
 						<td>{{ _("langid") }}:</td>
 						<td>
 							<select name="langid" id="langid">
+								<!-- required to reduce flicking -->
+								<option value="empty" selected="selected"></option>
 								<option value="">{{ _("any") }}</option>
 							</select>
 						</td>
