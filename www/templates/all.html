@@ -6,9 +6,14 @@
 {% include "components/header.html" %}
 		<h2>{{ _("displaying everything") }}:</h2>
 		<div class="content">
+{% if items %}
 {% for item in items %}
 {% include "components/item.html" %}
+			<hr/>
 {% endfor %}
+{% else %}
+			<hr/>
+{% endif %}
 {% include "components/footer.html" %}
 		</div>
 	</body>

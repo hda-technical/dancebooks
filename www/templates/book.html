@@ -7,6 +7,35 @@
 		<h2>{{ _("entry with id") }} {{ item.id() }}:</h2>
 		<div class="content">
 {% include "components/item.html" %}
+			<div class="center">
+				<span class="action" id="bugReport" onclick="toggleReportForm()">{{ _("report_bug") }}</a>
+			</div>
+			<div id="reportForm" class="center" style="display: none;">
+				<form>
+					<table>
+						<tr>
+							<td>{{ _("introduce") }}:</td>
+							<td>
+								<input type="text" name="name"/>
+							</td>
+						</td>
+						<tr>
+							<td>{{ _("email") }}:</td>
+							<td>
+								<input type="email" name="email"/>
+							</td>
+						</tr>
+						<tr>
+							<td>{{ _("describe_problem") }}:</td>
+							<td>
+								<textarea name="message" cols="50" rows="10" maxlength="500"></textarea>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<button onclick="sendReportForm()">{{ _("send") }}</button>
+			</div>
+			<hr/>
 {% include "components/footer.html" %}
 		</div>
 	</body>

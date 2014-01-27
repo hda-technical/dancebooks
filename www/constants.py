@@ -42,6 +42,11 @@ OUTPUT_LISTSEP = ", "
 #languages, supported by this website
 LANGUAGES = ["en", "ru"]
 
+BUG_REPORT_EMAIL = "georgthegreat@gmail.com"
+BUG_REPORT_NAME = "Yuriy Chernyshov"
+BUG_REPORT_SMTP_HOST = "smtp.yandex.ru"
+BUG_REPORT_SMTP_PORT = 587
+
 #two-letter country codes mapped to langid
 SHORT_LANG_MAP = {
 	"au": "english",

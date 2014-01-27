@@ -41,9 +41,33 @@ msgstr "or use the search"
 msgid "dancing books bibliography"
 msgstr "Dancing books bibliography"
 
-#: Search form
+msgid "search"
+msgstr "Search"
+
+msgid "clear"
+msgstr "Clear"
+
+msgid "report_bug"
+msgstr "Report bug"
+
+msgid "introduce"
+msgstr "Introduce yourself"
+
+msgid "email"
+msgstr "E-mail"
+
+msgid "describe_problem"
+msgstr "Describe the problem"
+
+msgid "send"
+msgstr "Send"
+
+msgid "thanks"
+msgstr "Thanks! Your message was sent to /dev/null"
+
+#: Entry fields / Search forms
 msgid "author"
-msgstr "Author"
+msgstr "Автор"
 
 msgid "title"
 msgstr "Title"
@@ -104,12 +128,6 @@ msgstr "Note"
 
 msgid "annotation"
 msgstr "Auxilliary note"
-
-msgid "search"
-msgstr "Search"
-
-msgid "clear"3yy
-msgstr "Clear"
 
 #: Languages
 msgid "any"

@@ -35,8 +35,10 @@
 					<tr>
 						<td>{{ _("year") }}:</td>
 						<td>
-							{{ _("year_from") }} <input type="number" name="year_from" value=""/>
-							{{ _("year_to") }} <input type="number" name="year_to" value=""/>
+							<span>{{ _("year_from") }}</span>
+							<input type="number" name="year_from" min="1000" max="3000" value=""/>
+							<span>{{ _("year_to") }}</span>
+							<input type="number" name="year_to" min="1000" max="3000" value=""/>
 						</td>
 					</tr>
 					<tr>
@@ -76,6 +78,7 @@
 {% if found_items %}
 {% for item in found_items %}
 {% include "components/item.html" %}
+			<hr/>
 {% endfor %}
 {% else %}
 			<hr/>

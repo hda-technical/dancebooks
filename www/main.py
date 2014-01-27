@@ -1,19 +1,30 @@
 #!/usr/bin/env python3
 # coding: utf-8
 import datetime
+import email
+import email.mime
+import email.mime.text
 import json
 import os.path
+import smtplib
 import sys
 
 import flask
 from flask.ext import babel
 
+import config
 import constants
 import parser
 import search
 import index
 import utils
 import utils_flask
+
+if (not os.path.exists("templates")):
+	print("Should run from root folder")
+	sys.exit(1)
+
+cfg = config.Config("../configs/www.cfg")
 
 items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
 item_index = index.Index(items, constants.INDEX_KEYS)
@@ -31,10 +42,6 @@ babel_app = babel.Babel(flask_app)
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 	
-if (not os.path.exists("templates")):
-	print("Should run from root folder")
-	sys.exit(1)
-
 @babel_app.localeselector
 def get_locale():
 	"""
@@ -118,7 +125,10 @@ def root():
 	if len(searches) > 0:
 		found_items = list(filter(search.and_(searches), found_items))
 
-	return flask.render_template("index.html", found_items=found_items)
+	return flask.render_template(
+		"index.html", 
+		found_items=found_items,
+		search_params=request_args)
 
 
 @flask_app.route(constants.APP_PREFIX + "/all.html")
@@ -136,12 +146,51 @@ def get_book(id):
 	return flask.render_template("book.html", item=items[0])
 
 
+@flask_app.route(constants.BOOK_PREFIX + "/<string:id>", methods=["POST"])
+def edit_book(id):
+	items = list(item_index["id"].get(id, None))
+	message = flask.request.values.get("message", None)
+	from_name = flask.request.values.get("name", None)
+	from_email = flask.request.values.get("email", None)
+
+	if items is None:
+		flask.abort(404, "Book with id {id} was not found".format(id=id))
+	elif len(items) != 1:
+		flask.abort(500, "Multiple entries with id {id}".format(id=id))
+	
+	if message is None:
+		flask.abort(400, "Got empty message")
+	
+	if from_name is None:
+		flask.abort(400, "Got empty name")
+
+	if from_email is None:
+		flask.abort(400, "Got empty email")
+
+	msg = email.mime.text.MIMEText(message)
+	msg["From"] = email.utils.formataddr((from_name, from_email))
+	msg["To"] = email.utils.formataddr((cfg.bug_report.name, cfg.bug_report.email))
+	msg["Subject"] = "[bib] Error in book {id}".format(id=id)
+	recipients = [cfg.bug_report.email]
+
+	smtp = smtplib.SMTP(cfg.smtp.host, cfg.smtp.port)
+	if cfg.smtp.user and cfg.smtp.password:
+		smtp.login(cfg.smtp.user, cfg.smtp.password)
+	smtp.sendmail(cfg.smtp.email, recipients, msg.as_string())
+	
+	data = {"result": "OK", "message": babel.gettext("thanks")}
+	response = flask.make_response(json.dumps(data, ensure_ascii=False))
+	response.headers["Content-Type"] = "application/json; charset=utf-8"
+	return response
+
+
 @flask_app.route(constants.APP_PREFIX + "/langid", methods=["GET"])
 def get_languages():
 	data = dict(zip(langid, map(babel.gettext, langid)))
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
 	response.headers["Content-Type"] = "application/json; charset=utf-8"
 	return response
+
 
 @flask_app.route(constants.APP_PREFIX + "/keywords", methods=["GET"])
 def get_keywords():
