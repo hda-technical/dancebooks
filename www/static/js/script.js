@@ -145,4 +145,15 @@ function loadSearchParams() {
 
 $(document).ready(function() {
 	loadSearchParams();
+	$('#search input, #search select').on("keyup", function(event) {
+		if (event.keyCode == 0x0D) {
+			submitSearchForm();
+		}
+	});
+
+	$('#reportForm input, #reportForm textarea').on("keyup", function(event) {
+		if (event.keyCode == 0x0D) {
+			sendReportForm();
+		}
+	});
 })
