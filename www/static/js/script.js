@@ -151,7 +151,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#reportForm input, #reportForm textarea').on("keyup", function(event) {
+	$('#reportForm input').on("keyup", function(event) {
 		if (event.keyCode == 0x0D) {
 			sendReportForm();
 		}
