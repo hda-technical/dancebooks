@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
 # coding: utf-8
 import datetime
-import email
-import email.mime
-import email.mime.text
 import json
 import os.path
-import smtplib
 import sys
 
 import flask
@@ -17,6 +13,7 @@ import constants
 import parser
 import search
 import index
+import messenger
 import utils
 import utils_flask
 
@@ -41,7 +38,9 @@ babel_app = babel.Babel(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
-	
+
+msngr = messenger.Messenger(cfg)
+
 @babel_app.localeselector
 def get_locale():
 	"""
@@ -146,9 +145,9 @@ def get_book(id):
 	return flask.render_template("book.html", item=items[0])
 
 
-@flask_app.route(constants.BOOK_PREFIX + "/<string:id>", methods=["POST"])
-def edit_book(id):
-	items = list(item_index["id"].get(id, None))
+@flask_app.route(constants.BOOK_PREFIX + "/<string:book_id>", methods=["POST"])
+def edit_book(book_id):
+	items = list(item_index["id"].get(book_id, None))
 	message = flask.request.values.get("message", None)
 	from_name = flask.request.values.get("name", None)
 	from_email = flask.request.values.get("email", None)
@@ -166,18 +165,10 @@ def edit_book(id):
 
 	if from_email is None:
 		flask.abort(400, "Got empty email")
-
-	msg = email.mime.text.MIMEText(message)
-	msg["From"] = email.utils.formataddr((from_name, from_email))
-	msg["To"] = email.utils.formataddr((cfg.bug_report.name, cfg.bug_report.email))
-	msg["Subject"] = "[bib] Error in book {id}".format(id=id)
-	recipients = [cfg.bug_report.email]
-
-	smtp = smtplib.SMTP(cfg.smtp.host, cfg.smtp.port)
-	if cfg.smtp.user and cfg.smtp.password:
-		smtp.login(cfg.smtp.user, cfg.smtp.password)
-	smtp.sendmail(cfg.smtp.email, recipients, msg.as_string())
 	
+	message = messenger.Message(book_id, from_email, from_name, message)
+	msngr.send(message)
+
 	data = {"result": "OK", "message": babel.gettext("thanks")}
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
 	response.headers["Content-Type"] = "application/json; charset=utf-8"

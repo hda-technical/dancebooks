@@ -22,15 +22,32 @@ class SmtpConfig(object):
 			raise ValueError("Email param wasn't found")
 		self.email = params["Email"]
 
+
 class BugReportConfig(object):
 	def __init__(self, params):
-		if "Email" not in params:
-			raise ValueError("Email param wasn't found")
-		self.email = params["Email"]
+		if "ToAddr" not in params:
+			raise ValueError("ToAddr param wasn't found")
+		self.to_addr = params["ToAddr"]
 
-		if "Name" not in params:
-			raise ValueError("Name param wasn't found")
-		self.name = params["Name"]
+		if "ToName" not in params:
+			raise ValueError("ToName param wasn't found")
+		self.to_name = params["ToName"]
+		
+		if "FromAddr" not in params:
+			raise ValueError("FromAddr param wasn't found")
+		self.from_addr = params["FromAddr"]
+
+		if "FromName" not in params:
+			raise ValueError("FromName param wasn't found")
+		self.from_name = params["FromName"]
+		
+		if "Timeout" not in params:
+			raise ValueError("Timeout param wasn't found")
+		self.timeout = int(params["Timeout"])
+
+		if "MaxCount" not in params:
+			raise ValueError("MaxCount param wasn't found")
+		self.max_count = int(params["MaxCount"])
 
 
 class Config(object):
