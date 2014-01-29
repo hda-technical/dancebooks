@@ -8,17 +8,17 @@
 		<div class="content">
 {% include "components/item.html" %}
 			<div class="center">
-				<span class="action" id="bugReport" onclick="toggleReportForm()">{{ _("report_bug") }}</a>
+				<span class="action" id="bugReport" onclick="toggleReportForm()">{{ _("report_bug") }}</span>
 			</div>
 			<div id="reportForm" class="center" style="display: none;">
-				<form>
+				<form action="/bib/book/{{ item.id() }}" method="post">
 					<table>
 						<tr>
 							<td>{{ _("introduce") }}:</td>
 							<td>
 								<input type="text" name="name"/>
 							</td>
-						</td>
+						</tr>
 						<tr>
 							<td>{{ _("email") }}:</td>
 							<td>
