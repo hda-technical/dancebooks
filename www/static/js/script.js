@@ -131,10 +131,10 @@ function loadSearchParams() {
 			$('input[name="keywords"]').val(keywords);
 
 			keywords = keywords.split(",");
-			selected = new Set();
+			selected = new Array();
 
 			for (index in keywords) {
-				selected.add(keywords[index].trim());
+				selected.push(keywords[index].trim());
 			}
 			html = '';
 			for (index in data) {
@@ -143,7 +143,8 @@ function loadSearchParams() {
 				html += '<input id="' + id + '" type="checkbox" onchange="updateKeywords()"';
 
 				keyword = data[index];
-				if (selected.has(keyword)) {
+				//goddamn javascript doesn't have sets
+				if (selected.indexOf(keyword) != -1) {
 					html += ' checked="checked"';
 				}
 				html += '/>';
