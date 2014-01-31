@@ -9,13 +9,12 @@ function submitSearchForm() {
 		}
 
 		var regexp = new RegExp(number.pattern)
-		parsed = parseInt(number.value)
-		if (isNaN(parsed) || (parsed < number.min) || (parsed > number.max)) {
+		if (regexp.exec(number.value) == null) {
 			return;
 		}
 	}
 
-	search = $('#search input, #search select').filter(function(index) {
+	search = $('#search input[type!="checkbox"], #search select').filter(function(index) {
 		return (this.value.length != 0);
 	}).map(function(index) {
 		return (this.name + '=' + this.value);
@@ -71,10 +70,20 @@ function sendReportForm() {
 function clearSearchForm() {
 	$('#search input').val('');
 	$('#search select').val('');
+	$('#search input[type="checkbox"]').prop("checked", false);
 }
 	
 function toggleReportForm() {
 	$('#reportForm').slideToggle();
+}
+
+function showKeywordsChooser() {
+	$('#keywordsChooser').slideDown();
+}
+
+function hideKeywordsChooser() {
+	$('#keywordsChooser').slideUp();
+	return false;
 }
 
 function extractFromLocation(key) {
@@ -83,21 +92,26 @@ function extractFromLocation(key) {
 	if (match != null) {
 		return decodeURIComponent(match[1] || "").replace("+", " ");
 	} else {
-		return null;
+		return '';
 	}
 }
 
 function setInputFromLocation() {
 	value = extractFromLocation(this.name);
-	if (value != null) {
 		this.value = value;
-	}
+}
+
+function updateKeywords() {
+	keywords = $('#keywordsChooser input[type="checkbox"]:checked + label').map(function(index) {
+		return $(this).html();
+	}).get().join(", ");
+	$('input[name="keywords"]').val(keywords);
 }
 
 function loadSearchParams() {
 	$.get('/bib/langid', 
 		function(data, textStatus, jqXHR) {
-			selected = extractFromLocation("langid")
+			selected = extractFromLocation("langid");
 			html = '';
 			for (lang in data) {
 				if (lang == selected) {
@@ -113,10 +127,33 @@ function loadSearchParams() {
 
 	$.get('/bib/keywords',
 		function(data, textStatus, jXHR) {
+			keywords = extractFromLocation("keywords")
+			$('input[name="keywords"]').val(keywords);
+
+			keywords = keywords.split(",");
+			selected = new Set();
+
+			for (index in keywords) {
+				selected.add(keywords[index].trim());
+			}
+			html = '';
+			for (index in data) {
+				id = 'keyword' + index;
+				
+				html += '<input id="' + id + '" type="checkbox" onchange="updateKeywords()"';
+
+				keyword = data[index];
+				if (selected.has(keyword)) {
+					html += ' checked="checked"';
+				}
+				html += '/>';
+				html += '<label for="' + id + '">' + keyword + '</label>';
+			}
+			$('#keywordsChooser #keywordsHider').after(html);
 		}
 	)
 	
-	$('#search input').map(setInputFromLocation);
+	$('#search input[name!="keywords"]').map(setInputFromLocation);
 }
 
 $(document).ready(function() {

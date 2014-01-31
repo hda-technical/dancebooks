@@ -94,27 +94,6 @@ ul, ol {
 	text-indent: 20px;
 }
 
-input[type="text"], input[type="email"], select, textarea {
-	width: 400px;
-}
-
-input[type="number"] {
-	width: 40px;
-}
-
-input, select, textarea {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #aaaaaa #eeeeee #eeeeee #eeeeee;
-	border-radius: 2px;
-	resize: none;
-}
-
-input:invalid, textarea:invalid {
-	border-color: #ff0000;
-	box-shadow: none;
-}
-
 table tr td:first-child {
 	width: 0%;
 	white-space: nowrap;
@@ -156,4 +135,70 @@ table tr td {
 	width: 74%;
 	display: inline-block;
 	vertical-align: top;
+}
+
+/* input magic */
+input[type="text"], 
+input[type="email"], 
+select, 
+textarea,
+#keywordsChooser {
+	width: 400px;
+}
+
+input[type="number"] {
+	width: 40px;
+}
+
+input, 
+select, 
+textarea {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #aaaaaa #eeeeee #eeeeee #eeeeee;
+	border-radius: 2px;
+	resize: none;
+}
+
+input:invalid, 
+textarea:invalid {
+	border-color: #ff0000;
+	box-shadow: none;
+}
+
+#keywordsChooser {
+	text-align: center;
+	color: #000000;
+	background-color: #dddddd;
+	
+	border: solid 1px #dddddd;
+}
+
+#keywordsChooser input[type="checkbox"] {
+	display: none;
+}
+
+#keywordsChooser input[type="checkbox"] + label, #keywordsHider {
+	color: #000000;
+	background-color: #dddddd;
+	padding: 2px;
+	display: inline-block;
+	white-space: nowrap;
+																																
+	border-radius: 2px;
+	border-width: 1px;
+	border-color: #dddddd;
+	border-style: solid;
+}
+
+#keywordsChooser input[type="checkbox"] + label:hover {
+	border-style: outset;
+}
+													
+#keywordsChooser input[type="checkbox"]:checked + label {
+	border-style: inset;
+}
+																										
+#keywordsChooser input[type="checkbox"]:checked + label:hover {
+	border-style: inset;
 }
