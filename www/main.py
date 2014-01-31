@@ -40,6 +40,7 @@ flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
 msngr = messenger.Messenger(cfg)
+EXPIRES = datetime.datetime(2100, 1, 1)
 
 @babel_app.localeselector
 def get_locale():
@@ -66,8 +67,7 @@ def redirect_root():
 		if referrer is not None:
 			next_url = referrer
 		response = flask.make_response(flask.redirect(next_url))
-		response.set_cookie("lang", value=desired_language,  
-			expires=datetime.datetime(2100, 1, 1))
+		response.set_cookie("lang", value=desired_language, expires=EXPIRES)
 		return response
 	else:	
 		return flask.redirect(next_url)
@@ -179,6 +179,7 @@ def edit_book(book_id):
 def get_languages():
 	data = dict(zip(langid, map(babel.gettext, langid)))
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
+
 	response.headers["Content-Type"] = "application/json; charset=utf-8"
 	return response
 
