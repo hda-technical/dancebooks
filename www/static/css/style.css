@@ -110,8 +110,9 @@ input, select, textarea {
 	resize: none;
 }
 
-input.invalid, textarea.invalid, input:invalid, textarea:invalid {
+input:invalid, textarea:invalid {
 	border-color: #ff0000;
+	box-shadow: none;
 }
 
 table tr td:first-child {

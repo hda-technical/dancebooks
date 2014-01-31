@@ -5,26 +5,16 @@ function submitSearchForm() {
 	for (index in numbers) {
 		number = numbers[index]
 		if (number.value.length == 0) {
-			$(number).removeClass("invalid");
 			continue;
 		}
 
+		var regexp = new RegExp(email.pattern)
 		parsed = parseInt(number.value)
-		if (isNaN(parsed)) {
-			$(number).addClass("invalid");
-			valid = false;
-		} else if ((parsed < number.min) || (parsed > number.max)) {
-			$(number).addClass("invalid");
-			valid = false;
-		} else {
-			$(number).removeClass("invalid");
+		if (isNaN(parsed) || (parsed < number.min) || (parsed > number.max)) {
+			return;
 		}
 	}
 
-	if (!valid) {
-		return;
-	}
-	
 	search = $('#search input, #search select').filter(function(index) {
 		return (this.value.length != 0);
 	}).map(function(index) {
@@ -38,37 +28,23 @@ function submitSearchForm() {
 
 function sendReportForm() {
 	//validating message field
-	var valid = true;
 	textareas = $('#reportForm textarea, #reportForm input[type="text"]').get();
 	for (index in textareas) {
 		textarea = textareas[index];
 		if (textarea.value.length == 0) {
-			$(textarea).addClass("invalid");
-			valid = false;
-		} else {
-			$(textarea).removeClass("invalid");
+			return;
 		}
 	}
 
-	var regexp = new RegExp('.@.')
 	emails = $('#reportForm input[type="email"]').get();
 	for (index in emails) {
 		email = emails[index];
-		if (email.value.length == 0) {
-			$(email).addClass("invalid");
-			valid = false;
-		} else if (regexp.exec(email.value) == null) {
-			$(email).addClass("invalid");
-			valid = false;
-		} else  {
-			$(email).removeClass("invalid");
+		var regexp = new RegExp(email.pattern)
+		if ((email.value.length == 0) || (regexp.exec(email.value) == null)) {
+			return;
 		}
 	}
 
-	if (!valid) {
-		return;
-	}
-	
 	this.disabled = 'disabled'
 	data = $('#reportForm textarea, #reportForm input').filter(function(index) {
 		return (this.value.length != 0);

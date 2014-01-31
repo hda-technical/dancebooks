@@ -16,19 +16,19 @@
 						<tr>
 							<td>{{ _("introduce") }}:</td>
 							<td>
-								<input type="text" name="name"/>
+								<input type="text" name="name" required="required"/>
 							</td>
 						</tr>
 						<tr>
 							<td>{{ _("email") }}:</td>
 							<td>
-								<input type="email" name="email"/>
+								<input type="email" name="email" pattern=".+@.+" required="required"/>
 							</td>
 						</tr>
 						<tr>
 							<td>{{ _("describe_problem") }}:</td>
 							<td>
-								<textarea name="message" cols="50" rows="10" maxlength="500"></textarea>
+								<textarea name="message" cols="50" rows="10" maxlength="500" required="required"></textarea>
 							</td>
 						</tr>
 					</table>
