@@ -26,18 +26,6 @@ h2 {
 	font-size: 135%;
 }
 
-h2.annoying {
-    animation: blink 1s steps(5, start) infinite;
-	color: #ff0000;
-	background-color: #ffffff;
-}
-
-@keyframes blink {
-    to {
-        visibility: hidden;
-    }
-}
-
 h3 {
     font-size: 120%;
     margin: 30px 10px 0px 10px;
@@ -184,6 +172,7 @@ textarea:invalid {
 	padding: 2px;
 	display: inline-block;
 	white-space: nowrap;
+	text-decoration: underline;
 																																
 	border-radius: 2px;
 	border-width: 1px;
@@ -201,4 +190,11 @@ textarea:invalid {
 																										
 #keywordsChooser input[type="checkbox"]:checked + label:hover {
 	border-style: inset;
+}
+
+#keywordsHider {
+	float: right;
+	display: inline-block;
+	cursor: default;
+	text-decoration: none;
 }
