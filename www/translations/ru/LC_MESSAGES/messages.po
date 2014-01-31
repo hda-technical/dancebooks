@@ -95,9 +95,6 @@ msgstr "Место издания"
 msgid "keywords"
 msgstr "Теги"
 
-msgid "comma separated"
-msgstr "через запятую"
-
 msgid "shorthand"
 msgstr "Сокращённое название"
 

@@ -93,9 +93,6 @@ msgstr "Place of publication"
 msgid "keywords"
 msgstr "Tags"
 
-msgid "comma separated"
-msgstr "comma separated"
-
 msgid "shorthand"
 msgstr "Shorthand"
 
