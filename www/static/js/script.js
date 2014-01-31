@@ -8,7 +8,7 @@ function submitSearchForm() {
 			continue;
 		}
 
-		var regexp = new RegExp(email.pattern)
+		var regexp = new RegExp(number.pattern)
 		parsed = parseInt(number.value)
 		if (isNaN(parsed) || (parsed < number.min) || (parsed > number.max)) {
 			return;
