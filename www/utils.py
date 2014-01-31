@@ -7,7 +7,6 @@ import pstats
 import re
 from urllib import parse as urlparse
 
-import constants
 import search
 
 def strip_split_list(value: str, sep: str) -> [str]:
@@ -18,9 +17,9 @@ def strip_split_list(value: str, sep: str) -> [str]:
 
 
 LATEX_GROUPING_REGEXP = re.compile(r"(\s|^)\{([^\s]*)\}(\s|$)")
-LATEX_URL_REGEXP = re.compile(r"\\url\{([^\s]*)\}")
-LATEX_PARENCITE_REGEXP = re.compile(r"\\parencite\{([a-z_\d]*)\}")
-PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(constants.BOOK_PREFIX)
+#LATEX_URL_REGEXP = re.compile(r"\\url\{([^\s]*)\}")
+#LATEX_PARENCITE_REGEXP = re.compile(r"\\parencite\{([a-z_\d]*)\}")
+#PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(constants.APP_PREFIX + "/book")
 def parse_latex(value: str) -> str:
 	"""
 	Attempts to remove LaTeX formatting from string
@@ -116,7 +115,27 @@ FILENAME_PATTERN = (
 	#extension: .pdf
 	r"\.pdf"
 )
-FILENAME_REGEXP = re.compile(FILENAME_PATTERN)	
+FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
+
+#two-letter country codes mapped to langid
+SHORT_LANG_MAP = {
+	"au": "english",
+	"ca": "english",
+	"cz": "czech",
+	"de": "german",
+	"dk": "danish",
+	"en": "english",
+	"es": "spanish",
+	"fr": "french",
+	"ie": "english",
+	"it": "italian",
+	"pl": "polish",
+	"pt": "portuguese",
+	"ru": "russian",
+	"sc": "english",
+	"us": "english"
+}
+
 def extract_metadata_from_file(path: str) -> {"str": str}:
 	"""
 	Extracts dictionary contating the following fields:
@@ -143,13 +162,13 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	
 	result = {
 		"year": (year_from, year_to),
-		"lang": constants.SHORT_LANG_MAP[match.group("lang")],
+		"lang": SHORT_LANG_MAP[match.group("lang")],
 		"title": match.group("title")
 	}
 	
 	author = match.group("author")
 	if author is not None:
-		result["author"] = strip_split_list(author, constants.OUTPUT_LISTSEP)
+		result["author"] = strip_split_list(author, ",")
 		
 	tome = match.group("tome")
 	if tome is not None:
@@ -165,12 +184,12 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	
 	keywords = match.group("keywords")
 	if keywords is not None:
-		result["keywords"] = set(strip_split_list(keywords, constants.OUTPUT_LISTSEP))
+		result["keywords"] = set(strip_split_list(keywords, ","))
 	
 	return result
 	
 	
-def create_search_from_metadata(metadata: {"str": str}) -> callable:
+def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
 	"""
 	Creates callable applicable to an item, 
 	checing if this item match given metadata
@@ -182,12 +201,15 @@ def create_search_from_metadata(metadata: {"str": str}) -> callable:
 	tome = metadata.get("tome", None)
 	edition = metadata.get("edition", None)
 	part = metadata.get("part", None)
-	keywords = metadata.get("keywords", None)
+	#keywords = metadata.get("keywords", None)
 	
 	title_regexp = re.compile("^" + re.escape(title))
 	
 	search_for_lang = search.search_for_eq("langid", lang)
-	search_for_year = search.search_for_year(*year)
+	search_for_year = search.and_([
+		search.search_for(cfg, "year_from", year[0]),
+		search.search_for(cfg, "year_to", year[1])
+	])
 	
 	search_for_itemtitle = search.search_for_string_regexp("title", title_regexp)
 	search_for_booktitle = search.search_for_string_regexp("booktitle", title_regexp)
@@ -304,3 +326,25 @@ def is_isbn_valid(isbn: str) -> (bool, str):
 		)
 	
 	return True, "ISBN is correct"
+	
+YEAR_REGEXP = re.compile(r"(?P<year_from>\d+)(?:[-–—]+(?P<year_to>\d+)(?P<circa>\?)?)?")
+def parse_year(year):
+	"""
+	Returns (year_from, year_to, circa) tuple
+	"""
+	match = YEAR_REGEXP.match(year)
+	if not match:
+		raise ValueError("Failed to parse year {year}".format(year=year))
+	
+	year_from = match.group("year_from")
+	year_from = int(year_from)
+	
+	year_to = match.group("year_to")
+	if year_to is not None:
+		year_to = int(year_to)
+	else:
+		year_to = year_from
+	
+	circa = match.group("circa") is not None
+	
+	return (year_from, year_to, circa)

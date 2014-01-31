@@ -1,64 +1,164 @@
 import configparser
+import functools
+import json
+import os.path
 
 class SmtpConfig(object):
 	def __init__(self, params):
-		if "Host" not in params:
-			raise ValueError("Host param wasn't found")
-		self.host = params["Host"]
+		if "host" not in params:
+			raise ValueError("host param wasn't found")
+		self.host = params["host"]
 
-		if "Port" not in params:
-			raise ValueError("Port param wasn't found")
-		self.port = int(params["Port"])
+		if "port" not in params:
+			raise ValueError("port param wasn't found")
+		self.port = int(params["port"])
 
-		if "User" not in params:
-			raise ValueError("User param wasn't found")
-		self.user = params["User"]
+		if "user" not in params:
+			raise ValueError("user param wasn't found")
+		self.user = params["user"]
 
-		if "Password" not in params:
-			raise ValueError("Password param wasn't found")
-		self.password = params["Password"]
+		if "password" not in params:
+			raise ValueError("password param wasn't found")
+		self.password = params["password"]
 
-		if "Email" not in params:
-			raise ValueError("Email param wasn't found")
-		self.email = params["Email"]
+		if "email" not in params:
+			raise ValueError("email param wasn't found")
+		self.email = params["email"]
 
 
 class BugReportConfig(object):
 	def __init__(self, params):
-		if "ToAddr" not in params:
-			raise ValueError("ToAddr param wasn't found")
-		self.to_addr = params["ToAddr"]
+		if "to_addr" not in params:
+			raise ValueError("to_addr param wasn't found")
+		self.to_addr = params["to_addr"]
 
-		if "ToName" not in params:
-			raise ValueError("ToName param wasn't found")
-		self.to_name = params["ToName"]
+		if "to_name" not in params:
+			raise ValueError("to_name param wasn't found")
+		self.to_name = params["to_name"]
 		
-		if "FromAddr" not in params:
-			raise ValueError("FromAddr param wasn't found")
-		self.from_addr = params["FromAddr"]
+		if "from_addr" not in params:
+			raise ValueError("from_addr param wasn't found")
+		self.from_addr = params["from_addr"]
 
-		if "FromName" not in params:
-			raise ValueError("FromName param wasn't found")
-		self.from_name = params["FromName"]
+		if "from_name" not in params:
+			raise ValueError("from_name param wasn't found")
+		self.from_name = params["from_name"]
 		
-		if "Timeout" not in params:
-			raise ValueError("Timeout param wasn't found")
-		self.timeout = int(params["Timeout"])
+		if "timeout" not in params:
+			raise ValueError("timeout param wasn't found")
+		self.timeout = int(params["timeout"])
 
-		if "MaxCount" not in params:
-			raise ValueError("MaxCount param wasn't found")
-		self.max_count = int(params["MaxCount"])
+		if "max_count" not in params:
+			raise ValueError("max_count param wasn't found")
+		self.max_count = int(params["max_count"])
 
+		
+class ParserConfig(object):
+	def __init__(self, params):
+		if "list_sep" not in params:
+			raise ValueError("list_sep param wasn't found")
+		self.list_sep = params["list_sep"]
+		
+		if "list_params" not in params:
+			raise ValueError("list_params param wasn't found")
+		self.list_params = set(json.loads(params["list_params"]))
+		
+		if "name_sep" not in params:
+			raise ValueError("name_sep param wasn't found")
+		self.name_sep = params["name_sep"]
+		
+		if "name_params" not in params:
+			raise ValueError("name_params param wasn't found")
+		self.name_params = set(json.loads(params["name_params"]))
+		
+		if "keywords_sep" not in params:
+			raise ValueError("keywords_sep param wasn't found")
+		self.keywords_sep = params["keywords_sep"]
+		
+		if "keywords_params" not in params:
+			raise ValueError("keywords_params param wasn't found")
+		self.keywords_params = set(json.loads(params["keywords_params"]))
+		
+		self.multivalue_params = self.list_params | self.name_params | self.keywords_params
+		
+		if "int_params" not in params:
+			raise ValueError("int_params param wasn't found")
+		self.int_params = set(json.loads(params["int_params"]))
+		
+		if "date_params" not in params:
+			raise ValueError("date_params param wasn't found")
+		self.date_params = set(json.loads(params["date_params"]))
+		
+		if "date_start_suffix" not in params:
+			raise ValueError("date_start_suffix param wasn't found")
+		self.date_start_suffix = params["date_start_suffix"]
+		
+		if "date_end_suffix" not in params:
+			raise ValueError("date_end_suffix param wasn't found")
+		self.date_end_suffix = params["date_end_suffix"]
+		
+		if "date_circa_suffix" not in params:
+			raise ValueError("date_circa_suffix param wasn't found")
+		self.date_circa_suffix = params["date_circa_suffix"]
+
+		suffix_adder = lambda string, suffix: string + suffix
+		self.date_start_params = set(map(
+			functools.partial(suffix_adder, suffix=self.date_start_suffix),
+			self.date_params
+		))
+		self.date_end_params = set(map(
+			functools.partial(suffix_adder, suffix=self.date_end_suffix),
+			self.date_params
+		))
+		
+
+class WwwConfig(object):
+	def __init__(self, params):
+		if "app_prefix" not in params:
+			raise ValueError("app_prefix param wasn't found")
+		self.app_prefix = params["app_prefix"]
+		
+		if "search_params" not in params:
+			raise ValueError("search_params param wasn't found")
+		self.search_params = set(json.loads(params["search_params"]))
+		
+		if "index_params" not in params:
+			raise ValueError("index_params param wasn't found")
+		self.index_params = set(json.loads(params["index_params"]))
+		
+		self.indexed_search_params = self.search_params & self.index_params
+		self.nonindexed_search_params = self.search_params - self.index_params
+		
+		if "languages" not in params:
+			raise ValueError("languages param wasn't found")
+		self.languages = json.loads(params["languages"])
+		
 
 class Config(object):
+	@staticmethod
+	def get_params(config, fallback, section):
+		params = dict()
+		if (fallback is not None) and (section in fallback):
+			params.update(fallback[section])
+		if section in config:
+			params.update(config[section])
+		return params
+		
 	def __init__(self, path):
 		config = configparser.ConfigParser()
 		config.read(path)
+		
+		fallback = None
+		if "DEFAULT" in config:
+			if "Fallback" in config["DEFAULT"]:
+				path = os.path.join(
+					os.path.dirname(path), 
+					config["DEFAULT"]["Fallback"]
+				)
+				fallback = configparser.ConfigParser()
+				fallback.read(path)
 
-		if "SMTP" not in config:
-			raise ValueError("SMTP section wasn't found")
-		self.smtp = SmtpConfig(config["SMTP"])
-
-		if "BUG_REPORT" not in config:
-			raise ValueError("BUG_REPORT section wasn't found")
-		self.bug_report = BugReportConfig(config["BUG_REPORT"])
+		self.smtp = SmtpConfig(Config.get_params(config, fallback, "SMTP"))
+		self.bug_report = BugReportConfig(Config.get_params(config, fallback, "BUG_REPORT"))
+		self.parser = ParserConfig(Config.get_params(config, fallback, "PARSER"))
+		self.www = WwwConfig(Config.get_params(config, fallback, "WWW"))

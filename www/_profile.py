@@ -2,7 +2,6 @@
 # coding: utf-8
 import os.path
 
-import constants
 import main
 import parser
 import utils
@@ -11,18 +10,18 @@ client = main.app.test_client()
 
 @utils.profile()
 def all_profile():
-	client.get(constants.APP_PREFIX + "/all.html")
+	client.get(main.cfg.www.app_prefix + "/all.html")
 	
 
 @utils.profile
 def parsing_profile():
-	bib_parser = parser.BibParser()
+	bib_parser = parser.BibParser(main.cfg)
 	bib_parser.parse_folder(os.path.abspath("../bib"))
 
 
 @utils.profile
 def search_profile():
-	client.get("/bib/index.html?"
+	client.get(main.cfg.www.app_prefix + "/index.html?"
 		"title=Dance&"
 		"author=Wil&"
 		"year_from=1000&"

@@ -4,18 +4,19 @@ import optparse
 import os.path
 import sys
 
-import constants
+import config
 import index
 import parser
 import utils
 
 MAX_OUTPUT_COUNT = 100
+cfg = config.Config("../configs/www.cfg")
 
-items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
-item_index = index.create_index(items, constants.INDEX_KEYS)
+items = parser.BibParser(cfg).parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(cfg, items)
 for item in items:
 	item.process_crossrefs(item_index)
-item_index.update(items, constants.INDEX_KEYS)
+item_index.update(items)
 
 languages = sorted(item_index["langid"].keys())
 
@@ -52,7 +53,7 @@ for file_ in files:
 	relpath = "/" + os.path.relpath(file_, options.root)
 		
 	metadata = utils.extract_metadata_from_file(file_)	
-	item_search = utils.create_search_from_metadata(metadata)
+	item_search = utils.create_search_from_metadata(cfg, metadata)
 	
 	found_items = list(filter(item_search, items))
 	found_count = len(found_items)
@@ -85,7 +86,7 @@ for item, paths in sorted(output_dict.items(), key=sort_key):
 		source=item.source(),
 	))
 	print("filename = {{{relpath}}}".format(
-		relpath=" {0} ".format(constants.GENERAL_SEP).join(sorted(paths))
+		relpath=" {0} ".format(cfg.parser.list_sep).join(sorted(paths))
 	))
 
 sort_key = lambda item: item.source()

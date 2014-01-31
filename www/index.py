@@ -1,11 +1,12 @@
 class Index(object):
-	def __init__(self, items, keys):
-		self.update(items, keys)
+	def __init__(self, cfg, items):
+		self.cfg = cfg
+		self.update(items) 
 
 	def __getitem__(self, key):
 		return self._dict[key]
 
-	def update(self, items, keys):
+	def update(self, items):
 		"""
 		Creates index for a given list of BibItems.
 		Returns {key: {possible value: set([BibItem])}} dictionary
@@ -27,10 +28,10 @@ class Index(object):
 					subindex[value] = set([item])
 						
 		self._dict = dict()
-		for key in keys:
+		for key in self.cfg.www.index_params:
 			self._dict[key] = dict()
 
-		for key in keys:
+		for key in self.cfg.www.index_params:
 			subindex = self._dict[key]
 			for item in items:
 				value = item.get(key)

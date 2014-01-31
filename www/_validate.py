@@ -4,18 +4,20 @@ import os.path
 import re
 import sys
 
-import constants
+import config
 import index
 import parser
 import utils
 
 MAX_OUTPUT_COUNT = 100
 
-items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
-item_index = index.create_index(items, constants.INDEX_KEYS)
+cfg = config.Config("../configs/www.cfg")
+
+items = parser.BibParser(cfg).parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(cfg, items)
 for item in items:
 	item.process_crossrefs(item_index)
-item_index.update(items, constants.INDEX_KEYS)
+item_index.update(items)
 
 languages = sorted(item_index["langid"].keys())
 
@@ -51,6 +53,25 @@ NON_MULTIVOLUME_BOOKTYPES = set(["article", "periodical"])
 MULTIVOLUME_BOOKTYPES = set(["mvbook", "mvreference"])
 SHORTHAND_LIMIT = 25
 
+#country as adjective mapped to langid
+LONG_LANG_MAP = {
+	"american": "english",
+	"australian": "english",
+	"austrian": "german",
+	"canadian": "english",
+	"czech": "czech",
+	"danish": "danish",
+	"english": "english",
+	"french": "french",
+	"german": "german",
+	"italian": "italian",
+	"mexican": "spanish",
+	"polish": "polish",
+	"portuguese": "portuguese",
+	"russian": "russian",
+	"spanish": "spanish"
+
+}
 erroneous_entries = 0
 for item in items:
 	errors = []
@@ -125,19 +146,19 @@ for item in items:
 	
 	if (booktype == "article"):
 		if journaltitle is None:
-			error.append("journaltitle must be present for @article")
+			errors.append("journaltitle must be present for @article")
 	
 	if (booktype == "inproceedings"):
 		if booktitle is None:
-			error.append("bootitle must be present for @inprocessing")
+			errors.append("bootitle must be present for @inprocessing")
 	
 	if (booktype == "thesis"):
 		if url is None:
-			error.append("url must be present for @thesis")
+			errors.append("url must be present for @thesis")
 		if type is None:
-			error.append("type must be present for @thesis")
+			errors.append("type must be present for @thesis")
 		if institution is None:
-			error.append("institution must be present for @thesis")
+			errors.append("institution must be present for @thesis")
 	
 	#data validation
 	#author validation empty
@@ -203,7 +224,7 @@ for item in items:
 				if "incomplete" not in keywords:
 					errors.append("Incomplete books should be stored in _problems.bib")
 			
-			search_ = utils.create_search_from_metadata(metadata)
+			search_ = utils.create_search_from_metadata(cfg, metadata)
 			if not search_(item):
 				errors.append("File {filename_} is not searchable by extracted params".format(
 					filename_=filename_
@@ -227,7 +248,7 @@ for item in items:
 	
 	#langid validation
 	if source_basename not in MULTILANG_FILES:
-		source_lang = constants.LONG_LANG_MAP[source_basename]
+		source_lang = LONG_LANG_MAP[source_basename]
 		#item language should match source language
 		if langid != source_lang:
 			errors.append("Source language ({source_lang}) doesn't match item language ({langid})".format(

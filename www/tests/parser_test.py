@@ -2,13 +2,13 @@
 
 from nose.tools import eq_ 
 
-import constants
 import index
 import main
 import parser
 import search
 
-client = main.app.test_client()
+client = main.flask_app.test_client()
+cfg = main.cfg
 
 TEST_ITEMS = \
 """
@@ -41,11 +41,11 @@ def parse_string_test():
 	"""
 	Tests if string can be succesfully parsed by BibParser
 	"""
-	items = parser.BibParser().parse_string(TEST_ITEMS)
-	item_index = index.Index(items, constants.INDEX_KEYS)
+	items = parser.BibParser(cfg).parse_string(TEST_ITEMS)
+	item_index = index.Index(cfg, items)
 	for item in items:
 		item.process_crossrefs(item_index)
-	item_index.update(items, constants.INDEX_KEYS)
+	item_index.update(items)
 	
 	languages = set(item_index["langid"].keys())
 	keywords = set(item_index["keywords"].keys())
@@ -59,22 +59,35 @@ def search_items_test():
 	"""
 	Tests if parsed items can be searched by a bunch of parameters
 	"""
-	items = parser.BibParser().parse_string(TEST_ITEMS)
-	item_index = index.Index(items, constants.INDEX_KEYS)
+	items = parser.BibParser(cfg).parse_string(TEST_ITEMS)
+	item_index = index.Index(cfg, items)
 	for item in items:
 		item.process_crossrefs(item_index)
-	item_index.update(items, constants.INDEX_KEYS)
+	item_index.update(items)
 
 	author_search = search.search_for_iterable("author", "Петров")
 	filtered_items = filter(author_search, items)
 	eq_(len(list(filtered_items)), 1)
 
-	year_search = search.search_for_year("1825", None)
+	year_search = search.and_([
+		search.search_for(cfg, "year_from", 1825),
+		search.search_for(cfg, "year_to", 1825)
+	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
 
-	year_interval_search = search.search_for_year("1500", "1900")
-	filtered_items = filter(year_interval_search, items)
+	year_search = search.and_([
+		search.search_for(cfg, "year_from", 1500),
+		search.search_for(cfg, "year_to", 1900)
+	])
+	filtered_items = filter(year_search, items)
+	eq_(len(list(filtered_items)), 2)	
+	
+	year_search = search.and_([
+		search.search_for(cfg, "year_from", 1499),
+		search.search_for(cfg, "year_to", 1501)
+	])
+	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 2)
 	
 	filtered_items = item_index["keywords"]["grumbling"]
@@ -87,19 +100,19 @@ def search_items_test():
 	
 	
 def app_test():
-	rq = client.get(constants.APP_PREFIX, follow_redirects=True)
+	rq = client.get(cfg.www.app_prefix, follow_redirects=True)
 	eq_(rq.status_code, 200)
 
-	rq = client.get(constants.APP_PREFIX + "/index.html")
+	rq = client.get(cfg.www.app_prefix + "/index.html")
 	eq_(rq.status_code, 200)
 
-	rq = client.get(constants.APP_PREFIX + "/index.html?"
+	rq = client.get(cfg.www.app_prefix + "/index.html?"
 		"author=Wilson&"
 		"title=Ecossoise&"
 		"year_from=1800&"
 		"year_to=1900")
 	eq_(rq.status_code, 200)
 
-	rq = client.get(constants.APP_PREFIX + "/all.html")
+	rq = client.get(cfg.www.app_prefix + "/all.html")
 	eq_(rq.status_code, 200)
 	

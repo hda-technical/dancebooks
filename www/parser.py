@@ -1,10 +1,10 @@
 # coding: utf-8
 import codecs
+import collections
 from fnmatch import fnmatch
 import os.path
 import re
 
-import constants
 import utils
 	
 class BibItem(object):
@@ -89,34 +89,12 @@ class BibItem(object):
 	#commentator
 	#editor
 
-	# search helpers
-	YEAR_RE = re.compile(r"(?P<start>\d+)(?:[-–—]+(?P<end>\d+)\??)?")
-	YEAR_INTERVAL_PARAM = "_year_interval"
-	def published_between(self, search_interval: (int, int)) -> bool:
-		if not hasattr(self, self.YEAR_INTERVAL_PARAM):
-			# parsing year field
-			match = self.YEAR_RE.match(self.year())
-			if match:
-				start = int(match.group("start"))
-				end = int(match.group("end") or start)
-				setattr(self, self.YEAR_INTERVAL_PARAM, (start, end))
-			else:
-				raise ValueError("Parsing year interval failed for entry with {0}".format(self.id()))
-		
-		year_interval = getattr(self, self.YEAR_INTERVAL_PARAM)
-		return (
-			year_interval[0] <= search_interval[0] <= year_interval[1] or
-			year_interval[0] <= search_interval[1] <= year_interval[1] or
-			search_interval[0] <= year_interval[0] <= search_interval[1] or
-			search_interval[0] <= year_interval[1] <= search_interval[1]
-		)
-	
 	# getters / setters
 	def get_as_string(self, key: str) -> str:
 		if key in self._params:
 			value = self._params[key]
-			if key in constants.MULTI_VALUE_PARAMS:
-				return constants.OUTPUT_LISTSEP.join(value)
+			if isinstance(value, collections.Iterable) and not isinstance(value, str):
+				return ", ".join(value)
 			else:
 				return value
 		else:
@@ -167,10 +145,11 @@ class BibParser(object):
 		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
 		(0,         1,           2,            3,           4,             5)
 
-	def __init__(self):
+	def __init__(self, cfg):
 		"""
 		Default ctor
 		"""
+		self.cfg = cfg
 		self.state = self.S_NO_ITEM
 		self.reset_lexeme()
 		
@@ -218,15 +197,24 @@ class BibParser(object):
 		"""
 		value = utils.parse_latex(value)
 		
-		if (key in constants.LIST_PARAMS) or (key in constants.NAME_PARAMS):
-			value = set(utils.strip_split_list(value, constants.GENERAL_SEP))
-		elif key in constants.KEYWORD_PARAMS:
-			value = set(utils.strip_split_list(value, constants.KEYWORD_SEP))
-		elif key in constants.INT_PARAMS:
-			try:
+		try:
+			if key in self.cfg.parser.list_params:
+				value = set(utils.strip_split_list(value, self.cfg.parser.list_sep))
+			elif key in self.cfg.parser.name_params:
+				value = set(utils.strip_split_list(value, self.cfg.parser.name_sep))
+			elif key in self.cfg.parser.keywords_params:
+				value = set(utils.strip_split_list(value, self.cfg.parser.keywords_sep))
+			elif key in self.cfg.parser.int_params:
 				value = int(value)
-			except ValueError:
-				self.raise_error()
+			elif key in self.cfg.parser.date_params:
+				(year_from, year_to, year_circa) = utils.parse_year(value)
+
+				item.set(key + self.cfg.parser.date_start_suffix, year_from)
+				item.set(key + self.cfg.parser.date_end_suffix, year_to)
+				item.set(key + self.cfg.parser.date_circa_suffix, year_circa)
+				
+		except ValueError:
+			self.raise_error()
 				
 		item.set(key, value)
 

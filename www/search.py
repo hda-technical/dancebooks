@@ -1,8 +1,6 @@
 # coding: utf-8
 import re
 
-import constants
-
 def search_for_string(key, value):
 	"""
 	Creates filter for string (searches for substrings)
@@ -59,32 +57,19 @@ def search_for_integer_ge(key, value):
 	return lambda item, key=key, value=value: \
 		item.get(key) and \
 		item.get(key) >= value
-
-
-def search_for_year(year_from, year_to):
-	"""
-	Generates filter for year intervals.
-	"""
-	if (not year_from) and (not year_to):
-		return None
 		
-	if not year_from:
-		year_from = year_to
 
-	if not year_to:
-		year_to = year_from
+def search_for_integer_le(key, value):
+	"""
+	Creates filter for integer value (searches for lesser or equal)
+	"""
+	if not isinstance(value, int):
+		raise ValueError("Integer value expected")
+	return lambda item, key=key, value=value: \
+		item.get(key) and \
+		item.get(key) <= value
 
-	year_from = int(year_from)
-	year_to = int(year_to)
-	if (year_to < year_from):
-		return search_false()
 
-	interval = (year_from, year_to)
-	
-	return lambda item, interval=interval: \
-		item.published_between(interval)
-
-					
 def search_false():
 	"""
 	Generates search always returning False
@@ -99,7 +84,7 @@ def search_true():
 	"""
 	return lambda item: \
 		True
-	
+
 	
 def and_(searches):
 	"""
@@ -117,17 +102,23 @@ def or_(searches):
 		any([s(item) for s in searches])
 		
 	
-def search_for(key, values):
+def search_for(cfg, key, value):
 	"""
 	Creates filter for a given key.
 	Returns None if something is bad
 	"""
-	if key in (constants.LIST_PARAMS) or (key in constants.NAME_PARAMS):
-		return search_for_iterable(key, values[key])
-	elif (key == constants.YEAR_PARAM):
-		return search_for_year(
-			values.get(constants.YEAR_FROM_PARAM, ""),
-			values.get(constants.YEAR_TO_PARAM, "")
-		)
+	if key in cfg.parser.multivalue_params:
+		return search_for_iterable(key, value)
+	elif key in cfg.parser.date_start_params:
+		#generating end key
+		extra_key = key[:-len(cfg.parser.date_start_suffix)] + \
+			cfg.parser.date_end_suffix
+		return search_for_integer_ge(extra_key, int(value))
+	elif key in cfg.parser.date_end_params:
+		#generating start key
+		extra_key = key[:-len(cfg.parser.date_end_suffix)] + \
+			cfg.parser.date_start_suffix
+		return search_for_integer_le(extra_key, int(value))
 	else:
-		return search_for_string(key, values[key])
+		print("Creating search for string {key} with value {value}".format(key=key, value=value))
+		return search_for_string(key, value)
