@@ -69,6 +69,7 @@ def search_items_test():
 	filtered_items = filter(author_search, items)
 	eq_(len(list(filtered_items)), 1)
 
+	#testing exact match
 	year_search = search.and_([
 		search.search_for(cfg, "year_from", 1825),
 		search.search_for(cfg, "year_to", 1825)
@@ -76,19 +77,29 @@ def search_items_test():
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
 
+	#testing partial intersection
 	year_search = search.and_([
 		search.search_for(cfg, "year_from", 1500),
-		search.search_for(cfg, "year_to", 1900)
+		search.search_for(cfg, "year_to", 1600)
 	])
 	filtered_items = filter(year_search, items)
-	eq_(len(list(filtered_items)), 2)	
+	eq_(len(list(filtered_items)), 1)
 	
+	#testing inner containment
 	year_search = search.and_([
 		search.search_for(cfg, "year_from", 1499),
 		search.search_for(cfg, "year_to", 1501)
 	])
 	filtered_items = filter(year_search, items)
-	eq_(len(list(filtered_items)), 2)
+	eq_(len(list(filtered_items)), 1)
+	
+	#testing outer containment
+	year_search = search.and_([
+		search.search_for(cfg, "year_from", 1400),
+		search.search_for(cfg, "year_to", 1600)
+	])
+	filtered_items = filter(year_search, items)
+	eq_(len(list(filtered_items)), 1)
 	
 	filtered_items = item_index["keywords"]["grumbling"]
 	eq_(len(list(filtered_items)), 1)
