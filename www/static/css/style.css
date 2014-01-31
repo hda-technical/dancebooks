@@ -194,7 +194,6 @@ textarea:invalid {
 
 #keywordsHider {
 	float: right;
-	display: inline-block;
 	cursor: default;
 	text-decoration: none;
 }
