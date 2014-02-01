@@ -1,9 +1,7 @@
 # coding: utf-8
 import codecs
-import collections
 from fnmatch import fnmatch
 import os.path
-import re
 
 import utils
 	
@@ -93,7 +91,7 @@ class BibItem(object):
 	def get_as_string(self, key: str) -> str:
 		if key in self._params:
 			value = self._params[key]
-			if isinstance(value, collections.Iterable) and not isinstance(value, str):
+			if isinstance(value, list):
 				return ", ".join(value)
 			else:
 				return value
