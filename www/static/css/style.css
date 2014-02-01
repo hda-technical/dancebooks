@@ -132,10 +132,14 @@ select,
 textarea,
 #keywordsChooser {
 	width: 400px;
+	font-size: 100%;
+    font-family: "PT Sans", sans-serif;
 }
 
 input[type="number"] {
 	width: 40px;
+	font-size: 100%;
+    font-family: "PT Sans", sans-serif;
 }
 
 input, 
