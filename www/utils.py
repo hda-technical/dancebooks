@@ -7,6 +7,7 @@ import pstats
 import re
 from urllib import parse as urlparse
 
+import constants
 import search
 
 def strip_split_list(value: str, sep: str) -> [str]:
@@ -83,59 +84,6 @@ def files_in_folder(path: str, pattern: str, excludes: set = set()):
 
 	return result_files
 
-#any of [incomplete, commentary, translation, facsimile]
-METADATA_PATTERN = r"(?:(?:incomplete)|(?:commentary)|(?:translation)|(?:facsimile)|(?:transcription))"
-FILENAME_PATTERN = (
-	#year: digits can be replaced by dashes
-	r"\[(?P<year>[\d\-]+), "
-	#lang: two-letter code
-	r"(?P<lang>\w{2})\] "
-	#author: optional, can contain 
-	#   spaces (Thomas Wilson),
-	#   dots (N. Malpied),
-	#   commas (Louis Pecour, Jacque Dezais)	
-	#(question mark at the end makes regexp non-greedy)
-	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
-	#title: sequence of words, digits, spaces, punctuation
-	#(question mark at the end makes regexp non-greedy)
-	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”№\(\)]+?)"
-	#metadata: optional sequence of predefined values
-	#   tome (, tome 2)
-	#   edition (, edition 10)
-	#   part(, partie 1)
-	#	comma-separated list of METADATA_PATTERN in parentheses
-	#   (something copy) — for books with multiple different copies known 
-	r"(?:"
-		r"(?:, tome (?P<tome>\d+))|"
-		r"(?:, édition (?P<edition>\d+))|"
-		r"(?:, partie (?P<part>\d+))|"
-		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))|"
-		r"(?: \([\w]+ copy\))"
-	r")*"
-	#extension: .pdf
-	r"\.pdf"
-)
-FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
-
-#two-letter country codes mapped to langid
-SHORT_LANG_MAP = {
-	"au": "english",
-	"ca": "english",
-	"cz": "czech",
-	"de": "german",
-	"dk": "danish",
-	"en": "english",
-	"es": "spanish",
-	"fr": "french",
-	"ie": "english",
-	"it": "italian",
-	"pl": "polish",
-	"pt": "portuguese",
-	"ru": "russian",
-	"sc": "english",
-	"us": "english"
-}
-
 def extract_metadata_from_file(path: str) -> {"str": str}:
 	"""
 	Extracts dictionary contating the following fields:
@@ -150,7 +98,7 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	* keywords ([string])
 	"""
 	basename = os.path.basename(path)
-	match = FILENAME_REGEXP.match(basename)
+	match = constants.FILENAME_REGEXP.match(basename)
 	if not match:
 		raise ValueError("Filename {path} didn't match FILENAME_REGEXP".format(
 			path=path
@@ -162,7 +110,7 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	
 	result = {
 		"year": (year_from, year_to),
-		"lang": SHORT_LANG_MAP[match.group("lang")],
+		"langid": constants.SHORT_LANG_MAP[match.group("langid")],
 		"title": match.group("title")
 	}
 	
@@ -194,7 +142,7 @@ def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
 	Creates callable applicable to an item, 
 	checing if this item match given metadata
 	"""
-	lang = metadata["lang"]
+	langid = metadata["langid"]
 	year = metadata["year"]
 	title = metadata["title"]
 	author = metadata.get("author", None)
@@ -205,7 +153,7 @@ def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
 	
 	title_regexp = re.compile("^" + re.escape(title))
 	
-	search_for_lang = search.search_for_eq("langid", lang)
+	search_for_langid = search.search_for_eq("langid", langid)
 	search_for_year = search.and_([
 		search.search_for(cfg, "year_from", year[0]),
 		search.search_for(cfg, "year_to", year[1])
@@ -216,7 +164,7 @@ def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
 	search_for_title = search.or_([search_for_itemtitle, search_for_booktitle])
 	
 	searches = [
-		search_for_lang,
+		search_for_langid,
 		search_for_year,
 		search_for_title,
 	]

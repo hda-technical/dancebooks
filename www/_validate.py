@@ -4,6 +4,7 @@ import os.path
 import re
 import sys
 
+import constants
 import config
 import index
 import parser
@@ -53,25 +54,6 @@ NON_MULTIVOLUME_BOOKTYPES = set(["article", "periodical"])
 MULTIVOLUME_BOOKTYPES = set(["mvbook", "mvreference"])
 SHORTHAND_LIMIT = 25
 
-#country as adjective mapped to langid
-LONG_LANG_MAP = {
-	"american": "english",
-	"australian": "english",
-	"austrian": "german",
-	"canadian": "english",
-	"czech": "czech",
-	"danish": "danish",
-	"english": "english",
-	"french": "french",
-	"german": "german",
-	"italian": "italian",
-	"mexican": "spanish",
-	"polish": "polish",
-	"portuguese": "portuguese",
-	"russian": "russian",
-	"spanish": "spanish"
-
-}
 erroneous_entries = 0
 for item in items:
 	errors = []
@@ -248,7 +230,7 @@ for item in items:
 	
 	#langid validation
 	if source_basename not in MULTILANG_FILES:
-		source_lang = LONG_LANG_MAP[source_basename]
+		source_lang = constants.LONG_LANG_MAP[source_basename]
 		#item language should match source language
 		if langid != source_lang:
 			errors.append("Source language ({source_lang}) doesn't match item language ({langid})".format(

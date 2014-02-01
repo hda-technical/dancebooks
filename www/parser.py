@@ -137,9 +137,10 @@ class BibParser(object):
 	Class for parsing .bib files, folders and multiline strings
 	"""
 	# static parser constants
-	ITEM_OPEN_PARENTHESIS = set(["{", "("])
+	ITEM_OPEN_BRACKET = "("
+	ITEM_CLOSE_BRACKET = ")"
 	FIELD_SEP = ","
-	PARAM_KEY_VALUE_SEP = "="
+	KEY_VALUE_SEP = "="
 	
 	STATE = \
 		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
@@ -151,7 +152,7 @@ class BibParser(object):
 		"""
 		self.cfg = cfg
 		self.state = self.S_NO_ITEM
-		self.reset_lexeme()
+		self._reset_lexeme()
 		
 	def state_string(self):
 		"""
@@ -180,16 +181,15 @@ class BibParser(object):
 			char=self.char
 		))
 
-	def reset_lexeme(self):
+	def _reset_lexeme(self):
 		"""
-		Resets some internal parser variables.
-		Shouldn't be called from the outside
+		Resets some internal parser variables
 		"""
 		self.lexeme = ""
 		self.lexeme_started = False
 		self.lexeme_finished = False
 		self.parenthesis_depth = 0
-		self.closing_param_parenthesis = ""
+		self.lexeme_in_brackets = False
 
 	def set_item_param(self, item: BibItem, key: str, value: str):
 		"""
@@ -291,13 +291,12 @@ class BibParser(object):
 				elif c.isalnum():
 					self.lexeme += c
 					self.lexeme_started = True
-				elif c in self.ITEM_OPEN_PARENTHESIS and (self.lexeme_started or self.lexeme_finished):
-					self.closing_parenthesis = ("}" if c == "{" else ")")
+				elif c == self.ITEM_OPEN_BRACKET and (self.lexeme_started or self.lexeme_finished):
 					self.set_item_param(item, "booktype", self.lexeme)
 					self.set_item_param(item, "source", self.line)
 
 					self.state = self.S_ITEM_NO_ID
-					self.reset_lexeme()
+					self._reset_lexeme()
 				else:
 					self.raise_error()
 
@@ -312,7 +311,7 @@ class BibParser(object):
 					self.set_item_param(item, "id", self.lexeme)
 
 					self.state = self.S_PARAM_KEY
-					self.reset_lexeme()
+					self._reset_lexeme()
 				else:
 					self.raise_error()
 
@@ -323,51 +322,51 @@ class BibParser(object):
 				elif c.isalnum() and (not self.lexeme_finished):
 					self.lexeme += c
 					self.lexeme_started = True
-				elif c == self.PARAM_KEY_VALUE_SEP and (self.lexeme_started or self.lexeme_finished):
+				elif c == self.KEY_VALUE_SEP and (self.lexeme_started or self.lexeme_finished):
 					self.key = self.lexeme
 
 					self.state = self.S_PARAM_VALUE
-					self.reset_lexeme()
+					self._reset_lexeme()
 				else:
 					self.raise_error()
 
 			elif self.state == self.S_PARAM_VALUE:
-				if c == os.linesep and self.lexeme_started and self.closing_param_parenthesis != "":
+				if c == os.linesep and self.lexeme_started and self.lexeme_in_brackets:
 					self.raise_error()
 				elif c.isspace():
 					#any space character sequence is considered as a single space
 					if self.lexeme_started:
 						#only values without spaces can be written without spaces
-						if self.closing_param_parenthesis == "":
+						if not self.lexeme_in_brackets:
 							self.set_item_param(item, self.key, self.lexeme)
 
 							self.state = self.S_PARAM_READ
 							self.key = ""
-							self.reset_lexeme()
+							self._reset_lexeme()
 						else:
 							if not self.lexeme.endswith(" "):
 								self.lexeme += " "
-				elif (c == self.FIELD_SEP) and self.lexeme_started and self.closing_param_parenthesis == "":
+				elif (c == self.FIELD_SEP) and self.lexeme_started and (not self.lexeme_in_brackets):
 					#values without spaces can be written without parentheses
 					self.set_item_param(item, self.key, self.lexeme)
 
 					self.state = self.S_PARAM_KEY
 					self.key = ""
-					self.reset_lexeme()
-				elif (c == self.closing_parenthesis) and self.lexeme_started and self.closing_param_parenthesis == "":					
+					self._reset_lexeme()
+				elif (c == self.ITEM_CLOSE_BRACKET) and self.lexeme_started and (not self.lexeme_in_brackets):					
 					self.set_item_param(item, self.key, self.lexeme)
 					items.append(item)
 					item = BibItem()
 					
 					self.state = self.S_NO_ITEM
 					self.key = ""
-					self.reset_lexeme()
+					self._reset_lexeme()
 				elif c == "{":
 					if self.lexeme_started:
 						self.parenthesis_depth += 1
 						self.lexeme += c
 					else:
-						self.closing_param_parenthesis = "}"
+						self.lexeme_in_brackets = True
 						self.lexeme_started = True
 				elif c == "}":
 					if self.parenthesis_depth > 0:
@@ -378,7 +377,7 @@ class BibParser(object):
 
 						self.state = self.S_PARAM_READ
 						self.key = ""
-						self.reset_lexeme()
+						self._reset_lexeme()
 				elif c.isprintable():
 					self.lexeme_started = True
 					self.lexeme += c
@@ -388,7 +387,7 @@ class BibParser(object):
 			elif self.state == self.S_PARAM_READ:
 				if c.isspace():
 					pass
-				elif c == self.closing_parenthesis:
+				elif c == self.ITEM_CLOSE_BRACKET:
 					items.append(item)
 					item = BibItem()
 					self.state = self.S_NO_ITEM
