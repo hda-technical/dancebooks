@@ -54,6 +54,11 @@ NON_MULTIVOLUME_BOOKTYPES = set(["article", "periodical"])
 MULTIVOLUME_BOOKTYPES = set(["mvbook", "mvreference"])
 SHORTHAND_LIMIT = 25
 
+#magic constant
+LAST_ORIGINAL_YEAR = 1937
+NON_ORIGINAL_KEYWORDS = set(["reissue", "research"])
+RESEARCH_BOOKTYPES = set(["book", "mvbook"])
+
 erroneous_entries = 0
 for item in items:
 	errors = []
@@ -61,6 +66,7 @@ for item in items:
 	author = item.get("author")
 	booktype = item.get("booktype")
 	booktitle = item.get("booktitle")
+	commentator = item.get("commentator")
 	edition = item.get("edition")
 	filename = item.get("filename")
 	id_ = item.get("id")
@@ -83,6 +89,9 @@ for item in items:
 	volume = item.get("volume")
 	volumes = item.get("volumes")
 	year = item.get("year")
+	year_from = item.get("year_from")
+	year_to = item.get("year_to")
+	year_circa = item.get("year_circa")
 	
 	match = SOURCE_REGEXP.match(source)
 	if not match:
@@ -91,9 +100,12 @@ for item in items:
 		))
 	source_basename = match.group("basename")
 	
-	parser_obligatory = [id, booktype, source]
-	if not all(parser_obligatory):
-		raise RuntimeError("Parser hasn't generated all required auxiliary fields ([id, booktype, source])")
+	parser_obligatory = [id, booktype, source, year_from, year_to, year_circa]
+	none_checker = lambda obj: obj is not None
+	if not all(map(none_checker, parser_obligatory)):
+		raise RuntimeError("Parser hasn't generated all required auxiliary fields {fields}".format(
+			fields=parser_obligatory
+		))
 	
 	general_obligatory = [langid, year, title]
 	if not all(general_obligatory):
@@ -148,6 +160,11 @@ for item in items:
 	#author validation empty
 	
 	#booktitle validation empty
+	
+	#commentator
+	if commentator is not None:
+		if (keywords is None) or ("commentary" not in keywords):
+			errors.append("Keywords should contain 'commentary' when commentator specified")
 	
 	#filename validation
 	if edition is not None:
@@ -242,6 +259,21 @@ for item in items:
 	
 	#journaltitle validation empty
 	
+	#keywords validation
+	#if item was issued after LAST_ORIGINAL_YEAR, it should define keywords
+	if True:
+		if (year_from > LAST_ORIGINAL_YEAR) and (booktype in RESEARCH_BOOKTYPES):
+			if (keywords is None) or (len(keywords & NON_ORIGINAL_KEYWORDS) == 0):
+				errors.append("Item was issued after {last_year}, but keywords don't define any of {keywords}".format(
+					last_year=LAST_ORIGINAL_YEAR,
+					keywords=NON_ORIGINAL_KEYWORDS
+				))
+		if (keywords is not None):
+			if ("translation" in keywords) and not all([translator, origlanguage]):
+				errors.append("When 'translation' keyword specified, translator and origlanguage should be present")
+			if ("commentary" in keywords) and not commentator:
+				errors.append("When 'commentary' keyword specified, commentator should be present")
+			
 	#langid validation
 	if source_basename not in MULTILANG_FILES:
 		source_lang = constants.LONG_LANG_MAP[source_basename]
@@ -286,8 +318,11 @@ for item in items:
 		if title.startswith(" ") or title.endswith(" "):
 			errors.append("Title isn't stripped")
 	
-	#translator validation empty
-	
+	#translator validation
+	if translator is not None:
+		if (keywords is None) or ("translation" not in keywords):
+			errors.append("Keywords should contain 'translation' when 'translator' field specified")
+			
 	#type validation empty
 	
 	#url validation empty
