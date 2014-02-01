@@ -1,5 +1,4 @@
 # coding: utf-8
-import codecs
 from fnmatch import fnmatch
 import os.path
 
@@ -228,13 +227,11 @@ class BibParser(object):
 		if not os.path.isdir(path):
 			raise Exception("Path to folder expected")
 
-		items = []
-		for filename in os.listdir(path):
-			if fnmatch(filename, "*.bib"):
-				parsed_items = self.parse_file(os.path.join(path, filename))
-				if parsed_items is not None:
-					items.extend(parsed_items)
-		return items
+		parsed_items = []
+		files = utils.files_in_folder(path, "*.bib")
+		for filename in files:
+			parsed_items += self.parse_file(os.path.join(path, filename))
+		return parsed_items
 		
 	def parse_file(self, path: str) -> [BibItem]:
 		"""
@@ -244,25 +241,17 @@ class BibParser(object):
 		if not os.path.isfile(path):
 			raise Exception("Path to file expected")
 		
-		with open(path, "r+b") as input_file:
-			str_data = input_file.read()
-			#trimming utf-8 byte order mark
-			if str_data.startswith(codecs.BOM_UTF8):
-				str_data = str_data[len(codecs.BOM_UTF8):].decode()
-			else:
-				print("Warning: File at {0} is not in utf-8".format(path))
-				str_data = str_data.decode()
-				
-			try:
-				source_file = os.path.basename(path)
-				items = self.parse_string(str_data)
-				for item in items:
-					self.set_item_param(item, "source", "{source}:{line:04d}".format(
-						source=source_file, 
-						line=item.get("source")))
-				return items				
-			except Exception as ex:
-				raise Exception("While parsing {0}: {1}".format(path, ex))
+		data = utils.read_utf8_file(path)
+		try:
+			source_file = os.path.basename(path)
+			items = self.parse_string(data)
+			for item in items:
+				self.set_item_param(item, "source", "{source}:{line:04d}".format(
+					source=source_file, 
+					line=item.get("source")))
+			return items				
+		except Exception as ex:
+			raise Exception("While parsing {0}: {1}".format(path, ex))
 
 	def parse_string(self, str_data: str) -> [BibItem]:
 		"""

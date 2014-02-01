@@ -1,3 +1,4 @@
+import codecs
 import cProfile
 import functools
 import io
@@ -172,7 +173,7 @@ def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
 	if author is not None:
 		search_for_author = search.search_for_eq(
 			"author", 
-			set(author)
+			author
 		)
 		searches.append(search_for_author)
 	
@@ -296,3 +297,13 @@ def parse_year(year):
 	circa = match.group("circa") is not None
 	
 	return (year_from, year_to, circa)
+
+	
+def read_utf8_file(path):
+	with open(path, "r+b") as input_file:
+		data = input_file.read()
+		#trimming utf-8 byte order mark
+		if data.startswith(codecs.BOM_UTF8):
+			return data[len(codecs.BOM_UTF8):].decode()
+		else:
+			return data.decode()

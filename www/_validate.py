@@ -60,6 +60,7 @@ NON_ORIGINAL_KEYWORDS = set(["reissue", "research"])
 RESEARCH_BOOKTYPES = set(["book", "mvbook"])
 
 erroneous_entries = 0
+errors_count = 0
 for item in items:
 	errors = []
 	#datamodel validation
@@ -73,7 +74,7 @@ for item in items:
 	isbn = item.get("isbn")
 	institution = item.get("institution")
 	journaltitle = item.get("journaltitle")
-	keywords = item.get("keywords")
+	keywords = set(item.get("keywords")) if item.get("keywords") else None
 	langid = item.get("langid")
 	location = item.get("location")
 	number = item.get("number")
@@ -343,6 +344,7 @@ for item in items:
 	#printing errors
 	if len(errors) > 0:
 		erroneous_entries += 1
+		errors_count += len(errors)
 		print("Errors for {id_} ({source})".format(
 			id_=id_,
 			source=source
@@ -350,6 +352,7 @@ for item in items:
 		for error in errors:
 			print("    " + error)
 	
-print("Found {count} erroneous entries".format(
-	count=erroneous_entries
+print("Found {entries} erroneous entries ({errors} errors)".format(
+	entries=erroneous_entries,
+	errors=errors_count
 ))
