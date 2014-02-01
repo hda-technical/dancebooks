@@ -15,7 +15,7 @@ class Index(object):
 			"""
 			Appends an item to subindex
 			"""
-			if isinstance(value, (list, set)):
+			if isinstance(value, list):
 				for subvalue in value:
 					if subvalue in subindex:
 						subindex[subvalue].add(item)

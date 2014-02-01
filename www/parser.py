@@ -199,13 +199,17 @@ class BibParser(object):
 		
 		try:
 			if key in self.cfg.parser.list_params:
-				value = set(utils.strip_split_list(value, self.cfg.parser.list_sep))
+				value = utils.strip_split_list(value, self.cfg.parser.list_sep)
+				
 			elif key in self.cfg.parser.name_params:
-				value = set(utils.strip_split_list(value, self.cfg.parser.name_sep))
+				value = utils.strip_split_list(value, self.cfg.parser.name_sep)
+				
 			elif key in self.cfg.parser.keywords_params:
-				value = set(utils.strip_split_list(value, self.cfg.parser.keywords_sep))
+				value = utils.strip_split_list(value, self.cfg.parser.keywords_sep)
+				
 			elif key in self.cfg.parser.int_params:
 				value = int(value)
+				
 			elif key in self.cfg.parser.date_params:
 				(year_from, year_to, year_circa) = utils.parse_year(value)
 
