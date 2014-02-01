@@ -63,10 +63,11 @@ for item in items:
 	booktitle = item.get("booktitle")
 	edition = item.get("edition")
 	filename = item.get("filename")
-	id = item.get("id")
+	id_ = item.get("id")
 	isbn = item.get("isbn")
 	institution = item.get("institution")
 	journaltitle = item.get("journaltitle")
+	keywords = item.get("keywords")
 	langid = item.get("langid")
 	location = item.get("location")
 	number = item.get("number")
@@ -111,7 +112,8 @@ for item in items:
 	
 	if (publisher is not None) and (location is None):
 		errors.append("If publisher present, location must be present")
-		
+	
+	#booktype validation
 	booktype = booktype.lower()
 	if booktype not in VALID_BOOKTYPES:
 		errors.append("Invalid booktype ({booktype})".format(
@@ -144,8 +146,6 @@ for item in items:
 	
 	#data validation
 	#author validation empty
-	
-	#booktype validated above
 	
 	#booktitle validation empty
 	
@@ -201,10 +201,22 @@ for item in items:
 					filename_=filename_
 				))
 			
-			keywords = metadata.get("keywords", None)
-			if source_basename == "_problems" and keywords is not None:
-				if "incomplete" not in keywords:
+			meta_keywords = metadata.get("keywords", None)
+			if meta_keywords is not None:
+				if ("incomplete" not in meta_keywords) and (source_basename == "_problems"):
 					errors.append("Incomplete books should be stored in _problems.bib")
+				meta_keywords.discard("incomplete")
+				
+				if len(meta_keywords) > 0:
+					if keywords is None:
+						errors.append("No keywords specified (should be {meta_keywords}".format(
+							meta_keywords=meta_keywords
+						))
+					elif not keywords >= meta_keywords:
+						errors.append("Item keywords {keywords} do not match metadata keywords {meta_keywords}".format(
+							keywords=keywords,
+							meta_keywords=meta_keywords
+						))
 			
 			search_ = utils.create_search_from_metadata(cfg, metadata)
 			if not search_(item):
@@ -213,7 +225,9 @@ for item in items:
 				))
 	
 	#id validation empty
-	
+	if len(item_index["id"][id_]) != 1:
+		errors.append("Id is not unique")
+		
 	#isbn validation
 	if isbn is not None:
 		for isbn_ in isbn:
@@ -294,8 +308,8 @@ for item in items:
 	#printing errors
 	if len(errors) > 0:
 		erroneous_entries += 1
-		print("Errors for {id} ({source})".format(
-			id=id,
+		print("Errors for {id_} ({source})".format(
+			id_=id_,
 			source=source
 		))
 		for error in errors:

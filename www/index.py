@@ -13,7 +13,7 @@ class Index(object):
 		"""
 		def append_to_subindex(subindex, item, value):
 			"""
-			Appends an item to subindex. Changes subindex.
+			Appends an item to subindex
 			"""
 			if isinstance(value, (list, set)):
 				for subvalue in value:
