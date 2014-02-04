@@ -86,7 +86,7 @@ def root():
 	for index_to_use in (cfg.www.indexed_search_params & request_keys):
 		value_to_use = request_args[index_to_use]
 
-		if index_to_use in cfg.parser.multivalue_params:
+		if index_to_use in cfg.parser.list_params:
 			values_to_use = utils.strip_split_list(value_to_use, ",")
 		else:
 			values_to_use = [value_to_use]
