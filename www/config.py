@@ -63,24 +63,6 @@ class ParserConfig(object):
 			raise ValueError("list_params param wasn't found")
 		self.list_params = set(json.loads(params["list_params"]))
 		
-		if "name_sep" not in params:
-			raise ValueError("name_sep param wasn't found")
-		self.name_sep = params["name_sep"]
-		
-		if "name_params" not in params:
-			raise ValueError("name_params param wasn't found")
-		self.name_params = set(json.loads(params["name_params"]))
-		
-		if "keywords_sep" not in params:
-			raise ValueError("keywords_sep param wasn't found")
-		self.keywords_sep = params["keywords_sep"]
-		
-		if "keywords_params" not in params:
-			raise ValueError("keywords_params param wasn't found")
-		self.keywords_params = set(json.loads(params["keywords_params"]))
-		
-		self.multivalue_params = self.list_params | self.name_params | self.keywords_params
-		
 		if "int_params" not in params:
 			raise ValueError("int_params param wasn't found")
 		self.int_params = set(json.loads(params["int_params"]))

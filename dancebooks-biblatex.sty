@@ -122,18 +122,6 @@
 % using small caps for URL and ISBN terms
 \renewcommand\mkbibacro[1]{\textsc{\MakeLowercase{#1}}}
 
-\DeclareSourcemap{
-	\maps[datatype=bibtex]{
-		\map{
-			\step[fieldsource=keywords]
-			\step[fieldset=lista, origfieldval]
-			\step[fieldsource=lista,
-				match=\regexp{\s*,\s*},
-				replace=\regexp{\x20|\x20}]
-		}
-	}
-}
-
 % adding [label] before each bibliography entry
 \renewbibmacro*{cite}{%
 \iffieldundef{shorthand}%
@@ -153,13 +141,14 @@
 % only if option was specified
 \ifdancebooks@detailed%
 \xapptobibmacro{url+urldate+note}{%
+\finentry%
 \iffieldundef{annotation}%
 {}%
-{\newline\mkbibacro{note}\addcolon\addspace\usebibmacro{annotation}}%
+{\printtext{\newline\mkbibacro{annotation}\addcolon\addspace\usebibmacro{annotation}}}%
 \iffieldundef{keywords}%
 {}%
-{\newline\mkbibacro{keywords}\addcolon\addspace\usebibmacro{lista}}%
-}
+{\finentry\printtext{\newline\mkbibacro{keywords}\addcolon\addspace\usebibmacro{keywords}}}%
+}%
 {}{}%
 \else
 \fi
@@ -173,9 +162,6 @@
 \DeclareListFormat{isbn}{%
 \ifnumequal{\value{listcount}}{\value{liststart}}%
 {\mkbibacro{isbn}\addcolon\addspace}%
-{}%
-\ifnumgreater{\value{listcount}}{\value{liststart}}%
-{\addcomma\addspace}%
 {\addcomma\addspace}%
 #1}
 
@@ -186,6 +172,11 @@
 {\bibsstring{from#1}}%
 {\bibsstring{lang#1}}%
 \usebibmacro{list:andothers}}
+
+% intellectual keyword printing
+\DeclareFieldFormat{keywords}{%
+\forcsvlist{\addcomma\addspace}{#1}%
+}
 
 \renewcommand*{\lbx@gost@lfromlang}[1]{%
 \iflistundef{#1}%
@@ -205,13 +196,9 @@
 % defining ISBN list printing format
 \renewbibmacro*{isbn}{\printlist{isbn}}
 
-% defining lista printing fortat
-% as already said, this macro will be used for keywords storage
+% defining keywords list printing fortat
 % using \newbibmacro* instead of \renewbibmacro* to remove warning
-\newbibmacro*{lista}{\printlist{lista}}
-
-% adding empty line at the end of each entry
-\renewbibmacro*{finentry}{\finentry\newline}
+\newbibmacro*{keywords}{\printfield{keywords}}
 
 % adding option to ignore bibliography source included by default
 \ifdancebooks@usedefaults

@@ -107,7 +107,7 @@ def search_for(cfg, key, value):
 	Creates filter for a given key.
 	Returns None if something is bad
 	"""
-	if key in cfg.parser.multivalue_params:
+	if key in cfg.parser.list_params:
 		return search_for_iterable(key, value)
 	elif key in cfg.parser.date_start_params:
 		#generating end key

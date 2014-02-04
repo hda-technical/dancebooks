@@ -18,9 +18,10 @@ HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 PDFLATEX := pdflatex --shell-escape --max-print-line=250
 LUALATEX := lualatex --shell-escape --max-print-line=250
 XELATEX  := xelatex  --shell-escape --max-print-line=250
-LATEX := $(LUALATEX)
+LATEX ?= $(LUALATEX)
 
-BIBER := biber --listsep=\| --namesep=\| --validate_datamodel
+#biber command with delimeters specification (xsvsep expects regexp, other expects symbol)
+BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamodel
 
 # PDF files related targets
 
