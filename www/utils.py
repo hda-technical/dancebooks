@@ -1,6 +1,7 @@
 import codecs
 import cProfile
 import functools
+from http import client as httpclient
 import io
 import os
 import fnmatch
@@ -207,26 +208,59 @@ def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
 	return search.and_(searches)
 	
 	
-def all_or_none(iterable: "iterable") -> bool:
+def all_or_none(iterable: "iterable") -> (bool, str):
 	return all(iterable) or not any(iterable)
+
 	
+def head_request(scheme: str, host: str, path: str) -> int:
+	"""
+	Performs HTTP head request and returns response code
+	"""
+	if (scheme == "http"):
+		connection = httpclient.HTTPConnection(host)
+	elif (scheme == "https"):
+		connection = httpclient.HTTPSConnection(host)
+	else:
+		raise ValueError("Scheme {scheme} is not supported".format(
+			scheme=scheme
+		))
+	connection.request("HEAD", urlparse.quote(path))
+	response = connection.getresponse()
+	return response.status, response.reason
+
+
 
 def is_url_valid(url: str, check_head: bool = False) -> (bool, str):
 	"""
 	Validates urls.
 	Returns tuple containing validation result and error message
 	"""
-	parse_result = urlparse.urlparse(url)
-	if len(parse_result.scheme) == 0:
-		return False, "Scheme isn't specified"
-	elif len(parse_result.netloc) == 0:
-		return False, "Netloc isn't specified"
-	elif len(parse_result.fragment) != 0:
-		return False, "Fragments aren't allowed"
-	else:
-		return True, "URL is correct"
-	
-	
+	try:
+		parse_result = urlparse.urlparse(url)
+		if len(parse_result.scheme) == 0:
+			return False, "Scheme isn't specified"
+		elif len(parse_result.netloc) == 0:
+			return False, "Netloc isn't specified"
+		elif len(parse_result.fragment) != 0:
+			return False, "Fragments aren't allowed"
+		
+		if check_head:
+			code, reason = head_request(
+				parse_result.scheme,
+				parse_result.hostname,
+				parse_result.path
+			)
+			if code not in constants.VALID_HTTP_CODES:
+				return False, "HTTP HEAD request returned code {code}: {reason}".format(
+					code=code,
+					reason=reason
+				)
+	except Exception as ex:
+		return False, "Exception occured: {ex}".format(
+			ex=ex
+		)
+	return True, "URL is correct"
+		
 ISBN_REGEXP = re.compile("[^\dX]")
 def is_isbn_valid(isbn: str) -> (bool, str):
 	"""

@@ -72,3 +72,9 @@ FILENAME_PATTERN = (
 	r"\.pdf"
 )
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
+
+VALID_HTTP_CODES = set([
+	200, #OK
+	302, #Found — used by hdl.loc.gov
+	303  #See Other — used by hdl.handle.net
+])

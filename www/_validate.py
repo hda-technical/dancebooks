@@ -327,7 +327,7 @@ def main(
 		
 		#url validation empty
 		if url is not None:
-			correct, msg = utils.is_url_valid(url)
+			correct, msg = utils.is_url_valid(url, True)
 			if not correct:
 				errors.append("URL {url} isn't valid: {msg}".format(
 					url=url,
