@@ -211,7 +211,7 @@ def all_or_none(iterable: "iterable") -> bool:
 	return all(iterable) or not any(iterable)
 	
 
-def is_url_valid(url: str) -> (bool, str):
+def is_url_valid(url: str, check_head: bool = False) -> (bool, str):
 	"""
 	Validates urls.
 	Returns tuple containing validation result and error message

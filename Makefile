@@ -6,12 +6,11 @@ ANC_BIBLATEX_FILES := \
 	dancebooks-biblatex.sty
 
 ANC_MARKDOWN_FILES := \
-	transcriptions/_markdown2.py \
-	transcriptions/_reset.css \
+	www/_markdown2.py \
 	transcriptions/_style.css
 	
 ANC_WIKI_FILES := \
-	transcriptions/_generate_wiki.py
+	www/_generate_wiki.py
 
 HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
@@ -22,6 +21,9 @@ LATEX ?= $(LUALATEX)
 
 #biber command with delimeters specification (xsvsep expects regexp, other expects symbol)
 BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamodel
+
+TRANSCRIPTIONS_WIKI_PAGE := wiki/Transcriptions.md
+TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
 
 # PDF files related targets
 
@@ -71,13 +73,19 @@ purge-pdfs: clean-pdfs
 # Transcriptions related targets
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
-	@./transcriptions/_markdown2.py --input "$<" --output "$@"
+	@cd www && ./_markdown2.py \
+		--input "../$<" \
+		--output "../$@" \
+		--css "../transcriptions/_style.css"
 
 transcriptions.mk: $(HTML_FILES)
 	@touch $@
 
 update-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
-	@./transcriptions/_generate_wiki.py $(MARKDOWN_FILES)
+	@cd www && ./_generate_wiki.py \
+		--folder ../transcriptions \
+		--page "../$(TRANSCRIPTIONS_WIKI_PAGE)" \
+		--url-prefix "$(TRANSCRIPTIONS_URL_PREFIX)"
 	@cd wiki && (git commit -am "Updated wiki" || true) && git push origin master
 	@touch $@
 	

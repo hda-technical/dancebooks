@@ -2,6 +2,8 @@
 # coding: utf-8
 import os.path
 
+import opster
+
 import main
 import parser
 import utils
@@ -28,8 +30,15 @@ def search_profile():
 		"year_to=2000")
 
 
-if __name__ == "__main__":
+@opster.command()
+def main():
+	"""
+	Profiles some parts of a www-module
+	"""
 	all_profile()
 	#parsing_profile()
 	#search_profile()
-	pass
+
+
+if __name__ == "__main__":
+	main()
