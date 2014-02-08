@@ -1,21 +1,10 @@
 function submitSearchForm() {
-	//validating number fields
-	var valid = true;
-	numbers = $('input[type="number"]').get();
-	for (index in numbers) {
-		number = numbers[index]
-		if (number.value.length == 0) {
-			continue;
-		}
-
-		var regexp = new RegExp(number.pattern)
-		if (regexp.exec(number.value) == null) {
-			return;
-		}
-	}
-
+	this.disabled = 'disabled'
 	search = $('#search input[type!="checkbox"], #search select').filter(function(index) {
-		return (this.value.length != 0);
+		return (
+			(this.value.length != 0) ||
+			($(this).is(':invalid'))
+		);
 	}).map(function(index) {
 		return (this.name + '=' + this.value);
 	}).get().join("&");
@@ -26,27 +15,12 @@ function submitSearchForm() {
 }
 
 function sendReportForm() {
-	//validating message field
-	textareas = $('#reportForm textarea, #reportForm input[type="text"]').get();
-	for (index in textareas) {
-		textarea = textareas[index];
-		if (textarea.value.length == 0) {
-			return;
-		}
-	}
-
-	emails = $('#reportForm input[type="email"]').get();
-	for (index in emails) {
-		email = emails[index];
-		var regexp = new RegExp(email.pattern)
-		if ((email.value.length == 0) || (regexp.exec(email.value) == null)) {
-			return;
-		}
-	}
-
 	this.disabled = 'disabled'
 	data = $('#reportForm textarea, #reportForm input').filter(function(index) {
-		return (this.value.length != 0);
+		return (
+			(this.value.length != 0) ||
+			($(this).is(':invalid'))
+		);
 	}).map(function(index) {
 		return (this.name + '=' + this.value);
 	}).get().join("&");

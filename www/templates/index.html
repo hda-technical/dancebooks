@@ -21,30 +21,38 @@
 			<form id="search" action="/bib/index.html">
 				<table>
 					<tr>
-						<td>{{ _("author") }}:</td>
 						<td>
-							<input type="text" name="author"/>
+							<label for="author">{{ _("author") }}:</label>
+						</td>
+						<td>
+							<input id="author" type="text" name="author"/>
 						</td>
 					</tr>
 					<tr>
-						<td>{{ _("title") }}:</td>
 						<td>
-							<input type="text" name="title"/>
+							<label for="title">{{ _("title") }}:</label>
+						</td>
+						<td>
+							<input id="title" type="text" name="title"/>
 						</td>
 					</tr>
 					<tr>
-						<td>{{ _("year") }}:</td>
 						<td>
-							<span>{{ _("year_from") }}</span>
-							<input type="number" name="year_from" pattern="\d+"/>
-							<span>{{ _("year_to") }}</span>
-							<input type="number" name="year_to" pattern="\d+"/>
+							<label for="year_from">{{ _("year") }}:</label>
+						</td>
+						<td>
+							<label for="year_from">{{ _("year_from") }}</label>
+							<input id="year_from" type="number" name="year_from" min="0" max="9999"/>
+							<label from="year_to">{{ _("year_to") }}</label>
+							<input id="year_to" type="number" name="year_to" min="0" max="9999"/>
 						</td>
 					</tr>
 					<tr>
-						<td>{{ _("langid") }}:</td>
 						<td>
-							<select name="langid" id="langid">
+							<label for="langid">{{ _("langid") }}:</label>
+						</td>
+						<td>
+							<select id="langid" name="langid" id="langid">
 								<!-- required to reduce flicking -->
 								<option value="empty" selected="selected"></option>
 								<option value="">{{ _("any") }}</option>
@@ -52,21 +60,27 @@
 						</td>
 					</tr>
 					<tr>
-						<td>{{ _("publisher") }}:</td>
 						<td>
-							<input type="text" name="publisher"/>
+							<label for="publisher">{{ _("publisher") }}:</label>
+						</td>
+						<td>
+							<input id="publisher" type="text" name="publisher"/>
 						</td>
 					</tr>
 					<tr>
-						<td>{{ _("location") }}:</td>
 						<td>
-							<input type="text" name="location"/>
+							<label for="location">{{ _("location") }}:</label>
+						</td>
+						<td>
+							<input id="location" type="text" name="location"/>
 						</td>
 					</tr>
 					<tr>
-						<td>{{ _("keywords") }}:</td>
 						<td>
-							<input type="text" readonly="readonly" name="keywords" onfocus="showKeywordsChooser()"/>
+							<label for="keywords">{{ _("keywords") }}:</label>
+						</td>
+						<td>
+							<input id="keywords" type="text" readonly="readonly" name="keywords" onfocus="showKeywordsChooser()"/>
 							<div id="keywordsChooser" style="display: none;">
 								<span id="keywordsHider" onclick="hideKeywordsChooser()">▲</span>
 							</div>
