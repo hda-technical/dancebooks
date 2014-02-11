@@ -23,7 +23,8 @@ languages = sorted(item_index["langid"].keys())
 
 @opster.command()
 def main(
-	root=("r", "", "E-library root")
+	root=("r", "", "E-library root"),
+	check_head=("", False, "Perform HTTP HEAD request to url values")
 ):
 	"""
 	Validates bibliography over a bunch of rules
@@ -327,7 +328,7 @@ def main(
 		
 		#url validation empty
 		if url is not None:
-			correct, msg = utils.is_url_valid(url, True)
+			correct, msg = utils.is_url_valid(url, check_head)
 			if not correct:
 				errors.append("URL {url} isn't valid: {msg}".format(
 					url=url,
