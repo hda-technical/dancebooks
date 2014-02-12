@@ -58,6 +58,8 @@ def main(
 	LAST_ORIGINAL_YEAR = 1937
 	NON_ORIGINAL_KEYWORDS = set(["reissue", "research"])
 	RESEARCH_BOOKTYPES = set(["book", "mvbook"])
+	
+	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
 
 	erroneous_entries = 0
 	errors_count = 0
@@ -77,6 +79,7 @@ def main(
 		keywords = set(item.get("keywords")) if item.get("keywords") else None
 		langid = item.get("langid")
 		location = item.get("location")
+		note = item.get("note")
 		number = item.get("number")
 		origlanguage = item.get("origlanguage")
 		publisher = item.get("publisher")
@@ -285,6 +288,16 @@ def main(
 					langid=langid
 				))
 		#location validation empty
+		
+		#note validation
+		note_unpublished = (note is not None) and (note.startswith(UNPUBLISHED_NOTE_PREFIX))
+		booktype_unpublished = (booktype == "unpublished")
+		if not utils.all_or_none([note_unpublished, booktype_unpublished]):
+			errors.append("For unpublished books, note should begin with [{note_prefix}] and booktype should be {booktype}".format(
+				booktype="unpublished",
+				note_prefix=UNPUBLISHED_NOTE_PREFIX
+			))
+		
 		
 		#number validation empty
 		
