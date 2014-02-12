@@ -1,3 +1,5 @@
+import collections
+
 class Index(object):
 	def __init__(self, cfg, items):
 		self.cfg = cfg
@@ -17,20 +19,12 @@ class Index(object):
 			"""
 			if isinstance(value, list):
 				for subvalue in value:
-					if subvalue in subindex:
-						subindex[subvalue].add(item)
-					else:
-						subindex[subvalue] = set([item])
+					subindex[subvalue].add(item)
 			else:
-				if value in subindex:
-					subindex[value].add(item)
-				else:
-					subindex[value] = set([item])
-						
-		self._dict = dict()
-		for key in self.cfg.www.index_params:
-			self._dict[key] = dict()
-
+				subindex[value].add(item)
+	
+		dict_creator = lambda: collections.defaultdict(set)
+		self._dict = collections.defaultdict(dict_creator)
 		for key in self.cfg.www.index_params:
 			subindex = self._dict[key]
 			for item in items:
