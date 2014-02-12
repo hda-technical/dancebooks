@@ -2,6 +2,7 @@ import configparser
 import functools
 import json
 import os.path
+import subprocess
 
 class SmtpConfig(object):
 	def __init__(self, params):
@@ -144,3 +145,5 @@ class Config(object):
 		self.bug_report = BugReportConfig(Config.get_params(config, fallback, "BUG_REPORT"))
 		self.parser = ParserConfig(Config.get_params(config, fallback, "PARSER"))
 		self.www = WwwConfig(Config.get_params(config, fallback, "WWW"))
+		
+		self.version = subprocess.check_output("git log | head -n 1 | cut -f 2 -d ' '", shell=True).decode().strip()
