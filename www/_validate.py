@@ -5,7 +5,7 @@ import sys
 
 import opster
 
-import constants
+import const
 import config
 import index
 import parser
@@ -280,7 +280,7 @@ def main(
 				
 		#langid validation
 		if source_basename not in MULTILANG_FILES:
-			source_lang = constants.LONG_LANG_MAP[source_basename]
+			source_lang = const.LONG_LANG_MAP[source_basename]
 			#item language should match source language
 			if langid != source_lang:
 				errors.append("Source language ({source_lang}) doesn't match item language ({langid})".format(

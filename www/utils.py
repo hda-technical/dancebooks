@@ -9,7 +9,7 @@ import pstats
 import re
 from urllib import parse as urlparse
 
-import constants
+import const
 import search
 
 def strip_split_list(value: str, sep: str) -> [str]:
@@ -22,7 +22,7 @@ def strip_split_list(value: str, sep: str) -> [str]:
 LATEX_GROUPING_REGEXP = re.compile(r"(\s|^)\{([^\s]*)\}(\s|$)")
 #LATEX_URL_REGEXP = re.compile(r"\\url\{([^\s]*)\}")
 #LATEX_PARENCITE_REGEXP = re.compile(r"\\parencite\{([a-z_\d]*)\}")
-#PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(constants.APP_PREFIX + "/book")
+#PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(const.APP_PREFIX + "/book")
 def parse_latex(value: str) -> str:
 	"""
 	Attempts to remove LaTeX formatting from string
@@ -100,7 +100,7 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	* keywords ([string])
 	"""
 	basename = os.path.basename(path)
-	match = constants.FILENAME_REGEXP.match(basename)
+	match = const.FILENAME_REGEXP.match(basename)
 	if not match:
 		raise ValueError("Filename {path} didn't match FILENAME_REGEXP".format(
 			path=path
@@ -112,7 +112,7 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	
 	result = {
 		"year": (year_from, year_to),
-		"langid": constants.SHORT_LANG_MAP[match.group("langid")],
+		"langid": const.SHORT_LANG_MAP[match.group("langid")],
 		"title": match.group("title")
 	}
 	
@@ -250,7 +250,7 @@ def is_url_valid(url: str, check_head: bool = False) -> (bool, str):
 				parse_result.hostname,
 				parse_result.path
 			)
-			if code not in constants.VALID_HTTP_CODES:
+			if code not in const.VALID_HTTP_CODES:
 				return False, "HTTP HEAD request returned code {code}: {reason}".format(
 					code=code,
 					reason=reason

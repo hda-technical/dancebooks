@@ -133,7 +133,6 @@ class BibParser(object):
 	"""
 	Class for parsing .bib files, folders and multiline strings
 	"""
-	# static parser constants
 	ITEM_OPEN_BRACKET = "("
 	ITEM_CLOSE_BRACKET = ")"
 	FIELD_SEP = ","
