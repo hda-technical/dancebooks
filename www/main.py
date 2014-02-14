@@ -131,11 +131,12 @@ def show_all():
 
 @flask_app.route(cfg.www.app_prefix + "/book/<string:id>", methods=["GET"])
 def get_book(id):
-	items = list(item_index["id"].get(id, None))
+	items = item_index["id"].get(id, None)
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
+	items = list(items)
 	return flask.render_template("book.html", item=items[0])
 
 
@@ -193,7 +194,7 @@ def everything_else(filename):
 	elif (os.path.isfile("static/" + filename)):
 		return flask_app.send_static_file(filename)
 	else:
-		flask.abort(404)
+		flask.abort(404, "No such file")
 
 
 if __name__ == "__main__":
