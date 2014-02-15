@@ -43,7 +43,7 @@
 						<td>
 							<label for="year_from">{{ _("year_from") }}</label>
 							<input id="year_from" type="number" name="year_from" min="0" max="9999"/>
-							<label from="year_to">{{ _("year_to") }}</label>
+							<label for="year_to">{{ _("year_to") }}</label>
 							<input id="year_to" type="number" name="year_to" min="0" max="9999"/>
 						</td>
 					</tr>
@@ -52,7 +52,7 @@
 							<label for="langid">{{ _("langid") }}:</label>
 						</td>
 						<td>
-							<select id="langid" name="langid" id="langid">
+							<select id="langid" name="langid">
 								<!-- required to reduce flicking -->
 								<option value="empty" selected="selected"></option>
 								<option value="">{{ _("any") }}</option>
