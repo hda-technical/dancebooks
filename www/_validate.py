@@ -38,7 +38,7 @@ def main(
 
 	SOURCE_REGEXP = re.compile("(?P<basename>[_\-\w\.]+).bib:\d+")
 	MULTILANG_FILES = set(["proceedings-spb", "proceedings-rothenfelser", "_missing", "_problems"])
-	VALID_BOOKTYPES = set([
+	VALidBOOKTYPES = set([
 		"book",
 		"mvbook",
 		"inproceedings",
@@ -72,7 +72,7 @@ def main(
 		commentator = item.get("commentator")
 		edition = item.get("edition")
 		filename = item.get("filename")
-		id_ = item.get("id")
+		id = item.get("id")
 		isbn = item.get("isbn")
 		institution = item.get("institution")
 		journaltitle = item.get("journaltitle")
@@ -131,7 +131,7 @@ def main(
 		
 		#booktype validation
 		booktype = booktype.lower()
-		if booktype not in VALID_BOOKTYPES:
+		if booktype not in VALidBOOKTYPES:
 			errors.append("Invalid booktype ({booktype})".format(
 				booktype=booktype
 			))
@@ -246,7 +246,7 @@ def main(
 					))
 		
 		#id validation empty
-		if len(item_index["id"][id_]) != 1:
+		if len(item_index["id"][id]) != 1:
 			errors.append("Id is not unique")
 			
 		#isbn validation
@@ -358,8 +358,8 @@ def main(
 		if len(errors) > 0:
 			erroneous_entries += 1
 			errors_count += len(errors)
-			print("Errors for {id_} ({source})".format(
-				id_=id_,
+			print("Errors for {id} ({source})".format(
+				id=id,
 				source=source
 			))
 			for error in errors:
