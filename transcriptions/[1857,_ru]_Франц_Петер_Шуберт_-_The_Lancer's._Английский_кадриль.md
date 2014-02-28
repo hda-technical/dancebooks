@@ -1,5 +1,5 @@
 ﻿# Франц Петер Шуберт
-# The Lancer's. Английский кадриль с объяснением на русском языке. Les lanciers. Célèbre quadrille anglais pour le piano arrangé d'après le text original. Édition avec théorie d'après les plus célèbres professeurs de Paris et Londres. Adopté dans tous les cours de danses de Paris.
+# The Lancer's. Английский кадриль с объяснением на русском языке. Les lanciers. Célèbre quadrille anglais pour le piano arrangé d'après le text original. Édition avec théorie d'après les plus célèbres professeurs de Paris et Londres. Adopté dans tous les cours de danses de Paris
 
 ### Первая фигура
 
