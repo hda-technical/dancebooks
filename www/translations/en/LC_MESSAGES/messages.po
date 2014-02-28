@@ -160,3 +160,12 @@ msgstr "Russian"
 msgid "spanish"
 msgstr "Spanish"
 
+msgid "hda"
+msgstr "Historical Dance Association"
+
+msgid "golden_forests"
+msgstr "Golden Forests"
+
+msgid "github_repo"
+msgstr "GitHub repository"
+

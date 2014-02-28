@@ -162,3 +162,11 @@ msgstr "Русский"
 msgid "spanish"
 msgstr "Испанский"
 
+msgid "hda"
+msgstr "Ассоциация исторического танца"
+
+msgid "golden_forests"
+msgstr "Золотые леса"
+
+msgid "github_repo"
+msgstr "Репозиторий на ГитХабе"
