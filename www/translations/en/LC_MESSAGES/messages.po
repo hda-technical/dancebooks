@@ -67,7 +67,7 @@ msgstr "Thanks! Your message was sent to /dev/null"
 
 #: Entry fields / Search forms
 msgid "author"
-msgstr "Автор"
+msgstr "Author"
 
 msgid "title"
 msgstr "Title"
