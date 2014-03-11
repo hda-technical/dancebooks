@@ -160,6 +160,10 @@ msgstr "Russian"
 msgid "spanish"
 msgstr "Spanish"
 
+#: Footer icons
+msgid "rendered_pdf"
+msgstr "Renrered PDF file"
+
 msgid "hda"
 msgstr "Historical Dance Association"
 
@@ -168,4 +172,7 @@ msgstr "Golden Forests"
 
 msgid "github_repo"
 msgstr "GitHub repository"
+
+msgid "persimmon"
+msgstr "Persimmon"
 

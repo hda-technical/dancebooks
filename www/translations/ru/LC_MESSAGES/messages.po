@@ -162,6 +162,10 @@ msgstr "Русский"
 msgid "spanish"
 msgstr "Испанский"
 
+#: Footer icons
+msgid "rendered_pdf"
+msgstr "Файл в формате PDF"
+
 msgid "hda"
 msgstr "Ассоциация исторического танца"
 
@@ -170,3 +174,6 @@ msgstr "Золотые леса"
 
 msgid "github_repo"
 msgstr "Репозиторий на ГитХабе"
+
+msgid "persimmon"
+msgstr "Хурма"

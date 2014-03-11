@@ -24,6 +24,8 @@
 {% set value = item.get_as_string(param) %}
 {% endif %}
 {% if value %}
+
+{% if (param != "filename") or show_secrets %} {# secrets filtering: start #}
 			<div class="bib_item_left">{{ _(param) }}:</div>
 			<div class="bib_item_right">
 {% if param == "id" %}
@@ -39,13 +41,15 @@
 {% elif param == "series" %}
 {% set extra_value = item.get_as_string("number") %}
 				{{ value }} {{ _("number") }}{{ extra_value }}
+
 {% elif param == "langid" %}
 				{{ _(value) }}
+
 {% else %}
 				{{ value }}
 {% endif %}
 			</div>
-			<br/>
 {% endif %}
+{% endif %} {# secrets filtering: end #}
 {% endfor %}
 

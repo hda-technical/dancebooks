@@ -39,7 +39,9 @@ flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
 msngr = messenger.Messenger(cfg)
-EXPIRES = datetime.datetime(2100, 1, 1)
+EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
+SECRET_COOKIE_KEY = "secret"
+SECRET_COOKIE_VALUE = "I_AM_A_PERSIMMON"
 
 @babel_app.localeselector
 def get_locale():
@@ -51,6 +53,13 @@ def get_locale():
 		return lang
 	else:	
 		return flask.request.accept_languages.best_match(cfg.www.languages)
+
+
+@flask_app.route(cfg.www.app_prefix + "/secret-cookie")
+def secret_cookie():
+	response = flask.make_response(flask.redirect(cfg.www.app_prefix + "/index.html"))
+	response.set_cookie(SECRET_COOKIE_KEY, value=SECRET_COOKIE_VALUE, expires=EXPIRES)
+	return response
 
 
 @flask_app.route(cfg.www.app_prefix + "/")
@@ -77,9 +86,15 @@ def root():
 	request_args = dict(filter(args_filter, flask.request.args.items()))
 	request_keys = set(request_args.keys())
 
+	show_secrets = (flask.request.cookies.get(SECRET_COOKIE_KEY, "") == SECRET_COOKIE_VALUE)
+
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
-		return flask.render_template("index.html", items=items)
+		return flask.render_template(
+			"index.html", 
+			items=items,
+			show_secrets=show_secrets
+		)
 
 	found_items = None
 
@@ -121,23 +136,38 @@ def root():
 	return flask.render_template(
 		"index.html", 
 		found_items=found_items,
-		search_params=request_args)
+		search_params=request_args,
+		show_secrets=show_secrets
+	)
 
 
 @flask_app.route(cfg.www.app_prefix + "/all.html")
 def show_all():
-	return flask.render_template("all.html", items=items)
+	show_secrets = (flask.request.cookies.get(SECRET_COOKIE_KEY, "") == SECRET_COOKIE_VALUE)
+
+	return flask.render_template(
+		"all.html", 
+		items=items,
+		show_secrets=show_secrets
+	)
 
 
 @flask_app.route(cfg.www.app_prefix + "/book/<string:id>", methods=["GET"])
 def get_book(id):
+	show_secrets = (flask.request.cookies.get(SECRET_COOKIE_KEY, "") == SECRET_COOKIE_VALUE)
+	
 	items = item_index["id"].get(id, None)
+	
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
 	items = list(items)
-	return flask.render_template("book.html", item=items[0])
+	return flask.render_template(
+		"book.html", 
+		item=items[0],
+		show_secrets=show_secrets
+	)
 
 
 @flask_app.route(cfg.www.app_prefix + "/book/<string:book_id>", methods=["POST"])
