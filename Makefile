@@ -47,7 +47,7 @@ debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 
 upload-pdfs.mk: test-biblatex.pdf
 	@chmod 644 $^
-	@scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
+	@scp -p $^ georg@iley.ru:/home/georg/dancebooks-bibtex/www/static/files/
 	@touch $@
 
 clean-pdfs:
