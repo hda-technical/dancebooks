@@ -114,7 +114,6 @@
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=dancebooks,prefix=dancebooks@}
 \DeclareStringOption{root}
-\DeclareBoolOption[false]{detailed}
 \DeclareBoolOption[true]{usedefaults}
 \ProcessKeyvalOptions*
 
@@ -137,22 +136,6 @@
 {\printnames{labelname}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 {\printfield{shorthand}\setunit{\nameyeardelim}\printfield{year}\printfield{extrayear}}%
 }\addnbspace}
-
-% adding annotation and keywords fields
-% only if option was specified
-\ifdancebooks@detailed%
-\xapptobibmacro{url+urldate+note}{%
-\finentry%
-\iffieldundef{annotation}%
-{}%
-{\printtext{\newline\mkbibacro{annotation}\addcolon\addspace\usebibmacro{annotation}}}%
-\iffieldundef{keywords}%
-{}%
-{\finentry\printtext{\newline\mkbibacro{keywords}\addcolon\addspace\usebibmacro{keywords}}}%
-}%
-{}{}%
-\else
-\fi
 
 % removing letter from the year in the bibliography entry text (not label)
 \DeclareFieldFormat{extrayear}{\mknumalph{#1}}

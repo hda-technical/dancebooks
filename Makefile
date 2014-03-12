@@ -29,12 +29,6 @@ TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/
 
 default: test-biblatex.pdf
 
-# LaTeX \filecontents isn't tread-safe
-# LuaLaTeX requires to much memory
-#
-# Disabling parallel compilation
-test-biblatex-detailed.pdf: test-biblatex.pdf
-
 %.pdf: JOBNAME = $(@:.pdf=)
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
@@ -50,16 +44,8 @@ debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@$(LATEX) $<
 	@$(BIBER) $(<:.tex=)
 	@$(LATEX) $<
-	
-# Target which doesn't hide LaTeX output - useful for debugging stuff
-debug-detailed: test-biblatex-detailed.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
-	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	@$(LATEX) $<
-	@$(BIBER) $(<:.tex=)
-	@$(LATEX) $<
 
-
-upload-pdfs.mk: test-biblatex.pdf test-biblatex-detailed.pdf
+upload-pdfs.mk: test-biblatex.pdf
 	@chmod 644 $^
 	@scp -p $^ georg@iley.ru:/home/georg/leftparagraphs/static/files/
 	@touch $@
@@ -105,7 +91,7 @@ translations-www:
 
 # Ancillary targets
 
-all.mk: test-biblatex.pdf test-biblatex-detailed.pdf $(HTML_FILES)
+all.mk: test-biblatex.pdf $(HTML_FILES)
 	@touch $@
 
 upload-urls.mk:	$(URL_FILES)
