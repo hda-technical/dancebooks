@@ -11,6 +11,10 @@ import parser
 import utils
 
 MAX_OUTPUT_COUNT = 100
+EXCLUDED_FOLDERS = {
+	"Ancillary sources (not in bibliography)", 
+	"Leaflets (not in bibliography)"
+}
 cfg = config.Config("../configs/www.cfg")
 
 items = parser.BibParser(cfg).parse_folder(os.path.abspath("../bib"))
@@ -39,8 +43,7 @@ def main(
 	file_modifier = lambda file_, root=root: os.path.join(root, file_[1:])
 	filenames = set(map(file_modifier, item_index["filename"].keys()))
 	
-	excluded_folders = set(["Ancillary sources (not in bibliography)", "Leaflets (not in bibliography)"])
-	files = utils.files_in_folder(root, "*.pdf", excludes=excluded_folders)
+	files = utils.files_in_folder(root, "*.pdf", excludes=EXCLUDED_FOLDERS)
 	
 	files_filter = lambda file_: file_ not in filenames
 	files = list(filter(files_filter, files))

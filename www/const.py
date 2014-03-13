@@ -73,8 +73,8 @@ FILENAME_PATTERN = (
 )
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 
-VALID_HTTP_CODES = set([
+VALID_HTTP_CODES = {
 	200, #OK
 	302, #Found — used by hdl.loc.gov
 	303  #See Other — used by hdl.handle.net
-])
+}

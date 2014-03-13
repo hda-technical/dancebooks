@@ -37,8 +37,8 @@ def main(
 	print("Going to process {0} items".format(len(items)))
 
 	SOURCE_REGEXP = re.compile("(?P<basename>[_\-\w\.]+).bib:\d+")
-	MULTILANG_FILES = set(["proceedings-spb", "proceedings-rothenfelser", "_missing", "_problems"])
-	VALidBOOKTYPES = set([
+	MULTILANG_FILES = {"proceedings-spb", "proceedings-rothenfelser", "_missing", "_problems"}
+	VALID_BOOKTYPES = {
 		"book",
 		"mvbook",
 		"inproceedings",
@@ -49,15 +49,18 @@ def main(
 		"unpublished",
 		"thesis",
 		"article"
-	])
-	NON_MULTIVOLUME_BOOKTYPES = set(["article", "periodical"])
-	MULTIVOLUME_BOOKTYPES = set(["mvbook", "mvreference"])
+	}
+	NON_MULTIVOLUME_BOOKTYPES = {"article", "periodical"}
+	MULTIVOLUME_BOOKTYPES = {"mvbook", "mvreference"}
+	
+	#don't validate filename for the given entrytypes
+	MULTIENTRY_BOOKTYPES = {"proceedings", "inproceedings"}
 	SHORTHAND_LIMIT = 25
 
 	#magic constant
 	LAST_ORIGINAL_YEAR = 1937
-	NON_ORIGINAL_KEYWORDS = set(["reissue", "research"])
-	RESEARCH_BOOKTYPES = set(["book", "mvbook"])
+	NON_ORIGINAL_KEYWORDS = {"reissue", "research"}
+	RESEARCH_BOOKTYPES = {"book", "mvbook"}
 	
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
 
@@ -131,7 +134,7 @@ def main(
 		
 		#booktype validation
 		booktype = booktype.lower()
-		if booktype not in VALidBOOKTYPES:
+		if booktype not in VALID_BOOKTYPES:
 			errors.append("Invalid booktype ({booktype})".format(
 				booktype=booktype
 			))
@@ -192,7 +195,7 @@ def main(
 					))
 		
 		#filename validation
-		if filename is not None:
+		if (filename is not None) and (booktype not in MULTIENTRY_BOOKTYPES):
 			for filename_ in filename:
 				#filename starts with "/" which will mix os.path.join up
 				abspath = os.path.join(root, filename_[1:])
@@ -207,18 +210,18 @@ def main(
 				
 				#validating optional author, edition, tome
 				#in case when item specifies value, but filename doesn't
-				if (metadata.get("author", None) is not None) and (author is None):
-					errors.append("File {filename_} specifies author, but entry doesn't".format(
+				if not utils.all_or_none([metadata.get("author", None), author]):
+					errors.append("File {filename_} and entry have different author specifications".format(
 						filename_=filename_
 					))
 					
-				if (metadata.get("edition", None) is not None) and (edition is None):
-					errors.append("File {filename_} specifies edition, but entry doesn't".format(
+				if not utils.all_or_none([metadata.get("edition", None), edition]):
+					errors.append("File {filename_} and entry have different edition specifications".format(
 						filename_=filename_
 					))
 					
-				if (metadata.get("tome", None) is not None) and (volumes is None) and (volume is None):
-					errors.append("File {filename_} specifies volume, but entry doesn't".format(
+				if not utils.all_or_none([metadata.get("tome", None), any([volume, volumes])]):
+					errors.append("File {filename_} and entry have different volume specifications".format(
 						filename_=filename_
 					))
 				
