@@ -110,7 +110,9 @@ upload-urls.mk:	$(URL_FILES)
 	@touch $@
 	
 entry-count: $(BIB_FILES)
-	@cat $^ | grep -c "@"
+	@echo "Items:" `cat $^ | grep -c -P '^@[A-Z]+'`
+	@echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
+	@echo "With addition date:" `cat $^ | grep -c -P '\tadded_on = '`
 	
 clean: clean-pdfs;
 	

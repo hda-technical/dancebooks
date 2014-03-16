@@ -72,6 +72,9 @@ class BibItem(object):
 
 	def annotation(self) -> str:
 		return self.get_as_string("annotation")
+		
+	def added_on(self) -> str:
+		return self.get_as_string("added_on")
 
 	#not-implemented params
 	#
@@ -93,7 +96,7 @@ class BibItem(object):
 			if isinstance(value, list):
 				return ", ".join(value)
 			else:
-				return value
+				return str(value)
 		else:
 			return None
 
@@ -301,7 +304,7 @@ class BibParser(object):
 				if c.isspace():
 					if self.lexeme_started:
 						self.lexeme_finished = True
-				elif c.isalnum() and (not self.lexeme_finished):
+				elif (c.isalnum() or (c == "_")) and (not self.lexeme_finished):
 					self.lexeme += c
 					self.lexeme_started = True
 				elif c == self.KEY_VALUE_SEP and (self.lexeme_started or self.lexeme_finished):
