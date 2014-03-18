@@ -82,15 +82,11 @@ def redirect_root():
 
 
 @flask_app.route(config.www.app_prefix + "/index.html")
-def root():
+@utils_flask.check_secret_cookie()
+def root(show_secrets):
 	args_filter = lambda pair: len(pair[1]) > 0
 	request_args = dict(filter(args_filter, flask.request.args.items()))
 	request_keys = set(request_args.keys())
-
-	show_secrets = (
-		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
-		config.www.secret_cookie_value
-	)
 
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
@@ -146,12 +142,8 @@ def root():
 
 
 @flask_app.route(config.www.app_prefix + "/all.html")
-def show_all():
-	show_secrets = (
-		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
-		config.www.secret_cookie_value
-	)
-
+@utils_flask.check_secret_cookie()
+def show_all(show_secrets):
 	return flask.render_template(
 		"all.html", 
 		items=items,
@@ -160,11 +152,8 @@ def show_all():
 
 
 @flask_app.route(config.www.app_prefix + "/book/<string:id>", methods=["GET"])
-def get_book(id):
-	show_secrets = (
-		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
-		config.www.secret_cookie_value
-	)
+@utils_flask.check_secret_cookie()
+def get_book(id, show_secrets):
 	
 	items = item_index["id"].get(id, None)
 	
@@ -220,12 +209,8 @@ def get_languages():
 
 
 @flask_app.route(config.www.app_prefix + "/keywords", methods=["GET"])
-def get_keywords():
-	show_secrets = (
-		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
-		config.www.secret_cookie_value
-	)
-
+@utils_flask.check_secret_cookie()
+def get_keywords(show_secrets):
 	data = keywords
 	if not show_secrets:
 		data -= config.www.secret_keywords
