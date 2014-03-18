@@ -25,6 +25,8 @@ BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamo
 TRANSCRIPTIONS_WIKI_PAGE := wiki/Transcriptions.md
 TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
 
+DEVEL_CONFIG := $(shell readlink -f configs/www.cfg)
+
 # PDF files related targets
 
 default: test-biblatex.pdf
@@ -39,21 +41,21 @@ default: test-biblatex.pdf
 	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
-debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
+debug-pdf: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@$(LATEX) $<
 	@$(BIBER) $(<:.tex=)
 	@$(LATEX) $<
 
-upload-pdfs.mk: test-biblatex.pdf
+upload-pdf.mk: test-biblatex.pdf
 	@chmod 644 $^
 	@scp -p $^ georg@iley.ru:/home/georg/dancebooks-bibtex/www/static/files/
 	@touch $@
 
-clean-pdfs:
+clean-pdf:
 	@rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
 
-purge-pdfs: clean-pdfs
+purge-pdf: clean-pdf
 	@rm -f *.pdf all.mk upload-pdfs.mk
 	
 # Transcriptions related targets
@@ -79,12 +81,20 @@ purge-transcriptions: clean
 	@rm -f transcriptions/*.html transriptions.mk
 
 # www-related targets
+debug-www:
+	cd www && \
+	CONFIG=$(DEVEL_CONFIG) \
+	./main.py
 
 test-www:
-	@cd www && nosetests tests
+	cd www && \
+	CONFIG=$(DEVEL_CONFIG) \
+	nosetests tests
 
 profile-www:
-	@cd www && ./_profile.py
+	@cd www && \
+	CONFIG=$(DEVEL_CONFIG) \
+	./_profile.py
 
 translations-www:
 	@pybabel -q compile -d www/translations

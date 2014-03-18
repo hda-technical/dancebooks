@@ -9,7 +9,7 @@ import flask
 from flask.ext import babel
 import werkzeug
 
-import config
+from config import config
 import parser
 import search
 import index
@@ -21,10 +21,8 @@ if (not os.path.exists("templates")):
 	print("Should run from root folder")
 	sys.exit(1)
 
-cfg = config.Config("../configs/www.cfg")
-
-items = parser.BibParser(cfg).parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(cfg, items)
+items = parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(config, items)
 for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
@@ -33,13 +31,13 @@ langid = sorted(item_index["langid"].keys())
 keywords = set(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
-flask_app.config["BABEL_DEFAULT_LOCALE"] = cfg.www.languages[0]
+flask_app.config["BABEL_DEFAULT_LOCALE"] = config.www.languages[0]
 babel_app = babel.Babel(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
-msngr = messenger.Messenger(cfg)
+msngr = messenger.Messenger(config)
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
 
 @babel_app.localeselector
@@ -48,31 +46,31 @@ def get_locale():
 	Extracts locale from request
 	"""
 	lang = flask.request.cookies.get("lang", None)
-	if (lang in cfg.www.languages):
+	if (lang in config.www.languages):
 		return lang
 	else:	
-		return flask.request.accept_languages.best_match(cfg.www.languages)
+		return flask.request.accept_languages.best_match(config.www.languages)
 
 
-@flask_app.route(cfg.www.app_prefix + "/secret-cookie")
+@flask_app.route(config.www.app_prefix + "/secret-cookie")
 def secret_cookie():
-	response = flask.make_response(flask.redirect(cfg.www.app_prefix + "/index.html"))
+	response = flask.make_response(flask.redirect(config.www.app_prefix + "/index.html"))
 	response.set_cookie(
-		cfg.www.secret_cookie_key, 
-		value=cfg.www.secret_cookie_value, 
+		config.www.secret_cookie_key, 
+		value=config.www.secret_cookie_value, 
 		expires=EXPIRES
 	)
 	return response
 
 
-@flask_app.route(cfg.www.app_prefix + "/")
+@flask_app.route(config.www.app_prefix + "/")
 def redirect_root():
 	desired_language = flask.request.values.get("lang", None)
-	next_url = cfg.www.app_prefix + "/index.html"
+	next_url = config.www.app_prefix + "/index.html"
 
 	#if lang param is set, redirecting user back to the page he came from
 	if (desired_language is not None) and \
-		(desired_language in cfg.www.languages):
+		(desired_language in config.www.languages):
 		referrer = flask.request.referrer
 		if referrer is not None:
 			next_url = referrer
@@ -83,15 +81,15 @@ def redirect_root():
 		return flask.redirect(next_url)
 
 
-@flask_app.route(cfg.www.app_prefix + "/index.html")
+@flask_app.route(config.www.app_prefix + "/index.html")
 def root():
 	args_filter = lambda pair: len(pair[1]) > 0
 	request_args = dict(filter(args_filter, flask.request.args.items()))
 	request_keys = set(request_args.keys())
 
 	show_secrets = (
-		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
-		cfg.www.secret_cookie_value
+		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
+		config.www.secret_cookie_value
 	)
 
 	#if request_args is empty, we should render empty search form
@@ -104,10 +102,10 @@ def root():
 
 	found_items = None
 
-	for index_to_use in (cfg.www.indexed_search_params & request_keys):
+	for index_to_use in (config.www.indexed_search_params & request_keys):
 		value_to_use = request_args[index_to_use]
 
-		if index_to_use in cfg.parser.list_params:
+		if index_to_use in config.parser.list_params:
 			values_to_use = utils.strip_split_list(value_to_use, ",")
 		else:
 			values_to_use = [value_to_use]
@@ -125,12 +123,12 @@ def root():
 		found_items = items
 	
 	try:
-		for search_key in (cfg.www.nonindexed_search_params & request_keys):
+		for search_key in (config.www.nonindexed_search_params & request_keys):
 			# argument can be missing or be empty
 			# both cases should be ignored during search
 			search_param = request_args[search_key]
 			if len(search_param) > 0:
-				param_filter = search.search_for(cfg, search_key, search_param)
+				param_filter = search.search_for(config, search_key, search_param)
 				if param_filter is not None:
 					searches.append(param_filter)
 	except Exception as ex:
@@ -147,11 +145,11 @@ def root():
 	)
 
 
-@flask_app.route(cfg.www.app_prefix + "/all.html")
+@flask_app.route(config.www.app_prefix + "/all.html")
 def show_all():
 	show_secrets = (
-		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
-		cfg.www.secret_cookie_value
+		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
+		config.www.secret_cookie_value
 	)
 
 	return flask.render_template(
@@ -161,11 +159,11 @@ def show_all():
 	)
 
 
-@flask_app.route(cfg.www.app_prefix + "/book/<string:id>", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/book/<string:id>", methods=["GET"])
 def get_book(id):
 	show_secrets = (
-		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
-		cfg.www.secret_cookie_value
+		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
+		config.www.secret_cookie_value
 	)
 	
 	items = item_index["id"].get(id, None)
@@ -182,7 +180,7 @@ def get_book(id):
 	)
 
 
-@flask_app.route(cfg.www.app_prefix + "/book/<string:book_id>", methods=["POST"])
+@flask_app.route(config.www.app_prefix + "/book/<string:book_id>", methods=["POST"])
 def edit_book(book_id):
 	items = list(item_index["id"].get(book_id, None))
 	message = flask.request.values.get("message", None)
@@ -212,7 +210,7 @@ def edit_book(book_id):
 	return response
 
 
-@flask_app.route(cfg.www.app_prefix + "/langid", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/langid", methods=["GET"])
 def get_languages():
 	data = dict(zip(langid, map(babel.gettext, langid)))
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
@@ -221,23 +219,23 @@ def get_languages():
 	return response
 
 
-@flask_app.route(cfg.www.app_prefix + "/keywords", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/keywords", methods=["GET"])
 def get_keywords():
 	show_secrets = (
-		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
-		cfg.www.secret_cookie_value
+		flask.request.cookies.get(config.www.secret_cookie_key, "") == 
+		config.www.secret_cookie_value
 	)
 
 	data = keywords
 	if not show_secrets:
-		data -= cfg.www.secret_keywords
+		data -= config.www.secret_keywords
 	data = sorted(data)
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
 	response.content_type = "application/json; charset=utf-8"
 	return response
 
 
-@flask_app.route(cfg.www.app_prefix + "/<path:filename>")
+@flask_app.route(config.www.app_prefix + "/<path:filename>")
 def everything_else(filename):
 	if (os.path.isfile("templates/" + filename)):
 		return flask.render_template(filename)

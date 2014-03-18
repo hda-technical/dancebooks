@@ -5,7 +5,7 @@ import sys
 
 import opster
 
-import config
+from config import config
 import index
 import parser
 import utils
@@ -15,10 +15,9 @@ EXCLUDED_FOLDERS = {
 	"Ancillary sources (not in bibliography)", 
 	"Leaflets (not in bibliography)"
 }
-cfg = config.Config("../configs/www.cfg")
 
-items = parser.BibParser(cfg).parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(cfg, items)
+items = parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(config, items)
 for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
@@ -56,7 +55,7 @@ def main(
 		relpath = "/" + os.path.relpath(file_, root)
 			
 		metadata = utils.extract_metadata_from_file(file_)	
-		item_search = utils.create_search_from_metadata(cfg, metadata)
+		item_search = utils.create_search_from_metadata(config, metadata)
 		
 		found_items = list(filter(item_search, items))
 		found_count = len(found_items)
@@ -89,7 +88,7 @@ def main(
 			source=item.source(),
 		))
 		print("filename = {{{relpath}}}".format(
-			relpath=" {0} ".format(cfg.parser.list_sep).join(sorted(paths))
+			relpath=" {0} ".format(config.parser.list_sep).join(sorted(paths))
 		))
 
 	sort_key = lambda item: item.source()

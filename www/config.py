@@ -1,7 +1,7 @@
 import configparser
 import functools
 import json
-import os.path
+import os
 import subprocess
 
 class SmtpConfig(object):
@@ -145,17 +145,21 @@ class Config(object):
 		
 		fallback = None
 		if "DEFAULT" in config:
-			if "Fallback" in config["DEFAULT"]:
+			if "fallback" in config["DEFAULT"]:
 				path = os.path.join(
 					os.path.dirname(path), 
-					config["DEFAULT"]["Fallback"]
+					config["DEFAULT"]["fallback"]
 				)
 				fallback = configparser.ConfigParser()
 				fallback.read(path)
-
 		self.smtp = SmtpConfig(Config.get_params(config, fallback, "SMTP"))
 		self.bug_report = BugReportConfig(Config.get_params(config, fallback, "BUG_REPORT"))
 		self.parser = ParserConfig(Config.get_params(config, fallback, "PARSER"))
 		self.www = WwwConfig(Config.get_params(config, fallback, "WWW"))
 		
 		self.version = subprocess.check_output("git log | head -n 1 | cut -f 2 -d ' '", shell=True).decode().strip()
+
+config = Config(os.environ.get(
+	"CONFIG",
+	os.path.abspath("../configs/www.cfg") #workaround
+))

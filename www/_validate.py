@@ -6,15 +6,13 @@ import sys
 import opster
 
 import const
-import config
+from import config
 import index
 import parser
 import utils
 
-cfg = config.Config("../configs/www.cfg")
-
-items = parser.BibParser(cfg).parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(cfg, items)
+items = parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(config, items)
 for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
@@ -242,7 +240,7 @@ def main(
 								meta_keywords=meta_keywords
 							))
 				
-				search_ = utils.create_search_from_metadata(cfg, metadata)
+				search_ = utils.create_search_from_metadata(config, metadata)
 				if not search_(item):
 					errors.append("File {filename_} is not searchable by extracted params".format(
 						filename_=filename_
