@@ -159,7 +159,6 @@ class Config(object):
 		
 		self.version = subprocess.check_output("git log | head -n 1 | cut -f 2 -d ' '", shell=True).decode().strip()
 
-config = Config(os.environ.get(
-	"CONFIG",
-	os.path.abspath("../configs/www.cfg") #workaround
-))
+if "CONFIG" not in os.environ:
+	raise RuntimeError("Config was not found. Please, specify CONFIG environment variable")
+config = Config(os.environ["CONFIG"])
