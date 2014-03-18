@@ -29,7 +29,7 @@ for item in items:
 item_index.update(items)
 
 langid = sorted(item_index["langid"].keys())
-keywords = sorted(item_index["keywords"].keys())
+keywords = set(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = cfg.www.languages[0]
@@ -40,8 +40,6 @@ flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
 msngr = messenger.Messenger(cfg)
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
-SECRET_COOKIE_KEY = "secret"
-SECRET_COOKIE_VALUE = "I_AM_A_PERSIMMON"
 
 @babel_app.localeselector
 def get_locale():
@@ -58,7 +56,11 @@ def get_locale():
 @flask_app.route(cfg.www.app_prefix + "/secret-cookie")
 def secret_cookie():
 	response = flask.make_response(flask.redirect(cfg.www.app_prefix + "/index.html"))
-	response.set_cookie(SECRET_COOKIE_KEY, value=SECRET_COOKIE_VALUE, expires=EXPIRES)
+	response.set_cookie(
+		cfg.www.secret_cookie_key, 
+		value=cfg.www.secret_cookie_value, 
+		expires=EXPIRES
+	)
 	return response
 
 
@@ -86,7 +88,10 @@ def root():
 	request_args = dict(filter(args_filter, flask.request.args.items()))
 	request_keys = set(request_args.keys())
 
-	show_secrets = (flask.request.cookies.get(SECRET_COOKIE_KEY, "") == SECRET_COOKIE_VALUE)
+	show_secrets = (
+		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
+		cfg.www.secret_cookie_value
+	)
 
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
@@ -143,7 +148,10 @@ def root():
 
 @flask_app.route(cfg.www.app_prefix + "/all.html")
 def show_all():
-	show_secrets = (flask.request.cookies.get(SECRET_COOKIE_KEY, "") == SECRET_COOKIE_VALUE)
+	show_secrets = (
+		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
+		cfg.www.secret_cookie_value
+	)
 
 	return flask.render_template(
 		"all.html", 
@@ -154,7 +162,10 @@ def show_all():
 
 @flask_app.route(cfg.www.app_prefix + "/book/<string:id>", methods=["GET"])
 def get_book(id):
-	show_secrets = (flask.request.cookies.get(SECRET_COOKIE_KEY, "") == SECRET_COOKIE_VALUE)
+	show_secrets = (
+		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
+		cfg.www.secret_cookie_value
+	)
 	
 	items = item_index["id"].get(id, None)
 	
@@ -205,15 +216,23 @@ def get_languages():
 	data = dict(zip(langid, map(babel.gettext, langid)))
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
 
-	response.headers["Content-Type"] = "application/json; charset=utf-8"
+	response.content_type = "application/json; charset=utf-8"
 	return response
 
 
 @flask_app.route(cfg.www.app_prefix + "/keywords", methods=["GET"])
 def get_keywords():
+	show_secrets = (
+		flask.request.cookies.get(cfg.www.secret_cookie_key, "") == 
+		cfg.www.secret_cookie_value
+	)
+
 	data = keywords
+	if not show_secrets:
+		data -= cfg.www.secret_keywords
+	data = sorted(data)
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
-	response.headers["Content-Type"] = "application/json; charset=utf-8"
+	response.content_type = "application/json; charset=utf-8"
 	return response
 
 

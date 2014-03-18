@@ -115,6 +115,18 @@ class WwwConfig(object):
 		if "languages" not in params:
 			raise ValueError("languages param wasn't found")
 		self.languages = json.loads(params["languages"])
+
+		if "secret_cookie_key" not in params:
+			raise ValueError("secret_cookie_key wasn't found")
+		self.secret_cookie_key = params["secret_cookie_key"]
+		
+		if "secret_cookie_value" not in params:
+			raise ValueError("secret_cookie_value wasn't found")
+		self.secret_cookie_value = params["secret_cookie_value"]
+
+		if "secret_keywords" not in params:
+			raise ValueError("secret_keywords wasn't found")
+		self.secret_keywords = set(json.loads(params["secret_keywords"]))
 		
 
 class Config(object):
