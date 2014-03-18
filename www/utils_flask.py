@@ -1,6 +1,34 @@
+import flask
 import jinja2
+import werkzeug
 
 
+XML_DECLARATION = '<?xml version="1.0" encoding="utf-8"?>'
+
+def xml_exception_handler(ex):
+	"""
+	Function converting Exception or HTTPException instance to xml response
+	"""
+	if isinstance(ex, werkzeug.exceptions.HTTPException):
+		xml_error = '{decl}\n<error code="{code}" description="{description}">{msg}</error>'.format(
+			decl=XML_DECLARATION,
+			code=ex.code,
+			description=ex.name,
+			msg=ex.description
+		)
+		response = flask.make_response(xml_error, ex.code)
+	elif isinstance(ex, Exception):
+		xml_error = '{decl}\n<error code="{code}" description="{description}">{msg}</error>'.format(
+			decl=XML_DECLARATION,
+			code=500,
+			description="Internal Server Error",
+			msg=ex
+		)
+		response = flask.make_response(xml_error, 500)
+
+	response.content_type = "text/xml; charset=utf-8"
+	return response
+	
 
 class MemoryCache(jinja2.BytecodeCache):
 	def __init__(self):

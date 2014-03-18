@@ -7,6 +7,7 @@ import sys
 
 import flask
 from flask.ext import babel
+import werkzeug
 
 import config
 import parser
@@ -133,7 +134,7 @@ def root():
 				if param_filter is not None:
 					searches.append(param_filter)
 	except Exception as ex:
-		flask.abort(400, "Some of search parameters are wrong: {0}".format(ex))
+		flask.abort("Some of the search parameters are wrong: {0}".format(ex))
 
 	if len(searches) > 0:
 		found_items = list(filter(search.and_(searches), found_items))
@@ -245,6 +246,10 @@ def everything_else(filename):
 	else:
 		flask.abort(404, "No such file")
 
+
+for code in werkzeug.HTTP_STATUS_CODES:
+	flask_app.errorhandler(code)(utils_flask.xml_exception_handler)
+flask_app.errorhandler(Exception)(utils_flask.xml_exception_handler)
 
 if __name__ == "__main__":
 	flask_app.debug = True
