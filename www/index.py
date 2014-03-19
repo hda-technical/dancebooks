@@ -1,8 +1,9 @@
 import collections
 
+from config import config
+
 class Index(object):
-	def __init__(self, cfg, items):
-		self.cfg = cfg
+	def __init__(self, items):
 		self.update(items) 
 
 	def __getitem__(self, key):
@@ -25,7 +26,7 @@ class Index(object):
 	
 		dict_creator = lambda: collections.defaultdict(set)
 		self._dict = collections.defaultdict(dict_creator)
-		for key in self.cfg.www.index_params:
+		for key in config.www.index_params:
 			subindex = self._dict[key]
 			for item in items:
 				value = item.get(key)

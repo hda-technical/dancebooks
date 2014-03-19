@@ -7,14 +7,12 @@ import subprocess
 
 import opster
 
-import config
+from config import config
 import index
 import parser
 
-cfg = config.Config("../configs/www.cfg")
-
-items = parser.BibParser(cfg).parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(cfg, items)
+items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(items)
 for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
@@ -41,7 +39,6 @@ def process_file(path):
 		shell=True)\
 		.decode()
 
-	results = []
 	for line in data.split("\n"):
 		#ignoring empty lines
 		if not line:

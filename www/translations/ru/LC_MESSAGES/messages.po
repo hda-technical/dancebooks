@@ -77,10 +77,10 @@ msgstr "Заглавие"
 msgid "year"
 msgstr "Год публикации"
 
-msgid "year_from"
+msgid "from"
 msgstr "с"
 
-msgid "year_to"
+msgid "to"
 msgstr "по"
 
 msgid "langid"
@@ -100,6 +100,9 @@ msgstr "Сокращённое название"
 
 msgid "id"
 msgstr "Идентификатор"
+
+msgid "added_on"
+msgstr "Дата добавления в базу"
 
 msgid "source"
 msgstr "Строка в файле"

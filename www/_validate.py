@@ -11,8 +11,8 @@ import index
 import parser
 import utils
 
-items = parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(config, items)
+items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(items)
 for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
@@ -97,6 +97,7 @@ def main(
 		year_from = item.get("year_from")
 		year_to = item.get("year_to")
 		year_circa = item.get("year_circa")
+		added_on = item.get("added_on")
 		
 		match = SOURCE_REGEXP.match(source)
 		if not match:
@@ -112,7 +113,7 @@ def main(
 				fields=parser_obligatory
 			))
 		
-		general_obligatory = [langid, year, title]
+		general_obligatory = [langid, year, title, added_on]
 		if not all(general_obligatory):
 			errors.append("Item doesn't define one of [langid, year, title]")
 		

@@ -41,8 +41,8 @@ def parse_string_test():
 	"""
 	Tests if string can be succesfully parsed by BibParser
 	"""
-	items = parser.BibParser(config).parse_string(TEST_ITEMS)
-	item_index = index.Index(config, items)
+	items = parser.BibParser().parse_string(TEST_ITEMS)
+	item_index = index.Index(items)
 	for item in items:
 		item.process_crossrefs(item_index)
 	item_index.update(items)
@@ -59,8 +59,8 @@ def search_items_test():
 	"""
 	Tests if parsed items can be searched by a bunch of parameters
 	"""
-	items = parser.BibParser(config).parse_string(TEST_ITEMS)
-	item_index = index.Index(config, items)
+	items = parser.BibParser().parse_string(TEST_ITEMS)
+	item_index = index.Index(items)
 	for item in items:
 		item.process_crossrefs(item_index)
 	item_index.update(items)
@@ -71,32 +71,32 @@ def search_items_test():
 
 	#testing exact match
 	year_search = search.and_([
-		search.search_for(config, "year_from", 1825),
-		search.search_for(config, "year_to", 1825)
+		search.search_for("year_from", 1825),
+		search.search_for("year_to", 1825)
 	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
 
 	#testing partial intersection
 	year_search = search.and_([
-		search.search_for(config, "year_from", 1500),
-		search.search_for(config, "year_to", 1600)
+		search.search_for("year_from", 1500),
+		search.search_for("year_to", 1600)
 	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
 	
 	#testing inner containment
 	year_search = search.and_([
-		search.search_for(config, "year_from", 1499),
-		search.search_for(config, "year_to", 1501)
+		search.search_for("year_from", 1499),
+		search.search_for("year_to", 1501)
 	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
 	
 	#testing outer containment
 	year_search = search.and_([
-		search.search_for(config, "year_from", 1400),
-		search.search_for(config, "year_to", 1600)
+		search.search_for("year_from", 1400),
+		search.search_for("year_to", 1600)
 	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)

@@ -4,6 +4,7 @@
 	"title", 
 	"langid",
 	"id",
+	"added_on",
 	"source",
 	"booktype",
 	"year",
@@ -15,10 +16,10 @@
 	"url",
 	"filename",
 	"note",
-	"annotation"
+	"annotation",
 ] %}
 {% for param in fields %}
-{% if param == "filename" %}
+{% if param in ["filename", "added_on"] %}
 {% set value = item.get(param) %}
 {% else %}
 {% set value = item.get_as_string(param) %}
@@ -39,12 +40,14 @@
 {% endfor %}
 				</ul>
 {% elif param == "series" %}
-{% set extra_value = item.get_as_string("number") %}
+{% set extra_value = item.get("number") %}
 				{{ value }} {{ _("number") }}{{ extra_value }}
 
 {% elif param == "langid" %}
 				{{ _(value) }}
 
+{% elif param == "added_on" %}
+				{{ value | dateformat("long") }}
 {% else %}
 				{{ value }}
 {% endif %}

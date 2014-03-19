@@ -68,32 +68,53 @@ class ParserConfig(object):
 			raise ValueError("int_params param wasn't found")
 		self.int_params = set(json.loads(params["int_params"]))
 		
+		if "year_params" not in params:
+			raise ValueError("year_params param wasn't found")
+		self.year_params = set(json.loads(params["year_params"]))
+		
 		if "date_params" not in params:
 			raise ValueError("date_params param wasn't found")
 		self.date_params = set(json.loads(params["date_params"]))
-		
-		if "date_start_suffix" not in params:
-			raise ValueError("date_start_suffix param wasn't found")
-		self.date_start_suffix = params["date_start_suffix"]
-		
-		if "date_end_suffix" not in params:
-			raise ValueError("date_end_suffix param wasn't found")
-		self.date_end_suffix = params["date_end_suffix"]
-		
-		if "date_circa_suffix" not in params:
-			raise ValueError("date_circa_suffix param wasn't found")
-		self.date_circa_suffix = params["date_circa_suffix"]
 
-		suffix_adder = lambda string, suffix: string + suffix
-		self.date_start_params = set(map(
-			functools.partial(suffix_adder, suffix=self.date_start_suffix),
-			self.date_params
-		))
-		self.date_end_params = set(map(
-			functools.partial(suffix_adder, suffix=self.date_end_suffix),
-			self.date_params
-		))
+		if "date_format" not in params:
+			raise ValueError("date_format param wasn't found")
+		self.date_format = params["date_format"]
+	
+		#suffixes parsing
+		if "start_suffix" not in params:
+			raise ValueError("start_suffix param wasn't found")
+		self.start_suffix = params["start_suffix"]
 		
+		if "end_suffix" not in params:
+			raise ValueError("end_suffix param wasn't found")
+		self.end_suffix = params["end_suffix"]
+		
+		if "circa_suffix" not in params:
+			raise ValueError("circa_suffix param wasn't found")
+		self.circa_suffix = params["circa_suffix"]
+
+		#generating additional params
+		suffix_adder = lambda string, suffix: string + suffix
+		self.year_start_params = set(map(
+			functools.partial(suffix_adder, suffix=self.start_suffix),
+			self.year_params
+		))
+
+		self.year_end_params = set(map(
+			functools.partial(suffix_adder, suffix=self.end_suffix),
+			self.year_params
+		))
+
+		self.date_start_params = set(map(
+			functools.partial(suffix_adder, suffix=self.start_suffix),
+			self.date_params
+		))
+
+		self.date_end_params = set(map(
+			functools.partial(suffix_adder, suffix=self.end_suffix),
+			self.date_params
+		))
+
 
 class WwwConfig(object):
 	def __init__(self, params):
@@ -127,6 +148,10 @@ class WwwConfig(object):
 		if "secret_keywords" not in params:
 			raise ValueError("secret_keywords wasn't found")
 		self.secret_keywords = set(json.loads(params["secret_keywords"]))
+
+		if "date_formats" not in params:
+			raise ValueError("date_formats param wasn't found")
+		self.date_formats = json.loads(params["date_formats"])
 		
 
 class Config(object):
@@ -140,7 +165,7 @@ class Config(object):
 		return params
 		
 	def __init__(self, path):
-		config = configparser.ConfigParser()
+		config = configparser.ConfigParser(interpolation=None)
 		config.read(path)
 		
 		fallback = None

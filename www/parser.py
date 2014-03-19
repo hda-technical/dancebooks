@@ -1,7 +1,8 @@
 # coding: utf-8
-from fnmatch import fnmatch
+import datetime
 import os.path
 
+from config import config
 import utils
 	
 class BibItem(object):
@@ -95,6 +96,8 @@ class BibItem(object):
 			value = self._params[key]
 			if isinstance(value, list):
 				return ", ".join(value)
+			elif isinstance(value, datetime.datetime):
+				return value.strftime(config.parser.date_format)
 			else:
 				return str(value)
 		else:
@@ -145,11 +148,10 @@ class BibParser(object):
 		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
 		(0,         1,           2,            3,           4,             5)
 
-	def __init__(self, cfg):
+	def __init__(self):
 		"""
 		Default ctor
 		"""
-		self.cfg = cfg
 		self.state = self.S_NO_ITEM
 		self._reset_lexeme()
 		
@@ -197,16 +199,18 @@ class BibParser(object):
 		value = utils.parse_latex(value)
 		
 		try:
-			if key in self.cfg.parser.list_params:
-				value = utils.strip_split_list(value, self.cfg.parser.list_sep)
-			elif key in self.cfg.parser.int_params:
+			if key in config.parser.list_params:
+				value = utils.strip_split_list(value, config.parser.list_sep)
+			elif key in config.parser.int_params:
 				value = int(value)
-			elif key in self.cfg.parser.date_params:
+			elif key in config.parser.year_params:
 				(year_from, year_to, year_circa) = utils.parse_year(value)
 
-				item.set(key + self.cfg.parser.date_start_suffix, year_from)
-				item.set(key + self.cfg.parser.date_end_suffix, year_to)
-				item.set(key + self.cfg.parser.date_circa_suffix, year_circa)
+				item.set(key + config.parser.start_suffix, year_from)
+				item.set(key + config.parser.end_suffix, year_to)
+				item.set(key + config.parser.circa_suffix, year_circa)
+			elif key in config.parser.date_params:
+				value = datetime.datetime.strptime(value, config.parser.date_format)
 				
 		except ValueError:
 			self.raise_error()

@@ -75,10 +75,10 @@ msgstr "Title"
 msgid "year"
 msgstr "Year of publication"
 
-msgid "year_from"
+msgid "from"
 msgstr "from"
 
-msgid "year_to"
+msgid "to"
 msgstr "to"
 
 msgid "langid"
@@ -98,6 +98,9 @@ msgstr "Shorthand"
 
 msgid "id"
 msgstr "Id"
+
+msgid "added_on"
+msgstr "Added to database"
 
 msgid "source"
 msgstr "Source"

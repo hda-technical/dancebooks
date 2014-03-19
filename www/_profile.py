@@ -4,6 +4,7 @@ import os.path
 
 import opster
 
+from config import config
 import main
 import parser
 import utils
@@ -17,13 +18,13 @@ def all_profile():
 
 @utils.profile
 def parsing_profile():
-	bib_parser = parser.BibParser(main.cfg)
+	bib_parser = parser.BibParser()
 	bib_parser.parse_folder(os.path.abspath("../bib"))
 
 
 @utils.profile
 def search_profile():
-	client.get(main.cfg.www.app_prefix + "/index.html?"
+	client.get(config.www.app_prefix + "/index.html?"
 		"title=Dance&"
 		"author=Wil&"
 		"year_from=1000&"

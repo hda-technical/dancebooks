@@ -21,8 +21,8 @@ if (not os.path.exists("templates")):
 	print("Should run from root folder")
 	sys.exit(1)
 
-items = parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(config, items)
+items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(items)
 for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
@@ -124,7 +124,7 @@ def root(show_secrets):
 			# both cases should be ignored during search
 			search_param = request_args[search_key]
 			if len(search_param) > 0:
-				param_filter = search.search_for(config, search_key, search_param)
+				param_filter = search.search_for(search_key, search_param)
 				if param_filter is not None:
 					searches.append(param_filter)
 	except Exception as ex:
@@ -230,10 +230,11 @@ def everything_else(filename):
 		flask.abort(404, "No such file")
 
 
-for code in werkzeug.HTTP_STATUS_CODES:
-	flask_app.errorhandler(code)(utils_flask.xml_exception_handler)
-flask_app.errorhandler(Exception)(utils_flask.xml_exception_handler)
-
 if __name__ == "__main__":
 	flask_app.debug = True
 	flask_app.run(host="0.0.0.0")
+else:
+	for code in werkzeug.HTTP_STATUS_CODES:
+		flask_app.errorhandler(code)(utils_flask.xml_exception_handler)
+	flask_app.errorhandler(Exception)(utils_flask.xml_exception_handler)
+

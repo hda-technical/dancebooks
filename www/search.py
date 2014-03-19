@@ -1,5 +1,8 @@
 # coding: utf-8
+import datetime
 import re
+
+from config import config
 
 def search_for_string(key, value):
 	"""
@@ -70,6 +73,28 @@ def search_for_integer_le(key, value):
 		item.get(key) <= value
 
 
+def search_for_datetime_ge(key, value):
+	"""
+	Creates filter for datetime value (searches for greater or equal)
+	"""
+	if not isinstance(value, datetime.datetime):
+		raise ValueError("datetime value expected")
+	return lambda item, key=key, value=value: \
+		item.get(key) and \
+		item.get(key) >= value
+		
+
+def search_for_datetime_le(key, value):
+	"""
+	Creates filter for datetime value (searches for lesser or equal)
+	"""
+	if not isinstance(value, datetime.datetime):
+		raise ValueError("datetime value expected")
+	return lambda item, key=key, value=value: \
+		item.get(key) and \
+		item.get(key) <= value
+
+
 def search_false():
 	"""
 	Generates search always returning False
@@ -102,23 +127,47 @@ def or_(searches):
 		any([s(item) for s in searches])
 		
 	
-def search_for(cfg, key, value):
+def search_for(key, value):
 	"""
 	Creates filter for a given key.
 	Returns None if something is bad
 	"""
-	if key in cfg.parser.list_params:
+	def parse_datetime(value):
+		#trying to parse value in multiple formats
+		for date_format in config.www.date_formats:
+			try:
+				return datetime.datetime.strptime(value, date_format)
+			except:
+				pass
+		raise ValueError("Unsupported datetime format")
+
+
+	if key in config.parser.list_params:
 		return search_for_iterable(key, value)
-	elif key in cfg.parser.date_start_params:
+
+	elif key in config.parser.year_start_params:
 		#generating end key
-		extra_key = key[:-len(cfg.parser.date_start_suffix)] + \
-			cfg.parser.date_end_suffix
+		extra_key = key[:-len(config.parser.start_suffix)] + \
+			config.parser.end_suffix
 		return search_for_integer_ge(extra_key, int(value))
-	elif key in cfg.parser.date_end_params:
+
+	elif key in config.parser.year_end_params:
 		#generating start key
-		extra_key = key[:-len(cfg.parser.date_end_suffix)] + \
-			cfg.parser.date_start_suffix
+		extra_key = key[:-len(config.parser.end_suffix)] + \
+			config.parser.start_suffix
 		return search_for_integer_le(extra_key, int(value))
+
+	elif key in config.parser.date_start_params:
+		value = parse_datetime(value)
+		#generating extra key
+		extra_key = key[:-len(config.parser.start_suffix)]
+		return search_for_datetime_ge(extra_key, value)
+
+	elif key in config.parser.date_end_params:
+		value = parse_datetime(value)
+		#generating extra key
+		extra_key = key[:-len(config.parser.end_suffix)]
+		return search_for_datetime_le(extra_key, value)
+
 	else:
-		print("Creating search for string {key} with value {value}".format(key=key, value=value))
 		return search_for_string(key, value)
