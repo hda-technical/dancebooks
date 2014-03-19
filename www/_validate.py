@@ -6,7 +6,7 @@ import sys
 import opster
 
 import const
-from import config
+from config import config
 import index
 import parser
 import utils
