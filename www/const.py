@@ -1,3 +1,4 @@
+import http.client
 import re
 
 #two-letter country codes mapped to langid
@@ -74,7 +75,7 @@ FILENAME_PATTERN = (
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 
 VALID_HTTP_CODES = {
-	200, #OK
-	302, #Found — used by hdl.loc.gov
-	303  #See Other — used by hdl.handle.net
+	http.client.OK,
+	http.client.FOUND, #used by hdl.loc.gov
+	http.client.SEE_OTHER  #used by hdl.handle.net
 }
