@@ -41,21 +41,21 @@ default: test-biblatex.pdf
 	@(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
 
 # Target which doesn't hide LaTeX output - useful for debugging stuff
-debug-pdf: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
+pdf-debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	@rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
 	@$(LATEX) $<
 	@$(BIBER) $(<:.tex=)
 	@$(LATEX) $<
 
-upload-pdf.mk: test-biblatex.pdf
+pdf-upload.mk: test-biblatex.pdf
 	@chmod 644 $^
 	@scp -p $^ georg@iley.ru:/home/georg/dancebooks-bibtex/www/static/files/
 	@touch $@
 
-clean-pdf:
+pdf-clean:
 	@rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
 
-purge-pdf: clean-pdf
+pdf-purge: pdf-clean
 	@rm -f *.pdf all.mk upload-pdfs.mk
 	
 # Transcriptions related targets
@@ -66,10 +66,13 @@ purge-pdf: clean-pdf
 		--output "../$@" \
 		--css "../transcriptions/_style.css"
 
-transcriptions.mk: $(HTML_FILES)
+markdown.mk: $(HTML_FILES)
 	@touch $@
 
-update-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
+markdown-purge:
+	@rm -f transcriptions/*.html markdown.mk
+
+markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 	@cd www && ./_generate_wiki.py \
 		--folder ../transcriptions \
 		--page "../$(TRANSCRIPTIONS_WIKI_PAGE)" \
@@ -77,26 +80,23 @@ update-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 	@cd wiki && (git commit -am "Updated wiki" || true) && git push origin master
 	@touch $@
 	
-purge-transcriptions: clean
-	@rm -f transcriptions/*.html transriptions.mk
-
 # www-related targets
-debug-www:
+www-debug:
 	cd www && \
 	CONFIG=$(DEVEL_CONFIG) \
 	./main.py
 
-test-www:
+www-test:
 	cd www && \
 	CONFIG=$(DEVEL_CONFIG) \
 	nosetests tests
 
-profile-www:
+www-profile:
 	@cd www && \
 	CONFIG=$(DEVEL_CONFIG) \
 	./_profile.py
 
-translations-www:
+www-translations:
 	@pybabel -q compile -d www/translations
 
 # Ancillary targets
@@ -104,7 +104,7 @@ translations-www:
 all.mk: test-biblatex.pdf $(HTML_FILES)
 	@touch $@
 
-upload-urls.mk:	$(URL_FILES)
+urls-upload.mk: $(URL_FILES)
 	@chmod 644 $^
 	@scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
 	@touch $@
