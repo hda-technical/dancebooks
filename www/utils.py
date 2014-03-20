@@ -9,6 +9,7 @@ import pstats
 import re
 from urllib import parse as urlparse
 
+from config import config
 import const
 import search
 
@@ -20,9 +21,9 @@ def strip_split_list(value: str, sep: str) -> [str]:
 
 
 LATEX_GROUPING_REGEXP = re.compile(r"(\s|^)\{([^\s]*)\}(\s|$)")
-#LATEX_URL_REGEXP = re.compile(r"\\url\{([^\s]*)\}")
-#LATEX_PARENCITE_REGEXP = re.compile(r"\\parencite\{([a-z_\d]*)\}")
-#PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(const.APP_PREFIX + "/book")
+LATEX_URL_REGEXP = re.compile(r"\\url\{([^\s]*)\}")
+LATEX_PARENCITE_REGEXP = re.compile(r"\\parencite\{([a-z_\d]*)\}")
+PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(config.www.app_prefix + "/book")
 def parse_latex(value: str) -> str:
 	"""
 	Attempts to remove LaTeX formatting from string
@@ -30,10 +31,8 @@ def parse_latex(value: str) -> str:
 	if isinstance(value, str):
 		value = value.replace(r"\&", "&")
 		value = LATEX_GROUPING_REGEXP.sub(r"\1\2\3", value)
-		#requires autoescape to be turned off
-		#but this is a break in is security wall
-		#value = LATEX_URL_REGEXP.sub(r'<a href="\1">\1</a>', value)
-		#value = LATEX_PARENCITE_REGEXP.sub(PARENCITE_SUBST, value)
+		value = LATEX_URL_REGEXP.sub(r'<a href="\1">\1</a>', value)
+		value = LATEX_PARENCITE_REGEXP.sub(PARENCITE_SUBST, value)
 		return value
 	else:
 		return value

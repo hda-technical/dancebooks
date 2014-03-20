@@ -48,6 +48,8 @@
 
 {% elif param == "added_on" %}
 				{{ value | dateformat("long") }}
+{% elif param == "annotation" %}
+				{{ value | safe }}
 {% else %}
 				{{ value }}
 {% endif %}
