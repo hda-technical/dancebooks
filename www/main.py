@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 import datetime
+import http.client
 import json
 import os.path
 import sys
@@ -235,6 +236,8 @@ if __name__ == "__main__":
 	flask_app.run(host="0.0.0.0")
 else:
 	for code in werkzeug.HTTP_STATUS_CODES:
-		flask_app.errorhandler(code)(utils_flask.xml_exception_handler)
+		#registering only required code
+		if http.client.BAD_REQUEST <= code:
+			flask_app.errorhandler(code)(utils_flask.xml_exception_handler)
 	flask_app.errorhandler(Exception)(utils_flask.xml_exception_handler)
 
