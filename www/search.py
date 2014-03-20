@@ -137,7 +137,7 @@ def search_for(key, value):
 		for date_format in config.www.date_formats:
 			try:
 				return datetime.datetime.strptime(value, date_format)
-			except:
+			except ValueError:
 				pass
 		raise ValueError("Unsupported datetime format")
 

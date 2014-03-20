@@ -129,7 +129,7 @@ def root(show_secrets):
 				if param_filter is not None:
 					searches.append(param_filter)
 	except Exception as ex:
-		flask.abort("Some of the search parameters are wrong: {0}".format(ex))
+		flask.abort(400, "Some of the search parameters are wrong: {0}".format(ex))
 
 	if len(searches) > 0:
 		found_items = list(filter(search.and_(searches), found_items))
