@@ -241,7 +241,7 @@ def main(
 								meta_keywords=meta_keywords
 							))
 				
-				search_ = utils.create_search_from_metadata(config, metadata)
+				search_ = utils.create_search_from_metadata(metadata)
 				if not search_(item):
 					errors.append("File {filename_} is not searchable by extracted params".format(
 						filename_=filename_

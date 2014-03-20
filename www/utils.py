@@ -139,7 +139,7 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	return result
 	
 	
-def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
+def create_search_from_metadata(metadata: {"str": str}) -> callable:
 	"""
 	Creates callable applicable to an item, 
 	checing if this item match given metadata
@@ -157,8 +157,8 @@ def create_search_from_metadata(cfg, metadata: {"str": str}) -> callable:
 	
 	search_for_langid = search.search_for_eq("langid", langid)
 	search_for_year = search.and_([
-		search.search_for(cfg, "year_from", year[0]),
-		search.search_for(cfg, "year_to", year[1])
+		search.search_for("year_from", year[0]),
+		search.search_for("year_to", year[1])
 	])
 	
 	search_for_itemtitle = search.search_for_string_regexp("title", title_regexp)

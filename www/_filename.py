@@ -55,7 +55,7 @@ def main(
 		relpath = "/" + os.path.relpath(file_, root)
 			
 		metadata = utils.extract_metadata_from_file(file_)	
-		item_search = utils.create_search_from_metadata(config, metadata)
+		item_search = utils.create_search_from_metadata(metadata)
 		
 		found_items = list(filter(item_search, items))
 		found_count = len(found_items)
