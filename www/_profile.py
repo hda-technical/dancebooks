@@ -6,20 +6,19 @@ import opster
 
 from config import config
 import main
-import parser
+import bib_parser
 import utils
 
-client = main.app.test_client()
+client = main.flask_app.test_client()
 
 @utils.profile()
 def all_profile():
-	client.get(main.cfg.www.app_prefix + "/all.html")
+	client.get(config.www.app_prefix + "/all.html")
 	
 
 @utils.profile
 def parsing_profile():
-	bib_parser = parser.BibParser()
-	bib_parser.parse_folder(os.path.abspath("../bib"))
+	bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
 
 
 @utils.profile

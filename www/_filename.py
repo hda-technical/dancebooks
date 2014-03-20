@@ -7,7 +7,7 @@ import opster
 
 from config import config
 import index
-import parser
+import bib_parser
 import utils
 
 MAX_OUTPUT_COUNT = 100
@@ -16,7 +16,7 @@ EXCLUDED_FOLDERS = {
 	"Leaflets (not in bibliography)"
 }
 
-items = parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
+items = bib_parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
 item_index = index.Index(config, items)
 for item in items:
 	item.process_crossrefs(item_index)

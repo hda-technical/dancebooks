@@ -1,11 +1,12 @@
 # coding: utf-8
+import http.client
 
-from nose.tools import eq_ 
+from nose.tools import eq_, ok_
 
 from config import config
 import index
 import main
-import parser
+import bib_parser
 import search
 
 client = main.flask_app.test_client()
@@ -20,7 +21,7 @@ TEST_ITEMS = \
 	location = {London},
 	year = {1491—1547?},
 	url = {http://example.com},
-	keywords = {renaissance, cinquecento, historical dance}
+	keywords = {renaissance | cinquecento | historical dance}
 )
 
 @book(
@@ -30,7 +31,7 @@ TEST_ITEMS = \
 	langid = {russian},
 	location = {Москва | Одесса},
 	year = {1825},
-	keywords = {grumbling, historical dance}
+	keywords = {grumbling | historical dance}
 )
 """
 
@@ -41,7 +42,7 @@ def parse_string_test():
 	"""
 	Tests if string can be succesfully parsed by BibParser
 	"""
-	items = parser.BibParser().parse_string(TEST_ITEMS)
+	items = bib_parser.BibParser().parse_string(TEST_ITEMS)
 	item_index = index.Index(items)
 	for item in items:
 		item.process_crossrefs(item_index)
@@ -59,7 +60,7 @@ def search_items_test():
 	"""
 	Tests if parsed items can be searched by a bunch of parameters
 	"""
-	items = parser.BibParser().parse_string(TEST_ITEMS)
+	items = bib_parser.BibParser().parse_string(TEST_ITEMS)
 	item_index = index.Index(items)
 	for item in items:
 		item.process_crossrefs(item_index)
@@ -112,18 +113,22 @@ def search_items_test():
 	
 def app_test():
 	rq = client.get(config.www.app_prefix, follow_redirects=True)
-	eq_(rq.status_code, 200)
+	eq_(rq.status_code, http.client.OK)
+
+	rq = client.get(config.www.app_prefix + "?lang=ru")
+	#eq_(rq.status_code, http.client.OK)
+	ok_("Set-Cookie" in rq.headers)
 
 	rq = client.get(config.www.app_prefix + "/index.html")
-	eq_(rq.status_code, 200)
+	eq_(rq.status_code, http.client.OK)
 
 	rq = client.get(config.www.app_prefix + "/index.html?"
 		"author=Wilson&"
 		"title=Ecossoise&"
 		"year_from=1800&"
 		"year_to=1900")
-	eq_(rq.status_code, 200)
+	eq_(rq.status_code, http.client.OK)
 
 	rq = client.get(config.www.app_prefix + "/all.html")
-	eq_(rq.status_code, 200)
+	eq_(rq.status_code, http.client.OK)
 	

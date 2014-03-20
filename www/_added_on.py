@@ -7,11 +7,10 @@ import subprocess
 
 import opster
 
-from config import config
 import index
-import parser
+import bib_parser
 
-items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
 item_index = index.Index(items)
 for item in items:
 	item.process_crossrefs(item_index)

@@ -11,7 +11,7 @@ from flask.ext import babel
 import werkzeug
 
 from config import config
-import parser
+import bib_parser
 import search
 import index
 import messenger
@@ -22,7 +22,7 @@ if (not os.path.exists("templates")):
 	print("Should run from root folder")
 	sys.exit(1)
 
-items = parser.BibParser().parse_folder(os.path.abspath("../bib"))
+items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
 item_index = index.Index(items)
 for item in items:
 	item.process_crossrefs(item_index)
@@ -64,7 +64,7 @@ def secret_cookie():
 	return response
 
 
-@flask_app.route(config.www.app_prefix + "/")
+@flask_app.route(config.www.app_prefix)
 def redirect_root():
 	desired_language = flask.request.values.get("lang", None)
 	next_url = config.www.app_prefix + "/index.html"
