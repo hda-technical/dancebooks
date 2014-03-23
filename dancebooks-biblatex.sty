@@ -13,12 +13,16 @@
 }
 \DeclareDatamodelFields[type=field,datatype=literal]{pagesize}
 \DeclareDatamodelFields[type=list,datatype=literal]{filename}
+\DeclareDatamodelFields[type=list,datatype=literal]{added_on}
+\DeclareDatamodelFields[type=field,datatype=literal]{added_on}
 
+\DeclareDatamodelEntryfields{added_on}
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[unpublished]{volumes}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelEntryfields{pagesize}
 \DeclareDatamodelEntryfields{filename}
+\DeclareDatamodelEntryfields{added_on}
 
 \DeclareDatamodelConstraints{
 	% {langid, title, year} must be present

@@ -20,7 +20,7 @@ XELATEX  := xelatex  --shell-escape --max-print-line=250
 LATEX ?= $(LUALATEX)
 
 #biber command with delimeters specification (xsvsep expects regexp, other expects symbol)
-BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamodel
+BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --validate_datamodel
 
 TRANSCRIPTIONS_WIKI_PAGE := wiki/Transcriptions.md
 TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
