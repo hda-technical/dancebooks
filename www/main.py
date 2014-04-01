@@ -5,6 +5,7 @@ import http.client
 import json
 import os.path
 import sys
+import signal
 
 import flask
 from flask.ext import babel
@@ -33,6 +34,7 @@ keywords = set(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = config.www.languages[0]
+flask_app.config["USE_EVALEX"] = False
 babel_app = babel.Babel(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
@@ -40,6 +42,12 @@ flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
 msngr = messenger.Messenger(config)
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
+
+def signal_handler(signal_number, stack_frame):
+	msngr.teardown()
+	sys.exit(0)
+
+signal.signal(signal.SIGTERM, signal_handler)
 
 @babel_app.localeselector
 def get_locale():
@@ -232,7 +240,6 @@ def everything_else(filename):
 
 
 if __name__ == "__main__":
-	flask_app.debug = True
 	flask_app.run(host="0.0.0.0")
 else:
 	for code in werkzeug.HTTP_STATUS_CODES:

@@ -23,6 +23,10 @@ class Messenger(object):
 		self.send_thread = threading.Thread(target=self.send_routine, daemon=True)
 		self.send_thread.start()
 
+	def teardown(self):
+		self.messages.put(None)
+		self.send_thread.join()
+
 	def send(self, message):
 		self.messages.put(message)
 
@@ -50,19 +54,27 @@ class Messenger(object):
 
 	def send_routine(self):
 		messages = []
-		while True:
+		shutdown = False
+		while not shutdown:
 			send_now = False
 			try:
 				message = self.messages.get(timeout=self.cfg.bug_report.timeout)
-				messages.append(message)
-				if len(messages) == self.cfg.bug_report.max_count:
+				if message is None:
+					send_now = True
+					shutdown = True
+				else:
+					messages.append(message)
+
+				if len(messages) >= self.cfg.bug_report.max_count:
 					send_now = True
 
 			except queue.Empty:
-				if len(messages) > 0:
-					send_now = True
+				send_now = True
 
 			if not send_now:
+				continue
+			
+			if len(messages) == 0:
 				continue
 
 			message_text = self.format_messages(messages)
