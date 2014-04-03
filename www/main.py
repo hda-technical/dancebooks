@@ -3,6 +3,7 @@
 import datetime
 import http.client
 import json
+import logging
 import os.path
 import sys
 import signal
@@ -43,11 +44,13 @@ flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 msngr = messenger.Messenger(config)
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
 
-def signal_handler(signal_number, stack_frame):
+def exit_signal_handler(signal_number, stack_frame):
+	logging.info("Graceful shutdown requested")
 	msngr.teardown()
 	sys.exit(0)
 
-signal.signal(signal.SIGTERM, signal_handler)
+signal.signal(signal.SIGTERM, exit_signal_handler)
+signal.signal(signal.SIGINT, exit_signal_handler)
 
 @babel_app.localeselector
 def get_locale():

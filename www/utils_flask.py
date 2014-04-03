@@ -1,4 +1,5 @@
 import functools
+import logging
 
 import flask
 import jinja2
@@ -13,6 +14,10 @@ def xml_exception_handler(ex):
 	Function converting Exception or HTTPException instance to xml response
 	"""
 	if isinstance(ex, werkzeug.exceptions.HTTPException):
+		logging.warn("HTTP {name} error occured: {msg}".format(
+			name=ex.name,
+			msg=ex.description
+		))
 		xml_error = '{decl}\n<error code="{code}" description="{description}">{msg}</error>'.format(
 			decl=XML_DECLARATION,
 			code=ex.code,
@@ -20,7 +25,11 @@ def xml_exception_handler(ex):
 			msg=ex.description
 		)
 		response = flask.make_response(xml_error, ex.code)
+
 	elif isinstance(ex, Exception):
+		logging.exception("Unhandled exception: {ex}".format(
+			ex=ex
+		))
 		xml_error = '{decl}\n<error code="{code}" description="{description}">{msg}</error>'.format(
 			decl=XML_DECLARATION,
 			code=500,
@@ -47,7 +56,6 @@ def check_secret_cookie():
 		return wrapper
 	return check_decorator
 	
-
 
 class MemoryCache(jinja2.BytecodeCache):
 	def __init__(self):

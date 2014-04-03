@@ -26,6 +26,11 @@ TRANSCRIPTIONS_WIKI_PAGE := wiki/Transcriptions.md
 TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
 
 DEVEL_CONFIG := $(shell readlink -f configs/www.cfg)
+LOGGING_CONFIG := $(shell readlink -f configs/logger-console.cfg)
+
+DEVEL_ENV := \
+	CONFIG=$(DEVEL_CONFIG) \
+	LOGGING_CONFIG=$(LOGGING_CONFIG)
 
 # PDF files related targets
 
@@ -83,17 +88,17 @@ markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 # www-related targets
 www-debug:
 	cd www && \
-	CONFIG=$(DEVEL_CONFIG) \
+	$(DEVEL_ENV) \
 	./main.py
 
 www-test:
 	cd www && \
-	CONFIG=$(DEVEL_CONFIG) \
+	$(DEVEL_ENV) \
 	nosetests tests
 
 www-profile:
 	@cd www && \
-	CONFIG=$(DEVEL_CONFIG) \
+	$(DEVEL_ENV) \
 	./_profile.py
 
 www-translations:

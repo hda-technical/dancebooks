@@ -1,8 +1,12 @@
 import configparser
 import functools
 import json
+import logging.config
 import os
 import subprocess
+
+import const
+
 
 class SmtpConfig(object):
 	def __init__(self, params):
@@ -182,8 +186,34 @@ class Config(object):
 		self.parser = ParserConfig(Config.get_params(config, fallback, "PARSER"))
 		self.www = WwwConfig(Config.get_params(config, fallback, "WWW"))
 		
-		self.version = subprocess.check_output("git log | head -n 1 | cut -f 2 -d ' '", shell=True).decode().strip()
+		self.version = subprocess.check_output(
+			"git log | "
+			"head -n 1 | "
+			"cut -f 2 -d ' '", 
+			shell=True
+		).decode().strip()
 
-if "CONFIG" not in os.environ:
-	raise RuntimeError("Config was not found. Please, specify CONFIG environment variable")
-config = Config(os.environ["CONFIG"])
+
+def setup_logging(config_path):
+	logging.config.fileConfig(config_path)
+
+config_path = os.environ.get(const.ENV_CONFIG, None)
+if config_path is None:
+	raise RuntimeError(
+		"Config was not found. "
+		"Please, specify {env_var} environment variable".format(
+			env_var=const.ENV_CONFIG
+		)
+	)
+config = Config(config_path)
+
+config_path = os.environ.get(const.ENV_LOGGING_CONFIG, None)
+if config_path is None:
+	raise RuntimeError(
+		"Logging config was not found. "
+		"Please, specify {env_var} environment variable".format(
+			env_var=const.ENV_LOGGING_CONFIG
+		)
+	)
+setup_logging(config_path)
+

@@ -79,3 +79,6 @@ VALID_HTTP_CODES = {
 	http.client.FOUND, #used by hdl.loc.gov
 	http.client.SEE_OTHER  #used by hdl.handle.net
 }
+
+ENV_CONFIG = "CONFIG"
+ENV_LOGGING_CONFIG = "LOGGING_CONFIG"
