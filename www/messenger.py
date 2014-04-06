@@ -3,8 +3,8 @@ import email.mime
 import email.mime.text
 import logging
 import smtplib
-import queue
-import threading
+
+from config import config
 
 class Message(object):
 	def __init__(self, book_id, from_addr, from_name, text):
@@ -24,75 +24,26 @@ class Message(object):
 			)
 		)
 
-
-class Messenger(object):
-	"""
-	Class capable of batch message-sending
-	"""
-	def __init__(self, cfg):
-		self.cfg = cfg
-		self.messages = queue.Queue()
-		self.send_thread = threading.Thread(target=self.send_routine, daemon=True)
-		self.send_thread.start()
-
-	def teardown(self):
-		self.messages.put(None)
-		self.send_thread.join()
-
-	def send(self, message):
-		self.messages.put(message)
-
-	def send_routine(self):
-		messages = []
-		shutdown = False
-		while not shutdown:
-			send_now = False
-			try:
-				message = self.messages.get(timeout=self.cfg.bug_report.timeout)
-				if message is None:
-					send_now = True
-					shutdown = True
-				else:
-					messages.append(message)
-
-				if len(messages) >= self.cfg.bug_report.max_count:
-					send_now = True
-
-			except queue.Empty:
-				send_now = True
-
-			if not send_now:
-				continue
-			
-			if len(messages) == 0:
-				continue
-
-			logging.info("Messenger: going to send {count} messages".format(
-				count=len(messages)
+	def send(self):
+		try:
+			msg = email.mime.text.MIMEText(str(self))
+			msg["From"] = email.utils.formataddr((
+				config.bug_report.from_name, 
+				config.bug_report.from_addr
 			))
-			text = "\n\n".join(map(str, messages))
-			messages = []
-			
+			msg["To"] = email.utils.formataddr((
+				config.bug_report.to_name, 
+				config.bug_report.to_addr
+			))
+			msg["Subject"] = "[dancebooks-bibtex] Error reports".format(id=id)
+			recipients = [config.bug_report.to_addr]
 
-			try:
-				msg = email.mime.text.MIMEText(text)
-				msg["From"] = email.utils.formataddr((
-					self.cfg.bug_report.from_name, 
-					self.cfg.bug_report.from_addr
-				))
-				msg["To"] = email.utils.formataddr((
-					self.cfg.bug_report.to_name, 
-					self.cfg.bug_report.to_addr
-				))
-				msg["Subject"] = "[dancebooks-bibtex] Error reports".format(id=id)
-				recipients = [self.cfg.bug_report.to_addr]
-
-				smtp = smtplib.SMTP(self.cfg.smtp.host, self.cfg.smtp.port)
-				if self.cfg.smtp.user and self.cfg.smtp.password:
-					smtp.login(self.cfg.smtp.user, self.cfg.smtp.password)
-				smtp.sendmail(self.cfg.smtp.email, recipients, msg.as_string())
-		
-			except Exception as ex:
-				logging.exception("Messenger: exception occured. {ex}".format(
-					ex=ex
-				))
+			smtp = smtplib.SMTP(config.smtp.host, config.smtp.port)
+			if config.smtp.user and config.smtp.password:
+				smtp.login(config.smtp.user, config.smtp.password)
+			smtp.sendmail(config.smtp.email, recipients, msg.as_string())
+	
+		except Exception as ex:
+			logging.exception("Messenger: exception occured. {ex}".format(
+				ex=ex
+			))

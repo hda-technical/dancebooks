@@ -6,7 +6,6 @@ import json
 import logging
 import os.path
 import sys
-import signal
 
 import flask
 from flask.ext import babel
@@ -21,7 +20,7 @@ import utils
 import utils_flask
 
 if (not os.path.exists("templates")):
-	print("Should run from root folder")
+	logging.error("Should run from root folder")
 	sys.exit(1)
 
 items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
@@ -41,16 +40,11 @@ babel_app = babel.Babel(flask_app)
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
-msngr = messenger.Messenger(config)
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
 
-def exit_signal_handler(signal_number, stack_frame):
-	logging.info("Graceful shutdown requested")
-	msngr.teardown()
-	sys.exit(0)
-
-signal.signal(signal.SIGTERM, exit_signal_handler)
-signal.signal(signal.SIGINT, exit_signal_handler)
+@flask_app.before_first_request
+def initialize():
+	logging.info("Starting up")
 
 @babel_app.localeselector
 def get_locale():
@@ -203,7 +197,7 @@ def edit_book(book_id):
 		flask.abort(400, "Got empty email")
 	
 	message = messenger.Message(book_id, from_email, from_name, message)
-	msngr.send(message)
+	message.send()
 
 	data = {"result": "OK", "message": babel.gettext("thanks")}
 	response = flask.make_response(json.dumps(data, ensure_ascii=False))
@@ -232,7 +226,7 @@ def get_keywords(show_secrets):
 	return response
 
 
-@flask_app.route(config.www.app_prefix + "/<path:filename>")
+@flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])
 def everything_else(filename):
 	if (os.path.isfile("templates/" + filename)):
 		return flask.render_template(filename)
