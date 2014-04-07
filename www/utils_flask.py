@@ -1,5 +1,7 @@
 import functools
+import json
 import logging
+import re
 
 import flask
 import jinja2
@@ -43,7 +45,7 @@ def xml_exception_handler(ex):
 
 
 def check_secret_cookie():
-	def check_decorator(func):
+	def real_decorator(func):
 		@functools.wraps(func)
 		def wrapper(*args, **kwargs):
 			show_secrets = (
@@ -54,8 +56,58 @@ def check_secret_cookie():
 			kwargs["show_secrets"] = show_secrets
 			return func(*args, **kwargs)
 		return wrapper
-	return check_decorator
+	return real_decorator
 	
+
+def jsonify():
+	"""
+	Decorator dumping response to json
+	"""
+	def real_decorator(func):
+		@functools.wraps(func)
+		def wrapper(*args, **kwargs):
+			try:
+				data = func(*args, **kwargs)
+				response = flask.make_response(
+					json.dumps(data, ensure_ascii=False)
+				)
+				response.content_type = "application/json; charset=utf-8"
+				return response
+			except werkzeug.exceptions.HTTPException as ex:
+				data = {"result": "ERROR", "message": ex.description}
+				response = flask.make_response(
+					json.dumps(data, ensure_ascii=False), 
+					ex.code
+				)
+				response.content_type = "application/json; charset=utf-8"
+				return response
+
+		return wrapper
+	return real_decorator
+
+
+class _DefaultValue(object):
+	pass
+
+
+def extract_string_from_request(param_name, default=_DefaultValue):
+	param = flask.request.values.get(param_name, default)
+	if param is _DefaultValue:
+		flask.abort(400, "Param {param_name} wasn't found".format(
+			param_name=param_name
+		))
+	return param
+
+
+EMAIL_REGEXP = re.compile(".*@.*")
+def extract_email_from_request(param_name, default=_DefaultValue):
+	email = extract_string_from_request(param_name, default)
+	if not EMAIL_REGEXP.match(email):
+		flask.abort(400, "Param {param_name} isn't a valid email".format(
+			param_name=param_name
+		))
+	return email
+
 
 class MemoryCache(jinja2.BytecodeCache):
 	def __init__(self):

@@ -29,16 +29,17 @@ function sendReportForm() {
 		window.location,
 		data,
 		function(data, textStatus, jqXHR) {
-			if (data['result'] != 'OK') {
-				alert(data['message']);
-			} else {
-				html = '<h2>' + data['message'] + '</h2>';
-				$('#reportForm').fadeToggle();
-				$('#bugReport').fadeToggle();
-				$('#reportForm').after(html);
-			}
+			$('#submitMessage').remove()
+			html = '<h2 id="submitMessage">' + data['message'] + '</h2>';
+			$('#reportForm').fadeToggle();
+			$('#bugReport').fadeToggle();
+			$('#reportForm').after(html);
 		}
-	)
+	).fail(function(jqXHR) {
+		$('#submitMessage').remove()
+		html = '<h2 id="submitMessage" style="color: #ff0000;">' + jqXHR.responseJSON['message'] + '</h2>';
+		$('#reportForm').after(html);
+	})
 }
 
 function clearSearchForm() {

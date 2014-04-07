@@ -2,7 +2,6 @@
 # coding: utf-8
 import datetime
 import http.client
-import json
 import logging
 import os.path
 import sys
@@ -167,63 +166,50 @@ def get_book(id, show_secrets):
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
-	items = list(items)
+	item = next(iter(items))
 	return flask.render_template(
 		"book.html", 
-		item=items[0],
+		item=item,
 		show_secrets=show_secrets
 	)
 
 
 @flask_app.route(config.www.app_prefix + "/book/<string:book_id>", methods=["POST"])
+@utils_flask.jsonify()
 def edit_book(book_id):
-	items = list(item_index["id"].get(book_id, None))
-	message = flask.request.values.get("message", None)
-	from_name = flask.request.values.get("name", None)
-	from_email = flask.request.values.get("email", None)
+	items = item_index["id"].get(book_id, None)
 
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
 	
-	if message is None:
-		flask.abort(400, "Got empty message")
-	
-	if from_name is None:
-		flask.abort(400, "Got empty name")
-
-	if from_email is None:
-		flask.abort(400, "Got empty email")
+	message = utils_flask.extract_string_from_request("message")
+	from_name = utils_flask.extract_string_from_request("name")
+	from_email = utils_flask.extract_email_from_request("email")
+	if not all([message, from_name, from_email]):
+		flask.abort(400, "Empty values aren't allowed")
 	
 	message = messenger.Message(book_id, from_email, from_name, message)
 	message.send()
 
-	data = {"result": "OK", "message": babel.gettext("thanks")}
-	response = flask.make_response(json.dumps(data, ensure_ascii=False))
-	response.headers["Content-Type"] = "application/json; charset=utf-8"
-	return response
+	return {"result": "OK", "message": babel.gettext("thanks")}
 
 
 @flask_app.route(config.www.app_prefix + "/langid", methods=["GET"])
+@utils_flask.jsonify()
 def get_languages():
-	data = dict(zip(langid, map(babel.gettext, langid)))
-	response = flask.make_response(json.dumps(data, ensure_ascii=False))
-
-	response.content_type = "application/json; charset=utf-8"
-	return response
+	return dict(zip(langid, map(babel.gettext, langid)))
 
 
 @flask_app.route(config.www.app_prefix + "/keywords", methods=["GET"])
 @utils_flask.check_secret_cookie()
+@utils_flask.jsonify()
 def get_keywords(show_secrets):
 	data = keywords
 	if not show_secrets:
 		data -= config.www.secret_keywords
-	data = sorted(data)
-	response = flask.make_response(json.dumps(data, ensure_ascii=False))
-	response.content_type = "application/json; charset=utf-8"
-	return response
+	return sorted(data)
 
 
 @flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])

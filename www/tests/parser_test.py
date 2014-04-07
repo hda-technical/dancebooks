@@ -1,5 +1,6 @@
 # coding: utf-8
 import http.client
+import json
 
 from nose.tools import eq_, ok_
 
@@ -131,4 +132,15 @@ def app_test():
 
 	rq = client.get(config.www.app_prefix + "/all.html")
 	eq_(rq.status_code, http.client.OK)
+
+	rq = client.get(config.www.app_prefix + "/book/dodworth_1844_indian_hunter")
+	eq_(rq.status_code, http.client.OK)
+
+	rq = client.get(config.www.app_prefix + "/keywords")
+	eq_(rq.status_code, http.client.OK)
+	json.loads(rq.data.decode())
+
+	rq = client.get(config.www.app_prefix + "/langid")
+	eq_(rq.status_code, http.client.OK)
+	json.loads(rq.data.decode())
 	
