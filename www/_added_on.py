@@ -82,15 +82,16 @@ def main(
 		sys.exit(1)
 	
 	if os.path.isdir(path):
-		dirname = os.path.dirname(path)
+		dirname = os.path.abspath(path)
 		files = [os.path.join(dirname, file) for file in os.listdir(path)]
 	elif os.path.isfile(path):
-		files = [path]
+		files = [os.path.abspath(path)]
 	else:
 		raise ValueError("Wrong path")
 	
 	for file in files:
 		process_file(file)
+		sys.exit(1)
 	
 if __name__ == "__main__":
 	main.command()
