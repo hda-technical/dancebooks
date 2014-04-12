@@ -20,19 +20,38 @@ def strip_split_list(value: str, sep: str) -> [str]:
 	return [word.strip() for word in value.split(sep)]
 
 
-LATEX_GROUPING_REGEXP = re.compile(r"(\s|^)\{([^\s]*)\}(\s|$)")
-LATEX_URL_REGEXP = re.compile(r"\\url\{([^\s]*)\}")
-LATEX_PARENCITE_REGEXP = re.compile(r"\\parencite\{([a-z_\d]*)\}")
-PARENCITE_SUBST = r'[<a href="{0}/\1">\1</a>]'.format(config.www.app_prefix + "/book")
+LATEX_REPLACEMENTS = [
+	#\url{href}
+	(
+		re.compile(r"\\url\{([^\s]*)\}"),
+		r'<a href="\1">\1</a>'
+	),
+	#\parencite{book_id}
+	(
+		re.compile(r"\\parencite\{([a-z_\d]*)\}"),
+		r'<a href="{0}/\1">\1</a>'.format(
+			config.www.app_prefix + "/book"
+		)
+	),
+	#ampersand escapements
+	(
+		re.compile(r"\\&"),
+		"&"
+	),
+	#parentheses
+	(
+		re.compile(r"\{(.*)\}"),
+		r"\1"
+	)
+]
+
 def parse_latex(value: str) -> str:
 	"""
 	Attempts to remove LaTeX formatting from string
 	"""
 	if isinstance(value, str):
-		value = value.replace(r"\&", "&")
-		value = LATEX_GROUPING_REGEXP.sub(r"\1\2\3", value)
-		value = LATEX_URL_REGEXP.sub(r'<a href="\1">\1</a>', value)
-		value = LATEX_PARENCITE_REGEXP.sub(PARENCITE_SUBST, value)
+		for regexp, subst in LATEX_REPLACEMENTS:
+			value = regexp.sub(subst, value)
 		return value
 	else:
 		return value
