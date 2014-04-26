@@ -40,7 +40,7 @@ class BugReportConfig(object):
 		if "to_name" not in params:
 			raise ValueError("to_name param wasn't found")
 		self.to_name = params["to_name"]
-		
+
 		if "from_addr" not in params:
 			raise ValueError("from_addr param wasn't found")
 		self.from_addr = params["from_addr"]
@@ -48,7 +48,7 @@ class BugReportConfig(object):
 		if "from_name" not in params:
 			raise ValueError("from_name param wasn't found")
 		self.from_name = params["from_name"]
-		
+
 		if "timeout" not in params:
 			raise ValueError("timeout param wasn't found")
 		self.timeout = int(params["timeout"])
@@ -57,25 +57,25 @@ class BugReportConfig(object):
 			raise ValueError("max_count param wasn't found")
 		self.max_count = int(params["max_count"])
 
-		
+
 class ParserConfig(object):
 	def __init__(self, params):
 		if "list_sep" not in params:
 			raise ValueError("list_sep param wasn't found")
 		self.list_sep = params["list_sep"]
-		
+
 		if "list_params" not in params:
 			raise ValueError("list_params param wasn't found")
 		self.list_params = set(json.loads(params["list_params"]))
-		
+
 		if "int_params" not in params:
 			raise ValueError("int_params param wasn't found")
 		self.int_params = set(json.loads(params["int_params"]))
-		
+
 		if "year_params" not in params:
 			raise ValueError("year_params param wasn't found")
 		self.year_params = set(json.loads(params["year_params"]))
-		
+
 		if "date_params" not in params:
 			raise ValueError("date_params param wasn't found")
 		self.date_params = set(json.loads(params["date_params"]))
@@ -83,16 +83,16 @@ class ParserConfig(object):
 		if "date_format" not in params:
 			raise ValueError("date_format param wasn't found")
 		self.date_format = params["date_format"]
-	
+
 		#suffixes parsing
 		if "start_suffix" not in params:
 			raise ValueError("start_suffix param wasn't found")
 		self.start_suffix = params["start_suffix"]
-		
+
 		if "end_suffix" not in params:
 			raise ValueError("end_suffix param wasn't found")
 		self.end_suffix = params["end_suffix"]
-		
+
 		if "circa_suffix" not in params:
 			raise ValueError("circa_suffix param wasn't found")
 		self.circa_suffix = params["circa_suffix"]
@@ -122,21 +122,25 @@ class ParserConfig(object):
 
 class WwwConfig(object):
 	def __init__(self, params):
+		if "domain" not in params:
+			raise ValueError("domain param wasn't found")
+		self.domain = params["domain"]
+
 		if "app_prefix" not in params:
 			raise ValueError("app_prefix param wasn't found")
 		self.app_prefix = params["app_prefix"]
-		
+
 		if "search_params" not in params:
 			raise ValueError("search_params param wasn't found")
 		self.search_params = set(json.loads(params["search_params"]))
-		
+
 		if "index_params" not in params:
 			raise ValueError("index_params param wasn't found")
 		self.index_params = set(json.loads(params["index_params"]))
-		
+
 		self.indexed_search_params = self.search_params & self.index_params
 		self.nonindexed_search_params = self.search_params - self.index_params
-		
+
 		if "languages" not in params:
 			raise ValueError("languages param wasn't found")
 		self.languages = json.loads(params["languages"])
@@ -144,7 +148,7 @@ class WwwConfig(object):
 		if "secret_cookie_key" not in params:
 			raise ValueError("secret_cookie_key wasn't found")
 		self.secret_cookie_key = params["secret_cookie_key"]
-		
+
 		if "secret_cookie_value" not in params:
 			raise ValueError("secret_cookie_value wasn't found")
 		self.secret_cookie_value = params["secret_cookie_value"]
@@ -156,7 +160,7 @@ class WwwConfig(object):
 		if "date_formats" not in params:
 			raise ValueError("date_formats param wasn't found")
 		self.date_formats = json.loads(params["date_formats"])
-		
+
 
 class Config(object):
 	@staticmethod
@@ -167,16 +171,16 @@ class Config(object):
 		if section in config:
 			params.update(config[section])
 		return params
-		
+
 	def __init__(self, path):
 		config = configparser.ConfigParser(interpolation=None)
 		config.read(path)
-		
+
 		fallback = None
 		if "DEFAULT" in config:
 			if "fallback" in config["DEFAULT"]:
 				path = os.path.join(
-					os.path.dirname(path), 
+					os.path.dirname(path),
 					config["DEFAULT"]["fallback"]
 				)
 				fallback = configparser.ConfigParser()
@@ -185,11 +189,11 @@ class Config(object):
 		self.bug_report = BugReportConfig(Config.get_params(config, fallback, "BUG_REPORT"))
 		self.parser = ParserConfig(Config.get_params(config, fallback, "PARSER"))
 		self.www = WwwConfig(Config.get_params(config, fallback, "WWW"))
-		
+
 		self.version = subprocess.check_output(
 			"git log | "
 			"head -n 1 | "
-			"cut -f 2 -d ' '", 
+			"cut -f 2 -d ' '",
 			shell=True
 		).decode().strip()
 

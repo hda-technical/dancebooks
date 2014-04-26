@@ -53,7 +53,7 @@ def get_locale():
 	lang = flask.request.cookies.get("lang", None)
 	if (lang in config.www.languages):
 		return lang
-	else:	
+	else:
 		return flask.request.accept_languages.best_match(config.www.languages)
 
 
@@ -61,8 +61,8 @@ def get_locale():
 def secret_cookie():
 	response = flask.make_response(flask.redirect(config.www.app_prefix + "/index.html"))
 	response.set_cookie(
-		config.www.secret_cookie_key, 
-		value=config.www.secret_cookie_value, 
+		config.www.secret_cookie_key,
+		value=config.www.secret_cookie_value,
 		expires=EXPIRES
 	)
 	return response
@@ -82,7 +82,7 @@ def redirect_root():
 		response = flask.make_response(flask.redirect(next_url))
 		response.set_cookie("lang", value=desired_language, expires=EXPIRES)
 		return response
-	else:	
+	else:
 		return flask.redirect(next_url)
 
 
@@ -90,13 +90,22 @@ def redirect_root():
 @utils_flask.check_secret_cookie()
 def root(show_secrets):
 	args_filter = lambda pair: len(pair[1]) > 0
-	request_args = dict(filter(args_filter, flask.request.args.items()))
+	args_mapper = lambda pair: (pair[0], pair[1].strip())
+	request_args = dict(
+		map(
+			args_mapper,
+			filter(
+				args_filter,
+				flask.request.args.items()
+			)
+		)
+	)
 	request_keys = set(request_args.keys())
 
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
 		return flask.render_template(
-			"index.html", 
+			"index.html",
 			items=items,
 			show_secrets=show_secrets
 		)
@@ -117,12 +126,12 @@ def root(show_secrets):
 				found_items = indexed_items
 			else:
 				found_items &= indexed_items
-	
+
 	searches = []
 	if found_items is None:
 		#no index was applied
 		found_items = items
-	
+
 	try:
 		for search_key in (config.www.nonindexed_search_params & request_keys):
 			# argument can be missing or be empty
@@ -139,7 +148,7 @@ def root(show_secrets):
 		found_items = list(filter(search.and_(searches), found_items))
 
 	return flask.render_template(
-		"index.html", 
+		"index.html",
 		found_items=found_items,
 		search_params=request_args,
 		show_secrets=show_secrets
@@ -150,7 +159,7 @@ def root(show_secrets):
 @utils_flask.check_secret_cookie()
 def show_all(show_secrets):
 	return flask.render_template(
-		"all.html", 
+		"all.html",
 		items=items,
 		show_secrets=show_secrets
 	)
@@ -159,16 +168,16 @@ def show_all(show_secrets):
 @flask_app.route(config.www.app_prefix + "/book/<string:id>", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def get_book(id, show_secrets):
-	
+
 	items = item_index["id"].get(id, None)
-	
+
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
 	item = next(iter(items))
 	return flask.render_template(
-		"book.html", 
+		"book.html",
 		item=item,
 		show_secrets=show_secrets
 	)
@@ -183,13 +192,13 @@ def edit_book(book_id):
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
-	
+
 	message = utils_flask.extract_string_from_request("message")
 	from_name = utils_flask.extract_string_from_request("name")
 	from_email = utils_flask.extract_email_from_request("email")
 	if not all([message, from_name, from_email]):
 		flask.abort(400, "Empty values aren't allowed")
-	
+
 	message = messenger.Message(book_id, from_email, from_name, message)
 	message.send()
 
@@ -214,6 +223,8 @@ def get_keywords(show_secrets):
 
 @flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])
 def everything_else(filename):
+	if (filename.startswith("components")):
+		flask.abort(404, "No such file")
 	if (os.path.isfile("templates/" + filename)):
 		return flask.render_template(filename)
 	elif (os.path.isfile("static/" + filename)):

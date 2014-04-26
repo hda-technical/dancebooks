@@ -6,7 +6,7 @@ function submitSearchForm() {
 			($(this).is(':invalid'))
 		);
 	}).map(function(index) {
-		return (this.name + '=' + this.value);
+		return (this.name + '=' + encodeURIComponent(this.value));
 	}).get().join("&");
 
 	if (search.length != 0) {
@@ -47,7 +47,7 @@ function clearSearchForm() {
 	$('#search select').val('');
 	$('#search input[type="checkbox"]').prop("checked", false);
 }
-	
+
 function toggleReportForm() {
 	$('#reportForm').slideToggle();
 }
@@ -84,7 +84,7 @@ function updateKeywords() {
 }
 
 function loadSearchParams() {
-	$.get('/bib/langid', 
+	$.get('/bib/langid',
 		function(data, textStatus, jqXHR) {
 			selected = extractFromLocation("langid");
 			html = '';
@@ -114,7 +114,7 @@ function loadSearchParams() {
 			html = '';
 			for (index in data) {
 				id = 'keyword' + index;
-				
+
 				html += '<input id="' + id + '" type="checkbox" onchange="updateKeywords()"';
 
 				keyword = data[index];
@@ -128,7 +128,7 @@ function loadSearchParams() {
 			$('#keywordsChooser #keywordsHider').after(html);
 		}
 	)
-	
+
 	$('#search input[name!="keywords"]').map(setInputFromLocation);
 }
 

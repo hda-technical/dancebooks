@@ -13,16 +13,17 @@ import search
 client = main.flask_app.test_client()
 
 TEST_ITEMS = \
-"""
+r"""
 @book(
 	id_1,
 	author = {Henry Eight | Anne Boleyn | Catherine of Aragon},
-	title = {Six Wifes of Henry Eight},
+	title = {Six Wifes of Henry Eight. Some Words {\&} Letters {\&} Other Stuff Here},
 	langid = {english},
 	location = {London},
 	year = {1491—1547?},
 	url = {http://example.com},
-	keywords = {renaissance | cinquecento | historical dance}
+	keywords = {renaissance | cinquecento | historical dance},
+	annotation = {\url{http://example.com/description}}
 )
 
 @book(
@@ -48,13 +49,21 @@ def parse_string_test():
 	for item in items:
 		item.process_crossrefs(item_index)
 	item_index.update(items)
-	
+
 	languages = set(item_index["langid"].keys())
 	keywords = set(item_index["keywords"].keys())
 
 	eq_(len(items), 2)
 	eq_(languages, EXPECTED_LANGUAGES)
 	eq_(keywords, EXPECTED_KEYWORDS)
+
+	item1 = next(iter(item_index["id"]["id_1"]))
+	ok_('{' not in item1.title())
+	ok_('}' not in item1.title())
+	eq_(
+		item1.annotation(),
+		'<a href="http://example.com/description">http://example.com/description</a>'
+	)
 
 
 def search_items_test():
@@ -86,7 +95,7 @@ def search_items_test():
 	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
-	
+
 	#testing inner containment
 	year_search = search.and_([
 		search.search_for("year_from", 1499),
@@ -94,7 +103,7 @@ def search_items_test():
 	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
-	
+
 	#testing outer containment
 	year_search = search.and_([
 		search.search_for("year_from", 1400),
@@ -102,7 +111,7 @@ def search_items_test():
 	])
 	filtered_items = filter(year_search, items)
 	eq_(len(list(filtered_items)), 1)
-	
+
 	filtered_items = item_index["keywords"]["grumbling"]
 	eq_(len(list(filtered_items)), 1)
 
@@ -110,8 +119,8 @@ def search_items_test():
 		item_index["keywords"]["cinquecento"] & \
 		item_index["keywords"]["historical dance"]
 	eq_(len(list(filtered_items)), 1)
-	
-	
+
+
 def app_test():
 	rq = client.get(config.www.app_prefix, follow_redirects=True)
 	eq_(rq.status_code, http.client.OK)
@@ -143,4 +152,4 @@ def app_test():
 	rq = client.get(config.www.app_prefix + "/langid")
 	eq_(rq.status_code, http.client.OK)
 	json.loads(rq.data.decode())
-	
+
