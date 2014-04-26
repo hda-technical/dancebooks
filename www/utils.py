@@ -40,7 +40,7 @@ LATEX_REPLACEMENTS = [
 	),
 	#parentheses
 	(
-		re.compile(r"\{(.*)\}"),
+		re.compile(r"\{([^\{\}]*)\}"),
 		r"\1"
 	)
 ]
