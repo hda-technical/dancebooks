@@ -78,7 +78,7 @@ def main(
 	path=("p", "", ".bib file to use")
 ):
 	if not path:
-		print(".bib file must be specified")
+		print(".bib file/folder must be specified")
 		sys.exit(1)
 	
 	if os.path.isdir(path):
@@ -91,7 +91,6 @@ def main(
 	
 	for file in files:
 		process_file(file)
-		sys.exit(1)
 	
 if __name__ == "__main__":
 	main.command()

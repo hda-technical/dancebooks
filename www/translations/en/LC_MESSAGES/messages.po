@@ -48,7 +48,7 @@ msgid "clear"
 msgstr "Clear"
 
 msgid "report_bug"
-msgstr "Report bug"
+msgstr "Report bug / mistake"
 
 msgid "introduce"
 msgstr "Introduce yourself"
