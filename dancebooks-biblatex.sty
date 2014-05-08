@@ -7,19 +7,15 @@
 %Datamodel constraints
 %Do not change without changing _validate.py correspondingly
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-\DeclareDatamodelFields[type=list,datatype=key]{
-	origlanguage,
-	bookoriglanguage
-}
-\DeclareDatamodelFields[type=field,datatype=literal]{pagesize}
-\DeclareDatamodelFields[type=list,datatype=literal]{filename}
-\DeclareDatamodelFields[type=list,datatype=literal]{added_on}
-\DeclareDatamodelFields[type=field,datatype=literal]{added_on}
+\DeclareDatamodelFields[type=list,datatype=key]{origlanguage}
+\DeclareDatamodelFields[type=list,datatype=literal,skipout=true]{filename}
+\DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{pagesize}
+\DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{added_on}
 
-\DeclareDatamodelEntryfields{added_on}
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[unpublished]{volumes}
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
+\DeclareDatamodelEntryfields[inproceedings]{origlanguage,translator}
 \DeclareDatamodelEntryfields{pagesize}
 \DeclareDatamodelEntryfields{filename}
 \DeclareDatamodelEntryfields{added_on}
@@ -161,11 +157,13 @@
 {\bibsstring{lang#1}}%
 \usebibmacro{list:andothers}}
 
-% intellectual keyword printing
-\DeclareFieldFormat{keywords}{%
-\forcsvlist{\addcomma\addspace}{#1}%
+\DeclareSourcemap{
+	\maps[datatype=bibtex]{
+		\map{
+			\step[fieldsource=url,match=\regexp{([^\|\s]+).*},replace=\regexp{$1}]
+		}
+	}
 }
-
 \renewcommand*{\lbx@gost@lfromlang}[1]{%
 \iflistundef{#1}%
 {\unspace}%
@@ -173,7 +171,7 @@
 	
 \renewcommand*{\lbx@gost@sfromlang}[1]{%
 \iflistundef{#1}%
-{\space}%
+{\unspace}%
 {\printlist[origlanguage]{#1}}}
 	
 \renewcommand*{\lbx@lfromlang}{\lbx@gost@lfromlang{origlanguage}}
@@ -183,10 +181,6 @@
 
 % defining ISBN list printing format
 \renewbibmacro*{isbn}{\printlist{isbn}}
-
-% defining keywords list printing fortat
-% using \newbibmacro* instead of \renewbibmacro* to remove warning
-\newbibmacro*{keywords}{\printfield{keywords}}
 
 % adding option to ignore bibliography source included by default
 \ifdancebooks@usedefaults

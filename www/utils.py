@@ -230,7 +230,7 @@ def all_or_none(iterable: "iterable") -> (bool, str):
 	return all(iterable) or not any(iterable)
 
 	
-def head_request(scheme: str, host: str, path: str) -> int:
+def request(scheme, host, path, method):
 	"""
 	Performs HTTP head request and returns response code
 	"""
@@ -242,10 +242,10 @@ def head_request(scheme: str, host: str, path: str) -> int:
 		raise ValueError("Scheme {scheme} is not supported".format(
 			scheme=scheme
 		))
-	connection.request("HEAD", urlparse.quote(path))
+	connection.request(method, urlparse.quote(path))
 	response = connection.getresponse()
-	return response.status, response.reason
-
+	data = response.read()
+	return (response.status, response.reason, str(data))
 
 
 def is_url_valid(url: str, check_head: bool = False) -> (bool, str):
@@ -263,10 +263,11 @@ def is_url_valid(url: str, check_head: bool = False) -> (bool, str):
 			return False, "Fragments aren't allowed"
 		
 		if check_head:
-			code, reason = head_request(
+			code, reason, data = request(
 				parse_result.scheme,
 				parse_result.hostname,
-				parse_result.path
+				parse_result.path,
+				"HEAD"
 			)
 			if code not in const.VALID_HTTP_CODES:
 				return False, "HTTP HEAD request returned code {code}: {reason}".format(

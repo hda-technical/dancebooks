@@ -343,12 +343,13 @@ def main(
 		
 		#url validation empty
 		if url is not None:
-			correct, msg = utils.is_url_valid(url, check_head)
-			if not correct:
-				errors.append("URL {url} isn't valid: {msg}".format(
-					url=url,
-					msg=msg
-				))
+			for signle_url in url:
+				correct, msg = utils.is_url_valid(signle_url, check_head)
+				if not correct:
+					errors.append("URL {signle_url} isn't valid: {msg}".format(
+						signle_url=signle_url,
+						msg=msg
+					))
 			
 		#volume validation empty
 		
