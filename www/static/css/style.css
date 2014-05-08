@@ -1,4 +1,4 @@
-﻿/* importing fonts from google */
+/* importing fonts from google */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,cyrillic);
 /* resetting default browser styles */
@@ -79,7 +79,7 @@ hr {
 
 ul, ol {
 	text-align: left;
-	text-indent: 20px;
+	text-indent: 0px;
 }
 
 table tr td:first-child {
@@ -126,9 +126,9 @@ table tr td {
 }
 
 /* input magic */
-input[type="text"], 
-input[type="email"], 
-select, 
+input[type="text"],
+input[type="email"],
+select,
 textarea,
 #keywordsChooser {
 	width: 400px;
@@ -143,8 +143,8 @@ input[type="datetime"]{
     font-family: "PT Sans", sans-serif;
 }
 
-input, 
-select, 
+input,
+select,
 textarea {
 	border-style: solid;
 	border-width: 1px;
@@ -153,7 +153,7 @@ textarea {
 	resize: none;
 }
 
-input:invalid, 
+input:invalid,
 textarea:invalid {
 	color: #000000;
 	background-color: rgba(255, 204, 204, 0.1);
@@ -165,7 +165,7 @@ textarea:invalid {
 	text-align: center;
 	color: #000000;
 	background-color: #dddddd;
-	
+
 	border: solid 1px #dddddd;
 }
 
@@ -180,7 +180,7 @@ textarea:invalid {
 	display: inline-block;
 	white-space: nowrap;
 	text-decoration: underline;
-																																
+
 	border-radius: 2px;
 	border-width: 1px;
 	border-color: #dddddd;
@@ -190,11 +190,11 @@ textarea:invalid {
 #keywordsChooser input[type="checkbox"] + label:hover {
 	border-style: outset;
 }
-													
+
 #keywordsChooser input[type="checkbox"]:checked + label {
 	border-style: inset;
 }
-																										
+
 #keywordsChooser input[type="checkbox"]:checked + label:hover {
 	border-style: inset;
 }
