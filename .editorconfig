@@ -8,3 +8,9 @@ indent_size = 4
 tab_width = 4
 
 charset = utf-8
+
+[{GNUMakefile,makefile,Makefile}]
+indent_style = tab
+
+[debian/control]
+indent_style = space
