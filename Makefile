@@ -60,7 +60,7 @@ pdf-upload.mk: test-biblatex.pdf
 pdf-clean:
 	@rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
 
-pdf-purge: pdf-clean
+pdf-distclean: pdf-clean
 	@rm -f *.pdf all.mk upload-pdfs.mk
 	
 # Transcriptions related targets
@@ -74,7 +74,7 @@ pdf-purge: pdf-clean
 markdown.mk: $(HTML_FILES)
 	@touch $@
 
-markdown-purge:
+markdown-distclean:
 	@rm -f transcriptions/*.html markdown.mk
 
 markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
@@ -106,8 +106,7 @@ www-translations:
 
 # Ancillary targets
 
-all.mk: test-biblatex.pdf $(HTML_FILES)
-	@touch $@
+all.mk: test-biblatex.pdf $(HTML_FILES);
 
 urls-upload.mk: $(URL_FILES)
 	@chmod 644 $^
@@ -121,4 +120,4 @@ entry-count: $(BIB_FILES)
 	
 clean: clean-pdfs;
 	
-rebuild: purge-pdfs purge-transcriptions all.mk;
+rebuild: distclean-pdfs distclean-transcriptions all.mk;

@@ -6,6 +6,7 @@
 
 %Datamodel constraints
 %Do not change without changing _validate.py correspondingly
+\DeclareDatamodelFields[type=list,datatype=uri]{url}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
 \DeclareDatamodelFields[type=list,datatype=key]{origlanguage}
 \DeclareDatamodelFields[type=list,datatype=literal,skipout=true]{filename}
@@ -149,6 +150,13 @@
 {\addcomma\addspace}%
 #1}
 
+% adding support for URL list
+\DeclareListFormat{url}{%
+\ifnumequal{\value{listcount}}{\value{liststart}}%
+{\mkbibacro{url}\addcolon\addspace}%
+{\addcomma\addspace}%
+\url{#1}}
+
 % adding support for origlanguage list
 \DeclareListFormat{origlanguage}{%
 \usebibmacro{list:delim}{#1}%
@@ -157,13 +165,7 @@
 {\bibsstring{lang#1}}%
 \usebibmacro{list:andothers}}
 
-\DeclareSourcemap{
-	\maps[datatype=bibtex]{
-		\map{
-			\step[fieldsource=url,match=\regexp{([^\|\s]+).*},replace=\regexp{$1}]
-		}
-	}
-}
+% defining origlanguage list printing format
 \renewcommand*{\lbx@gost@lfromlang}[1]{%
 \iflistundef{#1}%
 {\unspace}%
@@ -181,6 +183,9 @@
 
 % defining ISBN list printing format
 \renewbibmacro*{isbn}{\printlist{isbn}}
+
+% defining URL list printing format
+\renewbibmacro*{url}{\printlist{url}}
 
 % adding option to ignore bibliography source included by default
 \ifdancebooks@usedefaults
