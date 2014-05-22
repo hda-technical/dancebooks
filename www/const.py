@@ -75,9 +75,14 @@ FILENAME_PATTERN = (
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 
 VALID_HTTP_CODES = {
+	#general OK
 	http.client.OK,
-	http.client.FOUND, #used by hdl.loc.gov
-	http.client.SEE_OTHER  #used by hdl.handle.net
+	#used by hdl.loc.gov
+	http.client.FOUND,
+	#used by hdl.handle.net
+	http.client.SEE_OTHER,
+	#used by uni-goettingen.de
+	http.client.TEMPORARY_REDIRECT
 }
 
 ENV_CONFIG = "CONFIG"
