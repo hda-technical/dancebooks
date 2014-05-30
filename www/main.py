@@ -90,16 +90,12 @@ def redirect_root():
 @utils_flask.check_secret_cookie()
 def root(show_secrets):
 	args_filter = lambda pair: len(pair[1]) > 0
-	args_mapper = lambda pair: (pair[0], pair[1].strip())
-	request_args = dict(
-		map(
-			args_mapper,
-			filter(
-				args_filter,
-				flask.request.args.items()
-			)
-		)
-	)
+	request_args = {
+		key:value.strip() 
+		for key, value 
+		in flask.request.args.items()
+		if value
+	}
 	request_keys = set(request_args.keys())
 
 	#if request_args is empty, we should render empty search form
@@ -205,10 +201,10 @@ def edit_book(book_id):
 	return {"result": "OK", "message": babel.gettext("thanks")}
 
 
-@flask_app.route(config.www.app_prefix + "/langid", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/languages", methods=["GET"])
 @utils_flask.jsonify()
 def get_languages():
-	return dict(zip(langid, map(babel.gettext, langid)))
+	return {language:babel.gettext(language) for language in languages}
 
 
 @flask_app.route(config.www.app_prefix + "/keywords", methods=["GET"])

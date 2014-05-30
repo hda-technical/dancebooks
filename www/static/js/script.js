@@ -84,7 +84,7 @@ function updateKeywords() {
 }
 
 function loadSearchParams() {
-	$.get('/bib/langid',
+	$.get('/bib/languages',
 		function(data, textStatus, jqXHR) {
 			selected = extractFromLocation("langid");
 			html = '';
