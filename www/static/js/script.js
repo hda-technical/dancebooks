@@ -10,7 +10,7 @@ function submitSearchForm() {
 	}).get().join("&");
 
 	if (search.length != 0) {
-		document.location = '/bib/index.html?' + search;
+		document.location = '/bib/search?' + search;
 	}
 }
 

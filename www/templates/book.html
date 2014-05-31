@@ -11,7 +11,7 @@
 				<span class="action" id="bugReport" onclick="toggleReportForm()">{{ _("report_bug") }}</span>
 			</div>
 			<div id="reportForm" class="center" style="display: none;">
-				<form action="/bib/book/{{ item.id() }}" method="post">
+				<form action="/bib/books/{{ item.id() }}" method="post">
 					<table>
 						<tr>
 							<td>{{ _("introduce") }}:</td>

@@ -125,31 +125,32 @@ def app_test():
 	rq = client.get(config.www.app_prefix, follow_redirects=True)
 	eq_(rq.status_code, http.client.OK)
 
-	rq = client.get(config.www.app_prefix + "?lang=ru")
+	rq = client.get(config.www.app_prefix + "/ui-lang/ru")
 	#eq_(rq.status_code, http.client.OK)
 	ok_("Set-Cookie" in rq.headers)
 
-	rq = client.get(config.www.app_prefix + "/index.html")
+	rq = client.get(config.www.app_prefix)
 	eq_(rq.status_code, http.client.OK)
 
-	rq = client.get(config.www.app_prefix + "/index.html?"
-		"author=Wilson&"
-		"title=Ecossoise&"
-		"year_from=1800&"
-		"year_to=1900")
+	rq = client.get(config.www.app_prefix, query_string={
+		"author": "Wilson",
+		"title": "Ecossoise",
+		"year_from": 1800,
+		"year_to": 1900
+	})
 	eq_(rq.status_code, http.client.OK)
 
-	rq = client.get(config.www.app_prefix + "/all.html")
+	rq = client.get(config.www.app_prefix + "/books")
 	eq_(rq.status_code, http.client.OK)
 
-	rq = client.get(config.www.app_prefix + "/book/dodworth_1844_indian_hunter")
+	rq = client.get(config.www.app_prefix + "/books/dodworth_1844_indian_hunter")
 	eq_(rq.status_code, http.client.OK)
 
 	rq = client.get(config.www.app_prefix + "/keywords")
 	eq_(rq.status_code, http.client.OK)
 	json.loads(rq.data.decode())
 
-	rq = client.get(config.www.app_prefix + "/langid")
+	rq = client.get(config.www.app_prefix + "/languages")
 	eq_(rq.status_code, http.client.OK)
 	json.loads(rq.data.decode())
 

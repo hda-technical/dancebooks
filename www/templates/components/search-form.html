@@ -1,0 +1,87 @@
+		<h2>{{ _("can") }} <a href="/bib/books">{{ _("display everything") }}</a> {{ _("or use the search") }}:</h2>
+		<div class="content">
+			<form id="search" action="/bib/search">
+				<table>
+					<tr>
+						<td>
+							<label for="author">{{ _("author") }}:</label>
+						</td>
+						<td>
+							<input id="author" type="text" name="author"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="title">{{ _("title") }}:</label>
+						</td>
+						<td>
+							<input id="title" type="text" name="title"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="year_from">{{ _("year") }}:</label>
+						</td>
+						<td>
+							<label for="year_from">{{ _("from") }}</label>
+							<input id="year_from" type="number" name="year_from" min="0" max="9999"/>
+							<label for="year_to">{{ _("to") }}</label>
+							<input id="year_to" type="number" name="year_to" min="0" max="9999"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="added_on_from">{{ _("added_on") }}:</label>
+						</td>
+						<td>
+							<label for="added_on_from">{{ _("from") }}</label>
+							<input id="added_on_from" type="datetime" name="added_on_from"/>
+							<label for="added_on_to">{{ _("to") }}</label>
+							<input id="added_on_to" type="datetime" name="added_on_to"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="langid">{{ _("langid") }}:</label>
+						</td>
+						<td>
+							<select id="langid" name="langid">
+								<!-- required to reduce flicking -->
+								<option value="empty" selected="selected"></option>
+								<option value="">{{ _("any") }}</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="publisher">{{ _("publisher") }}:</label>
+						</td>
+						<td>
+							<input id="publisher" type="text" name="publisher"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="location">{{ _("location") }}:</label>
+						</td>
+						<td>
+							<input id="location" type="text" name="location"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="keywords">{{ _("keywords") }}:</label>
+						</td>
+						<td>
+							<input id="keywords" type="text" readonly="readonly" name="keywords" onfocus="showKeywordsChooser()"/>
+							<div id="keywordsChooser" style="display: none;">
+								<span id="keywordsHider" onclick="hideKeywordsChooser()">▲</span>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</form>
+			<div class="center">
+				<button onclick="submitSearchForm()">{{ _("search") }}</button>
+				<button onclick="clearSearchForm()">{{ _("clear") }}</button>
+			</div>

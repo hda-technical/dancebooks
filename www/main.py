@@ -28,7 +28,7 @@ for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
 
-langid = sorted(item_index["langid"].keys())
+languages = sorted(item_index["langid"].keys())
 keywords = set(item_index["keywords"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -57,7 +57,7 @@ def get_locale():
 		return flask.request.accept_languages.best_match(config.www.languages)
 
 
-@flask_app.route(config.www.app_prefix + "/secret-cookie")
+@flask_app.route(config.www.app_prefix + "/secret-cookie", methods=["GET"])
 def secret_cookie():
 	response = flask.make_response(flask.redirect(config.www.app_prefix + "/index.html"))
 	response.set_cookie(
@@ -68,45 +68,41 @@ def secret_cookie():
 	return response
 
 
-@flask_app.route(config.www.app_prefix)
-def redirect_root():
-	desired_language = flask.request.values.get("lang", None)
-	next_url = config.www.app_prefix + "/index.html"
-
-	#if lang param is set, redirecting user back to the page he came from
-	if (desired_language is not None) and \
-		(desired_language in config.www.languages):
-		referrer = flask.request.referrer
-		if referrer is not None:
-			next_url = referrer
+@flask_app.route(config.www.app_prefix + "/ui-lang/<string:lang>", methods=["GET"])
+def choose_ui_lang(lang):
+	next_url = flask.request.referrer or config.www.app_prefix
+	if lang in config.www.languages:
 		response = flask.make_response(flask.redirect(next_url))
-		response.set_cookie("lang", value=desired_language, expires=EXPIRES)
+		response.set_cookie("lang", value=lang, expires=EXPIRES)
 		return response
-	else:
-		return flask.redirect(next_url)
 
 
-@flask_app.route(config.www.app_prefix + "/index.html")
+@flask_app.route(config.www.app_prefix, methods=["GET"])
 @utils_flask.check_secret_cookie()
 def root(show_secrets):
-	args_filter = lambda pair: len(pair[1]) > 0
+	return flask.render_template(
+		"index.html",
+		entry_count=len(items),
+		show_secrets=show_secrets
+	)
+
+
+@flask_app.route(config.www.app_prefix + "/search", methods=["GET"])
+@utils_flask.check_secret_cookie()
+def search_items(show_secrets):
 	request_args = {
-		key:value.strip() 
-		for key, value 
-		in flask.request.args.items()
+		key:value.strip()
+		for key, value
+		in flask.request.values.items()
 		if value
 	}
 	request_keys = set(request_args.keys())
 
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
-		return flask.render_template(
-			"index.html",
-			items=items,
-			show_secrets=show_secrets
-		)
+		flask.abort(400, "No search parameters specified")
 
-	found_items = None
+	found_items = set(items)
 
 	for index_to_use in (config.www.indexed_search_params & request_keys):
 		value_to_use = request_args[index_to_use]
@@ -118,16 +114,9 @@ def root(show_secrets):
 
 		for value in values_to_use:
 			indexed_items = set(item_index[index_to_use].get(value, set()))
-			if found_items is None:
-				found_items = indexed_items
-			else:
-				found_items &= indexed_items
+			found_items &= indexed_items
 
 	searches = []
-	if found_items is None:
-		#no index was applied
-		found_items = items
-
 	try:
 		for search_key in (config.www.nonindexed_search_params & request_keys):
 			# argument can be missing or be empty
@@ -140,18 +129,16 @@ def root(show_secrets):
 	except Exception as ex:
 		flask.abort(400, "Some of the search parameters are wrong: {0}".format(ex))
 
-	if len(searches) > 0:
-		found_items = list(filter(search.and_(searches), found_items))
+	found_items = list(filter(search.and_(searches), found_items))
 
 	return flask.render_template(
-		"index.html",
+		"search.html",
 		found_items=found_items,
-		search_params=request_args,
 		show_secrets=show_secrets
 	)
 
 
-@flask_app.route(config.www.app_prefix + "/all.html")
+@flask_app.route(config.www.app_prefix + "/books", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def show_all(show_secrets):
 	return flask.render_template(
@@ -161,7 +148,7 @@ def show_all(show_secrets):
 	)
 
 
-@flask_app.route(config.www.app_prefix + "/book/<string:id>", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/books/<string:id>", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def get_book(id, show_secrets):
 
@@ -179,7 +166,7 @@ def get_book(id, show_secrets):
 	)
 
 
-@flask_app.route(config.www.app_prefix + "/book/<string:book_id>", methods=["POST"])
+@flask_app.route(config.www.app_prefix + "/books/<string:book_id>", methods=["POST"])
 @utils_flask.jsonify()
 def edit_book(book_id):
 	items = item_index["id"].get(book_id, None)

@@ -4,9 +4,20 @@
 	<body>
 {% include "components/choose-lang.html" %}
 {% include "components/header.html" %}
-		<h2>{{ ngettext("total %(num)d entry", "total %(num)d entries", entry_count) }}.</h2>
+{% if found_items %}
+		<h2>{{ ngettext("found %(num)d entry", "found %(num)d entries", found_items|length) }}.</h2>
+{% else %}
+		<h2>{{ _("nothing found") }}.</h2>
+{% endif %}
 {% include "components/search-form.html" %}
+{% if found_items %}
+{% for item in found_items %}
+{% include "components/item.html" %}
 			<hr/>
+{% endfor %}
+{% else %}
+			<hr/>
+{% endif %}
 {% include "components/footer.html" %}
 		</div>
 	</body>

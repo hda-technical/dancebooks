@@ -8,7 +8,7 @@ ANC_BIBLATEX_FILES := \
 ANC_MARKDOWN_FILES := \
 	www/_markdown2.py \
 	transcriptions/_style.css
-	
+
 ANC_WIKI_FILES := \
 	www/_generate_wiki.py
 
@@ -62,7 +62,7 @@ pdf-clean:
 
 pdf-distclean: pdf-clean
 	rm -f *.pdf all.mk upload-pdfs.mk
-	
+
 # Transcriptions related targets
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
@@ -84,7 +84,7 @@ markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 		--url-prefix "$(TRANSCRIPTIONS_URL_PREFIX)"
 	cd wiki && (git commit -am "Updated wiki" || true) && git push origin master
 	touch $@
-	
+
 # www-related targets
 www-debug:
 	cd www && \
@@ -104,6 +104,9 @@ www-profile:
 www-translations:
 	pybabel -q compile -d www/translations
 
+www-requirements:
+	pip freeze --local > requirements.txt
+
 # Ancillary targets
 
 all.mk: test-biblatex.pdf $(HTML_FILES);
@@ -112,12 +115,12 @@ urls-upload.mk: $(URL_FILES)
 	chmod 644 $^
 	scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
 	touch $@
-	
+
 entry-count: $(BIB_FILES)
 	echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
 	echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
 	echo "With addition date:" `cat $^ | grep -c -P '\tadded_on = '`
-	
+
 clean: clean-pdfs;
-	
+
 rebuild: distclean-pdfs distclean-transcriptions all.mk;
