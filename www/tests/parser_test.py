@@ -148,9 +148,19 @@ def app_test():
 
 	rq = client.get(config.www.app_prefix + "/keywords")
 	eq_(rq.status_code, http.client.OK)
+	eq_(rq.content_type, "application/json; charset=utf-8")
 	json.loads(rq.data.decode())
 
 	rq = client.get(config.www.app_prefix + "/languages")
 	eq_(rq.status_code, http.client.OK)
+	eq_(rq.content_type, "application/json; charset=utf-8")
 	json.loads(rq.data.decode())
+
+	rq = client.get(config.www.app_prefix + "/rss/en/books")
+	eq_(rq.status_code, http.client.OK)
+	eq_(rq.content_type, "application/rss+xml")
+
+	rq = client.get(config.www.app_prefix + "/rss/ru/books")
+	eq_(rq.status_code, http.client.OK)
+	eq_(rq.content_type, "application/rss+xml")
 

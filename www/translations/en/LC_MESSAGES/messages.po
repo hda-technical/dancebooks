@@ -179,3 +179,20 @@ msgstr "GitHub repository"
 msgid "persimmon"
 msgstr "Persimmon"
 
+#: RSS
+msgid "rss_title"
+msgstr "New books"
+
+msgid "rss_description"
+msgstr "Latest additions to dancing books biblipgraphy"
+
+msgid "new_books_for"
+msgstr "Added on"
+
+#, python-format
+msgid "added %(num)d entry"
+msgid_plural "added %(num)d entries"
+msgstr[0] "%(num)d entry added"
+msgstr[1] "%(num)d entry added"
+msgstr[2] "%(num)d entry added"
+

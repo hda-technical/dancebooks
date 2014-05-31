@@ -180,3 +180,21 @@ msgstr "Репозиторий на ГитХабе"
 
 msgid "persimmon"
 msgstr "Хурма"
+
+#: RSS
+msgid "rss_title"
+msgstr "Новые книги"
+
+msgid "rss_description"
+msgstr "Последние поступления танцевальных источников в библиографию"
+
+msgid "new_books_for"
+msgstr "Добавлено"
+
+#, python-format
+msgid "added %(num)d entry"
+msgid_plural "added %(num)d entries"
+msgstr[0] "Добавлена %(num)d запись"
+msgstr[1] "Добавлены %(num)d записи"
+msgstr[2] "Добавлено %(num)d записей"
+

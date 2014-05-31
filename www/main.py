@@ -50,8 +50,11 @@ def get_locale():
 	"""
 	Extracts locale from request
 	"""
-	lang = flask.request.cookies.get("lang", None)
-	if (lang in config.www.languages):
+	lang = (
+		flask.request.cookies.get("lang", None) or
+		getattr(flask.g, "lang", None)
+	)
+	if lang in config.www.languages:
 		return lang
 	else:
 		return flask.request.accept_languages.best_match(config.www.languages)
@@ -75,6 +78,8 @@ def choose_ui_lang(lang):
 		response = flask.make_response(flask.redirect(next_url))
 		response.set_cookie("lang", value=lang, expires=EXPIRES)
 		return response
+	else:
+		flask.abort(404, "Language isn't available")
 
 
 @flask_app.route(config.www.app_prefix, methods=["GET"])
@@ -202,6 +207,22 @@ def get_keywords(show_secrets):
 	if not show_secrets:
 		data -= config.www.secret_keywords
 	return sorted(data)
+
+
+@flask_app.route(config.www.app_prefix + "/rss/<string:lang>/books", methods=["GET"])
+def get_books_rss(lang):
+	if lang in config.www.languages:
+		#setting attribute in flask.g so it cat be returned by get_locale call
+		setattr(flask.g, "lang", lang)
+	else:
+		flask.abort(404, "Language isn't available")
+
+	response = flask.make_response(flask.render_template(
+		"rss/books.xml",
+		item_index=item_index["added_on"]
+	))
+	response.content_type = "application/rss+xml"
+	return response
 
 
 @flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])

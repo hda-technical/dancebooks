@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ _("rss_title") }}<title>
+		<description>{{ _("rss_description") }}</description>
+		<link>http://bib.hda.org.ru/bib</link>
+{% set last_date = item_index | sort | last %}
+{% set last_date_string = last_date.strftime("%a, %d %b %Y 00:00:00 +0000") %}
+		<lastBuildDate>{{ last_date_string }}</lastBuildDate>
+		<pubDate>{{ last_date_string }}</pubDate>
+		<atom:link href="http://bib.hda.org.ru/bib/rss/books" rel="self" type="application/rss+xml"/>
+{% for date, items in item_index | dictsort | reverse %}
+		<item>
+			<title>{{ _("new_books_for") }} {{ date | dateformat("long") }}</title>
+			<description>{{ ngettext("added %(num)d entry", "added %(num)d entries", items | length) }}</description>
+{% set date_string = date.strftime("%Y-%m-%d") %}
+			<link>http://bib.hda.org.ru/bib/search?added_on_from={{ date_string }}&added_on_to={{ date_string }}</link>
+			<guid>http://bib.hda.org.ru/bib/search?added_on_from={{ date_string }}&added_on_to={{ date_string }}</guid>
+			<pubDate>{{ date }}</pubDate>
+		</item>
+{% endfor %}
+	</channel>
+</rss>
