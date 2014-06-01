@@ -209,6 +209,15 @@ def get_keywords(show_secrets):
 	return sorted(data)
 
 
+@flask_app.route(config.www.app_prefix + "/rss/books", methods=["GET"])
+def rss_redirect():
+	lang = get_locale()
+	return flask.redirect("{prefix}/rss/{lang}/books".format(
+		prefix=config.www.app_prefix,
+		lang=lang
+	))
+
+
 @flask_app.route(config.www.app_prefix + "/rss/<string:lang>/books", methods=["GET"])
 def get_books_rss(lang):
 	if lang in config.www.languages:
