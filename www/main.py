@@ -229,8 +229,8 @@ def get_books_rss(lang):
 def everything_else(filename):
 	if (filename.startswith("components")):
 		flask.abort(404, "No such file")
-	if (os.path.isfile("templates/" + filename)):
-		return flask.render_template(filename)
+	if (os.path.isfile("templates/static/" + filename)):
+		return flask.render_template("static/" + filename)
 	elif (os.path.isfile("static/" + filename)):
 		return flask_app.send_static_file(filename)
 	else:
