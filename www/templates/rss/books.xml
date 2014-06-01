@@ -10,10 +10,16 @@
 		<lastBuildDate>{{ last_date_string }}</lastBuildDate>
 		<pubDate>{{ last_date_string }}</pubDate>
 		<atom:link href="http://bib.hda.org.ru/bib/rss/books" rel="self" type="application/rss+xml"/>
-{% for date, items in item_index | dictsort | reverse %}
+{% for date, entries in item_index | dictsort | reverse %}
 		<item>
-			<title>{{ _("new_books_for") }} {{ date | dateformat("long") }}</title>
-			<description>{{ ngettext("added %(num)d entry", "added %(num)d entries", items | length) }}</description>
+			<title>{{ ngettext("added %(num)d entry", "added %(num)d entries", entries | length) }}</title>
+			<description>
+{% for entry in entries %}
+{% set author = entry.author() %}
+{% set title = entry.title() %}
+			• {% if author %} {{ author }} — {% endif %} {{ title }}
+{% endfor %}
+			</description>
 {% set date_string = date.strftime("%Y-%m-%d") %}
 			<link>http://bib.hda.org.ru/bib/search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
 			<guid>http://bib.hda.org.ru/bib/search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</guid>
