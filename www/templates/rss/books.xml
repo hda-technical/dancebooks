@@ -13,13 +13,17 @@
 {% for date, entries in item_index | dictsort | reverse %}
 		<item>
 			<title>{{ ngettext("added %(num)d entry", "added %(num)d entries", entries | length) }}</title>
-			<description>
+			<description><![CDATA[
+				<ul>
 {% for entry in entries %}
+{% set id = entry.id() %}
 {% set author = entry.author() %}
 {% set title = entry.title() %}
-			• {% if author %} {{ author }} — {% endif %} {{ title }}
+{% set year = entry.year() %}
+					<li><a href="http://bib.hda.org.ru/bib/books/{{ id }}">[{{ year }}] {% if author %} {{ author }} — {% endif %} {{ title }}</a></li>
 {% endfor %}
-			</description>
+				</ul>
+			]]></description>
 {% set date_string = date.strftime("%Y-%m-%d") %}
 			<link>http://bib.hda.org.ru/bib/search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
 			<guid>http://bib.hda.org.ru/bib/search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</guid>
