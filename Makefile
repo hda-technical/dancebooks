@@ -104,8 +104,10 @@ www-profile:
 www-translations:
 	pybabel -q compile -d www/translations
 
-www-requirements:
-	pip freeze --local > requirements.txt
+requirements.txt: .PHONY
+	pip freeze --local > $@
+
+.PHONY:;
 
 # Ancillary targets
 
