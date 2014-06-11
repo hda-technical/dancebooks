@@ -19,7 +19,7 @@ class Message(object):
 		return flask.render_template("components/message.html",
 			base_url="http://{domain}{book_prefix}".format(
 				domain=config.www.domain,
-				book_prefix=config.www.app_prefix + "/book"
+				book_prefix=config.www.app_prefix + "/books"
 			),
 			book_id=self.book_id,
 			from_name=self.from_name,
