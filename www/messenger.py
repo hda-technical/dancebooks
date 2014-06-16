@@ -31,8 +31,8 @@ class Message(object):
 		try:
 			msg = email.mime.text.MIMEText(str(self), "html")
 			msg["From"] = email.utils.formataddr((
-				config.bug_report.from_name,
-				config.bug_report.from_addr
+				self.from_name,
+				self.from_addr
 			))
 			msg["To"] = email.utils.formataddr((
 				config.bug_report.to_name,

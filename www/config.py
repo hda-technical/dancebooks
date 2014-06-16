@@ -41,22 +41,6 @@ class BugReportConfig(object):
 			raise ValueError("to_name param wasn't found")
 		self.to_name = params["to_name"]
 
-		if "from_addr" not in params:
-			raise ValueError("from_addr param wasn't found")
-		self.from_addr = params["from_addr"]
-
-		if "from_name" not in params:
-			raise ValueError("from_name param wasn't found")
-		self.from_name = params["from_name"]
-
-		if "timeout" not in params:
-			raise ValueError("timeout param wasn't found")
-		self.timeout = int(params["timeout"])
-
-		if "max_count" not in params:
-			raise ValueError("max_count param wasn't found")
-		self.max_count = int(params["max_count"])
-
 
 class ParserConfig(object):
 	def __init__(self, params):
