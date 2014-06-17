@@ -100,6 +100,23 @@ function loadSearchParams() {
 		}
 	)
 
+	$.get('/bib/source-files',
+		function(data, textStatus, jqXHR) {
+			selected = extractFromLocation("source_file");
+			html = '';
+			for (index in data) {
+				sourceFile = data[index];
+				if (sourceFile == selected) {
+					html += '<option value="' + sourceFile + '" selected="selected">' + sourceFile + '</option>';
+				} else {
+					html += '<option value="' + sourceFile + '">' + sourceFile + '</option>';
+				}
+			}
+			$('#source_file option[value=""]').after(html);
+			$('#source_file option[value="empty"]').remove();
+		}
+	)
+
 	$.get('/bib/keywords',
 		function(data, textStatus, jXHR) {
 			keywords = extractFromLocation("keywords")

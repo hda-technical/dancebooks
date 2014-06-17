@@ -107,6 +107,9 @@ msgstr "Дата добавления в базу"
 msgid "source"
 msgstr "Строка в файле"
 
+msgid "source_file"
+msgstr "Исходный файл"
+
 msgid "booktype"
 msgstr "Тип записи"
 

@@ -30,6 +30,7 @@ item_index.update(items)
 
 languages = sorted(item_index["langid"].keys())
 keywords = set(item_index["keywords"].keys())
+source_files = sorted(item_index["source_file"].keys())
 
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = config.www.languages[0]
@@ -197,6 +198,12 @@ def edit_book(book_id):
 @utils_flask.jsonify()
 def get_languages():
 	return {language:babel.gettext(language) for language in languages}
+
+
+@flask_app.route(config.www.app_prefix + "/source-files", methods=["GET"])
+@utils_flask.jsonify()
+def get_source_files():
+	return source_files
 
 
 @flask_app.route(config.www.app_prefix + "/keywords", methods=["GET"])

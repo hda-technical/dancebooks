@@ -54,6 +54,18 @@
 					</tr>
 					<tr>
 						<td>
+							<label for="source_file">{{ _("source_file") }}:</label>
+						</td>
+						<td>
+							<select id="source_file" name="source_file">
+								<!-- required to reduce flicking -->
+								<option value="empty" selected="selected"></option>
+								<option value="">{{ _("any") }}</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<label for="publisher">{{ _("publisher") }}:</label>
 						</td>
 						<td>

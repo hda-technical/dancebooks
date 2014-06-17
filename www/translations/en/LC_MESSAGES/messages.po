@@ -105,6 +105,9 @@ msgstr "Added to database"
 msgid "source"
 msgstr "Source"
 
+msgid "source_file"
+msgstr "Source file"
+
 msgid "booktype"
 msgstr "Entry type"
 

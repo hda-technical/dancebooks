@@ -4,17 +4,17 @@ import os.path
 
 from config import config
 import utils
-	
+
 class BibItem(object):
 	"""
 	Class for bibliography item representation
 	"""
 	def __init__(self):
 		self._params = {}
-	
+
 	def __hash__(self):
 		return hash(self.get("id"))
-	
+
 	# ancillary fields
 	def booktype(self) -> str:
 		return self.get_as_string("booktype")
@@ -34,7 +34,7 @@ class BibItem(object):
 
 	def title(self) -> str:
 		return self.get_as_string("title")
-	
+
 	def publisher(self) -> str:
 		return self.get_as_string("publisher")
 
@@ -64,7 +64,7 @@ class BibItem(object):
 
 	def url(self) -> str:
 		return self.get_as_string("url")
-		
+
 	def filename(self) -> str:
 		return self.get_as_string("filename")
 
@@ -73,7 +73,7 @@ class BibItem(object):
 
 	def annotation(self) -> str:
 		return self.get_as_string("annotation")
-		
+
 	def added_on(self) -> str:
 		return self.get_as_string("added_on")
 
@@ -105,7 +105,7 @@ class BibItem(object):
 
 	def get(self, key: str) -> str or list or set or None:
 		return self._params.get(key, None)
-			
+
 	def set(self, key: str, value: str or list or set):
 		if key is self._params:
 			raise RuntimeError("Can't set the parameter '{key}' twice for item {id}".format(
@@ -143,7 +143,7 @@ class BibParser(object):
 	ITEM_CLOSE_BRACKET = ")"
 	FIELD_SEP = ","
 	KEY_VALUE_SEP = "="
-	
+
 	STATE = \
 		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
 		(0,         1,           2,            3,           4,             5)
@@ -154,7 +154,7 @@ class BibParser(object):
 		"""
 		self.state = self.S_NO_ITEM
 		self._reset_lexeme()
-		
+
 	def state_string(self):
 		"""
 		Returns human-readable error message
@@ -177,8 +177,8 @@ class BibParser(object):
 		Raises human-readable Exception based on parser state and current file position
 		"""
 		raise ValueError("While {state}: wrong syntax at (line {line}, #{char})".format(
-			state=self.state_string(), 
-			line=self.line, 
+			state=self.state_string(),
+			line=self.line,
 			char=self.char
 		))
 
@@ -197,7 +197,7 @@ class BibParser(object):
 		Sets item param, applying additional conversion if needed.
 		"""
 		value = utils.parse_latex(value)
-		
+
 		try:
 			if key in config.parser.list_params:
 				value = utils.strip_split_list(value, config.parser.list_sep)
@@ -211,10 +211,10 @@ class BibParser(object):
 				item.set(key + config.parser.circa_suffix, year_circa)
 			elif key in config.parser.date_params:
 				value = datetime.datetime.strptime(value, config.parser.date_format)
-				
+
 		except ValueError:
 			self.raise_error()
-				
+
 		item.set(key, value)
 
 	def parse_folder(self, path: str) -> [BibItem]:
@@ -230,7 +230,7 @@ class BibParser(object):
 		for filename in files:
 			parsed_items += self.parse_file(os.path.join(path, filename))
 		return parsed_items
-		
+
 	def parse_file(self, path: str) -> [BibItem]:
 		"""
 		Parses file at given path, handling utf-8-bom correctly.
@@ -238,16 +238,17 @@ class BibParser(object):
 		"""
 		if not os.path.isfile(path):
 			raise Exception("Path to file expected")
-		
+
 		data = utils.read_utf8_file(path)
 		try:
 			source_file = os.path.basename(path)
 			items = self.parse_string(data)
 			for item in items:
+				self.set_item_param(item, "source_file", source_file)
 				self.set_item_param(item, "source", "{source}:{line:04d}".format(
-					source=source_file, 
-					line=item.get("source")))
-			return items				
+					source=source_file,
+					line=item.get("source_line")))
+			return items
 		except Exception as ex:
 			raise Exception("While parsing {0}: {1}".format(path, ex))
 
@@ -267,7 +268,7 @@ class BibParser(object):
 				self.char = 0
 			else:
 				self.char += 1
-				
+
 			if self.state == self.S_NO_ITEM:
 				if c == "@":
 					self.state = self.S_ITEM_TYPE
@@ -282,7 +283,7 @@ class BibParser(object):
 					self.lexeme_started = True
 				elif c == self.ITEM_OPEN_BRACKET and (self.lexeme_started or self.lexeme_finished):
 					self.set_item_param(item, "booktype", self.lexeme)
-					self.set_item_param(item, "source", self.line)
+					self.set_item_param(item, "source_line", self.line)
 
 					self.state = self.S_ITEM_NO_ID
 					self._reset_lexeme()
@@ -342,11 +343,11 @@ class BibParser(object):
 					self.state = self.S_PARAM_KEY
 					self.key = ""
 					self._reset_lexeme()
-				elif (c == self.ITEM_CLOSE_BRACKET) and self.lexeme_started and (not self.lexeme_in_brackets):					
+				elif (c == self.ITEM_CLOSE_BRACKET) and self.lexeme_started and (not self.lexeme_in_brackets):
 					self.set_item_param(item, self.key, self.lexeme)
 					items.append(item)
 					item = BibItem()
-					
+
 					self.state = self.S_NO_ITEM
 					self.key = ""
 					self._reset_lexeme()
@@ -387,6 +388,6 @@ class BibParser(object):
 
 			else:
 				self.raise_error()
-		
+
 		#giant for cycle ends here
 		return items
