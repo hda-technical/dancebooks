@@ -83,6 +83,7 @@ def main(
 		note = item.get("note")
 		number = item.get("number")
 		origlanguage = item.get("origlanguage")
+		origauthor = item.get("origauthor")
 		publisher = item.get("publisher")
 		series = item.get("series")
 		shorthand = item.get("shorthand")
@@ -116,10 +117,12 @@ def main(
 		general_obligatory = [langid, year, title, added_on]
 		if not all(general_obligatory):
 			errors.append("Item doesn't define one of [langid, year, title]")
+
 		
-		translation_obligatory = [origlanguage, translator]
+		has_transation_keyword = keywords and ("translation" in keywords)		
+		translation_obligatory = [origlanguage, translator, origauthor, has_transation_keyword]
 		if not utils.all_or_none(translation_obligatory):
-			errors.append("All of [origlanguage, translator] must be present for translations")
+			errors.append("[origlanguage, translator, origauthor, 'transation' keyword] must be present for translations")
 		
 		series_obligatory = [series, number]
 		if not utils.all_or_none(series_obligatory):
@@ -303,8 +306,6 @@ def main(
 		
 		#number validation empty
 		
-		#origlanguage validation empty
-		
 		#publisher validation empty
 		
 		#series validation empty
@@ -334,11 +335,6 @@ def main(
 			if title.startswith(" ") or title.endswith(" "):
 				errors.append("Title isn't stripped")
 		
-		#translator validation
-		if translator is not None:
-			if (keywords is None) or ("translation" not in keywords):
-				errors.append("Keywords should contain 'translation' when 'translator' field specified")
-				
 		#type validation empty
 		
 		#url validation empty
