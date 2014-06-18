@@ -12,8 +12,17 @@
 \DeclareDatamodelFields[type=list,datatype=name,skipout=true]{origauthor}
 \DeclareDatamodelFields[type=list,datatype=literal,skipout=true]{filename}
 \DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{pagesize}
-\DeclareDatamodelFields[type=field,datatype=date,skipout=true]{added_on}
 \DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{annotation}
+
+\DeclareDatamodelFields[type=field,datatype=date,skipout=true]{added_on}
+\DeclareDatamodelFields[type=field,datatype=datepart,skipout=true]{
+	added_onyear,
+	added_onmonth,
+	added_onday,
+	added_onendyear,
+	added_onendmonth,
+	added_onendday
+}
 
 \DeclareDatamodelEntryfields[mvbook]{part}
 \DeclareDatamodelEntryfields[unpublished]{volumes}
@@ -22,7 +31,16 @@
 \DeclareDatamodelEntryfields{origauthor}
 \DeclareDatamodelEntryfields{pagesize}
 \DeclareDatamodelEntryfields{filename}
+
 \DeclareDatamodelEntryfields{added_on}
+\DeclareDatamodelEntryfields{
+	added_onyear,
+	added_onmonth,
+	added_onday,
+	added_onendyear,
+	added_onendmonth,
+	added_onendday
+}
 
 \DeclareDatamodelConstraints{
 	% {langid, title, year} must be present
