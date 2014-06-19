@@ -3,13 +3,17 @@
 	<ShortName>bib.hda.org.ru by author</ShortName>
 	<LongName>Search books from HDA dancing book bibliography by author</LongName>
 	<Description>Uses bib.hda.org.ru to search by the book author.</Description>
+
+	<SearchForm>http://bib.hda.org.ru/bib</SearchForm>
 	<Contact>georgthegreat@gmail.com</Contact>
- 	<Url type="text/html" template="http://bib.hda.org.ru/bib/index.html?author={searchTerms}"/>
+ 	<Url type="text/html" template="http://bib.hda.org.ru/bib/search?author={searchTerms}"/>
+
 	<Image height="16" width="16" type="image/png">http://bib.hda.org.ru/bib/images/icon/persimmon.016x016.png</Image>
 	<Developer>Yuriy Chernyshov</Developer>
 	<Attribution>Search data Copyright 2014, Yuriy Chernyshov, All Rights Reserved</Attribution>
 	<SyndicationRight>open</SyndicationRight>
 	<AdultContent>false</AdultContent>
+
 	<Language>en-us</Language>
 	<OutputEncoding>UTF-8</OutputEncoding>
 	<InputEncoding>UTF-8</InputEncoding>
