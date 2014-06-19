@@ -103,6 +103,9 @@ www-profile:
 
 www-translations:
 	pybabel -q compile -d www/translations
+	
+www-distclean:
+	rm -rf www/__pycache__ www/tests/__pycache__
 
 requirements.txt: .PHONY
 	pip freeze --local > $@
@@ -123,6 +126,8 @@ entry-count: $(BIB_FILES)
 	echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
 	echo "With addition date:" `cat $^ | grep -c -P '\tadded_on = '`
 
-clean: clean-pdfs;
+clean: pdf-clean;
 
-rebuild: distclean-pdfs distclean-transcriptions all.mk;
+distclean: pdf-distclean www-distclean markdown-distclean;
+
+rebuild: distclean all.mk;
