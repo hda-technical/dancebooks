@@ -118,6 +118,10 @@ class WwwConfig(object):
 			raise ValueError("search_params param wasn't found")
 		self.search_params = set(json.loads(params["search_params"]))
 
+		if "search_synonyms" not in params:
+			raise ValueError("search_synonyms params wasn't found")
+		self.search_synonyms = json.loads(params["search_synonyms"])
+
 		if "index_params" not in params:
 			raise ValueError("index_params param wasn't found")
 		self.index_params = set(json.loads(params["index_params"]))

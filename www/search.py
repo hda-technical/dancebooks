@@ -1,5 +1,6 @@
 # coding: utf-8
 import datetime
+import logging
 import re
 
 from config import config
@@ -13,7 +14,7 @@ def search_for_string(key, value):
 		item.get(key) and \
 		regexp.search(item.get(key))
 
-					
+
 def search_for_string_regexp(key, regexp):
 	"""
 	Creates filter for string (searches for substring at the beginning)
@@ -30,7 +31,7 @@ def search_for_iterable(key, value):
 	regexp = re.compile(re.escape(value), flags=re.IGNORECASE)
 	return lambda item, key=key, regexp=regexp: \
 		item.get(key) and \
-		any([regexp.search(word) for word in 
+		any([regexp.search(word) for word in
 			item.get(key)])
 
 
@@ -41,7 +42,7 @@ def search_for_eq(key, value):
 	return lambda item, key=key, value=value: \
 		item.get(key) and \
 		item.get(key) == value
-		
+
 
 def search_for_optional_eq(key, value):
 	"""
@@ -60,7 +61,7 @@ def search_for_integer_ge(key, value):
 	return lambda item, key=key, value=value: \
 		item.get(key) and \
 		item.get(key) >= value
-		
+
 
 def search_for_integer_le(key, value):
 	"""
@@ -82,7 +83,7 @@ def search_for_datetime_ge(key, value):
 	return lambda item, key=key, value=value: \
 		item.get(key) and \
 		item.get(key) >= value
-		
+
 
 def search_for_datetime_le(key, value):
 	"""
@@ -101,8 +102,8 @@ def search_false():
 	"""
 	return lambda item: \
 		False
-	
-	
+
+
 def search_true():
 	"""
 	Generates search always returning True
@@ -110,23 +111,23 @@ def search_true():
 	return lambda item: \
 		True
 
-	
+
 def and_(searches):
 	"""
 	Generates search acting as boolean and of given searches
 	"""
 	return lambda item, searches=searches: \
 		all([s(item) for s in searches])
-	
-	
+
+
 def or_(searches):
 	"""
 	Generates search acting as boolean or of given searches
 	"""
 	return lambda item, searches=searches: \
 		any([s(item) for s in searches])
-		
-	
+
+
 def search_for(key, value):
 	"""
 	Creates filter for a given key.
@@ -141,33 +142,41 @@ def search_for(key, value):
 				pass
 		raise ValueError("Unsupported datetime format")
 
+	def simple_search_for(key, value):
+		if key in config.parser.list_params:
+			return search_for_iterable(key, value)
 
-	if key in config.parser.list_params:
-		return search_for_iterable(key, value)
+		elif key in config.parser.year_start_params:
+			#generating end key
+			extra_key = key[:-len(config.parser.start_suffix)] + \
+				config.parser.end_suffix
+			return search_for_integer_ge(extra_key, int(value))
 
-	elif key in config.parser.year_start_params:
-		#generating end key
-		extra_key = key[:-len(config.parser.start_suffix)] + \
-			config.parser.end_suffix
-		return search_for_integer_ge(extra_key, int(value))
+		elif key in config.parser.year_end_params:
+			#generating start key
+			extra_key = key[:-len(config.parser.end_suffix)] + \
+				config.parser.start_suffix
+			return search_for_integer_le(extra_key, int(value))
 
-	elif key in config.parser.year_end_params:
-		#generating start key
-		extra_key = key[:-len(config.parser.end_suffix)] + \
-			config.parser.start_suffix
-		return search_for_integer_le(extra_key, int(value))
+		elif key in config.parser.date_start_params:
+			value = parse_datetime(value)
+			#generating extra key
+			extra_key = key[:-len(config.parser.start_suffix)]
+			return search_for_datetime_ge(extra_key, value)
 
-	elif key in config.parser.date_start_params:
-		value = parse_datetime(value)
-		#generating extra key
-		extra_key = key[:-len(config.parser.start_suffix)]
-		return search_for_datetime_ge(extra_key, value)
+		elif key in config.parser.date_end_params:
+			value = parse_datetime(value)
+			#generating extra key
+			extra_key = key[:-len(config.parser.end_suffix)]
+			return search_for_datetime_le(extra_key, value)
 
-	elif key in config.parser.date_end_params:
-		value = parse_datetime(value)
-		#generating extra key
-		extra_key = key[:-len(config.parser.end_suffix)]
-		return search_for_datetime_le(extra_key, value)
+		else:
+			return search_for_string(key, value)
 
-	else:
-		return search_for_string(key, value)
+	synonyms = config.www.search_synonyms.get(key, [])
+	synonyms.append(key)
+	searches = [
+		simple_search_for(synonym, value)
+		for synonym in synonyms
+	]
+	return or_(searches)
