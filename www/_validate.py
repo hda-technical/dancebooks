@@ -57,7 +57,7 @@ def main(
 
 	#magic constant
 	LAST_ORIGINAL_YEAR = 1937
-	NON_ORIGINAL_KEYWORDS = {"reissue", "research"}
+	NON_ORIGINAL_KEYWORDS = {"reissue", "research", "translation"}
 	RESEARCH_BOOKTYPES = {"book", "mvbook"}
 	
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
@@ -119,10 +119,14 @@ def main(
 			errors.append("Item doesn't define one of [langid, year, title]")
 
 		
-		has_transation_keyword = keywords and ("translation" in keywords)		
-		translation_obligatory = [origlanguage, translator, origauthor, has_transation_keyword]
-		if not utils.all_or_none(translation_obligatory):
-			errors.append("[origlanguage, translator, origauthor, 'transation' keyword] must be present for translations")
+		has_transation_keyword = keywords and ("translation" in keywords)
+		translation_obligatory = [origlanguage, translator, has_transation_keyword]
+		if any(translation_obligatory):
+			if not all(translation_obligatory):
+				errors.append("[origlanguage, translator, 'translation' keyword] must be present for translations")
+		
+			if not origauthor:
+				errors.append("'origauthor' must be present for translations")
 		
 		series_obligatory = [series, number]
 		if not utils.all_or_none(series_obligatory):
@@ -278,8 +282,6 @@ def main(
 						keywords=NON_ORIGINAL_KEYWORDS
 					))
 			if (keywords is not None):
-				if ("translation" in keywords) and not all([translator, origlanguage]):
-					errors.append("When 'translation' keyword specified, translator and origlanguage should be present")
 				if ("commentary" in keywords) and not commentator:
 					errors.append("When 'commentary' keyword specified, commentator should be present")
 				

@@ -3,6 +3,7 @@ import re
 
 #two-letter country codes mapped to langid
 SHORT_LANG_MAP = {
+	"ar": "spanish",
 	"au": "english",
 	"ca": "english",
 	"cz": "czech",
@@ -23,6 +24,7 @@ SHORT_LANG_MAP = {
 #country as adjective mapped to langid
 LONG_LANG_MAP = {
 	"american": "english",
+	"argentine": "spanish",
 	"australian": "english",
 	"austrian": "german",
 	"canadian": "english",
