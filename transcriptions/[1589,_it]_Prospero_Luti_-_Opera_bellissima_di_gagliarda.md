@@ -1,5 +1,7 @@
 ﻿# Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda
 ## Prospero Luti
+## Transcribed by Joseph Casazza
+
 ### All'illustrissimo signor Francesco Maria de Marchesi del Monte
 
 Quando pensassi che V.S. Illustrissima fosse per accettare volontieri queste mie poche fatiche, senza dubbio prenderei ardire di donargliele: mà persuadendomi, ch'l poco merito loro non sia per riportare questa gratia; oltre la bassezza del donatore; stommi senz'ardire irresoluto. Mà perche questa timidezza non mi lascia mostrare in questa parte quella devotione, che porto al molto suo valore infinita, pur mi risolvo di farle conoscere, presentandole, che io nel debito mio mi confido piú tosto di quella gentilezza, che è doppia in lei di sangue, e di costume, che di qual si possa essere in me notabile mancamento. Delibero dunque in ogni modo presentare à V. S. Illustrissima questo parto, se più tosto abhorro ragionevolmente non vogliam chiamarlo, certo che non tanto dalla bellezza, quando che fusse, quanto dalla mon strosità sua sia per prendere infinito piacere; poiche è parere nel vulgo, che il bello e'l brutto nelle sue parti egualmente dilettano. La prego dunque à restare servita di risguardare più tosto all'animo mio, che à quanto havrei potuto fare, se più non posso negli effetti di quanto al presente potrà conoscere: con che augurandole felicità bascio à V.S. Illustrissima reverentemente le mani di Perugia il i di Maggio. M. D LXXIX.

@@ -1,4 +1,6 @@
 ﻿# The Register of Dances at Castle Menzies
+## Anonymous manuscript
+## Transcribed by Jim Healy
 
 ### The Menzies's rant or reel Don ne Marachan
 
