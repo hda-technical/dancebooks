@@ -1,6 +1,6 @@
 ﻿# Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda
 ## Prospero Luti
-## Transcribed by Joseph Casazza
+## Transcribed by [Joseph Casazza](http://mysite.verizon.net/vzeryeh4/dance/Lutii.html)
 
 ### All'illustrissimo signor Francesco Maria de Marchesi del Monte
 

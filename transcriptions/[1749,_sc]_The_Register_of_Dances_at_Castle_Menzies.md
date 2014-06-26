@@ -1,6 +1,6 @@
 ﻿# The Register of Dances at Castle Menzies
 ## Anonymous manuscript
-## Transcribed by Jim Healy
+## Transcribed by [Jim Healy](http://www.strathspey.org/history/menzies)
 
 ### The Menzies's rant or reel Don ne Marachan
 

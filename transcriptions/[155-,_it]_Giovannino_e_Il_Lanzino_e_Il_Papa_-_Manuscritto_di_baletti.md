@@ -1,6 +1,6 @@
 ﻿# Il Papa che insegnia ballar di Balletti a sua scholari
 ## Giovannino e Il Lanzino e Il Papa
-## Transcribed by Joseph Casazza, Elizabeth Cain
+## Transcribed by [Joseph Casazza](http://www.nypl.org/node/33839), [Elizabeth Cain](http://www.nypl.org/node/33839)
 
 Considerando io, uirtuossissimi e nobilissimi giouani, con che honore con che pegnio o, co(n) che i(n)dustria io potessi farui conoscere la grande affectione d lanimo mio uerso di uoi mi e uenuto i(n) animo di farui un bello et honoreuole dono poi che di bellissimi et honoreuolissimi siete degni offerendoui ipassi di balletti i(n)sieme co(n)le parole agiugniendo lordine e uia che di(n)segniargli tengo Ne ui p(re)se(n)to questo accio da uoi gli possiate i(m)parare ch(e) sarebbe (credete a me) i(m)possibile ma perche ui serua mentre da me gli imparate et anchora se p(er) il no(n) ballare spesso di alcuna cosa ui dime(n)ticassi con u(n) solo squardo in questo mio thesoro di passi subito ui tornera a, memoria ne a, me adomandarne ui sara bisognio e cosi ui conseruerete questa nobile e, gentil uirtu
 

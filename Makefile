@@ -23,7 +23,7 @@ LATEX ?= $(LUALATEX)
 BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --validate_datamodel
 
 TRANSCRIPTIONS_WIKI_PAGE := wiki/Transcriptions.md
-TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/dev/transcriptions/
+TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/master/transcriptions/
 
 DEVEL_CONFIG := $(shell readlink -f configs/www.cfg)
 LOGGING_CONFIG := $(shell readlink -f configs/logger-console.cfg)
@@ -78,7 +78,9 @@ markdown-distclean:
 	rm -f transcriptions/*.html markdown.mk
 
 markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
-	cd www && ./_generate_wiki.py \
+	cd www && \
+	$(DEVEL_ENV) \
+	./_generate_wiki.py \
 		--folder ../transcriptions \
 		--page "../$(TRANSCRIPTIONS_WIKI_PAGE)" \
 		--url-prefix "$(TRANSCRIPTIONS_URL_PREFIX)"

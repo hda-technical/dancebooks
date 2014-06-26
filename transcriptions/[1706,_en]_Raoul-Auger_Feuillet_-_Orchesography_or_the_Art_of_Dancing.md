@@ -1,7 +1,7 @@
 ﻿# Orchesography or, The Art Of Dancing by Characters and Demonstrative Figures
 ## Raoul-Auger Feuillet
 ## Translated by John Weaver
-## Transcribed by Project Gutenberg
+## Transcribed by [Project Gutenberg](http://www.gutenberg.org)
 
 To mister Isaac.
 
