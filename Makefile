@@ -1,6 +1,7 @@
 BIB_FILES := $(wildcard bib/*.bib)
 URL_FILES := $(wildcard urls/*.txt)
 MARKDOWN_FILES := $(wildcard transcriptions/*.md)
+HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
 ANC_BIBLATEX_FILES := \
 	dancebooks-biblatex.sty
@@ -11,8 +12,6 @@ ANC_MARKDOWN_FILES := \
 
 ANC_WIKI_FILES := \
 	www/_generate_wiki.py
-
-HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
 PDFLATEX := pdflatex --shell-escape --max-print-line=250
 LUALATEX := lualatex --shell-escape --max-print-line=250
@@ -30,8 +29,11 @@ LOGGING_CONFIG := $(shell readlink -f configs/logger-console.cfg)
 
 DEVEL_ENV := \
 	CONFIG=$(DEVEL_CONFIG) \
-	LOGGING_CONFIG=$(LOGGING_CONFIG)
+	LOGGING_CONFIG=$(LOGGING_CONFIG) \
+	PYTHONPATH=. \
 
+TESTS := $(wildcard www/tests/*.py)
+TEST_TARGETS := $(TESTS:.py=.mk)
 # PDF files related targets
 
 default: test-biblatex.pdf
@@ -93,10 +95,12 @@ www-debug:
 	$(DEVEL_ENV) \
 	./main.py
 
-www-test:
+www-test: $(TEST_TARGETS);
+
+www/tests/%.mk: www/tests/%.py
 	cd www && \
 	$(DEVEL_ENV) \
-	nosetests tests
+	python tests/`basename $<`
 
 www-profile:
 	cd www && \
@@ -111,6 +115,7 @@ www-distclean:
 
 requirements.txt: .PHONY
 	pip freeze --local > $@
+	cat $@
 
 .PHONY:;
 
@@ -133,3 +138,5 @@ clean: pdf-clean;
 distclean: pdf-distclean www-distclean markdown-distclean;
 
 rebuild: distclean all.mk;
+
+test: www-test;
