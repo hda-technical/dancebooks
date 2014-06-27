@@ -22,7 +22,7 @@ languages = sorted(item_index["langid"].keys())
 @opster.command()
 def main(
 	root=("r", "", "E-library root"),
-	check_head=("", False, "Perform HTTP HEAD request to url values")
+	strict=("", False, "Add some extra checks (includes HTTP HEAD requests)")
 ):
 	"""
 	Validates bibliography over a bunch of rules
@@ -320,7 +320,7 @@ def main(
 					length=length,
 					limit=SHORTHAND_LIMIT
 				))
-			if (author is None) and (not title.startswith(shorthand)):
+			if strict and (not title.startswith(shorthand)):
 				errors.append("Title ({title}) should begin with from shorthand ({shorthand})".format(
 					title=title,
 					shorthand=shorthand
@@ -342,7 +342,7 @@ def main(
 		#url validation empty
 		if url is not None:
 			for signle_url in url:
-				correct, msg = utils.is_url_valid(signle_url, check_head)
+				correct, msg = utils.is_url_valid(signle_url, strict)
 				if not correct:
 					errors.append("URL {signle_url} isn't valid: {msg}".format(
 						signle_url=signle_url,

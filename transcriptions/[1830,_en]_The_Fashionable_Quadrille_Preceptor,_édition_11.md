@@ -1,5 +1,5 @@
 ﻿# The Fashionable Quadrille Preceptor Containing Paine's Sets, Lancers, Caledonians, Waltz Cotillon, Gallopades, Mazurkas, &c. &c., édition 11
-## Thomas Wilson
+## Anonymous book
 ## Transcribed by [Susan de Guardiola](http://www.kickery.com)
 
 ### Preliminary Directions
