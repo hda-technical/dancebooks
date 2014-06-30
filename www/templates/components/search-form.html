@@ -1,7 +1,12 @@
 		<h2>{{ _("can") }} <a href="/bib/books">{{ _("display everything") }}</a> {{ _("or use the search") }}:</h2>
 		<div class="content">
+			<div class="center" id="search_togglers">
+				<span class="search_toggle">{{ _("basic") }}</span>
+				<span class="search_toggle action">{{ _("advanced") }}</span>
+			</div>
+
 			<form id="search" action="/bib/search">
-				<table>
+				<table id="search_form_basic">
 					<tr>
 						<td>
 							<label for="author">{{ _("author") }}:</label>
@@ -23,24 +28,23 @@
 							<label for="year_from">{{ _("year") }}:</label>
 						</td>
 						<td>
-							<label for="year_from">{{ _("from") }}</label>
 							<input id="year_from" type="number" name="year_from" min="0" max="9999"/>
-							<label for="year_to">{{ _("to") }}</label>
+							<span>–</span>
 							<input id="year_to" type="number" name="year_to" min="0" max="9999"/>
 						</td>
 					</tr>
-					<tr>
+					<!-- Advanced search should be hidden by default -->
+					<tr class="search_form_extras hidden">
 						<td>
 							<label for="added_on_from">{{ _("added_on") }}:</label>
 						</td>
 						<td>
-							<label for="added_on_from">{{ _("from") }}</label>
 							<input id="added_on_from" type="datetime" name="added_on_from"/>
-							<label for="added_on_to">{{ _("to") }}</label>
+							<span>–</span>
 							<input id="added_on_to" type="datetime" name="added_on_to"/>
 						</td>
 					</tr>
-					<tr>
+					<tr class="search_form_extras hidden">
 						<td>
 							<label for="langid">{{ _("langid") }}:</label>
 						</td>
@@ -52,7 +56,7 @@
 							</select>
 						</td>
 					</tr>
-					<tr>
+					<tr class="search_form_extras hidden">
 						<td>
 							<label for="source_file">{{ _("source_file") }}:</label>
 						</td>
@@ -64,7 +68,7 @@
 							</select>
 						</td>
 					</tr>
-					<tr>
+					<tr class="search_form_extras hidden">
 						<td>
 							<label for="publisher">{{ _("publisher") }}:</label>
 						</td>
@@ -72,7 +76,7 @@
 							<input id="publisher" type="text" name="publisher"/>
 						</td>
 					</tr>
-					<tr>
+					<tr class="search_form_extras hidden">
 						<td>
 							<label for="location">{{ _("location") }}:</label>
 						</td>
@@ -80,7 +84,7 @@
 							<input id="location" type="text" name="location"/>
 						</td>
 					</tr>
-					<tr>
+					<tr class="search_form_extras hidden">
 						<td>
 							<label for="keywords">{{ _("keywords") }}:</label>
 						</td>

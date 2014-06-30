@@ -82,24 +82,12 @@ ul, ol {
 	text-indent: 0px;
 }
 
-table tr td:first-child {
-	width: 0%;
-	white-space: nowrap;
-}
-
-table tr td:last-child {
-	width: 100%;
-	white-space: normal;
-}
-
-table tr td {
-	padding: 2px;
-	text-align: left;
-	vertical-align: top;
-}
-
 .center {
 	text-align: center;
+}
+
+.hidden {
+	display: none;
 }
 
 .content {
@@ -113,19 +101,35 @@ table tr td {
 	white-space: nowrap;
 }
 
-.bib_item_left {
+table tr td:first-child,
+div.bib_item_left {
 	width: 25%;
+	vertical-align: top;
 	display: inline-block;
+}
+
+table tr td:last-child,
+div.bib_item_right {
+	width: 74%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+table tr td {
+	padding: 2px 0px;
+	text-align: left;
 	vertical-align: top;
 }
 
-.bib_item_right {
-	width: 74%;
-	display: inline-block;
-	vertical-align: top;
+.search_toggle {
+	font-size: 110%;
 }
 
 /* input magic */
+#search table {
+	width: 100%;
+}
+
 input[type="text"],
 input[type="email"],
 select,

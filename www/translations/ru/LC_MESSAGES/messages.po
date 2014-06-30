@@ -67,6 +67,12 @@ msgstr "Отправить"
 msgid "thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
 
+msgid "basic"
+msgstr "Простой"
+
+msgid "advanced"
+msgstr "Расширенный"
+
 #: Entry fields / Search forms
 msgid "author"
 msgstr "Автор"

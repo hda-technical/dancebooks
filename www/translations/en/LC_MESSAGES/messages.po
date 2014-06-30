@@ -65,6 +65,12 @@ msgstr "Send"
 msgid "thanks"
 msgstr "Thanks! Your message was sent to /dev/null"
 
+msgid "basic"
+msgstr "Basic"
+
+msgid "advanced"
+msgstr "Advanced"
+
 #: Entry fields / Search forms
 msgid "author"
 msgstr "Author"

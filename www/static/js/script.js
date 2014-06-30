@@ -1,3 +1,7 @@
+var env = {
+	isSearchAdvanded: false
+};
+
 function submitSearchForm() {
 	this.disabled = 'disabled'
 	search = $('#search input[type!="checkbox"], #search select').filter(function(index) {
@@ -10,7 +14,10 @@ function submitSearchForm() {
 	}).get().join("&");
 
 	if (search.length != 0) {
-		document.location = '/bib/search?' + search;
+		searchPath = env.isSearchAdvanced ?
+			'/bib/advanced-search' :
+			'/bib/search';
+		document.location = searchPath + '?' + search;
 	}
 }
 
@@ -65,7 +72,7 @@ function extractFromLocation(key) {
 	var regexp = new RegExp('[&\\?]' + key + '=([\^&]*)');
 	match = regexp.exec(window.location.search);
 	if (match != null) {
-		return decodeURIComponent(match[1] || "").replace("+", " ");
+		return decodeURIComponent(match[1] || "");
 	} else {
 		return '';
 	}
@@ -151,15 +158,35 @@ function loadSearchParams() {
 
 $(document).ready(function() {
 	loadSearchParams();
-	$('#search input, #search select').on("keyup", function(event) {
+	$('#search input, #search select').on('keyup', function(event) {
 		if (event.keyCode == 0x0D) {
 			submitSearchForm();
 		}
 	});
 
-	$('#reportForm input').on("keyup", function(event) {
+	$('#reportForm input').on('keyup', function(event) {
 		if (event.keyCode == 0x0D) {
 			sendReportForm();
 		}
 	});
+
+	$('#search_togglers span.action').on("click", toggleSearchForms);
+	if (window.location.pathname == '/bib/advanced-search') {
+		toggleSearchForms();
+	}
 })
+
+function toggleSearchForms() {
+	$('.search_form_extras').toggleClass("hidden");
+	$('.search_toggle').toggleClass("action");
+	$('#search_togglers span:not(.action)').off("click");
+	$('#search_togglers span.action').on("click", toggleSearchForms);
+
+	env.isSearchAdvanced = !env.isSearchAdvanced;
+	if (!env.isSearchAdvanced) {
+		$('.search_form_extras input').val('');
+		$('.search_form_extras select').val('');
+		$('.search_form_extras input[type="checkbox"]').prop("checked", false);
+		//cleaning up advanced search fields
+	}
+}
