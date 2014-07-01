@@ -16,65 +16,65 @@ class BibItem(object):
 		return hash(self.get("id"))
 
 	# ancillary fields
-	def booktype(self) -> str:
+	def booktype(self):
 		return self.get_as_string("booktype")
 
-	def id(self) -> str:
+	def id(self):
 		return self.get_as_string("id")
 
-	def source(self) -> str:
+	def source(self):
 		return self.get_as_string("source")
 
 	# data fields
-	def author(self) -> str:
+	def author(self):
 		return self.get_as_string("author")
 
-	def shorthand(self) -> str:
+	def shorthand(self):
 		return self.get_as_string("shorthand")
 
-	def title(self) -> str:
+	def title(self):
 		return self.get_as_string("title")
 
-	def publisher(self) -> str:
+	def publisher(self):
 		return self.get_as_string("publisher")
 
-	def series(self) -> str:
+	def series(self):
 		return self.get_as_string("series")
 
-	def number(self) -> str:
+	def number(self):
 		return self.get_as_string("number")
 
-	def edition(self) -> str:
+	def edition(self):
 		return self.get_as_string("edition")
 
-	def volume(self) -> str:
+	def volume(self):
 		return self.get_as_string("volume")
 
-	def volumes(self) -> str:
+	def volumes(self):
 		return self.get_as_string("volumes")
 
-	def location(self) -> str:
+	def location(self):
 		return self.get_as_string("location")
 
-	def year(self) -> str:
+	def year(self):
 		return self.get_as_string("year")
 
-	def keywords(self) -> str:
+	def keywords(self):
 		return self.get_as_string("keywords")
 
-	def url(self) -> str:
+	def url(self):
 		return self.get_as_string("url")
 
-	def filename(self) -> str:
+	def filename(self):
 		return self.get_as_string("filename")
 
-	def note(self) -> str:
+	def note(self):
 		return self.get_as_string("note")
 
-	def annotation(self) -> str:
+	def annotation(self):
 		return self.get_as_string("annotation")
 
-	def added_on(self) -> str:
+	def added_on(self):
 		return self.get_as_string("added_on")
 
 	#not-implemented params
@@ -109,7 +109,7 @@ class BibItem(object):
 	def has(self, key):
 		return (key in self._params)
 
-	def set(self, key: str, value: str or list or set):
+	def set(self, key, value):
 		if key is self._params:
 			raise RuntimeError("Can't set the parameter '{key}' twice for item {id}".format(
 				key=key,
@@ -195,7 +195,7 @@ class BibParser(object):
 		self.parenthesis_depth = 0
 		self.lexeme_in_brackets = False
 
-	def set_item_param(self, item: BibItem, key: str, value: str):
+	def set_item_param(self, item, key, value):
 		"""
 		Sets item param, applying additional conversion if needed.
 		"""
@@ -220,7 +220,7 @@ class BibParser(object):
 
 		item.set(key, value)
 
-	def parse_folder(self, path: str) -> [BibItem]:
+	def parse_folder(self, path):
 		"""
 		Parses all .bib files in given folder.
 		Returns list containing all items found
@@ -234,7 +234,7 @@ class BibParser(object):
 			parsed_items += self.parse_file(os.path.join(path, filename))
 		return parsed_items
 
-	def parse_file(self, path: str) -> [BibItem]:
+	def parse_file(self, path):
 		"""
 		Parses file at given path, handling utf-8-bom correctly.
 		@returns list of parsed BibItem
@@ -255,7 +255,7 @@ class BibParser(object):
 		except Exception as ex:
 			raise Exception("While parsing {0}: {1}".format(path, ex))
 
-	def parse_string(self, str_data: str) -> [BibItem]:
+	def parse_string(self, str_data):
 		"""
 		Parses utf-8 encoded string.
 		@returns list of parsed BibItem

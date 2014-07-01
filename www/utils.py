@@ -14,7 +14,7 @@ from config import config
 import const
 import search
 
-def strip_split_list(value: str, sep: str) -> [str]:
+def strip_split_list(value, sep):
 	"""
 	Splits string on a given separator, strips spaces from resulting words
 	"""
@@ -46,7 +46,7 @@ LATEX_REPLACEMENTS = [
 	)
 ]
 
-def parse_latex(value: str) -> str:
+def parse_latex(value):
 	"""
 	Attempts to remove LaTeX formatting from string
 	"""
@@ -58,7 +58,7 @@ def parse_latex(value: str) -> str:
 		return value
 
 
-def profile(sort: str = "time", limits: str or int = 50) -> callable:
+def profile(sort="time", limits=50):
 	"""
 	Decorator to make profiling easy
 	"""
@@ -82,7 +82,7 @@ def profile(sort: str = "time", limits: str or int = 50) -> callable:
 	return profile_decorator
 
 
-def files_in_folder(path: str, pattern: str, excludes: set = set()):
+def files_in_folder(path, pattern, excludes={}):
 	"""
 	Iterates over folder yielding files matching pattern
 	"""
@@ -105,7 +105,7 @@ def files_in_folder(path: str, pattern: str, excludes: set = set()):
 
 	return result_files
 
-def extract_metadata_from_file(path: str) -> {"str": str}:
+def extract_metadata_from_file(path):
 	"""
 	Extracts dictionary contating the following fields:
 	
@@ -158,7 +158,7 @@ def extract_metadata_from_file(path: str) -> {"str": str}:
 	return result
 	
 	
-def create_search_from_metadata(metadata: {"str": str}) -> callable:
+def create_search_from_metadata(metadata):
 	"""
 	Creates callable applicable to an item, 
 	checing if this item match given metadata
@@ -227,11 +227,11 @@ def create_search_from_metadata(metadata: {"str": str}) -> callable:
 	return search.and_(searches)
 	
 	
-def all_or_none(iterable: "iterable") -> (bool, str):
+def all_or_none(iterable):
 	return all(iterable) or not any(iterable)
 	
 
-def is_url_valid(url: str, check_head: bool = False) -> (bool, str):
+def is_url_valid(url, check_head=False):
 	"""
 	Validates urls.
 	Returns tuple containing validation result and error message
@@ -259,12 +259,12 @@ def is_url_valid(url: str, check_head: bool = False) -> (bool, str):
 	return True, "URL is correct"
 		
 ISBN_REGEXP = re.compile("[^\dX]")
-def is_isbn_valid(isbn: str) -> (bool, str):
+def is_isbn_valid(isbn):
 	"""
 	Validates ISBN-10 and ISBN-13.
 	Returns tuple containing validation result and error message
 	"""
-	def check_digit_isbn_10(isbn: str) -> str:
+	def check_digit_isbn_10(isbn):
 		sum = 0
 		length = len(isbn)
 		if length != 9:
@@ -276,7 +276,7 @@ def is_isbn_valid(isbn: str) -> (bool, str):
 		r = sum % 11
 		return (str(r) if (r != 10) else "X")
 	
-	def check_digit_isbn_13(isbn: str) -> str:
+	def check_digit_isbn_13(isbn):
 		sum = 0
 		length = len(isbn)
 		if length != 12:
