@@ -112,6 +112,7 @@ def search_items(show_secrets):
 	found_items = set(items)
 
 	for index_to_use in (config.www.indexed_search_params & request_keys):
+
 		value_to_use = request_args[index_to_use]
 
 		if index_to_use in config.parser.list_params:
@@ -129,6 +130,7 @@ def search_items(show_secrets):
 			# argument can be missing or be empty
 			# both cases should be ignored during search
 			search_param = request_args[search_key]
+
 			if len(search_param) > 0:
 				param_filter = search.search_for(search_key, search_param)
 				if param_filter is not None:

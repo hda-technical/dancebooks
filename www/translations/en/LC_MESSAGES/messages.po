@@ -138,6 +138,21 @@ msgstr "Note"
 msgid "annotation"
 msgstr "Auxilliary note"
 
+msgid "search:url"
+msgstr "Available for download"
+
+msgid "search:origlanguage"
+msgstr "Translated edition"
+
+msgid "yes"
+msgstr "Yes"
+
+msgid "no"
+msgstr "No"
+
+msgid "dont_matter"
+msgstr "Don't matter"
+
 #: Languages
 msgid "any"
 msgstr "Any"

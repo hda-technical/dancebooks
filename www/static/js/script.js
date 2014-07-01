@@ -153,7 +153,11 @@ function loadSearchParams() {
 		}
 	)
 
-	$('#search input[name!="keywords"]').map(setInputFromLocation);
+	$(
+		'#search input[name!="keywords"], ' +
+		'#url, ' +
+		'#origlanguage'
+	).map(setInputFromLocation);
 }
 
 $(document).ready(function() {

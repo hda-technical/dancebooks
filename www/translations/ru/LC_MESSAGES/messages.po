@@ -140,6 +140,21 @@ msgstr "Примечание"
 msgid "annotation"
 msgstr "Служебное примечание"
 
+msgid "search:url"
+msgstr "Доступно для скачивания"
+
+msgid "search:origlanguage"
+msgstr "Переводное издание"
+
+msgid "yes"
+msgstr "Да"
+
+msgid "no"
+msgstr "Нет"
+
+msgid "dont_matter"
+msgstr "Не важно"
+
 #: Languages
 msgid "any"
 msgstr "Любой"

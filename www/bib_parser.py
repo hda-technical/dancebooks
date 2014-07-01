@@ -91,7 +91,7 @@ class BibItem(object):
 	#editor
 
 	# getters / setters
-	def get_as_string(self, key: str) -> str:
+	def get_as_string(self, key):
 		if key in self._params:
 			value = self._params[key]
 			if isinstance(value, list):
@@ -103,8 +103,11 @@ class BibItem(object):
 		else:
 			return None
 
-	def get(self, key: str) -> str or list or set or None:
+	def get(self, key):
 		return self._params.get(key, None)
+
+	def has(self, key):
+		return (key in self._params)
 
 	def set(self, key: str, value: str or list or set):
 		if key is self._params:

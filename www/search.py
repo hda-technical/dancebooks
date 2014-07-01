@@ -96,6 +96,16 @@ def search_for_datetime_le(key, value):
 		item.get(key) <= value
 
 
+def search_for_key_presence(key, value):
+	"""
+	Creates filter for key-presence lookup
+	"""
+	if not isinstance(value, bool):
+		raise ValueError("bool value expected")
+	return lambda item, key=key, value=value: \
+		item.has(key) == value
+
+
 def search_false():
 	"""
 	Generates search always returning False
@@ -143,7 +153,15 @@ def search_for(key, value):
 		raise ValueError("Unsupported datetime format")
 
 	def simple_search_for(key, value):
-		if key in config.parser.list_params:
+		#should be checked on the very first place
+		if key in config.parser.bool_params:
+			if value not in {"true", "false"}:
+				raise ValueError("Boolean value for {key} expected".format(
+					key=key
+				))
+			return search_for_key_presence(key, (value == "true"))
+
+		elif key in config.parser.list_params:
 			return search_for_iterable(key, value)
 
 		elif key in config.parser.year_start_params:
