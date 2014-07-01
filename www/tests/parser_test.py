@@ -42,7 +42,7 @@ class TestParser(unittest.TestCase):
 	def setUp(self):
 		self.client = main.flask_app.test_client()
 
-	def parse_string_test(self):
+	def test_parse_string(self):
 		"""
 		Tests if string can be succesfully parsed by BibParser
 		"""
