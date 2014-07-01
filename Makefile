@@ -100,7 +100,7 @@ www-test: $(TEST_TARGETS);
 www/tests/%.mk: www/tests/%.py
 	cd www && \
 	$(DEVEL_ENV) \
-	python tests/`basename $<`
+	python tests/`basename $<` -v
 
 www-profile:
 	cd www && \
@@ -109,7 +109,7 @@ www-profile:
 
 www-translations:
 	pybabel -q compile -d www/translations
-	
+
 www-distclean:
 	rm -rf www/__pycache__ www/tests/__pycache__
 

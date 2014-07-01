@@ -41,7 +41,7 @@ class TestParser(unittest.TestCase):
 
 	def setUp(self):
 		self.client = main.flask_app.test_client()
-	
+
 	def parse_string_test(self):
 		"""
 		Tests if string can be succesfully parsed by BibParser
@@ -55,20 +55,20 @@ class TestParser(unittest.TestCase):
 		languages = set(item_index["langid"].keys())
 		keywords = set(item_index["keywords"].keys())
 
-		eq_(len(items), 2)
-		eq_(languages, EXPECTED_LANGUAGES)
-		eq_(keywords, EXPECTED_KEYWORDS)
+		self.assertEqual(len(items), 2)
+		self.assertEqual(languages, EXPECTED_LANGUAGES)
+		self.assertEqual(keywords, EXPECTED_KEYWORDS)
 
 		item1 = next(iter(item_index["id"]["id_1"]))
-		ok_('{' not in item1.title())
-		ok_('}' not in item1.title())
-		eq_(
+		self.assertTrue('{' not in item1.title())
+		self.assertTrue('}' not in item1.title())
+		self.assertEqual(
 			item1.annotation(),
 			'<a href="http://example.com/description">http://example.com/description</a>'
 		)
 
 
-	def search_items_test():
+	def test_search_items(self):
 		"""
 		Tests if parsed items can be searched by a bunch of parameters
 		"""
@@ -80,7 +80,7 @@ class TestParser(unittest.TestCase):
 
 		author_search = search.search_for_iterable("author", "Петров")
 		filtered_items = filter(author_search, items)
-		eq_(len(list(filtered_items)), 1)
+		self.assertEqual(len(list(filtered_items)), 1)
 
 		#testing exact match
 		year_search = search.and_([
@@ -88,7 +88,7 @@ class TestParser(unittest.TestCase):
 			search.search_for("year_to", 1825)
 		])
 		filtered_items = filter(year_search, items)
-		eq_(len(list(filtered_items)), 1)
+		self.assertEqual(len(list(filtered_items)), 1)
 
 		#testing partial intersection
 		year_search = search.and_([
@@ -96,7 +96,7 @@ class TestParser(unittest.TestCase):
 			search.search_for("year_to", 1600)
 		])
 		filtered_items = filter(year_search, items)
-		eq_(len(list(filtered_items)), 1)
+		self.assertEqual(len(list(filtered_items)), 1)
 
 		#testing inner containment
 		year_search = search.and_([
@@ -104,7 +104,7 @@ class TestParser(unittest.TestCase):
 			search.search_for("year_to", 1501)
 		])
 		filtered_items = filter(year_search, items)
-		eq_(len(list(filtered_items)), 1)
+		self.assertEqual(len(list(filtered_items)), 1)
 
 		#testing outer containment
 		year_search = search.and_([
@@ -112,59 +112,59 @@ class TestParser(unittest.TestCase):
 			search.search_for("year_to", 1600)
 		])
 		filtered_items = filter(year_search, items)
-		eq_(len(list(filtered_items)), 1)
+		self.assertEqual(len(list(filtered_items)), 1)
 
 		filtered_items = item_index["keywords"]["grumbling"]
-		eq_(len(list(filtered_items)), 1)
+		self.assertEqual(len(list(filtered_items)), 1)
 
 		filtered_items = \
 			item_index["keywords"]["cinquecento"] & \
 			item_index["keywords"]["historical dance"]
-		eq_(len(list(filtered_items)), 1)
+		self.assertEqual(len(list(filtered_items)), 1)
 
 
-	def app_test():
-		rq = client.get(config.www.app_prefix, follow_redirects=True)
-		eq_(rq.status_code, http.client.OK)
+	def test_app_handlers(self):
+		rq = self.client.get(config.www.app_prefix, follow_redirects=True)
+		self.assertEqual(rq.status_code, http.client.OK)
 
-		rq = client.get(config.www.app_prefix + "/ui-lang/ru")
-		#eq_(rq.status_code, http.client.OK)
-		ok_("Set-Cookie" in rq.headers)
+		rq = self.client.get(config.www.app_prefix + "/ui-lang/ru")
+		#self.assertEqual(rq.status_code, http.client.OK)
+		self.assertTrue("Set-Cookie" in rq.headers)
 
-		rq = client.get(config.www.app_prefix)
-		eq_(rq.status_code, http.client.OK)
+		rq = self.client.get(config.www.app_prefix)
+		self.assertEqual(rq.status_code, http.client.OK)
 
-		rq = client.get(config.www.app_prefix, query_string={
+		rq = self.client.get(config.www.app_prefix, query_string={
 			"author": "Wilson",
 			"title": "Ecossoise",
 			"year_from": 1800,
 			"year_to": 1900
 		})
-		eq_(rq.status_code, http.client.OK)
+		self.assertEqual(rq.status_code, http.client.OK)
 
-		rq = client.get(config.www.app_prefix + "/books")
-		eq_(rq.status_code, http.client.OK)
+		rq = self.client.get(config.www.app_prefix + "/books")
+		self.assertEqual(rq.status_code, http.client.OK)
 
-		rq = client.get(config.www.app_prefix + "/books/dodworth_1844_indian_hunter")
-		eq_(rq.status_code, http.client.OK)
+		rq = self.client.get(config.www.app_prefix + "/books/dodworth_1844_indian_hunter")
+		self.assertEqual(rq.status_code, http.client.OK)
 
-		rq = client.get(config.www.app_prefix + "/keywords")
-		eq_(rq.status_code, http.client.OK)
-		eq_(rq.content_type, "application/json; charset=utf-8")
+		rq = self.client.get(config.www.app_prefix + "/keywords")
+		self.assertEqual(rq.status_code, http.client.OK)
+		self.assertEqual(rq.content_type, "application/json; charset=utf-8")
 		json.loads(rq.data.decode())
 
-		rq = client.get(config.www.app_prefix + "/languages")
-		eq_(rq.status_code, http.client.OK)
-		eq_(rq.content_type, "application/json; charset=utf-8")
+		rq = self.client.get(config.www.app_prefix + "/languages")
+		self.assertEqual(rq.status_code, http.client.OK)
+		self.assertEqual(rq.content_type, "application/json; charset=utf-8")
 		json.loads(rq.data.decode())
 
-		rq = client.get(config.www.app_prefix + "/rss/en/books")
-		eq_(rq.status_code, http.client.OK)
-		eq_(rq.content_type, "application/rss+xml")
+		rq = self.client.get(config.www.app_prefix + "/rss/en/books")
+		self.assertEqual(rq.status_code, http.client.OK)
+		self.assertEqual(rq.content_type, "application/rss+xml")
 
-		rq = client.get(config.www.app_prefix + "/rss/ru/books")
-		eq_(rq.status_code, http.client.OK)
-		eq_(rq.content_type, "application/rss+xml")
+		rq = self.client.get(config.www.app_prefix + "/rss/ru/books")
+		self.assertEqual(rq.status_code, http.client.OK)
+		self.assertEqual(rq.content_type, "application/rss+xml")
 
 
 if __name__ == "__main__":
