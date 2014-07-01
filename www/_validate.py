@@ -56,8 +56,7 @@ def main(
 	SHORTHAND_LIMIT = 25
 
 	#magic constant
-	LAST_ORIGINAL_YEAR = 1937
-	NON_ORIGINAL_KEYWORDS = {"reissue", "research", "translation"}
+	NON_ORIGINAL_KEYWORDS = {"reissue", "research"}
 	RESEARCH_BOOKTYPES = {"book", "mvbook"}
 	
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
@@ -119,11 +118,10 @@ def main(
 			errors.append("Item doesn't define one of [langid, year, title]")
 
 		
-		has_transation_keyword = keywords and ("translation" in keywords)
-		translation_obligatory = [origlanguage, translator, has_transation_keyword]
+		translation_obligatory = [origlanguage, translator]
 		if any(translation_obligatory):
 			if not all(translation_obligatory):
-				errors.append("[origlanguage, translator, 'translation' keyword] must be present for translations")
+				errors.append("[origlanguage, translator] must be present for translations")
 		
 			if not origauthor:
 				errors.append("'origauthor' must be present for translations")
@@ -274,16 +272,9 @@ def main(
 		
 		#keywords validation
 		#if item was issued after LAST_ORIGINAL_YEAR, it should define keywords
-		if True:
-			if (year_from > LAST_ORIGINAL_YEAR) and (booktype in RESEARCH_BOOKTYPES):
-				if (keywords is None) or (len(keywords & NON_ORIGINAL_KEYWORDS) == 0):
-					errors.append("Item was issued after {last_year}, but keywords don't define any of {keywords}".format(
-						last_year=LAST_ORIGINAL_YEAR,
-						keywords=NON_ORIGINAL_KEYWORDS
-					))
-			if (keywords is not None):
-				if ("commentary" in keywords) and not commentator:
-					errors.append("When 'commentary' keyword specified, commentator should be present")
+		if (keywords is not None):
+			if ("commentary" in keywords) and not commentator:
+				errors.append("When 'commentary' keyword specified, commentator should be present")
 				
 		#langid validation
 		if source_basename not in MULTILANG_FILES:
