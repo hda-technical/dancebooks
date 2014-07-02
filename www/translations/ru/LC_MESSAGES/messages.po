@@ -152,7 +152,7 @@ msgstr "Да"
 msgid "no"
 msgstr "Нет"
 
-msgid "dont_matter"
+msgid "doesnt_matter"
 msgstr "Не важно"
 
 #: Languages

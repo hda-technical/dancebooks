@@ -150,8 +150,8 @@ msgstr "Yes"
 msgid "no"
 msgstr "No"
 
-msgid "dont_matter"
-msgstr "Don't matter"
+msgid "doesnt_matter"
+msgstr "Doesn't matter"
 
 #: Languages
 msgid "any"
