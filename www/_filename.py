@@ -16,8 +16,8 @@ EXCLUDED_FOLDERS = {
 	"Leaflets (not in bibliography)"
 }
 
-items = bib_parser.BibParser(config).parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(config, items)
+items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
+item_index = index.Index(items)
 for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
