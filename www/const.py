@@ -23,22 +23,56 @@ SHORT_LANG_MAP = {
 
 #country as adjective mapped to langid
 LONG_LANG_MAP = {
-	"american": "english",
-	"argentine": "spanish",
-	"australian": "english",
-	"austrian": "german",
-	"canadian": "english",
-	"czech": "czech",
-	"danish": "danish",
-	"english": "english",
-	"french": "french",
-	"german": "german",
-	"italian": "italian",
-	"mexican": "spanish",
-	"polish": "polish",
-	"portuguese": "portuguese",
-	"russian": "russian",
-	"spanish": "spanish"
+	"american": {
+		"english"
+	},
+	"argentine": {
+		"spanish",
+		"portuguese"
+	},
+	"australian": {
+		"english"
+	},
+	"austrian": {
+		"german",
+		"french"
+	},
+	"canadian": {
+		"english"
+	},
+	"czech": {
+		"czech"
+	},
+	"danish": {
+		"danish"
+	},
+	"english": {
+		"english"
+	},
+	"french": {
+		"french"
+	},
+	"german": {
+		"german"
+	},
+	"italian": {
+		"italian"
+	},
+	"mexican": {
+		"spanish"
+	},
+	"polish": {
+		"polish"
+	},
+	"portuguese": {
+		"portuguese"
+	},
+	"russian": {
+		"russian"
+	},
+	"spanish": {
+		"spanish"
+	}
 }
 
 #a structired pattern for file basename

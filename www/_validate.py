@@ -278,11 +278,11 @@ def main(
 				
 		#langid validation
 		if source_basename not in MULTILANG_FILES:
-			source_lang = const.LONG_LANG_MAP[source_basename]
-			#item language should match source language
-			if langid != source_lang:
-				errors.append("Source language ({source_lang}) doesn't match item language ({langid})".format(
-					source_lang=source_lang,
+			source_langs = const.LONG_LANG_MAP[source_basename]
+			#item language should match any of source languages
+			if langid not in source_langs:
+				errors.append("Source languages {source_langs} doesn't match item language ({langid})".format(
+					source_langs=list(source_langs),
 					langid=langid
 				))
 		#location validation empty
