@@ -129,9 +129,9 @@ urls-upload.mk: $(URL_FILES)
 	touch $@
 
 entry-count: $(BIB_FILES)
-	echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
-	echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
-	echo "With addition date:" `cat $^ | grep -c -P '\tadded_on = '`
+	@echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
+	@echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
+	@echo "With addition date:" `cat $^ | grep -c -P '\tadded_on = '`
 
 clean: pdf-clean;
 
