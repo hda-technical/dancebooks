@@ -1,0 +1,8 @@
+#!/bin/sh -e
+#
+
+make test
+make www-translations
+
+echo "Updating leftparagrahps-bib-reload"
+touch /home/georg/.leftparagraphs-bib-reload
