@@ -146,6 +146,24 @@ msgstr "Доступно для скачивания"
 msgid "search:origlanguage"
 msgstr "Переводное издание"
 
+msgid "search:orderby"
+msgstr "Упорядочить по"
+
+msgid "search:orderby:year_from"
+msgstr "Году публикации"
+
+msgid "search:orderby:added_on"
+msgstr "Дате добавления в базу"
+
+msgid "search:orderby:source"
+msgstr "Исходному файлу"
+
+msgid "search:orderby:author"
+msgstr "Автору"
+
+msgid "search:orderby:location"
+msgstr "Месту публикации"
+
 msgid "yes"
 msgstr "Да"
 

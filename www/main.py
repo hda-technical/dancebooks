@@ -11,6 +11,7 @@ from flask.ext import babel
 import werkzeug
 
 from config import config
+import const
 import bib_parser
 import search
 import index
@@ -22,7 +23,10 @@ if (not os.path.exists("templates")):
 	logging.error("Should run from root folder")
 	sys.exit(1)
 
-items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
+items = sorted(
+	bib_parser.BibParser().parse_folder(os.path.abspath("../bib")),
+	key=bib_parser.BibItem.key_to_key_func(const.DEFAULT_ORDERBY)
+)
 item_index = index.Index(items)
 for item in items:
 	item.process_crossrefs(item_index)
@@ -105,6 +109,12 @@ def search_items(show_secrets):
 	}
 	request_keys = set(request_args.keys())
 
+	orderby = request_args.get("orderby", const.DEFAULT_ORDERBY)
+	if orderby not in config.www.orderby_keys:
+		flask.abort(400, "Key {orderby} is not supported for ordering".format(
+			orderby=orderby
+		))
+
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
 		flask.abort(400, "No search parameters specified")
@@ -138,7 +148,10 @@ def search_items(show_secrets):
 	except Exception as ex:
 		flask.abort(400, "Some of the search parameters are wrong: {0}".format(ex))
 
-	found_items = list(filter(search.and_(searches), found_items))
+	found_items = list(sorted(
+		filter(search.and_(searches), found_items),
+		key=bib_parser.BibItem.key_to_key_func(orderby)
+	))
 
 	return flask.render_template(
 		"search.html",

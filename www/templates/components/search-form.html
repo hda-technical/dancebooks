@@ -119,6 +119,23 @@
 							</select>
 						</td>
 					</tr>
+					<tr>
+						<td colspan="100"><hr/></td>
+					</tr>
+					<tr>
+						<td>
+							<label for="orderby">{{ _("search:orderby") }}:</label>
+						</td>
+						<td>
+							<select id="orderby" name="orderby">
+								<option value="">{{ _("search:orderby:year_from") }}</option>
+								<option value="added_on">{{ _("search:orderby:added_on") }}</option>
+								<option value="source">{{ _("search:orderby:source") }}</option>
+								<option value="author">{{ _("search:orderby:author") }}</option>
+								<option value="location">{{ _("search:orderby:location") }}</option>
+							</select>
+						</td>
+					</tr>
 				</table>
 			</form>
 			<div class="center">

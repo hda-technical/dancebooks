@@ -9,6 +9,19 @@ class BibItem(object):
 	"""
 	Class for bibliography item representation
 	"""
+	KEY_TO_DEFAULT_VALUE = {
+		"year_from": 0,
+		"added_on": datetime.date(1970, 1, 1),
+		"author": [],
+		"location": [],
+		"source": ""
+	}
+
+	@staticmethod
+	def key_to_key_func(key):
+		default = BibItem.KEY_TO_DEFAULT_VALUE[key]
+		return lambda item, key=key, default=default: item.get(key) or default
+
 	def __init__(self):
 		self._params = {}
 

@@ -83,10 +83,10 @@ FILENAME_PATTERN = (
 	r"\[(?P<year>[\d\-]+), "
 	#lang: two-letter code
 	r"(?P<langid>\w{2})\] "
-	#author: optional, can contain 
+	#author: optional, can contain
 	#   spaces (Thomas Wilson),
 	#   dots (N. Malpied),
-	#   commas (Louis Pecour, Jacque Dezais)	
+	#   commas (Louis Pecour, Jacque Dezais)
 	#(question mark at the end makes regexp non-greedy)
 	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
 	#title: sequence of words, digits, spaces, punctuation
@@ -97,7 +97,7 @@ FILENAME_PATTERN = (
 	#   edition (, edition 10)
 	#   part(, partie 1)
 	#	comma-separated list of METADATA_PATTERN in parentheses
-	#   (something copy) — for books with multiple different copies known 
+	#   (something copy) — for books with multiple different copies known
 	r"(?:"
 		r"(?:, tome (?P<tome>\d+))|"
 		r"(?:, édition (?P<edition>\d+))|"
@@ -123,3 +123,5 @@ VALID_HTTP_CODES = {
 
 ENV_CONFIG = "CONFIG"
 ENV_LOGGING_CONFIG = "LOGGING_CONFIG"
+
+DEFAULT_ORDERBY = "year_from"

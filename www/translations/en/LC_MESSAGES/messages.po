@@ -144,6 +144,24 @@ msgstr "Available for download"
 msgid "search:origlanguage"
 msgstr "Translated edition"
 
+msgid "search:orderby"
+msgstr "Order by"
+
+msgid "search:orderby:year_from"
+msgstr "Year of publication"
+
+msgid "search:orderby:added_on"
+msgstr "Database addition date"
+
+msgid "search:orderby:source"
+msgstr "Soruce file"
+
+msgid "search:orderby:author"
+msgstr "Author"
+
+msgid "search:orderby:location"
+msgstr "Place of publication"
+
 msgid "yes"
 msgstr "Yes"
 
