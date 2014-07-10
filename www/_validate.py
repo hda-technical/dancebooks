@@ -76,7 +76,7 @@ def main(
 		isbn = item.get("isbn")
 		institution = item.get("institution")
 		journaltitle = item.get("journaltitle")
-		keywords = set(item.get("keywords")) if item.get("keywords") else None
+		keywords = set(item.get("keywords") or {})
 		langid = item.get("langid")
 		location = item.get("location")
 		note = item.get("note")
@@ -311,7 +311,7 @@ def main(
 					length=length,
 					limit=SHORTHAND_LIMIT
 				))
-			if strict and (not title.startswith(shorthand)):
+			if strict and not author and (not title.startswith(shorthand)):
 				errors.append("Title ({title}) should begin with from shorthand ({shorthand})".format(
 					title=title,
 					shorthand=shorthand
