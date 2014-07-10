@@ -35,7 +35,7 @@ def main(
 	print("Going to process {0} items".format(len(items)))
 
 	SOURCE_REGEXP = re.compile("(?P<basename>[_\-\w\.]+).bib:\d+")
-	MULTILANG_FILES = {"proceedings-spb", "proceedings-rothenfelser", "_missing", "_problems"}
+	MULTILANG_FILES = {"proceedings-spb", "proceedings-rothenfelser", "_problems"}
 	VALID_BOOKTYPES = {
 		"book",
 		"mvbook",
