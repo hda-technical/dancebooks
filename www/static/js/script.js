@@ -1,5 +1,25 @@
+var SearchType = {
+	Basic: 0,
+	Advanced: 1,
+	Fulltext: 2
+};
+
 var env = {
-	isSearchAdvanded: false
+	searchToggleBasic: null,
+	searchToggleAdvanced: null,
+	serachToggleFulltext: null,
+
+	searchFormBasic: null,
+	searchFormAdvanced: null,
+	searchFormFulltext: null,
+
+	searchType: SearchType.Basic,
+
+	searchTypeToPath: [
+		'/bib/basic-search',
+		'/bib/advanced-search',
+		'/bib/fulltext-search'
+	]
 };
 
 function submitSearchForm() {
@@ -14,9 +34,7 @@ function submitSearchForm() {
 	}).get().join("&");
 
 	if (search.length != 0) {
-		searchPath = env.isSearchAdvanced ?
-			'/bib/advanced-search' :
-			'/bib/search';
+		searchPath = env.searchTypeToPath[env.searchType];
 		document.location = searchPath + '?' + search;
 	}
 }
@@ -47,12 +65,6 @@ function sendReportForm() {
 		html = '<h2 id="submitMessage" style="color: #ff0000;">' + jqXHR.responseJSON['message'] + '</h2>';
 		$('#reportForm').after(html);
 	})
-}
-
-function clearSearchForm() {
-	$('#search input').val('');
-	$('#search select').val('');
-	$('#search input[type="checkbox"]').prop("checked", false);
 }
 
 function toggleReportForm() {
@@ -161,6 +173,14 @@ function loadSearchParams() {
 }
 
 $(document).ready(function() {
+	env.searchToggleBasic = $('#searchToggleBasic');
+	env.searchToggleAdvanced = $('#searchToggleAdvanced');
+	env.searchToggleFulltext = $('#searchToggleFulltext');
+
+	env.searchFormBasic = $('#searchFormBasic');
+	env.searchFormAdvanced = $('#searchFormAdvanced');
+	env.searchFormFulltext = $('#searchFormFulltext');
+
 	loadSearchParams();
 	$('#search input, #search select').on('keyup', function(event) {
 		if (event.keyCode == 0x0D) {
@@ -174,23 +194,88 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#search_togglers span.action').on("click", toggleSearchForms);
 	if (window.location.pathname == '/bib/advanced-search') {
-		toggleSearchForms();
+		env.searchType = SearchType.Advanced;
+	} else if (window.location.pathname == '/bib/fulltext-search') {
+		env.searchType = SearchType.Fulltext;
 	}
+	switchSearchForms(true)
+
 })
 
-function toggleSearchForms() {
-	$('.search_form_extras').toggleClass("hidden");
-	$('.search_toggle').toggleClass("action");
-	$('#search_togglers span:not(.action)').off("click");
-	$('#search_togglers span.action').on("click", toggleSearchForms);
+function clearSearchForm(form) {
+	form.children('input').val('');
+	form.children('select').val('');
+	form.children('input[type="checkbox"]').prop('checked', false);
+}
 
-	env.isSearchAdvanced = !env.isSearchAdvanced;
-	if (!env.isSearchAdvanced) {
-		$('.search_form_extras input').val('');
-		$('.search_form_extras select').val('');
-		$('.search_form_extras input[type="checkbox"]').prop("checked", false);
-		//cleaning up advanced search fields
+function clearSearchForms() {
+	clearSearchForm(env.searchFormBasic);
+	clearSearchForm(env.searchFormAdvanced);
+	clearSearchForm(env.searchFormFulltext);
+}
+
+function switchToBasicSearch() {
+	env.searchType = SearchType.Basic;
+	switchSearchForms(false);
+}
+
+function switchToAdvancedSearch() {
+	env.searchType = SearchType.Advanced;
+	switchSearchForms(false);
+}
+
+function switchToFulltextSearch() {
+	env.searchType = SearchType.Fulltext;
+	switchSearchForms(false);
+}
+
+function switchSearchForms(initial) {
+
+	if (env.searchType == SearchType.Basic) {
+		clearSearchForm(env.searchFormAdvanced);
+		clearSearchForm(env.searchFormFulltext);
+
+		env.searchFormBasic.removeClass('hidden');
+		env.searchFormAdvanced.addClass('hidden');
+		env.searchFormFulltext.addClass('hidden');
+
+		env.searchToggleBasic.removeClass("action");
+		env.searchToggleAdvanced.addClass("action");
+		env.searchToggleFulltext.addClass("action");
+
+		env.searchToggleBasic.off('click');
+		env.searchToggleAdvanced.on('click', switchToAdvancedSearch);
+		env.searchToggleFulltext.on('click', switchToFulltextSearch);
+	} else if (env.searchType == SearchType.Advanced) {
+		//don't clear basic search form
+		clearSearchForm(env.searchFormFulltext);
+
+		env.searchFormBasic.removeClass('hidden');
+		env.searchFormAdvanced.removeClass('hidden');
+		env.searchFormFulltext.addClass('hidden');
+
+		env.searchToggleBasic.addClass("action");
+		env.searchToggleAdvanced.removeClass("action");
+		env.searchToggleFulltext.addClass("action");
+
+		env.searchToggleBasic.on('click', switchToBasicSearch);
+		env.searchToggleAdvanced.off('click');
+		env.searchToggleFulltext.on('click', switchToFulltextSearch);
+	} else if (env.searchType == SearchType.Fulltext) {
+		clearSearchForm(env.searchFormBasic);
+		clearSearchForm(env.searchFormAdvanced);
+
+		env.searchFormBasic.addClass('hidden');
+		env.searchFormAdvanced.addClass('hidden');
+		env.searchFormFulltext.removeClass('hidden');
+
+		env.searchToggleBasic.addClass("action");
+		env.searchToggleAdvanced.addClass("action");
+		env.searchToggleFulltext.removeClass("action");
+
+		env.searchToggleBasic.on('click', switchToBasicSearch);
+		env.searchToggleAdvanced.on('click', switchToAdvancedSearch);
+		env.searchToggleFulltext.off('click');
 	}
 }

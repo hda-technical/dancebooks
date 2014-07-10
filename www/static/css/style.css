@@ -121,8 +121,12 @@ table tr td {
 	vertical-align: top;
 }
 
-.search_toggle {
-	font-size: 110%;
+#searchToggleBasic,
+#searchToggleAdvanced,
+#searchToggleFulltext {
+	font-size: 105%;
+	display: inline-block;
+	margin: 1px 2px;
 }
 
 /* input magic */

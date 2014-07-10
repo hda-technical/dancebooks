@@ -23,7 +23,9 @@ class BibItem(object):
 		return lambda item, key=key, default=default: item.get(key) or default
 
 	def __init__(self):
-		self._params = {}
+		self._params = {
+			"fulltext": ""
+		}
 
 	def __hash__(self):
 		return hash(self.get("id"))
@@ -103,16 +105,22 @@ class BibItem(object):
 	#commentator
 	#editor
 
+	@staticmethod
+	def value_to_string(value, sep=","):
+		if isinstance(value, str):
+			return value
+		elif isinstance(value, (list, set)):
+			return (sep + " ").join(value)
+		elif isinstance(value, datetime.datetime):
+			return value.strftime(config.parser.date_format)
+		else:
+			return str(value)
+
 	# getters / setters
 	def get_as_string(self, key):
 		if key in self._params:
 			value = self._params[key]
-			if isinstance(value, list):
-				return ", ".join(value)
-			elif isinstance(value, datetime.datetime):
-				return value.strftime(config.parser.date_format)
-			else:
-				return str(value)
+			return BibItem.value_to_string(value)
 		else:
 			return None
 
@@ -128,6 +136,7 @@ class BibItem(object):
 				key=key,
 				id=self._params.get("id", None)))
 		self._params[key] = value
+		self._params["fulltext"] += BibItem.value_to_string(value, "")
 
 	def params(self):
 		return self._params

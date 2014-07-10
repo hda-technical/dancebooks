@@ -67,11 +67,14 @@ msgstr "Отправить"
 msgid "thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
 
-msgid "basic"
+msgid "search:type:basic"
 msgstr "Простой"
 
-msgid "advanced"
+msgid "search:type:advanced"
 msgstr "Расширенный"
+
+msgid "search:type:fulltext"
+msgstr "Полнотекстовый"
 
 #: Entry fields / Search forms
 msgid "author"
@@ -140,11 +143,14 @@ msgstr "Примечание"
 msgid "annotation"
 msgstr "Служебное примечание"
 
-msgid "search:url"
+msgid "search:labels:url"
 msgstr "Доступно для скачивания"
 
-msgid "search:origlanguage"
+msgid "search:labels:origlanguage"
 msgstr "Переводное издание"
+
+msgid "search:labels:fulltext"
+msgstr "Строка для поиска"
 
 msgid "search:orderby"
 msgstr "Упорядочить по"

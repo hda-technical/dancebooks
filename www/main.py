@@ -98,18 +98,20 @@ def root(show_secrets):
 
 
 @flask_app.route(config.www.app_prefix + "/search", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/basic-search", methods=["GET"])
 @flask_app.route(config.www.app_prefix + "/advanced-search", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/fulltext-search", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def search_items(show_secrets):
 	request_args = {
 		key:value.strip()
 		for key, value
 		in flask.request.values.items()
-		if value
+		if value and key in config.www.search_params
 	}
 	request_keys = set(request_args.keys())
 
-	orderby = request_args.get("orderby", const.DEFAULT_ORDERBY)
+	orderby = flask.request.values.get("orderby", const.DEFAULT_ORDERBY)
 	if orderby not in config.www.orderby_keys:
 		flask.abort(400, "Key {orderby} is not supported for ordering".format(
 			orderby=orderby

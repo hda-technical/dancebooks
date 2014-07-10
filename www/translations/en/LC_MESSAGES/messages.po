@@ -65,11 +65,14 @@ msgstr "Send"
 msgid "thanks"
 msgstr "Thanks! Your message was sent to /dev/null"
 
-msgid "basic"
+msgid "search:type:basic"
 msgstr "Basic"
 
-msgid "advanced"
+msgid "search:type:advanced"
 msgstr "Advanced"
+
+msgid "search:type:fulltext"
+msgstr "Full-text"
 
 #: Entry fields / Search forms
 msgid "author"
@@ -138,11 +141,14 @@ msgstr "Note"
 msgid "annotation"
 msgstr "Auxilliary note"
 
-msgid "search:url"
+msgid "search:labels:url"
 msgstr "Available for download"
 
-msgid "search:origlanguage"
+msgid "search:labels:origlanguage"
 msgstr "Translated edition"
+
+msgid "search:labels:fulltext"
+msgstr "Text to search for"
 
 msgid "search:orderby"
 msgstr "Order by"
