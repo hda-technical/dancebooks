@@ -153,9 +153,9 @@ class WwwConfig(object):
 			raise ValueError("date_formats param wasn't found")
 		self.date_formats = json.loads(params["date_formats"])
 
-		if "orderby_keys" not in params:
-			raise ValueError("orderby_keys param wasn't found")
-		self.orderby_keys = set(json.loads(params["orderby_keys"]))
+		if "order_by_keys" not in params:
+			raise ValueError("order_by_keys param wasn't found")
+		self.order_by_keys = set(json.loads(params["order_by_keys"]))
 
 
 class Config(object):

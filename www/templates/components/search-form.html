@@ -1,4 +1,4 @@
-		<h2>{{ _("can") }} <a href="/bib/books">{{ _("display everything") }}</a> {{ _("or use the search") }}:</h2>
+		<h2>{{ _("interface:you_can") }} <a href="/bib/books">{{ _("interface:display_everything") }}</a> {{ _("common:or") }} {{ _("interface:use_search") }}:</h2>
 		<div class="content">
 			<div class="center" id="searchTogglers">
 				<span id="searchToggleBasic">{{ _("search:type:basic") }}</span>
@@ -10,7 +10,7 @@
 				<table id="searchFormBasic">
 					<tr>
 						<td>
-							<label for="author">{{ _("author") }}:</label>
+							<label for="author">{{ _("search:labels:author") }}:</label>
 						</td>
 						<td>
 							<input id="author" type="text" name="author"/>
@@ -18,7 +18,7 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="title">{{ _("title") }}:</label>
+							<label for="title">{{ _("search:labels:title") }}:</label>
 						</td>
 						<td>
 							<input id="title" type="text" name="title"/>
@@ -26,19 +26,19 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="year_from">{{ _("year") }}:</label>
+							<label for="year_from">{{ _("search:labels:year") }}:</label>
 						</td>
 						<td>
-							<input id="year_from" type="number" name="year_from" min="0" max="9999"/>
+							<input id="year_from" type="number" name="year_from" min="1000" max="9999"/>
 							<span>–</span>
-							<input id="year_to" type="number" name="year_to" min="0" max="9999"/>
+							<input id="year_to" type="number" name="year_to" min="1000" max="9999"/>
 						</td>
 					</tr>
 				</table>
 				<table id="searchFormAdvanced" class="hidden">
 					<tr>
 						<td>
-							<label for="added_on_from">{{ _("added_on") }}:</label>
+							<label for="added_on_from">{{ _("search:labels:added_on") }}:</label>
 						</td>
 						<td>
 							<input id="added_on_from" type="datetime" name="added_on_from"/>
@@ -48,31 +48,31 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="langid">{{ _("langid") }}:</label>
+							<label for="langid">{{ _("search:labels:langid") }}:</label>
 						</td>
 						<td>
 							<select id="langid" name="langid">
 								<!-- required to reduce flicking -->
 								<option value="empty" selected="selected"></option>
-								<option value="">{{ _("any") }}</option>
+								<option value="">{{ _("common:Any") }}</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<label for="source_file">{{ _("source_file") }}:</label>
+							<label for="source_file">{{ _("search:labels:source_file") }}:</label>
 						</td>
 						<td>
 							<select id="source_file" name="source_file">
 								<!-- required to reduce flicking -->
 								<option value="empty" selected="selected"></option>
-								<option value="">{{ _("any") }}</option>
+								<option value="">{{ _("common:Any") }}</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<label for="publisher">{{ _("publisher") }}:</label>
+							<label for="publisher">{{ _("search:labels:publisher") }}:</label>
 						</td>
 						<td>
 							<input id="publisher" type="text" name="publisher"/>
@@ -80,7 +80,7 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="location">{{ _("location") }}:</label>
+							<label for="location">{{ _("search:labels:location") }}:</label>
 						</td>
 						<td>
 							<input id="location" type="text" name="location"/>
@@ -88,7 +88,7 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="keywords">{{ _("keywords") }}:</label>
+							<label for="keywords">{{ _("search:labels:keywords") }}:</label>
 						</td>
 						<td>
 							<input id="keywords" type="text" readonly="readonly" name="keywords" onfocus="showKeywordsChooser()"/>
@@ -103,9 +103,9 @@
 						</td>
 						<td>
 							<select id="url" name="url">
-								<option value="">{{ _("doesnt_matter") }}</option>
-								<option value="true">{{ _("yes") }}</option>
-								<option value="false">{{ _("no") }}</option>
+								<option value="">{{ _("common:Doesnt_matter") }}</option>
+								<option value="true">{{ _("common:Yes") }}</option>
+								<option value="false">{{ _("common:No") }}</option>
 							</select>
 						</td>
 					</tr>
@@ -115,9 +115,9 @@
 						</td>
 						<td>
 							<select id="origlanguage" name="origlanguage">
-								<option value="">{{ _("doesnt_matter") }}</option>
-								<option value="true">{{ _("yes") }}</option>
-								<option value="false">{{ _("no") }}</option>
+								<option value="">{{ _("common:Doesnt_matter") }}</option>
+								<option value="true">{{ _("common:Yes") }}</option>
+								<option value="false">{{ _("common:No") }}</option>
 							</select>
 						</td>
 					</tr>
@@ -138,21 +138,21 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="orderby">{{ _("search:orderby") }}:</label>
+							<label for="orderBy">{{ _("search:order_by") }}:</label>
 						</td>
 						<td>
-							<select id="orderby" name="orderby">
-								<option value="">{{ _("search:orderby:year_from") }}</option>
-								<option value="added_on">{{ _("search:orderby:added_on") }}</option>
-								<option value="source">{{ _("search:orderby:source") }}</option>
-								<option value="author">{{ _("search:orderby:author") }}</option>
-								<option value="location">{{ _("search:orderby:location") }}</option>
+							<select id="orderBy" name="orderBy">
+								<option value="">{{ _("search:order_by:year_from") }}</option>
+								<option value="added_on">{{ _("search:order_by:added_on") }}</option>
+								<option value="source">{{ _("search:order_by:source") }}</option>
+								<option value="author">{{ _("search:order_by:author") }}</option>
+								<option value="location">{{ _("search:order_by:location") }}</option>
 							</select>
 						</td>
 					</tr>
 				</table>
 			</form>
 			<div class="center">
-				<button onclick="submitSearchForm()">{{ _("search") }}</button>
-				<button onclick="clearSearchForms()">{{ _("clear") }}</button>
+				<button onclick="submitSearchForm()">{{ _("interface:buttons:search") }}</button>
+				<button onclick="clearSearchForms()">{{ _("interface:buttons:clear") }}</button>
 			</div>

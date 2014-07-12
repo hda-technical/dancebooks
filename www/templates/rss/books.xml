@@ -2,8 +2,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>{{ _("rss_title") }}</title>
-		<description>{{ _("rss_description") }}</description>
+		<title>{{ _("rss:title") }}</title>
+		<description>{{ _("rss:description") }}</description>
+		<language>{{ _("common:locale") }}</language>
 		<link>http://bib.hda.org.ru/bib</link>
 {% set last_date = item_index | sort | last %}
 {% set last_date_string = last_date.strftime(RFC_DATETIME_FORMAT) %}
@@ -12,7 +13,7 @@
 		<atom:link href="http://bib.hda.org.ru/bib/rss/books" rel="self" type="application/rss+xml"/>
 {% for date, entries in item_index | dictsort | reverse %}
 		<item>
-			<title>{{ ngettext("added %(num)d entry", "added %(num)d entries", entries | length) }}</title>
+			<title>{{ ngettext("rss:added_count", "rss:added_count", entries | length) }}</title>
 			<description><![CDATA[
 				<ul>
 {% for entry in entries %}

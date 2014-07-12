@@ -108,7 +108,7 @@ www-profile:
 	./_profile.py
 
 www-translations:
-	pybabel -q compile -d www/translations
+	pybabel -v -q compile -d www/translations
 
 www-distclean:
 	rm -rf www/__pycache__ www/tests/__pycache__

@@ -7,64 +7,107 @@
 msgid ""
 msgstr ""
 
-#: Interface strings
-msgid "displaying everything"
+# Interface strings
+msgid "interface:displaying_all"
 msgstr "Displaying everything"
 
-msgid "entry with id"
+msgid "interface:single_entry"
 msgstr "Entry with id"
 
-#, python-format
-msgid "total %(num)d entry"
-msgid_plural "total %(num)d entries"
+msgid "interface:total_entries"
+msgid_plural "interface:total_entries"
 msgstr[0] "In database: %(num)d entry"
 msgstr[1] "In database: %(num)d entries"
+msgstr[2] "In database: %(num)d entries"
 
-#, python-format
-msgid "found %(num)d entry"
-msgid_plural "found %(num)d entries"
+msgid "interface:found_entries"
+msgid_plural "interface:found_entries"
 msgstr[0] "Found %(num)d entry"
 msgstr[1] "Found %(num)d entries"
+msgstr[2] "Found %(num)d entries"
 
-msgid "nothing found"
+msgid "interface:found_none"
 msgstr "Nothing found. Try another search"
 
-msgid "can"
+msgid "interface:you_can"
 msgstr "You can"
 
-msgid "display everything"
+msgid "interface:display_everything"
 msgstr "display everything"
 
-msgid "or use the search"
-msgstr "or use the search"
+msgid "interface:use_search"
+msgstr "use the search"
 
-msgid "dancing books bibliography"
+msgid "interface:title"
 msgstr "Dancing books bibliography"
 
-msgid "search"
+# Buttons
+msgid "interface:buttons:search"
 msgstr "Search"
 
-msgid "clear"
+msgid "interface:buttons:clear"
 msgstr "Clear"
 
-msgid "report_bug"
-msgstr "Report bug / mistake"
-
-msgid "introduce"
-msgstr "Introduce yourself"
-
-msgid "email"
-msgstr "E-mail"
-
-msgid "describe_problem"
-msgstr "Describe the problem"
-
-msgid "send"
+msgid "interface:buttons:send"
 msgstr "Send"
 
-msgid "thanks"
+# Common
+msgid "common:Yes"
+msgstr "Yes"
+
+msgid "common:yes"
+msgstr "yes"
+
+msgid "common:No"
+msgstr "No"
+
+msgid "common:no"
+msgstr "no"
+
+msgid "common:Doesnt_matter"
+msgstr "Doesn't matter"
+
+msgid "common:doesnt_matter"
+msgstr "doesn't matter"
+
+msgid "common:Or"
+msgstr "Or"
+
+msgid "common:or"
+msgstr "or"
+
+msgid "common:And"
+msgstr "And"
+
+msgid "common:and"
+msgstr "and"
+
+msgid "common:Any"
+msgstr "Any"
+
+msgid "common:any"
+msgstr "any"
+
+msgid "common:locale"
+msgstr "en"
+
+# Report form
+msgid "interface:report:title"
+msgstr "Report bug / mistake"
+
+msgid "interface:report:name"
+msgstr "Introduce yourself"
+
+msgid "interface:report:email"
+msgstr "E-mail"
+
+msgid "interface:report:description"
+msgstr "Describe the problem"
+
+msgid "interface:report:thanks"
 msgstr "Thanks! Your message was sent to /dev/null"
 
+# Search types
 msgid "search:type:basic"
 msgstr "Basic"
 
@@ -74,72 +117,33 @@ msgstr "Advanced"
 msgid "search:type:fulltext"
 msgstr "Full-text"
 
-#: Entry fields / Search forms
-msgid "author"
+# Search labels
+msgid "search:labels:author"
 msgstr "Author"
 
-msgid "title"
+msgid "search:labels:title"
 msgstr "Title"
 
-msgid "year"
+msgid "search:labels:year"
 msgstr "Year of publication"
 
-msgid "from"
-msgstr "from"
-
-msgid "to"
-msgstr "to"
-
-msgid "langid"
-msgstr "Language"
-
-msgid "publisher"
-msgstr "Publisher"
-
-msgid "location"
-msgstr "Place of publication"
-
-msgid "keywords"
-msgstr "Tags"
-
-msgid "shorthand"
-msgstr "Shorthand"
-
-msgid "id"
-msgstr "Id"
-
-msgid "added_on"
+msgid "search:labels:added_on"
 msgstr "Added to database"
 
-msgid "source"
-msgstr "Source"
+msgid "search:labels:langid"
+msgstr "Language"
 
-msgid "source_file"
+msgid "search:labels:source_file"
 msgstr "Source file"
 
-msgid "booktype"
-msgstr "Entry type"
+msgid "search:labels:publisher"
+msgstr "Publisher"
 
-msgid "edition"
-msgstr "Edition"
+msgid "search:labels:location"
+msgstr "Place of publication"
 
-msgid "series"
-msgstr "Series"
-
-msgid "number"
-msgstr "No. "
-
-msgid "url"
-msgstr "URL"
-
-msgid "filename"
-msgstr "Paths to files"
-
-msgid "note"
-msgstr "Note"
-
-msgid "annotation"
-msgstr "Auxilliary note"
+msgid "search:labels:keywords"
+msgstr "Tags"
 
 msgid "search:labels:url"
 msgstr "Available for download"
@@ -150,97 +154,184 @@ msgstr "Translated edition"
 msgid "search:labels:fulltext"
 msgstr "Text to search for"
 
-msgid "search:orderby"
-msgstr "Order by"
-
-msgid "search:orderby:year_from"
-msgstr "Year of publication"
-
-msgid "search:orderby:added_on"
-msgstr "Database addition date"
-
-msgid "search:orderby:source"
-msgstr "Soruce file"
-
-msgid "search:orderby:author"
-msgstr "Author"
-
-msgid "search:orderby:location"
-msgstr "Place of publication"
-
-msgid "yes"
-msgstr "Yes"
-
-msgid "no"
-msgstr "No"
-
-msgid "doesnt_matter"
-msgstr "Doesn't matter"
-
-#: Languages
-msgid "any"
-msgstr "Any"
-
-msgid "czech"
+# Search: Language select options
+msgid "search:language:czech"
 msgstr "Czech"
 
-msgid "danish"
+msgid "search:languagedanish"
 msgstr "Danish"
 
-msgid "english"
+msgid "search:language:english"
 msgstr "English"
 
-msgid "french"
+msgid "search:language:french"
 msgstr "French"
 
-msgid "german"
+msgid "search:language:german"
 msgstr "German"
 
-msgid "italian"
+msgid "search:language:italian"
 msgstr "Italian"
 
-msgid "polish"
+msgid "search:language:polish"
 msgstr "Polish"
 
-msgid "portuguese"
+msgid "search:language:portuguese"
 msgstr "Portuguese"
 
-msgid "russian"
+msgid "search:language:russian"
 msgstr "Russian"
 
-msgid "spanish"
+msgid "search:language:spanish"
 msgstr "Spanish"
 
-#: Footer icons
-msgid "rendered_pdf"
+# Search results ordering
+msgid "search:order_by"
+msgstr "Order by"
+
+msgid "search:order_by:year_from"
+msgstr "Year of publication"
+
+msgid "search:order_by:added_on"
+msgstr "Database addition date"
+
+msgid "search:order_by:source"
+msgstr "Soruce file"
+
+msgid "search:order_by:author"
+msgstr "Author"
+
+msgid "search:order_by:location"
+msgstr "Place of publication"
+
+# Entry fields
+msgid "item:labels:author"
+msgstr "Author"
+
+msgid "item:labels:title"
+msgstr "Title"
+
+msgid "item:labels:year"
+msgstr "Year of publication"
+
+msgid "item:labels:langid"
+msgstr "Language"
+
+msgid "item:labels:publisher"
+msgstr "Publisher"
+
+msgid "item:labels:location"
+msgstr "Place of publication"
+
+msgid "item:labels:keywords"
+msgstr "Tags"
+
+msgid "item:labels:shorthand"
+msgstr "Shorthand"
+
+msgid "item:labels:id"
+msgstr "Id"
+
+msgid "item:labels:added_on"
+msgstr "Added to database"
+
+msgid "item:labels:source"
+msgstr "Source"
+
+msgid "item:labels:booktype"
+msgstr "Entry type"
+
+msgid "item:labels:edition"
+msgstr "Edition"
+
+msgid "item:labels:series"
+msgstr "Series"
+
+msgid "item:labels:number"
+msgstr "No."
+
+msgid "item:labels:url"
+msgstr "URL"
+
+msgid "item:labels:filename"
+msgstr "Paths to files"
+
+msgid "item:labels:note"
+msgstr "Note"
+
+msgid "item:labels:annotation"
+msgstr "Auxilliary note"
+
+#: Languages
+msgid "item:language:czech"
+msgstr "Czech"
+
+msgid "item:language:danish"
+msgstr "Danish"
+
+msgid "item:language:english"
+msgstr "English"
+
+msgid "item:language:french"
+msgstr "French"
+
+msgid "item:language:german"
+msgstr "German"
+
+msgid "item:language:italian"
+msgstr "Italian"
+
+msgid "item:language:polish"
+msgstr "Polish"
+
+msgid "item:language:portuguese"
+msgstr "Portuguese"
+
+msgid "item:language:russian"
+msgstr "Russian"
+
+msgid "item:language:spanish"
+msgstr "Spanish"
+
+# Footer icons
+msgid "interface:footer:pdf"
 msgstr "Renrered PDF file"
 
-msgid "hda"
+msgid "interface:footer:hda"
 msgstr "Historical Dance Association"
 
-msgid "golden_forests"
+msgid "interface:footer:golden_forests"
 msgstr "Golden Forests"
 
-msgid "github_repo"
+msgid "interface:footer:repo"
 msgstr "GitHub repository"
 
-msgid "persimmon"
+msgid "interface:footer:persimmon"
 msgstr "Persimmon"
 
-#: RSS
-msgid "rss_title"
+# RSS
+msgid "rss:title"
 msgstr "New books"
 
-msgid "rss_description"
-msgstr "Latest additions to dancing books biblipgraphy"
+msgid "rss:description"
+msgstr "Latest additions to dancing books bibliography"
 
-msgid "new_books_for"
-msgstr "Added on"
-
-#, python-format
-msgid "added %(num)d entry"
-msgid_plural "added %(num)d entries"
+msgid "rss:added_count"
+msgid_plural "rss:added_count"
 msgstr[0] "%(num)d entry added"
 msgstr[1] "%(num)d entries added"
 msgstr[2] "%(num)d entries added"
+
+# Error messages
+msgid "errors:missing:description"
+msgstr "Description is missing"
+
+msgid "errors:missing:name"
+msgstr "Name is missing"
+
+msgid "errors:missing:email"
+msgstr "E-mail in missing"
+
+msgid "errors:wrong:email"
+msgstr "E-mail is wrong"
 

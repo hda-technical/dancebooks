@@ -7,66 +7,107 @@
 msgid ""
 msgstr ""
 
-#: Inteface
-msgid "displaying everything"
+# Inteface strings
+msgid "interface:displaying_all"
 msgstr "Вот всё, что есть"
 
-msgid "entry with id"
+msgid "interface:single_entry"
 msgstr "Вот запись с идентификатором"
 
-#, python-format
-msgid "total %(num)d entry"
-msgid_plural "total %(num)d entries"
+msgid "interface:total_entries"
+msgid_plural "interface:total_entries"
 msgstr[0] "Всего %(num)d запись"
 msgstr[1] "Всего %(num)d записи"
 msgstr[2] "Всего %(num)d записей"
 
-#, python-format
-msgid "found %(num)d entry"
-msgid_plural "found %(num)d entries"
+msgid "interface:found_entries"
+msgid_plural "interface:found_entries"
 msgstr[0] "Найдена %(num)d запись"
 msgstr[1] "Найдены %(num)d записи"
 msgstr[2] "Найдено %(num)d записей"
 
-msgid "nothing found"
+msgid "interface:found_none"
 msgstr "Ничего не найдено"
 
-msgid "can"
+msgid "interface:you_can"
 msgstr "Можно"
 
-msgid "display everything"
+msgid "interface:display_everything"
 msgstr "показать всё"
 
-msgid "or use the search"
+msgid "interface:use_search"
 msgstr "или воспользоваться поиском"
 
-msgid "dancing books bibliography"
+msgid "interface:title"
 msgstr "Библиография танцевальных источников"
 
-msgid "search"
+# Buttons
+msgid "interface:buttons:search"
 msgstr "Искать"
 
-msgid "clear"
+msgid "interface:buttons:clear"
 msgstr "Сбросить"
 
-msgid "report_bug"
-msgstr "Сообщить о проблеме"
-
-msgid "introduce"
-msgstr "Представьтесь, пожалуйста"
-
-msgid "email"
-msgstr "E-mail"
-
-msgid "describe_problem"
-msgstr "Опишите проблему"
-
-msgid "send"
+msgid "interface:buttons:send"
 msgstr "Отправить"
 
-msgid "thanks"
+# Common
+msgid "common:Yes"
+msgstr "Да"
+
+msgid "common:yes"
+msgstr "Да"
+
+msgid "common:No"
+msgstr "Нет"
+
+msgid "common:no"
+msgstr "нет"
+
+msgid "common:Doesnt_matter"
+msgstr "Не важно"
+
+msgid "common:doesnt_matter"
+msgstr "не важно"
+
+msgid "common:Or"
+msgstr "Или"
+
+msgid "common:or"
+msgstr "или"
+
+msgid "common:And"
+msgstr "И"
+
+msgid "common:and"
+msgstr "и"
+
+msgid "common:Any"
+msgstr "Любой"
+
+msgid "common:any"
+msgstr "любой"
+
+msgid "common:locale"
+msgstr "ru"
+
+# Report form
+msgid "interface:report:title"
+msgstr "Сообщить о проблеме"
+
+msgid "interface:report:name"
+msgstr "Представьтесь, пожалуйста"
+
+msgid "interface:report:email"
+msgstr "E-mail"
+
+msgid "interface:report:description"
+msgstr "Опишите проблему"
+
+msgid "iterface:report:thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
 
+# Search types
 msgid "search:type:basic"
 msgstr "Простой"
 
@@ -76,72 +117,33 @@ msgstr "Расширенный"
 msgid "search:type:fulltext"
 msgstr "Полнотекстовый"
 
-#: Entry fields / Search forms
-msgid "author"
+# Search labels
+msgid "search:labels:author"
 msgstr "Автор"
 
-msgid "title"
-msgstr "Заглавие"
+msgid "search:labels:title"
+msgstr "Название"
 
-msgid "year"
+msgid "search:labels:year"
 msgstr "Год публикации"
 
-msgid "from"
-msgstr "с"
-
-msgid "to"
-msgstr "по"
-
-msgid "langid"
-msgstr "Язык"
-
-msgid "publisher"
-msgstr "Издатель"
-
-msgid "location"
-msgstr "Место издания"
-
-msgid "keywords"
-msgstr "Теги"
-
-msgid "shorthand"
-msgstr "Сокращённое название"
-
-msgid "id"
-msgstr "Идентификатор"
-
-msgid "added_on"
+msgid "search:labels:added_on"
 msgstr "Дата добавления в базу"
 
-msgid "source"
-msgstr "Строка в файле"
+msgid "search:labels:langid"
+msgstr "Язык"
 
-msgid "source_file"
+msgid "search:labels:source_file"
 msgstr "Исходный файл"
 
-msgid "booktype"
-msgstr "Тип записи"
+msgid "search:labels:publisher"
+msgstr "Место издания"
 
-msgid "edition"
-msgstr "Издание"
+msgid "search:labels:location"
+msgstr "Place of publication"
 
-msgid "series"
-msgstr "Серия"
-
-msgid "number"
-msgstr "№"
-
-msgid "url"
-msgstr "Ссылка"
-
-msgid "filename"
-msgstr "Пути к файлам"
-
-msgid "note"
-msgstr "Примечание"
-
-msgid "annotation"
-msgstr "Служебное примечание"
+msgid "search:labels:keywords"
+msgstr "Теги"
 
 msgid "search:labels:url"
 msgstr "Доступно для скачивания"
@@ -152,97 +154,184 @@ msgstr "Переводное издание"
 msgid "search:labels:fulltext"
 msgstr "Строка для поиска"
 
-msgid "search:orderby"
-msgstr "Упорядочить по"
-
-msgid "search:orderby:year_from"
-msgstr "Году публикации"
-
-msgid "search:orderby:added_on"
-msgstr "Дате добавления в базу"
-
-msgid "search:orderby:source"
-msgstr "Исходному файлу"
-
-msgid "search:orderby:author"
-msgstr "Автору"
-
-msgid "search:orderby:location"
-msgstr "Месту публикации"
-
-msgid "yes"
-msgstr "Да"
-
-msgid "no"
-msgstr "Нет"
-
-msgid "doesnt_matter"
-msgstr "Не важно"
-
-#: Languages
-msgid "any"
-msgstr "Любой"
-
-msgid "czech"
+# Search: Language select options
+msgid "search:language:czech"
 msgstr "Чешский"
 
-msgid "danish"
+msgid "search:language:danish"
 msgstr "Датский"
 
-msgid "english"
+msgid "search:language:english"
 msgstr "Английский"
 
-msgid "french"
+msgid "search:language:french"
 msgstr "Французский"
 
-msgid "german"
+msgid "search:language:german"
 msgstr "Немецкий"
 
-msgid "italian"
+msgid "search:language:italian"
 msgstr "Итальянский"
 
-msgid "polish"
+msgid "search:language:polish"
 msgstr "Польский"
 
-msgid "portuguese"
+msgid "search:language:portuguese"
 msgstr "Португальский"
 
-msgid "russian"
+msgid "search:language:russian"
 msgstr "Русский"
 
-msgid "spanish"
+msgid "search:language:spanish"
 msgstr "Испанский"
 
-#: Footer icons
-msgid "rendered_pdf"
+# Search results ordering
+msgid "search:order_by"
+msgstr "Упорядочить по"
+
+msgid "search:order_by:year_from"
+msgstr "Году публикации"
+
+msgid "search:order_by:added_on"
+msgstr "Дате добавления в базу"
+
+msgid "search:order_by:source"
+msgstr "Исходному файлу"
+
+msgid "search:order_by:author"
+msgstr "Автору"
+
+msgid "search:order_by:location"
+msgstr "Месту публикации"
+
+# Entry fields
+msgid "item:labels:author"
+msgstr "Автор"
+
+msgid "item:labels:title"
+msgstr "Название"
+
+msgid "item:labels:year"
+msgstr "Год публикации"
+
+msgid "item:labels:langid"
+msgstr "Язык"
+
+msgid "item:labels:publisher"
+msgstr "Издатель"
+
+msgid "item:labels:location"
+msgstr "Место издания"
+
+msgid "item:labels:keywords"
+msgstr "Теги"
+
+msgid "item:labels:shorthand"
+msgstr "Сокращённое название"
+
+msgid "item:labels:id"
+msgstr "Идентификатор"
+
+msgid "item:labels:added_on"
+msgstr "Дата добавления в базу"
+
+msgid "item:labels:source"
+msgstr "Строка в файле"
+
+msgid "item:labels:booktype"
+msgstr "Тип записи"
+
+msgid "item:labels:edition"
+msgstr "Издание"
+
+msgid "item:labels:series"
+msgstr "Серия"
+
+msgid "item:labels:number"
+msgstr "№"
+
+msgid "item:labels:url"
+msgstr "Ссылка"
+
+msgid "item:labels:filename"
+msgstr "Пути к файлам"
+
+msgid "item:labels:note"
+msgstr "Примечание"
+
+msgid "item:labels:annotation"
+msgstr "Служебное примечание"
+
+# Languages
+msgid "item:language:czech"
+msgstr "Чешский"
+
+msgid "item:language:danish"
+msgstr "Датский"
+
+msgid "item:language:english"
+msgstr "Английский"
+
+msgid "item:language:french"
+msgstr "Французский"
+
+msgid "item:language:german"
+msgstr "Немецкий"
+
+msgid "item:language:italian"
+msgstr "Итальянский"
+
+msgid "item:language:polish"
+msgstr "Польский"
+
+msgid "item:language:portuguese"
+msgstr "Португальский"
+
+msgid "item:language:russian"
+msgstr "Русский"
+
+msgid "item:language:spanish"
+msgstr "Испанский"
+
+# Footer icons
+msgid "interface:footer:pdf"
 msgstr "Файл в формате PDF"
 
-msgid "hda"
+msgid "interface:footer:hda"
 msgstr "Ассоциация исторического танца"
 
-msgid "golden_forests"
+msgid "interface:footer:golden_forests"
 msgstr "Золотые леса"
 
-msgid "github_repo"
+msgid "interface:footer:repo"
 msgstr "Репозиторий на ГитХабе"
 
-msgid "persimmon"
+msgid "interface:footer:persimmon"
 msgstr "Хурма"
 
 #: RSS
-msgid "rss_title"
+msgid "rss:title"
 msgstr "Новые книги"
 
-msgid "rss_description"
+msgid "rss:description"
 msgstr "Последние поступления танцевальных источников в библиографию"
 
-msgid "new_books_for"
-msgstr "Добавлено"
-
-#, python-format
-msgid "added %(num)d entry"
-msgid_plural "added %(num)d entries"
+msgid "rss:added_count"
+msgid_plural "rss:added_count"
 msgstr[0] "Добавлена %(num)d запись"
 msgstr[1] "Добавлены %(num)d записи"
 msgstr[2] "Добавлено %(num)d записей"
+
+# Error messages
+msgid "errors:missing:description"
+msgstr "Отсуствует описание"
+
+msgid "errors:missing:name"
+msgstr "Отсутствует имя"
+
+msgid "errors:missing:email"
+msgstr "Отсутствует e-mail"
+
+msgid "errors:wrong:email"
+msgstr "Неправильный e-mail"
 

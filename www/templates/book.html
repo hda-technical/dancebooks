@@ -4,36 +4,36 @@
 	<body>
 {% include "components/choose-lang.html" %}
 {% include "components/header.html" %}
-		<h2>{{ _("entry with id") }} {{ item.id() }}:</h2>
+		<h2>{{ _("interface:single_entry") }} {{ item.id() }}:</h2>
 		<div class="content">
 {% include "components/item.html" %}
 			<div class="center">
-				<span class="action" id="bugReport" onclick="toggleReportForm()">{{ _("report_bug") }}</span>
+				<span class="action" id="bugReport" onclick="toggleReportForm()">{{ _("interface:report:title") }}</span>
 			</div>
-			<div id="reportForm" class="center" style="display: none;">
+			<div id="reportForm" class="center hidden">
 				<form action="/bib/books/{{ item.id() }}" method="post">
 					<table>
 						<tr>
-							<td>{{ _("introduce") }}:</td>
+							<td>{{ _("interface:report:name") }}:</td>
 							<td>
 								<input type="text" name="name" required="required"/>
 							</td>
 						</tr>
 						<tr>
-							<td>{{ _("email") }}:</td>
+							<td>{{ _("interface:report:email") }}:</td>
 							<td>
 								<input type="email" name="email" pattern=".+@.+" required="required"/>
 							</td>
 						</tr>
 						<tr>
-							<td>{{ _("describe_problem") }}:</td>
+							<td>{{ _("interface:report:description") }}:</td>
 							<td>
 								<textarea name="message" cols="50" rows="10" maxlength="500" required="required"></textarea>
 							</td>
 						</tr>
 					</table>
 				</form>
-				<button onclick="sendReportForm()">{{ _("send") }}</button>
+				<button onclick="sendReportForm()">{{ _("interface:buttons:send") }}</button>
 			</div>
 			<hr/>
 {% include "components/footer.html" %}

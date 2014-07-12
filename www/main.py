@@ -25,7 +25,7 @@ if (not os.path.exists("templates")):
 
 items = sorted(
 	bib_parser.BibParser().parse_folder(os.path.abspath("../bib")),
-	key=bib_parser.BibItem.key_to_key_func(const.DEFAULT_ORDERBY)
+	key=bib_parser.BibItem.key_to_key_func(const.DEFAULT_ORDER_BY)
 )
 item_index = index.Index(items)
 for item in items:
@@ -111,10 +111,10 @@ def search_items(show_secrets):
 	}
 	request_keys = set(request_args.keys())
 
-	orderby = flask.request.values.get("orderby", const.DEFAULT_ORDERBY)
-	if orderby not in config.www.orderby_keys:
-		flask.abort(400, "Key {orderby} is not supported for ordering".format(
-			orderby=orderby
+	order_by = flask.request.values.get("orderBy", const.DEFAULT_ORDER_BY)
+	if order_by not in config.www.order_by_keys:
+		flask.abort(400, "Key {order_by} is not supported for ordering".format(
+			order_by=order_by
 		))
 
 	#if request_args is empty, we should render empty search form
@@ -152,7 +152,7 @@ def search_items(show_secrets):
 
 	found_items = list(sorted(
 		filter(search.and_(searches), found_items),
-		key=bib_parser.BibItem.key_to_key_func(orderby)
+		key=bib_parser.BibItem.key_to_key_func(order_by)
 	))
 
 	return flask.render_template(
@@ -209,13 +209,16 @@ def edit_book(book_id):
 	message = messenger.Message(book_id, from_email, from_name, message)
 	message.send()
 
-	return {"result": "OK", "message": babel.gettext("thanks")}
+	return {"result": "OK", "message": babel.gettext("interface:report:thanks")}
 
 
 @flask_app.route(config.www.app_prefix + "/languages", methods=["GET"])
 @utils_flask.jsonify()
 def get_languages():
-	return {language:babel.gettext(language) for language in languages}
+	return {
+		language:babel.gettext(const.BABEL_LANG_PREFIX + language)
+		for language in languages
+	}
 
 
 @flask_app.route(config.www.app_prefix + "/source-files", methods=["GET"])

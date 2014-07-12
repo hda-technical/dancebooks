@@ -27,7 +27,7 @@
 {% if value %}
 
 {% if (param != "filename") or show_secrets %} {# secrets filtering: start #}
-			<div class="bib_item_left">{{ _(param) }}:</div>
+			<div class="bib_item_left">{{ _("item:labels:" + param) }}:</div>
 			<div class="bib_item_right">
 {% if param == "id" %}
 				<a href="/bib/books/{{ value }}">{{ value }}</a>
@@ -45,10 +45,14 @@
 				</ul>
 {% elif param == "series" %}
 {% set extra_value = item.get("number") %}
+{% if extra_value %}
 				{{ value }} {{ _("number") }}{{ extra_value }}
+{% else %}
+				{{ value }}
+{% endif %}
 
 {% elif param == "langid" %}
-				{{ _(value) }}
+				{{ _("item:language:" + value) }}
 
 {% elif param == "added_on" %}
 				{{ value | dateformat("long") }}

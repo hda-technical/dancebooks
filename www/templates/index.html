@@ -4,7 +4,7 @@
 	<body>
 {% include "components/choose-lang.html" %}
 {% include "components/header.html" %}
-		<h2>{{ ngettext("total %(num)d entry", "total %(num)d entries", entry_count) }}.</h2>
+		<h2>{{ ngettext("interface:total_entries", "interface:total_entries", entry_count) }}.</h2>
 {% include "components/search-form.html" %}
 			<hr/>
 {% include "components/footer.html" %}

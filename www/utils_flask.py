@@ -4,6 +4,7 @@ import logging
 import re
 
 import flask
+from flask.ext import babel
 import jinja2
 import werkzeug
 
@@ -49,7 +50,7 @@ def check_secret_cookie():
 		@functools.wraps(func)
 		def wrapper(*args, **kwargs):
 			show_secrets = (
-				flask.request.cookies.get(config.www.secret_cookie_key, "") == 
+				flask.request.cookies.get(config.www.secret_cookie_key, "") ==
 				config.www.secret_cookie_value
 			)
 
@@ -57,7 +58,7 @@ def check_secret_cookie():
 			return func(*args, **kwargs)
 		return wrapper
 	return real_decorator
-	
+
 
 def jsonify():
 	"""
@@ -76,7 +77,7 @@ def jsonify():
 			except werkzeug.exceptions.HTTPException as ex:
 				data = {"result": "ERROR", "message": ex.description}
 				response = flask.make_response(
-					json.dumps(data, ensure_ascii=False), 
+					json.dumps(data, ensure_ascii=False),
 					ex.code
 				)
 				response.content_type = "application/json; charset=utf-8"
@@ -93,9 +94,7 @@ class _DefaultValue(object):
 def extract_string_from_request(param_name, default=_DefaultValue):
 	param = flask.request.values.get(param_name, default)
 	if param is _DefaultValue:
-		flask.abort(400, "Param {param_name} wasn't found".format(
-			param_name=param_name
-		))
+		flask.abort(400, babel.gettext("errors:missing:" + param_name))
 	return param
 
 
@@ -103,9 +102,7 @@ EMAIL_REGEXP = re.compile(".*@.*")
 def extract_email_from_request(param_name, default=_DefaultValue):
 	email = extract_string_from_request(param_name, default)
 	if not EMAIL_REGEXP.match(email):
-		flask.abort(400, "Param {param_name} isn't a valid email".format(
-			param_name=param_name
-		))
+		flask.abort(400, babel.gettext("errors:wrong:email"))
 	return email
 
 
@@ -116,6 +113,6 @@ class MemoryCache(jinja2.BytecodeCache):
 	def load_bytecode(self, bucket):
 		if bucket.key in self.cache:
 			bucket.bytecode_from_string(self.cache[bucket.key])
-	
+
 	def dump_bytecode(self, bucket):
 		self.cache[bucket.key] = bucket.bytecode_to_string()
