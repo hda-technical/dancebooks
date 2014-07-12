@@ -248,10 +248,20 @@ def main(
 				
 				search_ = utils.create_search_from_metadata(metadata)
 				if not search_(item):
-					errors.append("File {filename_} is not searchable by extracted params".format(
-						filename_=filename_
-					))
-		
+					errors.append(
+"""
+File {filename_} is not searchable by extracted params
+	extracted author: {author},
+	extracted title: {title},
+	extracted year_from: {year_from},
+	extracted year_to: {year_to}
+""".format(
+	filename_=filename_,
+	author=metadata["author"],
+	title=metadata["title"],
+	year_from=metadata["year_from"],
+	year_to=metadata["year_to"]
+))		
 		#id validation empty
 		if len(item_index["id"][id]) != 1:
 			errors.append("Id is not unique")

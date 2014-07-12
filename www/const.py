@@ -103,7 +103,7 @@ FILENAME_PATTERN = (
 		r"(?:, édition (?P<edition>\d+))|"
 		r"(?:, partie (?P<part>\d+))|"
 		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))|"
-		r"(?: \([\w\-]+ copy\))"
+		r"(?: \([\w\s\-]+ copy\))"
 	r")*"
 	#extension: .pdf
 	r"\.pdf"

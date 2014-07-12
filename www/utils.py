@@ -130,7 +130,8 @@ def extract_metadata_from_file(path):
 	year_to = int(year.replace("-", "9"))
 	
 	result = {
-		"year": (year_from, year_to),
+		"year_from": year_from, 
+		"year_to": year_to,
 		"langid": const.SHORT_LANG_MAP[match.group("langid")],
 		"title": match.group("title")
 	}
@@ -164,7 +165,8 @@ def create_search_from_metadata(metadata):
 	checing if this item match given metadata
 	"""
 	langid = metadata["langid"]
-	year = metadata["year"]
+	year_from = metadata["year_from"]
+	year_to = metadata["year_to"]
 	title = metadata["title"]
 	author = metadata.get("author", None)
 	tome = metadata.get("tome", None)
@@ -176,8 +178,8 @@ def create_search_from_metadata(metadata):
 	
 	search_for_langid = search.search_for_eq("langid", langid)
 	search_for_year = search.and_([
-		search.search_for("year_from", year[0]),
-		search.search_for("year_to", year[1])
+		search.search_for("year_from", year_from),
+		search.search_for("year_to", year_to)
 	])
 	
 	search_for_itemtitle = search.search_for_string_regexp("title", title_regexp)
