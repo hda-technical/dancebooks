@@ -101,7 +101,7 @@ def root(show_secrets):
 @flask_app.route(config.www.app_prefix + "/search", methods=["GET"])
 @flask_app.route(config.www.app_prefix + "/basic-search", methods=["GET"])
 @flask_app.route(config.www.app_prefix + "/advanced-search", methods=["GET"])
-@flask_app.route(config.www.app_prefix + "/fulltext-search", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/all-fields-search", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def search_items(show_secrets):
 	request_args = {

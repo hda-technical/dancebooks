@@ -24,7 +24,7 @@ class BibItem(object):
 
 	def __init__(self):
 		self._params = {
-			"fulltext": ""
+			"all_fields": ""
 		}
 
 	def __hash__(self):
@@ -136,7 +136,7 @@ class BibItem(object):
 				key=key,
 				id=self._params.get("id", None)))
 		self._params[key] = value
-		self._params["fulltext"] += BibItem.value_to_string(value, "")
+		self._params["all_fields"] += BibItem.value_to_string(value, "")
 
 	def params(self):
 		return self._params

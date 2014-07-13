@@ -1,24 +1,24 @@
 var SearchType = {
 	Basic: 0,
 	Advanced: 1,
-	Fulltext: 2
+	AllFields: 2
 };
 
 var env = {
 	searchToggleBasic: null,
 	searchToggleAdvanced: null,
-	serachToggleFulltext: null,
+	serachToggleAllFields: null,
 
 	searchFormBasic: null,
 	searchFormAdvanced: null,
-	searchFormFulltext: null,
+	searchFormAllFields: null,
 
 	searchType: SearchType.Basic,
 
 	searchTypeToPath: [
 		'/bib/basic-search',
 		'/bib/advanced-search',
-		'/bib/fulltext-search'
+		'/bib/all-fields-search'
 	]
 };
 
@@ -173,11 +173,11 @@ function loadSearchParams() {
 $(document).ready(function() {
 	env.searchToggleBasic = $('#searchToggleBasic');
 	env.searchToggleAdvanced = $('#searchToggleAdvanced');
-	env.searchToggleFulltext = $('#searchToggleFulltext');
+	env.searchToggleAllFields = $('#searchToggleAllFields');
 
 	env.searchFormBasic = $('#searchFormBasic');
 	env.searchFormAdvanced = $('#searchFormAdvanced');
-	env.searchFormFulltext = $('#searchFormFulltext');
+	env.searchFormAllFields = $('#searchFormAllFields');
 
 	loadSearchParams();
 	$('#search input, #search select').on('keyup', function(event) {
@@ -194,8 +194,8 @@ $(document).ready(function() {
 
 	if (window.location.pathname == '/bib/advanced-search') {
 		env.searchType = SearchType.Advanced;
-	} else if (window.location.pathname == '/bib/fulltext-search') {
-		env.searchType = SearchType.Fulltext;
+	} else if (window.location.pathname == '/bib/all-fields-search') {
+		env.searchType = SearchType.AllFields;
 	}
 	switchSearchForms(true)
 
@@ -210,7 +210,7 @@ function clearSearchForm(form) {
 function clearSearchForms() {
 	clearSearchForm(env.searchFormBasic);
 	clearSearchForm(env.searchFormAdvanced);
-	clearSearchForm(env.searchFormFulltext);
+	clearSearchForm(env.searchFormAllFields);
 }
 
 function switchToBasicSearch() {
@@ -223,8 +223,8 @@ function switchToAdvancedSearch() {
 	switchSearchForms(false);
 }
 
-function switchToFulltextSearch() {
-	env.searchType = SearchType.Fulltext;
+function switchToAllFieldsSearch() {
+	env.searchType = SearchType.AllFields;
 	switchSearchForms(false);
 }
 
@@ -232,48 +232,48 @@ function switchSearchForms(initial) {
 
 	if (env.searchType == SearchType.Basic) {
 		clearSearchForm(env.searchFormAdvanced);
-		clearSearchForm(env.searchFormFulltext);
+		clearSearchForm(env.searchFormAllFields);
 
 		env.searchFormBasic.removeClass('hidden');
 		env.searchFormAdvanced.addClass('hidden');
-		env.searchFormFulltext.addClass('hidden');
+		env.searchFormAllFields.addClass('hidden');
 
 		env.searchToggleBasic.removeClass("action");
 		env.searchToggleAdvanced.addClass("action");
-		env.searchToggleFulltext.addClass("action");
+		env.searchToggleAllFields.addClass("action");
 
 		env.searchToggleBasic.off('click');
 		env.searchToggleAdvanced.on('click', switchToAdvancedSearch);
-		env.searchToggleFulltext.on('click', switchToFulltextSearch);
+		env.searchToggleAllFields.on('click', switchToAllFieldsSearch);
 	} else if (env.searchType == SearchType.Advanced) {
 		//don't clear basic search form
-		clearSearchForm(env.searchFormFulltext);
+		clearSearchForm(env.searchFormAllFields);
 
 		env.searchFormBasic.removeClass('hidden');
 		env.searchFormAdvanced.removeClass('hidden');
-		env.searchFormFulltext.addClass('hidden');
+		env.searchFormAllFields.addClass('hidden');
 
 		env.searchToggleBasic.addClass("action");
 		env.searchToggleAdvanced.removeClass("action");
-		env.searchToggleFulltext.addClass("action");
+		env.searchToggleAllFields.addClass("action");
 
 		env.searchToggleBasic.on('click', switchToBasicSearch);
 		env.searchToggleAdvanced.off('click');
-		env.searchToggleFulltext.on('click', switchToFulltextSearch);
-	} else if (env.searchType == SearchType.Fulltext) {
+		env.searchToggleAllFields.on('click', switchToAllFieldsSearch);
+	} else if (env.searchType == SearchType.AllFields) {
 		clearSearchForm(env.searchFormBasic);
 		clearSearchForm(env.searchFormAdvanced);
 
 		env.searchFormBasic.addClass('hidden');
 		env.searchFormAdvanced.addClass('hidden');
-		env.searchFormFulltext.removeClass('hidden');
+		env.searchFormAllFields.removeClass('hidden');
 
 		env.searchToggleBasic.addClass("action");
 		env.searchToggleAdvanced.addClass("action");
-		env.searchToggleFulltext.removeClass("action");
+		env.searchToggleAllFields.removeClass("action");
 
 		env.searchToggleBasic.on('click', switchToBasicSearch);
 		env.searchToggleAdvanced.on('click', switchToAdvancedSearch);
-		env.searchToggleFulltext.off('click');
+		env.searchToggleAllFields.off('click');
 	}
 }

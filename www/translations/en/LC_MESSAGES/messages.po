@@ -114,8 +114,8 @@ msgstr "Basic"
 msgid "search:type:advanced"
 msgstr "Advanced"
 
-msgid "search:type:fulltext"
-msgstr "Full-text"
+msgid "search:type:all_fields"
+msgstr "All Fields"
 
 # Search labels
 msgid "search:labels:author"
@@ -151,7 +151,7 @@ msgstr "Available for download"
 msgid "search:labels:origlanguage"
 msgstr "Translated edition"
 
-msgid "search:labels:fulltext"
+msgid "search:labels:all_fields"
 msgstr "Text to search for"
 
 # Search: Language select options

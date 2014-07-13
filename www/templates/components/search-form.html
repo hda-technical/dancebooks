@@ -3,7 +3,7 @@
 			<div class="center" id="searchTogglers">
 				<span id="searchToggleBasic">{{ _("search:type:basic") }}</span>
 				<span id="searchToggleAdvanced" class="action">{{ _("search:type:advanced") }}</span>
-				<span id="searchToggleFulltext" class="action">{{ _("search:type:fulltext") }}</span>
+				<span id="searchToggleAllFields" class="action">{{ _("search:type:all_fields") }}</span>
 			</div>
 
 			<form id="search" action="/bib/basic-search">
@@ -122,13 +122,13 @@
 						</td>
 					</tr>
 				</table>
-				<table id="searchFormFulltext" class="hidden">
+				<table id="searchFormAllFields" class="hidden">
 					<tr>
 						<td>
-							<label for="fulltext">{{ _("search:labels:fulltext") }}:</label>
+							<label for="all_fields">{{ _("search:labels:all_fields") }}:</label>
 						</td>
 						<td>
-							<input id="fulltext" type="text" name="fulltext"/>
+							<input id="all_fields" type="text" name="all_fields"/>
 						</td>
 					</tr>
 				</table>

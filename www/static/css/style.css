@@ -123,7 +123,7 @@ table tr td {
 
 #searchToggleBasic,
 #searchToggleAdvanced,
-#searchToggleFulltext {
+#searchToggleAllFields {
 	font-size: 105%;
 	display: inline-block;
 	margin: 1px 2px;

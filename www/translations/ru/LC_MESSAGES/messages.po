@@ -114,8 +114,8 @@ msgstr "Простой"
 msgid "search:type:advanced"
 msgstr "Расширенный"
 
-msgid "search:type:fulltext"
-msgstr "Полнотекстовый"
+msgid "search:type:all_fields"
+msgstr "По всем полям"
 
 # Search labels
 msgid "search:labels:author"
@@ -151,7 +151,7 @@ msgstr "Доступно для скачивания"
 msgid "search:labels:origlanguage"
 msgstr "Переводное издание"
 
-msgid "search:labels:fulltext"
+msgid "search:labels:all_fields"
 msgstr "Строка для поиска"
 
 # Search: Language select options
