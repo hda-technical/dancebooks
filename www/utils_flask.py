@@ -1,3 +1,4 @@
+import http.client
 import functools
 import json
 import logging
@@ -69,19 +70,29 @@ def jsonify():
 		def wrapper(*args, **kwargs):
 			try:
 				data = func(*args, **kwargs)
-				response = flask.make_response(
-					json.dumps(data, ensure_ascii=False)
-				)
-				response.content_type = "application/json; charset=utf-8"
-				return response
-			except werkzeug.exceptions.HTTPException as ex:
-				data = {"result": "ERROR", "message": ex.description}
+				code = http.client.OK
 				response = flask.make_response(
 					json.dumps(data, ensure_ascii=False),
-					ex.code
+					code
 				)
-				response.content_type = "application/json; charset=utf-8"
-				return response
+			except werkzeug.exceptions.HTTPException as ex:
+				data = {"message": ex.description}
+				code = ex.code;
+				response = flask.make_response(
+					json.dumps(data, ensure_ascii=False),
+					code
+				)
+			except Exception as ex:
+				data = {"message": "Internal Server Error"}
+				code = http.client.INTERNAL_SERVER_ERROR
+				response = flask.make_response(
+					json.dumps(data, ensure_ascii=False),
+					code
+				)
+
+			response.content_type = "application/json; charset=utf-8"
+			return response
+
 
 		return wrapper
 	return real_decorator

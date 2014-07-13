@@ -148,12 +148,7 @@ class TestParser(unittest.TestCase):
 		rq = self.client.get(config.www.app_prefix + "/books/dodworth_1844_indian_hunter")
 		self.assertEqual(rq.status_code, http.client.OK)
 
-		rq = self.client.get(config.www.app_prefix + "/keywords")
-		self.assertEqual(rq.status_code, http.client.OK)
-		self.assertEqual(rq.content_type, "application/json; charset=utf-8")
-		json.loads(rq.data.decode())
-
-		rq = self.client.get(config.www.app_prefix + "/languages")
+		rq = self.client.get(config.www.app_prefix + "/options")
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "application/json; charset=utf-8")
 		json.loads(rq.data.decode())

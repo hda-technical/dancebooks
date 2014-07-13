@@ -32,8 +32,9 @@ for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
 
-languages = sorted(item_index["langid"].keys())
-keywords = set(item_index["keywords"].keys())
+langids = sorted(item_index["langid"].keys())
+all_keywords = list(item_index["keywords"].keys())
+filtered_keywords = list(item_index["keywords"].keys() - config.www.secret_keywords)
 source_files = sorted(item_index["source_file"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -209,32 +210,24 @@ def edit_book(book_id):
 	message = messenger.Message(book_id, from_email, from_name, message)
 	message.send()
 
-	return {"result": "OK", "message": babel.gettext("interface:report:thanks")}
+	return {"message": babel.gettext("interface:report:thanks")}
 
 
-@flask_app.route(config.www.app_prefix + "/languages", methods=["GET"])
+@flask_app.route(config.www.app_prefix + "/options", methods=["GET"])
 @utils_flask.jsonify()
-def get_languages():
-	return {
-		language:babel.gettext(const.BABEL_LANG_PREFIX + language)
-		for language in languages
-	}
-
-
-@flask_app.route(config.www.app_prefix + "/source-files", methods=["GET"])
-@utils_flask.jsonify()
-def get_source_files():
-	return source_files
-
-
-@flask_app.route(config.www.app_prefix + "/keywords", methods=["GET"])
 @utils_flask.check_secret_cookie()
-@utils_flask.jsonify()
-def get_keywords(show_secrets):
-	data = keywords
-	if not show_secrets:
-		data -= config.www.secret_keywords
-	return sorted(data)
+def get_options(show_secrets):
+	languages = [
+		(langid, babel.gettext(const.BABEL_LANG_PREFIX + langid))
+		for langid in langids
+	]
+	keywords = all_keywords if show_secrets else filtered_keywords
+
+	return {
+		"languages": languages,
+		"keywords": keywords,
+		"source_files": source_files
+	}
 
 
 @flask_app.route(config.www.app_prefix + "/rss/books", methods=["GET"])

@@ -102,30 +102,39 @@ function updateKeywords() {
 	$('input[name="keywords"]').val(keywords);
 }
 
+function trim(str) {
+	return str.trim();
+}
+
 function loadSearchParams() {
-	$.get('/bib/languages',
+	$.get('/bib/options',
 		function(data, textStatus, jqXHR) {
-			selected = extractFromLocation("langid");
+			languages = data['languages']
+			keywords = data['keywords']
+			source_files = data['source_files']
+
+			//setting languages select options
+			selectedLanguage = extractFromLocation("langid");
 			html = '';
-			for (lang in data) {
-				if (lang == selected) {
-					html += '<option value="' + lang + '" selected="selected">' + data[lang] + '</option>';
+			for (index in languages) {
+				languageKey = languages[index][0]
+				languageValue = languages[index][1]
+
+				if (languageKey == selectedLanguage) {
+					html += '<option value="' + languageKey + '" selected="selected">' + languageValue + '</option>';
 				} else {
-					html += '<option value="' + lang + '">' + data[lang] + '</option>';
+					html += '<option value="' + languageKey + '">' + languageValue + '</option>';
 				}
 			}
 			$('#langid option[value=""]').after(html);
 			$('#langid option[value="empty"]').remove();
-		}
-	)
 
-	$.get('/bib/source-files',
-		function(data, textStatus, jqXHR) {
-			selected = extractFromLocation("source_file");
+			//setting source file select options
+			selectedFile = extractFromLocation("source_file");
 			html = '';
-			for (index in data) {
-				sourceFile = data[index];
-				if (sourceFile == selected) {
+			for (index in source_files) {
+				sourceFile = source_files[index];
+				if (sourceFile == selectedFile) {
 					html += '<option value="' + sourceFile + '" selected="selected">' + sourceFile + '</option>';
 				} else {
 					html += '<option value="' + sourceFile + '">' + sourceFile + '</option>';
@@ -133,35 +142,24 @@ function loadSearchParams() {
 			}
 			$('#source_file option[value=""]').after(html);
 			$('#source_file option[value="empty"]').remove();
-		}
-	)
 
-	$.get('/bib/keywords',
-		function(data, textStatus, jXHR) {
-			keywords = extractFromLocation("keywords")
-			$('input[name="keywords"]').val(keywords);
-
-			keywords = keywords.split(",");
-			selected = new Array();
-
-			for (index in keywords) {
-				selected.push(keywords[index].trim());
-			}
+			//setting keywords select options
+			selectedKeywords = extractFromLocation("keywords").split(",").map(trim)
 			html = '';
-			for (index in data) {
+			for (index in keywords) {
 				id = 'keyword' + index;
-
-				html += '<input id="' + id + '" type="checkbox" onchange="updateKeywords()"';
-
-				keyword = data[index];
+				keyword = keywords[index];
 				//goddamn javascript doesn't have sets
-				if (selected.indexOf(keyword) != -1) {
-					html += ' checked="checked"';
+				if (selectedKeywords.indexOf(keyword) != -1) {
+					html += '<input id="' + id + '" type="checkbox" checked="checked" onchange="updateKeywords()"/>';
+				} else {
+					html += '<input id="' + id + '" type="checkbox" onchange="updateKeywords()"/>';
 				}
-				html += '/>';
 				html += '<label for="' + id + '">' + keyword + '</label>';
 			}
 			$('#keywordsChooser #keywordsHider').after(html);
+
+			updateKeywords();
 		}
 	)
 
