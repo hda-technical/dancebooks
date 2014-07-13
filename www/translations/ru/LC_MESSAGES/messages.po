@@ -137,10 +137,10 @@ msgid "search:labels:source_file"
 msgstr "Исходный файл"
 
 msgid "search:labels:publisher"
-msgstr "Место издания"
+msgstr "Издатель"
 
 msgid "search:labels:location"
-msgstr "Place of publication"
+msgstr "Место издания"
 
 msgid "search:labels:keywords"
 msgstr "Теги"
