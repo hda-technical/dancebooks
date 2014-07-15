@@ -202,9 +202,9 @@ $(document).ready(function() {
 })
 
 function clearSearchForm(form) {
-	form.children('input').val('');
-	form.children('select').val('');
-	form.children('input[type="checkbox"]').prop('checked', false);
+	form.find('input').val('');
+	form.find('select').val('');
+	form.find('input[type="checkbox"]').prop('checked', false);
 }
 
 function clearSearchForms() {
