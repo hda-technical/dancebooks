@@ -98,6 +98,13 @@ def jsonify():
 	return real_decorator
 
 
+def jinja_author_link(author):
+	return "<a href={basic_search}?author={author}>{author}</a>".format(
+		basic_search=config.www.basic_search_url,
+		author=author
+	)
+
+
 class _DefaultValue(object):
 	pass
 

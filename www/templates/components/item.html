@@ -19,7 +19,8 @@
 	"annotation",
 ] %}
 {% for param in fields %}
-{% if param in ["filename", "added_on", "url"] %}
+{# Some parameters require specific treatment #}
+{% if param in ["filename", "author", "added_on", "url"] %}
 {% set value = item.get(param) %}
 {% else %}
 {% set value = item.get_as_string(param) %}
@@ -31,9 +32,11 @@
 			<div class="bib_item_right">
 {% if param == "id" %}
 				<a href="/bib/books/{{ value }}">{{ value }}</a>
+{% elif param == "author" %}
+				{{ value|map("author_link")|map("safe")|join(", ") }}
 {% elif param == "url" %}
 				<ul>
-{% for single_url in value %}
+{% for url in value %}
 					<li><a href="{{ single_url }}">{{ single_url }}</a></li>
 {% endfor %}
 				</ul>

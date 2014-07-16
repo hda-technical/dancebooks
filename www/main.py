@@ -44,6 +44,7 @@ babel_app = babel.Babel(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
+flask_app.jinja_env.filters["author_link"] = utils_flask.jinja_author_link
 
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
 
