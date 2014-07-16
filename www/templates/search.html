@@ -5,7 +5,7 @@
 {% include "components/choose-lang.html" %}
 {% include "components/header.html" %}
 {% if found_items %}
-		<h2>{{ ngettext("found %(num)d entry", "found %(num)d entries", found_items|length) }}.</h2>
+		<h2>{{ ngettext("interface:found_entries", "interface:found_entries", found_items|length) }}.</h2>
 {% else %}
 		<h2>{{ _("interface:found_none") }}.</h2>
 {% endif %}
