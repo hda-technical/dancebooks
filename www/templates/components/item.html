@@ -51,7 +51,7 @@
 {% elif param == "series" %}
 {% set extra_value = item.get("number") %}
 {% if extra_value %}
-				{{ value }} {{ _("number") }}{{ extra_value }}
+				{{ value }} {{ _("item:labels:number") }}{{ extra_value }}
 {% else %}
 				{{ value }}
 {% endif %}
