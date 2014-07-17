@@ -99,9 +99,16 @@ def jsonify():
 
 
 def jinja_author_link(author):
-	return '<a href="{basic_search}?author={author}">{author}</a>'.format(
-		basic_search=config.www.basic_search_url,
+	return '<a href="{path}?author={author}">{author}</a>'.format(
+		path=config.www.basic_search_url,
 		author=author
+	)
+
+
+def jinja_keyword_link(keyword):
+	return '<a href="{path}?keywords={keyword}">{keyword}</a>'.format(
+		path=config.www.advanced_search_url,
+		keyword=keyword
 	)
 
 

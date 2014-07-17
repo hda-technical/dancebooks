@@ -118,6 +118,8 @@ class WwwConfig(object):
 			raise ValueError("app_prefix param wasn't found")
 		self.app_prefix = params["app_prefix"]
 		self.basic_search_url = self.app_prefix + "/basic-search"
+		self.advanced_search_url = self.app_prefix + "/advanced-search"
+		self.all_fields_search_url = self.app_prefix + "/all-fields-search"
 
 		if "search_params" not in params:
 			raise ValueError("search_params param wasn't found")

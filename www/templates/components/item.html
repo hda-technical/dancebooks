@@ -20,7 +20,7 @@
 ] %}
 {% for param in fields %}
 {# Some parameters require specific treatment #}
-{% if param in ["filename", "author", "added_on", "url"] %}
+{% if param in ["filename", "author", "added_on", "url", "keywords"] %}
 {% set value = item.get(param) %}
 {% else %}
 {% set value = item.get_as_string(param) %}
@@ -34,6 +34,8 @@
 				<a href="/bib/books/{{ value }}">{{ value }}</a>
 {% elif param == "author" %}
 				{{ value|map("author_link")|map("safe")|join(", ") }}
+{% elif param == "keywords" %}
+				{{ value|map("keyword_link")|map("safe")|join(", ") }}
 {% elif param == "url" %}
 				<ul>
 {% for url in value %}
