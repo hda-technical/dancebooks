@@ -18,6 +18,17 @@
 	"note",
 	"annotation",
 ] %}
+
+{% set useless_keywords = [
+	"reissue",
+	"transcription",
+	"research",
+	"commentary"
+	"facsimile"
+]|as_set %}
+{% set keywords_warn_min_year = 1800 %}
+{% set keywords_warn_max_year = 1900 %}
+
 {% for param in fields %}
 {# Some parameters require specific treatment #}
 {% if param in ["filename", "author", "added_on", "url", "keywords"] %}
@@ -70,4 +81,19 @@
 {% endif %}
 {% endif %} {# secrets filtering: end #}
 {% endfor %}
+
+{% set keywords = (item.get("keywords") or [])|as_set %}
+{% set year_from = item.get("year_from") %}
+{% set year_to = item.get("year_to") %}
+{% if (
+	(
+		(year_from < keywords_warn_max_year) and
+		(year_to > keywords_warn_min_year)
+	) and
+	(keywords - useless_keywords)|length == 0
+) %}
+			<div class="center warn">
+				{{ _("interface:no_keywords")|safe }}
+			</div>
+{% endif %}
 

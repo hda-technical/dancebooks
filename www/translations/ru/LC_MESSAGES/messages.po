@@ -41,6 +41,13 @@ msgstr "или воспользоваться поиском"
 msgid "interface:title"
 msgstr "Библиография танцевальных источников"
 
+msgid "interface:no_keywords"
+msgstr ""
+	"У этой записи нет осмысленных тегов.<br/>\n"
+	"Пожалуйста, воспользуйтесь формой отправки сообщения, чтобы добавить их.<br/>\n"
+	"Излишне заумный список ключевых слов можно найти "
+	"<a href='/bib/keywords.html'>здесь</a>."
+
 # Buttons
 msgid "interface:buttons:search"
 msgstr "Искать"
@@ -50,6 +57,57 @@ msgstr "Сбросить"
 
 msgid "interface:buttons:send"
 msgstr "Отправить"
+
+# Pages: keywords
+msgid "pages:keywords:title"
+msgstr "Излишне заумный список тегов"
+
+msgid "pages:keywords:bold"
+msgstr "Присутствующие в базе теги помечены жирным"
+
+msgid "pages:keywords:edits"
+msgstr "Преложения по улучшению списка можно слать на"
+
+msgid "pages:keywords:xxi"
+msgstr "Теги, связанные с танцами XIX века"
+
+msgid "pages:keywords:extras"
+msgstr "Дополнительные теги"
+
+msgid "pages:keywords:country-dance"
+msgstr "Теги, связанные с контрдансами"
+
+msgid "pages:keywords:references"
+msgstr "Примечания"
+
+msgid "pages:keywords:ref:waltz-sautese"
+msgstr "Любой прыгающий вальс"
+
+msgid "pages:keywords:ref:polka"
+msgstr "В том числе вариации, например, Эсмеральда"
+
+msgid "pages:keywords:ref:polka-mazurka"
+msgstr "В том числе вариации, например, варсовиана или полька-редова"
+
+msgid "pages:keywords:ref:boston"
+msgstr "В том числе бостон-дип"
+
+msgid "pages:keywords:ref:sequence"
+msgstr "Круговые танцы, содержащие несколько шагов или фигур"
+
+msgid "pages:keywords:ref:circle"
+msgstr "Кадрили замкнутые в круг. Например, черкесский или сицилийский круги"
+
+msgid "pages:keywords:ref:dance-instruction"
+msgstr "Источники содержащие описания позиций, упражнения и т. д."
+
+# Pages: persimmon
+msgid "pages:persimmon:verse"
+msgstr ""
+	"Мы танцевали до упаду<br/>\n"
+	"Лезгинку, польку и хурму.<br/>\n"
+	"Я до сих пор не понимаю,<br/>\n"
+	"Как мог хурму я танцевать?<br/>\n"
 
 # Common
 msgid "common:Yes"

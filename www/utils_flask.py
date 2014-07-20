@@ -111,6 +111,8 @@ def jinja_keyword_link(keyword):
 		keyword=keyword
 	)
 
+def jinja_as_set(value):
+	return set(value)
 
 class _DefaultValue(object):
 	pass

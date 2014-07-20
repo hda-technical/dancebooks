@@ -41,6 +41,64 @@ msgstr "use the search"
 msgid "interface:title"
 msgstr "Dancing books bibliography"
 
+msgid "interface:no_keywords"
+msgstr ""
+	"This item has no sensible keywords.<br/>\n"
+	"Consider adding them via report form.<br/>\n"
+	"A comprehensive keyword list can be found "
+	"<a href='/bib/keywords.html'>here</a>."
+
+# Pages: keywords
+msgid "pages:keywords:title"
+msgstr "A comprehensive keyword list"
+
+msgid "pages:keywords:bold"
+msgstr "Keywords already present in database are marked in bold"
+
+msgid "pages:keywords:edits"
+msgstr "You can send edits to the list to"
+
+msgid "pages:keywords:xxi"
+msgstr "Keywords for the 19th century books"
+
+msgid "pages:keywords:extras"
+msgstr "Extra information keywords"
+
+msgid "pages:keywords:country-dance"
+msgstr "Country dances / contredanses related keywords"
+
+msgid "pages:keywords:references"
+msgstr "References"
+
+msgid "pages:keywords:ref:waltz-sautese"
+msgstr "Any kind of sautese"
+
+msgid "pages:keywords:ref:polka"
+msgstr "Including variations like Esmeralda"
+
+msgid "pages:keywords:ref:polka-mazurka"
+msgstr "Including variations like varsovienne and polka-redowa"
+
+msgid "pages:keywords:ref:boston"
+msgstr "Including boston dip"
+
+msgid "pages:keywords:ref:sequence"
+msgstr "Round dances containing more that one figure or step"
+
+msgid "pages:keywords:ref:circle"
+msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
+
+msgid "pages:keywords:ref:dance-instruction"
+msgstr "When source contains positions description, exercises etc."
+
+# Pages: persimmon
+msgid "pages:persimmon:verse"
+msgstr ""
+	"We danc'd till we were very tired:<br/>\n"
+	"Lezginka, polka, persimmon.<br/>\n"
+	"I can not understand the nonsence:<br/>\n"
+	"How could I persimmon have danced?<br/>\n"
+
 # Buttons
 msgid "interface:buttons:search"
 msgstr "Search"
