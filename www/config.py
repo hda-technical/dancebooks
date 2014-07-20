@@ -148,10 +148,6 @@ class WwwConfig(object):
 			raise ValueError("secret_cookie_value wasn't found")
 		self.secret_cookie_value = params["secret_cookie_value"]
 
-		if "secret_keywords" not in params:
-			raise ValueError("secret_keywords wasn't found")
-		self.secret_keywords = set(json.loads(params["secret_keywords"]))
-
 		if "date_formats" not in params:
 			raise ValueError("date_formats param wasn't found")
 		self.date_formats = json.loads(params["date_formats"])

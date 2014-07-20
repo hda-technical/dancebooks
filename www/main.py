@@ -33,8 +33,7 @@ for item in items:
 item_index.update(items)
 
 langids = sorted(item_index["langid"].keys())
-all_keywords = list(item_index["keywords"].keys())
-filtered_keywords = list(item_index["keywords"].keys() - config.www.secret_keywords)
+keywords = list(item_index["keywords"].keys())
 source_files = sorted(item_index["source_file"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -224,7 +223,6 @@ def get_options(show_secrets):
 		(langid, babel.gettext(const.BABEL_LANG_PREFIX + langid))
 		for langid in langids
 	]
-	keywords = all_keywords if show_secrets else filtered_keywords
 
 	return {
 		"languages": languages,

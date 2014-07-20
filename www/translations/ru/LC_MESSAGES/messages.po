@@ -101,6 +101,12 @@ msgstr "Кадрили замкнутые в круг. Например, чер�
 msgid "pages:keywords:ref:dance-instruction"
 msgstr "Источники содержащие описания позиций, упражнения и т. д."
 
+msgid "pages:keywords:ref:commentary"
+msgstr "В книге есть вступительная статья"
+
+msgid "pages:keywords:ref:markdown"
+msgstr "Транскрипция выложена в <a href=\"https://github.com/georgthegreat/dancebooks-bibtex/wiki/Transcriptions\">wiki</a>"
+
 # Pages: persimmon
 msgid "pages:persimmon:verse"
 msgstr ""

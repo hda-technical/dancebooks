@@ -99,7 +99,8 @@ ol.decimal {
 }
 
 .sup {
-	font-size: 80%;
+	font-size: 70%;
+	font-weight: 400;
 	vertical-align: super;
 }
 

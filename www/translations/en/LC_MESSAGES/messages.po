@@ -91,6 +91,12 @@ msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-
 msgid "pages:keywords:ref:dance-instruction"
 msgstr "When source contains positions description, exercises etc."
 
+msgid "pages:keywords:ref:commentary"
+msgstr "Introductory article is present in the book"
+
+msgid "pages:keywords:ref:markdown"
+msgstr "Digital transcription available in <a href=\"https://github.com/georgthegreat/dancebooks-bibtex/wiki/Transcriptions\">wiki</a>"
+
 # Pages: persimmon
 msgid "pages:persimmon:verse"
 msgstr ""
