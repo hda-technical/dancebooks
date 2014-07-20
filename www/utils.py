@@ -114,6 +114,7 @@ def extract_metadata_from_file(path):
 	* author ([string])
 	* title (string)
 	* tome (integer)
+	* number (integer)
 	* edition (integer)
 	* part (integer)
 	* keywords ([string])
@@ -151,6 +152,10 @@ def extract_metadata_from_file(path):
 	part = match.group("part")
 	if part is not None:
 		result["part"] = int(part)
+		
+	number = match.group("number")
+	if number is not None:
+		result["number"] = int(number)
 	
 	keywords = match.group("keywords")
 	if keywords is not None:
@@ -170,6 +175,7 @@ def create_search_from_metadata(metadata):
 	title = metadata["title"]
 	author = metadata.get("author", None)
 	tome = metadata.get("tome", None)
+	number = metadata.get("number", None)
 	edition = metadata.get("edition", None)
 	part = metadata.get("part", None)
 	#keywords = metadata.get("keywords", None)
@@ -216,6 +222,13 @@ def create_search_from_metadata(metadata):
 			edition
 		)
 		searches.append(search_for_edition)
+		
+	if number is not None:
+		search_for_number = search.search_for_eq(
+			"number",
+			number
+		)
+		searches.append(search_for_number)
 		
 	if part is not None:
 		search_for_part = search.search_for_eq(

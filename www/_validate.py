@@ -54,6 +54,8 @@ def main(
 	#don't validate filename for the given entrytypes
 	MULTIENTRY_BOOKTYPES = {"proceedings", "inproceedings"}
 	SHORTHAND_LIMIT = 25
+	
+	PERIODICAL_BOOKTYPES = {"periodical"}
 
 	#magic constant
 	NON_ORIGINAL_KEYWORDS = {"reissue", "research"}
@@ -67,7 +69,7 @@ def main(
 		errors = []
 		#datamodel validation
 		author = item.get("author")
-		booktype = item.get("booktype")
+		booktype = item.get("booktype").lower()
 		booktitle = item.get("booktitle")
 		commentator = item.get("commentator")
 		edition = item.get("edition")
@@ -127,7 +129,7 @@ def main(
 				errors.append("'origauthor' must be present for translations")
 		
 		series_obligatory = [series, number]
-		if not utils.all_or_none(series_obligatory):
+		if not utils.all_or_none(series_obligatory) and (booktype not in PERIODICAL_BOOKTYPES):
 			errors.append("All of [series, number] must be present for serial books")
 		
 		if not any([author, shorthand]):
@@ -226,6 +228,11 @@ def main(
 					
 				if not utils.all_or_none([metadata.get("tome", None), any([volume, volumes])]):
 					errors.append("File {filename_} and entry have different volume specifications".format(
+						filename_=filename_
+					))	
+					
+				if not utils.all_or_none([metadata.get("number", None), number]) and not series:
+					errors.append("File {filename_} and entry have different number specifications".format(
 						filename_=filename_
 					))
 				
