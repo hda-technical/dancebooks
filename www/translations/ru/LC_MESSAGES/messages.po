@@ -80,6 +80,12 @@ msgstr "Теги, связанные с контрдансами"
 msgid "pages:keywords:references"
 msgstr "Примечания"
 
+msgid "pages:keywords:ref:quadrille"
+msgstr "Любая кадриль (добавляйте, если ставите любой кадрильный тег)"
+
+msgid "pages:keywords:ref:waltz"
+msgstr "Любой вальс (добавляйте, если ставите любой вальсовый тег)"
+
 msgid "pages:keywords:ref:waltz-sautese"
 msgstr "Любой прыгающий вальс"
 

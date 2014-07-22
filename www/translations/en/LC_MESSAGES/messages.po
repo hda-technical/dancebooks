@@ -70,6 +70,12 @@ msgstr "Country dances / contredanses related keywords"
 msgid "pages:keywords:references"
 msgstr "References"
 
+msgid "pages:keywords:ref:quadrille"
+msgstr "Any quadrille (add it when adding any other quadrille tag)"
+
+msgid "pages:keywords:ref:waltz"
+msgstr "Any kind of waltz (add it when adding any other waltzing tag)"
+
 msgid "pages:keywords:ref:waltz-sautese"
 msgstr "Any kind of sautese"
 
