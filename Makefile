@@ -114,8 +114,7 @@ www-distclean:
 	rm -rf www/__pycache__ www/tests/__pycache__
 
 requirements.txt: .PHONY
-	pip freeze --local > $@
-	cat $@
+	pip freeze --local | sort --ignore-case | tee $@
 
 .PHONY:;
 
