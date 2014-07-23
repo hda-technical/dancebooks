@@ -54,7 +54,7 @@ function tiles()
 	if [ $# -ne 5 ]
 	then
 		echo "Usage: $0 urlGenerator fileGenerator pageId zoom outputDir"
-		exit 1
+		return
 	fi
 	
 	local WGET_HTTP_ERROR=8
@@ -119,7 +119,7 @@ function rsl()
 	if [ $# -ne 1 ]
 	then
 		echo "Usage: $0 book_id"
-		exit 1
+		return
 	fi
 	
 	local BOOK_ID=$1
@@ -132,7 +132,7 @@ function haithi()
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 book_id page_count"
-		exit 1
+		return
 	fi
 	
 	local BOOK_ID=$1
@@ -157,7 +157,7 @@ function gallicaTileFile()
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 x y"
-		exit 1
+		return
 	fi
 	
 	local TILE_X=$1
@@ -171,7 +171,7 @@ function gallicaTilesUrl()
 	if [ $# -ne 4 ]
 	then
 		echo "Usage: $0 ark_id x y z"
-		exit 1
+		return
 	fi
 	
 	local BOOK_ID=$1
@@ -191,7 +191,7 @@ function dusseldorfTileFile()
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 x y"
-		exit 1
+		return
 	fi
 	
 	local TILE_X=$1
@@ -207,7 +207,7 @@ function dusseldorfTilesUrl()
 	if [ $# -ne 4 ]
 	then 
 		echo "Usage: $0 image_id x y z"
-		exit 1
+		return
 	fi
 	
 	local IMAGE_ID=$1
@@ -226,7 +226,7 @@ function gallicaTiles()
 	if [ $# -ne 1 ]
 	then
 		echo "Usage:  $0 ark_id"
-		exit 1
+		return
 	fi
 	
 	local BOOK_ID=$1
@@ -240,7 +240,7 @@ function dusseldorfTiles()
 	if [ $# -ne 1 ]
 	then
 		echo "Usage: $0 image_id"
-		exit 1
+		return
 	fi
 	local BOOK_ID=$1
 	local ZOOM=6
