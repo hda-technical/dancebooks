@@ -91,9 +91,9 @@
 							<label for="keywords">{{ _("search:labels:keywords") }}:</label>
 						</td>
 						<td>
-							<input id="keywords" type="text" readonly="readonly" name="keywords" onfocus="showKeywordsChooser()"/>
+							<input id="keywords" type="text" readonly="readonly" name="keywords"/>
 							<div id="keywordsChooser" style="display: none;">
-								<span id="keywordsHider" onclick="hideKeywordsChooser()">▲</span>
+								<span id="keywordsHider">▲</span>
 							</div>
 						</td>
 					</tr>
@@ -153,6 +153,6 @@
 				</table>
 			</form>
 			<div class="center">
-				<button onclick="submitSearchForm()">{{ _("interface:buttons:search") }}</button>
-				<button onclick="clearSearchForms()">{{ _("interface:buttons:clear") }}</button>
+				<button id="submitSearch">{{ _("interface:buttons:search") }}</button>
+				<button id="clearSearch">{{ _("interface:buttons:clear") }}</button>
 			</div>

@@ -8,6 +8,31 @@
 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="/bib/js/script.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				bib.utils.init();
+				bib.search.init();
+				bib.report.init();
+			});
+		</script>
+
+		<!--script type="text/javascript" src="http://addyosmani.github.io/basket.js/dist/basket.full.min.js"></script-->
+		<!--script type="text/javascript">
+			basket.require(
+				{ url: "http://code.jquery.com/jquery-2.1.1.min.js", key: "jquery" },
+				{ url: "/bib/js/script.js", unique: bib.VERSION }
+			).then(
+				function() {
+					console.log("magic");
+					bib.view.init();
+				},
+				function (error) {
+					console.log("Got error");
+					console.log(error);
+				}
+			);
+		</script-->
+
 		<link rel="search" type="application/opensearchdescription+xml" href="/bib/files/search-author.xml" title="bib.hda.org.ru by author"/>
 		<link rel="search" type="application/opensearchdescription+xml" href="/bib/files/search-title.xml" title="bib.hda.org.ru by title"/>
 		<title>{{ _("interface:title") }}</title>

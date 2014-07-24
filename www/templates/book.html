@@ -8,7 +8,7 @@
 		<div class="content">
 {% include "components/item.html" %}
 			<div class="center">
-				<span class="action" id="bugReport" onclick="toggleReportForm()">{{ _("interface:report:title") }}</span>
+				<span class="action" id="reportFormToggle">{{ _("interface:report:title") }}</span>
 			</div>
 			<div id="reportForm" class="center hidden">
 				<form action="/bib/books/{{ item.id() }}" method="post">
@@ -33,7 +33,7 @@
 						</tr>
 					</table>
 				</form>
-				<button onclick="sendReportForm()">{{ _("interface:buttons:send") }}</button>
+				<button id="reportFormSubmitter">{{ _("interface:buttons:send") }}</button>
 			</div>
 			<hr/>
 {% include "components/footer.html" %}

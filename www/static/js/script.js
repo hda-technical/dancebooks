@@ -1,279 +1,529 @@
-var SearchType = {
-	Basic: 0,
-	Advanced: 1,
-	AllFields: 2
-};
+var bib = {
+	VERSION: "{{ config.version }}",
+	BASKET_EXPIRE: 7 * 24, /* 7 days */
 
-var env = {
-	searchToggleBasic: null,
-	searchToggleAdvanced: null,
-	serachToggleAllFields: null,
+	SearchType: {
+		Undefined: -1,
+		Basic: 0,
+		Advanced: 1,
+		AllFields: 2
+	},
 
-	searchFormBasic: null,
-	searchFormAdvanced: null,
-	searchFormAllFields: null,
-
-	searchType: SearchType.Basic,
-
-	searchTypeToPath: [
+	SEARCH_PATHS: [
 		'/bib/basic-search',
 		'/bib/advanced-search',
 		'/bib/all-fields-search'
-	]
+	],
 };
 
-function submitSearchForm() {
-	this.disabled = 'disabled'
-	search = $('#search input[type!="checkbox"], #search select').filter(function(index) {
-		return (
-			(this.value.length != 0) ||
-			($(this).is(':invalid'))
-		);
-	}).map(function(index) {
-		return (this.name + '=' + encodeURIComponent(this.value));
-	}).get().join("&");
+bib.utils = function() {
+	//privates
+	//publics
+	return {
+		init: function() {
+		},
 
-	if (search.length != 0) {
-		searchPath = env.searchTypeToPath[env.searchType];
-		document.location = searchPath + '?' + search;
-	}
-}
+		hide: function(item) {
+			item.addClass('hidden');
+		},
 
-function sendReportForm() {
-	this.disabled = 'disabled'
-	data = $('#reportForm textarea, #reportForm input').filter(function(index) {
-		return (
-			(this.value.length != 0) ||
-			($(this).is(':invalid'))
-		);
-	}).map(function(index) {
-		return (this.name + '=' + this.value);
-	}).get().join("&");
+		show: function(item) {
+			item.removeClass('hidden')
+		},
 
-	$.post(
-		window.location,
-		data,
-		function(data, textStatus, jqXHR) {
-			$('#submitMessage').remove()
-			html = '<h2 id="submitMessage">' + data['message'] + '</h2>';
-			$('#reportForm').fadeToggle();
-			$('#bugReport').fadeToggle();
-			$('#reportForm').after(html);
+		activateAction: function(item) {
+			item.addClass('action');
+		},
+
+		deactivateAction: function(item) {
+			item.removeClass('action');
+		},
+
+		/*
+		 * Extracts key from location
+		 * @param key: key to extract
+		 */
+		extractFromLocation: function(key) {
+			var regexp = new RegExp('[&\\?]' + key + '=([^&]*)');
+			var match = regexp.exec(window.location.search);
+			if (match != null) {
+				return decodeURIComponent(match[1] || "");
+			} else {
+				return '';
+			}
+		},
+
+		/*
+		 * Creates text element of type elem,
+		 *   adds specified text content,
+		 *   and sets given attrs (of text->text mapping type)
+		 */
+		makeTextElement: function(elem, content, attrs) {
+			var element = document.createElement(elem);
+			$(element).html(content);
+			for (attr in attrs) {
+				value = attrs[attr];
+				$(element).attr(attr, value);
+			}
+			return element;
+		},
+
+		trim: function(str) {
+			return str.trim();
+		},
+
+		/*
+		 * Expects 'this' as the current DOM element
+		 */
+		isValid: function() {
+			//javascript guaranties valid element value to be non-empty
+			return (this.value.length > 0);
+		},
+
+		/*
+		 * Expecteds 'this' as the current DOM element
+		 */
+		isInvalid: function() {
+			//javascript guaranties invalid element value to be empty
+			//$(this).is(':invalid');
+			return false;
+		},
+
+		isEmptyOrInvalid: function() {
+			return (this.value.length == 0) || bib.utils.isInvalid();
+		},
+
+		/*
+		 * Makes search string (form post data)
+		 */
+		makeSearchString: function(attrs) {
+			var result = []
+			for (key in attrs) {
+				result.push(key + "=" + encodeURIComponent(attrs[key]));
+			}
+			return result.join("&");
+		},
+
+		/*
+		 * Dumps object to console
+		 */
+		dumpObject: function(obj) {
+			for (key in obj) {
+				console.log(key + ': ' + obj[key]);
+			};
+		},
+	};
+}();
+
+bib.report = function() {
+	//privates
+	var reportForm = null;
+	var reportFormToggle = null;
+	var reportFormSubmitter = null;
+
+	var inputs = null;
+
+	var sendReportForm = function() {
+		var invalids = inputs.filter(bib.utils.isEmptyOrInvalid);
+		if (invalids.length > 0) {
+			return;
 		}
-	).fail(function(jqXHR) {
-		$('#submitMessage').remove()
-		html = '<h2 id="submitMessage" style="color: #ff0000;">' + jqXHR.responseJSON['message'] + '</h2>';
-		$('#reportForm').after(html);
-	})
-}
+		reportFormSubmitter.attr("disabled", "disabled");
+		var data = {};
+		inputs.filter(bib.utils.isValid)
+			.map(function(index) {
+				data[this.name] = this.value;
+			});
 
-function toggleReportForm() {
-	$('#reportForm').slideToggle();
-}
-
-function showKeywordsChooser() {
-	$('#keywordsChooser').slideDown();
-}
-
-function hideKeywordsChooser() {
-	$('#keywordsChooser').slideUp();
-	return false;
-}
-
-function extractFromLocation(key) {
-	var regexp = new RegExp('[&\\?]' + key + '=([\^&]*)');
-	match = regexp.exec(window.location.search);
-	if (match != null) {
-		return decodeURIComponent(match[1] || "");
-	} else {
-		return '';
+		bib.server.postBugReport(
+			data,
+			//to be called on success
+			function(data) {
+				$('#submitMessage').remove();
+				var message = bib.utils.makeTextElement(
+					"h2",
+					data['message'],
+					{
+						id: "submitMessage"
+					}
+				);
+				reportFormToggle.fadeToggle();
+				reportForm.fadeToggle();
+				reportForm.after(message);
+			},
+			//to be called in case of fail
+			function(data) {
+				reportFormSubmitter.removeAttr("disabled");
+				$('#submitMessage').remove();
+				var message = bib.utils.makeTextElement(
+					"h2",
+					data["message"],
+					{
+						id: "submitMessage",
+						style: "color: #ff0000;"
+					}
+				);
+				reportForm.after(message);
+			}
+		)
 	}
-}
 
-function setInputFromLocation() {
-	value = extractFromLocation(this.name);
-		this.value = value;
-}
+	//publics
+	return {
+		init: function() {
+			reportForm = $('#reportForm');
+			reportFormToggle = $('#reportFormToggle');
+			inputs = reportForm.find("textarea, input");
 
-function updateKeywords() {
-	keywords = $('#keywordsChooser input[type="checkbox"]:checked + label').map(function(index) {
-		return $(this).html();
-	}).get().join(", ");
-	$('input[name="keywords"]').val(keywords);
-}
+			reportFormToggle.click(function() {
+				reportForm.slideToggle();
+			});
 
-function trim(str) {
-	return str.trim();
-}
+			reportFormSubmitter = $("#reportFormSubmitter");
+			reportFormSubmitter.click(sendReportForm);
 
-function loadSearchParams() {
-	$.get('/bib/options',
-		function(data, textStatus, jqXHR) {
-			languages = data['languages']
-			keywords = data['keywords']
-			source_files = data['source_files']
-
-			//setting languages select options
-			selectedLanguage = extractFromLocation("langid");
-			html = '';
-			for (index in languages) {
-				languageKey = languages[index][0]
-				languageValue = languages[index][1]
-
-				if (languageKey == selectedLanguage) {
-					html += '<option value="' + languageKey + '" selected="selected">' + languageValue + '</option>';
-				} else {
-					html += '<option value="' + languageKey + '">' + languageValue + '</option>';
+			var reportInput = $('#reportForm input');
+			reportInput.keyup(function(event) {
+				if (event.keyCode == 0x0D) {
+					sendReportForm();
 				}
-			}
-			$('#langid option[value=""]').after(html);
-			$('#langid option[value="empty"]').remove();
+			});
+		},
+	};
+}();
 
-			//setting source file select options
-			selectedFile = extractFromLocation("source_file");
-			html = '';
-			for (index in source_files) {
-				sourceFile = source_files[index];
+bib.search = function() {
+	//privates
+	var searchType = bib.SearchType.Basic;
+
+	var searchButton = null;
+
+	var searchFormBasic = null;
+	var searchFormAdvanced = null;
+	var searchFormAllFields = null;
+
+	var searchToggeBasic = null;
+	var searchToggleAdvanced = null;
+	var searchToggleAllFields = null;
+	var searchToggles = null;
+
+	var inputs = null;
+	var keywordsChooser = null;
+	var keywordsInput = null;
+
+	/*
+	 * Clears searchForm by
+	 *   setting input and select values to empty string,
+	 *   unchecking all checkboxes
+	 * @param form: jQuery collection of forms to be cleared
+	 */
+	var clearForm = function(form) {
+		form.find('input').val('');
+		form.find('select').val('');
+		form.find('input[type="checkbox"]').prop('checked', false);
+	};
+
+	/*
+	 * Fills input (passed as this) from window.location
+	 * Intended to be passed to jQuery.map
+	 */
+	var fillFromLocation = function() {
+		this.value = bib.utils.extractFromLocation(this.name);
+	};
+
+	var switchToBasicSearch = function() {
+		searchType = bib.SearchType.Basic;
+		switchSearchForms();
+	};
+
+	var switchToAdvancedSearch = function() {
+		searchType = bib.SearchType.Advanced;
+		switchSearchForms();
+	};
+
+	var switchToAllFieldsSearch = function() {
+		searchType = bib.SearchType.AllFields;
+		switchSearchForms();
+	};
+
+	/*
+	 * Switches between search forms, clears unused data
+	 */
+	var switchSearchForms = function() {
+		var toClear = null;
+		var toHide = null;
+		var toShow = null;
+		var toActivate = null;
+		var toDeactivate = null;
+
+		if (searchType == bib.SearchType.Undefined) {
+			return;
+		} else if (searchType == bib.SearchType.Basic) {
+			toShow = [searchFormBasic]
+			toHide = [searchFormAdvanced, searchFormAllFields];
+			toActivate = [searchToggleAdvanced, searchToggleAllFields];
+			toDeactivate = [searchToggleBasic];
+
+			searchToggleBasic.off('click');
+			searchToggleAdvanced.click(switchToAdvancedSearch);
+			searchToggleAllFields.click(switchToAllFieldsSearch);
+		} else if (searchType == bib.SearchType.Advanced) {
+			//don't clear basic search form
+			toShow = [searchFormBasic, searchFormAdvanced];
+			toHide = [searchFormAllFields];
+			toActivate = [searchToggleBasic, searchToggleAllFields];
+			toDeactivate = [searchToggleAdvanced];
+
+			searchToggleAdvanced.off('click');
+			searchToggleBasic.click(switchToBasicSearch);
+			searchToggleAllFields.click(switchToAllFieldsSearch);
+		} else if (searchType == bib.SearchType.AllFields) {
+			toShow = [searchFormAllFields];
+			toHide = [searchFormBasic, searchFormAdvanced];
+			toActivate = [searchToggleBasic, searchToggleAdvanced];
+			toDeactivate = [searchToggleAllFields];
+
+			searchToggleAllFields.off('click');
+			searchToggleBasic.click(switchToBasicSearch);
+			searchToggleAdvanced.click(switchToAdvancedSearch);
+		}
+
+		toHide.forEach(clearForm);
+		toHide.forEach(bib.utils.hide);
+		toShow.forEach(bib.utils.show);
+		toActivate.forEach(bib.utils.activateAction);
+		toDeactivate.forEach(bib.utils.deactivateAction);
+	};
+
+	var fillLanguages = function(languages) {
+		//setting languages select options
+		var selectedLanguage = bib.utils.extractFromLocation("langid");
+		var options = []
+		for (index in languages) {
+			var languageKey = languages[index][0];
+			var languageValue = languages[index][1];
+			var attrs = {
+				"value": languageKey
+			}
+			if (languageKey == selectedLanguage) {
+				attrs["selected"] = "selected";
+			}
+			var option = bib.utils.makeTextElement(
+				"option",
+				languageValue,
+				attrs
+			)
+			options.push(option);
+		}
+		$('#langid option[value=""]').after(options);
+		$('#langid option[value="empty"]').remove();
+	};
+
+	var fillSourceFiles = function(sourceFiles) {
+			var selectedFile = bib.utils.extractFromLocation("source_file");
+			var options = [];
+			for (index in sourceFiles) {
+				var sourceFile = sourceFiles[index];
+				var attrs = {
+					"value": sourceFile
+				};
 				if (sourceFile == selectedFile) {
-					html += '<option value="' + sourceFile + '" selected="selected">' + sourceFile + '</option>';
-				} else {
-					html += '<option value="' + sourceFile + '">' + sourceFile + '</option>';
+					attrs["selected"] = "selected";
 				}
+				var option = bib.utils.makeTextElement(
+					"option",
+					sourceFile,
+					attrs
+				)
+				options.push(option);
 			}
-			$('#source_file option[value=""]').after(html);
+			$('#source_file option[value=""]').after(options);
 			$('#source_file option[value="empty"]').remove();
 
-			//setting keywords select options
-			selectedKeywords = extractFromLocation("keywords").split(",").map(trim)
-			html = '';
-			for (index in keywords) {
-				id = 'keyword' + index;
-				keyword = keywords[index];
-				//goddamn javascript doesn't have sets
-				if (selectedKeywords.indexOf(keyword) != -1) {
-					html += '<input id="' + id + '" type="checkbox" checked="checked" onchange="updateKeywords()"/>';
-				} else {
-					html += '<input id="' + id + '" type="checkbox" onchange="updateKeywords()"/>';
-				}
-				html += '<label for="' + id + '">' + keyword + '</label>';
+	};
+
+	var updateKeywords = function() {
+		var keywords = keywordsChooser.find('input[type="checkbox"]:checked')
+			.map(function() {
+				return this.value
+			}).get().join(", ");
+		keywordsInput.val(keywords);
+	};
+
+	var fillKeywords = function(keywords) {
+		//setting keywords select options
+		var selectedKeywords = bib.utils.extractFromLocation("keywords").split(",").map(bib.utils.trim)
+		var elems = [];
+		for (index in keywords) {
+			var id = 'keyword' + index;
+			var keyword = keywords[index];
+			var inputAttrs = {
+				"id": id,
+				"value": keyword,
+				"type": "checkbox",
+			};
+			if (selectedKeywords.indexOf(keyword) != -1) {
+				inputAttrs["checked"] = "checked";
 			}
-			$('#keywordsChooser #keywordsHider').after(html);
 
-			updateKeywords();
+			var input = bib.utils.makeTextElement(
+				"input",
+				"",
+				inputAttrs
+			);
+			$(input).change(updateKeywords);
+			elems.push(input);
+
+			var labelAttrs = {
+				"for": id
+			};
+			var label = bib.utils.makeTextElement(
+				"label",
+				keyword,
+				labelAttrs
+			);
+			elems.push(label);
 		}
-	)
 
-	$(
-		'#search input[name!="keywords"], ' +
-		'#url, ' +
-		'#origlanguage'
-	).map(setInputFromLocation);
-}
+		$('#keywordsHider').after(elems);
+		updateKeywords();
+	};
 
-$(document).ready(function() {
-	env.searchToggleBasic = $('#searchToggleBasic');
-	env.searchToggleAdvanced = $('#searchToggleAdvanced');
-	env.searchToggleAllFields = $('#searchToggleAllFields');
+	var fillSearchForm = function(data) {
+		fillLanguages(data["languages"]);
+		fillSourceFiles(data["source_files"]);
+		fillKeywords(data['keywords']);
+	};
 
-	env.searchFormBasic = $('#searchFormBasic');
-	env.searchFormAdvanced = $('#searchFormAdvanced');
-	env.searchFormAllFields = $('#searchFormAllFields');
-
-	loadSearchParams();
-	$('#search input, #search select').on('keyup', function(event) {
-		if (event.keyCode == 0x0D) {
-			submitSearchForm();
+	var submitSearch = function() {
+		var invalids = inputs.filter(bib.utils.isInvalid);
+		if (invalids.length > 0) {
+			return;
 		}
-	});
 
-	$('#reportForm input').on('keyup', function(event) {
-		if (event.keyCode == 0x0D) {
-			sendReportForm();
+		searchButton.attr("disabled", "disabled");
+		var data = {};
+		search = inputs.filter(bib.utils.isValid)
+			.map(function() {
+				data[this.name] = this.value;
+			});
+		bib.utils.dumpObject(data);
+		if (Object.keys(data).length > 0) {
+			bib.server.submitSearch(searchType, data);
+		} else {
+			searchButton.removeAttr("disabled");
 		}
-	});
+	};
 
-	if (window.location.pathname == '/bib/advanced-search') {
-		env.searchType = SearchType.Advanced;
-	} else if (window.location.pathname == '/bib/all-fields-search') {
-		env.searchType = SearchType.AllFields;
-	}
-	switchSearchForms(true)
+	//publics
+	return {
+		init: function() {
+			searchFormBasic = $('#searchFormBasic');
+			searchFormAdvanced = $('#searchFormAdvanced');
+			searchFormAllFields = $('#searchFormAllFields');
 
-})
+			searchToggleBasic = $('#searchToggleBasic');
+			searchToggleAdvanced = $('#searchToggleAdvanced');
+			searchToggleAllFields = $('#searchToggleAllFields');
 
-function clearSearchForm(form) {
-	form.find('input').val('');
-	form.find('select').val('');
-	form.find('input[type="checkbox"]').prop('checked', false);
-}
+			keywordsInput = $('#keywords');
+			keywordsChooser = $('#keywordsChooser');
 
-function clearSearchForms() {
-	clearSearchForm(env.searchFormBasic);
-	clearSearchForm(env.searchFormAdvanced);
-	clearSearchForm(env.searchFormAllFields);
-}
+			//setting event handlers
+			$('#clearSearch').click(function() {
+				clearForm(searchFormBasic);
+				clearForm(searchFormAdvanced);
+				clearForm(searchFormAllFields);
+			});
 
-function switchToBasicSearch() {
-	env.searchType = SearchType.Basic;
-	switchSearchForms(false);
-}
+			searchButton = $('#submitSearch');
+			searchButton.click(submitSearch);
 
-function switchToAdvancedSearch() {
-	env.searchType = SearchType.Advanced;
-	switchSearchForms(false);
-}
+			keywordsInput.focus(function() {
+				keywordsChooser.slideDown();
+			});
 
-function switchToAllFieldsSearch() {
-	env.searchType = SearchType.AllFields;
-	switchSearchForms(false);
-}
+			$('#keywordsHider').click(function() {
+				keywordsChooser.slideUp();
+			});
 
-function switchSearchForms(initial) {
+			searchToggleAdvanced.click(switchToAdvancedSearch);
+			searchToggleAllFields.click(switchToAllFieldsSearch);
 
-	if (env.searchType == SearchType.Basic) {
-		clearSearchForm(env.searchFormAdvanced);
-		clearSearchForm(env.searchFormAllFields);
+			inputs = $(
+				'#search input[type!="checkbox"], ' +
+				'#search select, ' +
+				'#url, ' +
+				'#origlanguage'
+			);
+			inputs.keyup(function(event) {
+				if (event.keyCode == 0x0D) {
+					submitSearch();
+				}
+			});
 
-		env.searchFormBasic.removeClass('hidden');
-		env.searchFormAdvanced.addClass('hidden');
-		env.searchFormAllFields.addClass('hidden');
+			bib.server.getOptions(fillSearchForm);
 
-		env.searchToggleBasic.removeClass("action");
-		env.searchToggleAdvanced.addClass("action");
-		env.searchToggleAllFields.addClass("action");
+			$(
+				'#search input[name!="keywords"], ' +
+				'#url, ' +
+				'#origlanguage'
+			).map(fillFromLocation);
 
-		env.searchToggleBasic.off('click');
-		env.searchToggleAdvanced.on('click', switchToAdvancedSearch);
-		env.searchToggleAllFields.on('click', switchToAllFieldsSearch);
-	} else if (env.searchType == SearchType.Advanced) {
-		//don't clear basic search form
-		clearSearchForm(env.searchFormAllFields);
+			searchType = bib.SEARCH_PATHS.indexOf(window.location.pathname);
+			if (searchType == -1) {
+				searchType = bib.SearchType.Basic;
+			}
+			switchSearchForms()
+		},
 
-		env.searchFormBasic.removeClass('hidden');
-		env.searchFormAdvanced.removeClass('hidden');
-		env.searchFormAllFields.addClass('hidden');
+	};
+}();
 
-		env.searchToggleBasic.addClass("action");
-		env.searchToggleAdvanced.removeClass("action");
-		env.searchToggleAllFields.addClass("action");
+bib.server = function() {
+	//privates
 
-		env.searchToggleBasic.on('click', switchToBasicSearch);
-		env.searchToggleAdvanced.off('click');
-		env.searchToggleAllFields.on('click', switchToAllFieldsSearch);
-	} else if (env.searchType == SearchType.AllFields) {
-		clearSearchForm(env.searchFormBasic);
-		clearSearchForm(env.searchFormAdvanced);
+	//publics
+	return {
+		init: function() {
+		},
 
-		env.searchFormBasic.addClass('hidden');
-		env.searchFormAdvanced.addClass('hidden');
-		env.searchFormAllFields.removeClass('hidden');
+		getOptions: function(callback) {
+			$.get('/bib/options', function(data, textStatus, jqXHR) {
+				callback(data);
+			});
+		},
 
-		env.searchToggleBasic.addClass("action");
-		env.searchToggleAdvanced.addClass("action");
-		env.searchToggleAllFields.removeClass("action");
+		/*
+		 * Expects data as a mapping object
+		 */
+		postBugReport: function(data, successCallback, failCallback) {
+			$.post(
+				window.location,
+				bib.utils.makeSearchString(data),
+				function(data, textStatus, jqXHR) {
+					successCallback(data)
+				}
+			).fail(
+				function(jqXHR) {
+					failCallback(jqXHR.responseJSON)
+				}
+			)
+		},
 
-		env.searchToggleBasic.on('click', switchToBasicSearch);
-		env.searchToggleAdvanced.on('click', switchToAdvancedSearch);
-		env.searchToggleAllFields.off('click');
-	}
-}
+		/*
+		 * Expects data as a mapping object
+		 */
+		submitSearch: function(searchType, data) {
+			var newLocation =
+				bib.SEARCH_PATHS[searchType] +
+				"?" +
+				bib.utils.makeSearchString(data);
+			document.location = newLocation;
+
+
+
+		}
+	};
+}();
+
