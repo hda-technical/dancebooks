@@ -228,7 +228,7 @@ msgstr "Text to search for"
 msgid "search:language:czech"
 msgstr "Czech"
 
-msgid "search:languagedanish"
+msgid "search:language:danish"
 msgstr "Danish"
 
 msgid "search:language:english"
