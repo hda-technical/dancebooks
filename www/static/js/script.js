@@ -385,7 +385,7 @@ bib.search = function() {
 			elems.push(label);
 		}
 
-		$('#keywordsHider').after(elems);
+		$('#keywordsHider').before(elems);
 		updateKeywords();
 	};
 

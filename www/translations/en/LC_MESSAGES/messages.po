@@ -94,8 +94,11 @@ msgstr "Round dances containing more that one figure or step"
 msgid "pages:keywords:ref:circle"
 msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
 
+msgid "pages:keywords:ref:dance-description"
+msgstr "When source contains dance description (the sequence of steps and figures)"
+
 msgid "pages:keywords:ref:dance-instruction"
-msgstr "When source contains positions description, exercises etc."
+msgstr "When source contains instructions how to learn dancing"
 
 msgid "pages:keywords:ref:commentary"
 msgstr "Introductory article is present in the book"

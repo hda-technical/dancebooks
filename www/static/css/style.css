@@ -193,11 +193,12 @@ textarea:invalid {
 }
 
 #keywordsChooser {
-	text-align: center;
 	color: #000000;
 	background-color: #dddddd;
 
 	border: solid 1px #dddddd;
+	width: 400px;
+	height: 100%;
 }
 
 #keywordsChooser input[type="checkbox"] {
@@ -205,17 +206,16 @@ textarea:invalid {
 }
 
 #keywordsChooser input[type="checkbox"] + label, #keywordsHider {
-	color: #000000;
-	background-color: #dddddd;
-	padding: 2px;
 	display: inline-block;
 	white-space: nowrap;
 	text-decoration: underline;
+	text-align: center;
 
-	border-radius: 2px;
-	border-width: 1px;
-	border-color: #dddddd;
-	border-style: solid;
+	color: #000000;
+	background-color: #dddddd;
+
+	width: 32%;
+	border: solid 1px #dddddd;
 }
 
 #keywordsChooser input[type="checkbox"] + label:hover {
@@ -231,7 +231,18 @@ textarea:invalid {
 }
 
 #keywordsHider {
-	float: right;
-	cursor: default;
+	color: #000000;
+	background-color: #dddddd;
+	text-align: center;
 	text-decoration: none;
+	width: 100%;
+
+	border-radius: 2px;
+	border-width: 1px;
+	border-color: #dddddd;
+	border-style: solid;
+}
+
+#keywordsHider:hover {
+	border-style: inset;
 }
