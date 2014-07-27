@@ -99,9 +99,9 @@ ol.decimal {
 }
 
 .sup {
-	font-size: 70%;
+	font-size: 60%;
 	font-weight: 400;
-	vertical-align: super;
+	vertical-align: top;
 }
 
 .bold {
@@ -197,6 +197,9 @@ textarea:invalid {
 	background-color: #dddddd;
 
 	border: solid 1px #dddddd;
+	border-radius: 2px;
+	text-align: center;
+
 	width: 400px;
 	height: 100%;
 }
@@ -205,7 +208,7 @@ textarea:invalid {
 	display: none;
 }
 
-#keywordsChooser input[type="checkbox"] + label, #keywordsHider {
+#keywordsChooser input[type="checkbox"] + label {
 	display: inline-block;
 	white-space: nowrap;
 	text-decoration: underline;
@@ -216,17 +219,16 @@ textarea:invalid {
 
 	width: 32%;
 	border: solid 1px #dddddd;
+	border-radius: 2px;
 }
 
 #keywordsChooser input[type="checkbox"] + label:hover {
 	border-style: outset;
 }
 
-#keywordsChooser input[type="checkbox"]:checked + label {
-	border-style: inset;
-}
-
-#keywordsChooser input[type="checkbox"]:checked + label:hover {
+#keywordsChooser input[type="checkbox"]:checked + label,
+#keywordsChooser input[type="checkbox"]:checked + label:hover,
+#keywordsHider:hover {
 	border-style: inset;
 }
 
@@ -235,14 +237,8 @@ textarea:invalid {
 	background-color: #dddddd;
 	text-align: center;
 	text-decoration: none;
-	width: 100%;
 
+	border: solid 1px #dddddd;
 	border-radius: 2px;
-	border-width: 1px;
-	border-color: #dddddd;
-	border-style: solid;
 }
 
-#keywordsHider:hover {
-	border-style: inset;
-}
