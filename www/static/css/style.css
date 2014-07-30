@@ -89,6 +89,10 @@ ol.decimal {
 	list-style-type: decimal;
 }
 
+li {
+	margin: 2px 0px;
+}
+
 .center {
 	width: 100%;
 	text-align: center;
