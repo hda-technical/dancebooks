@@ -183,7 +183,7 @@ function gallicaTilesUrl()
 	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
 	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
 	
-	echo "http://gallica.bnf.fr/proxy?method=R&ark=$BOOK_ID.f1&l=$TILE_Z&r=$TOP,$LEFT,$TILE_SIZE,$TILE_SIZE"
+	echo "http://gallica.bnf.fr/proxy?method=R&ark=$BOOK_ID&l=$TILE_Z&r=$TOP,$LEFT,$TILE_SIZE,$TILE_SIZE"
 }
 
 function dusseldorfTileFile()
