@@ -62,6 +62,70 @@ def main(
 	RESEARCH_BOOKTYPES = {"book", "mvbook"}
 	
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
+	
+	ALLOWED_KEYWORDS = {	
+		#19th century related tags
+		"minuet",
+		"grossfater",
+		"highland",
+		"landler",
+		"quadrille",
+		"quadrille: first set",
+		"quadrille: lancers",
+		"quadrille: caledonians",
+		"quadrille: prince imperial",
+		"quadrille: variete parisiennes",
+		"waltz",
+		"waltz: trois temps",
+		"waltz: sautese",
+		"waltz: deux temps",
+		"waltz: new trois temps",
+		"waltz: boston",
+		"waltz: hesitation",
+		"waltz: glide",
+		"waltz: five steps",
+		"mazurka",
+		"polonaise",
+		"cotillon: 19th century",
+		"galop",
+		"polka",
+		"polka-mazurka",
+		"redowa",
+		"sequence",
+		"scottish",
+		"character dance",
+		"promiscuous figures",
+		"grand march",
+		#country dance related tags
+		"contredanse",
+		"cotillon: 18th century",
+		"ecossaise",
+		"anglaise",
+		"swedish dance",
+		"la tempete",
+		"circle",
+		"sir roger de coverly / virginia reel",
+		"la boulanger",
+		"rustic reel",
+		"spanish dance",		
+		#extra tags
+		"music",
+		"steps",
+		"antidance",
+		"belles-lettres",
+		"dance description",
+		"dance instruction",
+		"etiquette",
+		"libretto",
+		"memoirs",
+		"reissue",
+		"facsimile",
+		"transcription",
+		"research",
+		"commentary",
+		"markdown",
+		"not digitized",
+	}
 
 	erroneous_entries = 0
 	errors_count = 0
@@ -288,8 +352,12 @@ File {filename_} is not searchable by extracted params
 		#journaltitle validation empty
 		
 		#keywords validation
-		#if item was issued after LAST_ORIGINAL_YEAR, it should define keywords
 		if (keywords is not None):
+			unallowed_keywords = (keywords - ALLOWED_KEYWORDS)
+			if unallowed_keywords:
+				errors.append("Entry has unallowed keywords: {keywords}".format(
+					keywords=unallowed_keywords
+				))
 			if ("commentary" in keywords) and not commentator:
 				errors.append("When 'commentary' keyword specified, commentator should be present")
 				
