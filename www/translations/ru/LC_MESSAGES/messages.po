@@ -108,7 +108,7 @@ msgid "pages:keywords:ref:dance-description"
 msgstr "Источники, содержащие описание последовательности шагов и фигур танца"
 
 msgid "pages:keywords:ref:dance-instruction"
-msgstr "Источники, содержащие последовательные инстуркции по обучению танцам"
+msgstr "Источники, содержащие последовательные инструкции по обучению танцам"
 
 msgid "pages:keywords:ref:commentary"
 msgstr "В книге есть вступительная статья"
