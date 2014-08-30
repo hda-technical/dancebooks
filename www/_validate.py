@@ -92,10 +92,12 @@ def main(
 		"polka-mazurka",
 		"redowa",
 		"sequence",
-		"scottish",
+		"schottische",
 		"character dance",
 		"promiscuous figures",
 		"grand march",
+		"clog",
+		"jig",
 		#country dance related tags
 		"contredanse",
 		"cotillon: 18th century",

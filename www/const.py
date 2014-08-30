@@ -91,7 +91,7 @@ FILENAME_PATTERN = (
 	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
 	#title: sequence of words, digits, spaces, punctuation
 	#(question mark at the end makes regexp non-greedy)
-	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”№\(\)]+?)"
+	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”№\(\);]+?)"
 	#metadata: optional sequence of predefined values
 	#   tome (, tome 2)
 	#   edition (, edition 10)

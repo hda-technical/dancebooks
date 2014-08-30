@@ -103,9 +103,14 @@ li {
 }
 
 .sup {
-	font-size: 60%;
+	font-size: 75%;
 	font-weight: 400;
 	vertical-align: top;
+}
+
+a.sup {
+	text-decoration: none;
+	border-bottom: dashed 1px #0088ff;
 }
 
 .bold {
