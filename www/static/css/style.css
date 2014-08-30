@@ -108,11 +108,6 @@ li {
 	vertical-align: top;
 }
 
-a.sup {
-	text-decoration: none;
-	border-bottom: dashed 1px #0088ff;
-}
-
 .bold {
 	font-weight: 700;
 }
