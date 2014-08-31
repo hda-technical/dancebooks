@@ -4,7 +4,8 @@
 /* resetting default browser styles */
 @import url(/bib/css/reset.css);
 
-body {
+body
+{
 	color: #000000;
 	background-color: #ffffff;
 	margin: 0px 0px 100px 0px;
@@ -12,63 +13,75 @@ body {
     font-family: "PT Sans", sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3
+{
     font-family: "PT Sans Caption", sans-serif;
     text-align: center;
     margin: 10px;
 }
 
-h1 {
+h1
+{
     font-size: 200%;
 }
 
-h2 {
+h2
+{
 	font-size: 135%;
 }
 
-h3 {
+h3
+{
     font-size: 120%;
 }
 
-p {
+p
+{
 	text-align: left;
 	text-indent: 20px;
 	margin: 0px 0px 5px 0px;
 }
 
-img {
+img
+{
  	border: 0px;
  	vertical-align: middle;
 }
 
-a {
+a
+{
 	background-color: transparent;
 	color: #0088ff;
 	outline: none;
 }
 
-span.action {
+span.action
+{
 	background-color: transparent;
 	color: #0088ff;
 	cursor: pointer;
 }
 
-a.action, span.action {
+a.action, span.action
+{
 	text-decoration: none;
 	border-bottom: dashed 1px #0088ff;
 	margin-bottom: 4px;
 	display: inline-block;
 }
 
-a.image_link {
+a.image_link
+{
 	text-decoration: none;
 }
 
-a.image_link span {
+a.image_link span
+{
 	text-decoration: underline;
 }
 
-hr {
+hr
+{
 	width: 100%;
 	height: 2px;
 	border: none;
@@ -76,52 +89,63 @@ hr {
 	background-color: #cccccc;
 }
 
-ul, ol {
+ul, ol
+{
 	text-align: left;
 	text-indent: 0px;
 }
 
-ul.disc {
+ul.disc
+{
 	list-style-type: disc;
 }
 
-ol.decimal {
+ol.decimal
+{
 	list-style-type: decimal;
 }
 
-li {
+li
+{
 	margin: 2px 0px;
 }
 
-.center {
+.center
+{
 	width: 100%;
 	text-align: center;
 }
 
-.hidden {
+.hidden
+{
 	display: none;
 }
 
-.sup {
+.sup
+{
 	font-size: 75%;
 	font-weight: 400;
 	vertical-align: top;
 }
 
-.bold {
+.bold
+{
 	font-weight: 700;
 }
 
-.content {
+.content
+{
 	margin: 0% 20%;
 }
 
-.warn {
+.warn
+{
 	color: #ff3333;
 	background-color: #ffffff;
 }
 
-.choose_lang {
+.choose_lang
+{
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -129,20 +153,23 @@ li {
 }
 
 table tr td:first-child,
-div.bib_item_left {
+div.bib_item_left
+{
 	width: 25%;
 	vertical-align: top;
 	display: inline-block;
 }
 
 table tr td:last-child,
-div.bib_item_right {
+div.bib_item_right
+{
 	width: 74%;
 	vertical-align: top;
 	display: inline-block;
 }
 
-table tr td {
+table tr td
+{
 	padding: 2px 0px;
 	text-align: left;
 	vertical-align: top;
@@ -150,21 +177,24 @@ table tr td {
 
 #searchToggleBasic,
 #searchToggleAdvanced,
-#searchToggleAllFields {
+#searchToggleAllFields
+{
 	font-size: 105%;
 	display: inline-block;
 	margin: 1px 2px;
 }
 
 /* input magic */
-#search table {
+#search table
+{
 	width: 100%;
 }
 
 input[type="text"],
 input[type="email"],
 select,
-textarea {
+textarea
+{
 	width: 400px;
 	font-size: 100%;
     font-family: "PT Sans", sans-serif;
@@ -179,7 +209,8 @@ input[type="datetime"]{
 
 input,
 select,
-textarea {
+textarea
+{
 	border-style: solid;
 	border-width: 1px;
 	border-color: #aaaaaa #eeeeee #eeeeee #eeeeee;
@@ -188,14 +219,16 @@ textarea {
 }
 
 input:invalid,
-textarea:invalid {
+textarea:invalid
+{
 	color: #000000;
 	background-color: rgba(255, 204, 204, 0.1);
 	border-color: #ff0000;
 	box-shadow: none;
 }
 
-#keywordsChooser {
+#keywordsChooser
+{
 	color: #000000;
 	background-color: #dddddd;
 
@@ -208,11 +241,13 @@ textarea:invalid {
 	font-size: 90%;
 }
 
-#keywordsChooser input[type="checkbox"] {
+#keywordsChooser input[type="checkbox"]
+{
 	display: none;
 }
 
-#keywordsChooser input[type="checkbox"] + label {
+#keywordsChooser input[type="checkbox"] + label
+{
 	display: inline-block;
 	white-space: nowrap;
 	text-decoration: underline;
@@ -226,17 +261,19 @@ textarea:invalid {
 	border-radius: 2px;
 }
 
-#keywordsChooser input[type="checkbox"] + label:hover {
+#keywordsChooser input[type="checkbox"] + label:hover
+{
 	border-style: outset;
 }
 
 #keywordsChooser input[type="checkbox"]:checked + label,
-#keywordsChooser input[type="checkbox"]:checked + label:hover,
-#keywordsHider:hover {
-	border-style: outset;
+#keywordsChooser input[type="checkbox"]:checked + label:hover
+{
+	border-style: inset;
 }
 
-#keywordsHider {
+#keywordsHider
+{
 	color: #000000;
 	background-color: #dddddd;
 	text-align: center;
@@ -246,3 +283,7 @@ textarea:invalid {
 	border-radius: 2px;
 }
 
+#keywordsHider:hover
+{
+	border-style: outset;
+}
