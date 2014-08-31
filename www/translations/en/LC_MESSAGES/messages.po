@@ -216,7 +216,7 @@ msgid "search:labels:location"
 msgstr "Place of publication"
 
 msgid "search:labels:keywords"
-msgstr "Tags"
+msgstr "Keywords"
 
 msgid "search:labels:url"
 msgstr "Available for download"
@@ -297,7 +297,7 @@ msgid "item:labels:location"
 msgstr "Place of publication"
 
 msgid "item:labels:keywords"
-msgstr "Tags"
+msgstr "Keywords"
 
 msgid "item:labels:shorthand"
 msgstr "Shorthand"
@@ -381,6 +381,9 @@ msgstr "GitHub repository"
 
 msgid "interface:footer:persimmon"
 msgstr "Persimmon"
+
+msgid "interface:footer:tags"
+msgstr "Allowed keywords"
 
 # RSS
 msgid "rss:title"

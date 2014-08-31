@@ -382,6 +382,9 @@ msgstr "Репозиторий на ГитХабе"
 msgid "interface:footer:persimmon"
 msgstr "Хурма"
 
+msgid "interface:footer:tags"
+msgstr "Разрешённые теги"
+
 #: RSS
 msgid "rss:title"
 msgstr "Новые книги"
