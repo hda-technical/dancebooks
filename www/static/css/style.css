@@ -164,11 +164,14 @@ table tr td {
 input[type="text"],
 input[type="email"],
 select,
-textarea,
-#keywordsChooser {
+textarea {
 	width: 400px;
 	font-size: 100%;
     font-family: "PT Sans", sans-serif;
+}
+
+#keywordsChooser {
+	width: 600px;
 }
 
 input[type="number"],

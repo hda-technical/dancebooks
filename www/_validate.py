@@ -106,7 +106,7 @@ def main(
 		"swedish dance",
 		"la tempete",
 		"circle",
-		"sir roger de coverly / virginia reel",
+		"sir roger de coverly",
 		"la boulanger",
 		"rustic reel",
 		"spanish dance",		
