@@ -362,6 +362,18 @@ File {filename_} is not searchable by extracted params
 				))
 			if ("commentary" in keywords) and not commentator:
 				errors.append("When 'commentary' keyword specified, commentator should be present")
+			for keyword in keywords:
+				colon_pos = keyword.find(":")
+				if colon_pos != -1:
+					parent_keyword = keyword[:colon_pos]
+					if (
+						(parent_keyword in ALLOWED_KEYWORDS) and
+						(not parent_keyword in keywords)
+					):
+						errors.append("Parent keyword {parent_keyword} for keyword {keyword} is missing".format(
+							parent_keyword=parent_keyword,
+							keyword=keyword
+						))
 				
 		#langid validation
 		if source_basename not in MULTILANG_FILES:
