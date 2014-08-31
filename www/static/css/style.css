@@ -170,10 +170,6 @@ textarea {
     font-family: "PT Sans", sans-serif;
 }
 
-#keywordsChooser {
-	width: 600px;
-}
-
 input[type="number"],
 input[type="datetime"]{
 	width: 100px;
@@ -207,8 +203,9 @@ textarea:invalid {
 	border-radius: 2px;
 	text-align: center;
 
-	width: 400px;
+	width: 510px;
 	height: 100%;
+	font-size: 90%;
 }
 
 #keywordsChooser input[type="checkbox"] {
@@ -236,7 +233,7 @@ textarea:invalid {
 #keywordsChooser input[type="checkbox"]:checked + label,
 #keywordsChooser input[type="checkbox"]:checked + label:hover,
 #keywordsHider:hover {
-	border-style: inset;
+	border-style: outset;
 }
 
 #keywordsHider {
