@@ -410,9 +410,8 @@ bib.search = function() {
 		bib.utils.dumpObject(data);
 		if (Object.keys(data).length > 0) {
 			bib.server.submitSearch(searchType, data);
-		} else {
-			searchButton.removeAttr("disabled");
 		}
+		searchButton.removeAttr("disabled");
 	};
 
 	//publics
