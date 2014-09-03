@@ -95,7 +95,7 @@ msgid "pages:keywords:ref:tango"
 msgstr ""
 	"Tango in the middle of 19th century is believed to be just a sequence dance "
 	"(as far, as I know, nobody did a research on that). "
-	"However, since the dance was able to pass through the sequence era, a separate keywords was added for it"
+	"However, since the dance was able to pass through the sequence era, a separate keyword was added for it"
 
 msgid "pages:keywords:ref:animal-dances"
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
