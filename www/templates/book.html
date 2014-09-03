@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
-{% include "components/head.html" %}
+	{% include "components/head.html" %}
 	<body>
-{% include "components/choose-lang.html" %}
-{% include "components/header.html" %}
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
 		<h2>{{ _("interface:single_entry") }} {{ item.id() }}:</h2>
 		<div class="content">
-{% include "components/item.html" %}
+			{% include "components/item.html" %}
 			<div class="center">
 				<span class="action" id="reportFormToggle">{{ _("interface:report:title") }}</span>
 			</div>
@@ -36,7 +36,7 @@
 				<button id="reportFormSubmitter">{{ _("interface:buttons:send") }}</button>
 			</div>
 			<hr/>
-{% include "components/footer.html" %}
+			{% include "components/footer.html" %}
 		</div>
 	</body>
 </html>

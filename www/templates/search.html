@@ -1,24 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
-{% include "components/head.html" %}
+	{% include "components/head.html" %}
 	<body>
-{% include "components/choose-lang.html" %}
-{% include "components/header.html" %}
-{% if found_items %}
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
+		{% if found_items %}
 		<h2>{{ ngettext("interface:found_entries", "interface:found_entries", found_items|length) }}.</h2>
-{% else %}
+		{% else %}
 		<h2>{{ _("interface:found_none") }}.</h2>
-{% endif %}
-{% include "components/search-form.html" %}
-{% if found_items %}
-{% for item in found_items %}
-{% include "components/item.html" %}
+		{% endif %}
+		<div class="content">
+		{% include "components/search-form.html" %}
+		{% if found_items %}
+			{% for item in found_items %}
+				{% include "components/item.html" %}
+				<hr/>
+			{% endfor %}
+		{% else %}
 			<hr/>
-{% endfor %}
-{% else %}
-			<hr/>
-{% endif %}
-{% include "components/footer.html" %}
+		{% endif %}
+		{% include "components/footer.html" %}
 		</div>
 	</body>
 </html>

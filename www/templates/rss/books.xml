@@ -16,19 +16,19 @@
 			<title>{{ ngettext("rss:added_count", "rss:added_count", entries | length) }}</title>
 			<description><![CDATA[
 				<ul>
-{% for entry in entries %}
-{% set id = entry.id() %}
-{% set author = entry.author() %}
-{% set title = entry.title() %}
-{% set year = entry.year() %}
+	{% for entry in entries %}
+		{% set id = entry.id() %}
+		{% set author = entry.author() %}
+		{% set title = entry.title() %}
+		{% set year = entry.year() %}
 					<li><a href="http://bib.hda.org.ru/bib/books/{{ id }}">[{{ year }}] {% if author %} {{ author }} — {% endif %} {{ title }}</a></li>
-{% endfor %}
+	{% endfor %}
 				</ul>
 			]]></description>
-{% set date_string = date.strftime("%Y-%m-%d") %}
+	{% set date_string = date.strftime("%Y-%m-%d") %}
 			<link>http://bib.hda.org.ru/bib/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
 			<guid>http://bib.hda.org.ru/bib/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</guid>
-{% set rfc_date_string = date.strftime(RFC_DATETIME_FORMAT) %}
+	{% set rfc_date_string = date.strftime(RFC_DATETIME_FORMAT) %}
 			<pubDate>{{ rfc_date_string }}</pubDate>
 		</item>
 {% endfor %}

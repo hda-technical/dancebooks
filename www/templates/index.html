@@ -1,13 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
-{% include "components/head.html" %}
+	{% include "components/head.html" %}
 	<body>
-{% include "components/choose-lang.html" %}
-{% include "components/header.html" %}
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
 		<h2>{{ ngettext("interface:total_entries", "interface:total_entries", entry_count) }}.</h2>
-{% include "components/search-form.html" %}
+		<div class="content">
+			{% include "components/search-form.html" %}
 			<hr/>
-{% include "components/footer.html" %}
+			{% include "components/footer.html" %}
 		</div>
 	</body>
 </html>

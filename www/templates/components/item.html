@@ -28,60 +28,55 @@
 ]|as_set %}
 {% set keywords_warn_min_year = 1800 %}
 {% set keywords_warn_max_year = 1900 %}
-
 {% for param in fields %}
 {# Some parameters require specific treatment #}
-{% if param in ["filename", "author", "added_on", "url", "keywords"] %}
-{% set value = item.get(param) %}
-{% else %}
-{% set value = item.get_as_string(param) %}
-{% endif %}
-{% if value %}
-
-{% if (param != "filename") or show_secrets %} {# secrets filtering: start #}
+	{% if param in ["filename", "author", "added_on", "url", "keywords"] %}
+		{% set value = item.get(param) %}
+	{% else %}
+		{% set value = item.get_as_string(param) %}
+	{% endif %}
+	{% if value %}
+		{% if (param != "filename") or show_secrets %} {# secrets filtering: start #}
 			<div class="bib_item_left">{{ _("item:labels:" + param) }}:</div>
 			<div class="bib_item_right">
-{% if param == "id" %}
+			{% if param == "id" %}
 				<a href="/bib/books/{{ value }}">{{ value }}</a>
-{% elif param == "author" %}
+			{% elif param == "author" %}
 				{{ value|map("author_link")|map("safe")|join(", ") }}
-{% elif param == "keywords" %}
+			{% elif param == "keywords" %}
 				{{ value|map("keyword_link")|map("safe")|join(", ") }}
-{% elif param == "url" %}
+			{% elif param == "url" %}
 				<ul>
-{% for url in value %}
+				{% for url in value %}
 					<li><a href="{{ url }}">{{ url }}</a></li>
-{% endfor %}
+				{% endfor %}
 				</ul>
-{% elif param == "filename" %}
+			{% elif param == "filename" %}
 				<ul>
-{% for filename in value %}
+				{% for filename in value %}
 					<li>{{ filename }}</li>
-{% endfor %}
+				{% endfor %}
 				</ul>
-{% elif param == "series" %}
-{% set extra_value = item.get("number") %}
-{% if extra_value %}
+			{% elif param == "series" %}
+				{% set extra_value = item.get("number") %}
+				{% if extra_value %}
 				{{ value }} {{ _("item:labels:number") }}{{ extra_value }}
-{% else %}
+				{% else %}
 				{{ value }}
-{% endif %}
-
-{% elif param == "langid" %}
+				{% endif %}
+			{% elif param == "langid" %}
 				{{ _("item:language:" + value) }}
-
-{% elif param == "added_on" %}
+			{% elif param == "added_on" %}
 				{{ value | dateformat("long") }}
-{% elif param == "annotation" %}
+			{% elif param == "annotation" %}
 				{{ value | safe }}
-{% else %}
+			{% else %}
 				{{ value }}
-{% endif %}
+			{% endif %}
 			</div>
-{% endif %}
-{% endif %} {# secrets filtering: end #}
+		{% endif %} {# secrets filtering: end #}
+	{% endif %}
 {% endfor %}
-
 {% set keywords = (item.get("keywords") or [])|as_set %}
 {% set year_from = item.get("year_from") %}
 {% set year_to = item.get("year_to") %}

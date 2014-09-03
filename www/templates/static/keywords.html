@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
-{% include "components/head.html" %}
+	{% include "components/head.html" %}
 	<body>
-{% include "components/choose-lang.html" %}
-{% include "components/header.html" %}
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
 		<h2>{{ _("pages:keywords:title") }}</h2>
 		<h3>{{ _("pages:keywords:bold") }}</h3>
 		<h3>{{ _("pages:keywords:edits") }}: <a class="action" href="mailto://georgthegreat@gmail.com">georgthegreat@gmail.com</a></h3>
 		<div class="content">
 			<h3>{{ _("pages:keywords:xxi") }}</h3>
-{% set ref = cycler(*range(1, 100)) %}
+			{% set ref = cycler(*range(1, 100)) %}
 			<ul class="disc">
 				<li>minuet</li>
 				<li>grossfater</li>
@@ -79,7 +79,7 @@
 				<li class="bold">not digitized</li>
 			</ul>
 			<h3>{{ _("pages:keywords:references") }}</h3>
-{% set ref = cycler(*range(1, 100)) %}
+			{% set ref = cycler(*range(1, 100)) %}
 			<ol class="decimal">
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:quadrille") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:waltz") }}</li>
@@ -95,7 +95,8 @@
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:markdown")|safe }}</li>
 			</ol>
 			<hr/>
-{% include "components/footer.html" %}
+			{% include "components/footer.html" %}
 		</div>
 	</body>
 </html>
+

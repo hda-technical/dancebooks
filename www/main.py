@@ -42,6 +42,8 @@ flask_app.config["USE_EVALEX"] = False
 babel_app = babel.Babel(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
+flask_app.jinja_env.lstrip_blocks = True
+flask_app.jinja_env.keep_trailing_newline = False
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 flask_app.jinja_env.filters["author_link"] = utils_flask.jinja_author_link
 flask_app.jinja_env.filters["keyword_link"] = utils_flask.jinja_keyword_link
