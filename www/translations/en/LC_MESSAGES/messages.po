@@ -52,14 +52,14 @@ msgstr ""
 msgid "pages:keywords:title"
 msgstr "A comprehensive keyword list"
 
-msgid "pages:keywords:bold"
-msgstr "Keywords already present in database are marked in bold"
-
 msgid "pages:keywords:edits"
 msgstr "You can send edits to the list to"
 
 msgid "pages:keywords:xxi"
 msgstr "Keywords for the 19th century books"
+
+msgid "pages:keywords:xx"
+msgstr "Keywords for the 20th century books (up to 1920 or so)"
 
 msgid "pages:keywords:extras"
 msgstr "Extra information keywords"
@@ -90,6 +90,15 @@ msgstr "Including boston dip"
 
 msgid "pages:keywords:ref:sequence"
 msgstr "Round dances containing more that one figure or step"
+
+msgid "pages:keywords:ref:tango"
+msgstr ""
+	"Tango in the middle of 19th century is believed to be just a sequence dance "
+	"(as far, as I know, nobody did a research on that). "
+	"However, since the dance was able to pass through the sequence era, a separate keywords was added for it"
+
+msgid "pages:keywords:ref:animal-dances"
+msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
 msgid "pages:keywords:ref:circle"
 msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"

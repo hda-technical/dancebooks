@@ -62,14 +62,14 @@ msgstr "Отправить"
 msgid "pages:keywords:title"
 msgstr "Излишне заумный список тегов"
 
-msgid "pages:keywords:bold"
-msgstr "Присутствующие в базе теги помечены жирным"
-
 msgid "pages:keywords:edits"
 msgstr "Преложения по улучшению списка можно слать на"
 
 msgid "pages:keywords:xxi"
 msgstr "Теги, связанные с танцами XIX века"
+
+msgid "pages:keywords:xx"
+msgstr "Теги, связанные с танцами XX века (примерно до 1920 года)"
 
 msgid "pages:keywords:extras"
 msgstr "Дополнительные теги"
@@ -100,6 +100,15 @@ msgstr "В том числе бостон-дип"
 
 msgid "pages:keywords:ref:sequence"
 msgstr "Круговые танцы, содержащие несколько шагов или фигур"
+
+msgid "pages:keywords:ref:tango"
+msgstr ""
+	"Танго середины XIX века, по-видимому, является обычным сиквенсом "
+	"(насколько мне известно, никто не исследовал этот вопрос). "
+	"Однако, поскольку танец пережил эпоху сиквенсов, ему был добавлен отдельный тег"
+
+msgid "pages:keywords:ref:animal-dances"
+msgstr "Любой танец, подражающий движениям животных (добавляйте, если ставите любой их подобных тегов)"
 
 msgid "pages:keywords:ref:circle"
 msgstr "Кадрили замкнутые в круг. Например, черкесский или сицилийский круги"

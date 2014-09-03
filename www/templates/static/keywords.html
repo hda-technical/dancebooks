@@ -5,7 +5,6 @@
 		{% include "components/choose-lang.html" %}
 		{% include "components/header.html" %}
 		<h2>{{ _("pages:keywords:title") }}</h2>
-		<h3>{{ _("pages:keywords:bold") }}</h3>
 		<h3>{{ _("pages:keywords:edits") }}: <a class="action" href="mailto://georgthegreat@gmail.com">georgthegreat@gmail.com</a></h3>
 		<div class="content">
 			<h3>{{ _("pages:keywords:xxi") }}</h3>
@@ -20,7 +19,7 @@
 				<li>quadrille: lancers</li>
 				<li>quadrille: caledonians</li>
 				<li>quadrille: prince imperial</li>
-				<li>quadrille: variete parisiennes</li>
+				<li>quadrille: varietes parisiennes</li>
 				<li>waltz<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>waltz: trois temps</li>
 				<li>waltz: sautese<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
@@ -37,13 +36,35 @@
 				<li>polka<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>polka-mazurka<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>redowa</li>
-				<li>sequence<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>schottische</li>
+				<li>sequence<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
+				<li>tango<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>character dance</li>
 				<li>promiscuous figures</li>
 				<li>grand march</li>
 				<li>clog</li>
 				<li>jig</li>
+			</ul>
+			<h3>{{ _("pages:keywords:xx") }}</h3>
+			<ul class="disc">
+				<li>one-step</li>
+				<li>two-step</li>
+				<li>three-step</li>
+				<li>foxtrot</li>
+				<li>tango</li>
+				<li>waltz</li>
+				<li>waltz: hesitation</li>
+				<li>waltz: boston</li>
+				<li>waltz: canter</li>
+				<li>half and half</li>
+				<li>animal dances<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
+				<li>animal dances: grizzly bear</li>
+				<li>animal dances: turkey trot</li>
+				<li>castle walk</li>
+				<li>sequence</li>
+				<li>mixer dance</li>
+				<li>cakewalk</li>
+				<li>swing</li>
 			</ul>
 			<h3>{{ _("pages:keywords:country-dance") }}</h3>
 			<ul class="disc">
@@ -63,20 +84,20 @@
 			<ul class="disc">
 				<li>music</li>
 				<li>steps</li>
-				<li class="bold">antidance</li>
+				<li>antidance</li>
 				<li>belles-lettres</li>
 				<li>dance description<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>dance instruction<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>etiquette</li>
 				<li>libretto</li>
 				<li>memoirs</li>
-				<li class="bold">reissue</li>
-				<li class="bold">facsimile</li>
-				<li class="bold">transcription</li>
-				<li class="bold">research</li>
-				<li class="bold">commentary<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
-				<li class="bold">markdown<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
-				<li class="bold">not digitized</li>
+				<li>reissue</li>
+				<li>facsimile</li>
+				<li>transcription</li>
+				<li>research</li>
+				<li>commentary<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
+				<li>markdown<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
+				<li>not digitized</li>
 			</ul>
 			<h3>{{ _("pages:keywords:references") }}</h3>
 			{% set ref = cycler(*range(1, 100)) %}
@@ -88,6 +109,8 @@
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:polka") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:polka-mazurka") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:sequence") }}</li>
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:tango") }}</li>
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:animal-dances") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:circle") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:dance-description") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:dance-instruction") }}</li>

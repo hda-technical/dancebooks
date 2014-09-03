@@ -6,7 +6,6 @@ import sys
 import opster
 
 import const
-from config import config
 import index
 import bib_parser
 import utils
@@ -26,11 +25,11 @@ def main(
 ):
 	"""
 	Validates bibliography over a bunch of rules
-	"""	
+	"""
 	if (len(root) == 0) or (not os.path.isdir(root)):
 		print("Root folder is inaccessible")
 		sys.exit(1)
-		
+
 	root = os.path.abspath(root)
 	print("Going to process {0} items".format(len(items)))
 
@@ -50,20 +49,16 @@ def main(
 	}
 	NON_MULTIVOLUME_BOOKTYPES = {"article", "periodical"}
 	MULTIVOLUME_BOOKTYPES = {"mvbook", "mvreference"}
-	
+
 	#don't validate filename for the given entrytypes
 	MULTIENTRY_BOOKTYPES = {"proceedings", "inproceedings"}
 	SHORTHAND_LIMIT = 25
-	
+
 	PERIODICAL_BOOKTYPES = {"periodical"}
 
-	#magic constant
-	NON_ORIGINAL_KEYWORDS = {"reissue", "research"}
-	RESEARCH_BOOKTYPES = {"book", "mvbook"}
-	
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
-	
-	ALLOWED_KEYWORDS = {	
+
+	ALLOWED_KEYWORDS = {
 		#19th century related tags
 		"minuet",
 		"grossfater",
@@ -74,7 +69,7 @@ def main(
 		"quadrille: lancers",
 		"quadrille: caledonians",
 		"quadrille: prince imperial",
-		"quadrille: variete parisiennes",
+		"quadrille: varietes parisiennes",
 		"waltz",
 		"waltz: trois temps",
 		"waltz: sautese",
@@ -91,13 +86,33 @@ def main(
 		"polka",
 		"polka-mazurka",
 		"redowa",
-		"sequence",
 		"schottische",
+		"sequence",
+		"tango",
 		"character dance",
 		"promiscuous figures",
 		"grand march",
 		"clog",
 		"jig",
+		#20th century related tags
+		"one-step",
+		"two-step",
+		"three-step",
+		"foxtrot",
+		"tango",
+		"waltz",
+		"waltz: hesitation",
+		"waltz: boston",
+		"waltz: canter",
+		"half and half",
+		"animal dances",
+		"animal dances: grizzly bear",
+		"animal dances: turkey trot",
+		"castle walk",
+		"sequence",
+		"mixer dance",
+		"cakewalk",
+		"swing",
 		#country dance related tags
 		"contredanse",
 		"cotillon: 18th century",
@@ -109,7 +124,7 @@ def main(
 		"sir roger de coverly",
 		"la boulanger",
 		"rustic reel",
-		"spanish dance",		
+		"spanish dance",
 		#extra tags
 		"music",
 		"steps",
@@ -166,67 +181,67 @@ def main(
 		year_to = item.get("year_to")
 		year_circa = item.get("year_circa")
 		added_on = item.get("added_on")
-		
+
 		match = SOURCE_REGEXP.match(source)
 		if not match:
 			raise RuntimeError("Failed to parse 'source' for item ({id})".format(
 				id=id
 			))
 		source_basename = match.group("basename")
-		
+
 		parser_obligatory = [id, booktype, source, year_from, year_to, year_circa]
 		none_checker = lambda obj: obj is not None
 		if not all(map(none_checker, parser_obligatory)):
 			raise RuntimeError("Parser hasn't generated all required auxiliary fields {fields}".format(
 				fields=parser_obligatory
 			))
-		
+
 		general_obligatory = [langid, year, title, added_on]
 		if not all(general_obligatory):
 			errors.append("Item doesn't define one of [langid, year, title]")
 
-		
+
 		translation_obligatory = [origlanguage, translator]
 		if any(translation_obligatory):
 			if not all(translation_obligatory):
 				errors.append("[origlanguage, translator] must be present for translations")
-		
+
 			if not origauthor:
 				errors.append("'origauthor' must be present for translations")
-		
+
 		series_obligatory = [series, number]
 		if not utils.all_or_none(series_obligatory) and (booktype not in PERIODICAL_BOOKTYPES):
 			errors.append("All of [series, number] must be present for serial books")
-		
+
 		if not any([author, shorthand]):
 			errors.append("'author' or 'shorthand' must be present")
-		
+
 		if (publisher is not None) and (location is None):
 			errors.append("If publisher present, location must be present")
-		
+
 		#booktype validation
 		booktype = booktype.lower()
 		if booktype not in VALID_BOOKTYPES:
 			errors.append("Invalid booktype ({booktype})".format(
 				booktype=booktype
 			))
-		
+
 		if (booktype not in NON_MULTIVOLUME_BOOKTYPES):
 			if (volume is not None) and (volumes is None):
 				errors.append("If volume present, volumes must be present")
-		
+
 		if (booktype in MULTIVOLUME_BOOKTYPES):
 			if volumes is None:
 				errors.append("volumes must be present for @{0}".format(booktype))
-		
+
 		if (booktype == "article"):
 			if journaltitle is None:
 				errors.append("journaltitle must be present for @article")
-		
+
 		if (booktype == "inproceedings"):
 			if booktitle is None:
 				errors.append("bootitle must be present for @inprocessing")
-		
+
 		if (booktype == "thesis"):
 			if url is None:
 				errors.append("url must be present for @thesis")
@@ -234,17 +249,17 @@ def main(
 				errors.append("type must be present for @thesis")
 			if institution is None:
 				errors.append("institution must be present for @thesis")
-		
+
 		#data validation
 		#author validation empty
-		
+
 		#booktitle validation empty
-		
+
 		#commentator
 		if commentator is not None:
 			if (keywords is None) or ("commentary" not in keywords):
 				errors.append("Keywords should contain 'commentary' when commentator specified")
-		
+
 		#filename validation
 		if edition is not None:
 			#edition should be greater than 1
@@ -252,7 +267,7 @@ def main(
 				errors.append("Wrong edition {edition}".format(
 					edition=edition
 				))
-		
+
 		if volume is not None:
 			#volume should be positive integer
 			if volume <= 0:
@@ -265,7 +280,7 @@ def main(
 						volume=volume,
 						volumes=volumes
 					))
-		
+
 		#filename validation
 		if (filename is not None) and (booktype not in MULTIENTRY_BOOKTYPES):
 			for filename_ in filename:
@@ -276,38 +291,38 @@ def main(
 					errors.append("File {filename_} is not accessible".format(
 						filename_=filename_
 					))
-					
+
 				#item should be searchable by its filename metadata
 				metadata = utils.extract_metadata_from_file(filename_)
-				
+
 				#validating optional author, edition, tome
 				#in case when item specifies value, but filename doesn't
 				if not utils.all_or_none([metadata.get("author", None), author]):
 					errors.append("File {filename_} and entry have different author specifications".format(
 						filename_=filename_
 					))
-					
+
 				if not utils.all_or_none([metadata.get("edition", None), edition]):
 					errors.append("File {filename_} and entry have different edition specifications".format(
 						filename_=filename_
 					))
-					
+
 				if not utils.all_or_none([metadata.get("tome", None), any([volume, volumes])]):
 					errors.append("File {filename_} and entry have different volume specifications".format(
 						filename_=filename_
-					))	
-					
+					))
+
 				if not utils.all_or_none([metadata.get("number", None), number]) and not series:
 					errors.append("File {filename_} and entry have different number specifications".format(
 						filename_=filename_
 					))
-				
+
 				meta_keywords = metadata.get("keywords", None)
 				if meta_keywords is not None:
 					if ("incomplete" not in meta_keywords) and (source_basename == "_problems"):
 						errors.append("Incomplete books should be stored in _problems.bib")
 					meta_keywords.discard("incomplete")
-					
+
 					if len(meta_keywords) > 0:
 						if keywords is None:
 							errors.append("No keywords specified (should be {meta_keywords}".format(
@@ -318,7 +333,7 @@ def main(
 								keywords=keywords,
 								meta_keywords=meta_keywords
 							))
-				
+
 				search_ = utils.create_search_from_metadata(metadata)
 				if not search_(item):
 					errors.append(
@@ -334,11 +349,11 @@ File {filename_} is not searchable by extracted params
 	title=metadata["title"],
 	year_from=metadata["year_from"],
 	year_to=metadata["year_to"]
-))		
+))
 		#id validation empty
 		if len(item_index["id"][id]) != 1:
 			errors.append("Id is not unique")
-			
+
 		#isbn validation
 		if isbn is not None:
 			for isbn_ in isbn:
@@ -348,11 +363,11 @@ File {filename_} is not searchable by extracted params
 						isbn_=isbn_,
 						msg=msg
 					))
-		
+
 		#institution validation empty
-		
+
 		#journaltitle validation empty
-		
+
 		#keywords validation
 		if (keywords is not None):
 			unallowed_keywords = (keywords - ALLOWED_KEYWORDS)
@@ -374,7 +389,7 @@ File {filename_} is not searchable by extracted params
 							parent_keyword=parent_keyword,
 							keyword=keyword
 						))
-				
+
 		#langid validation
 		if source_basename not in MULTILANG_FILES:
 			source_langs = const.LONG_LANG_MAP[source_basename]
@@ -385,7 +400,7 @@ File {filename_} is not searchable by extracted params
 					langid=langid
 				))
 		#location validation empty
-		
+
 		#note validation
 		note_unpublished = (note is not None) and (note.startswith(UNPUBLISHED_NOTE_PREFIX))
 		booktype_unpublished = (booktype == "unpublished")
@@ -394,14 +409,14 @@ File {filename_} is not searchable by extracted params
 				booktype="unpublished",
 				note_prefix=UNPUBLISHED_NOTE_PREFIX
 			))
-		
-		
+
+
 		#number validation empty
-		
+
 		#publisher validation empty
-		
+
 		#series validation empty
-		
+
 		#shorthand validation empty
 		if shorthand is not None:
 			length = len(shorthand)
@@ -415,9 +430,9 @@ File {filename_} is not searchable by extracted params
 					title=title,
 					shorthand=shorthand
 				))
-		
+
 		#source validation empty
-		
+
 		#title validation empty
 		if title is not None:
 			if ("  " in title):
@@ -426,9 +441,9 @@ File {filename_} is not searchable by extracted params
 				errors.append("Tabs in title")
 			if title.startswith(" ") or title.endswith(" "):
 				errors.append("Title isn't stripped")
-		
+
 		#type validation empty
-		
+
 		#url validation empty
 		if url is not None:
 			for signle_url in url:
@@ -438,13 +453,13 @@ File {filename_} is not searchable by extracted params
 						signle_url=signle_url,
 						msg=msg
 					))
-			
+
 		#volume validation empty
-		
+
 		#volumes validation empty
-		
+
 		#year validation empty
-		
+
 		#printing errors
 		if len(errors) > 0:
 			erroneous_entries += 1
@@ -455,12 +470,12 @@ File {filename_} is not searchable by extracted params
 			))
 			for error in errors:
 				print("    " + error)
-		
+
 	print("Found {entries} erroneous entries ({errors} errors)".format(
 		entries=erroneous_entries,
 		errors=errors_count
 	))
 
-	
+
 if __name__ == "__main__":
 	main.command()
