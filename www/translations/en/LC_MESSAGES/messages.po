@@ -100,6 +100,9 @@ msgstr ""
 msgid "pages:keywords:ref:animal-dances"
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
+msgid "pages:keywords:ref:anglaise"
+msgstr "Any English country dance (add it when adding any other ECD tag)"
+
 msgid "pages:keywords:ref:circle"
 msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
 
