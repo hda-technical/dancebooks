@@ -82,6 +82,7 @@ def main(
 		"mazurka",
 		"polonaise",
 		"cotillon: 19th century",
+		"fandango",
 		"galop",
 		"polka",
 		"polka-mazurka",
@@ -91,7 +92,7 @@ def main(
 		"tango",
 		"character dance",
 		"promiscuous figures",
-		"grand march",
+		"march",
 		"clog",
 		"jig",
 		#20th century related tags
@@ -114,10 +115,10 @@ def main(
 		"cakewalk",
 		"swing",
 		#country dance related tags
-		"contredanse",
 		"cotillon: 18th century",
 		"ecossaise",
 		"anglaise",
+		"anglaise: matredour",
 		"swedish dance",
 		"la tempete",
 		"circle",
