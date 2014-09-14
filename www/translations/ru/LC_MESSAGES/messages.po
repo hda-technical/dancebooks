@@ -80,6 +80,14 @@ msgstr "Теги, связанные с контрдансами"
 msgid "pages:keywords:references"
 msgstr "Примечания"
 
+#Pages: keywords: country dance related
+msgid "pages:keywords:ref:anglaise"
+msgstr "Любой английский контрданс (добавляйте, если ставите любой тег про английские контрдансы)"
+
+msgid "pages:keywords:ref:circle"
+msgstr "Кадрили замкнутые в круг. Например, черкесский или сицилийский круги"
+
+#Pages: keywords: XIX century
 msgid "pages:keywords:ref:quadrille"
 msgstr "Любая кадриль (добавляйте, если ставите любой кадрильный тег)"
 
@@ -107,20 +115,22 @@ msgstr ""
 	"(насколько мне известно, никто не исследовал этот вопрос). "
 	"Однако, поскольку танец пережил эпоху сиквенсов, ему был добавлен отдельный тег"
 
+#Pages: keywords: XX century
 msgid "pages:keywords:ref:animal-dances"
 msgstr "Любой танец, подражающий движениям животных (добавляйте, если ставите любой их подобных тегов)"
 
-msgid "pages:keywords:ref:anglaise"
-msgstr "Любой английский контрданс (добавляйте, если ставите любой тег про английские контрдансы)"
-
-msgid "pages:keywords:ref:circle"
-msgstr "Кадрили замкнутые в круг. Например, черкесский или сицилийский круги"
+#Pages: keywords: extras
+msgid "pages:keywords:ref:essay"
+msgstr "Источник, содержащий авторский взгляд на какую-то тему, связанную с танцем"
 
 msgid "pages:keywords:ref:dance-description"
 msgstr "Источники, содержащие описание последовательности шагов и фигур танца"
 
 msgid "pages:keywords:ref:dance-instruction"
 msgstr "Источники, содержащие последовательные инструкции по обучению танцам"
+
+msgid "pages:keywords:ref:first-edition"
+msgstr "Художественная или мемуарная литература, а также эссеистика, впервые изданная на языке источника"
 
 msgid "pages:keywords:ref:commentary"
 msgstr "В книге есть вступительная статья"

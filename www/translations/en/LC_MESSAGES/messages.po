@@ -55,7 +55,13 @@ msgstr "A comprehensive keyword list"
 msgid "pages:keywords:edits"
 msgstr "You can send edits to the list to"
 
-msgid "pages:keywords:xxi"
+msgid "pages:keywords:baroque"
+msgstr "Some keywords for the baroque books"
+
+msgid "pages:keywords:country-dance"
+msgstr "Country dances / contredanses related keywords"
+
+msgid "pages:keywords:xix"
 msgstr "Keywords for the 19th century books"
 
 msgid "pages:keywords:xx"
@@ -64,12 +70,17 @@ msgstr "Keywords for the 20th century books (up to 1920 or so)"
 msgid "pages:keywords:extras"
 msgstr "Extra information keywords"
 
-msgid "pages:keywords:country-dance"
-msgstr "Country dances / contredanses related keywords"
-
 msgid "pages:keywords:references"
 msgstr "References"
 
+# Pages: keywords: country-dance related
+msgid "pages:keywords:ref:anglaise"
+msgstr "Any English country dance (add it when adding any other ECD tag)"
+
+msgid "pages:keywords:ref:circle"
+msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
+
+# Pages: keywords: XIX century
 msgid "pages:keywords:ref:quadrille"
 msgstr "Any quadrille (add it when adding any other quadrille tag)"
 
@@ -97,20 +108,22 @@ msgstr ""
 	"(as far, as I know, nobody did a research on that). "
 	"However, since the dance was able to pass through the sequence era, a separate keyword was added for it"
 
+# Pages: keywords: XX century
 msgid "pages:keywords:ref:animal-dances"
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
-msgid "pages:keywords:ref:anglaise"
-msgstr "Any English country dance (add it when adding any other ECD tag)"
-
-msgid "pages:keywords:ref:circle"
-msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
+# Pages: keywords: extras
+msgid "pages:keywords:ref:essay"
+msgstr "Source containing author view on some dance-related subject"
 
 msgid "pages:keywords:ref:dance-description"
 msgstr "When source contains dance description (the sequence of steps and figures)"
 
 msgid "pages:keywords:ref:dance-instruction"
 msgstr "When source contains instructions how to learn dancing"
+
+msgid "pages:keywords:ref:first-edition"
+msgstr "Belles-lettres, memoirs and essays of the first known edition on the source language"
 
 msgid "pages:keywords:ref:commentary"
 msgstr "Introductory article is present in the book"
