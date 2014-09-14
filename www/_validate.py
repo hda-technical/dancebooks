@@ -59,6 +59,22 @@ def main(
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
 
 	ALLOWED_KEYWORDS = {
+		#baroque related tags
+		"galliard",
+		"saraband",
+		"courante",
+		#country dance related tags
+		"cotillon: 18th century",
+		"ecossaise",
+		"anglaise",
+		"anglaise: matredour",
+		"swedish dance",
+		"la tempete",
+		"circle",
+		"sir roger de coverly",
+		"la boulanger",
+		"rustic reel",
+		"spanish dance",
 		#19th century related tags
 		"minuet",
 		"grossfater",
@@ -114,25 +130,15 @@ def main(
 		"mixer dance",
 		"cakewalk",
 		"swing",
-		#country dance related tags
-		"cotillon: 18th century",
-		"ecossaise",
-		"anglaise",
-		"anglaise: matredour",
-		"swedish dance",
-		"la tempete",
-		"circle",
-		"sir roger de coverly",
-		"la boulanger",
-		"rustic reel",
-		"spanish dance",
 		#extra tags
 		"music",
 		"steps",
 		"antidance",
 		"belles-lettres",
+		"essay",
 		"dance description",
 		"dance instruction",
+		"first edition",
 		"etiquette",
 		"libretto",
 		"memoirs",
