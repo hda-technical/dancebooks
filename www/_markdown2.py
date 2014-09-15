@@ -19,21 +19,21 @@ def main(
 	if not os.path.isfile(input):
 		print("Error: input file is not defined\n")
 		sys.exit(1)
-	
+
 	if len(output) ==  0:
 		print("Error: output file is not defined\n")
 		sys.exit(1)
-	
+
 	if not os.path.isfile(css):
 		print("Error: style file is not defined\n")
 		sys.exit(1)
 
 	title = os.path.basename(input)
 	title = os.path.splitext(title)[0]
-	
+
 	css_string = open(css, "r").read()
 
-	with open(input, "r+b") as input_file:
+	with open(input, "rb") as input_file:
 		markdown = input_file.read()
 		#trimming utf-8 byte order mark
 		if markdown.startswith(codecs.BOM_UTF8):
@@ -60,6 +60,6 @@ def main(
 
 	output_file = codecs.open(output, "w", encoding="utf-8")
 	output_file.write(html)
-	
+
 if __name__ == "__main__":
 	main.command()

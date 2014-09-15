@@ -1,3 +1,5 @@
+NAME := dancebooks
+
 BIB_FILES := $(wildcard bib/*.bib)
 URL_FILES := $(wildcard urls/*.txt)
 MARKDOWN_FILES := $(wildcard transcriptions/*.md)
@@ -109,6 +111,18 @@ www-profile:
 
 www-translations:
 	pybabel -v -q compile -d www/translations
+
+# must be imvoked as root
+www-configs-install: configs/nginx.conf configs/uwsgi.conf
+	cp configs/nginx.conf /etc/nginx/sites-available/$(NAME).conf
+	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
+	cp configs/uwsgi.conf /etc/uwsgi/apps-available/$(NAME).conf
+	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
+	cp configs/service.conf /etc/init.d/$(NAME)
+
+	service nginx reload
+	service $(NAME) restart
+
 
 www-distclean:
 	rm -rf www/__pycache__ www/tests/__pycache__

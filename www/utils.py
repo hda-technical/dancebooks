@@ -87,10 +87,10 @@ def files_in_folder(path, pattern, excludes={}):
 	Iterates over folder yielding files matching pattern
 	"""
 	result_files = []
-	
+
 	for root, dirs, files in os.walk(path):
 		skip = False
-		
+
 		#processing excludes
 		for excl in excludes:
 			excl_with_sep = "/" + excl
@@ -98,7 +98,7 @@ def files_in_folder(path, pattern, excludes={}):
 				skip = True
 		if skip:
 			continue
-		
+
 		for file_ in files:
 			if fnmatch.fnmatch(file_, pattern):
 				result_files.append(os.path.join(root, file_))
@@ -108,7 +108,7 @@ def files_in_folder(path, pattern, excludes={}):
 def extract_metadata_from_file(path):
 	"""
 	Extracts dictionary contating the following fields:
-	
+
 	* year (interval)
 	* language (string)
 	* author ([string])
@@ -129,44 +129,44 @@ def extract_metadata_from_file(path):
 	year = match.group("year")
 	year_from = int(year.replace("-", "0"))
 	year_to = int(year.replace("-", "9"))
-	
+
 	result = {
-		"year_from": year_from, 
+		"year_from": year_from,
 		"year_to": year_to,
 		"langid": const.SHORT_LANG_MAP[match.group("langid")],
 		"title": match.group("title")
 	}
-	
+
 	author = match.group("author")
 	if author is not None:
 		result["author"] = strip_split_list(author, ",")
-		
+
 	tome = match.group("tome")
 	if tome is not None:
 		result["tome"] = int(tome)
-	
+
 	edition = match.group("edition")
 	if edition is not None:
 		result["edition"] = int(edition)
-	
+
 	part = match.group("part")
 	if part is not None:
 		result["part"] = int(part)
-		
+
 	number = match.group("number")
 	if number is not None:
 		result["number"] = int(number)
-	
+
 	keywords = match.group("keywords")
 	if keywords is not None:
 		result["keywords"] = set(strip_split_list(keywords, ","))
-	
+
 	return result
-	
-	
+
+
 def create_search_from_metadata(metadata):
 	"""
-	Creates callable applicable to an item, 
+	Creates callable applicable to an item,
 	checing if this item match given metadata
 	"""
 	langid = metadata["langid"]
@@ -179,32 +179,32 @@ def create_search_from_metadata(metadata):
 	edition = metadata.get("edition", None)
 	part = metadata.get("part", None)
 	#keywords = metadata.get("keywords", None)
-	
+
 	title_regexp = re.compile("^" + re.escape(title))
-	
+
 	search_for_langid = search.search_for_eq("langid", langid)
 	search_for_year = search.and_([
 		search.search_for("year_from", year_from),
 		search.search_for("year_to", year_to)
 	])
-	
+
 	search_for_itemtitle = search.search_for_string_regexp("title", title_regexp)
 	search_for_booktitle = search.search_for_string_regexp("booktitle", title_regexp)
 	search_for_title = search.or_([search_for_itemtitle, search_for_booktitle])
-	
+
 	searches = [
 		search_for_langid,
 		search_for_year,
 		search_for_title,
 	]
-	
+
 	if author is not None:
 		search_for_author = search.search_for_eq(
-			"author", 
+			"author",
 			author
 		)
 		searches.append(search_for_author)
-	
+
 	if tome is not None:
 		search_for_volume = search.search_for_optional_eq(
 			"volume",
@@ -215,21 +215,21 @@ def create_search_from_metadata(metadata):
 			tome
 		)
 		searches.append(search.or_([search_for_volume, search_for_volumes]))
-	
+
 	if edition is not None:
 		search_for_edition = search.search_for_eq(
 			"edition",
 			edition
 		)
 		searches.append(search_for_edition)
-		
+
 	if number is not None:
 		search_for_number = search.search_for_eq(
 			"number",
 			number
 		)
 		searches.append(search_for_number)
-		
+
 	if part is not None:
 		search_for_part = search.search_for_eq(
 			"part",
@@ -238,13 +238,13 @@ def create_search_from_metadata(metadata):
 		searches.append(search_for_part)
 
 	#keywords aren't counted
-	
+
 	return search.and_(searches)
-	
-	
+
+
 def all_or_none(iterable):
 	return all(iterable) or not any(iterable)
-	
+
 
 def is_url_valid(url, check_head=False):
 	"""
@@ -259,7 +259,7 @@ def is_url_valid(url, check_head=False):
 			return False, "Netloc isn't specified"
 		elif len(split_result.fragment) != 0:
 			return False, "Fragments aren't allowed"
-		
+
 		if check_head:
 			response = requests.head(url, allow_redirects=False, verify=False)
 			if (response.status_code not in const.VALID_HTTP_CODES):
@@ -272,7 +272,7 @@ def is_url_valid(url, check_head=False):
 			ex=ex
 		)
 	return True, "URL is correct"
-		
+
 ISBN_REGEXP = re.compile("[^\dX]")
 def is_isbn_valid(isbn):
 	"""
@@ -290,7 +290,7 @@ def is_isbn_valid(isbn):
 			sum += w * c
 		r = sum % 11
 		return (str(r) if (r != 10) else "X")
-	
+
 	def check_digit_isbn_13(isbn):
 		sum = 0
 		length = len(isbn)
@@ -307,21 +307,21 @@ def is_isbn_valid(isbn):
 	isbn_clear = ISBN_REGEXP.sub("", isbn)
 	length = len(isbn_clear)
 	check, isbn_clear = isbn_clear[-1], isbn_clear[:-1]
-	
+
 	if length == 10:
 		right_check = check_digit_isbn_10(isbn_clear)
 	elif length == 13:
 		right_check = check_digit_isbn_13(isbn_clear)
 	else:
 		return False, "ISBN is neither ISBN-10 or ISBN-13"
-	
+
 	if check != right_check:
 		return False, "ISBN check digit is incorrect (should be {0})".format(
 			right_check
 		)
-	
+
 	return True, "ISBN is correct"
-	
+
 YEAR_REGEXP = re.compile(r"(?P<year_from>\d+)(?:[-–—]+(?P<year_to>\d+)(?P<circa>\?)?)?")
 def parse_year(year):
 	"""
@@ -330,23 +330,23 @@ def parse_year(year):
 	match = YEAR_REGEXP.match(year)
 	if not match:
 		raise ValueError("Failed to parse year {year}".format(year=year))
-	
+
 	year_from = match.group("year_from")
 	year_from = int(year_from)
-	
+
 	year_to = match.group("year_to")
 	if year_to is not None:
 		year_to = int(year_to)
 	else:
 		year_to = year_from
-	
+
 	circa = match.group("circa") is not None
-	
+
 	return (year_from, year_to, circa)
 
-	
+
 def read_utf8_file(path):
-	with open(path, "r+b") as input_file:
+	with open(path, "rb") as input_file:
 		data = input_file.read()
 		#trimming utf-8 byte order mark
 		if data.startswith(codecs.BOM_UTF8):
