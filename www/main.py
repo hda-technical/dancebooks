@@ -73,7 +73,7 @@ def get_locale():
 
 @flask_app.route(config.www.app_prefix + "/secret-cookie", methods=["GET"])
 def secret_cookie():
-	response = flask.make_response(flask.redirect(config.www.app_prefix + "/index.html"))
+	response = flask.make_response(flask.redirect(config.www.app_prefix))
 	response.set_cookie(
 		config.www.secret_cookie_key,
 		value=config.www.secret_cookie_value,

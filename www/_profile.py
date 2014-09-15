@@ -14,7 +14,7 @@ client = main.flask_app.test_client()
 @utils.profile()
 def all_profile():
 	client.get(config.www.app_prefix + "/all.html")
-	
+
 
 @utils.profile
 def parsing_profile():
@@ -23,7 +23,7 @@ def parsing_profile():
 
 @utils.profile
 def search_profile():
-	client.get(config.www.app_prefix + "/index.html?"
+	client.get(config.www.app_prefix + "/basic-search?"
 		"title=Dance&"
 		"author=Wil&"
 		"year_from=1000&"
