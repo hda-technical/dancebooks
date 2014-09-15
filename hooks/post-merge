@@ -4,5 +4,5 @@
 make test
 make www-translations
 
-echo "Updating leftparagrahps-bib-reload"
-touch /home/georg/.leftparagraphs-bib-reload
+echo "Updating .dancebooks-reload"
+touch /home/georg/.dancebooks-reload
