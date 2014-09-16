@@ -11,7 +11,6 @@
 \DeclareDatamodelFields[type=list,datatype=key]{origlanguage}
 \DeclareDatamodelFields[type=list,datatype=name,skipout=true]{origauthor}
 \DeclareDatamodelFields[type=list,datatype=literal,skipout=true]{filename}
-\DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{pagesize}
 \DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{annotation}
 
 \DeclareDatamodelFields[type=field,datatype=date,skipout=true]{added_on}
@@ -29,7 +28,6 @@
 \DeclareDatamodelEntryfields[periodical]{location,publisher,part}
 \DeclareDatamodelEntryfields[inproceedings]{origlanguage,translator}
 \DeclareDatamodelEntryfields{origauthor}
-\DeclareDatamodelEntryfields{pagesize}
 \DeclareDatamodelEntryfields{filename}
 
 \DeclareDatamodelEntryfields{added_on}
@@ -89,7 +87,7 @@
 	}
 }
 \DeclareDatamodelConstraints[book,mvbook,reference,mvreference]{
-	% for books and multi-volume books: 
+	% for books and multi-volume books:
 	% if one of {volume, volumes} exitst, both must be present
 	\constraint[type=conditional]{
 		\consequent[quantifier=all]{
@@ -191,12 +189,12 @@
 \iflistundef{#1}%
 {\unspace}%
 {\printlist[origlanguage]{#1}}}
-	
+
 \renewcommand*{\lbx@gost@sfromlang}[1]{%
 \iflistundef{#1}%
 {\unspace}%
 {\printlist[origlanguage]{#1}}}
-	
+
 \renewcommand*{\lbx@lfromlang}{\lbx@gost@lfromlang{origlanguage}}
 \renewcommand*{\lbx@sfromlang}{\lbx@gost@sfromlang{origlanguage}}
 \renewcommand*{\blx@gost@iflangundef}[3]{\iflistundef{#1}{#2}{#3}}
