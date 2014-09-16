@@ -52,3 +52,4 @@ class Message(object):
 			logging.exception("Messenger: exception occured. {ex}".format(
 				ex=ex
 			))
+			raise
