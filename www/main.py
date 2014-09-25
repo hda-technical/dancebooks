@@ -188,7 +188,7 @@ def get_book(id, show_secrets):
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		flask.abort(500, "Multiple entries with id {id}".format(id=id))
-	item = next(iter(items))
+	item = utils.first(items)
 	return flask.render_template(
 		"book.html",
 		item=item,

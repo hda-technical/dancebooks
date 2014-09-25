@@ -160,6 +160,7 @@ def main(
 		booktype = item.get("booktype").lower()
 		booktitle = item.get("booktitle")
 		commentator = item.get("commentator")
+		crossref = item.get("crossref")
 		edition = item.get("edition")
 		filename = item.get("filename")
 		id = item.get("id")
@@ -247,7 +248,7 @@ def main(
 
 		if (booktype == "inproceedings"):
 			if booktitle is None:
-				errors.append("bootitle must be present for @inprocessing")
+				errors.append("booktitle must be present for @inprocessing")
 
 		if (booktype == "thesis"):
 			if url is None:
@@ -261,6 +262,11 @@ def main(
 		#author validation empty
 
 		#booktitle validation empty
+		
+		if crossref:
+			referenced_title = utils.first(item_index["id"][crossref]).get("title")
+			if booktitle != referenced_title:
+				errors.append("booktitle doesn't match referenced book title")
 
 		#commentator
 		if commentator is not None:

@@ -353,4 +353,8 @@ def read_utf8_file(path):
 			return data[len(codecs.BOM_UTF8):].decode()
 		else:
 			return data.decode()
+	
+	
+def first(iterable):
+	return next(iter(iterable))
 
