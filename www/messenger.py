@@ -44,6 +44,7 @@ class Message(object):
 			recipients = [config.bug_report.to_addr]
 
 			smtp = smtplib.SMTP(config.smtp.host, config.smtp.port)
+			smtp.starttls()
 			if config.smtp.user and config.smtp.password:
 				smtp.login(config.smtp.user, config.smtp.password)
 			smtp.sendmail(config.smtp.email, recipients, msg.as_string())
