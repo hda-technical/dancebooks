@@ -1,8 +1,7 @@
 #!/bin/sh -e
-#
 
 make test
 make www-translations
 
 echo "Updating .dancebooks-reload"
-touch /home/georg/.dancebooks-reload
+touch ~/.dancebooks-reload
