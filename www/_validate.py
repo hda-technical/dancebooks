@@ -34,6 +34,7 @@ def main(
 	print("Going to process {0} items".format(len(items)))
 
 	SOURCE_REGEXP = re.compile("(?P<basename>[_\-\w\.]+).bib:\d+")
+	ID_REGEXP = re.compile("[a-z][a-z_0-9]+")
 	MULTILANG_FILES = {"proceedings-spb", "proceedings-rothenfelser", "_problems"}
 	VALID_BOOKTYPES = {
 		"book",
@@ -203,10 +204,15 @@ def main(
 			raise RuntimeError("Parser hasn't generated all required auxiliary fields {fields}".format(
 				fields=parser_obligatory
 			))
+			
+		if not ID_REGEXP.match(id):
+			errors.append("Id {id} doesn't match ID_REGEXP".format(
+				id=id
+			))
 
 		general_obligatory = [langid, year, title, added_on]
 		if not all(general_obligatory):
-			errors.append("Item doesn't define one of [langid, year, title]")
+			errors.append("Item doesn't define one of [langid, year, title, added_on]")
 
 
 		translation_obligatory = [origlanguage, translator]
