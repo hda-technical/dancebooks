@@ -130,7 +130,8 @@ www-distclean:
 requirements.txt: .PHONY
 	pip freeze --local | sort --ignore-case | tee $@
 
-.PHONY:;
+.PHONY:
+	;
 
 # Ancillary targets
 
