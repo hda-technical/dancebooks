@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+3#!/usr/bin/env python3
 import os.path
 import re
 import sys
@@ -80,7 +80,7 @@ def main(
 		"minuet",
 		"grossfater",
 		"highland",
-		"landler",
+		"landler / allemande",
 		"quadrille",
 		"quadrille: first set",
 		"quadrille: lancers",

@@ -62,10 +62,13 @@ msgstr "Отправить"
 msgid "pages:keywords:title"
 msgstr "Излишне заумный список тегов"
 
+msgid "pages:keywords:baroque"
+msgstr "Теги, связанные с танцами эпохи барокко"
+
 msgid "pages:keywords:edits"
 msgstr "Преложения по улучшению списка можно слать на"
 
-msgid "pages:keywords:xxi"
+msgid "pages:keywords:xix"
 msgstr "Теги, связанные с танцами XIX века"
 
 msgid "pages:keywords:xx"
@@ -83,6 +86,9 @@ msgstr "Примечания"
 #Pages: keywords: country dance related
 msgid "pages:keywords:ref:anglaise"
 msgstr "Любой английский контрданс (добавляйте, если ставите любой тег про английские контрдансы)"
+
+msgid "pages:keywords:ref:ecossaise"
+msgstr "Разницу между английскими контрдансами и экосезами — отличная тема для диссертации"
 
 msgid "pages:keywords:ref:circle"
 msgstr "Кадрили замкнутые в круг. Например, черкесский или сицилийский круги"

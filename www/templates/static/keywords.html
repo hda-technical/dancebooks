@@ -12,14 +12,15 @@
 				<li>galliard</li>
 				<li>sarabande</li>
 				<li>courante</li>
+				<li>landler / allemande</li>
 			</ul>
 			{% set ref = cycler(*range(1, 100)) %}
 			<h3>{{ _("pages:keywords:country-dance") }}</h3>
 			<ul class="disc">
 				<li>cotillon: 18th century</li>
-				<li>ecossaise</li>
 				<li>anglaise<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>anglaise: matredour</li>
+				<li>ecossaise<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>swedish dance</li>
 				<li>la tempete</li>
 				<li>circle<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
@@ -33,7 +34,7 @@
 				<li>minuet</li>
 				<li>grossfater</li>
 				<li>highland</li>
-				<li>landler</li>
+				<li>landler / allemande</li>
 				<li>quadrille<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>quadrille: first set</li>
 				<li>quadrille: lancers</li>
@@ -113,6 +114,7 @@
 			<ol class="decimal">
 				<!-- References for country-dance related keywords -->
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:anglaise") }}</li>
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:ecossaise") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:circle") }}</li>
 				<!-- References for XIX century keywords -->
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:quadrille") }}</li>
