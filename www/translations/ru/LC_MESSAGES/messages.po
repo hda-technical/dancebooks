@@ -63,7 +63,7 @@ msgid "pages:keywords:title"
 msgstr "Излишне заумный список тегов"
 
 msgid "pages:keywords:baroque"
-msgstr "Теги, связанные с танцами эпохи барокко"
+msgstr "Теги, связанные с танцами эпохи барокко (XVII–XVIII века)"
 
 msgid "pages:keywords:edits"
 msgstr "Преложения по улучшению списка можно слать на"

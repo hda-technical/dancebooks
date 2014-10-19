@@ -56,7 +56,7 @@ msgid "pages:keywords:edits"
 msgstr "You can send edits to the list to"
 
 msgid "pages:keywords:baroque"
-msgstr "Some keywords for the baroque books"
+msgstr "Some keywords for the baroque books (XVII–XVIII centuries)"
 
 msgid "pages:keywords:country-dance"
 msgstr "Country dances / contredanses related keywords"

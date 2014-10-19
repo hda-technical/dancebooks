@@ -13,11 +13,14 @@
 				<li>sarabande</li>
 				<li>courante</li>
 				<li>landler / allemande</li>
+				<li>perigourdine</li>
 			</ul>
 			{% set ref = cycler(*range(1, 100)) %}
 			<h3>{{ _("pages:keywords:country-dance") }}</h3>
 			<ul class="disc">
 				<li>cotillon: 18th century</li>
+				<li>cotillon: douze</li>
+				<li>cotillon: seize</li>
 				<li>anglaise<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>anglaise: matredour</li>
 				<li>ecossaise<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>

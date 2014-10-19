@@ -1,4 +1,4 @@
-3#!/usr/bin/env python3
+#!/usr/bin/env python3
 import os.path
 import re
 import sys
@@ -60,15 +60,19 @@ def main(
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
 
 	ALLOWED_KEYWORDS = {
-		#baroque related tags
+		#baroque related tags (XVII–XVIII century)
 		"galliard",
 		"saraband",
 		"courante",
+		"landler / allemande",
+		"perigourdine",
 		#country dance related tags
 		"cotillon: 18th century",
-		"ecossaise",
+		"cotillon: douze",
+		"cotillon: seize",
 		"anglaise",
 		"anglaise: matredour",
+		"ecossaise",
 		"swedish dance",
 		"la tempete",
 		"circle",
