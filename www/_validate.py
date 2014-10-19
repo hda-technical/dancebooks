@@ -82,6 +82,7 @@ def main(
 		"rustic reel",
 		"spanish dance",
 		#19th century related tags
+		"stage dance",
 		"minuet",
 		"grossfater",
 		"highland",

@@ -8,6 +8,7 @@ msgid ""
 msgstr ""
 
 # Interface strings
+
 msgid "interface:displaying_all"
 msgstr "Displaying everything"
 
@@ -49,6 +50,7 @@ msgstr ""
 	"<a href='/bib/keywords.html'>here</a>."
 
 # Pages: keywords
+
 msgid "pages:keywords:title"
 msgstr "A comprehensive keyword list"
 
@@ -74,6 +76,7 @@ msgid "pages:keywords:references"
 msgstr "References"
 
 # Pages: keywords: country-dance related
+
 msgid "pages:keywords:ref:anglaise"
 msgstr "Any English country dance (add it when adding any other ECD tag)"
 
@@ -84,6 +87,10 @@ msgid "pages:keywords:ref:circle"
 msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
 
 # Pages: keywords: XIX century
+
+msgid "pages:keywords:ref:quadrille"
+msgstr "Ballet, scenic and show off dance"
+
 msgid "pages:keywords:ref:quadrille"
 msgstr "Any quadrille (add it when adding any other quadrille tag)"
 
@@ -112,10 +119,12 @@ msgstr ""
 	"However, since the dance was able to pass through the sequence era, a separate keyword was added for it"
 
 # Pages: keywords: XX century
+
 msgid "pages:keywords:ref:animal-dances"
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
 # Pages: keywords: extras
+
 msgid "pages:keywords:ref:essay"
 msgstr "Source containing author view on some dance-related subject"
 
@@ -135,6 +144,7 @@ msgid "pages:keywords:ref:markdown"
 msgstr "Digital transcription available in <a href=\"https://github.com/georgthegreat/dancebooks-bibtex/wiki/Transcriptions\">wiki</a>"
 
 # Pages: persimmon
+
 msgid "pages:persimmon:verse"
 msgstr ""
 	"We danc'd till we were very tired:<br/>\n"
@@ -143,6 +153,7 @@ msgstr ""
 	"How could I persimmon have danced?<br/>\n"
 
 # Buttons
+
 msgid "interface:buttons:search"
 msgstr "Search"
 
@@ -153,6 +164,7 @@ msgid "interface:buttons:send"
 msgstr "Send"
 
 # Common
+
 msgid "common:Yes"
 msgstr "Yes"
 
@@ -193,6 +205,7 @@ msgid "common:locale"
 msgstr "en"
 
 # Report form
+
 msgid "interface:report:title"
 msgstr "Report bug / mistake"
 
@@ -209,6 +222,7 @@ msgid "interface:report:thanks"
 msgstr "Thanks! Your message was sent to /dev/null"
 
 # Search types
+
 msgid "search:type:basic"
 msgstr "Basic"
 
@@ -219,6 +233,7 @@ msgid "search:type:all_fields"
 msgstr "All Fields"
 
 # Search labels
+
 msgid "search:labels:author"
 msgstr "Author"
 
@@ -256,6 +271,7 @@ msgid "search:labels:all_fields"
 msgstr "Text to search for"
 
 # Search: Language select options
+
 msgid "search:language:czech"
 msgstr "Czech"
 
@@ -287,6 +303,7 @@ msgid "search:language:spanish"
 msgstr "Spanish"
 
 # Search results ordering
+
 msgid "search:order_by"
 msgstr "Order by"
 
@@ -306,6 +323,7 @@ msgid "search:order_by:location"
 msgstr "Place of publication"
 
 # Entry fields
+
 msgid "item:labels:author"
 msgstr "Author"
 
@@ -363,7 +381,8 @@ msgstr "Note"
 msgid "item:labels:annotation"
 msgstr "Auxilliary note"
 
-#: Languages
+# Languages
+
 msgid "item:language:czech"
 msgstr "Czech"
 
@@ -395,6 +414,7 @@ msgid "item:language:spanish"
 msgstr "Spanish"
 
 # Footer icons
+
 msgid "interface:footer:pdf"
 msgstr "Renrered PDF file"
 
@@ -414,6 +434,7 @@ msgid "interface:footer:tags"
 msgstr "Allowed keywords"
 
 # RSS
+
 msgid "rss:title"
 msgstr "New books"
 
@@ -427,6 +448,7 @@ msgstr[1] "%(num)d entries added"
 msgstr[2] "%(num)d entries added"
 
 # Error messages
+
 msgid "errors:missing:description"
 msgstr "Description is missing"
 

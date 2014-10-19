@@ -8,6 +8,7 @@ msgid ""
 msgstr ""
 
 # Inteface strings
+
 msgid "interface:displaying_all"
 msgstr "Вот всё, что есть"
 
@@ -49,6 +50,7 @@ msgstr ""
 	"<a href='/bib/keywords.html'>здесь</a>."
 
 # Buttons
+
 msgid "interface:buttons:search"
 msgstr "Искать"
 
@@ -59,6 +61,7 @@ msgid "interface:buttons:send"
 msgstr "Отправить"
 
 # Pages: keywords
+
 msgid "pages:keywords:title"
 msgstr "Излишне заумный список тегов"
 
@@ -84,6 +87,7 @@ msgid "pages:keywords:references"
 msgstr "Примечания"
 
 #Pages: keywords: country dance related
+
 msgid "pages:keywords:ref:anglaise"
 msgstr "Любой английский контрданс (добавляйте, если ставите любой тег про английские контрдансы)"
 
@@ -94,6 +98,10 @@ msgid "pages:keywords:ref:circle"
 msgstr "Кадрили замкнутые в круг. Например, черкесский или сицилийский круги"
 
 #Pages: keywords: XIX century
+
+msgid "pages:keywords:ref:stage-dance"
+msgstr "Балет, постановочные и показательные танцы"
+
 msgid "pages:keywords:ref:quadrille"
 msgstr "Любая кадриль (добавляйте, если ставите любой кадрильный тег)"
 
@@ -122,10 +130,12 @@ msgstr ""
 	"Однако, поскольку танец пережил эпоху сиквенсов, ему был добавлен отдельный тег"
 
 #Pages: keywords: XX century
+
 msgid "pages:keywords:ref:animal-dances"
 msgstr "Любой танец, подражающий движениям животных (добавляйте, если ставите любой их подобных тегов)"
 
 #Pages: keywords: extras
+
 msgid "pages:keywords:ref:essay"
 msgstr "Источник, содержащий авторский взгляд на какую-то тему, связанную с танцем"
 
@@ -145,6 +155,7 @@ msgid "pages:keywords:ref:markdown"
 msgstr "Транскрипция выложена в <a href=\"https://github.com/georgthegreat/dancebooks-bibtex/wiki/Transcriptions\">wiki</a>"
 
 # Pages: persimmon
+
 msgid "pages:persimmon:verse"
 msgstr ""
 	"Мы танцевали до упаду<br/>\n"
@@ -153,6 +164,7 @@ msgstr ""
 	"Как мог хурму я танцевать?<br/>\n"
 
 # Common
+
 msgid "common:Yes"
 msgstr "Да"
 
@@ -193,6 +205,7 @@ msgid "common:locale"
 msgstr "ru"
 
 # Report form
+
 msgid "interface:report:title"
 msgstr "Сообщить о проблеме"
 
@@ -209,6 +222,7 @@ msgid "iterface:report:thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
 
 # Search types
+
 msgid "search:type:basic"
 msgstr "Простой"
 
@@ -219,6 +233,7 @@ msgid "search:type:all_fields"
 msgstr "По всем полям"
 
 # Search labels
+
 msgid "search:labels:author"
 msgstr "Автор"
 
@@ -256,6 +271,7 @@ msgid "search:labels:all_fields"
 msgstr "Строка для поиска"
 
 # Search: Language select options
+
 msgid "search:language:czech"
 msgstr "Чешский"
 
@@ -287,6 +303,7 @@ msgid "search:language:spanish"
 msgstr "Испанский"
 
 # Search results ordering
+
 msgid "search:order_by"
 msgstr "Упорядочить по"
 
@@ -306,6 +323,7 @@ msgid "search:order_by:location"
 msgstr "Месту публикации"
 
 # Entry fields
+
 msgid "item:labels:author"
 msgstr "Автор"
 
@@ -364,6 +382,7 @@ msgid "item:labels:annotation"
 msgstr "Служебное примечание"
 
 # Languages
+
 msgid "item:language:czech"
 msgstr "Чешский"
 
@@ -395,6 +414,7 @@ msgid "item:language:spanish"
 msgstr "Испанский"
 
 # Footer icons
+
 msgid "interface:footer:pdf"
 msgstr "Файл в формате PDF"
 
@@ -413,7 +433,8 @@ msgstr "Хурма"
 msgid "interface:footer:tags"
 msgstr "Разрешённые теги"
 
-#: RSS
+# RSS
+
 msgid "rss:title"
 msgstr "Новые книги"
 
@@ -427,6 +448,7 @@ msgstr[1] "Добавлены %(num)d записи"
 msgstr[2] "Добавлено %(num)d записей"
 
 # Error messages
+
 msgid "errors:missing:description"
 msgstr "Отсуствует описание"
 
