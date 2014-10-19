@@ -71,6 +71,7 @@ def main(
 		"cotillon: 18th century",
 		"cotillon: douze",
 		"cotillon: seize",
+		"cotillon: vingt-quatre",
 		"anglaise",
 		"anglaise: matredour",
 		"ecossaise",
@@ -371,10 +372,10 @@ File {filename_} is not searchable by extracted params
 	extracted year_to: {year_to}
 """.format(
 	filename_=filename_,
-	author=metadata["author"],
-	title=metadata["title"],
-	year_from=metadata["year_from"],
-	year_to=metadata["year_to"]
+	author=metadata.get("author", ""),
+	title=metadata.get("title", ""),
+	year_from=metadata.get("year_from", ""),
+	year_to=metadata.get("year_to", "")
 ))
 		#id validation empty
 		if len(item_index["id"][id]) != 1:
