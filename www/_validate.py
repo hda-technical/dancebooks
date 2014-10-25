@@ -265,8 +265,6 @@ def main(
 				errors.append("booktitle must be present for @inprocessing")
 
 		if (booktype == "thesis"):
-			if url is None:
-				errors.append("url must be present for @thesis")
 			if type is None:
 				errors.append("type must be present for @thesis")
 			if institution is None:

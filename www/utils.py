@@ -261,7 +261,7 @@ def is_url_valid(url, check_head=False):
 			return False, "Fragments aren't allowed"
 
 		if check_head:
-			response = requests.head(url, allow_redirects=False, verify=False)
+			response = requests.head(url, allow_redirects=False, verify=True)
 			if (response.status_code not in const.VALID_HTTP_CODES):
 				return False, "HTTP HEAD request returned code {code}: {reason}".format(
 					code=response.status_code,
