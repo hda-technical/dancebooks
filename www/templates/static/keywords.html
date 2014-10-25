@@ -10,8 +10,8 @@
 			<h3>{{ _("pages:keywords:baroque") }}</h3>
 			<ul class="disc">
 				<li>galliard</li>
-				<li>sarabande</li>
-				<li>courante</li>
+				<li>saraband</li>
+				<li>courant</li>
 				<li>allemande</li>
 				<li>landler</li>
 				<li>perigourdine</li>
@@ -25,6 +25,7 @@
 				<li>cotillon: vingt-quatre</li>
 				<li>anglaise<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>anglaise: matredour</li>
+				<li>anglaise: money musk</li>
 				<li>ecossaise<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>swedish dance</li>
 				<li>la tempete</li>
@@ -36,12 +37,11 @@
 			</ul>
 			<h3>{{ _("pages:keywords:xix") }}</h3>
 			<ul class="disc">
-				<li>stage dance<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>minuet</li>
 				<li>grossfater</li>
-				<li>highland</li>
 				<li>allemande</li>
 				<li>landler</li>
+				<li>monferine</li>
 				<li>quadrille<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>quadrille: first set</li>
 				<li>quadrille: lancers</li>
@@ -71,8 +71,9 @@
 				<li>character dance</li>
 				<li>promiscuous figures</li>
 				<li>march</li>
-				<li>clog</li>
-				<li>jig</li>
+				<li>stage dance<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
+				<li>folk dance<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li<
+				<li>folk dance: country bumpkin</li<
 			</ul>
 			<h3>{{ _("pages:keywords:xx") }}</h3>
 			<ul class="disc">
@@ -86,9 +87,9 @@
 				<li>waltz: boston</li>
 				<li>waltz: canter</li>
 				<li>half and half</li>
-				<li>animal dances<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
-				<li>animal dances: grizzly bear</li>
-				<li>animal dances: turkey trot</li>
+				<li>animal dance<a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
+				<li>animal dance: grizzly bear</li>
+				<li>animal dance: turkey trot</li>
 				<li>castle walk</li>
 				<li>sequence</li>
 				<li>mixer dance</li>
@@ -124,7 +125,6 @@
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:ecossaise") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:circle") }}</li>
 				<!-- References for XIX century keywords -->
-				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:stage-dance") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:quadrille") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:waltz") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:waltz-sautese") }}</li>
@@ -133,8 +133,10 @@
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:polka-mazurka") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:sequence") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:tango") }}</li>
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:stage-dance") }}</li>
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:folk-dance") }}</li>				
 				<!-- References for XX century keywords -->
-				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:animal-dances") }}</li>
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:animal-dance") }}</li>
 				<!-- References for extra keywords -->
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:essay") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:dance-description") }}</li>

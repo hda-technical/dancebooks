@@ -5,6 +5,7 @@
 #========================
 
 MAX_TILE=50
+
 if [ "$DEBUG" ]
 then
 	WGET='wget'
@@ -12,6 +13,13 @@ else
 	WGET='wget -q'
 fi
 
+#Latin numbers in lowercase (from 1 to 10)
+LATIN_NUMBERS="i ii iii iv v vi vii viii ix x xi xii xiii xiv xv xvi xvii xviii xix xx xxi xxii xxiii xxiv xxv xxvi xxvii xxviii xxix xxx xxxi xxxii xxxiii xxxiv xxxv xxxvi xxxvii xxxviii xxxix xl"
+#Extra latin number (not used)
+
+
+WGET_HTTP_ERROR=8
+	
 #========================
 #HELPER FUNCTIONS
 #========================
@@ -22,7 +30,7 @@ function max()
 	local MAX=$1
 	shift
 	
-	for CANDIDATE in $#
+	for CANDIDATE in $@
 	do
 		if [ "$CANDIDATE" -gt "$MAX" ]
 		then
@@ -38,7 +46,7 @@ function min()
 	local MIN=$1
 	shift
 	
-	for CANDIDATE in $#
+	for CANDIDATE in $@
 	do
 		if [ "$CANDIDATE" -lt "$MIN" ]
 		then
@@ -57,7 +65,6 @@ function tiles()
 		return
 	fi
 	
-	local WGET_HTTP_ERROR=8
 	local MIN_TILE_SIZE=`expr 1024 '*' 5` #5.0 kilobytes
 	
 	local URL_GENERATOR=$1
@@ -247,3 +254,57 @@ function dusseldorfTiles()
 	local OUTPUT_DIR=.
 	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
 }
+
+function vwml()
+{
+	if [ $# -ne 3 ]
+	then
+		echo "Usage: $0 book_shorthand book_id page_count"
+		return
+	fi
+	
+	local BOOK_SHORTHAND=$1
+	local BOOK_ID=$2
+	local PAGE_COUNT=$3
+	local OUTPUT_DIR="vwml.$BOOK_ID"
+	
+	mkdir -p "$OUTPUT_DIR"
+	local OUTPUT_PAGE=1
+	
+	#Getting pages with latin numeration first
+	for LATIN_NUMBER in $LATIN_NUMBERS
+	do
+		local NORMALIZED_NUMBER=`printf %06s $LATIN_NUMBER | sed -e 's/ /0/g'`
+		local OUTPUT_FILE="$OUTPUT_DIR/latin_`printf %04d $OUTPUT_PAGE`.jpg"
+		$WGET "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID$NORMALIZED_NUMBER.jpg" -O $OUTPUT_FILE
+		if [ $? == "$WGET_HTTP_ERROR" ]
+		then
+			rm $OUTPUT_FILE
+			break
+		else
+			OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
+		fi
+	done
+	
+	for PAGE in `seq 1 $PAGE_COUNT`
+	do
+		local OUTPUT_FILE="$OUTPUT_DIR/`printf %04d $OUTPUT_PAGE`.jpg"
+		$WGET "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID`printf %06d $PAGE`.jpg" -O $OUTPUT_FILE
+		if [ $? == "$WGET_HTTP_ERROR" ]
+		then
+			rm $OUTPUT_FILE
+		else
+			OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
+		fi
+	done
+}
+
+if [ $# -lt 2 ]
+then
+	echo "Usage: $0 grabber <grabber params>"
+	exit 1
+fi
+
+GRABBER=$1
+shift
+$GRABBER $@

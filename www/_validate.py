@@ -63,7 +63,7 @@ def main(
 		#baroque related tags (XVII–XVIII century)
 		"galliard",
 		"saraband",
-		"courante",
+		"courant",
 		"allemande",
 		"landler",
 		"perigourdine",
@@ -74,6 +74,7 @@ def main(
 		"cotillon: vingt-quatre",
 		"anglaise",
 		"anglaise: matredour",
+		"anglaise: money musk",
 		"ecossaise",
 		"swedish dance",
 		"la tempete",
@@ -83,12 +84,11 @@ def main(
 		"rustic reel",
 		"spanish dance",
 		#19th century related tags
-		"stage dance",
 		"minuet",
 		"grossfater",
-		"highland",
 		"allemande",
 		"landler",
+		"monferine",
 		"quadrille",
 		"quadrille: first set",
 		"quadrille: lancers",
@@ -118,8 +118,9 @@ def main(
 		"character dance",
 		"promiscuous figures",
 		"march",
-		"clog",
-		"jig",
+		"stage dance",
+		"folk dance",
+		"folk dance: country bumpkin",
 		#20th century related tags
 		"one-step",
 		"two-step",
@@ -131,9 +132,9 @@ def main(
 		"waltz: boston",
 		"waltz: canter",
 		"half and half",
-		"animal dances",
-		"animal dances: grizzly bear",
-		"animal dances: turkey trot",
+		"animal dance",
+		"animal dance: grizzly bear",
+		"animal dance: turkey trot",
 		"castle walk",
 		"sequence",
 		"mixer dance",
@@ -344,7 +345,7 @@ def main(
 
 				meta_keywords = metadata.get("keywords", None)
 				if meta_keywords is not None:
-					if ("incomplete" not in meta_keywords) and (source_basename == "_problems"):
+					if ("incomplete" in meta_keywords) and (source_basename != "_problems"):
 						errors.append("Incomplete books should be stored in _problems.bib")
 					meta_keywords.discard("incomplete")
 

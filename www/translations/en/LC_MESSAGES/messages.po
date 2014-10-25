@@ -78,7 +78,9 @@ msgstr "References"
 # Pages: keywords: country-dance related
 
 msgid "pages:keywords:ref:anglaise"
-msgstr "Any English country dance (add it when adding any other ECD tag)"
+msgstr ""
+	"Any English country dance (add it when adding any other anglaise tag). "
+	"Musical form of the country dances is not counted in keywords"
 
 msgid "pages:keywords:ref:ecossaise"
 msgstr "Differenced between English country dances and ecossaises is yet to be detemined"
@@ -118,9 +120,12 @@ msgstr ""
 	"(as far, as I know, nobody did a research on that). "
 	"However, since the dance was able to pass through the sequence era, a separate keyword was added for it"
 
+msgid "pages:keywords:ref:folk-dance"
+msgstr "Currently includes the following tags: reel, jig, strathspey, fling, fancy, hornpipe, clog"
+
 # Pages: keywords: XX century
 
-msgid "pages:keywords:ref:animal-dances"
+msgid "pages:keywords:ref:animal-dances
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
 # Pages: keywords: extras

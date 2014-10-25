@@ -89,7 +89,9 @@ msgstr "Примечания"
 #Pages: keywords: country dance related
 
 msgid "pages:keywords:ref:anglaise"
-msgstr "Любой английский контрданс (добавляйте, если ставите любой тег про английские контрдансы)"
+msgstr ""
+	"Любой английский контрданс (добавляйте, если ставите любой тег про английские контрдансы). "
+	"Музыкальная форма контрданса не ведёт к добавлению тегов"
 
 msgid "pages:keywords:ref:ecossaise"
 msgstr "Разницу между английскими контрдансами и экосезами — отличная тема для диссертации"
@@ -129,9 +131,12 @@ msgstr ""
 	"(насколько мне известно, никто не исследовал этот вопрос). "
 	"Однако, поскольку танец пережил эпоху сиквенсов, ему был добавлен отдельный тег"
 
+msgid "pages:keywords:ref:folk-dance"
+msgstr "В данный момент объединяет в себе следующие теги: reel, jig, strathspey, fling, fancy, hornpipe, clog"
+	
 #Pages: keywords: XX century
 
-msgid "pages:keywords:ref:animal-dances"
+msgid "pages:keywords:ref:animal-dance"
 msgstr "Любой танец, подражающий движениям животных (добавляйте, если ставите любой их подобных тегов)"
 
 #Pages: keywords: extras
