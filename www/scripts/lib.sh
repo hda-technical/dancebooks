@@ -6,23 +6,42 @@
 
 MAX_TILE=50
 
-if [ "$DEBUG" ]
-then
-	WGET='wget'
-else
-	WGET='wget -q'
-fi
-
 #Latin numbers in lowercase (from 1 to 10)
-LATIN_NUMBERS="i ii iii iv v vi vii viii ix x xi xii xiii xiv xv xvi xvii xviii xix xx xxi xxii xxiii xxiv xxv xxvi xxvii xxviii xxix xxx xxxi xxxii xxxiii xxxiv xxxv xxxvi xxxvii xxxviii xxxix xl"
+LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 #Extra latin number (not used)
-
+#"xi xii xiii xiv xv xvi xvii xviii xix xx xxi xxii xxiii xxiv xxv xxvi xxvii xxviii xxix xxx xxxi xxxii xxxiii xxxiv xxxv xxxvi xxxvii xxxviii xxxix xl"
 
 WGET_HTTP_ERROR=8
 	
 #========================
 #HELPER FUNCTIONS
 #========================
+
+
+function web_get()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage: $0 url output_file"
+		return
+	fi
+	
+	local URL=$1
+	local OUTPUT_FILE=$2
+	echo -n "Getting $1 ... "
+	
+	wget -q "$1" -O "$2"
+	
+	if [ $? == "$WGET_HTTP_ERROR" ]
+	then
+		rm $OUTPUT_FILE
+		echo "FAIL"
+		return 1
+	else
+		echo "OK"
+		return 0
+	fi
+}
 
 #Utility functions
 function max()
@@ -83,9 +102,9 @@ function tiles()
 	do
 		local TILE_Y=0
 		local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
-		$WGET `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` -O $TILE_FILE
+		web_get `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
 		if [ \
-			\( $? == "$WGET_HTTP_ERROR" \) -o \
+			\( $? -ne 0 \) -o \
 			\( `stat --format=%s $TILE_FILE` -lt $MIN_TILE_SIZE \) \
 		]
 		then
@@ -97,10 +116,10 @@ function tiles()
 		for TILE_Y in `seq 0 $MAX_TILE_Y`
 		do
 			local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
-			$WGET `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` -O $TILE_FILE
+			web_get `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
 				
 			if [ \
-				\( $? == "$WGET_HTTP_ERROR" \) -o \
+				\( $? -ne 0 \) -o \
 				\( `stat --format=%s $TILE_FILE` -lt $MIN_TILE_SIZE \) \
 			]
 			then
@@ -131,7 +150,7 @@ function rsl()
 	
 	local BOOK_ID=$1
 	
-	$WGET "http://dlib.rsl.ru/loader/view/$1?get=pdf" -O "rsl.$BOOK_ID.pdf"
+	web_get "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
 }
 
 function haithi()
@@ -150,8 +169,8 @@ function haithi()
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
 		while ( \
-			$WGET "http://babel.hathitrust.org/cgi/imgsrv/image?id=$BOOK_ID;seq=$PAGE;width=1000000" -O "$OUTPUT_DIR/`printf %04d.jpg $PAGE`"; \
-			[ "$?" == "$WGET_HTTP_ERROR" ] \
+			web_get "http://babel.hathitrust.org/cgi/imgsrv/image?id=$BOOK_ID;seq=$PAGE;width=1000000" "$OUTPUT_DIR/`printf %04d.jpg $PAGE`"; \
+			[ "$?" -ne 0 ] \
 		)
 		do
 			sleep 30
@@ -274,27 +293,24 @@ function vwml()
 	#Getting pages with latin numeration first
 	for LATIN_NUMBER in $LATIN_NUMBERS
 	do
-		local NORMALIZED_NUMBER=`printf %06s $LATIN_NUMBER | sed -e 's/ /0/g'`
+		local NORMALIZED_NUMBER=`printf %04s $LATIN_NUMBER | sed -e 's/ /0/g'`
 		local OUTPUT_FILE="$OUTPUT_DIR/latin_`printf %04d $OUTPUT_PAGE`.jpg"
-		$WGET "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID$NORMALIZED_NUMBER.jpg" -O $OUTPUT_FILE
-		if [ $? == "$WGET_HTTP_ERROR" ]
+		web_get "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID$NORMALIZED_NUMBER.jpg" "$OUTPUT_FILE"
+		if [ $? -ne 0 ]
 		then
-			rm $OUTPUT_FILE
 			break
 		else
-			OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
+			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
 		fi
 	done
 	
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
 		local OUTPUT_FILE="$OUTPUT_DIR/`printf %04d $OUTPUT_PAGE`.jpg"
-		$WGET "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID`printf %06d $PAGE`.jpg" -O $OUTPUT_FILE
-		if [ $? == "$WGET_HTTP_ERROR" ]
+		web_get "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID`printf %04d $PAGE`.jpg" "$OUTPUT_FILE"
+		if [ $? == 0 ]
 		then
-			rm $OUTPUT_FILE
-		else
-			OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
+			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
 		fi
 	done
 }
