@@ -112,7 +112,10 @@ msgid "pages:keywords:ref:boston"
 msgstr "Including boston dip"
 
 msgid "pages:keywords:ref:sequence"
-msgstr "Round dances containing more that one figure or step"
+msgstr ""
+	"Round dances containing more that one figure or step. "
+	"Keywords includes round dances of the middle of 19th century "
+	"(gorlitza, varsovienne, sicilienne, imperial, etc.)"
 
 msgid "pages:keywords:ref:tango"
 msgstr ""
