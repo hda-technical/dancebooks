@@ -165,7 +165,22 @@ class WwwConfig(object):
 		if "elibrary_root" not in params:
 			raise ValueError("elibrary_root param wasn't found")
 		self.elibrary_root = params["elibrary_root"]
-
+		
+		if "secret_question_keys" not in params:
+			raise ValueError("secret_question_keys param wasn't found")
+		secret_question_keys = json.loads(params["secret_question_keys"])
+		
+		if "secret_question_answers" not in params:
+			raise ValueError("secret_question_answers param wasn't found")
+		secret_question_answers = json.loads(params["secret_question_answers"])
+		
+		self.secret_questions = {
+			key: answer 
+			for key, anwser in zip(
+				secret_questions_keys, 
+				secret_question_answers
+			)
+		}
 
 class Config(object):
 	@staticmethod

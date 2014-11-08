@@ -235,6 +235,15 @@ msgstr "Опишите проблему"
 msgid "iterface:report:thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
 
+msgid "interface:report:questions:louis-naissanse"
+msgstd "Год рождения Людовика XIV"
+
+msgid "interface:report:questions:revolution"
+msgstd "Год начала Великой Французской революции"
+
+msgid "interface:report:questions:congress"
+msgstd "Год начала Венского конгресса"
+
 # Search types
 
 msgid "search:type:basic"
@@ -471,6 +480,12 @@ msgstr "Отсутствует имя"
 
 msgid "errors:missing:email"
 msgstr "Отсутствует e-mail"
+
+msgid "errors:missing:answer"
+msgstr "Отсутствует ответ на секретный вопрос"
+
+msgid "errors:wrong:answer"
+msgstr "Неправильный ответ"
 
 msgid "errors:wrong:email"
 msgstr "Неправильный e-mail"

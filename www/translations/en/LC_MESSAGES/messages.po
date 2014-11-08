@@ -235,6 +235,15 @@ msgstr "Describe the problem"
 msgid "interface:report:thanks"
 msgstr "Thanks! Your message was sent to /dev/null"
 
+msgid "interface:report:questions:louis-naissanse"
+msgstd "The year when Louis XIV was born"
+
+msgid "interface:report:questions:revolution"
+msgstd "The year when révolution française has started"
+
+msgid "interface:report:questions:congress"
+msgstd "The year when Congress of Vienna has begun"
+
 # Search types
 
 msgid "search:type:basic"
@@ -471,6 +480,12 @@ msgstr "Name is missing"
 
 msgid "errors:missing:email"
 msgstr "E-mail in missing"
+
+msgid "errors:missing:answer"
+msgstr "The answer to the question is missing"
+
+msgid "errors:wrong:answer"
+msgstr "The answer to the question is wrong"
 
 msgid "errors:wrong:email"
 msgstr "E-mail is wrong"
