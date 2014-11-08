@@ -481,10 +481,13 @@ msgstr "Отсутствует имя"
 msgid "errors:missing:email"
 msgstr "Отсутствует e-mail"
 
-msgid "errors:missing:answer"
+msgid "errors:missing:captcha-key"
+msgstr "Отсутствует идентификатор секретного вопроса"
+
+msgid "errors:missing:captcha-answer"
 msgstr "Отсутствует ответ на секретный вопрос"
 
-msgid "errors:wrong:answer"
+msgid "errors:wrong:captcha-answer"
 msgstr "Неправильный ответ"
 
 msgid "errors:wrong:email"

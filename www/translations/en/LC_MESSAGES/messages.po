@@ -481,10 +481,13 @@ msgstr "Name is missing"
 msgid "errors:missing:email"
 msgstr "E-mail in missing"
 
-msgid "errors:missing:answer"
+msgid "errors:missing:captcha-key"
+msgstr "The id of the question is missing"
+
+msgid "errors:missing:captcha-answer"
 msgstr "The answer to the question is missing"
 
-msgid "errors:wrong:answer"
+msgid "errors:wrong:captcha-answer"
 msgstr "The answer to the question is wrong"
 
 msgid "errors:wrong:email"

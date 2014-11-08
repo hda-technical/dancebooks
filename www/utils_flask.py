@@ -121,17 +121,34 @@ class _DefaultValue(object):
 def extract_string_from_request(param_name, default=_DefaultValue):
 	param = flask.request.values.get(param_name, default)
 	if param is _DefaultValue:
-		flask.abort(400, babel.gettext("errors:missing:" + param_name))
+		flask.abort(
+			400, 
+			babel.gettext("errors:missing:" + param_name.replace("_", "-"))
+		)
 	return param
 
 
 EMAIL_REGEXP = re.compile(".*@.*")
 def extract_email_from_request(param_name, default=_DefaultValue):
-	email = extract_string_from_request(param_name, default)
-	if not EMAIL_REGEXP.match(email):
-		flask.abort(400, babel.gettext("errors:wrong:email"))
-	return email
-
+	result = extract_string_from_request(param_name, default)
+	if not EMAIL_REGEXP.match(result):
+		flask.abort(
+			400, 
+			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
+		)
+	return result
+	
+	
+def extract_int_from_request(param_name, default=_DefaultValue):
+	result = extract_string_from_request(param_name, default)
+	try:
+		return int(result)
+	except Exception:
+		flask.abort(
+			400, 
+			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
+		)
+		
 
 class MemoryCache(jinja2.BytecodeCache):
 	def __init__(self):

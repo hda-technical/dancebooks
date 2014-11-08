@@ -31,6 +31,13 @@
 								<textarea name="message" cols="50" rows="10" maxlength="500" required="required"></textarea>
 							</td>
 						</tr>
+						<tr>
+							<td>{{ _("interface:report:questions:" + captcha_key) }}:</td>
+							<td>
+								<input type="hidden" name="captcha_key">{{ captcha_key }}</input>
+								<input type="text" name="captcha_answer" required="required"></input>
+							</td>
+						</tr>
 					</table>
 				</form>
 				<button id="reportFormSubmitter">{{ _("interface:buttons:send") }}</button>

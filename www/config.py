@@ -168,7 +168,7 @@ class WwwConfig(object):
 		
 		if "secret_question_keys" not in params:
 			raise ValueError("secret_question_keys param wasn't found")
-		secret_question_keys = json.loads(params["secret_question_keys"])
+		self.secret_question_keys = json.loads(params["secret_question_keys"])
 		
 		if "secret_question_answers" not in params:
 			raise ValueError("secret_question_answers param wasn't found")
@@ -176,8 +176,8 @@ class WwwConfig(object):
 		
 		self.secret_questions = {
 			key: answer 
-			for key, anwser in zip(
-				secret_questions_keys, 
+			for key, answer in zip(
+				self.secret_question_keys, 
 				secret_question_answers
 			)
 		}

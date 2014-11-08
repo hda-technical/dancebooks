@@ -4,6 +4,7 @@ import datetime
 import http.client
 import logging
 import os.path
+import random
 import sys
 from urllib import parse as urlparse
 
@@ -195,11 +196,13 @@ def get_book(id, show_secrets):
 		flask.abort(500, message)
 		
 	item = utils.first(items)
+	captcha_key = random.choice(config.www.secret_question_keys)
 	
 	return flask.render_template(
 		"book.html",
 		item=item,
-		show_secrets=show_secrets
+		show_secrets=show_secrets,
+		captcha_key=captcha_key
 	)
 	
 
@@ -278,9 +281,18 @@ def edit_book(book_id):
 	message = utils_flask.extract_string_from_request("message")
 	from_name = utils_flask.extract_string_from_request("name")
 	from_email = utils_flask.extract_email_from_request("email")
-	if not all([message, from_name, from_email]):
+	captcha_key = utils_flask.extract_string_from_request("captcha_key")
+	captcha_answer = utils_flask.extract_int_from_request("captcha_answer")
+	
+	if not all([message, from_name, from_email, captcha_key, captcha_answer]):
 		flask.abort(400, "Empty values aren't allowed")
-
+	
+	if captcha_key not in config.www.secret_questions:
+		flask.abort(400, "Wrong secret question id")
+	
+	if captcha_answer != config.www.secret_questions[captcha_key]:
+		flask.abort(403, babel.gettext("errors:wrong:captcha-answer"))
+	
 	message = messenger.Message(book_id, from_email, from_name, message)
 	message.send()
 
