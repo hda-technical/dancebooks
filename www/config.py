@@ -71,7 +71,11 @@ class ParserConfig(object):
 		if "date_format" not in params:
 			raise ValueError("date_format param wasn't found")
 		self.date_format = params["date_format"]
-
+		
+		if "blocked_domains" not in params:
+			raise ValueError("blocked_domains param wasn't found")
+		self.blocked_domains = set(json.loads(params["blocked_domains"]))
+		
 		#suffixes parsing
 		if "start_suffix" not in params:
 			raise ValueError("start_suffix param wasn't found")

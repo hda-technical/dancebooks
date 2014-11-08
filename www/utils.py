@@ -259,6 +259,11 @@ def is_url_valid(url, check_head=False):
 			return False, "Netloc isn't specified"
 		elif len(split_result.fragment) != 0:
 			return False, "Fragments aren't allowed"
+			
+		if split_result.hostname in config.parser.blocked_domains:
+			return False, "Hostname {hostname} is blocked".format(
+				hostname=split_result.hostname
+			)
 
 		if check_head:
 			response = requests.head(url, allow_redirects=False, verify=True)
