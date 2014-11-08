@@ -5,6 +5,7 @@ import http.client
 import logging
 import os.path
 import sys
+from urllib import parse as urlparse
 
 import flask
 from flask.ext import babel
@@ -187,14 +188,78 @@ def get_book(id, show_secrets):
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
-		flask.abort(500, "Multiple entries with id {id}".format(id=id))
+		message = "Multiple entries with id {id}".format(
+			id=id
+		)
+		logging.error(message)
+		flask.abort(500, message)
+		
 	item = utils.first(items)
+	
 	return flask.render_template(
 		"book.html",
 		item=item,
 		show_secrets=show_secrets
 	)
+	
 
+@flask_app.route(config.www.app_prefix + "/books/<string:id>/pdf/<int:index>", methods=["GET"])
+def get_book_pdf(id, index):
+	items = item_index["id"].get(id, None)
+	
+	if (index <= 0):
+		flask.abort(400, "Param index should be positive number")
+	
+	if items is None: 
+		flask.abort(404, "Book with id {id} was not found".format(
+			id=id
+		))
+	elif len(items) != 1:
+		message = "Multiple entries with id {id}".format(
+			id=id
+		)
+		logging.error(message)
+		flask.abort(500, message)
+	
+	item = utils.first(items)
+	item_urls = item.get("url")
+	item_filenames = item.get("filename")
+	rel_url = "{app_prefix}/books/{id}/pdf/{index}".format(
+		app_prefix=config.www.app_prefix
+		id=id,
+		index=index
+	)
+	full_url = "{books_url}/{id}/pdf/{index}".format(
+		books_url=config.www.books_url,
+		id=id,
+		index=index
+	)
+	
+	#checking some security cases
+	if (
+		(item_urls, is None) or 
+		(item_filenames is None) or 
+		(full_url not in item_urls) or
+		(index > len(item_filenames)
+	):
+		flask.abort(404, "Book with id {id} isn't available for download".format(
+			id=id
+		))
+	
+	#first symbol of each filename is '/' that should be trimmed
+	pdf_rel_path = item_filenames[index - 1][1:]
+	pdf_full_path = os.path.join(config.www.elibrary_root, pdf_rel_path)
+	
+	if not os.path.isfile(pdf_full_path):
+		message = "Item {id} metadata is wrong: file for url {rel_url} is missing".format(
+			id=id,
+			rel_url=rel_url
+		)
+		logging.error(message)
+		flask.abort(500, message)
+	
+	return flask_app.send_static_file(pdf_full_path)
+	
 
 @flask_app.route(config.www.app_prefix + "/books/<string:book_id>", methods=["POST"])
 @utils_flask.jsonify()
@@ -204,7 +269,11 @@ def edit_book(book_id):
 	if items is None:
 		flask.abort(404, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
-		flask.abort(500, "Multiple entries with id {id}".format(id=id))
+		message = "Multiple entries with id {id}".format(
+			id=id
+		)
+		logging.error(message)
+		flask.abort(500, message)
 
 	message = utils_flask.extract_string_from_request("message")
 	from_name = utils_flask.extract_string_from_request("name")

@@ -114,13 +114,15 @@ class ParserConfig(object):
 
 class WwwConfig(object):
 	def __init__(self, params):
-		if "domain" not in params:
-			raise ValueError("domain param wasn't found")
-		self.domain = params["domain"]
+		if "app_domain" not in params:
+			raise ValueError("app_domain param wasn't found")
+		self.app_domain = params["app_domain"]
 
 		if "app_prefix" not in params:
 			raise ValueError("app_prefix param wasn't found")
 		self.app_prefix = params["app_prefix"]
+		
+		self.books_url = "http://" + self.app_domain + self.app_prefix + "/books"
 		self.basic_search_url = self.app_prefix + "/basic-search"
 		self.advanced_search_url = self.app_prefix + "/advanced-search"
 		self.all_fields_search_url = self.app_prefix + "/all-fields-search"
@@ -159,6 +161,10 @@ class WwwConfig(object):
 		if "order_by_keys" not in params:
 			raise ValueError("order_by_keys param wasn't found")
 		self.order_by_keys = set(json.loads(params["order_by_keys"]))
+		
+		if "elibrary_root" not in params:
+			raise ValueError("elibrary_root param wasn't found")
+		self.elibrary_root = params["elibrary_root"]
 
 
 class Config(object):

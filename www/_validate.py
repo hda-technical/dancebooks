@@ -5,6 +5,7 @@ import sys
 
 import opster
 
+from config import config
 import const
 import index
 import bib_parser
@@ -20,17 +21,17 @@ languages = sorted(item_index["langid"].keys())
 
 @opster.command()
 def main(
-	root=("r", "", "E-library root"),
 	strict=("", False, "Add some extra checks (includes HTTP HEAD requests)")
 ):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
-	if (len(root) == 0) or (not os.path.isdir(root)):
-		print("Root folder is inaccessible")
+	if not os.path.isdir(config.www.elibrary_root):
+		print("root folder '{elibrary_root}' is inaccessible".format(
+			elibrary_root=config.www.elibrary_root
+		))
 		sys.exit(1)
 
-	root = os.path.abspath(root)
 	print("Going to process {0} items".format(len(items)))
 
 	SOURCE_REGEXP = re.compile("(?P<basename>[_\-\w\.]+).bib:\d+")
@@ -313,7 +314,7 @@ def main(
 		if (filename is not None) and (booktype not in MULTIENTRY_BOOKTYPES):
 			for filename_ in filename:
 				#filename starts with "/" which will mix os.path.join up
-				abspath = os.path.join(root, filename_[1:])
+				abspath = os.path.join(config.www.elibrary_root, filename_[1:])
 				#each filename should be accessible
 				if not os.path.isfile(abspath):
 					errors.append("File {filename_} is not accessible".format(

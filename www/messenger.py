@@ -17,8 +17,8 @@ class Message(object):
 
 	def __str__(self):
 		return flask.render_template("components/message.html",
-			base_url="http://{domain}{book_prefix}".format(
-				domain=config.www.domain,
+			base_url="http://{app_domain}{book_prefix}".format(
+				app_domain=config.www.app_domain,
 				book_prefix=config.www.app_prefix + "/books"
 			),
 			book_id=self.book_id,

@@ -29,20 +29,19 @@ languages = sorted(item_index["langid"].keys())
 
 @opster.command()
 def main(
-	max_count=("c", 100, "Maximum count of filenames to display"),
-	root=("r", "", "E-library root")
+	max_count=("c", 100, "Maximum count of filenames to display")
 ):
-	if (len(root) == 0) or (not os.path.isdir(root)):
-		print("Root folder is inaccessible")
+	if not os.path.isdir(config.www.elibrary_root):
+		print("root folder '{elibrary_root}' is inaccessible".format(
+			elibrary_root=config.www.elibrary_root
+		))
 		sys.exit(1)
 
-	root = os.path.abspath(root)
-
 	#filename in database is relative, but begins from /
-	file_modifier = lambda file_, root=root: os.path.join(root, file_[1:])
+	file_modifier = lambda file_, root=config.www.elibrary_root: os.path.join(root, file_[1:])
 	filenames = set(map(file_modifier, item_index["filename"].keys()))
 	
-	files = utils.files_in_folder(root, "*.pdf", excludes=EXCLUDED_FOLDERS)
+	files = utils.files_in_folder(config.www.elibrary_root, "*.pdf", excludes=EXCLUDED_FOLDERS)
 	
 	files_filter = lambda file_: file_ not in filenames
 	files = list(filter(files_filter, files))
@@ -52,7 +51,7 @@ def main(
 	output_count = 0
 	output_dict = dict()
 	for file_ in files:
-		relpath = "/" + os.path.relpath(file_, root)
+		relpath = "/" + os.path.relpath(file_, config.www.elibrary_root)
 			
 		metadata = utils.extract_metadata_from_file(file_)	
 		item_search = utils.create_search_from_metadata(metadata)
