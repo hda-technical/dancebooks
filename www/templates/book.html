@@ -34,8 +34,8 @@
 						<tr>
 							<td>{{ _("interface:report:questions:" + captcha_key) }}:</td>
 							<td>
-								<input type="hidden" name="captcha_key">{{ captcha_key }}</input>
-								<input type="text" name="captcha_answer" required="required"></input>
+								<input type="hidden" name="captcha_key" value="{{ captcha_key }}"/>
+								<input type="text" name="captcha_answer" required="required"/>
 							</td>
 						</tr>
 					</table>

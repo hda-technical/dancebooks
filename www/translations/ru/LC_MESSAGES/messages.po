@@ -236,13 +236,13 @@ msgid "iterface:report:thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
 
 msgid "interface:report:questions:louis-naissanse"
-msgstd "Год рождения Людовика XIV"
+msgstr "Год рождения Людовика XIV"
 
 msgid "interface:report:questions:revolution"
-msgstd "Год начала Великой Французской революции"
+msgstr "Год начала Великой Французской революции"
 
 msgid "interface:report:questions:congress"
-msgstd "Год начала Венского конгресса"
+msgstr "Год начала Венского конгресса"
 
 # Search types
 

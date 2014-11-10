@@ -86,7 +86,7 @@ msgid "pages:keywords:ref:ecossaise"
 msgstr "Differences between English country dances and écossaises is yet to be determined"
 
 msgid "pages:keywords:ref:ecossaise-two-columns"
-msgstr "Special form of écossaise for two linked columns standing side by side"
+msgstr "Special form of ecossaise for two linked columns standing side by side"
 
 msgid "pages:keywords:ref:circle"
 msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
@@ -236,13 +236,13 @@ msgid "interface:report:thanks"
 msgstr "Thanks! Your message was sent to /dev/null"
 
 msgid "interface:report:questions:louis-naissanse"
-msgstd "The year when Louis XIV was born"
+msgstr "The year when Louis XIV was born"
 
 msgid "interface:report:questions:revolution"
-msgstd "The year when révolution française has started"
+msgstr "The year when révolution française has started"
 
 msgid "interface:report:questions:congress"
-msgstd "The year when Congress of Vienna has begun"
+msgstr "The year when Congress of Vienna has begun"
 
 # Search types
 

@@ -6,7 +6,6 @@ import logging
 import os.path
 import random
 import sys
-from urllib import parse as urlparse
 
 import flask
 from flask.ext import babel
@@ -194,75 +193,82 @@ def get_book(id, show_secrets):
 		)
 		logging.error(message)
 		flask.abort(500, message)
-		
+
 	item = utils.first(items)
 	captcha_key = random.choice(config.www.secret_question_keys)
-	
+
 	return flask.render_template(
 		"book.html",
 		item=item,
 		show_secrets=show_secrets,
 		captcha_key=captcha_key
 	)
-	
 
-@flask_app.route(config.www.app_prefix + "/books/<string:id>/pdf/<int:index>", methods=["GET"])
-def get_book_pdf(id, index):
-	items = item_index["id"].get(id, None)
-	
+
+@flask_app.route(config.www.app_prefix + "/books/<string:book_id>/pdf/<int:index>", methods=["GET"])
+def get_book_pdf(book_id, index):
+	items = item_index["id"].get(book_id, None)
+
 	if (index <= 0):
 		flask.abort(400, "Param index should be positive number")
-	
-	if items is None: 
-		flask.abort(404, "Book with id {id} was not found".format(
-			id=id
+
+	if items is None:
+		flask.abort(404, "Book with id {book_id} was not found".format(
+			book_id=book_id
 		))
 	elif len(items) != 1:
-		message = "Multiple entries with id {id}".format(
-			id=id
+		message = "Multiple entries with id {book_id}".format(
+			book_id=book_id
 		)
 		logging.error(message)
 		flask.abort(500, message)
-	
+
 	item = utils.first(items)
 	item_urls = item.get("url")
 	item_filenames = item.get("filename")
-	rel_url = "{app_prefix}/books/{id}/pdf/{index}".format(
-		app_prefix=config.www.app_prefix
-		id=id,
+	rel_url = "{app_prefix}/books/{book_id}/pdf/{index}".format(
+		app_prefix=config.www.app_prefix,
+		book_id=book_id,
 		index=index
 	)
-	full_url = "{books_url}/{id}/pdf/{index}".format(
+	full_url = "{books_url}/{book_id}/pdf/{index}".format(
 		books_url=config.www.books_url,
-		id=id,
+		book_id=book_id,
 		index=index
 	)
-	
+
 	#checking some security cases
 	if (
-		(item_urls, is None) or 
-		(item_filenames is None) or 
+		(item_urls is None) or
+		(item_filenames is None) or
 		(full_url not in item_urls) or
-		(index > len(item_filenames)
+		(index > len(item_filenames))
 	):
-		flask.abort(404, "Book with id {id} isn't available for download".format(
-			id=id
+		flask.abort(404, "Book with id {booK_id} isn't available for download".format(
+			book_id=book_id
 		))
-	
+
 	#first symbol of each filename is '/' that should be trimmed
 	pdf_rel_path = item_filenames[index - 1][1:]
 	pdf_full_path = os.path.join(config.www.elibrary_root, pdf_rel_path)
-	
+
 	if not os.path.isfile(pdf_full_path):
-		message = "Item {id} metadata is wrong: file for url {rel_url} is missing".format(
-			id=id,
+		message = "Item {book_id} metadata is wrong: file for url {rel_url} is missing".format(
+			book_id=book_id,
 			rel_url=rel_url
 		)
 		logging.error(message)
 		flask.abort(500, message)
-	
-	return flask_app.send_static_file(pdf_full_path)
-	
+
+	logging.debug("Sending pdf file: {pdf_full_path}".format(
+		pdf_full_path=pdf_full_path
+	))
+	return flask.send_file(
+		pdf_full_path,
+		as_attachment=True,
+		attachment_filename=os.path.basename(pdf_full_path)
+	)
+
 
 @flask_app.route(config.www.app_prefix + "/books/<string:book_id>", methods=["POST"])
 @utils_flask.jsonify()
@@ -283,16 +289,16 @@ def edit_book(book_id):
 	from_email = utils_flask.extract_email_from_request("email")
 	captcha_key = utils_flask.extract_string_from_request("captcha_key")
 	captcha_answer = utils_flask.extract_int_from_request("captcha_answer")
-	
+
 	if not all([message, from_name, from_email, captcha_key, captcha_answer]):
 		flask.abort(400, "Empty values aren't allowed")
-	
+
 	if captcha_key not in config.www.secret_questions:
 		flask.abort(400, "Wrong secret question id")
-	
+
 	if captcha_answer != config.www.secret_questions[captcha_key]:
 		flask.abort(403, babel.gettext("errors:wrong:captcha-answer"))
-	
+
 	message = messenger.Message(book_id, from_email, from_name, message)
 	message.send()
 
