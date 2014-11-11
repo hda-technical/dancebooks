@@ -244,7 +244,7 @@ def get_book_pdf(book_id, index):
 		(full_url not in item_urls) or
 		(index > len(item_filenames))
 	):
-		flask.abort(404, "Book with id {booK_id} isn't available for download".format(
+		flask.abort(404, "Book with id {book_id} isn't available for download".format(
 			book_id=book_id
 		))
 
