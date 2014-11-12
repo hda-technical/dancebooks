@@ -81,7 +81,7 @@ LONG_LANG_MAP = {
 
 #a structired pattern for file basename
 #any of [incomplete, commentary, translation, facsimile]
-METADATA_PATTERN = r"(?:incomplete|commentary|translation|facsimile|transcription)"
+METADATA_PATTERN = r"(?:incomplete|commentary|translation|facsimile|transcription|[\w\s\-]+ copy)"
 FILENAME_PATTERN = (
 	#year: digits can be replaced by dashes
 	r"\[(?P<year>[\d\-]+), "
@@ -107,8 +107,7 @@ FILENAME_PATTERN = (
 		r"(?:, number (?P<number>\d+))|"
 		r"(?:, édition (?P<edition>\d+))|"
 		r"(?:, partie (?P<part>\d+))|"
-		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))|"
-		r"(?: \([\w\s\-]+ copy\))"
+		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"
 	r")*"
 	#extension: .pdf
 	r"\.pdf"

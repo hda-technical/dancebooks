@@ -82,6 +82,9 @@ msgstr ""
 	"Any English country dance (add it when adding any other anglaise tag). "
 	"Musical form of the country dances is not counted in keywords"
 
+msgid "pages:keywords:ref:anglaise-francaise"
+msgstr "Special kind of anglaise that make use of complicated ballet steps (entrechat, sissone, ballote, glissade, pas de rigodon)"
+
 msgid "pages:keywords:ref:ecossaise"
 msgstr "Differences between English country dances and écossaises is yet to be determined"
 
@@ -104,6 +107,9 @@ msgstr "Indicates single quadrille figure described as an independent dance"
 
 msgid "pages:keywords:ref:waltz"
 msgstr "Any kind of waltz (add it when adding any other waltzing tag)"
+
+msgid "pages:keywords:ref:waltz-trois-temps"
+msgstr "Includes slow French, slow German, langsamer, rasher and geschwinder waltzes"
 
 msgid "pages:keywords:ref:waltz-sautese"
 msgstr "Any kind of sautese"

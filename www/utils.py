@@ -159,7 +159,10 @@ def extract_metadata_from_file(path):
 
 	keywords = match.group("keywords")
 	if keywords is not None:
-		result["keywords"] = set(strip_split_list(keywords, ","))
+		result["keywords"] = set(filter(
+			lambda keywords: not keywords.endswith(" copy"),
+			strip_split_list(keywords, ",")
+		))
 
 	return result
 
