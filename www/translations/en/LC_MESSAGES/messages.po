@@ -140,13 +140,13 @@ msgstr "Currently includes the following tags: reel, jig, strathspey, fling, fan
 
 # Pages: keywords: XX century
 
-msgid "pages:keywords:ref:animal-dances
+msgid "pages:keywords:ref:animal-dances"
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
 # Pages: keywords: extras
 
-msgid "pages:keywords:ref:essay"
-msgstr "Source containing author view on some dance-related subject"
+msgid "pages:keywords:ref:commentary"
+msgstr "Introductory article is present in the book"
 
 msgid "pages:keywords:ref:dance-description"
 msgstr "When source contains dance description (the sequence of steps and figures)"
@@ -154,14 +154,17 @@ msgstr "When source contains dance description (the sequence of steps and figure
 msgid "pages:keywords:ref:dance-instruction"
 msgstr "When source contains instructions how to learn dancing"
 
+msgid "pages:keywords:ref:essay"
+msgstr "Source containing author view on some dance-related subject"
+
 msgid "pages:keywords:ref:first-edition"
 msgstr "Belles-lettres, memoirs and essays of the first known edition on the source language"
 
-msgid "pages:keywords:ref:commentary"
-msgstr "Introductory article is present in the book"
-
 msgid "pages:keywords:ref:markdown"
 msgstr "Digital transcription available in <a href=\"https://github.com/georgthegreat/dancebooks-bibtex/wiki/Transcriptions\">wiki</a>"
+
+msgid "pages:keywords:ref:useless"
+msgstr "Special keyword for the books lacking dance related parts, but added for collection completeness"
 
 # Pages: persimmon
 

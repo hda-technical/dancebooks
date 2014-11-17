@@ -122,6 +122,7 @@ def main(
 		"polka-mazurka",
 		"redowa",
 		"schottische",
+		"hongroise",
 		"sequence",
 		"tango",
 		"character dance",
@@ -150,24 +151,25 @@ def main(
 		"cakewalk",
 		"swing",
 		#extra tags
-		"music",
-		"steps",
 		"antidance",
 		"belles-lettres",
-		"essay",
+		"commentary",
 		"dance description",
 		"dance instruction",
-		"first edition",
+		"essay",
 		"etiquette",
-		"libretto",
-		"memoirs",
-		"reissue",
 		"facsimile",
-		"transcription",
-		"research",
-		"commentary",
+		"first edition",
+		"libretto",
 		"markdown",
+		"memoirs",
+		"music",
 		"not digitized",
+		"reissue",
+		"research",
+		"steps",
+		"transcription",
+		"useless",
 	}
 
 	erroneous_entries = 0
@@ -424,6 +426,8 @@ File {filename_} is not searchable by extracted params
 							parent_keyword=parent_keyword,
 							keyword=keyword
 						))
+			if ("useless" in keywords) and (len(keywords) != 1):
+				errors.append("'useless' keywords can't be combined with any other keywords")
 
 		#langid validation
 		if source_basename not in MULTILANG_FILES:
