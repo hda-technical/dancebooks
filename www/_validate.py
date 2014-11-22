@@ -115,6 +115,7 @@ def main(
 		"quadrille: contredanse",
 		"quadrille: first set",
 		"quadrille: lancers",
+		"quadrille: monster",
 		"quadrille: prince imperial",
 		"quadrille: varietes parisiennes",
 		"redowa",
@@ -153,6 +154,7 @@ def main(
 		#extra tags
 		"antidance",
 		"belles-lettres",
+		"belles-lettres: dance song",
 		"commentary",
 		"dance description",
 		"dance instruction",

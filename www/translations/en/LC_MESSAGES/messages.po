@@ -106,6 +106,9 @@ msgstr "Any quadrille (add it when adding any other quadrille tag)"
 msgid "pages:keywords:ref:quadrille-contredanse"
 msgstr "Indicates single quadrille figure described as an independent dance"
 
+msgid "pages:keywords:ref:quadrille-monster"
+msgstr "Form of first set with high amount of figure variations, lead by a conductor"
+
 msgid "pages:keywords:ref:waltz"
 msgstr "Any kind of waltz (add it when adding any other waltzing tag)"
 
@@ -145,6 +148,9 @@ msgid "pages:keywords:ref:animal-dances"
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
 # Pages: keywords: extras
+
+msgid "pages:keywords:ref:belles-lettres-dance-song"
+msgstr "Indicates that the source has lyrics being sung while dancing"
 
 msgid "pages:keywords:ref:commentary"
 msgstr "Introductory article is present in the book"

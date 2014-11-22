@@ -67,6 +67,7 @@
 				<li>quadrille: contredanse <a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>quadrille: first set</li>
 				<li>quadrille: lancers</li>
+				<li>quadrille: monster <a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>quadrille: prince imperial</li>
 				<li>quadrille: varietes parisiennes</li>
 				<li>redowa</li>
@@ -109,6 +110,7 @@
 			<ul class="disc">
 				<li>antidance</li>
 				<li>belles-lettres</li>
+				<li>belles-lettres: dance song <a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>commentary <a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>dance description <a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 				<li>dance instruction <a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
@@ -125,7 +127,7 @@
 				<li>research</li>
 				<li>steps</li>
 				<li>transcription</li>
-				<li>useless</li>
+				<li>useless <a href="#keyword{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a></li>
 			</ul>
 			<h3>{{ _("pages:keywords:references") }}</h3>
 			{% set ref = cycler(*range(1, 100)) %}
@@ -142,6 +144,7 @@
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:polka-mazurka") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:quadrille") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:quadrille-contredanse") }}</li>
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:quadrille-monster") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:sequence") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:stage-dance") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:tango") }}</li>
@@ -152,6 +155,7 @@
 				<!-- References for XX century keywords -->
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:animal-dance") }}</li>
 				<!-- References for extra keywords -->
+				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:belles-lettres-dance-song") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:commentary") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:dance-description") }}</li>
 				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ _("pages:keywords:ref:dance-instruction") }}</li>

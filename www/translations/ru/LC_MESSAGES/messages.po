@@ -117,6 +117,9 @@ msgstr "Любая кадриль (добавляйте, если ставите
 msgid "pages:keywords:ref:quadrille-contredanse"
 msgstr "Одиночная фигура кадрили, описанная как самостоятельный танец"
 
+msgid "pages:keywords:ref:quadrille-monster"
+msgstr "Французская кадриль, отличающая высокой вариативностью фигур и ведомая дирижёром"
+
 msgid "pages:keywords:ref:waltz"
 msgstr "Любой вальс (добавляйте, если ставите любой вальсовый тег)"
 
@@ -156,6 +159,9 @@ msgid "pages:keywords:ref:animal-dance"
 msgstr "Любой танец, подражающий движениям животных (добавляйте, если ставите любой их подобных тегов)"
 
 #Pages: keywords: extras
+
+msgid "pages:keywords:ref:belles-lettres-dance-song"
+msgstr "Источник содержит текст песни, использующейся в качестве аккомпанемента танца"
 
 msgid "pages:keywords:ref:commentary"
 msgstr "В книге есть вступительная статья"
