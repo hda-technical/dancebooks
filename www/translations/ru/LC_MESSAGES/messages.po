@@ -88,18 +88,19 @@ msgstr "Примечания"
 
 #Pages: keywords: country dance related
 
-msgid "pages:keywords:ref:anglaise"
+msgid "pages:keywords:ref:longway"
 msgstr ""
-	"Любой английский контрданс (добавляйте, если ставите любой тег про английские контрдансы). "
-	"Музыкальная форма контрданса не ведёт к добавлению тегов"
+	"Любой контрданс в колонну (добавляйте, если ставите любой тег про контрдансы в колонну). "
+	"Музыкальная форма контрданса не ведёт к добавлению тегов "
+	"(то есть, вальсовый контрданс не означает наличие тега “waltz”)"
 
-msgid "pages:keywords:ref:anglaise-francaise"
-msgstr "Особый вид английских контрдансов, танцующийся на сложных шагах (антраша, сиссон, баллоте, глиссад, па-де-ригодон)"
+msgid "pages:keywords:ref:longway-francaise"
+msgstr "Особый вид контрдансов в колонну, танцующийся на сложных шагах (антраша, сиссон, баллоте, глиссад, па-де-ригодон и так далее)"
 
-msgid "pages:keywords:ref:ecossaise"
-msgstr "Разницу между английскими контрдансами и экосезами — отличная тема для диссертации"
+msgid "pages:keywords:ref:longway-ecossaise"
+msgstr "Разницу между контрдансами в колонну и экосезами — отличная тема для диссертации"
 
-msgid "pages:keywords:ref:ecossaise-two-columns"
+msgid "pages:keywords:ref:longway-ecossaise-in-two-columns"
 msgstr "Специальная форма экосеза для двух контрдансных колонн стоящих рядом"
 
 msgid "pages:keywords:ref:circle"

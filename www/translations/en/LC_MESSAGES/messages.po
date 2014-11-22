@@ -77,18 +77,19 @@ msgstr "References"
 
 # Pages: keywords: country-dance related
 
-msgid "pages:keywords:ref:anglaise"
+msgid "pages:keywords:ref:longway"
 msgstr ""
-	"Any English country dance (add it when adding any other anglaise tag). "
-	"Musical form of the country dances is not counted in keywords"
+	"Any dance for a line of couples (add it when adding any other longway tag). "
+	"Musical form of the country dance is not counted in keywords "
+	"(i. e. waltz longway doesn't generate a “waltz” keyword)"
 
-msgid "pages:keywords:ref:anglaise-francaise"
-msgstr "Special kind of anglaise that make use of complicated ballet steps (entrechat, sissone, ballote, glissade, pas de rigodon)"
+msgid "pages:keywords:ref:longway-francaise"
+msgstr "Special kind of longway that make use of complicated ballet steps (entrechat, sissone, ballote, glissade, pas de rigodon, etc.)"
 
-msgid "pages:keywords:ref:ecossaise"
-msgstr "Differences between English country dances and écossaises is yet to be determined"
+msgid "pages:keywords:ref:longway-ecossaise"
+msgstr "Differences between longway country dances and écossaises is yet to be determined"
 
-msgid "pages:keywords:ref:ecossaise-two-columns"
+msgid "pages:keywords:ref:longway-ecossaise-in-two-columns"
 msgstr "Special form of ecossaise for two linked columns standing side by side"
 
 msgid "pages:keywords:ref:circle"
