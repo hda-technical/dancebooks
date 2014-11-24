@@ -112,6 +112,9 @@ msgstr "Form of first set with high amount of figure variations, lead by a condu
 msgid "pages:keywords:ref:waltz"
 msgstr "Any kind of waltz (add it when adding any other waltzing tag)"
 
+msgid "pages:keywords:ref:waltz-boston"
+msgstr "Including boston dip"
+
 msgid "pages:keywords:ref:waltz-trois-temps"
 msgstr "Includes slow French, slow German, langsamer, rasher and geschwinder waltzes"
 
@@ -123,9 +126,6 @@ msgstr "Including variations like Esmeralda"
 
 msgid "pages:keywords:ref:polka-mazurka"
 msgstr "Including variations like varsovienne and polka-redowa"
-
-msgid "pages:keywords:ref:boston"
-msgstr "Including boston dip"
 
 msgid "pages:keywords:ref:sequence"
 msgstr ""
@@ -144,7 +144,7 @@ msgstr "Currently includes the following tags: reel, jig, strathspey, fling, fan
 
 # Pages: keywords: XX century
 
-msgid "pages:keywords:ref:animal-dances"
+msgid "pages:keywords:ref:animal-dance"
 msgstr "Any animal dance (add it when adding any other animal dance tag)"
 
 # Pages: keywords: extras
