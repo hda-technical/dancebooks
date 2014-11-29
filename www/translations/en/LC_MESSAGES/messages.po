@@ -98,7 +98,7 @@ msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-
 # Pages: keywords: XIX century
 
 msgid "pages:keywords:ref:stage-dance"
-msgstr "Ballet, scenic and show off dance"
+msgstr "Ballet, scenic and show off dance (also the music for such dances, or taken from them)"
 
 msgid "pages:keywords:ref:quadrille"
 msgstr "Any quadrille (add it when adding any other quadrille tag)"
