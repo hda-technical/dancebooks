@@ -226,7 +226,7 @@ def main(
 			raise RuntimeError("Parser hasn't generated all required auxiliary fields {fields}".format(
 				fields=parser_obligatory
 			))
-			
+
 		if not ID_REGEXP.match(id):
 			errors.append("Id {id} doesn't match ID_REGEXP".format(
 				id=id
@@ -288,7 +288,7 @@ def main(
 		#author validation empty
 
 		#booktitle validation empty
-		
+
 		if crossref:
 			referenced_title = utils.first(item_index["id"][crossref]).get("title")
 			if booktitle != referenced_title:
@@ -361,17 +361,6 @@ def main(
 					if ("incomplete" in meta_keywords) and (source_basename != "_problems"):
 						errors.append("Incomplete books should be stored in _problems.bib")
 					meta_keywords.discard("incomplete")
-
-					if len(meta_keywords) > 0:
-						if keywords is None:
-							errors.append("No keywords specified (should be {meta_keywords}".format(
-								meta_keywords=meta_keywords
-							))
-						elif not keywords >= meta_keywords:
-							errors.append("Item keywords {keywords} do not match metadata keywords {meta_keywords}".format(
-								keywords=keywords,
-								meta_keywords=meta_keywords
-							))
 
 				search_ = utils.create_search_from_metadata(metadata)
 				if not search_(item):
