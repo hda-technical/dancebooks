@@ -1,7 +1,9 @@
 #!/bin/sh -e
 
+NAME=dancebooks
+
 make test
 make www-translations
 
-echo "Updating .dancebooks-reload"
-touch ~/.dancebooks-reload
+echo "Reloading $NAME"
+touch /var/run/uwsgi/$NAME.reload
