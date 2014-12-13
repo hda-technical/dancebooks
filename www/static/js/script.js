@@ -46,8 +46,8 @@ bib.utils = function() {
 		extractFromLocation: function(key) {
 			var regexp = new RegExp('[&\\?]' + key + '=([^&]*)');
 			var match = regexp.exec(window.location.search);
-			if (match != null) {
-				return decodeURIComponent(match[1] || "");
+			if ((match != null) && (match[1] != null)) {
+				return decodeURIComponent(match[1].replace("+", " "));
 			} else {
 				return '';
 			}
