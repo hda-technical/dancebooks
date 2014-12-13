@@ -73,6 +73,7 @@ def main(
 		#country dance related tags
 		"circle",
 		"cotillon: 18th century",
+		"cotillon: cracovienne",
 		"cotillon: doppel-quadrille",
 		"cotillon: douze",
 		"cotillon: seize",
