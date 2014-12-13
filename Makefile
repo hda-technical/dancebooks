@@ -56,16 +56,11 @@ pdf-debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	$(BIBER) $(<:.tex=)
 	$(LATEX) $<
 
-pdf-upload.mk: test-biblatex.pdf
-	chmod 644 $^
-	scp -p $^ georg@iley.ru:/home/georg/dancebooks-bibtex/www/static/files/
-	touch $@
-
 pdf-clean:
 	rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
 
 pdf-distclean: pdf-clean
-	rm -f *.pdf all.mk upload-pdfs.mk
+	rm -f *.pdf all.mk
 
 # Transcriptions related targets
 
