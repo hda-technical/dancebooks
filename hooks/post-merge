@@ -5,5 +5,5 @@ NAME=dancebooks
 make test
 make www-translations
 
-echo "Reloading $NAME"
-touch /var/run/uwsgi/$NAME.reload
+service dancebooks reload
+
