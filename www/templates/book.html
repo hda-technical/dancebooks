@@ -8,7 +8,8 @@
 		<div class="content">
 			{% include "components/item.html" %}
 			<div class="center">
-				<span class="action" id="reportFormToggle">{{ _("interface:report:title") }}</span>
+				<span class="action" id="reportFormToggle">{{ _("interface:report:error-form-title") }}</span>
+				<span class="action" id="keywordFormToggle">{{ _("interface:report:keyword-form-title") }}</span>
 			</div>
 			<div id="reportForm" class="center hidden">
 				<form action="/bib/books/{{ item.id() }}" method="post">
@@ -26,9 +27,35 @@
 							</td>
 						</tr>
 						<tr>
+							<td>{{ _("interface:report:questions:" + captcha_key) }}:</td>
+							<td>
+								<input type="hidden" name="captcha_key" value="{{ captcha_key }}"/>
+								<input type="text" name="captcha_answer" required="required"/>
+							</td>
+						</tr>
+						<tr>
 							<td>{{ _("interface:report:description") }}:</td>
 							<td>
 								<textarea name="message" cols="50" rows="10" maxlength="500" required="required"></textarea>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<button id="reportFormSubmitter">{{ _("interface:buttons:send") }}</button>
+			</div>
+			<div id="keywordForm" class="center hidden">
+				<form action="/bib/books/{{ item.id() }}/keywords" method="post">
+					<table>
+						<tr>
+							<td>{{ _("interface:report:name") }}:</td>
+							<td>
+								<input type="text" name="name" required="required"/>
+							</td>
+						</tr>
+						<tr>
+							<td>{{ _("interface:report:email") }}:</td>
+							<td>
+								<input type="email" name="email" pattern=".+@.+" required="required"/>
 							</td>
 						</tr>
 						<tr>
@@ -38,9 +65,16 @@
 								<input type="text" name="captcha_answer" required="required"/>
 							</td>
 						</tr>
+						<tr>
+							<td>{{ _("interface:report:keywords") }}:</td>
+							<td>
+								<input id="keywords" type="text" readonly="readonly" name="keywords"/>
+								<div id="keywordsButtons"/>
+							</td>
+						</tr>
 					</table>
 				</form>
-				<button id="reportFormSubmitter">{{ _("interface:buttons:send") }}</button>
+				<button id="keywordFormSubmitter">{{ _("interface:buttons:send") }}</button>
 			</div>
 			<hr/>
 			{% include "components/footer.html" %}

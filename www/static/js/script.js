@@ -120,17 +120,21 @@ bib.report = function() {
 	var reportForm = null;
 	var reportFormToggle = null;
 	var reportFormSubmitter = null;
+	var reportInputs = null;
 
-	var inputs = null;
+	var keywordForm = null;
+	var keywordFormToggle = null;
+	var keywordFormSubmitter = null;
+	var keywordInputs = null;
 
 	var sendReportForm = function() {
-		var invalids = inputs.filter(bib.utils.isEmptyOrInvalid);
+		var invalids = reportInputs.filter(bib.utils.isEmptyOrInvalid);
 		if (invalids.length > 0) {
 			return;
 		}
 		reportFormSubmitter.attr("disabled", "disabled");
 		var data = {};
-		inputs.filter(bib.utils.isValid)
+		reportInputs.filter(bib.utils.isValid)
 			.map(function(index) {
 				data[this.name] = this.value;
 			});
@@ -148,6 +152,7 @@ bib.report = function() {
 					}
 				);
 				reportFormToggle.fadeToggle();
+				keywordFormToggle.fadeToggle();
 				reportForm.fadeToggle();
 				reportForm.after(message);
 			},
@@ -168,19 +173,78 @@ bib.report = function() {
 		)
 	}
 
+	var sendKeywordForm = function() {
+		var invalids = keywordInputs.filter(bib.utils.isEmptyOrInvalid);
+		if (invalids.length > 0) {
+			return;
+		}
+		keywordFormSubmitter.attr("disabled", "disabled");
+		var data = {};
+		keywordInputs.filter(bib.utils.isValid)
+			.map(function(index) {
+				data[this.name] = this.value;
+			});
+		bib.utils.dumpObject(data);
+		bib.server.postKeywordReport(
+			data,
+			//to be called on success
+			function(data) {
+				$('#submitMessage').remove();
+				var message = bib.utils.makeTextElement(
+					"h2",
+					data['message'],
+					{
+						id: "submitMessage"
+					}
+				);
+				reportFormToggle.fadeToggle();
+				keywordFormToggle.fadeToggle();
+				keywordForm.fadeToggle();
+				keywordForm.after(message);
+			},
+			//to be called in case of fail
+			function(data) {
+				keywordFormSubmitter.removeAttr("disabled");
+				$('#submitMessage').remove();
+				var message = bib.utils.makeTextElement(
+					"h2",
+					data["message"],
+					{
+						id: "submitMessage",
+						style: "color: #ff0000;"
+					}
+				);
+				keywordForm.after(message);
+			}
+		)
+	}
+
 	//publics
 	return {
 		init: function() {
 			reportForm = $('#reportForm');
 			reportFormToggle = $('#reportFormToggle');
-			inputs = reportForm.find("textarea, input");
+			reportInputs = reportForm.find("textarea, input");
+
+			keywordForm = $('#keywordForm');
+			keywordFormToggle = $('#keywordFormToggle');
+			keywordInputs = keywordForm.find("textarea, input");
 
 			reportFormToggle.click(function() {
+				keywordForm.hide();
 				reportForm.slideToggle();
+			});
+
+			keywordFormToggle.click(function() {
+				reportForm.hide();
+				keywordForm.slideToggle();
 			});
 
 			reportFormSubmitter = $("#reportFormSubmitter");
 			reportFormSubmitter.click(sendReportForm);
+
+			keywordFormSubmitter = $('#keywordFormSubmitter');
+			keywordFormSubmitter.click(sendKeywordForm);
 
 			var reportInput = $('#reportForm input');
 			reportInput.keyup(function(event) {
@@ -209,6 +273,7 @@ bib.search = function() {
 
 	var inputs = null;
 	var keywordsChooser = null;
+	var keywordsButtons = null;
 	var keywordsInput = null;
 
 	/*
@@ -343,49 +408,75 @@ bib.search = function() {
 	};
 
 	var updateKeywords = function() {
-		var keywords = keywordsChooser.find('input[type="checkbox"]:checked')
+		var foundKeywords = keywordsButtons.find('input[type="checkbox"]:checked')
 			.map(function() {
 				return this.value
-			}).get().join(", ");
-		keywordsInput.val(keywords);
+			}).get();
+		var uniqueKeywords = new Set(foundKeywords);
+		keywordsInput.val([...uniqueKeywords].join(', '));
 	};
 
 	var fillKeywords = function(keywords) {
 		//setting keywords select options
 		var selectedKeywords = bib.utils.extractFromLocation("keywords").split(",").map(bib.utils.trim)
-		var elems = [];
-		for (index in keywords) {
-			var id = 'keyword' + index;
-			var keyword = keywords[index];
-			var inputAttrs = {
-				"id": id,
-				"value": keyword,
-				"type": "checkbox",
-			};
-			if (selectedKeywords.indexOf(keyword) != -1) {
-				inputAttrs["checked"] = "checked";
+		//server will respond with the following data:
+		/*
+		[
+			category : {
+				"translation": header,
+				"keywords": [keywords]
 			}
+		]
+		*/
+		var elems = [];
+		for (catIndex in keywords) {
+			var catTranslation = keywords[catIndex]["translation"]
+			var catKeywords = keywords[catIndex]["keywords"]
 
-			var input = bib.utils.makeTextElement(
-				"input",
-				"",
-				inputAttrs
-			);
-			$(input).change(updateKeywords);
-			elems.push(input);
-
-			var labelAttrs = {
-				"for": id
+			var headerAttrs = {
+				"class": "bold center"
 			};
-			var label = bib.utils.makeTextElement(
-				"label",
-				keyword,
-				labelAttrs
+			var header = bib.utils.makeTextElement(
+				"div",
+				catTranslation,
+				headerAttrs
 			);
-			elems.push(label);
+			elems.push(header);
+
+			for (index in catKeywords) {
+				var keyword = catKeywords[index]
+				var id = 'keyword-' + catIndex + '-' + index;
+
+				var inputAttrs = {
+					"id": id,
+					"value": keyword,
+					"type": "checkbox",
+				};
+				if (selectedKeywords.indexOf(keyword) != -1) {
+					inputAttrs["checked"] = "checked";
+				}
+
+				var input = bib.utils.makeTextElement(
+					"input",
+					"",
+					inputAttrs
+				);
+				$(input).change(updateKeywords);
+				elems.push(input);
+
+				var labelAttrs = {
+					"for": id
+				};
+				var label = bib.utils.makeTextElement(
+					"label",
+					keyword,
+					labelAttrs
+				);
+				elems.push(label);
+			}
 		}
 
-		$('#keywordsHider').before(elems);
+		$('#keywordsButtons').html(elems);
 		updateKeywords();
 	};
 
@@ -407,7 +498,6 @@ bib.search = function() {
 			.map(function() {
 				data[this.name] = this.value;
 			});
-		bib.utils.dumpObject(data);
 		if (Object.keys(data).length > 0) {
 			bib.server.submitSearch(searchType, data);
 		}
@@ -427,6 +517,7 @@ bib.search = function() {
 
 			keywordsInput = $('#keywords');
 			keywordsChooser = $('#keywordsChooser');
+			keywordsButtons = $('#keywordsButtons');
 
 			//setting event handlers
 			$('#clearSearch').click(function() {
@@ -499,6 +590,20 @@ bib.server = function() {
 		postBugReport: function(data, successCallback, failCallback) {
 			$.post(
 				window.location,
+				bib.utils.makeSearchString(data),
+				function(data, textStatus, jqXHR) {
+					successCallback(data)
+				}
+			).fail(
+				function(jqXHR) {
+					failCallback(jqXHR.responseJSON)
+				}
+			)
+		},
+
+		postKeywordReport: function(data, successCallback, failCallback) {
+			$.post(
+				window.location + '/keywords',
 				bib.utils.makeSearchString(data),
 				function(data, textStatus, jqXHR) {
 					successCallback(data)

@@ -65,26 +65,26 @@ msgstr "Отправить"
 msgid "pages:keywords:title"
 msgstr "Излишне заумный список тегов"
 
-msgid "pages:keywords:baroque"
-msgstr "Теги, связанные с танцами эпохи барокко (XVII–XVIII века)"
-
 msgid "pages:keywords:edits"
 msgstr "Преложения по улучшению списка можно слать на"
 
-msgid "pages:keywords:xix"
-msgstr "Теги, связанные с танцами XIX века"
-
-msgid "pages:keywords:xx"
-msgstr "Теги, связанные с танцами XX века (примерно до 1920 года)"
-
-msgid "pages:keywords:extras"
-msgstr "Дополнительные теги"
-
-msgid "pages:keywords:country-dance"
-msgstr "Теги, связанные с контрдансами"
-
 msgid "pages:keywords:references"
 msgstr "Примечания"
+
+msgid "pages:keywords:category:baroque"
+msgstr "Танцы эпох барокко и рококо"
+
+msgid "pages:keywords:category:country-dance"
+msgstr "Контрдансы"
+
+msgid "pages:keywords:category:xix"
+msgstr "Танцы XIX века"
+
+msgid "pages:keywords:category:xx"
+msgstr "Танцы XX века (примерно до 1920 года)"
+
+msgid "pages:keywords:category:extras"
+msgstr "Дополнительные теги"
 
 #Pages: keywords: country dance related
 
@@ -236,8 +236,11 @@ msgstr "ru"
 
 # Report form
 
-msgid "interface:report:title"
+msgid "interface:report:error-form-title"
 msgstr "Сообщить о проблеме"
+
+msgid "interface:report:keyword-form-title"
+msgstr "Предложить теги"
 
 msgid "interface:report:name"
 msgstr "Представьтесь, пожалуйста"
@@ -247,6 +250,9 @@ msgstr "E-mail"
 
 msgid "interface:report:description"
 msgstr "Опишите проблему"
+
+msgid "interface:report:keywords"
+msgstr "Теги"
 
 msgid "iterface:report:thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
@@ -503,9 +509,14 @@ msgstr "Отсутствует идентификатор секретного �
 msgid "errors:missing:captcha-answer"
 msgstr "Отсутствует ответ на секретный вопрос"
 
+msgid "errors:wrong:captcha-key"
+msgstr "Неправильный идентификатор капчи"
+
 msgid "errors:wrong:captcha-answer"
 msgstr "Неправильный ответ"
 
 msgid "errors:wrong:email"
 msgstr "Неправильный e-mail"
 
+msgid "errors:wrong:keywords"
+msgstr "Неправильно заполнены теги"

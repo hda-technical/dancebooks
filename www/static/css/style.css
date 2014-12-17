@@ -11,6 +11,7 @@ body
 	margin: 0px 0px 100px 0px;
 	font-size: 100%;
     font-family: "PT Sans", sans-serif;
+	overflow-y: scroll;
 }
 
 h1, h2, h3
@@ -236,17 +237,26 @@ textarea:invalid
 	border-radius: 2px;
 	text-align: center;
 
-	width: 510px;
+	width: 600px;
+	height: 100%;
+}
+
+#keywordsButtons
+{
+	color: #000000;
+	background-color: #dddddd;
+
+	width: inherit;
 	height: 100%;
 	font-size: 90%;
 }
 
-#keywordsChooser input[type="checkbox"]
+#keywordsButtons input[type="checkbox"]
 {
 	display: none;
 }
 
-#keywordsChooser input[type="checkbox"] + label
+#keywordsButtons input[type="checkbox"] + label
 {
 	display: inline-block;
 	white-space: nowrap;
@@ -261,13 +271,13 @@ textarea:invalid
 	border-radius: 2px;
 }
 
-#keywordsChooser input[type="checkbox"] + label:hover
+#keywordsButtons input[type="checkbox"] + label:hover
 {
 	border-style: outset;
 }
 
-#keywordsChooser input[type="checkbox"]:checked + label,
-#keywordsChooser input[type="checkbox"]:checked + label:hover
+#keywordsButtons input[type="checkbox"]:checked + label,
+#keywordsButtons input[type="checkbox"]:checked + label:hover
 {
 	border-style: inset;
 }

@@ -10,6 +10,8 @@ import jinja2
 import werkzeug
 
 from config import config
+import const
+import utils
 
 XML_DECLARATION = '<?xml version="1.0" encoding="utf-8"?>'
 
@@ -61,6 +63,24 @@ def check_secret_cookie():
 	return real_decorator
 
 
+def check_captcha():
+	def real_decorator(func):
+		@functools.wraps(func)
+		def wrapper(*args, **kwargs):
+			captcha_key = extract_string_from_request("captcha_key")
+			captcha_answer = extract_int_from_request("captcha_answer")
+
+			if captcha_key not in config.www.secret_questions:
+				flask.abort(400, babel.gettext("errors:wrong:captcha-key"))
+
+			if captcha_answer != config.www.secret_questions[captcha_key]:
+				flask.abort(403, babel.gettext("errors:wrong:captcha-answer"))
+
+			return func(*args, **kwargs)
+		return wrapper
+	return real_decorator
+
+
 def jsonify():
 	"""
 	Decorator dumping response to json
@@ -76,6 +96,7 @@ def jsonify():
 					code
 				)
 			except werkzeug.exceptions.HTTPException as ex:
+				logging.exception(ex)
 				data = {"message": ex.description}
 				code = ex.code;
 				response = flask.make_response(
@@ -83,6 +104,7 @@ def jsonify():
 					code
 				)
 			except Exception as ex:
+				logging.exception(ex)
 				data = {"message": "Internal Server Error"}
 				code = http.client.INTERNAL_SERVER_ERROR
 				response = flask.make_response(
@@ -98,6 +120,7 @@ def jsonify():
 	return real_decorator
 
 
+#functions to be registered in jinja: begin
 def jinja_author_link(author):
 	return '<a href="{path}?author={author}">{author}</a>'.format(
 		path=config.www.basic_search_url,
@@ -114,6 +137,20 @@ def jinja_keyword_link(keyword):
 def jinja_as_set(value):
 	return set(value)
 
+def jinja_translate_language(langid):
+	return babel.gettext(const.BABEL_LANG_PREFIX + langid)
+
+def jinja_translate_keyword_category(category):
+	return babel.gettext(const.BABEL_KEYWORD_CATEGORY_PREFIX + category)
+
+def jinja_translate_keyword_ref(keyword):
+	#colon should be remove, spaces should be replaces with dashes
+	key = keyword.replace(":", "").replace(" ", "-")
+	return babel.gettext(const.BABEL_KEYWORD_REF_PREFIX + key)
+#functions to be registered in jinja: end
+
+
+#parsing parameter helpers: begin
 class _DefaultValue(object):
 	pass
 
@@ -122,7 +159,7 @@ def extract_string_from_request(param_name, default=_DefaultValue):
 	param = flask.request.values.get(param_name, default)
 	if param is _DefaultValue:
 		flask.abort(
-			400, 
+			400,
 			babel.gettext("errors:missing:" + param_name.replace("_", "-"))
 		)
 	return param
@@ -133,22 +170,44 @@ def extract_email_from_request(param_name, default=_DefaultValue):
 	result = extract_string_from_request(param_name, default)
 	if not EMAIL_REGEXP.match(result):
 		flask.abort(
-			400, 
+			400,
 			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
 		)
 	return result
-	
-	
+
+
 def extract_int_from_request(param_name, default=_DefaultValue):
 	result = extract_string_from_request(param_name, default)
 	try:
 		return int(result)
 	except Exception:
 		flask.abort(
-			400, 
+			400,
 			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
 		)
-		
+
+
+def extract_json_from_request(param_name, default=_DefaultValue):
+	result = extract_string_from_request(param_name, default)
+	try:
+		return json.loads(result)
+	except Exception:
+		flask.abort(
+			400,
+			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
+		)
+
+def extract_list_from_request(param_name, default=_DefaultValue):
+	result = extract_string_from_request(param_name, default)
+	try:
+		return utils.strip_split_list(result,",")
+	except Exception:
+		flask.abort(
+			400,
+			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
+		)
+#parsing parameter helpers: end
+
 
 class MemoryCache(jinja2.BytecodeCache):
 	def __init__(self):

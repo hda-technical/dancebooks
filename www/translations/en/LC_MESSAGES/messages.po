@@ -57,23 +57,23 @@ msgstr "A comprehensive keyword list"
 msgid "pages:keywords:edits"
 msgstr "You can send edits to the list to"
 
-msgid "pages:keywords:baroque"
-msgstr "Some keywords for the baroque books (XVII–XVIII centuries)"
-
-msgid "pages:keywords:country-dance"
-msgstr "Country dances / contredanses related keywords"
-
-msgid "pages:keywords:xix"
-msgstr "Keywords for the 19th century books"
-
-msgid "pages:keywords:xx"
-msgstr "Keywords for the 20th century books (up to 1920 or so)"
-
-msgid "pages:keywords:extras"
-msgstr "Extra information keywords"
-
 msgid "pages:keywords:references"
 msgstr "References"
+
+msgid "pages:keywords:category:baroque"
+msgstr "Dances of baroque and rococo"
+
+msgid "pages:keywords:category:country-dance"
+msgstr "Country dances / contredanses"
+
+msgid "pages:keywords:category:xix"
+msgstr "19th century dances"
+
+msgid "pages:keywords:category:xx"
+msgstr "20th century dances (up to 1920 or so)"
+
+msgid "pages:keywords:category:extras"
+msgstr "Extra keywords"
 
 # Pages: keywords: country-dance related
 
@@ -236,14 +236,20 @@ msgstr "en"
 
 # Report form
 
-msgid "interface:report:title"
+msgid "interface:report:error-form-title"
 msgstr "Report bug / mistake"
+
+msgid "interface:report:keyword-form-title"
+msgstr "Suggest keywords"
 
 msgid "interface:report:name"
 msgstr "Introduce yourself"
 
 msgid "interface:report:email"
 msgstr "E-mail"
+
+msgid "interface:report:keywords"
+msgstr "Keywords"
 
 msgid "interface:report:description"
 msgstr "Describe the problem"
@@ -503,9 +509,14 @@ msgstr "The id of the question is missing"
 msgid "errors:missing:captcha-answer"
 msgstr "The answer to the question is missing"
 
+msgid "errors:wrong:captcha-key"
+msgstr "The key of the question is wrong"
+
 msgid "errors:wrong:captcha-answer"
 msgstr "The answer to the question is wrong"
 
 msgid "errors:wrong:email"
 msgstr "E-mail is wrong"
 
+msgid "errors:wrong:keywords"
+msgstr "Keywords are wrong"

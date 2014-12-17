@@ -60,121 +60,6 @@ def main(
 
 	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
 
-	ALLOWED_KEYWORDS = {
-		#baroque related tags (XVII–XVIII century)
-		"allemande",
-		"courant",
-		"galliard",
-		"gavotte",
-		"landler",
-		"minuet",
-		"perigourdine",
-		"saraband",
-		#country dance related tags
-		"circle",
-		"cotillon: 18th century",
-		"cotillon: cracovienne",
-		"cotillon: doppel-quadrille",
-		"cotillon: douze",
-		"cotillon: seize",
-		"cotillon: vingt-quatre",
-		"la boulanger",
-		"longway",
-		"longway: ecossaise in two columns",
-		"longway: ecossaise",
-		"longway: francaise",
-		"longway: matredour",
-		"longway: money musk",
-		"longway: pop goes the weasel",
-		"rustic reel",
-		"sir roger de coverly",
-		"spanish dance",
-		"swedish dance",
-		"tempete",
-		#19th century related tags
-		"allemande",
-		"bogentanz",
-		"character dance",
-		"cotillon: 19th century",
-		"fandango",
-		"folk dance",
-		"folk dance: country bumpkin",
-		"galop",
-		"grossfater",
-		"hongroise",
-		"landler",
-		"march",
-		"mazurka",
-		"minuet",
-		"monferine",
-		"polka",
-		"polka-mazurka",
-		"polonaise",
-		"promiscuous figures",
-		"quadrille",
-		"quadrille: caledonians",
-		"quadrille: contredanse",
-		"quadrille: first set",
-		"quadrille: lancers",
-		"quadrille: monster",
-		"quadrille: prince imperial",
-		"quadrille: varietes parisiennes",
-		"redowa",
-		"schottische",
-		"sequence",
-		"stage dance",
-		"tango",
-		"waltz",
-		"waltz: boston",
-		"waltz: deux temps",
-		"waltz: five steps",
-		"waltz: glide",
-		"waltz: hesitation",
-		"waltz: new trois temps",
-		"waltz: sautese",
-		"waltz: trois temps",
-		#20th century related tags
-		"animal dance",
-		"animal dance: grizzly bear",
-		"animal dance: turkey trot",
-		"cakewalk",
-		"castle walk",
-		"foxtrot",
-		"half and half",
-		"mixer dance",
-		"one-step",
-		"sequence",
-		"swing",
-		"tango",
-		"three-step",
-		"two-step",
-		"waltz",
-		"waltz: boston",
-		"waltz: canter",
-		"waltz: hesitation",
-		#extra tags
-		"antidance",
-		"belles-lettres",
-		"belles-lettres: dance song",
-		"commentary",
-		"dance description",
-		"dance instruction",
-		"essay",
-		"etiquette",
-		"facsimile",
-		"first edition",
-		"libretto",
-		"markdown",
-		"memoirs",
-		"music",
-		"not digitized",
-		"reissue",
-		"research",
-		"steps",
-		"transcription",
-		"useless",
-	}
-
 	erroneous_entries = 0
 	errors_count = 0
 	for item in items:
@@ -399,7 +284,7 @@ File {filename_} is not searchable by extracted params
 
 		#keywords validation
 		if (keywords is not None):
-			unallowed_keywords = (keywords - ALLOWED_KEYWORDS)
+			unallowed_keywords = (keywords - config.parser.keywords_set)
 			if unallowed_keywords:
 				errors.append("Entry has unallowed keywords: {keywords}".format(
 					keywords=unallowed_keywords
@@ -411,7 +296,7 @@ File {filename_} is not searchable by extracted params
 				if colon_pos != -1:
 					parent_keyword = keyword[:colon_pos]
 					if (
-						(parent_keyword in ALLOWED_KEYWORDS) and
+						(parent_keyword in config.parser.keywords_set) and
 						(not parent_keyword in keywords)
 					):
 						errors.append("Parent keyword {parent_keyword} for keyword {keyword} is missing".format(

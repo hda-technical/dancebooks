@@ -130,3 +130,5 @@ ENV_LOGGING_CONFIG = "LOGGING_CONFIG"
 DEFAULT_ORDER_BY = "year_from"
 
 BABEL_LANG_PREFIX = "search:language:"
+BABEL_KEYWORD_CATEGORY_PREFIX = "pages:keywords:category:"
+BABEL_KEYWORD_REF_PREFIX = "pages:keywords:ref:"

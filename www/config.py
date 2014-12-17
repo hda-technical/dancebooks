@@ -1,3 +1,4 @@
+import collections
 import configparser
 import functools
 import json
@@ -71,11 +72,27 @@ class ParserConfig(object):
 		if "date_format" not in params:
 			raise ValueError("date_format param wasn't found")
 		self.date_format = params["date_format"]
-		
+
 		if "blocked_domains" not in params:
 			raise ValueError("blocked_domains param wasn't found")
 		self.blocked_domains = set(json.loads(params["blocked_domains"]))
-		
+
+		#keywords param is loaded from a single config value,
+		#but is splitted into a number of config fields with predictable meaning
+		if "keywords" not in params:
+			raise ValueError("keywords param wasn't found")
+		keywords = json.JSONDecoder(object_pairs_hook=collections.OrderedDict).decode(params["keywords"])
+		self.keywords = set()
+		self.category_keywords = collections.defaultdict(set)
+		self.keywords_with_ref = []
+		for category, cat_keywords in keywords.items():
+			for keyword, has_reference in cat_keywords.items():
+				#iterating through (keywords, has_reference) tuples
+				self.keywords.add(keyword)
+				self.category_keywords[category].add(keyword)
+				if has_reference:
+					self.keywords_with_ref.append(keyword)
+
 		#suffixes parsing
 		if "start_suffix" not in params:
 			raise ValueError("start_suffix param wasn't found")
@@ -121,7 +138,7 @@ class WwwConfig(object):
 		if "app_prefix" not in params:
 			raise ValueError("app_prefix param wasn't found")
 		self.app_prefix = params["app_prefix"]
-		
+
 		self.books_url = "http://" + self.app_domain + self.app_prefix + "/books"
 		self.basic_search_url = self.app_prefix + "/basic-search"
 		self.advanced_search_url = self.app_prefix + "/advanced-search"
@@ -161,23 +178,23 @@ class WwwConfig(object):
 		if "order_by_keys" not in params:
 			raise ValueError("order_by_keys param wasn't found")
 		self.order_by_keys = set(json.loads(params["order_by_keys"]))
-		
+
 		if "elibrary_root" not in params:
 			raise ValueError("elibrary_root param wasn't found")
 		self.elibrary_root = params["elibrary_root"]
-		
+
 		if "secret_question_keys" not in params:
 			raise ValueError("secret_question_keys param wasn't found")
 		self.secret_question_keys = json.loads(params["secret_question_keys"])
-		
+
 		if "secret_question_answers" not in params:
 			raise ValueError("secret_question_answers param wasn't found")
 		secret_question_answers = json.loads(params["secret_question_answers"])
-		
+
 		self.secret_questions = {
-			key: answer 
+			key: answer
 			for key, answer in zip(
-				self.secret_question_keys, 
+				self.secret_question_keys,
 				secret_question_answers
 			)
 		}

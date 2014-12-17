@@ -34,7 +34,12 @@ for item in items:
 item_index.update(items)
 
 langids = sorted(item_index["langid"].keys())
-keywords = sorted(list(item_index["keywords"].keys()))
+keywords = {
+	category: sorted(
+		cat_keywords &
+		set(item_index["keywords"].keys())
+	) for category, cat_keywords in config.parser.category_keywords.items()
+}
 source_files = sorted(item_index["source_file"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -46,9 +51,14 @@ flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
 flask_app.jinja_env.keep_trailing_newline = False
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
+#filling jinja filters
 flask_app.jinja_env.filters["author_link"] = utils_flask.jinja_author_link
 flask_app.jinja_env.filters["keyword_link"] = utils_flask.jinja_keyword_link
 flask_app.jinja_env.filters["as_set"] = utils_flask.jinja_as_set
+flask_app.jinja_env.filters["translate_language"] = utils_flask.jinja_translate_language
+flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.jinja_translate_keyword_category
+flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.jinja_translate_keyword_ref
+#filling jinja global variables
 flask_app.jinja_env.globals["config"] = config
 
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
@@ -182,7 +192,6 @@ def show_all(show_secrets):
 @flask_app.route(config.www.app_prefix + "/books/<string:id>", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def get_book(id, show_secrets):
-
 	items = item_index["id"].get(id, None)
 
 	if items is None:
@@ -272,6 +281,7 @@ def get_book_pdf(book_id, index):
 
 @flask_app.route(config.www.app_prefix + "/books/<string:book_id>", methods=["POST"])
 @utils_flask.jsonify()
+@utils_flask.check_captcha()
 def edit_book(book_id):
 	items = item_index["id"].get(book_id, None)
 
@@ -287,19 +297,41 @@ def edit_book(book_id):
 	message = utils_flask.extract_string_from_request("message")
 	from_name = utils_flask.extract_string_from_request("name")
 	from_email = utils_flask.extract_email_from_request("email")
-	captcha_key = utils_flask.extract_string_from_request("captcha_key")
-	captcha_answer = utils_flask.extract_int_from_request("captcha_answer")
 
-	if not all([message, from_name, from_email, captcha_key, captcha_answer]):
+	if not all([message, from_name, from_email]):
 		flask.abort(400, "Empty values aren't allowed")
 
-	if captcha_key not in config.www.secret_questions:
-		flask.abort(400, "Wrong secret question id")
+	message = messenger.ErrorReport(book_id, from_email, from_name, message)
+	message.send()
 
-	if captcha_answer != config.www.secret_questions[captcha_key]:
-		flask.abort(403, babel.gettext("errors:wrong:captcha-answer"))
+	return {"message": babel.gettext("interface:report:thanks")}
 
-	message = messenger.Message(book_id, from_email, from_name, message)
+
+@flask_app.route(config.www.app_prefix + "/books/<string:book_id>/keywords", methods=["POST"])
+@utils_flask.jsonify()
+@utils_flask.check_captcha()
+def edit_book_keywords(book_id):
+	items = item_index["id"].get(book_id, None)
+
+	if items is None:
+		flask.abort(404, "Book with id {id} was not found".format(id=id))
+	elif len(items) != 1:
+		message = "Multiple entries with id {id}".format(
+			id=id
+		)
+		logging.error(message)
+		flask.abort(500, message)
+
+	suggested_keywords = set(utils_flask.extract_list_from_request("keywords"))
+	from_name = utils_flask.extract_string_from_request("name")
+	from_email = utils_flask.extract_email_from_request("email")
+
+	if not all([suggested_keywords, from_name, from_email]):
+		flask.abort(400, "Empty values aren't allowed")
+	if not suggested_keywords.issubset(config.parser.keywords):
+		flask.abort(400, babel.gettext("errors:wrong:keywords"))
+
+	message = messenger.KeywordsSuggest(book_id, from_email, from_name, suggested_keywords)
 	message.send()
 
 	return {"message": babel.gettext("interface:report:thanks")}
@@ -307,17 +339,25 @@ def edit_book(book_id):
 
 @flask_app.route(config.www.app_prefix + "/options", methods=["GET"])
 @utils_flask.jsonify()
-@utils_flask.check_secret_cookie()
-def get_options(show_secrets):
-	languages = [
-		(langid, babel.gettext(const.BABEL_LANG_PREFIX + langid))
+def get_options():
+	opt_languages = [
+		(langid, utils_flask.jinja_translate_language(langid))
 		for langid in langids
 	]
 
+	opt_keywords = {
+		category: {
+			"translation": utils_flask.jinja_translate_keyword_category(category),
+			"keywords": category_keywords
+		} for category, category_keywords in keywords.items()
+	}
+
+	opt_source_files = source_files
+
 	return {
-		"languages": languages,
-		"keywords": keywords,
-		"source_files": source_files
+		"languages": opt_languages,
+		"keywords": opt_keywords,
+		"source_files": opt_source_files
 	}
 
 
