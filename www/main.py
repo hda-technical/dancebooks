@@ -34,12 +34,6 @@ for item in items:
 item_index.update(items)
 
 langids = sorted(item_index["langid"].keys())
-keywords = {
-	category: sorted(
-		cat_keywords &
-		set(item_index["keywords"].keys())
-	) for category, cat_keywords in config.parser.category_keywords.items()
-}
 source_files = sorted(item_index["source_file"].keys())
 
 flask_app = flask.Flask(__name__)
@@ -349,7 +343,7 @@ def get_options():
 		category: {
 			"translation": utils_flask.jinja_translate_keyword_category(category),
 			"keywords": category_keywords
-		} for category, category_keywords in keywords.items()
+		} for category, category_keywords in config.parser.category_keywords.items()
 	}
 
 	opt_source_files = source_files
