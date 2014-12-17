@@ -347,6 +347,9 @@ msgstr "Russian"
 msgid "search:language:spanish"
 msgstr "Spanish"
 
+msgid "search:language:swedish"
+msgstr "Swedish"
+
 # Search results ordering
 
 msgid "search:order_by"
@@ -457,6 +460,9 @@ msgstr "Russian"
 
 msgid "item:language:spanish"
 msgstr "Spanish"
+
+msgid "item:language:swedish"
+msgstr "Swedish"
 
 # Footer icons
 
