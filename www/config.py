@@ -83,13 +83,13 @@ class ParserConfig(object):
 			raise ValueError("keywords param wasn't found")
 		keywords = json.JSONDecoder(object_pairs_hook=collections.OrderedDict).decode(params["keywords"])
 		self.keywords = set()
-		self.category_keywords = collections.defaultdict(set)
+		self.category_keywords = collections.defaultdict(list)
 		self.keywords_with_ref = []
 		for category, cat_keywords in keywords.items():
 			for keyword, has_reference in cat_keywords.items():
 				#iterating through (keywords, has_reference) tuples
 				self.keywords.add(keyword)
-				self.category_keywords[category].add(keyword)
+				self.category_keywords[category].append(keyword)
 				if has_reference:
 					self.keywords_with_ref.append(keyword)
 
@@ -139,7 +139,7 @@ class WwwConfig(object):
 			raise ValueError("app_prefix param wasn't found")
 		self.app_prefix = params["app_prefix"]
 
-		self.books_url = "http://" + self.app_domain + self.app_prefix + "/books"
+		self.books_url = "https://" + self.app_domain + self.app_prefix + "/books"
 		self.basic_search_url = self.app_prefix + "/basic-search"
 		self.advanced_search_url = self.app_prefix + "/advanced-search"
 		self.all_fields_search_url = self.app_prefix + "/all-fields-search"

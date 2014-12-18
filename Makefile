@@ -109,14 +109,17 @@ www-translations:
 
 # must be imvoked as root
 www-configs-install: configs/nginx.conf configs/uwsgi.conf
-	cp configs/nginx.conf /etc/nginx/sites-available/$(NAME).conf
-	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
+	#installing uwsgi configs
 	cp configs/uwsgi.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
 	cp configs/service.conf /etc/init.d/$(NAME)
-
-	service nginx reload
 	service $(NAME) restart
+	#installing nginx configs
+	cp configs/nginx.conf /etc/nginx/sites-available/$(NAME).conf
+	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
+	service nginx reload
+	#installing logrotate configs (no reload / restart is required)
+	cp configs/logrotate.conf /etc/logrotate.d/$(NAME).conf
 
 
 www-distclean:

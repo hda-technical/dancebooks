@@ -254,7 +254,7 @@ msgstr "Опишите проблему"
 msgid "interface:report:keywords"
 msgstr "Теги"
 
-msgid "iterface:report:thanks"
+msgid "interface:report:thanks"
 msgstr "Спасибо! Ваше сообщение отправлено в /dev/null"
 
 msgid "interface:report:questions:louis-naissanse"
