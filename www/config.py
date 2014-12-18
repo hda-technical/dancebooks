@@ -83,9 +83,10 @@ class ParserConfig(object):
 			raise ValueError("keywords param wasn't found")
 		keywords = json.JSONDecoder(object_pairs_hook=collections.OrderedDict).decode(params["keywords"])
 		self.keywords = set()
-		self.category_keywords = collections.defaultdict(list)
+		self.category_keywords = collections.OrderedDict()
 		self.keywords_with_ref = []
 		for category, cat_keywords in keywords.items():
+			self.category_keywords[category] = list()
 			for keyword, has_reference in cat_keywords.items():
 				#iterating through (keywords, has_reference) tuples
 				self.keywords.add(keyword)

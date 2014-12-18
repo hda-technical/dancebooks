@@ -13,7 +13,7 @@ var bib = {
 		'/bib/basic-search',
 		'/bib/advanced-search',
 		'/bib/all-fields-search'
-	],
+	]
 };
 
 bib.utils = function() {
@@ -412,8 +412,7 @@ bib.search = function() {
 			.map(function() {
 				return this.value
 			}).get();
-		var uniqueKeywords = new Set(foundKeywords);
-		keywordsInput.val([...uniqueKeywords].join(', '));
+		keywordsInput.val(foundKeywords.join(', '));
 	};
 
 	var fillKeywords = function(keywords) {
@@ -422,16 +421,19 @@ bib.search = function() {
 		//server will respond with the following data:
 		/*
 		[
-			category : {
-				"translation": header,
-				"keywords": [keywords]
-			}
+			[
+				category,
+				{
+					"translation": header,
+					"keywords": [keywords]
+				}
+			]
 		]
 		*/
 		var elems = [];
 		for (catIndex in keywords) {
-			var catTranslation = keywords[catIndex]["translation"]
-			var catKeywords = keywords[catIndex]["keywords"]
+			var catTranslation = keywords[catIndex][1]["translation"]
+			var catKeywords = keywords[catIndex][1]["keywords"]
 
 			var headerAttrs = {
 				"class": "bold center"

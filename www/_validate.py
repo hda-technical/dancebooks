@@ -284,7 +284,7 @@ File {filename_} is not searchable by extracted params
 
 		#keywords validation
 		if (keywords is not None):
-			unallowed_keywords = (keywords - config.parser.keywords_set)
+			unallowed_keywords = (keywords - config.parser.keywords)
 			if unallowed_keywords:
 				errors.append("Entry has unallowed keywords: {keywords}".format(
 					keywords=unallowed_keywords
@@ -296,7 +296,7 @@ File {filename_} is not searchable by extracted params
 				if colon_pos != -1:
 					parent_keyword = keyword[:colon_pos]
 					if (
-						(parent_keyword in config.parser.keywords_set) and
+						(parent_keyword in config.parser.keywords) and
 						(not parent_keyword in keywords)
 					):
 						errors.append("Parent keyword {parent_keyword} for keyword {keyword} is missing".format(

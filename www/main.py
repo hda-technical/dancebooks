@@ -345,12 +345,16 @@ def get_options():
 		for langid in langids
 	]
 
-	opt_keywords = {
-		category: {
-			"translation": utils_flask.jinja_translate_keyword_category(category),
-			"keywords": category_keywords
-		} for category, category_keywords in config.parser.category_keywords.items()
-	}
+	opt_keywords = [
+		(
+			category,
+			{
+				"translation": utils_flask.jinja_translate_keyword_category(category),
+				"keywords": category_keywords
+			}
+		)
+		for category, category_keywords in config.parser.category_keywords.items()
+	]
 
 	opt_source_files = source_files
 
@@ -389,13 +393,17 @@ def get_books_rss(lang):
 @flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])
 def everything_else(filename):
 	if (filename.startswith("components")):
-		flask.abort(404, "No such file")
+		flask.abort(404, "No such file: {filename}".format(
+			filename=filename
+		))
 	if (os.path.isfile("templates/static/" + filename)):
 		return flask.render_template("static/" + filename)
 	elif (os.path.isfile("static/" + filename)):
 		return flask_app.send_static_file(filename)
 	else:
-		flask.abort(404, "No such file")
+		flask.abort(404, "No such file: {filename}".format(
+			filename=filename
+		))
 
 
 if __name__ == "__main__":
