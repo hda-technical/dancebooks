@@ -1,4 +1,5 @@
 NAME := dancebooks
+NAME_TESTING := dancebooks.testing
 
 BIB_FILES := $(wildcard bib/*.bib)
 URL_FILES := $(wildcard urls/*.txt)
@@ -26,8 +27,9 @@ BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --
 TRANSCRIPTIONS_WIKI_PAGE := wiki/Transcriptions.md
 TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/master/transcriptions/
 
-DEVEL_CONFIG := $(shell readlink -f configs/www.cfg)
-LOGGING_CONFIG := $(shell readlink -f configs/logger-console.cfg)
+#Using testing conf-file in development environment
+DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
+LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 DEVEL_ENV := \
 	CONFIG=$(DEVEL_CONFIG) \
@@ -108,19 +110,37 @@ www-translations:
 	pybabel -v -q compile -d www/translations
 
 # must be imvoked as root
-www-configs-install: configs/nginx.conf configs/uwsgi.conf
+www-configs-install: www-configs-install-production www-configs-install-testing;
+
+www-configs-install-production:
 	#installing uwsgi configs
-	cp configs/uwsgi.conf /etc/uwsgi/apps-available/$(NAME).conf
+	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
-	cp configs/service.conf /etc/init.d/$(NAME)
+	#installing service configs
+	cp configs/service.production.conf /etc/init.d/$(NAME)
+	chmod +x /etc/init.d/$(NAME)
 	service $(NAME) restart
 	#installing nginx configs
-	cp configs/nginx.conf /etc/nginx/sites-available/$(NAME).conf
+	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
 	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
 	service nginx reload
 	#installing logrotate configs (no reload / restart is required)
-	cp configs/logrotate.conf /etc/logrotate.d/$(NAME).conf
+	cp configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
+www-configs-install-testing:
+	#installing uwsgi configs
+	cp configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
+	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
+	#installing service configs
+	cp configs/service.testing.conf /etc/init.d/$(NAME_TESTING)
+	chmod +x /etc/init.d/$(NAME_TESTING)
+	service $(NAME_TESTING) restart
+	#installing nginx configs
+	cp configs/nginx.testing.conf /etc/nginx/sites-available/$(NAME_TESTING).conf
+	ln -sf /etc/nginx/sites-available/$(NAME_TESTING).conf /etc/nginx/sites-enabled/$(NAME_TESTING).conf
+	service nginx reload
+	#installing logrotate configs (no reload / restart is required)
+	cp configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
 
 www-distclean:
 	rm -rf www/__pycache__ www/tests/__pycache__
@@ -128,16 +148,11 @@ www-distclean:
 requirements.txt: .PHONY
 	pip freeze --local | sort --ignore-case | tee $@
 
-.PHONY:;
-
 # Ancillary targets
 
-all.mk: test-biblatex.pdf $(HTML_FILES);
+.PHONY:;
 
-urls-upload.mk: $(URL_FILES)
-	chmod 644 $^
-	scp -p $^ georg@server.goldenforests.ru:/home/georg/urls/
-	touch $@
+all.mk: test-biblatex.pdf $(HTML_FILES);
 
 entry-count: $(BIB_FILES)
 	@echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
