@@ -87,7 +87,7 @@ msgid "pages:keywords:ref:longway-francaise"
 msgstr "Special kind of longway that make use of complicated ballet steps (entrechat, sissone, ballote, glissade, pas de rigodon, etc.)"
 
 msgid "pages:keywords:ref:longway-ecossaise"
-msgstr "Differences between longway country dances and écossaises is yet to be determined"
+msgstr "Differences between longway country dances and ecossaises is yet to be determined"
 
 msgid "pages:keywords:ref:longway-ecossaise-in-two-columns"
 msgstr "Special form of ecossaise for two linked columns standing side by side"
@@ -101,7 +101,10 @@ msgid "pages:keywords:ref:stage-dance"
 msgstr "Ballet, scenic and show off dance (also the music for such dances, or taken from them)"
 
 msgid "pages:keywords:ref:quadrille"
-msgstr "Any quadrille (add it when adding any other quadrille tag)"
+msgstr ""
+	"Any quadrille (add it when adding any other quadrille tag). "
+	"Musical form of the quadrille is counted in keywords "
+	"(i. e. schottische quadrille will generate “schottische” keywords"
 
 msgid "pages:keywords:ref:quadrille-contredanse"
 msgstr "Indicates single quadrille figure described as an independent dance"
@@ -122,10 +125,10 @@ msgid "pages:keywords:ref:waltz-sautese"
 msgstr "Any kind of sautese"
 
 msgid "pages:keywords:ref:polka"
-msgstr "Including variations like Esmeralda"
+msgstr "Including variations (e. g. Esmeralda)"
 
 msgid "pages:keywords:ref:polka-mazurka"
-msgstr "Including variations like varsovienne and polka-redowa"
+msgstr "Including variations (e. g. polka-redowa)"
 
 msgid "pages:keywords:ref:sequence"
 msgstr ""

@@ -133,10 +133,10 @@ msgid "pages:keywords:ref:waltz-sautese"
 msgstr "Любой прыгающий вальс"
 
 msgid "pages:keywords:ref:polka"
-msgstr "В том числе вариации, например, Эсмеральда"
+msgstr "В том числе вариации (например, Эсмеральда)"
 
 msgid "pages:keywords:ref:polka-mazurka"
-msgstr "В том числе вариации, например, варсовиана или полька-редова"
+msgstr "В том числе вариации (например, полька-редова)"
 
 msgid "pages:keywords:ref:sequence"
 msgstr ""
