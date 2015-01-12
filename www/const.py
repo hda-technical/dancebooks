@@ -80,7 +80,7 @@ LONG_LANG_MAP = {
 }
 
 #a structired pattern for file basename
-METADATA_PATTERN = r"(?:incomplete|[\w\s\-]+ copy)"
+METADATA_PATTERN = r"(?:incomplete|[\w\s\-']+ copy)"
 FILENAME_PATTERN = (
 	#year: digits can be replaced by dashes
 	r"\[(?P<year>[\d\-]+), "
