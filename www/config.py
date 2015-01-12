@@ -85,6 +85,7 @@ class ParserConfig(object):
 		self.keywords = set()
 		self.category_keywords = collections.OrderedDict()
 		self.keywords_with_ref = []
+		self.keywords_with_ref_set = set()
 		for category, cat_keywords in keywords.items():
 			self.category_keywords[category] = list()
 			for keyword, has_reference in cat_keywords.items():
@@ -92,6 +93,7 @@ class ParserConfig(object):
 				self.keywords.add(keyword)
 				self.category_keywords[category].append(keyword)
 				if has_reference:
+					self.keywords_with_ref_set.add(keyword)
 					self.keywords_with_ref.append(keyword)
 
 		#suffixes parsing

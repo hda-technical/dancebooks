@@ -8,13 +8,13 @@
 		<h3>{{ _("pages:keywords:edits") }}:<a class="action" href="mailto://georgthegreat@gmail.com">georgthegreat@gmail.com</a></h3>
 		<div class="content">
 			{% set ref = cycler(*range(1, 100)) %}
-			{% for keyword_category in config.parser.keywords.keys() %}
+			{% for keyword_category, keywords in config.parser.category_keywords.items() %}
 			<h3>{{ keyword_category | translate_keyword_category }}</h3>
 			<ul class="disc">
-				{% for keyword in config.parser.keywords[keyword_category].items() %}
+				{% for keyword in keywords %}
 					<li>
-						{{ keyword[0] }}
-						{% if keyword[1] %}
+						{{ keyword }}
+						{% if keyword in config.parser.keywords_with_ref_set %}
 						<a href="#keyword-{{ "%03d" % ref.current }}" class="sup">{{ ref.__next__() }}</a>
 						{% endif %}
 					</li>
@@ -25,7 +25,7 @@
 			{% set ref = cycler(*range(1, 100)) %}
 			<ol class="decimal">
 				{% for keyword in config.parser.keywords_with_ref %}
-				<li><a id="keyword{{ "%03d" % ref.__next__() }}"></a>{{ keyword | translate_keyword_ref | safe }}</li>
+				<li><a id="keyword-{{ "%03d" % ref.__next__() }}"></a>{{ keyword | translate_keyword_ref | safe }}</li>
 				{% endfor %}
 			</ol>
 			<hr/>
