@@ -206,6 +206,26 @@ def extract_list_from_request(param_name, default=_DefaultValue):
 			400,
 			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
 		)
+
+def extract_keywords_from_request(param_name, default=_DefaultValue):
+	"""
+	Extracts keywords, validates them according to config,
+	inserts parent keywords if needed.
+	Returns alphabetically sorted list of keywords.
+	"""
+	parsed_keywords = extract_list_from_request(param_name, default)
+	result_keywords = set()
+	for keyword in parsed_keywords:
+		if keyword not in config.keywords:
+			flask.abort(
+				400,
+				babel.gettext("errors:wrong:" + param_name.replace("_", "-")) +
+					" " + keyword
+			)
+		result_keywords.add(keyword)
+		parent_keyword = utils.extract_parent_keyword(keyword)
+		result_keywords.add(parent_keyword)
+	return sorted(result_keywords)
 #parsing parameter helpers: end
 
 

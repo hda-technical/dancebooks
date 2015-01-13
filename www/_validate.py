@@ -292,17 +292,12 @@ File {filename_} is not searchable by extracted params
 			if ("commentary" in keywords) and not commentator:
 				errors.append("When 'commentary' keyword specified, commentator should be present")
 			for keyword in keywords:
-				colon_pos = keyword.find(":")
-				if colon_pos != -1:
-					parent_keyword = keyword[:colon_pos]
-					if (
-						(parent_keyword in config.parser.keywords) and
-						(not parent_keyword in keywords)
-					):
-						errors.append("Parent keyword {parent_keyword} for keyword {keyword} is missing".format(
-							parent_keyword=parent_keyword,
-							keyword=keyword
-						))
+				parent_keyword = utils.extract_parent_keyword(keyword)
+				if parent_keyword not in keywords:
+					errors.append("Parent keyword {parent_keyword} for keyword {keyword} is missing".format(
+						parent_keyword=parent_keyword,
+						keyword=keyword
+					))
 			if ("useless" in keywords) and (len(keywords) != 1):
 				errors.append("'useless' keywords can't be combined with any other keywords")
 

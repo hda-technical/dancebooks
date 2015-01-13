@@ -68,7 +68,7 @@ class KeywordsSuggest(BasicMessage):
 		self.book_id = book_id
 		self.from_addr = from_addr
 		self.from_name = from_name
-		self.rendered_keywords = ", ".join(keywords)
+		self.rendered_keywords = " | ".join(keywords)
 
 	def __str__(self):
 		return flask.render_template(

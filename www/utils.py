@@ -262,7 +262,7 @@ def is_url_valid(url, check_head=False):
 			return False, "Netloc isn't specified"
 		elif len(split_result.fragment) != 0:
 			return False, "Fragments aren't allowed"
-			
+
 		if split_result.hostname in config.parser.blocked_domains:
 			return False, "Hostname {hostname} is blocked".format(
 				hostname=split_result.hostname
@@ -360,9 +360,25 @@ def read_utf8_file(path):
 		if data.startswith(codecs.BOM_UTF8):
 			return data[len(codecs.BOM_UTF8):].decode()
 		else:
-			return data.decode()
-	
-	
+				return data.decode()
+
+
 def first(iterable):
+	"""
+	Returns first item in a containter
+	"""
 	return next(iter(iterable))
 
+
+def extract_parent_keyword(keyword):
+	"""
+	Extracts parent keyword from keyword.
+	Returns input value if no KEYWORD_SEPARATOR was found
+	"""
+	colon_pos = keyword.find(":")
+	if colon_pos != -1:
+		parent_candidate = keyword[:colon_pos]
+		if parent_candidate in config.parser.keywords:
+			return parent_candidate
+	#no parent can be extracted
+	return keyword
