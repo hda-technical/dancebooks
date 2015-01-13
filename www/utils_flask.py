@@ -216,7 +216,7 @@ def extract_keywords_from_request(param_name, default=_DefaultValue):
 	parsed_keywords = extract_list_from_request(param_name, default)
 	result_keywords = set()
 	for keyword in parsed_keywords:
-		if keyword not in config.keywords:
+		if keyword not in config.parser.keywords:
 			flask.abort(
 				400,
 				babel.gettext("errors:wrong:" + param_name.replace("_", "-")) +

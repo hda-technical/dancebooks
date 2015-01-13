@@ -6,7 +6,6 @@ import logging
 import os.path
 import random
 import sys
-import urllib.parse
 
 import flask
 from flask.ext import babel
@@ -322,14 +321,12 @@ def edit_book_keywords(book_id):
 		logging.error(message)
 		flask.abort(500, message)
 
-	suggested_keywords = set(utils_flask.extract_list_from_request("keywords"))
+	suggested_keywords = utils_flask.extract_keywords_from_request("keywords")
 	from_name = utils_flask.extract_string_from_request("name")
 	from_email = utils_flask.extract_email_from_request("email")
 
 	if not all([suggested_keywords, from_name, from_email]):
 		flask.abort(400, "Empty values aren't allowed")
-	if not suggested_keywords.issubset(config.parser.keywords):
-		flask.abort(400, babel.gettext("errors:wrong:keywords"))
 
 	message = messenger.KeywordsSuggest(book_id, from_email, from_name, suggested_keywords)
 	message.send()
