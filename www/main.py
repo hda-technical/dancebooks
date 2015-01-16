@@ -328,7 +328,8 @@ def edit_book_keywords(book_id):
 	if not all([suggested_keywords, from_name, from_email]):
 		flask.abort(400, "Empty values aren't allowed")
 
-	message = messenger.KeywordsSuggest(book_id, from_email, from_name, suggested_keywords)
+	item = utils.first(items)
+	message = messenger.KeywordsSuggest(item, from_email, from_name, suggested_keywords)
 	message.send()
 
 	return {"message": babel.gettext("interface:report:thanks")}

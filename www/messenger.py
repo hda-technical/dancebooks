@@ -24,7 +24,7 @@ class BasicMessage(object):
 				config.bug_report.to_name,
 				config.bug_report.to_addr
 			))
-			msg["Subject"] = "[dancebooks-bibtex] Error reports".format(id=id)
+			msg["Subject"] = self.subject()
 			msg["Content-Type"] = "text/html"
 
 			recipients = [config.bug_report.to_addr]
@@ -43,8 +43,8 @@ class BasicMessage(object):
 
 
 class ErrorReport(BasicMessage):
-	def __init__(self, book_id, from_addr, from_name, text):
-		self.book_id = book_id
+	def __init__(self, book, from_addr, from_name, text):
+		self.book = book
 		self.from_addr = from_addr
 		self.from_name = from_name
 		self.text = text
@@ -56,16 +56,19 @@ class ErrorReport(BasicMessage):
 				app_domain=config.www.app_domain,
 				book_prefix=config.www.app_prefix + "/books"
 			),
-			book_id=self.book_id,
+			book=self.book,
 			from_name=self.from_name,
 			from_addr=self.from_addr,
 			text=self.text
 		)
 
+	def subject(self):
+		return "dancebooks: Error reports for {id}".format(id=self.book.id())
+
 
 class KeywordsSuggest(BasicMessage):
-	def __init__(self, book_id, from_addr, from_name, keywords):
-		self.book_id = book_id
+	def __init__(self, book, from_addr, from_name, keywords):
+		self.book = book
 		self.from_addr = from_addr
 		self.from_name = from_name
 		self.rendered_keywords = " | ".join(keywords)
@@ -77,8 +80,12 @@ class KeywordsSuggest(BasicMessage):
 				app_domain=config.www.app_domain,
 				book_prefix=config.www.app_prefix + "/books"
 			),
-			book_id=self.book_id,
+			book=self.book,
 			from_name=self.from_name,
 			from_addr=self.from_addr,
 			rendered_keywords=self.rendered_keywords
 		)
+
+	def subject(self):
+		return "dancebooks: Keywords suggestion for {id}".format(id=self.book.id())
+

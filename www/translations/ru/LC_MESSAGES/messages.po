@@ -112,7 +112,10 @@ msgid "pages:keywords:ref:stage-dance"
 msgstr "Балет, постановочные и показательные танцы (а также музыка написанная к таким танцам или взятая из них)"
 
 msgid "pages:keywords:ref:quadrille"
-msgstr "Любая кадриль (добавляйте, если ставите любой кадрильный тег)"
+msgstr ""
+	"Любая кадриль (добавляйте, если ставите любой кадрильный тег). "
+	"Музыкальная форма кадрили ведёт к добавлению соответствующих тегов "
+	"(то есть, шоттиш-кадриль приведёт к добавлению тега \"schottische\")"
 
 msgid "pages:keywords:ref:quadrille-contredanse"
 msgstr "Одиночная фигура кадрили, описанная как самостоятельный танец"
@@ -169,7 +172,7 @@ msgstr "В книге есть вступительная статья"
 msgid "pages:keywords:ref:dance-description"
 msgstr "Источники, содержащие описание последовательности шагов и фигур танца"
 
-msgid "pages:keywords:ref:dance-instruction"
+msgid "pages:keywords:ref:dance-education"
 msgstr "Источники, содержащие последовательные инструкции по обучению танцам"
 
 msgid "pages:keywords:ref:essay"

@@ -9,7 +9,10 @@
 			{% include "components/item.html" %}
 			<div class="center">
 				<span class="action" id="reportFormToggle">{{ _("interface:report:error-form-title") }}</span>
+				<!--
+				Disabled keywords suggestion by the user
 				<span class="action" id="keywordFormToggle">{{ _("interface:report:keyword-form-title") }}</span>
+				-->
 			</div>
 			<div id="reportForm" class="center hidden">
 				<form action="/bib/books/{{ item.id() }}" method="post">
