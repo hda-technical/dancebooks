@@ -300,7 +300,8 @@ def edit_book(book_id):
 	if not all([message, from_name, from_email]):
 		flask.abort(400, "Empty values aren't allowed")
 
-	message = messenger.ErrorReport(book_id, from_email, from_name, message)
+	item = utils.first(items)
+	message = messenger.ErrorReport(item, from_email, from_name, message)
 	message.send()
 
 	return {"message": babel.gettext("interface:report:thanks")}

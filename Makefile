@@ -87,7 +87,7 @@ markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 	touch $@
 
 # www-related targets
-www-debug:
+www-debug: www-translations
 	cd www && \
 	$(DEVEL_ENV) \
 	./main.py
