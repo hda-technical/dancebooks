@@ -6,6 +6,7 @@ import logging
 import os.path
 import random
 import sys
+from urllib import parse as urlparse
 
 import flask
 from flask.ext import babel
@@ -241,10 +242,6 @@ def get_book_pdf(book_id, index):
 	)
 
 	#checking some security cases
-	logging.debug(str(item_urls))
-	logging.debug(str(item_filenames))
-	logging.debug(str(full_url))
-	logging.debug(str(item_filenames))
 	if (
 		(item_urls is None) or
 		(item_filenames is None) or
@@ -270,12 +267,13 @@ def get_book_pdf(book_id, index):
 	logging.debug("Sending pdf file: {pdf_full_path}".format(
 		pdf_full_path=pdf_full_path
 	))
-	return flask.send_file(
-		pdf_full_path,
-		as_attachment=True,
-		attachment_filename="book.pdf"
-		#attachment_filename=urllib.parse.quote(os.path.basename(pdf_full_path))
+	response = flask.make_response(flask.send_file(pdf_full_path))
+	response.headers["Content-Disposition"] = \
+		"attachment; " \
+		"filename*=UTF-8''{utf_filename}".format(
+		utf_filename=urlparse.quote(os.path.basename(pdf_full_path))
 	)
+	return response
 
 
 @flask_app.route(config.www.app_prefix + "/books/<string:book_id>", methods=["POST"])
