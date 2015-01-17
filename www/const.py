@@ -113,6 +113,10 @@ FILENAME_PATTERN = (
 )
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 
+SELF_SERVED_URLS_PATH_PATTERN = (
+	"/bib"
+)
+
 VALID_HTTP_CODES = {
 	#general OK
 	http.client.OK,

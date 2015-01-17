@@ -21,7 +21,7 @@ languages = sorted(item_index["langid"].keys())
 
 @opster.command()
 def main(
-	strict=("", False, "Add some extra checks (includes HTTP HEAD requests)")
+	strict=("", False, "Add some extra check (includes HTTP HEAD requests)")
 ):
 	"""
 	Validates bibliography over a bunch of rules
@@ -72,7 +72,7 @@ def main(
 		crossref = item.get("crossref")
 		edition = item.get("edition")
 		filename = item.get("filename")
-		id = item.get("id")
+		book_id = item.get("id")
 		isbn = item.get("isbn")
 		institution = item.get("institution")
 		journaltitle = item.get("journaltitle")
@@ -101,21 +101,21 @@ def main(
 
 		match = SOURCE_REGEXP.match(source)
 		if not match:
-			raise RuntimeError("Failed to parse 'source' for item ({id})".format(
-				id=id
+			raise RuntimeError("Failed to parse 'source' for item ({book_id})".format(
+				book_id=book_id
 			))
 		source_basename = match.group("basename")
 
-		parser_obligatory = [id, booktype, source, year_from, year_to, year_circa]
+		parser_obligatory = [book_id, booktype, source, year_from, year_to, year_circa]
 		none_checker = lambda obj: obj is not None
 		if not all(map(none_checker, parser_obligatory)):
 			raise RuntimeError("Parser hasn't generated all required auxiliary fields {fields}".format(
 				fields=parser_obligatory
 			))
 
-		if not ID_REGEXP.match(id):
-			errors.append("Id {id} doesn't match ID_REGEXP".format(
-				id=id
+		if not ID_REGEXP.match(book_id):
+			errors.append("Id {book_id} doesn't match ID_REGEXP".format(
+				book_id=book_id
 			))
 
 		general_obligatory = [langid, year, title, added_on]
@@ -265,7 +265,7 @@ File {filename_} is not searchable by extracted params
 	year_to=metadata.get("year_to", "")
 ))
 		#id validation empty
-		if len(item_index["id"][id]) != 1:
+		if len(item_index["id"][book_id]) != 1:
 			errors.append("Id is not unique")
 
 		#isbn validation
@@ -357,11 +357,16 @@ File {filename_} is not searchable by extracted params
 
 		#url validation empty
 		if url is not None:
-			for signle_url in url:
-				correct, msg = utils.is_url_valid(signle_url, strict)
+			for single_url in url:
+				correct, msg = utils.is_url_valid(
+					single_url,
+					book_id=book_id,
+					filename=filename,
+					check_head=strict
+				)
 				if not correct:
-					errors.append("URL {signle_url} isn't valid: {msg}".format(
-						signle_url=signle_url,
+					errors.append("URL {single_url} isn't valid: {msg}".format(
+						single_url=single_url,
 						msg=msg
 					))
 
@@ -375,8 +380,8 @@ File {filename_} is not searchable by extracted params
 		if len(errors) > 0:
 			erroneous_entries += 1
 			errors_count += len(errors)
-			print("Errors for {id} ({source})".format(
-				id=id,
+			print("Errors for {book_id} ({source})".format(
+				book_id=book_id,
 				source=source
 			))
 			for error in errors:

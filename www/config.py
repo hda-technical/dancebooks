@@ -77,6 +77,10 @@ class ParserConfig(object):
 			raise ValueError("blocked_domains param wasn't found")
 		self.blocked_domains = set(json.loads(params["blocked_domains"]))
 
+		if "blocked_domains_http" not in params:
+			raise ValueError("blocked_domains_http param wasn't found")
+		self.blocked_domains_http = set(json.loads(params["blocked_domains_http"]))
+
 		#keywords param is loaded from a single config value,
 		#but is splitted into a number of config fields with predictable meaning
 		if "keywords" not in params:
@@ -142,7 +146,8 @@ class WwwConfig(object):
 			raise ValueError("app_prefix param wasn't found")
 		self.app_prefix = params["app_prefix"]
 
-		self.books_url = "https://" + self.app_domain + self.app_prefix + "/books"
+		self.books_path = self.app_prefix + "/books"
+		self.books_url = "https://" + self.app_domain + self.books_path
 		self.basic_search_url = self.app_prefix + "/basic-search"
 		self.advanced_search_url = self.app_prefix + "/advanced-search"
 		self.all_fields_search_url = self.app_prefix + "/all-fields-search"

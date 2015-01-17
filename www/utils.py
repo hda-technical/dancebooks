@@ -249,12 +249,13 @@ def all_or_none(iterable):
 	return all(iterable) or not any(iterable)
 
 
-def is_url_valid(url, check_head=False):
+def is_url_valid(url, book_id, filename, check_head):
 	"""
 	Validates urls.
 	Returns tuple containing validation result and error message
 	"""
 	try:
+
 		split_result = urlparse.urlsplit(url)
 		if len(split_result.scheme) == 0:
 			return False, "Scheme isn't specified"
@@ -263,10 +264,44 @@ def is_url_valid(url, check_head=False):
 		elif len(split_result.fragment) != 0:
 			return False, "Fragments aren't allowed"
 
+		#validating blocked domains
 		if split_result.hostname in config.parser.blocked_domains:
 			return False, "Hostname {hostname} is blocked".format(
 				hostname=split_result.hostname
 			)
+
+		#validating domains blocked for insecure (http) access
+		if (
+			(split_result.hostname in config.parser.blocked_domains_http) and
+			(split_result.scheme == "http")
+		):
+			return False, "Hostname {hostname} is blocked for insecure access".format(
+				hostname=split_result.hostname
+			)
+
+		#validating self-served urls
+		if (
+			(split_result.hostname == config.www.app_domain) and
+			(split_result.path.startswith(config.www.books_path))
+		):
+			path_regexp = re.compile(
+				r"{books_path}/{book_id}/pdf/(?P<pdf_index>\d+)".format(
+					books_path=config.www.books_path,
+					book_id=book_id
+				)
+			)
+			match = path_regexp.match(split_result.path)
+			if not match:
+				return False, "Extracted self-served path {path} doesn't match path_regexp"
+			pdf_index = int(match.group("pdf_index"))
+			#pdf_indices are 1-based, while filename counts from 0
+			if (
+				pdf_index > len(filename) or
+				pdf_index <= 0
+			):
+				return False, "Invalid pdf index: {pdf_index}".format(
+					pdf_index=pdf_index
+				)
 
 		if check_head:
 			response = requests.head(url, allow_redirects=False, verify=True)
