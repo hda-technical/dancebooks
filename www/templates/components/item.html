@@ -1,6 +1,5 @@
 {% set fields = [
 	"author",
-	"shorthand",
 	"title",
 	"langid",
 	"id",
@@ -28,7 +27,7 @@
 	"dance description",
 	"steps",
 	"music"
-]|as_set %}
+] | as_set %}
 {% set keywords_warn_min_year = 1800 %}
 {% set keywords_warn_max_year = 1920 %}
 {% for param in fields %}
@@ -45,9 +44,9 @@
 			{% if param == "id" %}
 				<a href="/bib/books/{{ value }}">{{ value }}</a>
 			{% elif param == "author" %}
-				{{ value|map("author_link")|map("safe")|join(", ") }}
+				{{ value | map("author_link") | map("safe") | join(", ") }}
 			{% elif param == "keywords" %}
-				{{ value|map("keyword_link")|map("safe")|join(", ") }}
+				{{ value | map("keyword_link") | map("safe") | join(", ") }}
 			{% elif param == "url" %}
 				<ul>
 				{% for url in value %}
@@ -80,7 +79,7 @@
 		{% endif %} {# secrets filtering: end #}
 	{% endif %}
 {% endfor %}
-{% set keywords = (item.get("keywords") or [])|as_set %}
+{% set keywords = (item.get("keywords") or []) | as_set %}
 {% set year_from = item.get("year_from") %}
 {% set year_to = item.get("year_to") %}
 {% if (
@@ -88,10 +87,10 @@
 		(year_from < keywords_warn_max_year) and
 		(year_to > keywords_warn_min_year)
 	) and
-	(keywords - useless_keywords)|length == 0
+	(keywords - useless_keywords) | length == 0
 ) %}
 			<div class="center warn">
-				{{ _("interface:no_keywords")|safe }}
+				{{ _("interface:no_keywords") | safe }}
 			</div>
 {% endif %}
 
