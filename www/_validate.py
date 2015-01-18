@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import json
 import os.path
 import re
 import sys
@@ -18,6 +19,39 @@ for item in items:
 item_index.update(items)
 
 languages = sorted(item_index["langid"].keys())
+
+IDS_JSON_FILENAME = "books_ids.json"
+
+def check_ids_contiguousness():
+	previous_ids = set()
+	if (os.path.exists(IDS_JSON_FILENAME)):
+		with open(IDS_JSON_FILENAME, "r") as ids_file:
+			previous_ids = set(json.loads(ids_file.read()))
+
+	current_ids = set(item_index["id"].keys())
+	changed_ids = previous_ids - current_ids
+	#ids that were lost due to renaming
+	lost_ids = changed_ids - config.www.id_redirections
+	#ids that exist in files, and are also present in id_redirections
+	found_ids = current_ids & config.www.id_redirections
+
+	if len(found_ids) > 0:
+		print("ERROR: Following book ids are present in files and in id_redirections:")
+		for found_id in found_ids:
+			print("\t" + found_id)
+
+	if len(lost_ids) == 0:
+		#everything is ok, no ids were lost
+		#rewriting ids_file
+		with open(IDS_JSON_FILENAME, "w") as ids_file:
+			ids_file.write(json.dumps(list(current_ids)))
+	else:
+		#some ids were lost
+		#printing them without updating ids_file
+		print("ERROR: Following book ids were lost:")
+		for lost_id in lost_ids:
+			print("\t" + lost_id)
+
 
 @opster.command()
 def main(
@@ -392,6 +426,7 @@ File {filename_} is not searchable by extracted params
 		errors=errors_count
 	))
 
+	check_ids_contiguousness()
 
 if __name__ == "__main__":
 	main.command()

@@ -184,16 +184,25 @@ def show_all(show_secrets):
 	)
 
 
-@flask_app.route(config.www.app_prefix + "/books/<string:id>", methods=["GET"])
+@flask_app.route(config.www.books_path + "/<string:book_id>", methods=["GET"])
 @utils_flask.check_secret_cookie()
-def get_book(id, show_secrets):
-	items = item_index["id"].get(id, None)
+def get_book(book_id, show_secrets):
+	if id in config.www.id_redirections:
+		return flask_app.redirect(
+			"{books_path}/{new_id}".format(
+				books_path=config.www.books_path,
+				new_id = config.www.id_redirections[book_id]
+			),
+			code=http.client.MOVED_PERMANENTLY
+		)
+
+	items = item_index["id"].get(book_id, None)
 
 	if items is None:
-		flask.abort(404, "Book with id {id} was not found".format(id=id))
+		flask.abort(404, "Book with id {book_id} was not found".format(book_id=book_id))
 	elif len(items) != 1:
-		message = "Multiple entries with id {id}".format(
-			id=id
+		message = "Multiple entries with id {book_id}".format(
+			book_id=book_id
 		)
 		logging.error(message)
 		flask.abort(500, message)
