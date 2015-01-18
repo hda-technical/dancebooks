@@ -30,10 +30,11 @@ def check_ids_contiguousness():
 
 	current_ids = set(item_index["id"].keys())
 	changed_ids = previous_ids - current_ids
+	known_redirections = set(config.www.id_redirections.keys())
 	#ids that were lost due to renaming
-	lost_ids = changed_ids - config.www.id_redirections
+	lost_ids = changed_ids - known_redirections
 	#ids that exist in files, and are also present in id_redirections
-	found_ids = current_ids & config.www.id_redirections
+	found_ids = current_ids & known_redirections
 
 	if len(found_ids) > 0:
 		print("ERROR: Following book ids are present in files and in id_redirections:")

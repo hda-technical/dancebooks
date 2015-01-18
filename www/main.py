@@ -174,7 +174,7 @@ def search_items(show_secrets):
 	)
 
 
-@flask_app.route(config.www.app_prefix + "/books", methods=["GET"])
+@flask_app.route(config.www.books_path, methods=["GET"])
 @utils_flask.check_secret_cookie()
 def show_all(show_secrets):
 	return flask.render_template(
@@ -187,8 +187,8 @@ def show_all(show_secrets):
 @flask_app.route(config.www.books_path + "/<string:book_id>", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def get_book(book_id, show_secrets):
-	if id in config.www.id_redirections:
-		return flask_app.redirect(
+	if book_id in config.www.id_redirections:
+		return flask.redirect(
 			"{books_path}/{new_id}".format(
 				books_path=config.www.books_path,
 				new_id = config.www.id_redirections[book_id]

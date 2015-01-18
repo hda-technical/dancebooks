@@ -207,7 +207,7 @@ class WwwConfig(object):
 
 		if "id_redirections" not in params:
 			raise ValueError("id_redirections param wasn't found")
-		self.id_redirections = set(json.loads(params["id_redirections"]))
+		self.id_redirections = json.loads(params["id_redirections"])
 
 class Config(object):
 	@staticmethod
