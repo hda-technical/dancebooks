@@ -12,7 +12,7 @@ LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 #"xi xii xiii xiv xv xvi xvii xviii xix xx xxi xxii xxiii xxiv xxv xxvi xxvii xxviii xxix xxx xxxi xxxii xxxiii xxxiv xxxv xxxvi xxxvii xxxviii xxxix xl"
 
 WGET_HTTP_ERROR=8
-	
+
 #========================
 #HELPER FUNCTIONS
 #========================
@@ -25,13 +25,13 @@ function web_get()
 		echo "Usage: $0 url output_file"
 		return
 	fi
-	
+
 	local URL=$1
 	local OUTPUT_FILE=$2
 	echo -n "Getting $1 ... "
-	
+
 	wget -q "$1" -O "$2"
-	
+
 	if [ $? == "$WGET_HTTP_ERROR" ]
 	then
 		rm $OUTPUT_FILE
@@ -48,7 +48,7 @@ function max()
 {
 	local MAX=$1
 	shift
-	
+
 	for CANDIDATE in $@
 	do
 		if [ "$CANDIDATE" -gt "$MAX" ]
@@ -56,7 +56,7 @@ function max()
 			MAX=$CANDIDATE
 		fi
 	done
-	
+
 	echo $MAX
 }
 
@@ -64,7 +64,7 @@ function min()
 {
 	local MIN=$1
 	shift
-	
+
 	for CANDIDATE in $@
 	do
 		if [ "$CANDIDATE" -lt "$MIN" ]
@@ -72,7 +72,7 @@ function min()
 			MIN=$CANDIDATE
 		fi
 	done
-	
+
 	echo $MIN
 }
 
@@ -83,9 +83,9 @@ function tiles()
 		echo "Usage: $0 urlGenerator fileGenerator pageId zoom outputDir"
 		return
 	fi
-	
+
 	local MIN_TILE_SIZE=`expr 1024 '*' 5` #5.0 kilobytes
-	
+
 	local URL_GENERATOR=$1
 	local FILE_GENERATOR=$2
 	local PAGE_ID=$3
@@ -93,10 +93,10 @@ function tiles()
 	local OUTPUT_DIR=$5
 	local OUTPUT_FILE=$OUTPUT_DIR/$PAGE_ID.bmp
 	local TMP_DIR=$OUTPUT_DIR/tmp
-	
+
 	local MAX_TILE_X=$MAX_TILE
 	local MAX_TILE_Y=$MAX_TILE
-	
+
 	mkdir -p "$TMP_DIR"
 	for TILE_X in `seq 0 $MAX_TILE_X`
 	do
@@ -112,12 +112,12 @@ function tiles()
 			MAX_TILE_X=`expr $TILE_X - 1`
 			break
 		fi
-	
+
 		for TILE_Y in `seq 0 $MAX_TILE_Y`
 		do
 			local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
 			web_get `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
-				
+
 			if [ \
 				\( $? -ne 0 \) -o \
 				\( `stat --format=%s $TILE_FILE` -lt $MIN_TILE_SIZE \) \
@@ -129,7 +129,7 @@ function tiles()
 			fi
 		done;
 	done;
-	
+
 	montage $TMP_DIR/* -mode Concatenate -tile `expr $MAX_TILE_X + 1`x`expr $MAX_TILE_Y + 1` $OUTPUT_FILE
 	convert $OUTPUT_FILE -trim $OUTPUT_FILE
 
@@ -147,24 +147,24 @@ function rsl()
 		echo "Usage: $0 book_id"
 		return
 	fi
-	
+
 	local BOOK_ID=$1
-	
+
 	web_get "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
 }
 
-function haithi()
+function hathi()
 {
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 book_id page_count"
 		return
 	fi
-	
+
 	local BOOK_ID=$1
 	local PAGE_COUNT=$2
 	local OUTPUT_DIR="haithi.$BOOK_ID"
-	
+
 	mkdir -p "$OUTPUT_DIR"
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
@@ -185,10 +185,10 @@ function gallicaTileFile()
 		echo "Usage: $0 x y"
 		return
 	fi
-	
+
 	local TILE_X=$1
 	local TILE_Y=$2
-	
+
 	echo `printf %04d $TILE_Y`x`printf %04d $TILE_X`
 }
 
@@ -199,16 +199,16 @@ function gallicaTilesUrl()
 		echo "Usage: $0 ark_id x y z"
 		return
 	fi
-	
+
 	local BOOK_ID=$1
 	local TILE_X=$2
 	local TILE_Y=$3
 	local TILE_Z=$4
 	local TILE_SIZE=2048
-	
+
 	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
 	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
-	
+
 	echo "http://gallica.bnf.fr/proxy?method=R&ark=$BOOK_ID&l=$TILE_Z&r=$TOP,$LEFT,$TILE_SIZE,$TILE_SIZE"
 }
 
@@ -219,31 +219,31 @@ function dusseldorfTileFile()
 		echo "Usage: $0 x y"
 		return
 	fi
-	
+
 	local TILE_X=$1
 	local TILE_Y=$2
 	#dusseldorf tiles are numbered from bottom to top
 	local REAL_TILE_Y=`expr $MAX_TILE - $TILE_Y`
-	
+
 	echo `printf %04d $REAL_TILE_Y`x`printf %04d $TILE_X`
 }
 
 function dusseldorfTilesUrl()
 {
 	if [ $# -ne 4 ]
-	then 
+	then
 		echo "Usage: $0 image_id x y z"
 		return
 	fi
-	
+
 	local IMAGE_ID=$1
 	local TILE_X=$2
 	local TILE_Y=$3
 	local TILE_Z=$4
-	
+
 	#some unknown number with unspecified purpose
 	local UNKNOWN_NUMBER=5089
-	
+
 	echo "http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/$UNKNOWN_NUMBER/1.0.0/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
 }
 
@@ -254,7 +254,7 @@ function gallicaTiles()
 		echo "Usage:  $0 ark_id"
 		return
 	fi
-	
+
 	local BOOK_ID=$1
 	local ZOOM=6
 	local OUTPUT_DIR=.
@@ -281,15 +281,15 @@ function vwml()
 		echo "Usage: $0 book_shorthand book_id page_count"
 		return
 	fi
-	
+
 	local BOOK_SHORTHAND=$1
 	local BOOK_ID=$2
 	local PAGE_COUNT=$3
 	local OUTPUT_DIR="vwml.$BOOK_ID"
-	
+
 	mkdir -p "$OUTPUT_DIR"
 	local OUTPUT_PAGE=1
-	
+
 	#Getting pages with latin numeration first
 	for LATIN_NUMBER in $LATIN_NUMBERS
 	do
@@ -303,7 +303,7 @@ function vwml()
 			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
 		fi
 	done
-	
+
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
 		local OUTPUT_FILE="$OUTPUT_DIR/`printf %04d $OUTPUT_PAGE`.jpg"
