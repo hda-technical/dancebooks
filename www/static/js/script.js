@@ -47,7 +47,8 @@ bib.utils = function() {
 			var regexp = new RegExp('[&\\?]' + key + '=([^&]*)');
 			var match = regexp.exec(window.location.search);
 			if ((match != null) && (match[1] != null)) {
-				return decodeURIComponent(match[1].replace("+", " "));
+				var plusRegexp = new RegExp('\\+', 'g');
+				return decodeURIComponent(match[1].replace(plusRegexp, ' '));
 			} else {
 				return '';
 			}
