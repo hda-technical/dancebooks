@@ -1,4 +1,4 @@
-NAME := dancebooks
+NAME_PRODUCTION := dancebooks.production
 NAME_TESTING := dancebooks.testing
 
 BIB_FILES := $(wildcard bib/*.bib)
@@ -114,18 +114,18 @@ www-configs-install: www-configs-install-production www-configs-install-testing;
 
 www-configs-install-production:
 	#installing uwsgi configs
-	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
-	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
+	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME_PRODUCTION).conf
+	ln -sf /etc/uwsgi/apps-available/$(NAME_PRODUCTION).conf /etc/uwsgi/apps-enabled/$(NAME_PRODUCTION).conf
 	#installing service configs
-	cp configs/service.production.conf /etc/init.d/$(NAME)
-	chmod +x /etc/init.d/$(NAME)
-	service $(NAME) restart
+	cp configs/service.production.conf /etc/init.d/$(NAME_PRODUCTION)
+	chmod +x /etc/init.d/$(NAME_PRODUCTION)
+	service $(NAME_PRODUCTION) restart
 	#installing nginx configs
-	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
-	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
+	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME_PRODUCTION).conf
+	ln -sf /etc/nginx/sites-available/$(NAME_PRODUCTION).conf /etc/nginx/sites-enabled/$(NAME_PRODUCTION).conf
 	service nginx reload
 	#installing logrotate configs (no reload / restart is required)
-	cp configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
+	cp configs/logrotate.production.conf /etc/logrotate.d/$(NAME_PRODUCTION).conf
 
 www-configs-install-testing:
 	#installing uwsgi configs
