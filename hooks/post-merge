@@ -1,9 +1,0 @@
-#!/bin/sh -e
-
-NAME=dancebooks
-
-make test
-make www-translations
-
-service dancebooks reload
-

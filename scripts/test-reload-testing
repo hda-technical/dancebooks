@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+NAME_TESTING=dancebooks.testing
+
+make test
+make www-translations
+
+service $NAME_TESTING reload
+

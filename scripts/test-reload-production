@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+NAME_PRODUCTION=dancebooks.production
+
+make test
+make www-translations
+
+service $NAME_PRODUCTION reload
+
