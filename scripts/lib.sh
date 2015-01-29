@@ -13,6 +13,8 @@ LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 
 WGET_HTTP_ERROR=8
 
+MIN_FILE_SIZE=`expr 1024 '*' 5` # 5.0 kilobytes
+
 #========================
 #HELPER FUNCTIONS
 #========================
@@ -32,7 +34,10 @@ function web_get()
 
 	wget -q "$1" -O "$2"
 
-	if [ $? == "$WGET_HTTP_ERROR" ]
+	if [ \
+		\($? == "$WGET_HTTP_ERROR" \) -o \
+		\( `stat --format=%s $OUTPUT_FILE` -lt $MIN_FILE_SIZE \) \
+	]
 	then
 		rm $OUTPUT_FILE
 		echo "FAIL"
@@ -84,8 +89,6 @@ function tiles()
 		return
 	fi
 
-	local MIN_TILE_SIZE=`expr 1024 '*' 5` #5.0 kilobytes
-
 	local URL_GENERATOR=$1
 	local FILE_GENERATOR=$2
 	local PAGE_ID=$3
@@ -103,12 +106,8 @@ function tiles()
 		local TILE_Y=0
 		local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
 		web_get `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
-		if [ \
-			\( $? -ne 0 \) -o \
-			\( `stat --format=%s $TILE_FILE` -lt $MIN_TILE_SIZE \) \
-		]
+		if [ $? -ne 0 ]
 		then
-			rm -f $TILE_FILE
 			MAX_TILE_X=`expr $TILE_X - 1`
 			break
 		fi
@@ -118,12 +117,8 @@ function tiles()
 			local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
 			web_get `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
 
-			if [ \
-				\( $? -ne 0 \) -o \
-				\( `stat --format=%s $TILE_FILE` -lt $MIN_TILE_SIZE \) \
-			]
+			if [ $? -ne 0 ]
 			then
-				rm -f $TILE_FILE
 				MAX_TILE_Y=`expr $TILE_Y - 1`
 				break
 			fi
