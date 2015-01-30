@@ -50,12 +50,17 @@
 			{% elif param == "url" %}
 				<ul>
 				{% for url in value %}
-					<li><a href="{{ url }}">{{ url }}</a></li>
+					<li>
+						<a href="{{ url }}">{{ url }}</a>
+						{% if url | is_url_self_served %}
+							({{ url | self_served_url_size(item) }})
+						{% endif %}
+					</li>
 				{% endfor %}
 				</ul>
 			{% elif param == "filename" %}
 				<ul>
-				{% for filename in value %}
+				{% for index, filename in value %}
 					<li>{{ filename }}</li>
 				{% endfor %}
 				</ul>

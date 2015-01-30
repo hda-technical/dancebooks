@@ -46,6 +46,7 @@ flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
 flask_app.jinja_env.keep_trailing_newline = False
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
+
 #filling jinja filters
 flask_app.jinja_env.filters["author_link"] = utils_flask.jinja_author_link
 flask_app.jinja_env.filters["keyword_link"] = utils_flask.jinja_keyword_link
@@ -53,14 +54,22 @@ flask_app.jinja_env.filters["as_set"] = utils_flask.jinja_as_set
 flask_app.jinja_env.filters["translate_language"] = utils_flask.jinja_translate_language
 flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.jinja_translate_keyword_category
 flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.jinja_translate_keyword_ref
+flask_app.jinja_env.filters["is_url_self_served"] = utils.is_url_self_served
+
+def jinja_self_served_url_size(url, item):
+	file_name, file_size = utils.get_file_info_from_url(url, item)
+	return utils.pretty_print_file_size(file_size)
+
+flask_app.jinja_env.filters["self_served_url_size"] = jinja_self_served_url_size
+
 #filling jinja global variables
 flask_app.jinja_env.globals["config"] = config
 
 EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
-
 @flask_app.before_first_request
 def initialize():
 	logging.info("Starting up")
+
 
 @babel_app.localeselector
 def get_locale():
@@ -237,38 +246,21 @@ def get_book_pdf(book_id, index):
 		flask.abort(500, message)
 
 	item = utils.first(items)
-	item_urls = item.get("url")
-	item_filenames = item.get("filename")
-	rel_url = "{app_prefix}/books/{book_id}/pdf/{index}".format(
-		app_prefix=config.www.app_prefix,
-		book_id=book_id,
-		index=index
-	)
-	full_url = "{books_url}/{book_id}/pdf/{index}".format(
-		books_url=config.www.books_url,
-		book_id=book_id,
-		index=index
-	)
-
-	#checking some security cases
 	if (
-		(item_urls is None) or
-		(item_filenames is None) or
-		(full_url not in item_urls) or
-		(index > len(item_filenames))
+		flask.request.base_url not in item.get("url") or
+		not utils.is_url_self_served(flask.request.base_url)
 	):
 		flask.abort(404, "Book with id {book_id} isn't available for download".format(
 			book_id=book_id
 		))
-
-	#first symbol of each filename is '/' that should be trimmed
-	pdf_rel_path = item_filenames[index - 1][1:]
-	pdf_full_path = os.path.join(config.www.elibrary_root, pdf_rel_path)
+	file_name, file_size = utils.get_file_info_from_url(flask.request.base_url, item)
+	#filenames start from slash, trimming it
+	pdf_full_path = os.path.join(config.www.elibrary_root, file_name[1:])
 
 	if not os.path.isfile(pdf_full_path):
 		message = "Item {book_id} metadata is wrong: file for url {rel_url} is missing".format(
 			book_id=book_id,
-			rel_url=rel_url
+			rel_url=flask.request.base_url
 		)
 		logging.error(message)
 		flask.abort(500, message)
@@ -279,7 +271,9 @@ def get_book_pdf(book_id, index):
 	response = flask.make_response(flask.send_file(pdf_full_path))
 	response.headers["Content-Disposition"] = \
 		"attachment; " \
+		"filenane={ascii_filename};" \
 		"filename*=UTF-8''{utf_filename}".format(
+		ascii_filename="book.pdf",
 		utf_filename=urlparse.quote(os.path.basename(pdf_full_path))
 	)
 	return response

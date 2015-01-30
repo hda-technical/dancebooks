@@ -1,8 +1,10 @@
 # coding: utf-8
 import datetime
+import logging
 import os.path
 
 from config import config
+import const
 import utils
 
 class BibItem(object):
@@ -110,7 +112,7 @@ class BibItem(object):
 		if isinstance(value, str):
 			return value
 		elif isinstance(value, (list, set)):
-			return (sep + " ").join(value)
+			return (sep + " ").join(map(str, value))
 		elif isinstance(value, datetime.datetime):
 			return value.strftime(config.parser.date_format)
 		else:
@@ -131,7 +133,7 @@ class BibItem(object):
 		return (key in self._params)
 
 	def set(self, key, value):
-		if key is self._params:
+		if key in self._params:
 			raise RuntimeError("Can't set the parameter '{key}' twice for item {id}".format(
 				key=key,
 				id=self._params.get("id", None)))
@@ -225,6 +227,14 @@ class BibParser(object):
 		try:
 			if key in config.parser.list_params:
 				value = utils.strip_split_list(value, config.parser.list_sep)
+			elif key in config.parser.file_list_params:
+				value = utils.strip_split_list(value, config.parser.list_sep)
+				filesize_value = []
+				for single_filename in value:
+					#filenames start from slash, trimming it
+					abspath = os.path.join(config.www.elibrary_root, single_filename[1:])
+					filesize_value.append(os.path.getsize(abspath))
+				item.set(const.FILE_SIZE_PARAM, filesize_value)
 			elif key in config.parser.int_params:
 				value = int(value)
 			elif key in config.parser.year_params:
@@ -269,9 +279,10 @@ class BibParser(object):
 			items = self.parse_string(data)
 			for item in items:
 				self.set_item_param(item, "source_file", source_file)
-				self.set_item_param(item, "source", "{source}:{line:04d}".format(
-					source=source_file,
-					line=item.get("source_line")))
+				self.set_item_param(item, "source", "{source_file}:{source_line:04d}".format(
+					source_file=source_file,
+					source_line=item.get("source_line"))
+				)
 			return items
 		except Exception as ex:
 			raise Exception("While parsing {0}: {1}".format(path, ex))
@@ -306,7 +317,7 @@ class BibParser(object):
 					self.lexeme += c
 					self.lexeme_started = True
 				elif c == self.ITEM_OPEN_BRACKET and (self.lexeme_started or self.lexeme_finished):
-					self.set_item_param(item, "booktype", self.lexeme)
+					self.set_item_param(item, "booktype", self.lexeme.lower())
 					self.set_item_param(item, "source_line", self.line)
 
 					self.state = self.S_ITEM_NO_ID

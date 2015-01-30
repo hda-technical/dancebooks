@@ -24,60 +24,63 @@ SHORT_LANG_MAP = {
 
 #country as adjective mapped to langid
 LONG_LANG_MAP = {
-	"american": {
+	"american.bib": {
 		"english",
 	},
-	"argentine": {
+	"argentine.bib": {
 		"spanish",
 		"portuguese",
 	},
-	"australian": {
+	"australian.bib": {
 		"english",
 	},
-	"austrian": {
+	"austrian.bib": {
 		"german",
 		"french",
 	},
-	"canadian": {
+	"canadian.bib": {
 		"english",
 	},
-	"czech": {
+	"czech.bib": {
 		"czech",
 	},
-	"danish": {
+	"danish.bib": {
 		"danish",
 	},
-	"english": {
+	"english.bib": {
 		"english",
 	},
-	"french": {
+	"french.bib": {
 		"french",
 	},
-	"german": {
+	"german.bib": {
 		"german",
 	},
-	"italian": {
+	"italian.bib": {
 		"italian",
 	},
-	"mexican": {
+	"mexican.bib": {
 		"spanish",
 	},
-	"polish": {
+	"polish.bib": {
 		"polish",
 	},
-	"portuguese": {
+	"portuguese.bib": {
 		"portuguese",
 	},
-	"russian": {
+	"russian.bib": {
 		"russian",
 	},
-	"spanish": {
+	"spanish.bib": {
 		"spanish",
 	},
-	"swedish": {
+	"swedish.bib": {
 		"swedish",
 	},
 }
+
+META_INCOMPLETE = "incomplete"
+META_HAS_OWNER = "has_owner"
 
 #a structired pattern for file basename
 METADATA_PATTERN = r"(?:incomplete|[\w\s\-']+ copy)"
@@ -102,7 +105,7 @@ FILENAME_PATTERN = (
 	#	comma-separated list of METADATA_PATTERN in parentheses
 	#   (something copy) — for books with multiple different copies known
 	r"(?:"
-		r"(?:, tome (?P<tome>\d+))|"
+		r"(?:, tome (?P<volume>\d+))|"
 		r"(?:, number (?P<number>\d+))|"
 		r"(?:, édition (?P<edition>\d+))|"
 		r"(?:, partie (?P<part>\d+))|"
@@ -113,13 +116,16 @@ FILENAME_PATTERN = (
 )
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 
-SELF_SERVED_URLS_PATH_PATTERN = (
-	"/bib"
-)
+ID_PATTERN = r"[a-z][a-z_0-9]+"
+ID_REGEXP = re.compile(ID_PATTERN)
 
 VALID_HTTP_CODES = {
 	#general OK
 	http.client.OK,
+	#
+	#adding http.client.MOVED_PERMANENTLY
+	#considered as error here
+	#
 	#used by hdl.loc.gov
 	http.client.FOUND,
 	#used by hdl.handle.net
@@ -139,3 +145,23 @@ BABEL_KEYWORD_REF_PREFIX = "pages:keywords:ref:"
 
 #separator of keyword sublevels
 KEYWORD_SEPARATOR = ":"
+
+FILE_SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
+FILE_SIZE_EXPONENT = 1024
+FILE_SIZE_PARAM = "filesize"
+
+#libraries that've allowed
+#to share their books via bib.hda.org.ru
+KNOWN_LIBRARIES = {
+	"RSL",
+}
+
+#users that've allowed
+#to share their books via bib.hda.org.ru
+KNOWN_BOOKKEEPERS = {
+	"Bodhi",
+	"Garold",
+	"Georg",
+	"Glorf",
+	"Rostik",
+}

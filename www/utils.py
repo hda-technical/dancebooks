@@ -1,9 +1,10 @@
 import codecs
 import cProfile
+import fnmatch
 import functools
 import io
+import logging
 import os
-import fnmatch
 import pstats
 import re
 from urllib import parse as urlparse
@@ -14,11 +15,27 @@ from config import config
 import const
 import search
 
+#can't move this to const.py due to cyclic references
+SELF_SERVED_URL_PATTERN = (
+	re.escape(config.www.books_url) +
+	r"/(?P<item_id>[\w_]+)/pdf/(?P<pdf_index>\d+)"
+)
+SELF_SERVED_URL_REGEXP = re.compile(SELF_SERVED_URL_PATTERN)
+
 def strip_split_list(value, sep):
 	"""
 	Splits string on a given separator, strips spaces from resulting words
 	"""
 	return [word.strip() for word in value.split(sep)]
+
+
+def require(condition, ex):
+	"""
+	Raises ex if condition is False.
+	Just a piece of syntax sugar
+	"""
+	if (not condition):
+		raise ex
 
 
 LATEX_REPLACEMENTS = [
@@ -113,7 +130,7 @@ def extract_metadata_from_file(path):
 	* language (string)
 	* author ([string])
 	* title (string)
-	* tome (integer)
+	* volume (integer)
 	* number (integer)
 	* edition (integer)
 	* part (integer)
@@ -141,9 +158,9 @@ def extract_metadata_from_file(path):
 	if author is not None:
 		result["author"] = strip_split_list(author, ",")
 
-	tome = match.group("tome")
-	if tome is not None:
-		result["tome"] = int(tome)
+	volume = match.group("volume")
+	if volume is not None:
+		result["volume"] = int(volume)
 
 	edition = match.group("edition")
 	if edition is not None:
@@ -159,162 +176,159 @@ def extract_metadata_from_file(path):
 
 	keywords = match.group("keywords")
 	if keywords is not None:
-		result["keywords"] = set(filter(
-			lambda keywords: not keywords.endswith(" copy"),
-			strip_split_list(keywords, ",")
-		))
+		result["keywords"] = set()
+		for keyword in strip_split_list(keywords, ","):
+			if (keyword == const.META_INCOMPLETE):
+				result["keywords"].add(const.META_INCOMPLETE)
+			if (keyword.endswith(" copy")):
+				owner = keyword.split()[0]
+				if (
+					(owner in const.KNOWN_LIBRARIES) or
+					(owner in const.KNOWN_BOOKKEEPERS)
+				):
+					result["keywords"].add(const.META_HAS_OWNER)
 
 	return result
 
 
-def create_search_from_metadata(metadata):
+def make_searches_from_metadata(metadata):
 	"""
-	Creates callable applicable to an item,
-	checing if this item match given metadata
+	Creates dict: {
+		search_aliaskey: callable applicable to an item
+	},
+	checking if this item match given metadata
 	"""
-	langid = metadata["langid"]
-	year_from = metadata["year_from"]
-	year_to = metadata["year_to"]
+	result = {}
+
+	equality_searches = ["author", "edition", "number", "part", "langid"]
+	for search_key in equality_searches:
+		search_value = metadata.get(search_key, None)
+		if search_value is None:
+			continue
+		result[search_key] = search.search_for_eq(
+			search_key,
+			search_value
+		)
+
+	date_searches = ["year_from", "year_to"]
+	for search_key in date_searches:
+		search_value = metadata.get(search_key, None)
+		result[search_key] = search.search_for(
+			search_key,
+			search_value
+		)
+
 	title = metadata["title"]
-	author = metadata.get("author", None)
-	tome = metadata.get("tome", None)
-	number = metadata.get("number", None)
-	edition = metadata.get("edition", None)
-	part = metadata.get("part", None)
-	#keywords = metadata.get("keywords", None)
-
 	title_regexp = re.compile("^" + re.escape(title))
-
-	search_for_langid = search.search_for_eq("langid", langid)
-	search_for_year = search.and_([
-		search.search_for("year_from", year_from),
-		search.search_for("year_to", year_to)
-	])
-
 	search_for_itemtitle = search.search_for_string_regexp("title", title_regexp)
 	search_for_booktitle = search.search_for_string_regexp("booktitle", title_regexp)
-	search_for_title = search.or_([search_for_itemtitle, search_for_booktitle])
+	result["title"] = search.or_([search_for_itemtitle, search_for_booktitle])
 
-	searches = [
-		search_for_langid,
-		search_for_year,
-		search_for_title,
-	]
-
-	if author is not None:
-		search_for_author = search.search_for_eq(
-			"author",
-			author
-		)
-		searches.append(search_for_author)
-
-	if tome is not None:
+	volume = metadata.get("volume", None)
+	if volume is not None:
 		search_for_volume = search.search_for_optional_eq(
 			"volume",
-			tome
+			volume
 		)
 		search_for_volumes = search.search_for_integer_ge(
 			"volumes",
-			tome
+			volume
 		)
-		searches.append(search.or_([search_for_volume, search_for_volumes]))
-
-	if edition is not None:
-		search_for_edition = search.search_for_eq(
-			"edition",
-			edition
-		)
-		searches.append(search_for_edition)
-
-	if number is not None:
-		search_for_number = search.search_for_eq(
-			"number",
-			number
-		)
-		searches.append(search_for_number)
-
-	if part is not None:
-		search_for_part = search.search_for_eq(
-			"part",
-			part
-		)
-		searches.append(search_for_part)
-
-	#keywords aren't counted
-
-	return search.and_(searches)
-
+		result["volume"] = search.or_([search_for_volume, search_for_volumes])
+	return result
 
 def all_or_none(iterable):
 	return all(iterable) or not any(iterable)
 
 
-def is_url_valid(url, book_id, filename, check_head):
+def is_url_self_served(url):
+	return bool(SELF_SERVED_URL_REGEXP.match(url))
+
+
+def get_file_info_from_url(url, item):
 	"""
-	Validates urls.
-	Returns tuple containing validation result and error message
+	Returns tuple (file_name, file_size)
 	"""
-	try:
+	match = SELF_SERVED_URL_REGEXP.match(url)
+	require(
+		match,
+		ValueError("Received url ({url}) doesn't match SELF_SERVED_URL_REGEXP".format(
+			url=url
+		))
+	)
+	extracted_id = match.group("item_id")
+	extracted_index = int(match.group("pdf_index")) - 1
+	require(
+		extracted_id == item.id(),
+		ValueError("Extracted item_id ({extracted}) doesn't match item id ({received}".format(
+			extracted=extracted_id,
+			received=item.id()
+		))
+	)
+	require(
+		(extracted_index >= 0) and (extracted_index < len(item.get("filename"))),
+		ValueError("Extracted pdf index ({extracted_index}) isn't in filename list boundaries".format(
+			extracted_index=extracted_index
+		))
+	)
+	return (
+		item.get("filename")[extracted_index],
+		item.get("filesize")[extracted_index]
+	)
 
-		split_result = urlparse.urlsplit(url)
-		if len(split_result.scheme) == 0:
-			return False, "Scheme isn't specified"
-		elif len(split_result.netloc) == 0:
-			return False, "Netloc isn't specified"
-		elif len(split_result.fragment) != 0:
-			return False, "Fragments aren't allowed"
 
-		#validating blocked domains
-		if split_result.hostname in config.parser.blocked_domains:
-			return False, "Hostname {hostname} is blocked".format(
-				hostname=split_result.hostname
-			)
+def is_url_valid(url, item):
+	"""
+	Validates urls by a number of checks
+	"""
+	split_result = urlparse.urlsplit(url)
+	if len(split_result.scheme) == 0:
+		logging.debug("Schemes isn't specified")
+		return False
+	elif len(split_result.netloc) == 0:
+		logging.debug("Network location isn't specified")
+		return False
+	elif len(split_result.fragment) != 0:
+		logging.debug("Fragments aren't allowed")
+		return False
 
-		#validating domains blocked for insecure (http) access
-		if (
-			(split_result.hostname in config.parser.blocked_domains_http) and
-			(split_result.scheme == "http")
-		):
-			return False, "Hostname {hostname} is blocked for insecure access".format(
-				hostname=split_result.hostname
-			)
+	#validating blocked domains
+	if split_result.hostname in config.parser.blocked_domains:
+		logging.debug("Domain {hostname} is blocked".format(
+			hostname=split_result.hostname
+		))
+		return False
 
-		#validating self-served urls
-		if (
-			(split_result.hostname == config.www.app_domain) and
-			(split_result.path.startswith(config.www.books_path))
-		):
-			path_regexp = re.compile(
-				r"{books_path}/{book_id}/pdf/(?P<pdf_index>\d+)".format(
-					books_path=config.www.books_path,
-					book_id=book_id
-				)
-			)
-			match = path_regexp.match(split_result.path)
-			if not match:
-				return False, "Extracted self-served path {path} doesn't match path_regexp"
-			pdf_index = int(match.group("pdf_index"))
-			#pdf_indices are 1-based, while filename counts from 0
-			if (
-				pdf_index > len(filename) or
-				pdf_index <= 0
-			):
-				return False, "Invalid pdf index: {pdf_index}".format(
-					pdf_index=pdf_index
-				)
+	#validating domains blocked for insecure (http) access
+	if (
+		(split_result.hostname in config.parser.blocked_domains_http) and
+		(split_result.scheme == "http")
+	):
+		logging.debug("Domain {hostname} is blocked for insecure access".format(
+			hostname=split_result.hostname
+		))
+		return False
 
-		if check_head:
-			response = requests.head(url, allow_redirects=False, verify=True)
-			if (response.status_code not in const.VALID_HTTP_CODES):
-				return False, "HTTP HEAD request returned code {code}: {reason}".format(
-					code=response.status_code,
-					reason=response.reason
-				)
-	except Exception as ex:
-		return False, "Exception occured: {ex}".format(
-			ex=ex
-		)
-	return True, "URL is correct"
+	return True
+
+
+def is_url_accessible(url):
+	"""
+	Checks url accessibility via HTTP HEAD request
+	"""
+	if is_url_self_served(url):
+		return True
+
+	response = requests.head(url, allow_redirects=False, verify=True)
+	if (response.status_code not in const.VALID_HTTP_CODES):
+		logging.debug("HTTP HEAD request for url {url} returned code {code}: {reason}".format(
+			url=url,
+			code=response.status_code,
+			reason=response.reason
+		))
+
+	return True
+
 
 ISBN_REGEXP = re.compile("[^\dX]")
 def is_isbn_valid(isbn):
@@ -324,25 +338,25 @@ def is_isbn_valid(isbn):
 	"""
 	def check_digit_isbn_10(isbn):
 		sum = 0
-		length = len(isbn)
-		if length != 9:
-			raise RuntimeError("Input should contain exactly 9 digits")
-		for i in range(length):
-			c = int(isbn[i])
+		require(
+			len(isbn) == 9,
+			RuntimeError("Input should contain exactly 9 digits")
+		)
+		for i, c in enumerate(isbn):
 			w = i + 1
-			sum += w * c
+			sum += w * int(c)
 		r = sum % 11
 		return (str(r) if (r != 10) else "X")
 
 	def check_digit_isbn_13(isbn):
 		sum = 0
-		length = len(isbn)
-		if length != 12:
-			raise RuntimeError("Input should control exactly 12 digits")
-		for i in range(length):
-			c = int(isbn[i])
+		require(
+			len(isbn) == 12,
+			RuntimeError("Input should control exactly 12 digits")
+		)
+		for i, c in enumerate(isbn):
 			w = 3 if (i % 2 != 0) else 1
-			sum += w * c
+			sum += w * int(c)
 		r = 10 - (sum % 10)
 		return str(r % 10)
 
@@ -356,14 +370,16 @@ def is_isbn_valid(isbn):
 	elif length == 13:
 		right_check = check_digit_isbn_13(isbn_clear)
 	else:
-		return False, "ISBN is neither ISBN-10 or ISBN-13"
+		logging.debug("ISBN format is not known")
+		return False
 
 	if check != right_check:
-		return False, "ISBN check digit is incorrect (should be {0})".format(
-			right_check
-		)
+		logging.debug("Check digit should be {right_check}".format(
+			right_check=right_check
+		))
+		return False
 
-	return True, "ISBN is correct"
+	return True, ""
 
 YEAR_REGEXP = re.compile(r"(?P<year_from>\d+)(?:[-–—]+(?P<year_to>\d+)(?P<circa>\?)?)?")
 def parse_year(year):
@@ -395,7 +411,7 @@ def read_utf8_file(path):
 		if data.startswith(codecs.BOM_UTF8):
 			return data[len(codecs.BOM_UTF8):].decode()
 		else:
-				return data.decode()
+			return data.decode()
 
 
 def first(iterable):
@@ -417,3 +433,18 @@ def extract_parent_keyword(keyword):
 			return parent_candidate
 	#no parent can be extracted
 	return keyword
+
+
+def pretty_print_file_size(size_value):
+	"""
+	Returns string containing pretty printed file size
+	"""
+	size_unit_index = 0
+	while (size_value > const.FILE_SIZE_EXPONENT):
+		size_unit_index += 1
+		size_value /= const.FILE_SIZE_EXPONENT
+	return "{size:0.1f} {unit}".format(
+		size=size_value,
+		unit=const.FILE_SIZE_UNITS[size_unit_index]
+	)
+

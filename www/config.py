@@ -8,7 +8,6 @@ import subprocess
 
 import const
 
-
 class SmtpConfig(object):
 	def __init__(self, params):
 		if "host" not in params:
@@ -52,6 +51,10 @@ class ParserConfig(object):
 		if "list_params" not in params:
 			raise ValueError("list_params param wasn't found")
 		self.list_params = set(json.loads(params["list_params"]))
+
+		if "file_list_params" not in params:
+			raise ValueError("file_list_params param wasn't found")
+		self.file_list_params = set(json.loads(params["file_list_params"]))
 
 		if "int_params" not in params:
 			raise ValueError("int_params param wasn't found")
@@ -188,6 +191,8 @@ class WwwConfig(object):
 		if "elibrary_root" not in params:
 			raise ValueError("elibrary_root param wasn't found")
 		self.elibrary_root = params["elibrary_root"]
+		if not os.path.isdir(self.elibrary_root):
+			raise ValueError("elibrary folder is inaccessible")
 
 		if "secret_question_keys" not in params:
 			raise ValueError("secret_question_keys param wasn't found")

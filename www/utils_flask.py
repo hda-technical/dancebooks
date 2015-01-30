@@ -147,6 +147,9 @@ def jinja_translate_keyword_ref(keyword):
 	#colon should be remove, spaces should be replaces with dashes
 	key = keyword.replace(":", "").replace(" ", "-")
 	return babel.gettext(const.BABEL_KEYWORD_REF_PREFIX + key)
+
+def jinja_is_url_self_served(url):
+	return utils.is_url_self_served(url)
 #functions to be registered in jinja: end
 
 
