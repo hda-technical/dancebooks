@@ -233,7 +233,11 @@ class BibParser(object):
 				for single_filename in value:
 					#filenames start from slash, trimming it
 					abspath = os.path.join(config.www.elibrary_root, single_filename[1:])
-					filesize_value.append(os.path.getsize(abspath))
+					if (os.path.isfile(abspath)):
+						filesize_value.append(os.path.getsize(abspath))
+					else:
+						logging.warn("File is not accessible: {0}".format(abspath))
+						filesize_value.append(0)
 				item.set(const.FILE_SIZE_PARAM, filesize_value)
 			elif key in config.parser.int_params:
 				value = int(value)
