@@ -88,6 +88,11 @@ markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
 	cd wiki && (git commit -am "Updated wiki" || true) && git push origin master
 	touch $@
 
+validate:
+	cd www && \
+	$(DEVEL_ENV) \
+	./_validate.py
+
 # www-related targets
 www-debug: www-translations
 	cd www && \
