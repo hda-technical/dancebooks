@@ -1,4 +1,5 @@
 import codecs
+import copy
 import cProfile
 import fnmatch
 import functools
@@ -447,4 +448,18 @@ def pretty_print_file_size(size_value):
 		size=size_value,
 		unit=const.FILE_SIZE_UNITS[size_unit_index]
 	)
+
+
+def isfile_case_sensitive(abspath):
+	"""
+	Checks if file exists using case-sensive path
+	"""
+	if not os.path.isfile(abspath):
+		return False
+	path = copy.copy(abspath)
+	while path != '/':
+		path, basename = os.path.split(path)
+		if basename not in os.listdir(path):
+			return False
+	return True
 
