@@ -105,7 +105,7 @@ def choose_ui_lang(lang):
 		response.set_cookie("lang", value=lang, expires=EXPIRES)
 		return response
 	else:
-		flask.abort(404, "Language isn't available")
+		flask.abort(http.client.NOT_FOUND, "Language isn't available")
 
 
 @flask_app.route(config.www.app_prefix, methods=["GET"])
@@ -134,13 +134,13 @@ def search_items(show_secrets):
 
 	order_by = flask.request.values.get("orderBy", const.DEFAULT_ORDER_BY)
 	if order_by not in config.www.order_by_keys:
-		flask.abort(400, "Key {order_by} is not supported for ordering".format(
+		flask.abort(http.client.BAD_REQUEST, "Key {order_by} is not supported for ordering".format(
 			order_by=order_by
 		))
 
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
-		flask.abort(400, "No search parameters specified")
+		flask.abort(http.client.BAD_REQUEST, "No search parameters specified")
 
 	found_items = set(items)
 
@@ -169,7 +169,7 @@ def search_items(show_secrets):
 				if param_filter is not None:
 					searches.append(param_filter)
 	except Exception as ex:
-		flask.abort(400, "Some of the search parameters are wrong: {0}".format(ex))
+		flask.abort(http.client.BAD_REQUEST, "Some of the search parameters are wrong: {0}".format(ex))
 
 	found_items = list(sorted(
 		filter(search.and_(searches), found_items),
@@ -208,13 +208,13 @@ def get_book(book_id, show_secrets):
 	items = item_index["id"].get(book_id, None)
 
 	if items is None:
-		flask.abort(404, "Book with id {book_id} was not found".format(book_id=book_id))
+		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(book_id=book_id))
 	elif len(items) != 1:
 		message = "Multiple entries with id {book_id}".format(
 			book_id=book_id
 		)
 		logging.error(message)
-		flask.abort(500, message)
+		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	item = utils.first(items)
 	captcha_key = random.choice(config.www.secret_question_keys)
@@ -232,10 +232,10 @@ def get_book_pdf(book_id, index):
 	items = item_index["id"].get(book_id, None)
 
 	if (index <= 0):
-		flask.abort(400, "Param index should be positive number")
+		flask.abort(http.client.BAD_REQUEST, "Param index should be positive number")
 
 	if items is None:
-		flask.abort(404, "Book with id {book_id} was not found".format(
+		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(
 			book_id=book_id
 		))
 	elif len(items) != 1:
@@ -243,7 +243,7 @@ def get_book_pdf(book_id, index):
 			book_id=book_id
 		)
 		logging.error(message)
-		flask.abort(500, message)
+		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	item = utils.first(items)
 	if (
@@ -263,7 +263,7 @@ def get_book_pdf(book_id, index):
 			rel_url=flask.request.base_url
 		)
 		logging.error(message)
-		flask.abort(500, message)
+		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	logging.debug("Sending pdf file: {pdf_full_path}".format(
 		pdf_full_path=pdf_full_path
@@ -286,20 +286,20 @@ def edit_book(book_id):
 	items = item_index["id"].get(book_id, None)
 
 	if items is None:
-		flask.abort(404, "Book with id {id} was not found".format(id=id))
+		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		message = "Multiple entries with id {id}".format(
 			id=id
 		)
 		logging.error(message)
-		flask.abort(500, message)
+		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	message = utils_flask.extract_string_from_request("message")
 	from_name = utils_flask.extract_string_from_request("name")
 	from_email = utils_flask.extract_email_from_request("email")
 
 	if not all([message, from_name, from_email]):
-		flask.abort(400, "Empty values aren't allowed")
+		flask.abort(http.client.BAD_REQUEST, "Empty values aren't allowed")
 
 	item = utils.first(items)
 	message = messenger.ErrorReport(item, from_email, from_name, message)
@@ -315,20 +315,20 @@ def edit_book_keywords(book_id):
 	items = item_index["id"].get(book_id, None)
 
 	if items is None:
-		flask.abort(404, "Book with id {id} was not found".format(id=id))
+		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
 	elif len(items) != 1:
 		message = "Multiple entries with id {id}".format(
 			id=id
 		)
 		logging.error(message)
-		flask.abort(500, message)
+		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	suggested_keywords = utils_flask.extract_keywords_from_request("keywords")
 	from_name = utils_flask.extract_string_from_request("name")
 	from_email = utils_flask.extract_email_from_request("email")
 
 	if not all([suggested_keywords, from_name, from_email]):
-		flask.abort(400, "Empty values aren't allowed")
+		flask.abort(http.client.BAD_REQUEST, "Empty values aren't allowed")
 
 	item = utils.first(items)
 	message = messenger.KeywordsSuggest(item, from_email, from_name, suggested_keywords)
@@ -380,7 +380,7 @@ def get_books_rss(lang):
 		#setting attribute in flask.g so it cat be returned by get_locale call
 		setattr(flask.g, "lang", lang)
 	else:
-		flask.abort(404, "Language isn't available")
+		flask.abort(http.client.NOT_FOUND, "Language isn't available")
 
 	response = flask.make_response(flask.render_template(
 		"rss/books.xml",
@@ -393,7 +393,7 @@ def get_books_rss(lang):
 @flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])
 def everything_else(filename):
 	if (filename.startswith("components")):
-		flask.abort(404, "No such file: {filename}".format(
+		flask.abort(http.client.NOT_FOUND, "No such file: {filename}".format(
 			filename=filename
 		))
 	if (os.path.isfile("templates/static/" + filename)):
@@ -401,7 +401,7 @@ def everything_else(filename):
 	elif (os.path.isfile("static/" + filename)):
 		return flask_app.send_static_file(filename)
 	else:
-		flask.abort(404, "No such file: {filename}".format(
+		flask.abort(http.client.NOT_FOUND, "No such file: {filename}".format(
 			filename=filename
 		))
 

@@ -38,11 +38,11 @@ def xml_exception_handler(ex):
 		))
 		xml_error = '{decl}\n<error code="{code}" description="{description}">{msg}</error>'.format(
 			decl=XML_DECLARATION,
-			code=500,
+			code=http.client.INTERNAL_SERVER_ERROR,
 			description="Internal Server Error",
 			msg=ex
 		)
-		response = flask.make_response(xml_error, 500)
+		response = flask.make_response(xml_error, http.client.INTERNAL_SERVER_ERROR)
 
 	response.content_type = "text/xml; charset=utf-8"
 	return response
@@ -71,10 +71,10 @@ def check_captcha():
 			captcha_answer = extract_int_from_request("captcha_answer")
 
 			if captcha_key not in config.www.secret_questions:
-				flask.abort(400, babel.gettext("errors:wrong:captcha-key"))
+				flask.abort(http.client.BAD_REQUEST, babel.gettext("errors:wrong:captcha-key"))
 
 			if captcha_answer != config.www.secret_questions[captcha_key]:
-				flask.abort(403, babel.gettext("errors:wrong:captcha-answer"))
+				flask.abort(http.client.FORBIDDEN, babel.gettext("errors:wrong:captcha-answer"))
 
 			return func(*args, **kwargs)
 		return wrapper
@@ -162,7 +162,7 @@ def extract_string_from_request(param_name, default=_DefaultValue):
 	param = flask.request.values.get(param_name, default)
 	if param is _DefaultValue:
 		flask.abort(
-			400,
+			http.client.BAD_REQUEST,
 			babel.gettext("errors:missing:" + param_name.replace("_", "-"))
 		)
 	return param
@@ -173,7 +173,7 @@ def extract_email_from_request(param_name, default=_DefaultValue):
 	result = extract_string_from_request(param_name, default)
 	if not EMAIL_REGEXP.match(result):
 		flask.abort(
-			400,
+			http.client.BAD_REQUEST,
 			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
 		)
 	return result
@@ -185,7 +185,7 @@ def extract_int_from_request(param_name, default=_DefaultValue):
 		return int(result)
 	except Exception:
 		flask.abort(
-			400,
+			http.client.BAD_REQUEST,
 			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
 		)
 
@@ -196,7 +196,7 @@ def extract_json_from_request(param_name, default=_DefaultValue):
 		return json.loads(result)
 	except Exception:
 		flask.abort(
-			400,
+			http.client.BAD_REQUEST,
 			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
 		)
 
@@ -206,7 +206,7 @@ def extract_list_from_request(param_name, default=_DefaultValue):
 		return utils.strip_split_list(result,",")
 	except Exception:
 		flask.abort(
-			400,
+			http.client.BAD_REQUEST,
 			babel.gettext("errors:wrong:" + param_name.replace("_", "-"))
 		)
 
@@ -221,7 +221,7 @@ def extract_keywords_from_request(param_name, default=_DefaultValue):
 	for keyword in parsed_keywords:
 		if keyword not in config.parser.keywords:
 			flask.abort(
-				400,
+				http.client.BAD_REQUEST,
 				babel.gettext("errors:wrong:" + param_name.replace("_", "-")) +
 					" " + keyword
 			)
