@@ -49,6 +49,17 @@ msgstr ""
 	"A comprehensive keyword list can be found "
 	"<a href='/bib/keywords.html'>here</a>."
 
+# Buttons
+
+msgid "interface:buttons:search"
+msgstr "Search"
+
+msgid "interface:buttons:clear"
+msgstr "Clear"
+
+msgid "interface:buttons:send"
+msgstr "Send"
+
 # Pages: keywords
 
 msgid "pages:keywords:title"
@@ -185,17 +196,6 @@ msgstr ""
 	"I can not understand the nonsence:<br/>\n"
 	"How could I persimmon have danced?<br/>\n"
 
-# Buttons
-
-msgid "interface:buttons:search"
-msgstr "Search"
-
-msgid "interface:buttons:clear"
-msgstr "Clear"
-
-msgid "interface:buttons:send"
-msgstr "Send"
-
 # Common
 
 msgid "common:Yes"
@@ -251,11 +251,11 @@ msgstr "Introduce yourself"
 msgid "interface:report:email"
 msgstr "E-mail"
 
-msgid "interface:report:keywords"
-msgstr "Keywords"
-
 msgid "interface:report:description"
 msgstr "Describe the problem"
+
+msgid "interface:report:keywords"
+msgstr "Keywords"
 
 msgid "interface:report:thanks"
 msgstr "Thanks! Your message was sent to /dev/null"
