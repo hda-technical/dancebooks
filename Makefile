@@ -34,6 +34,7 @@ LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 DEVEL_ENV := \
 	CONFIG=$(DEVEL_CONFIG) \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
+	UNITTEST=true \
 	PYTHONPATH=. \
 
 TESTS := $(wildcard www/tests/*.py)

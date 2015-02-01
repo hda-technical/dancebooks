@@ -143,15 +143,18 @@ class WwwConfig(object):
 			raise ValueError("app_domain param wasn't found")
 		self.app_domain = params["app_domain"]
 
+		if "app_domain_production" not in params:
+			raise ValueError("app_domain_production param wasn't found")
+		self.app_domain_production = params["app_domain_production"]
+
 		if "app_prefix" not in params:
 			raise ValueError("app_prefix param wasn't found")
 		self.app_prefix = params["app_prefix"]
 
-		self.books_path = self.app_prefix + "/books"
-		self.books_url = "https://" + self.app_domain + self.books_path
-		self.basic_search_url = self.app_prefix + "/basic-search"
-		self.advanced_search_url = self.app_prefix + "/advanced-search"
-		self.all_fields_search_url = self.app_prefix + "/all-fields-search"
+		self.books_prefix = self.app_prefix + "/books"
+		self.basic_search_prefix = self.app_prefix + "/basic-search"
+		self.advanced_search_prefix = self.app_prefix + "/advanced-search"
+		self.all_fields_search_prefix = self.app_prefix + "/all-fields-search"
 
 		if "search_params" not in params:
 			raise ValueError("search_params param wasn't found")
@@ -248,6 +251,8 @@ class Config(object):
 			"cut -f 2 -d ' '",
 			shell=True
 		).decode().strip()
+
+		self.unittest = ("UNITTEST" in os.environ)
 
 
 def setup_logging(config_path):

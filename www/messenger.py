@@ -29,6 +29,10 @@ class BasicMessage(object):
 
 			recipients = [config.bug_report.to_addr]
 
+			#do not send data in unittest mode
+			if config.unittest:
+				return
+
 			smtp = smtplib.SMTP(config.smtp.host, config.smtp.port)
 			smtp.starttls()
 			if config.smtp.user and config.smtp.password:

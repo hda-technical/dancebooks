@@ -183,7 +183,7 @@ def search_items(show_secrets):
 	)
 
 
-@flask_app.route(config.www.books_path, methods=["GET"])
+@flask_app.route(config.www.books_prefix, methods=["GET"])
 @utils_flask.check_secret_cookie()
 def show_all(show_secrets):
 	return flask.render_template(
@@ -193,13 +193,13 @@ def show_all(show_secrets):
 	)
 
 
-@flask_app.route(config.www.books_path + "/<string:book_id>", methods=["GET"])
+@flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["GET"])
 @utils_flask.check_secret_cookie()
 def get_book(book_id, show_secrets):
 	if book_id in config.www.id_redirections:
 		return flask.redirect(
-			"{books_path}/{new_id}".format(
-				books_path=config.www.books_path,
+			"{books_prefix}/{new_id}".format(
+				books_prefix=config.www.books_prefix,
 				new_id = config.www.id_redirections[book_id]
 			),
 			code=http.client.MOVED_PERMANENTLY
@@ -246,21 +246,25 @@ def get_book_pdf(book_id, index):
 		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	item = utils.first(items)
+	item_url = item.get("url") or set()
+	request_path = flask.request.script_root + flask.request.path
+	request_url_production = "https://" + config.www.app_domain_production + request_path
 	if (
-		flask.request.base_url not in item.get("url") or
-		not utils.is_url_self_served(flask.request.base_url)
+		(book_id != item.id()) or
+		(request_url_production not in item_url) or
+		not utils.is_url_self_served(request_url_production, item)
 	):
 		flask.abort(404, "Book with id {book_id} isn't available for download".format(
 			book_id=book_id
 		))
-	file_name, file_size = utils.get_file_info_from_url(flask.request.base_url, item)
+	file_name, file_size = utils.get_file_info_from_url(request_url_production, item)
 	#filenames start from slash, trimming it
 	pdf_full_path = os.path.join(config.www.elibrary_root, file_name[1:])
 
 	if not os.path.isfile(pdf_full_path):
 		message = "Item {book_id} metadata is wrong: file for url {rel_url} is missing".format(
 			book_id=book_id,
-			rel_url=flask.request.base_url
+			rel_url=request_url_production
 		)
 		logging.error(message)
 		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
@@ -268,7 +272,14 @@ def get_book_pdf(book_id, index):
 	logging.debug("Sending pdf file: {pdf_full_path}".format(
 		pdf_full_path=pdf_full_path
 	))
-	response = flask.make_response(flask.send_file(pdf_full_path))
+	if config.unittest:
+		#using send_file in unittest mode causes ResourceWarning due to unclosed file
+		response = flask.make_response("SOME_BINARY_PDF_LIKE_DATA")
+		response.headers["Content-Type"] = "application/pdf"
+	else:
+		#native send_file as_attrachment parameter works incorrectly with unicode data
+		#adding corrent Content-Disposition header manually
+		response = flask.make_response(flask.send_file(pdf_full_path))
 	response.headers["Content-Disposition"] = \
 		"attachment; " \
 		"filenane={ascii_filename};" \

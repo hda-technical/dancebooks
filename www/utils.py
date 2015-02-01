@@ -18,7 +18,9 @@ import search
 
 #can't move this to const.py due to cyclic references
 SELF_SERVED_URL_PATTERN = (
-	re.escape(config.www.books_url) +
+	"https://" +
+	re.escape(config.www.app_domain_production) +
+	re.escape(config.www.books_prefix) +
 	r"/(?P<item_id>[\w_]+)/pdf/(?P<pdf_index>\d+)"
 )
 SELF_SERVED_URL_REGEXP = re.compile(SELF_SERVED_URL_PATTERN)
@@ -242,8 +244,12 @@ def all_or_none(iterable):
 	return all(iterable) or not any(iterable)
 
 
-def is_url_self_served(url):
-	return bool(SELF_SERVED_URL_REGEXP.match(url))
+def is_url_self_served(url, item):
+	match = SELF_SERVED_URL_REGEXP.match(url)
+	if not match:
+		return False
+	extracted_id = match.group("item_id")
+	return (extracted_id == item.id())
 
 
 def get_file_info_from_url(url, item):
@@ -313,11 +319,11 @@ def is_url_valid(url, item):
 	return True
 
 
-def is_url_accessible(url):
+def is_url_accessible(url, item):
 	"""
 	Checks url accessibility via HTTP HEAD request
 	"""
-	if is_url_self_served(url):
+	if is_url_self_served(url, item):
 		return True
 
 	response = requests.head(url, allow_redirects=False, verify=True)

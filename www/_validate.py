@@ -301,7 +301,7 @@ def check_url_validity(item, errors):
 					number=number
 				))
 
-			if utils.is_url_self_served(single_url):
+			if utils.is_url_self_served(single_url, item):
 				single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
 				metadata = utils.extract_metadata_from_file(single_filename)
 				if (
@@ -320,7 +320,7 @@ def check_url_accessibility(item, errors):
 	url = item.get("url")
 	if url is not None:
 		for number, single_url in enumerate(url):
-			if not utils.is_url_accessible(single_url):
+			if not utils.is_url_accessible(single_url, item):
 				errors.add("Field url with value [{single_url}] and number {number} is unaccessible".format(
 					single_url=single_url,
 					number=number

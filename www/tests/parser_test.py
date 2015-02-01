@@ -6,7 +6,6 @@ import unittest
 
 from config import config
 import index
-import main
 import bib_parser
 import search
 
@@ -39,10 +38,9 @@ EXPECTED_LANGUAGES = set(["russian", "english"])
 EXPECTED_KEYWORDS = set(["renaissance", "cinquecento", "grumbling", "historical dance"])
 
 class TestParser(unittest.TestCase):
-
-	def setUp(self):
-		self.client = main.flask_app.test_client()
-
+	"""
+	Tests if parser and basic search tools work as expected
+	"""
 	def test_parse_string(self):
 		"""
 		Tests if string can be succesfully parsed by BibParser
@@ -67,7 +65,6 @@ class TestParser(unittest.TestCase):
 			item1.annotation(),
 			'<a href="http://example.com/description">http://example.com/description</a>'
 		)
-
 
 	def test_search_items(self):
 		"""
@@ -122,45 +119,6 @@ class TestParser(unittest.TestCase):
 			item_index["keywords"]["cinquecento"] & \
 			item_index["keywords"]["historical dance"]
 		self.assertEqual(len(list(filtered_items)), 1)
-
-
-	def test_app_handlers(self):
-		rq = self.client.get(config.www.app_prefix, follow_redirects=True)
-		self.assertEqual(rq.status_code, http.client.OK)
-
-		rq = self.client.get(config.www.app_prefix + "/ui-lang/ru")
-		#self.assertEqual(rq.status_code, http.client.OK)
-		self.assertTrue("Set-Cookie" in rq.headers)
-
-		rq = self.client.get(config.www.app_prefix)
-		self.assertEqual(rq.status_code, http.client.OK)
-
-		rq = self.client.get(config.www.app_prefix, query_string={
-			"author": "Wilson",
-			"title": "Ecossoise",
-			"year_from": 1800,
-			"year_to": 1900
-		})
-		self.assertEqual(rq.status_code, http.client.OK)
-
-		rq = self.client.get(config.www.app_prefix + "/books")
-		self.assertEqual(rq.status_code, http.client.OK)
-
-		rq = self.client.get(config.www.app_prefix + "/books/dodworth_1844_indian_hunter")
-		self.assertEqual(rq.status_code, http.client.OK)
-
-		rq = self.client.get(config.www.app_prefix + "/options")
-		self.assertEqual(rq.status_code, http.client.OK)
-		self.assertEqual(rq.content_type, "application/json; charset=utf-8")
-		json.loads(rq.data.decode())
-
-		rq = self.client.get(config.www.app_prefix + "/rss/en/books")
-		self.assertEqual(rq.status_code, http.client.OK)
-		self.assertEqual(rq.content_type, "application/rss+xml")
-
-		rq = self.client.get(config.www.app_prefix + "/rss/ru/books")
-		self.assertEqual(rq.status_code, http.client.OK)
-		self.assertEqual(rq.content_type, "application/rss+xml")
 
 
 if __name__ == "__main__":
