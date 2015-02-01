@@ -50,7 +50,10 @@ class LocalizationTest(unittest.TestCase):
 						message=message
 					))
 					has_mismatches = True
-
+			self.assertEqual(
+				len(first_message_list),
+				len(message_list)
+			)
 		self.assertFalse(has_mismatches)
 
 

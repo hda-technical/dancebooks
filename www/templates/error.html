@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+	{% include "components/head.html" %}
+	<body>
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
+		<h2>{{ _("errors:http:oops") }}</h2>
+		<div class="center">
+			<span>
+			{% if error.code == 400 %}
+				<h3>{{ _("errors:http:bad-request-start") }}</h3>
+				<h3>{{ error.description }}</h3>
+				<h3>{{ _("errors:http:bad-request-finish") }}</h3>
+			{% elif error.code == 403 %}
+				<h3>{{ _("errors:http:forbidden-start") }}</h3>
+				<h3>{{ error.description }}</h3>
+				<h3>{{ _("errors:http:forbidden-finish") }}</h3>
+			{% elif error.code == 404 %}
+				<h3>{{ _("errors:http:not-found-start") }}</h3>
+				<h3>{{ error.description }}</h3>
+				<h3>{{ _("errors:http:not-found-finish") }}</h3>
+			{% elif error.code == 500 %}
+				<h3>{{ _("errors:http:internal-server-error-start") }}</h3>
+				<h3>{{ error.description }}</h3>
+				<h3>{{ _("errors:http:internal-server-error-finish") }}</h3>
+			{% endif %}
+			</span>
+			<hr/>
+			{% include "components/footer.html" %}
+		</div>
+	</body>
+</html>

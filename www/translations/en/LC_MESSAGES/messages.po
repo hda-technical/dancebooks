@@ -529,3 +529,35 @@ msgstr "E-mail is wrong"
 
 msgid "errors:wrong:keywords"
 msgstr "Keywords are wrong"
+
+msgid "errors:http:oops"
+msgstr "Avada Kedavra!"
+
+#HTTP 400 error handler
+msgid "errors:http:bad-request-start"
+msgstr "Your request isn't allowed in this house."
+
+msgid "errors:http:bad-request-finish"
+msgstr "Should I call the butler?"
+
+#HTTP 403 error handler
+msgid "errors:http:forbidden-start"
+msgstr "Action you are trying to perform was forbidden by Her Majesty's Act."
+
+msgid "errors:http:forbidden-finish"
+msgstr ""
+
+#HTTP 404 error handler
+msgid "errors:http:not-found-start"
+msgstr "Can't find"
+
+msgid "errors:http:not-found-finish"
+msgstr "Try calling housekeeper."
+
+#HTTP 500
+msgid "errors:http:internal-server-error-start"
+msgstr "Internal server error occured: "
+
+msgid "errors:http:internal-server-error-finish"
+msgstr "You better get a lawyer and, maybe, a priest."
+

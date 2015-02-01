@@ -13,38 +13,26 @@ from config import config
 import const
 import utils
 
-XML_DECLARATION = '<?xml version="1.0" encoding="utf-8"?>'
-
-def xml_exception_handler(ex):
+def http_exception_handler(ex):
 	"""
-	Function converting Exception or HTTPException instance to xml response
+	Function converting Exception or HTTPException instance
+	to HTML response
 	"""
 	if isinstance(ex, werkzeug.exceptions.HTTPException):
 		logging.warn("HTTP {name} error occured: {msg}".format(
 			name=ex.name,
 			msg=ex.description
 		))
-		xml_error = '{decl}\n<error code="{code}" description="{description}">{msg}</error>'.format(
-			decl=XML_DECLARATION,
-			code=ex.code,
-			description=ex.name,
-			msg=ex.description
-		)
-		response = flask.make_response(xml_error, ex.code)
+		render = flask.render_template("error.html", error=ex)
+		response = flask.make_response(render, ex.code)
 
 	elif isinstance(ex, Exception):
 		logging.exception("Unhandled exception: {ex}".format(
 			ex=ex
 		))
-		xml_error = '{decl}\n<error code="{code}" description="{description}">{msg}</error>'.format(
-			decl=XML_DECLARATION,
-			code=http.client.INTERNAL_SERVER_ERROR,
-			description="Internal Server Error",
-			msg=ex
-		)
-		response = flask.make_response(xml_error, http.client.INTERNAL_SERVER_ERROR)
+		render = flask.render_template("error.html", error=ex)
+		response = flask.make_response(render, http.client.INTERNAL_SERVER_ERROR)
 
-	response.content_type = "text/xml; charset=utf-8"
 	return response
 
 

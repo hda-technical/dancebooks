@@ -401,17 +401,12 @@ def everything_else(filename):
 	elif (os.path.isfile("static/" + filename)):
 		return flask_app.send_static_file(filename)
 	else:
-		flask.abort(http.client.NOT_FOUND, "No such file: {filename}".format(
-			filename=filename
-		))
+		flask.abort(http.client.NOT_FOUND, flask.request.base_url)
 
 
 if __name__ == "__main__":
-	flask_app.run(host="0.0.0.0")
-else:
 	for code in werkzeug.HTTP_STATUS_CODES:
-		#registering only required code
-		if http.client.BAD_REQUEST <= code:
-			flask_app.errorhandler(code)(utils_flask.xml_exception_handler)
-	flask_app.errorhandler(Exception)(utils_flask.xml_exception_handler)
+		flask_app.errorhandler(code)(utils_flask.http_exception_handler)
+	flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
+	flask_app.run(host="0.0.0.0")
 

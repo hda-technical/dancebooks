@@ -529,3 +529,36 @@ msgstr "Неправильный e-mail"
 
 msgid "errors:wrong:keywords"
 msgstr "Неправильно заполнены теги"
+
+msgid "errors:http:oops"
+msgstr "Авада Кедавра!"
+
+#HTTP 400 error handler
+msgid "errors:http:bad-request-start"
+msgstr "Судя по пуговицам вашего вицмундира, вы должны служить по другому ведомству."
+
+msgid "errors:http:bad-request-finish"
+msgstr "Позвар оберполицеймейстера?"
+
+#HTTP 403 error handler
+msgid "errors:http:forbidden-start"
+msgstr "Не лезьте в чужой монастырь со своим летописным сводом, пожалуйста."
+
+msgid "errors:http:forbidden-finish"
+msgstr ""
+
+#HTTP 404 error handler
+msgid "errors:http:not-found-start"
+msgstr "Не могу найти"
+
+msgid "errors:http:not-found-finish"
+msgstr "Читали басню про мартышку и очки?"
+
+#HTTP 500
+msgid "errors:http:internal-server-error-start"
+msgstr "Неладно что-то в датском королевстве: "
+
+msgid "errors:http:internal-server-error-finish"
+msgstr "Быть или не быть?"
+
+
