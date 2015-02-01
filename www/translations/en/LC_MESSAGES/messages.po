@@ -531,33 +531,36 @@ msgid "errors:wrong:keywords"
 msgstr "Keywords are wrong"
 
 msgid "errors:http:oops"
-msgstr "Avada Kedavra!"
+msgstr "Oops!"
+
+msgid "errors:http:code"
+msgstr "Error code"
 
 #HTTP 400 error handler
-msgid "errors:http:bad-request-start"
-msgstr "Your request isn't allowed in this house."
-
-msgid "errors:http:bad-request-finish"
-msgstr "Should I call the butler?"
-
-#HTTP 403 error handler
-msgid "errors:http:forbidden-start"
-msgstr "Action you are trying to perform was forbidden by Her Majesty's Act."
-
-msgid "errors:http:forbidden-finish"
+msgid "errors:http:400:cite"
 msgstr ""
 
-#HTTP 404 error handler
-msgid "errors:http:not-found-start"
-msgstr "Can't find"
+msgid "errors:http:400:description"
+msgstr "Something is wrong with your request."
 
-msgid "errors:http:not-found-finish"
-msgstr "Try calling housekeeper."
+#HTTP 403 error handler
+msgid "errors:http:403:cite"
+msgstr ""
+
+msgid "errors:http:403:description"
+msgstr "Action you are trying to perform is forbidden"
+
+#HTTP 404 error handler
+msgid "errors:http:404:cite"
+msgstr ""
+
+msgid "errors:http:404:description"
+msgstr "Can't find the item you've requested"
 
 #HTTP 500
-msgid "errors:http:internal-server-error-start"
-msgstr "Internal server error occured: "
+msgid "errors:http:500:cite"
+msgstr "Something is rotten is the state of Denmark"
 
-msgid "errors:http:internal-server-error-finish"
-msgstr "You better get a lawyer and, maybe, a priest."
+msgid "errors:http:500:description"
+msgstr "Internal server error occured"
 

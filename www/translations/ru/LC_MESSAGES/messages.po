@@ -531,34 +531,35 @@ msgid "errors:wrong:keywords"
 msgstr "Неправильно заполнены теги"
 
 msgid "errors:http:oops"
-msgstr "Авада Кедавра!"
+msgstr "Ой!"
+
+msgid "errors:http:code"
+msgstr "Код ошибки"
 
 #HTTP 400 error handler
-msgid "errors:http:bad-request-start"
+msgid "errors:http:400:cite"
 msgstr "Судя по пуговицам вашего вицмундира, вы должны служить по другому ведомству."
 
-msgid "errors:http:bad-request-finish"
-msgstr "Позвар оберполицеймейстера?"
+msgid "errors:http:400:description"
+msgstr "Неправильный запрос"
 
 #HTTP 403 error handler
-msgid "errors:http:forbidden-start"
-msgstr "Не лезьте в чужой монастырь со своим летописным сводом, пожалуйста."
+msgid "errors:http:403:cite"
+msgstr "В чужой монастырь со своим уставом не ходят."
 
-msgid "errors:http:forbidden-finish"
-msgstr ""
+msgid "errors:http:403:description"
+msgstr "Вам запрещён выполнять такой запрос"
 
 #HTTP 404 error handler
-msgid "errors:http:not-found-start"
-msgstr "Не могу найти"
+msgid "errors:http:404:cite"
+msgstr "Мартышка к старости слаба глазами стала."
 
-msgid "errors:http:not-found-finish"
-msgstr "Читали басню про мартышку и очки?"
+msgid "errors:http:404:description"
+msgstr "Не могу найти файл"
 
 #HTTP 500
-msgid "errors:http:internal-server-error-start"
-msgstr "Неладно что-то в датском королевстве: "
+msgid "errors:http:500:cite"
+msgstr "Неладно что-то в датском королевстве."
 
-msgid "errors:http:internal-server-error-finish"
-msgstr "Быть или не быть?"
-
-
+msgid "errors:http:500:description"
+msgstr "Внутренняя ошибка сервера"
