@@ -404,9 +404,9 @@ def everything_else(filename):
 		flask.abort(http.client.NOT_FOUND, flask.request.base_url)
 
 
+for code in werkzeug.HTTP_STATUS_CODES:
+	flask_app.errorhandler(code)(utils_flask.http_exception_handler)
+flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
 if __name__ == "__main__":
-	for code in werkzeug.HTTP_STATUS_CODES:
-		flask_app.errorhandler(code)(utils_flask.http_exception_handler)
-	flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
 	flask_app.run(host="0.0.0.0")
 
