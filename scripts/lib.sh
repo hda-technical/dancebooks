@@ -32,11 +32,11 @@ function web_get()
 	local OUTPUT_FILE=$2
 	echo -n "Getting $1 ... "
 
-	wget -q "$1" -O "$2"
+	wget -q "$URL" -O "$OUTPUT_FILE"
 
 	if [ \
-		\($? == "$WGET_HTTP_ERROR" \) -o \
-		\( `stat --format=%s $OUTPUT_FILE` -lt $MIN_FILE_SIZE \) \
+		\( $? == "$WGET_HTTP_ERROR" \) -o \
+		\( `stat --format=%s "$OUTPUT_FILE"` -lt $MIN_FILE_SIZE \) \
 	]
 	then
 		rm $OUTPUT_FILE
@@ -246,7 +246,7 @@ function gallicaTiles()
 {
 	if [ $# -ne 1 ]
 	then
-		echo "Usage:  $0 ark_id"
+		echo "Usage: $0 ark_id"
 		return
 	fi
 
@@ -254,6 +254,25 @@ function gallicaTiles()
 	local ZOOM=6
 	local OUTPUT_DIR=.
 	tiles gallicaTilesUrl gallicaTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
+}
+
+function gallica()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage $0 ark_id page_count"
+		return
+	fi
+
+	local BOOK_ID=$1
+	local OUTPUT_DIR="gallica.$BOOK_ID"
+	local PAGE_COUNT=$2
+	mkdir -p "$OUTPUT_DIR"
+	for PAGE in `seq $PAGE_COUNT`
+	do
+		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.jpg $PAGE`
+		web_get "http://gallica.bnf.fr/ark:/12148/$BOOK_ID/f$PAGE.highres" $OUTPUT_FILE
+	done
 }
 
 function dusseldorfTiles()
