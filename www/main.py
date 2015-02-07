@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # coding: utf-8
-import datetime
 import http.client
 import logging
 import os.path
@@ -65,11 +64,26 @@ flask_app.jinja_env.filters["self_served_url_size"] = jinja_self_served_url_size
 #filling jinja global variables
 flask_app.jinja_env.globals["config"] = config
 
-EXPIRES = datetime.datetime.today() + datetime.timedelta(days=1000)
 @flask_app.before_first_request
 def initialize():
 	logging.info("Starting up")
 
+
+@flask_app.after_request
+def add_security_headers(response):
+	response.headers["Strict-Transport-Security"] = (
+		"max-age={seconds_in_year}; includeSubDomains".format(
+			seconds_in_year=const.SECONDS_IN_YEAR
+		)
+	)
+	response.headers["Content-Security-Policy"] = (
+		"default-src https:; "
+		"script-src https:; "
+		"style-src https:; "
+		"img-src https: data:;"
+		"font-src https: data:;"
+	)
+	return response
 
 @babel_app.localeselector
 def get_locale():
@@ -92,7 +106,10 @@ def secret_cookie():
 	response.set_cookie(
 		config.www.secret_cookie_key,
 		value=config.www.secret_cookie_value,
-		expires=EXPIRES
+		max_age=const.SECONDS_IN_YEAR,
+		httponly=True,
+		secure=True,
+		path=config.www.app_prefix
 	)
 	return response
 
@@ -102,7 +119,14 @@ def choose_ui_lang(lang):
 	next_url = flask.request.referrer or config.www.app_prefix
 	if lang in config.www.languages:
 		response = flask.make_response(flask.redirect(next_url))
-		response.set_cookie("lang", value=lang, expires=EXPIRES)
+		response.set_cookie(
+			"lang",
+			value=lang,
+			max_age=const.SECONDS_IN_YEAR,
+			httponly=True,
+			secure=True,
+			path=config.www.app_prefix
+		)
 		return response
 	else:
 		flask.abort(http.client.NOT_FOUND, "Language isn't available")

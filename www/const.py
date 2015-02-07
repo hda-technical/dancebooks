@@ -165,3 +165,5 @@ KNOWN_BOOKKEEPERS = {
 	"Glorf",
 	"Rostik",
 }
+
+SECONDS_IN_YEAR = 60 * 60 * 24 * 365
