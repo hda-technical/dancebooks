@@ -293,6 +293,7 @@ def check_url_validity(item, errors):
 	Checks url for validity
 	"""
 	url = item.get("url")
+	item_id = item.get("id")
 	if url is not None:
 		for number, single_url in enumerate(url):
 			if not utils.is_url_valid(single_url, item):
@@ -301,16 +302,20 @@ def check_url_validity(item, errors):
 					number=number
 				))
 
-			if utils.is_url_self_served(single_url, item):
-				single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
-				metadata = utils.extract_metadata_from_file(single_filename)
-				if (
-					("keywords" not in metadata) or
-					(const.META_HAS_OWNER not in metadata["keywords"])
-				):
-					errors.add("Owner specification expected for self-served url number {number}".format(
-						number=number
-					))
+			match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
+			if match:
+				if (match.group("item_id") != item_id):
+					errors.add("Wrong item_id specified in self-served url")
+				else:
+					single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
+					metadata = utils.extract_metadata_from_file(single_filename)
+					if (
+						("keywords" not in metadata) or
+						(const.META_HAS_OWNER not in metadata["keywords"])
+					):
+						errors.add("Owner specification expected for self-served url number {number}".format(
+							number=number
+						))
 
 
 def check_url_accessibility(item, errors):

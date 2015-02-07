@@ -123,6 +123,9 @@ msgstr "Indicates single quadrille figure described as an independent dance"
 msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Form of first set with high amount of figure variations, lead by a conductor"
 
+msgid "pages:keywords:ref:quadrille-grand-rond"
+msgstr "First set finale figure variation: the dancers join hands in a circle, and perform figures according to conductor's commands"
+
 msgid "pages:keywords:ref:waltz"
 msgstr "Any kind of waltz (add it when adding any other waltzing tag)"
 
