@@ -488,8 +488,13 @@ def check_filename(item, errors):
 		searches = utils.make_searches_from_metadata(metadata)
 		for search_key, search_func in searches.items():
 			if not search_func(item):
-				errors.add("Item is not searchable by {search_key}".format(
-					search_key=search_key
+				errors.add(
+					"Item is not searchable by {search_key}.\n"
+					"    Item has: {item_value}\n"
+					"    Search has: {search_value}".format(
+					search_key=search_key,
+					item_value=item.get(search_key),
+					search_value=metadata[search_key]
 				))
 
 
