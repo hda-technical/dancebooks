@@ -7,6 +7,7 @@ import subprocess
 
 import opster
 
+from config import config
 import index
 import bib_parser
 
@@ -30,7 +31,7 @@ BLAME_REGEXP = re.compile(
 	r"(?P<id>[a-z_\d]+),\s*$"
 )
 
-def process_file(path):	
+def process_file(path):
 	data = subprocess.check_output(
 		"git blame -f {path} | grep -P '\t[a-z\_\d]+,'".format(
 			path=path
@@ -44,13 +45,13 @@ def process_file(path):
 			continue
 
 		match = BLAME_REGEXP.search(line)
-		if not match: 
+		if not match:
 			print(line)
 			raise ValueError("Received string doesn't match BLAME_REGEXP")
-				
+
 		date = match.group("date")
 		id = match.group("id")
-		
+
 		#ignoring items with added_on already set
 		item = list(item_index["id"][id])[0]
 		item_added_on = item.added_on()
@@ -74,23 +75,13 @@ def process_file(path):
 
 
 @opster.command()
-def main(
-	path=("p", "", ".bib file to use")
-):
-	if not path:
-		print(".bib file/folder must be specified")
-		sys.exit(1)
-	
-	if os.path.isdir(path):
-		dirname = os.path.abspath(path)
-		files = [os.path.join(dirname, file) for file in os.listdir(path)]
-	elif os.path.isfile(path):
-		files = [os.path.abspath(path)]
-	else:
-		raise ValueError("Wrong path")
-	
+def main():
+	files = [
+		os.path.join(config.parser.bibdata_dir, file)
+		for file in os.listdir(config.parser.bibdata_dir)
+	]
 	for file in files:
 		process_file(file)
-	
+
 if __name__ == "__main__":
 	main.command()

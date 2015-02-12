@@ -449,7 +449,7 @@ def check_filename(item, errors):
 
 	for single_filename in filename:
 		#filename starts with slash - trimming it
-		abspath = os.path.join(config.www.elibrary_root, single_filename[1:])
+		abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
 		if not utils.isfile_case_sensitive(abspath):
 			errors.add("File [{abspath}] is not accessible".format(
 				abspath=abspath

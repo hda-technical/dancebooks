@@ -232,7 +232,7 @@ class BibParser(object):
 				filesize_value = []
 				for single_filename in value:
 					#filenames start from slash, trimming it
-					abspath = os.path.join(config.www.elibrary_root, single_filename[1:])
+					abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
 					if (os.path.isfile(abspath)):
 						filesize_value.append(os.path.getsize(abspath))
 					else:

@@ -44,6 +44,10 @@ class BugReportConfig(object):
 
 class ParserConfig(object):
 	def __init__(self, params):
+		if "bibdata_dir" not in params:
+			raise ValueError("bibdata_dir param wasn't found")
+		self.bibdata_dir = params["bibdata_dir"]
+
 		if "list_sep" not in params:
 			raise ValueError("list_sep param wasn't found")
 		self.list_sep = params["list_sep"]
@@ -191,10 +195,10 @@ class WwwConfig(object):
 			raise ValueError("order_by_keys param wasn't found")
 		self.order_by_keys = set(json.loads(params["order_by_keys"]))
 
-		if "elibrary_root" not in params:
-			raise ValueError("elibrary_root param wasn't found")
-		self.elibrary_root = params["elibrary_root"]
-		if not os.path.isdir(self.elibrary_root):
+		if "elibrary_dir" not in params:
+			raise ValueError("elibrary_dir param wasn't found")
+		self.elibrary_dir = params["elibrary_dir"]
+		if not os.path.isdir(self.elibrary_dir):
 			raise ValueError("elibrary folder is inaccessible")
 
 		if "secret_question_keys" not in params:

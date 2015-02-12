@@ -68,7 +68,8 @@ pdf-distclean: pdf-clean
 # Transcriptions related targets
 
 %.html: %.md $(ANC_MARKDOWN_FILES)
-	cd www && ./_markdown2.py \
+	cd www && \
+	./_markdown2.py \
 		--input "../$<" \
 		--output "../$@" \
 		--css "../transcriptions/_style.css"
@@ -93,6 +94,11 @@ validate:
 	cd www && \
 	$(DEVEL_ENV) \
 	./_validate.py
+
+added-on:
+	cd www && \
+	$(DEVEL_ENV) \
+	./_added_on.py
 
 # www-related targets
 www-debug: www-translations

@@ -26,7 +26,7 @@ if (not os.path.exists("templates")):
 	sys.exit(1)
 
 items = sorted(
-	bib_parser.BibParser().parse_folder(os.path.abspath("../bib")),
+	bib_parser.BibParser().parse_folder(config.parser.bibdata_dir3),
 	key=bib_parser.BibItem.key_to_key_func(const.DEFAULT_ORDER_BY)
 )
 item_index = index.Index(items)
@@ -259,7 +259,7 @@ def get_book_pdf(book_id, index):
 		))
 	file_name, file_size = utils.get_file_info_from_url(request_url_production, item)
 	#filenames start from slash, trimming it
-	pdf_full_path = os.path.join(config.www.elibrary_root, file_name[1:])
+	pdf_full_path = os.path.join(config.www.elibrary_dir, file_name[1:])
 
 	if not os.path.isfile(pdf_full_path):
 		message = "Item {book_id} metadata is wrong: file for url {rel_url} is missing".format(
