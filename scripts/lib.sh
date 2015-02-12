@@ -171,7 +171,7 @@ function hathi()
 
 	local BOOK_ID=$1
 	local PAGE_COUNT=$2
-	local OUTPUT_DIR=`makeOutputDir "haithi.$BOOK_ID"`
+	local OUTPUT_DIR=`makeOutputDir "hathi.$BOOK_ID"`
 
 	mkdir -p "$OUTPUT_DIR"
 	for PAGE in `seq 1 $PAGE_COUNT`
