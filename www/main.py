@@ -26,7 +26,7 @@ if (not os.path.exists("templates")):
 	sys.exit(1)
 
 items = sorted(
-	bib_parser.BibParser().parse_folder(config.parser.bibdata_dir3),
+	bib_parser.BibParser().parse_folder(config.parser.bibdata_dir),
 	key=bib_parser.BibItem.key_to_key_func(const.DEFAULT_ORDER_BY)
 )
 item_index = index.Index(items)
