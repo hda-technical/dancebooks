@@ -1,4 +1,8 @@
-﻿### Introduction
+# Practise for Dauncinge. Some Almans and a Pavan. England 1570-1650. A Manual for Dance Instruction in Which Is Explained the Performance of a Number of Dances Popular in the London Inns of Court in the Sixteenth and Seventeenth Centuries, Together with Music in Four Parts
+## Patri J. Pugliese, Joseph Casazza
+### Transcription by [Patri J. Pugliese, Joseph Casazza](https://sites.google.com/site/renaissancedancesources/home/practise-for-dauncinge)
+
+### Introduction
 
 In his pamphlet on Dancing in the Inns of Court (London, Jordan & Sons, Ltd., 1965), James P. Cunningham presents an important body of materials relating to dance in England in the late sixteenth and early seventeenth centuries. The four Inns of Court served as professional bodies of lawyers in London. From at least the fifteenth century, it was their practice to sponsor Christmas revels with "all Manner of pastimes as singing and dancing." (Tb. Denton (l535); quoted in Cunningham, Inns of Court (1965), p. 3.) Sir William Dugdale reports in the seventeenth century: "Nor were these Exercises of Dancing meerly permitted; but thought very necessary (as it seems) and much conducing to the making of gentlemen more fit for their Books at other times." (Quoted in Cunningham, Inns of Court (1965), p. 4.)
 
@@ -116,7 +120,7 @@ This work also benefitted immeasurably from both the general instruction in danc
 (Harley 367)
 
 * ssl ssl dl
-* ssr ssr dr< 
+* ssr ssr dr<
 
 four times through.
 
@@ -201,130 +205,130 @@ A complete text of this ballad was unearthed at Yale University in 1958, and is 
 > Uprightly, uprightly,
 >
 > Though troubled with despair.
-> 
+>
 > I cannot find to set my mind
 >
 > So lightly, so lightly
 >
 > As die before you be there.
-> 
+>
 > But since I must needs you provoke,
-> 
+>
 > Come slake the thirst, stand by the stroke,
-> 
+>
 > That when my heart is tainted,
-> 
+>
 > The sorrowful sighs may tell
-> 
+>
 > You might have been acquainted
-> 
+>
 > With ane that loved you well:
-> 
+>
 > None have I told the jeopardy
-> 
+>
 > That nane but you can remedy.
-> 
+>
 > Those cursed eyes that were the spies
-> 
+>
 > To find ye, to find ye,
-> 
+>
 > Are blubbered now with tears;
-> 
+>
 > And eke the head that Fancy led
-> 
+>
 > To mind ye, to mind ye,
-> 
+>
 > Is fraught with deadly fears,
-> 
+>
 > And every part from top to toe
-> 
+>
 > Compelleth the heart to bleed for woe,
-> 
+>
 > Alas, let pity move you
-> 
+>
 > Some remedy soon to send me,
-> 
+>
 > And knowing how well to love you,
-> 
+>
 > Your self vouchsafe to lend me:
-> 
+>
 > I will not boast the victory,
-> 
+>
 > But yield me to your courtesy.
-> 
+>
 > I read of old what hath been told
-> 
+>
 > Full truly, full truly,
-> 
+>
 > Of ladies long ago,
-> 
+>
 > Whose pitiful hearts have played their parts
-> 
+>
 > As duly, as duly,
-> 
+>
 > As ever good will could show;
-> 
+>
 > And you therefore that know my case,
-> 
+>
 > Refuse me not but grant me grace
-> 
+>
 > That I may say and hold me nigh
-> 
+>
 > To one triumph and truth,
-> 
+>
 > Even as it has been told me,
-> 
+>
 > So my good lady doth:
-> 
+>
 > So shall you win the victory,
-> 
+>
 > With honour for your courtesy.
-> 
+>
 > With courtesy now, so bend, so bow,
-> 
+>
 > To speed me, to speed me,
-> 
+>
 > As answereth my desire;
-> 
+>
 > As I will be if ever I see
-> 
+>
 > You need me, you need me,
-> 
+>
 > As ready when you require;
-> 
+>
 > Unworthy though to come so nigh
-> 
+>
 > That passing show that feeds mine eye,
-> 
+>
 > Yet shall I die without it,
-> 
+>
 > If pity be not in you;
-> 
+>
 > But sure I do not doubt it
-> 
+>
 > Nor anything you can do,
-> 
+>
 > To whom I do commit, and shall,
-> 
+>
 > My self to work your will, withal.
 
 ### 3. Earl of Essex
 
 > The Earle of Essex Measures
-> 
+>
 > Honour
-> 
+>
 > One double forwardes & one single backe 4 tymes, 2 singles syde, one double forward & one single backe (againe all) honour & soe ende
 
 (Douce 280)
 
-* (A) 
+* (A)
 	dl sr< dl sr< dl sr< dl sr<
-* (B) 
-	sl(in 3 beats) 
-	
-	sr(in 3 beats) 
-	
+* (B)
+	sl(in 3 beats)
+
+	sr(in 3 beats)
+
 	dl sr<
 * repeat from beginning
 
@@ -340,7 +344,7 @@ With the exception of Rawl. Poet. 108 (which makes no reference to repeating the
 
 (Harley 367)
 
-* (A) 
+* (A)
 	dldr (end facing partner)
 * (B)
 	sl sr dl (around partner, holding right hands)
@@ -357,13 +361,13 @@ The "Dallis Lute Book" includes a piece entitled "Tinternell" which fits the dan
 ### 5. Lorayne Alman
 
 > Lorayne Allemayne
-> 
+>
 > A Duble forward hoppe 4 tymes
-> 
+>
 > a Duble forwarde repryme backe a Duble forward cast off a Duble round twyse
-> 
+>
 > a Duble forward hoppe 4 times
-> 
+>
 > a Duble forward repryme backe a Duble forward cast of a Duble round twyse
 
 (Rawl. Poet. 108)
@@ -418,9 +422,9 @@ This dance is described only in Rawl. Poet. 108. It is described by Dolmetsch (D
 ### 8. Queen's Alman
 
 > The Queens Almaine
-> 
-> Honour 
-> 
+>
+> Honour
+>
 > A double forward & a.d. backe. 2 singles syde & a.d. rounde on your lefte hande. a.d. forwarde & a. d. backe. 2 s. syde & a. d. round on your right hande. 4 d. forward a. d. forward & a. d. backe 2.s. syde as afore
 
 (Douce 280)
@@ -429,9 +433,9 @@ This dance is described only in Rawl. Poet. 108. It is described by Dolmetsch (D
 	dl dr< (end facing partner)
 
 	ssl ssr dlOl
-	
+
 	dr< dl< (end facing partner)
-	
+
 	ssr ssl drOr
 * (B)
 	dl dr dl dr
@@ -451,7 +455,7 @@ The problem of fitting the dance to the music is readily solved by the instructi
 
 (Rawl. Poet. 108)
 
-* (A) 
+* (A)
 	dlh drh dlh drh (end facing partner)
 * (B)
 	ssl ssr dlOl
