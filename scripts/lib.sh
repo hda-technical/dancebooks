@@ -20,7 +20,7 @@ MIN_FILE_SIZE=`expr 1024 '*' 5` # 5.0 kilobytes
 #========================
 
 
-function web_get()
+function webGet()
 {
 	if [ $# -ne 2 ]
 	then
@@ -30,6 +30,12 @@ function web_get()
 
 	local URL=$1
 	local OUTPUT_FILE=$2
+
+	if [ -f "$OUTPUT_FILE" ]
+	then
+		return
+	fi
+
 	echo -n "Getting $1 ... "
 
 	wget -q "$URL" -O "$OUTPUT_FILE"
@@ -105,7 +111,7 @@ function tiles()
 	do
 		local TILE_Y=0
 		local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
-		web_get `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
+		webGet `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
 		if [ $? -ne 0 ]
 		then
 			MAX_TILE_X=`expr $TILE_X - 1`
@@ -115,7 +121,7 @@ function tiles()
 		for TILE_Y in `seq 0 $MAX_TILE_Y`
 		do
 			local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
-			web_get `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
+			webGet `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
 
 			if [ $? -ne 0 ]
 			then
@@ -129,6 +135,13 @@ function tiles()
 	convert $OUTPUT_FILE -trim $OUTPUT_FILE
 
 	rm -rf $TMP_DIR
+}
+
+# removes wrong symbols from filename, replacing them by underscores
+function makeOutputDir()
+{
+	local OUTPUT_DIR=$1
+	echo "$OUTPUT_DIR" | sed -e 's/[:\/\\\?\*"]/_/g'
 }
 
 #========================
@@ -145,7 +158,7 @@ function rsl()
 
 	local BOOK_ID=$1
 
-	web_get "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
+	webGet "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
 }
 
 function hathi()
@@ -158,13 +171,13 @@ function hathi()
 
 	local BOOK_ID=$1
 	local PAGE_COUNT=$2
-	local OUTPUT_DIR="haithi.$BOOK_ID"
+	local OUTPUT_DIR=`makeOutputDir "haithi.$BOOK_ID"`
 
 	mkdir -p "$OUTPUT_DIR"
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
 		while ( \
-			web_get "http://babel.hathitrust.org/cgi/imgsrv/image?id=$BOOK_ID;seq=$PAGE;width=1000000" "$OUTPUT_DIR/`printf %04d.jpg $PAGE`"; \
+			webGet "http://babel.hathitrust.org/cgi/imgsrv/image?id=$BOOK_ID;seq=$PAGE;width=1000000" "$OUTPUT_DIR/`printf %04d.jpg $PAGE`"; \
 			[ "$?" -ne 0 ] \
 		)
 		do
@@ -271,7 +284,7 @@ function gallica()
 	for PAGE in `seq $PAGE_COUNT`
 	do
 		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.jpg $PAGE`
-		web_get "http://gallica.bnf.fr/ark:/12148/$BOOK_ID/f$PAGE.highres" $OUTPUT_FILE
+		webGet "http://gallica.bnf.fr/ark:/12148/$BOOK_ID/f$PAGE.highres" $OUTPUT_FILE
 	done
 }
 
@@ -309,7 +322,7 @@ function vwml()
 	do
 		local NORMALIZED_NUMBER=`printf %04s $LATIN_NUMBER | sed -e 's/ /0/g'`
 		local OUTPUT_FILE="$OUTPUT_DIR/latin_`printf %04d $OUTPUT_PAGE`.jpg"
-		web_get "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID$NORMALIZED_NUMBER.jpg" "$OUTPUT_FILE"
+		webGet "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID$NORMALIZED_NUMBER.jpg" "$OUTPUT_FILE"
 		if [ $? -ne 0 ]
 		then
 			break
@@ -321,7 +334,7 @@ function vwml()
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
 		local OUTPUT_FILE="$OUTPUT_DIR/`printf %04d $OUTPUT_PAGE`.jpg"
-		web_get "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID`printf %04d $PAGE`.jpg" "$OUTPUT_FILE"
+		webGet "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID`printf %04d $PAGE`.jpg" "$OUTPUT_FILE"
 		if [ $? == 0 ]
 		then
 			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
