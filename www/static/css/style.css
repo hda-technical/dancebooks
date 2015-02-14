@@ -1,8 +1,74 @@
-/* importing fonts from google */
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
-@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,cyrillic);
-/* resetting default browser styles */
-@import url(/bib/css/reset.css);
+/* adding fonts directly since fonts.google.com received CSS isn't cached in browser */
+
+@font-face
+{
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), url(https://bib.hda.org.ru/bib/fonts/PT Sans.woff) format('woff');
+}
+
+@font-face
+{
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), url(https://bib.hda.org.ru/bib/fonts/PT Sans Bold.woff), format('woff');
+}
+
+@font-face
+{
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Sans Italic'), url(https://bib.hda.org.ru/bib/fonts/PT Sans Italic.woff) format('woff');
+}
+
+@font-face
+{
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('PT Sans Bold Italic'), url(https://bib.hda.org.ru/bib/fonts/PT Sans Bold Italic.woff) format('woff');
+}
+
+@font-face
+{
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Caption'), url(https://bib.hda.org.ru/bib/fonts/PT Sans Caption.woff) format('woff');
+}
+
+@font-face
+{
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Caption Bold'), url(https://bib.hda.org.ru/bib/fonts/PT Sans Caption Bold.woff) format('woff');
+}
+
+/* resetting some predefined stuff */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+	display: block;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+/* styles go here */
 
 body
 {
@@ -10,6 +76,7 @@ body
 	background-color: #ffffff;
 	margin: 0px 0px 100px 0px;
 	font-size: 100%;
+	line-height: 1;
     font-family: "PT Sans", sans-serif;
 	overflow-y: scroll;
 }
@@ -94,6 +161,7 @@ ul, ol
 {
 	text-align: left;
 	text-indent: 0px;
+	list-style-type: none;
 }
 
 ul.disc

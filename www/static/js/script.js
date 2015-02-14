@@ -634,3 +634,9 @@ bib.server = function() {
 	};
 }();
 
+//performing startup initialization
+$(document).ready(function() {
+    bib.utils.init();
+    bib.search.init();
+    bib.report.init();
+});
