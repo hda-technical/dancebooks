@@ -148,6 +148,18 @@ def check_translation_fields(item, errors):
 			))
 
 
+def check_title(item, errors):
+	"""
+	Checks if title can be processed by LaTeX markup system
+	"""
+	UNESCAPED_AMP_PATTERN = r"[^\\]&"
+	UNESCAPED_AMP_REGEXP = re.compile(UNESCAPED_AMP_PATTERN)
+	title = item.get("title")
+	match = UNESCAPED_AMP_REGEXP.match(title)
+	if match:
+		errors.append("Unescaped ampersands in title")
+
+
 def check_shorthand(item, errors):
 	"""
 	Checks that either author or shorthand should be present
@@ -450,8 +462,12 @@ def check_filename(item, errors):
 	for single_filename in filename:
 		#filename starts with slash - trimming it
 		abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
-		if not utils.isfile_case_sensitive(abspath):
+		if not os.path.isfile(abspath):
 			errors.add("File [{abspath}] is not accessible".format(
+				abspath=abspath
+			))
+		if not utils.isfile_case_sensitive(abspath):
+			errors.add("File [{abspath}] is not accessible in case-sensitive mode".format(
 				abspath=abspath
 			))
 		metadata = utils.extract_metadata_from_file(single_filename)
