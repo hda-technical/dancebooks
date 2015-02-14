@@ -41,6 +41,13 @@ def require(condition, ex):
 		raise ex
 
 
+LATEX_UNPARSABLE_REGEXPS = [
+	(
+		re.compile(r"[^\\]&"),
+		"Unescaped ampersands"
+	)
+]
+
 LATEX_REPLACEMENTS = [
 	#\url{href}
 	(
@@ -66,11 +73,21 @@ LATEX_REPLACEMENTS = [
 	)
 ]
 
-def parse_latex(value):
+def parse_latex(item, key, value):
 	"""
 	Attempts to remove LaTeX formatting from string
 	"""
 	if isinstance(value, str):
+		item_id = item.get("id")
+		for regexp, what in LATEX_UNPARSABLE_REGEXPS:
+			if regexp.search(value):
+				logging.warning(
+					"While parsing LaTeX for key={key} of {item_id} got {what}".format(
+						key=key,
+						item_id=item_id,
+						what=what
+					)
+				)
 		for regexp, subst in LATEX_REPLACEMENTS:
 			value = regexp.sub(subst, value)
 		return value

@@ -76,6 +76,10 @@ class ParserConfig(object):
 			raise ValueError("bool_params param wasn't found")
 		self.bool_params = set(json.loads(params["bool_params"]))
 
+		if "latex_params" not in params:
+			raise ValueError("latex_params param wasn't found")
+		self.latex_params = set(json.loads(params["latex_params"]))
+
 		if "date_format" not in params:
 			raise ValueError("date_format param wasn't found")
 		self.date_format = params["date_format"]
