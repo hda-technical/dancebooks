@@ -120,6 +120,9 @@ msgstr ""
 msgid "pages:keywords:ref:quadrille-contredanse"
 msgstr "Indicates single quadrille figure described as an independent dance"
 
+msgid "pages:keywords:ref:quadrille-lancers"
+msgstr "Keywords includes numerous Lancers variations (like Saratoga Lancers)"
+
 msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Form of first set with high amount of figure variations, lead by a conductor"
 
