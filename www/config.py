@@ -8,6 +8,9 @@ import subprocess
 
 import const
 
+#TODO: there is a lot of similar code.
+#refactor it ASAP
+
 class SmtpConfig(object):
 	def __init__(self, params):
 		if "host" not in params:
@@ -46,7 +49,11 @@ class ParserConfig(object):
 	def __init__(self, params):
 		if "bibdata_dir" not in params:
 			raise ValueError("bibdata_dir param wasn't found")
-		self.bibdata_dir = params["bibdata_dir"]
+		self.bibdata_dir = os.path.abspath(params["bibdata_dir"])
+
+		if "markdown_dir" not in params:
+			raise ValueError("markdown_dir param wasn't found")
+		self.markdown_dir = os.path.abspath(params["markdown_dir"])
 
 		if "list_sep" not in params:
 			raise ValueError("list_sep param wasn't found")

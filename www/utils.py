@@ -25,6 +25,14 @@ SELF_SERVED_URL_PATTERN = (
 )
 SELF_SERVED_URL_REGEXP = re.compile(SELF_SERVED_URL_PATTERN)
 
+SELF_SERVED_TRANSCRIPTION_PATTERN = (
+	"https://" +
+	re.escape(config.www.app_domain_production) +
+	re.escape(config.www.books_prefix) +
+	r"/(?P<item_id>[\w_]+)/transcription/(?P<transcription_index>\d+)"
+)
+SELF_SERVED_TRANSCRIPTION_REGEXP = re.compile(SELF_SERVED_TRANSCRIPTION_PATTERN)
+
 def strip_split_list(value, sep):
 	"""
 	Splits string on a given separator, strips spaces from resulting words
@@ -214,7 +222,7 @@ def extract_metadata_from_file(path):
 def make_searches_from_metadata(metadata):
 	"""
 	Creates dict: {
-		search_aliaskey: callable applicable to an item
+		search_alias_key: callable applicable to an item
 	},
 	checking if this item match given metadata
 	"""

@@ -60,6 +60,11 @@ msgstr "Clear"
 msgid "interface:buttons:send"
 msgstr "Send"
 
+# Pages: transcription
+
+msgid "interface:transcription:title"
+msgstr "Here is a transcription of entry with id"
+
 # Pages: keywords
 
 msgid "pages:keywords:title"
@@ -371,7 +376,7 @@ msgid "search:order_by:added_on"
 msgstr "Database addition date"
 
 msgid "search:order_by:source"
-msgstr "Soruce file"
+msgstr "Source file"
 
 msgid "search:order_by:author"
 msgstr "Author"
@@ -428,6 +433,9 @@ msgstr "No."
 
 msgid "item:labels:url"
 msgstr "URL"
+
+msgid "item:labels:transcription_url"
+msgstr "Transcription"
 
 msgid "item:labels:filename"
 msgstr "Paths to files"

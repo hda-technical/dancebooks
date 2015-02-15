@@ -3,7 +3,6 @@ import collections
 import json
 import logging
 import os.path
-import re
 
 import opster
 
@@ -333,6 +332,67 @@ def check_url_accessibility(item, errors):
 				))
 
 
+def check_transcription_fields(item, errors):
+	"""
+	Checks if transcription file exists and
+	can be served upon request
+	"""
+	item_id = item.get("id")
+	keywords = item.get("keywords")
+	transcription_url = item.get("transcription_url")
+	transcription_filename = item.get("transcription_filename")
+	has_transcription = any([
+		(keywords is not None) and ("markdown" in keywords),
+		transcription_url is not None,
+		transcription_filename is not None
+	])
+	if not has_transcription:
+		return
+
+	if not all([
+		(keywords is not None) and ("markdown" in keywords),
+		transcription_url is not None,
+		transcription_filename is not None
+	]):
+		errors.add("Some of transcription fields are missing")
+		return
+
+	for single_url in transcription_url:
+		match = utils.SELF_SERVED_TRANSCRIPTION_REGEXP.match(single_url)
+		if not match:
+			errors.add("Transcription url {single_url} doesn't match SELF_SERVED_TRANSCRIPTION_REGEXP".format(
+				single_url=single_url
+			))
+			continue
+		if item_id != match.group("item_id"):
+			errors.add(
+				"Trancscription url {single_url} isn't valid. "
+				"Extracted id {extracted_id} doesn't match item_id {item_id}".format(
+					single_url=single_url,
+					extracted_id=match.group("item_id"),
+					item_id=item_id
+				)
+			)
+
+		if (int(match.group("transcription_index")) - 1) > len(transcription_url):
+			errors.add("Transcription index is too large in {single_url}".format(
+				single_url=single_url
+			))
+
+	for single_filename in transcription_filename:
+		logging.debug(single_filename)
+		logging.debug(config.parser.markdown_dir)
+		abspath = os.path.join(config.parser.markdown_dir, single_filename)
+		if not os.path.isfile(abspath):
+			errors.add("Transcription file [{abspath}] is not accessible".format(
+				abspath=abspath
+			))
+		if not utils.isfile_case_sensitive(abspath):
+			errors.add("Transcription file [{abspath}] is not accessible in case-sensitive mode".format(
+				abspath=abspath
+			))
+
+
 def check_location(item, errors):
 	"""
 	Checks that location must be present in case of publisher presence
@@ -544,6 +604,7 @@ def main(
 			check_parser_generated_fields(item, errors)
 			check_obligatory_fields(item, errors)
 			check_translation_fields(item, errors)
+			check_transcription_fields(item, errors)
 			check_shorthand(item, errors)
 			check_isbn(item, errors)
 			check_booktype(item, errors)

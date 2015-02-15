@@ -9,6 +9,7 @@ from urllib import parse as urlparse
 
 import flask
 from flask.ext import babel
+from flask.ext import markdown
 import werkzeug
 
 from config import config
@@ -40,6 +41,10 @@ flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = config.www.languages[0]
 flask_app.config["USE_EVALEX"] = False
 babel_app = babel.Babel(flask_app)
+markdown_app = markdown.Markdown(
+	flask_app,
+	output_format="xhtml"
+)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
@@ -251,8 +256,12 @@ def get_book(book_id, show_secrets):
 	)
 
 
-@flask_app.route(config.www.app_prefix + "/books/<string:book_id>/pdf/<int:index>", methods=["GET"])
+@flask_app.route(config.www.books_prefix + "/<string:book_id>/pdf/<int:index>", methods=["GET"])
 def get_book_pdf(book_id, index):
+	"""
+	TODO: I'm a huge method that isn't easy to read
+	Please, refactor me ASAP
+	"""
 	items = item_index["id"].get(book_id, None)
 
 	if (index <= 0):
@@ -314,7 +323,48 @@ def get_book_pdf(book_id, index):
 	return response
 
 
-@flask_app.route(config.www.app_prefix + "/books/<string:book_id>", methods=["POST"])
+@flask_app.route(config.www.books_prefix + "/<string:book_id>/transcription/<int:index>", methods=["GET"])
+def get_book_markdown(book_id, index):
+	items = item_index["id"].get(book_id, None)
+	if items is None:
+		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
+	elif len(items) != 1:
+		message = "Multiple entries with id {id}".format(
+			id=id
+		)
+		logging.error(message)
+		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
+
+	item = utils.first(items)
+	index -= 1
+	transcription_url = item.get("transcription_url")
+	transcription_filename = item.get("transcription_filename")
+	if (
+		(transcription_url is None) or
+		(transcription_filename is None) or
+		(index < 0) or
+		(index > len(transcription_url)) or
+		(index > len(transcription_filename))
+	):
+		flask.abort(
+			http.client.NOT_FOUND,
+			"Markdowned trascription for book with id {id} is not available".format(
+				id=book_id
+			)
+		)
+
+	markdown_file = os.path.join(
+		config.parser.markdown_dir,
+		transcription_filename[index]
+	)
+	return flask.render_template(
+		"markdown.html",
+		markdown_data=utils.read_utf8_file(markdown_file),
+		item=item
+	)
+
+
+@flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["POST"])
 @utils_flask.jsonify()
 @utils_flask.check_captcha()
 def edit_book(book_id):
@@ -343,7 +393,7 @@ def edit_book(book_id):
 	return {"message": babel.gettext("interface:report:thanks")}
 
 
-@flask_app.route(config.www.app_prefix + "/books/<string:book_id>/keywords", methods=["POST"])
+@flask_app.route(config.www.books_prefix + "/<string:book_id>/keywords", methods=["POST"])
 @utils_flask.jsonify()
 @utils_flask.check_captcha()
 def edit_book_keywords(book_id):

@@ -60,6 +60,11 @@ msgstr "Сбросить"
 msgid "interface:buttons:send"
 msgstr "Отправить"
 
+# Pages: transcriptions
+
+msgid "interface:transcription:title"
+msgstr "Вот транскрипция книги с идентификатором"
+
 # Pages: keywords
 
 msgid "pages:keywords:title"
@@ -428,6 +433,9 @@ msgstr "№"
 
 msgid "item:labels:url"
 msgstr "Ссылка"
+
+msgid "item:labels:transcription_url"
+msgstr "Транскрипция"
 
 msgid "item:labels:filename"
 msgstr "Пути к файлам"
