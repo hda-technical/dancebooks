@@ -8,102 +8,92 @@ import subprocess
 
 import const
 
-#TODO: there is a lot of similar code.
-#refactor it ASAP
+def get_config_value(
+	key,
+	params,
+	transform=None,
+	check=None
+):
+	"""
+	Retrieves non-optional config field,
+	transforming it of necessary
+	"""
+	if key not in params:
+		raise ValueError("{key} param wasn't found".format(
+			key=key
+		))
+	value = params[key]
+	if transform is not None:
+		value = transform(value)
+	if check is not None:
+		if not check(value):
+			raise ValueError("Check failed for {key}={value}".format(
+				key=key,
+				value=value
+			))
+	return value
+
+
+def extract_set_from_json(value):
+	return set(json.loads(value))
+
+
+def make_ordered_json_extractor():
+	decoder = json.JSONDecoder(object_pairs_hook=collections.OrderedDict)
+	return lambda value, decoder=decoder: decoder.decode(value)
+
 
 class SmtpConfig(object):
 	def __init__(self, params):
-		if "host" not in params:
-			raise ValueError("host param wasn't found")
-		self.host = params["host"]
-
-		if "port" not in params:
-			raise ValueError("port param wasn't found")
-		self.port = int(params["port"])
-
-		if "user" not in params:
-			raise ValueError("user param wasn't found")
-		self.user = params["user"]
-
-		if "password" not in params:
-			raise ValueError("password param wasn't found")
-		self.password = params["password"]
-
-		if "email" not in params:
-			raise ValueError("email param wasn't found")
-		self.email = params["email"]
+		self.host = get_config_value("host", params)
+		self.port = get_config_value("port", params, transform=int)
+		self.user = get_config_value("user", params)
+		self.password = get_config_value("password", params)
+		self.email = get_config_value("email", params)
 
 
 class BugReportConfig(object):
 	def __init__(self, params):
-		if "to_addr" not in params:
-			raise ValueError("to_addr param wasn't found")
-		self.to_addr = params["to_addr"]
-
-		if "to_name" not in params:
-			raise ValueError("to_name param wasn't found")
-		self.to_name = params["to_name"]
+		self.to_addr = get_config_value("to_addr", params)
+		self.to_name = get_config_value("to_name", params)
 
 
 class ParserConfig(object):
 	def __init__(self, params):
-		if "bibdata_dir" not in params:
-			raise ValueError("bibdata_dir param wasn't found")
-		self.bibdata_dir = os.path.abspath(params["bibdata_dir"])
+		#some directories
+		self.bibdata_dir = get_config_value(
+			"bibdata_dir",
+			params,
+			transform=os.path.abspath,
+			check=os.path.isdir
+		)
+		self.markdown_dir = get_config_value(
+			"markdown_dir",
+			params,
+			transform=os.path.abspath,
+			check=os.path.isdir
+		)
 
-		if "markdown_dir" not in params:
-			raise ValueError("markdown_dir param wasn't found")
-		self.markdown_dir = os.path.abspath(params["markdown_dir"])
+		#field type specification
+		self.list_params = get_config_value("list_params", params, transform=extract_set_from_json)
+		self.file_list_params = get_config_value("file_list_params", params, transform=extract_set_from_json)
+		self.int_params = get_config_value("int_params", params, transform=extract_set_from_json)
+		self.year_params = get_config_value("year_params", params, transform=extract_set_from_json)
+		self.date_params = get_config_value("date_params", params, transform=extract_set_from_json)
+		self.bool_params = get_config_value("bool_params", params, transform=extract_set_from_json)
+		self.latex_params = get_config_value("latex_params", params, transform=extract_set_from_json)
 
-		if "list_sep" not in params:
-			raise ValueError("list_sep param wasn't found")
-		self.list_sep = params["list_sep"]
-
-		if "list_params" not in params:
-			raise ValueError("list_params param wasn't found")
-		self.list_params = set(json.loads(params["list_params"]))
-
-		if "file_list_params" not in params:
-			raise ValueError("file_list_params param wasn't found")
-		self.file_list_params = set(json.loads(params["file_list_params"]))
-
-		if "int_params" not in params:
-			raise ValueError("int_params param wasn't found")
-		self.int_params = set(json.loads(params["int_params"]))
-
-		if "year_params" not in params:
-			raise ValueError("year_params param wasn't found")
-		self.year_params = set(json.loads(params["year_params"]))
-
-		if "date_params" not in params:
-			raise ValueError("date_params param wasn't found")
-		self.date_params = set(json.loads(params["date_params"]))
-
-		if "bool_params" not in params:
-			raise ValueError("bool_params param wasn't found")
-		self.bool_params = set(json.loads(params["bool_params"]))
-
-		if "latex_params" not in params:
-			raise ValueError("latex_params param wasn't found")
-		self.latex_params = set(json.loads(params["latex_params"]))
-
-		if "date_format" not in params:
-			raise ValueError("date_format param wasn't found")
-		self.date_format = params["date_format"]
-
-		if "blocked_domains" not in params:
-			raise ValueError("blocked_domains param wasn't found")
-		self.blocked_domains = set(json.loads(params["blocked_domains"]))
-
-		if "blocked_domains_http" not in params:
-			raise ValueError("blocked_domains_http param wasn't found")
-		self.blocked_domains_http = set(json.loads(params["blocked_domains_http"]))
+		#other values
+		self.list_sep = get_config_value("list_sep", params)
+		self.date_format = get_config_value("date_format", params)
+		self.blocked_domains = get_config_value("blocked_domains", params, transform=extract_set_from_json)
+		self.blocked_domains_http = get_config_value("blocked_domains_http", params, transform=extract_set_from_json)
 
 		#keywords param is loaded from a single config value,
 		#but is splitted into a number of config fields with predictable meaning
 		if "keywords" not in params:
 			raise ValueError("keywords param wasn't found")
-		keywords = json.JSONDecoder(object_pairs_hook=collections.OrderedDict).decode(params["keywords"])
+		keywords = get_config_value("keywords", params, transform=make_ordered_json_extractor())
 		self.keywords = set()
 		self.category_keywords = collections.OrderedDict()
 		self.keywords_with_ref = []
@@ -117,17 +107,9 @@ class ParserConfig(object):
 					self.keywords_with_ref.append(keyword)
 
 		#suffixes parsing
-		if "start_suffix" not in params:
-			raise ValueError("start_suffix param wasn't found")
-		self.start_suffix = params["start_suffix"]
-
-		if "end_suffix" not in params:
-			raise ValueError("end_suffix param wasn't found")
-		self.end_suffix = params["end_suffix"]
-
-		if "circa_suffix" not in params:
-			raise ValueError("circa_suffix param wasn't found")
-		self.circa_suffix = params["circa_suffix"]
+		self.start_suffix = get_config_value("start_suffix", params)
+		self.end_suffix = get_config_value("end_suffix", params)
+		self.circa_suffix = get_config_value("circa_suffix", params)
 
 		#generating additional params
 		suffix_adder = lambda string, suffix: string + suffix
@@ -154,83 +136,46 @@ class ParserConfig(object):
 
 class WwwConfig(object):
 	def __init__(self, params):
-		if "app_domain" not in params:
-			raise ValueError("app_domain param wasn't found")
-		self.app_domain = params["app_domain"]
+		#domains
+		self.app_domain = get_config_value("app_domain", params)
+		self.app_domain_production = get_config_value("app_domain_production", params)
 
-		if "app_domain_production" not in params:
-			raise ValueError("app_domain_production param wasn't found")
-		self.app_domain_production = params["app_domain_production"]
-
-		if "app_prefix" not in params:
-			raise ValueError("app_prefix param wasn't found")
-		self.app_prefix = params["app_prefix"]
-
+		#paths
+		self.app_prefix = get_config_value("app_prefix", params)
 		self.books_prefix = self.app_prefix + "/books"
 		self.basic_search_prefix = self.app_prefix + "/basic-search"
 		self.advanced_search_prefix = self.app_prefix + "/advanced-search"
 		self.all_fields_search_prefix = self.app_prefix + "/all-fields-search"
 
-		if "search_params" not in params:
-			raise ValueError("search_params param wasn't found")
-		self.search_params = set(json.loads(params["search_params"]))
-
-		if "search_synonyms" not in params:
-			raise ValueError("search_synonyms params wasn't found")
-		self.search_synonyms = json.loads(params["search_synonyms"])
-
-		if "index_params" not in params:
-			raise ValueError("index_params param wasn't found")
-		self.index_params = set(json.loads(params["index_params"]))
-
+		self.search_params = get_config_value("search_params", params, transform=extract_set_from_json)
+		self.search_synonyms = get_config_value("search_synonyms", params, transform=json.loads)
+		self.index_params = get_config_value("index_params", params, transform=extract_set_from_json)
 		self.indexed_search_params = self.search_params & self.index_params
 		self.nonindexed_search_params = self.search_params - self.index_params
+		self.languages = get_config_value("languages", params, transform=json.loads)
+		self.date_formats = get_config_value("date_formats", params, transform=json.loads)
+		self.order_by_keys = get_config_value("date_formats", params, transform=extract_set_from_json)
+		self.elibrary_dir = get_config_value(
+			"elibrary_dir",
+			params,
+			transform=os.path.abspath,
+			check=os.path.isdir
+		)
 
-		if "languages" not in params:
-			raise ValueError("languages param wasn't found")
-		self.languages = json.loads(params["languages"])
-
-		if "secret_cookie_key" not in params:
-			raise ValueError("secret_cookie_key wasn't found")
-		self.secret_cookie_key = params["secret_cookie_key"]
-
-		if "secret_cookie_value" not in params:
-			raise ValueError("secret_cookie_value wasn't found")
-		self.secret_cookie_value = params["secret_cookie_value"]
-
-		if "date_formats" not in params:
-			raise ValueError("date_formats param wasn't found")
-		self.date_formats = json.loads(params["date_formats"])
-
-		if "order_by_keys" not in params:
-			raise ValueError("order_by_keys param wasn't found")
-		self.order_by_keys = set(json.loads(params["order_by_keys"]))
-
-		if "elibrary_dir" not in params:
-			raise ValueError("elibrary_dir param wasn't found")
-		self.elibrary_dir = params["elibrary_dir"]
-		if not os.path.isdir(self.elibrary_dir):
-			raise ValueError("elibrary folder is inaccessible")
-
-		if "secret_question_keys" not in params:
-			raise ValueError("secret_question_keys param wasn't found")
-		self.secret_question_keys = json.loads(params["secret_question_keys"])
-
-		if "secret_question_answers" not in params:
-			raise ValueError("secret_question_answers param wasn't found")
-		secret_question_answers = json.loads(params["secret_question_answers"])
-
+		#security params
+		self.secret_cookie_key = get_config_value("secret_cookie_key", params)
+		self.secret_cookie_value = get_config_value("secret_cookie_value", params)
+		secret_question_keys = get_config_value("secret_question_keys", params, transform=json.loads)
+		secret_question_answers = get_config_value("secret_question_answers", params, transform=json.loads)
 		self.secret_questions = {
 			key: answer
 			for key, answer in zip(
-				self.secret_question_keys,
+				secret_question_keys,
 				secret_question_answers
 			)
 		}
 
-		if "id_redirections" not in params:
-			raise ValueError("id_redirections param wasn't found")
-		self.id_redirections = json.loads(params["id_redirections"])
+		self.id_redirections = get_config_value("id_redirections", params, transform=json.loads)
 
 class Config(object):
 	@staticmethod
@@ -266,7 +211,6 @@ class Config(object):
 			"cut -f 2 -d ' '",
 			shell=True
 		).decode().strip()
-
 		self.unittest = ("UNITTEST" in os.environ)
 
 

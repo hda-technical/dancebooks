@@ -246,7 +246,7 @@ def get_book(book_id, show_secrets):
 		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	item = utils.first(items)
-	captcha_key = random.choice(config.www.secret_question_keys)
+	captcha_key = random.choice(config.www.secret_question.keys())
 
 	return flask.render_template(
 		"book.html",
