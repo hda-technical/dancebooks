@@ -5,7 +5,7 @@
 	font-family: 'PT Sans';
 	font-style: normal;
 	font-weight: 400;
-	src: local("PT Sans"), url("/bib/fonts/PT Sans.woff") format("woff");
+	src: local("PT Sans"), url("/bib/fonts/PT_Sans.woff") format("woff");
 }
 
 @font-face
@@ -13,7 +13,7 @@
 	font-family: 'PT Sans';
 	font-style: normal;
 	font-weight: 700;
-	src: local("PT Sans Bold"), url("/bib/fonts/PT Sans Bold.woff") format("woff");
+	src: local("PT Sans Bold"), url("/bib/fonts/PT_Sans_Bold.woff") format("woff");
 }
 
 @font-face
@@ -21,7 +21,7 @@
 	font-family: 'PT Sans';
 	font-style: italic;
 	font-weight: 400;
-	src: local("PT Sans Italic"), url("/bib/fonts/PT Sans Italic.woff") format("woff");
+	src: local("PT Sans Italic"), url("/bib/fonts/PT_Sans_Italic.woff") format("woff");
 }
 
 @font-face
@@ -29,7 +29,7 @@
 	font-family: 'PT Sans';
 	font-style: italic;
 	font-weight: 700;
-	src: local("PT Sans Bold Italic"), url("/bib/fonts/PT Sans Bold Italic.woff") format("woff");
+	src: local("PT Sans Bold Italic"), url("/bib/fonts/PT_Sans_Bold_Italic.woff") format("woff");
 }
 
 @font-face
@@ -37,7 +37,7 @@
 	font-family: 'PT Sans Caption';
 	font-style: normal;
 	font-weight: 400;
-	src: local("PT Sans Caption"), url("/bib/fonts/PT Sans Caption.woff") format("woff");
+	src: local("PT Sans Caption"), url("/bib/fonts/PT_Sans_Caption.woff") format("woff");
 }
 
 @font-face
@@ -45,7 +45,7 @@
 	font-family: 'PT Sans Caption';
 	font-style: normal;
 	font-weight: 700;
-	src: local("PT Sans Caption Bold"), url("/bib/fonts/PT Sans Caption Bold.woff") format("woff");
+	src: local("PT Sans Caption Bold"), url("/bib/fonts/PT_Sans_Caption_Bold.woff") format("woff");
 }
 
 /* resetting some predefined stuff */
