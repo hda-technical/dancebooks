@@ -421,3 +421,55 @@ textarea:invalid
 {
 	border-style: outset;
 }
+
+/* rendered transcription styles */
+
+div.transcription
+{
+	font-family: "PT Serif";
+	line-height: 1.2;
+	max-width: 700px;
+	margin: auto;
+}
+
+div.transcription p
+{
+	font-size: 110%;
+	margin: 10px 0px;
+}
+
+div.transcription blockquote p
+{
+	font-style: italic;
+	margin: 3px;
+}
+
+div.transcription blockquote p
+{
+	font-style: italic;
+}
+
+div.transcription blockquote p
+{
+	font-style: italic;
+}
+
+div.transcription h1,
+div.transcription h2,
+div.transcription h3
+{
+	font-family: "PT Serif Pation";
+}
+
+div.transcription ul
+{
+	font-size: 110%;
+	list-style-type: disc !important;
+}
+
+div.transcription ol
+{
+	font-size: 110%;
+	list-style-type: decimal !important;
+}
+
