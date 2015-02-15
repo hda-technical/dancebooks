@@ -338,25 +338,24 @@ def check_transcription_fields(item, errors):
 	can be served upon request
 	"""
 	item_id = item.get("id")
-	keywords = item.get("keywords")
-	transcription_url = item.get("transcription_url")
-	transcription_filename = item.get("transcription_filename")
-	has_transcription = any([
-		(keywords is not None) and ("markdown" in keywords),
-		transcription_url is not None,
-		transcription_filename is not None
-	])
+	TRANSLATION_FIELDS = ["transcription_url", "transcription_filename"]
+	has_transcription = False
+	for field in TRANSLATION_FIELDS:
+		if item.has(field):
+			has_transcription = True
+
 	if not has_transcription:
 		return
 
-	if not all([
-		(keywords is not None) and ("markdown" in keywords),
-		transcription_url is not None,
-		transcription_filename is not None
-	]):
-		errors.add("Some of transcription fields are missing")
-		return
+	for field in TRANSLATION_FIELDS:
+		if not item.has(field):
+			errors.add("Field {field} is require for transcriptions".format(
+				field=field
+			))
+			return
 
+	transcription_url = item.get("transcription_url")
+	transcription_filename = item.get("transcription_filename")
 	for single_url in transcription_url:
 		match = utils.SELF_SERVED_TRANSCRIPTION_REGEXP.match(single_url)
 		if not match:
@@ -380,8 +379,6 @@ def check_transcription_fields(item, errors):
 			))
 
 	for single_filename in transcription_filename:
-		logging.debug(single_filename)
-		logging.debug(config.parser.markdown_dir)
 		abspath = os.path.join(config.parser.markdown_dir, single_filename)
 		if not os.path.isfile(abspath):
 			errors.add("Transcription file [{abspath}] is not accessible".format(
