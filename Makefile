@@ -16,10 +16,17 @@ BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --
 
 #Using testing conf-file in development environment
 DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
+PRODUCTION_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
 LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 DEVEL_ENV := \
 	CONFIG=$(DEVEL_CONFIG) \
+	LOGGING_CONFIG=$(LOGGING_CONFIG) \
+	UNITTEST=true \
+	PYTHONPATH=. \
+
+PRODUCTION_TEST_ENV := \
+	CONFIG=$(PRODUCTION_CONFIG) \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
 	UNITTEST=true \
 	PYTHONPATH=. \
@@ -73,6 +80,10 @@ www-test: $(TEST_TARGETS);
 www/tests/%.mk: www/tests/%.py
 	cd www && \
 	$(DEVEL_ENV) \
+	python tests/`basename $<` -v
+
+	cd www && \
+	$(PRODUCTION_TEST_ENV) \
 	python tests/`basename $<` -v
 
 www-profile:
