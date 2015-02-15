@@ -135,7 +135,7 @@ entry-count: $(BIB_FILES)
 
 clean: pdf-clean;
 
-distclean: pdf-distclean www-distclean markdown-distclean;
+distclean: pdf-distclean www-distclean;
 
 rebuild: distclean all.mk;
 
