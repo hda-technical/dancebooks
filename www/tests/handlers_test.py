@@ -47,6 +47,7 @@ class TestHandlers(unittest.TestCase):
 				config.www.books_prefix + "/" + book_id,
 				follow_redirects=True
 			)
+			print(rq.data)
 			self.assertEqual(rq.status_code, http.client.OK)
 
 		rq = self.client.get(

@@ -240,7 +240,7 @@ def get_book(book_id, show_secrets):
 		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(book_id=book_id))
 
 	item = utils.first(items)
-	captcha_key = random.choice(config.www.secret_question.keys())
+	captcha_key = random.choice(list(config.www.secret_questions.keys()))
 
 	return flask.render_template(
 		"book.html",

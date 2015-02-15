@@ -160,7 +160,7 @@ class WwwConfig(object):
 		self.nonindexed_search_params = self.search_params - self.index_params
 		self.languages = get_config_value("languages", params, transform=json.loads)
 		self.date_formats = get_config_value("date_formats", params, transform=json.loads)
-		self.order_by_keys = get_config_value("date_formats", params, transform=extract_set_from_json)
+		self.order_by_keys = get_config_value("order_by_keys", params, transform=extract_set_from_json)
 		self.elibrary_dir = get_config_value(
 			"elibrary_dir",
 			params,
