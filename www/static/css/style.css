@@ -1,5 +1,7 @@
 /* adding fonts directly since fonts.google.com received CSS isn't cached in browser */
 
+/* PT Sans font family */
+
 @font-face
 {
 	font-family: 'PT Sans';
@@ -32,6 +34,8 @@
 	src: local("PT Sans Bold Italic"), url("/bib/fonts/PT_Sans_Bold_Italic.woff") format("woff");
 }
 
+/* PT Sans Caption font family */
+
 @font-face
 {
 	font-family: 'PT Sans Caption';
@@ -46,6 +50,58 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local("PT Sans Caption Bold"), url("/bib/fonts/PT_Sans_Caption_Bold.woff") format("woff");
+}
+
+/* PT Serif font family */
+
+@font-face
+{
+	font-family: 'PT Serif';
+	font-style: normal;
+	font-weight: 400;
+	src: local("PT Serif"), url("/bib/fonts/PT_Serif.woff") format("woff");
+}
+
+@font-face
+{
+	font-family: 'PT Serif';
+	font-style: normal;
+	font-weight: 700;
+	src: local("PT Serif Bold"), url("/bib/fonts/PT_Serif_Bold.woff") format("woff");
+}
+
+@font-face
+{
+	font-family: 'PT Serif';
+	font-style: italic;
+	font-weight: 700;
+	src: local("PT Serif Bold Italic"), url("/bib/fonts/PT_Serif_Bold_Italic.woff") format("woff");
+}
+
+@font-face
+{
+	font-family: 'PT Serif';
+	font-style: italic;
+	font-weight: 400;
+	src: local("PT Serif Italic"), url("/bib/fonts/PT_Serif_Italic.woff") format("woff");
+}
+
+/* PT Serif Caption font family */
+
+@font-face
+{
+	font-family: 'PT Serif Caption';
+	font-style: normal;
+	font-weight: 400;
+	src: local("PT Serif Caption"), url("/bib/fonts/PT_Serif_Caption.woff") format("woff");
+}
+
+@font-face
+{
+	font-family: 'PT Serif Caption';
+	font-style: italic;
+	font-weight: 400;
+	src: local("PT Serif Caption Italic"), url("/bib/fonts/PT_Serif_Caption_Italic.woff") format("woff");
 }
 
 /* resetting some predefined stuff */
