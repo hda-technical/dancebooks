@@ -3,6 +3,7 @@ import collections
 import json
 import logging
 import os.path
+import re
 
 import opster
 
@@ -146,18 +147,6 @@ def check_translation_fields(item, errors):
 			errors.add("Field {field} is required for translations".format(
 				field=field
 			))
-
-
-def check_title(item, errors):
-	"""
-	Checks if title can be processed by LaTeX markup system
-	"""
-	UNESCAPED_AMP_PATTERN = r"[^\\]&"
-	UNESCAPED_AMP_REGEXP = re.compile(UNESCAPED_AMP_PATTERN)
-	title = item.get("title")
-	match = UNESCAPED_AMP_REGEXP.match(title)
-	if match:
-		errors.append("Unescaped ampersands in title")
 
 
 def check_shorthand(item, errors):
