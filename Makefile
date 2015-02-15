@@ -16,7 +16,7 @@ BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --
 
 #Using testing conf-file in development environment
 DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
-PRODUCTION_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
+PRODUCTION_CONFIG := $(shell readlink -f configs/dancebooks.production.conf)
 LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 DEVEL_ENV := \
