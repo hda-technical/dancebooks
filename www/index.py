@@ -4,7 +4,7 @@ from config import config
 
 class Index(object):
 	def __init__(self, items):
-		self.update(items) 
+		self.update(items)
 
 	def __getitem__(self, key):
 		return self._dict[key]
@@ -23,7 +23,7 @@ class Index(object):
 					subindex[subvalue].add(item)
 			else:
 				subindex[value].add(item)
-	
+
 		dict_creator = lambda: collections.defaultdict(set)
 		self._dict = collections.defaultdict(dict_creator)
 		for key in config.www.index_params:
@@ -31,4 +31,13 @@ class Index(object):
 			for item in items:
 				value = item.get(key)
 				if value is not None:
+					if (
+						(key in config.www.index_unique_params) and
+						(key in subindex)
+					):
+						logging.error("Value {value} is not unique for unique index by {key}".format(
+							value=value,
+							key=key
+						))
+						continue
 					append_to_subindex(subindex, item, value)

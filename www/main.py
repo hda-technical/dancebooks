@@ -238,12 +238,6 @@ def get_book(book_id, show_secrets):
 
 	if items is None:
 		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(book_id=book_id))
-	elif len(items) != 1:
-		message = "Multiple entries with id {book_id}".format(
-			book_id=book_id
-		)
-		logging.error(message)
-		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	item = utils.first(items)
 	captcha_key = random.choice(config.www.secret_question.keys())
@@ -271,12 +265,6 @@ def get_book_pdf(book_id, index):
 		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(
 			book_id=book_id
 		))
-	elif len(items) != 1:
-		message = "Multiple entries with id {book_id}".format(
-			book_id=book_id
-		)
-		logging.error(message)
-		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	item = utils.first(items)
 	item_url = item.get("url") or set()
@@ -328,12 +316,6 @@ def get_book_markdown(book_id, index):
 	items = item_index["id"].get(book_id, None)
 	if items is None:
 		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
-	elif len(items) != 1:
-		message = "Multiple entries with id {id}".format(
-			id=id
-		)
-		logging.error(message)
-		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	item = utils.first(items)
 	index -= 1
@@ -372,12 +354,6 @@ def edit_book(book_id):
 
 	if items is None:
 		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
-	elif len(items) != 1:
-		message = "Multiple entries with id {id}".format(
-			id=id
-		)
-		logging.error(message)
-		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	message = utils_flask.extract_string_from_request("message")
 	from_name = utils_flask.extract_string_from_request("name")
@@ -401,12 +377,6 @@ def edit_book_keywords(book_id):
 
 	if items is None:
 		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
-	elif len(items) != 1:
-		message = "Multiple entries with id {id}".format(
-			id=id
-		)
-		logging.error(message)
-		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	suggested_keywords = utils_flask.extract_keywords_from_request("keywords")
 	from_name = utils_flask.extract_string_from_request("name")
