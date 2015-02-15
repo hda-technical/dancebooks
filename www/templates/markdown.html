@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+	{% include "components/head.html" %}
+	<body>
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
+		<h2>{{ _("interface:transcription:title") }} {{ item.id() }}:</h2>
+		<div class="content transcription">
+			{{ markdown_data | markdown }}
+			<hr/>
+			{% include "components/footer.html" %}
+		</div>
+	</body>
+</html>
