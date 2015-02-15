@@ -560,7 +560,8 @@ bib.search = function() {
 			$(
 				'#search input[name!="keywords"], ' +
 				'#url, ' +
-				'#origlanguage'
+				'#origlanguage, ' +
+				'#orderBy'
 			).map(fillFromLocation);
 
 			searchType = bib.SEARCH_PATHS.indexOf(window.location.pathname);
