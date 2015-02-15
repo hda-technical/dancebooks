@@ -2,19 +2,9 @@ NAME_PRODUCTION := dancebooks.production
 NAME_TESTING := dancebooks.testing
 
 BIB_FILES := $(wildcard bib/*.bib)
-URL_FILES := $(wildcard urls/*.txt)
-MARKDOWN_FILES := $(wildcard transcriptions/*.md)
-HTML_FILES := $(MARKDOWN_FILES:.md=.html)
 
 ANC_BIBLATEX_FILES := \
 	dancebooks-biblatex.sty
-
-ANC_MARKDOWN_FILES := \
-	www/_markdown2.py \
-	transcriptions/_style.css
-
-ANC_WIKI_FILES := \
-	www/_generate_wiki.py
 
 PDFLATEX := pdflatex --shell-escape --max-print-line=250
 LUALATEX := lualatex --shell-escape --max-print-line=250
@@ -23,9 +13,6 @@ LATEX ?= $(LUALATEX)
 
 #biber command with delimeters specification (xsvsep expects regexp, other expects symbol)
 BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --validate_datamodel
-
-TRANSCRIPTIONS_WIKI_PAGE := wiki/Transcriptions.md
-TRANSCRIPTIONS_URL_PREFIX := https://github.com/georgthegreat/dancebooks-bibtex/blob/master/transcriptions/
 
 #Using testing conf-file in development environment
 DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
@@ -64,31 +51,6 @@ pdf-clean:
 
 pdf-distclean: pdf-clean
 	rm -f *.pdf all.mk
-
-# Transcriptions related targets
-
-%.html: %.md $(ANC_MARKDOWN_FILES)
-	cd www && \
-	./_markdown2.py \
-		--input "../$<" \
-		--output "../$@" \
-		--css "../transcriptions/_style.css"
-
-markdown.mk: $(HTML_FILES)
-	touch $@
-
-markdown-distclean:
-	rm -f transcriptions/*.html markdown.mk
-
-markdown-wiki.mk: $(MARKDOWN_FILES) $(ANC_WIKI_FILES)
-	cd www && \
-	$(DEVEL_ENV) \
-	./_generate_wiki.py \
-		--folder ../transcriptions \
-		--page "../$(TRANSCRIPTIONS_WIKI_PAGE)" \
-		--url-prefix "$(TRANSCRIPTIONS_URL_PREFIX)"
-	cd wiki && (git commit -am "Updated wiki" || true) && git push origin master
-	touch $@
 
 validate:
 	cd www && \
@@ -164,7 +126,7 @@ requirements.txt: .PHONY
 
 .PHONY:;
 
-all.mk: test-biblatex.pdf $(HTML_FILES);
+all.mk: test-biblatex.pdf;
 
 entry-count: $(BIB_FILES)
 	@echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
