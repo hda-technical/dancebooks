@@ -432,26 +432,16 @@ div.transcription
 	margin: auto;
 }
 
-div.transcription p
+div.transcription > p
 {
 	font-size: 110%;
 	margin: 10px 0px;
 }
 
-div.transcription blockquote p
+div.transcription blockquote > p
 {
 	font-style: italic;
 	margin: 3px;
-}
-
-div.transcription blockquote p
-{
-	font-style: italic;
-}
-
-div.transcription blockquote p
-{
-	font-style: italic;
 }
 
 div.transcription h1,
@@ -461,15 +451,15 @@ div.transcription h3
 	font-family: "PT Serif Pation";
 }
 
-div.transcription ul
+div.transcription > ul
 {
 	font-size: 110%;
-	list-style-type: disc !important;
+	list-style-type: disc;
 }
 
-div.transcription ol
+div.transcription > ol
 {
 	font-size: 110%;
-	list-style-type: decimal !important;
+	list-style-type: decimal;
 }
 
