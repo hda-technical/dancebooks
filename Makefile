@@ -25,12 +25,6 @@ DEVEL_ENV := \
 	UNITTEST=true \
 	PYTHONPATH=. \
 
-PRODUCTION_TEST_ENV := \
-	CONFIG=$(PRODUCTION_CONFIG) \
-	LOGGING_CONFIG=$(LOGGING_CONFIG) \
-	UNITTEST=true \
-	PYTHONPATH=. \
-
 TESTS := $(wildcard www/tests/*.py)
 TEST_TARGETS := $(TESTS:.py=.mk)
 # PDF files related targets
@@ -80,10 +74,6 @@ www-test: $(TEST_TARGETS);
 www/tests/%.mk: www/tests/%.py
 	cd www && \
 	$(DEVEL_ENV) \
-	python tests/`basename $<` -v
-
-	cd www && \
-	$(PRODUCTION_TEST_ENV) \
 	python tests/`basename $<` -v
 
 www-profile:

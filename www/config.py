@@ -194,6 +194,20 @@ class Config(object):
 		return params
 
 	def __init__(self, path):
+		if path is None:
+			raise RuntimeError(
+				"Config was not found. "
+				"Please, specify {env_var} environment variable".format(
+					env_var=const.ENV_CONFIG
+				)
+			)
+		if not os.path.isfile(path):
+			raise RuntimeError(
+				"Config path {path} doesn't exist".format(
+					path=path
+				)
+			)
+
 		config = configparser.ConfigParser(interpolation=None)
 		config.read(path)
 
@@ -224,13 +238,6 @@ def setup_logging(config_path):
 	logging.config.fileConfig(config_path)
 
 config_path = os.environ.get(const.ENV_CONFIG, None)
-if config_path is None:
-	raise RuntimeError(
-		"Config was not found. "
-		"Please, specify {env_var} environment variable".format(
-			env_var=const.ENV_CONFIG
-		)
-	)
 config = Config(config_path)
 
 config_path = os.environ.get(const.ENV_LOGGING_CONFIG, None)
