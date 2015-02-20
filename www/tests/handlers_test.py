@@ -11,13 +11,16 @@ import main
 TEST_DOWNLOADABLE_BOOK_ID = "zarman_1905_russlav"
 #normal book id, unavailable for download
 TEST_UNDOWNLOADABLE_BOOK_ID = "wilson_1818_ecossoise"
-#outdated book it, redirection to TEST_DOWNLOADABLE_BOOK_ID
+#outdated book id, redirection to TEST_DOWNLOADABLE_BOOK_ID
 TEST_OUTDATED_BOOK_ID = "zarman_1905"
+#transcribed book id, transcription should be available
+TEST_MARKDOWNED_BOOK_ID = "wilson_1824"
 
 BOOK_IDS = [
 	TEST_DOWNLOADABLE_BOOK_ID,
 	TEST_UNDOWNLOADABLE_BOOK_ID,
-	TEST_OUTDATED_BOOK_ID
+	TEST_OUTDATED_BOOK_ID,
+	TEST_MARKDOWNED_BOOK_ID
 ]
 
 class TestHandlers(unittest.TestCase):
@@ -47,7 +50,6 @@ class TestHandlers(unittest.TestCase):
 				config.www.books_prefix + "/" + book_id,
 				follow_redirects=True
 			)
-			print(rq.data)
 			self.assertEqual(rq.status_code, http.client.OK)
 
 		rq = self.client.get(
@@ -181,6 +183,13 @@ class TestHandlers(unittest.TestCase):
 			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID + "/pdf/1"
 		)
 		self.assertEqual(rq.status_code, http.client.NOT_FOUND)
+
+	def test_markdown_handlers(self):
+		rq = self.client.get(
+			config.www.books_prefix + "/" + TEST_MARKDOWNED_BOOK_ID + "/transcription/1"
+		)
+		self.assertEqual(rq.status_code, http.client.OK)
+		self.assertEqual(rq.content_type, "text/html; charset=utf-8")
 
 	def test_json_handlers(self):
 		rq = self.client.get(config.www.app_prefix + "/options")
