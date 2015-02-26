@@ -51,7 +51,7 @@ def require(condition, ex):
 
 LATEX_UNPARSABLE_REGEXPS = [
 	(
-		re.compile(r"[^\\]&"),
+		re.compile(r"\s[^\\]&[\.\s]"),
 		"Unescaped ampersands"
 	)
 ]
