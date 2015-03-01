@@ -192,6 +192,15 @@ msgstr "Source containing author view on some dance-related subject"
 msgid "pages:keywords:ref:first-edition"
 msgstr "Belles-lettres, memoirs and essays of the first known edition on the source language"
 
+msgid "pages:keywords:ref:tempo"
+msgstr "Any kind of useful tempo indication"
+
+msgid "pages:keywords:ref:tempo-italian"
+msgstr "Musical tempo is specified by Italian terminology (e. g. allegro assai)"
+
+msgid "pages:keywords:ref:tempo-malzel"
+msgstr "Musical tempo is specified by number of beats on Mälzel metronome"
+
 msgid "pages:keywords:ref:useless"
 msgstr "Special keyword for the books lacking dance related parts, but added for collection completeness"
 
