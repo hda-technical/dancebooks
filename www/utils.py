@@ -53,6 +53,10 @@ LATEX_UNPARSABLE_REGEXPS = [
 	(
 		re.compile(r"\s[^\\]&[\.\s]"),
 		"Unescaped ampersands"
+	),
+	(
+		re.compile(r"\\(?!(parencite|url|flat|&))"),
+		"Unsupported latex command"
 	)
 ]
 
@@ -69,6 +73,10 @@ LATEX_REPLACEMENTS = [
 			config.www.app_prefix + "/book"
 		)
 	),
+	(
+		re.compile(r"\$\\flat\$"),
+		r"♭"
+	),
 	#ampersand escapements
 	(
 		re.compile(r"\\&"),
@@ -76,7 +84,7 @@ LATEX_REPLACEMENTS = [
 	),
 	#parentheses
 	(
-		re.compile(r"\{([^\{\}]*)\}"),
+		re.compile(r"\{([^\{\}])*\}"),
 		r"\1"
 	)
 ]
