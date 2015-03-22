@@ -83,7 +83,7 @@ META_INCOMPLETE = "incomplete"
 META_HAS_OWNER = "has_owner"
 
 #a structired pattern for file basename
-METADATA_PATTERN = r"(?:incomplete|[\w\s\-\&']+ copy)"
+METADATA_PATTERN = r"(?:incomplete|[\w\s\-\&\.']+ copy)"
 FILENAME_PATTERN = (
 	#year: digits can be replaced by dashes
 	r"\[(?P<year>[\d\-]+), "
