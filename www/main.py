@@ -4,7 +4,6 @@ import http.client
 import logging
 import os.path
 import random
-import sys
 from urllib import parse as urlparse
 
 import flask
@@ -22,8 +21,7 @@ import utils
 import utils_flask
 
 if (not os.path.exists("templates")):
-	logging.error("Should run from root folder")
-	sys.exit(1)
+	raise RuntimeError("Should run from root folder")
 
 items = sorted(
 	bib_parser.BibParser().parse_folder(config.parser.bibdata_dir),

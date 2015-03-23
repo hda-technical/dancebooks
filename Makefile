@@ -93,9 +93,8 @@ www-configs-install-production:
 	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME_PRODUCTION).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_PRODUCTION).conf /etc/uwsgi/apps-enabled/$(NAME_PRODUCTION).conf
 	#installing service configs
-	cp configs/service.production.conf /etc/init.d/$(NAME_PRODUCTION)
-	chmod +x /etc/init.d/$(NAME_PRODUCTION)
-	service $(NAME_PRODUCTION) restart
+	cp configs/service.production.conf /etc/init/$(NAME_PRODUCTION).conf
+	stop $(NAME_PRODUCTION); start $(NAME_PRODUCTION)
 	#installing nginx configs
 	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME_PRODUCTION).conf
 	ln -sf /etc/nginx/sites-available/$(NAME_PRODUCTION).conf /etc/nginx/sites-enabled/$(NAME_PRODUCTION).conf
@@ -108,9 +107,8 @@ www-configs-install-testing:
 	cp configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
 	#installing service configs
-	cp configs/service.testing.conf /etc/init.d/$(NAME_TESTING)
-	chmod +x /etc/init.d/$(NAME_TESTING)
-	service $(NAME_TESTING) restart
+	cp configs/service.testing.conf /etc/init/$(NAME_TESTING).conf
+	stop $(NAME_TESTING); start $(NAME_TESTING)
 	#installing nginx configs
 	cp configs/nginx.testing.conf /etc/nginx/sites-available/$(NAME_TESTING).conf
 	ln -sf /etc/nginx/sites-available/$(NAME_TESTING).conf /etc/nginx/sites-enabled/$(NAME_TESTING).conf
