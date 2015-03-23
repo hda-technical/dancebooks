@@ -174,6 +174,8 @@ def check_title_starts_from_shorthand(item, errors):
 	"""
 	title = item.get("title")
 	shorthand = item.get("shorhand")
+	if (shorthand is None):
+		return
 	if not title.startswith(shorthand):
 		errors.add("Title should begin with shorthand")
 

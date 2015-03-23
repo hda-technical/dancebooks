@@ -56,30 +56,31 @@ pdf-distclean: pdf-clean
 validate:
 	cd www && \
 	$(DEVEL_ENV) \
-	./_validate.py
+	./_validate.py \
+	$(ARGS)
 
 added-on:
 	cd www && \
 	$(DEVEL_ENV) \
-	./_added_on.py
+	./_added_on.py \
 
 # www-related targets
 www-debug: www-translations
 	cd www && \
 	$(DEVEL_ENV) \
-	./main.py
+	./main.py \
 
 www-test: $(TEST_TARGETS);
 
 www/tests/%.mk: www/tests/%.py
 	cd www && \
 	$(DEVEL_ENV) \
-	python tests/`basename $<` -v
+	python tests/`basename $<` -v \
 
 www-profile:
 	cd www && \
 	$(DEVEL_ENV) \
-	./_profile.py
+	./_profile.py \
 
 www-translations:
 	pybabel -v -q compile -d www/translations
