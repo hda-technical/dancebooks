@@ -1,9 +1,10 @@
 #!/bin/sh -e
 
 NAME_TESTING=dancebooks.testing
+TOUCH_RELOAD=/var/run/uwsgi/${NAME_TESTING}.reload
 
 make test
 make www-translations
 
-service $NAME_TESTING reload
+touch "$TOUCH_RELOAD"
 
