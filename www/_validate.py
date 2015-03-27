@@ -165,7 +165,9 @@ def check_shorthand(item, errors):
 		(shorthand is not None) and
 		(len(shorthand) > MAX_SHORTHAND_LENGTH)
 	):
-		errors.add("Shrthand is oversized")
+		errors.add("Shorthand is oversized (max length is {max_length})".format(
+			max_length=MAX_SHORTHAND_LENGTH
+		))
 
 
 def check_title_starts_from_shorthand(item, errors):
