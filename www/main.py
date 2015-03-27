@@ -9,6 +9,7 @@ from urllib import parse as urlparse
 import flask
 from flask.ext import babel
 from flask.ext import markdown
+import unidecode
 import werkzeug
 
 from config import config
@@ -299,12 +300,13 @@ def get_book_pdf(book_id, index):
 		#native send_file as_attrachment parameter works incorrectly with unicode data
 		#adding corrent Content-Disposition header manually
 		response = flask.make_response(flask.send_file(pdf_full_path))
+	basename = os.path.basename(pdf_full_path)
 	response.headers["Content-Disposition"] = \
-		"attachment; " \
-		"filenane={ascii_filename};" \
+		"attachment;" \
+		"filename={ascii_filename};" \
 		"filename*=UTF-8''{utf_filename}".format(
-		ascii_filename="book.pdf",
-		utf_filename=urlparse.quote(os.path.basename(pdf_full_path))
+		ascii_filename=unidecode.unidecode(basename).replace(' ', '_'),
+		utf_filename=urlparse.quote(basename)
 	)
 	return response
 
