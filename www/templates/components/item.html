@@ -19,18 +19,6 @@
 	"annotation",
 ] %}
 
-{% set useless_keywords = [
-	"reissue",
-	"transcription",
-	"research",
-	"commentary",
-	"facsimile",
-	"dance description",
-	"steps",
-	"music"
-] | as_set %}
-{% set keywords_warn_min_year = 1800 %}
-{% set keywords_warn_max_year = 1920 %}
 {% for param in fields %}
 {# Some parameters require specific treatment #}
 	{% if param in ["filename", "author", "added_on", "url", "transcription_url", "keywords"] %}
@@ -95,11 +83,9 @@
 {% set year_from = item.get("year_from") %}
 {% set year_to = item.get("year_to") %}
 {% if (
-	(
-		(year_from < keywords_warn_max_year) and
-		(year_to > keywords_warn_min_year)
-	) and
-	(keywords - useless_keywords) | length == 0
+	(year_from <= config.www.keywords_warn_max_year) and
+	(year_to >= config.www.keywords_warn_min_year) and
+	((keywords - config.parser.useless_keywords) | length == 0)
 ) %}
 			<div class="center warn">
 				{{ _("interface:no_keywords") | safe }}

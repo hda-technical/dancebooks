@@ -240,6 +240,10 @@ class BibParser(object):
 						logging.warn("File is not accessible: {0}".format(abspath))
 						filesize_value.append(0)
 				item.set(const.FILE_SIZE_PARAM, filesize_value)
+			elif key in config.parser.keyword_list_params:
+				value = utils.strip_split_list(value, config.parser.list_sep)
+				useful_keywords = (set(value) <= config.parser.useless_keywords)
+				item.set("useful_" + key, useful_keywords)
 			elif key in config.parser.int_params:
 				value = int(value)
 			elif key in config.parser.year_params:

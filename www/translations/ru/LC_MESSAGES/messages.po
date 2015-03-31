@@ -332,6 +332,9 @@ msgstr "Доступно для скачивания"
 msgid "search:labels:origlanguage"
 msgstr "Переводное издание"
 
+msgid "search:labels:useful-keywords"
+msgstr "Присутствуют полезные ключевые слова"
+
 msgid "search:labels:all_fields"
 msgstr "Строка для поиска"
 

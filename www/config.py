@@ -77,6 +77,7 @@ class ParserConfig(object):
 		#field type specification
 		self.list_params = get_config_value("list_params", params, transform=extract_set_from_json)
 		self.file_list_params = get_config_value("file_list_params", params, transform=extract_set_from_json)
+		self.keyword_list_params = get_config_value("keyword_list_params", params, transform=extract_set_from_json)
 		self.int_params = get_config_value("int_params", params, transform=extract_set_from_json)
 		self.year_params = get_config_value("year_params", params, transform=extract_set_from_json)
 		self.date_params = get_config_value("date_params", params, transform=extract_set_from_json)
@@ -91,8 +92,6 @@ class ParserConfig(object):
 
 		#keywords param is loaded from a single config value,
 		#but is splitted into a number of config fields with predictable meaning
-		if "keywords" not in params:
-			raise ValueError("keywords param wasn't found")
 		keywords = get_config_value("keywords", params, transform=make_ordered_json_extractor())
 		self.keywords = set()
 		self.category_keywords = collections.OrderedDict()
@@ -105,6 +104,7 @@ class ParserConfig(object):
 				self.category_keywords[category].append(keyword)
 				if has_reference:
 					self.keywords_with_ref.append(keyword)
+		self.useless_keywords = get_config_value("useless_keywords", params, transform=extract_set_from_json)
 
 		#suffixes parsing
 		self.start_suffix = get_config_value("start_suffix", params)
@@ -182,6 +182,8 @@ class WwwConfig(object):
 		}
 
 		self.id_redirections = get_config_value("id_redirections", params, transform=json.loads)
+		self.keywords_warn_min_year = get_config_value("keywords_warn_min_year", params, transform=int)
+		self.keywords_warn_max_year = get_config_value("keywords_warn_max_year", params, transform=int)
 
 class Config(object):
 	@staticmethod

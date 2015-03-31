@@ -547,7 +547,8 @@ bib.search = function() {
 				'#search input[type!="checkbox"], ' +
 				'#search select, ' +
 				'#url, ' +
-				'#origlanguage'
+				'#origlanguage, ' +
+				'#useful_keywords'
 			);
 			inputs.keyup(function(event) {
 				if (event.keyCode == 0x0D) {
@@ -561,6 +562,7 @@ bib.search = function() {
 				'#search input[name!="keywords"], ' +
 				'#url, ' +
 				'#origlanguage, ' +
+				'#useful_keywords, ' +
 				'#orderBy'
 			).map(fillFromLocation);
 
