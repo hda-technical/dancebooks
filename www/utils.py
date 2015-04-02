@@ -70,7 +70,7 @@ LATEX_REPLACEMENTS = [
 	(
 		re.compile(r"\\parencite\{([a-z_\d]*)\}"),
 		r'<a href="{0}/\1">\1</a>'.format(
-			config.www.app_prefix + "/book"
+			config.www.books_prefix
 		)
 	),
 	(
