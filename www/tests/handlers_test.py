@@ -2,6 +2,7 @@
 #coding: utf-8
 import http.client
 import json
+import logging
 import unittest
 
 from config import config
@@ -15,6 +16,8 @@ TEST_UNDOWNLOADABLE_BOOK_ID = "wilson_1818_ecossoise"
 TEST_OUTDATED_BOOK_ID = "zarman_1905"
 #transcribed book id, transcription should be available
 TEST_MARKDOWNED_BOOK_ID = "wilson_1824"
+#not transcribed book id
+TEST_NOT_MARKDOWNED_BOOK_ID = "cellarius_1848_russian"
 
 BOOK_IDS = [
 	TEST_DOWNLOADABLE_BOOK_ID,
@@ -46,6 +49,9 @@ class TestHandlers(unittest.TestCase):
 		self.assertTrue(TEST_UNDOWNLOADABLE_BOOK_ID in rq.data.decode())
 
 		for book_id in BOOK_IDS:
+			logging.debug("Requesting book: {book_id}".format(
+				book_id=book_id
+			))
 			rq = self.client.get(
 				config.www.books_prefix + "/" + book_id,
 				follow_redirects=True
@@ -135,6 +141,23 @@ class TestHandlers(unittest.TestCase):
 		data = json.loads(rq.data.decode())
 		self.assertTrue("message" in data)
 
+		#test sending correct data with redirect
+		rq = self.client.post(
+			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID,
+			data = {
+				"message": "There is a problem with the book. Мой дядя самых честных правил",
+				"name": "Александр Сергеевич Пушкин",
+				"email": "pushkin@lyceum.net",
+				"captcha_key": "unittest",
+				"captcha_answer": "31337",
+			},
+			follow_redirects=True
+		)
+		self.assertEqual(rq.status_code, http.client.NOT_FOUND)
+		self.assertEqual(rq.content_type, "application/json; charset=utf-8")
+		data = json.loads(rq.data.decode())
+		self.assertTrue("message" in data)
+
 		#testing submit without captch authorization
 		rq = self.client.post(
 			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID,
@@ -168,28 +191,40 @@ class TestHandlers(unittest.TestCase):
 
 	def test_pdf_handlers(self):
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID + "/pdf/1"
+			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID + "/pdf/1",
+			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "application/pdf")
 		self.assertTrue("Content-Disposition" in rq.headers)
 
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_UNDOWNLOADABLE_BOOK_ID + "/pdf/1"
+			config.www.books_prefix + "/" + TEST_UNDOWNLOADABLE_BOOK_ID + "/pdf/1",
+			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.NOT_FOUND)
 
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID + "/pdf/1"
+			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID + "/pdf/1",
+			follow_redirects=True
 		)
-		self.assertEqual(rq.status_code, http.client.NOT_FOUND)
+		self.assertEqual(rq.status_code, http.client.OK)
 
 	def test_markdown_handlers(self):
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_MARKDOWNED_BOOK_ID + "/transcription/1"
+			config.www.books_prefix + "/" + TEST_MARKDOWNED_BOOK_ID + "/transcription/1",
+			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "text/html; charset=utf-8")
+
+		rq = self.client.get(
+			config.www.books_prefix + "/" + TEST_NOT_MARKDOWNED_BOOK_ID + "/transcription/1",
+			follow_redirects=True
+		)
+		self.assertEqual(rq.status_code, http.client.NOT_FOUND)
+
+		#WARN: NO TEST FOR OUTDATED MARKDOWNED BOOK ID
 
 	def test_json_handlers(self):
 		rq = self.client.get(config.www.app_prefix + "/options")

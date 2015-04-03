@@ -38,7 +38,10 @@ def http_exception_handler(ex):
 	return response
 
 
-def check_secret_cookie():
+def check_secret_cookie(param_name):
+	"""
+	Checks presence of secret cookie
+	"""
 	def real_decorator(func):
 		@functools.wraps(func)
 		def wrapper(*args, **kwargs):
@@ -47,7 +50,32 @@ def check_secret_cookie():
 				config.www.secret_cookie_value
 			)
 
-			kwargs["show_secrets"] = show_secrets
+			kwargs[param_name] = show_secrets
+			return func(*args, **kwargs)
+		return wrapper
+	return real_decorator
+
+
+def check_id_redirections(param_name):
+	"""
+	Checks if requested book_id is outdated,
+	and redirects to the actual url
+	"""
+	def real_decorator(func):
+		@functools.wraps(func)
+		def wrapper(*args, **kwargs):
+			old_id = kwargs[param_name]
+			if old_id in config.www.id_redirections:
+				new_id = config.www.id_redirections[old_id]
+				new_url = re.sub(
+					r"\/{old_id}".format(old_id=old_id),
+					r"/{new_id}".format(new_id=new_id),
+					flask.request.url
+				)
+				return flask.redirect(
+					new_url,
+					code=http.client.MOVED_PERMANENTLY
+				)
 			return func(*args, **kwargs)
 		return wrapper
 	return real_decorator

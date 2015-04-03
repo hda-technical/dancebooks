@@ -137,7 +137,7 @@ def choose_ui_lang(lang):
 
 
 @flask_app.route(config.www.app_prefix, methods=["GET"])
-@utils_flask.check_secret_cookie()
+@utils_flask.check_secret_cookie("show_secrets")
 def root(show_secrets):
 	return flask.render_template(
 		"index.html",
@@ -150,7 +150,7 @@ def root(show_secrets):
 @flask_app.route(config.www.app_prefix + "/basic-search", methods=["GET"])
 @flask_app.route(config.www.app_prefix + "/advanced-search", methods=["GET"])
 @flask_app.route(config.www.app_prefix + "/all-fields-search", methods=["GET"])
-@utils_flask.check_secret_cookie()
+@utils_flask.check_secret_cookie("show_secrets")
 def search_items(show_secrets):
 	request_args = {
 		key:value.strip()
@@ -212,7 +212,7 @@ def search_items(show_secrets):
 
 
 @flask_app.route(config.www.books_prefix, methods=["GET"])
-@utils_flask.check_secret_cookie()
+@utils_flask.check_secret_cookie("show_secrets")
 def show_all(show_secrets):
 	return flask.render_template(
 		"all.html",
@@ -222,19 +222,10 @@ def show_all(show_secrets):
 
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["GET"])
-@utils_flask.check_secret_cookie()
+@utils_flask.check_id_redirections("book_id")
+@utils_flask.check_secret_cookie("show_secrets")
 def get_book(book_id, show_secrets):
-	if book_id in config.www.id_redirections:
-		return flask.redirect(
-			"{books_prefix}/{new_id}".format(
-				books_prefix=config.www.books_prefix,
-				new_id = config.www.id_redirections[book_id]
-			),
-			code=http.client.MOVED_PERMANENTLY
-		)
-
 	items = item_index["id"].get(book_id, None)
-
 	if items is None:
 		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(book_id=book_id))
 
@@ -250,6 +241,7 @@ def get_book(book_id, show_secrets):
 
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>/pdf/<int:index>", methods=["GET"])
+@utils_flask.check_id_redirections("book_id")
 def get_book_pdf(book_id, index):
 	"""
 	TODO: I'm a huge method that isn't easy to read
@@ -312,6 +304,7 @@ def get_book_pdf(book_id, index):
 
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>/transcription/<int:index>", methods=["GET"])
+@utils_flask.check_id_redirections("book_id")
 def get_book_markdown(book_id, index):
 	items = item_index["id"].get(book_id, None)
 	if items is None:
