@@ -16,7 +16,9 @@ class BibItem(object):
 		"added_on": datetime.date(1970, 1, 1),
 		"author": [],
 		"location": [],
-		"source": ""
+		"source": "",
+		"series": "",
+		"number": 0
 	}
 
 	@staticmethod

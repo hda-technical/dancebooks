@@ -393,6 +393,12 @@ msgstr "Автору"
 msgid "search:order_by:location"
 msgstr "Месту публикации"
 
+msgid "search:order_by:series"
+msgstr "Серии"
+
+msgid "search:order_by:number"
+msgstr "Номеру в серии / Номеру периодического издания"
+
 # Entry fields
 
 msgid "item:labels:author"
