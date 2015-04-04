@@ -131,6 +131,9 @@ msgstr "Включает в себя многочисленные вариаци
 msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Французская кадриль, отличающая высокой вариативностью фигур и ведомая дирижёром"
 
+msgid "pages:keywords:ref:schottishe"
+msgstr "Шоттиш (включая вариации, например “Military schottische”) или па-де-катр"
+
 msgid "pages:keywords:ref:quadrille-grand-rond"
 msgstr "Вариант финала французской кадрили: танцоры идут в общем кругу, исполняя фигуры под объявления распорядителя"
 

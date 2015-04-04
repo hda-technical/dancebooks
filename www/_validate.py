@@ -3,7 +3,6 @@ import collections
 import concurrent.futures
 import json
 import logging
-import multiprocessing
 import os.path
 
 import opster
@@ -440,7 +439,10 @@ def check_series(item, errors):
 	"""
 	#perdiodical booktypes may also have number field,
 	#through they aren't serial entries
-	PERIODICAL_BOOKTYPES = {"periodical"}
+	PERIODICAL_BOOKTYPES = {
+		"periodical",
+		"article"
+	}
 	booktype = item.get("booktype")
 	if booktype in PERIODICAL_BOOKTYPES:
 		return
@@ -571,9 +573,10 @@ def check_source_file(item, errors):
 	Checks if source file language matches item language
 	"""
 	MULTILANG_FILES = {
-		"proceedings-spb.bib",
+		"_problems.bib",
+		"periodical.bib",
 		"proceedings-rothenfelser.bib",
-		"_problems.bib"
+		"proceedings-spb.bib",
 	}
 	source_file = item.get("source_file")
 	langid = item.get("langid")
@@ -615,7 +618,7 @@ def check_single_item(item, make_extra_checks):
 def main(
 	make_extra_checks=("", False, "Add some extra checks"),
 	ignore_missing_ids=("", False, "Update validation data even when some ids were lost"),
-	num_threads=("", multiprocessing.cpu_count(), "Override number of threads")
+	num_threads=("", 1, "Override number of threads")
 ):
 	"""
 	Validates bibliography over a bunch of rules

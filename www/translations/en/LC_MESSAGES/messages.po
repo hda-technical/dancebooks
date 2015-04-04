@@ -131,6 +131,9 @@ msgstr "Keywords includes numerous Lancers variations (like Saratoga Lancers)"
 msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Form of first set with high amount of figure variations, lead by a conductor"
 
+msgid "pages:keywords:ref:schottishe"
+msgstr "Either schottische (including variations like “Military schottische”) or pas de quatre"
+
 msgid "pages:keywords:ref:quadrille-grand-rond"
 msgstr "First set finale figure variation: the dancers join hands in a circle, and perform figures according to conductor's commands"
 
