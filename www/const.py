@@ -153,7 +153,10 @@ FILE_SIZE_PARAM = "filesize"
 #libraries that've allowed
 #to share their books via bib.hda.org.ru
 KNOWN_LIBRARIES = {
+	#Russian State Library (aka Leninka)
 	"RSL",
+	#National Library of Russia (aka Publichka)
+	"NLR",
 }
 
 #users that've allowed
