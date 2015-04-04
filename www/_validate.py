@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import collections
+import concurrent.futures
 import json
 import logging
+import multiprocessing
 import os.path
 
 import opster
@@ -586,59 +588,66 @@ def check_source_file(item, errors):
 		))
 
 
+def check_single_item(item, make_extra_checks):
+	errors = set()
+	check_id(item, errors)
+	check_parser_generated_fields(item, errors)
+	check_obligatory_fields(item, errors)
+	check_translation_fields(item, errors)
+	check_transcription_fields(item, errors)
+	check_shorthand(item, errors)
+	check_isbn(item, errors)
+	check_booktype(item, errors)
+	check_commentator(item, errors)
+	check_url_validity(item, errors)
+	check_volume(item, errors)
+	check_series(item, errors)
+	check_keywords(item, errors)
+	check_filename(item, errors)
+	check_source_file(item, errors)
+	if make_extra_checks:
+		check_title_starts_from_shorthand(item, errors)
+		check_url_accessibility(item, errors)
+	return errors
+
+
 @opster.command()
 def main(
 	make_extra_checks=("", False, "Add some extra checks"),
-	ignore_missing_ids=("", False, "Update validation data even when some ids were lost")
+	ignore_missing_ids=("", False, "Update validation data even when some ids were lost"),
+	num_threads=("", multiprocessing.cpu_count(), "Override number of threads")
 ):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
 	logging.info("Going to process {0} items".format(len(items)))
-
-	error_storage = collections.OrderedDict()
-	#don't validate filename for the given entrytypes
-	for item in items:
-		errors = set()
+	num_threads = int(num_threads)
+	executor = concurrent.futures.ThreadPoolExecutor(max_workers=num_threads)
+	future_errors = {executor.submit(check_single_item, item, make_extra_checks): item for item in items}
+	erroneous_items = 0
+	for future in concurrent.futures.as_completed(future_errors):
+		item = future_errors[future]
 		try:
-			check_id(item, errors)
-			check_parser_generated_fields(item, errors)
-			check_obligatory_fields(item, errors)
-			check_translation_fields(item, errors)
-			check_transcription_fields(item, errors)
-			check_shorthand(item, errors)
-			check_isbn(item, errors)
-			check_booktype(item, errors)
-			check_commentator(item, errors)
-			check_url_validity(item, errors)
-			check_volume(item, errors)
-			check_series(item, errors)
-			check_keywords(item, errors)
-			check_filename(item, errors)
-			check_source_file(item, errors)
-			if make_extra_checks:
-				check_title_starts_from_shorthand(item, errors)
-				check_url_accessibility(item, errors)
+			result = future.result()
+			if len(result) == 0:
+				continue
+			logging.debug("Errors for {item_id} ({source}):".format(
+				item_id=item.id(),
+				source=item.source()
+			))
+			erroneous_items += 1
+			for error in result:
+				logging.debug("    " + error)
 		except Exception as ex:
 			logging.exception("Exception while validating {item_id} ({source}): {ex}".format(
 				item_id=item.id(),
 				source=item.source(),
 				ex=ex
 			))
-			continue
-
-		if (len(errors) > 0):
-			error_storage[item] = errors
-			logging.debug("Errors for {item_id} ({source}):".format(
-				item_id=item.id(),
-				source=item.source()
-			))
-			for error in errors:
-				logging.debug("    " + error)
 
 	update_validation_data(ignore_missing_ids)
-	logging.warning("Found {number} erroneous entries".format(
-		number=len(error_storage)
+	logging.warning("Found {erroneous_items} erroneous items".format(
+		erroneous_items=erroneous_items
 	))
 
 
