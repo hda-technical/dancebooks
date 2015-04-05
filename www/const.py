@@ -111,13 +111,16 @@ FILENAME_PATTERN = (
 		r"(?:, partie (?P<part>\d+))|"
 		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"
 	r")*"
-	#extension: .pdf
-	r"\.pdf"
+	#extension: .pdf (facsimiles) or .md (transcriptions)
+	r"\.(pdf|md)"
 )
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 
 ID_PATTERN = r"[a-z][a-z_0-9]+"
 ID_REGEXP = re.compile(ID_PATTERN)
+
+PAGES_PATTERN = r"\d+(–\d+)?"
+PAGES_REGEXP = re.compile(PAGES_PATTERN)
 
 VALID_HTTP_CODES = {
 	#general OK

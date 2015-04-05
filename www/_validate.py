@@ -74,6 +74,61 @@ def update_validation_data(ignore_missing_ids):
 		validation_data_file.write(json.dumps(validation_data))
 
 
+def check_single_filename(abspath, filename, item, errors):
+	"""
+	Checks if file is accessible and matches item metadata
+	"""
+	if not os.path.isfile(abspath):
+		errors.add("File [{abspath}] is not accessible".format(
+			abspath=abspath
+		))
+	if not utils.isfile_case_sensitive(abspath):
+		errors.add("File [{abspath}] is not accessible in case-sensitive mode".format(
+			abspath=abspath
+		))
+	metadata = utils.extract_metadata_from_file(filename)
+
+	#validating optional author, edition, tome
+	#in case when item specifies value, but filename does not
+	optional_meta_fields = [
+		"author",
+		"edition",
+		"volume",
+		#For serial books, no number is present in metadata
+		#Temporary disable check here
+		#"number",
+		"part"
+	]
+	for meta_field in optional_meta_fields:
+		if (
+			(item.has(meta_field)) and
+			(meta_field not in metadata)
+		):
+			errors.add("Field {meta_field} is not specified in filename [{filename}]".format(
+				meta_field=meta_field,
+				filename=filename
+			))
+
+	meta_keywords = metadata.get("keywords", {})
+	source_file = item.get("source_file")
+	if (
+		(const.META_INCOMPLETE in meta_keywords) and
+		(source_file != "_problems.bib")
+	):
+		errors.add("Incomplete entries should be stored in _problems.bib")
+
+	searches = utils.make_searches_from_metadata(metadata)
+	for search_key, search_func in searches.items():
+		if not search_func(item):
+			errors.add(
+				"Item is not searchable by {search_key} extracted from filename {abspath}.\n"
+				"    Item has: {item_value}\n"
+				"    Search has: {search_value}".format(
+				search_key=search_key,
+				item_value=item.get(search_key),
+				search_value=metadata[search_key],
+				abspath=abspath
+			))
 
 #single parameter group validations (executed once per entry)
 def check_id(item, errors):
@@ -337,30 +392,37 @@ def check_url_accessibility(item, errors):
 				))
 
 
-def check_transcription_fields(item, errors):
+def check_transcription(item, errors):
 	"""
-	Checks if transcription file exists and
-	can be served upon request
+	Checks if trascribed item has both
+	transcription_url and transcription_filename specified
 	"""
-	item_id = item.get("id")
-	TRANSLATION_FIELDS = ["transcription_url", "transcription_filename"]
+	TRANSCRIPTION_FIELDS = ["transcription_url", "transcription_filename"]
 	has_transcription = False
-	for field in TRANSLATION_FIELDS:
+	for field in TRANSCRIPTION_FIELDS:
 		if item.has(field):
 			has_transcription = True
 
 	if not has_transcription:
 		return
 
-	for field in TRANSLATION_FIELDS:
+	for field in TRANSCRIPTION_FIELDS:
 		if not item.has(field):
 			errors.add("Field {field} is require for transcriptions".format(
 				field=field
 			))
 			return
 
+
+def check_transcription_url(item, errors):
+	"""
+	Checks if transcription_url is valid
+	"""
+	item_id = item.get("id")
 	transcription_url = item.get("transcription_url")
-	transcription_filename = item.get("transcription_filename")
+	if transcription_url is None:
+		return
+
 	for single_url in transcription_url:
 		match = utils.SELF_SERVED_TRANSCRIPTION_REGEXP.match(single_url)
 		if not match:
@@ -383,16 +445,23 @@ def check_transcription_fields(item, errors):
 				single_url=single_url
 			))
 
+
+def check_transcription_filename(item, errors):
+	"""
+	Checks if transcription_filename is valid, accessible and named correctly
+	"""
+	transcription_filename = item.get("transcription_filename")
+	if transcription_filename is None:
+		return
+
 	for single_filename in transcription_filename:
 		abspath = os.path.join(config.parser.markdown_dir, single_filename)
-		if not os.path.isfile(abspath):
-			errors.add("Transcription file [{abspath}] is not accessible".format(
-				abspath=abspath
-			))
-		if not utils.isfile_case_sensitive(abspath):
-			errors.add("Transcription file [{abspath}] is not accessible in case-sensitive mode".format(
-				abspath=abspath
-			))
+		check_single_filename(
+			abspath,
+			single_filename.replace('_', ' '),
+			item,
+			errors
+		)
 
 
 def check_location(item, errors):
@@ -406,6 +475,26 @@ def check_location(item, errors):
 		(location is None)
 	):
 		errors.add("Location should be present when publisher is known")
+
+
+def check_pages(item, erros):
+	"""
+	Checks if pages field matches PAGES_REGEX
+	"""
+	pages = item.get("pages")
+	if pages is None:
+		return
+	booktype = item.get("booktype")
+	PAGED_BOOKTYPES = {
+		"article",
+		"inproceedings"
+	}
+	if booktype not in PAGED_BOOKTYPES:
+		errors.add("Field {field} is not allowed for booktype {booktype}".format(
+			field="pages",
+			booktype=booktype
+		))
+	match = const.PAGES_REGEXP.match(pages)
 
 
 def check_volume(item, errors):
@@ -516,56 +605,7 @@ def check_filename(item, errors):
 	for single_filename in filename:
 		#filename starts with slash - trimming it
 		abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
-		if not os.path.isfile(abspath):
-			errors.add("File [{abspath}] is not accessible".format(
-				abspath=abspath
-			))
-		if not utils.isfile_case_sensitive(abspath):
-			errors.add("File [{abspath}] is not accessible in case-sensitive mode".format(
-				abspath=abspath
-			))
-		metadata = utils.extract_metadata_from_file(single_filename)
-
-		#validating optional author, edition, tome
-		#in case when item specifies value, but filename does not
-		optional_meta_fields = [
-			"author",
-			"edition",
-			"volume",
-			#For serial books, no number is present in metadata
-			#Temporary disable check here
-			#"number",
-			"part"
-		]
-		for meta_field in optional_meta_fields:
-			if (
-				(item.has(meta_field)) and
-				(meta_field not in metadata)
-			):
-				errors.add("Field {meta_field} is not specified in filename [{filename}]".format(
-					meta_field=meta_field,
-					filename=single_filename
-				))
-
-		meta_keywords = metadata.get("keywords", {})
-		source_file = item.get("source_file")
-		if (
-			(const.META_INCOMPLETE in meta_keywords) and
-			(source_file != "_problems.bib")
-		):
-			errors.add("Incomplete entries should be stored in _problems.bib")
-
-		searches = utils.make_searches_from_metadata(metadata)
-		for search_key, search_func in searches.items():
-			if not search_func(item):
-				errors.add(
-					"Item is not searchable by {search_key}.\n"
-					"    Item has: {item_value}\n"
-					"    Search has: {search_value}".format(
-					search_key=search_key,
-					item_value=item.get(search_key),
-					search_value=metadata[search_key]
-				))
+		check_single_filename(abspath, single_filename, item, errors)
 
 
 def check_source_file(item, errors):
@@ -597,7 +637,9 @@ def check_single_item(item, make_extra_checks):
 	check_parser_generated_fields(item, errors)
 	check_obligatory_fields(item, errors)
 	check_translation_fields(item, errors)
-	check_transcription_fields(item, errors)
+	check_transcription(item, errors)
+	check_transcription_url(item, errors)
+	check_transcription_filename(item, errors)
 	check_shorthand(item, errors)
 	check_isbn(item, errors)
 	check_booktype(item, errors)
@@ -608,6 +650,7 @@ def check_single_item(item, make_extra_checks):
 	check_keywords(item, errors)
 	check_filename(item, errors)
 	check_source_file(item, errors)
+	check_pages(item, errors)
 	if make_extra_checks:
 		check_title_starts_from_shorthand(item, errors)
 		check_url_accessibility(item, errors)
