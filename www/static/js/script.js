@@ -1,4 +1,4 @@
-var bib = {
+3var bib = {
 	VERSION: "{{ config.version }}",
 	BASKET_EXPIRE: 7 * 24, /* 7 days */
 
@@ -548,6 +548,7 @@ bib.search = function() {
 				'#search select, ' +
 				'#url, ' +
 				'#origlanguage, ' +
+				'#transcription_url, ' +
 				'#useful_keywords'
 			);
 			inputs.keyup(function(event) {
