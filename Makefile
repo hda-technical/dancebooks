@@ -93,7 +93,7 @@ www-configs-install-production:
 	mkdir --mode=775 --parents /var/run/uwsgi
 	chown www-data:www-data /var/run/uwsgi
 	touch /var/run/uwsgi/$(NAME_PRODUCTION).reload
-	chmod 755 /var/run/uwsgi/$(NAME_PRODUCTION).reload
+	chmod 664 /var/run/uwsgi/$(NAME_PRODUCTION).reload
 	chown www-data:www-data /var/run/uwsgi/$(NAME_PRODUCTION).reload
 	#installing uwsgi configs
 	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME_PRODUCTION).conf
@@ -113,7 +113,7 @@ www-configs-install-testing:
 	mkdir --mode=775 --parents /var/run/uwsgi
 	chown www-data:www-data /var/run/uwsgi
 	touch /var/run/uwsgi/$(NAME_TESTING).reload
-	chmod 755 /var/run/uwsgi/$(NAME_TESTING).reload
+	chmod 664 /var/run/uwsgi/$(NAME_TESTING).reload
 	chown www-data:www-data /var/run/uwsgi/$(NAME_TESTING).reload
 	#installing uwsgi configs
 	cp configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf

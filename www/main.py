@@ -42,7 +42,8 @@ flask_app.config["USE_EVALEX"] = False
 babel_app = babel.Babel(flask_app)
 markdown_app = markdown.Markdown(
 	flask_app,
-	output_format="xhtml"
+	extensions=["footnotes"],
+	output_format="xhtml5"
 )
 
 flask_app.jinja_env.trim_blocks = True
