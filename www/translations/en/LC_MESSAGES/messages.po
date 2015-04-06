@@ -335,7 +335,7 @@ msgstr "Available for download"
 msgid "search:labels:origlanguage"
 msgstr "Translated edition"
 
-msgstr "search:labels:transcription_url"
+msgid "search:labels:transcription_url"
 msgstr "Transcribed edition"
 
 msgid "search:labels:useful-keywords"

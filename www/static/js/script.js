@@ -1,4 +1,4 @@
-3var bib = {
+var bib = {
 	VERSION: "{{ config.version }}",
 	BASKET_EXPIRE: 7 * 24, /* 7 days */
 

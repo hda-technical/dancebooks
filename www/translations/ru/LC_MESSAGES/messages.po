@@ -335,7 +335,7 @@ msgstr "Доступно для скачивания"
 msgid "search:labels:origlanguage"
 msgstr "Переводное издание"
 
-msgstr "search:labels:transcription_url"
+msgid "search:labels:transcription_url"
 msgstr "Транскрибированное издание"
 
 msgid "search:labels:useful-keywords"
