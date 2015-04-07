@@ -1,4 +1,4 @@
-﻿# The Register of Dances at Castle Menzies
+# The Register of Dances at Castle Menzies
 ## Anonymous manuscript
 ## Transcribed by [Jim Healy](http://www.strathspey.org/history/menzies)
 

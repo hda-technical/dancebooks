@@ -1,4 +1,4 @@
-﻿# Il Papa che insegnia ballar di Balletti a sua scholari
+# Il Papa che insegnia ballar di Balletti a sua scholari
 ## Giovannino e Il Lanzino e Il Papa
 ## Transcribed by [Joseph Casazza](http://www.nypl.org/node/33839), [Elizabeth Cain](http://www.nypl.org/node/33839)
 

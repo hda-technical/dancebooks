@@ -1,4 +1,4 @@
-﻿# The Warsaw Varsoviana with a Correct Description of the Figure
+# The Warsaw Varsoviana with a Correct Description of the Figure
 ## Eugène Coulon
 ## Transcribed by Victor Lapshin
 
