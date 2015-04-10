@@ -6,9 +6,9 @@ BIB_FILES := $(wildcard bib/*.bib)
 ANC_BIBLATEX_FILES := \
 	dancebooks-biblatex.sty
 
-PDFLATEX := pdflatex --shell-escape --max-print-line=250
-LUALATEX := lualatex --shell-escape --max-print-line=250
-XELATEX  := xelatex  --shell-escape --max-print-line=250
+PDFLATEX := pdflatex --shell-escape
+LUALATEX := lualatex --shell-escape
+XELATEX  := xelatex  --shell-escape
 LATEX ?= $(LUALATEX)
 
 #biber command with delimeters specification (xsvsep expects regexp, other expects symbol)
