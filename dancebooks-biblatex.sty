@@ -5,13 +5,14 @@
 \begin{filecontents}{biblatex-dm.cfg}
 
 %Datamodel constraints
-%Do not change without changing _validate.py correspondingly
 \DeclareDatamodelFields[type=list,datatype=uri]{url}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
 \DeclareDatamodelFields[type=list,datatype=key]{origlanguage}
 \DeclareDatamodelFields[type=list,datatype=name,skipout=true]{origauthor}
 \DeclareDatamodelFields[type=list,datatype=literal,skipout=true]{filename}
 \DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{annotation}
+\DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{transcription_filename}
+\DeclareDatamodelFields[type=field,datatype=literal,skipout=true]{transcription_url}
 
 \DeclareDatamodelFields[type=field,datatype=date,skipout=true]{added_on}
 \DeclareDatamodelFields[type=field,datatype=datepart,skipout=true]{
@@ -29,6 +30,8 @@
 \DeclareDatamodelEntryfields[inproceedings]{origlanguage,translator}
 \DeclareDatamodelEntryfields{origauthor}
 \DeclareDatamodelEntryfields{filename}
+\DeclareDatamodelEntryfields{transcription_filename}
+\DeclareDatamodelEntryfields{transcription_url}
 
 \DeclareDatamodelEntryfields{added_on}
 \DeclareDatamodelEntryfields{
