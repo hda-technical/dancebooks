@@ -131,7 +131,7 @@ msgstr "Включает в себя многочисленные вариаци
 msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Французская кадриль, отличающая высокой вариативностью фигур и ведомая дирижёром"
 
-msgid "pages:keywords:ref:schottishe"
+msgid "pages:keywords:ref:schottische"
 msgstr "Шоттиш (включая вариации, например “Military schottische”) или па-де-катр"
 
 msgid "pages:keywords:ref:quadrille-grand-rond"
