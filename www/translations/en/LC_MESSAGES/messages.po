@@ -385,7 +385,7 @@ msgstr "Swedish"
 # Search: Booktype select options
 
 msgid "search:booktype:article"
-msgstr "Paper of magazine article"
+msgstr "Paper or magazine article"
 
 msgid "search:booktype:book"
 msgstr "Book"
