@@ -71,6 +71,18 @@
 					</tr>
 					<tr>
 						<td>
+							<label for="booktype">{{ _("search:labels:booktype") }}:</label>
+						</td>
+						<td>
+							<select id="booktype" name="booktype">
+								<!-- required to reduce flicking -->
+								<option value="empty" selected="selected"></option>
+								<option value="">{{ _("common:Any") }}</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<label for="publisher">{{ _("search:labels:publisher") }}:</label>
 						</td>
 						<td>

@@ -361,8 +361,30 @@ bib.search = function() {
 		toDeactivate.forEach(bib.utils.deactivateAction);
 	};
 
+	var fillFromOptions = function(name, values) {
+		var selectedValue = bib.utils.extractFromLocation(name);
+		options = [];
+		for (index in values) {
+			var value = values[index][0];
+			var text = values[index][1];
+			var attrs = {
+				"value": value
+			};
+			if (value == selectedValue) {
+				attrs["selected"] = "selected";
+			}
+			var option = bib.utils.makeTextElement(
+				"option",
+				text,
+				attrs
+			);
+			options.push(option);
+		}
+		$('#' + name + ' option[value=""]').after(options);
+		$('#' + name + ' option[value="empty"]').remove();
+	};
+
 	var fillLanguages = function(languages) {
-		//setting languages select options
 		var selectedLanguage = bib.utils.extractFromLocation("langid");
 		var options = []
 		for (index in languages) {
@@ -386,26 +408,11 @@ bib.search = function() {
 	};
 
 	var fillSourceFiles = function(sourceFiles) {
-			var selectedFile = bib.utils.extractFromLocation("source_file");
-			var options = [];
-			for (index in sourceFiles) {
-				var sourceFile = sourceFiles[index];
-				var attrs = {
-					"value": sourceFile
-				};
-				if (sourceFile == selectedFile) {
-					attrs["selected"] = "selected";
-				}
-				var option = bib.utils.makeTextElement(
-					"option",
-					sourceFile,
-					attrs
-				)
-				options.push(option);
-			}
-			$('#source_file option[value=""]').after(options);
-			$('#source_file option[value="empty"]').remove();
+		fillFromOptions("source_file", sourceFiles);
+	};
 
+	var fillBooktypes = function(booktypes) {
+		fillFromOptions("booktype", booktypes);
 	};
 
 	var updateKeywords = function() {
@@ -487,6 +494,7 @@ bib.search = function() {
 		fillLanguages(data["languages"]);
 		fillSourceFiles(data["source_files"]);
 		fillKeywords(data['keywords']);
+		fillBooktypes(data['booktypes']);
 	};
 
 	var submitSearch = function() {

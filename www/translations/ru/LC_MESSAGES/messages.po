@@ -320,6 +320,9 @@ msgstr "Язык"
 msgid "search:labels:source_file"
 msgstr "Исходный файл"
 
+msgid "search:labels:booktype"
+msgstr "Тип записи"
+
 msgid "search:labels:publisher"
 msgstr "Издатель"
 
@@ -378,6 +381,38 @@ msgstr "Испанский"
 
 msgid "search:language:swedish"
 msgstr "Шведский"
+
+# Search: Booktype select options
+
+msgid "search:booktype:article"
+msgstr "Статья в газете или журнале"
+
+msgid "search:booktype:book"
+msgstr "Книга"
+
+msgid "search:booktype:inproceedings"
+msgstr "Статья с конференции"
+
+msgid "search:booktype:mvbook"
+msgstr "Многотомная книга"
+
+msgid "search:booktype:mvreference"
+msgstr "Многотомная энциклопедия или словарь"
+
+msgid "search:booktype:periodical"
+msgstr "Газета или журнал целиком"
+
+msgid "search:booktype:proceedings"
+msgstr "Сборник статей с конференции"
+
+msgid "search:booktype:reference"
+msgstr "Энциклопедия или словарь"
+
+msgid "search:booktype:thesis"
+msgstr "Диссертация :)"
+
+msgid "search:booktype:unpublished"
+msgstr "Манускрипт"
 
 # Search results ordering
 

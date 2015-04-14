@@ -35,6 +35,7 @@ item_index.update(items)
 
 langids = sorted(item_index["langid"].keys())
 source_files = sorted(item_index["source_file"].keys())
+booktypes = sorted(item_index["booktype"].keys())
 
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = config.www.languages[0]
@@ -52,12 +53,12 @@ flask_app.jinja_env.keep_trailing_newline = False
 flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
 #filling jinja filters
-flask_app.jinja_env.filters["author_link"] = utils_flask.jinja_author_link
-flask_app.jinja_env.filters["keyword_link"] = utils_flask.jinja_keyword_link
-flask_app.jinja_env.filters["as_set"] = utils_flask.jinja_as_set
-flask_app.jinja_env.filters["translate_language"] = utils_flask.jinja_translate_language
-flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.jinja_translate_keyword_category
-flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.jinja_translate_keyword_ref
+flask_app.jinja_env.filters["author_link"] = utils_flask.make_author_link
+flask_app.jinja_env.filters["keyword_link"] = utils_flask.make_keyword_link
+flask_app.jinja_env.filters["as_set"] = utils_flask.as_set
+flask_app.jinja_env.filters["translate_language"] = utils_flask.translate_language
+flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.translate_keyword_cat
+flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.translate_keyword_ref
 flask_app.jinja_env.filters["is_url_self_served"] = utils.is_url_self_served
 
 def jinja_self_served_url_size(url, item):
@@ -390,7 +391,7 @@ def edit_book_keywords(book_id):
 @utils_flask.jsonify()
 def get_options():
 	opt_languages = [
-		(langid, utils_flask.jinja_translate_language(langid))
+		(langid, utils_flask.translate_language(langid))
 		for langid in langids
 	]
 
@@ -398,19 +399,28 @@ def get_options():
 		(
 			category,
 			{
-				"translation": utils_flask.jinja_translate_keyword_category(category),
+				"translation": utils_flask.translate_keyword_cat(category),
 				"keywords": category_keywords
 			}
 		)
 		for category, category_keywords in config.parser.category_keywords.items()
 	]
 
-	opt_source_files = source_files
+	opt_booktypes = [
+		(booktype, utils_flask.translate_booktype(booktype))
+		for booktype in booktypes
+	]
+
+	opt_source_files = [
+		(source_file, source_file)
+		for source_file in source_files
+	]
 
 	return {
 		"languages": opt_languages,
 		"keywords": opt_keywords,
-		"source_files": opt_source_files
+		"source_files": opt_source_files,
+		"booktypes": opt_booktypes
 	}
 
 

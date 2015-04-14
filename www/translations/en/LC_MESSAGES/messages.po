@@ -320,6 +320,9 @@ msgstr "Language"
 msgid "search:labels:source_file"
 msgstr "Source file"
 
+msgid "search:labels:booktype"
+msgstr "Entry type"
+
 msgid "search:labels:publisher"
 msgstr "Publisher"
 
@@ -378,6 +381,38 @@ msgstr "Spanish"
 
 msgid "search:language:swedish"
 msgstr "Swedish"
+
+# Search: Booktype select options
+
+msgid "search:booktype:article"
+msgstr "Paper of magazine article"
+
+msgid "search:booktype:book"
+msgstr "Book"
+
+msgid "search:booktype:inproceedings"
+msgstr "Conference article"
+
+msgid "search:booktype:mvbook"
+msgstr "Multivolume book"
+
+msgid "search:booktype:mvreference"
+msgstr "Multivolume encyclopaedia"
+
+msgid "search:booktype:periodical"
+msgstr "Entire paper or magazine"
+
+msgid "search:booktype:proceedings"
+msgstr "Conference proceedings"
+
+msgid "search:booktype:reference"
+msgstr "Encyclopaedia or dictionary"
+
+msgid "search:booktype:thesis"
+msgstr "Thesis"
+
+msgid "search:booktype:unpublished"
+msgstr "Manuscript"
 
 # Search results ordering
 

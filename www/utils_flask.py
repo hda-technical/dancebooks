@@ -148,29 +148,32 @@ def jsonify():
 
 
 #functions to be registered in jinja: begin
-def jinja_author_link(author):
+def make_author_link(author):
 	return '<a href="{path}?author={author}">{author}</a>'.format(
 		path=config.www.basic_search_prefix,
 		author=author
 	)
 
 
-def jinja_keyword_link(keyword):
+def make_keyword_link(keyword):
 	return '<a href="{path}?keywords={keyword}">{keyword}</a>'.format(
 		path=config.www.advanced_search_prefix,
 		keyword=keyword
 	)
 
-def jinja_as_set(value):
+def as_set(value):
 	return set(value)
 
-def jinja_translate_language(langid):
+def translate_language(langid):
 	return babel.gettext(const.BABEL_LANG_PREFIX + langid)
 
-def jinja_translate_keyword_category(category):
+def translate_booktype(booktype):
+	return babel.gettext(const.BABEL_BOOKTYPE_PREFIX + booktype)
+
+def translate_keyword_cat(category):
 	return babel.gettext(const.BABEL_KEYWORD_CATEGORY_PREFIX + category)
 
-def jinja_translate_keyword_ref(keyword):
+def translate_keyword_ref(keyword):
 	#colon should be remove, spaces should be replaces with dashes
 	key = keyword.replace(":", "").replace(" ", "-")
 	return babel.gettext(const.BABEL_KEYWORD_REF_PREFIX + key)
