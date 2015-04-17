@@ -591,7 +591,7 @@ def check_filename(item, errors):
 	"""
 	Checks filename against various tests
 	"""
-	MULTIENTRY_BOOKTYPES = {"proceedings", "inproceedings"}
+	MULTIENTRY_BOOKTYPES = {"article", "proceedings", "inproceedings"}
 	booktype = item.get("booktype")
 	filename = item.get("filename")
 	keywords = set(item.get("keywords") or {})
@@ -614,7 +614,7 @@ def check_source_file(item, errors):
 	"""
 	MULTILANG_FILES = {
 		"_problems.bib",
-		"periodical.bib",
+		"_periodical.bib",
 		"proceedings-rothenfelser.bib",
 		"proceedings-spb.bib",
 	}
