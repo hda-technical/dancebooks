@@ -592,16 +592,24 @@ def check_filename(item, errors):
 	Checks filename against various tests
 	"""
 	MULTIENTRY_BOOKTYPES = {"article", "proceedings", "inproceedings"}
+	NOT_DIGITIZED_KEYWORD = "not digitized"  
 	booktype = item.get("booktype")
 	filename = item.get("filename")
 	keywords = set(item.get("keywords") or {})
+	if filename is None:
+		if (NOT_DIGITIZED_KEYWORD not in keywords):
+			errors.add("Keyword {keyword} should be specified".format(
+				keyword=NOT_DIGITIZED_KEYWORD
+			))
+		return
+	else:
+		if (NOT_DIGITIZED_KEYWORD in keywords):
+			errors.add("Keyword {keyword} shouldn't be specified".format(
+				keyword=NOT_DIGITIZED_KEYWORD
+			))
+
 	if booktype in MULTIENTRY_BOOKTYPES:
 		return
-	if filename is None:
-		if ("not digitized" not in keywords):
-			errors.add("Keyword [not digitized] should be specified")
-		return
-
 	for single_filename in filename:
 		#filename starts with slash - trimming it
 		abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
