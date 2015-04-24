@@ -71,6 +71,8 @@
 				{{ value | dateformat("long") }}
 			{% elif param == "annotation" %}
 				{{ value | safe }}
+			{% elif param == "booktype" %}
+				{{ value | translate_booktype }}
 			{% else %}
 				{{ value }}
 			{% endif %}

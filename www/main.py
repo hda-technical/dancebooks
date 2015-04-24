@@ -57,6 +57,7 @@ flask_app.jinja_env.filters["author_link"] = utils_flask.make_author_link
 flask_app.jinja_env.filters["keyword_link"] = utils_flask.make_keyword_link
 flask_app.jinja_env.filters["as_set"] = utils_flask.as_set
 flask_app.jinja_env.filters["translate_language"] = utils_flask.translate_language
+flask_app.jinja_env.filters["translate_booktype"] = utils_flask.translate_booktype
 flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.translate_keyword_cat
 flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.translate_keyword_ref
 flask_app.jinja_env.filters["is_url_self_served"] = utils.is_url_self_served
