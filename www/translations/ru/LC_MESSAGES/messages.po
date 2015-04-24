@@ -448,6 +448,12 @@ msgstr "Автор"
 msgid "item:labels:title"
 msgstr "Название"
 
+msgid "item:labels:booktitle"
+msgstr "Название сборника"
+
+msgid "item:labels:journaltitle"
+msgstr "Название газеты или журнала"
+
 msgid "item:labels:year"
 msgstr "Год публикации"
 
@@ -481,11 +487,20 @@ msgstr "Тип записи"
 msgid "item:labels:edition"
 msgstr "Издание"
 
+msgid "item:labels:volume"
+msgstr "Том"
+
+msgid "item:labels:volumes"
+msgstr "Всего томов"
+
 msgid "item:labels:series"
 msgstr "Серия"
 
 msgid "item:labels:number"
-msgstr "№"
+msgstr "Номер"
+
+msgid "item:labels:pages"
+msgstr "Страницы"
 
 msgid "item:labels:url"
 msgstr "Ссылка"

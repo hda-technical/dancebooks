@@ -1,6 +1,8 @@
 {% set fields = [
 	"author",
 	"title",
+	"booktitle",
+	"journaltitle",
 	"langid",
 	"id",
 	"added_on",
@@ -11,6 +13,10 @@
 	"location",
 	"edition",
 	"series",
+	"volume",
+	"volumes",
+	"number",
+	"pages",
 	"keywords",
 	"url",
 	"transcription_url",
@@ -59,13 +65,6 @@
 					<li><a href="bib://{{ filename[1:] }}">{{ filename }}</a></li>
 				{% endfor %}
 				</ul>
-			{% elif param == "series" %}
-				{% set extra_value = item.get("number") %}
-				{% if extra_value %}
-				{{ value }} {{ _("item:labels:number") }}{{ extra_value }}
-				{% else %}
-				{{ value }}
-				{% endif %}
 			{% elif param == "langid" %}
 				{{ _("item:language:" + value) }}
 			{% elif param == "added_on" %}

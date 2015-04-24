@@ -448,6 +448,12 @@ msgstr "Author"
 msgid "item:labels:title"
 msgstr "Title"
 
+msgid "item:labels:booktitle"
+msgstr "Collection title"
+
+msgid "item:labels:journaltitle"
+msgstr "Title of a paper or magazine"
+
 msgid "item:labels:year"
 msgstr "Year of publication"
 
@@ -481,11 +487,20 @@ msgstr "Entry type"
 msgid "item:labels:edition"
 msgstr "Edition"
 
+msgid "item:labels:volume"
+msgstr "Volume"
+
+msgid "item:labels:volumes"
+msgstr "Number of volumes"
+
 msgid "item:labels:series"
 msgstr "Series"
 
 msgid "item:labels:number"
-msgstr "No."
+msgstr "Number"
+
+msgid "item:labels:pages"
+msgstr "Pages"
 
 msgid "item:labels:url"
 msgstr "URL"
