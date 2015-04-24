@@ -148,6 +148,9 @@ function makeOutputDir()
 #LIBRARY DEPENDENT FUNCTIONS
 #========================
 
+#========================
+#Single image per page downloaders
+#========================
 function rsl()
 {
 	if [ $# -ne 1 ]
@@ -186,89 +189,6 @@ function hathi()
 	done;
 }
 
-function gallicaTileFile()
-{
-	if [ $# -ne 2 ]
-	then
-		echo "Usage: $0 x y"
-		return
-	fi
-
-	local TILE_X=$1
-	local TILE_Y=$2
-
-	echo `printf %04d $TILE_Y`x`printf %04d $TILE_X`
-}
-
-function gallicaTilesUrl()
-{
-	if [ $# -ne 4 ]
-	then
-		echo "Usage: $0 ark_id x y z"
-		return
-	fi
-
-	local BOOK_ID=$1
-	local TILE_X=$2
-	local TILE_Y=$3
-	local TILE_Z=$4
-	local TILE_SIZE=2048
-
-	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
-	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
-
-	echo "http://gallica.bnf.fr/proxy?method=R&ark=$BOOK_ID&l=$TILE_Z&r=$TOP,$LEFT,$TILE_SIZE,$TILE_SIZE"
-}
-
-function dusseldorfTileFile()
-{
-	if [ $# -ne 2 ]
-	then
-		echo "Usage: $0 x y"
-		return
-	fi
-
-	local TILE_X=$1
-	local TILE_Y=$2
-	#dusseldorf tiles are numbered from bottom to top
-	local REAL_TILE_Y=`expr $MAX_TILE - $TILE_Y`
-
-	echo `printf %04d $REAL_TILE_Y`x`printf %04d $TILE_X`
-}
-
-function dusseldorfTilesUrl()
-{
-	if [ $# -ne 4 ]
-	then
-		echo "Usage: $0 image_id x y z"
-		return
-	fi
-
-	local IMAGE_ID=$1
-	local TILE_X=$2
-	local TILE_Y=$3
-	local TILE_Z=$4
-
-	#some unknown number with unspecified purpose
-	local UNKNOWN_NUMBER=5089
-
-	echo "http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/$UNKNOWN_NUMBER/1.0.0/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
-}
-
-function gallicaTiles()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 ark_id"
-		return
-	fi
-
-	local BOOK_ID=$1
-	local ZOOM=6
-	local OUTPUT_DIR=.
-	tiles gallicaTilesUrl gallicaTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
-}
-
 function gallica()
 {
 	if [ $# -ne 2 ]
@@ -286,19 +206,6 @@ function gallica()
 		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.jpg $PAGE`
 		webGet "http://gallica.bnf.fr/ark:/12148/$BOOK_ID/f$PAGE.highres" $OUTPUT_FILE
 	done
-}
-
-function dusseldorfTiles()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 image_id"
-		return
-	fi
-	local BOOK_ID=$1
-	local ZOOM=6
-	local OUTPUT_DIR=.
-	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
 }
 
 function vwml()
@@ -340,6 +247,105 @@ function vwml()
 			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
 		fi
 	done
+}
+
+#========================
+#Tiled page downloaders
+#========================
+function gallicaTileFile()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage: $0 x y"
+		return
+	fi
+
+	local TILE_X=$1
+	local TILE_Y=$2
+
+	echo `printf %04d $TILE_Y`x`printf %04d $TILE_X`
+}
+
+function gallicaTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage: $0 ark_id x y z"
+		return
+	fi
+
+	local BOOK_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local TILE_Z=$4
+	local TILE_SIZE=2048
+
+	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
+	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
+
+	echo "http://gallica.bnf.fr/proxy?method=R&ark=$BOOK_ID&l=$TILE_Z&r=$TOP,$LEFT,$TILE_SIZE,$TILE_SIZE"
+}
+
+function gallicaTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 ark_id"
+		return
+	fi
+
+	local BOOK_ID=$1
+	local ZOOM=6
+	local OUTPUT_DIR=.
+	tiles gallicaTilesUrl gallicaTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
+}
+
+function dusseldorfTileFile()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage: $0 x y"
+		return
+	fi
+
+	local TILE_X=$1
+	local TILE_Y=$2
+	#dusseldorf tiles are numbered from bottom to top
+	local REAL_TILE_Y=`expr $MAX_TILE - $TILE_Y`
+
+	echo `printf %04d $REAL_TILE_Y`x`printf %04d $TILE_X`
+}
+
+function dusseldorfTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage: $0 image_id x y z"
+		return
+	fi
+
+	local IMAGE_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local TILE_Z=$4
+
+	#some unknown number with unspecified purpose
+	local UNKNOWN_NUMBER=5089
+
+	echo "http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/$UNKNOWN_NUMBER/1.0.0/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
+}
+
+function dusseldorfTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return
+	fi
+	local BOOK_ID=$1
+	local ZOOM=6
+	local OUTPUT_DIR=.
+	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
 }
 
 if [ $# -lt 2 ]
