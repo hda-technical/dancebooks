@@ -159,7 +159,7 @@ msgid "pages:keywords:ref:sequence"
 msgstr ""
 	"Round dances containing more that one figure or step. "
 	"Keyword includes round dances of the middle of 19th century "
-	"(gorlitza, varsovienne, sicilienne, imperial, etc.)"
+	"(gorlitza, sicilienne, Cellarius valse, etc.)"
 
 msgid "pages:keywords:ref:tango"
 msgstr ""
