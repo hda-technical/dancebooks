@@ -359,13 +359,21 @@ def is_url_accessible(url, item):
 	if is_url_self_served(url, item):
 		return True
 
-	response = requests.head(url, allow_redirects=False, verify=True)
+	try:
+		response = requests.head(url, allow_redirects=False, verify=True)
+	except Exception as ex:
+		logging.debug("HTTP HEAD request for {url} raised an exception: {ex}".format(
+			url=url,
+			ex=ex
+		))
+		return False
 	if (response.status_code not in const.VALID_HTTP_CODES):
-		logging.debug("HTTP HEAD request for url {url} returned code {code}: {reason}".format(
+		logging.debug("HTTP HEAD request for {url} returned code {code}: {reason}".format(
 			url=url,
 			code=response.status_code,
 			reason=response.reason
 		))
+		return False
 
 	return True
 
