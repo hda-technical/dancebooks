@@ -132,7 +132,7 @@ msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Form of first set with high amount of figure variations, lead by a conductor"
 
 msgid "pages:keywords:ref:schottische"
-msgstr "Either schottische (including variations like “Military schottische”) or pas de quatre"
+msgstr "Either schottische (including variations like military schottische or pas de quatre)"
 
 msgid "pages:keywords:ref:quadrille-grand-rond"
 msgstr "First set finale figure variation: the dancers join hands in a circle, and perform figures according to conductor's commands"
