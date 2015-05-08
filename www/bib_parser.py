@@ -1,5 +1,6 @@
 # coding: utf-8
 import datetime
+import enum
 import logging
 import os.path
 
@@ -163,6 +164,15 @@ class BibItem(object):
 			self._params = new_params
 
 
+class ParserState(enum.Enum):
+	NoItem = 0
+	WaitingForItemType = 1
+	WaitingForItemId = 2
+	WaitingForParamKey = 3
+	WaitingForParamValue = 4
+	ParamWasRead = 5
+
+
 class BibParser(object):
 	"""
 	Class for parsing .bib files, folders and multiline strings
@@ -172,40 +182,19 @@ class BibParser(object):
 	FIELD_SEP = ","
 	KEY_VALUE_SEP = "="
 
-	STATE = \
-		(S_NO_ITEM, S_ITEM_TYPE, S_ITEM_NO_ID, S_PARAM_KEY, S_PARAM_VALUE, S_PARAM_READ) = \
-		(0,         1,           2,            3,           4,             5)
-
 	def __init__(self):
 		"""
 		Default ctor
 		"""
-		self.state = self.S_NO_ITEM
+		self.state = ParserState.NoItem
 		self._reset_lexeme()
-
-	def state_string(self):
-		"""
-		Returns human-readable error message
-		"""
-		if self.state == self.S_NO_ITEM:
-			return "looking for item"
-		elif self.state == self.S_ITEM_TYPE:
-			return "looking for item type"
-		elif self.state == self.S_ITEM_NO_ID:
-			return "looking for item id"
-		elif self.state == self.S_PARAM_KEY:
-			return "looking for parameter key"
-		elif self.state == self.S_PARAM_VALUE:
-			return "looking for parameter [{0}] value".format(self.key)
-		elif self.state == self.S_PARAM_READ:
-			return "looking for next parameter / item end"
 
 	def raise_error(self):
 		"""
 		Raises human-readable Exception based on parser state and current file position
 		"""
-		raise ValueError("While {state}: wrong syntax at (line {line}, #{char})".format(
-			state=self.state_string(),
+		raise ValueError("In state={state}: wrong syntax at (line {line}, #{char})".format(
+			state=self.state,
 			line=self.line,
 			char=self.char
 		))
@@ -315,12 +304,12 @@ class BibParser(object):
 			else:
 				self.char += 1
 
-			if self.state == self.S_NO_ITEM:
+			if self.state == ParserState.NoItem:
 				if c == "@":
-					self.state = self.S_ITEM_TYPE
+					self.state = ParserState.WaitingForItemType
 				#anything else is a comment
 
-			elif self.state == self.S_ITEM_TYPE:
+			elif self.state == ParserState.WaitingForItemType:
 				if c.isspace():
 					if self.lexeme_started:
 						self.lexeme_finished = True
@@ -331,12 +320,12 @@ class BibParser(object):
 					self.set_item_param(item, "booktype", self.lexeme.lower())
 					self.set_item_param(item, "source_line", self.line)
 
-					self.state = self.S_ITEM_NO_ID
+					self.state = ParserState.WaitingForItemId
 					self._reset_lexeme()
 				else:
 					self.raise_error()
 
-			elif self.state == self.S_ITEM_NO_ID:
+			elif self.state == ParserState.WaitingForItemId:
 				if c.isspace():
 					if self.lexeme_started:
 						self.lexeme_finished = True
@@ -346,12 +335,12 @@ class BibParser(object):
 				elif c == self.FIELD_SEP and (self.lexeme_started or self.lexeme_finished):
 					self.set_item_param(item, "id", self.lexeme)
 
-					self.state = self.S_PARAM_KEY
+					self.state = ParserState.WaitingForParamKey
 					self._reset_lexeme()
 				else:
 					self.raise_error()
 
-			elif self.state == self.S_PARAM_KEY:
+			elif self.state == ParserState.WaitingForParamKey:
 				if c.isspace():
 					if self.lexeme_started:
 						self.lexeme_finished = True
@@ -361,12 +350,12 @@ class BibParser(object):
 				elif c == self.KEY_VALUE_SEP and (self.lexeme_started or self.lexeme_finished):
 					self.key = self.lexeme
 
-					self.state = self.S_PARAM_VALUE
+					self.state = ParserState.WaitingForParamValue
 					self._reset_lexeme()
 				else:
 					self.raise_error()
 
-			elif self.state == self.S_PARAM_VALUE:
+			elif self.state == ParserState.WaitingForParamValue:
 				if c == os.linesep and self.lexeme_started and self.lexeme_in_brackets:
 					self.raise_error()
 				elif c.isspace():
@@ -376,7 +365,7 @@ class BibParser(object):
 						if not self.lexeme_in_brackets:
 							self.set_item_param(item, self.key, self.lexeme)
 
-							self.state = self.S_PARAM_READ
+							self.state = ParserState.ParamWasRead
 							self.key = ""
 							self._reset_lexeme()
 						else:
@@ -386,7 +375,7 @@ class BibParser(object):
 					#values without spaces can be written without parentheses
 					self.set_item_param(item, self.key, self.lexeme)
 
-					self.state = self.S_PARAM_KEY
+					self.state = ParserState.WaitingForParamKey
 					self.key = ""
 					self._reset_lexeme()
 				elif (c == self.ITEM_CLOSE_BRACKET) and self.lexeme_started and (not self.lexeme_in_brackets):
@@ -394,7 +383,7 @@ class BibParser(object):
 					items.append(item)
 					item = BibItem()
 
-					self.state = self.S_NO_ITEM
+					self.state = ParserState.NoItem
 					self.key = ""
 					self._reset_lexeme()
 				elif c == "{":
@@ -411,7 +400,7 @@ class BibParser(object):
 					else:
 						self.set_item_param(item, self.key, self.lexeme)
 
-						self.state = self.S_PARAM_READ
+						self.state = ParserState.ParamWasRead
 						self.key = ""
 						self._reset_lexeme()
 				elif c.isprintable():
@@ -420,15 +409,15 @@ class BibParser(object):
 				else:
 					self.raise_error()
 
-			elif self.state == self.S_PARAM_READ:
+			elif self.state == ParserState.ParamWasRead:
 				if c.isspace():
 					pass
 				elif c == self.ITEM_CLOSE_BRACKET:
 					items.append(item)
 					item = BibItem()
-					self.state = self.S_NO_ITEM
+					self.state = ParserState.NoItem
 				elif c == self.FIELD_SEP:
-					self.state = self.S_PARAM_KEY
+					self.state = ParserState.WaitingForParamKey
 				else:
 					self.raise_error()
 
