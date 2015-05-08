@@ -156,10 +156,10 @@ def root(show_secrets):
 @utils_flask.check_secret_cookie("show_secrets")
 def search_items(show_secrets):
 	request_args = {
-		key:value.strip()
+		key: value.strip()
 		for key, value
 		in flask.request.values.items()
-		if value and key in config.www.search_params
+		if value and (key in config.www.search_params)
 	}
 	request_keys = set(request_args.keys())
 
@@ -179,7 +179,10 @@ def search_items(show_secrets):
 
 		value_to_use = request_args[index_to_use]
 
-		if index_to_use in config.parser.list_params:
+		if (
+			(index_to_use in config.parser.list_params) or
+			(index_to_use in config.parser.keyword_list_params)
+		):
 			values_to_use = utils.strip_split_list(value_to_use, ",")
 		else:
 			values_to_use = [value_to_use]

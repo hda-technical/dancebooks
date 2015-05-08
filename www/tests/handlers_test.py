@@ -18,12 +18,15 @@ TEST_OUTDATED_BOOK_ID = "zarman_1905"
 TEST_MARKDOWNED_BOOK_ID = "wilson_1824"
 #not transcribed book id
 TEST_NOT_MARKDOWNED_BOOK_ID = "cellarius_1848_russian"
+#book with keywords "quadrille" and "polka" set
+TEST_KEYWORDED_BOOK_ID = "glover_1846_lee_walker"
 
 BOOK_IDS = [
 	TEST_DOWNLOADABLE_BOOK_ID,
 	TEST_UNDOWNLOADABLE_BOOK_ID,
 	TEST_OUTDATED_BOOK_ID,
-	TEST_MARKDOWNED_BOOK_ID
+	TEST_MARKDOWNED_BOOK_ID,
+	TEST_KEYWORDED_BOOK_ID
 ]
 
 class TestHandlers(unittest.TestCase):
@@ -41,13 +44,6 @@ class TestHandlers(unittest.TestCase):
 		self.assertEqual(rq.status_code, http.client.FOUND)
 		self.assertTrue("Set-Cookie" in rq.headers)
 
-		rq = self.client.get(config.www.basic_search_prefix, query_string={
-			"author": "Wilson",
-			"title": "Ecossoise",
-		})
-		self.assertEqual(rq.status_code, http.client.OK)
-		self.assertTrue(TEST_UNDOWNLOADABLE_BOOK_ID in rq.data.decode())
-
 		for book_id in BOOK_IDS:
 			logging.debug("Requesting book: {book_id}".format(
 				book_id=book_id
@@ -62,6 +58,22 @@ class TestHandlers(unittest.TestCase):
 			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID
 		)
 		self.assertEqual(rq.status_code, http.client.MOVED_PERMANENTLY)
+
+	def test_search(self):
+		#testing basic search
+		rq = self.client.get(config.www.basic_search_prefix, query_string={
+			"author": "Wilson",
+			"title": "Ecossoise",
+		})
+		self.assertEqual(rq.status_code, http.client.OK)
+		self.assertTrue(TEST_UNDOWNLOADABLE_BOOK_ID in rq.data.decode())
+
+		#testing advanced search by multiple keywords
+		rq = self.client.get(config.www.advanced_search_prefix, query_string={
+			"keywords": "quadrille, polka"
+		})
+		self.assertEqual(rq.status_code, http.client.OK)
+		self.assertTrue(TEST_KEYWORDED_BOOK_ID in rq.data.decode())
 
 	def test_post_keywords_handler(self):
 		#testing sending  correct data
