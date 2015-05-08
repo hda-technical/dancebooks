@@ -111,6 +111,9 @@ msgstr "Special form of ecossaise for two linked columns standing side by side"
 msgid "pages:keywords:ref:circle"
 msgstr "Quadrille dances closed into a circle. Circassian and sicilian are well-known examples"
 
+msgid "pages:keywords:ref:cotillon-potpourri"
+msgstr "Multiple cotillon figures danced one after another in a single dance"
+
 # Pages: keywords: XIX century
 
 msgid "pages:keywords:ref:stage-dance"
