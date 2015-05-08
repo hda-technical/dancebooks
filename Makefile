@@ -19,6 +19,9 @@ DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
 PRODUCTION_CONFIG := $(shell readlink -f configs/dancebooks.production.conf)
 LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
+TOUCH_RELOAD_TESTING := /var/run/uwsgi/$(NAME_TESTING).reload
+TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME_PRODUCTION).reload
+
 DEVEL_ENV := \
 	CONFIG=$(DEVEL_CONFIG) \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
@@ -127,6 +130,12 @@ www-configs-install-testing:
 	service nginx reload
 	#installing logrotate configs (no reload / restart is required)
 	cp configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
+
+www-reload-testing: www-test www-translations
+	touch $(TOUCH_RELOAD_TESTING)
+
+www-reload-production: www-test www-translations
+	touch $(TOUCH_RELOAD_PRODUCTION)
 
 www-distclean:
 	rm -rf www/__pycache__ www/tests/__pycache__
