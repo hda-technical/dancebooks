@@ -214,7 +214,8 @@ class BibParser(object):
 		Sets item param, applying additional conversion if needed.
 		"""
 		if key in config.parser.latex_params:
-			value = utils.parse_latex(item, key, value)
+			validate = config.parser.latex_params[key]
+			value = utils.parse_latex(item, key, value, validate)
 
 		try:
 			if key in config.parser.list_params:

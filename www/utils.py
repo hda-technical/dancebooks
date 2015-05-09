@@ -51,7 +51,7 @@ def require(condition, ex):
 
 LATEX_UNPARSABLE_REGEXPS = [
 	(
-		re.compile(r"\s[^\\]&[\.\s]"),
+		re.compile(r"[^\\]&"),
 		"Unescaped ampersands"
 	),
 	(
@@ -89,21 +89,30 @@ LATEX_REPLACEMENTS = [
 	)
 ]
 
-def parse_latex(item, key, value):
+
+def validate_latex(item, key, value):
+	"""
+	Checks if LaTeX marked up string can be parsed by pdflatex
+	"""
+	item_id = item.get("id")
+	for regexp, what in LATEX_UNPARSABLE_REGEXPS:
+		if regexp.search(value):
+			logging.warning(
+				"While parsing LaTeX for key={key} of {item_id} got {what}".format(
+					key=key,
+					item_id=item_id,
+					what=what
+				)
+			)
+
+
+def parse_latex(item, key, value, validate):
 	"""
 	Attempts to remove LaTeX formatting from string
 	"""
 	if isinstance(value, str):
-		item_id = item.get("id")
-		for regexp, what in LATEX_UNPARSABLE_REGEXPS:
-			if regexp.search(value):
-				logging.warning(
-					"While parsing LaTeX for key={key} of {item_id} got {what}".format(
-						key=key,
-						item_id=item_id,
-						what=what
-					)
-				)
+		if validate:
+			validate_latex(item, key, value)
 		for regexp, subst in LATEX_REPLACEMENTS:
 			value = regexp.sub(subst, value)
 		return value
