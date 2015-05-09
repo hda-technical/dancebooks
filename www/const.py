@@ -146,6 +146,8 @@ BABEL_LANG_PREFIX = "search:language:"
 BABEL_BOOKTYPE_PREFIX = "search:booktype:"
 BABEL_KEYWORD_CATEGORY_PREFIX = "pages:keywords:category:"
 BABEL_KEYWORD_REF_PREFIX = "pages:keywords:ref:"
+BABEL_MISSING_ERROR_PREFIX = "errors:missing:"
+BABEL_WRONG_ERROR_PREFIX = "errors:wrong:"
 
 #separator of keyword sublevels
 KEYWORD_SEPARATOR = ":"

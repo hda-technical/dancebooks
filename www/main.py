@@ -50,7 +50,6 @@ markdown_app = markdown.Markdown(
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
 flask_app.jinja_env.keep_trailing_newline = False
-flask_app.jinja_env.bytecode_cache = utils_flask.MemoryCache()
 
 #filling jinja filters
 flask_app.jinja_env.filters["author_link"] = utils_flask.make_author_link
@@ -108,6 +107,7 @@ def get_locale():
 
 
 @flask_app.route(config.www.app_prefix + "/secret-cookie", methods=["GET"])
+@utils_flask.log_exceptions()
 def secret_cookie():
 	response = flask.make_response(flask.redirect(config.www.app_prefix))
 	response.set_cookie(
@@ -122,6 +122,7 @@ def secret_cookie():
 
 
 @flask_app.route(config.www.app_prefix + "/ui-lang/<string:lang>", methods=["GET"])
+@utils_flask.log_exceptions()
 def choose_ui_lang(lang):
 	next_url = flask.request.referrer or config.www.app_prefix
 	if lang in config.www.languages:
@@ -140,6 +141,7 @@ def choose_ui_lang(lang):
 
 
 @flask_app.route(config.www.app_prefix, methods=["GET"])
+@utils_flask.log_exceptions()
 @utils_flask.check_secret_cookie("show_secrets")
 def root(show_secrets):
 	return flask.render_template(
@@ -154,6 +156,7 @@ def root(show_secrets):
 @flask_app.route(config.www.app_prefix + "/advanced-search", methods=["GET"])
 @flask_app.route(config.www.app_prefix + "/all-fields-search", methods=["GET"])
 @utils_flask.check_secret_cookie("show_secrets")
+@utils_flask.log_exceptions()
 def search_items(show_secrets):
 	request_args = {
 		key: value.strip()
@@ -219,6 +222,7 @@ def search_items(show_secrets):
 
 @flask_app.route(config.www.books_prefix, methods=["GET"])
 @utils_flask.check_secret_cookie("show_secrets")
+@utils_flask.log_exceptions()
 def show_all(show_secrets):
 	return flask.render_template(
 		"all.html",
@@ -230,6 +234,7 @@ def show_all(show_secrets):
 @flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["GET"])
 @utils_flask.check_id_redirections("book_id")
 @utils_flask.check_secret_cookie("show_secrets")
+@utils_flask.log_exceptions()
 def get_book(book_id, show_secrets):
 	items = item_index["id"].get(book_id, None)
 	if items is None:
@@ -248,6 +253,7 @@ def get_book(book_id, show_secrets):
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>/pdf/<int:index>", methods=["GET"])
 @utils_flask.check_id_redirections("book_id")
+@utils_flask.log_exceptions()
 def get_book_pdf(book_id, index):
 	"""
 	TODO: I'm a huge method that isn't easy to read
@@ -287,7 +293,7 @@ def get_book_pdf(book_id, index):
 		logging.error(message)
 		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
-	logging.debug("Sending pdf file: {pdf_full_path}".format(
+	logging.info("Sending pdf file: {pdf_full_path}".format(
 		pdf_full_path=pdf_full_path
 	))
 	if config.unittest:
@@ -311,6 +317,7 @@ def get_book_pdf(book_id, index):
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>/transcription/<int:index>", methods=["GET"])
 @utils_flask.check_id_redirections("book_id")
+@utils_flask.log_exceptions()
 def get_book_markdown(book_id, index):
 	items = item_index["id"].get(book_id, None)
 	if items is None:
@@ -347,6 +354,7 @@ def get_book_markdown(book_id, index):
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["POST"])
 @utils_flask.jsonify()
+@utils_flask.log_exceptions()
 @utils_flask.check_captcha()
 def edit_book(book_id):
 	items = item_index["id"].get(book_id, None)
@@ -370,6 +378,7 @@ def edit_book(book_id):
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>/keywords", methods=["POST"])
 @utils_flask.jsonify()
+@utils_flask.log_exceptions()
 @utils_flask.check_captcha()
 def edit_book_keywords(book_id):
 	items = item_index["id"].get(book_id, None)
@@ -393,6 +402,7 @@ def edit_book_keywords(book_id):
 
 @flask_app.route(config.www.app_prefix + "/options", methods=["GET"])
 @utils_flask.jsonify()
+@utils_flask.log_exceptions()
 def get_options():
 	opt_languages = [
 		(langid, utils_flask.translate_language(langid))
@@ -429,6 +439,7 @@ def get_options():
 
 
 @flask_app.route(config.www.app_prefix + "/rss/books", methods=["GET"])
+@utils_flask.log_exceptions()
 def rss_redirect():
 	lang = get_locale()
 	return flask.redirect("{prefix}/rss/{lang}/books".format(
@@ -438,6 +449,7 @@ def rss_redirect():
 
 
 @flask_app.route(config.www.app_prefix + "/rss/<string:lang>/books", methods=["GET"])
+@utils_flask.log_exceptions()
 def get_books_rss(lang):
 	if lang in config.www.languages:
 		#setting attribute in flask.g so it cat be returned by get_locale call
@@ -454,6 +466,7 @@ def get_books_rss(lang):
 
 
 @flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])
+@utils_flask.log_exceptions()
 def everything_else(filename):
 	if (filename.startswith("components")):
 		flask.abort(http.client.NOT_FOUND, "No such file: {filename}".format(
