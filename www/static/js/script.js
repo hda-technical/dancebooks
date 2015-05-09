@@ -185,7 +185,7 @@ bib.report = function() {
 		keywordFormSubmitter.attr("disabled", "disabled");
 		var data = {};
 		keywordInputs.filter(bib.utils.isValid)
-			.map(function(index) {
+			.map(function() {
 				data[this.name] = this.value;
 			});
 		bib.server.postKeywordReport(
@@ -512,10 +512,9 @@ bib.search = function() {
 
 		searchButton.attr("disabled", "disabled");
 		var data = {};
-		search = inputs.filter(bib.utils.isValid)
-			.map(function() {
-				data[this.name] = this.value;
-			});
+		inputs.filter(bib.utils.isValid).map(function() {
+			data[this.name] = this.value;
+		});
 		if (Object.keys(data).length > 0) {
 			bib.server.submitSearch(searchType, data);
 		}
@@ -601,9 +600,7 @@ bib.server = function() {
 		},
 
 		getOptions: function(callback) {
-			$.get('/bib/options', function(data, textStatus, jqXHR) {
-				callback(data);
-			});
+			$.get('/bib/options', callback);
 		},
 
 		/*
@@ -613,9 +610,7 @@ bib.server = function() {
 			$.post(
 				window.location,
 				bib.utils.makeSearchString(data),
-				function(data, textStatus, jqXHR) {
-					successCallback(data);
-				}
+				successCallback
 			).fail(
 				function(jqXHR) {
 					failCallback(jqXHR.responseJSON);
@@ -627,9 +622,7 @@ bib.server = function() {
 			$.post(
 				window.location + '/keywords',
 				bib.utils.makeSearchString(data),
-				function(data, textStatus, jqXHR) {
-					successCallback(data);
-				}
+				successCallback
 			).fail(
 				function(jqXHR) {
 					failCallback(jqXHR.responseJSON);
