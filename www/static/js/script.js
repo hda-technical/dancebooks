@@ -28,7 +28,7 @@ bib.utils = function() {
 		},
 
 		show: function(item) {
-			item.removeClass('hidden')
+			item.removeClass('hidden');
 		},
 
 		activateAction: function(item) {
@@ -46,7 +46,7 @@ bib.utils = function() {
 		extractFromLocation: function(key) {
 			var regexp = new RegExp('[&\\?]' + key + '=([^&]*)');
 			var match = regexp.exec(window.location.search);
-			if ((match != null) && (match[1] != null)) {
+			if ((match !== null) && (match[1] !== null)) {
 				var plusRegexp = new RegExp('\\+', 'g');
 				return decodeURIComponent(match[1].replace(plusRegexp, ' '));
 			} else {
@@ -62,7 +62,7 @@ bib.utils = function() {
 		makeTextElement: function(elem, content, attrs) {
 			var element = document.createElement(elem);
 			$(element).html(content);
-			for (attr in attrs) {
+			for (var attr in attrs) {
 				value = attrs[attr];
 				$(element).attr(attr, value);
 			}
@@ -91,15 +91,15 @@ bib.utils = function() {
 		},
 
 		isEmptyOrInvalid: function() {
-			return (this.value.length == 0) || bib.utils.isInvalid();
+			return (this.value.length === 0) || bib.utils.isInvalid();
 		},
 
 		/*
 		 * Makes search string (form post data)
 		 */
 		makeSearchString: function(attrs) {
-			var result = []
-			for (key in attrs) {
+			var result = [];
+			for (var key in attrs) {
 				result.push(key + "=" + encodeURIComponent(attrs[key]));
 			}
 			return result.join("&");
@@ -109,9 +109,9 @@ bib.utils = function() {
 		 * Dumps object to console
 		 */
 		dumpObject: function(obj) {
-			for (key in obj) {
+			for (var key in obj) {
 				console.log(key + ': ' + obj[key]);
-			};
+			}
 		},
 	};
 }();
@@ -147,7 +147,7 @@ bib.report = function() {
 				$('#submitMessage').remove();
 				var message = bib.utils.makeTextElement(
 					"h2",
-					data['message'],
+					data.message,
 					{
 						id: "submitMessage"
 					}
@@ -163,7 +163,7 @@ bib.report = function() {
 				$('#submitMessage').remove();
 				var message = bib.utils.makeTextElement(
 					"h2",
-					data["message"],
+					data.message,
 					{
 						id: "submitMessage",
 						style: "color: #ff0000;"
@@ -171,7 +171,7 @@ bib.report = function() {
 				);
 				reportForm.after(message);
 			}
-		)
+		);
 	}
 
 	var sendKeywordForm = function() {
@@ -193,7 +193,7 @@ bib.report = function() {
 				$('#submitMessage').remove();
 				var message = bib.utils.makeTextElement(
 					"h2",
-					data['message'],
+					data.message,
 					{
 						id: "submitMessage"
 					}
@@ -217,7 +217,7 @@ bib.report = function() {
 				);
 				keywordForm.after(message);
 			}
-		)
+		);
 	}
 
 	//publics
@@ -249,7 +249,7 @@ bib.report = function() {
 
 			var reportInput = $('#reportForm input');
 			reportInput.keyup(function(event) {
-				if (event.keyCode == 0x0D) {
+				if (event.keyCode === 0x0D) {
 					sendReportForm();
 				}
 			});
@@ -322,10 +322,10 @@ bib.search = function() {
 		var toActivate = null;
 		var toDeactivate = null;
 
-		if (searchType == bib.SearchType.Undefined) {
+		if (searchType === bib.SearchType.Undefined) {
 			return;
-		} else if (searchType == bib.SearchType.Basic) {
-			toShow = [searchFormBasic]
+		} else if (searchType === bib.SearchType.Basic) {
+			toShow = [searchFormBasic];
 			toHide = [searchFormAdvanced, searchFormAllFields];
 			toActivate = [searchToggleAdvanced, searchToggleAllFields];
 			toDeactivate = [searchToggleBasic];
@@ -333,7 +333,7 @@ bib.search = function() {
 			searchToggleBasic.off('click');
 			searchToggleAdvanced.click(switchToAdvancedSearch);
 			searchToggleAllFields.click(switchToAllFieldsSearch);
-		} else if (searchType == bib.SearchType.Advanced) {
+		} else if (searchType === bib.SearchType.Advanced) {
 			//don't clear basic search form
 			toShow = [searchFormBasic, searchFormAdvanced];
 			toHide = [searchFormAllFields];
@@ -343,7 +343,7 @@ bib.search = function() {
 			searchToggleAdvanced.off('click');
 			searchToggleBasic.click(switchToBasicSearch);
 			searchToggleAllFields.click(switchToAllFieldsSearch);
-		} else if (searchType == bib.SearchType.AllFields) {
+		} else if (searchType === bib.SearchType.AllFields) {
 			toShow = [searchFormAllFields];
 			toHide = [searchFormBasic, searchFormAdvanced];
 			toActivate = [searchToggleBasic, searchToggleAdvanced];
@@ -364,14 +364,14 @@ bib.search = function() {
 	var fillFromOptions = function(name, values) {
 		var selectedValue = bib.utils.extractFromLocation(name);
 		options = [];
-		for (index in values) {
+		for (var index in values) {
 			var value = values[index][0];
 			var text = values[index][1];
 			var attrs = {
 				"value": value
 			};
-			if (value == selectedValue) {
-				attrs["selected"] = "selected";
+			if (value === selectedValue) {
+				attrs.selected = "selected";
 			}
 			var option = bib.utils.makeTextElement(
 				"option",
@@ -386,21 +386,21 @@ bib.search = function() {
 
 	var fillLanguages = function(languages) {
 		var selectedLanguage = bib.utils.extractFromLocation("langid");
-		var options = []
-		for (index in languages) {
+		var options = [];
+		for (var index in languages) {
 			var languageKey = languages[index][0];
 			var languageValue = languages[index][1];
 			var attrs = {
 				"value": languageKey
 			}
 			if (languageKey == selectedLanguage) {
-				attrs["selected"] = "selected";
+				attrs.selected = "selected";
 			}
 			var option = bib.utils.makeTextElement(
 				"option",
 				languageValue,
 				attrs
-			)
+			);
 			options.push(option);
 		}
 		$('#langid option[value=""]').after(options);
@@ -418,14 +418,17 @@ bib.search = function() {
 	var updateKeywords = function() {
 		var foundKeywords = keywordsButtons.find('input[type="checkbox"]:checked')
 			.map(function() {
-				return this.value
+				return this.value;
 			}).get();
 		keywordsInput.val(foundKeywords.join(', '));
 	};
 
 	var fillKeywords = function(keywords) {
 		//setting keywords select options
-		var selectedKeywords = bib.utils.extractFromLocation("keywords").split(",").map(bib.utils.trim)
+		var selectedKeywords = bib.utils.extractFromLocation("keywords")
+			.split(",")
+			.map(bib.utils.trim)
+		;
 		//server will respond with the following data:
 		/*
 		[
@@ -439,9 +442,9 @@ bib.search = function() {
 		]
 		*/
 		var elems = [];
-		for (catIndex in keywords) {
-			var catTranslation = keywords[catIndex][1]["translation"]
-			var catKeywords = keywords[catIndex][1]["keywords"]
+		for (var catIndex in keywords) {
+			var catTranslation = keywords[catIndex][1].translation
+			var catKeywords = keywords[catIndex][1].keywords
 
 			var headerAttrs = {
 				"class": "bold center"
@@ -453,7 +456,7 @@ bib.search = function() {
 			);
 			elems.push(header);
 
-			for (index in catKeywords) {
+			for (var index in catKeywords) {
 				var keyword = catKeywords[index]
 				var id = 'keyword-' + catIndex + '-' + index;
 
@@ -462,8 +465,8 @@ bib.search = function() {
 					"value": keyword,
 					"type": "checkbox",
 				};
-				if (selectedKeywords.indexOf(keyword) != -1) {
-					inputAttrs["checked"] = "checked";
+				if (selectedKeywords.indexOf(keyword) !== -1) {
+					inputAttrs.checked = "checked";
 				}
 
 				var input = bib.utils.makeTextElement(

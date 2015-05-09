@@ -8,42 +8,37 @@ import flask
 
 from config import config
 
+MESSAGE_TEMPLATE = 
+
 class BasicMessage(object):
 	"""
 	Basic message class capable of sending
 	string replresentation of the self
 	"""
 	def send(self):
-		try:
-			msg = email.mime.text.MIMEText(str(self), "html")
-			msg["From"] = email.utils.formataddr((
-				self.from_name,
-				self.from_addr
-			))
-			msg["To"] = email.utils.formataddr((
-				config.bug_report.to_name,
-				config.bug_report.to_addr
-			))
-			msg["Subject"] = self.subject()
-			msg["Content-Type"] = "text/html"
+		msg = email.mime.text.MIMEText(str(self), "html")
+		msg["From"] = email.utils.formataddr((
+			self.from_name,
+			self.from_addr
+		))
+		msg["To"] = email.utils.formataddr((
+			config.bug_report.to_name,
+			config.bug_report.to_addr
+		))
+		msg["Subject"] = self.subject()
+		msg["Content-Type"] = "text/html"
 
-			recipients = [config.bug_report.to_addr]
+		recipients = [config.bug_report.to_addr]
 
-			#do not send data in unittest mode
-			if config.unittest:
-				return
+		#do not send data in unittest mode
+		if config.unittest:
+			return
 
-			smtp = smtplib.SMTP(config.smtp.host, config.smtp.port)
-			smtp.starttls()
-			if config.smtp.user and config.smtp.password:
-				smtp.login(config.smtp.user, config.smtp.password)
-			smtp.sendmail(config.smtp.email, recipients, msg.as_string())
-
-		except Exception as ex:
-			logging.exception("Messenger: exception occured. {ex}".format(
-				ex=ex
-			))
-			raise
+		smtp = smtplib.SMTP(config.smtp.host, config.smtp.port)
+		smtp.starttls()
+		if config.smtp.user and config.smtp.password:
+			smtp.login(config.smtp.user, config.smtp.password)
+		smtp.sendmail(config.smtp.email, recipients, msg.as_string())
 
 
 class ErrorReport(BasicMessage):

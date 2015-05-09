@@ -16,20 +16,22 @@ from config import config
 import const
 import search
 
-#can't move this to const.py due to cyclic references
-SELF_SERVED_URL_PATTERN = (
+SELF_SERVED_PATTERN = (
 	"https://" +
 	re.escape(config.www.app_domain_production) +
 	re.escape(config.www.books_prefix) +
-	r"/(?P<item_id>[\w_]+)/pdf/(?P<pdf_index>\d+)"
+	r"/(?P<item_id>[\w_]+)"
+)
+
+SELF_SERVED_URL_PATTERN = (
+	SELF_SERVED_PATTERN +
+	"/pdf/(?P<pdf_index>\d+)"
 )
 SELF_SERVED_URL_REGEXP = re.compile(SELF_SERVED_URL_PATTERN)
 
 SELF_SERVED_TRANSCRIPTION_PATTERN = (
-	"https://" +
-	re.escape(config.www.app_domain_production) +
-	re.escape(config.www.books_prefix) +
-	r"/(?P<item_id>[\w_]+)/transcription/(?P<transcription_index>\d+)"
+	SELF_SERVED_PATTERN + 
+	r"/transcription/(?P<transcription_index>\d+)"
 )
 SELF_SERVED_TRANSCRIPTION_REGEXP = re.compile(SELF_SERVED_TRANSCRIPTION_PATTERN)
 
@@ -167,6 +169,7 @@ def files_in_folder(path, pattern, excludes={}):
 
 	return result_files
 
+	
 def extract_metadata_from_file(path):
 	"""
 	Extracts dictionary contating the following fields:
@@ -195,44 +198,33 @@ def extract_metadata_from_file(path):
 	result = {
 		"year_from": year_from,
 		"year_to": year_to,
-		"langid": const.SHORT_LANG_MAP[match.group("langid")],
-		"title": match.group("title")
+		"langid": const.SHORT_LANG_MAP[match.group("langid")]
 	}
-
+	
+	PLAIN_PARAMS = {"volume", "edition", "part", "number", "title"}
+	for param in PLAIN_PARAMS:
+		value = match.group(param)
+		if value is None:
+			continue
+		if param in config.parser.int_params:
+			result[param] = int(value)
+		else:
+			result[param] = value
+	
 	author = match.group("author")
-	if author is not None:
+	if (author is not None):
 		result["author"] = strip_split_list(author, ",")
-
-	volume = match.group("volume")
-	if volume is not None:
-		result["volume"] = int(volume)
-
-	edition = match.group("edition")
-	if edition is not None:
-		result["edition"] = int(edition)
-
-	part = match.group("part")
-	if part is not None:
-		result["part"] = int(part)
-
-	number = match.group("number")
-	if number is not None:
-		result["number"] = int(number)
-
+			
 	keywords = match.group("keywords")
 	if keywords is not None:
 		result["keywords"] = set()
-		for keyword in strip_split_list(keywords, ","):
-			if (keyword == const.META_INCOMPLETE):
-				result["keywords"].add(const.META_INCOMPLETE)
+		for keyword in strip_split_list(keywords, ","):				
 			if (keyword.endswith(" copy")):
 				owner = keyword.split()[0]
-				if (
-					(owner in const.KNOWN_LIBRARIES) or
-					(owner in const.KNOWN_BOOKKEEPERS)
-				):
+				if (owner in const.KNOWN_BOOKKEEPERS):
 					result["keywords"].add(const.META_HAS_OWNER)
-
+			else:
+				result["keywords"].add(keyword)
 	return result
 
 
@@ -386,57 +378,6 @@ def is_url_accessible(url, item):
 
 	return True
 
-
-ISBN_REGEXP = re.compile("[^\dX]")
-def is_isbn_valid(isbn):
-	"""
-	Validates ISBN-10 and ISBN-13.
-	Returns tuple containing validation result and error message
-	"""
-	def check_digit_isbn_10(isbn):
-		sum = 0
-		require(
-			len(isbn) == 9,
-			RuntimeError("Input should contain exactly 9 digits")
-		)
-		for i, c in enumerate(isbn):
-			w = i + 1
-			sum += w * int(c)
-		r = sum % 11
-		return (str(r) if (r != 10) else "X")
-
-	def check_digit_isbn_13(isbn):
-		sum = 0
-		require(
-			len(isbn) == 12,
-			RuntimeError("Input should control exactly 12 digits")
-		)
-		for i, c in enumerate(isbn):
-			w = 3 if (i % 2 != 0) else 1
-			sum += w * int(c)
-		r = 10 - (sum % 10)
-		return str(r % 10)
-
-	#function starts here
-	isbn_clear = ISBN_REGEXP.sub("", isbn)
-	length = len(isbn_clear)
-	check, isbn_clear = isbn_clear[-1], isbn_clear[:-1]
-
-	if length == 10:
-		right_check = check_digit_isbn_10(isbn_clear)
-	elif length == 13:
-		right_check = check_digit_isbn_13(isbn_clear)
-	else:
-		logging.debug("ISBN format is not known")
-		return False
-
-	if check != right_check:
-		logging.debug("Check digit should be {right_check}".format(
-			right_check=right_check
-		))
-		return False
-
-	return True, ""
 
 YEAR_REGEXP = re.compile(r"(?P<year_from>\d+)(?:[-–—]+(?P<year_to>\d+)(?P<circa>\?)?)?")
 def parse_year(year):

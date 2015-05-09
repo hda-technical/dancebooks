@@ -163,14 +163,16 @@ KNOWN_LIBRARIES = {
 	"NLR",
 }
 
-#users that've allowed
-#to share their books via bib.hda.org.ru
-KNOWN_BOOKKEEPERS = {
+KNOWN_PERSONS = {
 	"Bodhi",
 	"Garold",
 	"Georg",
 	"Glorf",
 	"Rostik",
 }
+
+#users that've allowed
+#to share their books via bib.hda.org.ru
+KNOWN_BOOKKEEPERS = (KNOWN_LIBRARIES | KNOWN_PERSONS)
 
 SECONDS_IN_YEAR = 60 * 60 * 24 * 365

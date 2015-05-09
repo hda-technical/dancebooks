@@ -6,6 +6,7 @@ import logging
 import os.path
 
 import opster
+import isbnlib
 
 from config import config
 import const
@@ -246,10 +247,15 @@ def check_isbn(item, errors):
 	isbn_list = item.get("isbn")
 	if isbn_list is None:
 		return
-	for isbn in isbn_list:
-		correct, error = utils.is_isbn_valid(isbn)
-		if not correct:
-			errors.add("Isbn isn't valid" + error)
+	for index, isbn in enumerate(isbn_list):
+		valid = (
+			isbnlib.is_isbn10(isbn) or 
+			isbnlib.is_isbn13(isbn)
+		)
+		if not valid:
+			errors.add("ISBN #{index} isn't valid".format(
+				index=index
+			))
 
 
 def check_booktype(item, errors):
