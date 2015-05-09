@@ -290,8 +290,7 @@ class BibParser(object):
 
 	def parse_string(self, str_data):
 		"""
-		Parses utf-8 encoded string.
-		@returns list of parsed BibItem
+		Returns list of parsed BibItem
 		"""
 		item = BibItem()
 		items = []
