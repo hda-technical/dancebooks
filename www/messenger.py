@@ -13,6 +13,15 @@ class BasicMessage(object):
 	Basic message class capable of sending
 	string replresentation of the self
 	"""
+	def __init__(self, book, from_addr, from_name):
+		self.book = book
+		self.from_addr = from_addr
+		self.from_name = from_name
+		self.base_url="http://{app_domain}{book_prefix}".format(
+			app_domain=config.www.app_domain,
+			book_prefix=config.www.app_prefix + "/books"
+		)
+	
 	def send(self):
 		msg = email.mime.text.MIMEText(str(self), "html")
 		msg["From"] = email.utils.formataddr((
@@ -41,18 +50,13 @@ class BasicMessage(object):
 
 class ErrorReport(BasicMessage):
 	def __init__(self, book, from_addr, from_name, text):
-		self.book = book
-		self.from_addr = from_addr
-		self.from_name = from_name
+		super().__init__(book, from_addr, from_name)
 		self.text = text
 
 	def __str__(self):
 		return flask.render_template(
 			"components/message-error-report.html",
-			base_url="http://{app_domain}{book_prefix}".format(
-				app_domain=config.www.app_domain,
-				book_prefix=config.www.app_prefix + "/books"
-			),
+			base_url=self.base_url,
 			book=self.book,
 			from_name=self.from_name,
 			from_addr=self.from_addr,
@@ -65,18 +69,13 @@ class ErrorReport(BasicMessage):
 
 class KeywordsSuggest(BasicMessage):
 	def __init__(self, book, from_addr, from_name, keywords):
-		self.book = book
-		self.from_addr = from_addr
-		self.from_name = from_name
+		super().__init__(book, from_addr, from_name)
 		self.rendered_keywords = " | ".join(keywords)
 
 	def __str__(self):
 		return flask.render_template(
 			"components/message-keywords-suggest.html",
-			base_url="http://{app_domain}{book_prefix}".format(
-				app_domain=config.www.app_domain,
-				book_prefix=config.www.app_prefix + "/books"
-			),
+			base_url=self.base_url,
 			book=self.book,
 			from_name=self.from_name,
 			from_addr=self.from_addr,

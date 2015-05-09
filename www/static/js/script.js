@@ -16,7 +16,7 @@ var bib = {
 	]
 };
 
-bib.utils = function() {
+bib.utils = (function() {
 	//privates
 	//publics
 	return {
@@ -117,9 +117,9 @@ bib.utils = function() {
 			}
 		},
 	};
-}();
+}());
 
-bib.report = function() {
+bib.report = (function() {
 	//privates
 	var reportForm = null;
 	var reportFormToggle = null;
@@ -257,9 +257,9 @@ bib.report = function() {
 			});
 		},
 	};
-}();
+}());
 
-bib.search = function() {
+bib.search = (function() {
 	//privates
 	var searchType = bib.SearchType.Basic;
 
@@ -589,9 +589,9 @@ bib.search = function() {
 		},
 
 	};
-}();
+}());
 
-bib.server = function() {
+bib.server = (function() {
 	//privates
 
 	//publics
@@ -615,7 +615,7 @@ bib.server = function() {
 				function(jqXHR) {
 					failCallback(jqXHR.responseJSON);
 				}
-			)
+			);
 		},
 
 		postKeywordReport: function(data, successCallback, failCallback) {
@@ -644,7 +644,7 @@ bib.server = function() {
 
 		}
 	};
-}();
+}());
 
 //performing startup initialization
 $(document).ready(function() {
