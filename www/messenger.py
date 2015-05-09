@@ -8,8 +8,6 @@ import flask
 
 from config import config
 
-MESSAGE_TEMPLATE = 
-
 class BasicMessage(object):
 	"""
 	Basic message class capable of sending
