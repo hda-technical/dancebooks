@@ -63,7 +63,8 @@ bib.utils = function() {
 			var element = document.createElement(elem);
 			$(element).html(content);
 			for (var attr in attrs) {
-				value = attrs[attr];
+				/* jshint -W089 */
+				var value = attrs[attr];
 				$(element).attr(attr, value);
 			}
 			return element;
@@ -100,6 +101,7 @@ bib.utils = function() {
 		makeSearchString: function(attrs) {
 			var result = [];
 			for (var key in attrs) {
+				/* jshint -W089 */
 				result.push(key + "=" + encodeURIComponent(attrs[key]));
 			}
 			return result.join("&");
@@ -110,6 +112,7 @@ bib.utils = function() {
 		 */
 		dumpObject: function(obj) {
 			for (var key in obj) {
+				/* jshint -W089 */
 				console.log(key + ': ' + obj[key]);
 			}
 		},
@@ -136,7 +139,7 @@ bib.report = function() {
 		reportFormSubmitter.attr("disabled", "disabled");
 		var data = {};
 		reportInputs.filter(bib.utils.isValid)
-			.map(function(index) {
+			.map(function() {
 				data[this.name] = this.value;
 			});
 
@@ -172,7 +175,7 @@ bib.report = function() {
 				reportForm.after(message);
 			}
 		);
-	}
+	};
 
 	var sendKeywordForm = function() {
 		var invalids = keywordInputs.filter(bib.utils.isEmptyOrInvalid);
@@ -185,7 +188,6 @@ bib.report = function() {
 			.map(function(index) {
 				data[this.name] = this.value;
 			});
-		bib.utils.dumpObject(data);
 		bib.server.postKeywordReport(
 			data,
 			//to be called on success
@@ -209,7 +211,7 @@ bib.report = function() {
 				$('#submitMessage').remove();
 				var message = bib.utils.makeTextElement(
 					"h2",
-					data["message"],
+					data.message,
 					{
 						id: "submitMessage",
 						style: "color: #ff0000;"
@@ -218,7 +220,7 @@ bib.report = function() {
 				keywordForm.after(message);
 			}
 		);
-	}
+	};
 
 	//publics
 	return {
@@ -267,10 +269,9 @@ bib.search = function() {
 	var searchFormAdvanced = null;
 	var searchFormAllFields = null;
 
-	var searchToggeBasic = null;
+	var searchToggleBasic = null;
 	var searchToggleAdvanced = null;
 	var searchToggleAllFields = null;
-	var searchToggles = null;
 
 	var inputs = null;
 	var keywordsChooser = null;
@@ -316,7 +317,6 @@ bib.search = function() {
 	 * Switches between search forms, clears unused data
 	 */
 	var switchSearchForms = function() {
-		var toClear = null;
 		var toHide = null;
 		var toShow = null;
 		var toActivate = null;
@@ -363,8 +363,9 @@ bib.search = function() {
 
 	var fillFromOptions = function(name, values) {
 		var selectedValue = bib.utils.extractFromLocation(name);
-		options = [];
+		var options = [];
 		for (var index in values) {
+			/* jshint -W089 */
 			var value = values[index][0];
 			var text = values[index][1];
 			var attrs = {
@@ -388,12 +389,13 @@ bib.search = function() {
 		var selectedLanguage = bib.utils.extractFromLocation("langid");
 		var options = [];
 		for (var index in languages) {
+			/* jshint -W089 */
 			var languageKey = languages[index][0];
 			var languageValue = languages[index][1];
 			var attrs = {
 				"value": languageKey
-			}
-			if (languageKey == selectedLanguage) {
+			};
+			if (languageKey === selectedLanguage) {
 				attrs.selected = "selected";
 			}
 			var option = bib.utils.makeTextElement(
@@ -443,8 +445,9 @@ bib.search = function() {
 		*/
 		var elems = [];
 		for (var catIndex in keywords) {
-			var catTranslation = keywords[catIndex][1].translation
-			var catKeywords = keywords[catIndex][1].keywords
+			/* jshint -W089 */
+			var catTranslation = keywords[catIndex][1].translation;
+			var catKeywords = keywords[catIndex][1].keywords;
 
 			var headerAttrs = {
 				"class": "bold center"
@@ -457,7 +460,8 @@ bib.search = function() {
 			elems.push(header);
 
 			for (var index in catKeywords) {
-				var keyword = catKeywords[index]
+				/* jshint -W089 */
+				var keyword = catKeywords[index];
 				var id = 'keyword-' + catIndex + '-' + index;
 
 				var inputAttrs = {
@@ -494,10 +498,10 @@ bib.search = function() {
 	};
 
 	var fillSearchForm = function(data) {
-		fillLanguages(data["languages"]);
-		fillSourceFiles(data["source_files"]);
-		fillKeywords(data['keywords']);
-		fillBooktypes(data['booktypes']);
+		fillLanguages(data.languages);
+		fillSourceFiles(data.source_files);
+		fillKeywords(data.keywords);
+		fillBooktypes(data.booktypes);
 	};
 
 	var submitSearch = function() {
@@ -563,7 +567,7 @@ bib.search = function() {
 				'#useful_keywords'
 			);
 			inputs.keyup(function(event) {
-				if (event.keyCode == 0x0D) {
+				if (event.keyCode === 0x0D) {
 					submitSearch();
 				}
 			});
@@ -579,10 +583,10 @@ bib.search = function() {
 			).map(fillFromLocation);
 
 			searchType = bib.SEARCH_PATHS.indexOf(window.location.pathname);
-			if (searchType == -1) {
+			if (searchType === -1) {
 				searchType = bib.SearchType.Basic;
 			}
-			switchSearchForms()
+			switchSearchForms();
 		},
 
 	};
@@ -610,11 +614,11 @@ bib.server = function() {
 				window.location,
 				bib.utils.makeSearchString(data),
 				function(data, textStatus, jqXHR) {
-					successCallback(data)
+					successCallback(data);
 				}
 			).fail(
 				function(jqXHR) {
-					failCallback(jqXHR.responseJSON)
+					failCallback(jqXHR.responseJSON);
 				}
 			)
 		},
@@ -624,13 +628,13 @@ bib.server = function() {
 				window.location + '/keywords',
 				bib.utils.makeSearchString(data),
 				function(data, textStatus, jqXHR) {
-					successCallback(data)
+					successCallback(data);
 				}
 			).fail(
 				function(jqXHR) {
-					failCallback(jqXHR.responseJSON)
+					failCallback(jqXHR.responseJSON);
 				}
-			)
+			);
 		},
 
 		/*
