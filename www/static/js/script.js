@@ -285,7 +285,7 @@ bib.search = (function() {
 	 * @param form: jQuery collection of forms to be cleared
 	 */
 	var clearForm = function(form) {
-		form.find('input').val('');
+		form.find('input[type!="checkbox"]').val('');
 		form.find('select').val('');
 		form.find('input[type="checkbox"]').prop('checked', false);
 	};
@@ -651,4 +651,5 @@ $(document).ready(function() {
     bib.utils.init();
     bib.search.init();
     bib.report.init();
+    bib.server.init();
 });
