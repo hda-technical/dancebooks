@@ -60,6 +60,7 @@ flask_app.jinja_env.filters["translate_booktype"] = utils_flask.translate_bookty
 flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.translate_keyword_cat
 flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.translate_keyword_ref
 flask_app.jinja_env.filters["is_url_self_served"] = utils.is_url_self_served
+flask_app.jinja_env.filters["format_date"] = utils_flask.format_date
 
 def jinja_self_served_url_size(url, item):
 	file_name, file_size = utils.get_file_info_from_url(url, item)

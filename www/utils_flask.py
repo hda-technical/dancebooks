@@ -1,3 +1,4 @@
+import datetime
 import http.client
 import functools
 import json
@@ -6,7 +7,6 @@ import re
 
 import flask
 from flask.ext import babel
-import jinja2
 import werkzeug
 
 from config import config
@@ -95,11 +95,11 @@ def check_captcha():
 		return wrapper
 	return real_decorator
 
-	
+
 def make_json_response(obj, response_code):
 	"""
-	Dumps object to text, 
-	returns flask.Response object 
+	Dumps object to text,
+	returns flask.Response object
 	with correct Content-Type and response code
 	"""
 	response = flask.make_response(
@@ -108,8 +108,8 @@ def make_json_response(obj, response_code):
 	)
 	response.content_type = "application/json; charset=utf-8"
 	return response
-	
-	
+
+
 def log_exceptions():
 	"""
 	Decorator for logging all the exceptions and reraising them
@@ -127,7 +127,7 @@ def log_exceptions():
 		return wrapper
 	return real_decorator
 
-				
+
 def jsonify():
 	"""
 	Decorator dumping response to json
@@ -138,11 +138,11 @@ def jsonify():
 			try:
 				data = func(*args, **kwargs)
 				return make_json_response(data, http.client.OK)
-				
+
 			except werkzeug.exceptions.HTTPException as ex:
 				data = {"message": ex.description}
 				return make_json_response(data, ex.code)
-				
+
 			except Exception as ex:
 				data = {"message": "Internal Server Error"}
 				return make_json_response(data, http.client.INTERNAL_SERVER_ERROR)
@@ -165,36 +165,62 @@ def make_keyword_link(keyword):
 		keyword=keyword
 	)
 
-	
+
 def as_set(value):
 	return set(value)
 
-	
+
 def translate_language(langid):
 	return babel.gettext(const.BABEL_LANG_PREFIX + langid)
 
-	
+
 def translate_booktype(booktype):
 	return babel.gettext(const.BABEL_BOOKTYPE_PREFIX + booktype)
 
-	
+
 def translate_keyword_cat(category):
 	return babel.gettext(const.BABEL_KEYWORD_CATEGORY_PREFIX + category)
 
-	
+
 def translate_keyword_ref(keyword):
 	#colon should be remove, spaces should be replaces with dashes
 	key = keyword.replace(":", "").replace(" ", "-")
 	return babel.gettext(const.BABEL_KEYWORD_REF_PREFIX + key)
 
-	
+
 def translate_missing_error(key):
 	return babel.gettext(const.BABEL_MISSING_ERROR_PREFIX + key.replace("_", "-"))
-	
+
 
 def translate_wrong_error(key):
 	return babel.gettext(const.BABEL_WRONG_ERROR_PREFIX + key.replace("_", "-"))
-	
+
+
+def translate_month(month):
+	return babel.gettext(const.BABEL_MONTH_PREFIX + "{month:02}".format(
+		month=month
+	))
+
+
+def format_date(item):
+	year = item.get("year");
+	if item.get("year_circa"):
+		return year
+	#year_from == year_to == int(year) below
+	year_from = item.get("year_from")
+	month = item.get("month")
+	day = item.get("day")
+
+	if all([year_from, month, day]):
+		date = datetime.date(year_from, month, day)
+		return babel.format_date(date, format="d MMMM y")
+	elif all([year_from, month]):
+		#babel is unable to format month correctly for Russian language
+		#using own implementation here
+		return (translate_month(month) + ", " + year)
+	else:
+		return year
+
 
 #parsing parameter helpers: begin
 class _DefaultValueString(object):
@@ -288,7 +314,7 @@ def extract_keywords_from_request(param_name, default=_DefaultValueKeywords):
 	for keyword in result:
 		if keyword not in config.parser.keywords:
 			flask.abort(
-				http.client.BAD_REQUEST, 
+				http.client.BAD_REQUEST,
 				translate_wrong_error(param_name) + keyword
 			)
 		result_keywords.add(keyword)

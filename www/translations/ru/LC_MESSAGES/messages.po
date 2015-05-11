@@ -260,6 +260,43 @@ msgstr "любой"
 msgid "common:locale"
 msgstr "ru"
 
+# Month values - babel is unable to translate only month
+msgid "common:month:01"
+msgstr "Январь"
+
+msgid "common:month:02"
+msgstr "Февраль"
+
+msgid "common:month:03"
+msgstr "Март"
+
+msgid "common:month:04"
+msgstr "Апрель"
+
+msgid "common:month:05"
+msgstr "Май"
+
+msgid "common:month:06"
+msgstr "Июнь"
+
+msgid "common:month:07"
+msgstr "Июль"
+
+msgid "common:month:08"
+msgstr "Август"
+
+msgid "common:month:09"
+msgstr "Сентябрь"
+
+msgid "common:month:10"
+msgstr "Октябрь"
+
+msgid "common:month:11"
+msgstr "Ноябрь"
+
+msgid "common:month:12"
+msgstr "Декабрь"
+
 # Report form
 
 msgid "interface:report:error-form-title"
@@ -457,8 +494,8 @@ msgstr "Название сборника"
 msgid "item:labels:journaltitle"
 msgstr "Название газеты или журнала"
 
-msgid "item:labels:year"
-msgstr "Год публикации"
+msgid "item:labels:date"
+msgstr "Дата публикации"
 
 msgid "item:labels:langid"
 msgstr "Язык"

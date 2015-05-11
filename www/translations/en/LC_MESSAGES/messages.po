@@ -260,6 +260,43 @@ msgstr "any"
 msgid "common:locale"
 msgstr "en"
 
+# Month values - babel is unable to translate only month
+msgid "common:month:01"
+msgstr "January"
+
+msgid "common:month:02"
+msgstr "February"
+
+msgid "common:month:03"
+msgstr "March"
+
+msgid "common:month:04"
+msgstr "April"
+
+msgid "common:month:05"
+msgstr "May"
+
+msgid "common:month:06"
+msgstr "June"
+
+msgid "common:month:07"
+msgstr "July"
+
+msgid "common:month:08"
+msgstr "August"
+
+msgid "common:month:09"
+msgstr "September"
+
+msgid "common:month:10"
+msgstr "October"
+
+msgid "common:month:11"
+msgstr "November"
+
+msgid "common:month:12"
+msgstr "December"
+
 # Report form
 
 msgid "interface:report:error-form-title"
@@ -457,8 +494,8 @@ msgstr "Collection title"
 msgid "item:labels:journaltitle"
 msgstr "Title of a paper or magazine"
 
-msgid "item:labels:year"
-msgstr "Year of publication"
+msgid "item:labels:date"
+msgstr "Date of publication"
 
 msgid "item:labels:langid"
 msgstr "Language"
