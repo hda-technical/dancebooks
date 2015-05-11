@@ -4,6 +4,7 @@ import concurrent.futures
 import json
 import logging
 import os.path
+import re
 
 import opster
 import isbnlib
@@ -25,6 +26,17 @@ languages = sorted(item_index["langid"].keys())
 ERROR_PREFIX = "validation:error:"
 #filename for storing previous validation state
 DATA_JSON_FILENAME = "_validate.json"
+CATALOGUE_PATTERN = (
+	#Printed books in Francine Lancelot's "La belle danse"
+	r"(Lancelot:\d{4}\.\d)|"
+	#Manuscripts in Francine Lancelot's "La belle danse"
+	r"(Lancelor:Ms\d{2})|"
+	#Printed books in Little-Mars's "La danse noble"
+	r"(LittleMarsh:(\*?\[c?\d{4}\])-\w{3})|"
+	#Manuscripts in Little-Mars's "La danse noble"
+	r"(LittleMarsh:Ms-\d{2})"
+)
+CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
 
 #executed once per validation run
 def update_validation_data(ignore_missing_ids):
@@ -277,7 +289,6 @@ def check_booktype(item, errors):
 	}
 	#volumes tag should be present for these booktypes
 	MULTIVOLUME_BOOKTYPES = {"mvbook", "mvreference"}
-	UNPUBLISHED_NOTE_PREFIX = "Unpublished manuscript"
 
 	booktype = item.get("booktype")
 	if booktype is None:
@@ -307,7 +318,6 @@ def check_booktype(item, errors):
 			errors.add("Field booktitle expected for booktype {booktype}".format(
 				booktype=booktype
 			))
-
 	if (booktype == "thesis"):
 		thesis_type = item.get("type")
 		if thesis_type is None:
@@ -320,19 +330,20 @@ def check_booktype(item, errors):
 				booktype=booktype
 			))
 
-	if (booktype == "unpublished"):
-		note = item.get("note")
-		if note is None:
-			errors.add("Field note expected for booktype {booktype}".format(
-				booktype=booktype
+				
+def check_catalogue_code(item, errors):
+	"""
+	Checks if catalogue code againts 
+	"""
+	catalogue = item.get("catalogue")
+	if (catalogue is None):
+		return
+	for single_code in catalogue:
+		if not CATALOGUE_REGEXP.match(single_code):
+			errors.add("Catalogue code {single_code} doesn't match CATALOGUE_REGEXP".format(
+				single_code=single_code
 			))
-		else:
-			if not note.startswith(UNPUBLISHED_NOTE_PREFIX):
-				errors.add("Field note should start with \"{prefix}\" for booktype {booktype}".format(
-					prefix=UNPUBLISHED_NOTE_PREFIX,
-					booktype=booktype
-				))
-
+	
 
 def check_commentator(item, errors):
 	"""
@@ -360,28 +371,29 @@ def check_url_validity(item, errors):
 	"""
 	url = item.get("url")
 	item_id = item.get("id")
-	if url is not None:
-		for number, single_url in enumerate(url):
-			if not utils.is_url_valid(single_url, item):
-				errors.add("Field url with value [{single_url}] and number {number} is wrong".format(
-					single_url=single_url,
-					number=number
-				))
+	if url is None:
+		return
+	for number, single_url in enumerate(url):
+		if not utils.is_url_valid(single_url, item):
+			errors.add("Field url with value [{single_url}] and number {number} is wrong".format(
+				single_url=single_url,
+				number=number
+			))
 
-			match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
-			if match:
-				if (match.group("item_id") != item_id):
-					errors.add("Wrong item_id specified in self-served url")
-				else:
-					single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
-					metadata = utils.extract_metadata_from_file(single_filename)
-					if (
-						("keywords" not in metadata) or
-						(const.META_HAS_OWNER not in metadata["keywords"])
-					):
-						errors.add("Owner specification expected for self-served url number {number}".format(
-							number=number
-						))
+		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
+		if match:
+			if (match.group("item_id") != item_id):
+				errors.add("Wrong item_id specified in self-served url")
+			else:
+				single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
+				metadata = utils.extract_metadata_from_file(single_filename)
+				if (
+					("keywords" not in metadata) or
+					(const.META_HAS_OWNER not in metadata["keywords"])
+				):
+					errors.add("Owner specification expected for self-served url number {number}".format(
+						number=number
+					))
 
 
 def check_url_accessibility(item, errors):
@@ -389,13 +401,14 @@ def check_url_accessibility(item, errors):
 	Checks url for accessibility
 	"""
 	url = item.get("url")
-	if url is not None:
-		for number, single_url in enumerate(url):
-			if not utils.is_url_accessible(single_url, item):
-				errors.add("Field url with value [{single_url}] and number {number} is unaccessible".format(
-					single_url=single_url,
-					number=number
-				))
+	if url is None:
+		return
+	for number, single_url in enumerate(url):
+		if not utils.is_url_accessible(single_url, item):
+			errors.add("Field url with value [{single_url}] and number {number} is unaccessible".format(
+				single_url=single_url,
+				number=number
+			))
 
 
 def check_transcription(item, errors):

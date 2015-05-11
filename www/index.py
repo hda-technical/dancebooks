@@ -1,4 +1,5 @@
 import collections
+import logging
 
 from config import config
 
@@ -14,14 +15,27 @@ class Index(object):
 		Creates index for a given list of BibItems.
 		Returns {key: {possible value: set([BibItem])}} dictionary
 		"""
-		def append_to_subindex(subindex, item, value):
+		def check_value(subindex, item, key, value):
+			if (
+				(key in config.www.index_unique_params) and
+				(value in subindex)
+			):
+				logging.error("Value {value} is not unique for unique index by {key}".format(
+					value=value,
+					key=key
+				))
+
+
+		def append_to_subindex(subindex, item, key, value):
 			"""
 			Appends an item to subindex
 			"""
 			if isinstance(value, list):
 				for subvalue in value:
+					check_value(subindex, item, key, subvalue)
 					subindex[subvalue].add(item)
 			else:
+				check_value(subindex, item, key, value)
 				subindex[value].add(item)
 
 		dict_creator = lambda: collections.defaultdict(set)
@@ -31,13 +45,4 @@ class Index(object):
 			for item in items:
 				value = item.get(key)
 				if value is not None:
-					if (
-						(key in config.www.index_unique_params) and
-						(key in subindex)
-					):
-						logging.error("Value {value} is not unique for unique index by {key}".format(
-							value=value,
-							key=key
-						))
-						continue
-					append_to_subindex(subindex, item, value)
+					append_to_subindex(subindex, item, key, value)
