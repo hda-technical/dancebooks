@@ -30,9 +30,9 @@ CATALOGUE_PATTERN = (
 	#Printed books in Francine Lancelot's "La belle danse"
 	r"(Lancelot:\d{4}\.\d)|"
 	#Manuscripts in Francine Lancelot's "La belle danse"
-	r"(Lancelor:Ms\d{2})|"
+	r"(Lancelot:Ms\d{2})|"
 	#Printed books in Little-Mars's "La danse noble"
-	r"(LittleMarsh:(\*?\[c?\d{4}\])-\w{3})|"
+	r"(LittleMarsh:(\*?\[?c?\d{4}\]?)-\w{3})|"
 	#Manuscripts in Little-Mars's "La danse noble"
 	r"(LittleMarsh:Ms-\d{2})"
 )
@@ -261,7 +261,7 @@ def check_isbn(item, errors):
 		return
 	for index, isbn in enumerate(isbn_list):
 		valid = (
-			isbnlib.is_isbn10(isbn) or 
+			isbnlib.is_isbn10(isbn) or
 			isbnlib.is_isbn13(isbn)
 		)
 		if not valid:
@@ -330,10 +330,10 @@ def check_booktype(item, errors):
 				booktype=booktype
 			))
 
-				
+
 def check_catalogue_code(item, errors):
 	"""
-	Checks if catalogue code againts 
+	Checks if catalogue code againts
 	"""
 	catalogue = item.get("catalogue")
 	if (catalogue is None):
@@ -343,7 +343,7 @@ def check_catalogue_code(item, errors):
 			errors.add("Catalogue code {single_code} doesn't match CATALOGUE_REGEXP".format(
 				single_code=single_code
 			))
-	
+
 
 def check_commentator(item, errors):
 	"""
@@ -611,7 +611,7 @@ def check_filename(item, errors):
 	Checks filename against various tests
 	"""
 	MULTIENTRY_BOOKTYPES = {"article", "proceedings", "inproceedings"}
-	NOT_DIGITIZED_KEYWORD = "not digitized"  
+	NOT_DIGITIZED_KEYWORD = "not digitized"
 	booktype = item.get("booktype")
 	filename = item.get("filename")
 	keywords = set(item.get("keywords") or {})
@@ -667,6 +667,7 @@ def check_single_item(item, make_extra_checks):
 	check_transcription(item, errors)
 	check_transcription_url(item, errors)
 	check_transcription_filename(item, errors)
+	check_catalogue_code(item, errors)
 	check_shorthand(item, errors)
 	check_isbn(item, errors)
 	check_booktype(item, errors)
