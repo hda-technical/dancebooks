@@ -157,25 +157,4 @@ FILE_SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
 FILE_SIZE_EXPONENT = 1024
 FILE_SIZE_PARAM = "filesize"
 
-#libraries that've allowed
-#to share their books via bib.hda.org.ru
-KNOWN_LIBRARIES = {
-	#Russian State Library (aka Leninka)
-	"RSL",
-	#National Library of Russia (aka Publichka)
-	"NLR",
-}
-
-KNOWN_PERSONS = {
-	"Bodhi",
-	"Garold",
-	"Georg",
-	"Glorf",
-	"Rostik",
-}
-
-#users that've allowed
-#to share their books via bib.hda.org.ru
-KNOWN_BOOKKEEPERS = (KNOWN_LIBRARIES | KNOWN_PERSONS)
-
 SECONDS_IN_YEAR = 60 * 60 * 24 * 365

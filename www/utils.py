@@ -30,7 +30,7 @@ SELF_SERVED_URL_PATTERN = (
 SELF_SERVED_URL_REGEXP = re.compile(SELF_SERVED_URL_PATTERN)
 
 SELF_SERVED_TRANSCRIPTION_PATTERN = (
-	SELF_SERVED_PATTERN + 
+	SELF_SERVED_PATTERN +
 	r"/transcription/(?P<transcription_index>\d+)"
 )
 SELF_SERVED_TRANSCRIPTION_REGEXP = re.compile(SELF_SERVED_TRANSCRIPTION_PATTERN)
@@ -169,7 +169,7 @@ def files_in_folder(path, pattern, excludes={}):
 
 	return result_files
 
-	
+
 def extract_metadata_from_file(path):
 	"""
 	Extracts dictionary contating the following fields:
@@ -200,7 +200,7 @@ def extract_metadata_from_file(path):
 		"year_to": year_to,
 		"langid": const.SHORT_LANG_MAP[match.group("langid")]
 	}
-	
+
 	PLAIN_PARAMS = {"volume", "edition", "part", "number", "title"}
 	for param in PLAIN_PARAMS:
 		value = match.group(param)
@@ -210,18 +210,18 @@ def extract_metadata_from_file(path):
 			result[param] = int(value)
 		else:
 			result[param] = value
-	
+
 	author = match.group("author")
 	if (author is not None):
 		result["author"] = strip_split_list(author, ",")
-			
+
 	keywords = match.group("keywords")
 	if keywords is not None:
 		result["keywords"] = set()
-		for keyword in strip_split_list(keywords, ","):				
+		for keyword in strip_split_list(keywords, ","):
 			if (keyword.endswith(" copy")):
 				owner = keyword.split()[0]
-				if (owner in const.KNOWN_BOOKKEEPERS):
+				if (owner in config.parser.bookkeepers):
 					result["keywords"].add(const.META_HAS_OWNER)
 			else:
 				result["keywords"].add(keyword)
