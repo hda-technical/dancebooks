@@ -166,6 +166,22 @@ def make_keyword_link(keyword):
 	)
 
 
+def format_catalogue_code(single_code):
+	cat_type, cat_code = single_code.split(const.CATALOGUE_SEPARATOR)
+	item_id, title = const.CATALOGUE_MAP[cat_type];
+	return '<a href="{prefix}/{item_id}">{title}</a>: {code}'.format(
+		prefix=config.www.books_prefix,
+		item_id=item_id,
+		title=title,
+		code=cat_code
+	)
+
+def format_item_id(item_id):
+	return '<a href="{prefix}/{item_id}">{item_id}</a>'.format(
+		item_id=item_id,
+		prefix=config.www.books_prefix
+	)
+
 def as_set(value):
 	return set(value)
 

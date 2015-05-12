@@ -278,6 +278,9 @@ bib.search = (function() {
 	var keywordsButtons = null;
 	var keywordsInput = null;
 
+	var catalogueType = null;
+	var catalogueCode = null;
+
 	/*
 	 * Clears searchForm by
 	 *   setting input and select values to empty string,
@@ -286,7 +289,9 @@ bib.search = (function() {
 	 */
 	var clearForm = function(form) {
 		form.find('input[type!="checkbox"]').val('');
-		form.find('select').val('');
+		form.find('select').map(function() {
+			this.value = $(this).children("option").first().val()
+		});
 		form.find('input[type="checkbox"]').prop('checked', false);
 	};
 
@@ -504,6 +509,28 @@ bib.search = (function() {
 		fillBooktypes(data.booktypes);
 	};
 
+	var formatCatalogueCode = function() {
+		if (catalogueCode.val().length === 0) {
+			return null;
+		}
+		var type = catalogueType.val();
+		var code = catalogueCode.val();
+		return type + ":" + code;
+	};
+
+	var fillCatalogueCode = function() {
+		var catalogue = bib.utils.extractFromLocation("catalogue");
+		if (catalogue.length === 0) {
+			return;
+		}
+		var regexp = /([^:]+):(.*)/;
+		var match = catalogue.match(regexp);
+		if (match) {
+			catalogueType.val(match[1]);
+			catalogueCode.val(match[2]);
+		}
+	}
+
 	var submitSearch = function() {
 		var invalids = inputs.filter(bib.utils.isInvalid);
 		if (invalids.length > 0) {
@@ -515,11 +542,21 @@ bib.search = (function() {
 		inputs.filter(bib.utils.isValid).map(function() {
 			data[this.name] = this.value;
 		});
+		var catalogue = formatCatalogueCode();
+		if (catalogue !== null) {
+			data["catalogue"] = catalogue;
+		}
 		if (Object.keys(data).length > 0) {
 			bib.server.submitSearch(searchType, data);
 		}
 		searchButton.removeAttr("disabled");
 	};
+
+	var keyUpProcessor = function(event) {
+		if (event.keyCode === 0x0D) {
+			submitSearch();
+		}
+	}
 
 	//publics
 	return {
@@ -535,6 +572,9 @@ bib.search = (function() {
 			keywordsInput = $('#keywords');
 			keywordsChooser = $('#keywordsChooser');
 			keywordsButtons = $('#keywordsButtons');
+
+			catalogueType = $('#catalogueType');
+			catalogueCode = $('#catalogueCode');
 
 			//setting event handlers
 			$('#clearSearch').click(function() {
@@ -559,27 +599,23 @@ bib.search = (function() {
 
 			inputs = $(
 				'#search input[type!="checkbox"], ' +
-				'#search select, ' +
-				'#url, ' +
-				'#origlanguage, ' +
-				'#transcription_url, ' +
-				'#useful_keywords'
-			);
-			inputs.keyup(function(event) {
-				if (event.keyCode === 0x0D) {
-					submitSearch();
-				}
+				'#search select '
+			).filter(function() {
+				return (
+					(this.name !== "catalogueCode") &&
+					(this.name !== "catalogueType")
+				);
 			});
+			inputs.keyup(keyUpProcessor);
+			catalogueCode.keyup(keyUpProcessor);
 
 			bib.server.getOptions(fillSearchForm);
 
 			$(
-				'#search input[name!="keywords"], ' +
-				'#url, ' +
-				'#origlanguage, ' +
-				'#useful_keywords, ' +
-				'#orderBy'
+				'#search input[type!="checkbox"], ' +
+				'#search select '
 			).map(fillFromLocation);
+			fillCatalogueCode();
 
 			searchType = bib.SEARCH_PATHS.indexOf(window.location.pathname);
 			if (searchType === -1) {

@@ -369,6 +369,9 @@ msgstr "Publisher"
 msgid "search:labels:location"
 msgstr "Place of publication"
 
+msgid "search:labels:catalogue"
+msgstr "Catalogue code"
+
 msgid "search:labels:keywords"
 msgstr "Keywords"
 
@@ -505,6 +508,9 @@ msgstr "Publisher"
 
 msgid "item:labels:location"
 msgstr "Place of publication"
+
+msgid "item:labels:catalogue"
+msgstr "Catalogue codes"
 
 msgid "item:labels:keywords"
 msgstr "Keywords"

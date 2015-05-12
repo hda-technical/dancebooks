@@ -122,6 +122,23 @@ ID_REGEXP = re.compile(ID_PATTERN)
 PAGES_PATTERN = r"\d+(–\d+)?"
 PAGES_REGEXP = re.compile(PAGES_PATTERN)
 
+CATALOGUE_PATTERN = (
+	#Printed books in Francine Lancelot's "La belle danse"
+	r"(Lancelot:\d{4}\.\d)|"
+	#Manuscripts in Francine Lancelot's "La belle danse"
+	r"(Lancelot:Ms\d{2})|"
+	#Printed books in Little-Mars's "La danse noble"
+	r"(LittleMarsh:\*?\[?c?\d{4}\]?-\w{3})|"
+	#Manuscripts in Little-Mars's "La danse noble"
+	r"(LittleMarsh:Ms-\d{2})"
+)
+CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
+#map [catalogue type] -> (catalogue id, catalogue title)
+CATALOGUE_MAP = {
+	"Lancelot": ("lancelot_1996", "F. Lancelot. La belle danse"),
+	"LittleMarsh": ("little_1992", "M. E. Little, C. G. Marsh. La danse noble"),
+}
+
 VALID_HTTP_CODES = {
 	#general OK
 	http.client.OK,
@@ -152,6 +169,7 @@ BABEL_MONTH_PREFIX = "common:month:"
 
 #separator of keyword sublevels
 KEYWORD_SEPARATOR = ":"
+CATALOGUE_SEPARATOR = ":"
 
 FILE_SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
 FILE_SIZE_EXPONENT = 1024

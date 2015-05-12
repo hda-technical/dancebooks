@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-import collections
 import concurrent.futures
 import json
 import logging
 import os.path
-import re
 
 import opster
 import isbnlib
@@ -26,17 +24,6 @@ languages = sorted(item_index["langid"].keys())
 ERROR_PREFIX = "validation:error:"
 #filename for storing previous validation state
 DATA_JSON_FILENAME = "_validate.json"
-CATALOGUE_PATTERN = (
-	#Printed books in Francine Lancelot's "La belle danse"
-	r"(Lancelot:\d{4}\.\d)|"
-	#Manuscripts in Francine Lancelot's "La belle danse"
-	r"(Lancelot:Ms\d{2})|"
-	#Printed books in Little-Mars's "La danse noble"
-	r"(LittleMarsh:(\*?\[?c?\d{4}\]?)-\w{3})|"
-	#Manuscripts in Little-Mars's "La danse noble"
-	r"(LittleMarsh:Ms-\d{2})"
-)
-CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
 
 #executed once per validation run
 def update_validation_data(ignore_missing_ids):
@@ -259,14 +246,14 @@ def check_isbn(item, errors):
 	isbn_list = item.get("isbn")
 	if isbn_list is None:
 		return
-	for index, isbn in enumerate(isbn_list):
+	for idx, isbn in enumerate(isbn_list):
 		valid = (
 			isbnlib.is_isbn10(isbn) or
 			isbnlib.is_isbn13(isbn)
 		)
 		if not valid:
-			errors.add("ISBN #{index} isn't valid".format(
-				index=index
+			errors.add("ISBN #{idx} isn't valid".format(
+				idx=idx
 			))
 
 
@@ -339,7 +326,7 @@ def check_catalogue_code(item, errors):
 	if (catalogue is None):
 		return
 	for single_code in catalogue:
-		if not CATALOGUE_REGEXP.match(single_code):
+		if not const.CATALOGUE_REGEXP.match(single_code):
 			errors.add("Catalogue code {single_code} doesn't match CATALOGUE_REGEXP".format(
 				single_code=single_code
 			))
@@ -496,7 +483,7 @@ def check_location(item, errors):
 		errors.add("Location should be present when publisher is known")
 
 
-def check_pages(item, erros):
+def check_pages(item, errors):
 	"""
 	Checks if pages field matches PAGES_REGEX
 	"""
@@ -509,11 +496,14 @@ def check_pages(item, erros):
 		"inproceedings"
 	}
 	if booktype not in PAGED_BOOKTYPES:
-		errors.add("Field {field} is not allowed for booktype {booktype}".format(
-			field="pages",
+		errors.add("Field pages is not allowed for booktype {booktype}".format(
 			booktype=booktype
 		))
 	match = const.PAGES_REGEXP.match(pages)
+	if not match:
+		errors.add("Field pages={pages} doesn't match PAGES_REGEXP".format(
+			pages=pages
+		))
 
 
 def check_volume(item, errors):

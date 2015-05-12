@@ -352,6 +352,18 @@ textarea:invalid
 	box-shadow: none;
 }
 
+#catalogueType
+{
+	display: inline-block;
+	width: 300px;
+}
+
+#catalogueCode
+{
+	display: inline-block;
+	width: 100px;
+}
+
 #keywordsChooser
 {
 	color: #000000;

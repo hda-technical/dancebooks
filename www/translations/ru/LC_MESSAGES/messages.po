@@ -369,6 +369,9 @@ msgstr "Издатель"
 msgid "search:labels:location"
 msgstr "Место издания"
 
+msgid "search:labels:catalogue"
+msgstr "Код по каталогу"
+
 msgid "search:labels:keywords"
 msgstr "Теги"
 
@@ -505,6 +508,9 @@ msgstr "Издатель"
 
 msgid "item:labels:location"
 msgstr "Место издания"
+
+msgid "item:labels:catalogue"
+msgstr "Коды по каталогам"
 
 msgid "item:labels:keywords"
 msgstr "Теги"

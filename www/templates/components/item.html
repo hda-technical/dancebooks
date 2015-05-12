@@ -11,6 +11,7 @@
 	"date",
 	"publisher",
 	"location",
+	"catalogue",
 	"edition",
 	"series",
 	"volume",
@@ -27,7 +28,7 @@
 
 {% for param in fields %}
 {# Some parameters require specific treatment #}
-	{% if param in ["filename", "author", "added_on", "url", "transcription_url", "keywords"] %}
+	{% if param in ["filename", "catalogue", "author", "added_on", "url", "transcription_url", "keywords"] %}
 		{% set value = item.get(param) %}
 	{% elif param in ["date"] %}
 		{# pass #}
@@ -39,7 +40,7 @@
 			<div class="bib_item_left">{{ _("item:labels:" + param) }}:</div>
 			<div class="bib_item_right">
 			{% if param == "id" %}
-				<a href="/bib/books/{{ value }}">{{ value }}</a>
+				{{ value | format_item_id | safe }}</a>
 			{% elif param == "author" %}
 				{{ value | map("author_link") | map("safe") | join(", ") }}
 			{% elif param == "keywords" %}
@@ -65,6 +66,12 @@
 				<ul>
 				{% for filename in value %}
 					<li><a href="bib://{{ filename[1:] }}">{{ filename }}</a></li>
+				{% endfor %}
+				</ul>
+			{% elif param == "catalogue" %}
+				<ul>
+				{% for single_code in value %}
+					<li>{{ single_code | format_catalogue_code | safe }}</li>
 				{% endfor %}
 				</ul>
 			{% elif param == "langid" %}
