@@ -158,7 +158,7 @@ def check_parser_generated_fields(item, errors):
 	"""
 	OBLIGATORY_FIELDS = ["booktype", "source", "year_from", "year_to", "year_circa"]
 	for field in OBLIGATORY_FIELDS:
-		if item.get(field) is None:
+		if not item.has(field):
 			errors.add("Parser hasn't generated obligatory field {field}".format(
 				field=field
 			))
@@ -174,7 +174,7 @@ def check_obligatory_fields(item, errors):
 	"""
 	OBLIGATORY_FIELDS = ["langid", "year", "title", "added_on"]
 	for field in OBLIGATORY_FIELDS:
-		if item.get(field) is None:
+		if not item.has(field):
 			errors.add("Obligatory field {field} is missing".format(
 				field=field
 			))
@@ -191,14 +191,14 @@ def check_translation_fields(item, errors):
 	TRANSLATION_OBLIGATORY_FIELDS = ["origauthor", "translator", "origlanguage"]
 	is_translation = False
 	for field in TRANSLATION_FIELDS:
-		if item.get(field) is not None:
+		if item.has(field):
 			is_translation = True
 			break
 	if not is_translation:
 		return
 
 	for field in TRANSLATION_OBLIGATORY_FIELDS:
-		if item.get(field) is None:
+		if not item.has(field):
 			errors.add("Field {field} is required for translations".format(
 				field=field
 			))
@@ -332,6 +332,26 @@ def check_catalogue_code(item, errors):
 			))
 
 
+def check_library_fields(item, errors):
+	"""
+	Checks if library-related params with storage specifications
+	are available for @unpublished
+	"""
+	booktype = item.get("booktype");
+	if (booktype != "unpublished"):
+		return
+	REQUIRED_FIELDS = [
+		"library", 
+		"library_location",
+		"library_code"
+	];
+	for field in REQUIRED_FIELDS:
+		if not item.has(field):
+			errors.add("Field {field} is missing".format(
+				field=field
+			))
+			
+			
 def check_commentator(item, errors):
 	"""
 	Checks if "commentary" keyword is present
@@ -547,13 +567,13 @@ def check_series(item, errors):
 	SERIAL_FIELDS = ["series", "number"]
 	is_serial = False
 	for field in SERIAL_FIELDS:
-		if item.get(field) is not None:
+		if item.has(field):
 			is_serial = True
 			break
 	if not is_serial:
 		return
 	for field in SERIAL_FIELDS:
-		if item.get(field) is None:
+		if not item.has(field):
 			errors.add("Field {field} expected for serial books".format(
 				field=field
 			))
@@ -658,6 +678,7 @@ def check_single_item(item, make_extra_checks):
 	check_transcription_url(item, errors)
 	check_transcription_filename(item, errors)
 	check_catalogue_code(item, errors)
+	check_library_fields(item, errors)
 	check_shorthand(item, errors)
 	check_isbn(item, errors)
 	check_booktype(item, errors)
