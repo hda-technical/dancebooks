@@ -9,40 +9,40 @@ msgstr ""
 
 # Inteface strings
 
-msgid "interface:displaying_all"
+msgid "interface:displaying-all"
 msgstr "Вот всё, что есть"
 
-msgid "interface:single_entry"
+msgid "interface:single-entry"
 msgstr "Вот запись с идентификатором"
 
-msgid "interface:total_entries"
-msgid_plural "interface:total_entries"
+msgid "interface:total-entries"
+msgid_plural "interface:total-entries"
 msgstr[0] "Всего %(num)d запись"
 msgstr[1] "Всего %(num)d записи"
 msgstr[2] "Всего %(num)d записей"
 
-msgid "interface:found_entries"
-msgid_plural "interface:found_entries"
+msgid "interface:found-entries"
+msgid_plural "interface:found-entries"
 msgstr[0] "Найдена %(num)d запись"
 msgstr[1] "Найдены %(num)d записи"
 msgstr[2] "Найдено %(num)d записей"
 
-msgid "interface:found_none"
+msgid "interface:found-none"
 msgstr "Ничего не найдено"
 
-msgid "interface:you_can"
+msgid "interface:you-can"
 msgstr "Можно"
 
-msgid "interface:display_everything"
+msgid "interface:display-everything"
 msgstr "показать всё"
 
-msgid "interface:use_search"
+msgid "interface:use-search"
 msgstr "или воспользоваться поиском"
 
 msgid "interface:title"
 msgstr "Библиография танцевальных источников"
 
-msgid "interface:no_keywords"
+msgid "interface:no-keywords"
 msgstr ""
 	"У этой записи нет осмысленных тегов.<br/>\n"
 	"Пожалуйста, воспользуйтесь формой отправки сообщения, чтобы добавить их.<br/>\n"
@@ -233,10 +233,10 @@ msgstr "Нет"
 msgid "common:no"
 msgstr "нет"
 
-msgid "common:Doesnt_matter"
+msgid "common:Does-not-matter"
 msgstr "Не важно"
 
-msgid "common:doesnt_matter"
+msgid "common:does-not-matter"
 msgstr "не важно"
 
 msgid "common:Or"
@@ -337,7 +337,7 @@ msgstr "Простой"
 msgid "search:type:advanced"
 msgstr "Расширенный"
 
-msgid "search:type:all_fields"
+msgid "search:type:all-fields"
 msgstr "По всем полям"
 
 # Search labels
@@ -351,13 +351,13 @@ msgstr "Название"
 msgid "search:labels:year"
 msgstr "Год публикации"
 
-msgid "search:labels:added_on"
+msgid "search:labels:added-on"
 msgstr "Дата добавления в базу"
 
 msgid "search:labels:langid"
 msgstr "Язык"
 
-msgid "search:labels:source_file"
+msgid "search:labels:source-file"
 msgstr "Исходный файл"
 
 msgid "search:labels:booktype"
@@ -381,13 +381,13 @@ msgstr "Доступно для скачивания"
 msgid "search:labels:origlanguage"
 msgstr "Переводное издание"
 
-msgid "search:labels:transcription_url"
+msgid "search:labels:transcription-url"
 msgstr "Транскрибированное издание"
 
 msgid "search:labels:useful-keywords"
 msgstr "Присутствуют полезные ключевые слова"
 
-msgid "search:labels:all_fields"
+msgid "search:labels:all-fields"
 msgstr "Строка для поиска"
 
 # Search: Language select options
@@ -459,28 +459,28 @@ msgstr "Манускрипт"
 
 # Search results ordering
 
-msgid "search:order_by"
+msgid "search:order-by"
 msgstr "Упорядочить по"
 
-msgid "search:order_by:year_from"
+msgid "search:order-by:year-from"
 msgstr "Году публикации"
 
-msgid "search:order_by:added_on"
+msgid "search:order-by:added-on"
 msgstr "Дате добавления в базу"
 
-msgid "search:order_by:source"
+msgid "search:order-by:source"
 msgstr "Исходному файлу"
 
-msgid "search:order_by:author"
+msgid "search:order-by:author"
 msgstr "Автору"
 
-msgid "search:order_by:location"
+msgid "search:order-by:location"
 msgstr "Месту публикации"
 
-msgid "search:order_by:series"
+msgid "search:order-by:series"
 msgstr "Серии"
 
-msgid "search:order_by:number"
+msgid "search:order-by:number"
 msgstr "Номеру в серии / Номеру периодического издания"
 
 # Entry fields
@@ -521,7 +521,7 @@ msgstr "Сокращённое название"
 msgid "item:labels:id"
 msgstr "Идентификатор"
 
-msgid "item:labels:added_on"
+msgid "item:labels:added-on"
 msgstr "Дата добавления в базу"
 
 msgid "item:labels:source"
@@ -551,7 +551,7 @@ msgstr "Страницы"
 msgid "item:labels:url"
 msgstr "Ссылка"
 
-msgid "item:labels:transcription_url"
+msgid "item:labels:transcription-url"
 msgstr "Транскрипция"
 
 msgid "item:labels:filename"
@@ -606,7 +606,7 @@ msgstr "Файл в формате PDF"
 msgid "interface:footer:hda"
 msgstr "Ассоциация исторического танца"
 
-msgid "interface:footer:golden_forests"
+msgid "interface:footer:golden-forests"
 msgstr "Золотые леса"
 
 msgid "interface:footer:repo"
@@ -626,8 +626,8 @@ msgstr "Новые книги"
 msgid "rss:description"
 msgstr "Последние поступления танцевальных источников в библиографию"
 
-msgid "rss:added_count"
-msgid_plural "rss:added_count"
+msgid "rss:added-count"
+msgid_plural "rss:added-count"
 msgstr[0] "Добавлена %(num)d запись"
 msgstr[1] "Добавлены %(num)d записи"
 msgstr[2] "Добавлено %(num)d записей"

@@ -13,7 +13,7 @@
 		<atom:link href="https://bib.hda.org.ru/bib/rss/books" rel="self" type="application/rss+xml"/>
 {% for date, entries in item_index | dictsort | reverse %}
 		<item>
-			<title>{{ ngettext("rss:added_count", "rss:added_count", entries | length) }}</title>
+			<title>{{ ngettext("rss:added-count", "rss:added-count", entries | length) }}</title>
 			<description><![CDATA[
 				<ul>
 	{% for entry in entries %}

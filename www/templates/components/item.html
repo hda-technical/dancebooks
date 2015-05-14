@@ -37,7 +37,7 @@
 	{% endif %}
 	{% if value %}
 		{% if (param != "filename") or show_secrets %} {# secrets filtering: start #}
-			<div class="bib_item_left">{{ _("item:labels:" + param) }}:</div>
+			<div class="bib_item_left">{{ _("item:labels:" + param.replace("_", "-")) }}:</div>
 			<div class="bib_item_right">
 			{% if param == "id" %}
 				{{ value | format_item_id | safe }}</a>
@@ -100,7 +100,7 @@
 	((keywords - config.parser.useless_keywords) | length == 0)
 ) %}
 			<div class="center warn">
-				{{ _("interface:no_keywords") | safe }}
+				{{ _("interface:no-keywords") | safe }}
 			</div>
 {% endif %}
 

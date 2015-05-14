@@ -1,8 +1,8 @@
-			<h2>{{ _("interface:you_can") }} <a href="/bib/books">{{ _("interface:display_everything") }}</a> {{ _("common:or") }} {{ _("interface:use_search") }}:</h2>
+			<h2>{{ _("interface:you-can") }} <a href="/bib/books">{{ _("interface:display-everything") }}</a> {{ _("common:or") }} {{ _("interface:use-search") }}:</h2>
 			<div class="center" id="searchTogglers">
 				<span id="searchToggleBasic">{{ _("search:type:basic") }}</span>
 				<span id="searchToggleAdvanced" class="action">{{ _("search:type:advanced") }}</span>
-				<span id="searchToggleAllFields" class="action">{{ _("search:type:all_fields") }}</span>
+				<span id="searchToggleAllFields" class="action">{{ _("search:type:all-fields") }}</span>
 			</div>
 
 			<form id="search" action="/bib/basic-search">
@@ -37,7 +37,7 @@
 				<table id="searchFormAdvanced" class="hidden">
 					<tr>
 						<td>
-							<label for="added_on_from">{{ _("search:labels:added_on") }}:</label>
+							<label for="added_on_from">{{ _("search:labels:added-on") }}:</label>
 						</td>
 						<td>
 							<input id="added_on_from" type="datetime" name="added_on_from"/><!--
@@ -59,7 +59,7 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="source_file">{{ _("search:labels:source_file") }}:</label>
+							<label for="source_file">{{ _("search:labels:source-file") }}:</label>
 						</td>
 						<td>
 							<select id="source_file" name="source_file">
@@ -127,7 +127,7 @@
 						</td>
 						<td>
 							<select id="url" name="url">
-								<option value="">{{ _("common:Doesnt_matter") }}</option>
+								<option value="">{{ _("common:Does-not-matter") }}</option>
 								<option value="true">{{ _("common:Yes") }}</option>
 								<option value="false">{{ _("common:No") }}</option>
 							</select>
@@ -139,7 +139,7 @@
 						</td>
 						<td>
 							<select id="origlanguage" name="origlanguage">
-								<option value="">{{ _("common:Doesnt_matter") }}</option>
+								<option value="">{{ _("common:Does-not-matter") }}</option>
 								<option value="true">{{ _("common:Yes") }}</option>
 								<option value="false">{{ _("common:No") }}</option>
 							</select>
@@ -147,11 +147,11 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="transcription_url">{{ _("search:labels:transcription_url") }}:</label>
+							<label for="transcription_url">{{ _("search:labels:transcription-url") }}:</label>
 						</td>
 						<td>
 							<select id="transcription_url" name="transcription_url">
-								<option value="">{{ _("common:Doesnt_matter") }}</option>
+								<option value="">{{ _("common:Does-not-matter") }}</option>
 								<option value="true">{{ _("common:Yes") }}</option>
 								<option value="false">{{ _("common:No") }}</option>
 							</select>
@@ -163,7 +163,7 @@
 						</td>
 						<td>
 							<select id="useful_keywords" name="useful_keywords">
-								<option value="">{{ _("common:Doesnt_matter") }}</option>
+								<option value="">{{ _("common:Does-not-matter") }}</option>
 								<option value="true">{{ _("common:Yes") }}</option>
 								<option value="false">{{ _("common:No") }}</option>
 							</select>
@@ -173,7 +173,7 @@
 				<table id="searchFormAllFields" class="hidden">
 					<tr>
 						<td>
-							<label for="all_fields">{{ _("search:labels:all_fields") }}:</label>
+							<label for="all_fields">{{ _("search:labels:all-fields") }}:</label>
 						</td>
 						<td>
 							<input id="all_fields" type="text" name="all_fields"/>
@@ -186,17 +186,17 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="orderBy">{{ _("search:order_by") }}:</label>
+							<label for="orderBy">{{ _("search:order-by") }}:</label>
 						</td>
 						<td>
 							<select id="orderBy" name="orderBy">
-								<option value="">{{ _("search:order_by:year_from") }}</option>
-								<option value="added_on">{{ _("search:order_by:added_on") }}</option>
-								<option value="source">{{ _("search:order_by:source") }}</option>
-								<option value="author">{{ _("search:order_by:author") }}</option>
-								<option value="location">{{ _("search:order_by:location") }}</option>
-								<option value="series">{{ _("search:order_by:series") }}</option>
-								<option value="number">{{ _("search:order_by:number") }}</option>
+								<option value="">{{ _("search:order-by:year-from") }}</option>
+								<option value="added_on">{{ _("search:order-by:added-on") }}</option>
+								<option value="source">{{ _("search:order-by:source") }}</option>
+								<option value="author">{{ _("search:order-by:author") }}</option>
+								<option value="location">{{ _("search:order-by:location") }}</option>
+								<option value="series">{{ _("search:order-by:series") }}</option>
+								<option value="number">{{ _("search:order-by:number") }}</option>
 							</select>
 						</td>
 					</tr>

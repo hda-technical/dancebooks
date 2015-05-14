@@ -9,40 +9,40 @@ msgstr ""
 
 # Interface strings
 
-msgid "interface:displaying_all"
+msgid "interface:displaying-all"
 msgstr "Displaying everything"
 
-msgid "interface:single_entry"
+msgid "interface:single-entry"
 msgstr "Entry with id"
 
-msgid "interface:total_entries"
-msgid_plural "interface:total_entries"
+msgid "interface:total-entries"
+msgid_plural "interface:total-entries"
 msgstr[0] "In database: %(num)d entry"
 msgstr[1] "In database: %(num)d entries"
 msgstr[2] "In database: %(num)d entries"
 
-msgid "interface:found_entries"
-msgid_plural "interface:found_entries"
+msgid "interface:found-entries"
+msgid_plural "interface:found-entries"
 msgstr[0] "Found %(num)d entry"
 msgstr[1] "Found %(num)d entries"
 msgstr[2] "Found %(num)d entries"
 
-msgid "interface:found_none"
+msgid "interface:found-none"
 msgstr "Nothing found. Try another search"
 
-msgid "interface:you_can"
+msgid "interface:you-can"
 msgstr "You can"
 
-msgid "interface:display_everything"
+msgid "interface:display-everything"
 msgstr "display everything"
 
-msgid "interface:use_search"
+msgid "interface:use-search"
 msgstr "use the search"
 
 msgid "interface:title"
 msgstr "Dancing books bibliography"
 
-msgid "interface:no_keywords"
+msgid "interface:no-keywords"
 msgstr ""
 	"This item has no sensible keywords.<br/>\n"
 	"Consider adding them via report form.<br/>\n"
@@ -233,10 +233,10 @@ msgstr "No"
 msgid "common:no"
 msgstr "no"
 
-msgid "common:Doesnt_matter"
+msgid "common:Does-not-matter"
 msgstr "Doesn't matter"
 
-msgid "common:doesnt_matter"
+msgid "common:does-not-matter"
 msgstr "doesn't matter"
 
 msgid "common:Or"
@@ -337,7 +337,7 @@ msgstr "Basic"
 msgid "search:type:advanced"
 msgstr "Advanced"
 
-msgid "search:type:all_fields"
+msgid "search:type:all-fields"
 msgstr "All Fields"
 
 # Search labels
@@ -351,13 +351,13 @@ msgstr "Title"
 msgid "search:labels:year"
 msgstr "Year of publication"
 
-msgid "search:labels:added_on"
+msgid "search:labels:added-on"
 msgstr "Added to database"
 
 msgid "search:labels:langid"
 msgstr "Language"
 
-msgid "search:labels:source_file"
+msgid "search:labels:source-file"
 msgstr "Source file"
 
 msgid "search:labels:booktype"
@@ -381,13 +381,13 @@ msgstr "Available for download"
 msgid "search:labels:origlanguage"
 msgstr "Translated edition"
 
-msgid "search:labels:transcription_url"
+msgid "search:labels:transcription-url"
 msgstr "Transcribed edition"
 
 msgid "search:labels:useful-keywords"
 msgstr "Has useful keywords"
 
-msgid "search:labels:all_fields"
+msgid "search:labels:all-fields"
 msgstr "Text to search for"
 
 # Search: Language select options
@@ -459,28 +459,28 @@ msgstr "Manuscript"
 
 # Search results ordering
 
-msgid "search:order_by"
+msgid "search:order-by"
 msgstr "Order by"
 
-msgid "search:order_by:year_from"
+msgid "search:order-by:year-from"
 msgstr "Year of publication"
 
-msgid "search:order_by:added_on"
+msgid "search:order-by:added-on"
 msgstr "Database addition date"
 
-msgid "search:order_by:source"
+msgid "search:order-by:source"
 msgstr "Source file"
 
-msgid "search:order_by:author"
+msgid "search:order-by:author"
 msgstr "Author"
 
-msgid "search:order_by:location"
+msgid "search:order-by:location"
 msgstr "Place of publication"
 
-msgid "search:order_by:series"
+msgid "search:order-by:series"
 msgstr "Series"
 
-msgid "search:order_by:number"
+msgid "search:order-by:number"
 msgstr "Number in series / Periodical issue number"
 
 # Entry fields
@@ -521,7 +521,7 @@ msgstr "Shorthand"
 msgid "item:labels:id"
 msgstr "Id"
 
-msgid "item:labels:added_on"
+msgid "item:labels:added-on"
 msgstr "Added to database"
 
 msgid "item:labels:source"
@@ -551,7 +551,7 @@ msgstr "Pages"
 msgid "item:labels:url"
 msgstr "URL"
 
-msgid "item:labels:transcription_url"
+msgid "item:labels:transcription-url"
 msgstr "Transcription"
 
 msgid "item:labels:filename"
@@ -606,7 +606,7 @@ msgstr "Renrered PDF file"
 msgid "interface:footer:hda"
 msgstr "Historical Dance Association"
 
-msgid "interface:footer:golden_forests"
+msgid "interface:footer:golden-forests"
 msgstr "Golden Forests"
 
 msgid "interface:footer:repo"
@@ -626,8 +626,8 @@ msgstr "New books"
 msgid "rss:description"
 msgstr "Latest additions to dancing books bibliography"
 
-msgid "rss:added_count"
-msgid_plural "rss:added_count"
+msgid "rss:added-count"
+msgid_plural "rss:added-count"
 msgstr[0] "%(num)d entry added"
 msgstr[1] "%(num)d entries added"
 msgstr[2] "%(num)d entries added"
