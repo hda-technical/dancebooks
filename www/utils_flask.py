@@ -23,7 +23,9 @@ def http_exception_handler(ex):
 		response = flask.make_response(render, ex.code)
 
 	elif isinstance(ex, Exception):
-		render = flask.render_template("error.html", error=ex)
+		httpEx = werkzeug.exceptions.HTTPException(description="Internal Server Error")
+		httpEx.code = http.client.INTERNAL_SERVER_ERROR
+		render = flask.render_template("error.html", error=httpEx)
 		response = flask.make_response(render, http.client.INTERNAL_SERVER_ERROR)
 
 	return response
