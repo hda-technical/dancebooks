@@ -130,13 +130,16 @@ CATALOGUE_PATTERN = (
 	#Printed books in Little-Mars's "La danse noble"
 	r"(LittleMarsh:\*?\[?c?\d{4}\]?-\w{3})|"
 	#Manuscripts in Little-Mars's "La danse noble"
-	r"(LittleMarsh:Ms-\d{2})"
+	r"(LittleMarsh:Ms-\d{2})|"
+	#Wilhelm Gottlieb Becker's Taschenbüchern in Lange's "Modetänze um 1800"
+	r"(Lange:\d{4}(, I{1,2})?)"
 )
 CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
 #map [catalogue type] -> (catalogue id, catalogue title)
 CATALOGUE_MAP = {
 	"Lancelot": ("lancelot_1996", "F. Lancelot. La belle danse"),
 	"LittleMarsh": ("little_1992", "M. E. Little, C. G. Marsh. La danse noble"),
+	"Lange": ("lange_1984", "E. Lange, K.-H. Lange. Modetänze um 1800"),
 }
 
 VALID_HTTP_CODES = {
