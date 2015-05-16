@@ -236,6 +236,7 @@ class Config(object):
 			shell=True
 		).decode().strip()
 		self.unittest = ("UNITTEST" in os.environ)
+		self.debug = False
 
 
 def setup_logging(config_path):

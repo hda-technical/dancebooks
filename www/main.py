@@ -80,6 +80,8 @@ def initialize():
 
 @flask_app.after_request
 def add_security_headers(response):
+	if config.debug:
+		return response
 	response.headers["Strict-Transport-Security"] = (
 		"max-age={seconds_in_year}; includeSubDomains".format(
 			seconds_in_year=const.SECONDS_IN_YEAR
@@ -487,5 +489,6 @@ for code in werkzeug.HTTP_STATUS_CODES:
 	flask_app.errorhandler(code)(utils_flask.http_exception_handler)
 flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
 if __name__ == "__main__":
+	config.debug = True
 	flask_app.run(host="0.0.0.0")
 
