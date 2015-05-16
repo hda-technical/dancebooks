@@ -1,6 +1,6 @@
 # Practise for Dauncinge. Some Almans and a Pavan. England 1570-1650. A Manual for Dance Instruction in Which Is Explained the Performance of a Number of Dances Popular in the London Inns of Court in the Sixteenth and Seventeenth Centuries, Together with Music in Four Parts
 ## Patri J. Pugliese, Joseph Casazza
-### Transcription by [Patri J. Pugliese, Joseph Casazza](https://sites.google.com/site/renaissancedancesources/home/practise-for-dauncinge)
+### Transcribed by [Patri J. Pugliese, Joseph Casazza](https://sites.google.com/site/renaissancedancesources/home/practise-for-dauncinge)
 
 ### Introduction
 
