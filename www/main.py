@@ -47,7 +47,7 @@ markdown_app = markdown.Markdown(
 	extension_configs={
 		"footnotes": {
 			"PLACE_MARKER": "///Footnotes///",
-			"BACKLINK_TEXT": "↑"
+			"BACKLINK_TEXT": "↑",
 		}
 	},
 	output_format="xhtml5"

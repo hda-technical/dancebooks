@@ -135,13 +135,14 @@ def profile(sort="time", limits=50):
 			profiler = cProfile.Profile()
 			profiler.enable()
 
-			func(*args, **kwargs)
+			result = func(*args, **kwargs)
 
 			profiler.disable()
 			string_io = io.StringIO()
 			stats = pstats.Stats(profiler, stream=string_io).sort_stats(sort)
 			stats.print_stats(limits)
 			print(string_io.getvalue())
+			return result
 		return wrapper
 	return profile_decorator
 

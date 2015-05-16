@@ -166,6 +166,11 @@ p
 	margin: 0px 0px 5px 0px;
 }
 
+li > p
+{
+	text-indent: 0px;
+}
+
 img
 {
  	border: 0px;
@@ -486,3 +491,36 @@ div.transcription table
 {
 	width: 100%;
 }
+
+div.transcription p > img
+{
+	width: 1em;
+	height: 1em;
+}
+
+/* FIXME: remove these crutches
+div.transcription div.footnote p ~ blockquote:last-of-type
+{
+	display: inline-block;
+	width: 90%;
+}
+
+div.transcription div.footnote blockquote + p
+{
+	margin-left: 0px;
+	text-indent: 0px;
+	display: inline;
+}
+
+div.transcription div.footnote p ~ h3:last-of-type
+{
+	display: inline;
+}
+
+div.transcription div.footnote h3 + p
+{
+	margin-left: 0px;
+	text-indent: 0px;
+	display: inline;
+}
+*/
