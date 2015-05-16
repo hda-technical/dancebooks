@@ -38,12 +38,19 @@ source_files = sorted(item_index["source_file"].keys())
 booktypes = sorted(item_index["booktype"].keys())
 
 flask_app = flask.Flask(__name__)
-flask_app.config["BABEL_DEFAULT_LOCALE"] = config.www.languages[0]
+flask_app.config["BABEL_DEFAULT_LOCALE"] = utils.first(config.www.languages)
 flask_app.config["USE_EVALEX"] = False
 babel_app = babel.Babel(flask_app)
 markdown_app = markdown.Markdown(
 	flask_app,
-	extensions=["footnotes"],
+	extensions=["footnotes", "tables"],
+	extension_configs={
+		"footnotes": {
+			"PLACE_MARKER": "///Footnotes///",
+			"BACKLINK_TEXT": "↑"
+		}
+	},
+	safe_mode=True,
 	output_format="xhtml5"
 )
 
@@ -350,6 +357,7 @@ def get_book_markdown(book_id, index):
 		config.parser.markdown_dir,
 		transcription_filename[index]
 	)
+	markdown_app._instance.reset()
 	return flask.render_template(
 		"markdown.html",
 		markdown_data=utils.read_utf8_file(markdown_file),

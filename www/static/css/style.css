@@ -277,7 +277,6 @@ li
 	white-space: nowrap;
 }
 
-table tr td:first-child,
 div.bib_item_left
 {
 	width: 25%;
@@ -285,7 +284,6 @@ div.bib_item_left
 	display: inline-block;
 }
 
-table tr td:last-child,
 div.bib_item_right
 {
 	width: 74%;
@@ -460,18 +458,31 @@ div.transcription h1,
 div.transcription h2,
 div.transcription h3
 {
-	font-family: "PT Serif Pation";
+	font-family: "PT Serif Caption";
 }
 
-div.transcription > ul
+div.transcription ul
 {
 	font-size: 110%;
 	list-style-type: disc;
 }
 
-div.transcription > ol
+div.transcription ol
 {
 	font-size: 110%;
 	list-style-type: decimal;
 }
 
+div.transcription table,
+div.transcription td,
+div.transcription th
+{
+	border: solid 1px black;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+div.transcription table
+{
+	width: 100%;
+}
