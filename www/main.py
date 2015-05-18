@@ -50,7 +50,6 @@ markdown_app = markdown.Markdown(
 			"BACKLINK_TEXT": "↑"
 		}
 	},
-	safe_mode=True,
 	output_format="xhtml5"
 )
 
