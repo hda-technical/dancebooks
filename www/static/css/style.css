@@ -468,13 +468,11 @@ div.transcription h3
 
 div.transcription ul
 {
-	font-size: 110%;
 	list-style-type: disc;
 }
 
 div.transcription ol
 {
-	font-size: 110%;
 	list-style-type: decimal;
 }
 
@@ -498,29 +496,7 @@ div.transcription p > img
 	height: 1em;
 }
 
-/* FIXME: remove these crutches
-div.transcription div.footnote p ~ blockquote:last-of-type
+div.transcription > div.footnote h3
 {
-	display: inline-block;
-	width: 90%;
+	font-size: 100%;
 }
-
-div.transcription div.footnote blockquote + p
-{
-	margin-left: 0px;
-	text-indent: 0px;
-	display: inline;
-}
-
-div.transcription div.footnote p ~ h3:last-of-type
-{
-	display: inline;
-}
-
-div.transcription div.footnote h3 + p
-{
-	margin-left: 0px;
-	text-indent: 0px;
-	display: inline;
-}
-*/
