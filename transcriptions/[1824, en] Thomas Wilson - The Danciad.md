@@ -10748,24 +10748,7 @@ influence the gentlemen; and thus large companies are obtained.
 
 	### The Figure Bar
 
-	The figure bar marked thus
-
-	<svg version="1.2" baseProfile="tiny" width="17.158px" height="10.611px">
-		<line fill="none" stroke="#000000" stroke-width="1.1581" stroke-linecap="round" stroke-miterlimit="10" x1="16.579" y1="5.306" x2="0.579" y2="5.306"/>
-		<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="8.579" cy="9.137" r="1.126"/>
-	</svg>
-
-	, or thus
-
-	<svg version="1.2" baseProfile="tiny" width="17.158px" height="10.612px">
-		<line fill="none" stroke="#000000" stroke-width="1.1581" stroke-linecap="round" stroke-miterlimit="10" x1="0.579" y1="5.304" x2="16.579" y2="5.304"/>
-		<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="12.166" cy="1.473" r="1.126"/>
-		<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="4.991" cy="1.473" r="1.126"/>
-		<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="12.166" cy="9.139" r="1.126"/>
-		<circle stroke="#000000" stroke-width="0.6931" stroke-linecap="round" stroke-miterlimit="10" cx="4.991" cy="9.139" r="1.126"/>
-	</svg>
-
-	, is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
+	The figure bar marked thus ![](/bib/images/icon/wilson_04_down.svg), or thus ![](/bib/images/icon/wilson_16.svg), is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
 
 	### Figure of the Dance
 
