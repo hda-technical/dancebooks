@@ -678,21 +678,21 @@ msgstr "Error code"
 
 #HTTP 400 error handler
 msgid "errors:http:400:cite"
-msgstr ""
+msgstr "Bad request"
 
 msgid "errors:http:400:description"
 msgstr "Something is wrong with your request."
 
 #HTTP 403 error handler
 msgid "errors:http:403:cite"
-msgstr ""
+msgstr "Forbidden"
 
 msgid "errors:http:403:description"
 msgstr "Action you are trying to perform is forbidden"
 
 #HTTP 404 error handler
 msgid "errors:http:404:cite"
-msgstr ""
+msgstr "Not found"
 
 msgid "errors:http:404:description"
 msgstr "Can't find the item you've requested"
