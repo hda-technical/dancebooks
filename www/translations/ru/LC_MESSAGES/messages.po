@@ -506,6 +506,9 @@ msgstr "Язык"
 msgid "item:labels:publisher"
 msgstr "Издатель"
 
+msgid "item:labels:isbn"
+msgstr "ISBN"
+
 msgid "item:labels:location"
 msgstr "Место издания"
 
