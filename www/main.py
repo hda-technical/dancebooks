@@ -8,7 +8,6 @@ from urllib import parse as urlparse
 
 import flask
 from flask.ext import babel
-from flask.ext import markdown
 import unidecode
 import werkzeug
 
@@ -36,23 +35,12 @@ item_index.update(items)
 langids = sorted(item_index["langid"].keys())
 source_files = sorted(item_index["source_file"].keys())
 booktypes = sorted(item_index["booktype"].keys())
+markdown_cache = utils.MarkdownCache()
 
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = utils.first(config.www.languages)
 flask_app.config["USE_EVALEX"] = False
 babel_app = babel.Babel(flask_app)
-markdown_app = markdown.Markdown(
-	flask_app,
-	extensions=["footnotes", "tables"],
-	extension_configs={
-		"footnotes": {
-			"PLACE_MARKER": "///Footnotes///",
-			"BACKLINK_TEXT": "↑",
-		}
-	},
-	safe_mode=True,
-	output_format="xhtml5"
-)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
@@ -357,10 +345,9 @@ def get_book_markdown(book_id, index):
 		config.parser.markdown_dir,
 		transcription_filename[index]
 	)
-	markdown_app._instance.reset()
 	return flask.render_template(
 		"markdown.html",
-		markdown_data=utils.read_utf8_file(markdown_file),
+		markdown_data=markdown_cache.get(markdown_file),
 		item=item
 	)
 
