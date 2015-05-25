@@ -71,7 +71,7 @@ added-on:
 www-debug: www-translations
 	cd www && \
 	$(DEVEL_ENV) \
-	./main.py \
+	python main.py \
 
 www-test: $(TEST_TARGETS);
 
