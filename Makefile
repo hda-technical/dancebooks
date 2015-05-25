@@ -53,9 +53,6 @@ pdf-debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 pdf-clean:
 	rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
 
-pdf-distclean: pdf-clean
-	rm -f *.pdf all.mk
-
 validate:
 	cd www && \
 	$(DEVEL_ENV) \
@@ -137,9 +134,6 @@ www-reload-testing: www-test www-translations
 www-reload-production: www-test www-translations
 	touch $(TOUCH_RELOAD_PRODUCTION)
 
-www-distclean:
-	rm -rf www/__pycache__ www/tests/__pycache__
-
 requirements.txt: .PHONY
 	pip freeze --local | sort --ignore-case | tee $@
 
@@ -156,8 +150,9 @@ entry-count: $(BIB_FILES)
 
 clean: pdf-clean;
 
-distclean: pdf-distclean www-distclean;
-
+distclean:
+	git clean -f
+	
 rebuild: distclean all.mk;
 
 test: www-test;
