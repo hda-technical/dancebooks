@@ -307,9 +307,7 @@ def get_book_pdf(book_id, index):
 	basename = os.path.basename(pdf_full_path)
 	response.headers["Content-Disposition"] = \
 		"attachment;" \
-		"filename={ascii_filename};" \
 		"filename*=UTF-8''{utf_filename}".format(
-		ascii_filename=unidecode.unidecode(basename).replace(' ', '_'),
 		utf_filename=urlparse.quote(basename)
 	)
 	return response
