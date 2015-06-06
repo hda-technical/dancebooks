@@ -91,14 +91,18 @@ def check_single_filename(abspath, filename, item, errors):
 	#validating optional author, edition, tome
 	#in case when item specifies value, but filename does not
 	optional_meta_fields = [
-		"author",
-		"edition",
-		"volume",
-		#For serial books, no number is present in metadata
-		#Temporary disable check here
-		#"number",
-		"part"
+		"author"
 	]
+	if (item.get("booktype") != "article"):
+		optional_meta_fields += [
+			"edition",
+			"volume",
+			#For serial books, no number is present in metadata
+			#Temporary disable check here
+			#"number",
+			"part"
+		]
+	
 	for meta_field in optional_meta_fields:
 		if (
 			(item.has(meta_field)) and
@@ -484,7 +488,7 @@ def check_transcription_filename(item, errors):
 		abspath = os.path.join(config.parser.markdown_dir, single_filename)
 		check_single_filename(
 			abspath,
-			single_filename.replace('_', ' '),
+			single_filename,
 			item,
 			errors
 		)
@@ -620,6 +624,7 @@ def check_filename(item, errors):
 	"""
 	Checks filename against various tests
 	"""
+	#FIXME: even the presence of files for these bookstypes isn't checked
 	MULTIENTRY_BOOKTYPES = {"article", "proceedings", "inproceedings"}
 	NOT_DIGITIZED_KEYWORD = "not digitized"
 	booktype = item.get("booktype")
