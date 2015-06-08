@@ -2,7 +2,6 @@
 #coding: utf-8
 import os.path
 import re
-import sys
 import subprocess
 
 import opster
@@ -79,6 +78,7 @@ def main():
 	files = [
 		os.path.join(config.parser.bibdata_dir, file)
 		for file in os.listdir(config.parser.bibdata_dir)
+		if file.endswith(".bib")
 	]
 	for file in files:
 		process_file(file)
