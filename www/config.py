@@ -198,32 +198,18 @@ class Config(object):
 		return params
 
 	def __init__(self, path):
-		if path is None:
-			raise RuntimeError(
-				"Config was not found. "
-				"Please, specify {env_var} environment variable".format(
-					env_var=const.ENV_CONFIG
-				)
-			)
-		if not os.path.isfile(path):
-			raise RuntimeError(
-				"Config path {path} doesn't exist".format(
-					path=path
-				)
-			)
-
 		config = configparser.ConfigParser(interpolation=None)
 		config.read(path)
 
 		fallback = None
 		if "DEFAULT" in config:
 			if "fallback" in config["DEFAULT"]:
-				path = os.path.join(
+				fallback_path = os.path.join(
 					os.path.dirname(path),
 					config["DEFAULT"]["fallback"]
 				)
 				fallback = configparser.ConfigParser()
-				fallback.read(path)
+				fallback.read(fallback_path)
 		self.smtp = SmtpConfig(Config.get_params(config, fallback, "SMTP"))
 		self.bug_report = BugReportConfig(Config.get_params(config, fallback, "BUG_REPORT"))
 		self.parser = ParserConfig(Config.get_params(config, fallback, "PARSER"))
