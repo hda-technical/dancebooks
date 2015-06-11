@@ -390,6 +390,15 @@ msgstr "Has useful keywords"
 msgid "search:labels:all-fields"
 msgstr "Text to search for"
 
+msgid "search:labels:unavailable"
+msgstr "Unavailable"
+
+msgid "search:labels:available-elsewhere"
+msgstr "Available from another website"
+
+msgid "search:labels:available-here"
+msgstr "Available from this website"
+
 # Search: Language select options
 
 msgid "search:language:czech"

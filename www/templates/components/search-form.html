@@ -124,13 +124,14 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="url">{{ _("search:labels:url") }}:</label>
+							<label for="availability">{{ _("search:labels:url") }}:</label>
 						</td>
 						<td>
-							<select id="url" name="url">
+							<select id="availability" name="availability">
 								<option value="">{{ _("common:Does-not-matter") }}</option>
-								<option value="true">{{ _("common:Yes") }}</option>
-								<option value="false">{{ _("common:No") }}</option>
+								<option value="unavailable">{{ _("search:labels:unavailable") }}</option>
+								<option value="available-elsewhere">{{ _("search:labels:available-elsewhere") }}</option>
+								<option value="available-here">{{ _("search:labels:available-here") }}</option>
 							</select>
 						</td>
 					</tr>

@@ -8,7 +8,6 @@ from urllib import parse as urlparse
 
 import flask
 from flask.ext import babel
-import unidecode
 import werkzeug
 
 from config import config
@@ -191,6 +190,8 @@ def search_items(show_secrets):
 			values_to_use = [value_to_use]
 
 		for value in values_to_use:
+			if index_to_use == "availability":
+				value = bib_parser.Availability(value)
 			indexed_items = set(item_index[index_to_use].get(value, set()))
 			found_items &= indexed_items
 

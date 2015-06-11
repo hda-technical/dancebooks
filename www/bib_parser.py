@@ -8,6 +8,18 @@ from config import config
 import const
 import utils
 
+class Availability(enum.Enum):
+	Unavailable = "unavailable"
+	AvailableElsewhere = "available-elsewhere"
+	AvailableHere = "available-here"
+
+	@staticmethod
+	def from_url(single_url, item):
+		if utils.is_url_self_served(single_url, item):
+			return Availability.AvailableHere
+		else:
+			return Availability.AvailableElsewhere
+
 class BibItem(object):
 	"""
 	Class for bibliography item representation
@@ -29,7 +41,8 @@ class BibItem(object):
 
 	def __init__(self):
 		self._params = {
-			"all_fields": ""
+			"all_fields": "",
+			"availability": set([Availability.Unavailable])
 		}
 
 	def __hash__(self):
@@ -139,9 +152,16 @@ class BibItem(object):
 		if key in self._params:
 			raise RuntimeError("Can't set the parameter '{key}' twice for item {id}".format(
 				key=key,
-				id=self._params.get("id", None)))
+				id=self._params.get("id", None)
+			))
 		self._params[key] = value
 		self._params["all_fields"] += BibItem.value_to_string(value, "")
+		#warning handling value in a dirty unconfigured way
+		if key == "url":
+			self._params["availability"] = set([
+				Availability.from_url(single_url, self)
+				for single_url in value
+			])
 
 	def params(self):
 		return self._params

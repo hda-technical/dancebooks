@@ -390,6 +390,15 @@ msgstr "Присутствуют полезные ключевые слова"
 msgid "search:labels:all-fields"
 msgstr "Строка для поиска"
 
+msgid "search:labels:unavailable"
+msgstr "Не доступно"
+
+msgid "search:labels:available-elsewhere"
+msgstr "Доступно на другом сайте"
+
+msgid "search:labels:available-here"
+msgstr "Доступно на сайте библиографии"
+
 # Search: Language select options
 
 msgid "search:language:czech"

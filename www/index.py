@@ -30,7 +30,10 @@ class Index(object):
 			"""
 			Appends an item to subindex
 			"""
-			if isinstance(value, list):
+			if (
+				isinstance(value, list) or
+				isinstance(value, set)
+			):
 				for subvalue in value:
 					check_value(subindex, item, key, subvalue)
 					subindex[subvalue].add(item)
