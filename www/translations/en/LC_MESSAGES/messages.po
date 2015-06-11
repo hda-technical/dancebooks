@@ -343,7 +343,7 @@ msgstr "All Fields"
 # Search labels
 
 msgid "search:labels:author"
-msgstr "Author"
+msgstr "Author or his pseudonym"
 
 msgid "search:labels:title"
 msgstr "Title"
@@ -486,7 +486,10 @@ msgstr "Number in series / Periodical issue number"
 # Entry fields
 
 msgid "item:labels:author"
-msgstr "Author"
+msgstr "Author (real name)"
+
+msgid "item:labels:pseudo-author"
+msgstr "Author (pseudonym)"
 
 msgid "item:labels:title"
 msgstr "Title"

@@ -1,5 +1,6 @@
 {% set fields = [
 	"author",
+	"pseudo_author",
 	"title",
 	"booktitle",
 	"journaltitle",
@@ -31,7 +32,7 @@
 
 {% for param in fields %}
 {# Some parameters require specific treatment #}
-	{% if param in ["filename", "catalogue", "author", "added_on", "url", "transcription_url", "keywords"] %}
+	{% if param in ["filename", "catalogue", "author", "pseudo_author", "added_on", "url", "transcription_url", "keywords"] %}
 		{% set value = item.get(param) %}
 	{% elif param in ["date"] %}
 		{# pass #}
@@ -44,7 +45,7 @@
 			<div class="bib_item_right">
 			{% if param == "id" %}
 				{{ value | format_item_id | safe }}</a>
-			{% elif param == "author" %}
+			{% elif param in ["author", "pseudo_author"] %}
 				{{ value | map("author_link") | map("safe") | join(", ") }}
 			{% elif param == "keywords" %}
 				{{ value | map("keyword_link") | map("safe") | join(", ") }}

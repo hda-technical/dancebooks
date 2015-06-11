@@ -35,6 +35,20 @@ def search_for_iterable(key, value):
 			item.get(key)])
 
 
+def search_for_synonyms(keys, values):
+	"""
+	Creates filter for iterable(string) (searches for exact match)
+	@param keys: list of iterable to be searched for
+	"""
+	def search(item):
+		search_values = set(values)
+		item_values = set()
+		for key in keys:
+			item_values |= set(item.get(key) or [])
+		return search_values.issubset(item_values)
+	return search
+
+
 def search_for_eq(key, value):
 	"""
 	Creates filter for exact match

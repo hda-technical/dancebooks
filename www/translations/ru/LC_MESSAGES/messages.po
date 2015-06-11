@@ -343,7 +343,7 @@ msgstr "По всем полям"
 # Search labels
 
 msgid "search:labels:author"
-msgstr "Автор"
+msgstr "Автор (или его псевдоним)"
 
 msgid "search:labels:title"
 msgstr "Название"
@@ -486,7 +486,10 @@ msgstr "Номеру в серии / Номеру периодического �
 # Entry fields
 
 msgid "item:labels:author"
-msgstr "Автор"
+msgstr "Автор (настоящее имя)"
+
+msgid "item:labels:pseudo-author"
+msgstr "Автор (псевдоним)"
 
 msgid "item:labels:title"
 msgstr "Название"

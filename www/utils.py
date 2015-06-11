@@ -241,7 +241,7 @@ def make_searches_from_metadata(metadata):
 	"""
 	result = {}
 
-	equality_searches = ["author", "edition", "number", "part", "langid"]
+	equality_searches = ["edition", "number", "part", "langid"]
 	for search_key in equality_searches:
 		search_value = metadata.get(search_key, None)
 		if search_value is None:
@@ -251,9 +251,19 @@ def make_searches_from_metadata(metadata):
 			search_value
 		)
 
+	synonym_searches = ["author"]
+	for search_key in synonym_searches:
+		search_value = metadata.get(search_key, None)
+		if search_value is None:
+			continue
+		synonym_keys = config.www.search_synonyms.get(search_key) + [search_key]
+		result[search_key] = search.search_for_synonyms(synonym_keys, search_value)
+
 	date_searches = ["year_from", "year_to"]
 	for search_key in date_searches:
 		search_value = metadata.get(search_key, None)
+		if search_value is None:
+			continue
 		result[search_key] = search.search_for(
 			search_key,
 			search_value
@@ -464,19 +474,19 @@ def isfile_case_sensitive(abspath):
 			return False
 	return True
 
-	
+
 class MarkdownCache(object):
 	"""
 	Class capable of caching markdown files in compiled HTML form
 	(ready to be sent to client).
-	
+
 	Tracks file changing and recompiles files when necessary
 	"""
 	def __init__(self):
 		self._lock = threading.Lock()
 		#dict: file abspath -> (source file mtime, compiled html data)
 		self._cache = dict()
-		
+
 	def get(self, abspath):
 		"""
 		Main entry point of the function.
@@ -494,11 +504,11 @@ class MarkdownCache(object):
 		with self._lock:
 			self._cache[abspath] = (modified_at, compiled_data)
 		return compiled_data
-	
+
 	@staticmethod
 	def compile(abspath):
 		"""
-		Helper function for performing compilation 
+		Helper function for performing compilation
 		of a markdown file to HTML
 		"""
 		converter = markdown.Markdown(
@@ -514,4 +524,4 @@ class MarkdownCache(object):
 		)
 		raw_data = read_utf8_file(abspath)
 		return converter.convert(raw_data)
-		
+
