@@ -568,7 +568,7 @@ def check_series(item, errors):
 	booktype = item.get("booktype")
 	if booktype in PERIODICAL_BOOKTYPES:
 		return
-	SERIAL_FIELDS = ["series", "number"]
+	SERIAL_FIELDS = ["series"]
 	is_serial = False
 	for field in SERIAL_FIELDS:
 		if item.has(field):
@@ -576,7 +576,8 @@ def check_series(item, errors):
 			break
 	if not is_serial:
 		return
-	for field in SERIAL_FIELDS:
+	OBLIGATORY_SERIAL_FIELDS = ["series", "number"]
+	for field in OBLIGATORY_SERIAL_FIELDS:
 		if not item.has(field):
 			errors.add("Field {field} expected for serial books".format(
 				field=field
