@@ -503,6 +503,9 @@ msgstr "Author (pseudonym)"
 msgid "item:labels:title"
 msgstr "Title"
 
+msgid "item:labels:subtitle"
+msgstr "Additional title"
+
 msgid "item:labels:booktitle"
 msgstr "Collection title"
 
