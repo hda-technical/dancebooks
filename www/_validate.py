@@ -26,7 +26,11 @@ ERROR_PREFIX = "validation:error:"
 DATA_JSON_FILENAME = "_validate.json"
 
 #executed once per validation run
-def update_validation_data(ignore_missing_ids):
+def update_validation_data(
+	errors,
+	ignore_missing_ids,
+	ignore_added_errors
+):
 	"""
 	Checks if no book_ids were lost since
 	the last validation run on this machine.
@@ -54,6 +58,18 @@ def update_validation_data(ignore_missing_ids):
 	#ids that exist in files, and are also present in id_redirections
 	found_ids = current_ids & known_redirections
 
+	old_errors = set(validation_data["errors"])
+	new_errors = set(errors.keys())
+	added_errors = new_errors - old_errors
+	if len(added_errors) > 0:
+		logging.error("Following new erroneous entries were introduced")
+		for erroneous_id in errors:
+			if erroneous_id not in added_errors:
+				continue
+			logging.error("    " + str(erroneous_id))
+			for error_text in errors[erroneous_id]:
+				logging.error("        " + error_text)
+
 	if len(found_ids) > 0:
 		logging.error("Following book ids are present in files and in id_redirections:")
 		for found_id in found_ids:
@@ -65,10 +81,13 @@ def update_validation_data(ignore_missing_ids):
 		logging.warning("Following book ids were lost")
 		for lost_id in lost_ids:
 			logging.warning("    " + lost_id)
+
+	#updating validation data
 	if ((len(lost_ids) == 0) or ignore_missing_ids):
-		#no ids were lost
-		#updating validation data
 		validation_data["ids"] = list(current_ids)
+
+	if ((len(new_errors) == 0) or ignore_added_errors):
+		validation_data["errors"] = list(new_errors)
 
 	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
 		validation_data_file.write(json.dumps(validation_data))
@@ -102,7 +121,7 @@ def check_single_filename(abspath, filename, item, errors):
 			#"number",
 			"part"
 		]
-	
+
 	for meta_field in optional_meta_fields:
 		if (
 			(item.has(meta_field)) and
@@ -345,7 +364,7 @@ def check_library_fields(item, errors):
 	if (booktype != "unpublished"):
 		return
 	REQUIRED_FIELDS = [
-		"library", 
+		"library",
 		"library_location",
 		"library_code"
 	];
@@ -354,8 +373,8 @@ def check_library_fields(item, errors):
 			errors.add("Field {field} is missing".format(
 				field=field
 			))
-			
-			
+
+
 def check_commentator(item, errors):
 	"""
 	Checks if "commentary" keyword is present
@@ -706,6 +725,7 @@ def check_single_item(item, make_extra_checks):
 def main(
 	make_extra_checks=("", False, "Add some extra checks"),
 	ignore_missing_ids=("", False, "Update validation data even when some ids were lost"),
+	ignore_added_errors=("", False, "Update validation data even when new errors were introduced"),
 	num_threads=("", 1, "Override number of threads")
 ):
 	"""
@@ -715,30 +735,37 @@ def main(
 	num_threads = int(num_threads)
 	executor = concurrent.futures.ThreadPoolExecutor(max_workers=num_threads)
 	future_errors = {executor.submit(check_single_item, item, make_extra_checks): item for item in items}
-	erroneous_items = 0
+	erroneous_items = dict()
 	for future in concurrent.futures.as_completed(future_errors):
 		item = future_errors[future]
+		item_id=item.id(),
 		try:
 			result = future.result()
 			if len(result) == 0:
 				continue
 			logging.debug("Errors for {item_id} ({source}):".format(
-				item_id=item.id(),
+				item_id=item_id,
 				source=item.source()
 			))
-			erroneous_items += 1
+			#FIXME: there is a bug somewhere here,
+			#item_id is a tuple, while it should be a string
+			erroneous_items[item_id[0]] = result
 			for error in result:
 				logging.debug("    " + error)
 		except Exception as ex:
 			logging.exception("Exception while validating {item_id} ({source}): {ex}".format(
-				item_id=item.id(),
+				item_id=item_id,
 				source=item.source(),
 				ex=ex
 			))
 
-	update_validation_data(ignore_missing_ids)
-	logging.warning("Found {erroneous_items} erroneous items".format(
-		erroneous_items=erroneous_items
+	update_validation_data(
+		erroneous_items,
+		ignore_missing_ids,
+		ignore_added_errors
+	)
+	logging.warning("Found {items_count} erroneous items".format(
+		items_count=len(erroneous_items)
 	))
 
 
