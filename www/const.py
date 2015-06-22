@@ -142,6 +142,9 @@ CATALOGUE_MAP = {
 	"Lange": ("lange_1984", "E. Lange, K.-H. Lange. Modetänze um 1800"),
 }
 
+CONFIG_PATTERN = r"dancebooks\.(?P<mode>\w+)\.conf"
+CONFIG_REGEXP = re.compile(CONFIG_PATTERN)
+
 VALID_HTTP_CODES = {
 	#general OK
 	http.client.OK,

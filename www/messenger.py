@@ -6,7 +6,7 @@ import smtplib
 
 import flask
 
-from config import config
+from config import config, WorkingMode
 
 class BasicMessage(object):
 	"""
@@ -21,7 +21,7 @@ class BasicMessage(object):
 			app_domain=config.www.app_domain,
 			book_prefix=config.www.app_prefix + "/books"
 		)
-	
+
 	def send(self):
 		msg = email.mime.text.MIMEText(str(self), "html")
 		msg["From"] = email.utils.formataddr((
@@ -38,7 +38,7 @@ class BasicMessage(object):
 		recipients = [config.bug_report.to_addr]
 
 		#do not send data in unittest mode
-		if config.unittest:
+		if config.working_mode == WorkingMode.Unittest:
 			return
 
 		smtp = smtplib.SMTP(config.smtp.host, config.smtp.port)

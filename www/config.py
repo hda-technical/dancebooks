@@ -1,5 +1,6 @@
 import collections
 import configparser
+import enum
 import functools
 import json
 import logging.config
@@ -7,6 +8,12 @@ import os
 import subprocess
 
 import const
+
+class WorkingMode(enum.Enum):
+	Unittest="unittest"
+	Development="development"
+	Testing="testing"
+	Production="production"
 
 def get_config_value(
 	key,
@@ -221,8 +228,14 @@ class Config(object):
 			"cut -f 2 -d ' '",
 			shell=True
 		).decode().strip()
-		self.unittest = ("UNITTEST" in os.environ)
-		self.debug = False
+
+		cfg_basename = os.path.basename(path)
+		m = const.CONFIG_REGEXP.match(cfg_basename)
+		if m is None:
+			raise ValueError("Config basename {basename} doesn't match CONFIG_REGEXP".format(
+				basename=cfg_basename
+			))
+		self.working_mode = WorkingMode(m.group("mode"))
 
 
 def setup_logging(config_path):

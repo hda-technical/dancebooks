@@ -10,7 +10,7 @@ import flask
 from flask.ext import babel
 import werkzeug
 
-from config import config
+from config import config, WorkingMode
 import const
 import bib_parser
 import search
@@ -74,7 +74,7 @@ def initialize():
 
 @flask_app.after_request
 def add_security_headers(response):
-	if config.debug:
+	if config.working_mode in (WorkingMode.Unittest, WorkingMode.Development):
 		return response
 	response.headers["Strict-Transport-Security"] = (
 		"max-age={seconds_in_year}; includeSubDomains".format(
@@ -297,7 +297,7 @@ def get_book_pdf(book_id, index):
 	logging.info("Sending pdf file: {pdf_full_path}".format(
 		pdf_full_path=pdf_full_path
 	))
-	if config.unittest:
+	if config.working_mode == WorkingMode.Unittest:
 		#using send_file in unittest mode causes ResourceWarning due to unclosed file
 		response = flask.make_response("SOME_BINARY_PDF_LIKE_DATA")
 		response.headers["Content-Type"] = "application/pdf"
@@ -483,6 +483,5 @@ for code in werkzeug.HTTP_STATUS_CODES:
 	flask_app.errorhandler(code)(utils_flask.http_exception_handler)
 flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
 if __name__ == "__main__":
-	config.debug = True
 	flask_app.run(host="0.0.0.0")
 

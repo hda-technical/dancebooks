@@ -15,17 +15,22 @@ LATEX ?= $(LUALATEX)
 BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --validate_datamodel
 
 #Using testing conf-file in development environment
-DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.testing.conf)
+UNITTEST_CONFIG := $(shell readlink -f configs/dancebooks.unittest.conf)
+DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.development.conf)
 PRODUCTION_CONFIG := $(shell readlink -f configs/dancebooks.production.conf)
 LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 TOUCH_RELOAD_TESTING := /var/run/uwsgi/$(NAME_TESTING).reload
 TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME_PRODUCTION).reload
 
+UNITTEST_ENV := \
+	CONFIG=$(UNITTEST_CONFIG) \
+	LOGGING_CONFIG=$(LOGGING_CONFIG) \
+	PYTHONPATH=. \
+
 DEVEL_ENV := \
 	CONFIG=$(DEVEL_CONFIG) \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
-	UNITTEST=true \
 	PYTHONPATH=. \
 
 TESTS := $(wildcard www/tests/*.py)
@@ -74,7 +79,7 @@ www-test: $(TEST_TARGETS);
 
 www/tests/%.mk: www/tests/%.py
 	cd www && \
-	$(DEVEL_ENV) \
+	$(UNITTEST_ENV) \
 	python tests/`basename $<` -v \
 
 www-translations:
@@ -147,7 +152,7 @@ clean: pdf-clean;
 
 distclean:
 	git clean -f
-	
+
 rebuild: distclean all.mk;
 
 test: www-test;
