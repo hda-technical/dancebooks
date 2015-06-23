@@ -744,7 +744,7 @@ def main(
 			if len(result) == 0:
 				continue
 			logging.debug("Errors for {item_id} ({source}):".format(
-				item_id=item_id,
+				item_id=item_id[0],
 				source=item.source()
 			))
 			#FIXME: there is a bug somewhere here,
