@@ -421,8 +421,10 @@ def check_url_validity(item, errors):
 					("keywords" not in metadata) or
 					(const.META_HAS_OWNER not in metadata["keywords"])
 				):
-					errors.add("Owner specification expected for self-served url number {number}".format(
-						number=number
+					errors.add("Owner specification expected for self-served url #{number} (url={url}, filename={filename})".format(
+						number=number,
+						url=single_url,
+						filename=single_filename
 					))
 
 

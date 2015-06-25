@@ -224,9 +224,9 @@ def extract_metadata_from_file(path):
 		result["keywords"] = set()
 		for keyword in strip_split_list(keywords, ","):
 			if (keyword.endswith(" copy")):
-				owner = keyword.split()[0]
-				if (owner in config.parser.bookkeepers):
-					result["keywords"].add(const.META_HAS_OWNER)
+				for owner in config.parser.bookkeepers:
+					if keywords.startswith(owner):
+						result["keywords"].add(const.META_HAS_OWNER)
 			else:
 				result["keywords"].add(keyword)
 	return result
