@@ -512,14 +512,16 @@ class MarkdownCache(object):
 		of a markdown file to HTML
 		"""
 		converter = markdown.Markdown(
-			extensions=["footnotes", "tables"],
+			extensions=[
+				"markdown.extensions.footnotes",
+				"markdown.extensions.tables"
+			],
 			extension_configs={
-				"footnotes": {
+				"markdown.extensions.footnotes": {
 					"PLACE_MARKER": "///Footnotes///",
 					"BACKLINK_TEXT": "↑",
 				}
 			},
-			safe_mode=True,
 			output_format="xhtml5"
 		)
 		raw_data = read_utf8_file(abspath)
