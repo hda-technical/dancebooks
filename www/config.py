@@ -113,7 +113,7 @@ class ParserConfig(object):
 					self.keywords_with_ref.append(keyword)
 		self.useless_keywords = get_config_value("useless_keywords", params, transform=extract_set_from_json)
 
-		self.bookkeepers = get_config_value("bookkeepers", params, transform=extract_set_from_json)
+		self.bookkeepers = get_config_value("bookkeepers", params, transform=json.loads)
 
 		#suffixes parsing
 		self.start_suffix = get_config_value("start_suffix", params)

@@ -411,21 +411,35 @@ def check_url_validity(item, errors):
 			))
 
 		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
-		if match:
-			if (match.group("item_id") != item_id):
-				errors.add("Wrong item_id specified in self-served url")
-			else:
-				single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
-				metadata = utils.extract_metadata_from_file(single_filename)
-				if (
-					("keywords" not in metadata) or
-					(const.META_HAS_OWNER not in metadata["keywords"])
-				):
-					errors.add("Owner specification expected for self-served url #{number} (url={url}, filename={filename})".format(
-						number=number,
-						url=single_url,
-						filename=single_filename
-					))
+		if not match:
+			continue
+		
+		if (match.group("item_id") != item_id):
+			errors.add("Wrong item_id specified in self-served url")
+			continue
+			
+		single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
+		metadata = utils.extract_metadata_from_file(single_filename)
+		owner = metadata.get("owner")
+		if owner is None:
+			errors.add("Owner specification expected for self-served url #{number} (url={url}, filename={filename})".format(
+				number=number,
+				url=single_url,
+				filename=single_filename
+			))
+			continue
+		owner_fullname = config.parser.bookkeepers.get(owner)
+		if owner_fullname:
+			annotation = item.get("annotation")
+			if (
+				(not annotation) or 
+				(owner_fullname not in annotation)
+			):
+				errors.add("Owner fullname ({owner_fullname}) should be present in annotation".format(
+					owner_fullname=owner_fullname
+				))
+					
+				
 
 
 def check_url_accessibility(item, errors):

@@ -226,7 +226,7 @@ def extract_metadata_from_file(path):
 			if (keyword.endswith(" copy")):
 				for owner in config.parser.bookkeepers:
 					if keywords.startswith(owner):
-						result["keywords"].add(const.META_HAS_OWNER)
+						result["owner"] = owner
 			else:
 				result["keywords"].add(keyword)
 	return result
