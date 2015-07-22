@@ -693,6 +693,7 @@ def check_source_file(item, errors):
 	MULTILANG_FILES = {
 		"_problems.bib",
 		"_periodical.bib",
+		"_references.bib",
 		"proceedings-rothenfelser.bib",
 		"proceedings-spb.bib",
 	}
