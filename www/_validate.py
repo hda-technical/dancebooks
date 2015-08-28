@@ -691,8 +691,9 @@ def check_source_file(item, errors):
 	Checks if source file language matches item language
 	"""
 	MULTILANG_FILES = {
-		"_problems.bib",
+		"_antidance.bib",
 		"_periodical.bib",
+		"_problems.bib",
 		"_references.bib",
 		"proceedings-rothenfelser.bib",
 		"proceedings-spb.bib",
