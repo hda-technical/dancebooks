@@ -165,6 +165,9 @@ class BibItem(object):
 
 	def params(self):
 		return self._params
+		
+	def fields(self):
+		return set(self._params.keys())
 
 	def process_crossrefs(self, index):
 		"""
@@ -181,6 +184,7 @@ class BibItem(object):
 			parent = list(parent)[0]
 			new_params = dict(parent.params())
 			new_params.update(self._params)
+			new_params.pop("crossref")
 			self._params = new_params
 
 

@@ -24,6 +24,66 @@ languages = sorted(item_index["langid"].keys())
 ERROR_PREFIX = "validation:error:"
 #filename for storing previous validation state
 DATA_JSON_FILENAME = "_validate.json"
+DATA_FIELDS = {
+	"added_on",
+	"altauthor",
+	"annotation",
+	"author",
+	"booktitle",
+	"booktype",
+	"catalogue",
+	"commentator",
+	"day",
+	"edition",
+	"editor",
+	"filename",
+	"id",
+	"institution",
+	"isbn",
+	"journaltitle",
+	"keywords",
+	"langid",
+	"library",
+	"library_code",
+	"library_location",
+	"location",
+	"month",
+	"number",
+	"origauthor",
+	"origlanguage",
+	"pages",
+	"part",
+	"pseudo_author",
+	"publisher",
+	"series",
+	"shorthand",
+	"source",
+	"subtitle",
+	"title",
+	"type",
+	"transcription_filename",
+	"transcription_url",
+	"translator",
+	"type",
+	"url",
+	"volume",
+	"volumes",
+	"year",
+}
+
+ANCILLARY_FIELDS = {
+	"all_fields",
+	"availability",
+	"filesize",
+	"source_file",
+	"source_line",	
+	"useful_keywords",
+	"year_circa",
+	"year_from",
+	"year_to",
+}
+
+ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 
 #executed once per validation run
 def update_validation_data(
@@ -201,6 +261,17 @@ def check_obligatory_fields(item, errors):
 			errors.add("Obligatory field {field} is missing".format(
 				field=field
 			))
+	
+	
+def check_allowed_fields(item, errors):
+	"""
+	Checks if all fields of an item are allowed
+	"""
+	diff = item.fields() - ALLOWED_FIELDS
+	if len(diff) > 0:
+		errors.add("Fields {fields!r} aren't allowed".format(
+			fields=diff
+		))
 
 
 def check_translation_fields(item, errors):
@@ -716,6 +787,7 @@ def check_single_item(item, make_extra_checks):
 	check_id(item, errors)
 	check_parser_generated_fields(item, errors)
 	check_obligatory_fields(item, errors)
+	check_allowed_fields(item, errors)
 	check_translation_fields(item, errors)
 	check_transcription(item, errors)
 	check_transcription_url(item, errors)
