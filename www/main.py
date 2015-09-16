@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
+
 import http.client
 import logging
 import os.path
@@ -467,13 +468,9 @@ def get_books_rss(lang):
 @flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])
 @utils_flask.log_exceptions()
 def everything_else(filename):
-	if (filename.startswith("components")):
-		flask.abort(http.client.NOT_FOUND, "No such file: {filename}".format(
-			filename=filename
-		))
-	if (os.path.isfile("templates/static/" + filename)):
+	if os.path.isfile(os.path.join("templates/static", filename)):
 		return flask.render_template("static/" + filename)
-	elif (os.path.isfile("static/" + filename)):
+	elif os.path.isfile(os.path.join("static", filename)):
 		return flask_app.send_static_file(filename)
 	else:
 		flask.abort(http.client.NOT_FOUND, flask.request.base_url)
