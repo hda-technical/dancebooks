@@ -13,7 +13,7 @@ LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 
 WGET_HTTP_ERROR=8
 
-MIN_FILE_SIZE=`expr 1024 '*' 5` # 5.0 kilobytes
+MIN_FILE_SIZE_BYTES=1024
 
 #========================
 #HELPER FUNCTIONS
@@ -42,7 +42,7 @@ function webGet()
 
 	if [ \
 		\( $? == "$WGET_HTTP_ERROR" \) -o \
-		\( `stat --format=%s "$OUTPUT_FILE"` -lt $MIN_FILE_SIZE \) \
+		\( `stat --format=%s "$OUTPUT_FILE"` -lt $MIN_FILE_SIZE_BYTES \) \
 	]
 	then
 		rm $OUTPUT_FILE
