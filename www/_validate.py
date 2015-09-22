@@ -123,9 +123,7 @@ def update_validation_data(
 	added_errors = new_errors - old_errors
 	if len(added_errors) > 0:
 		logging.error("Following new erroneous entries were introduced")
-		for erroneous_id in errors:
-			if erroneous_id not in added_errors:
-				continue
+		for erroneous_id in added_errors:			
 			logging.error("    " + str(erroneous_id))
 			for error_text in errors[erroneous_id]:
 				logging.error("        " + error_text)
@@ -143,10 +141,10 @@ def update_validation_data(
 			logging.warning("    " + lost_id)
 
 	#updating validation data
-	if ((len(lost_ids) == 0) or ignore_missing_ids):
+	if (lost_ids or ignore_missing_ids):
 		validation_data["ids"] = list(current_ids)
 
-	if ((len(new_errors) == 0) or ignore_added_errors):
+	if (new_errors or ignore_added_errors):
 		validation_data["errors"] = list(new_errors)
 
 	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
@@ -157,6 +155,8 @@ def check_single_filename(abspath, filename, item, errors):
 	"""
 	Checks if file is accessible and matches item metadata
 	"""
+	MULTIENTRY_BOOKTYPES = {"article", "proceedings", "inproceedings"}
+	
 	if not os.path.isfile(abspath):
 		errors.add("File [{abspath}] is not accessible".format(
 			abspath=abspath
@@ -165,6 +165,10 @@ def check_single_filename(abspath, filename, item, errors):
 		errors.add("File [{abspath}] is not accessible in case-sensitive mode".format(
 			abspath=abspath
 		))
+		
+	booktype = item.get("booktype")
+	if booktype in MULTIENTRY_BOOKTYPES:
+		return	
 	metadata = utils.extract_metadata_from_file(filename)
 
 	#validating optional author, edition, tome
@@ -731,10 +735,7 @@ def check_filename(item, errors):
 	"""
 	Checks filename against various tests
 	"""
-	#FIXME: even the presence of files for these bookstypes isn't checked
-	MULTIENTRY_BOOKTYPES = {"article", "proceedings", "inproceedings"}
 	NOT_DIGITIZED_KEYWORD = "not digitized"
-	booktype = item.get("booktype")
 	filename = item.get("filename")
 	keywords = set(item.get("keywords") or {})
 	if filename is None:
@@ -748,9 +749,6 @@ def check_filename(item, errors):
 			errors.add("Keyword {keyword} shouldn't be specified".format(
 				keyword=NOT_DIGITIZED_KEYWORD
 			))
-
-	if booktype in MULTIENTRY_BOOKTYPES:
-		return
 	for single_filename in filename:
 		#filename starts with slash - trimming it
 		abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
