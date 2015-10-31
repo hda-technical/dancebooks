@@ -141,12 +141,8 @@ def update_validation_data(
 			logging.warning("    " + lost_id)
 
 	#updating validation data
-	if (lost_ids or ignore_missing_ids):
-		validation_data["ids"] = list(current_ids)
-
-	if (new_errors or ignore_added_errors):
-		validation_data["errors"] = list(new_errors)
-
+	validation_data["ids"] = list(current_ids)
+	validation_data["errors"] = list(new_errors)
 	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
 		validation_data_file.write(json.dumps(validation_data))
 
