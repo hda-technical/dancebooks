@@ -11,7 +11,7 @@ LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 #Extra latin number (not used)
 #"xi xii xiii xiv xv xvi xvii xviii xix xx xxi xxii xxiii xxiv xxv xxvi xxvii xxviii xxix xxx xxxi xxxii xxxiii xxxiv xxxv xxxvi xxxvii xxxviii xxxix xl"
 
-WGET_HTTP_ERROR=8
+CURL_HTTP_ERROR=22
 
 MIN_FILE_SIZE_BYTES=1024
 
@@ -25,7 +25,7 @@ function webGet()
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 url output_file"
-		return
+		return 1
 	fi
 
 	local URL=$1
@@ -33,16 +33,22 @@ function webGet()
 
 	if [ -f "$OUTPUT_FILE" ]
 	then
-		return
+		return 0
 	fi
 
 	echo -n "Getting $1 ... "
 
-	wget -q "$URL" -O "$OUTPUT_FILE"
+	curl \
+		--silent \
+		--fail \
+		--connect-timeout 5 \
+		--output "$OUTPUT_FILE" \
+		"$URL" 
 
 	if [ \
-		\( $? == "$WGET_HTTP_ERROR" \) -o \
-		\( `stat --format=%s "$OUTPUT_FILE"` -lt $MIN_FILE_SIZE_BYTES \) \
+		\( "$?" -ne "$CURL_HTTP_ERROR" \) -o \
+		\( ! -f "$OUTPUT_FILE" \) -o \
+		\( `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" \) \
 	]
 	then
 		rm $OUTPUT_FILE
@@ -92,7 +98,7 @@ function tiles()
 	if [ $# -ne 5 ]
 	then
 		echo "Usage: $0 urlGenerator fileGenerator pageId zoom outputDir"
-		return
+		return 1
 	fi
 
 	local URL_GENERATOR=$1
@@ -156,7 +162,7 @@ function rsl()
 	if [ $# -ne 1 ]
 	then
 		echo "Usage: $0 book_id"
-		return
+		return 1
 	fi
 
 	local BOOK_ID=$1
@@ -194,7 +200,7 @@ function gallica()
 	if [ $# -ne 2 ]
 	then
 		echo "Usage $0 ark_id page_count"
-		return
+		return 1
 	fi
 
 	local BOOK_ID=$1
@@ -208,12 +214,31 @@ function gallica()
 	done
 }
 
+function britishLibrary()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage: $0 book_id page_count"
+		return 1
+	fi
+	
+	local BOOK_ID=$1
+	local OUTPUT_DIR="british.$BOOK_ID"
+	local PAGE_COUNT=$2
+	mkdir -p "$OUTPUT_DIR"
+	for PAGE in `seq $PAGE_COUNT`
+	do
+		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.jpg $PAGE`
+		webGet "http://access.bl.uk/IIIFImageService/ark:/81055/${BOOK_ID}.0x`printf %06x $PAGE`/0,0,5000,5000/pct:100/0/native.jpg" "$OUTPUT_FILE"
+	done
+}
+
 function vwml()
 {
 	if [ $# -ne 3 ]
 	then
 		echo "Usage: $0 book_shorthand book_id page_count"
-		return
+		return 1
 	fi
 
 	local BOOK_SHORTHAND=$1
@@ -257,7 +282,7 @@ function gallicaTileFile()
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 x y"
-		return
+		return 1
 	fi
 
 	local TILE_X=$1
@@ -271,7 +296,7 @@ function gallicaTilesUrl()
 	if [ $# -ne 4 ]
 	then
 		echo "Usage: $0 ark_id x y z"
-		return
+		return 1
 	fi
 
 	local BOOK_ID=$1
@@ -291,7 +316,7 @@ function gallicaTiles()
 	if [ $# -ne 1 ]
 	then
 		echo "Usage: $0 ark_id"
-		return
+		return 1
 	fi
 
 	local BOOK_ID=$1
@@ -305,7 +330,7 @@ function dusseldorfTileFile()
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 x y"
-		return
+		return 1
 	fi
 
 	local TILE_X=$1
@@ -321,7 +346,7 @@ function dusseldorfTilesUrl()
 	if [ $# -ne 4 ]
 	then
 		echo "Usage: $0 image_id x y z"
-		return
+		return 1
 	fi
 
 	local IMAGE_ID=$1
@@ -340,7 +365,7 @@ function dusseldorfTiles()
 	if [ $# -ne 1 ]
 	then
 		echo "Usage: $0 image_id"
-		return
+		return 1
 	fi
 	local BOOK_ID=$1
 	local ZOOM=6
