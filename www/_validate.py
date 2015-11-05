@@ -100,7 +100,8 @@ def update_validation_data(
 		"ids": set(),
 		"errors": dict()
 	}
-	if (os.path.exists(DATA_JSON_FILENAME)):
+	previous_data_exists = os.path.exists(DATA_JSON_FILENAME)
+	if previous_data_exists:
 		with open(DATA_JSON_FILENAME, "r") as validation_data_file:
 			try:
 				validation_data = json.loads(validation_data_file.read())
@@ -140,9 +141,10 @@ def update_validation_data(
 		for lost_id in lost_ids:
 			logging.warning("    " + lost_id)
 
-	#updating validation data
-	validation_data["ids"] = list(current_ids)
-	validation_data["errors"] = list(new_errors)
+	if (not previous_data_exists) or (lost_ids and ignore_missing_ids):
+		validation_data["ids"] = list(current_ids)
+	if (not previous_data_exists) or (new_errors and ignore_added_errors):
+		validation_data["errors"] = list(new_errors)
 	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
 		validation_data_file.write(json.dumps(validation_data))
 
