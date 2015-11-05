@@ -32,6 +32,13 @@ for item in items:
 	item.process_crossrefs(item_index)
 item_index.update(items)
 
+#do not append HSTS headers in these modes
+DEBUG_WORKING_MODES = {
+	WorkingMode.Development,
+	WorkingMode.Unittest,
+	WorkingMode.Testing
+}
+
 langids = sorted(item_index["langid"].keys())
 source_files = sorted(item_index["source_file"].keys())
 booktypes = sorted(item_index["booktype"].keys())
@@ -75,7 +82,7 @@ def initialize():
 
 @flask_app.after_request
 def add_security_headers(response):
-	if config.working_mode in (WorkingMode.Unittest, WorkingMode.Development):
+	if config.working_mode in DEBUG_WORKING_MODES:
 		return response
 	response.headers["Strict-Transport-Security"] = (
 		"max-age={seconds_in_year}; includeSubDomains".format(
