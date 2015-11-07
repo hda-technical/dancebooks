@@ -45,18 +45,21 @@ function webGet()
 		--output "$OUTPUT_FILE" \
 		"$URL" 
 
-	if [ \
-		\( "$?" -ne "$CURL_HTTP_ERROR" \) -o \
-		\( ! -f "$OUTPUT_FILE" \) -o \
-		\( `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" \) \
-	]
+	if [ "$?" == "$CURL_HTTP_ERROR" ]
 	then
-		rm $OUTPUT_FILE
 		echo "FAIL"
 		return 1
-	else
-		echo "OK"
-		return 0
+	elif [ -f "$OUTPUT_FILE" ]
+	then
+		if [ `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" ]
+		then
+			rm -f "$OUTPUT_FILE"
+			echo "FAIL"
+			return 1
+		else
+			echo "OK"
+			return 0
+		fi
 	fi
 }
 
@@ -95,7 +98,7 @@ function min()
 
 function tiles()
 {
-	if [ $# -ne 5 ]
+	if [ $# -ne 6 ]
 	then
 		echo "Usage: $0 urlGenerator fileGenerator pageId zoom outputDir"
 		return 1
@@ -105,7 +108,8 @@ function tiles()
 	local FILE_GENERATOR=$2
 	local PAGE_ID=$3
 	local TILE_Z=$4
-	local OUTPUT_DIR=$5
+	local TILE_SIZE=$5
+	local OUTPUT_DIR=$6
 	local OUTPUT_FILE=$OUTPUT_DIR/$PAGE_ID.bmp
 	local TMP_DIR=$OUTPUT_DIR/tmp
 
@@ -137,7 +141,12 @@ function tiles()
 		done;
 	done;
 
-	montage $TMP_DIR/* -mode Concatenate -tile `expr $MAX_TILE_X + 1`x`expr $MAX_TILE_Y + 1` $OUTPUT_FILE
+	montage \
+		$TMP_DIR/* \
+		-mode Concatenate \
+		-geometry "${TILE_SIZE}x${TILE_SIZE}>" \
+		-tile `expr $MAX_TILE_X + 1`x`expr $MAX_TILE_Y + 1` \
+		$OUTPUT_FILE
 	convert $OUTPUT_FILE -trim $OUTPUT_FILE
 
 	rm -rf $TMP_DIR
@@ -299,16 +308,16 @@ function gallicaTilesUrl()
 		return 1
 	fi
 
-	local BOOK_ID=$1
+	local BOOK_ID=`echo $1 | sed -e 's/\./\//g'`
 	local TILE_X=$2
 	local TILE_Y=$3
 	local TILE_Z=$4
-	local TILE_SIZE=2048
+	local TILE_SIZE=1024
 
 	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
 	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
 
-	echo "http://gallica.bnf.fr/proxy?method=R&ark=$BOOK_ID&l=$TILE_Z&r=$TOP,$LEFT,$TILE_SIZE,$TILE_SIZE"
+	echo "http://gallica.bnf.fr/iiif/ark:/12148/$BOOK_ID/$LEFT,$TOP,1024,1024/1024,/0/native.jpg"
 }
 
 function gallicaTiles()
@@ -318,11 +327,16 @@ function gallicaTiles()
 		echo "Usage: $0 ark_id"
 		return 1
 	fi
-
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=20960
+	
 	local BOOK_ID=$1
 	local ZOOM=6
+	local TILE_SIZE=1024
 	local OUTPUT_DIR=.
-	tiles gallicaTilesUrl gallicaTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
+	
+	tiles gallicaTilesUrl gallicaTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 function dusseldorfTileFile()
@@ -369,8 +383,10 @@ function dusseldorfTiles()
 	fi
 	local BOOK_ID=$1
 	local ZOOM=6
+	local TILE_SIZE=256
 	local OUTPUT_DIR=.
-	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $OUTPUT_DIR
+	
+	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 if [ $# -lt 2 ]
