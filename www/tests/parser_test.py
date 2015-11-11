@@ -5,9 +5,11 @@ import json
 import unittest
 
 from config import config
-import index
 import bib_parser
+import const
+import index
 import search
+import utils
 
 TEST_ITEMS = \
 r"""
@@ -35,7 +37,15 @@ r"""
 """
 
 EXPECTED_LANGUAGES = set(["russian", "english"])
-EXPECTED_KEYWORDS = set(["renaissance", "cinquecento", "grumbling", "historical dance"])
+EXPECTED_KEYWORDS = set([
+	"renaissance", 
+	"cinquecento", 
+	"grumbling", 
+	"historical dance",
+	"!cinquecento",
+	"!renaissance",
+	"!grumbling",
+])
 
 class TestParser(unittest.TestCase):
 	"""
@@ -119,6 +129,22 @@ class TestParser(unittest.TestCase):
 			item_index["keywords"]["cinquecento"] & \
 			item_index["keywords"]["historical dance"]
 		self.assertEqual(len(list(filtered_items)), 1)
+		
+	def test_inverted_index_search(self):
+		items = bib_parser.BibParser().parse_string(TEST_ITEMS)
+		item_index = index.Index(items)
+		for item in items:
+			item.process_crossrefs(item_index)
+		item_index.update(items)
+		
+		DIRECT_KEY = "cinquecento"
+		INVERTED_KEY = const.INVERTED_INDEX_KEY_PREFIX + DIRECT_KEY
+		subindex = item_index["keywords"]
+		self.assertIn(DIRECT_KEY, subindex)
+		self.assertIn(INVERTED_KEY, subindex)
+		filtered_items = item_index["keywords"][INVERTED_KEY]
+		self.assertEqual(len(filtered_items), 1)
+		self.assertEqual(utils.first(filtered_items).id(), "id_2")
 
 
 if __name__ == "__main__":

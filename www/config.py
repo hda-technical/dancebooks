@@ -159,6 +159,7 @@ class WwwConfig(object):
 		self.search_params = get_config_value("search_params", params, transform=extract_set_from_json)
 		self.search_synonyms = get_config_value("search_synonyms", params, transform=json.loads)
 		self.index_params = get_config_value("index_params", params, transform=extract_set_from_json)
+		self.inverted_index_params = get_config_value("inverted_index_params", params, transform=extract_set_from_json)
 		self.index_unique_params = get_config_value(
 			"index_unique_params",
 			params,
