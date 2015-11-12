@@ -338,7 +338,7 @@ def is_url_valid(url, item):
 	"""
 	split_result = urlparse.urlsplit(url)
 	if len(split_result.scheme) == 0:
-		logging.debug("Schemes isn't specified")
+		logging.debug("Scheme isn't specified")
 		return False
 	elif len(split_result.netloc) == 0:
 		logging.debug("Network location isn't specified")

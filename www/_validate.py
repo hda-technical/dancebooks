@@ -148,6 +148,29 @@ def update_validation_data(
 	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
 		validation_data_file.write(json.dumps(validation_data))
 
+		
+def check_periodical_filename(filename, item, errors):
+	if filename.endswith(".md"):
+		return
+	booktype = item.get("booktype")
+	source_file = item.get("source_file") 
+	
+	if not utils.all_or_none([
+		source_file == "_periodical.bib",
+		booktype == "article",
+		filename.startswith("/Periodical/")
+	]):
+		errors.add("Only articles should be stored in '/Periodical' subfolder")
+	
+
+def check_short_desription_filename(filename, item, errors):
+	if filename.endswith(".md"):
+		return
+	keywords = item.get("keywords") or []
+	if filename.startswith("/Short descriptions/"):
+		if "dance description: short" not in keywords:
+			errors.add("Only 'dance description: short' tagged items should be stored in '/Short descriptions' subfolder")
+
 
 def check_single_filename(abspath, filename, item, errors):
 	"""
@@ -165,8 +188,11 @@ def check_single_filename(abspath, filename, item, errors):
 		))
 		
 	booktype = item.get("booktype")
+	check_periodical_filename(filename, item, errors)
+	check_short_desription_filename(filename, item, errors)
+	
 	if booktype in MULTIENTRY_BOOKTYPES:
-		return	
+		return
 	metadata = utils.extract_metadata_from_file(filename)
 
 	#validating optional author, edition, tome
@@ -174,7 +200,7 @@ def check_single_filename(abspath, filename, item, errors):
 	optional_meta_fields = [
 		"author"
 	]
-	if (item.get("booktype") != "article"):
+	if booktype:
 		optional_meta_fields += [
 			"edition",
 			"volume",

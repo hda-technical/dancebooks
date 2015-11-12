@@ -1,4 +1,4 @@
-# Russian translations for dancebooks-bibtex.
+3# Russian translations for dancebooks-bibtex.
 # Copyright (C) 2013 Yuriy Chernyshov
 # This file is distributed under the same license as the dancebooks-bibtex
 # project.
@@ -123,7 +123,8 @@ msgid "pages:keywords:ref:quadrille"
 msgstr ""
 	"Любая кадриль (добавляйте, если ставите любой кадрильный тег). "
 	"Музыкальная форма кадрили ведёт к добавлению соответствующих тегов "
-	"(то есть, шоттиш-кадриль приведёт к добавлению тега \"schottische\")"
+	"(то есть, шоттиш-кадриль приведёт к добавлению тега \"schottische\"). "
+	"Американские котильоны (sets of cotillions) также получают этот тег"
 
 msgid "pages:keywords:ref:quadrille-contredanse"
 msgstr "Одиночная фигура кадрили, описанная как самостоятельный танец"
@@ -188,6 +189,11 @@ msgstr "В книге есть вступительная статья"
 
 msgid "pages:keywords:ref:dance-description"
 msgstr "Источники, содержащие описание последовательности шагов и фигур танца"
+
+msgid "pages:keywords:ref:dance-description-short"
+msgstr ""
+	"Источники, содержащие короткое описание последовательности шагов и фигур танца "
+	"(несколько строк текста; основным содержанием источника является музыкальная нотация)"
 
 msgid "pages:keywords:ref:dance-education"
 msgstr "Источники, содержащие последовательные инструкции по обучению танцам"
