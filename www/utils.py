@@ -348,11 +348,12 @@ def is_url_valid(url, item):
 		return False
 
 	#validating blocked domains
-	if split_result.hostname in config.parser.blocked_domains:
-		logging.debug("Domain {hostname} is blocked".format(
-			hostname=split_result.hostname
-		))
-		return False
+	for blocked_domain in config.parser.blocked_domains:
+		if split_result.hostname.endswith(blocked_domain):
+			logging.debug("Domain {hostname} is blocked".format(
+				hostname=split_result.hostname
+			))
+			return False
 
 	#validating domains blocked for insecure (http) access
 	if (
