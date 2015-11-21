@@ -45,7 +45,7 @@ def main():
 	files = list(filter(files_filter, files))
 	
 	for file in files:
-		print("Unreferenced file: " + file)
+		print(file)
 
 if __name__ == "__main__":
 	main.command()
