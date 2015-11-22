@@ -241,6 +241,7 @@ def check_single_filename(abspath, filename, item, errors):
 				abspath=abspath
 			))
 
+
 #single parameter group validations (executed once per entry)
 def check_id(item, errors):
 	"""
@@ -300,6 +301,32 @@ def check_allowed_fields(item, errors):
 		errors.add("Fields {fields!r} aren't allowed".format(
 			fields=diff
 		))
+
+
+def check_antidance_fields(item, errors):
+	"""
+	Check that antidance books are 
+	* tagged with "antidance" keyword
+	* stored in /Antidance subfolder
+	* are sourced from _antidance.bib
+	"""
+	source_file = item.get("source_file")
+	keywords = item.get("keywords") or []
+	filename = item.get("filename") or []
+	
+	isSourceAntidance = (source_file == "_antidance.bib")
+	isKeywordsAntidance = ("antidance" in keywords)
+	
+	filename_checker = lambda f: f.startswith("/Antidance/")
+	isFilenameAntidance = any(map(filename_checker, filename))
+	
+	if not utils.all_or_none([isSourceAntidance, isKeywordsAntidance, isFilenameAntidance]):
+		errors.add(
+			"Antidance entries should be "
+			"stored in _antidance.bib, "
+			"tagged with 'antidance' keyword, "
+			"and placed into /Antidance subfolder"
+		)
 
 
 def check_translation_fields(item, errors):
@@ -827,6 +854,7 @@ def check_single_item(item, make_extra_checks):
 	check_filename(item, errors)
 	check_source_file(item, errors)
 	check_pages(item, errors)
+	check_antidance_fields(item, errors)
 	if make_extra_checks:
 		check_title_starts_from_shorthand(item, errors)
 		check_url_accessibility(item, errors)
