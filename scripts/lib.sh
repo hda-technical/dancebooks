@@ -148,8 +148,8 @@ function tiles()
 		-tile `expr $MAX_TILE_X + 1`x`expr $MAX_TILE_Y + 1` \
 		$OUTPUT_FILE
 	convert $OUTPUT_FILE -trim $OUTPUT_FILE
-
-	rm -rf $TMP_DIR
+	
+	rm -rf "$TMP_DIR"
 }
 
 # removes wrong symbols from filename, replacing them by underscores
@@ -317,7 +317,7 @@ function gallicaTilesUrl()
 	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
 	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
 
-	echo "http://gallica.bnf.fr/iiif/ark:/12148/$BOOK_ID/$LEFT,$TOP,1024,1024/1024,/0/native.jpg"
+	echo "http://gallica.bnf.fr/iiif/ark:/12148/$BOOK_ID/$LEFT,$TOP,1024,1024/pct:100/0/native.jpg"
 }
 
 function gallicaTiles()
