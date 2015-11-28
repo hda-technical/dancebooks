@@ -47,9 +47,10 @@ function webGet()
 
 	if [ "$?" == "$CURL_HTTP_ERROR" ]
 	then
+		rm -f "$OUTPUT_FILE"
 		echo "FAIL"
 		return 1
-	elif [ -f "$OUTPUT_FILE" ]
+	elif [ -e "$OUTPUT_FILE" ]
 	then
 		if [ `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" ]
 		then
@@ -317,7 +318,7 @@ function gallicaTilesUrl()
 	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
 	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
 
-	echo "http://gallica.bnf.fr/iiif/ark:/12148/$BOOK_ID/$LEFT,$TOP,1024,1024/pct:100/0/native.jpg"
+	echo "http://gallica.bnf.fr/iiif/ark:/12148/$BOOK_ID/$LEFT,$TOP,1024,1024/1024,/0/native.jpg"
 }
 
 function gallicaTiles()
@@ -329,7 +330,7 @@ function gallicaTiles()
 	fi
 	
 	#overriding global constant
-	MIN_FILE_SIZE_BYTES=20960
+	MIN_FILE_SIZE_BYTES=51200
 	
 	local BOOK_ID=$1
 	local ZOOM=6
