@@ -12,8 +12,8 @@ import utils
 
 MAX_OUTPUT_COUNT = 100
 EXCLUDED_FOLDERS = {
-	"!Ancillary sources", 
-	"!Leaflets"
+	"Ancillary sources (not in bibliography)", 
+	"Leaflets (not in bibliography)"
 }
 
 items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
