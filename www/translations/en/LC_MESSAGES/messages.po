@@ -135,6 +135,9 @@ msgstr "Keywords includes numerous Lancers variations (like Saratoga Lancers)"
 msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Form of first set with high amount of figure variations, lead by a conductor"
 
+msgid "pages:keywords:ref:quadrille-promiscuous-figures"
+msgstr "Contains figures used to replace one from the first set"
+	
 msgid "pages:keywords:ref:schottische"
 msgstr "Either schottische (including variations like military schottische or pas de quatre)"
 
