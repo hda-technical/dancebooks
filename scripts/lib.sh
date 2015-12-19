@@ -43,7 +43,7 @@ function webGet()
 		--fail \
 		--connect-timeout 5 \
 		--output "$OUTPUT_FILE" \
-		"$URL" 
+		"$URL"
 
 	if [ "$?" == "$CURL_HTTP_ERROR" ]
 	then
@@ -112,10 +112,12 @@ function tiles()
 	local TILE_SIZE=$5
 	local OUTPUT_DIR=$6
 	local OUTPUT_FILE=$OUTPUT_DIR/$PAGE_ID.bmp
-	local TMP_DIR=$OUTPUT_DIR/tmp
+	local TMP_DIR=$OUTPUT_DIR/$PAGE_ID.tmp
 
 	local MAX_TILE_X=$MAX_TILE
 	local MAX_TILE_Y=$MAX_TILE
+	local LAST_TILE_WIDTH=$TILE_SIZE
+	local LAST_TILE_HEIGHT=$TILE_HEIGHT
 
 	mkdir -p "$TMP_DIR"
 	for TILE_X in `seq 0 $MAX_TILE_X`
@@ -125,7 +127,9 @@ function tiles()
 		webGet `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
 		if [ $? -ne 0 ]
 		then
-			MAX_TILE_X=`expr $TILE_X - 1`
+			local MAX_TILE_X=`expr $TILE_X - 1`
+			local LAST_TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $MAX_TILE_X 0`.jpg"
+			local LAST_TILE_WIDTH=`identify -format '%w' "$LAST_TILE_FILE"`
 			break
 		fi
 
@@ -136,20 +140,49 @@ function tiles()
 
 			if [ $? -ne 0 ]
 			then
-				MAX_TILE_Y=`expr $TILE_Y - 1`
+				local MAX_TILE_Y=`expr $TILE_Y - 1`
+				local LAST_TILE_FILE="$TMP_DIR/`$FILE_GENERATOR 0 $MAX_TILE_Y`.jpg"
+				local LAST_TILE_HEIGHT=`identify -format '%h' "$LAST_TILE_FILE"`
 				break
 			fi
 		done;
 	done;
 
-	montage \
-		$TMP_DIR/* \
-		-mode Concatenate \
-		-geometry "${TILE_SIZE}x${TILE_SIZE}>" \
-		-tile `expr $MAX_TILE_X + 1`x`expr $MAX_TILE_Y + 1` \
-		$OUTPUT_FILE
-	convert $OUTPUT_FILE -trim $OUTPUT_FILE
-	
+	if [ \
+		"$MAX_TILE_X" -gt "0" -a \
+		"$MAX_TILE_Y" -gt "0" \
+	]
+	then
+		for row in `seq 0 $MAX_TILE_Y`
+		do
+			#fixing size of last tile in each row
+			local LAST_TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $MAX_TILE_X $row`.jpg"
+			local LAST_TILE_FIXED_FILE="$TMP_DIR/`$FILE_GENERATOR $MAX_TILE_X $row`.bmp"
+			local OLD_WIDTH=`identify -format "%w" $LAST_TILE_FILE`
+			local OLD_HEIGHT=`identify -format "%h" $LAST_TILE_FILE`
+			if [ "$row" != "$MAX_TILE_Y" ]
+			then
+				#resizing last column of tiles to have TILE_SIZE height
+				local NEW_WIDTH=`echo "$OLD_WIDTH * $TILE_SIZE / $OLD_HEIGHT" | bc`
+				local NEW_HEIGHT=$TILE_SIZE
+			else
+				#resizing last tile to match the previous in the grid
+				local NEW_HEIGHT=$LAST_TILE_HEIGHT
+				local NEW_WIDTH=`echo "$OLD_WIDTH * $LAST_TILE_HEIGHT / $OLD_HEIGHT" | bc`
+			fi
+			convert "$LAST_TILE_FILE" -resize "${NEW_WIDTH}x${NEW_HEIGHT}!" "$LAST_TILE_FIXED_FILE"
+			rm -f "$LAST_TILE_FILE"
+		done
+
+		montage \
+			$TMP_DIR/* \
+			-mode Concatenate \
+			-geometry "${TILE_SIZE}x${TILE_SIZE}>" \
+			-tile `expr $MAX_TILE_X + 1`x`expr $MAX_TILE_Y + 1` \
+			$OUTPUT_FILE
+		convert $OUTPUT_FILE -trim $OUTPUT_FILE
+	fi
+
 	rm -rf "$TMP_DIR"
 }
 
@@ -231,7 +264,7 @@ function britishLibrary()
 		echo "Usage: $0 book_id page_count"
 		return 1
 	fi
-	
+
 	local BOOK_ID=$1
 	local OUTPUT_DIR="british.$BOOK_ID"
 	local PAGE_COUNT=$2
@@ -328,15 +361,15 @@ function gallicaTiles()
 		echo "Usage: $0 ark_id"
 		return 1
 	fi
-	
+
 	#overriding global constant
-	MIN_FILE_SIZE_BYTES=51200
-	
+	MIN_FILE_SIZE_BYTES=10240
+
 	local BOOK_ID=$1
 	local ZOOM=6
 	local TILE_SIZE=1024
 	local OUTPUT_DIR=.
-	
+
 	tiles gallicaTilesUrl gallicaTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
@@ -384,9 +417,12 @@ function dusseldorfTiles()
 	fi
 	local BOOK_ID=$1
 	local ZOOM=6
-	local TILE_SIZE=256
+	local TILE_SIZE=512
 	local OUTPUT_DIR=.
 	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=5120
+
 	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
