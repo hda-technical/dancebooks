@@ -14,7 +14,7 @@ sub install
 	on error resume next
 	outFile=fs.GetTempName + ".reg"
 	set tempFolder = fs.GetSpecialFolder(2) 
-	set tempFile = tempFolder.CreateTextFile(outFile, True)
+	set tempFile = tempFolder.CreateTextFile(outFile, true)
 	tempFile.Write _
 		"Windows Registry Editor Version 5.00" & vbCrLf & _
 		"[HKEY_CLASSES_ROOT\bib]" & vbCrLf & _
@@ -42,15 +42,15 @@ sub uninstall
 	outFile=fs.GetTempName + ".reg"
 	'msgbox outfile
 	set tempFolder = fs.GetSpecialFolder(2) 
-	set tempFile = tempFolder.CreateTextFile(outFile, True)
+	set tempFile = tempFolder.CreateTextFile(outFile, true)
 	tempFile.Write _
-		"Windows Registry Editor Version 5.00"&vbCrLf&_
-		"[-HKEY_CLASSES_ROOT\bib]"&vbCrLf
+		"Windows Registry Editor Version 5.00" & vbCrLf & _
+		"[-HKEY_CLASSES_ROOT\bib]" & vbCrLf
 	tempFile.Close
-	fname = tempFolder + "\"+outFile
-	res = shell.Run(fname,1,true)
+	fname = tempFolder + "\" + outFile
+	res = shell.Run(fname, 1, true)
 	if Err.Number <> 0 then
-		msgbox "Uninstall failed. Check permissions.",vbSystemModal,"Bibiography URL Handler"
+		msgbox "Uninstall failed. Check permissions.", vbSystemModal, "Bibiography URL Handler"
 	end if
 	fs.DeleteFile outFile
 end sub
@@ -68,7 +68,7 @@ sub open(arg)
 	path = strFolder + urlDecode(arg)
 	res = shell.Run("""" + path + """")
 	if Err.Number <> 0 then
-		msgbox "No such file. Try re-syncing the library.",vbSystemModal,"Bibiography URL Handler"
+		msgbox "No such file. Try re-syncing the library.", vbSystemModal, "Bibiography URL Handler"
 	end if
 end sub
 
@@ -86,10 +86,47 @@ function readFromRegistry(strRegistryKey, strDefault)
     end if
 end function
 
-function urlDecode(s)
-	dim jsEngine
-	set jsEngine = CreateObject("MSScriptControl.ScriptControl")
-	jsEngine.Language = "JScript"
-	urlDecode = Replace(s, "+", " ")
-    urlDecode = jsEngine.CodeObject.decodeURIComponent(urlDecode)
+function urlDecode(str)
+    set list = CreateObject("System.Collections.ArrayList")
+    strLen = len(str)
+    for i = 1 to strLen
+        sT = mid(str, i, 1)
+        if sT = "%" then
+            if i + 2 <= strLen then
+                list.add cbyte("&H" & mid(str, i + 1, 2))
+                i = i + 2
+            end if
+        else
+            list.add asc(sT)
+        end if
+    next
+    depth = 0
+    for each by in list.toArray()
+        if by and &h80 then
+            if (by and &h40) = 0 then
+                if depth = 0 then Err.Raise 5
+                val = val * 2 ^ 6 + (by and &h3f)
+                depth = depth - 1
+                if depth = 0 then
+                    sR = sR & chrw(val)
+                    val = 0
+                end if
+            elseif (by and &h20) = 0 then
+                if depth > 0 then Err.Raise 5
+                val = by and &h1f
+                depth = 1
+            elseif (by and &h10) = 0 then
+                if depth > 0 then Err.Raise 5
+                val = by and &h0f
+                depth = 2
+            else
+                Err.Raise 5
+            end if
+        else
+            if depth > 0 then Err.Raise 5
+            sR = sR & chrw(by)
+        end if
+    next
+    if depth > 0 then Err.Raise 5
+    urlDecode = sR
 end function
