@@ -426,6 +426,54 @@ function dusseldorfTiles()
 	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
+function uniJenaTilesFile()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage: $0 x y"
+		return 1
+	fi
+
+	local TILE_X=$1
+	local TILE_Y=$2
+	
+	printf "%04d_%04d.jpg" "$TILE_Y" "$TILE_X"
+}
+
+function uniJenaTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage: $0 image_id x y z"
+		return 1
+	fi
+
+	local IMAGE_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local TILE_Z=4
+	
+	echo "http://archive.thulb.uni-jena.de/tiles/hisbest/HisBest_derivate_00000416/$IMAGE_ID.tif/$TILE_Z/$TILE_Y/$TILE_X.jpg"
+}
+
+function uniJenaTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return 1
+	fi
+	local BOOK_ID=$1
+	local ZOOM=4
+	local TILE_SIZE=256
+	local OUTPUT_DIR=.
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=1
+
+	tiles uniJenaTilesUrl uniJenaTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
 if [ $# -lt 2 ]
 then
 	echo "Usage: $0 grabber <grabber params>"
