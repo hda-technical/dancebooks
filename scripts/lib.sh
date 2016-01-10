@@ -213,6 +213,26 @@ function rsl()
 	webGet "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
 }
 
+function locMusdi()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage: $0 book_id page_count"
+		return 1
+	fi
+	
+	local BOOK_ID=$1
+	local PAGE_COUNT=$2
+	local OUTPUT_DIR="locMusdi.$BOOK_ID"
+	
+	mkdir -p "$OUTPUT_DIR"
+	for PAGE in `seq 1 $PAGE_COUNT`
+	do
+		local BASENAME=`printf %04d $PAGE`
+		webGet "http://memory.loc.gov/musdi/$BOOK_ID/$BASENAME.tif" "$OUTPUT_DIR/$BASENAME.tif" || webGet "http://memory.loc.gov/musdi/$BOOK_ID/$BASENAME.jpg" "$OUTPUT_DIR/$BASENAME.jpg"
+	done
+}
+
 function hathi()
 {
 	if [ $# -ne 2 ]
@@ -247,7 +267,7 @@ function gallica()
 	fi
 
 	local BOOK_ID=$1
-	local OUTPUT_DIR="gallica.$BOOK_ID"
+	local OUTPUT_DIR=`makeOutputDir "gallica.$BOOK_ID"`
 	local PAGE_COUNT=$2
 	mkdir -p "$OUTPUT_DIR"
 	for PAGE in `seq $PAGE_COUNT`
