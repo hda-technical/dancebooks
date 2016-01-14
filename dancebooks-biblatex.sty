@@ -7,7 +7,8 @@
 %Datamodel constraints
 \DeclareDatamodelFields[type=list,datatype=uri]{url}
 \DeclareDatamodelFields[type=list,datatype=literal]{isbn}
-\DeclareDatamodelFields[type=list,datatype=key]{origlanguage}
+\DeclareDatamodelFields[type=list,datatype=literal]{issn}
+\DeclareDatamodelFields[type=list,datatype=key]{origlanguafge}
 \DeclareDatamodelFields[type=list,datatype=name,skipout=true]{origauthor}
 \DeclareDatamodelFields[type=list,datatype=literal,skipout=true]{catalogue}
 \DeclareDatamodelFields[type=list,datatype=literal,skipout=true]{filename}
@@ -178,6 +179,12 @@
 {\addcomma\addspace}%
 #1}
 
+\DeclareListFormat{issn}{%
+\ifnumequal{\value{listcount}}{\value{liststart}}%
+{\mkbibacro{issn}\addcolon\addspace}%
+{\addcomma\addspace}%
+#1}
+
 % adding support for URL list
 \DeclareListFormat{url}{%
 \ifnumequal{\value{listcount}}{\value{liststart}}%
@@ -209,8 +216,9 @@
 \renewcommand*{\blx@gost@iflangundef}[3]{\iflistundef{#1}{#2}{#3}}
 \renewcommand*{\blx@gost@iflangsequal}[4]{\iflistsequal{#1}{#2}{#3}{#4}}
 
-% defining ISBN list printing format
+% defining ISBN / ISSN list printing format
 \renewbibmacro*{isbn}{\printlist{isbn}}
+\renewbibmacro*{issn}{\printlist{issn}}
 
 % defining URL list printing format
 \renewbibmacro*{url}{\printlist{url}}
@@ -219,6 +227,7 @@
 \ifdancebooks@usedefaults
 	\addbibresource{\dancebooks@root/bib/_antidance.bib}
 	\addbibresource{\dancebooks@root/bib/_periodical.bib}
+	\addbibresource{\dancebooks@root/bib/_periodical-dance-research.bib}
 	\addbibresource{\dancebooks@root/bib/_problems.bib}
 	\addbibresource{\dancebooks@root/bib/_references.bib}
 	\addbibresource{\dancebooks@root/bib/american.bib}

@@ -40,6 +40,7 @@ DATA_FIELDS = {
 	"id",
 	"institution",
 	"isbn",
+	"issn",
 	"journaltitle",
 	"keywords",
 	"langid",
@@ -813,6 +814,7 @@ def check_source_file(item, errors):
 	MULTILANG_FILES = {
 		"_antidance.bib",
 		"_periodical.bib",
+		"_periodical-dance-research.bib",
 		"_problems.bib",
 		"_references.bib",
 		"proceedings-rothenfelser.bib",

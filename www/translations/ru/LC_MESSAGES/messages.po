@@ -427,6 +427,9 @@ msgstr "Немецкий"
 msgid "search:language:italian"
 msgstr "Итальянский"
 
+msgid "search:language:latin"
+msgstr "Латынь"
+
 msgid "search:language:polish"
 msgstr "Польский"
 
@@ -617,6 +620,9 @@ msgstr "Немецкий"
 
 msgid "item:language:italian"
 msgstr "Итальянский"
+
+msgid "item:language:latin"
+msgstr "Латынь"
 
 msgid "item:language:polish"
 msgstr "Польский"

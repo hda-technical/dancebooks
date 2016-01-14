@@ -14,6 +14,8 @@ SHORT_LANG_MAP = {
 	"fr": "french",
 	"ie": "english",
 	"it": "italian",
+#ln is currently unassigned according to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+	"ln": "latin",
 	"pl": "polish",
 	"pt": "portuguese",
 	"ru": "russian",
@@ -52,6 +54,7 @@ LONG_LANG_MAP = {
 	},
 	"french.bib": {
 		"french",
+		"latin"
 	},
 	"german.bib": {
 		"german",

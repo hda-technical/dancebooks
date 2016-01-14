@@ -12,7 +12,7 @@ XELATEX  := xelatex  --shell-escape
 LATEX ?= $(LUALATEX)
 
 #biber command with delimeters specification (xsvsep expects regexp, other expects symbol)
-BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' '--mssplit=\#' --validate_datamodel
+BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamodel
 
 #Using testing conf-file in development environment
 UNITTEST_CONFIG := $(shell readlink -f configs/dancebooks.unittest.conf)
