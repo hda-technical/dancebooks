@@ -157,7 +157,7 @@ def check_periodical_filename(filename, item, errors):
 	source_file = item.get("source_file") 
 	
 	if not utils.all_or_none([
-		source_file == "_periodical.bib",
+		source_file.startswith("_periodical"),
 		booktype == "article",
 		filename.startswith("/Periodical/")
 	]):
@@ -528,6 +528,7 @@ def check_url_validity(item, errors):
 	"""
 	url = item.get("url")
 	item_id = item.get("id")
+	booktype = item.get("booktype")
 	if url is None:
 		return
 	for number, single_url in enumerate(url):
@@ -540,7 +541,12 @@ def check_url_validity(item, errors):
 		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
 		if not match:
 			continue
-		
+		#inproceedings can have self-served url pointing 
+		#to entire full proceedings book
+		#TODO: invent something like PARTIAL_BOOKTYPES
+		if (booktype == "inproceedings"):
+			continue
+			
 		if (match.group("item_id") != item_id):
 			errors.add("Wrong item_id specified in self-served url")
 			continue
