@@ -111,7 +111,7 @@
 
 ## О транскрипциях
 
-Все транскрипции хранятся в формате [`markdown`](http://daringfireball.net/projects/markdown/syntax), дополнительно включён синтаксис footnotes в [http://pythonhosted.org/Markdown/extensions/footnotes.html](варианте, предлагаемом Python Markdown).
+Все транскрипции хранятся в формате [`markdown`](http://daringfireball.net/projects/markdown/syntax), дополнительно включён синтаксис footnotes в [варианте, предлагаемом Python Markdown](http://pythonhosted.org/Markdown/extensions/footnotes.html).
 
 Файлы транскрипций находятся в кодировке UTF-8 (without BOM), используются UNIX-like окончания строк.
 
