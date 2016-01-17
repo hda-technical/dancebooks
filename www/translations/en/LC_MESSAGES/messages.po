@@ -538,6 +538,9 @@ msgstr "Publisher"
 msgid "item:labels:isbn"
 msgstr "ISBN"
 
+msgid "item:labels:issn"
+msgstr "ISSN"
+
 msgid "item:labels:location"
 msgstr "Place of publication"
 
