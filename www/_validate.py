@@ -5,7 +5,8 @@ import logging
 import os.path
 
 import opster
-import isbnlib
+from stdnum import isbn
+from stdnum import issn
 
 from config import config
 import const
@@ -396,13 +397,31 @@ def check_isbn(item, errors):
 	isbn_list = item.get("isbn")
 	if isbn_list is None:
 		return
-	for idx, isbn in enumerate(isbn_list):
-		valid = (
-			isbnlib.is_isbn10(isbn) or
-			isbnlib.is_isbn13(isbn)
-		)
-		if not valid:
+	for idx, single_isbn in enumerate(isbn_list):
+		if not isbn.is_valid(single_isbn):
 			errors.add("ISBN #{idx} isn't valid".format(
+				idx=idx
+			))
+			continue
+		formatted = isbn.format(single_isbn)
+		if (formatted != single_isbn):
+			errors.add("ISBN #{idx} ({single_isbn}) should be reformatted to {formatted}".format(
+				idx=idx,
+				single_isbn=single_isbn,
+				formatted=formatted
+			))
+
+			
+def check_issn(item, errors):
+	"""
+	Checks ISSN for validity
+	"""
+	issn_list = item.get("issn")
+	if issn_list is None:
+		return
+	for idx, single_issn in enumerate(issn_list):
+		if not issn.is_valid(single_issn):
+			errors.add("ISSN #{idx} isn't valid".format(
 				idx=idx
 			))
 
@@ -853,6 +872,7 @@ def check_single_item(item, make_extra_checks):
 	check_library_fields(item, errors)
 	check_shorthand(item, errors)
 	check_isbn(item, errors)
+	check_issn(item, errors)
 	check_booktype(item, errors)
 	check_commentator(item, errors)
 	check_url_validity(item, errors)
