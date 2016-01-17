@@ -29,16 +29,14 @@
 
 	`biber "--listsep=|" "--namesep=|" "test-biblatex"` (в Windows)
 3. `pdflatex project.tex`
-4. `pdflatex project.tex`
 
-В версии 1.9 была добавлена поддержка `lualatex` (в качестве лингвистического фреймворка используется `Πολυγλωσσια` (`Polyglossia`)). Порядок компиляции аналогичен:
+В версии 1.9 была добавлена поддержка `lualatex` (`xelatex` не поддерживается). Порядок компиляции аналогичен:
 
 1. `lualatex project.tex`
 2.	`biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --mssplit=# project` (в POSIX окружении)
 
 	`biber "--listsep=|" "--namesep=|" "test-biblatex" "--xsvsep=\s*\|\s*" "--mssplit=#" project` (в Windows)
 3. `lualatex project.tex`
-4. `lualatex project.tex`
 
 Пункт №4 может быть опущен в случае документов без оглавления.
 
