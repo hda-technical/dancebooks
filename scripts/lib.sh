@@ -111,8 +111,8 @@ function tiles()
 	local TILE_Z=$4
 	local TILE_SIZE=$5
 	local OUTPUT_DIR=$6
-	local OUTPUT_FILE=$OUTPUT_DIR/$PAGE_ID.bmp
-	local TMP_DIR=$OUTPUT_DIR/$PAGE_ID.tmp
+	local OUTPUT_FILE="$OUTPUT_DIR/$PAGE_ID.bmp"
+	local TMP_DIR="$OUTPUT_DIR/$PAGE_ID.tmp"
 
 	local MAX_TILE_X=$MAX_TILE
 	local MAX_TILE_Y=$MAX_TILE
@@ -163,7 +163,7 @@ function tiles()
 			if [ "$row" != "$MAX_TILE_Y" ]
 			then
 				#resizing last column of tiles to have TILE_SIZE height
-				local NEW_WIDTH=`echo "$OLD_WIDTH * $TILE_SIZE / $OLD_HEIGHT" | bc`
+				local NEW_WIDTH=`expr "$OLD_WIDTH * $TILE_SIZE / $OLD_HEIGHT" | bc`
 				local NEW_HEIGHT=$TILE_SIZE
 			else
 				#resizing last tile to match the previous in the grid
@@ -340,7 +340,7 @@ function vwml()
 #========================
 #Tiled page downloaders
 #========================
-function gallicaTileFile()
+function generalTilesFile()
 {
 	if [ $# -ne 2 ]
 	then
@@ -350,8 +350,8 @@ function gallicaTileFile()
 
 	local TILE_X=$1
 	local TILE_Y=$2
-
-	echo `printf %04d $TILE_Y`x`printf %04d $TILE_X`
+	
+	printf "%04d_%04d" "$TILE_Y" "$TILE_X"
 }
 
 function gallicaTilesUrl()
@@ -390,7 +390,7 @@ function gallicaTiles()
 	local TILE_SIZE=1024
 	local OUTPUT_DIR=.
 
-	tiles gallicaTilesUrl gallicaTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles gallicaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 function dusseldorfTileFile()
@@ -406,7 +406,7 @@ function dusseldorfTileFile()
 	#dusseldorf tiles are numbered from bottom to top
 	local REAL_TILE_Y=`expr $MAX_TILE - $TILE_Y`
 
-	echo `printf %04d $REAL_TILE_Y`x`printf %04d $TILE_X`
+	generalTilesFile "$TILE_X" "$REAL_TILE_Y"
 }
 
 function dusseldorfTilesUrl()
@@ -446,20 +446,6 @@ function dusseldorfTiles()
 	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
-function uniJenaTilesFile()
-{
-	if [ $# -ne 2 ]
-	then
-		echo "Usage: $0 x y"
-		return 1
-	fi
-
-	local TILE_X=$1
-	local TILE_Y=$2
-	
-	printf "%04d_%04d.jpg" "$TILE_Y" "$TILE_X"
-}
-
 function uniJenaTilesUrl()
 {
 	if [ $# -ne 4 ]
@@ -491,7 +477,44 @@ function uniJenaTiles()
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=1
 
-	tiles uniJenaTilesUrl uniJenaTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles uniJenaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
+function kunstkameraTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage: $0 image_id x y z"
+		return 1
+	fi
+	
+	local IMAGE_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local TILE_SIZE=512
+	
+	local TILE_LEFT=`expr $TILE_X '*' $TILE_SIZE`
+	local TILE_TOP=`expr $TILE_Y '*' $TILE_SIZE`
+	
+	echo "http://kunstkamera.ru/kunst-catalogue/spf/${IMAGE_ID}.jpg?w=${TILE_SIZE}&h=${TILE_SIZE}&cl=${TILE_LEFT}&ct=${TILE_TOP}&cw=${TILE_SIZE}&ch=${TILE_SIZE}"
+}
+
+function kunstkameraTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return 1
+	fi
+	local BOOK_ID=$1
+	local ZOOM=4
+	local TILE_SIZE=512
+	local OUTPUT_DIR=`makeOutputDir kunstkamera`
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=1
+
+	tiles kunstkameraTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 if [ $# -lt 2 ]
