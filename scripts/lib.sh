@@ -13,8 +13,6 @@ LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 
 CURL_HTTP_ERROR=22
 
-MIN_FILE_SIZE_BYTES=1024
-
 #========================
 #HELPER FUNCTIONS
 #========================
@@ -50,17 +48,9 @@ function webGet()
 		rm -f "$OUTPUT_FILE"
 		echo "FAIL"
 		return 1
-	elif [ -e "$OUTPUT_FILE" ]
-	then
-		if [ `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" ]
-		then
-			rm -f "$OUTPUT_FILE"
-			echo "FAIL"
-			return 1
-		else
-			echo "OK"
-			return 0
-		fi
+	else
+		echo "OK"
+		return 0
 	fi
 }
 
@@ -272,8 +262,11 @@ function gallica()
 	mkdir -p "$OUTPUT_DIR"
 	for PAGE in `seq $PAGE_COUNT`
 	do
-		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.jpg $PAGE`
-		webGet "http://gallica.bnf.fr/ark:/12148/$BOOK_ID/f$PAGE.highres" $OUTPUT_FILE
+		local PAGE_ID="${BOOK_ID}.f${PAGE}"
+		local DOWNLOADED_FILE="${PAGE_ID}.bmp"
+		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.bmp $PAGE`
+		gallicaTiles "$PAGE_ID" 
+		mv "$DOWNLOADED_FILE" "$OUTPUT_FILE"
 	done
 }
 
@@ -382,9 +375,6 @@ function gallicaTiles()
 		return 1
 	fi
 
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=10240
-
 	local BOOK_ID=$1
 	local ZOOM=6
 	local TILE_SIZE=1024
@@ -439,9 +429,6 @@ function dusseldorfTiles()
 	local ZOOM=6
 	local TILE_SIZE=512
 	local OUTPUT_DIR=.
-	
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=5120
 
 	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
@@ -473,9 +460,6 @@ function uniJenaTiles()
 	local ZOOM=4
 	local TILE_SIZE=256
 	local OUTPUT_DIR=.
-	
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=1
 
 	tiles uniJenaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
@@ -510,9 +494,6 @@ function kunstkameraTiles()
 	local ZOOM=4
 	local TILE_SIZE=512
 	local OUTPUT_DIR=`makeOutputDir kunstkamera`
-	
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=1
 
 	tiles kunstkameraTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
