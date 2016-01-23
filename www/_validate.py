@@ -157,10 +157,20 @@ def check_periodical_filename(filename, item, errors):
 	booktype = item.get("booktype")
 	source_file = item.get("source_file") 
 	
-	if not utils.all_or_none([
-		source_file.startswith("_periodical"),
-		booktype == "article",
-		filename.startswith("/Periodical/")
+	is_periodical_source_file = source_file.startswith("_periodical")
+	is_periodical_booktype = booktype in ("article", "periodical")
+	is_periodical_filename = filename.startswith("/Periodical/")
+	is_periodical = any([
+		is_periodical_source_file,
+		is_periodical_filename
+	])
+	if not is_periodical:
+		return
+
+	if not all([
+		is_periodical_source_file,
+		is_periodical_booktype,
+		is_periodical_filename		
 	]):
 		errors.add("Only articles should be stored in '/Periodical' subfolder")
 	
