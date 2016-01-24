@@ -852,6 +852,7 @@ def check_source_file(item, errors):
 		"_periodical-modern.bib",
 		"_problems.bib",
 		"_references.bib",
+		"proceedings-dhds.bib",
 		"proceedings-rothenfelser.bib",
 		"proceedings-spb.bib",
 	}
