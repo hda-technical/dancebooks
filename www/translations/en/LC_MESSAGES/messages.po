@@ -456,6 +456,9 @@ msgstr "Paper or magazine article"
 msgid "search:booktype:book"
 msgstr "Book"
 
+msgid "search:booktype:inbook"
+msgstr "Standalone part of the book"
+
 msgid "search:booktype:inproceedings"
 msgstr "Conference article"
 
@@ -521,7 +524,7 @@ msgid "item:labels:subtitle"
 msgstr "Additional title"
 
 msgid "item:labels:booktitle"
-msgstr "Collection title"
+msgstr "Entire book title"
 
 msgid "item:labels:journaltitle"
 msgstr "Title of a paper or magazine"

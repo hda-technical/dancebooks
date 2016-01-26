@@ -1,4 +1,4 @@
-3# Russian translations for dancebooks-bibtex.
+# Russian translations for dancebooks-bibtex.
 # Copyright (C) 2013 Yuriy Chernyshov
 # This file is distributed under the same license as the dancebooks-bibtex
 # project.
@@ -453,6 +453,9 @@ msgstr "Статья в газете или журнале"
 msgid "search:booktype:book"
 msgstr "Книга"
 
+msgid "search:booktype:inbook"
+msgstr "Самостоятельня часть книги"
+
 msgid "search:booktype:inproceedings"
 msgstr "Статья с конференции"
 
@@ -518,7 +521,7 @@ msgid "item:labels:subtitle"
 msgstr "Дополнительное название"
 
 msgid "item:labels:booktitle"
-msgstr "Название сборника"
+msgstr "Название сборника / книги"
 
 msgid "item:labels:journaltitle"
 msgstr "Название газеты или журнала"

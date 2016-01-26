@@ -444,6 +444,7 @@ def check_booktype(item, errors):
 	VALID_BOOKTYPES = {
 		"article",
 		"book",
+		"inbook",
 		"inproceedings",
 		"mvbook",
 		"mvreference",
@@ -478,7 +479,7 @@ def check_booktype(item, errors):
 			errors.add("Field journaltitle expected for booktype {booktype}".format(
 				booktype=booktype
 			))
-	if (booktype == "inproceedings"):
+	if (booktype in ("inproceedings", "inbook")):
 		booktitle = item.get("booktitle")
 		if booktitle is None:
 			errors.add("Field booktitle expected for booktype {booktype}".format(
