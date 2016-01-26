@@ -999,3 +999,5 @@ Il y a même d'autres pas de danses dont je n'ai point fait de mention, ne m'ét
 Mais si par la suite mes esperances ne sont point trompées, je donnerai incessamment un autre traité qui enseignera la maniere de faire tous les differens pas de balets, tant serieux que comiques, aussi tous les differens caracteres avec lesquels ils doivent être executez, & ornez de figures en taille-douce, qui representeront non-seulement les diverses attitudes; mais aussi les habillemens comiques. J'y joindrai encore un petit traité de la composition du balet, afin que cette Noble jeunesse ne se trouve pas embarassée, lorsqu'elle sera obligée de paroître dans les balets du Roi, & autres semblables où j'espere qu'elle se distinguera, pourvû qu'elle veüille indépendamment des bonnes leçons que lui en auront dû donner les maîtres, s'appliquer à bien comprendre les moïens clairs & faciles que je lui en donnerai.
 
 ### Fin
+
+///Footnotes///
