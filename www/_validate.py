@@ -188,7 +188,12 @@ def check_single_filename(abspath, filename, item, errors):
 	"""
 	Checks if file is accessible and matches item metadata
 	"""
-	MULTIENTRY_BOOKTYPES = {"article", "proceedings", "inproceedings"}
+	MULTIENTRY_BOOKTYPES = {
+		"article", 
+		"proceedings", 
+		"inproceedings",
+		"incollection"
+	}
 	
 	if not os.path.isfile(abspath):
 		errors.add("File [{abspath}] is not accessible".format(
@@ -443,14 +448,21 @@ def check_booktype(item, errors):
 	"""
 	VALID_BOOKTYPES = {
 		"article",
+		"periodical",
+		
 		"book",
 		"inbook",
-		"inproceedings",
 		"mvbook",
-		"mvreference",
-		"periodical",
+		
 		"proceedings",
+		"inproceedings",
+		
 		"reference",
+		"mvreference",
+		
+		"collection",
+		"incollection",
+		
 		"thesis",
 		"unpublished",
 	}
@@ -715,7 +727,8 @@ def check_pages(item, errors):
 	booktype = item.get("booktype")
 	PAGED_BOOKTYPES = {
 		"article",
-		"inproceedings"
+		"inproceedings",
+		"incollection"
 	}
 	if booktype not in PAGED_BOOKTYPES:
 		errors.add("Field pages is not allowed for booktype {booktype}".format(
