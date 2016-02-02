@@ -465,6 +465,12 @@ msgstr "Conference article"
 msgid "search:booktype:mvbook"
 msgstr "Multivolume book"
 
+msgid "search:booktype:collection"
+msgstr "Collection"
+
+msgid "search:booktype:incollection"
+msgstr "Article in a collection"
+
 msgid "search:booktype:mvreference"
 msgstr "Multivolume encyclopaedia"
 
