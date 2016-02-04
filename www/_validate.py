@@ -87,6 +87,12 @@ ANCILLARY_FIELDS = {
 
 ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 
+MULTIENTRY_BOOKTYPES = {
+	"article", 
+	"proceedings", 
+	"inproceedings",
+	"incollection"
+}
 #executed once per validation run
 def update_validation_data(
 	errors,
@@ -188,12 +194,6 @@ def check_single_filename(abspath, filename, item, errors):
 	"""
 	Checks if file is accessible and matches item metadata
 	"""
-	MULTIENTRY_BOOKTYPES = {
-		"article", 
-		"proceedings", 
-		"inproceedings",
-		"incollection"
-	}
 	
 	if not os.path.isfile(abspath):
 		errors.add("File [{abspath}] is not accessible".format(
@@ -838,6 +838,11 @@ def check_filename(item, errors):
 	"""
 	NOT_DIGITIZED_KEYWORD = "not digitized"
 	filename = item.get("filename")
+	
+	booktype = item.get("booktype")
+	if booktype in MULTIENTRY_BOOKTYPES:
+		return
+		
 	keywords = set(item.get("keywords") or {})
 	if filename is None:
 		if (NOT_DIGITIZED_KEYWORD not in keywords):
