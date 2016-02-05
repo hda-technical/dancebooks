@@ -1,12 +1,12 @@
-﻿# Schottische Quadrille
+# Schottische Quadrille
 ## James Hiley
 ### Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
 
 Mr. Rilsey, dear sir,
 
-I hope you will excuse me for not writing sooner. I was from home at the time your letter came & since that time I have been unusually busy. I send you a schottische which I have played a good deal this winter, it is very simple & easy but good. I think you will be pleased with it. The cotillion changes each line to eight bars of the music. The part in brackets is explanation & need not be called.
+I hope you will excuse me for not writing sooner. I was from home at the time your letter came & since that time I have been unusually busy. I send you a schottish which I have played a good deal this winter, it is very simple & easy but good. I think you will be pleased with it. The cotillion changes each line to eight bars of the music. The part in brackets is explanation & need not be called.
 
-We have had some fine parties this winter. I with you use back in Newark we have got some new dances. The five step waltz is very pretty & danced as much as the schottische.
+We have had some fine parties this winter. I with you use back in Newark we have got some new dances. The five step waltz is very pretty & danced as much as the schottish.
 
 Yours respectfully, James Hiley.
 
