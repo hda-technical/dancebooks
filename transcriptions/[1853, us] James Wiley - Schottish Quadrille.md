@@ -8,7 +8,7 @@ I hope you will excuse me for not writing sooner. I was from home at the time yo
 
 We have had some fine parties this winter. I with you use back in Newark we have got some new dances. The five step waltz is very pretty & danced as much as the schottish.
 
-Yours respectfully, James Hiley.
+Yours respectfully, James Wiley.
 
 ### №1
 
