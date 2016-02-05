@@ -18,7 +18,7 @@ CURL_HTTP_ERROR=22
 #========================
 
 
-function webGet()
+webGet()
 {
 	if [ $# -ne 2 ]
 	then
@@ -43,7 +43,7 @@ function webGet()
 		--output "$OUTPUT_FILE" \
 		"$URL"
 
-	if [ "$?" == "$CURL_HTTP_ERROR" ]
+	if [ "$?" -eq "$CURL_HTTP_ERROR" ]
 	then
 		rm -f "$OUTPUT_FILE"
 		echo "FAIL"
@@ -55,7 +55,7 @@ function webGet()
 }
 
 #Utility functions
-function max()
+max()
 {
 	local MAX=$1
 	shift
@@ -71,7 +71,7 @@ function max()
 	echo $MAX
 }
 
-function min()
+min()
 {
 	local MIN=$1
 	shift
@@ -87,7 +87,7 @@ function min()
 	echo $MIN
 }
 
-function tiles()
+tiles()
 {
 	if [ $# -ne 6 ]
 	then
@@ -177,7 +177,7 @@ function tiles()
 }
 
 # removes wrong symbols from filename, replacing them by underscores
-function makeOutputDir()
+makeOutputDir()
 {
 	local OUTPUT_DIR=$1
 	echo "$OUTPUT_DIR" | sed -e 's/[:\/\\\?\*"]/_/g'
@@ -190,7 +190,7 @@ function makeOutputDir()
 #========================
 #Single image per page downloaders
 #========================
-function rsl()
+rsl()
 {
 	if [ $# -ne 1 ]
 	then
@@ -203,18 +203,18 @@ function rsl()
 	webGet "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
 }
 
-function locMusdi()
+locMusdi()
 {
 	if [ $# -ne 2 ]
 	then
 		echo "Usage: $0 book_id page_count"
 		return 1
 	fi
-	
+
 	local BOOK_ID=$1
 	local PAGE_COUNT=$2
 	local OUTPUT_DIR="locMusdi.$BOOK_ID"
-	
+
 	mkdir -p "$OUTPUT_DIR"
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
@@ -223,7 +223,7 @@ function locMusdi()
 	done
 }
 
-function hathi()
+hathi()
 {
 	if [ $# -ne 2 ]
 	then
@@ -248,7 +248,7 @@ function hathi()
 	done;
 }
 
-function gallica()
+gallica()
 {
 	if [ $# -ne 2 ]
 	then
@@ -265,12 +265,12 @@ function gallica()
 		local PAGE_ID="${BOOK_ID}.f${PAGE}"
 		local DOWNLOADED_FILE="${PAGE_ID}.bmp"
 		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.bmp $PAGE`
-		gallicaTiles "$PAGE_ID" 
+		gallicaTiles "$PAGE_ID"
 		mv "$DOWNLOADED_FILE" "$OUTPUT_FILE"
 	done
 }
 
-function britishLibrary()
+britishLibrary()
 {
 	if [ $# -ne 2 ]
 	then
@@ -289,7 +289,7 @@ function britishLibrary()
 	done
 }
 
-function vwml()
+vwml()
 {
 	if [ $# -ne 3 ]
 	then
@@ -323,7 +323,7 @@ function vwml()
 	do
 		local OUTPUT_FILE="$OUTPUT_DIR/`printf %04d $OUTPUT_PAGE`.jpg"
 		webGet "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID`printf %04d $PAGE`.jpg" "$OUTPUT_FILE"
-		if [ $? == 0 ]
+		if [ "$?" -eq "0" ]
 		then
 			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
 		fi
@@ -333,7 +333,7 @@ function vwml()
 #========================
 #Tiled page downloaders
 #========================
-function generalTilesFile()
+generalTilesFile()
 {
 	if [ $# -ne 2 ]
 	then
@@ -343,11 +343,11 @@ function generalTilesFile()
 
 	local TILE_X=$1
 	local TILE_Y=$2
-	
+
 	printf "%04d_%04d" "$TILE_Y" "$TILE_X"
 }
 
-function gallicaTilesUrl()
+gallicaTilesUrl()
 {
 	if [ $# -ne 4 ]
 	then
@@ -367,7 +367,7 @@ function gallicaTilesUrl()
 	echo "http://gallica.bnf.fr/iiif/ark:/12148/$BOOK_ID/$LEFT,$TOP,1024,1024/1024,/0/native.jpg"
 }
 
-function gallicaTiles()
+gallicaTiles()
 {
 	if [ $# -ne 1 ]
 	then
@@ -383,7 +383,7 @@ function gallicaTiles()
 	tiles gallicaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
-function dusseldorfTileFile()
+dusseldorfTileFile()
 {
 	if [ $# -ne 2 ]
 	then
@@ -399,7 +399,7 @@ function dusseldorfTileFile()
 	generalTilesFile "$TILE_X" "$REAL_TILE_Y"
 }
 
-function dusseldorfTilesUrl()
+dusseldorfTilesUrl()
 {
 	if [ $# -ne 4 ]
 	then
@@ -418,7 +418,7 @@ function dusseldorfTilesUrl()
 	echo "http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/$UNKNOWN_NUMBER/1.0.0/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
 }
 
-function dusseldorfTiles()
+dusseldorfTiles()
 {
 	if [ $# -ne 1 ]
 	then
@@ -433,7 +433,7 @@ function dusseldorfTiles()
 	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
-function uniJenaTilesUrl()
+uniJenaTilesUrl()
 {
 	if [ $# -ne 4 ]
 	then
@@ -445,11 +445,11 @@ function uniJenaTilesUrl()
 	local TILE_X=$2
 	local TILE_Y=$3
 	local TILE_Z=4
-	
+
 	echo "http://archive.thulb.uni-jena.de/tiles/hisbest/HisBest_derivate_00000416/$IMAGE_ID.tif/$TILE_Z/$TILE_Y/$TILE_X.jpg"
 }
 
-function uniJenaTiles()
+uniJenaTiles()
 {
 	if [ $# -ne 1 ]
 	then
@@ -464,26 +464,26 @@ function uniJenaTiles()
 	tiles uniJenaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
-function kunstkameraTilesUrl()
+kunstkameraTilesUrl()
 {
 	if [ $# -ne 4 ]
 	then
 		echo "Usage: $0 image_id x y z"
 		return 1
 	fi
-	
+
 	local IMAGE_ID=$1
 	local TILE_X=$2
 	local TILE_Y=$3
 	local TILE_SIZE=512
-	
+
 	local TILE_LEFT=`expr $TILE_X '*' $TILE_SIZE`
 	local TILE_TOP=`expr $TILE_Y '*' $TILE_SIZE`
-	
+
 	echo "http://kunstkamera.ru/kunst-catalogue/spf/${IMAGE_ID}.jpg?w=${TILE_SIZE}&h=${TILE_SIZE}&cl=${TILE_LEFT}&ct=${TILE_TOP}&cw=${TILE_SIZE}&ch=${TILE_SIZE}"
 }
 
-function kunstkameraTiles()
+kunstkameraTiles()
 {
 	if [ $# -ne 1 ]
 	then
