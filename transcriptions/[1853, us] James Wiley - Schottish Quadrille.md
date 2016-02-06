@@ -1,5 +1,5 @@
 # Schottische Quadrille
-## James Hiley
+## James Wiley
 ### Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
 
 Mr. Rilsey, dear sir,
