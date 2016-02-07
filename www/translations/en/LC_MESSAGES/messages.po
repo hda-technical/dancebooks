@@ -377,6 +377,9 @@ msgstr "Entry type"
 msgid "search:labels:publisher"
 msgstr "Publisher"
 
+msgid "search:labels:plate-number"
+msgstr "Plate number"
+
 msgid "search:labels:location"
 msgstr "Place of publication"
 
@@ -543,6 +546,9 @@ msgstr "Language"
 
 msgid "item:labels:publisher"
 msgstr "Publisher"
+
+msgid "item:labels:plate-number"
+msgstr "Plate number"
 
 msgid "item:labels:isbn"
 msgstr "ISBN"

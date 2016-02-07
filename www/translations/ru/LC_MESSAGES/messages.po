@@ -374,6 +374,9 @@ msgstr "Тип записи"
 msgid "search:labels:publisher"
 msgstr "Издатель"
 
+msgid "search:labels:plate-number"
+msgstr "Код издателя"
+
 msgid "search:labels:location"
 msgstr "Место издания"
 
@@ -540,6 +543,9 @@ msgstr "Язык"
 
 msgid "item:labels:publisher"
 msgstr "Издатель"
+
+msgid "item:labels:plate-number"
+msgstr "Код издателя"
 
 msgid "item:labels:isbn"
 msgstr "ISBN"

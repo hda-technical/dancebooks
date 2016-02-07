@@ -55,6 +55,7 @@ DATA_FIELDS = {
 	"origlanguage",
 	"pages",
 	"part",
+	"plate_number",
 	"pseudo_author",
 	"publisher",
 	"series",
