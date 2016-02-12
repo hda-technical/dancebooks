@@ -440,6 +440,13 @@ def check_issn(item, errors):
 			errors.add("ISSN #{idx} isn't valid".format(
 				idx=idx
 			))
+		formatted = issn.format(single_issn)
+		if (formatted != single_issn):
+			errors.add("ISSN #{idx} ({single_issn}) should be reformatted to {formatted}".format(
+				idx=idx,
+				single_issn=single_issn,
+				formatted=formatted
+			))
 
 
 def check_booktype(item, errors):
