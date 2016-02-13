@@ -1,38 +1,48 @@
 # coding: utf-8
+from unidecode import unidecode
+
 import datetime
 import logging
 import re
 
 from config import config
 
+def simplify(str):
+	return unidecode(str.lower())
+
 def search_for_string(key, value):
 	"""
-	Creates filter for string (searches for substrings)
+	Creates filter for string
 	"""
-	regexp = re.compile(re.escape(value), flags = re.IGNORECASE)
-	return lambda item, key=key, regexp=regexp: \
-		item.get(key) and \
-		regexp.search(item.get(key))
+	search_value = simplify(value);
+	return lambda item, key=key, search_value=search_value: (
+		item.get(key) and
+		(simplify(item.get(key)).find(search_value) != -1)
+	)
 
 
 def search_for_string_regexp(key, regexp):
 	"""
-	Creates filter for string (searches for substring at the beginning)
+	Creates filter for string
 	"""
-	return lambda item, key=key, regexp=regexp: \
-		item.get(key) and \
+	return lambda item, key=key, regexp=regexp: (
+		item.get(key) and 
 		regexp.search(item.get(key))
+	)
 
 
 def search_for_iterable(key, value):
 	"""
 	Creates filter for iterable(string) (searches for substrings)
 	"""
-	regexp = re.compile(re.escape(value), flags=re.IGNORECASE)
-	return lambda item, key=key, regexp=regexp: \
+	search_value = simplify(value);
+	return lambda item, key=key, search_value=search_value: (
 		item.get(key) and \
-		any([regexp.search(word) for word in
-			item.get(key)])
+		any([
+			(simplify(word).find(search_value) != -1)
+			for word in item.get(key)
+		])
+	)
 
 
 def search_for_synonyms(keys, values):
