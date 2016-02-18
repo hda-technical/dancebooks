@@ -426,6 +426,12 @@ def check_isbn(item, errors):
 				single_isbn=single_isbn,
 				formatted=formatted
 			))
+		if (isbn.isbn_type(single_isbn) != 'ISBN13'):
+			errors.add("ISBN-10 #{idx} ({single_isbn}) should be reformatted to ISBN-13 {formatted}".format(
+				idx=idx,
+				single_isbn=single_isbn,
+				formatted=isbn.to_isbn13(single_isbn)
+			))
 
 			
 def check_issn(item, errors):
