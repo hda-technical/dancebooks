@@ -309,7 +309,7 @@ vwml()
 	for LATIN_NUMBER in $LATIN_NUMBERS
 	do
 		local NORMALIZED_NUMBER=`printf %04s $LATIN_NUMBER | sed -e 's/ /0/g'`
-		local OUTPUT_FILE="$OUTPUT_DIR/latin_`printf %04d $OUTPUT_PAGE`.jpg"
+		local OUTPUT_FILE="$OUTPUT_DIR/\!`printf %04d $OUTPUT_PAGE`.jpg"
 		webGet "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID$NORMALIZED_NUMBER.jpg" "$OUTPUT_FILE"
 		if [ $? -ne 0 ]
 		then
