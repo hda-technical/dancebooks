@@ -96,6 +96,7 @@ class ParserConfig(object):
 		self.date_format = get_config_value("date_format", params)
 		self.blocked_domains = get_config_value("blocked_domains", params, transform=extract_set_from_json)
 		self.blocked_domains_http = get_config_value("blocked_domains_http", params, transform=extract_set_from_json)
+		self.domains_allowed_301 = get_config_value("domains_allowed_301", params, transform=extract_set_from_json)
 
 		#keywords param is loaded from a single config value,
 		#but is splitted into a number of config fields with predictable meaning

@@ -3,6 +3,7 @@ import copy
 import cProfile
 import fnmatch
 import functools
+import http.client
 import io
 import logging
 import os
@@ -368,23 +369,41 @@ def is_url_valid(url, item):
 	return True
 
 
-def is_url_accessible(url, item):
+def is_url_accessible(url, item, method="HEAD"):
 	"""
-	Checks url accessibility via HTTP HEAD request
+	Checks url accessibility via HTTP request.
+	Tries to perform HTTP HEAD request, and if it fails with
+	status=405 (method not allowed) retries it with HTTP GET
 	"""
 	if is_url_self_served(url, item):
 		return True
 
 	try:
-		response = requests.head(url, allow_redirects=False, verify=True)
+		if method == "HEAD":
+			response = requests.head(url, allow_redirects=False, verify=True)
+		else:
+			#method == "GET"
+			response = requests.get(url, allow_redirects=False, verify=True)
 	except Exception as ex:
-		logging.debug("HTTP HEAD request for {url} raised an exception: {ex}".format(
+		logging.debug("HTTP request for {url} raised an exception: {ex}".format(
 			url=url,
 			ex=ex
 		))
 		return False
-	if (response.status_code not in const.VALID_HTTP_CODES):
-		logging.debug("HTTP HEAD request for {url} returned code {code}: {reason}".format(
+	if (
+		(response.status_code == 405) and
+		(method == "HEAD")
+	):
+		return is_url_accessible(url, item, method="GET")
+	is_valid = (
+		(response.status_code in const.VALID_HTTP_CODES) or
+		(
+			(response.status_code == http.client.MOVED_PERMANENTLY) and
+			(urlparse.urlsplit(url).hostname in config.parser.domains_allowed_301)
+		)
+	)
+	if not is_valid:
+		logging.debug("HTTP request for {url} returned code {code}: {reason}".format(
 			url=url,
 			code=response.status_code,
 			reason=response.reason
