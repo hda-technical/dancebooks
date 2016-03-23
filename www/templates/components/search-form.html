@@ -6,27 +6,28 @@
 			</div>
 
 			<form id="search" action="/bib/basic-search">
+				<!-- Basic search form -->
 				<table id="searchFormBasic">
 					<tr>
-						<td>
+						<th>
 							<label for="author">{{ _("search:labels:author") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="author" type="text" name="author"/>
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="title">{{ _("search:labels:title") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="title" type="text" name="title"/>
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="year_from">{{ _("search:labels:year") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="year_from" type="number" name="year_from" min="1000" max="9999"/><!--
 							--><span>–</span><!--
@@ -34,11 +35,13 @@
 						</td>
 					</tr>
 				</table>
+
+				<!-- Advanced search form -->
 				<table id="searchFormAdvanced" class="hidden">
 					<tr>
-						<td>
+						<th>
 							<label for="added_on_from">{{ _("search:labels:added-on") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="added_on_from" type="datetime" name="added_on_from"/><!--
 							--><span>–</span><!--
@@ -46,9 +49,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="langid">{{ _("search:labels:langid") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="langid" name="langid">
 								<!-- required to reduce flicking -->
@@ -58,9 +61,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="source_file">{{ _("search:labels:source-file") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="source_file" name="source_file">
 								<!-- required to reduce flicking -->
@@ -70,9 +73,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="booktype">{{ _("search:labels:booktype") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="booktype" name="booktype">
 								<!-- required to reduce flicking -->
@@ -82,17 +85,17 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="publisher">{{ _("search:labels:publisher") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="publisher" type="text" name="publisher"/>
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="catalogueCode">{{ _("search:labels:catalogue") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="catalogueType" name="catalogueType">
 								<option value="Lange">E. Lange, K.-H. Lange. Modetänze um 1800</option>
@@ -103,17 +106,17 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="location">{{ _("search:labels:location") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="location" type="text" name="location"/>
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="keywords">{{ _("search:labels:keywords") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="keywords" type="text" readonly="readonly" name="keywords"/>
 							<div id="keywordsChooser" class="hidden">
@@ -123,9 +126,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="availability">{{ _("search:labels:url") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="availability" name="availability">
 								<option value="">{{ _("common:Does-not-matter") }}</option>
@@ -136,9 +139,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="origlanguage">{{ _("search:labels:origlanguage") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="origlanguage" name="origlanguage">
 								<option value="">{{ _("common:Does-not-matter") }}</option>
@@ -148,9 +151,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="transcription_url">{{ _("search:labels:transcription-url") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="transcription_url" name="transcription_url">
 								<option value="">{{ _("common:Does-not-matter") }}</option>
@@ -160,9 +163,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="useful_keywords">{{ _("search:labels:useful-keywords") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="useful_keywords" name="useful_keywords">
 								<option value="">{{ _("common:Does-not-matter") }}</option>
@@ -172,24 +175,28 @@
 						</td>
 					</tr>
 				</table>
+
+				<!-- Search within all fields -->
 				<table id="searchFormAllFields" class="hidden">
 					<tr>
-						<td>
+						<th>
 							<label for="all_fields">{{ _("search:labels:all-fields") }}:</label>
-						</td>
+						</th>
 						<td>
 							<input id="all_fields" type="text" name="all_fields"/>
 						</td>
 					</tr>
 				</table>
+
+				<!-- Order by block -->
 				<table>
 					<tr>
 						<td colspan="100"><hr/></td>
 					</tr>
 					<tr>
-						<td>
+						<th>
 							<label for="orderBy">{{ _("search:order-by") }}:</label>
-						</td>
+						</th>
 						<td>
 							<select id="orderBy" name="orderBy">
 								<option value="">{{ _("search:order-by:year-from") }}</option>
