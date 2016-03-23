@@ -47,7 +47,7 @@
 			<div class="bib_item_left">{{ _("item:labels:" + param.replace("_", "-")) }}:</div>
 			<div class="bib_item_right">
 			{% if param == "id" %}
-				{{ value | format_item_id | safe }}</a>
+				{{ value | format_item_id | safe }}
 			{% elif param in ["author", "pseudo_author"] %}
 				{{ value | map("author_link") | map("safe") | join(", ") }}
 			{% elif param == "keywords" %}
