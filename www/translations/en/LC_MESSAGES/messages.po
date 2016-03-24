@@ -137,7 +137,7 @@ msgstr "Form of first set with high amount of figure variations, lead by a condu
 
 msgid "pages:keywords:ref:quadrille-promiscuous-figures"
 msgstr "Contains figures used to replace one from the first set"
-	
+
 msgid "pages:keywords:ref:schottische"
 msgstr "Either schottische (including variations like military schottische or pas de quatre)"
 
@@ -208,6 +208,9 @@ msgstr "Source containing author view on some dance-related subject"
 
 msgid "pages:keywords:ref:first-edition"
 msgstr "Belles-lettres, memoirs and essays of the first known edition on the source language"
+
+msgid "pages:keywords:ref:reverences"
+msgstr "Source containing description of révérences to be performed before the dance"
 
 msgid "pages:keywords:ref:tempo"
 msgstr "Any kind of useful tempo indication"
