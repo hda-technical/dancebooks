@@ -139,7 +139,6 @@ def choose_ui_lang(lang):
 			value=lang,
 			max_age=const.SECONDS_IN_YEAR,
 			httponly=True,
-			secure=True,
 			path=config.www.app_prefix
 		)
 		return response
