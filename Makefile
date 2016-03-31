@@ -1,5 +1,5 @@
-NAME_PRODUCTION := dancebooks.production
-NAME_TESTING := dancebooks.testing
+NAME := dancebooks
+NAME_TESTING := $(NAME).testing
 
 BIB_FILES := $(wildcard bib/*.bib)
 
@@ -21,7 +21,7 @@ PRODUCTION_CONFIG := $(shell readlink -f configs/dancebooks.production.conf)
 LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 TOUCH_RELOAD_TESTING := /var/run/uwsgi/$(NAME_TESTING).reload
-TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME_PRODUCTION).reload
+TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME).reload
 
 UNITTEST_ENV := \
 	CONFIG=$(UNITTEST_CONFIG) \
@@ -92,21 +92,21 @@ www-configs-install-production:
 	#creating required folders
 	mkdir --mode=775 --parents /var/run/uwsgi
 	chown www-data:www-data /var/run/uwsgi
-	touch /var/run/uwsgi/$(NAME_PRODUCTION).reload
-	chmod 664 /var/run/uwsgi/$(NAME_PRODUCTION).reload
-	chown www-data:www-data /var/run/uwsgi/$(NAME_PRODUCTION).reload
+	touch /var/run/uwsgi/$(NAME).reload
+	chmod 664 /var/run/uwsgi/$(NAME).reload
+	chown www-data:www-data /var/run/uwsgi/$(NAME).reload
 	#installing uwsgi configs
-	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME_PRODUCTION).conf
-	ln -sf /etc/uwsgi/apps-available/$(NAME_PRODUCTION).conf /etc/uwsgi/apps-enabled/$(NAME_PRODUCTION).conf
+	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
+	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
 	#installing service configs
-	cp configs/service.production.conf /etc/init/$(NAME_PRODUCTION).conf
-	stop $(NAME_PRODUCTION); start $(NAME_PRODUCTION)
+	cp configs/service.production.conf /etc/init/$(NAME).conf
+	stop $(NAME); start $(NAME)
 	#installing nginx configs
-	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME_PRODUCTION).conf
-	ln -sf /etc/nginx/sites-available/$(NAME_PRODUCTION).conf /etc/nginx/sites-enabled/$(NAME_PRODUCTION).conf
+	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
+	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
 	service nginx reload
 	#installing logrotate configs (no reload / restart is required)
-	cp configs/logrotate.production.conf /etc/logrotate.d/$(NAME_PRODUCTION).conf
+	cp configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
 www-configs-install-testing:
 	#creating required folders
