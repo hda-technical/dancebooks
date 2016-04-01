@@ -11,9 +11,6 @@ LUALATEX := lualatex --shell-escape
 XELATEX  := xelatex  --shell-escape
 LATEX ?= $(LUALATEX)
 
-#biber command with delimeters specification (xsvsep expects regexp, other expects symbol)
-BIBER := biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamodel
-
 #Using testing conf-file in development environment
 UNITTEST_CONFIG := $(shell readlink -f configs/dancebooks.unittest.conf)
 DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.development.conf)
@@ -43,17 +40,10 @@ default: test-biblatex.pdf
 
 %.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
 	rm -f $(JOBNAME).bbl biblatex-dm.cfg
-	$(LATEX) $< &>/dev/null
-	$(BIBER) --onlylog $(JOBNAME)
-	$(LATEX) $< &>/dev/null
+	$(LATEX) $(JOBNAME).tex
+	biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamodel $(JOBNAME)
+	$(LATEX) $(JOBNAME).tex
 	(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
-
-# Target which doesn't hide LaTeX output - useful for debugging stuff
-pdf-debug: test-biblatex.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
-	rm -f ${@:.pdf=.bbl} biblatex-dm.cfg
-	$(LATEX) $<
-	$(BIBER) $(<:.tex=)
-	$(LATEX) $<
 
 pdf-clean:
 	rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
@@ -144,14 +134,11 @@ requirements.txt: .PHONY
 all.mk: test-biblatex.pdf;
 
 entry-count: $(BIB_FILES)
-	@echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
-	@echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
-	@echo "With keywords:" `cat $^ | grep -c -P '\tkeywords = '`
+	echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
+	echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
+	echo "With keywords:" `cat $^ | grep -c -P '\tkeywords = '`
 
 clean: pdf-clean;
-
-distclean:
-	git clean -f
 
 rebuild: distclean all.mk;
 
