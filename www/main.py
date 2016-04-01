@@ -221,11 +221,25 @@ def search_items(show_secrets):
 		key=bib_parser.BibItem.key_to_key_func(order_by)
 	))
 
-	return flask.render_template(
-		"search.html",
-		found_items=found_items,
-		show_secrets=show_secrets
-	)
+	format = flask.request.values.get("format", "html")
+	if (format == "html"):
+		return flask.render_template(
+			"search.html",
+			found_items=found_items,
+			show_secrets=show_secrets
+		)
+	elif (format == "csv"):
+		response = flask.make_response(utils.render_to_csv(found_items))
+		response.headers["Content-Type"] = "text/csv"
+		response.headers["Content-Disposition"] = "attachment;filename=search_results.csv"
+		return response
+	else:
+		flask.abort(
+			http.client.BAD_REQUEST,
+			"Unsupported output format {format}".format(
+				format=format
+			)
+		)
 
 
 @flask_app.route(config.www.books_prefix, methods=["GET"])

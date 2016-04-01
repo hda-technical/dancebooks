@@ -1,6 +1,7 @@
 import codecs
 import copy
 import cProfile
+import csv
 import fnmatch
 import functools
 import http.client
@@ -493,6 +494,19 @@ def isfile_case_sensitive(abspath):
 		if basename not in os.listdir(path):
 			return False
 	return True
+
+
+def render_to_csv(items):
+	fields = ["author", "title", "edition", "location", "year", "url"]
+	stream = io.StringIO()
+	writer = csv.DictWriter(stream, fieldnames=fields)
+	writer.writeheader()
+	for item in items:
+		writer.writerow({
+			field: item.get_as_string(field) or ""
+			for field in fields
+		})
+	return stream.getvalue()
 
 
 class MarkdownCache(object):
