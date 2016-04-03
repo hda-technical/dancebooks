@@ -1,6 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
-	{% include "components/head.html" %}
+	<head>
+        {% include "components/head-meta-common.html" %}
+        {% include "components/head-link.html" %}
+        {% include "components/head-script.html" %}
+        <meta name="og:title" content="{{ item.title() }}"/>
+        <meta name="og:type" content="book"/>
+        <meta name="og:description" content="Transcription of the book by {{ item.author() }}"/>
+        <meta name="og:image" content="/bib/images/icon/persimmon.032x032.png"/>
+        <meta name="og:url" content="{{ request.url }}"/>
+        <title>{{ _("interface:title") }}</title>
+    </head>
 	<body>
 		{% include "components/choose-lang.html" %}
 		{% include "components/header.html" %}
