@@ -9,9 +9,6 @@ msgstr ""
 
 # Inteface strings
 
-msgid "interface:displaying-all"
-msgstr "Вот всё, что есть"
-
 msgid "interface:single-entry"
 msgstr "Вот запись с идентификатором"
 
@@ -30,14 +27,8 @@ msgstr[2] "Найдено %(num)d записей"
 msgid "interface:found-none"
 msgstr "Ничего не найдено"
 
-msgid "interface:you-can"
-msgstr "Можно"
-
-msgid "interface:display-everything"
-msgstr "показать всё"
-
 msgid "interface:use-search"
-msgstr "или воспользоваться поиском"
+msgstr "Можно воспользоваться поиском"
 
 msgid "interface:title"
 msgstr "Библиография танцевальных источников"

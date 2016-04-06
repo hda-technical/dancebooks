@@ -9,9 +9,6 @@ msgstr ""
 
 # Interface strings
 
-msgid "interface:displaying-all"
-msgstr "Displaying everything"
-
 msgid "interface:single-entry"
 msgstr "Entry with id"
 
@@ -30,14 +27,8 @@ msgstr[2] "Found %(num)d entries"
 msgid "interface:found-none"
 msgstr "Nothing found. Try another search"
 
-msgid "interface:you-can"
-msgstr "You can"
-
-msgid "interface:display-everything"
-msgstr "display everything"
-
 msgid "interface:use-search"
-msgstr "use the search"
+msgstr "You can use the search"
 
 msgid "interface:title"
 msgstr "Dancing books bibliography"

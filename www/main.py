@@ -242,17 +242,6 @@ def search_items(show_secrets):
 		)
 
 
-@flask_app.route(config.www.books_prefix, methods=["GET"])
-@utils_flask.check_secret_cookie("show_secrets")
-@utils_flask.log_exceptions()
-def show_all(show_secrets):
-	return flask.render_template(
-		"all.html",
-		items=items,
-		show_secrets=show_secrets
-	)
-
-
 @flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["GET"])
 @utils_flask.check_id_redirections("book_id")
 @utils_flask.check_secret_cookie("show_secrets")
