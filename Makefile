@@ -82,14 +82,15 @@ www-configs-install-production:
 	#creating required folders
 	mkdir --mode=775 --parents /var/run/uwsgi
 	chown www-data:www-data /var/run/uwsgi
-	touch /var/run/uwsgi/$(NAME).reload
-	chmod 664 /var/run/uwsgi/$(NAME).reload
-	chown www-data:www-data /var/run/uwsgi/$(NAME).reload
+	touch $(TOUCH_RELOAD_PRODUCTION)
+	chmod 664 $(TOUCH_RELOAD_PRODUCTION)
+	chown www-data:www-data $(TOUCH_RELOAD_PRODUCTION)
 	#installing uwsgi configs
 	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
 	#installing service configs
 	cp configs/service.production.conf /etc/init/$(NAME).conf
+	initctl reload-configuration
 	stop $(NAME); start $(NAME)
 	#installing nginx configs
 	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
@@ -102,14 +103,15 @@ www-configs-install-testing:
 	#creating required folders
 	mkdir --mode=775 --parents /var/run/uwsgi
 	chown www-data:www-data /var/run/uwsgi
-	touch /var/run/uwsgi/$(NAME_TESTING).reload
-	chmod 664 /var/run/uwsgi/$(NAME_TESTING).reload
-	chown www-data:www-data /var/run/uwsgi/$(NAME_TESTING).reload
+	touch $(TOUCH_RELOAD_TESTING)
+	chmod 664 $(TOUCH_RELOAD_TESTING)
+	chown www-data:www-data $(TOUCH_RELOAD_TESTING)
 	#installing uwsgi configs
 	cp configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
 	#installing service configs
 	cp configs/service.testing.conf /etc/init/$(NAME_TESTING).conf
+	initctl reload-configuration
 	stop $(NAME_TESTING); start $(NAME_TESTING)
 	#installing nginx configs
 	cp configs/nginx.testing.conf /etc/nginx/sites-available/$(NAME_TESTING).conf
