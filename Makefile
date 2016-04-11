@@ -34,7 +34,7 @@ TESTS := $(wildcard www/tests/*.py)
 TEST_TARGETS := $(TESTS:.py=.mk)
 # PDF files related targets
 
-default: test-biblatex.pdf
+default: test.pdf
 
 %.pdf: JOBNAME = $(@:.pdf=)
 
@@ -76,7 +76,10 @@ www-translations:
 	pybabel -v -q compile -d www/translations
 
 # must be imvoked as root
-www-configs-install: www-configs-install-production www-configs-install-testing;
+www-configs-install: www-configs-install-production www-configs-install-testing www-configs-install-autoupdate;
+
+www-configs-install-autoupdate:
+	cp configs/autoupdate.cron.conf /etc/cron.d/dancebooks.autoupdate
 
 www-configs-install-production:
 	#creating required folders
@@ -133,7 +136,7 @@ requirements.txt: .PHONY
 
 .PHONY:;
 
-all.mk: test-biblatex.pdf;
+all.mk: test.pdf;
 
 entry-count: $(BIB_FILES)
 	echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
