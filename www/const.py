@@ -130,6 +130,8 @@ CATALOGUE_PATTERN = (
 	r"(Lancelot:\d{4}\.\d)|"
 	#Manuscripts in Francine Lancelot's "La belle danse"
 	r"(Lancelot:Ms\d{2})|"
+	#‹Ludus Pastorali› manuscript from Francine Lancelot's "La belle danse"
+	r"(Lancelot:Addendum)|"
 	#Printed books in Little-Mars's "La danse noble"
 	r"(LittleMarsh:\*?\[?c?\d{4}\]?-\w{3})|"
 	#Manuscripts in Little-Mars's "La danse noble"
