@@ -79,7 +79,7 @@ www-translations:
 www-configs-install: www-configs-install-production www-configs-install-testing www-configs-install-autoupdate;
 
 www-configs-install-autoupdate:
-	cp configs/autoupdate.cron.conf /etc/cron.d/dancebooks.autoupdate
+	cp configs/autoupdate.cron.conf /etc/cron.d/dancebooks-autoupdate
 
 www-configs-install-production:
 	#creating required folders
