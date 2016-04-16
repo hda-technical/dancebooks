@@ -10,7 +10,11 @@
         {% include "components/head-script.html" %}
         <meta name="og:title" content="{{ item.title() }}"/>
         <meta name="og:type" content="book"/>
+		{% if item.author() %}
         <meta name="og:description" content="A book by {{ item.author() }}"/>
+		{% else %}
+		<meta name="og:description" content="An anonymously written book"/>
+		{% endif %}
         <meta name="og:image" content="/bib/images/icon/persimmon.032x032.png"/>
         <meta name="og:url" content="{{ request.url }}"/>
         <title>{{ _("interface:title") }}</title>
