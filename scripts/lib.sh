@@ -13,6 +13,8 @@ LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 
 CURL_HTTP_ERROR=22
 
+MIN_FILE_SIZE_BYTES=1024
+
 #========================
 #HELPER FUNCTIONS
 #========================
@@ -48,9 +50,17 @@ webGet()
 		rm -f "$OUTPUT_FILE"
 		echo "FAIL"
 		return 1
-	else
-		echo "OK"
-		return 0
+	elif [ -e "$OUTPUT_FILE" ]
+	then
+		if [ `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" ]
+		then
+			rm -f "$OUTPUT_FILE"
+			echo "FAIL"
+			return 1
+		else
+			echo "OK"
+			return 0
+		fi
 	fi
 }
 
@@ -375,6 +385,9 @@ gallicaTiles()
 		return 1
 	fi
 
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=10240
+
 	local BOOK_ID=$1
 	local ZOOM=6
 	local TILE_SIZE=1024
@@ -414,8 +427,9 @@ dusseldorfTilesUrl()
 
 	#some unknown number with unspecified purpose
 	local UNKNOWN_NUMBER=5089
+	local VERSION=1.0.0
 
-	echo "http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/$UNKNOWN_NUMBER/1.0.0/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
+	echo "http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/$UNKNOWN_NUMBER/$VERSION/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
 }
 
 dusseldorfTiles()
@@ -429,8 +443,66 @@ dusseldorfTiles()
 	local ZOOM=6
 	local TILE_SIZE=512
 	local OUTPUT_DIR=.
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=5120
 
 	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
+uniHalleTileFile()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage: $0 x y"
+		return 1
+	fi
+
+	local TILE_X=$1
+	local TILE_Y=$2
+	#dusseldorf tiles are numbered from bottom to top
+	local REAL_TILE_Y=`expr $MAX_TILE - $TILE_Y`
+
+	generalTilesFile "$TILE_X" "$REAL_TILE_Y"
+}
+
+#quite similar to dusseldorf, with dirreferent magic numbers
+uniHalleTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage: $0 image_id x y z"
+		return 1
+	fi
+
+	local IMAGE_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local TILE_Z=$4
+
+	#some unknown number with unspecified purpose
+	local UNKNOWN_NUMBER=1999
+	local VERSION=1.0.0
+
+	echo "http://digital.bibliothek.uni-halle.de/image/tile/wc/nop/$UNKNOWN_NUMBER/$VERSION/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
+}
+
+uniHalleTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return 1
+	fi
+	local BOOK_ID=$1
+	local ZOOM=4
+	local TILE_SIZE=300
+	local OUTPUT_DIR=.
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=2560
+
+	tiles uniHalleTilesUrl uniHalleTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 uniJenaTilesUrl()
@@ -460,6 +532,9 @@ uniJenaTiles()
 	local ZOOM=4
 	local TILE_SIZE=256
 	local OUTPUT_DIR=.
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=1
 
 	tiles uniJenaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
@@ -494,6 +569,9 @@ kunstkameraTiles()
 	local ZOOM=4
 	local TILE_SIZE=512
 	local OUTPUT_DIR=`makeOutputDir kunstkamera`
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=1
 
 	tiles kunstkameraTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
