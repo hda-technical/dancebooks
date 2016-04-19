@@ -386,7 +386,7 @@ gallicaTiles()
 	fi
 
 	#overriding global constant
-	MIN_FILE_SIZE_BYTES=10240
+	MIN_FILE_SIZE_BYTES=5120
 
 	local BOOK_ID=$1
 	local ZOOM=6
