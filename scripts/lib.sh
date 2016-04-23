@@ -481,10 +481,10 @@ uniHalleTilesUrl()
 	local TILE_Z=$4
 
 	#some unknown number with unspecified purpose
-	local UNKNOWN_NUMBER=1999
+	local UNKNOWN_NUMBER=1157
 	local VERSION=1.0.0
 
-	echo "http://digital.bibliothek.uni-halle.de/image/tile/wc/nop/$UNKNOWN_NUMBER/$VERSION/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
+	echo "http://digitale.bibliothek.uni-halle.de/image/tile/wc/nop/$UNKNOWN_NUMBER/$VERSION/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
 }
 
 uniHalleTiles()
@@ -495,12 +495,12 @@ uniHalleTiles()
 		return 1
 	fi
 	local BOOK_ID=$1
-	local ZOOM=4
-	local TILE_SIZE=300
+	local ZOOM=3
+	local TILE_SIZE=512
 	local OUTPUT_DIR=.
 	
 	#overriding global constant
-	MIN_FILE_SIZE_BYTES=2560
+	MIN_FILE_SIZE_BYTES=5120
 
 	tiles uniHalleTilesUrl uniHalleTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
