@@ -61,7 +61,6 @@ DATA_FIELDS = {
 	"series",
 	"shorthand",
 	"source",
-	"subtitle",
 	"title",
 	"type",
 	"transcription_filename",
