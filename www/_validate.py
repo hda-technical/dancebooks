@@ -91,8 +91,16 @@ MULTIENTRY_BOOKTYPES = {
 	"article", 
 	"proceedings", 
 	"inproceedings",
+	"collection",
 	"incollection"
 }
+
+PARTIAL_BOOKTYPES = {
+	"article",
+	"inproceedings",
+	"incollection"
+}
+	
 #executed once per validation run
 def update_validation_data(
 	errors,
@@ -738,12 +746,7 @@ def check_pages(item, errors):
 	if pages is None:
 		return
 	booktype = item.get("booktype")
-	PAGED_BOOKTYPES = {
-		"article",
-		"inproceedings",
-		"incollection"
-	}
-	if booktype not in PAGED_BOOKTYPES:
+	if booktype not in PARTIAL_BOOKTYPES:
 		errors.add("Field pages is not allowed for booktype {booktype}".format(
 			booktype=booktype
 		))
@@ -842,7 +845,16 @@ def check_keywords(item, errors):
 				keyword=keyword
 			))
 	if ("useless" in keywords) and (len(keywords) != 1):
-		errors.add("Keyword [useless] can't be combined with other keywprds")
+		errors.add("Keyword [useless] can't be combined with other keywords")
+		
+	annotation = item.get("annotation")
+	if (
+		("not digitized" in keywords) and 
+		not item.has("transcription_filename") and
+		(item.get("booktype") not in MULTIENTRY_BOOKTYPES)
+	):
+		if not annotation or ("Printed item may be borrowed from" not in annotation):
+			errors.add("Printed item owner must be specified in annotation")
 
 
 def check_filename(item, errors):
