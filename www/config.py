@@ -1,4 +1,5 @@
 import collections
+import collections
 import configparser
 import enum
 import functools
@@ -89,7 +90,7 @@ class ParserConfig(object):
 		self.year_params = get_config_value("year_params", params, transform=extract_set_from_json)
 		self.date_params = get_config_value("date_params", params, transform=extract_set_from_json)
 		self.bool_params = get_config_value("bool_params", params, transform=extract_set_from_json)
-		self.latex_params = get_config_value("latex_params", params, transform=json.loads)
+		self.latex_params = get_config_value("latex_params", params, transform=extract_set_from_json)
 
 		#other values
 		self.list_sep = get_config_value("list_sep", params)

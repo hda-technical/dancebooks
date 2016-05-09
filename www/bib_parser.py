@@ -4,6 +4,8 @@ import enum
 import logging
 import os.path
 
+import markdown
+
 from config import config
 import const
 import utils
@@ -155,6 +157,7 @@ class BibItem(object):
 				id=self._params.get("id", None)
 			))
 		self._params[key] = value
+		#TODO: move to finalize_item()
 		self._params["all_fields"] += BibItem.value_to_string(value, "")
 		#warning handling value in a dirty unconfigured way
 		if key == "url":
@@ -169,14 +172,26 @@ class BibItem(object):
 	def fields(self):
 		return set(self._params.keys())
 
-	def finalize(self, index):
+	def finalize_item(self):
+		self.set("cite_label", utils.make_cite_label(self))
+
+	def finalize_item_set(self, index):
 		"""
 		Method to be called once after parsing every entries.
 		Finalizes entry in the following ways:
 		1. Processes crossref tag, merges _params of currect entry and parent one
 		2. Generates citation label for further use
 		"""
-		self.set("cite_label", utils.make_cite_label(self))
+		annotation = self.get("annotation")
+		if annotation is not None:
+			#TODO: create converter once per item set, not once per item
+			md = markdown.Markdown(extensions=[utils.MarkdownAutociterExtension(index)])
+			#parsing markdown and removing paragraph markup added by parser
+			new_annotation = md.convert(annotation)\
+				.replace("<p>", "")\
+				.replace("</p>", "")
+			self._params["annotation"] = new_annotation
+		
 		#crossref processing inherits some of the parameters
 		#and therefore it should go last
 		crossref = self.get("crossref")
@@ -236,6 +251,7 @@ class BibParser(object):
 		self.lexeme = ""
 		self.lexeme_started = False
 		self.lexeme_finished = False
+		#TODO: remove after migrating to markdowned annotations (?)
 		self.parenthesis_depth = 0
 		self.lexeme_in_brackets = False
 
@@ -244,8 +260,8 @@ class BibParser(object):
 		Sets item param, applying additional conversion if needed.
 		"""
 		if key in config.parser.latex_params:
-			validate = config.parser.latex_params[key]
-			value = utils.parse_latex(item, key, value, validate)
+			utils.validate_latex(item, key, value)
+			value = utils.parse_latex(value)
 
 		try:
 			if key in config.parser.list_params:
@@ -443,6 +459,7 @@ class BibParser(object):
 				if c.isspace():
 					pass
 				elif c == self.ITEM_CLOSE_BRACKET:
+					item.finalize_item()
 					items.append(item)
 					item = BibItem()
 					self.state = ParserState.NoItem

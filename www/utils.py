@@ -62,24 +62,12 @@ LATEX_UNPARSABLE_REGEXPS = [
 		"Unescaped ampersands"
 	),
 	(
-		re.compile(r"\\(?!(parencite|url|flat|&))"),
+		re.compile(r"\\(?!(flat|&))"),
 		"Unsupported latex command"
 	)
 ]
 
 LATEX_REPLACEMENTS = [
-	#\url{href}
-	(
-		re.compile(r"\\url\{([^\s]*)\}"),
-		r'<a href="\1">\1</a>'
-	),
-	#\parencite{book_id}
-	(
-		re.compile(r"\\parencite\{([a-z_\d]*)\}"),
-		r'<a href="{0}/\1">\1</a>'.format(
-			config.www.books_prefix
-		)
-	),
 	(
 		re.compile(r"\$\\flat\$"),
 		r"♭"
@@ -113,18 +101,13 @@ def validate_latex(item, key, value):
 			)
 
 
-def parse_latex(item, key, value, validate):
+def parse_latex(value):
 	"""
 	Attempts to remove LaTeX formatting from string
 	"""
-	if isinstance(value, str):
-		if validate:
-			validate_latex(item, key, value)
-		for regexp, subst in LATEX_REPLACEMENTS:
-			value = regexp.sub(subst, value)
-		return value
-	else:
-		return value
+	for regexp, subst in LATEX_REPLACEMENTS:
+		value = regexp.sub(subst, value)
+	return value
 
 
 def profile(sort="time", limits=50):
@@ -560,7 +543,29 @@ class MarkdownCache(object):
 		)
 		raw_data = read_utf8_file(abspath)
 		return converter.convert(raw_data)
-
+		
+	
+class MarkdownAutociter(markdown.inlinepatterns.Pattern):
+	def __init__(self, index):
+		super().__init__(r"\[(?P<id>[a-z0-9_]+)\]")
+		self._index = index
+		
+	def handleMatch(self, m):
+		a = markdown.util.etree.Element("a")
+		id = m.group("id")
+		print(repr(id))
+		print(repr(self._index["id"][id]))
+		a.set("href", "/bib/books/{id}".format(id=id))
+		item = first(self._index["id"][id])
+		a.text = item.get("cite_label")
+		return a
+		
+class MarkdownAutociterExtension(markdown.extensions.Extension):
+	def __init__(self, index):
+		self._index = index
+	
+	def extendMarkdown(self, md, md_globals):
+		md.inlinePatterns.add("autociter", MarkdownAutociter(self._index), '_end')
 
 MAX_AUTHORS_IN_CITE_LABEL = 2		
 def make_cite_label(item):

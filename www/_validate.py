@@ -17,7 +17,7 @@ import utils
 items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
 item_index = index.Index(items)
 for item in items:
-	item.finalize(item_index)
+	item.finalize_item_set(item_index)
 item_index.update(items)
 
 languages = sorted(item_index["langid"].keys())
@@ -33,6 +33,7 @@ DATA_FIELDS = {
 	"booktitle",
 	"booktype",
 	"catalogue",
+	"cite_label",
 	"commentator",
 	"day",
 	"edition",

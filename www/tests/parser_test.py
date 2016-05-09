@@ -58,7 +58,7 @@ class TestParser(unittest.TestCase):
 		items = bib_parser.BibParser().parse_string(TEST_ITEMS)
 		item_index = index.Index(items)
 		for item in items:
-			item.finalize(item_index)
+			item.finalize_item_set(item_index)
 		item_index.update(items)
 
 		languages = set(item_index["langid"].keys())
@@ -83,7 +83,7 @@ class TestParser(unittest.TestCase):
 		items = bib_parser.BibParser().parse_string(TEST_ITEMS)
 		item_index = index.Index(items)
 		for item in items:
-			item.finalize(item_index)
+			item.finalize_item_set(item_index)
 		item_index.update(items)
 
 		author_search = search.search_for_iterable("author", "Петров")
@@ -134,7 +134,7 @@ class TestParser(unittest.TestCase):
 		items = bib_parser.BibParser().parse_string(TEST_ITEMS)
 		item_index = index.Index(items)
 		for item in items:
-			item.finalize(item_index)
+			item.finalize_item_set(item_index)
 		item_index.update(items)
 		
 		DIRECT_KEY = "cinquecento"
