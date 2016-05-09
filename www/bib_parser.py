@@ -169,10 +169,16 @@ class BibItem(object):
 	def fields(self):
 		return set(self._params.keys())
 
-	def process_crossrefs(self, index):
+	def finalize(self, index):
 		"""
-		Processes crossref tag, merges _params of currect entry and parent one
+		Method to be called once after parsing every entries.
+		Finalizes entry in the following ways:
+		1. Processes crossref tag, merges _params of currect entry and parent one
+		2. Generates citation label for further use
 		"""
+		self.set("cite_label", utils.make_cite_label(self))
+		#crossref processing inherits some of the parameters
+		#and therefore it should go last
 		crossref = self.get("crossref")
 		if crossref is not None:
 			parent = index["id"][crossref]

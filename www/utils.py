@@ -561,3 +561,37 @@ class MarkdownCache(object):
 		raw_data = read_utf8_file(abspath)
 		return converter.convert(raw_data)
 
+
+MAX_AUTHORS_IN_CITE_LABEL = 2		
+def make_cite_label(item):
+	"""
+	Returns citation label formatted according to GOST-2008 
+	bibliography style in square brackets
+	"""
+	def get_surname(fullname):
+		return fullname.split()[-1]
+	shorthand = item.get("shorthand")
+	author = item.get("author")
+	year = item.get("year")
+	langid = item.get("langid")
+	if shorthand is not None:
+		return '[{shorthand}, {year}]'.format(
+			shorthand=shorthand, 
+			year=year
+		)
+	elif len(author) <= MAX_AUTHORS_IN_CITE_LABEL:
+		### WARN: this code doesn't process repeated surnames in any way
+		return '[{surnames}, {year}]'.format(
+			surnames=", ".join(map(get_surname, author)),
+			year=year
+		)
+	else:
+		if langid == "russian":
+			postfix = "и др."
+		else:
+			postfix = "et al."
+		return "[{surnames}, {postfix}, {year}]".format(
+				surnames=", ".join(map(get_surname, author[0:MAX_AUTHORS_IN_CITE_LABEL])),
+				postfix=postfix,
+				year=year
+			)

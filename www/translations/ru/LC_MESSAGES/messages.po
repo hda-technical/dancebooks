@@ -571,6 +571,9 @@ msgstr "Сокращённое название"
 msgid "item:labels:id"
 msgstr "Идентификатор"
 
+msgid "item:labels:cite-label"
+msgstr "Метка для цитирования"
+
 msgid "item:labels:added-on"
 msgstr "Дата добавления в базу"
 

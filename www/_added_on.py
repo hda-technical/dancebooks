@@ -13,7 +13,7 @@ import bib_parser
 items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
 item_index = index.Index(items)
 for item in items:
-	item.process_crossrefs(item_index)
+	item.finalize(item_index)
 item_index.update(items)
 
 items_filter = lambda item: item.get("filename") is None

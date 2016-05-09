@@ -29,7 +29,7 @@ items = sorted(
 )
 item_index = index.Index(items)
 for item in items:
-	item.process_crossrefs(item_index)
+	item.finalize(item_index)
 item_index.update(items)
 
 #do not append HSTS headers in these modes
