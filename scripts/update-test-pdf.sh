@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /home/georg/repo/dancebooks.testing
+cd /home/georg/repo/dancebooks
 
 PDF=test.pdf
 
