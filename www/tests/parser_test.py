@@ -22,7 +22,7 @@ r"""
 	year = {1491—1547?},
 	url = {http://example.com},
 	keywords = {renaissance | cinquecento | historical dance},
-	annotation = {\url{http://example.com/description}}
+	annotation = {[test](http://example.com/description)}
 )
 
 @book(
@@ -38,9 +38,9 @@ r"""
 
 EXPECTED_LANGUAGES = set(["russian", "english"])
 EXPECTED_KEYWORDS = set([
-	"renaissance", 
-	"cinquecento", 
-	"grumbling", 
+	"renaissance",
+	"cinquecento",
+	"grumbling",
 	"historical dance",
 	"!cinquecento",
 	"!renaissance",
@@ -73,7 +73,7 @@ class TestParser(unittest.TestCase):
 		self.assertTrue('}' not in item1.title())
 		self.assertEqual(
 			item1.annotation(),
-			'<a href="http://example.com/description">http://example.com/description</a>'
+			'<a href="http://example.com/description">test</a>'
 		)
 
 	def test_search_items(self):
@@ -129,14 +129,14 @@ class TestParser(unittest.TestCase):
 			item_index["keywords"]["cinquecento"] & \
 			item_index["keywords"]["historical dance"]
 		self.assertEqual(len(list(filtered_items)), 1)
-		
+
 	def test_inverted_index_search(self):
 		items = bib_parser.BibParser().parse_string(TEST_ITEMS)
 		item_index = index.Index(items)
 		for item in items:
 			item.finalize_item_set(item_index)
 		item_index.update(items)
-		
+
 		DIRECT_KEY = "cinquecento"
 		INVERTED_KEY = const.INVERTED_INDEX_KEY_PREFIX + DIRECT_KEY
 		subindex = item_index["keywords"]
