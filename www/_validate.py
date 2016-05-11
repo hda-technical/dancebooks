@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import concurrent.futures
 import json
+import multiprocessing
 import logging
 import os.path
 
@@ -79,7 +80,7 @@ ANCILLARY_FIELDS = {
 	"availability",
 	"filesize",
 	"source_file",
-	"source_line",	
+	"source_line",
 	"useful_keywords",
 	"year_circa",
 	"year_from",
@@ -89,8 +90,8 @@ ANCILLARY_FIELDS = {
 ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 
 MULTIENTRY_BOOKTYPES = {
-	"article", 
-	"proceedings", 
+	"article",
+	"proceedings",
 	"inproceedings",
 	"collection",
 	"incollection"
@@ -101,7 +102,7 @@ PARTIAL_BOOKTYPES = {
 	"inproceedings",
 	"incollection"
 }
-	
+
 #executed once per validation run
 def update_validation_data(
 	errors,
@@ -141,7 +142,7 @@ def update_validation_data(
 	added_errors = new_errors - old_errors
 	if len(added_errors) > 0:
 		logging.error("Following new erroneous entries were introduced")
-		for erroneous_id in added_errors:			
+		for erroneous_id in added_errors:
 			logging.error("    " + str(erroneous_id))
 			for error_text in errors[erroneous_id]:
 				logging.error("        " + error_text)
@@ -165,13 +166,13 @@ def update_validation_data(
 	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
 		validation_data_file.write(json.dumps(validation_data))
 
-		
+
 def check_periodical_filename(filename, item, errors):
 	if filename.endswith(".md"):
 		return
 	booktype = item.get("booktype")
-	source_file = item.get("source_file") 
-	
+	source_file = item.get("source_file")
+
 	is_periodical_source_file = source_file.startswith("_periodical")
 	is_periodical_booktype = booktype in ("article", "periodical")
 	is_periodical_filename = filename.startswith("/Periodical/")
@@ -185,10 +186,10 @@ def check_periodical_filename(filename, item, errors):
 	if not all([
 		is_periodical_source_file,
 		is_periodical_booktype,
-		is_periodical_filename		
+		is_periodical_filename
 	]):
 		errors.add("Only articles should be stored in '/Periodical' subfolder")
-	
+
 
 def check_short_desription_filename(filename, item, errors):
 	if filename.endswith(".md"):
@@ -203,7 +204,7 @@ def check_single_filename(abspath, filename, item, errors):
 	"""
 	Checks if file is accessible and matches item metadata
 	"""
-	
+
 	if not os.path.isfile(abspath):
 		errors.add("File [{abspath}] is not accessible".format(
 			abspath=abspath
@@ -212,11 +213,11 @@ def check_single_filename(abspath, filename, item, errors):
 		errors.add("File [{abspath}] is not accessible in case-sensitive mode".format(
 			abspath=abspath
 		))
-		
+
 	booktype = item.get("booktype")
 	check_periodical_filename(filename, item, errors)
 	check_short_desription_filename(filename, item, errors)
-	
+
 	if booktype in MULTIENTRY_BOOKTYPES:
 		return
 	metadata = utils.extract_metadata_from_file(filename)
@@ -316,8 +317,8 @@ def check_obligatory_fields(item, errors):
 			errors.add("Obligatory field {field} is missing".format(
 				field=field
 			))
-	
-	
+
+
 def check_allowed_fields(item, errors):
 	"""
 	Checks if all fields of an item are allowed
@@ -331,7 +332,7 @@ def check_allowed_fields(item, errors):
 
 def check_antidance_fields(item, errors):
 	"""
-	Check that antidance books are 
+	Check that antidance books are
 	* tagged with "antidance" keyword
 	* stored in /Antidance subfolder
 	* are sourced from _antidance.bib
@@ -339,13 +340,13 @@ def check_antidance_fields(item, errors):
 	source_file = item.get("source_file")
 	keywords = item.get("keywords") or []
 	filename = item.get("filename") or []
-	
+
 	isSourceAntidance = (source_file == "_antidance.bib")
 	isKeywordsAntidance = ("antidance" in keywords)
-	
+
 	filename_checker = lambda f: f.startswith("/Antidance/")
 	isFilenameAntidance = any(map(filename_checker, filename))
-	
+
 	if not utils.all_or_none([isSourceAntidance, isKeywordsAntidance, isFilenameAntidance]):
 		errors.add(
 			"Antidance entries should be "
@@ -441,7 +442,7 @@ def check_isbn(item, errors):
 				formatted=isbn.to_isbn13(single_isbn)
 			))
 
-			
+
 def check_issn(item, errors):
 	"""
 	Checks ISSN for validity
@@ -471,20 +472,20 @@ def check_booktype(item, errors):
 	VALID_BOOKTYPES = {
 		"article",
 		"periodical",
-		
+
 		"book",
 		"inbook",
 		"mvbook",
-		
+
 		"proceedings",
 		"inproceedings",
-		
+
 		"reference",
 		"mvreference",
-		
+
 		"collection",
 		"incollection",
-		
+
 		"thesis",
 		"unpublished",
 	}
@@ -605,16 +606,16 @@ def check_url_validity(item, errors):
 		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
 		if not match:
 			continue
-		#inproceedings can have self-served url pointing 
+		#inproceedings can have self-served url pointing
 		#to entire full proceedings book
 		#TODO: invent something like PARTIAL_BOOKTYPES
 		if (booktype == "inproceedings"):
 			continue
-			
+
 		if (match.group("item_id") != item_id):
 			errors.add("Wrong item_id specified in self-served url")
 			continue
-			
+
 		single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
 		metadata = utils.extract_metadata_from_file(single_filename)
 		owner = metadata.get("owner")
@@ -629,14 +630,14 @@ def check_url_validity(item, errors):
 		if owner_fullname:
 			annotation = item.get("annotation")
 			if (
-				(not annotation) or 
+				(not annotation) or
 				(owner_fullname not in annotation)
 			):
 				errors.add("Owner fullname ({owner_fullname}) should be present in annotation".format(
 					owner_fullname=owner_fullname
 				))
-					
-				
+
+
 
 
 def check_url_accessibility(item, errors):
@@ -847,10 +848,10 @@ def check_keywords(item, errors):
 			))
 	if ("useless" in keywords) and (len(keywords) != 1):
 		errors.add("Keyword [useless] can't be combined with other keywords")
-		
+
 	annotation = item.get("annotation")
 	if (
-		("not digitized" in keywords) and 
+		("not digitized" in keywords) and
 		not item.has("transcription_filename") and
 		(item.get("booktype") not in MULTIENTRY_BOOKTYPES)
 	):
@@ -864,11 +865,11 @@ def check_filename(item, errors):
 	"""
 	NOT_DIGITIZED_KEYWORD = "not digitized"
 	filename = item.get("filename")
-	
+
 	booktype = item.get("booktype")
 	if booktype in MULTIENTRY_BOOKTYPES:
 		return
-		
+
 	keywords = set(item.get("keywords") or {})
 	if filename is None:
 		if (NOT_DIGITIZED_KEYWORD not in keywords):
@@ -950,18 +951,19 @@ def main(
 	make_extra_checks=("", False, "Add some extra checks"),
 	ignore_missing_ids=("", False, "Update validation data even when some ids were lost"),
 	ignore_added_errors=("", False, "Update validation data even when new errors were introduced"),
-	num_threads=("", 1, "Override number of threads")
 ):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
 	logging.info("Going to process {0} items".format(len(items)))
-	num_threads = int(num_threads)
-	executor = concurrent.futures.ThreadPoolExecutor(max_workers=num_threads)
-	future_errors = {executor.submit(check_single_item, item, make_extra_checks): item for item in items}
+	executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
+	futures = {
+		executor.submit(check_single_item, item, make_extra_checks): item
+		for item in items
+	}
 	erroneous_items = dict()
-	for future in concurrent.futures.as_completed(future_errors):
-		item = future_errors[future]
+	for future in concurrent.futures.as_completed(futures):
+		item = futures[future]
 		item_id=item.id(),
 		try:
 			result = future.result()

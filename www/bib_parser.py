@@ -1,7 +1,9 @@
 # coding: utf-8
+import concurrent.futures
 import datetime
 import enum
 import logging
+import multiprocessing
 import os.path
 
 import markdown
@@ -168,7 +170,7 @@ class BibItem(object):
 
 	def params(self):
 		return self._params
-		
+
 	def fields(self):
 		return set(self._params.keys())
 
@@ -191,7 +193,7 @@ class BibItem(object):
 				.replace("<p>", "")\
 				.replace("</p>", "")
 			self._params["annotation"] = new_annotation
-		
+
 		#crossref processing inherits some of the parameters
 		#and therefore it should go last
 		crossref = self.get("crossref")
@@ -308,8 +310,13 @@ class BibParser(object):
 
 		parsed_items = []
 		files = utils.files_in_folder(path, "*.bib")
-		for filename in files:
-			parsed_items += self.parse_file(os.path.join(path, filename))
+		executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
+		futures = {
+			executor.submit(self.parse_file, os.path.join(path, filename)): filename
+			for filename in files
+		}
+		for future in concurrent.futures.as_completed(futures):
+			parsed_items += future.result()
 		return parsed_items
 
 	def parse_file(self, path):
