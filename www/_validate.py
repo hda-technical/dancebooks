@@ -36,6 +36,7 @@ DATA_FIELDS = {
 	"catalogue",
 	"cite_label",
 	"commentator",
+	"crossref",
 	"day",
 	"edition",
 	"editor",
@@ -606,11 +607,6 @@ def check_url_validity(item, errors):
 		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
 		if not match:
 			continue
-		#inproceedings can have self-served url pointing
-		#to entire full proceedings book
-		#TODO: invent something like PARTIAL_BOOKTYPES
-		if (booktype == "inproceedings"):
-			continue
 
 		if (match.group("item_id") != item_id):
 			errors.add("Wrong item_id specified in self-served url")
@@ -740,23 +736,30 @@ def check_location(item, errors):
 		errors.add("Location should be present when publisher is known")
 
 
-def check_pages(item, errors):
+def check_partial_fields(item, errors):
 	"""
 	Checks if pages field matches PAGES_REGEX
 	"""
-	pages = item.get("pages")
-	if pages is None:
-		return
-	booktype = item.get("booktype")
-	if booktype not in PARTIAL_BOOKTYPES:
-		errors.add("Field pages is not allowed for booktype {booktype}".format(
-			booktype=booktype
-		))
-	match = const.PAGES_REGEXP.match(pages)
-	if not match:
-		errors.add("Field pages={pages} doesn't match PAGES_REGEXP".format(
-			pages=pages
-		))
+	PARTIAL_FIELDS = {
+		"pages": const.PAGES_REGEXP,
+		"crossref": None
+	}
+	is_partial = (item.get("booktype") in PARTIAL_BOOKTYPES)
+	
+	for field, regexp in PARTIAL_FIELDS.iteritems():
+		value = item.get(field)
+		if value is None:
+			continue
+		if not is_partial:
+			errors.add("Field {field} is not allowed for booktype {booktype}".format(
+				field=field,
+				booktype=booktype
+			))
+		if (regexp is not None) and not regexp.match(value)
+			errors.add("Field {field}={value} doesn't match format regexp".format(
+				field=field,
+				value=value
+			))
 
 
 def check_volume(item, errors):
@@ -938,7 +941,7 @@ def check_single_item(item, make_extra_checks):
 	check_keywords(item, errors)
 	check_filename(item, errors)
 	check_source_file(item, errors)
-	check_pages(item, errors)
+	check_partial_fields(item, errors)
 	check_antidance_fields(item, errors)
 	if make_extra_checks:
 		check_title_starts_from_shorthand(item, errors)

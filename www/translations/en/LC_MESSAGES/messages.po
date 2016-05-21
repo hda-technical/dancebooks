@@ -574,6 +574,9 @@ msgstr "Shorthand"
 msgid "item:labels:id"
 msgstr "Id"
 
+msgid "item:labels:crossref"
+msgstr "Published in"
+
 msgid "item:labels:cite-label"
 msgstr "Cite label"
 

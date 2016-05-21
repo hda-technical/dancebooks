@@ -8,6 +8,7 @@
 	"langid",
 	"id",
 	"cite_label",
+	"crossref",
 	"added_on",
 	"source",
 	"booktype",
@@ -49,6 +50,8 @@
 			<div class="bib_item_right">
 			{% if param == "id" %}
 				{{ value | format_item_id | safe }}
+			{% elif param == "crossref" %}
+				{{ value | safe }}
 			{% elif param in ["author", "pseudo_author"] %}
 				{{ value | map("author_link") | map("safe") | join(", ") }}
 			{% elif param == "keywords" %}

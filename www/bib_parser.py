@@ -181,13 +181,13 @@ class BibItem(object):
 		"""
 		Method to be called once after parsing every entries.
 		Finalizes entry in the following ways:
-		1. Processes crossref tag, merges _params of currect entry and parent one
+		1. Processes crossref tag, merging _params of current entry and parent one
 		2. Generates citation label for further use
 		"""
+		md = markdown.Markdown(extensions=[utils.MarkdownAutociterExtension(index)])
 		annotation = self.get("annotation")
 		if annotation is not None:
 			#TODO: create converter once per item set, not once per item
-			md = markdown.Markdown(extensions=[utils.MarkdownAutociterExtension(index)])
 			#parsing markdown and removing paragraph markup added by parser
 			new_annotation = md.convert(annotation)\
 				.replace("<p>", "")\
@@ -198,18 +198,9 @@ class BibItem(object):
 		#and therefore it should go last
 		crossref = self.get("crossref")
 		if crossref is not None:
-			parent = index["id"][crossref]
-			if len(parent) == 0:
-				raise ValueError("Crossref {crossref} was not found for item {id}".format(
-					crossref=crossref,
-					id=self.id()
-				))
-			parent = list(parent)[0]
-			new_params = dict(parent.params())
-			new_params.update(self._params)
-			new_params.pop("crossref")
-			self._params = new_params
-
+			self._params["crossref"] = md.convert("[" + crossref + "]"))\
+				.replace("<p>", "")\
+				.replace("</p>", "")
 
 class ParserState(enum.Enum):
 	NoItem = 0
