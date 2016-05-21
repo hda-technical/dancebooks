@@ -101,7 +101,8 @@ MULTIENTRY_BOOKTYPES = {
 PARTIAL_BOOKTYPES = {
 	"article",
 	"inproceedings",
-	"incollection"
+	"incollection",
+	"inbook"
 }
 
 #executed once per validation run
@@ -744,9 +745,10 @@ def check_partial_fields(item, errors):
 		"pages": const.PAGES_REGEXP,
 		"crossref": None
 	}
-	is_partial = (item.get("booktype") in PARTIAL_BOOKTYPES)
+	booktype = item.get("booktype")
+	is_partial = (booktype in PARTIAL_BOOKTYPES)
 	
-	for field, regexp in PARTIAL_FIELDS.iteritems():
+	for field, regexp in PARTIAL_FIELDS.items():
 		value = item.get(field)
 		if value is None:
 			continue
@@ -755,7 +757,7 @@ def check_partial_fields(item, errors):
 				field=field,
 				booktype=booktype
 			))
-		if (regexp is not None) and not regexp.match(value)
+		if (regexp is not None) and not regexp.match(value):
 			errors.add("Field {field}={value} doesn't match format regexp".format(
 				field=field,
 				value=value

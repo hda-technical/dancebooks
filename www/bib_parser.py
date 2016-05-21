@@ -198,7 +198,7 @@ class BibItem(object):
 		#and therefore it should go last
 		crossref = self.get("crossref")
 		if crossref is not None:
-			self._params["crossref"] = md.convert("[" + crossref + "]"))\
+			self._params["crossref"] = md.convert("[" + crossref + "]")\
 				.replace("<p>", "")\
 				.replace("</p>", "")
 
