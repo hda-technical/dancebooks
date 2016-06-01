@@ -257,7 +257,7 @@ hathi()
 	for PAGE in `seq 1 $PAGE_COUNT`
 	do
 		while ( \
-			webGet "http://babel.hathitrust.org/cgi/imgsrv/image?id=$BOOK_ID;seq=$PAGE;width=1000000" "$OUTPUT_DIR/`printf %04d.jpg $PAGE`"; \
+			webGet "https://babel.hathitrust.org/cgi/imgsrv/image?id=$BOOK_ID;seq=$PAGE;width=1000000" "$OUTPUT_DIR/`printf %04d.jpg $PAGE`"; \
 			[ "$?" -ne 0 ] \
 		)
 		do
