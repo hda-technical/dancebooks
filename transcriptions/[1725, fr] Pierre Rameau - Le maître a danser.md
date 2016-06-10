@@ -358,7 +358,7 @@ Ce n'est pas que je pretende qu'un menuet, qui seroit dansé un peu plus long-te
 
 Mais lorsque l'on est parvenu au point de le bien danser, on peut de tems à autre y faire quelque agrément; ce que je vais expliquer dans le chapitre suivant.
 
-### Chapitre XXIII
+### Chapitre XXIII. Des agréments que l'on peut faire dans le menuet, & l'attention qu'il faut avoir pour le figurer egalement
 
 Quoique le menuet le plus uni selon le goût de beaucoup de personnes, soit le mieux dansé: cependant, j'y ai vû faire quelques agrémens, qui lui donnent plus d'enjoüement, & plus de grace, & comme je voi qu'ils sont fort en usage, c'est ce qui m'engage de vous donner l'intelligence de les faire, afin que l'on puisse les mettre en pratique, soit en donnant la main, ou dans d'autres endroits.
 
