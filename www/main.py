@@ -8,7 +8,7 @@ import random
 from urllib import parse as urlparse
 
 import flask
-from flask.ext import babel
+import flask_babel
 import werkzeug
 
 from config import config, WorkingMode
@@ -47,7 +47,7 @@ markdown_cache = utils.MarkdownCache()
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = utils.first(config.www.languages)
 flask_app.config["USE_EVALEX"] = False
-babel_app = babel.Babel(flask_app)
+babel_app = flask_babel.Babel(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
@@ -382,7 +382,7 @@ def edit_book(book_id):
 	message = messenger.ErrorReport(item, from_email, from_name, message)
 	message.send()
 
-	return {"message": babel.gettext("interface:report:thanks")}
+	return {"message": flask_babel.gettext("interface:report:thanks")}
 
 
 @flask_app.route(config.www.books_prefix + "/<string:book_id>/keywords", methods=["POST"])
@@ -406,7 +406,7 @@ def edit_book_keywords(book_id):
 	message = messenger.KeywordsSuggest(item, from_email, from_name, suggested_keywords)
 	message.send()
 
-	return {"message": babel.gettext("interface:report:thanks")}
+	return {"message": flask_babel.gettext("interface:report:thanks")}
 
 
 @flask_app.route(config.www.app_prefix + "/options", methods=["GET"])

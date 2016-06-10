@@ -6,7 +6,7 @@ import logging
 import re
 
 import flask
-from flask.ext import babel
+import flask_babel
 import werkzeug
 
 from config import config
@@ -189,33 +189,33 @@ def as_set(value):
 
 
 def translate_language(langid):
-	return babel.gettext(const.BABEL_LANG_PREFIX + langid)
+	return flask_babel.gettext(const.BABEL_LANG_PREFIX + langid)
 
 
 def translate_booktype(booktype):
-	return babel.gettext(const.BABEL_BOOKTYPE_PREFIX + booktype)
+	return flask_babel.gettext(const.BABEL_BOOKTYPE_PREFIX + booktype)
 
 
 def translate_keyword_cat(category):
-	return babel.gettext(const.BABEL_KEYWORD_CATEGORY_PREFIX + category)
+	return flask_babel.gettext(const.BABEL_KEYWORD_CATEGORY_PREFIX + category)
 
 
 def translate_keyword_ref(keyword):
 	#colon should be remove, spaces should be replaces with dashes
 	key = keyword.replace(":", "").replace(" ", "-")
-	return babel.gettext(const.BABEL_KEYWORD_REF_PREFIX + key)
+	return flask_babel.gettext(const.BABEL_KEYWORD_REF_PREFIX + key)
 
 
 def translate_missing_error(key):
-	return babel.gettext(const.BABEL_MISSING_ERROR_PREFIX + key.replace("_", "-"))
+	return flask_babel.gettext(const.BABEL_MISSING_ERROR_PREFIX + key.replace("_", "-"))
 
 
 def translate_wrong_error(key):
-	return babel.gettext(const.BABEL_WRONG_ERROR_PREFIX + key.replace("_", "-"))
+	return flask_babel.gettext(const.BABEL_WRONG_ERROR_PREFIX + key.replace("_", "-"))
 
 
 def translate_month(month):
-	return babel.gettext(const.BABEL_MONTH_PREFIX + "{month:02}".format(
+	return flask_babel.gettext(const.BABEL_MONTH_PREFIX + "{month:02}".format(
 		month=month
 	))
 
@@ -231,7 +231,7 @@ def format_date(item):
 
 	if all([year_from, month, day]):
 		date = datetime.date(year_from, month, day)
-		return babel.format_date(date, format="d MMMM y")
+		return flask_babel.format_date(date, format="d MMMM y")
 	elif all([year_from, month]):
 		#babel is unable to format month correctly for Russian language
 		#using own implementation here
