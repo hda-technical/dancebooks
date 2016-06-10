@@ -543,34 +543,32 @@ class MarkdownCache(object):
 		)
 		raw_data = read_utf8_file(abspath)
 		return converter.convert(raw_data)
-		
-	
+
+
 class MarkdownAutociter(markdown.inlinepatterns.Pattern):
 	def __init__(self, index):
 		super().__init__(r"\[(?P<id>[a-z0-9_]+)\]")
 		self._index = index
-		
+
 	def handleMatch(self, m):
 		a = markdown.util.etree.Element("a")
 		id = m.group("id")
-		print(repr(id))
-		print(repr(self._index["id"][id]))
 		a.set("href", "/bib/books/{id}".format(id=id))
 		item = first(self._index["id"][id])
 		a.text = item.get("cite_label")
 		return a
-		
+
 class MarkdownAutociterExtension(markdown.extensions.Extension):
 	def __init__(self, index):
 		self._index = index
-	
+
 	def extendMarkdown(self, md, md_globals):
 		md.inlinePatterns.add("autociter", MarkdownAutociter(self._index), '_end')
 
-MAX_AUTHORS_IN_CITE_LABEL = 2		
+MAX_AUTHORS_IN_CITE_LABEL = 2
 def make_cite_label(item):
 	"""
-	Returns citation label formatted according to GOST-2008 
+	Returns citation label formatted according to GOST-2008
 	bibliography style in square brackets
 	"""
 	def get_surname(fullname):
@@ -581,7 +579,7 @@ def make_cite_label(item):
 	langid = item.get("langid")
 	if shorthand is not None:
 		return '[{shorthand}, {year}]'.format(
-			shorthand=shorthand, 
+			shorthand=shorthand,
 			year=year
 		)
 	elif len(author) <= MAX_AUTHORS_IN_CITE_LABEL:
