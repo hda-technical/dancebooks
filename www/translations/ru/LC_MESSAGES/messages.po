@@ -103,9 +103,15 @@ msgid "pages:keywords:ref:circle"
 msgstr "Кадрили замкнутые в круг. Например, черкесский или сицилийский круги"
 
 msgid "pages:keywords:ref:cotillon-potpourri"
-msgstr "Несколько фигур котильона, танцуемые одна за другой в рамках одного танца"
+msgstr "Несколько фигур котильона, исполняемые одна за другой в рамках одного танца"
 
 #Pages: keywords: XIX century
+
+msgid "pages:keywords:ref:cotillon-19th-century"
+msgstr "Включает в себя котильон (в значении бальной игры) и танец “Waltz Cotillon” с фиксированной схемой"
+
+msgid "pages:keywords:ref:mazurka"
+msgstr "Включает в себя как кадрильную, так и котильонную мазурку"
 
 msgid "pages:keywords:ref:stage-dance"
 msgstr "Балет, постановочные и показательные танцы (а также музыка написанная к таким танцам или взятая из них)"
@@ -121,7 +127,7 @@ msgid "pages:keywords:ref:quadrille-contredanse"
 msgstr "Одиночная фигура кадрили, описанная как самостоятельный танец"
 
 msgid "pages:keywords:ref:quadrille-lancers"
-msgstr "Включает в себя многочисленные вариаци кадрили (например, Saratoga Lancers)"
+msgstr "Включает в себя многочисленные вариации кадрили (например, Saratoga Lancers)"
 
 msgid "pages:keywords:ref:quadrille-monster"
 msgstr "Французская кадриль, отличающая высокой вариативностью фигур и ведомая дирижёром"

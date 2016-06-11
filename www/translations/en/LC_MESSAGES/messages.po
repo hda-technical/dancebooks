@@ -107,6 +107,12 @@ msgstr "Multiple cotillon figures danced one after another in a single dance"
 
 # Pages: keywords: XIX century
 
+msgid "pages:keywords:ref:cotillon-19th-century"
+msgstr "Includes cotillon (in the meaning of ballroom game) and the Waltz Cotillion (fixed sequence of figures)"
+
+msgid "pages:keywords:ref:mazurka"
+msgstr "Includes mazurka dance as a quadrille, and as a cotillon"
+
 msgid "pages:keywords:ref:stage-dance"
 msgstr "Ballet, scenic and show off dance (also the music for such dances, or taken from them)"
 
