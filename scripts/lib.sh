@@ -113,8 +113,8 @@ tiles()
 	local TILE_Z=$4
 	local TILE_SIZE=$5
 	local OUTPUT_DIR=$6
-	local OUTPUT_FILE="$OUTPUT_DIR/$PAGE_ID.bmp"
-	local TMP_DIR="$OUTPUT_DIR/$PAGE_ID.tmp"
+	local OUTPUT_FILE="$OUTPUT_DIR/`basename $PAGE_ID`.bmp"
+	local TMP_DIR="$OUTPUT_DIR/`basename $PAGE_ID`.tmp"
 
 	local MAX_TILE_X=$MAX_TILE
 	local MAX_TILE_Y=$MAX_TILE
@@ -149,7 +149,7 @@ tiles()
 			fi
 		done;
 	done;
-
+	
 	if [ \
 		"$MAX_TILE_X" -gt "0" -a \
 		"$MAX_TILE_Y" -gt "0" \
@@ -582,6 +582,55 @@ kunstkameraTiles()
 	MIN_FILE_SIZE_BYTES=1
 
 	tiles kunstkameraTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
+ugentTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage $0 image_id x y z"
+		return 1
+	fi
+	#expecting BOOK_ID in form of 
+	#2016/3/20/11/33/39/BIB-G-006778_2016_0002_AC
+	#(including date)
+	local BOOK_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local ZOOM=$4
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=1
+	
+	#FIXME: this number should be manually adjusted to get correct results
+	local TILES_IN_ROW=28
+	local TILE_NUMBER=`echo "$TILE_Y * $TILES_IN_ROW + $TILE_X" | bc`
+	
+	if [ "$TILE_X" -ge "$TILES_IN_ROW" ]
+	then
+		#generating fake url to make outer tile iteration algorithm work
+		echo "http://httpbin.org/status/404"
+	else
+		echo "http://adore.ugent.be/iip?FIF=/data/datadir/$BOOK_ID.jp2&CNT=1&SDS=0,90&JTL=$ZOOM,$TILE_NUMBER"
+	fi
+}
+
+ugentTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return 1
+	fi
+	local BOOK_ID=$1
+	local ZOOM=5
+	local TILE_SIZE=256
+	local OUTPUT_DIR=`makeOutputDir ugent`
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=640
+
+	tiles ugentTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 if [ $# -lt 2 ]
