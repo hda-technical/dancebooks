@@ -12,6 +12,7 @@ LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
 #"xi xii xiii xiv xv xvi xvii xviii xix xx xxi xxii xxiii xxiv xxv xxvi xxvii xxviii xxix xxx xxxi xxxii xxxiii xxxiv xxxv xxxvi xxxvii xxxviii xxxix xl"
 
 CURL_HTTP_ERROR=22
+CURL_TIMEOUT=28
 
 MIN_FILE_SIZE_BYTES=1024
 
@@ -41,29 +42,41 @@ webGet()
 	curl \
 		--silent \
 		--fail \
-		--connect-timeout 5 \
 		--retry 3 \
-		--retry-delay 10 \
+		--connect-timeout 5 \
+		--retry-delay 5 \
+		--max-time 10 \
 		--output "$OUTPUT_FILE" \
 		"$URL"
-
-	if [ "$?" -eq "$CURL_HTTP_ERROR" ]
+	
+	local EXIT_CODE=$?
+	
+	if [ "$EXIT_CODE" -eq "$CURL_TIMEOUT" ]
+	then
+		echo "TIMEOUT"
+		return 1
+	fi
+	if [ "$EXIT_CODE" -eq "$CURL_HTTP_ERROR" ]
 	then
 		rm -f "$OUTPUT_FILE"
-		echo "FAIL"
+		echo "HTTP ERROR"
 		return 1
-	elif [ -e "$OUTPUT_FILE" ]
-	then
-		if [ `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" ]
-		then
-			rm -f "$OUTPUT_FILE"
-			echo "FAIL"
-			return 1
-		else
-			echo "OK"
-			return 0
-		fi
 	fi
+	if [ ! -e "$OUTPUT_FILE" ]
+	then
+		echo "NO OUTPUT"
+		return 1
+	fi
+	
+	if [ `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" ]
+	then
+		rm -f "$OUTPUT_FILE"
+		echo "FILE TOO SMALL"
+		return 1
+	fi
+	
+	echo "OK"
+	return 0
 }
 
 #Utility functions
@@ -402,6 +415,46 @@ gallicaTiles()
 	local OUTPUT_DIR=.
 
 	tiles gallicaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
+princetonTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage: $0 ark_id x y z"
+		return 1
+	fi
+
+	local BOOK_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local TILE_Z=$4
+	local TILE_SIZE=1024
+
+	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
+	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
+
+	echo "http://libimages.princeton.edu/loris/$BOOK_ID/$LEFT,$TOP,1024,1024/1024,/0/native.jpg"
+}
+
+princetonTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 item_id"
+		return 1
+	fi
+
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=5120
+
+	local BOOK_ID=$1
+	local ZOOM=6
+	local TILE_SIZE=1024
+	local OUTPUT_DIR=.
+	
+
+	tiles princetonTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 dusseldorfTileFile()
