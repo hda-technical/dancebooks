@@ -124,6 +124,14 @@ table
 	border-spacing: 0px;
 }
 
+table.bound,
+table.bound td,
+table.bound th
+{
+	border: solid 1px black;
+	padding: 2px 5px;
+}
+
 /* styles go here */
 
 body

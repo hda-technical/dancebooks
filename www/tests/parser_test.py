@@ -146,6 +146,18 @@ class TestParser(unittest.TestCase):
 		self.assertEqual(len(filtered_items), 1)
 		self.assertEqual(utils.first(filtered_items).id(), "id_2")
 
+	def test_cite_formatting(self):
+		items = bib_parser.BibParser().parse_string(TEST_ITEMS)
+		self.assertEqual(
+			utils.make_html_cite(items[-1]),
+			(
+				"<em>Людовик Петровский, Николай Проклович Петров</em> "
+				"Побрюзжим на досуге. "
+				"Москва, Одесса, "
+				"1825. "
+				'<a href="/bib/books/id_2">https://bib.hda.org.ru/bib/books/id_2</a>'
+			)
+		)
 
 if __name__ == "__main__":
 	unittest.main()

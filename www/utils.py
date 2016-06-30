@@ -565,14 +565,17 @@ class MarkdownAutociterExtension(markdown.extensions.Extension):
 	def extendMarkdown(self, md, md_globals):
 		md.inlinePatterns.add("autociter", MarkdownAutociter(self._index), '_end')
 
-MAX_AUTHORS_IN_CITE_LABEL = 2
+MAX_AUTHORS_IN_CITE = 2
+
+def get_last_name(fullname):
+	return fullname.split()[-1]
+
+
 def make_cite_label(item):
 	"""
 	Returns citation label formatted according to GOST-2008
 	bibliography style in square brackets
 	"""
-	def get_surname(fullname):
-		return fullname.split()[-1]
 	shorthand = item.get("shorthand")
 	author = item.get("author")
 	year = item.get("year")
@@ -582,10 +585,10 @@ def make_cite_label(item):
 			shorthand=shorthand,
 			year=year
 		)
-	elif len(author) <= MAX_AUTHORS_IN_CITE_LABEL:
+	elif len(author) <= MAX_AUTHORS_IN_CITE:
 		### WARN: this code doesn't process repeated surnames in any way
 		return '[{surnames}, {year}]'.format(
-			surnames=", ".join(map(get_surname, author)),
+			surnames=", ".join(map(get_last_name, author)),
 			year=year
 		)
 	else:
@@ -594,7 +597,43 @@ def make_cite_label(item):
 		else:
 			postfix = "et al."
 		return "[{surnames}, {postfix}, {year}]".format(
-				surnames=", ".join(map(get_surname, author[0:MAX_AUTHORS_IN_CITE_LABEL])),
+				surnames=", ".join(map(get_last_name, author[0:MAX_AUTHORS_IN_CITE])),
 				postfix=postfix,
 				year=year
 			)
+
+
+def make_html_cite(item):
+	"""
+	Returns full citation, formatted according to some simple style
+	"""
+	result = ""
+	author = item.get("author")
+	langid = item.get("langid")
+	title = item.get("title")
+	location = item.get("location")
+	year = item.get("year")
+	if author is not None:
+		result += "<em>"
+		result += ", ".join(author[0:MAX_AUTHORS_IN_CITE])
+		if len(author) > MAX_AUTHORS_IN_CITE:
+			result += "и. др." if langid == "russian" else "et al."
+		result += "</em>"
+	result += " "
+	result += title
+	result += ". "
+	if location:
+		#location is a list
+		result += ", ".join(location)
+		result += ", "
+	result += year
+	result += ". "
+	result += '<a href="{prefix}/{item_id}">{scheme}{domain}{prefix}/{item_id}</a>'.format(
+		scheme="https://",
+		domain=config.www.app_domain_production,
+		prefix=config.www.books_prefix,
+		item_id=item.id()
+	)
+	return result
+
+

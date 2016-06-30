@@ -305,6 +305,16 @@ msgstr "Ноябрь"
 msgid "common:month:12"
 msgstr "Декабрь"
 
+# Item own page
+msgid "interface:item:cite-header"
+msgstr "Для цитирования"
+
+msgid "interface:item:cite-label"
+msgstr "Метка"
+
+msgid "interface:item:cite"
+msgstr "Библиографическая ссылка"
+
 # Report form
 
 msgid "interface:report:error-form-title"
@@ -579,9 +589,6 @@ msgstr "Идентификатор"
 
 msgid "item:labels:crossref"
 msgstr "Опубликовано в"
-
-msgid "item:labels:cite-label"
-msgstr "Метка для цитирования"
 
 msgid "item:labels:added-on"
 msgstr "Дата добавления в базу"

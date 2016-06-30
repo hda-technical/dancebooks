@@ -25,6 +25,21 @@
 		<h2>{{ _("interface:single-entry") }} {{ item.id() }}:</h2>
 		<div class="content">
 			{% include "components/item.html" %}
+			<div id="citeData">
+				<h3>{{ _("interface:item:cite-header") }}</h3>
+				<table class="bound">
+					<tr>
+						<td>{{ _("interface:item:cite-label") }}:</td>
+						<td>
+							{{ utils.make_cite_label(item) }}
+						</td>
+					</tr>
+					<tr>
+						<td>{{ _("interface:item:cite") }}: </td>
+						<td>{{ utils.make_html_cite(item) | safe }}
+					</tr>
+				</table>
+			</div>
 			<div class="center">
 				<span class="action" id="reportFormToggle">{{ _("interface:report:error-form-title") }}</span>
 				<span class="action" id="keywordFormToggle">{{ _("interface:report:keyword-form-title") }}</span>

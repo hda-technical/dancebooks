@@ -74,6 +74,7 @@ flask_app.jinja_env.filters["self_served_url_size"] = jinja_self_served_url_size
 
 #filling jinja global variables
 flask_app.jinja_env.globals["config"] = config
+flask_app.jinja_env.globals["utils"] = utils
 
 @flask_app.before_first_request
 def initialize():
@@ -324,13 +325,16 @@ def get_book_pdf(book_id, index):
 	return response
 
 
-@flask_app.route(config.www.books_prefix + "/<string:book_id>/transcription/<int:index>", methods=["GET"])
-@utils_flask.check_id_redirections("book_id")
+@flask_app.route(config.www.books_prefix + "/<string:item_id>/transcription/<int:index>", methods=["GET"])
+@utils_flask.check_id_redirections("item_id")
 @utils_flask.log_exceptions()
-def get_book_markdown(book_id, index):
-	items = item_index["id"].get(book_id, None)
+def get_book_markdown(item_id, index):
+	items = item_index["id"].get(item_id)
 	if items is None:
-		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
+		flask.abort(
+			http.client.NOT_FOUND,
+			"Item with id {item_id} was not found".format(item_id=item_id)
+		)
 
 	item = utils.first(items)
 	index -= 1
@@ -345,8 +349,8 @@ def get_book_markdown(book_id, index):
 	):
 		flask.abort(
 			http.client.NOT_FOUND,
-			"Markdowned trascription for book with id {id} is not available".format(
-				id=book_id
+			"Markdowned trascription for item {item_id} is not available".format(
+				item_id=item_id
 			)
 		)
 

@@ -34,7 +34,6 @@ DATA_FIELDS = {
 	"booktitle",
 	"booktype",
 	"catalogue",
-	"cite_label",
 	"commentator",
 	"crossref",
 	"day",
@@ -757,7 +756,7 @@ def check_partial_fields(item, errors):
 	}
 	booktype = item.get("booktype")
 	is_partial = (booktype in PARTIAL_BOOKTYPES)
-	
+
 	for field, regexp in PARTIAL_FIELDS.items():
 		value = item.get(field)
 		if value is None:

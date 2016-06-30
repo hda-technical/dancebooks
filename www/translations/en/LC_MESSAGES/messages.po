@@ -308,6 +308,16 @@ msgstr "November"
 msgid "common:month:12"
 msgstr "December"
 
+# Item own page
+msgid "interface:item:cite-header"
+msgstr "Cite this item"
+
+msgid "interface:item:cite-label"
+msgstr "In-text label"
+
+msgid "interface:item:cite"
+msgstr "Full cite"
+
 # Report form
 
 msgid "interface:report:error-form-title"
@@ -582,9 +592,6 @@ msgstr "Id"
 
 msgid "item:labels:crossref"
 msgstr "Published in"
-
-msgid "item:labels:cite-label"
-msgstr "Cite label"
 
 msgid "item:labels:added-on"
 msgstr "Added to database"
