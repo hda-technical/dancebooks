@@ -123,7 +123,6 @@ def secret_cookie():
 		value=config.www.secret_cookie_value,
 		max_age=const.SECONDS_IN_YEAR,
 		httponly=True,
-		secure=True,
 		path=config.www.app_prefix
 	)
 	return response

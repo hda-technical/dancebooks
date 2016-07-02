@@ -626,11 +626,11 @@ msgstr "Транскрипция"
 msgid "item:labels:filename"
 msgstr "Пути к файлам"
 
-msgid "item:labels:note"
-msgstr "Примечание"
+msgid "item:labels:magic-const"
+msgstr "Magic constant"
 
 msgid "item:labels:annotation"
-msgstr "Служебное примечание"
+msgstr "Примечание"
 
 # Languages
 

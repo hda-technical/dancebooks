@@ -629,11 +629,11 @@ msgstr "Transcription"
 msgid "item:labels:filename"
 msgstr "Paths to files"
 
-msgid "item:labels:note"
-msgstr "Note"
+msgid "item:labels:magic-const"
+msgstr "Magic constant"
 
 msgid "item:labels:annotation"
-msgstr "Auxilliary note"
+msgstr "Comment"
 
 # Languages
 

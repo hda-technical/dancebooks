@@ -52,6 +52,7 @@ DATA_FIELDS = {
 	"library_code",
 	"library_location",
 	"location",
+	"magic_const",
 	"month",
 	"number",
 	"origauthor",

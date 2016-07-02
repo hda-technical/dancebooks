@@ -31,6 +31,7 @@
 	"url",
 	"transcription_url",
 	"filename",
+	"magic_const",
 	"annotation",
 ] %}
 
@@ -44,7 +45,7 @@
 		{% set value = item.get_as_string(param) %}
 	{% endif %}
 	{% if value %}
-		{% if (param != "filename") or show_secrets %} {# secrets filtering: start #}
+		{% if (param not in ("filename", "magic_const")) or show_secrets %} {# secrets filtering: start #}
 			<div class="bib_item_left">{{ _("item:labels:" + param.replace("_", "-")) }}:</div>
 			<div class="bib_item_right">
 			{% if param == "id" %}
