@@ -175,7 +175,7 @@ class BibItem(object):
 		return set(self._params.keys())
 
 	def finalize_item(self):
-		pass
+		self.set("cite_label", utils.make_cite_label(self))
 
 	def finalize_item_set(self, index):
 		"""

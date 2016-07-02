@@ -617,7 +617,8 @@ def make_html_cite(item):
 		result += "<em>"
 		result += ", ".join(author[0:MAX_AUTHORS_IN_CITE])
 		if len(author) > MAX_AUTHORS_IN_CITE:
-			result += "и. др." if langid == "russian" else "et al."
+			result += " "
+			result += "и др." if langid == "russian" else "et al."
 		result += "</em>"
 	result += " "
 	result += title
