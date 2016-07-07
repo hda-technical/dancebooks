@@ -7,15 +7,9 @@ import subprocess
 import opster
 
 from config import config
-import index
 import bib_parser
 
-items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(items)
-for item in items:
-	item.finalize_item_set(item_index)
-item_index.update(items)
-
+items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 items_filter = lambda item: item.get("filename") is None
 items = list(filter(items_filter, items))
 

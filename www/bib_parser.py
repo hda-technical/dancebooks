@@ -10,6 +10,7 @@ import markdown
 
 from config import config
 import const
+import index as search_index
 import utils
 
 class Availability(enum.Enum):
@@ -24,9 +25,26 @@ class Availability(enum.Enum):
 		else:
 			return Availability.AvailableElsewhere
 
+
+class FinalizingContext(object):
+	"""
+	Contains objects required for finalizing parsed data set
+	"""
+	def __init__(self, index):
+		self._md = markdown.Markdown(
+			extensions=[utils.MarkdownAutociterExtension(index)]
+		)
+
+	def parse_markdown(self, data):
+		#erasing added <p> tags
+		return self._md.convert(data)\
+			.replace("<p>", "")\
+			.replace("</p>", "")
+
+
 class BibItem(object):
 	"""
-	Class for bibliography item representation
+	Class representing a bibliography item
 	"""
 	KEY_TO_DEFAULT_VALUE = {
 		"year_from": 0,
@@ -177,19 +195,16 @@ class BibItem(object):
 	def finalize_item(self):
 		self.set("cite_label", utils.make_cite_label(self))
 
-	def finalize_item_set(self, index):
+	def finalize_item_set(self, ctx):
 		"""
 		Method to be called once after parsing every entries.
-		Finalizes entry in the following ways:
-		1. Processes crossref tag, merging _params of current entry and parent one
-		2. Generates citation label for further use
+		Processes crossref tag, merging _params of current entry and parent one
 		"""
-		md = markdown.Markdown(extensions=[utils.MarkdownAutociterExtension(index)])
 		annotation = self.get("annotation")
 		if annotation is not None:
 			#TODO: create converter once per item set, not once per item
 			#parsing markdown and removing paragraph markup added by parser
-			new_annotation = md.convert(annotation)\
+			new_annotation = ctx.parse_markdown(annotation)\
 				.replace("<p>", "")\
 				.replace("</p>", "")
 			self._params["annotation"] = new_annotation
@@ -198,7 +213,7 @@ class BibItem(object):
 		#and therefore it should go last
 		crossref = self.get("crossref")
 		if crossref is not None:
-			self._params["crossref"] = md.convert("[" + crossref + "]")\
+			self._params["crossref"] = ctx.parse_markdown("[" + crossref + "]")\
 				.replace("<p>", "")\
 				.replace("</p>", "")
 
@@ -291,10 +306,11 @@ class BibParser(object):
 
 		item.set(key, value)
 
-	def parse_folder(self, path):
+	@staticmethod
+	def parse_folder(path):
 		"""
 		Parses all .bib files in given folder.
-		Returns list containing all items found
+		Returns a tuple (parsed_iten, search_index) containing all items found
 		"""
 		if not os.path.isdir(path):
 			raise Exception("Path to folder expected")
@@ -302,15 +318,29 @@ class BibParser(object):
 		parsed_items = []
 		files = utils.files_in_folder(path, "*.bib")
 		executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
-		futures = {
-			executor.submit(self.parse_file, os.path.join(path, filename)): filename
+		futures = [
+			executor.submit(
+				BibParser()._parse_file,
+				os.path.join(path, filename)
+			)
 			for filename in files
-		}
-		for future in concurrent.futures.as_completed(futures):
+		]
+		for future in futures:
 			parsed_items += future.result()
-		return parsed_items
+		executor.shutdown()
 
-	def parse_file(self, path):
+		parsed_items = list(sorted(
+			parsed_items,
+			key=BibItem.key_to_key_func(const.DEFAULT_ORDER_BY)
+		))
+		item_index = search_index.Index(parsed_items)
+		fin_ctx = FinalizingContext(item_index)
+		for item in parsed_items:
+			item.finalize_item_set(fin_ctx)
+		item_index.update(parsed_items)
+		return (parsed_items, item_index)
+
+	def _parse_file(self, path):
 		"""
 		Parses file at given path, handling utf-8-bom correctly.
 		@returns list of parsed BibItem
@@ -321,7 +351,7 @@ class BibParser(object):
 		data = utils.read_utf8_file(path)
 		try:
 			source_file = os.path.basename(path)
-			items = self.parse_string(data)
+			items = self._parse_string(data)
 			for item in items:
 				self.set_item_param(item, "source_file", source_file)
 				self.set_item_param(item, "source", "{source_file}:{source_line:04d}".format(
@@ -332,7 +362,7 @@ class BibParser(object):
 		except Exception as ex:
 			raise Exception("While parsing {0}: {1}".format(path, ex))
 
-	def parse_string(self, str_data):
+	def _parse_string(self, str_data):
 		"""
 		Returns list of parsed BibItem
 		"""

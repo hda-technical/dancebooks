@@ -11,16 +11,10 @@ from stdnum import issn
 
 from config import config
 import const
-import index
 import bib_parser
 import utils
 
-items = bib_parser.BibParser().parse_folder(os.path.abspath("../bib"))
-item_index = index.Index(items)
-for item in items:
-	item.finalize_item_set(item_index)
-item_index.update(items)
-
+items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 languages = sorted(item_index["langid"].keys())
 
 ERROR_PREFIX = "validation:error:"
@@ -606,7 +600,6 @@ def check_url_validity(item, errors):
 	"""
 	url = item.get("url")
 	item_id = item.get("id")
-	booktype = item.get("booktype")
 	if url is None:
 		return
 	for number, single_url in enumerate(url):
@@ -758,7 +751,7 @@ def check_partial_fields(item, errors):
 	}
 	booktype = item.get("booktype")
 	is_partial = (booktype in PARTIAL_BOOKTYPES)
-	
+
 	for field, regexp in PARTIAL_FIELDS.items():
 		value = item.get(field)
 		if value is None:

@@ -15,7 +15,6 @@ from config import config, WorkingMode
 import const
 import bib_parser
 import search
-import index
 import messenger
 import utils
 import utils_flask
@@ -23,14 +22,7 @@ import utils_flask
 if (not os.path.exists("templates")):
 	raise RuntimeError("Should run from root folder")
 
-items = sorted(
-	bib_parser.BibParser().parse_folder(config.parser.bibdata_dir),
-	key=bib_parser.BibItem.key_to_key_func(const.DEFAULT_ORDER_BY)
-)
-item_index = index.Index(items)
-for item in items:
-	item.finalize_item_set(item_index)
-item_index.update(items)
+items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 
 #do not append HSTS headers in these modes
 DEBUG_WORKING_MODES = {

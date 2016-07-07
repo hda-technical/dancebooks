@@ -10,7 +10,7 @@ class Index(object):
 
 	def __getitem__(self, key):
 		return self._dict[key]
-		
+
 	def __contains__(self, key):
 		return (key in self._dict)
 
@@ -64,4 +64,4 @@ class Index(object):
 						(key not in item.get(index_param))
 					):
 						inverted_key = const.INVERTED_INDEX_KEY_PREFIX + key
-						append_to_subindex(subindex, item, index_param, inverted_key) 
+						append_to_subindex(subindex, item, index_param, inverted_key)
