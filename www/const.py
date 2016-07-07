@@ -24,7 +24,7 @@ SHORT_LANG_MAP = {
 	"us": "english",
 }
 
-#country as adjective mapped to langid
+#filename mapped to langid
 LONG_LANG_MAP = {
 	"american.bib": {
 		"english",
@@ -42,6 +42,7 @@ LONG_LANG_MAP = {
 	},
 	"canadian.bib": {
 		"english",
+		"french"
 	},
 	"czech.bib": {
 		"czech",

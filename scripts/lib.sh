@@ -45,7 +45,7 @@ webGet()
 		--retry 3 \
 		--connect-timeout 5 \
 		--retry-delay 5 \
-		--max-time 10 \
+		--max-time 60 \
 		--output "$OUTPUT_FILE" \
 		"$URL"
 	
@@ -296,8 +296,11 @@ gallica()
 		local PAGE_ID="${BOOK_ID}.f${PAGE}"
 		local DOWNLOADED_FILE="${PAGE_ID}.bmp"
 		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.bmp $PAGE`
-		gallicaTiles "$PAGE_ID"
-		mv "$DOWNLOADED_FILE" "$OUTPUT_FILE"
+		if [ ! -f "$OUTPUT_FILE" ]
+		then
+			gallicaTiles "$PAGE_ID"
+			mv "$DOWNLOADED_FILE" "$OUTPUT_FILE"
+		fi
 	done
 }
 
