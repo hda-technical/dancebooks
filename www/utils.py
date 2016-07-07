@@ -362,12 +362,22 @@ def is_url_accessible(url, item, method="HEAD"):
 	if is_url_self_served(url, item):
 		return True
 
+	RETRIES = 3
+
 	try:
-		if method == "HEAD":
-			response = requests.head(url, allow_redirects=False, verify=True)
-		else:
-			#method == "GET"
-			response = requests.get(url, allow_redirects=False, verify=True)
+		for n_try in range(RETRIES):
+			if method == "HEAD":
+				response = requests.head(url, allow_redirects=False, verify=True)
+			elif method == "GET":
+				response = requests.get(url, allow_redirects=False, verify=True)
+			else:
+				raise ValueError("Unexpected method {method}".format(method=method))
+			if response.status_code not in (
+				http.client.INTERNAL_SERVER_ERROR,
+				http.client.SERVICE_UNAVAILABLE
+			):
+				#retrying in case of server error
+				break
 	except Exception as ex:
 		logging.debug("HTTP request for {url} raised an exception: {ex}".format(
 			url=url,
@@ -375,7 +385,11 @@ def is_url_accessible(url, item, method="HEAD"):
 		))
 		return False
 	if (
-		(response.status_code == 405) and
+		# some libraries (e. g. lib.ugent.be return 404 for HEAD requests
+		(response.status_code in (
+			http.client.NOT_FOUND,
+			http.client.METHOD_NOT_ALLOWED
+		)) and
 		(method == "HEAD")
 	):
 		return is_url_accessible(url, item, method="GET")
