@@ -20,7 +20,7 @@
 	\newcommand{\rootfolder}{%folderpath%}
 	\usepackage[usedefaults=false,root=\rootfolder]{\rootfolder/dancebooks-biblatex}
 
-После подключения становятся доступны макросы цитирования `\cite`, `\footcite`, `\parencite`, `\nocite`, `\volcite`. Работа макросов описана в [руководстве по biblatex](http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf). Стандартный макрос печати библиографии в `biblatex` -- `\printbibliography`, без параметров. Дополнительные библиографические источники можно добавить стандартной командой `\addbibresource{hello.bib}` (расширение `.bib` необходимо указывать явно).
+После подключения становятся доступны макросы цитирования `\cite`, `\footcite`, `\parencite`, `\nocite`, `\volcite`. Работа макросов описана в [руководстве по biblatex](http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf). Стандартный макрос печати библиографии в `biblatex` -- `\printbibliography`, без параметров. Дополнительные библиографические источники можно добавить стандартной командой `\addbibresource{hello.bib}`.
 
 Порядок компиляции такой:
 
@@ -37,8 +37,6 @@
 
 	`biber "--listsep=|" "--namesep=|" "test-biblatex" "--xsvsep=\s*\|\s*" "--mssplit=#" project` (в Windows)
 3. `lualatex project.tex`
-
-Пункт №4 может быть опущен в случае документов без оглавления.
 
 ## Информация о структуре базы данных
 
@@ -120,7 +118,7 @@
 	* `keywords=waltz,quadrille` — ищет все книги про вальс И про кадрили
 	* `keywords=waltz,!quadrille` — ищет все книги про вальс, но без кадрилей
 	* `keywords=!waltz,!quadrille` — ищет все книги, которые не упоминают ни вальса, ни кадрилей
-	
+
 2. Любой поиск можно экспортировать в простенький CSV, если дописать в поиск параметр `format=csv`
 
 ## О типах записей
@@ -132,7 +130,7 @@
 	* Поле `library_location` с указанием города, в котором находится библиотека
 	* Поле `library_code` с каталожным кодом объекта
 * `periodical` — периодическое издание (журнал). Имеет:
-	* Точную дату публикации, указанную в полях `year`, `month`, `day`. 
+	* Точную дату публикации, указанную в полях `year`, `month`, `day`.
 	* Поле `number` в значении _номер журнала_ (может отсчитываться относительно начала года)
 	* Поле `volume` в значении _порядковый год публикации журнала_
 * `article` — статья в газете или журнале. Имеет:
