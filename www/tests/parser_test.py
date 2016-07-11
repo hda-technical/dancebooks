@@ -13,7 +13,7 @@ r"""
 @book(
 	id_1,
 	author = {Henry Eight | Anne Boleyn | Catherine of Aragon},
-	title = {Six Wifes of Henry Eight. Some Words {\&} Letters {\&} Other Stuff Here},
+	title = {Six Wifes of Henry Eight. Some Words \& Letters \& Other Stuff Here},
 	langid = {english},
 	location = {London},
 	year = {1491—1547?},

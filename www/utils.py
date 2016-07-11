@@ -76,11 +76,6 @@ LATEX_REPLACEMENTS = [
 	(
 		re.compile(r"\\&"),
 		"&"
-	),
-	#parentheses
-	(
-		re.compile(r"\{([^\{\}])*\}"),
-		r"\1"
 	)
 ]
 
