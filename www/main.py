@@ -480,6 +480,11 @@ def everything_else(filename):
 		flask.abort(http.client.NOT_FOUND, flask.request.base_url)
 
 
+@flask_app.route(config.www.app_prefix + "/ping", methods=["GET"])
+def ping():
+	return "OK"
+
+
 for code in werkzeug.HTTP_STATUS_CODES:
 	flask_app.errorhandler(code)(utils_flask.http_exception_handler)
 flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)

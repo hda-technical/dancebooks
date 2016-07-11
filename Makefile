@@ -124,10 +124,12 @@ www-configs-install-testing:
 	cp configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
 
 www-reload-testing: www-test www-translations
-	touch $(TOUCH_RELOAD_TESTING)
+	@echo "Reloading"
+	bash -c "time -p (touch $(TOUCH_RELOAD_TESTING) && sleep 1 && curl --max-time 60 'http://bib-test.hda.org.ru/bib/ping')"
 
 www-reload-production: www-test www-translations
-	touch $(TOUCH_RELOAD_PRODUCTION)
+	@echo "Reloading"
+	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/bib/ping')"
 
 requirements.txt: .PHONY
 	pip freeze --local | sort --ignore-case | tee $@
