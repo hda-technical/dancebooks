@@ -58,6 +58,13 @@ def search_for_synonyms(keys, values):
 		return search_values.issubset(item_values)
 	return search
 
+	
+def search_for_any(key, values):
+	"""
+	Creates filter testing if any of the values matches given key
+	"""
+	return lambda item, key=key, values=values: (item.get(key) in values)
+
 
 def search_for_eq(key, value):
 	"""

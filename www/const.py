@@ -1,27 +1,27 @@
 import http.client
 import re
 
-#two-letter country codes mapped to langid
+#two-letter country codes mapped to list of corresponding langid's
 SHORT_LANG_MAP = {
-	"ar": "spanish",
-	"au": "english",
-	"ca": "english",
-	"cz": "czech",
-	"de": "german",
-	"dk": "danish",
-	"en": "english",
-	"es": "spanish",
-	"fr": "french",
-	"ie": "english",
-	"it": "italian",
+	"ar": ["spanish"],
+	"au": ["english"],
+	"ca": ["english", "french"],
+	"cz": ["czech"],
+	"de": ["german"],
+	"dk": ["danish"],
+	"en": ["english"],
+	"es": ["spanish"],
+	"fr": ["french"],
+	"ie": ["english"],
+	"it": ["italian"],
 #ln is currently unassigned according to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-	"ln": "latin",
-	"pl": "polish",
-	"pt": "portuguese",
-	"ru": "russian",
-	"sc": "english",
-	"sw": "swedish",
-	"us": "english",
+	"ln": ["latin"],
+	"pl": ["polish"],
+	"pt": ["portuguese"],
+	"ru": ["russian"],
+	"sc": ["english"],
+	"sw": ["swedish"],
+	"us": ["english"],
 }
 
 #filename mapped to langid

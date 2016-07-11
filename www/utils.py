@@ -221,13 +221,23 @@ def make_searches_from_metadata(metadata):
 	"""
 	result = {}
 
-	equality_searches = ["edition", "number", "part", "langid"]
+	equality_searches = ["edition", "number", "part"]
 	for search_key in equality_searches:
-		search_value = metadata.get(search_key, None)
+		search_value = metadata.get(search_key)
 		if search_value is None:
 			continue
 		result[search_key] = search.search_for_eq(
 			search_key,
+			search_value
+		)
+	
+	subset_searches = ["langid"]
+	for search_key in subset_searches:
+		search_value = metadata.get(search_key)
+		if search_value is None:
+			continue
+		result[search_key] = search.search_for_any(
+			search_key, 
 			search_value
 		)
 
