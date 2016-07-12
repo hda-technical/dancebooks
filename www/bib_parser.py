@@ -259,8 +259,6 @@ class BibParser(object):
 		self.lexeme = ""
 		self.lexeme_started = False
 		self.lexeme_finished = False
-		#TODO: remove after migrating to markdowned annotations (?)
-		self.parenthesis_depth = 0
 		self.lexeme_in_brackets = False
 
 	def set_item_param(self, item, key, value):
@@ -461,22 +459,14 @@ class BibParser(object):
 					self.key = ""
 					self._reset_lexeme()
 				elif c == "{":
-					if self.lexeme_started:
-						self.parenthesis_depth += 1
-						self.lexeme += c
-					else:
-						self.lexeme_in_brackets = True
-						self.lexeme_started = True
+					self.lexeme_in_brackets = True
+					self.lexeme_started = True
 				elif c == "}":
-					if self.parenthesis_depth > 0:
-						self.parenthesis_depth -= 1
-						self.lexeme += c
-					else:
-						self.set_item_param(item, self.key, self.lexeme)
+					self.set_item_param(item, self.key, self.lexeme)
 
-						self.state = ParserState.ParamWasRead
-						self.key = ""
-						self._reset_lexeme()
+					self.state = ParserState.ParamWasRead
+					self.key = ""
+					self._reset_lexeme()
 				elif c.isprintable():
 					self.lexeme_started = True
 					self.lexeme += c
