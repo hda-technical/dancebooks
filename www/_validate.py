@@ -858,15 +858,6 @@ def check_keywords(item, errors):
 	if ("useless" in keywords) and (len(keywords) != 1):
 		errors.add("Keyword [useless] can't be combined with other keywords")
 
-	annotation = item.get("annotation")
-	if (
-		("not digitized" in keywords) and
-		not item.has("transcription_filename") and
-		(item.get("booktype") not in MULTIENTRY_BOOKTYPES)
-	):
-		if not annotation or ("Printed item may be borrowed from" not in annotation):
-			errors.add("Printed item owner must be specified in annotation")
-
 
 def check_filename(item, errors):
 	"""
