@@ -599,6 +599,8 @@ def make_cite_label(item):
 	author = item.get("author")
 	year = item.get("year")
 	langid = item.get("langid")
+	if (author is None) and (shorthand is None):
+		raise ValueError("Can't make cite label without author or shorthand")
 	if shorthand is not None:
 		return '[{shorthand}, {year}]'.format(
 			shorthand=shorthand,
