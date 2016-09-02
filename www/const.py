@@ -1,7 +1,7 @@
 import http.client
 import re
 
-#two-letter country codes mapped to list of corresponding langid's
+#two-letter country codes mapped to list of corresponding langid
 SHORT_LANG_MAP = {
 	"ar": ["spanish"],
 	"au": ["english"],
@@ -18,7 +18,7 @@ SHORT_LANG_MAP = {
 	"ln": ["latin"],
 	"pl": ["polish"],
 	"pt": ["portuguese"],
-	"ru": ["russian"],
+	"ru": ["russian", "french"],
 	"sc": ["english"],
 	"sw": ["swedish"],
 	"us": ["english"],
@@ -42,7 +42,7 @@ LONG_LANG_MAP = {
 	},
 	"canadian.bib": {
 		"english",
-		"french"
+		"french",
 	},
 	"czech.bib": {
 		"czech",
@@ -74,6 +74,7 @@ LONG_LANG_MAP = {
 	},
 	"russian.bib": {
 		"russian",
+		"french",
 	},
 	"spanish.bib": {
 		"spanish",
