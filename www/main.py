@@ -31,7 +31,7 @@ DEBUG_WORKING_MODES = {
 	WorkingMode.Testing
 }
 
-langids = sorted(item_index["langid"].keys())
+langids = sorted(langid for langid in item_index["langid"].keys() if not langid.startswith("!"))
 source_files = sorted(item_index["source_file"].keys())
 booktypes = sorted(item_index["booktype"].keys())
 markdown_cache = utils.MarkdownCache()

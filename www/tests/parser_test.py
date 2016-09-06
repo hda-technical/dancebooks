@@ -54,7 +54,7 @@ class TestParser(unittest.TestCase):
 		items = bib_parser.BibParser()._parse_string(TEST_ITEMS)
 		item_index = index.Index(items)
 
-		languages = set(item_index["langid"].keys())
+		languages = set(langid for langid in item_index["langid"].keys() if not langid.startswith("!"))
 		keywords = set(item_index["keywords"].keys())
 
 		self.assertEqual(len(items), 2)
