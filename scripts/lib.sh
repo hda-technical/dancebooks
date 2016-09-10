@@ -50,9 +50,9 @@ webGet()
 		--max-time 60 \
 		--output "$OUTPUT_FILE" \
 		"$URL"
-	
+
 	local EXIT_CODE=$?
-	
+
 	if [ "$EXIT_CODE" -eq "$CURL_TIMEOUT" ]
 	then
 		echo "TIMEOUT"
@@ -69,14 +69,14 @@ webGet()
 		echo "NO OUTPUT"
 		return 1
 	fi
-	
+
 	if [ `stat --format=%s "$OUTPUT_FILE"` -lt "$MIN_FILE_SIZE_BYTES" ]
 	then
 		rm -f "$OUTPUT_FILE"
 		echo "FILE TOO SMALL"
 		return 1
 	fi
-	
+
 	echo "OK"
 	return 0
 }
@@ -164,7 +164,7 @@ tiles()
 			fi
 		done;
 	done;
-	
+
 	if [ \
 		"$MAX_TILE_X" -gt "0" -a \
 		"$MAX_TILE_Y" -gt "0" \
@@ -241,10 +241,10 @@ locMusdi()
 	local BOOK_ID=$1
 	local MAX_PAGE=1000
 	local OUTPUT_DIR="locMusdi.$BOOK_ID"
-	
+
 	#disabling global check
 	MIN_FILE_SIZE_BYTES=0
-	
+
 	mkdir -p "$OUTPUT_DIR"
 	for PAGE in `seq 1 $MAX_PAGE`
 	do
@@ -457,7 +457,7 @@ princetonTiles()
 	local ZOOM=6
 	local TILE_SIZE=1024
 	local OUTPUT_DIR=.
-	
+
 
 	tiles princetonTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
@@ -509,7 +509,7 @@ dusseldorfTiles()
 	local ZOOM=6
 	local TILE_SIZE=512
 	local OUTPUT_DIR=.
-	
+
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=5120
 
@@ -564,7 +564,7 @@ uniHalleTiles()
 	local ZOOM=3
 	local TILE_SIZE=512
 	local OUTPUT_DIR=.
-	
+
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=5120
 
@@ -598,7 +598,7 @@ uniJenaTiles()
 	local ZOOM=4
 	local TILE_SIZE=256
 	local OUTPUT_DIR=.
-	
+
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=1
 
@@ -606,7 +606,7 @@ uniJenaTiles()
 }
 
 yaleWalpoleTilesUrl()
-{	
+{
 	if [ $# -ne 4 ]
 	then
 		echo "Usage: $0 image_id x y z"
@@ -617,7 +617,7 @@ yaleWalpoleTilesUrl()
 	local TILE_X=$2
 	local TILE_Y=$3
 	local TILE_Z=$4
-	
+
 	for TILE_GROUP in `seq 0 2`
 	do
 		local URL="http://images.library.yale.edu/walpoleimages/dl/003000/$IMAGE_ID/TileGroup${TILE_GROUP}/$TILE_Z-$TILE_X-$TILE_Y.jpg"
@@ -628,7 +628,7 @@ yaleWalpoleTilesUrl()
 			return
 		fi
 	done
-	
+
 	echo "Failed to guess tile group for $URL"
 	return 1
 }
@@ -644,7 +644,7 @@ yaleWalpoleTiles()
 	local ZOOM=5
 	local TILE_SIZE=256
 	local OUTPUT_DIR=.
-	
+
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=256
 
@@ -681,7 +681,7 @@ kunstkameraTiles()
 	local ZOOM=4
 	local TILE_SIZE=512
 	local OUTPUT_DIR=`makeOutputDir kunstkamera`
-	
+
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=1
 
@@ -695,21 +695,21 @@ ugentTilesUrl()
 		echo "Usage $0 image_id x y z"
 		return 1
 	fi
-	#expecting BOOK_ID in form of 
+	#expecting BOOK_ID in form of
 	#2016/3/20/11/33/39/BIB-G-006778_2016_0002_AC
 	#(including date)
 	local BOOK_ID=$1
 	local TILE_X=$2
 	local TILE_Y=$3
 	local ZOOM=$4
-	
+
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=1
-	
+
 	#FIXME: this number should be manually adjusted to get correct results
 	local TILES_IN_ROW=28
 	local TILE_NUMBER=`echo "$TILE_Y * $TILES_IN_ROW + $TILE_X" | bc`
-	
+
 	if [ "$TILE_X" -ge "$TILES_IN_ROW" ]
 	then
 		#generating fake url to make outer tile iteration algorithm work
@@ -730,7 +730,7 @@ ugentTiles()
 	local ZOOM=5
 	local TILE_SIZE=256
 	local OUTPUT_DIR=`makeOutputDir ugent`
-	
+
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=640
 
@@ -744,15 +744,22 @@ uflEduTilesUrl()
 		echo "Usage $0 image_id x y z"
 		return 1
 	fi
-	#expecting BOOK_ID in form of 
+	#expecting BOOK_ID in form of
 	#AA/00/03/94/08/00001/00522
 	#(not including jp2 extension)
 	local BOOK_ID=$1
 	local TILE_X=$2
 	local TILE_Y=$3
 	local ZOOM=$4
-	
-	echo "http://ufdc.ufl.edu/iipimage/iipsrv.fcgi?DeepZoom=//flvc.fs.osg.ufl.edu/flvc-ufdc/resources/${BOOK_ID}.jp2_files/${ZOOM}/${TILE_X}_${TILE_Y}.jpg"
+
+	# ufl edu uses periodical tile grid, along the x axis
+	# emulating end of htegrid artificially
+	if [ "${TILE_X}" -lt 9 ]
+	then
+		echo "http://ufdc.ufl.edu/iipimage/iipsrv.fcgi?DeepZoom=//flvc.fs.osg.ufl.edu/flvc-ufdc/resources/${BOOK_ID}.jp2_files/${ZOOM}/${TILE_X}_${TILE_Y}.jpg"
+	else
+		echo "http://httpbin.org/status/404"
+	fi
 }
 
 uflEduTiles()
@@ -766,9 +773,9 @@ uflEduTiles()
 	local ZOOM=12
 	local TILE_SIZE=256
 	local OUTPUT_DIR=`makeOutputDir ufl.edu`
-	
+
 	#overriding global constant
-	MIN_FILE_SIZE_BYTES=640
+	MIN_FILE_SIZE_BYTES=1
 
 	tiles uflEduTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
@@ -781,7 +788,7 @@ uflEdu()
 		return 1
 	fi
 
-	#expecting BOOK_ID in form of 
+	#expecting BOOK_ID in form of
 	#AA/00/03/94/08/00001
 	local BOOK_ID=$1
 	local OUTPUT_DIR=`makeOutputDir "gallica.$BOOK_ID"`
@@ -797,7 +804,7 @@ uflEdu()
 			uflEduTiles "$PAGE_ID"
 			mv "$DOWNLOADED_FILE" "$OUTPUT_FILE"
 		fi
-	done 
+	done
 }
 
 if [ $# -lt 2 ]
