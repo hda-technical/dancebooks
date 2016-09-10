@@ -6,7 +6,8 @@
 #MAGIC CONSTANTS
 #========================
 
-MAX_TILE=50
+MAX_TILE_X=50
+MAX_TILE_Y=50
 
 #Latin numbers in lowercase (from 1 to 10)
 LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
@@ -114,6 +115,21 @@ min()
 	echo $MIN
 }
 
+roundDiv()
+{
+	local VAL=$1
+	local DIVISOR=$2
+
+	local RESULT=`echo "$VAL" / "$DIVISOR" | bc`
+	local REST=`echo "$VAL" % "$DIVISOR" | bc`
+	if [ "$REST" -eq 0 ]
+	then
+		echo $RESULT
+	else
+		echo "$RESULT" + 1 | bc
+	fi
+}
+
 tiles()
 {
 	if [ $# -ne 6 ]
@@ -131,8 +147,6 @@ tiles()
 	local OUTPUT_FILE="$OUTPUT_DIR/`basename $PAGE_ID`.bmp"
 	local TMP_DIR="$OUTPUT_DIR/`basename $PAGE_ID`.tmp"
 
-	local MAX_TILE_X=$MAX_TILE
-	local MAX_TILE_Y=$MAX_TILE
 	local LAST_TILE_WIDTH=$TILE_SIZE
 	local LAST_TILE_HEIGHT=$TILE_HEIGHT
 
@@ -473,7 +487,7 @@ dusseldorfTileFile()
 	local TILE_X=$1
 	local TILE_Y=$2
 	#dusseldorf tiles are numbered from bottom to top
-	local REAL_TILE_Y=`expr $MAX_TILE - $TILE_Y`
+	local REAL_TILE_Y=`expr $MAX_TILE_Y - $TILE_Y`
 
 	generalTilesFile "$TILE_X" "$REAL_TILE_Y"
 }
@@ -752,14 +766,7 @@ uflEduTilesUrl()
 	local TILE_Y=$3
 	local ZOOM=$4
 
-	# ufl edu uses periodical tile grid, along the x axis
-	# emulating end of htegrid artificially
-	if [ "${TILE_X}" -lt 9 ]
-	then
-		echo "http://ufdc.ufl.edu/iipimage/iipsrv.fcgi?DeepZoom=//flvc.fs.osg.ufl.edu/flvc-ufdc/resources/${BOOK_ID}.jp2_files/${ZOOM}/${TILE_X}_${TILE_Y}.jpg"
-	else
-		echo "http://httpbin.org/status/404"
-	fi
+	echo "http://ufdc.ufl.edu/iipimage/iipsrv.fcgi?DeepZoom=//flvc.fs.osg.ufl.edu/flvc-ufdc/resources/${BOOK_ID}.jp2_files/${ZOOM}/${TILE_X}_${TILE_Y}.jpg"
 }
 
 uflEduTiles()
@@ -769,13 +776,32 @@ uflEduTiles()
 		echo "Usage: $0 image_id"
 		return 1
 	fi
-	local BOOK_ID=$1
-	local ZOOM=12
+	local BOOK_ID="$1"
+	local ZOOM=-1
+	for TEST_ZOOM in `seq 13 -1 11`
+	do
+		if curl --fail --silent --head "`uflEduTilesUrl $BOOK_ID 0 0 $TEST_ZOOM`"
+		then
+			ZOOM=$TEST_ZOOM
+			break
+		fi
+	done
+	if [ $ZOOM -eq "-1" ]
+	then
+		echo "Unable to get max zoom"
+		return 1
+	fi
 	local TILE_SIZE=256
 	local OUTPUT_DIR=`makeOutputDir ufl.edu`
 
-	#overriding global constant
+	local DZI_URL="http://ufdc.ufl.edu/iipimage/iipsrv.fcgi?DeepZoom=//flvc.fs.osg.ufl.edu/flvc-ufdc/resources/${BOOK_ID}.jp2.dzi"
+	local IMG_WIDTH=`curl --silent "$DZI_URL" | sed 's/xmlns=".*"//g' | xmllint --xpath "string(/Image/Size/@Width)" -`
+	local IMG_HEIGHT=`curl --silent "$DZI_URL" | sed 's/xmlns=".*"//g' | xmllint --xpath "string(/Image/Size/@Height)" -`
+
+	#overriding global constants
 	MIN_FILE_SIZE_BYTES=1
+	MAX_TILE_X=`echo \`roundDiv ${IMG_WIDTH} 256\` - 1 | bc`
+	MAX_TILE_Y=`echo \`roundDiv ${IMG_HEIGHT} 256\` - 1 | bc`
 
 	tiles uflEduTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
