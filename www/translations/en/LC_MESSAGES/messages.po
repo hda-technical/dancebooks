@@ -350,6 +350,9 @@ msgstr "The year when révolution française has started"
 msgid "interface:report:questions:congress"
 msgstr "The year when Congress of Vienna has begun"
 
+msgid "interface:report:questions:unittest"
+msgstr "If you a hacker, you know the answer"
+
 # Search types
 
 msgid "search:type:basic"

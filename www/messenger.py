@@ -25,8 +25,16 @@ class BasicMessage(object):
 	def send(self):
 		msg = email.mime.text.MIMEText(str(self), "html")
 		msg["From"] = email.utils.formataddr((
+			"HDA Technical user",
+			config.smtp.email
+		))
+		msg["Reply-To"] = email.utils.formataddr((
 			self.from_name,
 			self.from_addr
+		))
+		msg["Sender"] = email.utils.formataddr((
+			"HDA Technical user",
+			config.smtp.email
 		))
 		msg["To"] = email.utils.formataddr((
 			config.bug_report.to_name,

@@ -347,6 +347,9 @@ msgstr "Год начала Великой Французской революц
 msgid "interface:report:questions:congress"
 msgstr "Год начала Венского конгресса"
 
+msgid "interface:report:questions:unittest"
+msgstr "Только хакер знает ответ"
+
 # Search types
 
 msgid "search:type:basic"
