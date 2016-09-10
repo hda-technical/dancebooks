@@ -485,7 +485,13 @@ def ping():
 	return "OK"
 
 
-for code in werkzeug.HTTP_STATUS_CODES:
+# Setting up some custom error handlers
+for code in (
+	http.client.BAD_REQUEST,
+	http.client.FORBIDDEN,
+	http.client.NOT_FOUND,
+	http.client.INTERNAL_SERVER_ERROR
+):
 	flask_app.errorhandler(code)(utils_flask.http_exception_handler)
 flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
 if __name__ == "__main__":
