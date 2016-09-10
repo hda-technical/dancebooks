@@ -737,6 +737,69 @@ ugentTiles()
 	tiles ugentTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
+uflEduTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage $0 image_id x y z"
+		return 1
+	fi
+	#expecting BOOK_ID in form of 
+	#AA/00/03/94/08/00001/00522
+	#(not including jp2 extension)
+	local BOOK_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local ZOOM=$4
+	
+	echo "http://ufdc.ufl.edu/iipimage/iipsrv.fcgi?DeepZoom=//flvc.fs.osg.ufl.edu/flvc-ufdc/resources/${BOOK_ID}.jp2_files/${ZOOM}/${TILE_X}_${TILE_Y}.jpg"
+}
+
+uflEduTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return 1
+	fi
+	local BOOK_ID=$1
+	local ZOOM=12
+	local TILE_SIZE=256
+	local OUTPUT_DIR=`makeOutputDir ufl.edu`
+	
+	#overriding global constant
+	MIN_FILE_SIZE_BYTES=640
+
+	tiles uflEduTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
+uflEdu()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "Usage $0 ark_id page_count"
+		return 1
+	fi
+
+	#expecting BOOK_ID in form of 
+	#AA/00/03/94/08/00001
+	local BOOK_ID=$1
+	local OUTPUT_DIR=`makeOutputDir "gallica.$BOOK_ID"`
+	local PAGE_COUNT=$2
+	mkdir -p "$OUTPUT_DIR"
+	for PAGE in `seq 1 $PAGE_COUNT`
+	do
+		local PAGE_ID="${BOOK_ID}/`printf %05d $PAGE`"
+		local DOWNLOADED_FILE="${PAGE_ID}.bmp"
+		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.bmp $PAGE`
+		if [ ! -f "$OUTPUT_FILE" ]
+		then
+			uflEduTiles "$PAGE_ID"
+			mv "$DOWNLOADED_FILE" "$OUTPUT_FILE"
+		fi
+	done 
+}
+
 if [ $# -lt 2 ]
 then
 	echo "Usage: $0 grabber <grabber params>"
