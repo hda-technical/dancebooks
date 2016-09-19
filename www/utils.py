@@ -230,14 +230,14 @@ def make_searches_from_metadata(metadata):
 			search_key,
 			search_value
 		)
-	
+
 	subset_searches = ["langid"]
 	for search_key in subset_searches:
 		search_value = metadata.get(search_key)
 		if search_value is None:
 			continue
 		result[search_key] = search.search_for_any(
-			search_key, 
+			search_key,
 			search_value
 		)
 
@@ -283,11 +283,11 @@ def all_or_none(iterable):
 
 
 def is_url_self_served(url, item):
-	match = SELF_SERVED_URL_REGEXP.match(url)
-	if not match:
-		return False
-	extracted_id = match.group("item_id")
-	return (extracted_id == item.id())
+	split = urlparse.urlsplit(url)
+	return (
+		(split.hostname == config.www.app_domain_production) and
+		("/pdf/" in split.path)
+	)
 
 
 def get_file_info_from_url(url, item):

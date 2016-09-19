@@ -609,10 +609,15 @@ def check_url_validity(item, errors):
 				number=number
 			))
 
-		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
-		if not match:
+		if not utils.is_url_self_served(single_url, item):
 			continue
 
+		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
+		if not match:
+			errors.add("Self served url [{single_url}] doesn't match SELF_SERVED_URL_REGEXP".format(
+				single_url=single_url
+			))
+			continue
 		if (match.group("item_id") != item_id):
 			errors.add("Wrong item_id specified in self-served url")
 			continue
