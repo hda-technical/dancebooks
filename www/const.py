@@ -155,11 +155,7 @@ CONFIG_REGEXP = re.compile(CONFIG_PATTERN)
 VALID_HTTP_CODES = {
 	#general OK
 	http.client.OK,
-	#
-	#adding http.client.MOVED_PERMANENTLY
-	#considered as error here
-	#
-	#used by hdl.loc.gov
+	#used by books.google.com
 	http.client.FOUND,
 	#used by hdl.handle.net
 	http.client.SEE_OTHER,
