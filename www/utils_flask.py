@@ -178,6 +178,15 @@ def format_catalogue_code(single_code):
 		code=cat_code
 	)
 
+
+def format_transcription_url(item):
+	return '<a href="https://{app_domain}/{prefix}/{item_id}/transcription">https://{app_domain}/{prefix}/{item_id}/transcription</a>'.format(
+		app_domain=config.www.app_domain_production,
+		prefix=config.www.books_prefix,
+		item_id=item.id()
+	)
+
+
 def format_item_id(item_id):
 	return '<a href="{prefix}/{item_id}">{item_id}</a>'.format(
 		item_id=item_id,

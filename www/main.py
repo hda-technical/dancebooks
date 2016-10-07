@@ -57,6 +57,7 @@ flask_app.jinja_env.filters["is_url_self_served"] = utils.is_url_self_served
 flask_app.jinja_env.filters["format_date"] = utils_flask.format_date
 flask_app.jinja_env.filters["format_catalogue_code"] = utils_flask.format_catalogue_code
 flask_app.jinja_env.filters["format_item_id"] = utils_flask.format_item_id
+flask_app.jinja_env.filters["format_transcription_url"] = utils_flask.format_transcription_url
 
 def jinja_self_served_url_size(url, item):
 	file_name, file_size = utils.get_file_info_from_url(url, item)
@@ -316,10 +317,10 @@ def get_book_pdf(book_id, index):
 	return response
 
 
-@flask_app.route(config.www.books_prefix + "/<string:item_id>/transcription/<int:index>", methods=["GET"])
+@flask_app.route(config.www.books_prefix + "/<string:item_id>/transcription", methods=["GET"])
 @utils_flask.check_id_redirections("item_id")
 @utils_flask.log_exceptions()
-def get_book_markdown(item_id, index):
+def get_book_markdown(item_id):
 	items = item_index["id"].get(item_id)
 	if items is None:
 		flask.abort(
@@ -328,26 +329,18 @@ def get_book_markdown(item_id, index):
 		)
 
 	item = utils.first(items)
-	index -= 1
-	transcription_url = item.get("transcription_url")
-	transcription_filename = item.get("transcription_filename")
-	if (
-		(transcription_url is None) or
-		(transcription_filename is None) or
-		(index < 0) or
-		(index > len(transcription_url)) or
-		(index > len(transcription_filename))
-	):
+	transcription = item.get("transcription")
+	if transcription is None:
 		flask.abort(
 			http.client.NOT_FOUND,
-			"Markdowned trascription for item {item_id} is not available".format(
+			"Trascription for item {item_id} is not available".format(
 				item_id=item_id
 			)
 		)
 
 	markdown_file = os.path.join(
 		config.parser.markdown_dir,
-		transcription_filename[index]
+		transcription
 	)
 	return flask.render_template(
 		"markdown.html",

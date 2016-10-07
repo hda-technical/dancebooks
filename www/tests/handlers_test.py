@@ -222,16 +222,16 @@ class TestHandlers(unittest.TestCase):
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
 
-	def test_markdown_handlers(self):
+	def test_transcription_handlers(self):
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_MARKDOWNED_BOOK_ID + "/transcription/1",
+			config.www.books_prefix + "/" + TEST_MARKDOWNED_BOOK_ID + "/transcription",
 			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "text/html; charset=utf-8")
 
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_NOT_MARKDOWNED_BOOK_ID + "/transcription/1",
+			config.www.books_prefix + "/" + TEST_NOT_MARKDOWNED_BOOK_ID + "/transcription",
 			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.NOT_FOUND)

@@ -29,7 +29,7 @@
 	"pages",
 	"keywords",
 	"url",
-	"transcription_url",
+	"transcription",
 	"filename",
 	"magic_const",
 	"annotation",
@@ -37,7 +37,7 @@
 
 {% for param in fields %}
 {# Some parameters require specific treatment #}
-	{% if param in ["filename", "catalogue", "author", "pseudo_author", "added_on", "url", "transcription_url", "keywords"] %}
+	{% if param in ["filename", "catalogue", "author", "pseudo_author", "added_on", "url", "keywords"] %}
 		{% set value = item.get(param) %}
 	{% elif param in ["date"] %}
 		{# pass #}
@@ -67,12 +67,8 @@
 					</li>
 				{% endfor %}
 				</ul>
-			{% elif param == "transcription_url" %}
-				<ul>
-				{% for transcription_url in value %}
-					<li><a href="{{ transcription_url }}">{{ transcription_url }}</a></li>
-				{% endfor %}
-				</ul>
+			{% elif param == "transcription" %}
+				{{ item | format_transcription_url | safe }}
 			{% elif param == "filename" %}
 				<ul>
 				{% for filename in value %}

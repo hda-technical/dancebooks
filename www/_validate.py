@@ -61,8 +61,7 @@ DATA_FIELDS = {
 	"source",
 	"title",
 	"type",
-	"transcription_filename",
-	"transcription_url",
+	"transcription",
 	"translator",
 	"type",
 	"url",
@@ -628,76 +627,21 @@ def check_url_accessibility(item, errors):
 			))
 
 
-def check_transcription(item, errors):
-	"""
-	Checks if trascribed item has both
-	transcription_url and transcription_filename specified
-	"""
-	TRANSCRIPTION_FIELDS = ["transcription_url", "transcription_filename"]
-	has_transcription = False
-	for field in TRANSCRIPTION_FIELDS:
-		if item.has(field):
-			has_transcription = True
-
-	if not has_transcription:
-		return
-
-	for field in TRANSCRIPTION_FIELDS:
-		if not item.has(field):
-			errors.add("Field {field} is require for transcriptions".format(
-				field=field
-			))
-			return
-
-
-def check_transcription_url(item, errors):
-	"""
-	Checks if transcription_url is valid
-	"""
-	item_id = item.get("id")
-	transcription_url = item.get("transcription_url")
-	if transcription_url is None:
-		return
-
-	for single_url in transcription_url:
-		match = utils.SELF_SERVED_TRANSCRIPTION_REGEXP.match(single_url)
-		if not match:
-			errors.add("Transcription url {single_url} doesn't match SELF_SERVED_TRANSCRIPTION_REGEXP".format(
-				single_url=single_url
-			))
-			continue
-		if item_id != match.group("item_id"):
-			errors.add(
-				"Trancscription url {single_url} isn't valid. "
-				"Extracted id {extracted_id} doesn't match item_id {item_id}".format(
-					single_url=single_url,
-					extracted_id=match.group("item_id"),
-					item_id=item_id
-				)
-			)
-
-		if (int(match.group("transcription_index")) - 1) > len(transcription_url):
-			errors.add("Transcription index is too large in {single_url}".format(
-				single_url=single_url
-			))
-
-
 def check_transcription_filename(item, errors):
 	"""
-	Checks if transcription_filename is valid, accessible and named correctly
+	Checks if transcription is valid, accessible and named correctly
 	"""
-	transcription_filename = item.get("transcription_filename")
-	if transcription_filename is None:
+	transcription = item.get("transcription")
+	if transcription is None:
 		return
 
-	for single_filename in transcription_filename:
-		abspath = os.path.join(config.parser.markdown_dir, single_filename)
-		check_single_filename(
-			abspath,
-			single_filename,
-			item,
-			errors
-		)
+	abspath = os.path.join(config.parser.markdown_dir, transcription)
+	check_single_filename(
+		abspath,
+		transcription,
+		item,
+		errors
+	)
 
 
 def check_location(item, errors):
@@ -895,8 +839,6 @@ def check_single_item(item, make_extra_checks):
 	check_obligatory_fields(item, errors)
 	check_allowed_fields(item, errors)
 	check_translation_fields(item, errors)
-	check_transcription(item, errors)
-	check_transcription_url(item, errors)
 	check_transcription_filename(item, errors)
 	check_catalogue_code(item, errors)
 	check_library_fields(item, errors)
