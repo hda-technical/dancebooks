@@ -626,7 +626,7 @@ msgstr "Pages"
 msgid "item:labels:url"
 msgstr "URL"
 
-msgid "item:labels:transcription-url"
+msgid "item:labels:transcription"
 msgstr "Transcription"
 
 msgid "item:labels:filename"

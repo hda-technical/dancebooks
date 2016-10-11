@@ -623,7 +623,7 @@ msgstr "Страницы"
 msgid "item:labels:url"
 msgstr "Ссылка"
 
-msgid "item:labels:transcription-url"
+msgid "item:labels:transcription"
 msgstr "Транскрипция"
 
 msgid "item:labels:filename"
