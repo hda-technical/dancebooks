@@ -11,7 +11,7 @@
 		<lastBuildDate>{{ last_date_string }}</lastBuildDate>
 		<pubDate>{{ last_date_string }}</pubDate>
 		<atom:link href="https://bib.hda.org.ru/bib/rss/books" rel="self" type="application/rss+xml"/>
-{% for date, entries in item_index | dictsort | reverse %}
+{% for date, entries in item_index | dictsort | reverse | batch(25) | first %}
 		<item>
 			<title>{{ ngettext("rss:added-count", "rss:added-count", entries | length) }}</title>
 			<description><![CDATA[
