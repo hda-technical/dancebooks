@@ -528,3 +528,20 @@ div.transcription > div.footnote h3
 {
 	font-size: 100%;
 }
+
+div.transcription span.page_number {
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+
+	text-decoration: none;
+    text-align: left;
+    text-indent: 0px;
+
+	color: #b0b0b0;
+
+    display: inline-block;
+    position: absolute;
+    right: 200px;
+    width: 50px;
+}
