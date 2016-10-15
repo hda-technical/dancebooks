@@ -550,7 +550,8 @@ class MarkdownCache(object):
 		converter = markdown.Markdown(
 			extensions=[
 				"markdown.extensions.footnotes",
-				"markdown.extensions.tables"
+				"markdown.extensions.tables",
+				MarkdownPageNumberExtension()
 			],
 			extension_configs={
 				"markdown.extensions.footnotes": {
@@ -564,7 +565,7 @@ class MarkdownCache(object):
 		return converter.convert(raw_data)
 
 
-class MarkdownAutociter(markdown.inlinepatterns.Pattern):
+class MarkdownCiteProcessor(markdown.inlinepatterns.Pattern):
 	def __init__(self, index):
 		super().__init__(r"\[(?P<id>[a-z0-9_]+)\]")
 		self._index = index
@@ -577,15 +578,31 @@ class MarkdownAutociter(markdown.inlinepatterns.Pattern):
 		a.text = item.get("cite_label")
 		return a
 
-class MarkdownAutociterExtension(markdown.extensions.Extension):
+		
+class MarkdownCiteExtension(markdown.extensions.Extension):
 	def __init__(self, index):
 		self._index = index
 
 	def extendMarkdown(self, md, md_globals):
-		md.inlinePatterns.add("autociter", MarkdownAutociter(self._index), '_end')
+		md.inlinePatterns.add("cite_reference", MarkdownCiteProcessor(self._index), '_end')
+		
+		
+class MarkdownPageNumberProcessor(markdown.inlinepatterns.Pattern):
+	def __init__(self):
+		super().__init__(r"\{(?P<number>[^\{\}]+)\}")
+		
+	def handleMatch(self, m):
+		span = markdown.util.etree.Element("span")
+		span.set("class", const.PAGE_NUMBER_CSS_CLASS)
+		span.text = m.group("number")
+		return span
 
-MAX_AUTHORS_IN_CITE = 2
+		
+class MarkdownPageNumberExtension(markdown.extensions.Extension):		
+	def extendMarkdown(self, md, md_globals):
+		md.inlinePatterns.add("page_number", MarkdownPageNumberProcessor(), '_end')		
 
+		
 def get_last_name(fullname):
 	return fullname.split()[-1]
 
@@ -606,7 +623,7 @@ def make_cite_label(item):
 			shorthand=shorthand,
 			year=year
 		)
-	elif len(author) <= MAX_AUTHORS_IN_CITE:
+	elif len(author) <= const.MAX_AUTHORS_IN_CITE_LABEL:
 		### WARN: this code doesn't process repeated surnames in any way
 		return '[{surnames}, {year}]'.format(
 			surnames=", ".join(map(get_last_name, author)),
@@ -618,7 +635,7 @@ def make_cite_label(item):
 		else:
 			postfix = "et al."
 		return "[{surnames}, {postfix}, {year}]".format(
-				surnames=", ".join(map(get_last_name, author[0:MAX_AUTHORS_IN_CITE])),
+				surnames=", ".join(map(get_last_name, author[0:const.MAX_AUTHORS_IN_CITE_LABEL])),
 				postfix=postfix,
 				year=year
 			)
@@ -636,8 +653,8 @@ def make_html_cite(item):
 	year = item.get("year")
 	if author is not None:
 		result += "<em>"
-		result += ", ".join(author[0:MAX_AUTHORS_IN_CITE])
-		if len(author) > MAX_AUTHORS_IN_CITE:
+		result += ", ".join(author[0:const.MAX_AUTHORS_IN_CITE_LABEL])
+		if len(author) > const.MAX_AUTHORS_IN_CITE_LABEL:
 			result += " "
 			result += "и др." if langid == "russian" else "et al."
 		result += "</em>"
