@@ -67,6 +67,9 @@ msgstr "You can send edits to the list to"
 msgid "pages:keywords:references"
 msgstr "References"
 
+msgid "pages:keywords:category:xvi"
+msgstr "Dances of the Renaissance"
+
 msgid "pages:keywords:category:baroque"
 msgstr "Dances of baroque and rococo"
 

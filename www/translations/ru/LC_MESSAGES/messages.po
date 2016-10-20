@@ -67,6 +67,9 @@ msgstr "Преложения по улучшению списка можно с�
 msgid "pages:keywords:references"
 msgstr "Примечания"
 
+msgid "pages:keywords:category:xvi"
+msgstr "Танцы Ренессанса"
+
 msgid "pages:keywords:category:baroque"
 msgstr "Танцы эпох барокко и рококо"
 
