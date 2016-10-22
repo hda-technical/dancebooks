@@ -522,6 +522,20 @@ class MarkdownCache(object):
 		self._lock = threading.Lock()
 		#dict: file abspath -> (source file mtime, compiled html data)
 		self._cache = dict()
+		self._converter = markdown.Markdown(
+			extensions=[
+				"markdown.extensions.footnotes",
+				"markdown.extensions.tables",
+				MarkdownPageNumberExtension()
+			],
+			extension_configs={
+				"markdown.extensions.footnotes": {
+					"PLACE_MARKER": "///Footnotes///",
+					"BACKLINK_TEXT": "↑",
+				}
+			},
+			output_format="xhtml5"
+		)
 
 	def get(self, abspath):
 		"""
@@ -541,28 +555,14 @@ class MarkdownCache(object):
 			self._cache[abspath] = (modified_at, compiled_data)
 		return compiled_data
 
-	@staticmethod
-	def compile(abspath):
+	def compile(self, abspath):
 		"""
 		Helper function for performing compilation
 		of a markdown file to HTML
 		"""
-		converter = markdown.Markdown(
-			extensions=[
-				"markdown.extensions.footnotes",
-				"markdown.extensions.tables",
-				MarkdownPageNumberExtension()
-			],
-			extension_configs={
-				"markdown.extensions.footnotes": {
-					"PLACE_MARKER": "///Footnotes///",
-					"BACKLINK_TEXT": "↑",
-				}
-			},
-			output_format="xhtml5"
-		)
+		self._converter.reset()
 		raw_data = read_utf8_file(abspath)
-		return converter.convert(raw_data)
+		return self._converter.convert(raw_data)
 
 
 class MarkdownCiteProcessor(markdown.inlinepatterns.Pattern):
