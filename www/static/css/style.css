@@ -492,6 +492,7 @@ div.transcription h2,
 div.transcription h3
 {
 	font-family: "PT Serif Caption";
+	width: 100%;
 }
 
 div.transcription ul
@@ -530,6 +531,7 @@ div.transcription > div.footnote h3
 }
 
 div.transcription span.page_number {
+	font-family: "PT Serif";
 	font-size: 14px;
 	font-weight: 700;
 	font-style: normal;
@@ -544,4 +546,9 @@ div.transcription span.page_number {
     position: absolute;
     right: 200px;
     width: 50px;
+	
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
 }
