@@ -180,7 +180,7 @@ def format_catalogue_code(single_code):
 
 
 def format_transcription_url(item):
-	return '<a href="https://{app_domain}{prefix}/{item_id}/transcription">{prefix}/{item_id}/transcription</a>'.format(
+	return '<a href="{prefix}/{item_id}/transcription">https://{app_domain}{prefix}/{item_id}/transcription</a>'.format(
 		app_domain=config.www.app_domain_production,
 		prefix=config.www.books_prefix,
 		item_id=item.id()
