@@ -525,6 +525,16 @@ div.transcription p > img
 	height: 1em;
 }
 
+div.transcription p > sup {
+	vertical-align: middle;
+	font-size: 80%;
+}
+
+div.transcription p > sup > a {
+	top: -7px;
+	position: relative;
+}
+
 div.transcription > div.footnote h3
 {
 	font-size: 100%;
