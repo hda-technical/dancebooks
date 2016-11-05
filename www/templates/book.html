@@ -15,7 +15,7 @@
 		{% else %}
 		<meta name="og:description" content="An anonymously written book"/>
 		{% endif %}
-        <meta name="og:image" content="/bib/images/icon/persimmon.032x032.png"/>
+        <meta name="og:image" content="/images/icon/persimmon.032x032.png"/>
         <meta name="og:url" content="{{ request.url }}"/>
         <title>{{ _("interface:title") }}</title>
     </head>
@@ -43,7 +43,7 @@
 				<span class="action" id="keywordFormToggle">{{ _("interface:report:keyword-form-title") }}</span>
 			</div>
 			<div id="reportForm" class="center hidden">
-				<form action="/bib/books/{{ item.id() }}" method="post">
+				<form action="/books/{{ item.id() }}" method="post">
 					<table>
 						<tr>
 							<td>{{ _("interface:report:name") }}:</td>
@@ -75,7 +75,7 @@
 				<button id="reportFormSubmitter">{{ _("interface:buttons:send") }}</button>
 			</div>
 			<div id="keywordForm" class="center hidden">
-				<form action="/bib/books/{{ item.id() }}/keywords" method="post">
+				<form action="/books/{{ item.id() }}/keywords" method="post">
 					<table>
 						<tr>
 							<td>{{ _("interface:report:name") }}:</td>

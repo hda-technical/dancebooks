@@ -130,11 +130,11 @@ www-configs-install-testing:
 
 www-reload-testing: www-test www-translations
 	@echo "Reloading"
-	bash -c "time -p (touch $(TOUCH_RELOAD_TESTING) && sleep 1 && curl --max-time 60 'http://bib-test.hda.org.ru/bib/ping')"
+	bash -c "time -p (touch $(TOUCH_RELOAD_TESTING) && sleep 1 && curl --max-time 60 'https://bib-test.hda.org.ru/ping')"
 
 www-reload-production: www-test www-translations
 	@echo "Reloading"
-	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/bib/ping')"
+	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/ping')"
 
 requirements.txt: .PHONY
 	pip freeze --local | sort --ignore-case | tee $@

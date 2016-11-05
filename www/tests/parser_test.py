@@ -138,7 +138,7 @@ class TestParser(unittest.TestCase):
 				"Побрюзжим на досуге. "
 				"Москва, Одесса, "
 				"1825. "
-				'<a href="/bib/books/id_2">https://bib.hda.org.ru/bib/books/id_2</a>'
+				'<a href="/books/id_2">https://bib.hda.org.ru/books/id_2</a>'
 			)
 		)
 

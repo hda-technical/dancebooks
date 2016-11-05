@@ -5,12 +5,12 @@
 		<title>{{ _("rss:title") }}</title>
 		<description>{{ _("rss:description") }}</description>
 		<language>{{ _("common:locale") }}</language>
-		<link>https://bib.hda.org.ru/bib</link>
+		<link>https://bib.hda.org.ru</link>
 {% set last_date = item_index | sort | last %}
 {% set last_date_string = last_date.strftime(RFC_DATETIME_FORMAT) %}
 		<lastBuildDate>{{ last_date_string }}</lastBuildDate>
 		<pubDate>{{ last_date_string }}</pubDate>
-		<atom:link href="https://bib.hda.org.ru/bib/rss/books" rel="self" type="application/rss+xml"/>
+		<atom:link href="https://bib.hda.org.ru/rss/books" rel="self" type="application/rss+xml"/>
 {% for date, entries in item_index | dictsort | reverse | batch(25) | first %}
 		<item>
 			<title>{{ ngettext("rss:added-count", "rss:added-count", entries | length) }}</title>
@@ -21,13 +21,13 @@
 		{% set author = entry.author() %}
 		{% set title = entry.title() %}
 		{% set year = entry.year() %}
-					<li><a href="https://bib.hda.org.ru/bib/books/{{ id }}">[{{ year }}] {% if author %} {{ author }} — {% endif %} {{ title }}</a></li>
+					<li><a href="https://bib.hda.org.ru/books/{{ id }}">[{{ year }}] {% if author %} {{ author }} — {% endif %} {{ title }}</a></li>
 	{% endfor %}
 				</ul>
 			]]></description>
 	{% set date_string = date.strftime("%Y-%m-%d") %}
-			<link>https://bib.hda.org.ru/bib/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
-			<guid>https://bib.hda.org.ru/bib/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</guid>
+			<link>https://bib.hda.org.ru/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
+			<guid>https://bib.hda.org.ru/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</guid>
 	{% set rfc_date_string = date.strftime(RFC_DATETIME_FORMAT) %}
 			<pubDate>{{ rfc_date_string }}</pubDate>
 		</item>

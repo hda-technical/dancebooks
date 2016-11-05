@@ -1,7 +1,6 @@
 import email
 import email.mime
 import email.mime.text
-import logging
 import smtplib
 
 import flask
@@ -19,7 +18,7 @@ class BasicMessage(object):
 		self.from_name = from_name
 		self.base_url="http://{app_domain}{book_prefix}".format(
 			app_domain=config.www.app_domain,
-			book_prefix=config.www.app_prefix + "/books"
+			book_prefix="/books"
 		)
 
 	def send(self):

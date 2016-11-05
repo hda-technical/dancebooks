@@ -9,7 +9,6 @@ from urllib import parse as urlparse
 
 import flask
 import flask_babel
-import werkzeug
 
 from config import config, WorkingMode
 import const
@@ -107,39 +106,37 @@ def get_locale():
 		return flask.request.accept_languages.best_match(config.www.languages)
 
 
-@flask_app.route(config.www.app_prefix + "/secret-cookie", methods=["GET"])
+@flask_app.route("/secret-cookie", methods=["GET"])
 @utils_flask.log_exceptions()
 def secret_cookie():
-	response = flask.make_response(flask.redirect(config.www.app_prefix))
+	response = flask.make_response(flask.redirect("/"))
 	response.set_cookie(
 		config.www.secret_cookie_key,
 		value=config.www.secret_cookie_value,
 		max_age=const.SECONDS_IN_YEAR,
-		httponly=True,
-		path=config.www.app_prefix
+		httponly=True
 	)
 	return response
 
 
-@flask_app.route(config.www.app_prefix + "/ui-lang/<string:lang>", methods=["GET"])
+@flask_app.route("/ui-lang/<string:lang>", methods=["GET"])
 @utils_flask.log_exceptions()
 def choose_ui_lang(lang):
-	next_url = flask.request.referrer or config.www.app_prefix
+	next_url = flask.request.referrer or "/"
 	if lang in config.www.languages:
 		response = flask.make_response(flask.redirect(next_url))
 		response.set_cookie(
 			"lang",
 			value=lang,
 			max_age=const.SECONDS_IN_YEAR,
-			httponly=True,
-			path=config.www.app_prefix
+			httponly=True
 		)
 		return response
 	else:
 		flask.abort(http.client.NOT_FOUND, "Language isn't available")
 
 
-@flask_app.route(config.www.app_prefix, methods=["GET"])
+@flask_app.route("/", methods=["GET"])
 @utils_flask.log_exceptions()
 @utils_flask.check_secret_cookie("show_secrets")
 def root(show_secrets):
@@ -150,10 +147,10 @@ def root(show_secrets):
 	)
 
 
-@flask_app.route(config.www.app_prefix + "/search", methods=["GET"])
-@flask_app.route(config.www.app_prefix + "/basic-search", methods=["GET"])
-@flask_app.route(config.www.app_prefix + "/advanced-search", methods=["GET"])
-@flask_app.route(config.www.app_prefix + "/all-fields-search", methods=["GET"])
+@flask_app.route("/search", methods=["GET"])
+@flask_app.route("/basic-search", methods=["GET"])
+@flask_app.route("/advanced-search", methods=["GET"])
+@flask_app.route("/all-fields-search", methods=["GET"])
 @utils_flask.check_secret_cookie("show_secrets")
 @utils_flask.log_exceptions()
 def search_items(show_secrets):
@@ -397,7 +394,7 @@ def edit_book_keywords(book_id):
 	return {"message": flask_babel.gettext("interface:report:thanks")}
 
 
-@flask_app.route(config.www.app_prefix + "/options", methods=["GET"])
+@flask_app.route("/options", methods=["GET"])
 @utils_flask.jsonify()
 @utils_flask.log_exceptions()
 def get_options():
@@ -435,17 +432,16 @@ def get_options():
 	}
 
 
-@flask_app.route(config.www.app_prefix + "/rss/books", methods=["GET"])
+@flask_app.route("/rss/books", methods=["GET"])
 @utils_flask.log_exceptions()
 def rss_redirect():
 	lang = get_locale()
-	return flask.redirect("{prefix}/rss/{lang}/books".format(
-		prefix=config.www.app_prefix,
+	return flask.redirect("/rss/{lang}/books".format(
 		lang=lang
 	))
 
 
-@flask_app.route(config.www.app_prefix + "/rss/<string:lang>/books", methods=["GET"])
+@flask_app.route("/rss/<string:lang>/books", methods=["GET"])
 @utils_flask.log_exceptions()
 def get_books_rss(lang):
 	if lang in config.www.languages:
@@ -462,7 +458,7 @@ def get_books_rss(lang):
 	return response
 
 
-@flask_app.route(config.www.app_prefix + "/<path:filename>", methods=["GET"])
+@flask_app.route("/<path:filename>", methods=["GET"])
 @utils_flask.log_exceptions()
 def everything_else(filename):
 	if os.path.isfile(os.path.join("templates/static", filename)):
@@ -473,7 +469,7 @@ def everything_else(filename):
 		flask.abort(http.client.NOT_FOUND, flask.request.base_url)
 
 
-@flask_app.route(config.www.app_prefix + "/ping", methods=["GET"])
+@flask_app.route("/ping", methods=["GET"])
 def ping():
 	return "OK"
 

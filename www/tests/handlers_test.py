@@ -37,10 +37,10 @@ class TestHandlers(unittest.TestCase):
 		self.client = main.flask_app.test_client()
 
 	def test_html_handlers(self):
-		rq = self.client.get(config.www.app_prefix, follow_redirects=True)
+		rq = self.client.get("/")
 		self.assertEqual(rq.status_code, http.client.OK)
 
-		rq = self.client.get(config.www.app_prefix + "/ui-lang/ru")
+		rq = self.client.get("/ui-lang/ru")
 		self.assertEqual(rq.status_code, http.client.FOUND)
 		self.assertTrue("Set-Cookie" in rq.headers)
 
@@ -239,7 +239,7 @@ class TestHandlers(unittest.TestCase):
 		#WARN: NO TEST FOR OUTDATED MARKDOWNED BOOK ID
 
 	def test_json_handlers(self):
-		rq = self.client.get(config.www.app_prefix + "/options")
+		rq = self.client.get("/options")
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "application/json; charset=utf-8")
 		data = json.loads(rq.data.decode())
@@ -248,14 +248,14 @@ class TestHandlers(unittest.TestCase):
 		self.assertTrue("languages" in data)
 
 	def test_rss_handlers(self):
-		rq = self.client.get(config.www.app_prefix + "/rss/books")
+		rq = self.client.get("/rss/books")
 		self.assertEqual(rq.status_code, http.client.FOUND)
 
-		rq = self.client.get(config.www.app_prefix + "/rss/en/books")
+		rq = self.client.get("/rss/en/books")
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "application/rss+xml")
 
-		rq = self.client.get(config.www.app_prefix + "/rss/ru/books")
+		rq = self.client.get("/rss/ru/books")
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "application/rss+xml")
 

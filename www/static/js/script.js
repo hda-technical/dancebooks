@@ -10,9 +10,9 @@ var bib = {
 	},
 
 	SEARCH_PATHS: [
-		'/bib/basic-search',
-		'/bib/advanced-search',
-		'/bib/all-fields-search'
+		'/basic-search',
+		'/advanced-search',
+		'/all-fields-search'
 	]
 };
 
@@ -636,7 +636,7 @@ bib.server = (function() {
 		},
 
 		getOptions: function(callback) {
-			$.get('/bib/options', callback);
+			$.get('/options', callback);
 		},
 
 		/*

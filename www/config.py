@@ -152,11 +152,10 @@ class WwwConfig(object):
 		self.app_domain_production = get_config_value("app_domain_production", params)
 
 		#paths
-		self.app_prefix = get_config_value("app_prefix", params)
-		self.books_prefix = self.app_prefix + "/books"
-		self.basic_search_prefix = self.app_prefix + "/basic-search"
-		self.advanced_search_prefix = self.app_prefix + "/advanced-search"
-		self.all_fields_search_prefix = self.app_prefix + "/all-fields-search"
+		self.books_prefix = "/books"
+		self.basic_search_prefix = "/basic-search"
+		self.advanced_search_prefix = "/advanced-search"
+		self.all_fields_search_prefix = "/all-fields-search"
 
 		self.search_params = get_config_value("search_params", params, transform=extract_set_from_json)
 		self.search_synonyms = get_config_value("search_synonyms", params, transform=json.loads)

@@ -573,36 +573,36 @@ class MarkdownCiteProcessor(markdown.inlinepatterns.Pattern):
 	def handleMatch(self, m):
 		a = markdown.util.etree.Element("a")
 		id = m.group("id")
-		a.set("href", "/bib/books/{id}".format(id=id))
+		a.set("href", "/books/{id}".format(id=id))
 		item = first(self._index["id"][id])
 		a.text = item.get("cite_label")
 		return a
 
-		
+
 class MarkdownCiteExtension(markdown.extensions.Extension):
 	def __init__(self, index):
 		self._index = index
 
 	def extendMarkdown(self, md, md_globals):
 		md.inlinePatterns.add("cite_reference", MarkdownCiteProcessor(self._index), '_end')
-		
-		
+
+
 class MarkdownPageNumberProcessor(markdown.inlinepatterns.Pattern):
 	def __init__(self):
 		super().__init__(r"\{(?P<number>[^\{\}]+)\}")
-		
+
 	def handleMatch(self, m):
 		span = markdown.util.etree.Element("span")
 		span.set("class", const.PAGE_NUMBER_CSS_CLASS)
 		span.text = m.group("number")
 		return span
 
-		
-class MarkdownPageNumberExtension(markdown.extensions.Extension):		
-	def extendMarkdown(self, md, md_globals):
-		md.inlinePatterns.add("page_number", MarkdownPageNumberProcessor(), '_end')		
 
-		
+class MarkdownPageNumberExtension(markdown.extensions.Extension):
+	def extendMarkdown(self, md, md_globals):
+		md.inlinePatterns.add("page_number", MarkdownPageNumberProcessor(), '_end')
+
+
 def get_last_name(fullname):
 	return fullname.split()[-1]
 
