@@ -2,7 +2,7 @@
 ## James Scott Skinner, William Scott
 ## Transcribed by [University of Aberdeen](http://www.abdn.ac.uk/scottskinner/display.php?ID=JSS0486), [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
 
-### Quadrilles
+### {10} Quadrilles
 
 > A quadrille, a quadrille is a pleasure,
 >
@@ -16,7 +16,7 @@ _Anonymous_
 
 The quadrilles are the unbounded favourites of old and young and no wonder. When we see a lady moving softly and smoothly to the voice of melody, her ear feeling every note and her graceful figure gliding in keeping with it, avoiding all laboured steps and rude, vulgar swingin'! (every good, and truly graceful dancer does so), the movements of her feet are but the index to graceful dancing, or musical motion, for the head, neck and body come in for a duo proportion of elegance, proving that “A thing of beauty is a joy for ever”. In our professional duties we have seen ladies, aye, and gentlemen too, give their hands with grace, ease and elegance that made their movements the “poetry of motion”. It has been said “The height of art is to conceal art”. Let this be so. With the above remarks we quote the following from “Analysis of the London Ball-Room”.
 
-Quadrilles are of novel introduction into this country, and we are indebted to the French for their survival, for they approximate  so nearly to the dance termed cotillion that design or invention cannot with justice be applied. They are danced in sets of eight, twelve or sixteen persons; but the set of eight is best calculated for displaying the true spirit and the elegant graceful evolutions of this mode of dancing.' As Teachers of Dancing we earnestly hope and trust that the Quadrille may be revived and danced with freedom, chasteness, and graceful ease, and that the “rough and ready” style now in vogue may be viewed as the “Romance of quadrille dancing”.
+Quadrilles are of novel introduction into this country, and we are indebted to the French for their survival, for they approximate {11} so nearly to the dance termed cotillion that design or invention cannot with justice be applied. They are danced in sets of eight, twelve or sixteen persons; but the set of eight is best calculated for displaying the true spirit and the elegant graceful evolutions of this mode of dancing.' As Teachers of Dancing we earnestly hope and trust that the Quadrille may be revived and danced with freedom, chasteness, and graceful ease, and that the “rough and ready” style now in vogue may be viewed as the “Romance of quadrille dancing”.
 
 ### Ball-room dances. Quadrilles.
 
@@ -34,7 +34,7 @@ The lady stands on the gentleman's right hand.
 
 This figure is performed twice; first by the top and bottom couples, and then by those at the side.
 
-### Second figure. L'ete.
+### {12} Second figure. L'ete.
 
 1. First or top lady and opposite gentleman to the right twice: (this is considered an improvement on advance and retire).
 2. Cross over five plain steps and at sixth turn the body half round and count 6, 7, 8.
@@ -49,7 +49,7 @@ L'ete and La poule after it, are performed each four times; both in the followin
 
 1. First lady and opposite gentleman cross over, offering right hands across giving left hands, and fall in a line, set four in a line.
 2. Half promenade to opposite places.
-3. First lady & gentleman advance twice, at second time the honours at second time the honours of the dance, or in plain terms, [^2]bow and curtsey.
+3. First lady & gentleman advance twice, at second time the honours {13} at second time the honours of the dance, or in plain terms, [^2]bow and curtsey.
 4. Four advance and retire: half right and left.
 
 ### Fourth figure. La pastorale.
@@ -71,7 +71,7 @@ La pastorale and La finale are each repeated four times. Flirtation sometimes us
 
 [^2]: Another reprehensible custom is creeping in videlicet: Instead of doing the honours to your vis-à-vis wheeling round and doing them to partners. This may be new (?) but is neither polite nor politic. Avoid it.
 
-### The Lancers
+### {14} The lancers
 
 The Lancers are not new but have again become popular in consequence of their elegance and revival at state balls + circles in high life.
 
@@ -89,7 +89,7 @@ _Each figure 4 time through — beginning after 8 bars of music._
 
 [^3]: [It is now the fashion for the four ladies to advance and courtesy to each other; then each lady turns to her partner and curtseys to him. The ladies do the moulinet while the gentlemen all move round outside the quadrille and return to places. This is repeated four times. The second and fourth times all the gentlemen advance, and immediately turn towards their partners and bow to them, and continued the figure as before]. We approve of this change as it suits tall and short dancers.
 
-### Cuirassiers
+### {15} Cuirassiers
 
 1. First and opposite couple half right and left — side couples the same. All promenade to places and turn partners. The ladies advance and retire - gentlemen do the same. All set and turn partners.
 2. Two ladies move to right, and hands three round. The ladies again set to right and turn opposite gentlemen. Lady and opposite gentlemen advance twice. Advance four, resume partners and places.
@@ -97,7 +97,7 @@ _Each figure 4 time through — beginning after 8 bars of music._
 4. First lady advance twice. Opposite gentleman do the same. First couple advance twice, leaving lady at left of opposite gentleman. The two ladies cross and change sides, while first gentleman passes between them — the same repeated to places — set and turn partners.
 5. All change sides and back again. Lady advance and retire opposite gentleman the same — the ladies move to the right into next lady's place and stop. The ladies again to right — gentlemen to left. All promenade to places and turn partners.
 
-### Caledonians
+### {16} Caledonians
 
 1. Leading couples hands across and back. Set to partners and turn. Ladies chain. Half promenade: half right and left. Other couples repeat this.
 2. Leading gentleman advances and retires twice. All set corners and turn, each lady passing into next lady's place. Having changed partners, all promenade quite round. Second, third and fourth gentleman repeat this figure.
@@ -105,7 +105,7 @@ _Each figure 4 time through — beginning after 8 bars of music._
 4. Leading lady and opposite gentleman advance and stop; partners do the same; both couples turn partners to places. Ladies then move to the right each into the other's place: gentlemen to the left, each into the other's place. Again ladies to the right; gentlemen to the left. Promenade and turn partners. Other couples repeat the figure in succession.
 5. Leading couples galop round the inside of the figure. The four ladies advance, courtesy to each other, retire: the four gentlemen do likewise and bow. All set to partners and turn. Grand chain, half round. All promenade to places, and turn partners. All chassez to partners places and back again. Repeated by the other couples in succession. Galop for finale.
 
-### Royal Victoria
+### {17} Royal Victoria
 
 Commonly called “Marshall's”.
 
@@ -115,7 +115,7 @@ Commonly called “Marshall's”.
 4. Grand square; ladies' hands across, all round, holding right hand up in centre; gentlemen do the same; all eight join hands and set, the gentlemen with their backs facing the inside of the figure, and turn partners. Four times.
 5. Grand chassez of eight round the figure, the first couple leading outside the couple on their right; finish in two lines, and turn partners, the ladies lead round to the left inside the figure, the gentlemen at the same time to the right outside the figure, and finish in two lines, the two centre couples hands four round to places, and turn partners. Four times. Finish, grand chain, and turn partners.
 
-### Le polo. A new French quadrille. By monsieur F. Paul, Paris.
+### {18} Le polo. A new French quadrille. By monsieur F. Paul, Paris.
 ### Arrangement for four couples
 ### 1. The promenade
 
@@ -139,7 +139,7 @@ Grand promenade by the four couples, who turn to their left in dancing the galop
 
 Number 1 twice through, and others 4 time, and first 8 bars.
 
-### Union[^4]
+### {19} Union[^4]
 
 [^4]: In press and speedily will be published “The union quadrilles”, on national airs, by James Scott Skinner specially arranged for this favourite and unknown neglected set.
 
@@ -180,7 +180,7 @@ The top and third couples face each other, and the second and fourth couples fac
 7. chassez into partners places and back again.
 8. Repeat.
 
-### 4. Spanish
+### 4. {20} Spanish
 
 1. Waltz chain half round (commencing at corners).
 2. Waltz to places
@@ -200,7 +200,7 @@ Top and bottom couples ab — cd advance to centre i — chassez to i —  chass
 
 [^5]: This part of the figure is performed by the four couples at the same time.
 
-### Coulon's, or double quadrille
+### {21} Coulon's, or double quadrille
 
 Being in London when this quadrille was introduced and having had lessons from a Mrs. Nicholas Henderson, the compilers insert her descriptions. William Scott.
 
@@ -208,7 +208,7 @@ This quadrille is danced by four couples. All quadrille music will suit it. It i
 
 1. Top and bottom couples right and left, whilst the side couples dance chaine anglaise outside them. All four balance to partners. The four ladies form ladies' chain, or hands across and back to places. Half promenade, top and bottom couples chaine anglaise, whilst side couples grands chaine round them. This leaves all in their respective places.
 2. The lady at the top, and the lady on her right, with their opposite gentlemen, perform L'ete (each forming a semicircle to the left in crossing over to opposite places). The remaining four do likewise.
-3. The lady at the top, and the lady on her right, with opposite gentlemen, dance La Poule (setting in two cross lines). The rest do likewise.
+3. {22} The lady at the top, and the lady on her right, with opposite gentlemen, dance La Poule (setting in two cross lines). The rest do likewise.
 4. Top and bottom couples dance La Pastorale with the two couples on their right. The latter do likewise with top and bottom couples.
 5. All galopade round. The top and bottom couples galopade forwards; and whilst they are retiring the side couples advance, and as they retire, top and bottom couples galopade to opposite places. Then the side couples do the same. Top and bottom couples readvance; and whilst they are retiring, the side couples readvance, and as they retire, top and bottom galopade back to places. Then the side couples do likewise. Double ladies' chain, and galopade round. Then the side couples begin the repetition of the figure, which finishes with a general galop.
 
@@ -216,7 +216,7 @@ Uniformity of step and correct measurement of time are particularly indispensabl
 
 This quadrille is now very generally taught by the profession, the leading members of which were invited by mister Coulon to his house to give their opinion of its merits, and all agreed to introduce it to their pupils.
 
-### Parisienne
+### {23} Parisienne
 
 This is simply the first set. Arrange partners by forming two lines (as in Scotch reel). There being neither top or bottom couples. The music is only played half the usual length of time. This set only requires to be introduced to become a great favourite.
 
@@ -238,7 +238,7 @@ The couples stand in a circle round the room. Lady on right of gentleman.
 2. Couples face each other, give three claps with the hands, then three beats with the right foot.
 3. Swing partner and pass her to gentleman on right side. The ladies do the same with every gentleman and moving round to the right till they come to places; then the gentlemen commence and do the same.
 
-### Long live the queen quadrille country dance by mister Scott Skinner, as danced at Balmoral
+### {23½} Long live the queen quadrille country dance by mister Scott Skinner, as danced at Balmoral
 
 Music — 16 bars of any 6/8 quadrille figure for promenade and
 
@@ -261,7 +261,7 @@ All full promenade top & bottom couples full promenade - side couples do Then fo
 
 All the ladies still join hands galop quickly to left to places. Gents do. to right to places to tune of “Flowers of Edinburgh” - places. All catch their partners & galop quickly to places.
 
-### The flower dance
+### {23½} The flower dance
 
 Tune “The dashing white sergeant”.
 
@@ -276,7 +276,7 @@ Arrangement same as for a reel.
 
 Every Lady should hold a wreath of flowers.
 
-### Come dance along with me
+### {24} Come dance along with me
 
 Gallopade or Singing Galop.
 
@@ -296,7 +296,7 @@ All form two lines, each gentleman having his partner at his side. Figure.
 >
 > I will fill your hearts with glee”.
 
-### [^7] The Chimes of Dunkirk with chorus.
+### [^7] {25} The Chimes of Dunkirk with chorus.
 
 [^7]: In our professional experience we have, on many occasions, been requested to give a dance in which all may join. The re-arranging of the “Chimes of Dunkirk”, the beauty of the music, and the simplicity of the figure has, we trust, reduced it to the capacity of the merest tyro. The dance has another advantage — videlicet — It gives gentlemen the pleasure of dancing and singing with every lady in the room. This is _comme il faut_. William Scott + James Scott Skinner.
 
@@ -314,9 +314,9 @@ Repeat until the ladies have regained partners.
 
 ***
 
-The Cellarius valse, redova & la gorlitza are all valses and cannot be learnt from books besides they are not popular and the introduction of too many dances into society entails more (illegible) on learners &c.
+{26} The Cellarius valse, redova & la gorlitza are all valses and cannot be learnt from books besides they are not popular and the introduction of too many dances into society entails more (illegible) on learners &c.
 
-* The terms valse, a deux temps, trois temps, le boston &c
+* {26} The terms valse, a deux temps, trois temps, le boston &c
 * The valse,
 * The fashionable valse,
 * Le galop,
@@ -334,7 +334,7 @@ Both turn half round with one polka step and pause.
 
 When this dance came out a third step was used. It is not now in vogue.
 
-### Country dances
+### {27} Country dances
 ### Circassian circle
 
 The couples form a circle round the room, facing each other.
@@ -360,13 +360,13 @@ Advance, four hands round and pass on to next couple.
 
 ### Spanish dance
 
-1. To commence the figure, the lady and gentleman at the top change places, and face down the dance, the second couples facing up; the two couples set and change to each other's places; face to partners, set and change places; set again and change on the sides; set again and change with partners, which brings all four to places.
+1. To commence the figure, the lady and gentleman at the top change places, and face down the dance, the second couples facing up; the two couples set and change to {28} each other's places; face to partners, set and change places; set again and change on the sides; set again and change with partners, which brings all four to places.
 2. Join hands in a circle, balance, gentlemen turn ladies into each other's place, repeat this four times.
 3. The two couples valse round each other for four or eight bars.
 
 The music for the Spanish dance is the same as that for the common valse.
 
-### La tempete.
+### {29} La tempete.
 
 Combination of quadrille and country dance. Arrange (across the room) double couples, facing each other — third backs to second, and face fourth so on for an unlimited number.
 
@@ -401,7 +401,7 @@ It may be remarked that when the couples reach top and bottom of the dance they 
 >
 > Adown the Village dance”.
 
-### Common Figure
+### {30} Common figure
 
 1. Down the back and up again
 2. Down the centre and up again
