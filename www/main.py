@@ -50,6 +50,7 @@ flask_app.jinja_env.filters["format_date"] = utils_flask.format_date
 flask_app.jinja_env.filters["format_catalogue_code"] = utils_flask.format_catalogue_code
 flask_app.jinja_env.filters["format_item_id"] = utils_flask.format_item_id
 flask_app.jinja_env.filters["format_transcription_url"] = utils_flask.format_transcription_url
+flask_app.jinja_env.filters["format_guid_for_rss"] = utils_flask.format_guid_for_rss
 
 def jinja_self_served_url_size(url, item):
 	file_name, file_size = utils.get_file_info_from_url(url, item)
@@ -429,7 +430,7 @@ def get_books_rss(lang):
 		"rss/books.xml",
 		item_index=item_index["added_on"]
 	))
-	response.content_type = "application/rss+xml"
+	response.content_type = "application/rss+xml; charset=utf-8"
 	return response
 
 

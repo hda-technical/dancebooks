@@ -27,7 +27,7 @@
 			]]></description>
 	{% set date_string = date.strftime("%Y-%m-%d") %}
 			<link>https://bib.hda.org.ru/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
-			<guid>https://bib.hda.org.ru/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</guid>
+			<guid>{{ entries | format_guid_for_rss }}</guid>
 	{% set rfc_date_string = date.strftime(RFC_DATETIME_FORMAT) %}
 			<pubDate>{{ rfc_date_string }}</pubDate>
 		</item>

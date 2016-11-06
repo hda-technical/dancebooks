@@ -185,6 +185,11 @@ def format_transcription_url(item):
 		prefix=config.www.books_prefix,
 		item_id=item.id()
 	)
+	
+
+def format_guid_for_rss(items):
+	get_id = lambda item: item.id()
+	return "|".join(map(get_id, sorted(items, key=get_id)))
 
 
 def format_item_id(item_id):
