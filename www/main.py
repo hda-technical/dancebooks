@@ -23,13 +23,6 @@ if (not os.path.exists("templates")):
 
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 
-#do not append HSTS headers in these modes
-DEBUG_WORKING_MODES = {
-	WorkingMode.Development,
-	WorkingMode.Unittest,
-	WorkingMode.Testing
-}
-
 langids = sorted(langid for langid in item_index["langid"].keys() if not langid.startswith("!"))
 source_files = sorted(item_index["source_file"].keys())
 booktypes = sorted(item_index["booktype"].keys())
@@ -72,24 +65,6 @@ flask_app.jinja_env.globals["utils"] = utils
 def initialize():
 	logging.info("Starting up")
 
-
-@flask_app.after_request
-def add_security_headers(response):
-	if config.working_mode in DEBUG_WORKING_MODES:
-		return response
-	response.headers["Strict-Transport-Security"] = (
-		"max-age={seconds_in_year}; includeSubDomains".format(
-			seconds_in_year=const.SECONDS_IN_YEAR
-		)
-	)
-	response.headers["Content-Security-Policy"] = (
-		"default-src https:; "
-		"script-src https:; "
-		"style-src https:; "
-		"img-src https: data:;"
-		"font-src https: data:;"
-	)
-	return response
 
 @babel_app.localeselector
 def get_locale():
