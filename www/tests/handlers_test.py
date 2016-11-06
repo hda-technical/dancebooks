@@ -253,11 +253,11 @@ class TestHandlers(unittest.TestCase):
 
 		rq = self.client.get("/rss/en/books")
 		self.assertEqual(rq.status_code, http.client.OK)
-		self.assertEqual(rq.content_type, "application/rss+xml")
+		self.assertEqual(rq.content_type, "application/rss+xml; charset=utf-8")
 
 		rq = self.client.get("/rss/ru/books")
 		self.assertEqual(rq.status_code, http.client.OK)
-		self.assertEqual(rq.content_type, "application/rss+xml")
+		self.assertEqual(rq.content_type, "application/rss+xml; charset=utf-8")
 
 
 if __name__ == "__main__":
