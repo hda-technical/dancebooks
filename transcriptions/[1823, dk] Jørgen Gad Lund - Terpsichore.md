@@ -1,6 +1,6 @@
-﻿# Terpsichore eller: En Veiledning for mine Dandselærlinger til at beholde de Trin og Toure i Hukommelsen som de under mig hav gjennemgaaet
+# Terpsichore eller: En Veiledning for mine Dandselærlinger til at beholde de Trin og Toure i Hukommelsen som de under mig hav gjennemgaaet
 ## Jørgen Gad Lund
-### Transcribert af [] og [Anna Fedorova](http://www.philol.msu.ru/~germanic/professoren/prof_vasilyeva.html)
+### Transcribert af [Eugenia Solenikova](http://rondino.spb.ru) og [Anna Fedorova](http://www.philol.msu.ru/~germanic/professoren/prof_vasilyeva.html)
 
 ### {3} Fortale
 
@@ -128,206 +128,290 @@ Man staaer ved Siden af hinanden i 5te Position, Damerne ved høire Side. Man b�
 
 ### Første Engelskdands
 
-1. Første Par fører ned[^1]
-2. og op,
-3. og 
-4. og giør Balancekjæde.
+1ste Tour. Første Par fører ned
 
-[^1]: Each number means a tour
+2den — og op,
+
+3 og 4. og giør Balancekjæde.
 
 ### Anden Engelskdands.
 
-1. Første Cavalier ned og bliver staaende.
-2. Første og anden Dame ned til ham.
-3. Alle tre op,
-4. og Kjæde.
+1ste Tour. Første Cavalier ned og bliver staaende.
+
+2den — Første og anden Dame ned til ham.
+
+3die — Alle tre op,
+
+4de — og Kjæde.
 
 ### {25} Tredie Engelskdands
 
-1. Første Cavalier ned med første og anden Dame.
-2. Cavalieren soinger først anden Dame med høire Haand, derpaa første Dame med venstre.
-3. Alle 3 op,
-4. og Kjæde.
+1ste Tour. Første Cavalier ned med første og anden Dame.
+
+2den — Cavalieren soinger først anden Dame med høire Haand, derpaa første Dame med venstre.
+
+3die — Alle 3 op,
+
+4de — og Kjæde.
 
 ### Fjerde Engelskdands
 
-1. Første og anden Par giør Molinet.
-2. Første Par ned.
-3. Op igjen,
-4. og Kjæde.
+1ste Tour. Første og anden Par giør Molinet.
+
+2den — Første Par ned.
+
+3die — Op igjen,
+
+4de — og Kjæde.
 
 ### Femte Engelskdands
 
-1. Første Cavalier svinger anden Dame rundt med høire Haand og løfter Armene i Veiret, idet han tillige giver anden Cavalier venstre Haand.
-2. Første Dame løber under hans Arme.
-3. Første Par dandser ned,
-4. og op igjen.
+1ste Tour. Første Cavalier svinger anden Dame rundt med høire Haand og løfter Armene i Veiret, idet han tillige giver anden Cavalier venstre Haand.
+
+2den — Første Dame løber under hans Arme.
+
+3die — Første Par dandser ned,
+
+4de — og op igjen.
 
 ### {26} Sjette Engelskdands
 
-1. Første og andet Par ned.
-2. halv Balancekjæde.
-3. Svinging med Damerne,
-4. og begge Par op.
+1ste Tour. Første og andet Par ned.
+
+2den — halv Balancekjæde.
+
+3die — Svinging med Damerne,
+
+4de — og begge Par op.
 
 ### Syvende Engelskdands
 
-1. Første Par fører ned
-2. og svinger nede;
-3. derpaa op
-4. og Kjæde.
+1ste Tour. Første Par fører ned
+
+2den — og svinger nede;
+
+3die — derpaa op
+
+4de — og Kjæde.
 
 ### Ottende Engelskdands
 
-1. Første Cavalier svinger med anden Cavalier, og første Dame det samme med anden Dame.
-2. Første Cavalier og første Dame svinger.
-3. fører derpaa ned,
-4. og op igjen.
+1ste Tour. Første Cavalier svinger med anden Cavalier, og første Dame det samme med anden Dame.
+
+2den — Første Cavalier og første Dame svinger.
+
+3die — fører derpaa ned,
+
+4de — og op igjen.
 
 ### Niende Engelskdands
 
 De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 
-1. Damerne løber under Armene imellem første og anden Cavalier og gaaer til høire og de 3 Cavalierer til venstre Side; nu mødes første Cavalier og første Dame og 3die C. og 3die D., giver hinanden Hænderne.
-2. {27} 6 rundt.
-3. første Par ned,
-4. og op igjen.
+1ste Tour. Damerne løber under Armene imellem første og anden Cavalier og gaaer til høire og de 3 Cavalierer til venstre Side; nu mødes første Cavalier og første Dame og 3die C. og 3die D., giver hinanden Hænderne.
+
+2den Tour. {27} 6 rundt.
+
+3die — første Par ned,
+
+4de — og op igjen.
 
 ### Tiende Engelskdands
 
-1. Første og anden Cavalier give deres Damer høire Haand, skifter Plads med dem og gjør Flikflak;
-2. nu ned paa Damernes Side, og Damerne dandser ned paa Cavalierernes.
-3. 4 rundt og et Flikflak,
-4. Nu staaer man paa sin rette Plads, og nu dandser begge Par op.
+1ste Tour. Første og anden Cavalier give deres Damer høire Haand, skifter Plads med dem og gjør Flikflak;
+
+2den — nu ned paa Damernes Side, og Damerne dandser ned paa Cavalierernes.
+
+3die — 4 rundt og et Flikflak,
+
+4de — Nu staaer man paa sin rette Plads, og nu dandser begge Par op.
 
 ### Ellevte Engelskdands
 
-1. Første Par dandser rundt med anden Dame;
-2. det samme med anden Cavalier. 
-3. Første Par ned, 
-4. og op igjen. 
+1ste Tour. Første Par dandser rundt med anden Dame;
+
+2den — det samme med anden Cavalier.
+
+3die — Første Par ned,
+
+4de — og op igjen.
 
 ### Tolvte Engelskdands
 
-1. Første Cavalier gaaer imellem første og anden Dame, idet han giver dem Haande; nu giver Damerne hinanden Haanden bag ved ham og løfter dem over {28} hans hoved, idet han gaaer tilbage.
-2. 3 rundt.
-3. Første Par ned,
-4de - og op.
+1ste Tour. Første Cavalier gaaer imellem første og anden Dame, idet han giver dem Haande; nu giver Damerne hinanden Haanden bag ved ham og løfter dem over {28} hans hoved, idet han gaaer tilbage.
+
+2den — 3 rundt.
+
+3die — Første Par ned,
+
+4de — og op.
 
 ### Trettende Engelskdands
 
-1. Første og andet Par ned;
-2. op igjen.
-3. Cavaliererne giver den Haand til hinanden, som er nærmest, og dandser til høire og venstre Side. Damerne det samme.
-4. Svingning med sin egen Dame.
+1ste Tour. Første og andet Par ned;
+
+2den — op igjen.
+
+3die — Cavaliererne giver den Haand til hinanden, som er nærmest, og dandser til høire og venstre Side. Damerne det samme.
+
+4de — Svingning med sin egen Dame.
 
 ### Fjortende Engelskdands
 
-1. Første og anden Dame giver hinanden Hænderne og dandser imellem første og anden Cavalier over paa deres Plads; Cavaliererne dandser paa Damernes plads uden om dem.
-2. Tilbage igjen.
-3. Første Par ned,
-4. og op igjen.
+1ste Tour. Første og anden Dame giver hinanden Hænderne og dandser imellem første og anden Cavalier over paa deres Plads; Cavaliererne dandser paa Damernes plads uden om dem.
+
+2den — Tilbage igjen.
+
+3die — Første Par ned,
+
+4de — og op igjen.
 
 ### Femtende Engelskdands
 
-1. Første par ned.
-2. og op igjen.
-3. og 
-4. Første og andet par Hopsavalz.
+1ste Tour. Første par ned.
+
+2den — og op igjen.
+
+3 og 4. Første og andet par Hopsavalz.
 
 ### {29} Sextende Engelskdands
 
-1. Første Par ned og løfter Armene i Veiret
-2. Andet Par ned og gaaer under Armene.
-3. Alle 4 op,
-4. og Kjæde.
+1ste Tour. Første Par ned og løfter Armene i Veiret
+
+2den — Andet Par ned og gaaer under Armene.
+
+3die — Alle 4 op,
+
+4de — og Kjæde.
 
 ### Syttende Engelskdands
 
-1. 6 rundt.
-2. Første Par ned.
-3. og op;
-4. derpaa Kjæde.
+1ste Tour. 6 rundt.
+
+2den — Første Par ned.
+
+3die — og op;
+
+4de — derpaa Kjæde.
 
 ### Attende Engelskdands
 
-1. 3 Par ned.
-2. Første Par svinger, og andet og tredie Par giør Molinet.
-3. Alle 3 Par op,
-4. Første og andet Par Kjæde, og tredie Par Svinger.
+1ste Tour. 3 Par ned.
+
+2den — Første Par svinger, og andet og tredie Par giør Molinet.
+
+3die — Alle 3 Par op,
+
+4de — Første og andet Par Kjæde, og tredie Par Svinger.
 
 ### Engelskdands med Sex Tourer
 ### Første Engelskdands
 
-1. 3 Par fører ud til Siden af Quadrillen,
-2. svinger deres Dame med høire Haand;
-3. tilbage paa deres Plads,
-4. {30} Første og andet Par Kjæde;
-5. Første Par ned,
-6. og op igjen.
+1ste Tour. 3 Par fører ud til Siden af Quadrillen,
+
+2den — svinger deres Dame med høire Haand;
+
+3die — tilbage paa deres Plads,
+
+4de Tour. {30} Første og andet Par Kjæde;
+
+5te — Første Par ned,
+
+6te — og op igjen.
 
 ### Anden Engelskdands
 
-1. og 
-2. Første og andet Par Hopsavals
-3. Første Par ned og gjør
-4. Quaré;
-5. derpaa op,
-6. og Kjæde.
+1 og 2 Tour. Første og andet Par Hopsavals
+
+3die — Første Par ned og gjør
+
+4de — Quaré;
+
+5te — derpaa op,
+
+6te — og Kjæde.
 
 ### Tredie Engelskdands
 
-1. 6 rundt;
-2. første og andet Par ned,
-3. Svingning med Damerne,
-4. Molinet;
-5. op,
-6. og derpaa Kjæde.
+1ste Tour. 6 rundt;
+
+2den — første og andet Par ned,
+
+3die — Svingning med Damerne,
+
+4de — Molinet;
+
+5te — op,
+
+6te — og derpaa Kjæde.
 
 ### Fierde Engelskdands
 
-1. 3 Par ned.
-2. Første Par fører imellem og kaster bag om 3die, saa det nu bliver andet Par.
-3. Nu alle op,
-4. Første og andet Par Kjæde;
-5. og
-6. Første og andet Par Hopsavals.
+1ste Tour. 3 Par ned.
+
+2den — Første Par fører imellem og kaster bag om 3die, saa det nu bliver andet Par.
+
+3die — Nu alle op,
+
+4de — Første og andet Par Kjæde;
+
+5te — og
+
+6te — Første og andet Par Hopsavals.
 
 ### Femte Engelskdands
 
-1. Første Cavalier Démi Chasse omkring med anden Dame.
-2. {31} Første Dame det samme med anden Cavalier.
-3. Første Par ned og
-4. Svingning nede;
-5. derpaa op og,
-6. Kjæde.
+1ste Tour. Første Cavalier Démi Chasse omkring med anden Dame.
+
+2den Tour. {31} Første Dame det samme med anden Cavalier.
+
+3die — Første Par ned og
+
+4de — Svingning nede;
+
+5te — derpaa op og,
+
+6te — Kjæde.
 
 ### Sjette Engelskdands
 
-1. og 
-2. 3 Par Hopsavals
-3. Alle ned,
-4. 6 rundt;
-5. op igjen,
-6. Første og andet Par Molinet.
+1 og 2 Tour. 3 Par Hopsavals
+
+3die — Alle ned,
+
+4de — 6 rundt;
+
+5te — op igjen,
+
+6te — Første og andet Par Molinet.
 
 ### Hornpipe
 
-1. 6 rundt til venstre Side;
-2. tilbage til høire.
-3. Cavaliererne giver Damerne Hænderne overkors og fører omkring,
-4. Første og andet Par Hopsavals.
-5. Første par ned,
-6. op og igjen, og nu begynder man med følgende Par.
+1ste Tour. 6 rundt til venstre Side;
+
+2den — tilbage til høire.
+
+3die — Cavaliererne giver Damerne Hænderne overkors og fører omkring,
+
+4de — Første og andet Par Hopsavals.
+
+5te — Første par ned,
+
+6te — op og igjen, og nu begynder man med følgende Par.
 
 ### Molinasky
 
-1. Første Cavalier svinger sin Dame med høire Haand;
-2. {32} det samme med venstre Haand og slutter nu imellem tredie C. og D. og første D. imellem anden C. og D.;
-3. balancerer for hinanden. Første C. skiftet Plads imellem anden og tredie D. og første D. imellem første og anden C.;
-4. balancerer igjen.
-5. 6 rundt til venstre Side;
-6. tilbage til høire.
+1ste Tour. Første Cavalier svinger sin Dame med høire Haand;
+
+2den Tour. {32} det samme med venstre Haand og slutter nu imellem tredie C. og D. og første D. imellem anden C. og D.;
+
+3die — balancerer for hinanden. Første C. skiftet Plads imellem anden og tredie D. og første D. imellem første og anden C.;
+
+4de — balancerer igjen.
+
+5te — 6 rundt til venstre Side;
+
+6te — tilbage til høire.
 7. Første C. dandser op paa Damesiden og første D. paa Cavaliersiden; de vende fig ved Enden
 8. og dandser nu op paa deres egen Side.
 
@@ -356,16 +440,19 @@ I denne dans staaer man ved Siden af den, man dandser med, som f. Ex.:
 
 og saa fremdeles.
 
-1. og 
-2. De 4 øverste Par gjør La Bateuse-Trinnene for hinanden.
-3. Alle 8 rundt til venstre Side,
-4. tilbage til høire;
-5. {35} De to opførende Par fører ned efter hinanden
-6. og op igjen.
-7. Første og tredie C. og tredie D. dandser rundt om første Dame; 4 C og 4 D. det samme om anden Dame til venstre Side;
-8. tilbage til høire.
-9. og 
-10. De to opførende Par Valz, og begynde saa med det næstfølgende Par.
+1 og 2 Tour. De 4 øverste Par gjør La Bateuse-Trinnene for hinanden.
+
+3die — Alle 8 rundt til venstre Side,
+
+4de — tilbage til høire;
+
+5te — {35} De to opførende Par fører ned efter hinanden
+
+6te — og op igjen.
+
+7de — Første og tredie C. og tredie D. dandser rundt om første Dame; 4 C og 4 D. det samme om anden Dame til venstre Side;
+8de — tilbage til høire.
+9 og 10 T. De to opførende Par Valz, og begynde saa med det næstfølgende Par.
 
 ### Figaro.
 
@@ -382,12 +469,15 @@ I denne dands stiller man sig saaledes:
 
 Man maa altid passe, at der er lige mange Par paa hver Side af de opførende.
 
-1. {36} Første og tredie par dandser over paa andet og fjerde Pars Plads og omvendt
-2. Molinet paa hver Side.
-3. Tilbage paa deres Plads,
-4. og 4 rundt.
-5. og 
-6. Første og tredie Par valser omkring hinanden; andet og fjerde det samme og slutter første og andet ved niende og tiende, og tredie og fjerde ved femte og sjette Par; derpaa dandser man igjen som før og kommer hver Gang, man har valzet, et Par længer op til Enden; der vender man fig og begynder nu, naar det næste Par kommer op til dem.
+1ste Tour. {36} Første og tredie par dandser over paa andet og fjerde Pars Plads og omvendt
+
+2den — Molinet paa hver Side.
+
+3die — Tilbage paa deres Plads,
+
+4de — og 4 rundt.
+
+5 og 6 — Første og tredie Par valser omkring hinanden; andet og fjerde det samme og slutter første og andet ved niende og tiende, og tredie og fjerde ved femte og sjette Par; derpaa dandser man igjen som før og kommer hver Gang, man har valzet, et Par længer op til Enden; der vender man fig og begynder nu, naar det næste Par kommer op til dem.
 
 Man dandser den saalænge, man ønsker, og slutter derpaa efter Valzen; gjerne vælger man den Gang, naar alle Parrene har været i Bevægelse paa eengang
 
@@ -407,14 +497,21 @@ og saa fremdeles
 
 Denne Dands bestaaer af 8 Tourer, som følger:
 
-1. De 4 øverste Par klapper i Hænderne og skifter Plads, saaledes at første Dame kommer paa tredie Cavaliers Plads og omvendt; ligeledes første Cavalier og tredie Dame; saaledes ogsaa anden D. og fjerde C., og det samme anden C. og fjerde D. Trinnene gjøres i Slutningen af Démi Chasse og Flikflak.
-2. Det samme tilbage paa deres Plads.
-3. Nu dandser første og tredie Par over Gulvet paa andet og fjerde Pars Plads, og andet og fjerde Par modsat,
-4. det samme tilbage;
-5. De 4 som er i Midten, nemling: første C. og anden D. og {38} tredie D. og fjerde C. gjør Molinet med høire Haand, imedens første D. og tredie C. svinger rundt; ligeledes anden C. og fjerde D.
-6. Nu Molinet med venstre haand og Svinging til den anden Side.
-7. Første Dame og tredie Cavalier giver hinanden høire haand; ligeledes første C. og tredie D.; det samme anden D. og fjerde C. og anden C og fjerde D., og svinger rundt;
-8. derpaa det samme med venstre Haand, og nu slutter første og andet Par ved femte og sjette og begynder med disse to Par ligesom med de forrige. Naar man nu har dandset med disse Par, kommer man ned til syvende og ottende og saa fremdeles. Naar man kommer til Enden, vender man sig og sætter sin Dame ved høire Side og begynder saasnart det næste Par kommer ned til det Par, som stod stille; saaledes bliver alle {39} Parrene til Slutning i Bevegelse. Naar de Opførende har dandset ned og kommer op, hvor de begyndte, træder de ud; og saaledes endes Dandsen, naar de 4 sidste Par har dandset.
+1ste Tour. De 4 øverste Par klapper i Hænderne og skifter Plads, saaledes at første Dame kommer paa tredie Cavaliers Plads og omvendt; ligeledes første Cavalier og tredie Dame; saaledes ogsaa anden D. og fjerde C., og det samme anden C. og fjerde D. Trinnene gjøres i Slutningen af Démi Chasse og Flikflak.
+
+2den — Det samme tilbage paa deres Plads.
+
+3die — Nu dandser første og tredie Par over Gulvet paa andet og fjerde Pars Plads, og andet og fjerde Par modsat,
+
+4de — det samme tilbage;
+
+5te — De 4 som er i Midten, nemling: første C. og anden D. og {38} tredie D. og fjerde C. gjør Molinet med høire Haand, imedens første D. og tredie C. svinger rundt; ligeledes anden C. og fjerde D.
+
+6te Tour. Nu Molinet med venstre haand og Svinging til den anden Side.
+
+7de — Første Dame og tredie Cavalier giver hinanden høire haand; ligeledes første C. og tredie D.; det samme anden D. og fjerde C. og anden C og fjerde D., og svinger rundt;
+
+8de — derpaa det samme med venstre Haand, og nu slutter første og andet Par ved femte og sjette og begynder med disse to Par ligesom med de forrige. Naar man nu har dandset med disse Par, kommer man ned til syvende og ottende og saa fremdeles. Naar man kommer til Enden, vender man sig og sætter sin Dame ved høire Side og begynder saasnart det næste Par kommer ned til det Par, som stod stille; saaledes bliver alle {39} Parrene til Slutning i Bevegelse. Naar de Opførende har dandset ned og kommer op, hvor de begyndte, træder de ud; og saaledes endes Dandsen, naar de 4 sidste Par har dandset.
 
 ### La Bateuse
 
