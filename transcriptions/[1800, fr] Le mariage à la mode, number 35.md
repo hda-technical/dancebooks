@@ -1,4 +1,4 @@
-﻿# Le mariage à la mode. Contre danse nouvelle
+# Le mariage à la mode. Contre danse nouvelle
 ### Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
 
 ### Figure

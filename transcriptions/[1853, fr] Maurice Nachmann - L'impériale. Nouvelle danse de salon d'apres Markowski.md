@@ -2,7 +2,7 @@
 ### Transcribed by [Dmitry Filimonov](mailto://mityafil@gmail.com)
 
 ### Théorie
-                                                                            
+
 Mouvement lent et bien marqué.
 
 1. Le cavalier commence du pied gauche: temps levé[^1], chassé[^2], coupé[^3], jeté-devant[^4], de l'une et l'autre jambe, le tout formant 8 temps

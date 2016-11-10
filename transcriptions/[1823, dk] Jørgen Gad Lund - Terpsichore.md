@@ -544,3 +544,5 @@ Førend man begynder at føre ned, da gjør man Compliment, først for sin egen 
 {48} Ingen Dame bør nægte en Cavalier en Dands, naar hun ikke er opbudet, med mindre der kunde være Tilfælde, som gjorde det til Pligt for hende at afslaae det.
 
 Nu har jeg søgt at gjøre min Veiledning nyttig; modtag den nu alle med venlige Følelser for mig!
+
+///Footnotes///

@@ -22,15 +22,15 @@ The sketch being approved, was afterwards shown, in manuscript, to several emine
 
 [^3]: Many strangers, forming their opinion from the delusive advertisements of certain teachers whose terms are very low, but never meant to be fulfilled, have objected to the charges of the respectable part of the profession, as exorbitant, though really no more than adequate; hence it arises, that fair-dealing teachers cannot, in many instances, obtain adequate remuneration. Loud complaints on the subject have been made to the author, whose own experience confirms the facts here stated.
 
-> So the author endeavoured to take up the cause 
+> So the author endeavoured to take up the cause
 >
-> By exposing mean tricks and explaining the laws; 
+> By exposing mean tricks and explaining the laws;
 >
-> To caution the public against some impostors, 
+> To caution the public against some impostors,
 >
-> Those self-named "professors" yclept dancing masters. 
-> 
-> How the task is performed, must be judged of by those 
+> Those self-named "professors" yclept dancing masters.
+>
+> How the task is performed, must be judged of by those
 >
 > Who well know the art, and such quackery oppose:
 
@@ -125,7 +125,7 @@ He has entirely abstained from allusions to family circumstances, and personal m
 The Author's motives for this publication will probably be attributed to various causes; some persons will accuse him of self-interest, but he is quite convinced, if they had published as much, and as variously us he has, they would acquit him of that charge[^4]. Books published by a humble individual (not a bookseller) seldom pay even for paper and printing, much less any remuneration for authorship; he forms this opinion from his own experience, believing it to be well known that
 
 [^4]: He, evidently, could not have been very sanguine in his expectation of gain from this work, which was laid aside for a year after the first representation, and afterwards resumed only at intervals spared from professional avocations, which be never suffered to be interrupted for such purposes, as
-	> He remembers an adage, which struck him with awe, 
+	> He remembers an adage, which struck him with awe,
 	>
 	> That "who lives with the muses, must die in the straw"
 
@@ -1322,7 +1322,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And some, I am told, were lately undertakers[^19];
 
-[^19]: 
+[^19]:
 	There are now persons calling themselves "professors," who were but a little time ago following the above named trades and occupations, and some even now continue the same occasionally.
 
 	It is not meant to be insinuated, that every person has not an undoubted right to practice and get a living by any particular profession (provided it be done without taking any unfair means to supplant others). How far the conduct of the parties above alluded to has been fair and correct must be left to the judgment of those who are certainly most competent to decide, videlicet the scientific part of the profession. On the subject of the author's own case, he begs leave here to observe, that he was bred to a mechanical business, which, before the expiration of his at apprenticeship, he was compelled (with others) to relinquish, (that trade being entirely ruined through certain financial speculations of mister Pitt). Having some taste for dancing, as an amusement, he determined to endeavour to qualify himself so as to follow it, as a profession, and which was only effected after long and unremitting exertions, such as few individuals would encounter. With the particulars he may perhaps at some future period trouble the public, not fearing that, like some of his contemporaries, he can with anecdotes, digressions, quotations, &c. &c. fill two quarto volumes.
@@ -3027,19 +3027,19 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Saying, "Supper, Gratis", might his ball-room fill.
 
-[^57]: 
+[^57]:
 	A ball-bill has recently been put forth by the professor alluded to, (who has been before noticed), printed in a particular manner. The words "Supper, Gratis," very large. The following extract will show how ingeniously it is contrived for the purposes of deception.
-	
+
 	### City of London tavern.
-	
+
 	### Mister ---'s ball,
-	
+
 	### February, 1824.
-	
+
 	### The splendor will surpass any thing of the kind ever witnessed.
 
 	### The band will consist of violins, flutes, clarionets, serpents, violincellos, double bass's, &c. but neither six harps, nor two bands.
-	
+
 	### Supper will be provided. Order of the dancing will be given gratis.
 
 > So he puts out a pompous bill of fare,
@@ -3966,7 +3966,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 
 [^86]:
 	The phrase "opera mice," does not allude to the first dancers, or to the liberal and honourable sons and daughters of Terpsichore, attached to that great theatre, (the wonder and delight of its visitors) but to some dancers belonging thereto, whose actions neither keep pace with their own words, nor with the size and creditor the establishment.
-	
+
 	> Yet, notwithstanding, would not hesitate,
 	>
 	> And even their manager calumniate
@@ -4602,9 +4602,9 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And are you still with Mister H. in Co?
 
-[^98]: 
+[^98]:
 	J---'s W---ll, a public house, (yclept tavern) in Barbican, where a ball (some say a hop), has been for several years held every Saturday evening, under Professor W---r's direction. The assembly is indiscriminate; any gentleman may be a welcome guest on payment of one shilling; and the ladies, who usually attend, are for their well known good nature, admitted for sixpence. This assembly is said to be held and constituted not quite conformable to the provisions of the late Vagrant Act, nor to that of the 25th of George II, nor are its votaries awed by, the approach of the Sabbath, and obliged to quit at twelve o clock, as at the opera house and other public places.
-	
+
 	> For neither the professor nor mine host,
 	>
 	> Can of exemplary rigid virtues boast;
@@ -4640,9 +4640,9 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 	> No dread of watchman, should he ev'n come in,
 	>
 	> For he is silenced with a glass of gin;
-	
+
 	None of these apprehensions has either the professor or mine host. Why such an assembly, on a Saturday night, should have been for years permitted in the heart of the city, so near the seat of civic government, and should also have escaped the vigilance of the society for the suppression of vice, whilst a few respectable persons, assembled for amusement at a private house, were lately seized and taken before a magistrate: must be left to casuists to determine.
-	
+
 	That the professor Chassée was often at the Barbican balls, there is no doubt; whether for the purpose of displaying his, talents picking up pupils or selecting company for his own room, or for what other laudable purpose he best knows.
 
 > Chassée. Sacre Dieu! I have cut the Tonsor long ago;
@@ -5175,9 +5175,9 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > As there are other candidates for fame[^109].
 
-[^109]: 
+[^109]:
 	The author is well acquainted with the merits of many other dancers and teachers of equal excellence, and may perhaps take a future opportunity to do them justice. At present, he forbears naming individuals, more than necessary. In certain instances, it appeared right to contrast dancers of excellence in any particular department with pretenders to equal merit. Some names have therefore been selected, not intended to exclude merit in others.
-	
+
 	> He is uninfluenced, aids no partial voice,
 	>
 	> Nor has through interest ever made a choice,
@@ -5193,7 +5193,7 @@ Chassée. Don't flatter, me, for flattery I disdain.
 	> And bows to talent, find it where he will,
 	>
 	> And envies none who have superior skill.
-	
+
 	From a wish of avoiding, as far as possible, any invidious distinctions, the Author has been induced to abandon his original intention, of dedicating this work to an eminent teacher and dancer now retired, an excellent judge of the subject.
 
 > Whose talents merit more than I can say,
@@ -5312,13 +5312,13 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > So alter names and the invention claim[^119].
 
-[^119]: No sooner had the Author announced his waltz and quadrille 
-country dances, new reels, ecossoises, and circular dances, than 
-persons were found not ashamed to claim them as their own inventions, 
-and as soon as the "Ecossoise Instructor" was published, though the 
-system was previously unknown, yet another "Ecossoise Instructor" 
-immediately appeared at half the original price. Such conduct has since 
-obliged the Author to put his name to all his own compositions, however 
+[^119]: No sooner had the Author announced his waltz and quadrille
+country dances, new reels, ecossoises, and circular dances, than
+persons were found not ashamed to claim them as their own inventions,
+and as soon as the "Ecossoise Instructor" was published, though the
+system was previously unknown, yet another "Ecossoise Instructor"
+immediately appeared at half the original price. Such conduct has since
+obliged the Author to put his name to all his own compositions, however
 trifling.
 
 > They'll mangle and new christen some old dance,
@@ -5707,7 +5707,7 @@ trifling.
 >
 > And walk as if they just had left the stocks[^128]:
 
-[^128]: "Left the stocks" — Not the public stocks, but those of dancing 
+[^128]: "Left the stocks" — Not the public stocks, but those of dancing
 masters.
 
 > Of affectation they've a decent stock,
@@ -7780,9 +7780,9 @@ Jem. This is a proof of ignorance you'll find,
 
 [^174]:
 	It has lately been the practice with some professors of dancing when they have a ball, to call up their company to the dances, (i. e. to their places in the dance) with a charge on the trumpet, instead of the ever-commanding voice of the master of the ceremonies; thus making the ball room resemble a field of Mars, rather than the Temple of Terpsichore. It is done to give the idea of the company being too numerous to be summoned by the master's voice.
-	
+
 	> What next will form a feature in their bill,
-	> 
+	>
 	> None can devise--- 'tis past all human skill.
 
 > Who hear the trumpet, then take to their legs,
@@ -7961,20 +7961,20 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Some wholly live; whatever they pretend.
 
-[^177]: The profits arising from cloaks and hats has long been 
-considered by the holders of these balls as an annuity, which is raised 
-by levying a tax on all comers, ladies as well as gentlemen — the usual 
-demand on each Lady is sixpence, and never less, but sometimes more, on 
-each gentleman. Some of the proprietors of these balls, or "professors" 
-as they stile themselves, (though many of them notwithstanding they 
-assume that title, have no more knowledge of dancing than some M. P.'s 
-have of legislation), boast of gaining nightly two or three pounds by 
-this practice, which, together with the profits they gain by liquors 
-and refreshments support their establishments. Therefore, they do not 
-depend on their abilities as teachers, to procure pupils; the quality 
-either of the dancer or of the guest, is to them of no importance, 
-numbers being all they want, to attain which, tickets are distributed 
-amongst the company, but chiefly to the ladies, who they trust can 
+[^177]: The profits arising from cloaks and hats has long been
+considered by the holders of these balls as an annuity, which is raised
+by levying a tax on all comers, ladies as well as gentlemen — the usual
+demand on each Lady is sixpence, and never less, but sometimes more, on
+each gentleman. Some of the proprietors of these balls, or "professors"
+as they stile themselves, (though many of them notwithstanding they
+assume that title, have no more knowledge of dancing than some M. P.'s
+have of legislation), boast of gaining nightly two or three pounds by
+this practice, which, together with the profits they gain by liquors
+and refreshments support their establishments. Therefore, they do not
+depend on their abilities as teachers, to procure pupils; the quality
+either of the dancer or of the guest, is to them of no importance,
+numbers being all they want, to attain which, tickets are distributed
+amongst the company, but chiefly to the ladies, who they trust can
 influence the gentlemen; and thus large companies are obtained.
 
 > From these and other stratagems are gained,
@@ -8517,13 +8517,13 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Some late transactions prove this is the fact[^188].
 
-[^188]: 
+[^188]:
 	A circumstance of this kind (which must be in the recollection of some of the readers) occurred in the year 1822. at the Assembly Rooms, in Kirby Street, Hatton Garden, then kept by a mister Smith, but now in the occupation of the Author of this work.
-	
+
 	Mister Smith was in the habit of letting his rooms indiscriminately for Masquerades and Public Dancing, though repeatedly cautioned on the illegality and danger of such proceedings; yet, the practice was continued till the Magistrates unexpectedly caused the parties to be apprehended on a warrant, under the Act 25th Geo. 2nd. The Proprietor could not be found; the company (after being detained in custody all night, and part of the next day, when they were publicly exposed, and reprimanded,) were at last permitted to depart, and with difficulty escaped the Tread Mill.
-	
+
 	A more recent instance has also occurred:
-	
+
 	A company of fifty persons who had assembled at mister Jackson's rooms, Ship Yard, Temple Bar, were taken before Sir Richard Birnie at the Public Office, Bow Street, on Tuesday 28th December, 1824; they were accompanied by mister Jackson, who was charged with holding Dancing Assemblies illegally, in unlicensed rooms. Mister J. observed, that no money had been taken at the doors, and handed in a ticket, the price of which appeared to be 3s. 6d. to admit a Lady and Gentleman. The Magistrate considered this an attempt at evading a license, but upon mister Lowe, a musician, stating that he had sold the tickets for his annual benefit, and that mister J. had lent him the rooms, and the officers stating that there was no person of known bad character among the company, the Magistrate was satisfied, and dismissed the charge, merely recommending the dancers to be cautious of assembling in unlicensed rooms.
 
 	For a more particular account of this transaction, see "The News" of 2nd January, 1825.
@@ -8666,19 +8666,19 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To show if you transgress what you've to fear.
 
-[^194]: 
+[^194]:
 	The following is an abstract of the Act as far as regards the laws against illegal dancing.
-	
+
 	By Act of Parliament of the 25th George the Second, entitled "An Act for the better preventing thefts and robberies, and for regulating places of public amusement, and punishing persons keeping disorderly houses." After reciting (amongst other things) "That the multitude of places of entertainment for the lower sort of people was a great cause of Thefts and Robberies, as they were thereby tempted to spend their small substance in riotous pleasures, and in consequence were put on unlawful methods of supplying their wants and renewing their pleasures, in order to correct as far as might be the habit of idleness which was become too general over the whole kingdom, and was productive of much mischief and inconvenience; It is enacted that after the first day of December, 1752, any House, Room, Garden, or other place kept for public Dancing, Music, or other public entertainments of the like kind, in the Cities of London and Westminster, or within twenty miles thereof, without a license had for that purpose, from the last preceding Michaelmas Quarter Sessions of the Peace, to be holden for the County, City, Riding, Liberty or Division, in which such House, Room, Garden, or other place is situate, (who are thereby authorized and impowered to grant such licenses as they in their discretion shall think proper) signified under the hands and seals of four or more of the Justices there assembled, shall be deemed a disorderly House or Place; And every such license shall be signed and sealed by the said Justices in open Court, and afterwards be publicly read by the Clerk of the Peace, together with the names of the Justices subscribing the same; and no such license shall be granted at any Adjourned Sessions, nor shall any fee or reward be taken for any such license; And it shall and may be lawful to and for any other person being thereunto authorized by warrant, under the hand and seal of one and more of his Majesty's Justices of the Peace of the County, City, Riding, Division, or Liberty, where such House or place shall be situate, to enter such House or place, and to seize every person who shall be found therein, in order that they may be dealt with according to law; And every person keeping such House, Room, Garden, or other place, without such license as aforesaid, shall forfeit the sum of £100 to such person as will sue for the same, and be otherwise punishable as the law directs, in cases of disorderly Houses. And it is thereby further enacted, that in order to give public notice what places are licensed pursuant to this Act, there shall be affixed and kept up in some notorious place over the door or entrance of every such House, Room, Garden, or other place kept for any of the said purposes, and so licensed as aforesaid, an inscription in large capital letters, in the words following, (videlicet) licensed pursuant to Act of Parliament of the twenty fifth of king George the Second, and that no such House, Room, Garden, or other place, kept for any of the said purposes, although licensed as aforesaid, shall be opened for any of the said purposes before the hour of five in the Afternoon, and that the affixing and keeping up of such inscription as aforesaid, and that the said limitation or restriction in point of time shall be inserted in, and made conditions of every such license. And in case of any breach of either of the said conditions, such license shall be forfeited, and shall be revoked by the Justices of the Peace, in the General or Quarter Sessions, and shall not be renewed, nor shall any new license be granted to the same person or persons, or any others on their behalf, directly or indirectly, for keeping any such House, Room, Garden, or other place for any of the purposes aforesaid.
-	
+
 	Proviso, that nothing in this Act shall extend to the Theatres Royal, in Drury Lane and Covent Garden, or the King's Theatre, in the Haymarket, or to any public entertainments carried on under Letters Patent, or license of the Crown, or the Lord Chamberlain.
-	
+
 	And it is further enacted, that any person entitled to any of the forfeitures by this Act imposed, may sue for the same by action of debt, in any of the Courts of Record at Westminster in which it shall be sufficient to declare, the Defendant is indebted to the Plaintiff in the sum of £, being forfeited by this Act, and the Plaintiff, if he recover, shall have full costs.
-	
+
 	Proviso that no action shall be brought by virtue of this Act, unless commenced within six months after the offence committed.
-	
+
 	And it is enacted, that this Act should be in force three years and no longer.
-	
+
 	Three years afterwards, the above Act was made perpetual.
 
 > I'll briefly state the act of Parliament —
@@ -11636,9 +11636,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > But danced the figures of the first to all[^240].
 
-[^240]: 
+[^240]:
 	It frequently occurs when dancers call different sets of quadrilles, and the musicians play the original music to each set; the dancers for want of ability, perform the figures of the first set to all, and are seldom ashamed to boast of the several sets they have danced, and even to enumerate their names.
-	
+
 	### The Original, or, Old First Set of French Quadrilles
 
 	1.	Le pantalon.
@@ -11897,7 +11897,7 @@ influence the gentlemen; and thus large companies are obtained.
 
 [^245]:
 	To enable the reader to form his own judgement on the subject, he is here presented with the whole of the figures of
- 
+
 	### The Lancers
 
 	1.	The first gentleman and opposite lady advance and set,
@@ -12111,9 +12111,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Others from form[^248] alone their titles take;
 
-[^247]: 
+[^247]:
 	The author was also the original inventor of that species denominated "Waltz quadrilles", from their combining the waltz with the quadrille figures, as he was likewise of the country dance quadrilles, so called from blending in a particular manner both these forms of dancing.
-	
+
 	The reader is here presented with the figures of the
 
 	### Waltz Quadrilles, "Les allemandes"
@@ -12244,14 +12244,14 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > The three first figures from the first are taken[^249].
 
-[^249]: 
+[^249]:
 
 	### The second set of quadrilles
 
 	The first, second and third dances as in first set.
 
 	* 4th
-	
+
 		Ladies chain,
 
 		Double,
@@ -12273,7 +12273,7 @@ influence the gentlemen; and thus large companies are obtained.
 		Half right and left.
 
 	* 5th
-	
+
 		All round,
 
 		Advance four,
@@ -12295,7 +12295,7 @@ influence the gentlemen; and thus large companies are obtained.
 		The four promenade to places.
 
 	* 6th
-	
+
 		Right and left,
 
 		Gentleman advance twice,
@@ -12482,7 +12482,7 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Dos a dos, les lignes, grand rond, traversez,
 
-[^254]: 
+[^254]:
 	This and the other following figures are described by diagrams in "The quadrille panorama". In describing these terms where the English translation is not litera, the technical meaning is given.
 
 	* _Promenade_. The gentleman and lady cross hands, the gentleman with his right hand takes the lady's right, and with his left, takes her left hand and leads her round in a circle; there are several promenades, (videlicet) grand promenade, whole promenade, and half promenade
@@ -12624,7 +12624,7 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > But live they as the average number fix;
 
-[^259]: 
+[^259]:
 	### Long and Short Sets
 
 	When these terms are used in quadrille dancing, they allude to the number of dances in the set; a long set generally consists of six, and a short set is usually of five. The first is considered a short set, and when la pastourelle is add, it is then termed a long set. A short set consists not only of a smaller number of quadrilles, but various figures are omitted in certain quadrilles, as the ladies chain in Trenise, and the finale, is likewise abridged.
@@ -12647,7 +12647,7 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > As in Finale, and in "La trenise"[^261].
 
-[^261]: 
+[^261]:
 	### Trenise Simple
 
 	Is when the Trenise figure is performed without the chaîne des dames.
@@ -12677,7 +12677,7 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To alter, transpose, change, and mutilate[^262].
 
-[^262]: 
+[^262]:
 	That this practice has become too prevalent, the Author, as well as many others, considers he has some reason to complain he some time ago composed a dance to the tune of Vestris's gavotte, to be danced as a quadrille, though not strictly so; this dance, which became a favorite, is not that which, under a similar title, is included in a "Quadrille Preceptor", though he has reason to believe the latter dance was intended to be given as the original; whether that were so or not, wishing only to have the fruit of his own labours, and to derive no credit from the merits of others, he here presents a correct copy of the one composed by himself.
 
 	### The Gavotte Quadrille
@@ -12740,7 +12740,7 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > The first eight bars the dancers always wait[^263];
 
-[^263]: 
+[^263]:
 	### Waiting Eight Bars
 
 	The set being formed, the dancers should wait the first eight bars, and begin the dance with the second strains, if the first is not repeated, this interval of time should be filled up with the performances of the honours. To every quadrille in the set they should wait the first eight bars.

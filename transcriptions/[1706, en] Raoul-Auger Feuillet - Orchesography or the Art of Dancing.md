@@ -61,7 +61,7 @@ Steps, are the motions of the feet from one place to another.
 Sinkings, are the bendings of the knees.
 
 Risings, are when we rise from a sink, or erect our selves.
-	
+
 Springing, is a rising or leaping from the ground.
 
 Capers, are when in rising or leaping from the ground, one leg beats against the other, which we call cutting.
@@ -124,7 +124,7 @@ It is to be observed, that the letter A, in the foregoing figure, represents the
 
 ### Of True Positions
 
-There are five true positions. The first is when the two feet are joined together, the heels being one against the other. 
+There are five true positions. The first is when the two feet are joined together, the heels being one against the other.
 
 The second is when the feet are open, or separate, on a line, one distant from the other the length of the foot.
 
@@ -440,7 +440,7 @@ To practise more easily what has already been taught and demonstrated, you may m
 4. Of bourrées, or fleurets.
 5. Of bounds, or tacs.
 6. Of contretemps, or composed hops.
-7. Of chassées, or drives. 	
+7. Of chassées, or drives.
 8. Of sissonnes, or cross-leaps.
 9. Of pirouettes.
 10. Of capers, and half-capers.

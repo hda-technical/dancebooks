@@ -8,7 +8,7 @@
 ### Théorie de la varsoviana
 
 * Première figure. Partir du pied gauche, glisser de l'autre, assembler, frapper du pied gauche, glisser le pied droit en avant et faire une pose
-	
+
 	Répèter la figure en partant du pied droit, etc. 8 fois, 4 de chaque pied.
 
 * Deuxième figure. 12 fois le polka-mazurka en faisant une pose du pied (devant)

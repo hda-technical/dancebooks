@@ -1,4 +1,4 @@
-﻿# Le tango. Nouvelle danse de salon
+# Le tango. Nouvelle danse de salon
 ## Markowski, B. T. Missler
 ### Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
 

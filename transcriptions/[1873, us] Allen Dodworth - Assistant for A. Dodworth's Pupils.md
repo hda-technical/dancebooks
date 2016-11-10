@@ -1,4 +1,4 @@
-﻿# Assistant for A. Dodworth's pupils
+# Assistant for A. Dodworth's pupils
 ## Allen Dodworth
 ## Transcribed by [Library of Congress](http://memory.loc.gov/ammem/index.html)
 
@@ -166,8 +166,8 @@ All chassez across. Pass and repass partners — 8
 ### Cheat, or coquette
 
 * First couple balance to right.
-	* Forward and back; 
-	* forward again and turn, giving both hands to-opposite persons. 
+	* Forward and back;
+	* forward again and turn, giving both hands to-opposite persons.
 	* Balance to next couple, then to the fourth couple, and finally, balance and turn partners.
 * Third couple balance to right. And the same as above.
 * Second couple balance to right. And the same as above.
@@ -229,11 +229,11 @@ In forming two lines first and second times, the two side couples separate from 
 ### {19} Fifth figure
 
 * Grand chain (or right and left all round) — 16
-* 
+*
 	First couple turn round and face outward,
-	
+
 	Couple on right take place behind first,
-	
+
 	Couple on left behind third couple — 8
 
 * Second couple behind all — 8
@@ -565,10 +565,10 @@ What is the unfortunate leader to do under such circumstances? The scene is a re
 
 Programmes of dancing should always show what dance the music is intended for; the leader would then know what time to take. It would also be understood that he was playing a time suitable for the dance mentioned, and if some chose to use steps not suitable to that time, they would have no cause to complain, but must {42} accept the inconvenience as their own seeking, and not interfere with those who desire to dance in accordance with the time. To a waltz we have five different dances, videlicet:
 
-1. Boston; 
-2. Two-step Boston; 
-3. Redowa; 
-4. Deux Temps; 
+1. Boston;
+2. Two-step Boston;
+3. Redowa;
+4. Deux Temps;
 5. Hop waltz.
 
 Commencing with No. 1, the slowest, the time of each is a little quicker than the preceding one, until, with No. 5, we may dance almost at any speed. We have also the trois temps, polka mazourka, and polka redowa — each a little quicker than the other. The polka should be about the time of a military quick step. It is now becoming very general to use the redowa step to the galop music — in that case the time may be a little slower than when the galop step is used.

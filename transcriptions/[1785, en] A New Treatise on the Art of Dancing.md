@@ -1,8 +1,8 @@
-﻿# A New Treatise on the Art of Dancing Never Before Attempted in the English Language with Remarks on the Different Manner of Teaching This Art, Interspersed with Some Observations on Dancing Masters in General
+# A New Treatise on the Art of Dancing Never Before Attempted in the English Language with Remarks on the Different Manner of Teaching This Art, Interspersed with Some Observations on Dancing Masters in General
 
 ### Part I
 ### To the Editor of the Lady's Magazine.
-Sir, being very well assured, that your fair readers can have no objection to a dissertation on dancing, in which they will meet with some useful instructions never before published. I should esteem it a favour, if you would permit it to make its first appearance through the channel of your entertaining Magazine. I am, sir, your most obedient, humble servant, 
+Sir, being very well assured, that your fair readers can have no objection to a dissertation on dancing, in which they will meet with some useful instructions never before published. I should esteem it a favour, if you would permit it to make its first appearance through the channel of your entertaining Magazine. I am, sir, your most obedient, humble servant,
 
 _An Old Master of Ceremonies._
 
@@ -23,7 +23,7 @@ Having in a few words endeavoured to shew that all kind of affectation is opposi
 
 In the first place, the master begins his scholars with the five positions[^1] and generally speaking, were he to leave off at this period it would be well for him. The next thing which is taught him is what is called the _forward_ minuet step, in doing which he is made to _rise_ and _sink_ in such an _unnatural_ form, that one would imagine he was working a machine. When he has sufficiently acquired this stiff, aukward, and ridiculous movement, the master fixes him in the _third position_, in order to make his _bow_ before he begins the minuet; in this position he is taught to take off his hat, by a slow but _unnatural_ elevation of the hand to the head, and then to lower it till it hangs, as if there were neither bones or joints in his arm. As soon as this is performed, his right leg moves from his left, and he bows with both his arms hanging down, resembling those of a man hanging in chains: if this is _graceful_, let nature judge!
 
-[^1]: 
+[^1]:
 	* The first position is formed by the two heels close
 	* The second, one foot separate from the other about half a foot
 	* Third, the heel of one foot to the buckle of the other

@@ -169,7 +169,7 @@ Una passatina per lo inanti, un sotto piede fermo, un saltino à pie pari in ter
 Tre mezze capriole cioè una per piede, girando la vita, un saltino coi piedi in disparte due capriole incruciate, che fan tempo.
 
 ### Passegio 17
-	
+
 Il passeggio è mutanza di una ripresetta in sotto piede battendo in terra, i, piedi disuguali, e con gratia, il groppetto di tre botte girando la vita di riverscio, un fioretto, che resta in aria, che fà tempo.
 
 ### Partita 21
@@ -217,7 +217,7 @@ La volta della gamba alta di riverso, metti il piede in terra, un sotto piede fe
 
 ### Passegio 23
 
-Il passeggio è mutanza di tre ripresette in sotto piede, battendo li piedi disuguali, due sotto piedi ricacciati, girando la vita di riverso, & cadenza. 
+Il passeggio è mutanza di tre ripresette in sotto piede, battendo li piedi disuguali, due sotto piedi ricacciati, girando la vita di riverso, & cadenza.
 
 ### Partita 27
 
@@ -240,12 +240,12 @@ et resta col piede alto.
 
 Una ripresetta in sotto piede, battendo i piedi disuguali, un sotto piede ricacci[a]to, un passo avanti, che fa tempo, un altro passo per lo innanti adagio, & con gratia, & alzare l'altro piede un fioretto con l'altro piede, & con quello fà un passo addietro, che fà tempo, un altro passo addietro con un sotto piede ricacciato; la cadenza, un passo addietro col piede, ch'è innanti, & con quello fà un balzetto sopra il piede, che resta innanti, un sotto piede fermo, un fioretto, girando la vita, che fà tempo.
 
-### Partita 31 
+### Partita 31
 
 Doi balzetti à pie pari per fianco, un sotto piede fermo, & alzare avanti l'altro piede, & con quello fà un passo addietro, che fà tempo, un passo avanti per fianco col piede, ch'è addietro; un altro passo con l'altro piede pure per quel fianco, girando la gamba, e non la vita, un passo avanti col piede, ch'è addietro per l'altro fianco, un passo con l'altro piede; pure per quel fianco, girando la gamba, ma non la vita, tutti presto, & con gratia, che fà tempo, il pirolotto, tre passi in aria, che fà tempo, sempre girando la vita, una ripresetta in sotto piede ricacciato; due balzetti à pie pari per lo innanti, un sotto piede fermo, un sotto piede ricacciato, e girando la vita tutto in contra tempo, un passo in aria, &la cadenza.
 
 ### Partita 32
 
-Un balzetto à pie pari per l'inanti, il groppetto di tre botte girando la vita. Doi fioretti finti il primo fioretto fà tempo, due ripresette con un pie solo, e ferme, che fanno tempo, due sotto piedi ricacciati con un pie solo, girando la vita presto di roverscio, la cadenza. 
+Un balzetto à pie pari per l'inanti, il groppetto di tre botte girando la vita. Doi fioretti finti il primo fioretto fà tempo, due ripresette con un pie solo, e ferme, che fanno tempo, due sotto piedi ricacciati con un pie solo, girando la vita presto di roverscio, la cadenza.
 
 ### Il fine
