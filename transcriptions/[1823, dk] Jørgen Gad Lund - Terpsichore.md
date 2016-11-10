@@ -1,6 +1,6 @@
 # Terpsichore eller: En Veiledning for mine Dandselærlinger til at beholde de Trin og Toure i Hukommelsen som de under mig hav gjennemgaaet
 ## Jørgen Gad Lund
-### Transcribert af [Eugenia Solenikova](http://rondino.spb.ru) og [Anna Fedorova](http://www.philol.msu.ru/~germanic/professoren/prof_vasilyeva.html)
+### Transskribert af [Eugenia Solenikova](http://rondino.spb.ru) og [Anna Fedorova](http://www.philol.msu.ru/~germanic/professoren/prof_vasilyeva.html)
 
 ### {3} Fortale
 
