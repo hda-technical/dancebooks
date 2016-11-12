@@ -6,7 +6,7 @@
 {
 	font-family: 'PT Sans';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: normal;
 	src: local("PT Sans"), url("/fonts/PT_Sans.woff") format("woff");
 }
 
@@ -14,7 +14,7 @@
 {
 	font-family: 'PT Sans';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: bold;
 	src: local("PT Sans Bold"), url("/fonts/PT_Sans_Bold.woff") format("woff");
 }
 
@@ -22,7 +22,7 @@
 {
 	font-family: 'PT Sans';
 	font-style: italic;
-	font-weight: 400;
+	font-weight: normal;
 	src: local("PT Sans Italic"), url("/fonts/PT_Sans_Italic.woff") format("woff");
 }
 
@@ -30,7 +30,7 @@
 {
 	font-family: 'PT Sans';
 	font-style: italic;
-	font-weight: 700;
+	font-weight: bold;
 	src: local("PT Sans Bold Italic"), url("/fonts/PT_Sans_Bold_Italic.woff") format("woff");
 }
 
@@ -40,7 +40,7 @@
 {
 	font-family: 'PT Sans Caption';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: normal;
 	src: local("PT Sans Caption"), url("/fonts/PT_Sans_Caption.woff") format("woff");
 }
 
@@ -48,7 +48,7 @@
 {
 	font-family: 'PT Sans Caption';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: bold;
 	src: local("PT Sans Caption Bold"), url("/fonts/PT_Sans_Caption_Bold.woff") format("woff");
 }
 
@@ -58,7 +58,7 @@
 {
 	font-family: 'PT Serif';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: normal;
 	src: local("PT Serif"), url("/fonts/PT_Serif.woff") format("woff");
 }
 
@@ -66,7 +66,7 @@
 {
 	font-family: 'PT Serif';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: bold;
 	src: local("PT Serif Bold"), url("/fonts/PT_Serif_Bold.woff") format("woff");
 }
 
@@ -74,7 +74,7 @@
 {
 	font-family: 'PT Serif';
 	font-style: italic;
-	font-weight: 700;
+	font-weight: bold;
 	src: local("PT Serif Bold Italic"), url("/fonts/PT_Serif_Bold_Italic.woff") format("woff");
 }
 
@@ -82,7 +82,7 @@
 {
 	font-family: 'PT Serif';
 	font-style: italic;
-	font-weight: 400;
+	font-weight: normal;
 	src: local("PT Serif Italic"), url("/fonts/PT_Serif_Italic.woff") format("woff");
 }
 
@@ -92,7 +92,7 @@
 {
 	font-family: 'PT Serif Caption';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: normal;
 	src: local("PT Serif Caption"), url("/fonts/PT_Serif_Caption.woff") format("woff");
 }
 
@@ -100,7 +100,7 @@
 {
 	font-family: 'PT Serif Caption';
 	font-style: italic;
-	font-weight: 400;
+	font-weight: normal;
 	src: local("PT Serif Caption Italic"), url("/fonts/PT_Serif_Caption_Italic.woff") format("woff");
 }
 
@@ -262,13 +262,13 @@ li
 .sup
 {
 	font-size: 75%;
-	font-weight: 400;
+	font-weight: normal;
 	vertical-align: top;
 }
 
 .bold
 {
-	font-weight: 700;
+	font-weight: bold;
 }
 
 .content
@@ -319,7 +319,7 @@ div.bib_item_right
 	width: 70%;
 	text-align: left;
 	vertical-align: top;
-	font-weight: 400;
+	font-weight: normal;
 }
 
 #search table tr th
@@ -328,7 +328,7 @@ div.bib_item_right
 	width: 30%;
 	text-align: left;
 	vertical-align: top;
-	font-weight: 400;
+	font-weight: normal;
 }
 
 #searchToggleBasic,
@@ -512,6 +512,7 @@ div.transcription th
 	border: solid 1px black;
 	text-align: center;
 	border-collapse: collapse;
+	font-weight: normal;
 }
 
 div.transcription table
@@ -543,7 +544,7 @@ div.transcription > div.footnote h3
 div.transcription span.page_number {
 	font-family: "PT Serif";
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: bold;
 	font-style: normal;
 
 	text-decoration: none;

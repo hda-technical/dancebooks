@@ -84,7 +84,7 @@ Jørgen Gad Lund.
 
 **Tretrinnene**. Er blot 4 Glisader til Siden.
 
-**Chasse** til Siden og derpaa omkring. Her gjøres først et **Chasse** til høire Side, og siden gjør man Slutningen af Démi Chasse saaledes, at naar man begynder med høire Fod, saa vender man sig til høire Side idet man gjør Asemble frem med venstre Fod, og derpaa et Changement de jambe, at høire Fod bliver foran, og nu det Samme til venstre Side.
+**Chasse til Siden og derpaa omkring**. Her gjøres først et **Chasse** til høire Side, og siden gjør man Slutningen af **Démi Chasse** saaledes, at naar man begynder med høire Fod, saa vender man sig til høire Side idet man gjør Asemble frem med venstre Fod, og derpaa et **Changement de jambe**, at høire Fod bliver foran, og nu det Samme til venstre Side.
 
 {15} **Pas Espagnol omkring**. De gjøres som Pas Espagnol, med den Forskjel, at her hopper man rundt, da man i de første hoppede til Siden.
 
@@ -120,7 +120,7 @@ Jørgen Gad Lund.
 
 ### Menuet
 
-Man staaer ved Siden af hinanden i 5te Position, Damerne ved høire Side. Man bøjer Knæerne, stryger derpaa den høire Fod {20} til Siden, trækker den venstre til den og gjør Compliment. Nu sætter Cavalieren den venstre Fod tilbage i 4de Position og Damerne den høire; derpaa vender de sig imod hinanden, idet de stryge den Fod frem i 3die Position, som var i 4de, gjør nu et Trin fremad Gulvet, Damen med høire Fod og Cavalieren med venstre, trækker derpaa den anden Fod til dem og gjør Compliment. Nu giver Cavalieren sin høire Haand til Damen, om lægger sin venstre i hans, derpaa gjør de et Skridt tilbage, Cavalieren med høire og Damen med venstre Fod, og saa 3 Trin hurtigere, af disse 3 heller ikke udfylder mere end een Tact, og i det sidste vende de sig og staae som de begyndte. Nu gjør man et langsomt Trin ligefrem ad Gulvet med høire Fod, derpa 3 hurtigere, som man begynder med venstre; nu fører Cavalieren sin Dame omkring sig, idet hun først gjør et langsomt Trin ligefrem ad Gulvet med høire Fod, derpaa 3 hurtigere, som man begynder med venstre; nu fører Cavalieren sin Dame omkring sig, idet hun først gjør et langsomt Trin, saa tre hurtigere, atter et langsomt Trin, saa tre hurtigere, atter et langsomt, og nu slipper hun ham, idet hun træder tilbage og staaer paa den Side, hvor de begyndte Menuetten; medens Damen gaaer omkring, gjør Cavalieren et langsomt Trin til høire Side, derpaa 3 hurtigere omkring, idet man vender Ansigtet til Damen, atter et langsomt, og nu træder hantilbage, {21} idet han slipper Damen og staaer paa den modsatte Side af hvor de begyndte; Ansigtet er imod hinanden. Nu gjøres Menuet-Trinnene, som ere saaledes som følger: Først bøjer man Knæerne og stryger den høire Fod til Siden og strækker den venstre Fodspids imod Gulvet, og dette udfylder een Tact; nu gjør man 3 hurtigere til høire Side; man begynder med venstre Fod og trækker den bag ved den høire i 5te Position, den høire til Siden igjen og atter den venstre tilbage som før, og dette udfylder den anden Tact; nu et langsomt til høire Side, som første Gang i tredie Tact; derpaa trækker man den venstre Fod tilbage i 4de Position, idet man vender Kroppen imod den Person, man dandser med, og strækker den høire Fodspids imod Gulve, og nu er de 4 Tacter udfyldte; nu stryger man den venstre Fod frem i 3die Position, idet man vender sig lige i Quadrillen, hæver sig lidt paa Fodspidsene og synker derpaa ned pa hele Foden; dette er den 5 Tact. Nu gjøres 3 hurtige til venstre Side, man bøjer Knærne og stryger den venstre Fod i 2den Position, derpaa den høire bagved i 3die og atter venstre til Siden, saaledes, at man slutter den 6te Tact med den høire Fod i {22} 2den Position, Fodspidsen imod Gulvet; nu trækker man den høire Fod bagved i 5te Position, idet man bøjer Knæerne, hæver sig derpaa op paa Tæerne og synker ned paa hele Foden; dette er den 7de Tact; nu gjør man 3 hurtige igjen til venstre Side, som før, og dette er den 8de Tact. Nu stryger man den høire Fod i første Position, og saa frem i 4de, at hele Kroppen hviler paa den; den venstre maa være strækket tilbage; dette er den 9de Tact; derpaa 3 hurtige Skridt over Gulvet forbi den, man dandsede med, som man ma have paa sin høire Side; nu er 10de Tact udfyldt; igjen et langsomt Trin frem med høire Fod i den 11te Tact, ligesom i den 9de; nu sætter man venstre Fod frem i 4de Position, stryger derpaa høire Fod frem i 5te Position, idet man vender sig til venstre Side; nu begynder man Trinnene til høire Side igjen. I Menuetten kan der være saa mange Par ved Siden af hinanden, som Pladsen tillader. Naar man nu har dandset Trinnene endeel Gange paa hver Side, saa maa man passe, naar man engang er paa den Side, hvor man stod, da man slap hinanden, saa idet man vil gaae over Gulvet, da gjøres rundt først med høire Hand. Man hæver den høire Arm, idet {23} man gjør et langsomt Trin frem med høire Fod, gaaer derpaa de 3 hurtige, idet man giver Haanden til den, man dandser med; nu gjøres et langsomt Omkring og atter 3 hurtige, idet man slipper hinanden og staaer paa samme Side, man begyndte. Nu gjøres Trinnene til høire Side, derpaa giver man venstre Haand til hinanden, ganske paa samme Maade, som før med høire. Nu gjøres Trinnene til høire og venstre Side og over Gulvet forbi hinanden; nu staaer Cavalieren paa den Side, hvor man begyndte Menuetten, og Damerne paa den anden Side; atter til høire og venstre Side. Nu hæver man Armene og gaaer imod hinanden med eet langsomt og 3 hurtige Skridt, idet man giver hinanden begge Hænder og staaer med Ansigterne imod hinanden, derpaa et langsomt Trin til Siden, Cavalieren til høire og Damen til venstre, derpaa 3 hurtige til samme Side, og nu vende de sig ligesom de stod, da Menuetten begyndtes; nu et Trin til høire Side og Compliment, derpaa Foden tilbage i 4de Position, som i Begyndelsen; man vender sig nu imod hinanden og gjør et Trin til Siden ligesom i Begyndelsen, idet man gjør Compliment for hinanden, hvormed Menuetten endes.
+Man staaer ved Siden af hinanden i 5te Position, Damerne ved høire Side. Man bøjer Knæerne, stryger derpaa den høire Fod {20} til Siden, trækker den venstre til den og gjør Compliment. Nu sætter Cavalieren den venstre Fod tilbage i 4de Position og Damerne den høire; derpaa vender de sig imod hinanden, idet de stryge den Fod frem i 3die Position, som var i 4de, gjør nu et Trin fremad Gulvet, Damen med høire Fod og Cavalieren med venstre, trækker derpaa den anden Fod til dem og gjør Compliment. Nu giver Cavalieren sin høire Haand til Damen, om lægger sin venstre i hans, derpaa gjør de et Skridt tilbage, Cavalieren med høire og Damen med venstre Fod, og saa 3 Trin hurtigere, af disse 3 heller ikke udfylder mere end een Tact, og i det sidste vende de sig og staae som de begyndte. Nu gjør man et langsomt Trin ligefrem ad Gulvet med høire Fod, derpa 3 hurtigere, som man begynder med venstre; nu fører Cavalieren sin Dame omkring sig, idet hun først gjør et langsomt Trin ligefrem ad Gulvet med høire Fod, derpaa 3 hurtigere, som man begynder med venstre; nu fører Cavalieren sin Dame omkring sig, idet hun først gjør et langsomt Trin, saa tre hurtigere, atter et langsomt Trin, saa tre hurtigere, atter et langsomt, og nu slipper hun ham, idet hun træder tilbage og staaer paa den Side, hvor de begyndte Menuetten; medens Damen gaaer omkring, gjør Cavalieren et langsomt Trin til høire Side, derpaa 3 hurtigere omkring, idet man vender Ansigtet til Damen, atter et langsomt, og nu træder hantilbage, {21} idet han slipper Damen og staaer paa den modsatte Side af hvor de begyndte; Ansigtet er imod hinanden. Nu gjøres Menuet-Trinnene, som ere saaledes som følger: Først bøjer man Knæerne og stryger den høire Fod til Siden og strækker den venstre Fodspids imod Gulvet, og dette udfylder een Tact; nu gjør man 3 hurtigere til høire Side; man begynder med venstre Fod og trækker den bag ved den høire i 5te Position, den høire til Siden igjen og atter den venstre tilbage som før, og dette udfylder den anden Tact; nu et langsomt til høire Side, som første Gang i tredie Tact; derpaa trækker man den venstre Fod tilbage i 4de Position, idet man vender Kroppen imod den Person, man dandser med, og strækker den høire Fodspids imod Gulve, og nu er de 4 Tacter udfyldte; nu stryger man den venstre Fod frem i 3die Position, idet man vender sig lige i Quadrillen, hæver sig lidt paa Fodspidsene og synker derpaa ned pa hele Foden; dette er den 5 Tact. Nu gjøres 3 hurtige til venstre Side, man bøjer Knærne og stryger den venstre Fod i 2den Position, derpaa den høire bagved i 3die og atter venstre til Siden, saaledes, at man slutter den 6te Tact med den høire Fod i {22} 2den Position, Fodspidsen imod Gulvet; nu trækker man den høire Fod bagved i 5te Position, idet man bøjer Knæerne, hæver sig derpaa op paa Tæerne og synker ned paa hele Foden; dette er den 7de Tact; nu gjør man 3 hurtige igjen til venstre Side, som før, og dette er den 8de Tact. Nu stryger man den høire Fod i første Position, og saa frem i 4de, at hele Kroppen hviler paa den; den venstre maa være strækket tilbage; dette er den 9de Tact; derpaa 3 hurtige Skridt over Gulvet forbi den, man dandsede med, som man ma have paa sin høire Side; nu er 10de Tact udfyldt; igjen et langsomt Trin frem med høire Fod i den 11te Tact, ligesom i den 9de; nu sætter man venstre Fod frem i 4de Position, stryger derpaa høire Fod frem i 5te Position, idet man vender sig til venstre Side; nu begynder man Trinnene til høire Side igjen. I Menuetten kan der være saa mange Par ved Siden af hinanden, som Pladsen tillader. Naar man nu har dandset Trinnene endeel Gange paa hver Side, saa maa man passe, naar man engang er paa den Side, hvor man stod, da man slap hinanden, saa idet man vil gaae over Gulvet, da gjøres rundt først med høire Haand. Man hæver den høire Arm, idet {23} man gjør et langsomt Trin frem med høire Fod, gaaer derpaa de 3 hurtige, idet man giver Haanden til den, man dandser med; nu gjøres et langsomt Omkring og atter 3 hurtige, idet man slipper hinanden og staaer paa samme Side, man begyndte. Nu gjøres Trinnene til høire Side, derpaa giver man venstre Haand til hinanden, ganske paa samme Maade, som før med høire. Nu gjøres Trinnene til høire og venstre Side og over Gulvet forbi hinanden; nu staaer Cavalieren paa den Side, hvor man begyndte Menuetten, og Damerne paa den anden Side; atter til høire og venstre Side. Nu hæver man Armene og gaaer imod hinanden med eet langsomt og 3 hurtige Skridt, idet man giver hinanden begge Hænder og staaer med Ansigterne imod hinanden, derpaa et langsomt Trin til Siden, Cavalieren til høire og Damen til venstre, derpaa 3 hurtige til samme Side, og nu vende de sig ligesom de stod, da Menuetten begyndtes; nu et Trin til høire Side og Compliment, derpaa Foden tilbage i 4de Position, som i Begyndelsen; man vender sig nu imod hinanden og gjør et Trin til Siden ligesom i Begyndelsen, idet man gjør Compliment for hinanden, hvormed Menuetten endes.
 
 {24} Imedens man dandser Menuetten maa man altid passe, at have Ansigtet til den, man dandser med. Legemet maa være meget rankt, dog uden at være stivt. Damen holder sig lidt i Kjolen, og Cavalieren lader sine Arme hænge ned ved Siden. Iagttag stedse at give dit Legeme tækkelig Ynde! thi denne Dands er den væsentligste af alle; kan du først dandse denne med Ynde og Værdighed, da vil alle de øvrige Dandse falde dig lette. Enhver Dands er afhængig af Moden; men om endogsaa stormende Dandse har fortrængt Menuetten, saa er og bliver den dog skjønneste af alle.
 
@@ -355,9 +355,7 @@ De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 
 4de — Første og andet Par Kjæde;
 
-5te — og
-
-6te — Første og andet Par Hopsavals.
+5 og 6 — Første og andet Par Hopsavals.
 
 ### Femte Engelskdands
 
@@ -412,8 +410,8 @@ De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 5te — 6 rundt til venstre Side;
 
 6te — tilbage til høire.
-7. Første C. dandser op paa Damesiden og første D. paa Cavaliersiden; de vende fig ved Enden
-8. og dandser nu op paa deres egen Side.
+7de — Første C. dandser op paa Damesiden og første D. paa Cavaliersiden; de vende fig ved Enden
+8de — og dandser nu op paa deres egen Side.
 
 ### Vexeldandsen
 
@@ -421,7 +419,9 @@ Man staaer ligesom i en Engelskdands. Det øverste og nederste Par fører til Mi
 
 ### Ruche de Covoly
 
-Man staaer ogsa heri som i Engelskdands. Første Caavalier og nederste Dame svinger med høire Haand; nu første Dame og nederste Cavalier det samme; derpaa første C. og nederste D. med venstre Haand, og første D. og nederste C. ligeledes; nu svinges rundt med begge Hænder, de samme som før, siden Quaré, og nu bukker første C. for nederste D., og første Dame neier for sidste C.; derpaa slaaer Alle et Slag i Haanden og følger efter, C. efter første C., og D. efter første D., som vender sig og løber ned til Enden, hvor nederste Par stod; nu fører {34} alle Parrene op og holder deres Damer i Hænderne , og man staaer nu, som da Dandsen begyndte; nu gjør første Par Skubkar igjennem alle Parrene og bliver altsaa nederst. Nu begynder anden C., som nu er øverst, at svinge med første D, som er nedest, og saa fremdeles. Saasnart det opførende par har gjort Skubkar , slipper man strax hinanden, at det følgende Par kan faae plads. Naar det allersidste Par har ført op og gjør Skubkar, bukker enhver Cavalier for sin Dame og træder ud af Dandsen; hvormed den endes.
+Man staaer ogsa heri som i Engelskdands. Første Cavalier[^1] og nederste Dame svinger med høire Haand; nu første Dame og nederste Cavalier det samme; derpaa første C. og nederste D. med venstre Haand, og første D. og nederste C. ligeledes; nu svinges rundt med begge Hænder, de samme som før, siden Quaré, og nu bukker første C. for nederste D., og første Dame neier for sidste C.; derpaa slaaer Alle et Slag i Haanden og følger efter, C. efter første C., og D. efter første D., som vender sig og løber ned til Enden, hvor nederste Par stod; nu fører {34} alle Parrene op og holder deres Damer i Hænderne , og man staaer nu, som da Dandsen begyndte; nu gjør første Par Skubkar igjennem alle Parrene og bliver altsaa nederst. Nu begynder anden C., som nu er øverst, at svinge med første D, som er nedest, og saa fremdeles. Saasnart det opførende par har gjort Skubkar, slipper man strax hinanden, at det følgende Par kan faae plads. Naar det allersidste Par har ført op og gjør Skubkar, bukker enhver Cavalier for sin Dame og træder ud af Dandsen; hvormed den endes.
+
+[^1]: Spelled Caavalier in original. Misprint fixed in the second edition
 
 ### Fandango
 
@@ -436,7 +436,7 @@ I denne dans staaer man ved Siden af den, man dandser med, som f. Ex.:
 5 C. 6 K.[^2]<br/>
 </div>
 
-[^2]: Probably, a misprint. Figure show two fourth dames and two fifth cavaliers
+[^2]: Misprint: Figure shows fourth dame and fifth cavalier twice. Misprint fixed in the second edition
 
 og saa fremdeles.
 
@@ -458,14 +458,14 @@ og saa fremdeles.
 
 I denne dands stiller man sig saaledes:
 
-| 13 —  | 14 —  |
-| 7 —   | 8 -   |
-| 5 —   | 6 — med Ansigtet imod første og andet Par |
-| 1 Par | 2 Par |
-| 3 —   | 4 — med Ansigtet imod hinanden |
-| 9 —   | 10 — med Ansigtet imod 3 og 4 Par, og saa fremdeles
-| 11 —  | 12 —  |
-| 15 —  | 16 —  |
+| 13 —  | 14 —  ||
+| 7 —   | 8 -   ||
+| 5 —   | 6 —   | med Ansigtet imod første og andet Par |
+| 1 Par | 2 Par ||
+| 3 —   | 4 —   | med Ansigtet imod hinanden |
+| 9 —   | 10 —  | med Ansigtet imod 3 og 4 Par, og saa fremdeles |
+| 11 —  | 12 —  ||
+| 15 —  | 16 —  ||
 
 Man maa altid passe, at der er lige mange Par paa hver Side af de opførende.
 
@@ -481,7 +481,7 @@ Man maa altid passe, at der er lige mange Par paa hver Side af de opførende.
 
 Man dandser den saalænge, man ønsker, og slutter derpaa efter Valzen; gjerne vælger man den Gang, naar alle Parrene har været i Bevægelse paa eengang
 
-### La Tempete.
+### {35} La Tempete
 
 I denne Dands staaer man som i Figaro, med den Forskjel, at kun de 2 opførende Par vende Ansigterne ned ad Quadrillen, og alle de andre par staae efter hinanden med Ansigterne imod de Opførende, saaledes:
 
@@ -523,7 +523,7 @@ Alle Parrene staaer i Rundkreds, Damerne ved høire Side. Alle dandser rundt til
 
 ### Den franske Cotillon
 
-Denne Dands er inddeelt i 4 Repricer, de 3 første i 2/4 Tact og den sidste i 3/8 eller Valztact. Alle Parrene staae i Runddeel, og da den maaskee vil blive lettere at satte, saa vil jeg give 2 Par et Nummer saaledes[^3]:
+Denne Dands er inddeelt i 4 Repricer, de 3 første i 2/4 Tact og den sidste i 3/8 eller Valztact. Alle Parrene staae i Runddeel, og da den maaskee vil blive lettere at satte, saa vil jeg give 2 Par et Nummer saaledes[^3].
 
 [^3]: Round formation figure omitted
 
