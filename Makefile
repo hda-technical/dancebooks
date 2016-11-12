@@ -126,12 +126,12 @@ www-reload-production: www-test www-translations
 	@echo "Reloading"
 	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/ping')"
 
-requirements.txt: .PHONY
+requirements.txt:
 	pip freeze --local | sort --ignore-case | tee $@
 
 # Ancillary targets
 
-.PHONY:;
+.PHONY: requirements.txt
 
 all.mk: test.pdf;
 

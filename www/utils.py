@@ -552,6 +552,7 @@ class MarkdownCache(object):
 			extensions=[
 				"markdown.extensions.footnotes",
 				"markdown.extensions.tables",
+				"superscript",
 				MarkdownPageNumberExtension()
 			],
 			extension_configs={
@@ -613,7 +614,7 @@ class MarkdownCiteExtension(markdown.extensions.Extension):
 		md.inlinePatterns.add("cite_reference", MarkdownCiteProcessor(self._index), '_end')
 
 
-class MarkdownPageNumberProcessor(markdown.inlinepatterns.Pattern):
+class MarkdownPageNumber(markdown.inlinepatterns.Pattern):
 	def __init__(self):
 		super().__init__(r"\{(?P<number>[^\{\}]+)\}")
 
@@ -622,11 +623,23 @@ class MarkdownPageNumberProcessor(markdown.inlinepatterns.Pattern):
 		span.set("class", const.PAGE_NUMBER_CSS_CLASS)
 		span.text = m.group("number")
 		return span
+		
+		
+class MarkdownStikethrough(markdown.inlinepatterns.Pattern):
+	def __init__(self):
+		super().__init__(r"\~\~(?P<stokeout>[^\~]+)\~\~")
+	
+	def handleMatch(self, m):
+		span = markdown.util.etree.Element("span")
+		span.set("style", "text-decoration: line-through;")
+		span.text = m.group("stokeout")
+		return span
 
 
 class MarkdownPageNumberExtension(markdown.extensions.Extension):
 	def extendMarkdown(self, md, md_globals):
-		md.inlinePatterns.add("page_number", MarkdownPageNumberProcessor(), '_end')
+		md.inlinePatterns.add("page_number", MarkdownPageNumber(), '_end')
+		md.inlinePatterns.add("strikethough", MarkdownStikethrough(), '_end')
 
 
 def get_last_name(fullname):
