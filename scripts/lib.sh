@@ -47,7 +47,7 @@ webGet()
 		--fail \
 		--retry 3 \
 		--connect-timeout 5 \
-		--retry-delay 5 \
+		--retry-delay 3 \
 		--max-time 60 \
 		--output "$OUTPUT_FILE" \
 		"$URL"
@@ -297,17 +297,17 @@ hathi()
 
 gallica()
 {
-	if [ $# -ne 2 ]
+	if [ $# -ge 4 ]
 	then
-		echo "Usage $0 ark_id page_count"
+		echo "Usage $0 ark_id [first_page] last_page"
 		return 1
 	fi
 
 	local BOOK_ID=$1
 	local OUTPUT_DIR=`makeOutputDir "gallica.$BOOK_ID"`
-	local PAGE_COUNT=$2
+	shift;
 	mkdir -p "$OUTPUT_DIR"
-	for PAGE in `seq $PAGE_COUNT`
+	for PAGE in `seq $@`
 	do
 		local PAGE_ID="${BOOK_ID}.f${PAGE}"
 		local DOWNLOADED_FILE="${PAGE_ID}.bmp"
@@ -426,7 +426,7 @@ gallicaTiles()
 	fi
 
 	#overriding global constant
-	MIN_FILE_SIZE_BYTES=5120
+	MIN_FILE_SIZE_BYTES=0
 
 	local BOOK_ID=$1
 	local ZOOM=6
