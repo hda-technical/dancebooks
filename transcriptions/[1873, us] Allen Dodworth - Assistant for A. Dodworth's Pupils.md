@@ -22,7 +22,7 @@ I cannot refrain from confessing here, however, that when surrounded, under thes
 
 It is, I believe, the experience of most teachers, that our ideals are far beyond what we accomplish. I believe, also, that I may trust to the evidence of my patrons, that although I may not have accomplished all that I could see before me, it has not been without faithful and earnest effort to do so.
 
-### {6} Manners
+### {7} Manners
 
 How few can resist the influence of agreeable manners; and, what is this manner? It may be simply a word or a gesture; yet those kind of persons who mistakenly consider it an exhibition of independence to be rude to others, are nevertheless influenced, and often subdued, by the kindly good manners of another. Is it not manner which gives us the first, and often the most lasting, impression of any person to whom we may be introduced? Do we not all feet it in the effect of a kindly expression, or a gesture of attention? Do not others feel as we do? Surely, then, that which adds so greatly to the pleasures of ordinary intercourse is deserving of great attention; and yet, how few in reality study to _cultivate good manners_.
 
