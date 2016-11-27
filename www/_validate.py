@@ -36,6 +36,7 @@ DATA_FIELDS = {
 	"editor",
 	"filename",
 	"id",
+	"incipit",
 	"institution",
 	"isbn",
 	"issn",
@@ -310,7 +311,7 @@ def check_obligatory_fields(item, errors):
 	* title
 	* added_on
 	"""
-	OBLIGATORY_FIELDS = ["langid", "year", "title", "added_on"]
+	OBLIGATORY_FIELDS = ["langid", "year", "added_on"]
 	for field in OBLIGATORY_FIELDS:
 		if not item.has(field):
 			errors.add("Obligatory field {field} is missing".format(
@@ -379,7 +380,7 @@ def check_title_starts_from_shorthand(item, errors):
 	"""
 	Checks if title starts from shorthand
 	"""
-	title = item.get("title")
+	title = item.get("title") or item.get("incipit")
 	shorthand = item.get("shorhand")
 	if (shorthand is None):
 		return

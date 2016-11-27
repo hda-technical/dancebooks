@@ -542,8 +542,8 @@ msgstr "Автор (псевдоним)"
 msgid "item:labels:title"
 msgstr "Название"
 
-msgid "item:labels:subtitle"
-msgstr "Дополнительное название"
+msgid "item:labels:incipit"
+msgstr "Incipit"
 
 msgid "item:labels:booktitle"
 msgstr "Название сборника / книги"

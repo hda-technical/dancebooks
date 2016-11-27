@@ -545,8 +545,8 @@ msgstr "Author (pseudonym)"
 msgid "item:labels:title"
 msgstr "Title"
 
-msgid "item:labels:subtitle"
-msgstr "Additional title"
+msgid "item:labels:incipit"
+msgstr "Incipit"
 
 msgid "item:labels:booktitle"
 msgstr "Entire book title"
