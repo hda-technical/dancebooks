@@ -1,13 +1,13 @@
 # Orchesography or, The Art Of Dancing by Characters and Demonstrative Figures
 ## Raoul-Auger Feuillet
 ## Translated by John Weaver
-## Transcribed by [Project Gutenberg](http://www.gutenberg.org)
+## Transcribed by [Project Gutenberg](http://www.gutenberg.org/ebooks/9454)
 
 To mister Isaac.
 
 Sir,
 
-Though dancing and musick seem to be of near an equal antiquity, and even of an equal extent, yet musick has long received an advantage, which dancing wanted. musick has employed the pens of many of the learned, both ancient and modern, and has had the benefit of an universal character, which conveyed the harmonious compositions to all lovers of the art in all nations. Dancing, on the contrary, though celebrated by ancient authors in an extraordinary manner, and with uncommon praises, (as I shall show in a treatise, which I shall suddenly publish on that subject) yet among the moderns, it has been wholly unknown to the learned, and destitute of all pens, in either the speculative or practice part of the art, which for want of an universal character, was confined to the immediate master and scholar, or at farthest, to a narrow traditional instruction, which none could participate of without a teacher, who had been taught by some other, either composer, or scholar of such composer. This inconvenience at length stirred up monsieur Beauchamp to begin what monsieur Feuillet accomplished in the following treatise, which though for some time enjoyed by the French nation, as a native growth, now first appears in its true and just extent in its transplantation into the English climate and language.
+Though dancing and musick seem to be of near an equal antiquity, and even of an equal extent, yet musick has long received an advantage, which dancing wanted. musick has employed the pens of many of the learned, both ancient and modern, and has had the benefit of an universal character, which conveyed the harmonious compositions to all lovers of the art in all nations. Dancing, on the contrary, though celebrated by ancient authors in an extraordinary manner, and with uncommon phrases, (as I shall shew in a treatise, which I shall suddenly publish on that subject) yet among the moderns, it has been wholly unknown to the learned, and destitute of all pens, in either the speculative or practice part of the art, which for want of an universal character, was confined to the immediate master and scholar, or at farthest, to a narrow traditional instruction, which none could participate of without a teacher, who had been taught by some other, either composer, or scholar of such composer. This inconvenience at length stirred up monsieur Beauchamp to begin what monsieur Feuillet accomplished in the following treatise, which though for some time enjoyed by the French nation, as a native growth, now first appears in its true and just extent in its transplantation into the English climate and language.
 
 The service to the lovers and professors of this art, having been the chief motive of my undertaking so difficult a province, that we who enjoy the happiness of so great a master as mister Isaac, should not want the advantage of spreading that excellence in this art, which renders him so admired by all who have any taste of it; so having received such great and generous encouragement in this study from you, sir; the product of that encouragement and study does, as it were, out of a natural right and just gratitude, seek shelter under your patronage, and challenge the advantage of appearing in the world under the protection of your name, whole known judgement and mastery in this art, will secure me from the censure of malice and ignorance.
 
@@ -48,11 +48,20 @@ I shall not therefore detain the reader any longer in the porch, but leave him n
 
 > Ingredere ut proficias.
 
-### Orchesography or, the Art of Dancing by Characters and Demonstrative Figures by Which Any Person, Who Understands Dancing, May of Himself Easily learn All Manner of Dances
+### Errata
 
+* Dedication, page 2, line 1. for _Phrases_, read _Praises_.
+* P. 8. l. 3. f. _the_, r. _a_.
+* P. 17. l. 3, f. _afterwards_, r. _forwards_.
+* P. 34. l. 7. after _Page_, add _as E F do the upper end of the Room, G H the lower part_.
+* P. 40. 1. 2, f. _behind_, r. _before_.
+* P. 47. 1. 4. f. _Rigandons_, r. _Rigaudons_.
+
+### {1} Orchesography or, the Art of Dancing by Characters and Demonstrative Figures by Which Any Person, Who Understands Dancing, May of Himself Easily learn All Manner of Dances
+	
 The explanation of the terms belonging to dancing, seem to be altogether needless, since they are so plain and intelligible of themselves: but lest the reader should put wrong constructions on those terms of art which the dancing-masters make use of, I shall give the following explanation of them.
 
-Dancing is composed of positions, steps, sinkings, risings, springings, capers, fallings, slidings, turnings of the body, cadence or time, figures, &c.
+{2} Dancing is composed of positions, steps, sinkings, risings, springings, capers, fallings, slidings, turnings of the body, cadence or time, figures, &c.
 
 Positions, are the different placings of the feet in dancing.
 
@@ -78,7 +87,7 @@ Figures, are tracts made by art, on which the dancer is to move.
 
 Before I proceed to demonstrate what I have already explained, I shall describe the room or stage, where dancing is performed; as also the different tracts or figures to be made thereon, and the posture and presence of the body, in which the performer ought to stand.
 
-### Of the Stage, Room, or School
+### {3} Of the Stage, Room, or School
 
 The stage or dancing-room, I shall represent by an oblong, as in the figure A B C D, of which the upper end is A B, the lower end C D; the right side B D, and the left side A C.
 
@@ -86,7 +95,7 @@ The stage or dancing-room, I shall represent by an oblong, as in the figure A B 
 
 The posture or presence of the body, is to have respect to that part of the room, to which the face or fore-part of the body is directed, which I describe by the figure F G H I, of which F G shows the two sides of the body, H the face or fore-part, and I the back or hinder-part.
 
-### Of the Tract
+### {4} Of the Tract
 
 The line on which the dances are described, I call the tract.
 
@@ -98,13 +107,13 @@ A right line, I call that which extends it self in length, from one end of the r
 
 A diametrical line, is that which goes cross the room from side to side, as is shown by the line L.
 
-The circular line, is that which goes round the room, as is expressed by the letter M.
+{5} The circular line, is that which goes round the room, as is expressed by the letter M.
 
 The oblique line, is that which goes cross the room, from corner to corner, as may be seen by the line N.
 
 Every one of these lines, or tracts, may jointly or separately form the figure of a dance, on which may be described the positions and steps, as in figure O. The beginning of which tract, is shown by the character representing the posture or presence of the body, which must be joined to it, to show the position of the body at the beginning of the Dance.
 
-### Of the Positions
+### {6} Of the Positions
 
 There are ten sorts of positions generally used in dancing, which are divided into true and false.
 
@@ -122,7 +131,7 @@ This figure of the foot, is but a half position, because it represents but one f
 
 It is to be observed, that the letter A, in the foregoing figure, represents the left foot, and B, the right.
 
-### Of True Positions
+### {7} Of True Positions
 
 There are five true positions. The first is when the two feet are joined together, the heels being one against the other.
 
@@ -134,7 +143,7 @@ The fourth is when the two feet are placed one before the other, the distance of
 
 The fifth is when the two feet are crossed, the heel of one directly opposite to the toe of the other.
 
-### Of False Positions
+### {8} Of False Positions
 
 There are also five of these. The first is when the toes are turned inwards, and touch each other, the heels being open on the line.
 
@@ -146,7 +155,7 @@ The fourth is when the toes are turned inwards, so that the toe of one foot poin
 
 The fifth false position, is marked like the fifth true one, and seems to be the same position; but notwithstanding, they are very different, for whereas in the true one, the toes are turned outwards, in the false, they are turned inwards, crossing each other, so that the heel of one foot is right against the toe of the other, and is to be distinguished from the true one by a small bar between the position.
 
-### Of Steps
+### {9} Of Steps
 
 Although steps made use of in dancing, are almost innumerable, I shall nevertheless reduce them to five, which serve to express the different figures the leg makes in moving: these I shall call, a straight plain step, an open step, a circular or round step, a waving step, and a beaten step.
 
@@ -160,9 +169,11 @@ The waving step, is when the foot, in moving, turns both inwards and outwards. T
 
 The beaten step, is when one leg or foot is beaten against the other. Of this there are also three ways of performing, videlicet forwards, backwards, and sideways.
 
-A step is known by the character following, videlicet a black spot marked A, representing the position of the foot, the line drawn from that spot, marked B, showing the motion, figure, and largeness of the step, as from A to D, and lastly, by a small side stroke joined to the end of the line C, representing the foot, of which D is the heel, and E the point of the foot, or toe.
+A step is known by the character following, videlicet a black spot marked A, representing the position of the foot, the line drawn from that spot, marked B, showing the motion, figure, and largeness of the step, as from A to D, and lastly, by a small side stroke joined to the end of the line C, representing the foot, of which D is the heel, and E the point of the foot, or toe[^1].
 
-To a step may be added these following marks, videlicet sinking, rising, springing or bounds, capers, falling, sliding, holding the foot up, pointing the toes, placing the heel, turning a quarter turn, a half turn, a three quarter turn, and a whole turn.
+[^1]: Figures on the page 10 were ommited in this transcription
+
+{11} To a step may be added these following marks, videlicet sinking, rising, springing or bounds, capers, falling, sliding, holding the foot up, pointing the toes, placing the heel, turning a quarter turn, a half turn, a three quarter turn, and a whole turn.
 
 The mark for a sink, is a little stroke inclining towards the little black head.
 
@@ -172,7 +183,7 @@ The mark of a spring or rise from the ground, is when there are two of the afore
 
 The mark for a caper, is when there are three strokes.
 
-The mark for a falling step, is when at the end of the little straight stroke, another straight one is joined parallel to the step, and pointing to the mark for the foot.
+{12} The mark for a falling step, is when at the end of the little straight stroke, another straight one is joined parallel to the step, and pointing to the mark for the foot.
 
 The mark of a slide, is when at the end of the little stroke, a small bar is placed parallel to the step.
 
@@ -180,7 +191,7 @@ The mark for the foot up, is when the step is cut off.
 
 The mark for pointing the foot, without the body's bearing upon it, is when there is a point directly at the end of that which represents the toe.
 
-The mark for placing the heel, without the body's bearing upon it, is when there is a point directly behind that which represents the heel.
+{13} The mark for placing the heel, without the body's bearing upon it, is when there is a point directly behind that which represents the heel.
 
 A quarter turn of the body, is shown by a quarter of a circle placed on the step.
 
@@ -190,13 +201,13 @@ A three quarter turn, is shown by a three quarter circle.
 
 A whole turn, is represented by a whole circle.
 
-Steps may have several marks.
+### {14} Steps may have several marks
 
 ### How to Place the Marks in Their Proper Order
 
 It is necessary first to know, that a step has three divisions, videlicet a beginning, middle, and end: you must also consider the foot, as well in steps as positions, has two sides, an inside and an outside. The beginning of the step, is the beginning of the line, joining the little black spot, as is shown by the letter A. The middle, is the middle of the line, as at letter B. And the end, is the extremity of the line, joining that which represents the foot, as at letter C. The outside of the foot, is between the heel and the end of the little toe, marked D E; and the inside, is that which is between the heel and end of the great toe, as is marked F G.
 
-There are three ways of sinking, videlicet before the foot moves, in moving, and after it has moved.
+{15} There are three ways of sinking, videlicet before the foot moves, in moving, and after it has moved.
 
 When there is the mark of a sink at the beginning of a step, the sink must be made before the foot moves.
 
@@ -206,7 +217,7 @@ When the sink is marked at the end of the step, the sink must not be made till t
 
 It is the same thing in the marks of a rise.
 
-### Observations upon Springings
+### {16} Observations upon Springings
 
 Springings may be performed two ways, videlicet with both feet at once, or with one foot only.
 
@@ -218,13 +229,13 @@ A springing step, is performed two ways, either by springing and falling on the 
 
 When there is a mark of a spring upon the step, and no mark for the holding up of the foot after it, it shows, that the spring is to be made with the foot that moves, which is called a bound.
 
-But when there is a mark for a spring, and afterwards a mark for the foot up, it signifies, that the spring must be made on the foot that does not move forwards, which is called a hop.
+{17} But when there is a mark for a spring, and afterwards a mark for the foot up, it signifies, that the spring must be made on the foot that does not move forwards, which is called a hop.
 
 The mark for falling, has no proper place assigned it, and I shall only observe, that in rising, when it is in order to fall, it is necessary the mark for a rise, should be near the beginning of the step.
 
 The mark for a slide, has likewise no proper place, when it is single on a step; but when it is accompanied with other marks, as sinking, rising, &c. then it must be placed last.
 
-If after the mark of a slide, there be also the mark for the foot up, you must slide no farther than that mark showing the foot up.
+{18} If after the mark of a slide, there be also the mark for the foot up, you must slide no farther than that mark showing the foot up.
 
 The mark for the foot up, may be placed either in the middle, or the end; when it is in the middle, it shows, that the foot is only up, in order to be set down afterwards.
 
@@ -234,7 +245,7 @@ To point the toe, and afterwards the heel, there must be a point on the outside 
 
 To place the heel, and afterwards point the toe, there must be a point on the outside of that which represents the heel, and another on the inside of that which represents the toe.
 
-It is to be observed, that in the two foregoing examples, the point which is on the outside of that which represents either the toe or heel, is the point from whence you must always begin.
+{19} It is to be observed, that in the two foregoing examples, the point which is on the outside of that which represents either the toe or heel, is the point from whence you must always begin.
 
 When there is a point at the end of that which represents the toe, and another behind that which shows the heel, it shows, that the foot must be set down flat.
 
@@ -244,13 +255,13 @@ You must observe, that the beginning of the turning mark, is to be taken from th
 
 After having thus shown the beginning of each turning mark, you must observe exactly which way to turn, whether to the right or left, as appears by the following examples.
 
-The beginning of a whole turn, or turn quite round, is more difficult to find out, because the circle, which is the mark of it, has neither beginning nor end: but it is nevertheless to be known by a point placed on the side of the step; from which point the beginning being known, you make use of the same rules as above.
+{20} The beginning of a whole turn, or turn quite round, is more difficult to find out, because the circle, which is the mark of it, has neither beginning nor end: but it is nevertheless to be known by a point placed on the side of the step; from which point the beginning being known, you make use of the same rules as above.
 
 When a turn is to be made but half a quarter round, it must be marked a quarter of a circle on the side of the step, without joining it to the step.
 
 I have already shown, that all steps and half positions, which have but one point at either of their extremities, signify either the pointing of the toe, or placing the heel, without the body's bearing on it; but when there happens to be two points, it then shows, that the body must bear upon it.
 
-Having explained all the before-mentioned marks, I hope it will not be thought improper to show when sinkings, risings, springings, and slidings, are to be made upon the toe, heel, or flat foot, as the following examples will demonstrate.
+Having explain'd all the before-mention'd marks, I hope it will not be thought improper to show when sinkings, risings, springings, {21} and slidings, are to be made upon the toe, heel, or flat foot, as the following examples will demonstrate.
 
 When there is a point at the end of the sinking mark, it shows, that the toe must be bent downwards.
 
@@ -260,7 +271,7 @@ When there is a point at the end of the sinking mark, and another behind, it sho
 
 When there is a point at the end of a rising mark, it shows the rise must be made on the toe.
 
-When there is a Point behind the rising mark, it shows, that the Rise must be made on the heel.
+{22} When there is a point behind the rising mark, it shews, that the Rise must be made on the heel.
 
 When there is a point at the end of a rising mark, and another behind, it shows, that the rise must be on a flat foot.
 
@@ -270,7 +281,7 @@ When there is a point behind the springing mark, it shows, that the spring, hop,
 
 When there is a point at the end of the springing mark, and another behind, it signifies, that the spring, hop, or bound, must be made on a flat foot.
 
-When there is a point at the end of the sliding mark, towards the mark representing the foot, it shows, that the slide must be made on the toe.
+{23} When there is a point at the end of the sliding mark, towards the mark representing the foot, it shows, that the slide must be made on the toe.
 
 When there is a point at the other end of the sliding mark, it shows, that the slide is to be made on the heel.
 
@@ -280,17 +291,17 @@ And when there is a point at each end of the sliding mark, it denotes, that the 
 
 All the marks which have been hitherto demonstrated, may be placed as well upon the half positions or positions, as upon the steps, the sliding marks only excepted.
 
-If there were, for example, a sinking mark upon a half position, it would show, that the knee of that leg only was to be bent; but if sinking marks should be on the whole position, then both knees are to be bent at the same time. The same is to be observed for rising, springing, &c. The marks on the positions, have no appointed place, as they have on steps, excepting points, which are to be placed in the same manner as on steps.
+{24} If there were, for example, a sinking mark upon a half position, it would show, that the knee of that leg only was to be bent; but if sinking marks should be on the whole position, then both knees are to be bent at the same time. The same is to be observed for rising, springing, &c. The marks on the positions, have no appointed place, as they have on steps, excepting points, which are to be placed in the same manner as on steps.
 
 ### Of Positions and Half Positions Having Several Marks at Once
 
 Positions and half positions may have several marks together, as steps have; and it must be observed of the marks for sinking, rising, springing, and capers, that the mark placed nearest to the O, is what must be first made; but when there is the mark for the foot up, that must certainly be the last performed.
 
-All the marks of sinking and rising, which have been already demonstrated upon the step, have relation to the bendings and risings of both the knees: but when it shall happen, that in moving in a dance, one knee only ought to bend or rise, the following rules must be observed.
+{25} All the marks of sinking and rising, which have been already demonstrated upon the step, have relation to the bendings and risings of both the knees: but when it shall happen, that in moving in a dance, one knee only ought to bend or rise, the following rules must be observed.
 
 It will be necessary upon this occasion, to understand when one leg moves, what the other ought to do; to demonstrate which, I shall make use of a half position and a step, which must be tied together by a small line, of which, one end is joined to that which represents the heel of the half position, and the other to the head of the step. This union denotes, that the half position and the step, are both to act at the same time.
 
-Two steps tied together at the heads, show they are both to move at once, which can only be performed by springing, which I shall hereafter call a starting step.
+{26} Two steps tied together at the heads, show they are both to move at once, which can only be performed by springing, which I shall hereafter call a starting step.
 
 These kind of starting steps, may be practised two ways, videlicet with both knees stiff, or falling with the knees bent.
 
@@ -298,15 +309,15 @@ The first of these needs no other mark for direction, but the sliding mark; but 
 
 ### Of Waving Positions, and Half Positions
 
-A waving position, or half position, is when the foot waves or turns inwards or outwards, whether upon the toe, the heel, or with the foot up, which is explained by a kind of half-moon proceeding from that place which represents either the heel or toe, and which demonstrates the motion the heel or toe ought to make in waving. If it be to wave upon the toe, the crescent or half-moon ought to be placed where the heel is represented, tending towards the toes on that side you are to wave; on the contrary, if the waving step is to be done on the heel, or with the foot up, the crescent must be in the place which represents the toes tending towards the heel.
+A waving position, or half position, is when the foot waves or turns inwards or outwards, whether upon the toe, the heel, or with the foot up, which is explained by a kind of half-moon proceeding from that place which represents either the heel or toe, and which demonstrates the motion the heel or {27} toe ought to make in waving. If it be to wave upon the toe, the crescent or half-moon ought to be placed where the heel is represented, tending towards the toes on that side you are to wave; on the contrary, if the waving step is to be done on the heel, or with the foot up, the crescent must be in the place which represents the toes tending towards the heel.
 
-### Of Positions and Half Positions, Which Are Waved and Unwaved
+### Of Positions and Half Positions, Which Are Wav'd and Unwav'd
 
 Positions and half positions, waved and unwaved are when the heel or toe returns to the place from whence either of them moved, which is explained by the crescent being doubled, returning to the place from whence it came.
 
 Examples of waving positions, where the toes or heels wave both one way, and are distinguished by the crescents being both on the same side.
 
-Examples of waving and unwaving positions, where the feet turn and return both on the same side.
+{28} Examples of waving and unwaving positions, where the feet turn and return both on the same side.
 
 ### Of the Change of Positions
 
@@ -316,15 +327,17 @@ The change of positions is made two ways, either by springing, or waving.
 
 Those which are performed by springing, are done when you spring from one position, and fall in another; and those which are performed by waving, must be done on the ground, by waving the two feet, or each foot separately, either on the toes or heels.
 
-The shifting of positions by springing, may be known by what follows, videlicet by two positions, one of which has springing on it, and the other none.
+The shifting of positions by springing, may be known by what follows, videlicet by two positions, one of which has springing on it, and the other none[^2].
 
-The position which has springing marks on it, shows from whence the spring is to be made, and that which has no springing marks on it, only denotes in what position to fall, as may be seen by the foregoing tables.
+[^2]: Tables on pages 29 and 30 were omitted in this transcription
+
+{31} The position which has springing marks on it, shows from whence the spring is to be made, and that which has no springing marks on it, only denotes in what position to fall, as may be seen by the foregoing tables.
 
 ### Of Positions that Shift or Change From One Place to Another
 
 Positions may also change in springing from one place to another, as in springing forwards, backwards, or sideways. This is explained by two lines of communication, that go from the position on which the springing marks are placed, to that where there are none: which lines denote the extension of the spring, and of which side it must fall.
 
-Positions may also change in springing, by two steps being tied together at the heads; which shows, that they must move both at the same time.
+{32} Positions may also change in springing, by two steps being tied together at the heads; which shows, that they must move both at the same time.
 
 ### Of the Changing of Waving Positions
 
@@ -334,13 +347,13 @@ I have already said, that one position may change to another, by waving both fee
 
 Those which are to be made with both feet at once, are to be known by a waved position; and those which are to be made by one foot only, are known by a half position waved.
 
-### How to Hold the Book or Paper, to Decipher Written Dances
+### {33} How to Hold the Book or Paper, to Decipher Written Dances
 
-You must understand, the each page, on which the dance is described, represents the dancing-room; and the four sides of the page, the four sides of the room, videlicet the upper part of the page, represents the upper end of the room; the lower part, the lower end; the right side of the page the right side of the room; and the left side, the left, as you may see by the following figure, of which A B C D represent the room, and E F G H, the page. E F show the upper part of the page, as C D do the lower end; F H the right side of the page, as E F do the upper end of the room G H the lower part, as B D the right side of the room; and E G the left side of the page, as A C the left side of the room.
+You must understand, the each page, on which the dance is described, represents the dancing-room; and the four {34} sides of the page, the four sides of the room, videlicet the upper part of the page, represents the upper end of the room; the lower part, the lower end; the right side of the page the right side of the room; and the left side, the left, as you may see by the following figure, of which A B C D represent the room, and E F G H, the page. E F show the upper part of the page, as C D do the lower end; F H the right side of the page, as E F do the upper end of the room G H the lower part, as B D the right side of the room; and E G the left side of the page, as A C the left side of the room.
 
 You must observe always to hold the upper end of the book against the upper end of the room; and whether the dance have any turning in it or not, you must carefully avoid removing the book from the situation above demonstrated.
 
-When any steps are made without turning, or in turning quite round, then both sides of the book must be held with both hands; but in turning a quarter round, half round, or three quarters round, it will be necessary to take more care, because it will be difficult to turn, unless the book turns also; yet this must be absolutely avoided; for if the book moves out of its situation, it will be impossible to comprehend the steps therein described; wherefore, for the better observation of this, I shall give you the following rules.
+When any steps are made without turning, or in turning quite round, then both sides of the book must be held with both hands; but in turning a quarter round, half round, or three quarters round, it will be necessary to take more care, because {35} it will be difficult to turn, unless the book turns also; yet this must be absolutely avoided; for if the book moves out of its situation, it will be impossible to comprehend the steps therein described; wherefore, for the better observation of this, I shall give you the following rules.
 
 After having considered the turning, and on what side to turn, as for example, in a quarter turn to the right, you must put your left hand to the farther part of the book, and your right to the nearest. Your hands being thus prepared, in turning your quarter turn, bring your left hand in to you, whilst your right removes from you; so that both hands will by this means be equally advanced before you, holding the book by the same places before-mentioned, and you will find, that in turning a quarter round, the book will still remain in its former situation. You must make use of the same rule in a half turn.
 
@@ -350,11 +363,11 @@ To turn three quarters round to the right, you must cross your hands more than y
 
 The same rules may be made use of in turning to the left, only you must observe, that instead of placing your left hand, you must place the right to that part of the book the farthest from you; and it may serve for a general rule, that in turning to the right, you first remove your left hand; and in turning to the left, you remove your right.
 
-### Rules to be Observed in Dancing by Written Characters
+### {36} Rules to be Observ'd in Dancing by Written Characters
 
 You must first find out the beginning of the tract, by which means you will know towards what part of the dancing-room the body is to be placed, before the dance begins, as has been shown before, in speaking of the posture, and presence of the body. Then observe whether there be any position, as you will find in the following examples, and there you are to place your self. Then see what step is nearest to the said position, and you will find it to be that which is marked number 1. Which having performed, observe which is nearest to that, and you will find it is that marked number 2. After this, you must move to number 3, then to number 4, &c. and so continue moving, observing exactly to perform that step which is nearest to the place where you are, and to follow always the same rule as well in moving forwards, backwards, and sideways, as in moving round.
 
-### How to Know What Steps and Half Positions Are with the Right Foot, and What with the Left
+### {37} How to Know What Steps and Half Positions Are with the Right Foot, and What with the Left
 
 The tract or line, on which dances are described, whether forward or backward, must be considered in respect to its right side marked R, and the left side marked L, as may be seen by the following example.
 
@@ -378,9 +391,11 @@ The tract I, moves forwards, the face towards the left side of the room.
 
 The tract K retires backwards, the face towards the right side of the room.
 
-The tract G, move round, and the tract M, retire round.
+The tract G, move round, and the tract M, retire round[^3].
 
-In moving sideways, the tract or line must also be considered as to its two sides, videlicet the upper side marked X, and the under side marked Y. Steps and half positions, which are on the upper side of the line, are to be made with the foremost foot, and those which are on the under side, with the hinder foot.
+[^3]: Table on page 38 was omitted in this transcription.
+
+{39} In moving sideways, the tract or line must also be considered as to its two sides, videlicet the upper side marked X, and the under side marked Y. Steps and half positions, which are on the upper side of the line, are to be made with the foremost foot, and those which are on the under side, with the hinder foot.
 
 The tracts marked N, are moving sideways to the right, towards the lower end of the room.
 
@@ -396,13 +411,13 @@ A step, which is to cross behind the foregoing step, must begin above the line, 
 
 A step, which begins with the foremost foot, in order to move sideways, to end on a line with the other foot, ought to begin from the part above the line, and descend obliquely sideways towards that below, as the following step, marked number 1, will show.
 
-A step, which is to cross before the foregoing step, must begin from below the line, and rise obliquely above it, which you may observe by the step number 1.
+{40} A step, which is to cross behind the foregoing step, must begin from below the line, and rise obliquely above it, which you may observe by the step number 1.
 
 ### To Return upon a Tract you Have Just Before Moved on
 
 For example, if you have moved from the lower end of the room, to the upper end, and have a mind to return upon the same tract, as the tract marked A, you must remove, and place the line or tract, on which you would return, on one side or the other, as you shall find most convenient, as is marked by the letter B, and which in effect is the same with the foregoing; which two tracts must be joined together by a pointed line marked C, which only serves to conduct the sight from one line to the other.
 
-The same thing must be observed in moving several times round on the same circle, as upon the circle marked D; about which may be described as many circles as shall be necessary. As for example, the circles E and F, which must be supposed to be on the same circle with the circle D.
+{41} The same thing must be observed in moving several times round on the same circle, as upon the circle marked D; about which may be described as many circles as shall be necessary. As for example, the circles E and F, which must be supposed to be on the same circle with the circle D.
 
 ### To Know to and from What Positions, Steps Move
 
@@ -412,17 +427,17 @@ Steps which move forwards or backwards, shall be taken to be in the fourth posit
 
 Steps which move straight, opening sideways, shall be taken to be in second the position, and steps crossing, whether forwards or backwards, shall be taken to be in the fifth position.
 
-If it should happen nevertheless, that any of the above-mentioned steps should terminate upon both feet, as it often happens in rising and springing, it is then necessary to mark the position; without which it would be impossible to know, that the rising and springing should be on both feet; wherefore, in demonstrating the positions of joined and unclosed steps, I will add to them those before-mentioned, on which I will also mark the positions, to make use of on occasion.
+{42} If it should happen nevertheless, that any of the above-mentioned steps should terminate upon both feet, as it often happens in rising and springing, it is then necessary to mark the position; without which it would be impossible to know, that the rising and springing should be on both feet; wherefore, in demonstrating the positions of joined and unclosed steps, I will add to them those before-mentioned, on which I will also mark the positions, to make use of on occasion.
 
 ### How Steps Terminate in Positions
 
 When a step terminates in a position, there ought to be no foot at the end of it, because the half position, to which it is joined, serves for that.
 
-A position at the end of a step, may be also known by adding to the step a half position, because the representation of the foot, which is at the extremity of the step, is made use of, upon this occasion, for a half position; and a half position joined to it, is the same as a whole position.
+{43} A position at the end of a step, may be also known by adding to the step a half position, because the representation of the foot, which is at the extremity of the step, is made use of, upon this occasion, for a half position; and a half position joined to it, is the same as a whole position.
 
 The same rule must be observed in beaten steps, videlicet that the half position represents the foot, against which the other beats; and whereby you may know whether the beat be made on the instep, behind the heel, against the ankle, or against the side of the foot.
 
-You must observe, that when two steps terminate both in the same position, the first moves without any regard to the position, and it is the last only that must observe the said position; as the following examples will demonstrate.
+{44} You must observe, that when two steps terminate both in the same position, the first moves without any regard to the position, and it is the last only that must observe the said position; as the following examples will demonstrate.
 
 ### Of Simple and Compound Steps
 
@@ -430,7 +445,7 @@ All steps may be either simple or compound.
 
 A simple step, is that which is alone, as all those which hitherto demonstrated; and a compound step, is, where two or more steps are joined together by a line, and which then are to be reputed as one step only, as will appear by the following steps.
 
-To practise more easily what has already been taught and demonstrated, you may make use of the following tables; where you will find all or the greatest part of the steps used in dancing, whether with one foot, or the other, forwards, backwards, sideways, or turning, as well upon straight lines, as diametrical.
+{45} To practise more easily what has already been taught and demonstrated, you may make use of the following tables; where you will find all or the greatest part of the steps used in dancing, whether with one foot, or the other, forwards, backwards, sideways, or turning, as well upon straight lines, as diametrical.
 
 ### The Tables
 
@@ -450,17 +465,19 @@ To practise more easily what has already been taught and demonstrated, you may m
 
 You must observe, that each square contains only one step, which I have writ down twice, to the end to show, that what is performed with one foot, may also be performed with the other.
 
-An explanation of the steps contained in each square, is also writ down with them; and whereas some of the words and terms are abbreviated for want of room, I have put down here a short explanation of them.
+An explanation of the steps contained in each square, is also writ down with them; and whereas some of the words and terms are abbreviated for want of room, I have put down here a short explanation of them[^4].
 
-### A Supplement of Steps
+[^4]: 41 pages of tables were omitted in this transcription.
+
+### {Table 42} A Supplement of Steps
 
 These four last steps are all of them in the rigaudon of mister Isaac's, and give a particular grace to the dance which the common way of performing them would not do; and it is to mister Isaac we owe the so frequent use of them here since they are seldom, or ever found, in any other dances whatsoever.
 
-### Of Time, Measure, or Cadence
+### {47} Of Time, Measure, or Cadence
 
 There are three sorts of time in dancing, videlicet common time, triple time, and quadruple time.
 
-Common time, is used in gavottes, galliards, bourrées, rigaudons, jigs, and canaries.
+Common time, is used in gavottes, galliards, bourrées, rigandons, jigs, and canaries.
 
 Triple time, is made use of in courants, sarabands, chaconnes, passacailes, minuets, and passe-pieds.
 
@@ -472,15 +489,17 @@ It is to be observed nevertheless, that in courant movements, two steps are put 
 
 The bars or measures in dances, must be marked in like manner with those in musick, videlicet with little bars crossing the tract, which are to agree with those of the tune.
 
-You will understand by the following examples, how each step agrees with the tune to which they are composed.
+You will understand by the following examples, how each step agrees with the tune to which they are composed[^5].
 
-If it happens that you have occasion to put more steps in a measure, than are in the foregoing examples, the following rules must be observed.
+[^5]: Musical notation page was omitted in this transcription
+
+{49} If it happens that you have occasion to put more steps in a measure, than are in the foregoing examples, the following rules must be observed.
 
 If, for example, you would in a measure of common time, or half a measure of quadruple time, which is the same thing, put a fleuret and a bound; the three steps composing the fleuret, must have a double tie to join them, and which will show their motion to be as swift again, as if there had been but one; the bound also must be joined to the fleuret with a single tie only; by which you will know, that these two steps are in effect but one.
 
 If you would put the same step in a measure of triple time, the two first steps of the fleuret must only have a double tie.
 
-When in dancing some measures of the tune, are to be let slip, whether in the beginning or middle of the dance, it must be marked in the following manner, vis. by a little stroke crossing obliquely the tract, and as many of them are to be marked, as there are bars to be let slip; and in describing a half measure, half the stroke only must be marked.
+{50} When in dancing some measures of the tune, are to be let slip, whether in the beginning or middle of the dance, it must be marked in the following manner, vis. by a little stroke crossing obliquely the tract, and as many of them are to be marked, as there are bars to be let slip; and in describing a half measure, half the stroke only must be marked.
 
 The same stroke longways, parallel with the tract, is equivalent to four of the foregoing strokes, and takes up four measures of the tune.
 
@@ -488,13 +507,13 @@ For a time, half time, or quarter time, &c. they may be marked in the same manne
 
 In tunes, which begin with odd notes, as gavottes, chaconnes, jigs, loures, bourrées, &c. the foregoing marks must be made use of in the beginning of the tract.
 
-The letters of the alphabet, which are placed upon the steps in the following example, and which are also placed over the notes of the tune, demonstrate the time or cadence of a dance.
+The letters of the alphabet, which are placed upon the steps in the following example, and which are also placed over the {51} notes of the tune, demonstrate the time or cadence of a dance.
 
 ### Of the Figure
 
 There are two sorts of figures in dancing, videlicet a regular, and an irregular.
 
-A regular figure, is when two or more dancers move contrarily, the one to the right, and the other to the left.
+{52} A regular figure, is when two or more dancers move contrarily, the one to the right, and the other to the left.
 
 An irregular figure, is when two dancers move together, both in the same figure, on the same side.
 
@@ -502,11 +521,11 @@ By the mark representing the presence of the body, you will distinguish the trac
 
 If a number of dancers figure together, the mark for the placing the body will not be sufficient to distinguish them, (as in a dance for eight:) on this occasion therefore, you may make use of letters, of which AA may represent two which figure together. BB two others. CC two more, and DD the other two; each of which, will also be distinguished by there figuring, and which the following example will demonstrate.
 
-### Some Rules to be Observed in the Figures of Dances
+### {53} Some Rules to be Observ'd in the Figures of Dances
 
 I have already shown, that the tract serves for two ends, videlicet first, on which to describe the steps and positions; and secondly, for the direction of the figure of the dance.
 
-I shall now add, that when in dancing, several steps are to be performed in the same place, the tract is then to be respected only as the conductor of the step, and not in relation to the figure; but where the steps move continually from one place to another, then the tract is to be observed, not only for the description of the steps, but also for the figure of the dance. Place your self then where the beginning of the tract directs, and observe whether the figure be straight, diametrical, circular, or oblique, whether it be forwards, backwards, or sideways, if to the right, or to the left; all which I have already demonstrated in the foregoing pages; then having learnt the tune, which must be pricked down on the top of each page, add the steps to the tune, as has been already shown, moving in the figure as is described on the paper. When it happens that the tract or tracts cross one another, the steps on the one, must leave a sufficient breach, for the describing the steps; on the other, to avoid confusion.
+I shall now add, that when in dancing, several steps are to be performed in the same place, the tract is then to be respected only as the conductor of the step, and not in relation to the figure; but where the steps move continually from one place to another, then the tract is to be observed, not only for the description of the steps, but also for the figure of the dance. Place your self then where the beginning of the tract directs, and observe whether the figure be straight, diametrical, circular, or oblique, whether it be forwards, backwards, or sideways, if to the right, or to the left; all which I have already demonstrated in the foregoing pages; then having learnt the tune, which must be pricked down on the top of each page, add the steps to the tune, as has been already shown, moving in the figure as is described on the paper. When it happens that the tract or tracts cross one another, the steps on the one, must {54} leave a sufficient breach, for the describing the steps; on the other, to avoid confusion.
 
 ### For Giving the Hands in Dancing
 
@@ -514,7 +533,7 @@ You will know when to give the hand, by a small crescent or half circle at the e
 
 When you have thus given one hand or both, you are not to quit hands, till you find the same marks cut through with another little stroke, which shows, that in that place the hands are to let go.
 
-### Of the Movement of the Arms
+### {55} Of the Movement of the Arms
 
 Although the carriage and movement of the arms depend more on the fancy of the performer, than on any certain rules, I shall nevertheless lay down some examples, which will explain, by demonstrative characters, the different motion of the arms in dancing; or at least, will inform you what characters to make use of in describing the motion of the arms, to the movement of each step.
 
@@ -524,7 +543,7 @@ The arm is represented by the letters ABC, of which A represents the shoulder, B
 
 In moving forwards or backwards in the dance, the arms must be marked on each side the tract, the right arm on the right side the tract, and the left arm on the left side; but when in the figure of the dance, the movement is sideways, they are to be marked both on one side, always observing, that the right arm must be to the right, and the left arm to the left.
 
-I shall not pretend to make a long disquisition on the motion of the arms, but shall only add, that as there are three movements from the waste downwards, so there are also three movements in the arms, which have a correspondence, and are agreeing with them below, videlicet that of the wrist, has relation to the heel; that of the elbow, to the knee, and that of the shoulder, or the whole arm, to the thigh.
+{56} I shall not pretend to make a long disquisition on the motion of the arms, but shall only add, that as there are three movements from the waste downwards, so there are also three movements in the arms, which have a correspondence, and are agreeing with them below, videlicet that of the wrist, has relation to the heel; that of the elbow, to the knee, and that of the shoulder, or the whole arm, to the thigh.
 
 You will know when the arm moves by an arched line, marked C D, drawn from that which represents the end of the arm, which shows the figure the wrist makes in moving, as from C to D.
 
@@ -534,7 +553,7 @@ The motion of the arm upwards, is when the arm, which is open or extended, close
 
 ### Examples of the Movements of the Arms.
 
-The arms may either move both together, or one after the other; you will know when the arms are to move together, by a line or tie drawn from the one to the other; and when there is no tie, they are then to move one after the other.
+{47} The arms may either move both together, or one after the other; you will know when the arms are to move together, by a line or tie drawn from the one to the other; and when there is no tie, they are then to move one after the other.
 
 The arms may either move alike with the same movement, as when both arms either open or extend themselves together, or close, or approach each other at the same time.
 
@@ -542,7 +561,7 @@ Or they may move contrary one to the other, when the one opens, and the other cl
 
 ### Some Rules to be Observed in Writing of Dances
 
-You must resolve in what part of the room the dance is to begin, and there place the beginning of the tract; then trace out the figure, and mark thereon the position; then describe the steps, as I have shown in the foregoing examples; and if you find any difficulty in writing any of the steps, you must make use of your table of steps; and in finding the step you have occasion for, you ought first to consider what step it is, whether courant, coupée, bourée, bound, contretemps, &c. Suppose, for example, the step to be a bourée, turn then to the table of bourrées or fleurets, and having found the step you want, observe after what manner it is described, and then write it down in your dance.
+You must resolve in what part of the room the dance is to begin, and there place the beginning of the tract; then trace out the figure, and mark thereon the position; then describe the steps, as I have shown in the foregoing examples; and if you find any difficulty in writing any of the steps, you must make use of your table of steps; and in finding the step you have occasion for, you ought first to consider what step it is, whether courant, coupée, bourée, bound, contretemps, &c. Suppose, for example, the step to be a bourée, turn then to the table of bourrées or fleurets, and having found the step you {58} want, observe after what manner it is described, and then write it down in your dance.
 
 On the top of each page, on which your dance is described, you must prick down as many bars of the tune, as there are barns or measures in the dance.
 
@@ -550,7 +569,7 @@ Although the tract serves generally for the explaining the figure of the dance, 
 
 You must observe at the end of each page, the place where the dancer finishes, and to what part of the room the face directs, by which means you will readily know where to place the beginning of the tract in the following page; and so continue from page to page, to the end of the dance.
 
-But if in the beginning of a page, two dancers should happen to be close together, and some steps to be performed in the same place; which steps cannot be conveniently described, neither on one side, or the other, and that the closeness of the dancers, will not admit of advancing of the tracts, one towards the other; you must then be obliged, instead of placing the tracts at C D, to retire as far back as will be necessary to describe the steps, so that the steps may end at C D.
+But if in the beginning of a page, two dancers should happen to be close together, and some steps to be performed in the same place; which steps cannot be conveniently described, neither {59} on one side, or the other, and that the closeness of the dancers, will not admit of advancing of the tracts, one towards the other; you must then be obliged, instead of placing the tracts at C D, to retire as far back as will be necessary to describe the steps, so that the steps may end at C D.
 
 Or else the contrary may be done, by placing the beginning of the steps at C D; and instead of describing the steps one towards the other, they must separate, as from C to E, and D to F.
 
@@ -559,3 +578,5 @@ You will find these are performed without the dancers moving out of their places
 If in the dances in the second volume, you find some of the steps longer than others, you must have no regard to them, as to their length in the description of them, but judge of their extension by the distance of positions, (as I have already shown in the termination of the steps, in their positions); so that you are not to conclude any thing from the length or shortness of steps.
 
 ### Finis
+
+///Footnotes///
