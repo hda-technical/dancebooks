@@ -74,7 +74,8 @@ def get_locale():
 	"""
 	lang = (
 		flask.request.cookies.get("lang", None) or
-		getattr(flask.g, "lang", None)
+		getattr(flask.g, "lang", None) or
+		utils.first(config.www.languages)
 	)
 	if lang in config.www.languages:
 		return lang
