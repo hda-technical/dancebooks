@@ -75,12 +75,12 @@ def get_locale():
 	lang = (
 		flask.request.cookies.get("lang", None) or
 		getattr(flask.g, "lang", None) or
-		utils.first(config.www.languages)
+		flask.request.accept_languages.best_match(config.www.languages)
 	)
 	if lang in config.www.languages:
 		return lang
 	else:
-		return flask.request.accept_languages.best_match(config.www.languages)
+		return utils.first(config.www.languages)
 
 
 @flask_app.route("/secret-cookie", methods=["GET"])
