@@ -8,7 +8,7 @@
         {% include "components/head-meta-common.html" %}
         {% include "components/head-link.html" %}
         {% include "components/head-script.html" %}
-        <meta name="og:title" content="{{ item.title() }}"/>
+        <meta name="og:title" content="{{ item.title() or item.incipit() }}"/>
         <meta name="og:type" content="book"/>
 		{% if item.author() %}
         <meta name="og:description" content="A book by {{ item.author() }}"/>

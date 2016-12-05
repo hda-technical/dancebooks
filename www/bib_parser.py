@@ -91,6 +91,9 @@ class BibItem(object):
 	def title(self):
 		return self.get_as_string("title")
 
+	def incipit(self):
+		return self.get_as_string("incipit")
+
 	def publisher(self):
 		return self.get_as_string("publisher")
 

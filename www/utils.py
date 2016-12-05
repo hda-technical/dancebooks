@@ -654,7 +654,7 @@ def make_html_cite(item):
 	result = ""
 	author = item.get("author")
 	langid = item.get("langid")
-	title = item.get("title")
+	title = item.get("title") or item.get("incipit")
 	location = item.get("location")
 	year = item.get("year")
 	if author is not None:
