@@ -591,26 +591,25 @@ def check_url_validity(item, errors):
 
 		single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
 		metadata = utils.extract_metadata_from_file(single_filename)
-		owner = metadata.get("owner")
-		if owner is None:
+		owners = metadata.get("owner").split("+")
+		if not owners:
 			errors.add("Owner specification expected for self-served url #{number} (url={url}, filename={filename})".format(
 				number=number,
 				url=single_url,
 				filename=single_filename
 			))
 			continue
-		owner_fullname = config.parser.bookkeepers.get(owner)
-		if owner_fullname:
-			annotation = item.get("annotation")
-			if (
-				(not annotation) or
-				(owner_fullname not in annotation)
-			):
-				errors.add("Owner fullname ({owner_fullname}) should be present in annotation".format(
-					owner_fullname=owner_fullname
-				))
-
-
+		for owner in owners:
+			owner_fullname = config.parser.bookkeepers.get(owner)
+			if owner_fullname:
+				annotation = item.get("annotation")
+				if (
+					(not annotation) or
+					(owner_fullname not in annotation)
+				):
+					errors.add("Owner fullname ({owner_fullname}) should be present in annotation".format(
+						owner_fullname=owner_fullname
+					))
 
 
 def check_url_accessibility(item, errors):
