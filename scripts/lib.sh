@@ -486,8 +486,9 @@ dusseldorfTileFile()
 
 	local TILE_X=$1
 	local TILE_Y=$2
+	local BASE_TILE_Y=50
 	#dusseldorf tiles are numbered from bottom to top
-	local REAL_TILE_Y=`expr $MAX_TILE_Y - $TILE_Y`
+	local REAL_TILE_Y=`expr $BASE_TILE_Y - $TILE_Y`
 
 	generalTilesFile "$TILE_X" "$REAL_TILE_Y"
 }
