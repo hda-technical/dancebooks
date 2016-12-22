@@ -63,6 +63,7 @@ LONG_LANG_MAP = {
 	},
 	"german.bib": {
 		"german",
+		"english"
 	},
 	"italian.bib": {
 		"italian",
