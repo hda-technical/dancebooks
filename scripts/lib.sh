@@ -130,20 +130,26 @@ roundDiv()
 	fi
 }
 
+dullValidate()
+{
+	return 0
+}
+
 tiles()
 {
-	if [ $# -ne 6 ]
+	if [ $# -ne 7 ]
 	then
-		echo "Usage: $0 urlGenerator fileGenerator pageId zoom outputDir"
+		echo "Usage: $0 urlGenerator fileGenerator fileValidator pageId zoom outputDir"
 		return 1
 	fi
 
 	local URL_GENERATOR=$1
 	local FILE_GENERATOR=$2
-	local PAGE_ID=$3
-	local TILE_Z=$4
-	local TILE_SIZE=$5
-	local OUTPUT_DIR=$6
+	local TILE_VALIDATOR=$3
+	local PAGE_ID=$4
+	local TILE_Z=$5
+	local TILE_SIZE=$6
+	local OUTPUT_DIR=$7
 	local OUTPUT_FILE="$OUTPUT_DIR/`basename $PAGE_ID`.bmp"
 	local TMP_DIR="$OUTPUT_DIR/`basename $PAGE_ID`.tmp"
 
@@ -155,9 +161,10 @@ tiles()
 	do
 		local TILE_Y=0
 		local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
-		webGet `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
+		webGet `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE" && $TILE_VALIDATOR "$TILE_FILE"
 		if [ $? -ne 0 ]
-		then
+		then			
+			rm -f "$TILE_FILE"
 			local MAX_TILE_X=`expr $TILE_X - 1`
 			local LAST_TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $MAX_TILE_X 0`.jpg"
 			local LAST_TILE_WIDTH=`identify -format '%w' "$LAST_TILE_FILE"`
@@ -167,10 +174,11 @@ tiles()
 		for TILE_Y in `seq 0 $MAX_TILE_Y`
 		do
 			local TILE_FILE="$TMP_DIR/`$FILE_GENERATOR $TILE_X $TILE_Y`.jpg"
-			webGet `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE"
+			webGet `$URL_GENERATOR $PAGE_ID $TILE_X $TILE_Y $TILE_Z` "$TILE_FILE" && $TILE_VALIDATOR "$TILE_FILE"
 
 			if [ $? -ne 0 ]
 			then
+				rm -f "$TILE_FILE"
 				local MAX_TILE_Y=`expr $TILE_Y - 1`
 				local LAST_TILE_FILE="$TMP_DIR/`$FILE_GENERATOR 0 $MAX_TILE_Y`.jpg"
 				local LAST_TILE_HEIGHT=`identify -format '%h' "$LAST_TILE_FILE"`
@@ -214,7 +222,7 @@ tiles()
 		convert $OUTPUT_FILE -trim $OUTPUT_FILE
 	fi
 
-	rm -rf "$TMP_DIR"
+	#rm -rf "$TMP_DIR"
 }
 
 # removes wrong symbols from filename, replacing them by underscores
@@ -433,7 +441,7 @@ gallicaTiles()
 	local TILE_SIZE=1024
 	local OUTPUT_DIR=.
 
-	tiles gallicaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles gallicaTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 princetonTilesUrl()
@@ -473,7 +481,7 @@ princetonTiles()
 	local OUTPUT_DIR=.
 
 
-	tiles princetonTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles princetonTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 dusseldorfTileFile()
@@ -528,7 +536,7 @@ dusseldorfTiles()
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=5120
 
-	tiles dusseldorfTilesUrl dusseldorfTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles dusseldorfTilesUrl dusseldorfTileFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 uniHalleTileFile()
@@ -583,7 +591,7 @@ uniHalleTiles()
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=5120
 
-	tiles uniHalleTilesUrl uniHalleTileFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles uniHalleTilesUrl uniHalleTileFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 uniJenaTilesUrl()
@@ -617,7 +625,7 @@ uniJenaTiles()
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=1
 
-	tiles uniJenaTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles uniJenaTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 yaleWalpoleTilesUrl()
@@ -663,7 +671,7 @@ yaleWalpoleTiles()
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=256
 
-	tiles yaleWalpoleTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles yaleWalpoleTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 kunstkameraTilesUrl()
@@ -700,7 +708,7 @@ kunstkameraTiles()
 	#overriding global constant
 	MIN_FILE_SIZE_BYTES=1
 
-	tiles kunstkameraTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles kunstkameraTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 ugentTilesUrl()
@@ -710,28 +718,27 @@ ugentTilesUrl()
 		echo "Usage $0 image_id x y z"
 		return 1
 	fi
-	#expecting BOOK_ID in form of
-	#2016/3/20/11/33/39/BIB-G-006778_2016_0002_AC
-	#(including date)
+	#expecting BOOK_ID in form of B3D7E912-00D1-11E6-BCF2-CC0ED53445F2:DS.42
 	local BOOK_ID=$1
 	local TILE_X=$2
 	local TILE_Y=$3
 	local ZOOM=$4
-
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=1
+	local TILE_SIZE=1024
+	
+	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
+	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
 
 	#FIXME: this number should be manually adjusted to get correct results
-	local TILES_IN_ROW=28
-	local TILE_NUMBER=`echo "$TILE_Y * $TILES_IN_ROW + $TILE_X" | bc`
+	echo "http://adore.ugent.be/IIIF/images/archive.ugent.be:$BOOK_ID/$LEFT,$TOP,$TILE_SIZE,$TILE_SIZE/$TILE_SIZE,/0/default.jpg"
+}
 
-	if [ "$TILE_X" -ge "$TILES_IN_ROW" ]
-	then
-		#generating fake url to make outer tile iteration algorithm work
-		echo "http://httpbin.org/status/404"
-	else
-		echo "http://adore.ugent.be/iip?FIF=/data/datadir/$BOOK_ID.jp2&CNT=1&SDS=0,90&JTL=$ZOOM,$TILE_NUMBER"
-	fi
+ugentTilesValidate()
+{
+	local TILE_FILE=$1
+	local HEIGHT=`identify -format "%h" $TILE_FILE`
+	#when out of bound, ugent will respond with some rainbow image with height=4000
+	test $HEIGHT -ne 4000
+	return $?
 }
 
 ugentTiles()
@@ -743,13 +750,13 @@ ugentTiles()
 	fi
 	local BOOK_ID=$1
 	local ZOOM=5
-	local TILE_SIZE=256
+	local TILE_SIZE=1024
 	local OUTPUT_DIR=`makeOutputDir ugent`
 
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=640
+	#overriding global constant with some magic value (with 276 kilobytes)
+	MIN_FILE_SIZE_BYTES=282624
 
-	tiles ugentTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles ugentTilesUrl generalTilesFile ugentTilesValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 uflEduTilesUrl()
@@ -804,7 +811,7 @@ uflEduTiles()
 	MAX_TILE_X=`echo \`roundDiv ${IMG_WIDTH} 256\` - 1 | bc`
 	MAX_TILE_Y=`echo \`roundDiv ${IMG_HEIGHT} 256\` - 1 | bc`
 
-	tiles uflEduTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles uflEduTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 uflEdu()
@@ -876,7 +883,7 @@ habDeTiles()
 	#overriding global constants
 	MIN_FILE_SIZE_BYTES=1
 
-	tiles habDeTilesUrl generalTilesFile $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+	tiles habDeTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 if [ $# -lt 2 ]
