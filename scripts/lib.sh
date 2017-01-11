@@ -222,7 +222,7 @@ tiles()
 		convert $OUTPUT_FILE -trim $OUTPUT_FILE
 	fi
 
-	#rm -rf "$TMP_DIR"
+	rm -rf "$TMP_DIR"
 }
 
 # removes wrong symbols from filename, replacing them by underscores
