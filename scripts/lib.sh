@@ -886,6 +886,48 @@ habDeTiles()
 	tiles habDeTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
+historyOrgTilesUrl()
+{
+		if [ $# -ne 4 ]
+	then
+		echo "Usage $0 image_id x y z"
+		return 1
+	fi
+	local BOOK_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local ZOOM=$4
+	
+	for TILE_GROUP in `seq 0 2`
+	do
+		local URL="http://www.history.org/history/museums/clothingexhibit/images/accessories/${BOOK_ID}/TileGroup${TILE_GROUP}/${ZOOM}-${TILE_X}-${TILE_Y}.jpg"
+		curl --silent -I "$URL" | grep "HTTP/1.1 200 OK" > /dev/null
+		if [ "$?" -eq 0 ]
+		then
+			echo "$URL"
+			return
+		fi
+	done
+}
+
+historyOrgTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return 1
+	fi
+	local BOOK_ID="$1"
+	local ZOOM=4
+	local TILE_SIZE=256
+	local OUTPUT_DIR=`makeOutputDir history.org`
+
+	#overriding global constants
+	MIN_FILE_SIZE_BYTES=1
+
+	tiles historyOrgTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
 if [ $# -lt 2 ]
 then
 	echo "Usage: $0 grabber <grabber params>"
