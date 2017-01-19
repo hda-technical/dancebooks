@@ -888,7 +888,7 @@ habDeTiles()
 
 historyOrgTilesUrl()
 {
-		if [ $# -ne 4 ]
+	if [ $# -ne 4 ]
 	then
 		echo "Usage $0 image_id x y z"
 		return 1
