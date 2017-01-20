@@ -539,6 +539,9 @@ msgstr "Number in series / Periodical issue number"
 msgid "item:labels:author"
 msgstr "Author (real name)"
 
+msgid "item:labels:compiler"
+msgstr "Compiler"
+
 msgid "item:labels:pseudo-author"
 msgstr "Author (pseudonym)"
 

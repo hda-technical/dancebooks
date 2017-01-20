@@ -619,7 +619,7 @@ def make_cite_label(item):
 	bibliography style in square brackets
 	"""
 	shorthand = item.get("shorthand")
-	author = item.get("author")
+	author = item.get("author") or item.get("pseudo_author") or item.get("compiler")
 	year = item.get("year")
 	langid = item.get("langid")
 	if (author is None) and (shorthand is None):

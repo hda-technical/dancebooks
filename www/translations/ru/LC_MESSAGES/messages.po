@@ -536,6 +536,9 @@ msgstr "Номеру в серии / Номеру периодического �
 msgid "item:labels:author"
 msgstr "Автор (настоящее имя)"
 
+msgid "item:labels:compiler"
+msgstr "Составитель"
+
 msgid "item:labels:pseudo-author"
 msgstr "Автор (псевдоним)"
 

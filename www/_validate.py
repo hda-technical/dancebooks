@@ -30,6 +30,7 @@ DATA_FIELDS = {
 	"catalogue",
 	"cite_label",
 	"commentator",
+	"compiler",
 	"crossref",
 	"day",
 	"edition",
@@ -360,17 +361,13 @@ def check_shorthand(item, errors):
 	"""
 	MAX_SHORTHAND_LENGTH = 25
 	author = item.get("author")
+	pseudo_author = item.get("pseudo_author")
+	compiler = item.get("compiler")
 	shorthand = item.get("shorthand")
-	if (
-		(author is None) and
-		(shorthand is None)
-	):
+	if not any([author, compiler, pseudo_author, shorthand]):
 		errors.add("Shorthand is missing")
 
-	if (
-		(shorthand is not None) and
-		(len(shorthand) > MAX_SHORTHAND_LENGTH)
-	):
+	if shorthand and (len(shorthand) > MAX_SHORTHAND_LENGTH):
 		errors.add("Shorthand is oversized (max length is {max_length})".format(
 			max_length=MAX_SHORTHAND_LENGTH
 		))
