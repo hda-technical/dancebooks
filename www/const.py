@@ -68,6 +68,7 @@ LONG_LANG_MAP = {
 	},
 	"italian.bib": {
 		"italian",
+		"latin"
 	},
 	"mexican.bib": {
 		"spanish",
