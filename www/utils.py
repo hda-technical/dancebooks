@@ -374,13 +374,16 @@ def is_url_accessible(url, item, method="HEAD"):
 		return True
 
 	RETRIES = 3
+	HEADERS = {
+		"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:51.0) Gecko/20100101 Firefox/51.0"
+	}
 
 	try:
 		for n_try in range(RETRIES):
 			if method == "HEAD":
-				response = requests.head(url, allow_redirects=False, verify=True)
+				response = requests.head(url, allow_redirects=False, verify=True, headers=HEADERS)
 			elif method == "GET":
-				response = requests.get(url, allow_redirects=False, verify=True)
+				response = requests.get(url, allow_redirects=False, verify=True, headers=HEADERS)
 			else:
 				raise ValueError("Unexpected method {method}".format(method=method))
 			if response.status_code not in (
@@ -388,6 +391,7 @@ def is_url_accessible(url, item, method="HEAD"):
 				http.client.SERVICE_UNAVAILABLE
 			):
 				#retrying in case of server error
+				#retrying in
 				break
 	except Exception as ex:
 		logging.debug("HTTP request for {url} raised an exception: {ex}".format(
@@ -396,8 +400,9 @@ def is_url_accessible(url, item, method="HEAD"):
 		))
 		return False
 	if (
-		# some libraries (e. g. lib.ugent.be return 404 for HEAD requests
+		# some libraries (e. g. lib.ugent.be return strange errors for HEAD requests
 		(response.status_code in (
+			http.client.FORBIDDEN,
 			http.client.NOT_FOUND,
 			http.client.METHOD_NOT_ALLOWED
 		)) and
