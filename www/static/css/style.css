@@ -563,3 +563,7 @@ div.transcription span.page_number {
 	-ms-user-select: none;
 	-webkit-user-select: none;
 }
+
+div.transcription div.upper_roman + ol {
+	list-style-type: upper-roman;
+}
