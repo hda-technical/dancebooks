@@ -8,7 +8,7 @@ SHORT_LANG_MAP = {
 	"ca": ["english", "french"],
 	"cl": ["spanish"],
 	"cz": ["czech"],
-	"de": ["german"],
+	"de": ["german", "french"],
 	"dk": ["danish"],
 	"en": ["english"],
 	"es": ["spanish"],
