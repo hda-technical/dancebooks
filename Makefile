@@ -54,16 +54,6 @@ validate:
 	python _validate.py \
 	$(ARGS)
 
-added-on:
-	cd www && \
-	$(DEVEL_ENV) \
-	python _added_on.py \
-
-check-files:
-	cd www && \
-	$(DEVEL_ENV) \
-	python _check_files.py \
-
 # www-related targets
 www-debug: www-translations
 	cd www && \

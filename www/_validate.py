@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 import concurrent.futures
+import datetime
 import json
 import multiprocessing
 import logging
-import os.path
+import os
+import re
+import subprocess
 
 import opster
 from stdnum import isbn
@@ -15,9 +18,7 @@ import bib_parser
 import utils
 
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
-languages = sorted(item_index["langid"].keys())
 
-ERROR_PREFIX = "validation:error:"
 #filename for storing previous validation state
 DATA_JSON_FILENAME = "_validate.json"
 DATA_FIELDS = {
@@ -101,6 +102,66 @@ PARTIAL_BOOKTYPES = {
 	"inbook"
 }
 
+def fetch_added_on_from_git():
+	BLAME_REGEXP = re.compile(
+		#commit hash
+		r"^[\^0-9a-z]+\s+"
+		#filename
+		r"[^\s]*?\s+"
+		#committer's name
+		r"\([A-Za-z\-\s\\]*?\s+"
+		#commit date
+		r"(?P<date>\d{4}-\d{2}-\d{2})\s+"
+		#commit time
+		r"[\d:]+\s+"
+		#commit time zone
+		r"[+\d]+\s+"
+		#line numberq
+		r"\d+\)\s+"
+		#item id
+		r"(?P<id>[a-z_\d]+),\s*$"
+	)
+	def blame_file(path):
+		data = subprocess.check_output([
+			"git",
+			"blame",
+			#WARN: using show-name to guarantee output format
+			"--show-name",
+			"--no-progress",
+			path
+		]).decode()
+		result = dict()
+		for line in data.split("\n"):
+			match = BLAME_REGEXP.search(line)
+			if not match:
+				continue
+			item_id = match.group("id")
+			date = datetime.datetime.strptime(
+				match.group("date"),
+				config.parser.date_format
+			)
+			result[item_id] = date
+		return result
+
+	result = dict()
+	for entry in os.listdir(config.parser.bibdata_dir):
+		entry_path = os.path.join(config.parser.bibdata_dir, entry)
+		result.update(blame_file(entry_path))
+	return result
+
+
+def fetch_filelist_from_fs():
+	EXCLUDED_FOLDERS = {
+		"Ancillary sources (not in bibliography)",
+		"Leaflets (not in bibliography)"
+	}
+	trim_root = lambda path: path[len(config.www.elibrary_dir):]
+	return set(map(
+		trim_root,
+		utils.files_in_folder(config.www.elibrary_dir, "*.pdf", excludes=EXCLUDED_FOLDERS)
+	))
+
+
 #executed once per validation run
 def update_validation_data(
 	errors,
@@ -165,7 +226,7 @@ def update_validation_data(
 		validation_data_file.write(json.dumps(validation_data))
 
 
-def check_periodical_filename(filename, item, errors):
+def validate_periodical_filename(filename, item, errors):
 	if filename.endswith(".md"):
 		return
 	booktype = item.get("booktype")
@@ -182,7 +243,7 @@ def check_periodical_filename(filename, item, errors):
 		errors.add("Only articles should be stored in '/Periodical' subfolder")
 
 
-def check_short_desription_filename(filename, item, errors):
+def validate_short_desription_filename(filename, item, errors):
 	if filename.endswith(".md"):
 		return
 	keywords = item.get("keywords") or []
@@ -191,7 +252,7 @@ def check_short_desription_filename(filename, item, errors):
 			errors.add("Only 'dance description: short' tagged items should be stored in '/Short descriptions' subfolder")
 
 
-def check_etiquette_filename(filename, item, errors):
+def validate_etiquette_filename(filename, item, errors):
 	if filename.endswith(".md"):
 		return
 	keywords = item.get("keywords") or []
@@ -200,7 +261,7 @@ def check_etiquette_filename(filename, item, errors):
 			errors.add("Only 'etiquette' tagged items should be stored in '/Etiquette' subfolder")
 
 
-def check_single_filename(abspath, filename, item, errors):
+def validate_single_filename(abspath, filename, item, errors):
 	"""
 	Checks if file is accessible and matches item metadata
 	"""
@@ -215,9 +276,9 @@ def check_single_filename(abspath, filename, item, errors):
 		))
 
 	booktype = item.get("booktype")
-	check_periodical_filename(filename, item, errors)
-	check_short_desription_filename(filename, item, errors)
-	check_etiquette_filename(filename, item, errors)
+	validate_periodical_filename(filename, item, errors)
+	validate_short_desription_filename(filename, item, errors)
+	validate_etiquette_filename(filename, item, errors)
 
 	if booktype in MULTIENTRY_BOOKTYPES:
 		return
@@ -271,7 +332,7 @@ def check_single_filename(abspath, filename, item, errors):
 
 
 #single parameter group validations (executed once per entry)
-def check_id(item, errors):
+def validate_id(item, errors):
 	"""
 	Checks item for id presence and validity
 	Raises ValueError if no id present
@@ -287,7 +348,7 @@ def check_id(item, errors):
 		errors.add("Item id is not unique")
 
 
-def check_parser_generated_fields(item, errors):
+def validate_parser_generated_fields(item, errors):
 	"""
 	Checks presence of the following fields:
 	* booktype
@@ -304,7 +365,7 @@ def check_parser_generated_fields(item, errors):
 			))
 
 
-def check_obligatory_fields(item, errors):
+def validate_obligatory_fields(item, errors):
 	"""
 	Checks presence of the following fields:
 	* langid
@@ -320,7 +381,7 @@ def check_obligatory_fields(item, errors):
 			))
 
 
-def check_allowed_fields(item, errors):
+def validate_allowed_fields(item, errors):
 	"""
 	Checks if all fields of an item are allowed
 	"""
@@ -331,7 +392,7 @@ def check_allowed_fields(item, errors):
 		))
 
 
-def check_translation_fields(item, errors):
+def validate_translation_fields(item, errors):
 	"""
 	Checks that translation entries should have the following fields:
 	* origlanguage
@@ -355,7 +416,7 @@ def check_translation_fields(item, errors):
 			))
 
 
-def check_shorthand(item, errors):
+def validate_shorthand(item, errors):
 	"""
 	Checks that either author or shorthand should be present
 	"""
@@ -373,7 +434,7 @@ def check_shorthand(item, errors):
 		))
 
 
-def check_title_starts_from_shorthand(item, errors):
+def validate_title_starts_from_shorthand(item, errors):
 	"""
 	Checks if title starts from shorthand
 	"""
@@ -385,7 +446,7 @@ def check_title_starts_from_shorthand(item, errors):
 		errors.add("Title should begin with shorthand")
 
 
-def check_isbn(item, errors):
+def validate_isbn(item, errors):
 	"""
 	Checks ISBN for validity.
 	Will accept both ISBN-10 and ISBN-13 formats
@@ -414,7 +475,7 @@ def check_isbn(item, errors):
 			))
 
 
-def check_issn(item, errors):
+def validate_issn(item, errors):
 	"""
 	Checks ISSN for validity
 	"""
@@ -435,7 +496,7 @@ def check_issn(item, errors):
 			))
 
 
-def check_booktype(item, errors):
+def validate_booktype(item, errors):
 	"""
 	Checks if booktype belongs to a valid list.
 	Performs extra checks for field presence based on booktype
@@ -504,7 +565,7 @@ def check_booktype(item, errors):
 			))
 
 
-def check_catalogue_code(item, errors):
+def validate_catalogue_code(item, errors):
 	"""
 	Checks if catalogue code againts
 	"""
@@ -518,7 +579,7 @@ def check_catalogue_code(item, errors):
 			))
 
 
-def check_library_fields(item, errors):
+def validate_library_fields(item, errors):
 	"""
 	Checks if library-related params with storage specifications
 	are available for @unpublished
@@ -538,7 +599,7 @@ def check_library_fields(item, errors):
 			))
 
 
-def check_commentator(item, errors):
+def validate_commentator(item, errors):
 	"""
 	Checks if "commentary" keyword is present
 	in case of known commentator
@@ -558,7 +619,7 @@ def check_commentator(item, errors):
 			errors.add("Field commentator expected")
 
 
-def check_url_validity(item, errors):
+def validate_url_validity(item, errors):
 	"""
 	Checks url for validity
 	"""
@@ -609,7 +670,7 @@ def check_url_validity(item, errors):
 					))
 
 
-def check_url_accessibility(item, errors):
+def validate_url_accessibility(item, errors):
 	"""
 	Checks url for accessibility
 	"""
@@ -624,7 +685,7 @@ def check_url_accessibility(item, errors):
 			))
 
 
-def check_transcription_filename(item, errors):
+def validate_transcription_filename(item, errors):
 	"""
 	Checks if transcription is valid, accessible and named correctly
 	"""
@@ -633,7 +694,7 @@ def check_transcription_filename(item, errors):
 		return
 
 	abspath = os.path.join(config.parser.markdown_dir, transcription)
-	check_single_filename(
+	validate_single_filename(
 		abspath,
 		transcription,
 		item,
@@ -641,7 +702,7 @@ def check_transcription_filename(item, errors):
 	)
 
 
-def check_location(item, errors):
+def validate_location(item, errors):
 	"""
 	Checks that location must be present in case of publisher presence
 	"""
@@ -654,7 +715,7 @@ def check_location(item, errors):
 		errors.add("Location should be present when publisher is known")
 
 
-def check_partial_fields(item, errors):
+def validate_partial_fields(item, errors):
 	"""
 	Checks if pages field matches PAGES_REGEX
 	"""
@@ -681,7 +742,7 @@ def check_partial_fields(item, errors):
 			))
 
 
-def check_volume(item, errors):
+def validate_volume(item, errors):
 	"""
 	Checks volume and volumes parameters for validity
 	"""
@@ -706,7 +767,7 @@ def check_volume(item, errors):
 			))
 
 
-def check_series(item, errors):
+def validate_series(item, errors):
 	"""
 	Checks series and number parameters for validity
 	"""
@@ -735,7 +796,7 @@ def check_series(item, errors):
 			))
 
 
-def check_edition(item, errors):
+def validate_edition(item, errors):
 	"""
 	Checks if edition points to a reissue (i. e. not first edition)
 	"""
@@ -748,7 +809,7 @@ def check_edition(item, errors):
 		))
 
 
-def check_keywords(item, errors):
+def validate_keywords(item, errors):
 	"""
 	Checks keywords for their allowness and correct inheritance
 	"""
@@ -772,7 +833,7 @@ def check_keywords(item, errors):
 		errors.add("Keyword [useless] can't be combined with other keywords")
 
 
-def check_filename(item, errors):
+def validate_filename(item, errors):
 	"""
 	Checks filename against various tests
 	"""
@@ -798,10 +859,10 @@ def check_filename(item, errors):
 	for single_filename in filename:
 		#filename starts with slash - trimming it
 		abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
-		check_single_filename(abspath, single_filename, item, errors)
+		validate_single_filename(abspath, single_filename, item, errors)
 
 
-def check_source_file(item, errors):
+def validate_source_file(item, errors):
 	"""
 	Checks if source file language matches item language
 	"""
@@ -829,66 +890,102 @@ def check_source_file(item, errors):
 		))
 
 
-def check_single_item(item, make_extra_checks):
+def validate_added_on(item, git_added_on, errors):
+	git_date = git_added_on[item.id()]
+	item_date = item.get("added_on")
+	if item_date != git_date:
+		errors.add("Item added_on is {item_date}, while git suggests {git_date}".format(
+			item_date=item_date,
+			git_date=git_date
+		))
+
+
+def validate_item(item, git_added_on, make_extra_checks):
 	errors = set()
-	check_id(item, errors)
-	check_parser_generated_fields(item, errors)
-	check_obligatory_fields(item, errors)
-	check_allowed_fields(item, errors)
-	check_translation_fields(item, errors)
-	check_transcription_filename(item, errors)
-	check_catalogue_code(item, errors)
-	check_library_fields(item, errors)
-	check_shorthand(item, errors)
-	check_isbn(item, errors)
-	check_issn(item, errors)
-	check_booktype(item, errors)
-	check_commentator(item, errors)
-	check_url_validity(item, errors)
-	check_volume(item, errors)
-	check_series(item, errors)
-	check_keywords(item, errors)
-	check_filename(item, errors)
-	check_source_file(item, errors)
-	check_partial_fields(item, errors)
+	validate_id(item, errors)
+	validate_parser_generated_fields(item, errors)
+	validate_obligatory_fields(item, errors)
+	validate_allowed_fields(item, errors)
+	validate_translation_fields(item, errors)
+	validate_transcription_filename(item, errors)
+	validate_catalogue_code(item, errors)
+	validate_library_fields(item, errors)
+	validate_shorthand(item, errors)
+	validate_isbn(item, errors)
+	validate_issn(item, errors)
+	validate_booktype(item, errors)
+	validate_commentator(item, errors)
+	validate_url_validity(item, errors)
+	validate_volume(item, errors)
+	validate_series(item, errors)
+	validate_keywords(item, errors)
+	validate_filename(item, errors)
+	validate_source_file(item, errors)
+	validate_partial_fields(item, errors)
+	validate_added_on(item, git_added_on, errors)
 	if make_extra_checks:
-		check_title_starts_from_shorthand(item, errors)
-		check_url_accessibility(item, errors)
+		validate_title_starts_from_shorthand(item, errors)
+		validate_url_accessibility(item, errors)
 	return errors
+	
+	
+def validate_items(items, git_added_on, make_extra_checks):
+	result = dict()
+	for item in items:
+		errors = validate_item(item, git_added_on, make_extra_checks)
+		if errors:
+			result[item.id()] = errors
+	return result
 
 
 @opster.command()
 def main(
 	make_extra_checks=("", False, "Add some extra checks"),
+	log_all_errors=("", False, "Log all errors, not only newly introduced ones"),
 	ignore_missing_ids=("", False, "Update validation data even when some ids were lost"),
 	ignore_added_errors=("", False, "Update validation data even when new errors were introduced"),
 ):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
+	logging.info("Fetching added_on from git")
+	git_added_on = fetch_added_on_from_git()
+	logging.info("Fetching list of pdf from filesystem")
+	physically_stored = fetch_filelist_from_fs()
+	
+	for item in items:
+		filename = item.get("filename")
+		if not filename:
+			continue
+		for file in filename:
+			physically_stored.discard(file)
+	for path in physically_stored:
+		logging.warn("Unreferenced file found in {elibrary}: {path}".format(
+			elibrary=config.www.elibrary_dir,
+			path=path
+		))
+
 	logging.info("Going to process {0} items".format(len(items)))
 	executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
 	futures = {
-		executor.submit(check_single_item, item, make_extra_checks): item
-		for item in items
+		executor.submit(validate_items, items_batch, git_added_on, make_extra_checks): None
+		for items_batch in utils.batched(items, 100)
 	}
+	
 	erroneous_items = dict()
 	for future in concurrent.futures.as_completed(futures):
-		item = futures[future]
-		item_id=item.id(),
 		try:
 			result = future.result()
-			if len(result) == 0:
-				continue
-			logging.debug("Errors for {item_id} ({source}):".format(
-				item_id=item_id[0],
-				source=item.source()
-			))
-			#FIXME: there is a bug somewhere here,
-			#item_id is a tuple, while it should be a string
-			erroneous_items[item_id[0]] = result
-			for error in result:
-				logging.debug("    " + error)
+			for item_id, errors in result.items():
+				if not errors:
+					continue
+				erroneous_items[item_id] = errors
+				if log_all_errors:
+					for error in errors:
+						logging.debug("Errors for {item_id}: {error}".format(
+							item_id=item_id,
+							error=error
+						))
 		except Exception as ex:
 			logging.exception("Exception while validating {item_id} ({source}): {ex}".format(
 				item_id=item_id,
@@ -901,9 +998,10 @@ def main(
 		ignore_missing_ids,
 		ignore_added_errors
 	)
-	logging.warning("Found {items_count} erroneous items".format(
-		items_count=len(erroneous_items)
-	))
+	if erroneous_items:
+		logging.warning("Found {items_count} erroneous items".format(
+			items_count=len(erroneous_items)
+		))
 
 
 if __name__ == "__main__":

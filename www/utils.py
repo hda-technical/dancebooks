@@ -6,6 +6,7 @@ import fnmatch
 import functools
 import http.client
 import io
+import itertools
 import logging
 import os
 import os.path
@@ -88,7 +89,7 @@ def validate_latex(item, key, value):
 	for regexp, what in LATEX_UNPARSABLE_REGEXPS:
 		if regexp.search(value):
 			logging.warning(
-				"While parsing LaTeX for key={key} of {item_id} got {what}".format(
+				"While parsing LaTeX for {key} of {item_id} got {what}".format(
 					key=key,
 					item_id=item_id,
 					what=what
@@ -134,7 +135,7 @@ def files_in_folder(path, pattern, excludes={}):
 	"""
 	Iterates over folder yielding files matching pattern
 	"""
-	result_files = []
+	result_files = set()
 
 	for root, dirs, files in os.walk(path):
 		skip = False
@@ -149,7 +150,7 @@ def files_in_folder(path, pattern, excludes={}):
 
 		for file_ in files:
 			if fnmatch.fnmatch(file_, pattern):
-				result_files.append(os.path.join(root, file_))
+				result_files.add(os.path.join(root, file_))
 
 	return result_files
 
@@ -465,6 +466,20 @@ def first(iterable):
 	Returns first item in a containter
 	"""
 	return next(iter(iterable))
+	
+	
+def batched(iterable, size):
+    """
+    Batches input iterable, producing batches of size (or less) items
+    """
+    sourceiter = iter(iterable)
+    while True:
+        batchiter = itertools.islice(sourceiter, size)
+        # When sourceiter becames empty,
+        # islice returns empty iterator (without raising StopIteration)
+        #
+        # Invoking next on batchiter in order to raise StopIteration when needed
+        yield [next(batchiter)] + list(batchiter)
 
 
 def extract_parent_keyword(keyword):
