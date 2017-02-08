@@ -127,7 +127,8 @@ def fetch_added_on_from_git():
 			"blame",
 			#WARN: using show-name to guarantee output format
 			"--show-name",
-			"--no-progress",
+			#no such option in "git blame" on trusty
+			#"--no-progress",
 			path
 		]).decode()
 		result = dict()
@@ -927,8 +928,8 @@ def validate_item(item, git_added_on, make_extra_checks):
 		validate_title_starts_from_shorthand(item, errors)
 		validate_url_accessibility(item, errors)
 	return errors
-	
-	
+
+
 def validate_items(items, git_added_on, make_extra_checks):
 	result = dict()
 	for item in items:
@@ -952,7 +953,7 @@ def main(
 	git_added_on = fetch_added_on_from_git()
 	logging.info("Fetching list of pdf from filesystem")
 	physically_stored = fetch_filelist_from_fs()
-	
+
 	for item in items:
 		filename = item.get("filename")
 		if not filename:
@@ -971,7 +972,7 @@ def main(
 		executor.submit(validate_items, items_batch, git_added_on, make_extra_checks): None
 		for items_batch in utils.batched(items, 100)
 	}
-	
+
 	erroneous_items = dict()
 	for future in concurrent.futures.as_completed(futures):
 		try:
