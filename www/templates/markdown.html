@@ -14,7 +14,7 @@
 	<body>
 		{% include "components/choose-lang.html" %}
 		{% include "components/header.html" %}
-		<h2>{{ _("interface:transcription:title") }} {{ item.id() }}:</h2>
+		<h2>{{ _("interface:transcription:title") }} {{ item.id() | format_item_id | safe }}:</h2>
 		<div class="content transcription">
 			{{ markdown_data | safe }}
 			<hr/>
