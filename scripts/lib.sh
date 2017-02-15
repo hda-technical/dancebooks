@@ -444,6 +444,42 @@ gallicaTiles()
 	tiles gallicaTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
+haabTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage: $0 inage_id x y z"
+		return 1
+	fi
+
+	local IMAGE_ID=`echo $1 | sed -e 's/\./\//g'`
+	local TILE_X=$2
+	local TILE_Y=$3
+	local TILE_Z=$4
+	local TILE_SIZE=1024
+
+	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
+	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
+
+	echo "https://haab-digital.klassik-stiftung.de/viewer/iiif/image/$IMAGE_ID.tif/$LEFT,$TOP,1024,1024/1024,/0/default.jpg"
+}
+
+haabTiles()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 ark_id"
+		return 1
+	fi
+
+	local BOOK_ID=$1
+	local ZOOM=6
+	local TILE_SIZE=1024
+	local OUTPUT_DIR=.
+
+	tiles haabTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
 princetonTilesUrl()
 {
 	if [ $# -ne 4 ]
