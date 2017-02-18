@@ -31,7 +31,7 @@ msgid "interface:use-search"
 msgstr "Можно воспользоваться поиском"
 
 msgid "interface:title"
-msgstr "Библиография танцевальных источников"
+msgstr "Библиография исторического танца"
 
 msgid "interface:no-keywords"
 msgstr ""

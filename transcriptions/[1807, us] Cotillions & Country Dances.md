@@ -26,7 +26,7 @@ First gent, bal^ce^ to 2d lady & turn & comes to his place, then the 1st lady do
 
 Chasse down outside, & up, cross hands 4 round, down the middle, up, cast off, & right & left.
 
-### 6. Hollow (??) Drum
+### 6. Hollow Drum
 
 Three couple join hands, balance & rig., double chasse round, balance & rig. & chasse back to places, 1st couple down the middle, up, cast off, & right & left.
 
@@ -130,7 +130,7 @@ Lead outside up, down the middle, up, cast off, 6 hands round, right & left.
 
 1st couple bal^ce^ to 2d lady & then to 2d gent & cross over below 2d couple. Change sides & right & left (use the shuffle step entirely).
 
-### 29. Link a Link
+### 29. Tink a Tink
 
 Hands across 4 round & back, down middle, up, cast off.
 
@@ -138,7 +138,7 @@ Hands across 4 round & back, down middle, up, cast off.
 
 1st gent allemand round with 2d lady, 1 lady with 2d gent, 1st couple down middle, up, cast off, right & left.
 
-### 31. Law & opportunity
+### 31. Love & opportunity
 
 Four hands 1/2 round & back, 1st couple down middle, up, cast off — set corners & change sides with partner, same ~~as~~ in the Chorus jig.
 
@@ -182,7 +182,7 @@ Top & botom couple chasse round and come to places. Side couple do the same, the
 
 Top & bottom couple right & left, the first lady contretem forward & rig. Chasse between the right couple on the right, & rig. them, between middle & rig., then between 3d couple, & rig. Then all 4 couple balance to partners & turn. The third lady afterwards do the same successively, & then the gentlemen.
 
-### 1. {Page} Settle wood Cotillion
+### 1. {Page} Little wood Cotillion
 
 Gent. chasse to the right & turns corner with every one he meet, till he get opposite from where he set out, then contretem forward chasse before partner, turn half round contretem back to his place.
 
@@ -244,7 +244,7 @@ Lead to 1st couple on the right, rig., then to next couple, rig. Chasse to right
 
 1st gent contratem to opposite lady & back, change side with her, & chasse to the right & back, then change sides to your place. {Page} Chasse before partner & rig. — back & rig. then next gent do the same after which the ladies do the same over to the gent, successively.
 
-### 12. Pyramide
+### 12. Pyramid
 
 Balance all 8 round & back, gent balance while his partner moulinette round before him, which will bring all the ladies in the middle. Then all the gent join hands & chasse round them twice, then the ladies turn their partners to their place. The gent then do the same which the ladies did, & the ladies chasse round them as before.
 
@@ -404,7 +404,7 @@ Cross hands at top, 1/2 round & back, then down outside, up middle, cast off one
 
 1st couple down outside, up, down the middle, up, cast off one couple, allemande with your partner, back, right & left at top.
 
-### 21. Link a Link
+### 21. Tink a Tink
 
 1st couple down the middle, up, cast off one couple, right & left at top.
 
@@ -416,7 +416,7 @@ Cross hands at top, 1/2 round & back, then down outside, up middle, cast off one
 
 1st couple chasse down outside, down middle, up, cast off one couple, short allemande & assemble with your partner, then turn your partner round, right & left with chasse, so as to face your partner all the time of performance.
 
-### 24. Ashley Ride
+### 24. Ashleys Ride
 
 1st couple cast off & back again, whilst the 1st couple down the middle, the 2d couple cast off, & return to places, 6 hands 1/2 round & back, right & left at top.
 
@@ -534,9 +534,9 @@ Cast off 1 couple, change sides, ditto 2d couple, balance 4 abreast two couple d
 
 ### 53. The Rose
 
-3 couple balance, & turn partners, ditto back,, down middle, up, right & left.
+3 couple balance, & turn partners, ditto back, down middle, up, right & left.
 
-### {Page} 54. Lady Butten whim
+### {Page} 54. Lady Butters whim
 
 Change sides, down the middle, up, 4 hands 1/2 round & back, right & left.
 
@@ -630,7 +630,7 @@ Cast off 1 couple, 4 hands at bottom, cast up & 4 hands round at top, down middl
 
 Down outside, up & down the middle, up again, cast off, 4 hands round with 3d couple, right & left at top.
 
-### {Page} 77. Breagwater Camp
+### {Page} 77. Bridgewater Camp
 
 Half right & left, the same back, cross over 1 couple & turn, right & left at top.
 
@@ -662,7 +662,7 @@ Right hands across, left hands back, lead down 1 couple, up, cast off.
 
 Turn right hand quite round, & cast off, turn left hands, set 3 to 3, top at bottom, turn your partners, hands 6 round & back.
 
-### {Page} 85. The president
+### {Page} 85. The President
 
 Balance 1/2 round & back, balance, change sides, balance, back again, lead down middle, up, cast off, right & left.
 

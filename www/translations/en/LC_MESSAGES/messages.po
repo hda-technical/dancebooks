@@ -31,7 +31,7 @@ msgid "interface:use-search"
 msgstr "You can use the search"
 
 msgid "interface:title"
-msgstr "Dancing books bibliography"
+msgstr "Historical Dance Bibliography"
 
 msgid "interface:no-keywords"
 msgstr ""
