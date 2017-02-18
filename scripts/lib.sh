@@ -249,7 +249,7 @@ rsl()
 
 	local BOOK_ID=$1
 
-	webGet "http://search.rsl.ru/ru/record/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
+	webGet "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
 }
 
 locMusdi()
