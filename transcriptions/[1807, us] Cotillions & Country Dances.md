@@ -10,7 +10,7 @@ Thus 1st couple contratem forward & back, balance & rig., change sides with part
 
 1st couple, balance & rig. (without crossing the feet) change sides with the moulinett step, & back, down middle, up, cast off, & right & left.
 
-### 3. Jack's alive
+### 3. Jack's Alive
 
 1st couple face the 2d & change sides, back again, down the middle, up &[^1]
 
@@ -248,7 +248,7 @@ Lead to 1st couple on the right, rig., then to next couple, rig. Chasse to right
 
 Balance all 8 round & back, gent balance while his partner moulinette round before him, which will bring all the ladies in the middle. Then all the gent join hands & chasse round them twice, then the ladies turn their partners to their place. The gent then do the same which the ladies did, & the ladies chasse round them as before.
 
-### {Page} 13. Fibi James
+### {Page} 13. Fitz James
 
 Top & bot. couple chasse to the right, rig. back, rig. Chasse before partner, rig. back, rig. top & bottom couple right & left. The side couple then go over the same.
 
