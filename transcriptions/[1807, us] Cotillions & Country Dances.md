@@ -1,4 +1,4 @@
-﻿### {Page} 1. Trip to Nahant
+### {Page} 1. Trip to Nahant
 
 Thus 1st couple contratem forward & back, balance & rig., change sides with partners, & back, down the middle, up, cast off & right & left.
 
@@ -298,13 +298,11 @@ All round, 1st & opposite couples balance in the middle, set, & turn contrary pa
 
 ### {Page} 8. La Fayette Forever
 
-Allemand, chasse 4 open back again, balance in the middle, then 1/2 right & left. The gent. then balance & turn the ladies to their left hand only halfway, set, chasse all eight that you may be in your former place, the S[^10] & 4th couple do the same.
-
-[^10]: S-shaped figure of unclear meaning
+Allemand, chasse 4 open back again, balance in the middle, then 1/2 right & left. The gent. then balance & turn the ladies to their left hand only halfway, set, chasse all eight that you may be in your former place, the 3d & 4th couple do the same.
 
 ### 9. German Spa
 
-All round, the 2 opposite couples take your partner hands & change places, chasse 4 only 5 steps, so back again, balance in the middle, set, 1/2 across hands that you may be in your places, the same couple turn contrary partners opposite, then turn your own with your right hand, half way, {Page} balance with your partner, set, half right & left, with the opposite coupleswhich brings you to your former places. The other 2 couples do the same.
+All round, the 2 opposite couples take your partner hands & change places, chasse 4 only 5 steps, so back again, balance in the middle, set, 1/2 across hands that you may be in your places, the same couple turn contrary partners opposite, then turn your own with your right hand, half way, {Page} balance with your partner, set, half right & left, with the opposite couples which brings you to your former places. The other 2 couples do the same.
 
 ### 10. Commencement
 
@@ -312,7 +310,7 @@ Prominade round 40 step, fall into 2 lines, set, 4 hands 1/2 way round bal^ce^ &
 
 ### 11. Duke of York Cotillion
 
-Top & opposite couple allemande & assemble, chasse to the ladies place, side couple the same. Take hands behind & balance & prominade to your place, side couple the same. Take hands begind & balance & prominade to your places.
+Top & opposite couple allemande & assemble, chasse to the ladies place, side couple the same. Take hands behind & balance & prominade to your places.
 
 ### 12. The Girl I left behind me
 
@@ -460,7 +458,7 @@ Cross 4 hands at top, 1/2 round, back again, cast off one couple, set, balance 6
 
 Cross 4 hands 1/2 round, back again, chasse only the 1st couple, 1st gent set with 2d lady & his partner with 2d gent. Chasse back again, then turn the 2d couple, that you may be between the 2d & 3d couples.
 
-### 36. The Seasong
+### 36. The Seasons
 
 4 hands across 1/2 round, back again, 3 first couple allemand quite round, lead down the middle, up, cast off, 6 hands 1/2 round & back, right & left at top.
 
@@ -554,9 +552,9 @@ Balance & change sides, down middle, balance round your partner, ditto & turn he
 
 ### {Page} 59. Liberty
 
-Balance & change sides, ditto & back[^11], down middle, up again, balance to your partner & turn her.
+Balance & change sides, ditto & back[^10], down middle, up again, balance to your partner & turn her.
 
-[^11]: The words _ditto & back_ are written above the line, so their position might be wrong.
+[^10]: The words _ditto & back_ are written above the line, so their position might be wrong.
 
 ### 60. Rose Tree
 
@@ -572,7 +570,7 @@ Cast off outside, down middle, up again, turn your partner, set 3 & 3 up & down,
 
 ### {Page} 63. King of Denmark favorite
 
-4 hands round 1/2 way & back, the 2 gent turn their partners round with right hands, lead down two couple, up, cast of one couple, right & left.
+4 hands round 1/2 way & back, the 2 gent turn their partners round with right hands, lead down two couple, up, cast off one couple, right & left.
 
 ### 64. Banks of the Dee
 
@@ -680,9 +678,9 @@ Balance 3 couple, change places, back again, lead down the middle, up, cast off 
 
 ### 90. Washington Forever
 
-Turn partner with right hand, set, back again with left, lead down midle, up again, cast off 1 couple, turn corners, <...>[^12] with partner, back again.
+Turn partner with right hand, set, back again with left, lead down midle, up again, cast off 1 couple, turn corners, <...>[^11] with partner, back again.
 
-[^12]: Page thorn, instruction can't be read
+[^11]: Page thorn, instruction can't be read
 
 ### {Page} 91. Charlotte Mc. Carty
 
@@ -698,8 +696,8 @@ Balance & fall down 1 couple & swing 4 down middle, swing 6, set corners & lead 
 
 ### 94. Queen Mab
 
-1st & 3d couple balance, change places, back again, down middle, up, <...>[^13] off, right & left.
+1st & 3d couple balance, change places, back again, down middle, up, <...>[^12] off, right & left.
 
-[^13]: Page thorn, instruction can't be read
+[^12]: Page thorn, instruction can't be read
 
 ///Footnotes///
