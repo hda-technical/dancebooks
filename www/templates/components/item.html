@@ -41,7 +41,8 @@
 	{% if param in ["filename", "catalogue", "author", "pseudo_author", "added_on", "url", "keywords"] %}
 		{% set value = item.get(param) %}
 	{% elif param in ["date"] %}
-		{# pass #}
+		{# This value will be ignored anyway #}
+		{% set value = item.get_as_string("year") %}
 	{% else %}
 		{% set value = item.get_as_string(param) %}
 	{% endif %}
