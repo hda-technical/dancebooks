@@ -45,9 +45,9 @@ webGet()
 	curl \
 		--silent \
 		--fail \
-		--retry 3 \
-		--connect-timeout 5 \
-		--retry-delay 3 \
+		--retry 2 \
+		--connect-timeout 3 \
+		--retry-delay 2 \
 		--max-time 60 \
 		--output "$OUTPUT_FILE" \
 		"$URL"
@@ -219,7 +219,10 @@ tiles()
 			-geometry "${TILE_SIZE}x${TILE_SIZE}>" \
 			-tile `expr $MAX_TILE_X + 1`x`expr $MAX_TILE_Y + 1` \
 			$OUTPUT_FILE
-		convert $OUTPUT_FILE -trim $OUTPUT_FILE
+		if [ ! "$NO_TRIM" ]
+		then
+			convert $OUTPUT_FILE -trim $OUTPUT_FILE
+		fi
 	fi
 
 	rm -rf "$TMP_DIR"
