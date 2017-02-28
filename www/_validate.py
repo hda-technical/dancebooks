@@ -92,7 +92,8 @@ MULTIENTRY_BOOKTYPES = {
 	"proceedings",
 	"inproceedings",
 	"collection",
-	"incollection"
+	"incollection",
+	"inbook"
 }
 
 PARTIAL_BOOKTYPES = {
