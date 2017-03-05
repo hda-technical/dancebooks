@@ -292,11 +292,10 @@ class BibParser(object):
 				value = utils.strip_split_list(value, config.parser.list_sep)
 				useful_keywords = (set(value) <= config.parser.useless_keywords)
 				item.set("useful_" + key, useful_keywords)
-			elif key in config.parser.int_params:
+			elif (key in config.parser.int_params) and value.isdecimal():
 				value = int(value)
 			elif key in config.parser.year_params:
 				(year_from, year_to, year_circa) = utils.parse_year(value)
-
 				item.set(key + config.parser.start_suffix, year_from)
 				item.set(key + config.parser.end_suffix, year_to)
 				item.set(key + config.parser.circa_suffix, year_circa)

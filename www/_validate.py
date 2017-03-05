@@ -230,6 +230,7 @@ def update_validation_data(
 
 def validate_periodical_filename(filename, item, errors):
 	if filename.endswith(".md"):
+		#periodical transcriptions are validated by this code too
 		return
 	booktype = item.get("booktype")
 
@@ -285,7 +286,6 @@ def validate_single_filename(abspath, filename, item, errors):
 	if booktype in MULTIENTRY_BOOKTYPES:
 		return
 	metadata = utils.extract_metadata_from_file(filename)
-
 	#validating optional author, edition, tome
 	#in case when item specifies value, but filename does not
 	optional_meta_fields = [

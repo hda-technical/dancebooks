@@ -191,7 +191,7 @@ def extract_metadata_from_file(path):
 		value = match.group(param)
 		if value is None:
 			continue
-		if param in config.parser.int_params:
+		if (param in config.parser.int_params) and value.isdecimal():
 			result[param] = int(value)
 		else:
 			result[param] = value
