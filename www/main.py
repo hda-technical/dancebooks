@@ -28,6 +28,8 @@ source_files = sorted(item_index["source_file"].keys())
 booktypes = sorted(item_index["booktype"].keys())
 markdown_cache = utils.MarkdownCache()
 
+debug_mode = False
+
 flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = utils.first(config.www.languages)
 flask_app.config["USE_EVALEX"] = False
@@ -120,7 +122,7 @@ def root(show_secrets):
 	return flask.render_template(
 		"index.html",
 		entry_count=len(items),
-		show_secrets=show_secrets
+		show_secrets=(show_secrets or debug_mode)
 	)
 
 
@@ -193,7 +195,7 @@ def search_items(show_secrets):
 		return flask.render_template(
 			"search.html",
 			found_items=found_items,
-			show_secrets=show_secrets
+			show_secrets=(show_secrets or debug_mode)
 		)
 	elif (format == "csv"):
 		response = flask.make_response(utils.render_to_csv(found_items))
@@ -224,7 +226,7 @@ def get_book(book_id, show_secrets):
 	return flask.render_template(
 		"book.html",
 		item=item,
-		show_secrets=show_secrets,
+		show_secrets=(show_secrets or debug_mode),
 		captcha_key=captcha_key
 	)
 
@@ -459,7 +461,10 @@ for code in (
 	http.client.INTERNAL_SERVER_ERROR
 ):
 	flask_app.errorhandler(code)(utils_flask.http_exception_handler)
+	
 flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
+
 if __name__ == "__main__":
+	debug_mode = True
 	flask_app.run(host="0.0.0.0")
 
