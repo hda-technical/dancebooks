@@ -15,7 +15,10 @@
 		{% include "components/choose-lang.html" %}
 		{% include "components/header.html" %}
 		<h2>{{ _("interface:transcription:title") }} {{ item.id() | format_item_id | safe }}:</h2>
+		<h3>{{ _("interface:transcription:transcribed-by") }} {{ item | format_transcribed_by }}</h3>
 		<div class="content transcription">
+			<h1>{% if item.author() %}{{ item.author() }}{% endif %}</h1>
+			<h2>{{ item.title() }}</h2>
 			{{ markdown_data | safe }}
 			<hr/>
 			{% include "components/footer.html" %}

@@ -1,7 +1,3 @@
-# The Register of Dances at Castle Menzies
-## Anonymous manuscript
-## Transcribed by [Jim Healy](http://www.strathspey.org/history/menzies)
-
 ### The Menzies's rant or reel Don ne Marachan
 
 First man turns second woman & casts off, then the first woman does the same then the first pair goes figure of eight through the 2 d pair; then the first man sets to the second woman & turns her, then the first woman the same; then the first pair goes four hands round with the second pair & right & left.

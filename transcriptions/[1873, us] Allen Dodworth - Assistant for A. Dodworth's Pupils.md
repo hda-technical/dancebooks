@@ -1,7 +1,3 @@
-# Assistant for A. Dodworth's pupils
-## Allen Dodworth
-## Transcribed by [Library of Congress](http://memory.loc.gov/ammem/index.html)
-
 ### {3} Preface
 
 With over thirty years' experience in one branch of education, it would be strange, indeed, if a teacher had not gathered together some useful ideas pertaining to his occupation, especially if that teacher had pursued his occupation with a constant desire for improvement, and an unceasing effort to profit by the experience of others in the same line of thought.

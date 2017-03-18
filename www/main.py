@@ -53,6 +53,8 @@ flask_app.jinja_env.filters["format_catalogue_code"] = utils_flask.format_catalo
 flask_app.jinja_env.filters["format_item_id"] = utils_flask.format_item_id
 flask_app.jinja_env.filters["format_transcription_url"] = utils_flask.format_transcription_url
 flask_app.jinja_env.filters["format_guid_for_rss"] = utils_flask.format_guid_for_rss
+flask_app.jinja_env.filters["format_transcribed_by"] = utils_flask.format_transcribed_by
+
 
 def jinja_self_served_url_size(url, item):
 	file_name, file_size = utils.get_file_info_from_url(url, item)

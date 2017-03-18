@@ -1,6 +1,3 @@
-# L'impériale. Nouvelle danse de salon d'apres Markowski. Pour le piano                                                                       ## Maurice Nachmann
-### Transcribed by [Dmitry Filimonov](mailto://mityafil@gmail.com)
-
 ### Théorie
 
 Mouvement lent et bien marqué.

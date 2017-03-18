@@ -1,7 +1,3 @@
-# MS 3088
-## James Scott Skinner, William Scott
-## Transcribed by [University of Aberdeen](http://www.abdn.ac.uk/scottskinner/display.php?ID=JSS0486), [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
-
 ### {10} Quadrilles
 
 > A quadrille, a quadrille is a pleasure,

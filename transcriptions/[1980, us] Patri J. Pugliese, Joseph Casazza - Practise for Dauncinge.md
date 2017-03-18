@@ -1,7 +1,3 @@
-# Practise for Dauncinge. Some Almans and a Pavan. England 1570-1650. A Manual for Dance Instruction in Which Is Explained the Performance of a Number of Dances Popular in the London Inns of Court in the Sixteenth and Seventeenth Centuries, Together with Music in Four Parts
-## Patri J. Pugliese, Joseph Casazza
-### Transcribed by [Patri J. Pugliese, Joseph Casazza](https://sites.google.com/site/renaissancedancesources/home/practise-for-dauncinge)
-
 ### Introduction
 
 In his pamphlet on Dancing in the Inns of Court (London, Jordan & Sons, Ltd., 1965), James P. Cunningham presents an important body of materials relating to dance in England in the late sixteenth and early seventeenth centuries. The four Inns of Court served as professional bodies of lawyers in London. From at least the fifteenth century, it was their practice to sponsor Christmas revels with "all Manner of pastimes as singing and dancing." (Tb. Denton (l535); quoted in Cunningham, Inns of Court (1965), p. 3.) Sir William Dugdale reports in the seventeenth century: "Nor were these Exercises of Dancing meerly permitted; but thought very necessary (as it seems) and much conducing to the making of gentlemen more fit for their Books at other times." (Quoted in Cunningham, Inns of Court (1965), p. 4.)

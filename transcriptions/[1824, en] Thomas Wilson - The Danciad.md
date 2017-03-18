@@ -1,7 +1,3 @@
-# The Danciad or, Dancer's Monitor Being a Descriptive Sketch in Verse on the Different Styles and Methods of Dancing Quadrilles, Waltzes, Country Dances, &c. &c. as Practised at Various Public Balls and Assemblies; also on the Pretensions of Certain Professors and Teachers of Dancing to that Title; on the Mode of Admission to, and of Conducting Various Places, Termed Académies for Dancing; Likewise on the Nature and Quality of What Are Frequently Called Grand, Free, Select, Fancy Dress, Friendly, Characteristic, Charity, and Dress Balls. Together with Observations on the Laws Regarding Dancing, with Extracts from the Acts of Parliament Relating Thereto
-## Thomas Wilson
-## Transcribed by [Library of Congress](http://memory.loc.gov/ammem/index.html), [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
-
 ### Dedication
 
 To teachers of merit, (particularly those at whose request the Danciad was composed, and who are most capable of deciding how far the author has done justice to the subject) he respectfully dedicates this work,

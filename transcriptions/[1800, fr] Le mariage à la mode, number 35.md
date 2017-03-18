@@ -1,6 +1,3 @@
-# Le mariage à la mode. Contre danse nouvelle
-### Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
-
 ### Figure
 
 1. Un cavalier et sa dame figurent a droite, rigaudon

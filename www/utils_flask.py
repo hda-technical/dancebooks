@@ -7,6 +7,7 @@ import re
 
 import flask
 import flask_babel
+import unidecode
 import werkzeug
 
 from config import config
@@ -185,7 +186,7 @@ def format_transcription_url(item):
 		prefix=config.www.books_prefix,
 		item_id=item.id()
 	)
-	
+
 
 def format_guid_for_rss(items):
 	get_id = lambda item: item.id()
@@ -197,6 +198,19 @@ def format_item_id(item_id):
 		item_id=item_id,
 		prefix=config.www.books_prefix
 	)
+
+
+def format_transcribed_by(item):
+	locale = flask_babel.get_locale()
+	if locale.language == "ru":
+		format_name = utils.make_genitive
+	else:
+		format_name = unidecode.unidecode
+	transcriber = item.get("transcriber")
+	if transcriber is None:
+		return ""
+	else:
+		return ", ".join(map(format_name, transcriber))
 
 def as_set(value):
 	return set(value)

@@ -1,9 +1,4 @@
-# The Warsaw Varsoviana with a Correct Description of the Figure
-## Eugène Coulon
-## Transcribed by Victor Lapshin
-
 ### The Varsoviana
-
 
 This dance, like the Waltz, is performed by two persons, gentleman holding the lady by the right arm.
 

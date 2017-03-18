@@ -1,7 +1,3 @@
-# Varsoviana
-## Alphonse Longueville
-### Transcribed by [Dmitry Filimonov](mailto://mityafil@gmail.com)
-
 ### Op. 50
 ### Souvenir à mademoiselles Mathilde Cailles et Octavie Zablocka
 

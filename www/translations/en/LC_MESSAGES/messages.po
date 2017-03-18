@@ -56,6 +56,9 @@ msgstr "Send"
 msgid "interface:transcription:title"
 msgstr "Here is a transcription of entry with id"
 
+msgid "interface:transcription:transcribed-by"
+msgstr "Transcribed by"
+
 # Pages: keywords
 
 msgid "pages:keywords:title"

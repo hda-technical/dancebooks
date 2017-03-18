@@ -1,8 +1,4 @@
-﻿# Cotillions & Country Dances
-
-## Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
-
-### {Page} 1. Trip to Nahant
+﻿### {Page} 1. Trip to Nahant
 
 Thus 1st couple contratem forward & back, balance & rig., change sides with partners, & back, down the middle, up, cast off & right & left.
 

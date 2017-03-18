@@ -1,7 +1,3 @@
-# L'impériale des salons. Nouvelle danse avec la théorie. À mademoiselle Bachelen (de Besançon)
-## Maurice Nachmann
-### Transcribed by [Dmitry Filimonov](mailto://mityafil@gmail.com)
-
 ### Théorie
 
 Mouvement lent et bien marqué.

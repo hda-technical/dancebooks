@@ -1,7 +1,3 @@
-# Schottische Quadrille
-## James Wiley
-### Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
-
 Mr. Rilsey, dear sir,
 
 I hope you will excuse me for not writing sooner. I was from home at the time your letter came & since that time I have been unusually busy. I send you a schottish which I have played a good deal this winter, it is very simple & easy but good. I think you will be pleased with it. The cotillion changes each line to eight bars of the music. The part in brackets is explanation & need not be called.

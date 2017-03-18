@@ -1,7 +1,3 @@
-# Pierre Rameau
-## Le maître a danser qui enseigne la maniere de faire tous les differens pas de Danse dans toute la regularité de l'Art, & de couduire les bras à chaque pas. Enrichi de figures en Taille-douce, servant de démonstration pour tous les differens mouvemens qu'il convient faire dans cet exercice. Ouvrage très-utile non-seulement à la jeunesse qui veut apprendre à bien danser, mais encore aux personnes honnêtes & polies, & qui leur donne des regles pour bien marcher, saluer & faire les reverences convenables dans toutes sortes de compagnies.
-### Transcrit par [Maria Derkach](http://dance.goldenforests.ru/teachers/derkatch.html)
-
 ### {iij} A monseigneur le duc de Ret, pair de France, et capitaine des gardes du corps
 
 Monseigneur,

@@ -56,6 +56,9 @@ msgstr "Отправить"
 msgid "interface:transcription:title"
 msgstr "Вот транскрипция книги с идентификатором"
 
+msgid "interface:transcription:transcribed-by"
+msgstr "Транскрипция"
+
 # Pages: keywords
 
 msgid "pages:keywords:title"

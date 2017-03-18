@@ -1,7 +1,3 @@
-# Terpsichore eller: En Veiledning for mine Dandselærlinger til at beholde de Trin og Toure i Hukommelsen som de under mig hav gjennemgaaet
-## Jørgen Gad Lund
-### Transskribert af [Eugenia Solenikova](http://rondino.spb.ru) og [Anna Fedorova](http://www.philol.msu.ru/~germanic/professoren/prof_vasilyeva.html)
-
 ### {3} Fortale
 
 Allerede længe har jeg havt isinde, som Dandselærer, at udgive en kort Beiledning for de Elever jed har informeret; men min maaskee ikke ugrundede Frygt for, at man trueligt kunde finde den alt for ufuldkommen til dens Hensigt, har hidindtil afholdt mig derfra. Dog, da jeg er overbeviist om, at den ikke vil være ganske uden Nytte for mine Elever, og jeg af Flere er bleven opmuntret til at sætte mit Forsæt iværk; saa har jeg, efter Evne, søgt at opfylde Bogens Bestemmelse:
