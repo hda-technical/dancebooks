@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+#coding: utf-8
 
 import unittest
 
-#WARN: importing class, not object
+#WARN: importing module, not the object from it
 import config
 
 CONFIG_PATH_PRODUCTION = "../configs/dancebooks.production.conf"
