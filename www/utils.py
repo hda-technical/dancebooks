@@ -467,8 +467,8 @@ def first(iterable):
 	Returns first item in a containter
 	"""
 	return next(iter(iterable))
-	
-	
+
+
 def batched(iterable, size):
     """
     Batches input iterable, producing batches of size (or less) items
@@ -624,12 +624,12 @@ class MarkdownPageNumber(markdown.inlinepatterns.Pattern):
 		span.set("class", const.PAGE_NUMBER_CSS_CLASS)
 		span.text = m.group("number")
 		return span
-		
-		
+
+
 class MarkdownStikethrough(markdown.inlinepatterns.Pattern):
 	def __init__(self):
 		super().__init__(r"\~\~(?P<stokeout>[^\~]+)\~\~")
-	
+
 	def handleMatch(self, m):
 		span = markdown.util.etree.Element("span")
 		span.set("style", "text-decoration: line-through;")
@@ -690,6 +690,10 @@ def make_html_cite(item):
 	langid = item.get("langid")
 	title = item.get("title") or item.get("incipit")
 	location = item.get("location")
+	booktitle = item.get("booktitle")
+	journaltitle = item.get("journaltitle")
+	number = item.get("number")
+	pages = item.get("pages")
 	year = item.get("year")
 	if author is not None:
 		result += "<em>"
@@ -700,6 +704,12 @@ def make_html_cite(item):
 		result += "</em>"
 	result += " "
 	result += title
+	if booktitle is not None:
+		result += " // " + booktitle
+	if journaltitle is not None:
+		result += " // " + journaltitle
+		if number is not None:
+			result += " №" + str(number)
 	result += ". "
 	if location:
 		#location is a list
@@ -735,13 +745,13 @@ def make_genitive(nominative):
 					return (inflected, variant.tag.gender)
 		#fall back to defaults when no matching variants were found
 		return (lexeme, "masc")
-		
-	#special trick with gender definition is required for 
+
+	#special trick with gender definition is required for
 	gender = None
 	processed = []
 	#pymorphy2 doesn't handle entire phrases - splitting into individual words
 	for lexeme in nominative.split():
-		#even though hyphen-separate surnames can be inflected properly without being split, 
+		#even though hyphen-separate surnames can be inflected properly without being split,
 		#one needs to handle them individually in order to capitalize them
 		sublexemes = lexeme.split('-')
 		inflected_sublexemes = []
