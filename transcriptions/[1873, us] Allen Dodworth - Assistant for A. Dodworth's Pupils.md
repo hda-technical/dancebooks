@@ -389,7 +389,7 @@ The gentleman presents to four ladies the four queens of a pack of cards, at the
 
 Three couple commence — each lady selects a lady — the six form a pyramid, thus:
 
-<div style="text-align: center">
+<div class="center">
 1<br/>
 2 3<br/>
 4 5 6<br/>
@@ -435,7 +435,7 @@ Different pairs of colored ribbons may be used in place of flags.
 
 Same distribution of flags as in the previous {32} figure; then form in four lines, an officer in front of each, thus:
 
-<div style="text-align: center">
+<div class="center">
 <em>Lady</em><br/>
 O<br/>
 <em>Line of gentlemen</em><br/>

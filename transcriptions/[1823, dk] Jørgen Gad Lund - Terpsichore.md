@@ -427,7 +427,7 @@ Man staaer ogsa heri som i Engelskdands. Første Caavalier[^1] og nederste Dame 
 
 I denne dans staaer man ved Siden af den, man dandser med, som f. Ex.:
 
-<div style="text-align: center;">
+<div class="center">
 1 C. 2 D.<br/>
 1 D. 2 C.<br/>
 3 C. 4 D.<br/>
@@ -485,7 +485,7 @@ Man dandser den saalænge, man ønsker, og slutter derpaa efter Valzen; gjerne v
 
 I denne Dands staaer man som i Figaro, med den Forskjel, at kun de 2 opførende Par vende Ansigterne ned ad Quadrillen, og alle de andre par staae efter hinanden med Ansigterne imod de Opførende, saaledes:
 
-<div style="text-align: center;">
+<div class="center">
 {37} 1 D. 1 C. 2 D. 2 C.<br/>
 3 D. 3 C. 4 D. 4 C.<br/>
 5 D. 5 C. 6 D. 6 C.<br/>

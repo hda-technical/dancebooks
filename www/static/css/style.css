@@ -254,6 +254,11 @@ li
 	text-align: center;
 }
 
+.italic
+{
+	font-style: italic;	
+}
+
 .hidden
 {
 	display: none;
