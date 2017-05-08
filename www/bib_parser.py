@@ -223,28 +223,30 @@ class BibItem(object):
 
 class ParserState(enum.Enum):
 	NoItem = 0
-	WaitingForItemType = 1
-	WaitingForItemId = 2
-	WaitingForParamKey = 3
-	WaitingForParamValue = 4
-	ParamWasRead = 5
+	WaitingForType = 1
+	WaitingForId = 2
+	ReadingId = 3
+	WaitingForCommaAfterId = 4
+	WaitingForKey = 5
+	ReadingKey = 6
+	WaitingForEq = 7
+	WaitingForParenthesis = 8
+	ReadingValue = 9
+	DoneReadingValue = 10
 
 
 class BibParser(object):
 	"""
 	Class for parsing .bib files, folders and multiline strings
 	"""
-	ITEM_OPEN_BRACKET = "("
-	ITEM_CLOSE_BRACKET = ")"
-	FIELD_SEP = ","
-	KEY_VALUE_SEP = "="
 
 	def __init__(self):
 		"""
 		Default ctor
 		"""
 		self.state = ParserState.NoItem
-		self._reset_lexeme()
+		self.key = ""
+		self.lexeme = ""
 
 	def raise_error(self):
 		"""
@@ -255,15 +257,6 @@ class BibParser(object):
 			line=self.line,
 			char=self.char
 		))
-
-	def _reset_lexeme(self):
-		"""
-		Resets some internal parser variables
-		"""
-		self.lexeme = ""
-		self.lexeme_started = False
-		self.lexeme_finished = False
-		self.lexeme_in_brackets = False
 
 	def set_item_param(self, item, key, value):
 		"""
@@ -363,7 +356,7 @@ class BibParser(object):
 		except Exception as ex:
 			raise Exception("While parsing {0}: {1}".format(path, ex))
 
-	def _parse_string(self, str_data):
+	def _parse_string(self, data):
 		"""
 		Returns list of parsed BibItem
 		"""
@@ -371,8 +364,7 @@ class BibParser(object):
 		items = []
 		self.line = 1
 		self.char = 1
-		for index in range(len(str_data)):
-			c = str_data[index]
+		for c in data:
 			if c == os.linesep:
 				self.line += 1
 				self.char = 0
@@ -381,111 +373,110 @@ class BibParser(object):
 
 			if self.state == ParserState.NoItem:
 				if c == "@":
-					self.state = ParserState.WaitingForItemType
-				#anything else is a comment
+					self.state = ParserState.WaitingForType
+				#anything else is a comment				
 
-			elif self.state == ParserState.WaitingForItemType:
+			elif self.state == ParserState.WaitingForType:
 				if c.isspace():
-					if self.lexeme_started:
-						self.lexeme_finished = True
-				elif c.isalnum():
-					self.lexeme += c
-					self.lexeme_started = True
-				elif c == self.ITEM_OPEN_BRACKET and (self.lexeme_started or self.lexeme_finished):
+					self.raise_error()
+				elif c == '(':
+					if not self.lexeme:
+						#empty item type is not allowed
+						self.raise_error()
 					self.set_item_param(item, "booktype", self.lexeme.lower())
 					self.set_item_param(item, "source_line", self.line)
+					self.state = ParserState.WaitingForId
+					self.lexeme = ""
+				else:
+					self.lexeme += c
+			#TODO: add 'ReadingType' state
 
-					self.state = ParserState.WaitingForItemId
-					self._reset_lexeme()
+			elif self.state == ParserState.WaitingForId:
+				if c.isspace():
+					continue
+				elif c.isidentifier():
+					self.state = ParserState.ReadingId
+					self.lexeme += c
 				else:
 					self.raise_error()
-
-			elif self.state == ParserState.WaitingForItemId:
+			
+			elif self.state == ParserState.ReadingId:
 				if c.isspace():
-					if self.lexeme_started:
-						self.lexeme_finished = True
-				elif (c.isalnum() or c == "_") and (not self.lexeme_finished):
-					self.lexeme += c
-					self.lexeme_started = True
-				elif c == self.FIELD_SEP and (self.lexeme_started or self.lexeme_finished):
 					self.set_item_param(item, "id", self.lexeme)
-
-					self.state = ParserState.WaitingForParamKey
-					self._reset_lexeme()
+					self.state = ParserState.WaitingForCommaAfterId
+					self.lexeme = ""
+				elif c == ',':
+					self.set_item_param(item, "id", self.lexeme)
+					self.state = ParserState.WaitingForKey
+					self.lexeme = ""
+				else:
+					self.lexeme += c
+			
+			elif self.state == ParserState.WaitingForCommaAfterId:
+				if c.isspace():
+					continue
+				elif c == ',':
+					self.state = ParserState.WaitingForKey
 				else:
 					self.raise_error()
 
-			elif self.state == ParserState.WaitingForParamKey:
+			elif self.state == ParserState.WaitingForKey:
 				if c.isspace():
-					if self.lexeme_started:
-						self.lexeme_finished = True
-				elif (c.isalnum() or (c == "_")) and (not self.lexeme_finished):
+					continue
+				elif c.isidentifier():
+					self.state = ParserState.ReadingKey
 					self.lexeme += c
-					self.lexeme_started = True
-				elif c == self.KEY_VALUE_SEP and (self.lexeme_started or self.lexeme_finished):
+				else:
+					self.raise_error()
+			
+			elif self.state == ParserState.ReadingKey:
+				if c.isspace():
+					self.state = ParserState.WaitingForEq
 					self.key = self.lexeme
-
-					self.state = ParserState.WaitingForParamValue
-					self._reset_lexeme()
+					self.lexeme = ""
+				elif c == '=':
+					self.state = ParserState.WaitingForParenthesis
+					self.key = self.lexeme
+					self.lexeme = ""
 				else:
-					self.raise_error()
-
-			elif self.state == ParserState.WaitingForParamValue:
-				if c == os.linesep and self.lexeme_started and self.lexeme_in_brackets:
-					self.raise_error()
-				elif c.isspace():
-					#any space character sequence is considered as a single space
-					if self.lexeme_started:
-						#only values without spaces can be written without spaces
-						if not self.lexeme_in_brackets:
-							self.set_item_param(item, self.key, self.lexeme)
-
-							self.state = ParserState.ParamWasRead
-							self.key = ""
-							self._reset_lexeme()
-						else:
-							if not self.lexeme.endswith(" "):
-								self.lexeme += " "
-				elif (c == self.FIELD_SEP) and self.lexeme_started and (not self.lexeme_in_brackets):
-					#values without spaces can be written without parentheses
-					self.set_item_param(item, self.key, self.lexeme)
-
-					self.state = ParserState.WaitingForParamKey
-					self.key = ""
-					self._reset_lexeme()
-				elif (c == self.ITEM_CLOSE_BRACKET) and self.lexeme_started and (not self.lexeme_in_brackets):
-					self.set_item_param(item, self.key, self.lexeme)
-					items.append(item)
-					item = BibItem()
-
-					self.state = ParserState.NoItem
-					self.key = ""
-					self._reset_lexeme()
-				elif c == "{":
-					self.lexeme_in_brackets = True
-					self.lexeme_started = True
-				elif c == "}":
-					self.set_item_param(item, self.key, self.lexeme)
-
-					self.state = ParserState.ParamWasRead
-					self.key = ""
-					self._reset_lexeme()
-				elif c.isprintable():
-					self.lexeme_started = True
 					self.lexeme += c
+			
+			elif self.state == ParserState.WaitingForEq:
+				if c.isspace():
+					continue
+				elif c == '=':
+					self.state = ParserState.WaitingForParenthesis
+				else:
+					self.raise_error()
+					
+			elif self.state == ParserState.WaitingForParenthesis:
+				if c.isspace():
+					continue
+				elif c == '{':
+					self.state = ParserState.ReadingValue
 				else:
 					self.raise_error()
 
-			elif self.state == ParserState.ParamWasRead:
+			elif self.state == ParserState.ReadingValue:
+				if c == '}':
+					#WARN: value can be empty here in case of "key = {}" syntax
+					self.set_item_param(item, self.key, self.lexeme)
+					self.state = ParserState.DoneReadingValue
+					self.key = ""
+					self.lexeme = ""
+				else:
+					self.lexeme += c
+
+			elif self.state == ParserState.DoneReadingValue:
 				if c.isspace():
-					pass
-				elif c == self.ITEM_CLOSE_BRACKET:
+					continue
+				elif c == ')':
 					item.finalize_item()
 					items.append(item)
 					item = BibItem()
 					self.state = ParserState.NoItem
-				elif c == self.FIELD_SEP:
-					self.state = ParserState.WaitingForParamKey
+				elif c == ',':
+					self.state = ParserState.WaitingForKey
 				else:
 					self.raise_error()
 
