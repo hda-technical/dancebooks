@@ -65,6 +65,7 @@ DATA_FIELDS = {
 	"title",
 	"type",
 	"transcription",
+	"transcriber",
 	"translator",
 	"type",
 	"url",
