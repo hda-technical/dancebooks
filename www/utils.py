@@ -693,7 +693,6 @@ def make_html_cite(item):
 	booktitle = item.get("booktitle")
 	journaltitle = item.get("journaltitle")
 	number = item.get("number")
-	pages = item.get("pages")
 	year = item.get("year")
 	if author is not None:
 		result += "<em>"
@@ -732,6 +731,10 @@ def make_genitive(nominative):
 	Accepts name in nominanive case, returns genivive case for it
 	"""
 	def process_lexeme(lexeme, gender):
+		#NB: pymorphy can't process this specific surname properly.
+		#    This crutch is intended to solve the problem.
+		if lexeme == "Стратилатов":
+			return ("Стратилатова", gender)
 		variants = morph_analyzer.parse(lexeme)
 		for variant in variants:
 			if "nomn" in variant.tag:
