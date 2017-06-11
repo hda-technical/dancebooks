@@ -19,6 +19,8 @@ LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 TOUCH_RELOAD_TESTING := /var/run/uwsgi/$(NAME_TESTING).reload
 TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME).reload
+DHPARAM_TESTING := /etc/nginx/conf/bib-test.hda.org.ru/dh_param.pem
+DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
 
 UNITTEST_ENV := \
 	CONFIG=$(UNITTEST_CONFIG) \
@@ -90,6 +92,15 @@ www-configs-install-production:
 	cp configs/service.production.conf /etc/init/$(NAME).conf
 	initctl reload-configuration
 	stop $(NAME); start $(NAME)
+	#generating custom dh_param.pem if needed
+	if [ ! -f "$(DHPARAM_PRODUCTION)" ]; \
+	then \
+		echo "Generating custom dh_param at $(DHPARAM_PRODUCTION)"; \
+		mkdir -m 700 -p $(dir $(DHPARAM_PRODUCTION)); \
+		openssl dhparam -out "$(DHPARAM_PRODUCTION)" 2048; \
+		chmod 700 "$(DHPARAM_PRODUCTION)"; \
+		chown -R www-data:www-data $(dir $(DHPARAM_PRODUCTION`)); \
+	fi
 	#installing nginx configs
 	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
 	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
@@ -111,6 +122,15 @@ www-configs-install-testing:
 	cp configs/service.testing.conf /etc/init/$(NAME_TESTING).conf
 	initctl reload-configuration
 	stop $(NAME_TESTING); start $(NAME_TESTING)
+	#generating custom dh_param.pem if needed
+	if [ ! -f "$(DHPARAM_TESTING)" ]; \
+	then \
+		echo "Generating custom dh_param at $(DHPARAM_TESTING)"; \
+		mkdir -m 700 -p $(dir $(DHPARAM_TESTING)); \
+		openssl dhparam -out "$(DHPARAM_TESTING)" 2048; \
+		chmod 700 "$(DHPARAM_TESTING)"; \
+		chown -R www-data:www-data $(dir $(DHPARAM_TESTING)); \
+	fi
 	#installing nginx configs
 	cp configs/nginx.testing.conf /etc/nginx/sites-available/$(NAME_TESTING).conf
 	ln -sf /etc/nginx/sites-available/$(NAME_TESTING).conf /etc/nginx/sites-enabled/$(NAME_TESTING).conf
