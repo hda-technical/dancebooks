@@ -549,6 +549,11 @@ def validate_booktype(item, errors):
 			errors.add("Field journaltitle expected for booktype {booktype}".format(
 				booktype=booktype
 			))
+		pages = item.get("pages")
+		if pages is None:
+			errors.add("Field pages expected for booktype {booktype}".format(
+				booktype=booktype
+			))
 	if (booktype in ("inproceedings", "inbook")):
 		booktitle = item.get("booktitle")
 		if booktitle is None:
