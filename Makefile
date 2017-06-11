@@ -102,7 +102,7 @@ www-configs-install-production:
 		mkdir -m 700 -p $(dir $(DHPARAM_PRODUCTION)); \
 		openssl dhparam -out "$(DHPARAM_PRODUCTION)" 2048; \
 		chmod 700 "$(DHPARAM_PRODUCTION)"; \
-		chown -R www-data:www-data $(dir $(DHPARAM_PRODUCTION`)); \
+		chown -R www-data:www-data $(dir $(DHPARAM_PRODUCTION)); \
 	fi
 	#installing nginx configs
 	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
