@@ -88,6 +88,9 @@ www-configs-install-production:
 	#installing uwsgi configs
 	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
+	#making folder for logs
+	mkdir -m 755 -p /var/log/dancebooks
+	chown www-data:www-data /var/log/dancebooks
 	#installing service configs
 	cp configs/service.production.conf /etc/init/$(NAME).conf
 	initctl reload-configuration
@@ -115,6 +118,9 @@ www-configs-install-testing:
 	touch $(TOUCH_RELOAD_TESTING)
 	chmod 664 $(TOUCH_RELOAD_TESTING)
 	chown www-data:www-data $(TOUCH_RELOAD_TESTING)
+	#making folder for logs
+	mkdir -m 755 -p /var/log/dancebooks.testing
+	chown www-data:www-data /var/log/dancebooks.testing
 	#installing uwsgi configs
 	cp configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
