@@ -308,7 +308,7 @@ hathi()
 
 gallica()
 {
-	if [ $# -ge 4 ]
+	if [ $# -le 3 ]
 	then
 		echo "Usage $0 ark_id [first_page] last_page"
 		return 1
