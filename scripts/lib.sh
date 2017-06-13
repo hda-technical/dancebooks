@@ -224,7 +224,7 @@ tiles()
 			convert $OUTPUT_FILE -trim $OUTPUT_FILE
 		fi
 	fi
-
+	
 	rm -rf "$TMP_DIR"
 }
 
@@ -965,6 +965,45 @@ historyOrgTiles()
 	MIN_FILE_SIZE_BYTES=1
 
 	tiles historyOrgTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
+}
+
+npgTilesUrl()
+{
+	if [ $# -ne 4 ]
+	then
+		echo "Usage $0 image_id x y z"
+		return 1
+	fi
+	local IMAGE_ID=$1
+	local TILE_X=$2
+	local TILE_Y=$3
+	local ZOOM=$4
+	
+	echo "http://collectionimages.npg.org.uk/zoom/${IMAGE_ID}/zoomXML_files/${ZOOM}/${TILE_X}_${TILE_Y}.jpg"
+}
+
+npg()
+{
+	if [ $# -ne 1 ]
+	then
+		echo "Usage: $0 image_id"
+		return 1
+	fi
+	local IMAGE_ID="$1"
+	local ZOOM=11
+	local TILE_SIZE=256
+	local OUTPUT_DIR=`makeOutputDir npg`
+
+	local DZI_URL="http://collectionimages.npg.org.uk/zoom/${IMAGE_ID}/zoomXML.dzi"
+	local IMG_WIDTH=`curl --silent "$DZI_URL" | sed 's/xmlns=".*"//g' | xmllint --xpath "string(/Image/Size/@Width)" -`
+	local IMG_HEIGHT=`curl --silent "$DZI_URL" | sed 's/xmlns=".*"//g' | xmllint --xpath "string(/Image/Size/@Height)" -`
+
+	#overriding global constants
+	MIN_FILE_SIZE_BYTES=1
+	MAX_TILE_X=`echo "(${IMG_WIDTH} + 128) / 256 - 1" | bc`
+	MAX_TILE_Y=`echo "(${IMG_HEIGHT} + 128) / 256 - 1" | bc`
+
+	tiles npgTilesUrl generalTilesFile dullValidate $IMAGE_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 if [ $# -lt 2 ]
