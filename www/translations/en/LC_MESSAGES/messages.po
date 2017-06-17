@@ -534,8 +534,11 @@ msgstr "Place of publication"
 msgid "search:order-by:series"
 msgstr "Series"
 
+msgid "search:order-by:serial-number"
+msgstr "Number in series"
+
 msgid "search:order-by:number"
-msgstr "Number in series / Periodical issue number"
+msgstr "Periodical issue number"
 
 # Entry fields
 
@@ -625,6 +628,9 @@ msgstr "Number of volumes"
 
 msgid "item:labels:series"
 msgstr "Series"
+
+msgid "item:labels:serial-number"
+msgstr "Serial number"
 
 msgid "item:labels:number"
 msgstr "Number"

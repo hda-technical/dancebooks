@@ -531,8 +531,11 @@ msgstr "Месту публикации"
 msgid "search:order-by:series"
 msgstr "Серии"
 
+msgid "search:order-by:series"
+msgstr "Номеру в серии"
+
 msgid "search:order-by:number"
-msgstr "Номеру в серии / Номеру периодического издания"
+msgstr "Номеру периодического издания"
 
 # Entry fields
 
@@ -623,8 +626,11 @@ msgstr "Всего томов"
 msgid "item:labels:series"
 msgstr "Серия"
 
-msgid "item:labels:number"
+msgid "item:labels:serial-number"
 msgstr "Номер"
+
+msgid "item:labels:number"
+msgstr "Выпуск"
 
 msgid "item:labels:pages"
 msgstr "Страницы"

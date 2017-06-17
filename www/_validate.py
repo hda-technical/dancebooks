@@ -60,6 +60,7 @@ DATA_FIELDS = {
 	"pseudo_author",
 	"publisher",
 	"series",
+	"serial_number",
 	"shorthand",
 	"source",
 	"title",
@@ -526,7 +527,8 @@ def validate_booktype(item, errors):
 	}
 	#volumes tag should be present for these booktypes
 	MULTIVOLUME_BOOKTYPES = {"mvbook", "mvreference"}
-
+	PERIODICAL_BOOKTYPES = {"periodical", "article"}
+	
 	booktype = item.get("booktype")
 	if booktype is None:
 		return
@@ -542,7 +544,7 @@ def validate_booktype(item, errors):
 			errors.add("Field volumes expected for booktype {booktype}".format(
 				booktype=booktype
 			))
-
+			
 	if (booktype == "article"):
 		journaltitle = item.get("journaltitle")
 		if journaltitle is None:
@@ -571,6 +573,10 @@ def validate_booktype(item, errors):
 			errors.add("Field institution  expected for booktype {booktype}".format(
 				booktype=booktype
 			))
+			
+	if item.get("number"):
+		if booktype not in PERIODICAL_BOOKTYPES:
+			errors.add("Field number can only be set for periodicals")
 
 
 def validate_catalogue_code(item, errors):
@@ -779,15 +785,6 @@ def validate_series(item, errors):
 	"""
 	Checks series and number parameters for validity
 	"""
-	#perdiodical booktypes may also have number field,
-	#through they aren't serial entries
-	PERIODICAL_BOOKTYPES = {
-		"periodical",
-		"article"
-	}
-	booktype = item.get("booktype")
-	if booktype in PERIODICAL_BOOKTYPES:
-		return
 	SERIAL_FIELDS = ["series"]
 	is_serial = False
 	for field in SERIAL_FIELDS:
@@ -796,7 +793,7 @@ def validate_series(item, errors):
 			break
 	if not is_serial:
 		return
-	OBLIGATORY_SERIAL_FIELDS = ["series", "number"]
+	OBLIGATORY_SERIAL_FIELDS = ["series", "serial_number"]
 	for field in OBLIGATORY_SERIAL_FIELDS:
 		if not item.has(field):
 			errors.add("Field {field} expected for serial books".format(

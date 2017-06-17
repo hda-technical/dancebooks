@@ -54,7 +54,8 @@ class BibItem(object):
 		"location": [],
 		"source": "",
 		"series": "",
-		"number": 0
+		"number": 0,
+		"serial_number": 0
 	}
 
 	@staticmethod
