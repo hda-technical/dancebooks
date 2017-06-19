@@ -40,6 +40,14 @@ class LocalizationTest(unittest.TestCase):
 		first_locale = utils.first(messages.keys())
 		first_message_list = messages.pop(first_locale)
 		for locale, message_list in messages.items():
+			self.assertEqual(
+				len(first_message_list),
+				len(message_list)
+			)
+			self.assertEqual(
+				set(first_message_list),
+				set(message_list)
+			)
 			for index, message in enumerate(message_list):
 				if message != first_message_list[index]:
 					logging.debug("Mismatch at position {index}. {first_locale} has {first_message}, {locale} has {message}".format(
@@ -50,10 +58,6 @@ class LocalizationTest(unittest.TestCase):
 						message=message
 					))
 					has_mismatches = True
-			self.assertEqual(
-				len(first_message_list),
-				len(message_list)
-			)
 		self.assertFalse(has_mismatches)
 
 

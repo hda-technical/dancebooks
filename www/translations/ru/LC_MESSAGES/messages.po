@@ -531,7 +531,7 @@ msgstr "Месту публикации"
 msgid "search:order-by:series"
 msgstr "Серии"
 
-msgid "search:order-by:series"
+msgid "search:order-by:serial-number"
 msgstr "Номеру в серии"
 
 msgid "search:order-by:number"
