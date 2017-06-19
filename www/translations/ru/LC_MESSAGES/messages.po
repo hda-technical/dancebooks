@@ -629,6 +629,9 @@ msgstr "Серия"
 msgid "item:labels:serial-number"
 msgstr "Номер"
 
+msgid "item:labels:part"
+msgstr "Часть"
+
 msgid "item:labels:number"
 msgstr "Выпуск"
 

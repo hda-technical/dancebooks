@@ -632,6 +632,9 @@ msgstr "Series"
 msgid "item:labels:serial-number"
 msgstr "Serial number"
 
+msgid "item:labels:part"
+msgstr "Part"
+
 msgid "item:labels:number"
 msgstr "Number"
 
