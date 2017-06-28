@@ -80,69 +80,54 @@ www-configs-install-autoupdate:
 
 www-configs-install-production:
 	#creating required folders
-	mkdir --mode=775 --parents /var/run/uwsgi
-	chown www-data:www-data /var/run/uwsgi
-	touch $(TOUCH_RELOAD_PRODUCTION)
-	chmod 664 $(TOUCH_RELOAD_PRODUCTION)
-	chown www-data:www-data $(TOUCH_RELOAD_PRODUCTION)
+	install --mode=775 --owner=www-data --group=www-data --directory /var/run/uwsgi
+	install --mode 755 --owner www-data --group=www-data --directory /var/log/dancebooks
 	#installing uwsgi configs
-	cp configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
+	install --owner=www-data --group=www-data configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
-	#making folder for logs
-	mkdir -m 755 -p /var/log/dancebooks
-	chown www-data:www-data /var/log/dancebooks
 	#installing service configs
-	cp configs/service.production.conf /etc/init/$(NAME).conf
+	install configs/service.production.conf /etc/init/$(NAME).conf
 	initctl reload-configuration
 	stop $(NAME); start $(NAME)
 	#generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_PRODUCTION)" ]; \
 	then \
-		echo "Generating custom dh_param at $(DHPARAM_PRODUCTION)"; \
-		mkdir -m 700 -p $(dir $(DHPARAM_PRODUCTION)); \
-		openssl dhparam -out "$(DHPARAM_PRODUCTION)" 2048; \
-		chmod 700 "$(DHPARAM_PRODUCTION)"; \
-		chown -R www-data:www-data $(dir $(DHPARAM_PRODUCTION)); \
+		echo "Generating custom dh_param at /tmp/dh_param.pem"; \
+		openssl dhparam -out "/tmp/dh_param.pem" 2048; \
+		install --mode=600 --owner=www-data --group=www-data "/tmp/dh_param.pem" "$(DHPARAM_PRODUCTION)"; \
+		rm "/tmp/dh_param.pem"; \
 	fi
 	#installing nginx configs
-	cp configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
+	install --owner=www-data --group=www-data configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
 	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
 	service nginx reload
 	#installing logrotate configs (no reload / restart is required)
-	cp configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
+	install configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
 www-configs-install-testing:
-	#creating required folders
-	mkdir --mode=775 --parents /var/run/uwsgi
-	chown www-data:www-data /var/run/uwsgi
-	touch $(TOUCH_RELOAD_TESTING)
-	chmod 664 $(TOUCH_RELOAD_TESTING)
-	chown www-data:www-data $(TOUCH_RELOAD_TESTING)
-	#making folder for logs
-	mkdir -m 755 -p /var/log/dancebooks.testing
-	chown www-data:www-data /var/log/dancebooks.testing
+	install --mode=775 --owner=www-data --group=www-data --directory /var/run/uwsgi
+	install --mode 755 --owner www-data --group=www-data --directory /var/log/dancebooks.testing
 	#installing uwsgi configs
-	cp configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
+	install --owner=www-data --group=www-data configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
 	#installing service configs
-	cp configs/service.testing.conf /etc/init/$(NAME_TESTING).conf
+	install configs/service.testing.conf /etc/init/$(NAME_TESTING).conf
 	initctl reload-configuration
 	stop $(NAME_TESTING); start $(NAME_TESTING)
 	#generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_TESTING)" ]; \
 	then \
-		echo "Generating custom dh_param at $(DHPARAM_TESTING)"; \
-		mkdir -m 700 -p $(dir $(DHPARAM_TESTING)); \
-		openssl dhparam -out "$(DHPARAM_TESTING)" 2048; \
-		chmod 700 "$(DHPARAM_TESTING)"; \
-		chown -R www-data:www-data $(dir $(DHPARAM_TESTING)); \
+		echo "Generating custom dh_param at /tmp/dh_param.pem"; \
+		openssl dhparam -out "/tmp/dh_param.pem" 2048; \
+		install --mode=600 --owner=www-data --group=www-data "/tmp/dh_param.pem" "$(DHPARAM_TESTING)"; \
+		rm "/tmp/dh_param.pem"; \
 	fi
 	#installing nginx configs
-	cp configs/nginx.testing.conf /etc/nginx/sites-available/$(NAME_TESTING).conf
+	install --owner=www-data --group=www-data configs/nginx.testing.conf /etc/nginx/sites-available/$(NAME_TESTING).conf
 	ln -sf /etc/nginx/sites-available/$(NAME_TESTING).conf /etc/nginx/sites-enabled/$(NAME_TESTING).conf
 	service nginx reload
 	#installing logrotate configs (no reload / restart is required)
-	cp configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
+	install configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
 
 www-reload-testing: www-test www-translations
 	@echo "Reloading"
