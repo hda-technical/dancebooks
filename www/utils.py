@@ -173,7 +173,7 @@ def extract_metadata_from_file(path):
 	basename = os.path.basename(path)
 	match = const.FILENAME_REGEXP.match(basename)
 	if not match:
-		raise ValueError("Filename {basename} didn't match FILENAME_REGEXP".format(
+		raise ValueError("Filename {basename} does not match FILENAME_REGEXP".format(
 			basename=basename
 		))
 

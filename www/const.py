@@ -22,6 +22,7 @@ SHORT_LANG_MAP = {
 	"ru": ["russian", "french"],
 	"sc": ["english"],
 	"sw": ["swedish"],
+	"ua": ["ukrainian"],
 	"us": ["english"],
 }
 
@@ -81,8 +82,9 @@ LONG_LANG_MAP = {
 		"portuguese",
 	},
 	"russian.bib": {
-		"russian",
 		"french",
+		"russian",
+		"ukrainian",
 	},
 	"spanish.bib": {
 		"spanish",
