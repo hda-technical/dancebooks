@@ -346,7 +346,7 @@ britishLibrary()
 	for PAGE in `seq $PAGE_COUNT`
 	do
 		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.jpg $PAGE`
-		webGet "http://access.bl.uk/IIIFImageService/ark:/81055/${BOOK_ID}.0x`printf %06x $PAGE`/0,0,5000,5000/pct:100/0/native.jpg" "$OUTPUT_FILE"
+		webGet "http://access.bl.uk/IIIFImageService/${BOOK_ID}.0x`printf %06x $PAGE`/0,0,5000,5000/pct:100/0/native.jpg" "$OUTPUT_FILE"
 	done
 }
 
