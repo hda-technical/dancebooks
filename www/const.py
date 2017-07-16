@@ -19,7 +19,7 @@ SHORT_LANG_MAP = {
 	"ln": ["latin"],
 	"pl": ["polish"],
 	"pt": ["portuguese"],
-	"ru": ["russian", "french"],
+	"ru": ["russian", "french", "german"],
 	"sc": ["english"],
 	"sw": ["swedish"],
 	"ua": ["ukrainian"],
@@ -82,9 +82,10 @@ LONG_LANG_MAP = {
 		"portuguese",
 	},
 	"russian.bib": {
+		"german",
 		"french",
 		"russian",
-		"ukrainian",
+		"ukrainian"
 	},
 	"spanish.bib": {
 		"spanish",
