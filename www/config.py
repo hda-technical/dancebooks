@@ -104,15 +104,11 @@ class ParserConfig(object):
 		keywords = get_config_value("keywords", params, transform=make_ordered_json_extractor())
 		self.keywords = set()
 		self.category_keywords = collections.OrderedDict()
-		self.keywords_with_ref = []
 		for category, cat_keywords in keywords.items():
 			self.category_keywords[category] = list()
-			for keyword, has_reference in cat_keywords.items():
-				#iterating through (keywords, has_reference) tuples
+			for keyword in cat_keywords:
 				self.keywords.add(keyword)
 				self.category_keywords[category].append(keyword)
-				if has_reference:
-					self.keywords_with_ref.append(keyword)
 		self.useless_keywords = get_config_value("useless_keywords", params, transform=extract_set_from_json)
 
 		self.bookkeepers = get_config_value("bookkeepers", params, transform=json.loads)
