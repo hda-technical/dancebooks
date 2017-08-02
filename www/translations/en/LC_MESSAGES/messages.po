@@ -94,7 +94,7 @@ msgid "pages:persimmon:verse"
 msgstr ""
 	"We danc'd till we were very tired:<br/>\n"
 	"Lezginka, polka, persimmon.<br/>\n"
-	"I can not understand the nonsence:<br/>\n"
+	"I can not understand the nonsense:<br/>\n"
 	"How could I persimmon have danced?<br/>\n"
 
 # Common
