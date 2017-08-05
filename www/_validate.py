@@ -538,13 +538,6 @@ def validate_booktype(item, errors):
 			booktype=booktype
 		))
 
-	if (booktype in MULTIVOLUME_BOOKTYPES):
-		volumes = item.get("volumes")
-		if volumes is None:
-			errors.add("Field volumes expected for booktype {booktype}".format(
-				booktype=booktype
-			))
-			
 	if (booktype == "article"):
 		journaltitle = item.get("journaltitle")
 		if journaltitle is None:
