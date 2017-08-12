@@ -136,23 +136,12 @@ def files_in_folder(path, pattern, excludes={}):
 	"""
 	Iterates over folder yielding files matching pattern
 	"""
-	result_files = set()
-
-	for root, dirs, files in os.walk(path):
-		skip = False
-
-		#processing excludes
-		for excl in excludes:
-			excl_with_sep = "/" + excl
-			if excl_with_sep in root:
-				skip = True
-		if skip:
-			continue
-
-		for file_ in files:
-			if fnmatch.fnmatch(file_, pattern):
-				result_files.add(os.path.join(root, file_))
-
+	result_files = []
+	for entry in os.scandir(path):
+		if entry.is_file() and fnmatch.fnmatch(entry.name, pattern):
+			result_files.append(os.path.join(path, entry.name))
+		elif entry.is_dir() and entry.name not in excludes:
+			result_files += files_in_folder(os.path.join(path, entry.name), pattern, excludes)
 	return result_files
 
 
@@ -516,7 +505,8 @@ def pretty_print_file_size(size_value):
 
 def isfile_case_sensitive(abspath):
 	"""
-	Checks if file exists using case-sensive path
+	Checks if file exists using case-sensitive path.
+	Makes sense only on Windows / Cygwin
 	"""
 	if not os.path.isfile(abspath):
 		return False
