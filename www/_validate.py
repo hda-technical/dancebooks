@@ -148,9 +148,8 @@ def fetch_added_on_from_git():
 		return result
 
 	result = dict()
-	for entry in os.listdir(config.parser.bibdata_dir):
-		entry_path = os.path.join(config.parser.bibdata_dir, entry)
-		result.update(blame_file(entry_path))
+	for path in utils.files_in_folder(config.parser.bibdata_dir, "*.bib"):
+		result.update(blame_file(path))
 	return result
 
 
