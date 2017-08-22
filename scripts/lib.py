@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
 import json
+import math
 import os
 import re
+import subprocess
+import shutil
 
 import opster
 import requests
@@ -17,22 +20,25 @@ HEADERS = {
 #UTILITY FUNCTIONS 
 ###################
 
-def json_get_request(*args, **kwargs):
+def get_json(*args, **kwargs):
 	"""
 	Returns parsed JSON object received via HTTP GET request
 	"""
-	rq = requests.get(*args, headers=HEADERS, **kwargs)
-	return json.loads(rq.text)
+	response = requests.get(*args, headers=HEADERS, **kwargs)
+	if response.status_code == 200:
+		return json.loads(response.content)
+	else:
+		raise ValueError("JSON with code 200 was expected. Got {response.status_code} with {response.content}")
 	
 	
-def binary_get_request(output_filename, *args, **kwargs):
+def get_binary(output_filename, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
 	"""
-	rq = requests.get(*args, stream=True, headers=HEADERS, **kwargs)
-	with open(output_filename, "wb") as fd:
-		for chunk in rq.iter_content(BLOCK_SIZE):
-			fd.write(chunk)
+	request = requests.get(*args, stream=True, headers=HEADERS, **kwargs)
+	with open(output_filename, "wb") as file:
+		for chunk in request.iter_content(BLOCK_SIZE):
+			file.write(chunk)
 	
 	
 def make_output_folder(downloader, book_id):
@@ -42,7 +48,7 @@ def make_output_folder(downloader, book_id):
 	)
 	os.makedirs(folder_name, exist_ok=True)
 	return folder_name
-		
+
 
 def make_output_filename(output_folder, prefix, page_number, extension):
 	return os.path.join(
@@ -53,6 +59,69 @@ def make_output_filename(output_folder, prefix, page_number, extension):
 			extension=extension
 		)
 	)
+	
+
+def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, tile_size):
+	"""
+	Invokes montage tool from ImageMagick package to sew tiles together
+	"""
+	subprocess.check_call([
+		"montage",
+		f"{folder}/*",
+		"-mode", "Concatenate",
+		"-geometry", f"{tile_size}x{tile_size}>",
+		"-tile", f"{tiles_number_x}x{tiles_number_y}",
+		output_file
+	])
+	subprocess.check_call([
+		"convert",
+		output_file,
+		"-trim",
+		output_file
+	])
+
+
+def download_page_from_iip(fastcgi_url, files_root, page_metadata, output_filename):
+	TILE_SIZE = 256
+	width = int(page_metadata["d"][-1]["w"])
+	height = int(page_metadata["d"][-1]["h"])
+	pyramide_height = page_metadata["m"]
+	remote_filename = os.path.join(files_root, page_metadata["f"])
+	tmp_folder = "tmp"
+	os.makedirs(tmp_folder, exist_ok=True)
+	tiles_number_x = math.ceil(width / TILE_SIZE)
+	tiles_number_y = math.ceil(height / TILE_SIZE)
+	print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image")
+	for tile_number in range(tiles_number_x * tiles_number_y):
+		tile_number_x = tile_number % tiles_number_x
+		tile_number_y = int(tile_number / tiles_number_x)
+		tile_file = os.path.join(tmp_folder, f"{tile_number_y:08d}_{tile_number_x:08d}.jpg")
+		get_binary(
+			tile_file,
+			fastcgi_url,
+			#WARN: passing parameters as string in order to send them in urldecoded form 
+			#(iip does not support urlencoded parameters)
+			params=f"FIF={remote_filename}&JTL={pyramide_height},{tile_number}"
+		)
+	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, TILE_SIZE)
+	shutil.rmtree(tmp_folder)
+	
+	
+def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root):
+	"""
+	Downloads book served by IIPImage fastcgi servant.
+	API is documented here:
+	http://iipimage.sourceforge.net/documentation/protocol/
+	"""
+	metadata = get_json(metadata_url)
+	pages_number = len(metadata["pgs"])
+	print(f"Going to download {pages_number} pages")
+	for page_number, page_metadata in enumerate(metadata["pgs"]):
+		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
+		if os.path.isfile(output_filename):
+			continue
+		download_page_from_iip(fastcgi_url, files_root, page_metadata, output_filename)
+	
 
 ###################
 #LIBRARY DEPENDENT FUNCTIONS 
@@ -64,14 +133,31 @@ def make_output_filename(output_folder, prefix, page_number, extension):
 
 ###################
 #PAGE BASED DOWNLOADERS
-###################	
+###################
+
+@opster.command()
+def prlib(
+	book_id=("b", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')")
+):
+	output_folder = make_output_folder("prlib", book_id)
+	metadata_url = f"http://content.beta.prlib.ru/out_metadata/{book_id}/{book_id}.json"
+	files_root = f"/var/data/out_files/{book_id}"
+	fastcgi_url = "http://content.beta.prlib.ru/fcgi-bin/iipsrv.fcgi"
+	download_book_from_iip(
+		metadata_url=metadata_url, 
+		fastcgi_url=fastcgi_url, 
+		files_root=files_root, 
+		output_folder=output_folder
+	)
+
 			
 @opster.command()
 def googleBooks(
 	book_id=("b", "", "Book id to be downloaded")
 ):
 	"""
-	Download freely-available book from Google Books service (image by image)
+	Downloads freely-available book from Google Books service (image by image)
+	Useful when freely-available pdf file has poor quality (such case is quite rare).
 	"""
 	if len(book_id) == 0:
 		raise RuntimeError("book_id is mandatory")
@@ -82,7 +168,7 @@ def googleBooks(
 	)
 	
 	#making basic request to get the list of page identifiers
-	json_obj = json_get_request(
+	json_obj = get_json(
 		BASE_URL,
 		params={
 			"id": book_id,
@@ -96,7 +182,7 @@ def googleBooks(
 		pages.add(obj["pid"])
 	output_folder = make_output_folder("googleBooks", book_id)
 	while len(pages) > 0:
-		pages_data = json_get_request(
+		pages_data = get_json(
 			BASE_URL,
 			params={
 				"id": book_id,
@@ -120,7 +206,7 @@ def googleBooks(
 				int(match.group("page_number")),
 				"jpg"
 			)
-			binary_get_request(
+			get_binary(
 				output_filename,
 				page_data["src"]
 			)
