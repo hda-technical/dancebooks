@@ -28,7 +28,7 @@ def get_json(*args, **kwargs):
 	if response.status_code == 200:
 		return json.loads(response.content)
 	else:
-		raise ValueError("JSON with code 200 was expected. Got {response.status_code} with {response.content}")
+		raise ValueError(f"While getting {args[0]}: JSON with code 200 was expected. Got {response.status_code}")
 	
 	
 def get_binary(output_filename, *args, **kwargs):
@@ -81,7 +81,7 @@ def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, 
 	])
 
 
-def download_page_from_iip(fastcgi_url, files_root, page_metadata, output_filename):
+def download_image_from_iip(fastcgi_url, files_root, page_metadata, output_filename):
 	TILE_SIZE = 256
 	width = int(page_metadata["d"][-1]["w"])
 	height = int(page_metadata["d"][-1]["h"])
@@ -120,8 +120,50 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
 		if os.path.isfile(output_filename):
 			continue
-		download_page_from_iip(fastcgi_url, files_root, page_metadata, output_filename)
+		download_image_from_iip(fastcgi_url, files_root, page_metadata, output_filename)
+
+		
+def download_image_from_iiif(canvas_metadata, output_filename):
+	"""
+	Downloads single image via IIIF protocol.
+	API is documented here:
+	http://iiif.io/about/
+	"""
+	id = canvas_metadata["images"][-1]["resource"]["service"]["@id"]
+	metadata = get_json(f"{id}/info.json")
+	tile_size = metadata["tiles"][0]["width"]
+	width = metadata["width"]
+	height = metadata["height"]
+	tmp_folder = "tmp"
+	os.makedirs(tmp_folder, exist_ok=True)
+	tiles_number_x = math.ceil(width / tile_size)
+	tiles_number_y = math.ceil(height / tile_size)
+	for tile_x in range(0, tiles_number_x):
+		for tile_y in range(0, tiles_number_y):
+			tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
+			left = tile_size * tile_x
+			top = tile_size * tile_y
+			tile_width = min(width - left, tile_size)
+			tile_height = min(height - top, tile_size)
+			get_binary(
+				tile_file,
+				f"{id}/{left},{top},{tile_width},{tile_height}/{min(tile_width, tile_height)},/0/native.jpg"
+			)
+	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
+	shutil.rmtree(tmp_folder)
 	
+
+def download_book_from_iiif(manifest_url, output_folder):
+	"""
+	Downloads entire book via IIIF protocol.
+	API is documented here:
+	http://iiif.io/about/
+	"""
+	manifest = get_json(manifest_url)
+	canvases = manifest["sequences"][0]["canvases"]
+	for page_number, canvas_metadata in enumerate(canvases):
+		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
+		download_image_from_iiif(canvas_metadata, output_filename)
 
 ###################
 #LIBRARY DEPENDENT FUNCTIONS 
@@ -136,9 +178,24 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 ###################
 
 @opster.command()
+def vatlib(
+	book_id=("b", "", "Id of the book to be downloaded (e. g. 'MSS_Cappon.203')")
+):
+	"""
+	Downloads book from http://digi.vatlib.it/
+	"""
+	manifest_url = f"http://digi.vatlib.it/iiif/{book_id}/manifest.json"
+	output_folder = make_output_folder("vatlib", book_id)
+	download_book_from_iiif(manifest_url, output_folder)
+
+
+@opster.command()
 def prlib(
 	book_id=("b", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')")
 ):
+	"""
+	Downloads book from https://www.prlib.ru/
+	"""
 	output_folder = make_output_folder("prlib", book_id)
 	metadata_url = f"http://content.beta.prlib.ru/out_metadata/{book_id}/{book_id}.json"
 	files_root = f"/var/data/out_files/{book_id}"
