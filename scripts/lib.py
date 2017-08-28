@@ -131,7 +131,12 @@ def download_image_from_iiif(canvas_metadata, output_filename):
 	"""
 	id = canvas_metadata["images"][-1]["resource"]["service"]["@id"]
 	metadata = get_json(f"{id}/info.json")
-	tile_size = metadata["tiles"][0]["width"]
+	if "tiles" in metadata:
+		# Served by e. g. vatlib servant
+		tile_size = metadata["tiles"][0]["width"]
+	else:
+		# Served by e. g. gallica servant
+		tile_size = 1024
 	width = metadata["width"]
 	height = metadata["height"]
 	tmp_folder = "tmp"
@@ -147,7 +152,7 @@ def download_image_from_iiif(canvas_metadata, output_filename):
 			tile_height = min(height - top, tile_size)
 			get_binary(
 				tile_file,
-				f"{id}/{left},{top},{tile_width},{tile_height}/{min(tile_width, tile_height)},/0/native.jpg"
+				f"{id}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
 			)
 	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
 	shutil.rmtree(tmp_folder)
@@ -177,6 +182,22 @@ def download_book_from_iiif(manifest_url, output_folder):
 #PAGE BASED DOWNLOADERS
 ###################
 
+@opster.command()
+def gallica(
+	book_id=("b", "", "Id of the book to be downloaded (e. g. 'btv1b7200356s')")
+):
+	"""
+	Downloads book from http://gallica.bnf.fr/
+	
+	NB: There is an option to download high resolution raw images
+	(see JSON path manifest["sequences"][0]["canvases"][0]["images"][0]["resource"]["@id"]).
+	It does not look standard for IIIF protocol, hence it is not used in this helper script.
+	"""
+	manifest_url = f"http://gallica.bnf.fr/iiif/ark:/12148/{book_id}/manifest.json"
+	output_folder = make_output_folder("gallica", book_id)
+	download_book_from_iiif(manifest_url, output_folder)
+
+	
 @opster.command()
 def vatlib(
 	book_id=("b", "", "Id of the book to be downloaded (e. g. 'MSS_Cappon.203')")

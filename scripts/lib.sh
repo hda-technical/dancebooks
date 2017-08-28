@@ -306,31 +306,6 @@ hathi()
 	done;
 }
 
-gallica()
-{
-	if [ $# -le 1 ]
-	then
-		echo "Usage $0 ark_id [first_page] last_page"
-		return 1
-	fi
-
-	local BOOK_ID=$1
-	local OUTPUT_DIR=`makeOutputDir "gallica.$BOOK_ID"`
-	shift;
-	mkdir -p "$OUTPUT_DIR"
-	for PAGE in `seq $@`
-	do
-		local PAGE_ID="${BOOK_ID}.f${PAGE}"
-		local DOWNLOADED_FILE="${PAGE_ID}.bmp"
-		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.bmp $PAGE`
-		if [ ! -f "$OUTPUT_FILE" ]
-		then
-			gallicaTiles "$PAGE_ID"
-			mv "$DOWNLOADED_FILE" "$OUTPUT_FILE"
-		fi
-	done
-}
-
 britishLibrary()
 {
 	if [ $# -ne 2 ]
@@ -406,45 +381,6 @@ generalTilesFile()
 	local TILE_Y=$2
 
 	printf "%04d_%04d" "$TILE_Y" "$TILE_X"
-}
-
-gallicaTilesUrl()
-{
-	if [ $# -ne 4 ]
-	then
-		echo "Usage: $0 ark_id x y z"
-		return 1
-	fi
-
-	local BOOK_ID=`echo $1 | sed -e 's/\./\//g'`
-	local TILE_X=$2
-	local TILE_Y=$3
-	local TILE_Z=$4
-	local TILE_SIZE=1024
-
-	local LEFT=`expr $TILE_X '*' $TILE_SIZE`
-	local TOP=`expr $TILE_Y '*' $TILE_SIZE`
-
-	echo "http://gallica.bnf.fr/iiif/ark:/12148/$BOOK_ID/$LEFT,$TOP,1024,1024/1024,/0/native.jpg"
-}
-
-gallicaTiles()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 ark_id"
-		return 1
-	fi
-
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=0
-
-	local BOOK_ID=$1
-	local ZOOM=6
-	local TILE_SIZE=1024
-	local OUTPUT_DIR=.
-
-	tiles gallicaTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 haabTilesUrl()
