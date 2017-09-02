@@ -2,7 +2,6 @@ import codecs
 import copy
 import cProfile
 import csv
-import fnmatch
 import functools
 import http.client
 import io
@@ -132,17 +131,18 @@ def profile(sort="time", limits=50):
 	return profile_decorator
 
 
-def files_in_folder(path, pattern, excludes={}):
+def search_in_folder(path, filter, excludes={}):
 	"""
 	Iterates over folder yielding files matching pattern
 	"""
-	result_files = []
+	results = []
 	for entry in os.scandir(path):
-		if entry.is_file() and fnmatch.fnmatch(entry.name, pattern):
-			result_files.append(os.path.join(path, entry.name))
+		abspath = os.path.join(path, entry.name)
+		if filter(abspath):
+			results.append(abspath)
 		elif entry.is_dir() and entry.name not in excludes:
-			result_files += files_in_folder(os.path.join(path, entry.name), pattern, excludes)
-	return result_files
+			results += search_in_folder(abspath, filter, excludes)
+	return results
 
 
 def extract_metadata_from_file(path):

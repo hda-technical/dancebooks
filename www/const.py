@@ -127,8 +127,9 @@ FILENAME_PATTERN = (
 		r"(?:, partie (?P<part>\d+))|"
 		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"
 	r")*"
-	#extension: .pdf (facsimiles) or .md (transcriptions)
-	r"\.(pdf|md)"
+	#extension: .pdf (facsimiles) or .md (transcriptions) or empty (backup folders)
+	r"(\.pdf|\.md|)"
+	"$"
 )
 FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 

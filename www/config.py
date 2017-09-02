@@ -1,5 +1,4 @@
 import collections
-import collections
 import configparser
 import enum
 import functools
@@ -171,8 +170,11 @@ class WwwConfig(object):
 		self.elibrary_dir = get_config_value(
 			"elibrary_dir",
 			params,
-			transform=os.path.abspath,
 			check=os.path.isdir
+		)
+		self.backup_dir = get_config_value(
+			"backup_dir",
+			params
 		)
 
 		#security params

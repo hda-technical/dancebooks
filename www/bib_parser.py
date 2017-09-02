@@ -311,7 +311,7 @@ class BibParser(object):
 			raise Exception("Path to folder expected")
 
 		parsed_items = []
-		files = utils.files_in_folder(path, "*.bib")
+		files = utils.search_in_folder(path, lambda path: path.endswith(".bib"))
 		executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
 		futures = [
 			executor.submit(
@@ -375,7 +375,7 @@ class BibParser(object):
 			if self.state == ParserState.NoItem:
 				if c == "@":
 					self.state = ParserState.WaitingForType
-				#anything else is a comment				
+				#anything else is a comment
 
 			elif self.state == ParserState.WaitingForType:
 				if c.isspace():
@@ -400,7 +400,7 @@ class BibParser(object):
 					self.lexeme += c
 				else:
 					self.raise_error()
-			
+
 			elif self.state == ParserState.ReadingId:
 				if c.isspace():
 					self.set_item_param(item, "id", self.lexeme)
@@ -412,7 +412,7 @@ class BibParser(object):
 					self.lexeme = ""
 				else:
 					self.lexeme += c
-			
+
 			elif self.state == ParserState.WaitingForCommaAfterId:
 				if c.isspace():
 					continue
@@ -429,7 +429,7 @@ class BibParser(object):
 					self.lexeme += c
 				else:
 					self.raise_error()
-			
+
 			elif self.state == ParserState.ReadingKey:
 				if c.isspace():
 					self.state = ParserState.WaitingForEq
@@ -441,7 +441,7 @@ class BibParser(object):
 					self.lexeme = ""
 				else:
 					self.lexeme += c
-			
+
 			elif self.state == ParserState.WaitingForEq:
 				if c.isspace():
 					continue
@@ -449,7 +449,7 @@ class BibParser(object):
 					self.state = ParserState.WaitingForParenthesis
 				else:
 					self.raise_error()
-					
+
 			elif self.state == ParserState.WaitingForParenthesis:
 				if c.isspace():
 					continue

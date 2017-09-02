@@ -148,7 +148,8 @@ def fetch_added_on_from_git():
 		return result
 
 	result = dict()
-	for path in utils.files_in_folder(config.parser.bibdata_dir, "*.bib"):
+	filter = lambda path: path.endswith(".bib")
+	for path in utils.search_in_folder(config.parser.bibdata_dir, filter):
 		result.update(blame_file(path))
 	return result
 
@@ -158,10 +159,32 @@ def fetch_filelist_from_fs():
 		"Ancillary sources (not in bibliography)",
 		"Leaflets (not in bibliography)"
 	}
-	trim_root = lambda path: path[len(config.www.elibrary_dir):]
+	trim_root = lambda path: "/" + os.path.relpath(path, start=config.www.elibrary_dir)
+	filter = lambda path: os.path.isfile(path) and path.endswith(".pdf")
 	return set(map(
 		trim_root,
-		utils.files_in_folder(config.www.elibrary_dir, "*.pdf", excludes=EXCLUDED_FOLDERS)
+		utils.search_in_folder(config.www.elibrary_dir, filter, excludes=EXCLUDED_FOLDERS)
+	))
+
+
+def fetch_backups_from_fs():
+	if not os.path.isdir(config.www.backup_dir):
+		return []
+	EXCLUDED_FOLDERS = {
+		"Cooking",
+		"Fashion",
+		"Leaflets (not in bibliography)",
+		"Postcards",
+		"Useless"
+	}
+	trim_root = lambda path: "/" + os.path.relpath(path, start=config.www.backup_dir)
+	filter = lambda path: (
+		os.path.isdir(path) and
+		const.FILENAME_REGEXP.match(os.path.basename(path))
+	)
+	return set(map(
+		trim_root,
+		utils.search_in_folder(config.www.backup_dir, filter, excludes=EXCLUDED_FOLDERS)
 	))
 
 
@@ -525,9 +548,8 @@ def validate_booktype(item, errors):
 		"unpublished",
 	}
 	#volumes tag should be present for these booktypes
-	MULTIVOLUME_BOOKTYPES = {"mvbook", "mvreference"}
 	PERIODICAL_BOOKTYPES = {"periodical", "article"}
-	
+
 	booktype = item.get("booktype")
 	if booktype is None:
 		return
@@ -565,7 +587,7 @@ def validate_booktype(item, errors):
 			errors.add("Field institution  expected for booktype {booktype}".format(
 				booktype=booktype
 			))
-			
+
 	if item.get("number"):
 		if booktype not in PERIODICAL_BOOKTYPES:
 			errors.add("Field number can only be set for periodicals")
@@ -949,6 +971,28 @@ def main(
 	git_added_on = fetch_added_on_from_git()
 	logging.info("Fetching list of pdf from filesystem")
 	physically_stored = fetch_filelist_from_fs()
+	logging.info("Found {count} physically stored items".format(
+		count=len(physically_stored)
+	))
+	if os.path.isdir(config.www.backup_dir):
+		logging.info("Fetching list of backups from filesystem")
+		backups = fetch_backups_from_fs()
+		logging.info("Found {count} items in backup".format(
+			count=len(backups)
+		))
+		strange_backups_number = 0
+		for backup in backups:
+			original = backup + ".pdf"
+			if original not in physically_stored:
+				strange_backups_number += 1
+				logging.warn("Found strange backup folder in {backup_dir}: {path}".format(
+					backup_dir=config.www.backup_dir,
+					path=backup
+				))
+		if strange_backups_number > 0:
+			logging.warn("Found {strange_backups_number} strange backups".format(
+				strange_backups_number=strange_backups_number
+			))
 
 	for item in items:
 		filename = item.get("filename")
@@ -963,7 +1007,7 @@ def main(
 		))
 
 	logging.info("Going to process {0} items".format(len(items)))
-	executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
+	executor = concurrent.futures.ProcessPoolExecutor(max_workers=1)#multiprocessing.cpu_count())
 	futures = {
 		executor.submit(validate_items, items_batch, git_added_on, make_extra_checks): None
 		for items_batch in utils.batched(items, 100)
