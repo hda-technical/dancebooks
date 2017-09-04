@@ -29,8 +29,16 @@ def get_json(*args, **kwargs):
 		return json.loads(response.content)
 	else:
 		raise ValueError(f"While getting {args[0]}: JSON with code 200 was expected. Got {response.status_code}")
-	
-	
+
+
+def get_text(*args, **kwargs):
+	response = requests.get(*args, headers=HEADERS, **kwargs)
+	if response.status_code == 200:
+		return response.content.decode("utf-8")
+	else:
+		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
+		
+		
 def get_binary(output_filename, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
@@ -80,17 +88,54 @@ def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, 
 		output_file
 	])
 
+	
+class IIPMetadata(object):
+	def __init__(self, tile_size, width, height, max_level):
+		self.tile_size = tile_size
+		self.width = width
+		self.height = height
+		self.max_level = max_level
+		
+	@staticmethod
+	def from_json(json):
+		tile_size = 256
+		width = int(json["d"][-1]["w"])
+		height = int(json["d"][-1]["h"])
+		max_level = json["m"]
+		return IIPMetadata(tile_size, width, height, max_level)
+		
+	@staticmethod
+	def from_text(text):
+		"""
+		Parses the following text:
+		```
+		Max-size:3590 3507
+		Tile-size:256 256
+		Resolution-number:5
+		```
+		"""
+		tile_size = None
+		width = None
+		height = None
+		max_level = None
+		for line in text.split('\n'):
+			parts = line.split(':')
+			if parts[0] == "Max-size":
+				(width, height) = map(int, parts[1].split())
+			elif parts[0] == "Tile-size":
+				tile_size = int(parts[1].split()[0])
+			elif parts[0] == "Resolution-number":
+				max_level = int(parts[1]) - 1
+			else:
+				pass
+		return IIPMetadata(tile_size, width, height, max_level)
 
-def download_image_from_iip(fastcgi_url, files_root, page_metadata, output_filename):
-	TILE_SIZE = 256
-	width = int(page_metadata["d"][-1]["w"])
-	height = int(page_metadata["d"][-1]["h"])
-	pyramide_height = page_metadata["m"]
-	remote_filename = os.path.join(files_root, page_metadata["f"])
+
+def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename):
 	tmp_folder = "tmp"
 	os.makedirs(tmp_folder, exist_ok=True)
-	tiles_number_x = math.ceil(width / TILE_SIZE)
-	tiles_number_y = math.ceil(height / TILE_SIZE)
+	tiles_number_x = math.ceil(metadata.width / metadata.tile_size)
+	tiles_number_y = math.ceil(metadata.height / metadata.tile_size)
 	print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image")
 	for tile_number in range(tiles_number_x * tiles_number_y):
 		tile_number_x = tile_number % tiles_number_x
@@ -101,9 +146,9 @@ def download_image_from_iip(fastcgi_url, files_root, page_metadata, output_filen
 			fastcgi_url,
 			#WARN: passing parameters as string in order to send them in urldecoded form 
 			#(iip does not support urlencoded parameters)
-			params=f"FIF={remote_filename}&JTL={pyramide_height},{tile_number}"
+			params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_number}"
 		)
-	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, TILE_SIZE)
+	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, metadata.tile_size)
 	shutil.rmtree(tmp_folder)
 	
 	
@@ -117,10 +162,12 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 	pages_number = len(metadata["pgs"])
 	print(f"Going to download {pages_number} pages")
 	for page_number, page_metadata in enumerate(metadata["pgs"]):
+		iip_page_metadata = IIPMetadata.from_json(page_metadata)
+		remote_filename = os.path.join(files_root, page_metadata["f"])
 		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
 		if os.path.isfile(output_filename):
 			continue
-		download_image_from_iip(fastcgi_url, files_root, page_metadata, output_filename)
+		download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
 		
 def download_image_from_iiif(canvas_metadata, output_filename):
@@ -218,16 +265,37 @@ def prlib(
 	Downloads book from https://www.prlib.ru/
 	"""
 	output_folder = make_output_folder("prlib", book_id)
-	metadata_url = f"http://content.beta.prlib.ru/out_metadata/{book_id}/{book_id}.json"
+	metadata_url = f"https://content.prlib.ru/out_metadata/{book_id}/{book_id}.json"
 	files_root = f"/var/data/out_files/{book_id}"
-	fastcgi_url = "http://content.beta.prlib.ru/fcgi-bin/iipsrv.fcgi"
+	fastcgi_url = "https://content.prlib.ru/fcgi-bin/iipsrv.fcgi"
 	download_book_from_iip(
 		metadata_url=metadata_url, 
 		fastcgi_url=fastcgi_url, 
 		files_root=files_root, 
 		output_folder=output_folder
 	)
-
+	
+	
+@opster.command()
+def nga(
+	image_id=("i", "", "Image id to be downloaded (e. g. `49035`)")
+):
+	"""
+	Downloads single image from https://www.nga.gov
+	"""
+	slashed_image_id = "/".join(image_id) #will produce "4/9/0/3/5" from "49035-primary-0-nativeres"
+	remote_filename = f"/public/objects/{slashed_image_id}/{image_id}-primary-0-nativeres.ptif"
+	fastcgi_url="https://media.nga.gov/fastcgi/iipsrv.fcgi"
+	metadata = IIPMetadata.from_text(
+		get_text(f"{fastcgi_url}?FIF={remote_filename}&obj=Max-size&obj=Tile-size&obj=Resolution-number")
+	)
+	download_image_from_iip(
+		fastcgi_url=fastcgi_url,
+		remote_filename=remote_filename,
+		metadata=metadata,
+		output_filename=f"nga.{image_id}.bmp"
+	)
+	
 			
 @opster.command()
 def googleBooks(
