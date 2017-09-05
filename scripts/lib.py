@@ -15,6 +15,7 @@ USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/201
 HEADERS = {
 	"User-Agent": USER_AGENT
 }
+TIMEOUT = 5
 
 ###################
 #UTILITY FUNCTIONS 
@@ -24,7 +25,7 @@ def get_json(*args, **kwargs):
 	"""
 	Returns parsed JSON object received via HTTP GET request
 	"""
-	response = requests.get(*args, headers=HEADERS, **kwargs)
+	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
 	if response.status_code == 200:
 		return json.loads(response.content)
 	else:
@@ -32,7 +33,7 @@ def get_json(*args, **kwargs):
 
 
 def get_text(*args, **kwargs):
-	response = requests.get(*args, headers=HEADERS, **kwargs)
+	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
 	if response.status_code == 200:
 		return response.content.decode("utf-8")
 	else:
@@ -43,7 +44,7 @@ def get_binary(output_filename, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
 	"""
-	request = requests.get(*args, stream=True, headers=HEADERS, **kwargs)
+	request = requests.get(*args, stream=True, headers=HEADERS, timeout=TIMEOUT, **kwargs)
 	with open(output_filename, "wb") as file:
 		for chunk in request.iter_content(BLOCK_SIZE):
 			file.write(chunk)
