@@ -18,7 +18,7 @@ HEADERS = {
 TIMEOUT = 5
 
 ###################
-#UTILITY FUNCTIONS 
+#UTILITY FUNCTIONS
 ###################
 
 def get_json(*args, **kwargs):
@@ -38,8 +38,8 @@ def get_text(*args, **kwargs):
 		return response.content.decode("utf-8")
 	else:
 		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
-		
-		
+
+
 def get_binary(output_filename, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
@@ -48,8 +48,8 @@ def get_binary(output_filename, *args, **kwargs):
 	with open(output_filename, "wb") as file:
 		for chunk in request.iter_content(BLOCK_SIZE):
 			file.write(chunk)
-	
-	
+
+
 def make_output_folder(downloader, book_id):
 	folder_name = "{downloader}_{book_id}".format(
 		downloader=downloader,
@@ -68,7 +68,7 @@ def make_output_filename(output_folder, prefix, page_number, extension):
 			extension=extension
 		)
 	)
-	
+
 
 def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, tile_size):
 	"""
@@ -89,14 +89,14 @@ def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, 
 		output_file
 	])
 
-	
+
 class IIPMetadata(object):
 	def __init__(self, tile_size, width, height, max_level):
 		self.tile_size = tile_size
 		self.width = width
 		self.height = height
 		self.max_level = max_level
-		
+
 	@staticmethod
 	def from_json(json):
 		tile_size = 256
@@ -104,7 +104,7 @@ class IIPMetadata(object):
 		height = int(json["d"][-1]["h"])
 		max_level = json["m"]
 		return IIPMetadata(tile_size, width, height, max_level)
-		
+
 	@staticmethod
 	def from_text(text):
 		"""
@@ -145,14 +145,14 @@ def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filen
 		get_binary(
 			tile_file,
 			fastcgi_url,
-			#WARN: passing parameters as string in order to send them in urldecoded form 
+			#WARN: passing parameters as string in order to send them in urldecoded form
 			#(iip does not support urlencoded parameters)
 			params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_number}"
 		)
 	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, metadata.tile_size)
 	shutil.rmtree(tmp_folder)
-	
-	
+
+
 def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root):
 	"""
 	Downloads book served by IIPImage fastcgi servant.
@@ -167,10 +167,13 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 		remote_filename = os.path.join(files_root, page_metadata["f"])
 		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
 		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing page #{page_number:04d}")
 			continue
-		download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
+		else:
+			print(f"Downloading page #{page_number:04d}")
+			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
-		
+
 def download_image_from_iiif(canvas_metadata, output_filename):
 	"""
 	Downloads single image via IIIF protocol.
@@ -204,7 +207,7 @@ def download_image_from_iiif(canvas_metadata, output_filename):
 			)
 	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
 	shutil.rmtree(tmp_folder)
-	
+
 
 def download_book_from_iiif(manifest_url, output_folder):
 	"""
@@ -219,12 +222,12 @@ def download_book_from_iiif(manifest_url, output_folder):
 		download_image_from_iiif(canvas_metadata, output_filename)
 
 ###################
-#LIBRARY DEPENDENT FUNCTIONS 
-###################	
+#LIBRARY DEPENDENT FUNCTIONS
+###################
 
 ###################
 #FILE BASED DOWNLOADERS
-###################	
+###################
 
 ###################
 #PAGE BASED DOWNLOADERS
@@ -236,7 +239,7 @@ def gallica(
 ):
 	"""
 	Downloads book from http://gallica.bnf.fr/
-	
+
 	NB: There is an option to download high resolution raw images
 	(see JSON path manifest["sequences"][0]["canvases"][0]["images"][0]["resource"]["@id"]).
 	It does not look standard for IIIF protocol, hence it is not used in this helper script.
@@ -245,7 +248,7 @@ def gallica(
 	output_folder = make_output_folder("gallica", book_id)
 	download_book_from_iiif(manifest_url, output_folder)
 
-	
+
 @opster.command()
 def vatlib(
 	book_id=("b", "", "Id of the book to be downloaded (e. g. 'MSS_Cappon.203')")
@@ -270,13 +273,13 @@ def prlib(
 	files_root = f"/var/data/out_files/{book_id}"
 	fastcgi_url = "https://content.prlib.ru/fcgi-bin/iipsrv.fcgi"
 	download_book_from_iip(
-		metadata_url=metadata_url, 
-		fastcgi_url=fastcgi_url, 
-		files_root=files_root, 
+		metadata_url=metadata_url,
+		fastcgi_url=fastcgi_url,
+		files_root=files_root,
 		output_folder=output_folder
 	)
-	
-	
+
+
 @opster.command()
 def nga(
 	image_id=("i", "", "Image id to be downloaded (e. g. `49035`)")
@@ -296,8 +299,8 @@ def nga(
 		metadata=metadata,
 		output_filename=f"nga.{image_id}.bmp"
 	)
-	
-			
+
+
 @opster.command()
 def googleBooks(
 	book_id=("b", "", "Book id to be downloaded")
@@ -313,7 +316,7 @@ def googleBooks(
 	PAGE_ID_REGEXP = re.compile(
 		r"(?P<page_group>PP|PA)(?P<page_number>\d+)"
 	)
-	
+
 	#making basic request to get the list of page identifiers
 	json_obj = get_json(
 		BASE_URL,
@@ -342,11 +345,11 @@ def googleBooks(
 			#src will only be returned for some pages (currently, 5)
 			if "src" not in page_data:
 				continue
-			
+
 			match = PAGE_ID_REGEXP.match(page_id)
 			if match is None:
 				raise RuntimeError("regexp match failed")
-				
+
 			output_filename = make_output_filename(
 				output_folder,
 				"!pp" if (match.group("page_group") == "PP") else "pa",
@@ -358,7 +361,7 @@ def googleBooks(
 				page_data["src"]
 			)
 			pages.discard(page_data["pid"])
-	
-	
+
+
 if __name__ == "__main__":
 	opster.dispatch()
