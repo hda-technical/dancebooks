@@ -184,25 +184,33 @@ def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filen
 		shutil.rmtree(tmp_folder)
 
 
-def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root):
+def download_book_from_iip(metadata_url, fastcgi_url, page, output_folder, files_root):
 	"""
 	Downloads book served by IIPImage fastcgi servant.
 	API is documented here:
 	http://iipimage.sourceforge.net/documentation/protocol/
 	"""
-	metadata = get_json(metadata_url)
-	pages_number = len(metadata["pgs"])
-	print(f"Going to download {pages_number} pages")
-	for page_number, page_metadata in enumerate(metadata["pgs"]):
+	metadata = get_json(metadata_url)["pgs"]
+	pages_number = len(metadata)
+	if page is not None:
+		print(f"Trimming metadata for pages other than {page}")
+		page_metadata = metadata[page]
 		iip_page_metadata = IIPMetadata.from_json(page_metadata)
 		remote_filename = os.path.join(files_root, page_metadata["f"])
-		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
-		if os.path.isfile(output_filename):
-			print(f"Skip downloading existing page #{page_number:04d}")
-			continue
-		else:
-			print(f"Downloading page #{page_number:04d}")
-			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
+		output_filename = make_output_filename(output_folder, prefix="", page_number=page, extension="bmp")
+		download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
+	else:
+		print(f"Going to download {pages_number} pages")
+		for page_number, page_metadata in enumerate(metadata):
+			iip_page_metadata = IIPMetadata.from_json(page_metadata)
+			remote_filename = os.path.join(files_root, page_metadata["f"])
+			output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
+			if os.path.isfile(output_filename):
+				print(f"Skip downloading existing page #{page_number:04d}")
+				continue
+			else:
+				print(f"Downloading page #{page_number:04d}")
+				download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
 
 def download_image_from_iiif(canvas_metadata, output_filename):
@@ -296,11 +304,13 @@ def vatlib(
 
 @opster.command()
 def prlib(
-	book_id=("b", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')")
+	book_id=("b", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')"),
+	page=("p", "", "Page to be downloaded (downloads all pages when not specified)"),
 ):
 	"""
 	Downloads book from https://www.prlib.ru/
 	"""
+	page = int(page) if page else None
 	output_folder = make_output_folder("prlib", book_id)
 	metadata_url = f"https://content.prlib.ru/out_metadata/{book_id}/{book_id}.json"
 	files_root = f"/var/data/out_files/{book_id}"
@@ -308,6 +318,7 @@ def prlib(
 	download_book_from_iip(
 		metadata_url=metadata_url,
 		fastcgi_url=fastcgi_url,
+		page=page,
 		files_root=files_root,
 		output_folder=output_folder
 	)
