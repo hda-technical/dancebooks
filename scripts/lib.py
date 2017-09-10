@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 
+import functools
 import json
 import math
 import os
 import re
 import subprocess
 import shutil
+import time
+import uuid
 
 import opster
 import requests
@@ -21,6 +24,26 @@ TIMEOUT = 5
 #UTILITY FUNCTIONS
 ###################
 
+def retry(retry_count, delay=0, delay_backoff=1):
+	def actual_decorator(func):
+		@functools.wraps(func)
+		def do_retry(*args, **kwargs):
+			retry_number = 0
+			current_delay = delay
+			try:
+				return func(*args, **kwargs)
+			except Exception as ex:
+				if retry_number >= retry_count:
+					raise RuntimeError(f"Failed to get results after {retry_number} retries")
+				else:
+					time.sleep(current_delay)
+					current_delay *= delay_backoff
+					retry_number += 1
+		return do_retry
+	return actual_decorator
+
+
+@retry(retry_count=3)
 def get_json(*args, **kwargs):
 	"""
 	Returns parsed JSON object received via HTTP GET request
@@ -32,6 +55,7 @@ def get_json(*args, **kwargs):
 		raise ValueError(f"While getting {args[0]}: JSON with code 200 was expected. Got {response.status_code}")
 
 
+@retry(retry_count=3)
 def get_text(*args, **kwargs):
 	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
 	if response.status_code == 200:
@@ -40,6 +64,7 @@ def get_text(*args, **kwargs):
 		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
 
 
+@retry(retry_count=3)
 def get_binary(output_filename, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
@@ -68,6 +93,10 @@ def make_output_filename(output_folder, prefix, page_number, extension):
 			extension=extension
 		)
 	)
+
+
+def make_temporary_folder():
+	return str(uuid.uuid4())
 
 
 def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, tile_size):
@@ -133,24 +162,26 @@ class IIPMetadata(object):
 
 
 def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename):
-	tmp_folder = "tmp"
-	os.makedirs(tmp_folder, exist_ok=True)
-	tiles_number_x = math.ceil(metadata.width / metadata.tile_size)
-	tiles_number_y = math.ceil(metadata.height / metadata.tile_size)
-	print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image")
-	for tile_number in range(tiles_number_x * tiles_number_y):
-		tile_number_x = tile_number % tiles_number_x
-		tile_number_y = int(tile_number / tiles_number_x)
-		tile_file = os.path.join(tmp_folder, f"{tile_number_y:08d}_{tile_number_x:08d}.jpg")
-		get_binary(
-			tile_file,
-			fastcgi_url,
-			#WARN: passing parameters as string in order to send them in urldecoded form
-			#(iip does not support urlencoded parameters)
-			params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_number}"
-		)
-	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, metadata.tile_size)
-	shutil.rmtree(tmp_folder)
+	tmp_folder = make_temporary_folder()
+	os.mkdir(tmp_folder)
+	try:
+		tiles_number_x = math.ceil(metadata.width / metadata.tile_size)
+		tiles_number_y = math.ceil(metadata.height / metadata.tile_size)
+		print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image in {tmp_folder}")
+		for tile_number in range(tiles_number_x * tiles_number_y):
+			tile_number_x = tile_number % tiles_number_x
+			tile_number_y = int(tile_number / tiles_number_x)
+			tile_file = os.path.join(tmp_folder, f"{tile_number_y:08d}_{tile_number_x:08d}.jpg")
+			get_binary(
+				tile_file,
+				fastcgi_url,
+				#WARN: passing parameters as string in order to send them in urldecoded form
+				#(iip does not support urlencoded parameters)
+				params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_number}"
+			)
+		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, metadata.tile_size)
+	finally:
+		shutil.rmtree(tmp_folder)
 
 
 def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root):
@@ -190,23 +221,25 @@ def download_image_from_iiif(canvas_metadata, output_filename):
 		tile_size = 1024
 	width = metadata["width"]
 	height = metadata["height"]
-	tmp_folder = "tmp"
-	os.makedirs(tmp_folder, exist_ok=True)
-	tiles_number_x = math.ceil(width / tile_size)
-	tiles_number_y = math.ceil(height / tile_size)
-	for tile_x in range(0, tiles_number_x):
-		for tile_y in range(0, tiles_number_y):
-			tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
-			left = tile_size * tile_x
-			top = tile_size * tile_y
-			tile_width = min(width - left, tile_size)
-			tile_height = min(height - top, tile_size)
-			get_binary(
-				tile_file,
-				f"{id}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
-			)
-	sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
-	shutil.rmtree(tmp_folder)
+	tmp_folder = make_temporary_folder()
+	os.mkdir(tmp_folder)
+	try:
+		tiles_number_x = math.ceil(width / tile_size)
+		tiles_number_y = math.ceil(height / tile_size)
+		for tile_x in range(0, tiles_number_x):
+			for tile_y in range(0, tiles_number_y):
+				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
+				left = tile_size * tile_x
+				top = tile_size * tile_y
+				tile_width = min(width - left, tile_size)
+				tile_height = min(height - top, tile_size)
+				get_binary(
+					tile_file,
+					f"{id}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
+				)
+		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
+	finally:
+		shutil.rmtree(tmp_folder)
 
 
 def download_book_from_iiif(manifest_url, output_folder):
