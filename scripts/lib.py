@@ -260,6 +260,9 @@ def download_book_from_iiif(manifest_url, output_folder):
 	canvases = manifest["sequences"][0]["canvases"]
 	for page_number, canvas_metadata in enumerate(canvases):
 		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing page #{page_number:04d}")
+			continue
 		download_image_from_iiif(canvas_metadata, output_filename)
 
 ###################
