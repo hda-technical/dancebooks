@@ -50,6 +50,7 @@
 | `minuet` |
 | `perigourdine` |
 | `saraband` |
+| `cancan` | Канкан, как танец из Moulen Rouge, так и как форма Французской кадрили |
 | `circle` | Кадрили замкнутые в круг. Например, черкесский или сицилийский круги | Quadrille dances closed into a circle. Circassian and sicilian circles are well-known examples |
 | `cotillon: 18th century` |
 | `cotillon: potpourri` | Несколько фигур котильона, исполняемые одна за другой в рамках одного танца | Multiple cotillon figures danced one after another in a single dance |
