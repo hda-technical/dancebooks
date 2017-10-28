@@ -301,6 +301,9 @@ msgstr "Чешский"
 msgid "search:language:danish"
 msgstr "Датский"
 
+msgid "search:language:dutch"
+msgstr "Голландский"
+
 msgid "search:language:english"
 msgstr "Английский"
 
@@ -524,6 +527,9 @@ msgstr "Чешский"
 
 msgid "item:language:danish"
 msgstr "Датский"
+
+msgid "item:language:dutch"
+msgstr "Голландский"
 
 msgid "item:language:english"
 msgstr "Английский"
