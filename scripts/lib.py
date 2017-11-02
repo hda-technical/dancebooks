@@ -64,14 +64,18 @@ def get_text(*args, **kwargs):
 
 
 @retry(retry_count=3)
-def get_binary(output_filename, url):
+def get_binary(output_filename, url_or_request):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
+	Accepts both url as string and request.Requests
 	"""
-	response = requests.get(url, stream=True, headers=HEADERS, timeout=TIMEOUT)
-	with open(output_filename, "wb") as file:
-		for chunk in response.iter_content(BLOCK_SIZE):
-			file.write(chunk)
+	response = requests.get(url_or_request, stream=True, headers=HEADERS, timeout=TIMEOUT)
+	if response.status_code == 200:
+		with open(output_filename, "wb") as file:
+			for chunk in response.iter_content(BLOCK_SIZE):
+				file.write(chunk)
+	else:
+		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
 
 
 def make_output_folder(downloader, book_id):
@@ -83,14 +87,11 @@ def make_output_folder(downloader, book_id):
 	return folder_name
 
 
-def make_output_filename(output_folder, page_number, extension):
-	return os.path.join(
-		output_folder,
-		"{page_number:08}.{extension}".format(
-			page_number=page_number,
-			extension=extension
-		)
-	)
+def make_output_filename(base, page_number=None, extension="bmp"):
+	if page_number is None:
+		return f"{base}.{extension}"
+	else:
+		return os.path.join(base, f"{page_number:08}.{extension}")
 
 
 def make_temporary_folder():
@@ -115,6 +116,29 @@ def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, 
 		"-trim",
 		output_file
 	])
+
+
+def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename):
+	"""
+	Iterates over range(tiles_number_x) cross range(tiles_number_y),
+	produces tile url via tile_url_maker invocation,
+	saves sewn .bmp file to output_filename
+	"""
+	tmp_folder = make_temporary_folder()
+	os.mkdir(tmp_folder)
+	try:
+		print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image in {tmp_folder}")
+		for tile_x in range(tiles_number_x):
+			for tile_y in range(tiles_number_y):
+				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
+				get_binary(
+					tile_file,
+					url_maker(tile_x, tile_y)
+				)
+		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
+	finally:
+		if "KEEP_TEMP" not in os.environ:
+			shutil.rmtree(tmp_folder)
 
 
 class IIPMetadata(object):
@@ -159,28 +183,6 @@ class IIPMetadata(object):
 		return IIPMetadata(tile_size, width, height, max_level)
 
 
-def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename):
-	"""
-	Iterates over range(tiles_number_x) cross range(tiles_number_y),
-	produces tile url via tile_url_maker invocation,
-	saves sewn .bmp file to output_filename
-	"""
-	tmp_folder = make_temporary_folder()
-	os.mkdir(tmp_folder)
-	try:
-		print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image in {tmp_folder}")
-		for tile_x in range(tiles_number_x):
-			for tile_y in range(tiles_number_y):
-				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
-				get_binary(
-					tile_file,
-					url_maker(tile_x, tile_y)
-				)
-		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
-	finally:
-		shutil.rmtree(tmp_folder)
-
-
 def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename):
 	tiles_number_x = math.ceil(metadata.width / metadata.tile_size)
 	tiles_number_y = math.ceil(metadata.height / metadata.tile_size)
@@ -206,7 +208,7 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 	for page_number, page_metadata in enumerate(metadata):
 		iip_page_metadata = IIPMetadata.from_json(page_metadata)
 		remote_filename = os.path.join(files_root, page_metadata["f"])
-		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
+		output_filename = make_output_filename(output_folder, page_number)
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page_number:04d}")
 			continue
@@ -257,7 +259,7 @@ def download_book_from_iiif(manifest_url, output_folder):
 	manifest = get_json(manifest_url)
 	canvases = manifest["sequences"][0]["canvases"]
 	for page_number, canvas_metadata in enumerate(canvases):
-		output_filename = make_output_filename(output_folder, page_number, extension="bmp")
+		output_filename = make_output_filename(output_folder, page_number)
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page_number:04d}")
 			continue
@@ -317,7 +319,7 @@ def prlib(
 	output_folder = make_output_folder("prlib", id)
 	if page:
 		page = int(page)
-		output_filename = make_output_filename(output_folder, page, extension="bmp")
+		output_filename = make_output_filename(output_folder, page)
 		metadata = get_json(metadata_url)
 		page_metadata = metadata[page]
 		remote_filename = os.path.join(files_root, page_metadata["f"])
@@ -350,6 +352,66 @@ def nga(
 		metadata=metadata,
 		output_filename=f"nga.{id}.bmp"
 	)
+
+
+@opster.command()
+def hab(
+	id=("", "", "Image id to be downloaded (i. e `grafik/uh-4f-47-00192`)")
+):
+	"""
+	Downloads single image from http://diglib.hab.de and http://kk.haum-bs.de
+	(both redirect to Virtuelles Kupferstichkabinett website, which is too hard to be typed)
+	"""
+	#The site does not use any metadata and simply sends unnecessary requests to backend
+	#Using head requests to get maximum available zoom and
+	class UrlMaker(object):
+		def __init__(self, zoom):
+			self.zoom = zoom
+
+		def __call__(self, tile_x, tile_y):
+			for tile_group in [0, 1, 2]:
+				probable_url = f"http://diglib.hab.de/varia/{id}/TileGroup{tile_group}/{self.zoom}-{tile_x}-{tile_y}.jpg"
+				head_response = requests.head(probable_url)
+				if head_response.status_code == 200:
+					return probable_url
+			return None
+
+	MAX_ZOOM = 10
+	MAX_TILE_NUMBER = 100
+	TILE_SIZE = 256
+	max_zoom = None
+	for test_zoom in range(MAX_ZOOM + 1):
+		if UrlMaker(test_zoom)(0, 0) is not None:
+			max_zoom = test_zoom
+		else:
+			#current zoom is not available - consider previous one to be maximal
+			break
+	assert(max_zoom is not None)
+	print(f"Guessed max_zoom={max_zoom}")
+	#The site does not use any metadata and simply sends unnecessary requests to backend
+	#Guessing tiles_number_x, tiles_number_y using HEAD requests with guessed max_zoom
+	#
+	#UrlMaker returns None when corresponding tile does not exist
+	#
+	#FIXME: one can save some requests using bisection here,
+	#but python standard library is too poor to have one
+	tiles_number_x = None
+	tiles_number_y = None
+	url_maker = UrlMaker(max_zoom)
+	for tile_x in range(MAX_TILE_NUMBER):
+		if url_maker(tile_x, 0) is None:
+			tiles_number_x = tile_x
+			print(f"Guessed tiles_number_x={tiles_number_x}")
+			break
+	for tile_y in range(MAX_TILE_NUMBER):
+		if url_maker(0, tile_y) is None:
+			tiles_number_y = tile_y
+			print(f"Guessed tiles_number_y={tiles_number_y}")
+			break
+	assert(tiles_number_x is not None)
+	assert(tiles_number_y is not None)
+	output_filename = make_output_filename(id.replace("/", "."))
+	download_and_sew_tiles(tiles_number_x, tiles_number_y, TILE_SIZE, url_maker, output_filename)
 
 
 if __name__ == "__main__":

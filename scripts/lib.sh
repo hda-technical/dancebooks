@@ -816,51 +816,6 @@ uflEdu()
 	done
 }
 
-habDeTilesUrl()
-{
-	if [ $# -ne 4 ]
-	then
-		echo "Usage $0 image_id x y z"
-		return 1
-	fi
-	#expecting BOOK_ID in form of
-	#AA/00/03/94/08/00001/00522
-	#(not including jp2 extension)
-	local BOOK_ID=$1
-	local TILE_X=$2
-	local TILE_Y=$3
-	local ZOOM=$4
-	
-	for TILE_GROUP in `seq 0 2`
-	do
-		local URL="http://diglib.hab.de/varia/grafik/graph-a1-${BOOK_ID}/TileGroup${TILE_GROUP}/${ZOOM}-${TILE_X}-${TILE_Y}.jpg"
-		curl --silent -I "$URL" | grep "HTTP/1.1 200 OK" > /dev/null
-		if [ "$?" -eq 0 ]
-		then
-			echo "$URL"
-			return
-		fi
-	done
-}
-
-habDeTiles()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 image_id"
-		return 1
-	fi
-	local BOOK_ID="$1"
-	local ZOOM=4
-	local TILE_SIZE=256
-	local OUTPUT_DIR=`makeOutputDir hab.de`
-
-	#overriding global constants
-	MIN_FILE_SIZE_BYTES=1
-
-	tiles habDeTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
-}
-
 historyOrgTilesUrl()
 {
 	if [ $# -ne 4 ]
