@@ -4,7 +4,6 @@ import functools
 import json
 import math
 import os
-import re
 import subprocess
 import shutil
 import time
@@ -65,13 +64,13 @@ def get_text(*args, **kwargs):
 
 
 @retry(retry_count=3)
-def get_binary(output_filename, *args, **kwargs):
+def get_binary(output_filename, url):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
 	"""
-	request = requests.get(*args, stream=True, headers=HEADERS, timeout=TIMEOUT, **kwargs)
+	response = requests.get(url, stream=True, headers=HEADERS, timeout=TIMEOUT)
 	with open(output_filename, "wb") as file:
-		for chunk in request.iter_content(BLOCK_SIZE):
+		for chunk in response.iter_content(BLOCK_SIZE):
 			file.write(chunk)
 
 
@@ -84,11 +83,10 @@ def make_output_folder(downloader, book_id):
 	return folder_name
 
 
-def make_output_filename(output_folder, prefix, page_number, extension):
+def make_output_filename(output_folder, page_number, extension):
 	return os.path.join(
 		output_folder,
-		"{prefix}{page_number:08}.{extension}".format(
-			prefix=prefix,
+		"{page_number:08}.{extension}".format(
 			page_number=page_number,
 			extension=extension
 		)
@@ -161,56 +159,60 @@ class IIPMetadata(object):
 		return IIPMetadata(tile_size, width, height, max_level)
 
 
-def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename):
+def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename):
+	"""
+	Iterates over range(tiles_number_x) cross range(tiles_number_y),
+	produces tile url via tile_url_maker invocation,
+	saves sewn .bmp file to output_filename
+	"""
 	tmp_folder = make_temporary_folder()
 	os.mkdir(tmp_folder)
 	try:
-		tiles_number_x = math.ceil(metadata.width / metadata.tile_size)
-		tiles_number_y = math.ceil(metadata.height / metadata.tile_size)
 		print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image in {tmp_folder}")
-		for tile_number in range(tiles_number_x * tiles_number_y):
-			tile_number_x = tile_number % tiles_number_x
-			tile_number_y = int(tile_number / tiles_number_x)
-			tile_file = os.path.join(tmp_folder, f"{tile_number_y:08d}_{tile_number_x:08d}.jpg")
-			get_binary(
-				tile_file,
-				fastcgi_url,
-				#WARN: passing parameters as string in order to send them in urldecoded form
-				#(iip does not support urlencoded parameters)
-				params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_number}"
-			)
-		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, metadata.tile_size)
+		for tile_x in range(tiles_number_x):
+			for tile_y in range(tiles_number_y):
+				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
+				get_binary(
+					tile_file,
+					url_maker(tile_x, tile_y)
+				)
+		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
 	finally:
 		shutil.rmtree(tmp_folder)
 
 
-def download_book_from_iip(metadata_url, fastcgi_url, page, output_folder, files_root):
+def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename):
+	tiles_number_x = math.ceil(metadata.width / metadata.tile_size)
+	tiles_number_y = math.ceil(metadata.height / metadata.tile_size)
+	download_and_sew_tiles(
+		tiles_number_x, tiles_number_y, metadata.tile_size,
+		lambda tile_x, tile_y: requests.Request(
+			fastcgi_url,
+			#WARN: passing parameters as string in order to send them in urldecoded form
+			#(iip does not support urlencoded parameters)
+			params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_x * tile_y}",
+		)
+	);
+
+
+def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root):
 	"""
 	Downloads book served by IIPImage fastcgi servant.
 	API is documented here:
 	http://iipimage.sourceforge.net/documentation/protocol/
 	"""
 	metadata = get_json(metadata_url)["pgs"]
-	pages_number = len(metadata)
-	if page is not None:
-		print(f"Trimming metadata for pages other than {page}")
-		page_metadata = metadata[page]
+	print(f"Going to download {len(metadata)} pages")
+	for page_number, page_metadata in enumerate(metadata):
 		iip_page_metadata = IIPMetadata.from_json(page_metadata)
 		remote_filename = os.path.join(files_root, page_metadata["f"])
-		output_filename = make_output_filename(output_folder, prefix="", page_number=page, extension="bmp")
-		download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
-	else:
-		print(f"Going to download {pages_number} pages")
-		for page_number, page_metadata in enumerate(metadata):
-			iip_page_metadata = IIPMetadata.from_json(page_metadata)
-			remote_filename = os.path.join(files_root, page_metadata["f"])
-			output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
-			if os.path.isfile(output_filename):
-				print(f"Skip downloading existing page #{page_number:04d}")
-				continue
-			else:
-				print(f"Downloading page #{page_number:04d}")
-				download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
+		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing page #{page_number:04d}")
+			continue
+		else:
+			print(f"Downloading page #{page_number:04d}")
+			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
 
 def download_image_from_iiif(canvas_metadata, output_filename):
@@ -219,6 +221,14 @@ def download_image_from_iiif(canvas_metadata, output_filename):
 	API is documented here:
 	http://iiif.io/about/
 	"""
+	class UrlMaker(object):
+		def __call__(self, tile_x, tile_y):
+			left = tile_size * tile_x
+			top = tile_size * tile_y
+			tile_width = min(width - left, tile_size)
+			tile_height = min(height - top, tile_size)
+			return f"{id}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
+
 	id = canvas_metadata["images"][-1]["resource"]["service"]["@id"]
 	metadata = get_json(f"{id}/info.json")
 	if "tiles" in metadata:
@@ -229,25 +239,13 @@ def download_image_from_iiif(canvas_metadata, output_filename):
 		tile_size = 1024
 	width = metadata["width"]
 	height = metadata["height"]
-	tmp_folder = make_temporary_folder()
-	os.mkdir(tmp_folder)
-	try:
-		tiles_number_x = math.ceil(width / tile_size)
-		tiles_number_y = math.ceil(height / tile_size)
-		for tile_x in range(0, tiles_number_x):
-			for tile_y in range(0, tiles_number_y):
-				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
-				left = tile_size * tile_x
-				top = tile_size * tile_y
-				tile_width = min(width - left, tile_size)
-				tile_height = min(height - top, tile_size)
-				get_binary(
-					tile_file,
-					f"{id}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
-				)
-		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
-	finally:
-		shutil.rmtree(tmp_folder)
+	tiles_number_x = math.ceil(width / tile_size)
+	tiles_number_y = math.ceil(height / tile_size)
+	download_and_sew_tiles(
+		tiles_number_x, tiles_number_y,	tile_size,
+		UrlMaker(),
+		output_filename
+	)
 
 
 def download_book_from_iiif(manifest_url, output_folder):
@@ -259,7 +257,7 @@ def download_book_from_iiif(manifest_url, output_folder):
 	manifest = get_json(manifest_url)
 	canvases = manifest["sequences"][0]["canvases"]
 	for page_number, canvas_metadata in enumerate(canvases):
-		output_filename = make_output_filename(output_folder, prefix="", page_number=page_number, extension="bmp")
+		output_filename = make_output_filename(output_folder, page_number, extension="bmp")
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page_number:04d}")
 			continue
@@ -279,7 +277,7 @@ def download_book_from_iiif(manifest_url, output_folder):
 
 @opster.command()
 def gallica(
-	book_id=("b", "", "Id of the book to be downloaded (e. g. 'btv1b7200356s')")
+	id=("", "", "Id of the book to be downloaded (e. g. 'btv1b7200356s')")
 ):
 	"""
 	Downloads book from http://gallica.bnf.fr/
@@ -288,54 +286,60 @@ def gallica(
 	(see JSON path manifest["sequences"][0]["canvases"][0]["images"][0]["resource"]["@id"]).
 	It does not look standard for IIIF protocol, hence it is not used in this helper script.
 	"""
-	manifest_url = f"http://gallica.bnf.fr/iiif/ark:/12148/{book_id}/manifest.json"
-	output_folder = make_output_folder("gallica", book_id)
+	manifest_url = f"http://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
+	output_folder = make_output_folder("gallica", id)
 	download_book_from_iiif(manifest_url, output_folder)
 
 
 @opster.command()
 def vatlib(
-	book_id=("b", "", "Id of the book to be downloaded (e. g. 'MSS_Cappon.203')")
+	id=("", "", "Id of the book to be downloaded (e. g. 'MSS_Cappon.203')")
 ):
 	"""
 	Downloads book from http://digi.vatlib.it/
 	"""
-	manifest_url = f"http://digi.vatlib.it/iiif/{book_id}/manifest.json"
-	output_folder = make_output_folder("vatlib", book_id)
+	manifest_url = f"http://digi.vatlib.it/iiif/{id}/manifest.json"
+	output_folder = make_output_folder("vatlib", id)
 	download_book_from_iiif(manifest_url, output_folder)
 
 
 @opster.command()
 def prlib(
-	book_id=("b", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')"),
-	page=("p", "", "Page to be downloaded (downloads all pages when not specified)"),
+	id=("", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')"),
+	page=("p", "", "Download specified (zero-based) page only"),
 ):
 	"""
 	Downloads book from https://www.prlib.ru/
 	"""
-	page = int(page) if page else None
-	output_folder = make_output_folder("prlib", book_id)
-	metadata_url = f"https://content.prlib.ru/out_metadata/{book_id}/{book_id}.json"
-	files_root = f"/var/data/out_files/{book_id}"
+	metadata_url = f"https://content.prlib.ru/out_metadata/{id}/{id}.json"
+	files_root = f"/var/data/out_files/{id}"
 	fastcgi_url = "https://content.prlib.ru/fcgi-bin/iipsrv.fcgi"
-	download_book_from_iip(
-		metadata_url=metadata_url,
-		fastcgi_url=fastcgi_url,
-		page=page,
-		files_root=files_root,
-		output_folder=output_folder
-	)
+	output_folder = make_output_folder("prlib", id)
+	if page:
+		page = int(page)
+		output_filename = make_output_filename(output_folder, page, extension="bmp")
+		metadata = get_json(metadata_url)
+		page_metadata = metadata[page]
+		remote_filename = os.path.join(files_root, page_metadata["f"])
+		download_image_from_iip(fastcgi_url, remote_filename, page_metadata, output_filename)
+	else:
+		download_book_from_iip(
+			metadata_url=metadata_url,
+			fastcgi_url=fastcgi_url,
+			files_root=files_root,
+			output_folder=output_folder
+		)
 
 
 @opster.command()
 def nga(
-	image_id=("i", "", "Image id to be downloaded (e. g. `49035`)")
+	id=("", "", "Image id to be downloaded (e. g. `49035`)")
 ):
 	"""
 	Downloads single image from https://www.nga.gov
 	"""
-	slashed_image_id = "/".join(image_id) #will produce "4/9/0/3/5" from "49035-primary-0-nativeres"
-	remote_filename = f"/public/objects/{slashed_image_id}/{image_id}-primary-0-nativeres.ptif"
+	slashed_image_id = "/".join(id) #will produce "4/9/0/3/5" from "49035-primary-0-nativeres"
+	remote_filename = f"/public/objects/{slashed_image_id}/{id}-primary-0-nativeres.ptif"
 	fastcgi_url="https://media.nga.gov/fastcgi/iipsrv.fcgi"
 	metadata = IIPMetadata.from_text(
 		get_text(f"{fastcgi_url}?FIF={remote_filename}&obj=Max-size&obj=Tile-size&obj=Resolution-number")
@@ -344,70 +348,8 @@ def nga(
 		fastcgi_url=fastcgi_url,
 		remote_filename=remote_filename,
 		metadata=metadata,
-		output_filename=f"nga.{image_id}.bmp"
+		output_filename=f"nga.{id}.bmp"
 	)
-
-
-@opster.command()
-def googleBooks(
-	book_id=("b", "", "Book id to be downloaded")
-):
-	"""
-	Downloads freely-available book from Google Books service (image by image)
-	Useful when freely-available pdf file has poor quality (such case is quite rare).
-	"""
-	if len(book_id) == 0:
-		raise RuntimeError("book_id is mandatory")
-	BASE_URL = "https://books.google.com/books"
-	STARTING_PAGE_ID = "PA1"
-	PAGE_ID_REGEXP = re.compile(
-		r"(?P<page_group>PP|PA)(?P<page_number>\d+)"
-	)
-
-	#making basic request to get the list of page identifiers
-	json_obj = get_json(
-		BASE_URL,
-		params={
-			"id": book_id,
-			"pg": STARTING_PAGE_ID,
-			"jscmd": "click3"
-		}
-	)
-
-	pages = set()
-	for obj in json_obj["page"]:
-		pages.add(obj["pid"])
-	output_folder = make_output_folder("googleBooks", book_id)
-	while len(pages) > 0:
-		pages_data = get_json(
-			BASE_URL,
-			params={
-				"id": book_id,
-				"pg": pages.pop(),
-				"jscmd": "click3"
-			}
-		)
-		for page_data in pages_data["page"]:
-			page_id = page_data["pid"]
-			#src will only be returned for some pages (currently, 5)
-			if "src" not in page_data:
-				continue
-
-			match = PAGE_ID_REGEXP.match(page_id)
-			if match is None:
-				raise RuntimeError("regexp match failed")
-
-			output_filename = make_output_filename(
-				output_folder,
-				"!pp" if (match.group("page_group") == "PP") else "pa",
-				int(match.group("page_number")),
-				"jpg"
-			)
-			get_binary(
-				output_filename,
-				page_data["src"]
-			)
-			pages.discard(page_data["pid"])
 
 
 if __name__ == "__main__":
