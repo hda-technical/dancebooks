@@ -159,3 +159,12 @@
 | `tempo: italian` | Темп музыки указан с использованием итальянских терминов (например, allegro assai) | Musical tempo is specified by Italian terminology (e. g. allegro assai) |
 | `tempo: malzel` | Темп музыки указан при помощи числа ударов метронома Мельцеля | Musical tempo is specified by number of beats on Mälzel metronome |
 | `useless` | Специальный тег для книг, не содержащих описания танцев и добавленных для полноты коллекции | Special keyword for the books lacking dance related parts, but added for collection completeness |
+
+## Dating
+
+Не всякий объект можно датировать точно. Зачастую с уверенностью можно назвать лишь десятилетие или другой доверительный интервал. Ситуации с невозможностью точной датировки отражаются следующим образом:
+
+* [`1701`](https://bib.hda.org.ru/bib/books/feuillet_1701_choregraphie) — год известен точно (например, он стоит на титульном листе книги, в датировке цензора или в copyright statement),
+* [`1890?`](https://bib.hda.org.ru/bib/books/lorenzova_1890) — год известен, но никаких явных доказательств в пользу такой датировки нет (например, это датировка библиотеки или одного из множества каталогов),
+* [`1803–1804`](https://bib.hda.org.ru/bib/books/noverre_1803) — год известен точно, однако издание (например, многотомная книга) выходило на протяжении нескольких лет,
+* [`1700–1705?`](https://bib.hda.org.ru/bib/books/beauchamp_1700) — год известен приблизительно, в поле `annotation` при этом хранится информация о том, почему была выбрана та или иная датировка.
