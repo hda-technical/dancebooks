@@ -97,7 +97,9 @@ Disse 5 Stillinger bør stedse iagttages, da ethvert Trin begynder og sluttes i 
 {17}
 **Galopade Valz**. Man træder frem i 4de Position, trækker derpaa den anden Fod til sig i 3die nedaf Sahlen i Vienervalz-Tact 4 Gange, derpaa gesvindt Valz 2 Gange rundt over Gulvet, og af den anden Side ligedeles 4 Gange og derpaa rundt. Damen holdes af Cavalierens høire Arm, og hans venstre Haand holder hendes høire.
 
-**Ungersk Valz**. Man falder frem; Cavalieren paa venstre og Damen paa høire Fo, og strækker den Fod der er tilbage; nu faldes ned vaa den bageste Fod og den første strækkes frem i 4de Position, saaledes tælles 8 eller 4 tacter, 2/4 Tact, derpa 2 Gange Hopsavalz omkring. Holdningen skeer paa samme Maade som Galopade.
+**Ungersk Valz**. Man falder frem; Cavalieren paa venstre og Damen paa høire Fo, og strækker den Fod der er tilbage; nu faldes ned vaa[^1] den bageste Fod og den første strækkes frem i 4de Position, saaledes tælles 8 eller 4 tacter, 2/4 Tact, derpa 2 Gange Hopsavalz omkring. Holdningen skeer paa samme Maade som Galopade.
+
+[^1]: Believed to be a misprinted _paa_.
 
 **Tyrkisk Valz**. Damen holdes i Cavalierens høire Arm, hun holder sig i Kjolen med den høire Arm, hun holder sig i Kjolen med den høire Haand og han sætter sin venstre i Siden. Cavalieren hopper 3 Gange paa høire og Damen 3 Gange paa venstre Fod, derpaa det samme med den anden Fod, saaledes nogle Gange ligefrem og derpaa det samme omkring. Til denne Valz bruges langsom Valz men af hoppende Tact.
 
@@ -514,9 +516,11 @@ Man staaer som i en Engelskdands.
 1ste Tour 1 ste Par fører ned..
 2den – Op igjen.
 3die – 1 C. balancerer for 2 D. og 1 D. det samme for 2 C.
-4de – Nu Balance for dem man dandser med.
+2de[^3] – Nu Balance for dem man dandser med.
 5te – Det opførende Par klappe i Hænderne og slaae derpaa i hinandens høire Haand, i sin egen igjen derpaa i venstre, atter i sine egne og nu i begge den andens Hænder paa engng, nu 3 Klap i sine egne, og
 6te – Svingning med sin Dame; og saa begyndes for fra og figureres med det næste Par.
+
+[^3]: Figure number is printed. Should be _4de_.
 
 ### Kiædelflikkerdandsen
 
