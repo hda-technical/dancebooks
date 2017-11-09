@@ -1,13 +1,25 @@
-FORTALE
-OM HOLDNING OG GANG
+{3} FORTALE TIL ANDET OPLAG
 
-### {6} De 5 Positioner
+Da det mueligt hændes at denne min Utgave af Terpsichore, kunde komme for nogles Dine der have en Hr. Kaastrups: Veiledning for mine Elever til at beholde de Trin og Toure i Hukommelsen, som e under mig hae gjennemgaaet; ikke at blive anseet af Nogen for en litterair Tyv, og især et Tyverie saa uforskammet som af en hee Bog. – Efterat have udgivet Terpsichore i Aaret 1823, trykt i Mariboe hos Pastor emeritus Schultz, kom jeg til Colbing hvor en Guldsmed (Mester eller Svend ved jeg ikke) ved Navn Kaastrup opholdt sig, der ogsaa gav sig af med at give Unerviisning i Dands. Han hørte om min lille Piece og ugbad sig et exemplar, som jeg overlod ham for Tourernes Skyld, der nok noget nær var det eneste han kunde betjene sig af; men mindst drømte jeg om at jeg skulde see mit lille skrøbilige Fdster fremstaae under hans Navn, med Fortale og Bagtale uden at have forandret et ord; paa nogle faa Dandse nær, som senere vare ukomne; ja hva der er det besynderligste: Et Par Trykfeil som vare i min sines ogsaa i hans, han hr altsaa havt det temmeligt mageligt, eller ogsaa slet ikke forstaaet den. Navnet {4} Terpsichore har han udeladt; vistnok har han ikke synderligt Betjendtskab til den gode Dame. Begyndelsen af min Fortale har han ligedes udeladt; men da han har værdiget at tge Keften, saa kunde han gjernde have taget det med. Imidlertid vil jeg deg bede Hr. Kaastrup naar han en annen Gang ønsker at gjøre sig til forfatter, han da, hvs han ikke selv formaaer at producere Noget, tager fra en Anden, end mig der kun har dette eneste lille Produkt. – Saameget om Hr. Kaastrup nu lidt om mig selv. Da min Bog var trykket, indsaae jeg at endnu kunde have gjort den mere nyttig, naar jeg havde omtalt flere Gjenstande, og har derfor nu ved andet Oplag søgt, skøndt ufulgkomment at athjelpe visse Mangler tillige findes her i dette Oplag de nyere Dandse foruden de gamle som stae i det første Oplag. Den gavnlige Indflydelve min første Udgave har havt paa mine Elever, giver mig det Haab at denne min forbedrede Udgave endnu mere vil være til Nytte, og anbefaler mig saaledes til mine Elevers venskabelige Erindring.
+Jørgen Gad Lund
+
+{5} FORTALE OM HOLDNING OG GANG
+
+Legemet holdes rankt, dog uden at være stift; Bryster frem. Skyldrene tilbage, Maven ind, Hovedet i Veiret, Armene hængende naturlige, strækkede Knæe og Fødderne udaf. Naar man gaaer strækkes Benet med Fodspidsen imod Gulvet, og nu sættes Foden med Spidsen først, dog næsten umærkeligt da angen ellers vilde blive unaturlig. Armene holdes tæt til Kroppen og bevæges med den nederste Deel.
+
+### Complimenten
+
+Cavalierens Compliment gjøres paa følgende Maade: Fødderne stilles i første Position, Hovedet bøies lige ned imod Brystet
+{6}saa dybt at Armene begynde at synke da hæves Hovedet igjen.
+Damens compliment gjøres paa følgende Maade: Foden stryges til Siden i et llille Trin, den Anden trækkes nu bag ved i 4de Position og nu bøies Knæerne, dog maa Kroppen for det meste hvile pa den bageste Fod. Bøiningen vedbliver indtil armene synke imod Knæet og da hæver man sig igjen. Damens Compliment maa ledsages med qvindelig Blidhed; Mandens derimod med mere Anstand og Værdighed.
+
+### De 5 Positioner
 
 **Første Position**. Man stiller sig med Hælene ganske sluttede til hinanden og Tæerne saa meget ud ad som mueligt.
 
 **Anden Position**. Man stryger derpaa den høire Fod lige ud til Siden i det man strækker Fodspidsen imod Gulvet og hæver Hælen i Veiret; dog maa man passe at Knæet er strækket.
 
-**Tredie Position**. Nu trækkes en høire Fod halvt foran den venstre, saaledes at Anklerne slutter imod hinanden.
+**Tredie Position**. Nu trækkes den høire Fod halvt foran den venstre, saaledes at Anklerne slutter imod hinanden.
 
 **Fjerde Position**. Derpaa stryger man den høire Fod lige frem paa samme {7} Maade, som man i anden strøg den til Siden.
 
@@ -53,7 +65,7 @@ Disse 5 Stillinger bør stedse iagttages, da ethvert Trin begynder og sluttes i 
 
 **Titrinnene**. De ere sammensatte af et **Glisade**, som udgjør 3, derpaa et **Pas de Bouree**, som indeholder 5, til Slutning 2 **Changement de jambes**, som bliver 9 og 10.
 
-*Vendetrinnene*. De begyndes som **Démi Chasse**, med den Fod, der er nærmest ved den, man dandser med. Nu taller man 3 ligesom i **Démi Chasse**, derpaa gjøres et **Asembler** med den Fod, der er længst fra hinanden, idet man vender Ansigtet imod hinanden, som bliver 4, siden et Pas de Bouree, som udfylder de 9, til Slutning et **Changement de jambe**, idet man vender Ansigtet opad Quadrillen, som udfylder det 10 Tempo.
+**Vendetrinnene**. De begyndes som **Démi Chasse**, med den Fod, der er nærmest ved den, man dandser med. Nu taller man 3 ligesom i **Démi Chasse**, derpaa gjøres et **Asembler** med den Fod, der er længst fra hinanden, idet man vender Ansigtet imod hinanden, som bliver 4, siden et Pas de Bouree, som udfylder de 9, til Slutning et **Changement de jambe**, idet man vender Ansigtet opad Quadrillen, som udfylder det 10 Tempo.
 
 ### {13} Trin, som bruges paa førskiellige Steder
 
@@ -82,9 +94,11 @@ Disse 5 Stillinger bør stedse iagttages, da ethvert Trin begynder og sluttes i 
 **Tyroler Valz**. Man træder fra hinanden med den nærmeste Fod frem i 4de Position, derpaa til hinanden og den anden Fod frem i 4de Position, og saa een Gang rundt. Man kan ogsaa afvexle med at træde 2 Gange fra og til hinanden, og derpaa valze 2 Gange rundt. Ligeledes kan man gaae 3 Trin frem, idet man vender Ryggen til hinanden, og atter 3 frem, ideet man vender Ansigtet til hinanden, og derpaa een Gang rundt. Ogaa kan Cavalieren dreje sin Dme een Gang under sin Arm, og derpaa valze. - Da denne Valz uimodsigelig er den meest yndefulde, saa er det den, jeg isærdeleshed vil anbefale mine unge Venner og Veninder til Øvelse.
 
 {17}
-GALOPADE VALZ
-UNGERSKT VALZ
-THRISK VALZ
+**Galopade Valz**. Man træder frem i 4de Position, trækker derpaa den anden Fod til sig i 3die nedaf Sahlen i Vienervalz-Tact 4 Gange, derpaa gesvindt Valz 2 Gange rundt over Gulvet, og af den anden Side ligedeles 4 Gange og derpaa rundt. Damen holdes af Cavalierens høire Arm, og hans venstre Haand holder hendes høire.
+
+**Ungersk Valz**. Man falder frem; Cavalieren paa venstre og Damen paa høire Fo, og strækker den Fod der er tilbage; nu faldes ned vaa den bageste Fod og den første strækkes frem i 4de Position, saaledes tælles 8 eller 4 tacter, 2/4 Tact, derpa 2 Gange Hopsavalz omkring. Holdningen skeer paa samme Maade som Galopade.
+
+**Tyrkisk Valz**. Damen holdes i Cavalierens høire Arm, hun holder sig i Kjolen med den høire Arm, hun holder sig i Kjolen med den høire Haand og han sætter sin venstre i Siden. Cavalieren hopper 3 Gange paa høire og Damen 3 Gange paa venstre Fod, derpaa det samme med den anden Fod, saaledes nogle Gange ligefrem og derpaa det samme omkring. Til denne Valz bruges langsom Valz men af hoppende Tact.
 
 ### Menuet
 
@@ -425,13 +439,13 @@ I denne Dands staaer man som i Figaro, med den Forskjel, at kun de 2 opførende 
 
 <div style="text-align: center;">
 1 D. 1 C. 2 D. 2 C.<br/>
-3 D. 3 C. 4 D. 4 C.<br/>
-5 D. 5 C. 6 D. 6 C.<br/>
-7 D. 7 C. 8 D. 8 C.<br/>
-9 D. 9 C. 10 D. 10 C.<br/>
+3 C. 3 D. 4 C. 4 D.<br/>
+5 C. 5 D. 6 C. 6 D.<br/>
+7 C. 7 D. 8 C. 8 D.<br/>
+9 C. 9 D. 10 C. 10 D.< br/>
 </div>
 
-og saa fremdeles
+og saaledes fremdeles
 
 Denne Dands bestaaer af 8 Tourer, som følger:
 
@@ -469,8 +483,56 @@ Denne Dands er inddeelt i 4 Repricer, de 3 første i 2/4 Tact og den sidste i 3/
 
 Alle rundt i den første Reprice til venstre Side, og, naar den gjentages, da tilbage til høire. I anden Reprice første og andet Par fra hver Side frem i Midten; Dancerne gjør dobbelt Molinet og Cavaliererne Kjæde uden om dem. I tredie Reprice begynde de Par, som ere betegnede med 1, Hopsavalz, og fjerde Reprice tager de andre Damer og Cavalierer, og bliver altsaa 4 Par til langsom Valz; i de sidste Tacter træder Enhver paa sin Plads. I første Reprice {43} forandrer man stedse Touren for første Gang Alle rundt; naar andet og tredie Par skal føre frem, da svinges Damen med høire og venstre Haand; naar tredie og fjerde Par skal frem da med 2 Hænder; naar fjerde og femte Par , da Allemande; til femte og sjette Par Balancer for Damen, til sjette og syvende Par Svingning, med Damen om Livet; til syvende og ottende Par Quare med sin Dame; til ottende og første Par, da andet Par Skubkar 1 og 2, 3 og 4, 5 og 6, 7 og 8. Hvis der ere flere end 16 Par , saa kan man gjerne dandse nogle af de foran benævnte Tourer, hvis man ikke kan finde en nye Forandring til hvert Par. Naar nu alle Parrene have dandset den Tour, hvor Damerne gjør Molinet og Cavaliererne Kjæde, da begynder man atter at dandse rundt til venstre og høire Side; nu fører de 2 første Par til Midten, Cavaliererne give hinanden begge Hænder og holder Armene i Veiret og Damerne under; derpaa holder Damerne Armene i Veiret, og Cavaliererne dandser under, siden Hopsavalz og saa langsom Valz; saaledes som første Par har gjort, dandser nu siden alle de andre. Man maa erindre, at i anden Reprice bliver den store eller Hoved-Forandringen i {44} Cottillonen dandset. Den tredie Forandring bestaaer i, naar man atter har dandset rundt da fører første og andet Par fra hver Side frem, og Damerne give Hænderne til hinanden, at de bliver i Firekant. Cavaliererne staae paa venstre Side af deres Damer og give nu og hinanden Hænderne og derpaa alle 8 rundt til venstre Side, derpaa Hopsavalz og saa fremdeles. Den første Cavalier fører til Midten med de 2 Damer som er ved Siden af dem; nu løfter den første Cavalier sine Arme i Veiret, og anden Cavaliers Damer løber under Armene og bag om Damerne, som han holder i Hænderne; nu giver den anden Cavalier sine Damer Hænderne og løfter dem i Veiret, og første Cavaliers Dame løber under hans Arme paa samme Maade som de første Damer gjorde; nu Hopsa o. s. f. De to Cavalierer, som opfører, maa aftale, hvem der først skal hæve Armene, da det ellers let kunde give Confution. Der 5te Forandring er: første og andet Par fra hver Side fører til Midten; Damerne rækker Armene i Veiret idet de give hinanden Hænderne; Cavaliererne bukker dem og giver hinanden Hænderne inde i Midten; nu hæver de Armene i Veiret {45} og lægger Armene om Damernes Ryg, idet alle 8 dandse rundt. Man maa passe at holde fast, da ellers Nogle let kan falde. Nu Hopsavalz og siden langsom Valz. Naar det 8de Par nu dandser Hopsavalz, saa, istedetfor at tage andre Damer, valzer de hen paa deres Plads, og nu dandser alle Parrene paa eengang Valz i den sidste Reprice, hvormed Dandsen endes.
 
-TANTELETE
-BOHMERDANDSEN
-KIŒDELFLIKTERDANDSEN
+### Tantelete
+
+Man staaer i denne Dands i Quadriller paa følgende Maade;
+<div style="text-align: center;">
+1 C. 1 D. 1 C. 1 D. <br/>
+2 C. 2 D. 2 C. 2 D.<br/>
+3 C. 3 D. 3 C. 3 D.<br/>
+</div>
+Og saa fremdeles-
+1ste Tour De to første Par gjøre 2 Japper og skifte Plads, hver Cavalier med sin Dame i et Chasse.
+2den – Det samme tilbage.
+3die – Chasse omkring med høire Haand paa Damenes Plads og Damen paa Cavalierens og Glisade for hinanden til høiere og venstre Side.
+
+{46}
+
+4de – Det samme tilbage med venstre Haand.
+5te – Cavaliererne dandse to Chasse ned af Quadrillen og Damerne op.
+6te – Det samme tilbage paa deres Plads.
+7de – Molinet med det ndet Par med høire Haand.
+8de – Det samme med Venstre.
+9de – Alle Par som staae paa venstre Side marchere til venstre efter det første Par langs ned af Sahlen. De som stae paa høire Side det samme til høire og møde hinanden ved Enden af Sahlen. 
+10de – 4 og 4 op af Sahlen paa deres Plads.
+11te – De opførende Par hæve Armene og de som gjorde Molinet gaae nu under disses Arme og bliver første Par. Naar de første Par begynde med 4 Par, da begynde andet Par med 3die og saaledes til Enden. Hvergang Marchen begynder da begynder stedse det øverste Par {47} og de andre følger som forhen er sagt.
+
+### Bohmerdandsen
+
+Man staaer som i en Engelskdands.
+1ste Tour 1 ste Par fører ned..
+2den – Op igjen.
+3die – 1 C. balancerer for 2 D. og 1 D. det samme for 2 C.
+4de – Nu Balance for dem man dandser med.
+5te – Det opførende Par klappe i Hænderne og slaae derpaa i hinandens høire Haand, i sin egen igjen derpaa i venstre, atter i sine egne og nu i begge den andens Hænder paa engng, nu 3 Klap i sine egne, og
+6te – Svingning med sin Dame; og saa begyndes for fra og figureres med det næste Par.
+
+### Kiædelflikkerdandsen
+
+Hver Cavalier har 2 Damer som han staaer imellem, alle med Andsigtet op af Quadrillen undtagen de opførende 3 som vende sig ned ad.
+
+{48}
+
+1ste Tour 1 C. balancerer for sin Dame paa venstre Haand og Allemande.
+2den – det samme med den anden Dame.
+3die –Alle tre balancerer frem og tilbage for de tre som staar imod dem og den Dame paa venstre Haand løber imellem den høire Dame og Cavalieren som dreier sig under sin Arm.
+4de – Det samme igjen og den høire Dame gaaer under Armene paa venstre Dame og Cavalieren.
+5te – 1 og 2 C. dandse til høire Side me deres Damer gaae bag om hinanden og
+6te – tilbage til venstre Side.
+7de – 3 rundt til høire Side.
+8de – Tilbage til venstre og slutter som de begyndte og nu forfra.
+
+Saasnart man kommer til Enden vender man sig og naar 1ste C. begynder med 4 C., da begynder 2 C. med 3 C. saaledes at alle tilsidst komme i Bevægelse paa engang.
 
 ///Footnotes///
+
