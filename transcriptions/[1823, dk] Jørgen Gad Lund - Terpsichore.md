@@ -423,14 +423,17 @@ Man staaer ogsa heri som i Engelskdands. Første Caavalier[^1] og nederste Dame 
 
 I denne dans staaer man ved Siden af den, man dandser med, som f. Ex.:
 
-<div class="center">
-1 C. 2 D.<br/>
-1 D. 2 C.<br/>
-3 C. 4 D.<br/>
-3 D. 4 D.<br/>
-5 C. 6 D.<br/>
-5 C. 6 K.[^2]<br/>
-</div>
+1 C. 2 D.
+
+1 D. 2 C.
+
+3 C. 4 D.
+
+3 D. 4 D.
+
+5 C. 6 D.
+
+5 C. 6 K.[^2]
 
 [^2]: Misprint: Figure shows fourth dame and fifth cavalier twice. Misprint fixed in the second edition
 
@@ -454,7 +457,8 @@ og saa fremdeles.
 
 I denne dands stiller man sig saaledes:
 
-| 13 —  | 14 —  ||
+| 13 —  | 14 —  |   |
+| ----- | ----- | - |
 | 7 —   | 8 -   ||
 | 5 —   | 6 —   | med Ansigtet imod første og andet Par |
 | 1 Par | 2 Par ||
