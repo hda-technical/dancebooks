@@ -170,6 +170,7 @@ def fetch_backups_from_fs():
 	if not os.path.isdir(config.www.backup_dir):
 		return []
 	EXCLUDED_FOLDERS = {
+		"Ancillary sources (not in bibliography)",
 		"Cooking",
 		"Fashion",
 		"Leaflets (not in bibliography)",
