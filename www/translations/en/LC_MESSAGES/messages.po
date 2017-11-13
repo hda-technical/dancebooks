@@ -38,7 +38,7 @@ msgstr ""
 	"This item has no sensible keywords.<br/>\n"
 	"Consider adding them via report form.<br/>\n"
 	"A comprehensive keyword list can be found "
-	"<a href='/keywords.html'>here</a>."
+	"<a href='https://github.com/hda-technical/docs/blob/master/common.md#keywords'>here</a>."
 
 # Buttons
 

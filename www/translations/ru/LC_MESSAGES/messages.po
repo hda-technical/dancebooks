@@ -38,7 +38,7 @@ msgstr ""
 	"У этой записи нет осмысленных тегов.<br/>\n"
 	"Пожалуйста, воспользуйтесь формой отправки сообщения, чтобы добавить их.<br/>\n"
 	"Излишне заумный список ключевых слов можно найти "
-	"<a href='/keywords.html'>здесь</a>."
+	"<a href='https://github.com/hda-technical/docs/blob/master/common.md#keywords'>здесь</a>."
 
 # Buttons
 
@@ -65,7 +65,7 @@ msgid "pages:keywords:title"
 msgstr "Излишне заумный список тегов"
 
 msgid "pages:keywords:edits"
-msgstr "Преложения по улучшению списка можно слать на"
+msgstr "Предложения по улучшению списка можно слать на"
 
 msgid "pages:keywords:references"
 msgstr "Примечания"
@@ -103,7 +103,7 @@ msgid "common:Yes"
 msgstr "Да"
 
 msgid "common:yes"
-msgstr "Да"
+msgstr "да"
 
 msgid "common:No"
 msgstr "Нет"
@@ -343,7 +343,7 @@ msgid "search:booktype:book"
 msgstr "Книга"
 
 msgid "search:booktype:inbook"
-msgstr "Самостоятельня часть книги"
+msgstr "Самостоятельная часть книги"
 
 msgid "search:booktype:inproceedings"
 msgstr "Статья с конференции"
@@ -598,7 +598,7 @@ msgstr[2] "Добавлено %(num)d записей"
 # Error messages
 
 msgid "errors:missing:description"
-msgstr "Отсуствует описание"
+msgstr "Отсутствует описание"
 
 msgid "errors:missing:name"
 msgstr "Отсутствует имя"
