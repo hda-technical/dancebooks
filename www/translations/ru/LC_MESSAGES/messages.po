@@ -59,35 +59,6 @@ msgstr "Вот транскрипция книги с идентификатор
 msgid "interface:transcription:transcribed-by"
 msgstr "Транскрипция"
 
-# Pages: keywords
-
-msgid "pages:keywords:title"
-msgstr "Излишне заумный список тегов"
-
-msgid "pages:keywords:edits"
-msgstr "Предложения по улучшению списка можно слать на"
-
-msgid "pages:keywords:references"
-msgstr "Примечания"
-
-msgid "pages:keywords:category:xvi"
-msgstr "Танцы Ренессанса"
-
-msgid "pages:keywords:category:baroque"
-msgstr "Танцы эпох барокко и рококо"
-
-msgid "pages:keywords:category:country-dance"
-msgstr "Контрдансы"
-
-msgid "pages:keywords:category:xix"
-msgstr "Танцы XIX века"
-
-msgid "pages:keywords:category:xx"
-msgstr "Танцы XX века (примерно до 1920 года)"
-
-msgid "pages:keywords:category:extras"
-msgstr "Дополнительные теги"
-
 # Pages: persimmon
 
 msgid "pages:persimmon:verse"
@@ -403,6 +374,26 @@ msgstr "Номеру в серии"
 
 msgid "search:order-by:number"
 msgstr "Номеру периодического издания"
+
+# Search keyword category labels
+
+msgid "search:keywords:category:xvi"
+msgstr "Танцы Ренессанса"
+
+msgid "search:keywords:category:baroque"
+msgstr "Танцы эпох барокко и рококо"
+
+msgid "search:keywords:category:country-dance"
+msgstr "Контрдансы"
+
+msgid "search:keywords:category:xix"
+msgstr "Танцы XIX века"
+
+msgid "search:keywords:category:xx"
+msgstr "Танцы XX века (примерно до 1920 года)"
+
+msgid "search:keywords:category:extras"
+msgstr "Дополнительные теги"
 
 # Entry fields
 

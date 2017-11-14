@@ -59,35 +59,6 @@ msgstr "Here is a transcription of entry with id"
 msgid "interface:transcription:transcribed-by"
 msgstr "Transcribed by"
 
-# Pages: keywords
-
-msgid "pages:keywords:title"
-msgstr "A comprehensive keyword list"
-
-msgid "pages:keywords:edits"
-msgstr "You can send edits to the list to"
-
-msgid "pages:keywords:references"
-msgstr "References"
-
-msgid "pages:keywords:category:xvi"
-msgstr "Dances of the Renaissance"
-
-msgid "pages:keywords:category:baroque"
-msgstr "Dances of baroque and rococo"
-
-msgid "pages:keywords:category:country-dance"
-msgstr "Country dances / contredanses"
-
-msgid "pages:keywords:category:xix"
-msgstr "19th century dances"
-
-msgid "pages:keywords:category:xx"
-msgstr "20th century dances (up to 1920 or so)"
-
-msgid "pages:keywords:category:extras"
-msgstr "Дополнительные теги"
-
 # Pages: persimmon
 
 msgid "pages:persimmon:verse"
@@ -403,6 +374,26 @@ msgstr "Number in series"
 
 msgid "search:order-by:number"
 msgstr "Periodical issue number"
+
+# Search: keyword category labels
+
+msgid "search:keywords:category:xvi"
+msgstr "Dances of the Renaissance"
+
+msgid "search:keywords:category:baroque"
+msgstr "Dances of baroque and rococo"
+
+msgid "search:keywords:category:country-dance"
+msgstr "Country dances / contredanses"
+
+msgid "search:keywords:category:xix"
+msgstr "19th century dances"
+
+msgid "search:keywords:category:xx"
+msgstr "20th century dances (up to 1920 or so)"
+
+msgid "search:keywords:category:extras"
+msgstr "Дополнительные теги"
 
 # Entry fields
 
