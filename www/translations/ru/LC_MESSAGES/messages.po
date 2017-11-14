@@ -66,38 +66,14 @@ msgstr ""
 msgid "common:Yes"
 msgstr "Да"
 
-msgid "common:yes"
-msgstr "да"
-
 msgid "common:No"
 msgstr "Нет"
-
-msgid "common:no"
-msgstr "нет"
 
 msgid "common:Does-not-matter"
 msgstr "Не важно"
 
-msgid "common:does-not-matter"
-msgstr "не важно"
-
-msgid "common:Or"
-msgstr "Или"
-
-msgid "common:or"
-msgstr "или"
-
-msgid "common:And"
-msgstr "И"
-
-msgid "common:and"
-msgstr "и"
-
 msgid "common:Any"
 msgstr "Любой"
-
-msgid "common:any"
-msgstr "любой"
 
 msgid "common:locale"
 msgstr "ru"

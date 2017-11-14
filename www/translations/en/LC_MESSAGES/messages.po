@@ -66,38 +66,14 @@ msgstr ""
 msgid "common:Yes"
 msgstr "Yes"
 
-msgid "common:yes"
-msgstr "yes"
-
 msgid "common:No"
 msgstr "No"
-
-msgid "common:no"
-msgstr "no"
 
 msgid "common:Does-not-matter"
 msgstr "Doesn't matter"
 
-msgid "common:does-not-matter"
-msgstr "doesn't matter"
-
-msgid "common:Or"
-msgstr "Or"
-
-msgid "common:or"
-msgstr "or"
-
-msgid "common:And"
-msgstr "And"
-
-msgid "common:and"
-msgstr "and"
-
 msgid "common:Any"
 msgstr "Any"
-
-msgid "common:any"
-msgstr "any"
 
 msgid "common:locale"
 msgstr "en"
@@ -383,7 +359,7 @@ msgid "search:keywords:category:xx"
 msgstr "20th century dances (up to 1920 or so)"
 
 msgid "search:keywords:category:extras"
-msgstr "Дополнительные теги"
+msgstr "Extra keywords"
 
 # Entry fields
 
@@ -582,7 +558,7 @@ msgid "errors:missing:name"
 msgstr "Name is missing"
 
 msgid "errors:missing:email"
-msgstr "E-mail in missing"
+msgstr "E-mail is missing"
 
 msgid "errors:missing:captcha-key"
 msgstr "The id of the question is missing"
