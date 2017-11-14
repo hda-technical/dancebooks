@@ -33,13 +33,6 @@ msgstr "You can use the search"
 msgid "interface:title"
 msgstr "Historical Dance Bibliography"
 
-msgid "interface:no-keywords"
-msgstr ""
-	"This item has no sensible keywords.<br/>\n"
-	"Consider adding them via report form.<br/>\n"
-	"A comprehensive keyword list can be found "
-	"<a href='https://github.com/hda-technical/docs/blob/master/common.md#keywords'>here</a>."
-
 # Buttons
 
 msgid "interface:buttons:search"
@@ -248,9 +241,6 @@ msgstr "Translated edition"
 
 msgid "search:labels:transcription"
 msgstr "Transcribed edition"
-
-msgid "search:labels:useful-keywords"
-msgstr "Has useful keywords"
 
 msgid "search:labels:all-fields"
 msgstr "Text to search for"

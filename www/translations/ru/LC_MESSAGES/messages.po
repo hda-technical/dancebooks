@@ -33,13 +33,6 @@ msgstr "Можно воспользоваться поиском"
 msgid "interface:title"
 msgstr "Библиография исторического танца"
 
-msgid "interface:no-keywords"
-msgstr ""
-	"У этой записи нет осмысленных тегов.<br/>\n"
-	"Пожалуйста, воспользуйтесь формой отправки сообщения, чтобы добавить их.<br/>\n"
-	"Излишне заумный список ключевых слов можно найти "
-	"<a href='https://github.com/hda-technical/docs/blob/master/common.md#keywords'>здесь</a>."
-
 # Buttons
 
 msgid "interface:buttons:search"
@@ -248,9 +241,6 @@ msgstr "Переводное издание"
 
 msgid "search:labels:transcription"
 msgstr "Транскрибированное издание"
-
-msgid "search:labels:useful-keywords"
-msgstr "Присутствуют полезные ключевые слова"
 
 msgid "search:labels:all-fields"
 msgstr "Строка для поиска"

@@ -284,8 +284,6 @@ class BibParser(object):
 				item.set(const.FILE_SIZE_PARAM, filesize_value)
 			elif key in config.parser.keyword_list_params:
 				value = utils.strip_split_list(value, config.parser.list_sep)
-				useful_keywords = (set(value) <= config.parser.useless_keywords)
-				item.set("useful_" + key, useful_keywords)
 			elif (key in config.parser.int_params) and value.isdecimal():
 				value = int(value)
 			elif key in config.parser.year_params:

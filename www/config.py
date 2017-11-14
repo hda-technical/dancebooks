@@ -108,7 +108,6 @@ class ParserConfig(object):
 			for keyword in cat_keywords:
 				self.keywords.add(keyword)
 				self.category_keywords[category].append(keyword)
-		self.useless_keywords = get_config_value("useless_keywords", params, transform=extract_set_from_json)
 
 		self.bookkeepers = get_config_value("bookkeepers", params, transform=json.loads)
 
@@ -191,8 +190,6 @@ class WwwConfig(object):
 		}
 
 		self.id_redirections = get_config_value("id_redirections", params, transform=json.loads)
-		self.keywords_warn_min_year = get_config_value("keywords_warn_min_year", params, transform=int)
-		self.keywords_warn_max_year = get_config_value("keywords_warn_max_year", params, transform=int)
 
 class Config(object):
 	@staticmethod

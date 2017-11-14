@@ -102,16 +102,4 @@
 		{% endif %} {# secrets filtering: end #}
 	{% endif %}
 {% endfor %}
-{% set keywords = (item.get("keywords") or []) | as_set %}
-{% set year_from = item.get("year_from") %}
-{% set year_to = item.get("year_to") %}
-{% if (
-	(year_from <= config.www.keywords_warn_max_year) and
-	(year_to >= config.www.keywords_warn_min_year) and
-	((keywords - config.parser.useless_keywords) | length == 0)
-) %}
-			<div class="center warn">
-				{{ _("interface:no-keywords") | safe }}
-			</div>
-{% endif %}
 

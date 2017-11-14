@@ -81,7 +81,6 @@ ANCILLARY_FIELDS = {
 	"filesize",
 	"source_file",
 	"source_line",
-	"useful_keywords",
 	"year_circa",
 	"year_from",
 	"year_to",
