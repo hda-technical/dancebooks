@@ -544,9 +544,6 @@ msgstr "Шведский"
 
 # Footer icons
 
-msgid "interface:footer:pdf"
-msgstr "Файл в формате PDF"
-
 msgid "interface:footer:hda"
 msgstr "Ассоциация исторического танца"
 
