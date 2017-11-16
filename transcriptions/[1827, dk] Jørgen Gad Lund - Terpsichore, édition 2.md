@@ -444,13 +444,15 @@ Man dandser den saalænge, man ønsker, og slutter derpaa efter Valzen; gjerne v
 
 I denne Dands staaer man som i Figaro, med den Forskjel, at kun de 2 opførende Par vende Ansigterne ned ad Quadrillen, og alle de andre par staae efter hinanden med Ansigterne imod de Opførende, saaledes:
 
-<div style="text-align: center;">
-1 D. 1 C. 2 D. 2 C.<br/>
-3 C. 3 D. 4 C. 4 D.<br/>
-5 C. 5 D. 6 C. 6 D.<br/>
-7 C. 7 D. 8 C. 8 D.<br/>
-9 C. 9 D. 10 C. 10 D.< br/>
-</div>
+1 D. 1 C. 2 D. 2 C.
+
+3 C. 3 D. 4 C. 4 D.
+
+5 C. 5 D. 6 C. 6 D.
+
+7 C. 7 D. 8 C. 8 D.
+
+9 C. 9 D. 10 C. 10 D.
 
 og saaledes fremdeles
 
