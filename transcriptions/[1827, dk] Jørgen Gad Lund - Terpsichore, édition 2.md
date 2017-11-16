@@ -493,35 +493,51 @@ Alle rundt i den første Reprice til venstre Side, og, naar den gjentages, da ti
 ### Tantelete
 
 Man staaer i denne Dands i Quadriller paa følgende Maade;
-<div style="text-align: center;">
-1 C. 1 D. 1 C. 1 D. <br/>
-2 C. 2 D. 2 C. 2 D.<br/>
-3 C. 3 D. 3 C. 3 D.<br/>
-</div>
+
+1 C. 1 D. 1 C. 1 D.
+
+2 C. 2 D. 2 C. 2 D.
+
+3 C. 3 D. 3 C. 3 D.
+
 Og saa fremdeles-
+
 1ste Tour De to første Par gjøre 2 Japper og skifte Plads, hver Cavalier med sin Dame i et Chasse.
+
 2den – Det samme tilbage.
+
 3die – Chasse omkring med høire Haand paa Damenes Plads og Damen paa Cavalierens og Glisade for hinanden til høiere og venstre Side.
 
-{46}
+{46} 4de – Det samme tilbage med venstre Haand.
 
-4de – Det samme tilbage med venstre Haand.
 5te – Cavaliererne dandse to Chasse ned af Quadrillen og Damerne op.
+
 6te – Det samme tilbage paa deres Plads.
+
 7de – Molinet med det ndet Par med høire Haand.
+
 8de – Det samme med Venstre.
+
 9de – Alle Par som staae paa venstre Side marchere til venstre efter det første Par langs ned af Sahlen. De som stae paa høire Side det samme til høire og møde hinanden ved Enden af Sahlen.
+
 10de – 4 og 4 op af Sahlen paa deres Plads.
+
 11te – De opførende Par hæve Armene og de som gjorde Molinet gaae nu under disses Arme og bliver første Par. Naar de første Par begynde med 4 Par, da begynde andet Par med 3die og saaledes til Enden. Hvergang Marchen begynder da begynder stedse det øverste Par {47} og de andre følger som forhen er sagt.
 
 ### Bohmerdandsen
 
 Man staaer som i en Engelskdands.
+
 1ste Tour 1 ste Par fører ned..
+
 2den – Op igjen.
+
 3die – 1 C. balancerer for 2 D. og 1 D. det samme for 2 C.
+
 2de[^3] – Nu Balance for dem man dandser med.
+
 5te – Det opførende Par klappe i Hænderne og slaae derpaa i hinandens høire Haand, i sin egen igjen derpaa i venstre, atter i sine egne og nu i begge den andens Hænder paa engng, nu 3 Klap i sine egne, og
+
 6te – Svingning med sin Dame; og saa begyndes for fra og figureres med det næste Par.
 
 [^3]: Figure number is printed. Should be _4de_.
@@ -530,18 +546,21 @@ Man staaer som i en Engelskdands.
 
 Hver Cavalier har 2 Damer som han staaer imellem, alle med Andsigtet op af Quadrillen undtagen de opførende 3 som vende sig ned ad.
 
-{48}
+{48} 1ste Tour 1 C. balancerer for sin Dame paa venstre Haand og Allemande.
 
-1ste Tour 1 C. balancerer for sin Dame paa venstre Haand og Allemande.
 2den – det samme med den anden Dame.
+
 3die –Alle tre balancerer frem og tilbage for de tre som staar imod dem og den Dame paa venstre Haand løber imellem den høire Dame og Cavalieren som dreier sig under sin Arm.
+
 4de – Det samme igjen og den høire Dame gaaer under Armene paa venstre Dame og Cavalieren.
+
 5te – 1 og 2 C. dandse til høire Side me deres Damer gaae bag om hinanden og
+
 6te – tilbage til venstre Side.
+
 7de – 3 rundt til høire Side.
+
 8de – Tilbage til venstre og slutter som de begyndte og nu forfra.
 
 Saasnart man kommer til Enden vender man sig og naar 1ste C. begynder med 4 C., da begynder 2 C. med 3 C. saaledes at alle tilsidst komme i Bevægelse paa engang.
-
-///Footnotes///
 
