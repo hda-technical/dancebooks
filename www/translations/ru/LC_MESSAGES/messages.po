@@ -271,6 +271,9 @@ msgstr "Испанский"
 msgid "search:language:swedish"
 msgstr "Шведский"
 
+msgid "search:language:ukrainian"
+msgstr "Украинский"
+
 # Search: Booktype select options
 
 msgid "search:booktype:article"
@@ -517,6 +520,9 @@ msgstr "Испанский"
 
 msgid "item:language:swedish"
 msgstr "Шведский"
+
+msgid "item:language:ukrainian"
+msgstr "Украинский"
 
 # Footer icons
 
