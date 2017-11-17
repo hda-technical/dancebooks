@@ -580,13 +580,10 @@ div.transcription span.note {
 
 	color: #b0b0b0;
 
-	display: inline-block;
-	position: absolute;
-	/*
-	 * WARN: right should be less than (-1 * width)
-	 */
-	right: -350px;
+	margin-right: -350px;
 	width: 300px;
+	clear: both;
+	float: right;
 
 	user-select: none;
 	-moz-user-select: none;
