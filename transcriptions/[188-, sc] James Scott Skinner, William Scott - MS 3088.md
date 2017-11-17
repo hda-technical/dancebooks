@@ -18,10 +18,8 @@ Quadrilles are of novel introduction into this country, and we are indebted to t
 
 The lady stands on the gentleman's right hand.
 
-### [^1]Paine's first set.
+### [Only dwellers in the “Silver city by the sea” call the “Th' Edinboro' quadrilles”]Paine's first set.
 ### First figure. Le pantalon.
-
-[^1]: Only dwellers in the “Silver city by the sea” call the “Th' Edinboro' quadrilles”
 
 1. Top and bottom couples right and left.
 2. Set (four walking steps to right, four to left), turn partners.
@@ -45,7 +43,7 @@ L'ete and La poule after it, are performed each four times; both in the followin
 
 1. First lady and opposite gentleman cross over, offering right hands across giving left hands, and fall in a line, set four in a line.
 2. Half promenade to opposite places.
-3. First lady & gentleman advance twice, at second time the honours {13} at second time the honours of the dance, or in plain terms, [^2]bow and curtsey.
+3. First lady & gentleman advance twice, at second time the honours {13} at second time the honours of the dance, or in plain terms, [Another reprehensible custom is creeping in videlicet: Instead of doing the honours to your vis-à-vis wheeling round and doing them to partners. This may be new (?) but is neither polite nor politic. Avoid it.]bow and curtsey.
 4. Four advance and retire: half right and left.
 
 ### Fourth figure. La pastorale.
@@ -65,8 +63,6 @@ L'ete and La poule after it, are performed each four times; both in the followin
 
 La pastorale and La finale are each repeated four times. Flirtation sometimes used as a sixth figure. As there is no set music for this figure, and no set arrangement we have omitted it.
 
-[^2]: Another reprehensible custom is creeping in videlicet: Instead of doing the honours to your vis-à-vis wheeling round and doing them to partners. This may be new (?) but is neither polite nor politic. Avoid it.
-
 ### {14} The lancers
 
 The Lancers are not new but have again become popular in consequence of their elegance and revival at state balls + circles in high life.
@@ -77,13 +73,11 @@ _Each figure 4 time through — beginning after 8 bars of music._
 
 1. First lady and opposite gentleman advance and retire: re-advance, turning each other with hands to places. First couple join hands and lead through third couple. Third couple join hands, and lead through first couple. All set at the corners, and turn to places. This is repeated by all the others.
 2. First couple advance and retire. Re-advance, gentleman leaving partner in centre (facing him). The set and turn to places. Sides part and form two lines at top and bottom. All join hands, advance, and retire, and turn partners to places. The whole of the above is repeated by the other couples, in order 3, 2, and 4, but 2 and 4 form the lines at sides.
-3. The ladies advance and retire; re-advance, gentlemen meanwhile join hands: ladies curtsey, and pass backwards under the gentleman's arms. Each lady places hands on gentleman hands; and all galop round to the left to places. Gentlemen advance and retire; re-advance,turning round; all bow or curtsey to partners. The four gentlemen crossing left hands, galop with partners to places. The whole of the above repeated[^3]
+3. The ladies advance and retire; re-advance, gentlemen meanwhile join hands: ladies curtsey, and pass backwards under the gentleman's arms. Each lady places hands on gentleman hands; and all galop round to the left to places. Gentlemen advance and retire; re-advance,turning round; all bow or curtsey to partners. The four gentlemen crossing left hands, galop with partners to places. The whole of the above repeated[(It is now the fashion for the four ladies to advance and courtesy to each other; then each lady turns to her partner and curtseys to him. The ladies do the moulinet while the gentlemen all move round outside the quadrille and return to places. This is repeated four times. The second and fourth times all the gentlemen advance, and immediately turn towards their partners and bow to them, and continued the figure as before). We approve of this change as it suits tall and short dancers.]
 4. First couple join hands, and visit side couple (2 and 4), bowing. First and fourth couples couples chassez and turn partners to places. First and third couples right and left to places.This is repeated by couples 3, 2, and 4 in order, each observing that they visit the couple on their right, then those on their left, and finishing by dancing right and left with their vis-à-vis
 5. 	Grand chain. First couple face outwards. Couples 2, 4, and 3 in order back up into line, each lady being slightly in advance of partner. Ladies move to left and gentlemen move to right, then ladies to right and gentlemen to left. All cast off. The ladies to the left and gentlemen to right then form opposite lines. The four gentlemen join hands, and the ladies likewise. All advance and retire and turn partners to places.
 
 	This figure, with all the others, is dances four times through. The second ime the order of forming couples is — 3, 4, 2, 1, also facing outwards; the third time couples 2, 3, 1, 4, facing outwards, also at the sides. In this figure grand chain always follows turn partners.
-
-[^3]: [It is now the fashion for the four ladies to advance and courtesy to each other; then each lady turns to her partner and curtseys to him. The ladies do the moulinet while the gentlemen all move round outside the quadrille and return to places. This is repeated four times. The second and fourth times all the gentlemen advance, and immediately turn towards their partners and bow to them, and continued the figure as before]. We approve of this change as it suits tall and short dancers.
 
 ### {15} Cuirassiers
 
@@ -135,9 +129,7 @@ Grand promenade by the four couples, who turn to their left in dancing the galop
 
 Number 1 twice through, and others 4 time, and first 8 bars.
 
-### {19} Union[^4]
-
-[^4]: In press and speedily will be published “The union quadrilles”, on national airs, by James Scott Skinner specially arranged for this favourite and unknown neglected set.
+### {19} Union[In press and speedily will be published “The union quadrilles”, on national airs, by James Scott Skinner specially arranged for this favourite and unknown neglected set.]
 
 ### 1. Scotch.
 
@@ -190,11 +182,9 @@ The top and third couples face each other, and the second and fourth couples fac
 ### 5. English.
 
 1. Top and opposite couples right and left
-2. ladies chain, grand square[^5].
+2. ladies chain, grand square[This part of the figure is performed by the four couples at the same time.].
 
 Top and bottom couples ab — cd advance to centre i — chassez to i —  chassez to s, and regain places;  the side couples efgh — chassez to o — chassez to p to i and again to places. O at corners means lady, ◇ means gentlemen.
-
-[^5]: This part of the figure is performed by the four couples at the same time.
 
 ### {21} Coulon's, or double quadrille
 
@@ -276,9 +266,7 @@ Every Lady should hold a wreath of flowers.
 
 Gallopade or Singing Galop.
 
-By William Scott[^6].
-
-[^6]: The music for this dance and for the “Chimes of Dunkirk” may be had from mister Skinner.
+By William Scott[The music for this dance and for the “Chimes of Dunkirk” may be had from mister Skinner.].
 
 Music: Fifth figure of “Le pacha quadrilles”.
 
@@ -292,9 +280,7 @@ All form two lines, each gentleman having his partner at his side. Figure.
 >
 > I will fill your hearts with glee”.
 
-### [^7] {25} The Chimes of Dunkirk with chorus.
-
-[^7]: In our professional experience we have, on many occasions, been requested to give a dance in which all may join. The re-arranging of the “Chimes of Dunkirk”, the beauty of the music, and the simplicity of the figure has, we trust, reduced it to the capacity of the merest tyro. The dance has another advantage — videlicet — It gives gentlemen the pleasure of dancing and singing with every lady in the room. This is _comme il faut_. William Scott + James Scott Skinner.
+### [In our professional experience we have, on many occasions, been requested to give a dance in which all may join. The re-arranging of the “Chimes of Dunkirk”, the beauty of the music, and the simplicity of the figure has, we trust, reduced it to the capacity of the merest tyro. The dance has another advantage — videlicet — It gives gentlemen the pleasure of dancing and singing with every lady in the room. This is _comme il faut_. William Scott + James Scott Skinner.] {25} The Chimes of Dunkirk with chorus.
 
 Any number of couples form a circle round the room. The gentleman having his lady on the right arm. At the first note of the music the gentleman makes a low formal bow in front of his partner. His partner makes a low formal curtsey (3 bars and 1 bar for the gentleman to return to his place).
 
@@ -375,9 +361,7 @@ Combination of quadrille and country dance. Arrange (across the room) double cou
 
 It may be remarked that when the couples reach top and bottom of the dance they should change sides. The gentlemen having to make certain that their ladies are on the right.
 
-### Country[^8] dances
-
-[^8]: The word country in this case, is no doubt a corruption of the French word contre, as contre danse signifies a dance performed by persons opposite to each other.
+### Country[The word country in this case, is no doubt a corruption of the French word contre, as contre danse signifies a dance performed by persons opposite to each other.] dances
 
 > “This life is like a village dance,
 >
@@ -421,11 +405,8 @@ It may be remarked that when the couples reach top and bottom of the dance they 
 2. Cross hands and back
 3. Foot out time to your partner in centre.
 
-### [^9]Promenade dance
+### [This is intended as a respite from the more violent dances - It also affords a chance for the promenaders using their conversional powers.]Promenade dance
 
-[^9]: This is intended as a respite from the more violent dances - It also affords a chance for the promenaders using their conversional powers.
-
-1. Lady and gentleman walk down centre (gentleman giving arm) & up again 2. Walk down backwards, while second lady and gentleman follow lady on gentleman's arm. Second couple walk backwards & first follow.
+1. Lady and gentleman walk down centre (gentleman giving arm) & up again 
+2. Walk down backwards, while second lady and gentleman follow lady on gentleman's arm. Second couple walk backwards & first follow.
 3. Poussette.
-
-///Footnotes///

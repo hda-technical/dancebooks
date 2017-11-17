@@ -544,10 +544,13 @@ class MarkdownCache(object):
 		self._cache = dict()
 		self._converter = markdown.Markdown(
 			extensions=[
-				"markdown.extensions.footnotes",
 				"markdown.extensions.tables",
 				"superscript",
-				MarkdownPageNumberExtension()
+				MarkdownExtension(
+					page_number=MarkdownPageNumber(),
+					strikethrough=MarkdownStrikethrough(),
+					note=MarkdownNote()
+				)
 			],
 			extension_configs={
 				"markdown.extensions.footnotes": {
@@ -586,7 +589,7 @@ class MarkdownCache(object):
 		return self._converter.convert(raw_data)
 
 
-class MarkdownCiteProcessor(markdown.inlinepatterns.Pattern):
+class MarkdownCite(markdown.inlinepatterns.Pattern):
 	def __init__(self, index):
 		super().__init__(r"\[(?P<id>[a-z0-9_]+)\]")
 		self._index = index
@@ -600,40 +603,77 @@ class MarkdownCiteProcessor(markdown.inlinepatterns.Pattern):
 		return a
 
 
-class MarkdownCiteExtension(markdown.extensions.Extension):
-	def __init__(self, index):
-		self._index = index
-
-	def extendMarkdown(self, md, md_globals):
-		md.inlinePatterns.add("cite_reference", MarkdownCiteProcessor(self._index), '_end')
-
-
 class MarkdownPageNumber(markdown.inlinepatterns.Pattern):
 	def __init__(self):
-		super().__init__(r"\{(?P<number>[^\{\}]+)\}")
+		super().__init__(r"\{(?P<page_number>[^\{\}]+)\}")
 
 	def handleMatch(self, m):
 		span = markdown.util.etree.Element("span")
-		span.set("class", const.PAGE_NUMBER_CSS_CLASS)
-		span.text = m.group("number")
+		span.set("class", const.CSS_CLASS_PAGE_NUMBER)
+		span.text = m.group("page_number")
 		return span
 
 
-class MarkdownStikethrough(markdown.inlinepatterns.Pattern):
+class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
+	"""
+	Marks the text enclosed into doubled tildas as strikethrough,
+	thus emulates the syntax of github flavoured markdown:
+	https://help.github.com/articles/basic-writing-and-formatting-syntax/
+	"""
 	def __init__(self):
-		super().__init__(r"\~\~(?P<stokeout>[^\~]+)\~\~")
+		super().__init__(r"\~\~(?P<strikethrough>[^\~]+)\~\~")
 
 	def handleMatch(self, m):
 		span = markdown.util.etree.Element("span")
-		span.set("style", "text-decoration: line-through;")
-		span.text = m.group("stokeout")
+		span.set("class", const.CSS_CLASS_STRIKETHROUGH)
+		span.text = m.group("strikethrough")
 		return span
 
 
-class MarkdownPageNumberExtension(markdown.extensions.Extension):
+class MarkdownNote(markdown.inlinepatterns.Pattern):
+	def __init__(self):
+		super().__init__(r"\[(?P<note>[^\]]+)\]")
+		self.reset()
+
+	def reset(self):
+		self.next_note_number = 1
+
+	def handleMatch(self, m):
+		anchor = markdown.util.etree.Element("span")
+		anchor.set("class", const.CSS_CLASS_NOTE_ANCHOR)
+		anchor.text = str(self.next_note_number)
+
+		note = markdown.util.etree.Element("span")
+		note.set("class", const.CSS_CLASS_NOTE)
+		note.text = "{next_note_number}. {note}".format(
+			next_note_number=self.next_note_number,
+			note=m.group("note")
+		)
+
+		parent = markdown.util.etree.Element("span")
+		parent.append(anchor)
+		parent.append(note)
+
+		self.next_note_number += 1
+		return parent
+
+
+class MarkdownExtension(markdown.extensions.Extension):
+	"""
+	Generalized Markdown extension which accepts
+	multiple inline patterns at once
+	"""
+	def __init__(self, **patterns):
+		self.patterns = patterns
+
 	def extendMarkdown(self, md, md_globals):
-		md.inlinePatterns.add("page_number", MarkdownPageNumber(), '_end')
-		md.inlinePatterns.add("strikethough", MarkdownStikethrough(), '_end')
+		for name, pattern in self.patterns.items():
+			md.inlinePatterns.add(name, pattern, '_end')
+
+	def reset(self):
+		for pattern in self.pattenrs.values():
+			pattern.reset()
+
 
 
 def get_last_name(fullname):

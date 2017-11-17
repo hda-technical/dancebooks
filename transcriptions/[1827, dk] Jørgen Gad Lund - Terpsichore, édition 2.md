@@ -97,9 +97,7 @@ Disse 5 Stillinger bør stedse iagttages, da ethvert Trin begynder og sluttes i 
 {17}
 **Galopade Valz**. Man træder frem i 4de Position, trækker derpaa den anden Fod til sig i 3die nedaf Sahlen i Vienervalz-Tact 4 Gange, derpaa gesvindt Valz 2 Gange rundt over Gulvet, og af den anden Side ligedeles 4 Gange og derpaa rundt. Damen holdes af Cavalierens høire Arm, og hans venstre Haand holder hendes høire.
 
-**Ungersk Valz**. Man falder frem; Cavalieren paa venstre og Damen paa høire Fo, og strækker den Fod der er tilbage; nu faldes ned vaa[^1] den bageste Fod og den første strækkes frem i 4de Position, saaledes tælles 8 eller 4 tacter, 2/4 Tact, derpa 2 Gange Hopsavalz omkring. Holdningen skeer paa samme Maade som Galopade.
-
-[^1]: Believed to be a misprinted _paa_.
+**Ungersk Valz**. Man falder frem; Cavalieren paa venstre og Damen paa høire Fo, og strækker den Fod der er tilbage; nu faldes ned vaa[Believed to be a misprinted _paa_] den bageste Fod og den første strækkes frem i 4de Position, saaledes tælles 8 eller 4 tacter, 2/4 Tact, derpa 2 Gange Hopsavalz omkring. Holdningen skeer paa samme Maade som Galopade.
 
 **Tyrkisk Valz**. Damen holdes i Cavalierens høire Arm, hun holder sig i Kjolen med den høire Arm, hun holder sig i Kjolen med den høire Haand og han sætter sin venstre i Siden. Cavalieren hopper 3 Gange paa høire og Damen 3 Gange paa venstre Fod, derpaa det samme med den anden Fod, saaledes nogle Gange ligefrem og derpaa det samme omkring. Til denne Valz bruges langsom Valz men af hoppende Tact.
 
@@ -484,9 +482,7 @@ Alle Parrene staaer i Rundkreds, Damerne ved høire Side. Alle dandser rundt til
 
 ### Den franske Cotillon
 
-Denne Dands er inddeelt i 4 Repricer, de 3 første i 2/4 Tact og den sidste i 3/8 eller Valztact. Alle Parrene staae i Runddeel, og da den maaskee vil blive lettere at satte, saa vil jeg give 2 Par et Nummer saaledes[^2].
-
-[^2]: Round formation figure omitted
+Denne Dands er inddeelt i 4 Repricer, de 3 første i 2/4 Tact og den sidste i 3/8 eller Valztact. Alle Parrene staae i Runddeel, og da den maaskee vil blive lettere at satte, saa vil jeg give 2 Par et Nummer saaledes[Round formation figure omitted in transcription].
 
 {42} Flere end 16 Par kan ogsaa deeltage; men man maa altid passe, at der er lige mange Par paa hver Side af de som fører op.
 
@@ -536,13 +532,11 @@ Man staaer som i en Engelskdands.
 
 3die – 1 C. balancerer for 2 D. og 1 D. det samme for 2 C.
 
-2de[^3] – Nu Balance for dem man dandser med.
+2de[Figure number is misprinted. Should be _4de_] – Nu Balance for dem man dandser med.
 
 5te – Det opførende Par klappe i Hænderne og slaae derpaa i hinandens høire Haand, i sin egen igjen derpaa i venstre, atter i sine egne og nu i begge den andens Hænder paa engng, nu 3 Klap i sine egne, og
 
 6te – Svingning med sin Dame; og saa begyndes for fra og figureres med det næste Par.
-
-[^3]: Figure number is printed. Should be _4de_.
 
 ### Kiædelflikkerdandsen
 

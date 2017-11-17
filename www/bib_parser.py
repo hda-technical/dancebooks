@@ -32,7 +32,9 @@ class FinalizingContext(object):
 	"""
 	def __init__(self, index):
 		self._converter = markdown.Markdown(
-			extensions=[utils.MarkdownCiteExtension(index)]
+			extensions=[utils.MarkdownExtension(
+				cite=utils.MarkdownCite(index)
+			)]
 		)
 
 	def parse_markdown(self, data):

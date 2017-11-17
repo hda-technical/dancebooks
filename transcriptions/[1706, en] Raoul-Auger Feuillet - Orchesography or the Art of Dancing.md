@@ -2,9 +2,7 @@ To mister Isaac.
 
 Sir,
 
-Though dancing and musick seem to be of near an equal antiquity, and even of an equal extent, yet musick has long received an advantage, which dancing wanted. musick has employed the pens of many of the learned, both ancient and modern, and has had the benefit of an universal character, which conveyed the harmonious compositions to all lovers of the art in all nations. Dancing, on the contrary, though celebrated by ancient authors in an extraordinary manner, and with uncommon phrases[^1], (as I shall shew in a treatise, which I shall suddenly publish on that subject) yet among the moderns, it has been wholly unknown to the learned, and destitute of all pens, in either the speculative or practice part of the art, which for want of an universal character, was confined to the immediate master and scholar, or at farthest, to a narrow traditional instruction, which none could participate of without a teacher, who had been taught by some other, either composer, or scholar of such composer. This inconvenience at length stirred up monsieur Beauchamp to begin what monsieur Feuillet accomplished in the following treatise, which though for some time enjoyed by the French nation, as a native growth, now first appears in its true and just extent in its transplantation into the English climate and language.
-
-[^1]: _Read_, uncommon praises (misprint is mentioned in Errata)
+Though dancing and musick seem to be of near an equal antiquity, and even of an equal extent, yet musick has long received an advantage, which dancing wanted. musick has employed the pens of many of the learned, both ancient and modern, and has had the benefit of an universal character, which conveyed the harmonious compositions to all lovers of the art in all nations. Dancing, on the contrary, though celebrated by ancient authors in an extraordinary manner, and with uncommon phrases[_Read_, uncommon praises (misprint is mentioned in Errata)], (as I shall shew in a treatise, which I shall suddenly publish on that subject) yet among the moderns, it has been wholly unknown to the learned, and destitute of all pens, in either the speculative or practice part of the art, which for want of an universal character, was confined to the immediate master and scholar, or at farthest, to a narrow traditional instruction, which none could participate of without a teacher, who had been taught by some other, either composer, or scholar of such composer. This inconvenience at length stirred up monsieur Beauchamp to begin what monsieur Feuillet accomplished in the following treatise, which though for some time enjoyed by the French nation, as a native growth, now first appears in its true and just extent in its transplantation into the English climate and language.
 
 The service to the lovers and professors of this art, having been the chief motive of my undertaking so difficult a province, that we who enjoy the happiness of so great a master as mister Isaac, should not want the advantage of spreading that excellence in this art, which renders him so admired by all who have any taste of it; so having received such great and generous encouragement in this study from you, sir; the product of that encouragement and study does, as it were, out of a natural right and just gratitude, seek shelter under your patronage, and challenge the advantage of appearing in the world under the protection of your name, whole known judgement and mastery in this art, will secure me from the censure of malice and ignorance.
 
@@ -55,7 +53,7 @@ I shall not therefore detain the reader any longer in the porch, but leave him n
 * P. 47. 1. 4. f. _Rigandons_, r. _Rigaudons_.
 
 ### {1} Orchesography or, the Art of Dancing by Characters and Demonstrative Figures by Which Any Person, Who Understands Dancing, May of Himself Easily learn All Manner of Dances
-	
+
 The explanation of the terms belonging to dancing, seem to be altogether needless, since they are so plain and intelligible of themselves: but lest the reader should put wrong constructions on those terms of art which the dancing-masters make use of, I shall give the following explanation of them.
 
 {2} Dancing is composed of positions, steps, sinkings, risings, springings, capers, fallings, slidings, turnings of the body, cadence or time, figures, &c.
@@ -142,9 +140,7 @@ The fifth is when the two feet are crossed, the heel of one directly opposite to
 
 ### {8} Of False Positions
 
-There are also five of these. The first is when the toes are turned inwards, and touch each other, the heels being open on the line[^2].
-
-[^2]: _Read_, on a line (misprint is mentioned in Errata)
+There are also five of these. The first is when the toes are turned inwards, and touch each other, the heels being open on the line[_Read_, on a line (misprint is mentioned in Errata)].
 
 The second is when the toes are turned inwards, there being the distance of a foot's length between the toes; the heels as before.
 
@@ -168,9 +164,7 @@ The waving step, is when the foot, in moving, turns both inwards and outwards. T
 
 The beaten step, is when one leg or foot is beaten against the other. Of this there are also three ways of performing, videlicet forwards, backwards, and sideways.
 
-A step is known by the character following, videlicet a black spot marked A, representing the position of the foot, the line drawn from that spot, marked B, showing the motion, figure, and largeness of the step, as from A to D, and lastly, by a small side stroke joined to the end of the line C, representing the foot, of which D is the heel, and E the point of the foot, or toe[^3].
-
-[^3]: Figures on the page 10 were ommited in this transcription
+A step is known by the character following, videlicet a black spot marked A, representing the position of the foot, the line drawn from that spot, marked B, showing the motion, figure, and largeness of the step, as from A to D, and lastly, by a small side stroke joined to the end of the line C, representing the foot, of which D is the heel, and E the point of the foot, or toe[Figures on the page 10 were ommited in this transcription].
 
 {11} To a step may be added these following marks, videlicet sinking, rising, springing or bounds, capers, falling, sliding, holding the foot up, pointing the toes, placing the heel, turning a quarter turn, a half turn, a three quarter turn, and a whole turn.
 
@@ -228,9 +222,7 @@ A springing step, is performed two ways, either by springing and falling on the 
 
 When there is a mark of a spring upon the step, and no mark for the holding up of the foot after it, it shows, that the spring is to be made with the foot that moves, which is called a bound.
 
-{17} But when there is a mark for a spring, and afterwards[^4] a mark for the foot up, it signifies, that the spring must be made on the foot that does not move forwards, which is called a hop.
-
-[^4]: _Read_, and forwards a mark for the foot up (misprint is mentioned in Errata)
+{17} But when there is a mark for a spring, and afterwards[_Read_, and forwards a mark for the foot up (misprint is mentioned in Errata)] a mark for the foot up, it signifies, that the spring must be made on the foot that does not move forwards, which is called a hop.
 
 The mark for falling, has no proper place assigned it, and I shall only observe, that in rising, when it is in order to fall, it is necessary the mark for a rise, should be near the beginning of the step.
 
@@ -328,9 +320,7 @@ The change of positions is made two ways, either by springing, or waving.
 
 Those which are performed by springing, are done when you spring from one position, and fall in another; and those which are performed by waving, must be done on the ground, by waving the two feet, or each foot separately, either on the toes or heels.
 
-The shifting of positions by springing, may be known by what follows, videlicet by two positions, one of which has springing on it, and the other none[^5].
-
-[^5]: Tables on pages 29 and 30 were omitted in this transcription
+The shifting of positions by springing, may be known by what follows, videlicet by two positions, one of which has springing on it, and the other none[Tables on pages 29 and 30 were omitted in this transcription].
 
 {31} The position which has springing marks on it, shows from whence the spring is to be made, and that which has no springing marks on it, only denotes in what position to fall, as may be seen by the foregoing tables.
 
@@ -350,9 +340,7 @@ Those which are to be made with both feet at once, are to be known by a waved po
 
 ### {33} How to Hold the Book or Paper, to Decipher Written Dances
 
-You must understand, the each page, on which the dance is described, represents the dancing-room; and the four {34} sides of the page, the four sides of the room, videlicet the upper part of the page, represents the upper end of the room; the lower part, the lower end; the right side of the page the right side of the room; and the left side, the left, as you may see by the following figure, of which A B C D represent the room, and E F G H, the page. E F show the upper part of the page[^6], as C D do the lower end; F H the right side of the page, as E F do the upper end of the room G H the lower part, as B D the right side of the room; and E G the left side of the page, as A C the left side of the room.
-
-[^6]: _Add_, as E F do the upper end of the Room, G H the lower part (missing phrase is mentioned in Errata)
+You must understand, the each page, on which the dance is described, represents the dancing-room; and the four {34} sides of the page, the four sides of the room, videlicet the upper part of the page, represents the upper end of the room; the lower part, the lower end; the right side of the page the right side of the room; and the left side, the left, as you may see by the following figure, of which A B C D represent the room, and E F G H, the page. E F show the upper part of the page[_Add_, as E F do the upper end of the Room, G H the lower part (missing phrase is mentioned in Errata)], as C D do the lower end; F H the right side of the page, as E F do the upper end of the room G H the lower part, as B D the right side of the room; and E G the left side of the page, as A C the left side of the room.
 
 You must observe always to hold the upper end of the book against the upper end of the room; and whether the dance have any turning in it or not, you must carefully avoid removing the book from the situation above demonstrated.
 
@@ -394,9 +382,7 @@ The tract I, moves forwards, the face towards the left side of the room.
 
 The tract K retires backwards, the face towards the right side of the room.
 
-The tract G, move round, and the tract M, retire round[^7].
-
-[^7]: Table on page 38 was omitted in this transcription.
+The tract G, move round, and the tract M, retire round[Table on page 38 was omitted in this transcription].
 
 {39} In moving sideways, the tract or line must also be considered as to its two sides, videlicet the upper side marked X, and the under side marked Y. Steps and half positions, which are on the upper side of the line, are to be made with the foremost foot, and those which are on the under side, with the hinder foot.
 
@@ -414,9 +400,7 @@ A step, which is to cross behind the foregoing step, must begin above the line, 
 
 A step, which begins with the foremost foot, in order to move sideways, to end on a line with the other foot, ought to begin from the part above the line, and descend obliquely sideways towards that below, as the following step, marked number 1, will show.
 
-{40} A step, which is to cross behind[^8] the foregoing step, must begin from below the line, and rise obliquely above it, which you may observe by the step number 1.
-
-[^8]: _Read_, to cross before (misprint is mentioned in Errata)
+{40} A step, which is to cross behind[_Read_, to cross before (misprint is mentioned in Errata)] the foregoing step, must begin from below the line, and rise obliquely above it, which you may observe by the step number 1.
 
 ### To Return upon a Tract you Have Just Before Moved on
 
@@ -470,9 +454,7 @@ A simple step, is that which is alone, as all those which hitherto demonstrated;
 
 You must observe, that each square contains only one step, which I have writ down twice, to the end to show, that what is performed with one foot, may also be performed with the other.
 
-An explanation of the steps contained in each square, is also writ down with them; and whereas some of the words and terms are abbreviated for want of room, I have put down here a short explanation of them[^9].
-
-[^9]: 41 pages of tables were omitted in this transcription.
+An explanation of the steps contained in each square, is also writ down with them; and whereas some of the words and terms are abbreviated for want of room, I have put down here a short explanation of them[41 pages of tables were omitted in this transcription].
 
 ### {Table 42} A Supplement of Steps
 
@@ -482,9 +464,7 @@ These four last steps are all of them in the rigaudon of mister Isaac's, and giv
 
 There are three sorts of time in dancing, videlicet common time, triple time, and quadruple time.
 
-Common time, is used in gavottes, galliards, bourrées, rigandons[^10], jigs, and canaries.
-
-[^10]: _Read_, rigaudons (misprint is mentioned in Errata)
+Common time, is used in gavottes, galliards, bourrées, rigandons[_Read_, rigaudons (misprint is mentioned in Errata)], jigs, and canaries.
 
 Triple time, is made use of in courants, sarabands, chaconnes, passacailes, minuets, and passe-pieds.
 
@@ -496,9 +476,7 @@ It is to be observed nevertheless, that in courant movements, two steps are put 
 
 The bars or measures in dances, must be marked in like manner with those in musick, videlicet with little bars crossing the tract, which are to agree with those of the tune.
 
-You will understand by the following examples, how each step agrees with the tune to which they are composed[^11].
-
-[^11]: Musical notation page was omitted in this transcription
+You will understand by the following examples, how each step agrees with the tune to which they are composed[Musical notation page was omitted in this transcription].
 
 {49} If it happens that you have occasion to put more steps in a measure, than are in the foregoing examples, the following rules must be observed.
 
@@ -585,5 +563,3 @@ You will find these are performed without the dancers moving out of their places
 If in the dances in the second volume, you find some of the steps longer than others, you must have no regard to them, as to their length in the description of them, but judge of their extension by the distance of positions, (as I have already shown in the termination of the steps, in their positions); so that you are not to conclude any thing from the length or shortness of steps.
 
 ### Finis
-
-///Footnotes///

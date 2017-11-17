@@ -256,7 +256,7 @@ li
 
 .italic
 {
-	font-style: italic;	
+	font-style: italic;
 }
 
 .hidden
@@ -478,6 +478,7 @@ div.transcription
 	line-height: 1.2;
 	max-width: 700px;
 	margin: auto;
+	position: relative;
 }
 
 div.transcription > p
@@ -531,16 +532,17 @@ div.transcription p > img
 	height: 1em;
 }
 
+
+div.transcription span.note_anchor,
 div.transcription p > sup {
 	vertical-align: middle;
-	top: -7px;	
+	top: -7px;
 	position: relative;
 	font-size: 75%;
 }
 
-div.transcription > div.footnote h3
-{
-	font-size: 100%;
+div.transcription span.strikethrough {
+	text-decoration: line-through;
 }
 
 div.transcription span.page_number {
@@ -550,15 +552,41 @@ div.transcription span.page_number {
 	font-style: normal;
 
 	text-decoration: none;
-    text-align: left;
-    text-indent: 0px;
+	text-align: right;
+	text-indent: 0px;
 
 	color: #b0b0b0;
 
-    display: inline-block;
-    position: absolute;
-    right: 200px;
-    width: 50px;
+	display: inline-block;
+	position: absolute;
+	left: -100px;
+	width: 50px;
+
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+}
+
+div.transcription span.note {
+	font-family: "PT Serif";
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+
+	text-decoration: none;
+	text-align: left;
+	text-indent: 0px;
+
+	color: #b0b0b0;
+
+	display: inline-block;
+	position: absolute;
+	/*
+	 * WARN: right should be less than (-1 * width)
+	 */
+	right: -350px;
+	width: 300px;
 
 	user-select: none;
 	-moz-user-select: none;

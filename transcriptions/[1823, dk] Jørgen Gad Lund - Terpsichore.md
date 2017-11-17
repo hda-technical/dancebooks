@@ -415,9 +415,7 @@ Man staaer ligesom i en Engelskdands. Det øverste og nederste Par fører til Mi
 
 ### Ruche de Covoly
 
-Man staaer ogsa heri som i Engelskdands. Første Caavalier[^1] og nederste Dame svinger med høire Haand; nu første Dame og nederste Cavalier det samme; derpaa første C. og nederste D. med venstre Haand, og første D. og nederste C. ligeledes; nu svinges rundt med begge Hænder, de samme som før, siden Quaré, og nu bukker første C. for nederste D., og første Dame neier for sidste C.; derpaa slaaer Alle et Slag i Haanden og følger efter, C. efter første C., og D. efter første D., som vender sig og løber ned til Enden, hvor nederste Par stod; nu fører {34} alle Parrene op og holder deres Damer i Hænderne , og man staaer nu, som da Dandsen begyndte; nu gjør første Par Skubkar igjennem alle Parrene og bliver altsaa nederst. Nu begynder anden C., som nu er øverst, at svinge med første D, som er nedest, og saa fremdeles. Saasnart det opførende par har gjort Skubkar, slipper man strax hinanden, at det følgende Par kan faae plads. Naar det allersidste Par har ført op og gjør Skubkar, bukker enhver Cavalier for sin Dame og træder ud af Dandsen; hvormed den endes.
-
-[^1]: Spelled Caavalier in original. Misprint fixed in the second edition
+Man staaer ogsa heri som i Engelskdands. Første Caavalier[Spelled Caavalier in original. Misprint fixed in the second edition] og nederste Dame svinger med høire Haand; nu første Dame og nederste Cavalier det samme; derpaa første C. og nederste D. med venstre Haand, og første D. og nederste C. ligeledes; nu svinges rundt med begge Hænder, de samme som før, siden Quaré, og nu bukker første C. for nederste D., og første Dame neier for sidste C.; derpaa slaaer Alle et Slag i Haanden og følger efter, C. efter første C., og D. efter første D., som vender sig og løber ned til Enden, hvor nederste Par stod; nu fører {34} alle Parrene op og holder deres Damer i Hænderne , og man staaer nu, som da Dandsen begyndte; nu gjør første Par Skubkar igjennem alle Parrene og bliver altsaa nederst. Nu begynder anden C., som nu er øverst, at svinge med første D, som er nedest, og saa fremdeles. Saasnart det opførende par har gjort Skubkar, slipper man strax hinanden, at det følgende Par kan faae plads. Naar det allersidste Par har ført op og gjør Skubkar, bukker enhver Cavalier for sin Dame og træder ud af Dandsen; hvormed den endes.
 
 ### Fandango
 
@@ -433,9 +431,7 @@ I denne dans staaer man ved Siden af den, man dandser med, som f. Ex.:
 
 5 C. 6 D.
 
-5 C. 6 K.[^2]
-
-[^2]: Misprint: Figure shows fourth dame and fifth cavalier twice. Misprint fixed in the second edition
+5 C. 6 K.[Misprint: Figure shows fourth dame and fifth cavalier twice. Misprint fixed in the second edition]
 
 og saa fremdeles.
 
@@ -525,9 +521,7 @@ Alle Parrene staaer i Rundkreds, Damerne ved høire Side. Alle dandser rundt til
 
 ### Den franske Cotillon
 
-Denne Dands er inddeelt i 4 Repricer, de 3 første i 2/4 Tact og den sidste i 3/8 eller Valztact. Alle Parrene staae i Runddeel, og da den maaskee vil blive lettere at satte, saa vil jeg give 2 Par et Nummer saaledes[^3].
-
-[^3]: Round formation figure omitted
+Denne Dands er inddeelt i 4 Repricer, de 3 første i 2/4 Tact og den sidste i 3/8 eller Valztact. Alle Parrene staae i Runddeel, og da den maaskee vil blive lettere at satte, saa vil jeg give 2 Par et Nummer saaledes[Round formation figure omitted in transcription].
 
 {44} Flere end 16 Par kan ogsaa deeltage; men man maa altid passe, at der er lige mange Par paa hver Side af de som fører op.
 
@@ -546,5 +540,3 @@ Førend man begynder at føre ned, da gjør man Compliment, først for sin egen 
 {48} Ingen Dame bør nægte en Cavalier en Dands, naar hun ikke er opbudet, med mindre der kunde være Tilfælde, som gjorde det til Pligt for hende at afslaae det.
 
 Nu har jeg søgt at gjøre min Veiledning nyttig; modtag den nu alle med venlige Følelser for mig!
-
-///Footnotes///
