@@ -552,12 +552,6 @@ class MarkdownCache(object):
 					note=MarkdownNote()
 				)
 			],
-			extension_configs={
-				"markdown.extensions.footnotes": {
-					"PLACE_MARKER": "///Footnotes///",
-					"BACKLINK_TEXT": "↑",
-				}
-			},
 			output_format="xhtml5"
 		)
 
