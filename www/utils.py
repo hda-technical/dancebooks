@@ -633,6 +633,8 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	TODO: FILL ME IN
 	"""
 	NOTE_NUMBER_PLACEHOLDER = "%NOTE_NUMBER%"
+	START = "["
+	END = "]"
 
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
@@ -649,8 +651,8 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		self._next_note_number = 1
 
 	def test(self, parent, block):
-		open_bracket_pos = block.find('[')
-		close_bracket_pos = block.find(']', open_bracket_pos)
+		open_bracket_pos = block.find(self.START)
+		close_bracket_pos = block.find(self.END, open_bracket_pos)
 		return (
 			#footnote exists
 			(open_bracket_pos != -1) and
@@ -662,21 +664,21 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		raw_block = blocks.pop(0)
 		processed_block = ""
 		#open_bracket_pos never equals to -1 at the start
-		close_bracket_pos = 0
-		open_bracket_pos = raw_block.find('[')
+		close_bracket_pos = -1
+		open_bracket_pos = raw_block.find(self.START)
 		while (open_bracket_pos != -1):
 			#this text does not belong to footnote and should not be handled
-			processed_block += raw_block[close_bracket_pos:open_bracket_pos]
-			close_bracket_pos = raw_block.find(']', open_bracket_pos + 1)
+			processed_block += raw_block[close_bracket_pos + 1:open_bracket_pos]
+			close_bracket_pos = raw_block.find(self.END, open_bracket_pos + 1)
 			raw_footnote = raw_block[open_bracket_pos + 1:close_bracket_pos]
 			while blocks and close_bracket_pos == -1:
 				#footnote is split across several blocks
 				#looking for the block ending the quote
 				raw_block = blocks.pop(0)
-				close_bracket_pos = raw_block.find(']')
+				close_bracket_pos = raw_block.find(self.START)
 				raw_footnote += raw_block[0:close_bracket_pos]
 			processed_block += self.handle_footnote(raw_footnote)
-			open_bracket_pos = raw_block.find('[', close_bracket_pos + 1)
+			open_bracket_pos = raw_block.find(self.START, close_bracket_pos + 1)
 
 		if len(raw_block) > close_bracket_pos + 1:
 			#handling the remaining of the block, if any

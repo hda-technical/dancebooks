@@ -592,7 +592,7 @@ div.transcription span.note {
 }
 
 div.transcription span.note span.p {
-	text-indent: 0px;
+	display: block;
 }
 
 div.transcription div.upper_roman + ol {
