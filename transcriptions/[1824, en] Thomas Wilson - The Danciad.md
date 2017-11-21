@@ -8,15 +8,9 @@ Academy of Dancing, 3, Kirby Street, Hatton Garden.
 
 ### Preface
 
-The Danciad is founded on a dramatic prelude to the Author's 89th Public Ball, held the 30th October 1822 (when the characters were represented by himself and three of his pupils[^1]) being intended as a descriptive sketch on the present state of ball-room dancing teachers and professors of dancing, academies, public balls, &c. &c.
+The Danciad is founded on a dramatic prelude to the Author's 89th Public Ball, held the 30th October 1822 (when the characters were represented by himself and three of his pupils[[The performance of the original sketch, was, at the request of several subscribers, repeated at the author's vacation ball, 15th January 1824.]]) being intended as a descriptive sketch on the present state of ball-room dancing teachers and professors of dancing, academies, public balls, &c. &c.
 
-[^1]: The performance of the original sketch, was, at the request of several subscribers, repeated at the author's vacation ball, 15th January 1824.
-
-The sketch being approved, was afterwards shown, in manuscript, to several eminent teachers, who strongly advised the author to continue the subject; as the various puffs and delusive advertisements of certain persons styling themselves "Professors of Dancing"[^2]: tended to bring even the art itself into disrepute, and loudly called for exposure and reprehension; however, what was every body's business was no-body's; though all continued to complain of injuries sustained in consequence of such practices, yet none attempted to draw on them the attention of the public[^3]. The author was therefore urged to continue and extend his sketch; he in vain represented the difficulty of making it into a poem without new-modelling the subject, a task that he had neither time nor ability to execute. It was replied, that regularity of form was not regarded by them. "Go on (they exclaimed) we care not about form", and to their suggestion he yielded.
-
-[^2]: This alludes more particularly to the London placard teachers, who almost invariably style themselves "Professors".
-
-[^3]: Many strangers, forming their opinion from the delusive advertisements of certain teachers whose terms are very low, but never meant to be fulfilled, have objected to the charges of the respectable part of the profession, as exorbitant, though really no more than adequate; hence it arises, that fair-dealing teachers cannot, in many instances, obtain adequate remuneration. Loud complaints on the subject have been made to the author, whose own experience confirms the facts here stated.
+The sketch being approved, was afterwards shown, in manuscript, to several eminent teachers, who strongly advised the author to continue the subject; as the various puffs and delusive advertisements of certain persons styling themselves "Professors of Dancing"[[This alludes more particularly to the London placard teachers, who almost invariably style themselves "Professors".]]: tended to bring even the art itself into disrepute, and loudly called for exposure and reprehension; however, what was every body's business was no-body's; though all continued to complain of injuries sustained in consequence of such practices, yet none attempted to draw on them the attention of the public[[Many strangers, forming their opinion from the delusive advertisements of certain teachers whose terms are very low, but never meant to be fulfilled, have objected to the charges of the respectable part of the profession, as exorbitant, though really no more than adequate; hence it arises, that fair-dealing teachers cannot, in many instances, obtain adequate remuneration. Loud complaints on the subject have been made to the author, whose own experience confirms the facts here stated.]]. The author was therefore urged to continue and extend his sketch; he in vain represented the difficulty of making it into a poem without new-modelling the subject, a task that he had neither time nor ability to execute. It was replied, that regularity of form was not regarded by them. "Go on (they exclaimed) we care not about form", and to their suggestion he yielded.
 
 > So the author endeavoured to take up the cause
 >
@@ -118,12 +112,7 @@ He has entirely abstained from allusions to family circumstances, and personal m
 >
 > Nor strives to censure, to obtain applause.
 
-The Author's motives for this publication will probably be attributed to various causes; some persons will accuse him of self-interest, but he is quite convinced, if they had published as much, and as variously us he has, they would acquit him of that charge[^4]. Books published by a humble individual (not a bookseller) seldom pay even for paper and printing, much less any remuneration for authorship; he forms this opinion from his own experience, believing it to be well known that
-
-[^4]: He, evidently, could not have been very sanguine in his expectation of gain from this work, which was laid aside for a year after the first representation, and afterwards resumed only at intervals spared from professional avocations, which be never suffered to be interrupted for such purposes, as
-	> He remembers an adage, which struck him with awe,
-	>
-	> That "who lives with the muses, must die in the straw"
+The Author's motives for this publication will probably be attributed to various causes; some persons will accuse him of self-interest, but he is quite convinced, if they had published as much, and as variously us he has, they would acquit him of that charge[[He, evidently, could not have been very sanguine in his expectation of gain from this work, which was laid aside for a year after the first representation, and afterwards resumed only at intervals spared from professional avocations, which be never suffered to be interrupted for such purposes, as _He remembers an adage, which struck him with awe, That "who lives with the muses, must die in the straw"_]]. Books published by a humble individual (not a bookseller) seldom pay even for paper and printing, much less any remuneration for authorship; he forms this opinion from his own experience, believing it to be well known that
 
 > The author has, on dancing, published more
 >
@@ -301,7 +290,7 @@ The Author can assure the Public, that he did not withhold the dedication, nor d
 >
 > To gain a fee the author has no hope,
 >
-> For dedication fees expired with Pope[^5].
+> For dedication fees expired with Pope[[It may not, perhaps, be strictly true, that no dedication fee has, in any instance, been given since Pope's time; but, since that period, it has certainly ceased to be the fashion.]].
 >
 > He therefore dedicates his piece to those
 >
@@ -310,8 +299,6 @@ The Author can assure the Public, that he did not withhold the dedication, nor d
 > He has been told it is prudent to be civil,
 >
 > And sometimes hold a candle to the Devil.
-
-[^5]: It may not, perhaps, be strictly true, that no dedication fee has, in any instance, been given since Pope's time; but, since that period, it has certainly ceased to be the fashion.
 
 Not only has the author been without a rich patron and a dedication fee, but he has never received any pecuniary assistance from his subscribers in the publication of this work, the conditions being not to pay till delivery, and the price only 5s, whatever may be the size or extent of the book; beyond which he has only this forlorn hope, as
 
@@ -377,7 +364,7 @@ Although, after making this declaration, the author might be acquitted of either
 >
 > (Be who they may) when pupils call dance well;
 >
-> And those who've had "machines[^6] for waltzing made,
+> And those who've had "machines[[The words in _italics_, between inverted commas, are taken from the party's bills and advertisements. The author would be much obliged to any Lady or Gentleman to supply him with any others of a similar kind: the favour shall be hereafter acknowledged.]] for waltzing made,
 >
 > To teach the art without a master's aid";
 >
@@ -404,8 +391,6 @@ Although, after making this declaration, the author might be acquitted of either
 > And conscientiously to them can say,
 >
 > "You now dance well, can ease and grace display".
-
-[^6]: The words in _italics_, between inverted commas, are taken from the party's bills and advertisements. The author would be much obliged to any Lady or Gentleman to supply him with any others of a similar kind: the favour shall be hereafter acknowledged.
 
 These and the several other super-human acquirements said to be possessed by certain professors of dancing, have excited the author's envy. In his defence, the calls on those eminent teachers who know the fallibility of human nature, to read these extraordinary professions, and then say whether they do not also envy those great professors such rare qualifications, and to this subject he particularly entreats the attention of eminent foreign dancers, who have so long laughed at our want of genius in the art of dancing.
 
@@ -473,9 +458,7 @@ The Author's further remarks and opinions on these matters must be reserved for 
 >
 > So the critics have said
 >
-> Of great Milton[^7] that's dead.
-
-[^7]: It is said of Milton, the poet, that he prized his "Paradise Regained" (considered by the critics as the most inferior of his poems) before his "Comus" and "Paradise Lost".
+> Of great Milton[[It is said of Milton, the poet, that he prized his "Paradise Regained" (considered by the critics as the most inferior of his poems) before his "Comus" and "Paradise Lost".]] that's dead.
 
 Should neither precedents nor apologies prevail	— with some critics, who think
 
@@ -567,7 +550,7 @@ He also apprehends, that it may not please a respectable portion of the professi
 >
 > He hopes with justice to maintain his cause.
 >
-> Though on him hurled Ernulphus's dread curse[^8],
+> Though on him hurled Ernulphus's dread curse[[See the dreadful curse or excommunication from the church of Rome by Ernulphus.]],
 >
 > If he's traduced or slandered, which is worse.
 >
@@ -578,8 +561,6 @@ He also apprehends, that it may not please a respectable portion of the professi
 > He'll not be neutral, but will speak his mind,
 >
 > Regardless if he friends or foes may find.
-
-[^8]: See the dreadful curse or excommunication from the church of Rome by Ernulphus.
 
 Notwithstanding which, he is, however, quite Willing to submit with deference to candid public opinion: yet
 
@@ -940,10 +921,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And now can well discriminate and show,
 >
-> That I the different styles of dancing know[^9].
-
-[^9]: It appeared requisite (particularly in the dramatic representation) that this lady should possess confidence, together with experience and abilities, as on her devolved the task of exposing the deceptive pretensions and impositions of various self-created and self-entitled "Professors of Dancing".
-
+> That I the different styles of dancing know[[It appeared requisite (particularly in the dramatic representation) that this lady should possess confidence, together with experience and abilities, as on her devolved the task of exposing the deceptive pretensions and impositions of various self-created and self-entitled "Professors of Dancing".]].
+>
 > Bel. Your knowledge of the art none can deny,
 >
 > On your good judgement I can well rely;
@@ -1030,14 +1009,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And pupils could impostors soon detect;
 >
-> When Bishop[^10] taught, and Slingsby[^11] graced the stage,
+> When Bishop[[Mister Bishop was one of the most celebrated English Dancing Masters: he taught the late Queen of France; also, most of the English nobility of that period, (1763 to 1803).]] taught, and Slingsby[[Mister Slingsby was a native of Ireland, and a dancer of uncommon merit, considering the difficulties he had to encounter was for several years first dancer at the Italian Opera House.]] graced the stage,
 >
 > And when less talent scarce would please the age,
-
-[^10]: Mister Bishop was one of the most celebrated English Dancing Masters: he taught the late Queen of France; also, most of the English nobility of that period, (1763 to 1803).
-
-[^11]: Mister Slingsby was a native of Ireland, and a dancer of uncommon merit, considering the difficulties he had to encounter was for several years first dancer at the Italian Opera House.
-
+>
 > Who vied with all the dancers then in France,
 >
 > And taught their pupils gracefully to dance;
@@ -1092,12 +1067,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > They all "Professors" write, and on the wall,
 >
-> They seem to vie with Vestris[^12] and with Paul[^13].
-
-[^12]: Vestris, the name of a celebrated family of French dancers, some of whom have been principals at the Italian Opera House for more than half a century; and mister Charles Vestris holds that situation at present, and is one of the best of modern dancers.
-
-[^13]: Paul, a French dancer of uncommon agility, and who, when this work was begun, was one of the first dancers at the Italian opera.The anther begs he may not have the credit for invention of the captivating phrases above quoted, as they are really taken from bills and advertisements of certain professors of dancing, many of which are in his possession.
-
+> They seem to vie with Vestris[[Vestris, the name of a celebrated family of French dancers, some of whom have been principals at the Italian Opera House for more than half a century; and mister Charles Vestris holds that situation at present, and is one of the best of modern dancers.]] and with Paul[[Paul, a French dancer of uncommon agility, and who, when this work was begun, was one of the first dancers at the Italian opera.The anther begs he may not have the credit for invention of the captivating phrases above quoted, as they are really taken from bills and advertisements of certain professors of dancing, many of which are in his possession.]].
+>
 > Try them, see their pupils dance, then proclaim
 >
 > Whether "Professor" does become their name.
@@ -1128,10 +1099,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And some, who on their talents can't depend,
 >
-> A picture[^14] of their room to shops they send,
-
-[^14]: A practise resorted to by a certain professor, who prefixes several initials to his name.
-
+> A picture[[A practise resorted to by a certain professor, who prefixes several initials to his name.]] of their room to shops they send,
+>
 > To hang in windows that they may be seen,
 >
 > Just like a grocer's nodding Mandarin;
@@ -1164,11 +1133,9 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > These proofs in plenty have occurred to me:
 >
-> Each teacher[^15] shows great talent by his bill,
+> Each teacher[[The author here only alludes to those advertising teachers, who are the subject of animadversion in this work.]] shows great talent by his bill,
 >
 > Just read it over, you'll wonder at his skill,
-
-[^15]: The author here only alludes to those advertising teachers, who are the subject of animadversion in this work.
 
 > There every dance is named, and they engage,
 >
@@ -1176,10 +1143,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > In a few lessons and at small expense,
 >
-> One guinea[^16] is all they ask us recompense.
-
-[^16]: The author possesses as the bills and advertisements of several professors of dancing, in which they profess to complete persons of any age in any department of dancing for one guinea.
-
+> One guinea[[The author possesses as the bills and advertisements of several professors of dancing, in which they profess to complete persons of any age in any department of dancing for one guinea.]] is all they ask us recompense.
+>
 > Bel. With these proposals they must all deceive,
 >
 > Who in their bills implicitly believe.
@@ -1256,12 +1221,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And others have to Calais only been.
 >
-> Others a letter from their names retrench[^17],
+> Others a letter from their names retrench[[An eminent dancing-master, a subscriber to this work, complained to the author, that one of these quack teachers, whose name he mentioned, had obtained from him some of his schools; this was accomplished by retrenching two letters of his name, which rendered it the same as that of an established teacher in the neighbourhood, and engaging to teach the school at a reduced price.]],
 >
 > Or add, or else transpose to make it French;
-
-[^17]: An eminent dancing-master, a subscriber to this work, complained to the author, that one of these quack teachers, whose name he mentioned, had obtained from him some of his schools; this was accomplished by retrenching two letters of his name, which rendered it the same as that of an established teacher in the neighbourhood, and engaging to teach the school at a reduced price.
-
+>
 > They shrug their shoulders, and cry "Sacre Dieu",
 >
 > But know no more of French than our Sue;
@@ -1290,12 +1253,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > He misapplied and wrong pronounced each word;
 >
-> With nasal twang[^18] I head this creature call,
+> With nasal twang[[It has lately been a common practice amongst the teachers of dancing alluded to in this work, to endeavour to pass themselves off as foreigners by imitating their manner, and endeavouring to speak in a broken French accent.]] I head this creature call,
 >
 > The quadrille figures at his last grand ball,
-
-[^18]: It has lately been a common practice amongst the teachers of dancing alluded to in this work, to endeavour to pass themselves off as foreigners by imitating their manner, and endeavouring to speak in a broken French accent.
-
+>
 > "It was neither French nor English that I heard.
 >
 > But jargon quite nonsensically absurd,
@@ -1316,13 +1277,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > From servants, tinkers, pastry cooks, and bakers;
 >
-> And some, I am told, were lately undertakers[^19];
-
-[^19]:
-	There are now persons calling themselves "professors," who were but a little time ago following the above named trades and occupations, and some even now continue the same occasionally.
-
-	It is not meant to be insinuated, that every person has not an undoubted right to practice and get a living by any particular profession (provided it be done without taking any unfair means to supplant others). How far the conduct of the parties above alluded to has been fair and correct must be left to the judgment of those who are certainly most competent to decide, videlicet the scientific part of the profession. On the subject of the author's own case, he begs leave here to observe, that he was bred to a mechanical business, which, before the expiration of his at apprenticeship, he was compelled (with others) to relinquish, (that trade being entirely ruined through certain financial speculations of mister Pitt). Having some taste for dancing, as an amusement, he determined to endeavour to qualify himself so as to follow it, as a profession, and which was only effected after long and unremitting exertions, such as few individuals would encounter. With the particulars he may perhaps at some future period trouble the public, not fearing that, like some of his contemporaries, he can with anecdotes, digressions, quotations, &c. &c. fill two quarto volumes.
-
+> And some, I am told, were lately undertakers[[There are now persons calling themselves "professors," who were but a little time ago following the above named trades and occupations, and some even now continue the same occasionally. It is not meant to be insinuated, that every person has not an undoubted right to practice and get a living by any particular profession (provided it be done without taking any unfair means to supplant others). How far the conduct of the parties above alluded to has been fair and correct must be left to the judgment of those who are certainly most competent to decide, videlicet the scientific part of the profession. On the subject of the author's own case, he begs leave here to observe, that he was bred to a mechanical business, which, before the expiration of his at apprenticeship, he was compelled (with others) to relinquish, (that trade being entirely ruined through certain financial speculations of mister Pitt). Having some taste for dancing, as an amusement, he determined to endeavour to qualify himself so as to follow it, as a profession, and which was only effected after long and unremitting exertions, such as few individuals would encounter. With the particulars he may perhaps at some future period trouble the public, not fearing that, like some of his contemporaries, he can with anecdotes, digressions, quotations, &c. &c. fill two quarto volumes.]];
+>
 > They are all at once great adepts in the art,
 >
 > And promise rare instructions to impart;
@@ -1379,10 +1335,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > At present will confine myself to give
 >
-> You some idea how these quack teachers[^20] live,
-
-[^20]: The terms "quack teachers" and "great professors", are not intended to be applied in derision to the profession indiscriminately, but only to characters of the particular description alluded to in the course of the work.
-
+> You some idea how these quack teachers[[The terms "quack teachers" and "great professors", are not intended to be applied in derision to the profession indiscriminately, but only to characters of the particular description alluded to in the course of the work.]] live,
+>
 > How great professors pupils do obtain,
 >
 > And how they oft instructions from them gain;
@@ -1391,14 +1345,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And who, with them, have any dancing brought,
 >
-> From such they learn; what they never knew before[^21],
+> From such they learn; what they never knew before[[It is a common practice with these teachers to endeavour to obtain from pupils who have been with other masters, a knowledge of dances with which they were before unacquainted, except by name, though constantly advertised in their bills, and sometimes as their own invention.]],
 >
 > Although they've advertised it over and over.
-
-[^21]: It is a common practice with these teachers to endeavour to obtain from pupils who have been with other masters, a knowledge of dances with which they were before unacquainted, except by name, though constantly advertised in their bills, and sometimes as their own invention.
-
-[^22]: It was formerly the pride of every dancing-master to be thought a gentleman, but that age, like the age of chivalry, is gone! for, several modern professors delight in being considered familiar with the lowest occupations; and one has had his full length figure as a dustman placed conspicuously in his ball-room, and has distributed a metal portrait of himself as "the original dustman!" Others have stepped aside from the usual path, to imitate so enviable an example. What would the Noverres, the Gallinis, the Bishops, and the Slingsbys, have said to this?
-
+>
 > If pupils badly dance, or from neglect,
 >
 > Or want of genius, or can't recollect
@@ -1415,7 +1365,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Or prices, which all pockets do not suit.
 >
-> One prides himself on what you'd scarce suppose,
+> One prides himself on what you'd scarce suppose[[It was formerly the pride of every dancing-master to be thought a gentleman, but that age, like the age of chivalry, is gone! for, several modern professors delight in being considered familiar with the lowest occupations; and one has had his full length figure as a dustman placed conspicuously in his ball-room, and has distributed a metal portrait of himself as "the original dustman!" Others have stepped aside from the usual path, to imitate so enviable an example. What would the Noverres, the Gallinis, the Bishops, and the Slingsbys, have said to this?]],
 >
 > That he the manners of a dustman knows;
 >
@@ -1511,22 +1461,18 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The following puff, designed to catch the eye.
 >
-> "Quadrilles[^22] by him are in six lessons taught",
+> "Quadrilles[[If this professor does not actually proclaim _"murder and fire"_ to excite public attention to his bill. yet he endeavours to attract notice by an apparently advantageous proposition to learners, of _"quadrilles taught in six lessons,"_ printed in very large striking characters, whilst the real meaning is only to be found in type, which he hopes is small enough to escape the passing eye. Though this stratagem has been so hackneyed by lottery office keepers and unfair traders, yet several persons who had not read the bill attentively, have been misled. The author of this work has been called on to fulfill similar engagements by parties who have cited the placards above alluded to.]] by him are in six lessons taught",
 >
 > With this he hopes the public will be caught.
-
-[^22]: If this professor does not actually proclaim "murder and fire" to excite public attention to his bill. yet he endeavours to attract notice by an apparently advantageous proposition to learners, of "quadrilles taught in six lessons," printed in very large striking characters, whilst the real meaning is only to be found in type, which he hopes is small enough to escape the passing eye. Though this stratagem has been so hackneyed by lottery office keepers and unfair traders, yet several persons who had not read the bill attentively, have been misled. The author of this work has been called on to fulfill similar engagements by parties who have cited the placards above alluded to.
-
+>
 > But, note his hill, you in small type will find,
 >
 > He has a saving clause, secure behind,
 >
-> Like haberdashers, who write up "as Todds[^23]",
+> Like haberdashers, who write up "as Todds[[Todd is the name of a celebrated haberdasher.]]",
 >
 > Where the conjunction "as" makes all the odds:
-
-[^23]: Todd is the name of a celebrated haberdasher.
-
+>
 > His bill not only this device displays,
 >
 > But to its author gives the greatest praise.
@@ -1543,12 +1489,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The public will both time and money save.
 >
-> Another[^24] "secret graces can impart",
+> Another[[The above lines are nearly a literal copy of the professor's advertisement which frequently appeared in the daily papers, and must be in the recollection of every teacher of dancing.]] "secret graces can impart",
 >
 > "That few or none can analyse his art";
-
-[^24]: The above lines are nearly a literal copy of the professor's advertisement which frequently appeared in the daily papers, and must be in the recollection of every teacher of dancing.
-
+>
 > "How its created, common teachers are"
 >
 > "Quite ignorant"; – thus runs his bill of fare.
@@ -1559,10 +1503,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > By opening wide the windows where they sit,
 >
-> Scraping aloud some fiddle, bass, or kit[^25],
-
-[^25]: These, and several other practices of a similar kind, are actually adopted by the teachers here alluded to, for be purpose of attracting attention and acquiring notoriety.
-
+> Scraping aloud some fiddle, bass, or kit[[These, and several other practices of a similar kind, are actually adopted by the teachers here alluded to, for be purpose of attracting attention and acquiring notoriety.]],
+>
 > Just to collect a crowd about the door,
 >
 > To gape up at the first or second floor;
@@ -1601,12 +1543,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > In hopes of fame or popularity.
 >
-> Another thinks that Royalty[^26] has charms,
+> Another thinks that Royalty[[On the Surrey side of Blackfriar's bridge, a certain professor exhibits the Royal arms, painted in a very conspicuous manner between his parlour windows, and with the inscription, "under Royal patronage".]] has charms,
 >
 > And on his shutters paints the Royal Arms;
-
-[^26]: On the Surrey side of Blackfriar's bridge, a certain professor exhibits the Royal arms, painted in a very conspicuous manner between his parlour windows, and with the inscription, "under Royal patronage".
-
+>
 > But e'er to see the Royal Guest dance there,
 >
 > Credulity itself would even despair.
@@ -1627,12 +1567,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Through mud and water in his dancing pumps.
 >
-> Bel. And yet, perhaps, that lady[^27] who of late,
+> Bel. And yet, perhaps, that lady[[The Prs. of C. in whose cause a patriotic M, P. eloquently but ineffectually spoke in the H. of C. and emphatically introduced the classical quotation: "Flectere si nequeo superos. Acheronta movebo". Her highness resides in the professor's neighbourhood, but cannot be seriously presumed to have granted the licence.]] who of late,
 >
 > Has claimed the honour of the Royal state,
-
-[^27]: The Prs. of C. in whose cause a patriotic M, P. eloquently but ineffectually spoke in the H. of C. and emphatically introduced the classical quotation: "Flectere si nequeo superos. Acheronta movebo". Her highness resides in the professor's neighbourhood, but cannot be seriously presumed to have granted the licence.
-
+>
 > (For whom some people Acheron would move
 >
 > If they should fail to bend the Gods above),
@@ -1649,10 +1587,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The same professor says, (though I've not seen),
 >
-> He has invented a rare new machine[^28],
-
-[^28]: This professor (resolving not to be outdone in invention, by any of his competitors) has positively asserted to several persons that he has invented a machine to teach waltzing without the aid of a master.
-
+> He has invented a rare new machine[[This professor (resolving not to be outdone in invention, by any of his competitors) has positively asserted to several persons that he has invented a machine to teach waltzing without the aid of a master.]],
+>
 > To teach the waltz without a master's aid,
 >
 > And with it he has several waltzes made.
@@ -1681,10 +1617,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > None less than Nelson's his great mind supplies.
 >
-> "Palmam[^29] qui meruit ferat", he cries.
-
-[^29]: Another great professor on the Surrey side of Blackfriar's bridge, put out large bills, with this motto: "Palmam qui meruit ferat" — those who knew his real off the Palm. Finding his claims unrewarded, he took another mode of attracting notoriety. by hoisting from his windows flags, inscribed with his name, profession, &c. but here again he was soon obliged to strike his colours.
-
+> "Palmam[[Another great professor on the Surrey side of Blackfriar's bridge, put out large bills, with this motto: "Palmam qui meruit ferat" — those who knew his real off the Palm. Finding his claims unrewarded, he took another mode of attracting notoriety. by hoisting from his windows flags, inscribed with his name, profession, &c. but here again he was soon obliged to strike his colours.]] qui meruit ferat", he cries.
+>
 > Bel. This really is what mottoes ought to be.
 >
 > Jem. Yet, with this motto, he didn't long agree,
@@ -1707,10 +1641,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Others, quack doctors like, aspire to fame,
 >
-> And give their portrait[^30] to preserve their name
-
-[^30]: One self-entitled "professor," closely imitates the celebrated quack doctors, Solomon and Brodum and has, indeed, improved on their plan; his portrait is not only prefixed to his book, but exhibited in shop windows separately for sale.
-
+> And give their portrait[[One self-entitled "professor," closely imitates the celebrated quack doctors, Solomon and Brodum and has, indeed, improved on their plan; his portrait is not only prefixed to his book, but exhibited in shop windows separately for sale.]] to preserve their name
+>
 > They all are gentlemen, at least if they
 >
 > Tell true, and you'll believe in what they say.
@@ -1729,12 +1661,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > On able teachers merits build their fame
 >
-> From skilful teachers[^31], pupils they engage,
+> From skilful teachers[[Some of these teachers (conscious of their own inability) engage qualified pupils, belonging to able masters, to open their balls, whom they advertise as their own pupils.]], pupils they engage,
 >
 > Their balls to open, or upon the stage
-
-[^31]: Some of these teachers (conscious of their own inability) engage qualified pupils, belonging to able masters, to open their balls, whom they advertise as their own pupils.
-
+>
 > To dance; but their real master's merits they disown,
 >
 > And advertise those pupils as their own.
@@ -1747,12 +1677,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And know some teachers, who have thus been served.
 >
-> The royal arms[^32] now most professors sport,
+> The royal arms[[To affix the king's arms to their bills is now a common practice with professors of dancing; even with those who, it may be presumed, cannot have the least claim or pretence to royal patronage.]] now most professors sport,
 >
 > As if they taught the monarch and the court,
-
-[^32]: To affix the king's arms to their bills is now a common practice with professors of dancing; even with those who, it may be presumed, cannot have the least claim or pretence to royal patronage.
-
+>
 > In hopes the reader will from this presage,
 >
 > That they enjoy the royal patronage;
@@ -1855,12 +1783,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Upon inquiring strangers often play:
 >
-> They purchase worn-out shoes[^33] of every kind,
+> They purchase worn-out shoes[[The author who was once noticing the great number of old shoes on a bench in a room of a pompons advertising teacher of dancing, was informed by the proprietor, that he had purchased a lot of them, as well as saved all those left by his pupils; and he referred to this collection as being a part only belonging to the numerous parties he taught (whenever inquiries were made as to the number of his pupils).]] of every kind,
 >
 > And save all those their pupils leave behind,
-
-[^33]: The author who was once noticing the great number of old shoes on a bench in a room of a pompons advertising teacher of dancing, was informed by the proprietor, that he had purchased a lot of them, as well as saved all those left by his pupils; and he referred to this collection as being a part only belonging to the numerous parties he taught (whenever inquiries were made as to the number of his pupils).
-
+>
 > Put them in heaps; or place them in a row,
 >
 > Though old and torn, they serve to make a show
@@ -1897,10 +1823,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > They follow close, but dare not one step-advance;
 >
-> They send forth works on dancing[^34] stole from those
-
-[^34]: The author considers he has himself some right to complain of this practice, having found that most of his works on dancing have been plundered very unmercifully by some of these great professors, who, as servile copyists, endeavour to become author, thinking to derive advantage, as well as popularity, by unfairly availing themselves of the labours of others.
-
+> They send forth works on dancing[[The author considers he has himself some right to complain of this practice, having found that most of his works on dancing have been plundered very unmercifully by some of these great professors, who, as servile copyists, endeavour to become author, thinking to derive advantage, as well as popularity, by unfairly availing themselves of the labours of others.]] stole from those
+>
 > They imitate, and strenuously oppose;
 >
 > To hide their thefts, they change the form and style
@@ -1987,18 +1911,14 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > They oft before them several initials place,
 >
-> As G. M. S. and R. M. D.[^35]; likewise
+> As G. M. S. and R. M. D.[[G. M. S. and R. M. D. See their bills and placards. Some of these piratical authors not content with quietly stealing the essence out of other works, by which they might sometimes avoid detection, seem to resemble cats, who are often detected by the noise they make over their ill-gotten prey.]]; likewise
 >
 > Three notes of admiration meet your eyes,
-
-[^35]: G. M. S. and R. M. D. See their bills and placards. Some of these piratical authors not content with quietly stealing the essence out of other works, by which they might sometimes avoid detection, seem to resemble cats, who are often detected by the noise they make over their ill-gotten prey.
-
-> Just like a Spanish prince[^36], of whom I've heard,
+>
+> Just like a Spanish prince[[This was really the case with a Spanish prince, who actually had fifty-two real and assumed names.These professors give their own names not only to particular dances, but to steps, tunes, &c.]], of whom I've heard,
 >
 > Who had fifty names most pompous and absurd;
-
-[^36]: This was really the case with a Spanish prince, who actually had fifty-two real and assumed names.These professors give their own names not only to particular dances, but to steps, tunes, &c.
-
+>
 > Their egotism is visible to all,
 >
 > For every thing by their own names they call,
@@ -2033,12 +1953,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And advertise in order to obtain,
 >
-> Apprentices[^37], with premiums, and engage
+> Apprentices[[This project has been very successfully tried by some of those advertisers, as many parents have found out to their cost, who, after having paid considerable sums of money by way of premiums, find their childrens' time has been lost, and that to qualify them for the pro fession, they must be put under other masters.]], with premiums, and engage
 >
 > To qualify them for the ball or stage;
-
-[^37]: This project has been very successfully tried by some of those advertisers, as many parents have found out to their cost, who, after having paid considerable sums of money by way of premiums, find their childrens' time has been lost, and that to qualify them for the pro fession, they must be put under other masters.
-
+>
 > Though they've no talent to fulfil the task
 >
 > They undertake, yet they great premiums ask;
@@ -2047,22 +1965,18 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The master's objects, to obtain the pelf;
 >
-> Should any dance be advertised that's known[^38]
+> Should any dance be advertised that's known[[Any person may ascertain the truth of this observation. No sooner does any dance appear (whoever may be the inventor) than it is advertised as correctly taught by a host of these pretenders, although known to them only by name.]]
 >
 > To the inventor, and to him alone,
-
-[^38]: Any person may ascertain the truth of this observation. No sooner does any dance appear (whoever may be the inventor) than it is advertised as correctly taught by a host of these pretenders, although known to them only by name.
-
+>
 > Teachers, like these, no sooner hear the name,
 >
 > But they will advertise to teach the same.
 >
 > They say, it will show they have professional skill,
 >
-> And make a leading feature in their bill[^39];
-
-[^39]: These great professors, like many strolling players, are more careful in making out a bill of fare, than of performing its contents.
-
+> And make a leading feature in their bill[[These great professors, like many strolling players, are more careful in making out a bill of fare, than of performing its contents.]];
+>
 > Should you to them to learn these dances go,
 >
 > Or others advertised, which they don't know,
@@ -2135,10 +2049,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > This great professor lately at a fair,
 >
-> Was dancing at a booth[^40] (no matter where)
-
-[^40]: This alludes to one of those sapient teachers, who writes "professor" on his door, who only a short time ago went to amuse himself at one of the dancing booths at Peckhamfair, where, forgetting that title new profession imposed on him the manners of a gentleman, he rudely insulted a lady, while at tea. She remonstrated with him on the impropriety of his conduct, as did the master of the booth, who, finding remonstrance only produced increased arrogance, became so enraged, that he was obliged to give the professor himself a lesson, not composed of graceful minuet steps, but of certain, violent, straight forward, kicking movements, which compelled him sore against his will, to make an ill-timed hasty chassee towards the door and thence suddenly a disgraceful exit, amongst the crowd, to the no small entertainment of the company and fiddlers at the ball, by many of whom he was well known. This anecdote was related to the author by an eye-witness to this transaction.
-
+> Was dancing at a booth[[This alludes to one of those sapient teachers, who writes "professor" on his door, who only a short time ago went to amuse himself at one of the dancing booths at Peckhamfair, where, forgetting that title new profession imposed on him the manners of a gentleman, he rudely insulted a lady, while at tea. She remonstrated with him on the impropriety of his conduct, as did the master of the booth, who, finding remonstrance only produced increased arrogance, became so enraged, that he was obliged to give the professor himself a lesson, not composed of graceful minuet steps, but of certain, violent, straight forward, kicking movements, which compelled him sore against his will, to make an ill-timed hasty chassee towards the door and thence suddenly a disgraceful exit, amongst the crowd, to the no small entertainment of the company and fiddlers at the ball, by many of whom he was well known. This anecdote was related to the author by an eye-witness to this transaction.]] (no matter where)
+>
 > When he forgetting etiquette and grace,
 >
 > Was by the master kicked from out the place;
@@ -2197,20 +2109,16 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > A great professor is easy made, you'd own,
 >
-> For he's one made by impudence alone[^41].
-
-[^41]: One of these sapient teachers once put forth a pompous advertisement, in which he proposed to give instruction to professors, amateurs, and others, in any department of dancing; and particularly all the most fashionable departments, including a new species invented by the author of this (work, and which he hopes he shall not incur the charge of egotism in observing, was then known only to himself and pupils, his system of dancing not being then published.) This induced two of his apprentices, just out of their time, to call on this great professor, in order to ascertain how it was possible for him to teach a dance known to him only by name. The professor. without hesitation, undertook to qualify them, and received money of them for that purpose, when an unlucky accident occurred which deprived them of the pleasure of seeing how he would have fulfilled his engagements, for on going into the practice room where they were invited, it being either a practice or ball-night, they were both known by one of the company; it was soon whispered round, who they were? The professor became alarmed and confused, and begged them to take back their money, as he heard they were teachers. This they refused, and called on him to fulfil what he had undertaken, repeating the words of his advertisement: "Professors, amateurs, &c. instructed". This, however, had no effect on the professor, who could not be prevailed on to impart his knowledge; and what he was able to teach to other professors has never yet been known.
-
+> For he's one made by impudence alone[[One of these sapient teachers once put forth a pompous advertisement, in which he proposed to give instruction to professors, amateurs, and others, in any department of dancing; and particularly all the most fashionable departments, including a new species invented by the author of this (work, and which he hopes he shall not incur the charge of egotism in observing, was then known only to himself and pupils, his system of dancing not being then published.) This induced two of his apprentices, just out of their time, to call on this great professor, in order to ascertain how it was possible for him to teach a dance known to him only by name. The professor. without hesitation, undertook to qualify them, and received money of them for that purpose, when an unlucky accident occurred which deprived them of the pleasure of seeing how he would have fulfilled his engagements, for on going into the practice room where they were invited, it being either a practice or ball-night, they were both known by one of the company; it was soon whispered round, who they were? The professor became alarmed and confused, and begged them to take back their money, as he heard they were teachers. This they refused, and called on him to fulfil what he had undertaken, repeating the words of his advertisement: "Professors, amateurs, &c. instructed". This, however, had no effect on the professor, who could not be prevailed on to impart his knowledge; and what he was able to teach to other professors has never yet been known.]].
+>
 > Bel. What sort of people go to this strange clown?
 >
 > They must be fools, and strangers to the town;
 >
-> Like the good neighbours in Ben Jonson's play[^42],
+> Like the good neighbours in Ben Jonson's play[[The alchemist.]],
 >
 > They scarce know what they hear, or see, or say.
-
-[^42]: The alchemist.
-
+>
 > Jem. There's some of each no doubt with others blended,
 >
 > Who are grown too old in folly to be mended;
@@ -2283,12 +2191,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > But they are puffers of the self same kind;
 >
-> Their terms[^43] are low – a week some say is all
+> Their terms[[It has long been the practice of certain professors to engage to complete persons of any age, in any department of dancing in six lessons; but others have lately considerably improved, even upon this concise system, and undertake to teach, in a week's time, and in three lessons.]] are low – a week some say is all
 >
 > You need attend, to fit yon for a ball.
-
-[^43]: It has long been the practice of certain professors to engage to complete persons of any age, in any department of dancing in six lessons; but others have lately considerably improved, even upon this concise system, and undertake to teach, in a week's time, and in three lessons.
-
+>
 > Others more bold, who, "in three lessons" say
 >
 > They'll make a novice dance and grace display,
@@ -2321,12 +2227,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Before you could a graceful dancer make;
 >
-> To sooth your fears these teachers will foretell[^44],
+> To sooth your fears these teachers will foretell[[The teachers here alluded to, not only promise to compleat the pupil, old or young, whoever they may be, in any department of dancing, for one guinea, but have likewise the sagacity to be able to tell, to a lesson, when pupils will dance well. This seldom, or never exceeds half a dozen lessons.]],
 >
 > (Even to a minute) when you shall dance well;
-
-[^44]: The teachers here alluded to, not only promise to compleat the pupil, old or young, whoever they may be, in any department of dancing, for one guinea, but have likewise the sagacity to be able to tell, to a lesson, when pupils will dance well. This seldom, or never exceeds half a dozen lessons.
-
+>
 > They name what lessons pupils ought to take,
 >
 > Engage that number will good dancers make;
@@ -2379,12 +2283,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > That in the end they have bought cheap dancing dear.
 >
-> Bel. Surely completion[^45] means when you well know,
+> Bel. Surely completion[[The author is of opinion, with Belinda, on the subject o f completion, and in his engagements with his pupils, generally allows a year for that purpose, (if necessary,) never yet having had the good fortune to meet with such apt pupils as could acquire perfection in six lessons.]] means when you well know,
 >
 > The dance you're learning, and can plainly show,
-
-[^45]: The author is of opinion, with Belinda, on the subject o f completion, and in his engagements with his pupils, generally allows a year for that purpose, (if necessary,) never yet having had the good fortune to meet with such apt pupils as could acquire perfection in six lessons.
-
+>
 > That you the steps and figures well combine;
 >
 > Can execute and show the whole design;
@@ -2433,10 +2335,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Jem. To fill their rooms and make a specious show.
 >
-> They tickets send to all the girls they know[^46];
-
-[^46]: These professors of dancing in order to fill their rooms, and make a specious show of business, frequently issue out a number of invitation tickets undated and unlimited, as to the number of persons to be admitted, to be filled up for any number required by the person who received them from the professor; they are generally directed to be given to ladies for reasons above mentioned.
-
+> They tickets send to all the girls they know[[These professors of dancing in order to fill their rooms, and make a specious show of business, frequently issue out a number of invitation tickets undated and unlimited, as to the number of persons to be admitted, to be filled up for any number required by the person who received them from the professor; they are generally directed to be given to ladies for reasons above mentioned.]];
+>
 > Which will admit as many ladies more,
 >
 > As choose to come, should it be half a score!
@@ -2545,10 +2445,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > To pass for masters who've acquired some fame,
 >
-> They often change[^47], and so transpose their name;
-
-[^47]: Of these practices, several eminent teachers have complained to the author, who is in possession of several instances where this expedient has been resorted to, to the injury of able masters, as already mentioned in page 10.
-
+> They often change[[Of these practices, several eminent teachers have complained to the author, who is in possession of several instances where this expedient has been resorted to, to the injury of able masters, as already mentioned in page 10.]], and so transpose their name;
+>
 > To point on it who they are by their address,
 >
 > Some secret magic power you must possess;
@@ -2679,12 +2577,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > In hopes to gain a casual glass of wine;
 >
-> Hang up some old cocked hat[^48], or so, that they
+> Hang up some old cocked hat[[This was actually the case with one of these teachers of dancing who used to hang up an old cocked hat, in a conspicous part of the room, and whoever took it off the nail was obliged to pay the forfeit of a bottle of wine, which the teacher took care to inforce for the sake of partaking of it. If complaint was ever made of the want era proper notice, he used to refer to one placed purposely in an obscure part of the room, which none could find without a guide.]], or so, that they
 >
 > May make the wearer for a bottle pay;
-
-[^48]: This was actually the case with one of these teachers of dancing who used to hang up an old cocked hat, in a conspicous part of the room, and whoever took it off the nail was obliged to pay the forfeit of a bottle of wine, which the teacher took care to inforce for the sake of partaking of it. If complaint was ever made of the want era proper notice, he used to refer to one placed purposely in an obscure part of the room, which none could find without a guide.
-
+>
 > Establish fines, but place the cautions where
 >
 > They can't be seen, to catch you in a snare.
@@ -2699,10 +2595,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Jem. One, showman like, with challenges abounds,
 >
-> "Will dance a hornpipe for a hundred pounds[^49]",
-
-[^49]: The professor's bill contains the following challenge: "Mister T– will, by particular desire, dance his celebrated hornpipe, and is ready to dance the same against any other man in the profession for one hundred guineas". The author fears that in adhering to his uniform practice of withholding the parties name, he shall disoblige this professor, whose great object appears to be notoriety; but should it be requisite will, in a future edition, give all the publicity in his power to the name and pretensions of this redoubtable challenger.
-
+> "Will dance a hornpipe for a hundred pounds[[The professor's bill contains the following challenge: "Mister T– will, by particular desire, dance his celebrated hornpipe, and is ready to dance the same against any other man in the profession for one hundred guineas". The author fears that in adhering to his uniform practice of withholding the parties name, he shall disoblige this professor, whose great object appears to be notoriety; but should it be requisite will, in a future edition, give all the publicity in his power to the name and pretensions of this redoubtable challenger.]]",
+>
 > With any one who dare contest his skill.
 >
 > Bel. I have read professor's challenge in his bill.
@@ -2747,12 +2641,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > "That he is not a dancer at a fair";
 >
-> Fifty professors[^50] he invokes to see
+> Fifty professors[[The professor "hopes to count fifty or sixty professors of dancing in the front of the house." See his bill, in which he states, "a further bill, three yards long, would be requisite to describe all particulars".]] he invokes to see
 >
 > His matchless prowess and great ability.
-
-[^50]: The professor "hopes to count fifty or sixty professors of dancing in the front of the house." See his bill, in which he states, "a further bill, three yards long, would be requisite to describe all particulars".
-
+>
 > To show the town they'll have a monstrous treat,
 >
 > "His bill of fare's to measure full nine feet".
@@ -2777,12 +2669,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Shameless buffoons you see at penny shows;
 >
-> To those who read, this may, like Turner's[^51] blacking,
+> To those who read, this may, like Turner's[[Turner, the blacking-maker, in order to show the superior qualify of his blacking, has introduced into his bills, prints, representing a man's having himself by a well shined boot, instead of a dressing-glass, and a cat alarmed at the reflection of her own image in another boot of brilliant polish.]] blacking,
 >
 > Reflect professor's face, and cure his cracking.
-
-[^51]: Turner, the blacking-maker, in order to show the superior qualify of his blacking, has introduced into his bills, prints, representing a man's having himself by a well shined boot, instead of a dressing-glass, and a cat alarmed at the reflection of her own image in another boot of brilliant polish.
-
+>
 > Another dancing anecdote I've heard,
 >
 > Which, although true, is equally absurd;
@@ -2827,12 +2717,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And by what means in his own trap was caught,
 >
-> It was by a tyro[^52], who, by chance went there,
+> It was by a tyro[[The above circumstance is stated on the authority of the pupil himself, from whom the author has received a long letter on the subject, with liberty to communicate the party's names and all particulars of the transaction.]], who, by chance went there,
 >
 > Attracted by professor's bill of fare,
-
-[^52]: The above circumstance is stated on the authority of the pupil himself, from whom the author has received a long letter on the subject, with liberty to communicate the party's names and all particulars of the transaction.
-
+>
 > Who told professor, heed some lessons had;
 >
 > But really feared that he danced very bad.
@@ -2923,10 +2811,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > You'd really think, (I've heard his pupils say),
 >
-> He was the Billy Waters[^53] of the day.
-
-[^53]: Billy Waters was a notorious street fiddler, who used to wear a feather in his hat, and dance to his own fiddling.
-
+> He was the Billy Waters[[Billy Waters was a notorious street fiddler, who used to wear a feather in his hat, and dance to his own fiddling.]] of the day.
+>
 > Bel. I am told his manners and his customs are,
 >
 > Such as few gentlemen would chase to share;
@@ -2959,10 +2845,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > That he from Smithfield had his manners brought,
 >
-> Was by the flying pieman[^54] gambling taught.
-
-[^54]: The flying pie-man was a well known character, who used to go about With his pies, crying "hot! hot! hot!" and generally disposed of them by tossing with his customers.
-
+> Was by the flying pieman[[The flying pie-man was a well known character, who used to go about With his pies, crying "hot! hot! hot!" and generally disposed of them by tossing with his customers.]] gambling taught.
+>
 > Bel. Say. what they will, he has this consolation,
 >
 > He yet may fill some low and grovelling station;
@@ -2993,14 +2877,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The conflagration came through gluttony;
 >
-> Nor let the monument[^55] their peace destroy,
+> Nor let the monument[[It is hoped the citizens of London have now too much liberality to suffer their social comforts to be disturbed by the disgraceful inscription on the monument, attributing the burning of the city, in 1668, to the Roman Catholics. &c. &c.]] their peace destroy,
 >
-> Nor take their cautions from the "Naked Boy[^56]",
-
-[^55]: It is hoped the citizens of London have now too much liberality to suffer their social comforts to be disturbed by the disgraceful inscription on the monument, attributing the burning of the city, in 1668, to the Roman Catholics. &c. &c.
-
-[^56]: The figure of a naked boy was for many years placed outside a public house ("The Fortune of War"), in Giltspur-street, formerly Pie Corner, with an inscription, describing the extent, northward, of the fire of London, and attributing it to the sin of gluttony; this image was taken down some time ago by the late landlord, but has since been restored by desire of the corporation. It now, however, stands without the inscription, that being, perhaps, considered too severe a reflection on the civic propensity to good eating.
-
+> Nor take their cautions from the "Naked Boy[[The figure of a naked boy was for many years placed outside a public house ("The Fortune of War"), in Giltspur-street, formerly Pie Corner, with an inscription, describing the extent, northward, of the fire of London, and attributing it to the sin of gluttony; this image was taken down some time ago by the late landlord, but has since been restored by desire of the corporation. It now, however, stands without the inscription, that being, perhaps, considered too severe a reflection on the civic propensity to good eating.]]",
+>
 > Have struck out gluttony from civic sins,
 >
 > And rather praise than punish greasy chins;
@@ -3019,35 +2899,39 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > That's worshipped now eastward of Temple Bar;
 >
-> From this he augured that a specious bill[^57],
+> From this he augured that a specious bill[[
+	A ball-bill has recently been put forth by the professor alluded to, (who has been before noticed), printed in a particular manner. The words "Supper, Gratis," very large. The following extract will show how ingeniously it is contrived for the purposes of deception. 
+	
+	### City of London tavern. 
+	### Mister ---'s ball, February, 1824. 
+	
+	The splendor will surpass any thing of the kind ever witnessed. 
+	
+	The band will consist of violins, flutes, clarionets, serpents, violincellos, double bass's, &c. but neither 
+	
+	### six harps, 
+	
+	nor
+
+	### two bands. 
+	
+	### _Supper_ will be provided. 
+	
+	Order of the dancing will be given 
+	
+	### gratis.
+]],
 >
 > Saying, "Supper, Gratis", might his ball-room fill.
-
-[^57]:
-	A ball-bill has recently been put forth by the professor alluded to, (who has been before noticed), printed in a particular manner. The words "Supper, Gratis," very large. The following extract will show how ingeniously it is contrived for the purposes of deception.
-
-	### City of London tavern.
-
-	### Mister ---'s ball,
-
-	### February, 1824.
-
-	### The splendor will surpass any thing of the kind ever witnessed.
-
-	### The band will consist of violins, flutes, clarionets, serpents, violincellos, double bass's, &c. but neither six harps, nor two bands.
-
-	### Supper will be provided. Order of the dancing will be given gratis.
-
+>
 > So he puts out a pompous bill of fare,
 >
 > Contrived in hopes the public to ensnare;
 >
 > The interlines in type of smallest size,
 >
-> "A Pearl", or "Diamond"[^58], these blind lines supplies
-
-[^58]: Pearl and Diamond are printers' technical names for very small, neat type.
-
+> "A Pearl", or "Diamond"[[Pearl and Diamond are printers' technical names for very small, neat type.]], these blind lines supplies
+>
 > His large lines were in type which you might read,
 >
 > On foot or horseback at the swiftest speed;
@@ -3098,10 +2982,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Jem. One great professor gives the town a treat,
 >
-> In what he calls "a grand and annual fête[^59]";
-
-[^59]: One sapient professor, who would be thought, a dealer in novelty, gave, what he Called a grand fête;" but either mistaking the meaning of the term, or wholly disregarding propriety the grand fête turned out to be nothing more than an every day ball.
-
+> In what he calls "a grand and annual fête[[[[One sapient professor, who would be thought, a dealer in novelty, gave, what he Called a grand fête;" but either mistaking the meaning of the term, or wholly disregarding propriety the grand fête turned out to be nothing more than an every day ball.]]";
+> 
 > He thinks the title frenchified and grand,
 >
 > That fools will praise what they don't understand,
@@ -3116,10 +2998,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Like some professors who, to make a bounce,
 >
-> Instead of ball[^60], a carnival announce.
-
-[^60]: One modest professor, put out a pompous bill, announcing "A grand carnival", with all its various entertainments; but it turned out to be nothing more than a common hop; and the professor, as soon as he had taken the money at the door, decamped rather abruptly, leaving the proprietors of the room, the musicians, and the company to settle matters among themselves, and remember to their cost the grand carnival.
-
+> Instead of ball[[One modest professor, put out a pompous bill, announcing "A grand carnival", with all its various entertainments; but it turned out to be nothing more than a common hop; and the professor, as soon as he had taken the money at the door, decamped rather abruptly, leaving the proprietors of the room, the musicians, and the company to settle matters among themselves, and remember to their cost the grand carnival.]], a carnival announce.
+>
 > Their carnival like our professor's treat,
 >
 > Proves just the same in substance, a grand cheat.
@@ -3128,12 +3008,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > At this grand fête was only seven years old.
 >
-> Bel. A child[^61], of seven years old, that's very strange!
+> Bel. A child[[A child of only seven years of age was actually appointed a master of the ceremonies, at this grand fête. Here is novelty with a vengeance?]], of seven years old, that's very strange!
 >
 > A child appointed dancing to arrange!
-
-[^61]: A child of only seven years of age was actually appointed a master of the ceremonies, at this grand fête. Here is novelty with a vengeance?
-
+>
 > I have heard of lord's and bishops of that age,
 >
 > But not directors for the ball or stage;
@@ -3164,18 +3042,14 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > If they tell true, whatever he may say,
 >
-> Professor's quite an Eady[^62] in his way,
-
-[^62]: Eady, the most notorious quack doctor of the present
-
+> Professor's quite an Eady[[Eady, the most notorious quack doctor of the present]] in his way,
+>
 > And of the quacks the greatest of the day.
 >
-> Jem. Another teacher[^63] who for years I've known,
+> Jem. Another teacher[[The teacher alluded to, by resorting to the tricks of a juggler, has indeed the author reluctantly to notice him. It appears that (in imitation of the professor who challenged any one to dance a hornpipe with him for one hundred guineas (see page 35), the above teacher, as if resolving to go further, has challenged any one who dare to dance a minuet, in competition with him, for five hundred guineas. His conduct seems the more extraordinary, from his having always wished to be ranked with the first class of teachers, and reprobated the low devices of unfair practitioners. When asked his reasons for descending to this practice. he is said to have declared, "there was no living without it." What do Messrs. Byrne, Le Mercier, and Jenkins, and other eminent members of the profession say to this?]] who for years I've known,
 >
 > And who I am now almost ashamed to own,
-
-[^63]: The teacher alluded to, by resorting to the tricks of a juggler, has indeed the author reluctantly to notice him. It appears that (in imitation of the professor who challenged any one to dance a hornpipe with him for one hundred guineas (see page 35), the above teacher, as if resolving to go further, has challenged any one who dare to dance a minuet, in competition with him, for five hundred guineas. His conduct seems the more extraordinary, from his having always wished to be ranked with the first class of teachers, and reprobated the low devices of unfair practitioners. When asked his reasons for descending to this practice. he is said to have declared, "there was no living without it." What do Messrs. Byrne, Le Mercier, and Jenkins, and other eminent members of the profession say to this?
-
+>
 > Has imitated those I've just exposed,
 >
 > And for five hundred pounds he has proposed
@@ -3246,12 +3120,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > That fools, like cats: are by their noise found out;
 >
-> So sent out bills[^64], with pictures placed on each,
+> So sent out bills[[The above sapient professor, published a bill ornamented with wood cuts of dancing attitudes, proposing to teach fifty-two divisions (not positions) of waltzing.]], with pictures placed on each,
 >
 > That he would "fifty-two divisions teach
-
-[^64]: The above sapient professor, published a bill ornamented with wood cuts of dancing attitudes, proposing to teach fifty-two divisions (not positions) of waltzing.
-
+>
 > Of waltzing!!!" – Mark, the term division shows
 >
 > The nature of the dance be little knows;
@@ -3266,10 +3138,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Yet I have heard professor oft advancing,
 >
-> Something about "philosophy of dancing[^65]".
-
-[^65]: In order to make his knowledge of the art apparently the more profound; he is in the frequent habit in common conversation, of speaking of "the philosophy of "the philosophy of dancing".
-
+> Something about "philosophy of dancing[[In order to make his knowledge of the art apparently the more profound; he is in the frequent habit in common conversation, of speaking of "the philosophy of "the philosophy of dancing".]]".
+>
 > Perhaps he means to view with Boyle and Locke,
 >
 > For of assurance he has an ample stock.
@@ -3292,12 +3162,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Will, into play, our thoughts and reason bring;
 >
-> For, like old Shandy[^66] some philosophize
+> For, like old Shandy[[See Sterne's Tristram Shandy.]] some philosophize
 >
 > On Christian names and changes in cat's eyes.
-
-[^66]: See Sterne's Tristram Shandy.
-
+>
 > There's many on philosophy, I've known,
 >
 > Have wrote large tomes you'd be ashamed to own;
@@ -3324,10 +3192,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > To prove his new philosophy, he may
 >
-> Like Gall and Spursheim[^67], all his art display
-
-[^67]: Gall and Spursheim are celebrated crainologists.
-
+> Like Gall and Spursheim[[Gall and Spursheim are celebrated crainologists.]], all his art display
+>
 > And publish, too; in hopes to gain éclat,
 >
 > On subjects dancers value not a straw.
@@ -3336,12 +3202,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > O, Terpsichore! let him do nought but caper.
 >
-> Jem. There's one professor[^68], a good loving soul,
+> Jem. There's one professor[[This sapient professor (who is also alluded to in several other parts of this work), issues invitation cards, with portraits of himself and wife, in manner above described; and in order to outdo his peddling competitors in the art of collecting a company, who generally fix the night of admission on their tickets, he, in order to avoid the mishaps and accidents by flood and field, gives tickets for as many as required, undated, the night being left to the parties convenience. Generous soul! But not a word about hats, clocks, refreshments, &c.]], a good loving soul,
 >
 > (Who on his card with wife sits cheek by jowl);
-
-[^68]: This sapient professor (who is also alluded to in several other parts of this work), issues invitation cards, with portraits of himself and wife, in manner above described; and in order to outdo his peddling competitors in the art of collecting a company, who generally fix the night of admission on their tickets, he, in order to avoid the mishaps and accidents by flood and field, gives tickets for as many as required, undated, the night being left to the parties convenience. Generous soul! But not a word about hats, clocks, refreshments, &c.
-
+>
 > To make folks think he might have come from France,
 >
 > Has called his dancing-room "une salle de danse".
@@ -3386,10 +3250,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > You might as well tell them (I must compare), —
 >
-> Of Algar's[^69] select ball at Peckham-fair:
-
-[^69]: Algar, is the keeper of a noted dancing booth, with which he attends the fairs, in the vicinity of the metropolis.
-
+> Of Algar's[[Algar, is the keeper of a noted dancing booth, with which he attends the fairs, in the vicinity of the metropolis.]] select ball at Peckham-fair:
+>
 > That he's a quack, to prove it I am ready,
 >
 > And, amongst dancers, quite a Dr. Eady.
@@ -3510,10 +3372,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Who cried all names by dictionaries and grammars,
 >
-> And weighed them as Pythagoras[^70] did his hammers,
-
-[^70]: Pythagoras, the celebrated philosopher, is said to have discovered and regulated musical tones, by striking hammers, of various weights, on an anvil.
-
+> And weighed them as Pythagoras[[Pythagoras, the celebrated philosopher, is said to have discovered and regulated musical tones, by striking hammers, of various weights, on an anvil.]] did his hammers,
+>
 > To find a name that had both sound and sense;
 >
 > But these are matters of no consequence
@@ -3524,10 +3384,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > They tried in vain, could nothing better meet,
 >
-> So named their houses after the next street[^71].
-
-[^71]: This is actually the case. The professors, above alluded to, not choosing to name their houses from the streets in which they are situate, as not being of sufficient consequence, have taken the titles from the next streets, videlicet Norton Falgate and Aidgate.
-
+> So named their houses after the next street[[This is actually the case. The professors, above alluded to, not choosing to name their houses from the streets in which they are situate, as not being of sufficient consequence, have taken the titles from the next streets, videlicet Norton Falgate and Aidgate.]].
+>
 > This shows at once their genius and their hate,
 >
 > From envy they each other imitate:
@@ -3564,12 +3422,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > As well as beings, gain notoriety;
 >
-> Read how inquiring Shandy's[^72] fancy itches,
+> Read how inquiring Shandy's[[Videlicet Tristram Shundy.]] fancy itches,
 >
 > When he's in search of Christian names and breeches.
-
-[^72]: Videlicet Tristram Shundy.
-
+>
 > Though these are trifles to some men of letters,
 >
 > To Mister Shandy they were weighty matters;
@@ -3582,10 +3438,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Jem. But he is quite the lowest of the low,
 >
-> And technically called "a man of dough[^73]".
-
-[^73]: A journeyman, baker has lately become a professor of dancing, and teaches at public houses. His terms are only sixpence each lesson; but, in addition, each of his pupils must pay for a pot of porter, by way of remuneration to the landlord of the house for the use of the room.
-
+> And technically called "a man of dough[[A journeyman, baker has lately become a professor of dancing, and teaches at public houses. His terms are only sixpence each lesson; but, in addition, each of his pupils must pay for a pot of porter, by way of remuneration to the landlord of the house for the use of the room.]]".
+>
 > Bel. No matter who, or what he is, for all
 >
 > Such teachers are fair game, both great and small.
@@ -3622,12 +3476,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The like of this you'll surely never see.
 >
-> Jem. One for a guinea tells you in his bills[^74],
+> Jem. One for a guinea tells you in his bills[[The professor alluded to with the hope of forcing trade, but apprehending that his circulars, with the above terms, might not be taken in, has resorted to the expedient of putting them underneath doors, into letter boxes, down areas, and under knockers; he is, however, less equivocal and more liberal than his competitors, for he specifies the quantity of dancing for one guinea; but where he finds pupils capable of learning three sets of quadrilles, with suitable steps, in six lessons, the author is at a loss to know.]],
 >
 > He'll teach three sets with steps of new quadrilles;
-
-[^74]: The professor alluded to with the hope of forcing trade, but apprehending that his circulars, with the above terms, might not be taken in, has resorted to the expedient of putting them underneath doors, into letter boxes, down areas, and under knockers; he is, however, less equivocal and more liberal than his competitors, for he specifies the quantity of dancing for one guinea; but where he finds pupils capable of learning three sets of quadrilles, with suitable steps, in six lessons, the author is at a loss to know.
-
+>
 > They're dropped down areas, and crammed under doors,
 >
 > And even sent to first and second floors;
@@ -3660,12 +3512,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And represents his ball-room on the stage;
 >
-> From Tom and Jerry[^75] takes the hint, where you
+> From Tom and Jerry[[Tom and Jerry, a well-known dramatic melange (performed at several of the minor theatres) in which is given a scene of the ball room at Almacks.]] takes the hint, where you
 >
 > May in one scene famed Almack's' ball-rooms view.
-
-[^75]: Tom and Jerry, a well-known dramatic melange (performed at several of the minor theatres) in which is given a scene of the ball room at Almacks.
-
+>
 > Bel. If this was the spontaneous act of those
 >
 > Who managed the concern, you might suppose
@@ -3700,10 +3550,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And try Pslenogistic knowledge to impart,
 >
-> And prove Gruithusien[^76] a tyro in his art.
-
-[^76]: Gruithusien, a learned German astronomer, who pretends to have discovered not only walls and roads in the moon, but also the visible traces of cultivation, &c.
-
+> And prove Gruithusien[[Gruithusien, a learned German astronomer, who pretends to have discovered not only walls and roads in the moon, but also the visible traces of cultivation, &c.]] a tyro in his art.
+>
 > Jem. All strive, but few can any fame command,
 >
 > For she deals honours with a sparing hand;
@@ -3716,12 +3564,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > And of themselves print what they'd have folks say.
 >
-> These teachers here remind us of the ass[^77],
+> These teachers here remind us of the ass[[For further elucidation of this subject, see the table of the Lap-dog and the Ass.]],
 >
 > Who thought he could for a great favourite pass;
-
-[^77]: For further elucidation of this subject, see the table of the Lap-dog and the Ass.
-
+>
 > So, when he saw his master fondle pug,
 >
 > Grew quite conceited, brayed, and gave a shrug,
@@ -3772,10 +3618,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > In one I'm told a curious taste prevails,
 >
-> For counting spots in tabby Tom cat's tails[^78];
-
-[^78]: Such frivolity and trifling as above alluded to, may perhaps appear to the general reader to be mere poetic fiction, but are nevertheless true. Were it consistent with the author's plan to divulge names, he could relate some anecdotes which he thinks would impress the public with a still meaner opinion of the intellect of some professors or artists, as they now call themselves.
-
+> For counting spots in tabby Tom cat's tails[[Such frivolity and trifling as above alluded to, may perhaps appear to the general reader to be mere poetic fiction, but are nevertheless true. Were it consistent with the author's plan to divulge names, he could relate some anecdotes which he thinks would impress the public with a still meaner opinion of the intellect of some professors or artists, as they now call themselves.]];
+>
 > A straw, a feather, will these wights amuse,
 >
 > For which they'll Pope and Addison refuse;
@@ -3826,12 +3670,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Who over-reach themselves, do mostly fall.
 >
-> Our dusting hero, I forgot to say[^79],
+> Our dusting hero, I forgot to say[[Some account is given in pages 13, 14, of the same party.]],
 >
 > Has lately made another grand display
-
-[^79]: Some account is given in pages 13, 14, of the same party.
-
+>
 > Of his dear phiz in lithographic print,
 >
 > As like as portraits issued from the mint;
@@ -3840,12 +3682,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Which dustmen would apply and dustmen prize;
 >
-> From "All-max", east, or "Back slums[^80]" in the south,
+> From "All-max", east, or "Back slums[[Low scenes in "Tom and Jerry".]]" in the south,
 >
 > He brought the sentence just to suit his mouth;
-
-[^80]: Low scenes in "Tom and Jerry".
-
+>
 > Though it is not what Lord Chesterfield would use,
 >
 > Yet it is is keeping with Bob's taste and views;
@@ -3882,30 +3722,22 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The like will never more be seen, rely;
 >
-> For he, like dirty Dick[^81], does all excel,
-
-[^81]: "Dirty Dick" was the name bestowed on an eccentric character, wire some years ago, kept a warehouse for ironmongery, &c. in Leadenhall-street.
-
+> For he, like dirty Dick[["Dirty Dick" was the name bestowed on an eccentric character, wire some years ago, kept a warehouse for ironmongery, &c. in Leadenhall-street.]], does all excel,
+>
 > Nor shall we ever see his parallel.
 >
-> On some established room that bears a name[^82],
+> On some established room that bears a name[[Not only have some modern teachers abridged and altered their names, as alluded to in page 10, to make the same as those of established masters; but some have been even induced to become teachers only from the accidental circumstance of their names being the same, hoping thereby to profit, on account of the established fame of others.]],
 >
 > Some teachers do completely hinge their fame.
-
-[^82]: Not only have some modern teachers abridged and altered their names, as alluded to in page 10, to make the same as those of established masters; but some have been even induced to become teachers only from the accidental circumstance of their names being the same, hoping thereby to profit, on account of the established fame of others.
-
+>
 > Some have become professors in the town,
 >
-> Because they'd names like teachers of renown[^83],
-
-[^83]: Some whose names happen to be the same as the professors of certain celebrated rooms, have endeavoured to identify themselves therewith in public opinion, and induce the public to come to them whom they never have been accused of undeceiving.
-
-> They're like those authors (named by Hogg and Co.[^84])
+> Because they'd names like teachers of renown[[Some whose names happen to be the same as the professors of certain celebrated rooms, have endeavoured to identify themselves therewith in public opinion, and induce the public to come to them whom they never have been accused of undeceiving.]],
+>
+> They're like those authors (named by Hogg and Co.[[Hogg and Co. were publishers of books in weekly numbers, which, though generally the worst works of the kind, were always announced in the most pompous manner as by an author of some established name.]])
 >
 > Whose name is all the public of them know,
-
-[^84]: Hogg and Co. were publishers of books in weekly numbers, which, though generally the worst works of the kind, were always announced in the most pompous manner as by an author of some established name.
-
+>
 > Who learn a little dancing just to say
 >
 > They're dancing masters and their name display;
@@ -3936,10 +3768,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > For some belonging to the opera-house,
 >
-> Remind me of the mountain and the mouse[^85];
-
-[^85]: Vide, Æsop's Fables.
-
+> Remind me of the mountain and the mouse[[Vide, Æsop's Fables.]];
+>
 > It was noised throughout the world by friend and neighbour,
 >
 > That the great mountains were at last in labour,
@@ -3958,9 +3788,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > I could say more, but will some other day,
 >
-> The actions of some opera mice display[^86].
-
-[^86]:
+> The actions of some opera mice display[[
 	The phrase "opera mice," does not allude to the first dancers, or to the liberal and honourable sons and daughters of Terpsichore, attached to that great theatre, (the wonder and delight of its visitors) but to some dancers belonging thereto, whose actions neither keep pace with their own words, nor with the size and creditor the establishment.
 
 	> Yet, notwithstanding, would not hesitate,
@@ -3990,7 +3818,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 	> To "sacre Dieu" the whole concern, and say
 	>
 	> They'll leave, but mean not till they're turn'd away.
-
+]]
+>
 > Jem. Others there are, whose plans are much the same,
 >
 > As those professors whom you've heard me name;
@@ -4052,16 +3881,12 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > He only comes, I am certain with this view,
 >
-> To give out cards[^87], or to learn something new
-
-[^87]: A common practice for these quack teachers to resort to dances and assemblies for the purpose of giving out cards for their own rooms and dances.
-
+> To give out cards[[A common practice for these quack teachers to resort to dances and assemblies for the purpose of giving out cards for their own rooms and dances.]], or to learn something new
+>
 > He's proud, affected, and a downright fop,
 >
-> And talks in technic[^88] phrases of his shop,
-
-[^88]: A common phrase applied to those whose discourse is generally on the subject of their own business, profession, &c.
-
+> And talks in technic[[A common phrase applied to those whose discourse is generally on the subject of their own business, profession, &c.]] phrases of his shop,
+>
 > Shrugs and grimaces like the fops of France,
 >
 > And calls himself "Un maitre de la danse".
@@ -4096,9 +3921,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Though impudent I'll make him run away.
 
-### Enter mister Chassée[^89]. Belinda and Jemima _walk up the stage_
-
-[^89]: The author, in the publication of this work, intended to omit the scene with Chassée, as being too dramatic; but it has been retained by the advice of several professional persons, to whom it was read, who were of opinion that it was so characteristic of the manners, actions, egotism, and illiberality of certain well known parties, that it ought not to be omitted. It is of course now divested of that interest given to it in the representation, by the performer of the character, whose excellent imitation of their manners, and affected stile of dancing, not only demands the author's thanks, but must always live in the recollection of the company who were then present. This entire scene, with part of the previous dialogue, and the subsequent scene with Miss Frump, constituted the whole of the first sketch.
+### Enter mister Chassée[[The author, in the publication of this work, intended to omit the scene with Chassée, as being too dramatic; but it has been retained by the advice of several professional persons, to whom it was read, who were of opinion that it was so characteristic of the manners, actions, egotism, and illiberality of certain well known parties, that it ought not to be omitted. It is of course now divested of that interest given to it in the representation, by the performer of the character, whose excellent imitation of their manners, and affected stile of dancing, not only demands the author's thanks, but must always live in the recollection of the company who were then present. This entire scene, with part of the previous dialogue, and the subsequent scene with Miss Frump, constituted the whole of the first sketch.]]. Belinda and Jemima _walk up the stage_
 
 > Chassée. Two ladies here! – Hey! – Who is that I see
 >
@@ -4116,12 +3939,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Bel. I really, Sir, didn't know you in the street,
 >
-> Your parson's hat and dress[^90] to me were new,
+> Your parson's hat and dress[[The professor here alluded to, in order to render himself more conspicuous, used to wear a particular dress, and a clerical hat.]] to me were new,
 >
 > And strange at first I could not believe it was you.
-
-[^90]: The professor here alluded to, in order to render himself more conspicuous, used to wear a particular dress, and a clerical hat.
-
+>
 > Chassée. That dress and hat are all my own design,
 >
 > There's not another in the town like mine;
@@ -4200,16 +4021,12 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Bel. You ought to know the art, it is very plain,
 >
-> As you the technic terms[^91] of art explain.
-
-[^91]: This professor, in giving the terms of art, is not candid enough to acknowledge whence he has copied them.
-
+> As you the technic terms[[This professor, in giving the terms of art, is not candid enough to acknowledge whence he has copied them.]] of art explain.
+>
 > Chassée. I find you've read my bill by what you've said,
 >
-> In red and blue[^92] you'll see I've there displayed,
-
-[^92]: Many of these professors consider even black and white not sufficiently attractive, therefore now print their bills in red and blue.
-
+> In red and blue[[Many of these professors consider even black and white not sufficiently attractive, therefore now print their bills in red and blue.]] you'll see I've there displayed,
+>
 > The different things I teach, and likewise those
 >
 > Named by those teachers who my fame oppose:
@@ -4272,12 +4089,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Their bills are nothing but a glaring puff;
 >
-> Read them; mark well[^93]; you'll find them quite absurd,
+> Read them; mark well[[These words, _mark well_, formed the most conspicuous line in a certain professor's bill.]]; you'll find them quite absurd,
 >
 > My bills, the wretches copy word for word:
-
-[^93]: These words, _mark well_, formed the most conspicuous line in a certain professor's bill.
-
+>
 > When I devise a bill that's something new,
 >
 > They imitate me, print in red and blue.
@@ -4358,10 +4173,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Just like the boasting traveller of old,
 >
-> (Whose story Æsop has in fable told[^94]),
-
-[^94]: The author is not sure whether he has related this fable literally according to Æsop, but believes he has preserved the substance and moral of the original.
-
+> (Whose story Æsop has in fable told[[The author is not sure whether he has related this fable literally according to Æsop, but believes he has preserved the substance and moral of the original.]]),
+>
 > Who boasted he at Rhodes had often been,
 >
 > Had beat in leaping all he had ever seen.
@@ -4414,10 +4227,8 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > A friend told me (on whom I can rely),
 >
-> That she proposed a minuet to try[^95],
-
-[^95]: This circumstance was related to the author by the lady herself, who has given him permission to use her name, if necessary, for the authenticity of the fact.
-
+> That she proposed a minuet to try[[This circumstance was related to the author by the lady herself, who has given him permission to use her name, if necessary, for the authenticity of the fact.]],
+> 
 > With one who prints "professor" in his bill,
 >
 > It was done to try the great professor's skill.
@@ -4480,12 +4291,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > This proves he dancing only knows by name".
 >
-> With other libellous strange things[^96] that they
+> With other libellous strange things[[At a public ball, held at a great tavern, this was actually the fact. A great professor whilst performing an opening dance, was annoyed in this manner, as he says, through envy; and for the credit of the professor it is hoped this was the case.]] that they
 >
 > Were base and impudent enough to say,
-
-[^96]: At a public ball, held at a great tavern, this was actually the fact. A great professor whilst performing an opening dance, was annoyed in this manner, as he says, through envy; and for the credit of the professor it is hoped this was the case.
-
+>
 > Thus to asperse a gentleman who has been
 >
 > To France, a professor whose name is seen
@@ -4572,12 +4381,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Even my own faults and failings I reveal.
 >
-> Bel. Did you e'er join E. W. or mister T.[^97]?
+> Bel. Did you e'er join E. W. or mister T.[[These initials will be easily identified by the parties and many of the London teachers.]]?
 >
 > Or e'er take lessons from a mister B.?
-
-[^97]: These initials will be easily identified by the parties and many of the London teachers.
-
+>
 > Chassée. What! I take lessons from a sorry crew.
 >
 > Who only copy me. – Oh! Sacre Dieu!
@@ -4594,11 +4401,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Do not with puny teachers mix my name.
 >
-> Bel. Do you to J---'s Well[^98] as usual go?
->
-> And are you still with Mister H. in Co?
-
-[^98]:
+> Bel. Do you to J---'s Well[[
 	J---'s W---ll, a public house, (yclept tavern) in Barbican, where a ball (some say a hop), has been for several years held every Saturday evening, under Professor W---r's direction. The assembly is indiscriminate; any gentleman may be a welcome guest on payment of one shilling; and the ladies, who usually attend, are for their well known good nature, admitted for sixpence. This assembly is said to be held and constituted not quite conformable to the provisions of the late Vagrant Act, nor to that of the 25th of George II, nor are its votaries awed by, the approach of the Sabbath, and obliged to quit at twelve o clock, as at the opera house and other public places.
 
 	> For neither the professor nor mine host,
@@ -4640,6 +4443,9 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 	None of these apprehensions has either the professor or mine host. Why such an assembly, on a Saturday night, should have been for years permitted in the heart of the city, so near the seat of civic government, and should also have escaped the vigilance of the society for the suppression of vice, whilst a few respectable persons, assembled for amusement at a private house, were lately seized and taken before a magistrate: must be left to casuists to determine.
 
 	That the professor Chassée was often at the Barbican balls, there is no doubt; whether for the purpose of displaying his, talents picking up pupils or selecting company for his own room, or for what other laudable purpose he best knows.
+]] as usual go?
+>
+> And are you still with Mister H. in Co?
 
 > Chassée. Sacre Dieu! I have cut the Tonsor long ago;
 >
@@ -4685,12 +4491,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Original, with which none can compare.
 >
-> My dances will astonish[^99], or I'm undone,
+> My dances will astonish[[A modest professor, in the suburbs of London, has lately published a bill, containing the following words, conspicuously printed in large capital letters, with blue ink, videlicet "Mister --- will astonish any lady or gentleman in London!!"]], or I'm undone,
 >
 > Any lady or gentleman in London.
-
-[^99]: A modest professor, in the suburbs of London, has lately published a bill, containing the following words, conspicuously printed in large capital letters, with blue ink, videlicet "Mister --- will astonish any lady or gentleman in London!!"
-
+>
 > I have a new method too, in which you'll find,
 >
 > All other teachers methods are combined.
@@ -4757,12 +4561,10 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > I've really quite forgot your own address.
 >
-> Chassée. This card, Mademoiselle, does my address contain[^100],
+> Chassée. This card, Mademoiselle, does my address contain[[The address cards of many of those great professors, contain. not only the names of every fashionable dance, but have also generally the king's arms at the head; for many profess to be "under royal patronage", whose irons are only known to them by name.]],
 >
 > And all the various dances will explain,
-
-[^100]: The address cards of many of those great professors, contain. not only the names of every fashionable dance, but have also generally the king's arms at the head; for many profess to be "under royal patronage", whose irons are only known to them by name.
-
+>
 > Whether composed by me with those I teach,
 >
 > For general use, the term I give to each.
@@ -4791,20 +4593,16 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Chassée. Do you know – La chaîne des dames et chassée croisée,
 >
-> Chassée ouvert, queue du chat et balancez[^101].
-
-[^101]: Technical terms of figures and steps in quadrille dancing.
-
+> Chassée ouvert, queue du chat et balancez[[Technical terms of figures and steps in quadrille dancing.]].
+>
 > Bel. I cannot say I understand them all,
 >
 > Although I danced them once at Almack's ball,
 >
-> I wish you would, sir, just perform L'été[^102],
+> I wish you would, sir, just perform L'été[[L'été a well known quadrille.]],
 >
 > And that will better put me in the way.
-
-[^102]: L'été a well known quadrille.
-
+>
 > Chassée. With pleasure, a quadrille I now will dance,
 >
 > With any in this country or in France.
@@ -4847,7 +4645,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > The greatest pleasure you could give to me.
 >
-> [To Jemima]. Now, try the dance, miss, do not hesitate,
+> [[To Jemima]]. Now, try the dance, miss, do not hesitate,
 >
 > That you may learn it well, and imitate
 >
@@ -4959,16 +4757,12 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > I wish they were exposed a little more.
 >
-> Jem. Of quacks, like these, I'd put to flight a score[^103].
-
-[^103]: As the anther has noticed the excellent personification of the character of Chassee, it would appear unjust to omit mentioning also, the admirable manner in which the characters of Belinda and Jemima were performed. It ladies, equally competent, were occasionally to visit the assemblies of certain professors, it would make them hide their diminished heads, unless they possessed even more assurance than they are supposed to have, and that would be ---.
-
-> There's one who keeps a gallimaufry hop[^104],
+> Jem. Of quacks, like these, I'd put to flight a score[[As the anther has noticed the excellent personification of the character of Chassee, it would appear unjust to omit mentioning also, the admirable manner in which the characters of Belinda and Jemima were performed. It ladies, equally competent, were occasionally to visit the assemblies of certain professors, it would make them hide their diminished heads, unless they possessed even more assurance than they are supposed to have, and that would be ---.]].
+>
+> There's one who keeps a gallimaufry hop[[Perhaps it might not be a libellous reflection on the above professor to say, he keeps a common hop, he may therefore be justly charged with presumption in pretending that his academy is on the principle of L'académie royale, Paris. If there are any who have visited both institutions, they can judge of the similarity; he is, however, imitated by another,person, superior to him in professional ability, though not in intellect or modesty.]],
 >
 > Thinks all his gagging brethren to overtop,
-
-[^104]: Perhaps it might not be a libellous reflection on the above professor to say, he keeps a common hop, he may therefore be justly charged with presumption in pretending that his academy is on the principle of L'académie royale, Paris. If there are any who have visited both institutions, they can judge of the similarity; he is, however, imitated by another,person, superior to him in professional ability, though not in intellect or modesty.
-
+>
 > Sends forth a bill of fare, "comme un François",
 >
 > Not to bring folks to dance, but fools to pay.
@@ -5007,10 +4801,8 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > And taught upon the rules which are laid down
 >
-> By Coulon[^105] and such masters of renown;
-
-[^105]: Coulon, a celebrated teacher at the French Academy, father of one of the principal dancers, lately on the Opera Establishment.
-
+> By Coulon[[Coulon, a celebrated teacher at the French Academy, father of one of the principal dancers, lately on the Opera Establishment.]] and such masters of renown;
+>
 > But our professor, whatever he may say,
 >
 > Teaches his pupils in a different way.
@@ -5035,12 +4827,10 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > Is "hop and go forward", get through how you can.
 >
-> No turning at the handle or the knees[^106],
+> No turning at the handle or the knees[[Though this subject may be too technical for the general reader, yet it is presumed it will be easily comprehended by dancers.]],
 >
 > To gain command, that attitudes may please;
-
-[^106]: Though this subject may be too technical for the general reader, yet it is presumed it will be easily comprehended by dancers.
-
+>
 > No battements made there, either close or grand,
 >
 > From which the hips and knees may gain command.
@@ -5077,12 +4867,10 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > Or lips pout out, or they extend the chin.
 >
-> If pupils stand like Popes[^107] in their position,
+> If pupils stand like Popes[[Alluding to the stuffed effigies of Guy Fawkes, carried about on the fifth of November vulgarly called, "Popes".]] in their position,
 >
 > Both stiff and graceless, he feels no contrition.
-
-[^107]: Alluding to the stuffed effigies of Guy Fawkes, carried about on the fifth of November vulgarly called, "Popes".
-
+>
 > If they in pirouettes should hop like geese,
 >
 > It don't disturb the great professor's peace,
@@ -5129,12 +4917,10 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > Who has to London been for years a stranger,
 >
-> But monsieur Boisgerard[^108] might chance go there,
+> But monsieur Boisgerard[[Monsieur Boisgerard, a dancer and teacher of unquestionable merit, for many years attached to the Opera House, now master of the Opera School, and second Ballet Master.]] might chance go there,
 >
 > (Attracted by professor's bill of fare),
-
-[^108]: Monsieur Boisgerard, a dancer and teacher of unquestionable merit, for many years attached to the Opera House, now master of the Opera School, and second Ballet Master.
-
+>
 > To analyse this "Royale Académie",
 >
 > And learn if it is what it is said to be.
@@ -5169,9 +4955,7 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > And have with some reluctance given the name,
 >
-> As there are other candidates for fame[^109].
-
-[^109]:
+> As there are other candidates for fame[[
 	The author is well acquainted with the merits of many other dancers and teachers of equal excellence, and may perhaps take a future opportunity to do them justice. At present, he forbears naming individuals, more than necessary. In certain instances, it appeared right to contrast dancers of excellence in any particular department with pretenders to equal merit. Some names have therefore been selected, not intended to exclude merit in others.
 
 	> He is uninfluenced, aids no partial voice,
@@ -5190,8 +4974,9 @@ Chassée. Don't flatter, me, for flattery I disdain.
 	>
 	> And envies none who have superior skill.
 
-	From a wish of avoiding, as far as possible, any invidious distinctions, the Author has been induced to abandon his original intention, of dedicating this work to an eminent teacher and dancer now retired, an excellent judge of the subject.
-
+	From a wish of avoiding, as far as possible, any invidious distinctions, the Author has been induced to abandon his original intention, of dedicating this work to an eminent teacher and dancer now retired, an excellent judge of the subject.]
+].
+>
 > Whose talents merit more than I can say,
 >
 > And who they are I'll name some other day;
@@ -5226,38 +5011,24 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > As a composer would himself compare,
 >
-> And even dispute with d'Egville[^110] or Aumer[^111].
-
-[^110]: Monsieur d'Egville, a celebrated dancer, formerly ballet matter at the Opera House.
-
-[^111]: Monsieur Aumer, one of the most scientific and original of the Terpsichorean family, now principal ballet master at the Opera House.
-
+> And even dispute with d'Egville[[Monsieur d'Egville, a celebrated dancer, formerly ballet matter at the Opera House.]] or Aumer[[Monsieur Aumer, one of the most scientific and original of the Terpsichorean family, now principal ballet master at the Opera House.]].
+>
 > Belinda. What! has he effrontery to advance,
 >
 > He can compose, or with those masters dance?
 >
-> Jemima. Though he may not excel le Blond[^112] in flying,
+> Jemima. Though he may not excel le Blond[[Le Blond, a principal dancer at the Opera House, celebrated for extraordinary agility.]] in flying,
 >
 > He'll beat him, aye, and all the world, in lying:
-
-[^112]: Le Blond, a principal dancer at the Opera House, celebrated for extraordinary agility.
-
-> Not sylph like Ronzi's[^113] light fantastic toe,
 >
-> Nor classic Julia[^114], nor agile le Gros[^115],
-
-[^113]: Madame Ronzi Vestris is also a principal at the Opera House, and one of the most fascinating and sylph-like dancers of the present age; this lady is the wife of monsieur Charles Vestris, one of the first dancers attached to that establishment, and of whom mention has before been made in p. 8. Both monsieur and madame Vestris have, very deservedly, long been and still continue to be, established favorites with the public.
-
-[^114]: Miss Julia Aumer, a principal dancer belonging to the Opera establishment, daughter of the ballet master of that name, and worthy of his scientific knowledge and classic taste.
-
-[^115]: Madame Le Gros, a principal dancer at the Opera of great merit.
-
-> Nor even Noblet's[^116] pure attic grace,
+> Not sylph like Ronzi's[[Madame Ronzi Vestris is also a principal at the Opera House, and one of the most fascinating and sylph-like dancers of the present age; this lady is the wife of monsieur Charles Vestris, one of the first dancers attached to that establishment, and of whom mention has before been made in p. 8. Both monsieur and madame Vestris have, very deservedly, long been and still continue to be, established favorites with the public.]] light fantastic toe,
+>
+> Nor classic Julia[[Miss Julia Aumer, a principal dancer belonging to the Opera establishment, daughter of the ballet master of that name, and worthy of his scientific knowledge and classic taste.]], nor agile le Gros[[Madame Le Gros, a principal dancer at the Opera of great merit.]],
+>
+> Nor even Noblet's[[Madame Noblet a principal dancer at the Opera House, of exquisite taste and possessing the most classic and graceful execution.]] pure attic grace,
 >
 > Would make professor hide his shameless face;
-
-[^116]: Madame Noblet a principal dancer at the Opera House, of exquisite taste and possessing the most classic and graceful execution.
-
+>
 > For be is deaf as well as blind to shame,
 >
 > And only knows it as he knows his name.
@@ -5266,13 +5037,9 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > Make him to dancers' merits always blind.
 >
-> He sees no execution or effect in Byrn[^117],
+> He sees no execution or effect in Byrn[[Mister Oscar Byrn, formerly of the Opera House, but now a principal dancer at the Thea	tre Royal Drory Lane. The brilliant execution and pleasing effect of his dancing have rendered him most deservedly a great favourite with the public. He is a son of mister James Byrn, formerly principal dancer and ballet master at both Covent Garden and Druny Lane Theatres.]],
 >
-> Nor can he Noble's[^118] ease and grace discern.
-
-[^117]: Mister Oscar Byrn, formerly of the Opera House, but now a principal dancer at the Thea	tre Royal Drory Lane. The brilliant execution and pleasing effect of his dancing have rendered him most deservedly a great favourite with the public. He is a son of mister James Byrn, formerly principal dancer and ballet master at both Covent Garden and Druny Lane Theatres.
-
-[^118]: Mister Noble, formerly of the King's Theatre, hut now at principal dancer and ballet master of the Theatre Royal Drury Lane, admired for his taste and graceful execution.
+> Nor can he Noble's[[Mister Noble, formerly of the King's Theatre, hut now at principal dancer and ballet master of the Theatre Royal Drury Lane, admired for his taste and graceful execution.]] ease and grace discern.
 
 ### End of the first part
 ### The Danciad or, Dancer's Monitor
@@ -5306,17 +5073,8 @@ Chassée. Don't flatter, me, for flattery I disdain.
 >
 > To call their own, Professors feel no shame,
 >
-> So alter names and the invention claim[^119].
-
-[^119]: No sooner had the Author announced his waltz and quadrille
-country dances, new reels, ecossoises, and circular dances, than
-persons were found not ashamed to claim them as their own inventions,
-and as soon as the "Ecossoise Instructor" was published, though the
-system was previously unknown, yet another "Ecossoise Instructor"
-immediately appeared at half the original price. Such conduct has since
-obliged the Author to put his name to all his own compositions, however
-trifling.
-
+> So alter names and the invention claim[[No sooner had the Author announced his waltz and quadrille country dances, new reels, ecossoises, and circular dances, than persons were found not ashamed to claim them as their own inventions, and as soon as the "Ecossoise Instructor" was published, though the system was previously unknown, yet another "Ecossoise Instructor" immediately appeared at half the original price. Such conduct has since obliged the Author to put his name to all his own compositions, however trifling.]].
+>
 > They'll mangle and new christen some old dance,
 >
 > Then say they made it, or it came from France;
@@ -5375,10 +5133,8 @@ trifling.
 >
 > And give it same strange French, or mongrel name,
 >
-> To make folks think it new and not the same[^120],
-
-[^120]: Some, by garbling old dances, and giving them a foreign or strange name, pass them off as their own compositions: upon examination into the construction of dances really composed by them (the invention of which will not be disputed), it will be clearly apparent that the composers have not the mathematical knowledge of an Archimedes, or an Euclid.
-
+> To make folks think it new and not the same[[Some, by garbling old dances, and giving them a foreign or strange name, pass them off as their own compositions: upon examination into the construction of dances really composed by them (the invention of which will not be disputed), it will be clearly apparent that the composers have not the mathematical knowledge of an Archimedes, or an Euclid.]],
+>
 > And add it to the list of their inventions,
 >
 > But what it was professor never mentions.
@@ -5391,10 +5147,8 @@ trifling.
 >
 > Like country dance collections, said to be
 >
-> "Danced by the Court and First Nobility[^121],
-
-[^121]: Whoever has observed the annual collections of country dances, will have found by their titles they are all danced at Court, Bath, Almacks, &c. though perhaps not one in twenty has really been so honoured.
-
+> "Danced by the Court and First Nobility[[Whoever has observed the annual collections of country dances, will have found by their titles they are all danced at Court, Bath, Almacks, &c. though perhaps not one in twenty has really been so honoured.]],
+>
 > Likewise at Bath and Almack's", though it is known
 >
 > That petty hops such dances would disown;
@@ -5439,10 +5193,8 @@ trifling.
 >
 > To whom you might as well recite in Greek,
 >
-> Instead of Pasta[^122], pigs to them should squeak;
-
-[^122]: A celebrated female Opera singer.
-
+> Instead of Pasta[[A celebrated female Opera singer.]], pigs to them should squeak;
+>
 > Yet they'll cry "bravo", praise the bill of fare,
 >
 > But relish music like a dancing bear;
@@ -5531,12 +5283,10 @@ trifling.
 >
 > And says, he teaches as they do in France,
 >
-> Upon the plan of "l'Académie Royal"[^123],
+> Upon the plan of "l'Académie Royal"[[The following is an extract from the teacher's bill alluded to: "Dancing is taught upon the immediate principles of the Royal Académie à Paris, by which persons are enabled to acquire a more extensive knowledge of quadrilles or any other department of the art in six lessons, than can possibly be obtained by any other method in as many months. Mister --- trusts the peculiar advantages of attending his establishment are so generally known, that a present nomination of them would be superfluous, and hopes by urbanity and assiduity, in conjunction with his well-known professional abilities, to merit a continuation of that patronage which he has hitherto extensively obtained".]],
 >
 > That's so well known it don't require a trial,
-
-[^123]: The following is an extract from the teacher's bill alluded to: "Dancing is taught upon the immediate principles of the Royal Académie à Paris, by which persons are enabled to acquire a more extensive knowledge of quadrilles or any other department of the art in six lessons, than can possibly be obtained by any other method in as many months. Mister --- trusts the peculiar advantages of attending his establishment are so generally known, that a present nomination of them would be superfluous, and hopes by urbanity and assiduity, in conjunction with his well-known professional abilities, to merit a continuation of that patronage which he has hitherto extensively obtained".
-
+>
 > And trusts chat his Académie alone
 >
 > Is where the art is to perfection known;
@@ -5607,12 +5357,10 @@ trifling.
 >
 > Are now performed by princes and by kings.
 >
-> Jem. There's now a King[^124], as foolish as you'd wish,
+> Jem. There's now a King[[The King of Naples sells fish in the public market, throw; the lazaroni into the sea, also drops macaroni, boiling hot, on peoples' heads in the pit at the Opera. Anecdotes of the present King of Naples, from "Venice under the yoke of France and Austria".]], as foolish as you'd wish,
 >
 > Sits in the market selling "stinking fish",
-
-[^124]: The King of Naples sells fish in the public market, throw; the lazaroni into the sea, also drops macaroni, boiling hot, on peoples' heads in the pit at the Opera. Anecdotes of the present King of Naples, from "Venice under the yoke of France and Austria".
-
+>
 > With cap and apron on, he makes a crony,
 >
 > Of every flattering idle lazaroni,
@@ -5641,12 +5389,10 @@ trifling.
 >
 > And licks his greasy paws, like some baboon:
 >
-> Then there's prince ---[^125] who does strange customs use,
+> Then there's prince ---[[A certain Prince now on his travels, is said to delight in killing hogs and forging horse shoes and when he eats hog's flesh, likes it hot and raw.]] who does strange customs use,
 >
 > Sometimes kills hogs, and forges horses shoes;
-
-[^125]: A certain Prince now on his travels, is said to delight in killing hogs and forging horse shoes and when he eats hog's flesh, likes it hot and raw.
-
+>
 > And what's mere strange, perhaps to gain éclat,
 >
 > When he eats hog's flesh, likes it hot and raw.
@@ -5675,12 +5421,10 @@ trifling.
 >
 > For carrying tales, which were so disregarded.
 >
-> Jem. They Artists[^126] call themselves, their practice is
+> Jem. They Artists[["Artists" — Some French dancers have assumed this title; and several of the Professors alluded to have also bestowed upon themselves the same modest appellation — they have likewise substituted "study" for "practice.]] call themselves, their practice is
 >
 > By them called "study" – nay – I do not quiz —
-
-[^126]: "Artists" — Some French dancers have assumed this title; and several of the Professors alluded to have also bestowed upon themselves the same modest appellation — they have likewise substituted "study" for "practice.
-
+>
 > If they can't dance, I'll prove their vanity
 >
 > Is little short of sheer insanity.
@@ -5695,25 +5439,19 @@ trifling.
 >
 > Long frill, high collar, ring, and bunch of seals,
 >
-> And boy with crowdy[^127] dangling at their heels;
-
-[^127]: "Crowdy" — A name for the violin.
-
+> And boy with crowdy[["Crowdy" — A name for the violin.]] dangling at their heels;
+>
 > When thus equipped, they strut, like bantam cocks,
 >
-> And walk as if they just had left the stocks[^128]:
-
-[^128]: "Left the stocks" — Not the public stocks, but those of dancing
-masters.
-
+> And walk as if they just had left the stocks[["Left the stocks" — Not the public stocks, but those of dancing
+masters.]]:
+>
 > Of affectation they've a decent stock,
 >
 > For at their doors you're told to "ring and knock".
 >
-> Bel. One in a fray had his false collar[^129] tore,
-
-[^129]: "False collar". This alludes to a certain dancing master, who recently brought his landlady before the magistrate for an assault, and tearing his false collar, when the termagant declared he had twelve to one shirt.
-
+> Bel. One in a fray had his false collar[["False collar". This alludes to a certain dancing master, who recently brought his landlady before the magistrate for an assault, and tearing his false collar, when the termagant declared he had twelve to one shirt.] tore,
+>
 > He to that shirt had twelve false collars wore.
 >
 > Jem. In dress as well as manners be it said,
@@ -5744,22 +5482,18 @@ masters.
 >
 > Which did the hearers both instruct and please.
 >
-> But is composed of Tom and Jerry[^130] flash,
+> But is composed of Tom and Jerry[["Tom, Jerry, Logic, and Bobs" characters in "Life in London", who abound in slang phrases.]] flash,
 >
 > For wit they substitute low balderdash.
-
-[^130]: "Tom, Jerry, Logic, and Bobs" characters in "Life in London", who abound in slang phrases.
-
+>
 > Their technic slang is, "Well, how goes the shop?"
 >
 > Not "How goes business; but how goes the hop?"
 >
 > Bel. I could name four professors, who for slang,
 >
-> Would outdo "Logic", – "Bob", or "Mother Bang"[^131],
-
-[^131]: "Mother Bang." The keeper of a house of a certain description.
-
+> Would outdo "Logic", – "Bob", or "Mother Bang"[["Mother Bang." The keeper of a house of a certain description.]],
+>
 > They think, if they some broken French can gabble,
 >
 > And scrape a kit, they'll pass off with the rabble,
@@ -5776,16 +5510,12 @@ masters.
 >
 > And grin like monkeys dressed up at a show.
 >
-> Jem. Professor Chasséep[^132], I forgot to state,
+> Jem. Professor Chasséep[[The Professor here alluded to has lately had his portrait engraved for an invitation Ball ticket; which is sent to Huxters, Chandlers, &c. to admit them gratis to his Balls and Assemblies: he has also had a circular letter printed, (which is sent round with his tickets to the shops in which his show boards are placed,) in which he assures them, "be they who they may," they may always have tickets for themselves and Friends to his Assemblies, whenever they send him a line.]], I forgot to state,
 >
 > Has put his phiz on a new copper plate,
 >
-> His cheek by jowl[^133] concern being out of date.
-
-[^132]: The Professor here alluded to has lately had his portrait engraved for an invitation Ball ticket; which is sent to Huxters, Chandlers, &c. to admit them gratis to his Balls and Assemblies: he has also had a circular letter printed, (which is sent round with his tickets to the shops in which his show boards are placed,) in which he assures them, "be they who they may," they may always have tickets for themselves and Friends to his Assemblies, whenever they send him a line.
-
-[^133]: "Cheek by jowl", See page 45.
-
+> His cheek by jowl[["Cheek by jowl", See page 45.]] concern being out of date.
+>
 > He's on his face determined to rely,
 >
 > Lest with his Works his name with him should die;
@@ -5840,10 +5570,8 @@ masters.
 >
 > Jem. Who ever heard of graces, more than three?
 >
-> Yet one professor[^134], (who must nameless be)
-
-[^134]: The above professor (who is also mentioned in page 17, as having ostentatiously displayed the Royal Arms between his windows), proposes in his bills to teach "the Seven Graces." Whether of the body or mind he does not say; Those who know him declare they have not discovered them externally.
-
+> Yet one professor[[The above professor (who is also mentioned in page 17, as having ostentatiously displayed the Royal Arms between his windows), proposes in his bills to teach "the Seven Graces." Whether of the body or mind he does not say; Those who know him declare they have not discovered them externally.]], (who must nameless be)
+>
 > Has made seven graces, and will these impart
 >
 > To every one who comes to learn his art.
@@ -5908,32 +5636,26 @@ masters.
 >
 > As some M. P.'s who're lately come from college.
 >
-> They know no more of Hume, des Cartes[^135], or Locke,
+> They know no more of Hume, des Cartes[[Des Cartes, an eminent French philosopher and metaphysician.]], or Locke,
 >
 > Than if each head had been a barber's block.
-
-[^135]: Des Cartes, an eminent French philosopher and metaphysician.
-
+>
 > Jem. He laughs at all the childish things he sees,
 >
 > And feels delight to search his cat for fleas;
 >
-> Even Rabelais' Bishop[^136], who made sport with wigs,
+> Even Rabelais' Bishop[[Vide Rabelais' works.]], who made sport with wigs,
 >
 > And died with laughter when the ass ate figs,
-
-[^136]: Vide Rabelais' works.
-
+>
 > Was not more foolish, I'll engage to say,
 >
 > Than our Professor is in his own way;
 >
-> Like Heliogabulus[^137], it seems, this elf
+> Like Heliogabulus[[Heliogabulus, a Roman Emperor, infamous for his vices follies.]], it seems, this elf
 >
 > Has tried how silly he can make himself;
-
-[^137]: Heliogabulus, a Roman Emperor, infamous for his vices follies.
-
+>
 > He boasts of talent in another way,
 >
 > Not dancing only, but in feats of play:
@@ -5948,10 +5670,8 @@ masters.
 >
 > He'll doubtless for excuse, say this and that,
 >
-> And cites Montaigne[^138], as playing with his cat.
-
-[^138]: Montaigne, the celebrated French writer, is said to have round particular amusement in playing with his cat.
-
+> And cites Montaigne[[Montaigne, the celebrated French writer, is said to have round particular amusement in playing with his cat.]], as playing with his cat.
+>
 > Bel. He cite Montaigne! The notion is absurd,
 >
 > By him that author's name was never heard.
@@ -5990,14 +5710,10 @@ masters.
 >
 > He brings his wit, to give his tales a lift
 >
-> But takes his stories from the "New Care Killer"[^139]:
+> But takes his stories from the "New Care Killer"[["New Care Killer", a book or the Joe Miller species]]:
 >
-> And all his wit and jokes from old Joe Miller[^140]:
-
-[^139]: "New Care Killer", a book or the Joe Miller species
-
-[^140]: Old "Joe Miller", alluding to "Joe Miller's Jests? a well known collection of jokes and phrases, now considered trite and stale.
-
+> And all his wit and jokes from old Joe Miller[[Old "Joe Miller", alluding to "Joe Miller's Jests? a well known collection of jokes and phrases, now considered trite and stale.]]:
+>
 > And these serve well to retail out to those,
 >
 > Who our professor's company compose;
@@ -6126,10 +5842,8 @@ masters.
 >
 > Hopes these devises will great sales announce,
 >
-> Though these great "Hongs"[^141], never weighed beyond an ounce.
-
-[^141]: Hongs are the great Chinese tea merchants, from whom our East India Company purchase their tea.
-
+> Though these great "Hongs"[[Hongs are the great Chinese tea merchants, from whom our East India Company purchase their tea.]], never weighed beyond an ounce.
+>
 > Each petty trader uses sounding; phrases,
 >
 > Cries down his rivals, and himself bepraises.
@@ -6200,10 +5914,8 @@ masters.
 >
 > The plan's to get you in and there to try,
 >
-> By some finesse, if they can make you buy[^142].
-
-[^142]: Though the above observations on the customs, manners, and stratagems of certain traders may be found generally true, yet the Author has the honour to know many traders who would not only despise such pitiful acts, but would be ashamed of the conduct of some professional artists, as they call themselves.
-
+> By some finesse, if they can make you buy[[Though the above observations on the customs, manners, and stratagems of certain traders may be found generally true, yet the Author has the honour to know many traders who would not only despise such pitiful acts, but would be ashamed of the conduct of some professional artists, as they call themselves.]].
+>
 > Bel. The tricks-in trade which you to me impart,
 >
 > Would be disgraceful in the polite art;
@@ -6280,20 +5992,16 @@ masters.
 >
 > To know the person he calls. Mister Thompson,
 >
-> You may as well enquire of monsieur Tonson[^143];
-
-[^143]: "Monsieur Tonson" — alluding to the well known story of this name, in which repeated enquiries are made after a fictitious character.
-
+> You may as well enquire of monsieur Tonson[["Monsieur Tonson" — alluding to the well known story of this name, in which repeated enquiries are made after a fictitious character.]];
+>
 > Bat when they're gone, the clerk and Mister Flaw
 >
 > Take draughts of Intire, and leave drafts of law.
 >
-> Those who by chance have been to take their drops[^144]
+> Those who by chance have been to take their drops[[Those who have visited the places above alluded to, must have noticed the imposing names inscribed on the supposed reservoir of strong waters and have been perhaps surprized that they have not been more frequently drawn from, for the customers.]]
 >
 > At retail wine vaults, or at some gin shops,
-
-[^144]: Those who have visited the places above alluded to, must have noticed the imposing names inscribed on the supposed reservoir of strong waters and have been perhaps surprized that they have not been more frequently drawn from, for the customers.
-
+>
 > Must have observed the systematic way
 >
 > In which they kegs and empty tubs display
@@ -6556,10 +6264,8 @@ masters.
 >
 > If you complain and prove you've been mistaken,
 >
-> They show the little "as" to save their bacon[^145].
-
-[^145]: The author must here apologize, particularly to Dancers, for this long digression, and for having deviated from the subject, and introduced so much irrelevant matter, under the head "Professors of Dancing;" but having once touched on the subject of trade, he found it difficult to quit the subject, being led into a longer train of reflection of the tricks and stratagems of certain traders, than he anticipated; and can say with the author of Tristram Shandy, "Let no man say he'll write a duodecimo".
-
+> They show the little "as" to save their bacon[[The author must here apologize, particularly to Dancers, for this long digression, and for having deviated from the subject, and introduced so much irrelevant matter, under the head "Professors of Dancing;" but having once touched on the subject of trade, he found it difficult to quit the subject, being led into a longer train of reflection of the tricks and stratagems of certain traders, than he anticipated; and can say with the author of Tristram Shandy, "Let no man say he'll write a duodecimo".]].
+>
 > In trades and callings, and in every art,
 >
 > They something new and wonderful impart:
@@ -6584,12 +6290,10 @@ masters.
 >
 > And loaded wagons with the mail will vie;
 >
-> Now on the main, Columbian castles float[^146],
+> Now on the main, Columbian castles float[[Alluding to the great American Ship "Columbus".]],
 >
 > And in steam coaches – there's a table d'hôte (7),
-
-[^146]: Alluding to the great American Ship "Columbus".
-
+>
 > Where not as usual, crammed up toes to toes,
 >
 > But room to promenade, and take repose.
@@ -6598,23 +6302,17 @@ masters.
 >
 > Strange things achieved, of which we've heard and seen
 >
-> They now move houses furnished and entire[^147],
+> They now move houses furnished and entire[[We have lately had an account of an entire house furnished, in which were all the family, being removed a considerable distance from the original , with scarcely any perceptible convulsion.]],
 >
 > With no more shock than whim you stir the fire;
-
-[^147]: We have lately had an account of an entire house furnished, in which were all the family, being removed a considerable distance from the original , with scarcely any perceptible convulsion.
-
-> A nail machine[^148] (some say the devil's in it)
+>
+> A nail machine[[A merchant of Gottenburg, of the name of Umgewitz, has invented a machine that will make 10,000 nails in a minute.]] (some say the devil's in it)
 >
 > I'm told will make 10000 nails a minute;
-
-[^148]: A merchant of Gottenburg, of the name of Umgewitz, has invented a machine that will make 10,000 nails in a minute.
-
+>
 > Fire-eaters now cool porridge with their breath,
 >
-> And we've stone-eaters[^149], nearly starved to death.
-
-[^149]: The author was some time ago congratulating a celebrated stone-eater on his extraordinary powers, and the advantages he must derive from such an accommodating stomach these hard times, when the stone-eater openly told him, he had been nearly starved to death before he got his present engagement.
+> And we've stone-eaters[[The author was some time ago congratulating a celebrated stone-eater on his extraordinary powers, and the advantages he must derive from such an accommodating stomach these hard times, when the stone-eater openly told him, he had been nearly starved to death before he got his present engagement.]], nearly starved to death.
 
 ***
 
@@ -6650,10 +6348,8 @@ The subjects mentioned in figures 1, 2, 3, 4, 5, 6, and 7, allude to the project
 >
 > A dance in wooden shoes, or clogs, or fetters,
 >
-> Now qualify a clown[^150] to teach his betters.
-
-[^150]: Those who have lately noticed and read the various placards, bills, and advertisements relative to dancing, will find that not only every clown, Pantaloon, and Scaramouch, now professes to teach that polite art, but that even every stage struck Daggerwood who has once performed a dance in fetters or wooden shoes, stiles himself "professor", and advertises to teach every department of Fashionable dancing. Who will not now be a "professor of dancing"? What would a stranger think of our fashionable style of dancing, if he knew the qualifications of these professors?
-
+> Now qualify a clown[[Those who have lately noticed and read the various placards, bills, and advertisements relative to dancing, will find that not only every clown, Pantaloon, and Scaramouch, now professes to teach that polite art, but that even every stage struck Daggerwood who has once performed a dance in fetters or wooden shoes, stiles himself "professor", and advertises to teach every department of Fashionable dancing. Who will not now be a "professor of dancing"? What would a stranger think of our fashionable style of dancing, if he knew the qualifications of these professors?]] to teach his betters.
+>
 > Read the professions of each stage-buffoon,
 >
 > Who'll teach you grace, though he's a pantalon;
@@ -6744,10 +6440,8 @@ The subjects mentioned in figures 1, 2, 3, 4, 5, 6, and 7, allude to the project
 >
 > Presume to lead, and the quadrilles direct,
 >
-> Where thirty figures they should recollect[^151];
-
-[^151]: It must be obvious to all who attend public balls, nay, even private parties, that when quadrilles are called, persons will be found contending to take the lead, who cannot explain the figures in a single quadrille, much less those of a whole set. How these quadrilles are danced, can be easily imagined. Although these observations will be found to apply to the majority of dancers, yet it cannot be denied that Ball-room dancing has been much improved since the introduction of quadrilles, and that many amateurs may be found who would make certain professors ashamed of that title.
-
+> Where thirty figures they should recollect[[It must be obvious to all who attend public balls, nay, even private parties, that when quadrilles are called, persons will be found contending to take the lead, who cannot explain the figures in a single quadrille, much less those of a whole set. How these quadrilles are danced, can be easily imagined. Although these observations will be found to apply to the majority of dancers, yet it cannot be denied that Ball-room dancing has been much improved since the introduction of quadrilles, and that many amateurs may be found who would make certain professors ashamed of that title.]];
+>
 > They've this advantage – as you mostly find
 >
 > In such formed sets, the blind there lead the blind.
@@ -6760,12 +6454,10 @@ The subjects mentioned in figures 1, 2, 3, 4, 5, 6, and 7, allude to the project
 >
 > And cons his task, as children do their prayers;
 >
-> With book in hand, like boys called up to read[^152],
+> With book in hand, like boys called up to read[[The majority of Dancers presume to stand up publicly to dance quadrilles before they have learnt them, and depend on learning the figures from the book while standing up in the set. Thus, whilst they are attentively conning their lessons, they frequently lose part of the tune, end in their endeavours to overtake the time, generally spoil the figure, and throw the dance into confusion.]],
 >
 > They stand and cut a sorry sight indeed;
-
-[^152]: The majority of Dancers presume to stand up publicly to dance quadrilles before they have learnt them, and depend on learning the figures from the book while standing up in the set. Thus, whilst they are attentively conning their lessons, they frequently lose part of the tune, end in their endeavours to overtake the time, generally spoil the figure, and throw the dance into confusion.
-
+>
 > They reading stand, till half the strain is done,
 >
 > Then in their fright, like bunted rabbits run;
@@ -6872,20 +6564,16 @@ The subjects mentioned in figures 1, 2, 3, 4, 5, 6, and 7, allude to the project
 >
 > Some, lost in doubt, let all the time expire,
 >
-> Afraid to move, like horses at a fire[^153];
-
-[^153]: "Horses at a fire". These animals, it is well know, are so terrified at fire, that it has been often found difficult, sometimes impossible to remove them.
-
+> Afraid to move, like horses at a fire[["Horses at a fire". These animals, it is well know, are so terrified at fire, that it has been often found difficult, sometimes impossible to remove them.]];
+>
 > Others quite run, and often the wrong way,
 >
 > Neither for music nor their partners stay;
 >
 > Whilst others oft their folly to defend,
 >
-> Grow insolent, and for their rights contend[^154];
-
-[^154]: "For their rights contend". The right to stand up in dances, is a privilege all claim, however unqualified: a master of the ceremonies has never been allowed the discretionary power of refusing an unqualified person a place in the dance.
-
+> Grow insolent, and for their rights contend[["For their rights contend". The right to stand up in dances, is a privilege all claim, however unqualified: a master of the ceremonies has never been allowed the discretionary power of refusing an unqualified person a place in the dance.]];
+>
 > So blunder on, and spoil the figures quite,
 >
 > By being pushed and pulled to set them right,
@@ -6918,12 +6606,10 @@ Jem. This is a proof of ignorance you'll find,
 >
 > But sometimes they from pride attempt to gain
 >
-> What they in others did as faults proclaim[^155].
+> What they in others did as faults proclaim[["As faults proclaim.". Instances have occurred within the Author's knowledge in which those who have censured others for learning certain dances, have been themselves privately taught the same.]].
 >
 > Bel. Vanity in some's incurable, they say,
-
-[^155]: "As faults proclaim.". Instances have occurred within the Author's knowledge in which those who have censured others for learning certain dances, have been themselves privately taught the same.
-
+>
 > For that commodity, fools dearly pay.
 >
 > Jem. You must allow, my dear, we all possess
@@ -7004,10 +6690,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > If they can through the figures go, they'll say,
 >
-> "I think I now can dance as well as they[^156]
-
-[^156]: Many sapient persons, after a few lessons, will, with the view of saving money, as they suppose, leave their masters, and endeavour to instruct themselves; for which purpose, they go to Balls and Dances, to pick up, (as their phrase is) as much dancing as they want.
-
+> "I think I now can dance as well as they[[Many sapient persons, after a few lessons, will, with the view of saving money, as they suppose, leave their masters, and endeavour to instruct themselves; for which purpose, they go to Balls and Dances, to pick up, (as their phrase is) as much dancing as they want.]]
+>
 > "Who've been two quarters; I'll no longer pay,
 >
 > "I can instruct myself – to balls I'll go,
@@ -7110,10 +6794,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And others, whom I've known as fiddlers, waiters,
 >
-> Gallimaufry men[^157], and undertakers
-
-[^157]: "Gallimaufry men". Those are so called, who hold entertainments of a mixed kind, dancing, singing, &c. and sometimes juggling; the company regale themselves during the performance, and the performers are generally remunerated by a collection made with a hat or plate. The greater part of advertised Public Balls are held by characters who can have no pretensions for holding them, except the hope of gain, which they endeavour to effect by using such means as will be explained in subsequent remarks.
-
+> Gallimaufry men[["Gallimaufry men". Those are so called, who hold entertainments of a mixed kind, dancing, singing, &c. and sometimes juggling; the company regale themselves during the performance, and the performers are generally remunerated by a collection made with a hat or plate. The greater part of advertised Public Balls are held by characters who can have no pretensions for holding them, except the hope of gain, which they endeavour to effect by using such means as will be explained in subsequent remarks.]], and undertakers
+>
 > And many others, who've no better claim —
 >
 > Yet in large placards, they grand balls proclaim;
@@ -7186,32 +6868,24 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Then they excuse themselves, say what you name
 >
-> Cannot be done – they're either ill or lame[^158].
-
-[^158]: The author has known more than one of these great professors, who, recollecting that "Comparisons are odious," have always avoided dancing at their own balls, and to prevent suspicions of the real cause, have generally pretended to be ill or lame.
-
-> One tells the World his ball will be a treat[^159],
+> Cannot be done – they're either ill or lame[[The author has known more than one of these great professors, who, recollecting that "Comparisons are odious," have always avoided dancing at their own balls, and to prevent suspicions of the real cause, have generally pretended to be ill or lame.]].
+>
+> One tells the World his ball will be a treat[[One great Professor endeavours to give importance to his Balls by advertising seats in the gallery; those who know him and his connections, declare that such as could be amused by the performance, can have little knowledge of dancing.]],
 >
 > And in the gallery they may have a seat;
-
-[^159]: One great Professor endeavours to give importance to his Balls by advertising seats in the gallery; those who know him and his connections, declare that such as could be amused by the performance, can have little knowledge of dancing.
-
+>
 > But those who know him and his pupils, say
 >
 > They neither dancing, taste, nor grace display.
 >
-> Sometimes "Six harps, with two full bands" combined[^160],
+> Sometimes "Six harps, with two full bands" combined[[Several of these Professors seem to consider tousle more attractive than dancing, as the announcement of two full bands, or six harps, forms the leading feature in their bills of fare. One has lately put forth a tricking bill, in which "six harps and two bands" form the principal feature, but on closer inspection, the word "neither", in small type, was placed before "six harps", and "nor", before "two bands". See page 40.]],
 >
 > Are leading features in their bill you'll find —
-
-[^160]: Several of these Professors seem to consider tousle more attractive than dancing, as the announcement of two full bands, or six harps, forms the leading feature in their bills of fare. One has lately put forth a tricking bill, in which "six harps and two bands" form the principal feature, but on closer inspection, the word "neither", in small type, was placed before "six harps", and "nor", before "two bands". See page 40.
-
-> If at a Tavern they should hold their ball[^161],
+>
+> If at a Tavern they should hold their ball[[Obscure individuals often advertise balls at great taverns, wholly depending on the credit of the house for company.]],
 >
 > Tavern's the most conspicuous word of all;
-
-[^161]: Obscure individuals often advertise balls at great taverns, wholly depending on the credit of the house for company.
-
+>
 > They on the place depend, not on their name,
 >
 > Thus strive to profit by the tavern's fame;
@@ -7234,18 +6908,14 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Instead of which, a hornpipe, or a reel,
 >
-> Or else from mother Goose a dance they steal[^162];
-
-[^162]: A popular burlesque dance in the pantomime of "Mother Goose".
-
+> Or else from mother Goose a dance they steal[[A popular burlesque dance in the pantomime of "Mother Goose".]];
+>
 > By way of interlude, they often chase,
 >
 > To show their skill and their dear selves amuse,
 >
-> To dance in fetters, or in wooden shoes[^163].
-
-[^163]: The author has in his possession ball bills, in which "dances in fetters", and "wooden shoes", are mentioned as forming part of the fashionable ball room dances of the evening.
-
+> To dance in fetters, or in wooden shoes[[The author has in his possession ball bills, in which "dances in fetters", and "wooden shoes", are mentioned as forming part of the fashionable ball room dances of the evening.]].
+>
 > Jem. At a grand ball, not far from Temple Bar,
 >
 > I saw some guests who did a minuet mar; v
@@ -7282,12 +6952,10 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Just as a bear herd holds his cadging cap.
 >
-> They danced, not as our Shakespeare[^164] wished to see,
+> They danced, not as our Shakespeare[[It is evident that Shakspeare was an admirer of the waving line, (the characteristic of the minuet), as, in the Winter's Tale, he makes Florizel say to Perdita, "When you dance, I wish you a wave of the sea".]] wished to see,
 >
 > To sink and rise like waving of the sea;
-
-[^164]: It is evident that Shakspeare was an admirer of the waving line, (the characteristic of the minuet), as, in the Winter's Tale, he makes Florizel say to Perdita, "When you dance, I wish you a wave of the sea".
-
+>
 > For they the gentle waving line never used,
 >
 > But all the laws of art and grace abused.
@@ -7338,10 +7006,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > They neither care for dancing, nor for fame;
 >
-> But should a dancer, or known teacher, call[^165]
-
-[^165]: A well-known professor who prints a flaming bill, and proposes to teach every department of the art, at one of his Public Balls attended the door himself, for the avowed purpose of keeping out every professed dancer who might apply, whether with admission tickets or not--the reason he gave for this very extraordinary seclusion was, that their object was either to make impertinent remarks, or to draw away his pupils.
-
+> But should a dancer, or known teacher, call[[A well-known professor who prints a flaming bill, and proposes to teach every department of the art, at one of his Public Balls attended the door himself, for the avowed purpose of keeping out every professed dancer who might apply, whether with admission tickets or not--the reason he gave for this very extraordinary seclusion was, that their object was either to make impertinent remarks, or to draw away his pupils.]]
+>
 > And ask of them admission to their ball,
 >
 > Heed be refused, for those imposing elves,
@@ -7398,10 +7064,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Jem. To advertise new rooms, some feel no shame,
 >
-> Though they for thirty years have been the same[^166].
-
-[^166]: One professor lately advertised "New dancing academy", which, on inspection, turned out to be the very rooms he had occupied for years, and which had been quitted by his predecessor in the same line for a more eligible situation.
-
+> Though they for thirty years have been the same[[One professor lately advertised "New dancing academy", which, on inspection, turned out to be the very rooms he had occupied for years, and which had been quitted by his predecessor in the same line for a more eligible situation.]].
+>
 > Bel. With some folks now, a handsome room is all
 >
 > The requisites they look for at a ball;
@@ -7424,10 +7088,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > E'en when they sweep the cobwebs with a broom,
 >
-> And every time they white-wash up their room[^167],
-
-[^167]: It has lately been the practice of certain teachers, whenever they white-wash, or repair their rooms, to put forth a pompous advertisement, detailing not terms of dancing, but "decorations, superb establishment, lamps, chandeliers, &c. &c." on which they appear to rely, more than on their own ability.
-
+> And every time they white-wash up their room[[It has lately been the practice of certain teachers, whenever they white-wash, or repair their rooms, to put forth a pompous advertisement, detailing not terms of dancing, but "decorations, superb establishment, lamps, chandeliers, &c. &c." on which they appear to rely, more than on their own ability.]],
+>
 > They advertise "their rooms done up anew",
 >
 > If only white-washed, that will prove it true.
@@ -7514,10 +7176,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > How, when and where they canvass, they're not nice,
 >
-> In chapel, playhouse, or upon the ice[^168] —
-
-[^168]: The author was told by a gentleman as a fact, that he was applied to one Sunday evening at chapel, by a lady unknown to him, who after some short conversation, offered him tickets for the ball of one of these professors. — And two of the author's pupils, whilst skating on the serpentine, were applied to by a lady with whom they were unacquainted, to take similar tickets.
-
+> In chapel, playhouse, or upon the ice[[The author was told by a gentleman as a fact, that he was applied to one Sunday evening at chapel, by a lady unknown to him, who after some short conversation, offered him tickets for the ball of one of these professors. — And two of the author's pupils, whilst skating on the serpentine, were applied to by a lady with whom they were unacquainted, to take similar tickets.]] —
+>
 > All's one to them, the chapel, or the play,
 >
 > They go to canvass, not to learn and pray.
@@ -7554,16 +7214,12 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Of bringing one their viands to partake,
 >
-> And pay for hat or cloak, for custom sake[^169]:
-
-[^169]: When the proprietors of these Balls are asked by the visitors the reasons they are not allowed to take their hats into the ball room, and through officious care, are compelled to pay for the unwilling detention--the plea is, "the usual custom".
-
+> And pay for hat or cloak, for custom sake[[When the proprietors of these Balls are asked by the visitors the reasons they are not allowed to take their hats into the ball room, and through officious care, are compelled to pay for the unwilling detention--the plea is, "the usual custom".]]:
+>
 > They gain addresses, invitations send
 >
-> For their grand balls, to Mister A---, and friend[^170]
-
-[^170]: The author knows several persons who have received tickets for Balls in the above manner, who had no knowledge of the party from whom they came, but concluding it could not be from strangers, have attended, when the ball proved to be nothing more than a common hop; in the numerous invitations to which they have been included (though they were not acquainted with the proprietor) for the evident purpose of gain, from refreshment, hat, cloak money, &c. &c.
-
+> For their grand balls, to Mister A---, and friend[[The author knows several persons who have received tickets for Balls in the above manner, who had no knowledge of the party from whom they came, but concluding it could not be from strangers, have attended, when the ball proved to be nothing more than a common hop; in the numerous invitations to which they have been included (though they were not acquainted with the proprietor) for the evident purpose of gain, from refreshment, hat, cloak money, &c. &c.]]
+>
 > Who reads and wonders how these tickets came,
 >
 > (As he, professor knows not e'en by name),
@@ -7672,12 +7328,10 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Daffers, duffers, mop-stick weavers, and undertakers,
 >
-> Oft constitute the guests at these grand balls[^171],
+> Oft constitute the guests at these grand balls[[That there should be such balls, Ball holders and Ball guests ought not to excite surprize, but that the professors alluded to should feel pride in identifying' themselves with such concerns, must appear extraordinary to those who know the parties, and have witnessed their constant boastings of their connections and abilities, as well as their challenges to all the town.]],
 >
 > Dispute precedence, and demand the calls.
-
-[^171]: That there should be such balls, Ball holders and Ball guests ought not to excite surprize, but that the professors alluded to should feel pride in identifying' themselves with such concerns, must appear extraordinary to those who know the parties, and have witnessed their constant boastings of their connections and abilities, as well as their challenges to all the town.
-
+>
 > The conduct of the guests whom you find there,
 >
 > Is such as you would meet with at a fair:
@@ -7692,12 +7346,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And hear professor oft attention call,
 >
-> For siffleurs[^172] and chin music[^173] at the ball.
-
-[^172]: The author possesses ball bills announcing performances similar with the above.
-
-[^173]: Chin music is a noise, or sort of music produced by striking the knuckles upon the chin, and has long formed an amusement for low and vulgar people: is mostly performed at fairs, and has been lately introduced to vary the entertainments of some of these Balls, or rather gallimaufry exhibitions, held under the name and pretence of "Grand Balls," and conducted by some of the professors alluded to.
-
+> For siffleurs[[The author possesses ball bills announcing performances similar with the above.]] and chin music[[Chin music is a noise, or sort of music produced by striking the knuckles upon the chin, and has long formed an amusement for low and vulgar people: is mostly performed at fairs, and has been lately introduced to vary the entertainments of some of these Balls, or rather gallimaufry exhibitions, held under the name and pretence of "Grand Balls," and conducted by some of the professors alluded to.]] at the ball.
+>
 > Uncloaked and smoking, in a wicker chair,
 >
 > Sits Shakespeare's Richard (says the bill of fare),
@@ -7770,27 +7420,24 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And treat their guests as they would little boys
 >
-> To call a dance they now a trumpet blow[^174],
->
-> As showmen gather children round a show:
-
-[^174]:
+> To call a dance they now a trumpet blow[[
 	It has lately been the practice with some professors of dancing when they have a ball, to call up their company to the dances, (i. e. to their places in the dance) with a charge on the trumpet, instead of the ever-commanding voice of the master of the ceremonies; thus making the ball room resemble a field of Mars, rather than the Temple of Terpsichore. It is done to give the idea of the company being too numerous to be summoned by the master's voice.
 
 	> What next will form a feature in their bill,
 	>
 	> None can devise--- 'tis past all human skill.
-
+]],
+>
+> As showmen gather children round a show:
+>
 > Who hear the trumpet, then take to their legs,
 >
 > In hopes to see some phoenix, or cock's eggs,
 >
 > Or learned pig, or mermaid newly taken,
 >
-> Or some kind pair, who've claimed the flitch of bacon[^175].
-
-[^175]: At the Manor of Dunmow, in Essex, according to ancient custom, the steward gives a flitch of bacon to any married couple having been married a year and a day, who kneeling on two sharp stones in the church-yard, will swear they have not transgressed their nuptial vow, had no domestic strife, offended each other in word or deed, wished themselves unmarried, or repented. It appears that the gift has been obtained only six times during the last four hundred years, (videlicet) three times before the dissolution of monasteries in the reign of Henry 8th, and thrice since that period.
-
+> Or some kind pair, who've claimed the flitch of bacon[[At the Manor of Dunmow, in Essex, according to ancient custom, the steward gives a flitch of bacon to any married couple having been married a year and a day, who kneeling on two sharp stones in the church-yard, will swear they have not transgressed their nuptial vow, had no domestic strife, offended each other in word or deed, wished themselves unmarried, or repented. It appears that the gift has been obtained only six times during the last four hundred years, (videlicet) three times before the dissolution of monasteries in the reign of Henry 8th, and thrice since that period.]].
+>
 > So our professors trope their guests will race,
 >
 > And sans decorum, scramble for a place;
@@ -7841,10 +7488,8 @@ Jem. This is a proof of ignorance you'll find,
 >
 > I've now forgot the wording, but I will
 >
-> Some future day, produce you this choice bill[^176];
-
-[^176]: Though the author has unfortunately mislaid the ball bill to which he has above alluded, and which is a curious specimen of doggrel, bombast, and extravagance; yet he hopes to be able to present it to the reader in a future edition.
-
+> Some future day, produce you this choice bill[[Though the author has unfortunately mislaid the ball bill to which he has above alluded, and which is a curious specimen of doggrel, bombast, and extravagance; yet he hopes to be able to present it to the reader in a future edition.]];
+>
 > But it is such wit, and so devoid of sense,
 >
 > To read it through you need have recompense.
@@ -7953,26 +7598,10 @@ Jem. This is a proof of ignorance you'll find,
 >
 > A profit on the various things they vend,
 >
-> From cloaks and hats[^177], and what the guest may spend,
+> From cloaks and hats[[The profits arising from cloaks and hats has long been considered by the holders of these balls as an annuity, which is raised by levying a tax on all comers, ladies as well as gentlemen — the usual demand on each Lady is sixpence, and never less, but sometimes more, on each gentleman. Some of the proprietors of these balls, or "professors" as they stile themselves, (though many of them notwithstanding they assume that title, have no more knowledge of dancing than some M. P.'s have of legislation), boast of gaining nightly two or three pounds by this practice, which, together with the profits they gain by liquors and refreshments support their establishments. Therefore, they do not depend on their abilities as teachers, to procure pupils; the quality either of the dancer or of the guest, is to them of no importance, numbers being all they want, to attain which, tickets are distributed amongst the company, but chiefly to the ladies, who they trust can influence the gentlemen; and thus large companies are obtained.]], and what the guest may spend,
 >
 > Some wholly live; whatever they pretend.
-
-[^177]: The profits arising from cloaks and hats has long been
-considered by the holders of these balls as an annuity, which is raised
-by levying a tax on all comers, ladies as well as gentlemen — the usual
-demand on each Lady is sixpence, and never less, but sometimes more, on
-each gentleman. Some of the proprietors of these balls, or "professors"
-as they stile themselves, (though many of them notwithstanding they
-assume that title, have no more knowledge of dancing than some M. P.'s
-have of legislation), boast of gaining nightly two or three pounds by
-this practice, which, together with the profits they gain by liquors
-and refreshments support their establishments. Therefore, they do not
-depend on their abilities as teachers, to procure pupils; the quality
-either of the dancer or of the guest, is to them of no importance,
-numbers being all they want, to attain which, tickets are distributed
-amongst the company, but chiefly to the ladies, who they trust can
-influence the gentlemen; and thus large companies are obtained.
-
+>
 > From these and other stratagems are gained,
 >
 > More profit than by teaching is obtained:
@@ -7981,18 +7610,14 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > By which they slyly cozen the excise,
 >
-> By mixing liquors without licensed leave[^178]
+> By mixing liquors without licensed leave[[It has become a common practice not only to vend coffee, tea, and other unexcisable articles, but also wine, beer, &c. and mixed liquors of all, kind without license, to the injury not only of the revenue, but of the fair trader.]]
 >
 > To sack the profit and excise deceive.
-
-[^178]: It has become a common practice not only to vend coffee, tea, and other unexcisable articles, but also wine, beer, &c. and mixed liquors of all, kind without license, to the injury not only of the revenue, but of the fair trader.
-
-> Some take one license, just by way of blind[^179],
+>
+> Some take one license, just by way of blind[[Some of these ball holders take one license only, under which they sell all the above articles and risque detection, but to sell them legally would require three separate licenses.]],
 >
 > Yet wines and liquors sell of every kind;
-
-[^179]: Some of these ball holders take one license only, under which they sell all the above articles and risque detection, but to sell them legally would require three separate licenses.
-
+>
 > With ale and porter, bottled beer, and stout,
 >
 > Yet all plead ignorance when they're found out.
@@ -8007,10 +7632,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To sell without is risk – the law abounds
 >
-> With penalties for each – some fifty pounds[^180].
-
-[^180]: The penalty for the sale of any excisable article without license, is £50.
-
+> With penalties for each – some fifty pounds[[The penalty for the sale of any excisable article without license, is £50.]].
+>
 > But these ball holders nothing have in view,
 >
 > But gain, for which they cheat the revenue;
@@ -8077,10 +7700,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Who never reflect, and whose resolves are vain,
 >
-> Who, Ranger[^181] like, – next night return again.
-
-[^181]: "Ranger". A character in the comedy of The Suspicious Husband.
-
+> Who, Ranger[["Ranger". A character in the comedy of The Suspicious Husband.]] like, – next night return again.
+>
 > Such are the guests they want, not those who are
 >
 > Economists, and rigid sons of care;
@@ -8123,10 +7744,8 @@ influence the gentlemen; and thus large companies are obtained.
 
 > Jem. I'll now begin with what some often call,
 >
-> And often advertise, "A grand dress ball[^182]";
-
-[^182]: The remarks and animadversions on this, and the various other public balls mentioned in this work, are not meant to apply to those eminent teachers, or to the Balls held by public societies, but only to such as are advertised by those self-created, self-entitled professors alluded to in this work.
-
+> And often advertise, "A grand dress ball[[The remarks and animadversions on this, and the various other public balls mentioned in this work, are not meant to apply to those eminent teachers, or to the Balls held by public societies, but only to such as are advertised by those self-created, self-entitled professors alluded to in this work.]]";
+>
 > You, from their title, might expect to find
 >
 > Good company, with elegance combined.
@@ -8281,10 +7900,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > They care not who the guest may be, not they,
 >
-> If he for coffee, hat, and partner pay[^183].
-
-[^183]: Coffee is the usual beverage at these balls, of which the whole company are expected to partake — each Gentleman is presented with a coffee ticket, for which he generally pays before he enters the ball room, and likewise one for his partner, (should he bring one); on this, and the profit made from other refreshments, and the charges for hats, cloaks, &c. the proprietors wholly depend, the tickets being mostly given away; their object is to obtain numbers.
-
+> If he for coffee, hat, and partner pay[[Coffee is the usual beverage at these balls, of which the whole company are expected to partake — each Gentleman is presented with a coffee ticket, for which he generally pays before he enters the ball room, and likewise one for his partner, (should he bring one); on this, and the profit made from other refreshments, and the charges for hats, cloaks, &c. the proprietors wholly depend, the tickets being mostly given away; their object is to obtain numbers.]].
+>
 > Bel. The numbers there collected, oft impose
 >
 > On strangers who too frequently suppose
@@ -8309,12 +7926,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > How far they with their title do agree.
 >
-> They often use the terms, Grand and Select[^184],
+> They often use the terms, Grand and Select[[The Author has in his possession several bills and placards of "select balls" held by different parties; of all those where he has been company have been indiscriminately admitted, either by tickets or payment of money at the door, notwithstanding the conditions in the bill (for select company); but professions and performances seemed quite incompatible with these professors, as all comers were welcome guests.]],
 >
 > In their announcements – this is puff direct,
-
-[^184]: The Author has in his possession several bills and placards of "select balls" held by different parties; of all those where he has been company have been indiscriminately admitted, either by tickets or payment of money at the door, notwithstanding the conditions in the bill (for select company); but professions and performances seemed quite incompatible with these professors, as all comers were welcome guests.
-
+>
 > For in one visit you'll the cheat detect.
 >
 > To gain access you need of no petition,
@@ -8383,10 +7998,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > They less politeness to each other employ,
 >
-> Than our old foes showed us, at Fontenoy[^185].
-
-[^185]: It is related that at the commencement of the battle of Fontenoy, the English and French guards were drawn up opposite each other, and so near as to be within hearing, where they remained sometime motionless, waiting for each others fire: when the French Commander called out, "the French guards are waiting for the gentlemen of the English guards to fire first". Read this ye modern ball room dancers — and confess that comparisons are odious.
-
+> Than our old foes showed us, at Fontenoy[[It is related that at the commencement of the battle of Fontenoy, the English and French guards were drawn up opposite each other, and so near as to be within hearing, where they remained sometime motionless, waiting for each others fire: when the French Commander called out, "the French guards are waiting for the gentlemen of the English guards to fire first". Read this ye modern ball room dancers — and confess that comparisons are odious.]].
+>
 > Bel. There's this excuse, if it can he allowed,
 >
 > They to politeness never yet have bowed,
@@ -8471,9 +8084,7 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To find them only common hops disguised.
 
-### Characteristic Balls[^186]
-
-[^186]: The holders of these Balls know the illegality of holding Masquerades, but (as they are more attractive than the usual quadrille and country dance balls) the law is attempted to be evaded by giving them under the title of characteristic balls, (the nature of which is well understood by dancers), by which they hope to deceive the police, but deceive themselves sometimes to their cost, as they become equally amenable to the severe clauses in the Act of Parliament relative to Dancing Assemblies, (hereafter stated). Some of these ball holders have experienced the truth of these observations.
+### Characteristic Balls[[The holders of these Balls know the illegality of holding Masquerades, but (as they are more attractive than the usual quadrille and country dance balls) the law is attempted to be evaded by giving them under the title of characteristic balls, (the nature of which is well understood by dancers), by which they hope to deceive the police, but deceive themselves sometimes to their cost, as they become equally amenable to the severe clauses in the Act of Parliament relative to Dancing Assemblies, (hereafter stated). Some of these ball holders have experienced the truth of these observations.]]
 
 > That you may now fresh information gain,
 >
@@ -8501,19 +8112,15 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To have these balls the holders must receive,
 >
-> Either the Chamberlain's license or his leave[^187];
-
-[^187]: Leave is on some occasions granted for a single night to parties who have no permanent license.
-
+> Either the Chamberlain's license or his leave[[Leave is on some occasions granted for a single night to parties who have no permanent license.]];
+>
 > Without such leave, all parties in the place
 >
 > May be imprisoned, and fined with the disgrace
 >
 > Of being convicted by the Vagrant act,
 >
-> Some late transactions prove this is the fact[^188].
-
-[^188]:
+> Some late transactions prove this is the fact[[
 	A circumstance of this kind (which must be in the recollection of some of the readers) occurred in the year 1822. at the Assembly Rooms, in Kirby Street, Hatton Garden, then kept by a mister Smith, but now in the occupation of the Author of this work.
 
 	Mister Smith was in the habit of letting his rooms indiscriminately for Masquerades and Public Dancing, though repeatedly cautioned on the illegality and danger of such proceedings; yet, the practice was continued till the Magistrates unexpectedly caused the parties to be apprehended on a warrant, under the Act 25th Geo. 2nd. The Proprietor could not be found; the company (after being detained in custody all night, and part of the next day, when they were publicly exposed, and reprimanded,) were at last permitted to depart, and with difficulty escaped the Tread Mill.
@@ -8525,13 +8132,12 @@ influence the gentlemen; and thus large companies are obtained.
 	For a more particular account of this transaction, see "The News" of 2nd January, 1825.
 
 	Though it appears the charge against these parties was dismissed, yet, had it been pressed, under the Act of Geo. 2nd, the Magistrate would have been compelled to send them to prison, and Mr. J. might also have been perhaps nearly ruined, through doing what he might have considered only as an act of humanity.
-
+]].
+>
 > To evade the law they try another way,
 >
-> And give out tickets gratis[^189], but then they
-
-[^189]: Many holders of Masquerades give admission tickets, in order to evade the law, but by way of compensation oblige the company to hire dresses of them, for which most extravagant charges are always made.
-
+> And give out tickets gratis[[Many holders of Masquerades give admission tickets, in order to evade the law, but by way of compensation oblige the company to hire dresses of them, for which most extravagant charges are always made.]], but then they
+>
 > Expect you will of them your dresses hire,
 >
 > And pay for them whatever they require.
@@ -8556,10 +8162,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Them always – two instances I have seen,
 >
-> At Bow street, and Saint Martin's lane, I mean[^190]:
-
-[^190]: The whole company at the assembly rooms in Saint Martin's Lane, and at Duke's Court, Bow Street, were lately taken up on warrants under the Act before referred to. From the latter place where a masquerade was held) several were committed as vagabonds to the house of correction — the proprietors escaped in both instances; but such of the company as were not committed, were publicly exposed and reprimanded.
-
+> At Bow street, and Saint Martin's lane, I mean[[The whole company at the assembly rooms in Saint Martin's Lane, and at Duke's Court, Bow Street, were lately taken up on warrants under the Act before referred to. From the latter place where a masquerade was held) several were committed as vagabonds to the house of correction — the proprietors escaped in both instances; but such of the company as were not committed, were publicly exposed and reprimanded.]]:
+>
 > Where the whole company were lately caught,
 >
 > And to the magistrate by force were brought;
@@ -8576,12 +8180,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > But they by chance were there decoyed and caught.
 >
-> The dancing laws[^191] you'll find, are little known,
+> The dancing laws[[Tavern keepers and publicans generally appear to be ignorant of the existence of the Act for the regulation of public amusement, much more to the penalties which they often incur. The only danger they apprehend, is from late hours and improper company, and in order to protect themselves from any risk on this account, they generally procure the attendance of a Peace Officer, which they think will sufficiently sanction them in case of being summoned to appear, and answer any complaint before a Magistrate--this being all they supposed requisite, several publicans whom the author is acquainted with have applied to the High Constable, and others to the Magistrates for permission to hold balls.]] you'll find, are little known,
 >
 > To those they most concern, in this great town.
-
-[^191]: Tavern keepers and publicans generally appear to be ignorant of the existence of the Act for the regulation of public amusement, much more to the penalties which they often incur. The only danger they apprehend, is from late hours and improper company, and in order to protect themselves from any risk on this account, they generally procure the attendance of a Peace Officer, which they think will sufficiently sanction them in case of being summoned to appear, and answer any complaint before a Magistrate--this being all they supposed requisite, several publicans whom the author is acquainted with have applied to the High Constable, and others to the Magistrates for permission to hold balls.
-
+>
 > Bel. I know but little of them, I must own.
 
 ### Laws Relative to Dancing
@@ -8628,12 +8230,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Jem. Well – that I'll do in what they call a trice.
 >
-> This act you'll find the public did obtain[^192]
+> This act you'll find the public did obtain[[This Act seems, ever since it was first passed, to have been almost unknown or greatly misunderstood by the parties whom it Chiefly concerns, (videlicet) teachers of dancing and publicans. The author recollects, that some years ago a penal action was brought (under this Statute) in the Court of K. B., against a mister Welling, who kept the Coach and Horses, in Holborn, and so little was the Act then known or understood, that he was supported by about twenty other Publicans, against whom similar actions were pending, not one of whom knew of the Act, and so confident were they of defeating the informers, that mister Welling (being persuaded by them) defended the action, on the ground that the company was respectable, and kept good hours--the defence availed nothing — the Plaintiff proved that dancing had been held at the Defendant's house, and that money had been received for admission, which constituted it "a place of public entertainment" within the meaning of the Act, and upon reading the penal clauses, a verdict was immediately given for the Plaintiff for £100, with double costs (£60). Mister Welling was entirely ruined by the action, — being utterly unable to pay the fine, he was obliged to quit his house, and retire into obscurity. Calendar (an Informer) afterwards brought various actions (under the same Statute) against other parties, none of whom ventured to contest the question with him, but were all obliged to compromise.]]
 >
 > The 25th of George the Second's reign.
-
-[^192]: This Act seems, ever since it was first passed, to have been almost unknown or greatly misunderstood by the parties whom it Chiefly concerns, (videlicet) teachers of dancing and publicans. The author recollects, that some years ago a penal action was brought (under this Statute) in the Court of K. B., against a mister Welling, who kept the Coach and Horses, in Holborn, and so little was the Act then known or understood, that he was supported by about twenty other Publicans, against whom similar actions were pending, not one of whom knew of the Act, and so confident were they of defeating the informers, that mister Welling (being persuaded by them) defended the action, on the ground that the company was respectable, and kept good hours--the defence availed nothing — the Plaintiff proved that dancing had been held at the Defendant's house, and that money had been received for admission, which constituted it "a place of public entertainment" within the meaning of the Act, and upon reading the penal clauses, a verdict was immediately given for the Plaintiff for £100, with double costs (£60). Mister Welling was entirely ruined by the action, — being utterly unable to pay the fine, he was obliged to quit his house, and retire into obscurity. Calendar (an Informer) afterwards brought various actions (under the same Statute) against other parties, none of whom ventured to contest the question with him, but were all obliged to compromise.
-
+>
 > This act is called "an act for the preventing
 >
 > Thefts and robberies, and for regulating
@@ -8650,19 +8250,11 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Disorderly houses also fare the same.
 >
-> Bel. It seems a complicated act, combined[^193]
+> Bel. It seems a complicated act, combined[[It will be observed, that illegal dancing is comprized in the "Act for preventing thefts and robberies, and punishing rogues and vagabonds, and keepers of disorderly houses, and houses of ill fame".]]
 >
 > With other things; to dancing not confined;
-
-[^193]: It will be observed, that illegal dancing is comprized in the "Act for preventing thefts and robberies, and punishing rogues and vagabonds, and keepers of disorderly houses, and houses of ill fame".
-
-> I'm told it is arbitrary, and too severe[^194].
 >
-> Jem. The pains and penalties you now shall hear,
->
-> To show if you transgress what you've to fear.
-
-[^194]:
+> I'm told it is arbitrary, and too severe[[
 	The following is an abstract of the Act as far as regards the laws against illegal dancing.
 
 	By Act of Parliament of the 25th George the Second, entitled "An Act for the better preventing thefts and robberies, and for regulating places of public amusement, and punishing persons keeping disorderly houses." After reciting (amongst other things) "That the multitude of places of entertainment for the lower sort of people was a great cause of Thefts and Robberies, as they were thereby tempted to spend their small substance in riotous pleasures, and in consequence were put on unlawful methods of supplying their wants and renewing their pleasures, in order to correct as far as might be the habit of idleness which was become too general over the whole kingdom, and was productive of much mischief and inconvenience; It is enacted that after the first day of December, 1752, any House, Room, Garden, or other place kept for public Dancing, Music, or other public entertainments of the like kind, in the Cities of London and Westminster, or within twenty miles thereof, without a license had for that purpose, from the last preceding Michaelmas Quarter Sessions of the Peace, to be holden for the County, City, Riding, Liberty or Division, in which such House, Room, Garden, or other place is situate, (who are thereby authorized and impowered to grant such licenses as they in their discretion shall think proper) signified under the hands and seals of four or more of the Justices there assembled, shall be deemed a disorderly House or Place; And every such license shall be signed and sealed by the said Justices in open Court, and afterwards be publicly read by the Clerk of the Peace, together with the names of the Justices subscribing the same; and no such license shall be granted at any Adjourned Sessions, nor shall any fee or reward be taken for any such license; And it shall and may be lawful to and for any other person being thereunto authorized by warrant, under the hand and seal of one and more of his Majesty's Justices of the Peace of the County, City, Riding, Division, or Liberty, where such House or place shall be situate, to enter such House or place, and to seize every person who shall be found therein, in order that they may be dealt with according to law; And every person keeping such House, Room, Garden, or other place, without such license as aforesaid, shall forfeit the sum of £100 to such person as will sue for the same, and be otherwise punishable as the law directs, in cases of disorderly Houses. And it is thereby further enacted, that in order to give public notice what places are licensed pursuant to this Act, there shall be affixed and kept up in some notorious place over the door or entrance of every such House, Room, Garden, or other place kept for any of the said purposes, and so licensed as aforesaid, an inscription in large capital letters, in the words following, (videlicet) licensed pursuant to Act of Parliament of the twenty fifth of king George the Second, and that no such House, Room, Garden, or other place, kept for any of the said purposes, although licensed as aforesaid, shall be opened for any of the said purposes before the hour of five in the Afternoon, and that the affixing and keeping up of such inscription as aforesaid, and that the said limitation or restriction in point of time shall be inserted in, and made conditions of every such license. And in case of any breach of either of the said conditions, such license shall be forfeited, and shall be revoked by the Justices of the Peace, in the General or Quarter Sessions, and shall not be renewed, nor shall any new license be granted to the same person or persons, or any others on their behalf, directly or indirectly, for keeping any such House, Room, Garden, or other place for any of the purposes aforesaid.
@@ -8676,7 +8268,12 @@ influence the gentlemen; and thus large companies are obtained.
 	And it is enacted, that this Act should be in force three years and no longer.
 
 	Three years afterwards, the above Act was made perpetual.
-
+]].
+>
+> Jem. The pains and penalties you now shall hear,
+>
+> To show if you transgress what you've to fear.
+>
 > I'll briefly state the act of Parliament —
 >
 > "Any house, garden, room, or tenement,
@@ -8695,12 +8292,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > You may be punished by the Vagrant act;
 >
-> With penalties and fines the act abounds[^195],
+> With penalties and fines the act abounds[[The penalties in this Act it will be seen are very severe — £100 for every offence (besides costs). The parties are also liable to be indicted under the Vagrant Act, and sent to prison to hard labour, and as is now the fashion, committed to the Tread Mill. Public Concerts are equally subject to the oppressive penal clauses of the Act, for regulating places of public amusement, which clauses are so little known, that must of the tavern keepers and publicans in London at times render themselves liable to them, as do also those dancing masters who hold such assemblies at their rooms, as they are not exempt from the operation of this Act, on account of their profession, though such an erroneous notion has prevailed.]],
 >
 > The penalty's each time, one hundred pounds;
-
-[^195]: The penalties in this Act it will be seen are very severe — £100 for every offence (besides costs). The parties are also liable to be indicted under the Vagrant Act, and sent to prison to hard labour, and as is now the fashion, committed to the Tread Mill. Public Concerts are equally subject to the oppressive penal clauses of the Act, for regulating places of public amusement, which clauses are so little known, that must of the tavern keepers and publicans in London at times render themselves liable to them, as do also those dancing masters who hold such assemblies at their rooms, as they are not exempt from the operation of this Act, on account of their profession, though such an erroneous notion has prevailed.
-
+>
 > Which may be gained by any one, who'll sue
 >
 > Those parties, that such practices pursue.
@@ -8713,12 +8308,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > For by the clauses you will see they deem
 >
-> Houses unlicensed, as disorderly[^196],
+> Houses unlicensed, as disorderly[[The company found dancing in unlicensed rooms, however respectable and orderly, are liable (if the Magistrates should think proper) to be committed to prison as Vagrants.]],
 >
 > If there's a dance, however orderly
-
-[^196]: The company found dancing in unlicensed rooms, however respectable and orderly, are liable (if the Magistrates should think proper) to be committed to prison as Vagrants.
-
+>
 > The company may be, yet by warrant,
 >
 > Which any sitting magistrate may grant
@@ -8829,12 +8422,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > And must be thus made out distinct and clear:
 >
-> Licensed pursuant to Act of Parliament[^197],
+> Licensed pursuant to Act of Parliament[[It would appear, therefore, that public amusements cannot he legally held in any tavern, (however respectable,) or other place where there is not this inscription. Calendar brought acons against the proprietors of some of the principal taverns in London, where public balls were held, (till then supposed to be held legally) but the tavern keepers found otherwise to their cost.]],
 >
 > Of the twenty-fifth of George the Second – meant
-
-[^197]: It would appear, therefore, that public amusements cannot he legally held in any tavern, (however respectable,) or other place where there is not this inscription. Calendar brought acons against the proprietors of some of the principal taverns in London, where public balls were held, (till then supposed to be held legally) but the tavern keepers found otherwise to their cost.
-
+>
 > For public dancing, to let people know
 >
 > Where they in safety may to dancing go.
@@ -8963,24 +8554,18 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Because his worship may not chance to know
 >
-> This Act exists[^198], for magistrates have been
+> This Act exists[[Magistrates are not always conversant with Acts of Parliament. To several of those gentlemen Publicans have applied (as the Author knows) for leave to hold Balls at their houses, and though the permission has been generally refused, yet their Worships never stated it was not in their power to give such permission; they never pointed out the penal clauses of the Act of 25th George the Second, nor gave any caution on the subject to the applicants, who were only warned as to late hours, improper company, &c. and to keep the peace.]], for magistrates have been
 >
 > As dull and ignorant quite, as other men.
-
-[^198]: Magistrates are not always conversant with Acts of Parliament. To several of those gentlemen Publicans have applied (as the Author knows) for leave to hold Balls at their houses, and though the permission has been generally refused, yet their Worships never stated it was not in their power to give such permission; they never pointed out the penal clauses of the Act of 25th George the Second, nor gave any caution on the subject to the applicants, who were only warned as to late hours, improper company, &c. and to keep the peace.
-
-> And petty constables[^199] you'll often find,
+>
+> And petty constables[[In the instances where expenses were incurred by publicans in defending themselves against calendar's informations, it was chiefly through the sapient advice of petty constables and catchpoles resorting to the Defendant's houses.]] you'll often find,
 >
 > If you enquire, are rogues and fools combined;
-
-[^199]: In the instances where expenses were incurred by publicans in defending themselves against calendar's informations, it was chiefly through the sapient advice of petty constables and catchpoles resorting to the Defendant's houses.
-
-> Like "Dogberry"[^200] of old, they're just the same,
+>
+> Like "Dogberry"[[A character in Shakspeare's Comedy of "Much ado about nothing".]] of old, they're just the same,
 >
 > And only differ from him as to name;
-
-[^200]: A character in Shakspeare's Comedy of "Much ado about nothing".
-
+>
 > Often pretend to understand the law,
 >
 > To give advice, or else to find a flaw.
@@ -9007,20 +8592,16 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > There's one thing more, of which they're not aware,
 >
-> They're not even privileged at Bartholomew fair[^201];
-
-[^201]: Several publicans in Smithfield were proceeded against for illegal dancing daring Bartholomew fair — the author is not acquainted with the result.
-
+> They're not even privileged at Bartholomew fair[[Several publicans in Smithfield were proceeded against for illegal dancing daring Bartholomew fair — the author is not acquainted with the result.]];
+>
 > No saving clause, that lady Holland's guest
 >
 > May privileged dance; they're classed among the rest;
 >
-> Before the court of pie poudre[^202], may be
+> Before the court of pie poudre[[Though the court of pie poudre cannot inflict the penalty for illegal dancing, yet it is presumed they may commit the parties to prison as Vagabonds under this Act.]], may be
 >
 > Arraigned, and punished for their jollity.
-
-[^202]: Though the court of pie poudre cannot inflict the penalty for illegal dancing, yet it is presumed they may commit the parties to prison as Vagabonds under this Act.
-
+>
 > Bel. There's one thing more, before we go,
 >
 > I wish to ask, and which no doubt you know;
@@ -9101,12 +8682,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > May in the court a casting witness be.
 >
-> Upon the statute then an action's brought[^203],
+> Upon the statute then an action's brought[[Actions on this Statute are mostly brought against the proprietors of the rooms — the informers seldom trouble themselves about the company — the £100 is their object.]],
 >
 > And thus the Publican's securely caught;
-
-[^203]: Actions on this Statute are mostly brought against the proprietors of the rooms — the informers seldom trouble themselves about the company — the £100 is their object.
-
+>
 > To evade the penalty he has then no chance,
 >
 > As these swear money paid, and prove the dance.
@@ -9165,10 +8744,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Nay, magistrates have late decisions made,
 >
-> That they've contrived the statute to evade[^204],
-
-[^204]: See Sir Richard Birnie's opinion as to mister J.'s case before referred to in page 124.
-
+> That they've contrived the statute to evade[[See Sir Richard Birnie's opinion as to mister J.'s case before referred to in page 124.]],
+>
 > For at unlicensed rooms, be where they may,
 >
 > You dare not dance, if you presume to pay,
@@ -9185,12 +8762,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > As near as I can recollect the act.
 >
-> If Johnson[^205] and his gang this act well knew,
+> If Johnson[[Johnson, the noted Informer, who has lately laid informations against numerous Publicans, for not closing their doors by a certain hour at night, and for other violations of the late Act.]] and his gang this act well knew,
 >
 > They would no longer publicans pursue
-
-[^205]: Johnson, the noted Informer, who has lately laid informations against numerous Publicans, for not closing their doors by a certain hour at night, and for other violations of the late Act.
-
+>
 > For trifling penalties, but leave such gains,
 >
 > When they could get a hundred for their pains,
@@ -9205,10 +8780,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > As he spares none, but takes them by surprise,
 >
-> And treats them as the spiders do the flies[^206].
-
-[^206]: The Author being convinced of the effect of the Act of George the Second before referred to, as well as the danger arising from Informers under the late Act, has constantly declined to take such advantages as many of his professional brethren derive from the admission of strangers (for money) to his assemblies.
-
+> And treats them as the spiders do the flies[[The Author being convinced of the effect of the Act of George the Second before referred to, as well as the danger arising from Informers under the late Act, has constantly declined to take such advantages as many of his professional brethren derive from the admission of strangers (for money) to his assemblies.]].
+>
 > Jem. Though it is irrelevant and retrograding,
 >
 > And may be thought the subject "balls" invading;
@@ -9231,10 +8804,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Jem. One in a broadside of large double crown,
 >
-> Proclaims "superior dancing" to the town[^207];
-
-[^207]: An anonymous bill has been put forth by some teacher, announcing that "at the Academy for dancing in C--- Street, superior dancing is taught at one-third the usual charges."
-
+> Proclaims "superior dancing" to the town[[An anonymous bill has been put forth by some teacher, announcing that "at the Academy for dancing in C--- Street, superior dancing is taught at one-third the usual charges."]];
+>
 > And what's more cheering, with some sage advice,
 >
 > Says he'll instruct you at one-third the price
@@ -9323,12 +8894,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > That they contrive to make all dancers pay.
 >
-> When you go in[^208], your hat or cloak they take,
+> When you go in[[Much time and trouble were formerly bestowed by the dancing master in teaching the use and management of the hat, particularly how to eater a room with it, and the proper mode of carrying it when not used in the dancing; but modern Professors are now spared that trouble, by their servants demanding the hats previous to admission to the ball room — the profits arising from this practice, have induced them to dispense with this part of ball room etiquette.]], your hat or cloak they take,
 >
 > Then on the wearer a demand they make
-
-[^208]: Much time and trouble were formerly bestowed by the dancing master in teaching the use and management of the hat, particularly how to eater a room with it, and the proper mode of carrying it when not used in the dancing; but modern Professors are now spared that trouble, by their servants demanding the hats previous to admission to the ball room — the profits arising from this practice, have induced them to dispense with this part of ball room etiquette.
-
+>
 > Of certain money, as the usual fee —
 >
 > To pay it ere you dance, you must agree.
@@ -9345,12 +8914,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Must be fulfilled, before you gain admission
 >
-> To join these balls, a coffee ticket they[^209]
+> To join these balls, a coffee ticket they[[Though this may not be the universal practice at all the Balls alluded to, yet it is at any rate the practice at several.]]
 >
 > Present you with, and then for which they say,
-
-[^209]: Though this may not be the universal practice at all the Balls alluded to, yet it is at any rate the practice at several.
-
+>
 > Before you enter, you must also pay.
 >
 > When gentlemen bring ladies to their ball,
@@ -9375,12 +8942,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > And only pay by way of recompense,
 >
-> A sixpence for the care of what they bring[^210],
+> A sixpence for the care of what they bring[[At these balls, sixpence only is the sum usually demanded of each of the ladies.]],
 >
 > Cloak, hat, or shawl, or any such like thing.
-
-[^210]: At these balls, sixpence only is the sum usually demanded of each of the ladies.
-
+>
 > Teachers for pay on gentlemen depend,
 >
 > Trust each will treat his partner and her friend;
@@ -9409,16 +8974,12 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Because some thousands still in errors die,
 >
-> Nor listen to advice from mistress Fry[^211].
-
-[^211]: Mistress Fry. — A pious lady of the Society of Friends, who has taken great pains to reform the profligate in prisons and other places, by means of religious lectures and discourses.
-
+> Nor listen to advice from mistress Fry[[Mistress Fry. — A pious lady of the Society of Friends, who has taken great pains to reform the profligate in prisons and other places, by means of religious lectures and discourses.]].
+>
 > But many can (oh! shocking!) curse and damn,
 >
-> And would not fear to ride the old black ram[^212];
-
-[^212]: According to the custom of a certain manor, a widow holds her lands only (dum sola et casta) whilst she continues single and chaste, but the steward is bound to restore them in ease of forfeiture, on condition of her riding backwards on a black ram into the Court, and publicly acknowledging her frailty by repeating certain verses. There is a humourous account of a transaction of this kind in the Spectator.
-
+> And would not fear to ride the old black ram[[According to the custom of a certain manor, a widow holds her lands only (dum sola et casta) whilst she continues single and chaste, but the steward is bound to restore them in ease of forfeiture, on condition of her riding backwards on a black ram into the Court, and publicly acknowledging her frailty by repeating certain verses. There is a humourous account of a transaction of this kind in the Spectator.]];
+>
 > Who are not so nice as to refuse to eat,
 >
 > Because it is the gentlemen who treat;
@@ -9443,12 +9004,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > A dress, select, or grand, or fancy ball.
 >
-> One has a scheme[^213] superior to the rest,
+> One has a scheme[[A Professor who holds a weekly Ball, and collects his company in the manlier and for the purposes described in the note in p. 120, is somewhat more indulgent than others of his brethren, in permitting his guests to dance before they take their coffee tickets; but being aware that many young men must leave before eleven o'clock, therefore to oblige them to take coffee which is seldom toady quite so early, when they apply for their hats, &c. &c. to their surprise, these things are locked up, and the servant not to be found till after the coffee is over. Thus they have been obliged to return to the Ball Room, and take refreshment against their will; many have complained of this practice.]] superior to the rest,
 >
 > To sell his coffee and detain his guest;
-
-[^213]: A Professor who holds a weekly Ball, and collects his company in the manlier and for the purposes described in the note in p. 120, is somewhat more indulgent than others of his brethren, in permitting his guests to dance before they take their coffee tickets; but being aware that many young men must leave before eleven o'clock, therefore to oblige them to take coffee which is seldom toady quite so early, when they apply for their hats, &c. &c. to their surprise, these things are locked up, and the servant not to be found till after the coffee is over. Thus they have been obliged to return to the Ball Room, and take refreshment against their will; many have complained of this practice.
-
+>
 > He makes them take it, if they will or no;
 >
 > How this is done I'll now attempt to show —
@@ -9479,12 +9038,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Of their finesse, than I e'er knew before.
 >
-> Jem. There's still one project I have not yet stated[^214],
+> Jem. There's still one project I have not yet stated[[The circumstance above stated, together with several others, having been communicated to the Author since the first part was published, is now inserted here at the request of some Subscribers, though not strictly in the proper place, rather than wait for a second edition.]],
 >
 > Which in professors should have been related.
-
-[^214]: The circumstance above stated, together with several others, having been communicated to the Author since the first part was published, is now inserted here at the request of some Subscribers, though not strictly in the proper place, rather than wait for a second edition.
-
+>
 > Bel. Let's hear it – time and place shall be excused,
 >
 > I seek to be instructed and amused.
@@ -9507,10 +9064,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To fill their Rooms, they to the town now bawl,
 >
-> "Two lessons gratis if you join our ball[^215]".
-
-[^215]: The Professors alluded to being conscious of their slender connections, and despairing of the ordinary means of filling a ball room, have (in imitation of the "supper gratis and trumpet schemes", vide page 40 and 130) hit upon the project of advertising to give two lessons gratis to any persons going to their ball.
-
+> "Two lessons gratis if you join our ball[[The Professors alluded to being conscious of their slender connections, and despairing of the ordinary means of filling a ball room, have (in imitation of the "supper gratis and trumpet schemes", vide page 40 and 130) hit upon the project of advertising to give two lessons gratis to any persons going to their ball.]]".
+>
 > It is meant to rival (may be plainly seen)
 >
 > The "Supper gratis", and the trumpet scheme;
@@ -9551,10 +9106,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > In which they're held; instead of free balls, they
 >
-> Who hold them, always make all comers pay[^216],
-
-[^216]: Those who suppose these free balls are given through the proprietor's generosity, will find themselves very much deceived. The proprietors have two objects in view, (videlicet) notoriety, and the profit of refreshments, which, with the hat and cloak money, generally make ample amends to them for their supposed liberality.
-
+> Who hold them, always make all comers pay[[Those who suppose these free balls are given through the proprietor's generosity, will find themselves very much deceived. The proprietors have two objects in view, (videlicet) notoriety, and the profit of refreshments, which, with the hat and cloak money, generally make ample amends to them for their supposed liberality.]],
+>
 > Either for music, room, or hat, or clothes,
 >
 > Or something else they claim, or else propose
@@ -9563,12 +9116,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > For "giving dancing gratis to their friends?"
 >
-> You'll find these free balls all on the same plan[^217] —
+> You'll find these free balls all on the same plan[[The author, sometime ago, was taken by a gentleman to one of these free balls; at the end of the second dance a collection was made for the music, and in about half an hour afterwards another collection for refreshments, of which a very spare quantity was supplied, not one-fifth of what was subscribed for, and before they left the Ball, a similar demand was made for lighting up the room, fires, &c. The ladies there were not exempt from these levies.]] —
 >
 > Go there, and dance at free cost if you can;
-
-[^217]: The author, sometime ago, was taken by a gentleman to one of these free balls; at the end of the second dance a collection was made for the music, and in about half an hour afterwards another collection for refreshments, of which a very spare quantity was supplied, not one-fifth of what was subscribed for, and before they left the Ball, a similar demand was made for lighting up the room, fires, &c. The ladies there were not exempt from these levies.
-
+>
 > For our professor's "gratis" is the lure,
 >
 > Who shows the cheat when he has guests secure.
@@ -9591,10 +9142,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Either for hat or cloak, or what they spend;
 >
-> The object's gain, whatever they pretend[^218].
-
-[^218]: Those who have attended the free balls given by these professors of dancing, will find the author pretty correct in the description of the parties attending them.
-
+> The object's gain, whatever they pretend[[Those who have attended the free balls given by these professors of dancing, will find the author pretty correct in the description of the parties attending them.]].
+>
 > I've heard such fights do at these balls take place,
 >
 > As any other ball room would disgrace;
@@ -9681,12 +9230,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > And what they really are you now shall hear.
 >
-> Fancy dress balls, some people likewise name[^219]
+> Fancy dress balls, some people likewise name[[The fancy dress balls held by the teachers alluded to, are generally found to be masquerades in disguise.]]
 >
 > Characteristic, and think they are the same;
-
-[^219]: The fancy dress balls held by the teachers alluded to, are generally found to be masquerades in disguise.
-
+>
 > (But characteristic as I just have said,
 >
 > Is meant to signify a masquerade),
@@ -9711,12 +9258,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > For taste and fancy with the Court that vie;
 >
-> Or those which Ranelagh[^220] did once contain,
+> Or those which Ranelagh[[The fancy dress balls held at this once celebrated place, were visited by all the fashionable world, amongst whom several branches of the Royal Family were known to mingle--for rank and consequence these Balls were superior to any others in England, and have never since been equalled. Fancy Dress Balls from the variety of character that may be introduced, may be rendered superior to any others. Besides those given at Court, Almack's, Bath, &c. one was given some years ago at Liverpool, of the most magnificent description, at which all the families of rank within the surrounding distance of many miles were present. For variety of character and original costume, this splendid Ball has never been surpassed.]] did once contain,
 >
 > The like of which will scarce be seen again;
-
-[^220]: The fancy dress balls held at this once celebrated place, were visited by all the fashionable world, amongst whom several branches of the Royal Family were known to mingle--for rank and consequence these Balls were superior to any others in England, and have never since been equalled. Fancy Dress Balls from the variety of character that may be introduced, may be rendered superior to any others. Besides those given at Court, Almack's, Bath, &c. one was given some years ago at Liverpool, of the most magnificent description, at which all the families of rank within the surrounding distance of many miles were present. For variety of character and original costume, this splendid Ball has never been surpassed.
-
+>
 > But quite unlike such splendid balls are those
 >
 > Which these professors give, though you'd suppose
@@ -9843,10 +9388,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > In holding balls where they themselves elect
 >
-> Patronesses[^221], to keep their balls select.
-
-[^221]: Certain Balls given by the nobility are managed by a select number of ladies patronesses; the office is considered both honourable and enviable, each lady having particular privileges, (including the indisputable right of approval or rejection of company). In imitation of these, some modern teachers pretend to hold similar balls, at which the ladies nominated by the professor have only the honour of the office, without any power whatever; though the pretence is that they are appointed for the purpose of keeping the company; select, yet they are not permitted to exercise the right of rejection of any party, as that might interfere with the proprietor's own interest.
-
+> Patronesses[[Certain Balls given by the nobility are managed by a select number of ladies patronesses; the office is considered both honourable and enviable, each lady having particular privileges, (including the indisputable right of approval or rejection of company). In imitation of these, some modern teachers pretend to hold similar balls, at which the ladies nominated by the professor have only the honour of the office, without any power whatever; though the pretence is that they are appointed for the purpose of keeping the company; select, yet they are not permitted to exercise the right of rejection of any party, as that might interfere with the proprietor's own interest.]], to keep their balls select.
+>
 > Jem. That's not the object, I will plainly show,
 >
 > As I the motives of these gentry know;
@@ -9889,10 +9432,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > As proof this office is bestowed for gain,
 >
-> A child for once this honour did obtain[^222].
-
-[^222]: A little girl of twelve or thirteen years of age was appointed to the office of lady patroness at one of these balls.
-
+> A child for once this honour did obtain[[A little girl of twelve or thirteen years of age was appointed to the office of lady patroness at one of these balls.]].
+>
 > Bel. These selfish wights it is plain now to perceive,
 >
 > Entirely live by those whom they deceive;
@@ -9943,10 +9484,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > How, or by what means do they exact the fine?
 >
-> Jem. One great professor levies it in wine[^223].
-
-[^223]: These Ball holders are very particular in exacting their fines — even the ladies are not exempt, if they fail attending punctually to the minute; the Professors sometimes receive these fines in kind; one of them takes it, generally, in wine.
-
+> Jem. One great professor levies it in wine[[These Ball holders are very particular in exacting their fines — even the ladies are not exempt, if they fail attending punctually to the minute; the Professors sometimes receive these fines in kind; one of them takes it, generally, in wine.]].
+>
 > Bel. That fining ladies is a barbarous plan,
 >
 > It surely could not emanate from man.
@@ -9989,10 +9528,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Jem. They know no more of what you have here laid down,
 >
-> Than children know the manners of the town[^224];
-
-[^224]: It is well known by those who have attended these Balls, that neither talent nor experience has the least influence with the Proprietors in the election of the ladies patronesses, as many have been appointed to that office who were totally unacquainted with dancing, and were equally ignorant of the etiquette of the ball room.
-
+> Than children know the manners of the town[[It is well known by those who have attended these Balls, that neither talent nor experience has the least influence with the Proprietors in the election of the ladies patronesses, as many have been appointed to that office who were totally unacquainted with dancing, and were equally ignorant of the etiquette of the ball room.]];
+>
 > For many a patroness has never seen
 >
 > A ball, or e'en a month at dancing been.
@@ -10033,10 +9570,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > They various objects have, for some profess
 >
-> "A widow's call", some " children in distress[^225]".
-
-[^225]: At one of these balls, purporting to be "for the benefit of a widow and fatherless children", it was discovered, in the course of the evening, that it was in fact for the benefit of a certain teacher of dancing in the habit of holding assemblies at various places under such pretences. On the discovery of this circumstance the company broke up, and endeavoured to make the professor refund; — those who know him may easily guess at the result of this undertaking. The circumstance was communicated to the author by the proprietor of the rooms where the ball was held.
-
+> "A widow's call", some " children in distress[[At one of these balls, purporting to be "for the benefit of a widow and fatherless children", it was discovered, in the course of the evening, that it was in fact for the benefit of a certain teacher of dancing in the habit of holding assemblies at various places under such pretences. On the discovery of this circumstance the company broke up, and endeavoured to make the professor refund; — those who know him may easily guess at the result of this undertaking. The circumstance was communicated to the author by the proprietor of the rooms where the ball was held.]]".
+>
 > Others (to gain the stewards some renown)
 >
 > Propose relief to half the poor in town.
@@ -10091,10 +9626,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > The room and band to pay for, or else they
 >
-> Must pocket the affront, and go away[^226].
-
-[^226]: Contributions for tickets have been levied on the benevolent under various pretences of char table purposes, and they have on some occasions been called upon to pay also for the music and the expense of the room.
-
+> Must pocket the affront, and go away[[Contributions for tickets have been levied on the benevolent under various pretences of char table purposes, and they have on some occasions been called upon to pay also for the music and the expense of the room.]].
+>
 > But all do not subscribe the cause to serve,
 >
 > Nor does their charity that name deserve.
@@ -10115,12 +9648,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Some office they've not merit to obtain,
 >
-> As stewards or directors[^227], or to be
+> As stewards or directors[[Many are in the habit of taking tickets for charity balls, expressly for the purpose of being appointed to the above offices, though by no means qualified to fill them.]], or to be
 >
 > Appointed masters of the ceremony;
-
-[^227]: Many are in the habit of taking tickets for charity balls, expressly for the purpose of being appointed to the above offices, though by no means qualified to fill them.
-
+>
 > A badge of office on their clothes to wear,
 >
 > A band or star, or else a wand to bear;
@@ -10169,12 +9700,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > And think all right, if nobody complain.
 >
-> Six lessons[^228] often make a feel presume
+> Six lessons[[Six lessons is the usual number fixed by these Professors for completion, in any department of dancing.]] often make a feel presume
 >
 > To take the lead, and consequence assume,
-
-[^228]: Six lessons is the usual number fixed by these Professors for completion, in any department of dancing.
-
+>
 > If he can through a figure blundering go,
 >
 > Though he has not one dancing step to show.
@@ -10215,10 +9744,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > They call them thus in hopes it may appear
 >
-> They only have one ball within the year[^229].
-
-[^229]: Some of these ball-holders have been known to have several "Annual balls" in the season; their motives appear to be to induce the belief, that every one announced under that name, was the only Ball intended to be held during the season.
-
+> They only have one ball within the year[[Some of these ball-holders have been known to have several "Annual balls" in the season; their motives appear to be to induce the belief, that every one announced under that name, was the only Ball intended to be held during the season.]].
+>
 > To miss it, some couldn't satisfied remain,
 >
 > Until that day twelve month should come round again;
@@ -10265,12 +9792,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Are not much more than twenty years of age.
 >
-> One has Parisian balls[^230], but those who dance
+> One has Parisian balls[[One Professor, to avail himself of a name, has what he calls "Parisian balls;" but these supposed French balls are nothing more than common every-day dances.]], but those who dance
 >
 > Find nothing at them like those held in France;
-
-[^230]: One Professor, to avail himself of a name, has what he calls "Parisian balls;" but these supposed French balls are nothing more than common every-day dances.
-
+>
 > The name is all you'll find that's French, the rest
 >
 > Is but a common English dance at best.
@@ -10295,10 +9820,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > A term of balls they will engage to give,
 >
-> Which seldom is completed whilst they live[^231];
-
-[^231]: Several of these ball-holders give out proposals for holding what they call "Subscription balls", professedly on the plan of those at Almack's; the pretended object is, by subscription, to make their balls respectable and select, but the real motives are to induce parties to subscribe at once for a certain number of balls — but were the existence of the dances to be as long as the age of Methusalem, they would not see the engagement complied with.
-
+> Which seldom is completed whilst they live[[Several of these ball-holders give out proposals for holding what they call "Subscription balls", professedly on the plan of those at Almack's; the pretended object is, by subscription, to make their balls respectable and select, but the real motives are to induce parties to subscribe at once for a certain number of balls — but were the existence of the dances to be as long as the age of Methusalem, they would not see the engagement complied with.]];
+>
 > They care not how nor whom they do admit,
 >
 > All that bring money they make amply fit
@@ -10367,12 +9890,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > But needy men of science walk away.
 >
-> A Scavan[^232], though he half the world had seen,
+> A Scavan[[The late mister Belzoni, the enterprising traveller, after his return from Egypt, visited a grand subscription ball at the King's Theatre, London, (professedly held for the relief of the distressed people of Ireland) an attempt was made to expel him, although he had fairly purchased a ticket (as he was not one of the privileged class) — the circumstance may be, perhaps, in the recollection of some readers. From what transpired at the time, it appeared there had been some clandestine dealings in tickets, which were sent to Shops for sale. No imputation could attach to mister B. whose conduct in the transaction was open and honourable. Whether as much should be said of some of the directors, the public will form their opinion.]], though he half the world had seen,
 >
 > To Memphis and the Pyramids had been,
-
-[^232]: The late mister Belzoni, the enterprising traveller, after his return from Egypt, visited a grand subscription ball at the King's Theatre, London, (professedly held for the relief of the distressed people of Ireland) an attempt was made to expel him, although he had fairly purchased a ticket (as he was not one of the privileged class) — the circumstance may be, perhaps, in the recollection of some readers. From what transpired at the time, it appeared there had been some clandestine dealings in tickets, which were sent to Shops for sale. No imputation could attach to mister B. whose conduct in the transaction was open and honourable. Whether as much should be said of some of the directors, the public will form their opinion.
-
+>
 > To join these balls he ever might despair,
 >
 > Should he on foot attempt to travel there.
@@ -10457,10 +9978,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To see them dance, you'd think they had been taught
 >
-> On heated iron, or from Egypt brought[^233];
-
-[^233]: The Egyptians are said to teach their camels to dance on heated iron plates, the heat of which obliges the poor animals to be continually lifting up and shifting their feet, which they call "dancing". Whether these mechanical dancers instruct themselves, or derive their quadrupedic steps, from the camels, their drivers, or any of the Professors alluded to, it is not easy to say.
-
+> On heated iron, or from Egypt brought[[The Egyptians are said to teach their camels to dance on heated iron plates, the heat of which obliges the poor animals to be continually lifting up and shifting their feet, which they call "dancing". Whether these mechanical dancers instruct themselves, or derive their quadrupedic steps, from the camels, their drivers, or any of the Professors alluded to, it is not easy to say.]];
+>
 > Go wrong for right, dance out of time, then say
 >
 > "It is all the fiddler's fault that they don't play
@@ -10561,11 +10080,11 @@ influence the gentlemen; and thus large companies are obtained.
 
 ### The English Country Dance
 
-> A country dance[^234] would be a pleasing sight,
+> A country dance[[^234]] would be a pleasing sight,
 >
 > If all performed the steps and figures right.
 
-[^234]:
+[[^234]]:
 	### A Country Dance
 
 	As it is named, (or more properly an English country dance) almost universally known as the national dance of English, is constructed on mathematical principles, clearly displayed in its operative effect, when properly and well performed. It is formed of two principal features, videlicet figures and steps, which, for the execution, government and display of their several movements and evolutions, are united with their indispensable auxiliary, music: but independent of the scientific structure of the dance, there are secondary features, named ornaments and embellishments, and which are necessary to the performance of the figures and steps to the music, as they apply and are connected with each other in a graceful and easy manner. The figures, which form various evolutionary movements in circular, serpentine, angular, and straight lines, are formed into a variety of different lengths, (as shown by the diagrams in the complete system of English country dancing) and require a variety of different steps or movements of the feet in their performance to music appropriately adapted thereto. A country dance is formed of an indefinite number of ladies and gentlemen, not less than six. The ladies and gentlemen are placed in two rows of lines parallel with each other; the one consisting of ladies, which is called the ladies' side; and the other of gentlemen; which is called the gentlemen's side; every lady is opposite a gentleman, who are called partners. The couples being so placed, form which is termed "a set", and are demonstrated by different technical appellations, according to their situations, or the manner in which they are employed in the dance. The subjoined sketch will more clearly elucidate the form and construction of an English country dance, as formed into various sets, as Set A, Set B, Set C; also the formation of the major and minor sets, of the 1st, 2nd and 3rd or top, central, and bottom couples; likewise the leading, neutral and auxiliary couples, top and bottom of the set, &c.
@@ -10744,7 +10263,7 @@ influence the gentlemen; and thus large companies are obtained.
 
 	### The Figure Bar
 
-	The figure bar marked thus ![](/bib/images/tr/wilson_04_down.svg), or thus ![](/bib/images/tr/wilson_16.svg), is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
+	The figure bar marked thus ![](/images/tr/wilson_04_down.svg), or thus ![](/images/tr/wilson_16.svg), is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
 
 	### Figure of the Dance
 
@@ -11111,10 +10630,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Bel. Let's have it by all means, for you must know,
 >
-> My spark's[^235] base conduct's made me very low.
-
-[^235]: This allusion, though it may appear irrelevant, was in the sketch as originally written and performed, the whole of which is now composed in the present poem.
-
+> My spark's[[This allusion, though it may appear irrelevant, was in the sketch as originally written and performed, the whole of which is now composed in the present poem.]] base conduct's made me very low.
+>
 > We are ready, sirs, it is time we have begun.
 >
 > Jem. Stop, sirs – we, for a country dance want one,
@@ -11131,12 +10648,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > That fifty couples stood up to her call:
 >
-> Danced "Money Musk"[^236], "Cheshire Rounds", "Scotch Contention",
+> Danced "Money Musk"[[Money Musk, Cheshire Rounds, and Scotch Contention, were old country dances, celebrated for long figures.]], "Cheshire Rounds", "Scotch Contention",
 >
 > And many more hard figures she does mention.
-
-[^236]: Money Musk, Cheshire Rounds, and Scotch Contention, were old country dances, celebrated for long figures.
-
+>
 > There's nothing like them now, you'll hear her say,
 >
 > She's so conceited in her formal way.
@@ -11257,10 +10772,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > I'm for a merry tune; at our last ball,
 >
-> I[^237] "Buttered Peas" and "Jack's Alive" did call.
-
-[^237]: Miss Frump, it will be observed, is not a polished dancer, she is supposed to have been taught in the ordinary style about forty or fifty years ago, when those dances she mentions were favorites in the Ball Room.
-
+> I[[Miss Frump, it will be observed, is not a polished dancer, she is supposed to have been taught in the ordinary style about forty or fifty years ago, when those dances she mentions were favorites in the Ball Room.]] "Buttered Peas" and "Jack's Alive" did call.
+>
 > Jem. If you don't recollect "The Merry Thought", now play
 >
 > The last new tune, called "Buxom, Young, and Gay".
@@ -11417,12 +10930,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Yet they at something national will try,
 >
-> And on a name or bagpiper rely[^238];
+> And on a name or bagpiper rely[[The author of certain Scotch Quadrilles, as he terms them, in order to prove their nationality, appears to have wholly relied on the tunes, and the print of a Scotch bagpiper in the title page — they should recollect the old adage "Good wine needs no bush".]];
 >
 > A print, they think, will often make fools buy.
-
-[^238]: The author of certain Scotch Quadrilles, as he terms them, in order to prove their nationality, appears to have wholly relied on the tunes, and the print of a Scotch bagpiper in the title page — they should recollect the old adage "Good wine needs no bush".
-
+>
 > So our professors put their trust in these
 >
 > Devices – which do fools and children please;
@@ -11453,9 +10964,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > What they call Scotch, old reckie would disown,
 >
-> Their steps nor figures would as Scotch be known[^239];
+> Their steps nor figures would as Scotch be known[[^239]];
 
-[^239]:
+[[^239]]:
 	There are several sets of what are termed "Scotch quadrilles", which are only Scotch as to name and tune, having no other national characteristic, being composed of French quadrille figures and steps. In order to enable those who are conversant with Scotch dancing, to judge how far these are entitled to the appellation of Scotch, the reader is here presented with the figures of
 
 	### The Caledonians
@@ -11630,9 +11141,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Six sets, some say "they've have danced at such a ball",
 >
-> But danced the figures of the first to all[^240].
+> But danced the figures of the first to all[[^240]].
 
-[^240]:
+[[^240]]:
 	It frequently occurs when dancers call different sets of quadrilles, and the musicians play the original music to each set; the dancers for want of ability, perform the figures of the first set to all, and are seldom ashamed to boast of the several sets they have danced, and even to enumerate their names.
 
 	### The Original, or, Old First Set of French Quadrilles
@@ -11729,18 +11240,14 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Are as to memory, not quite so au fait
 >
-> As Caesar[^241], who could recollect, it is said,
+> As Caesar[[Julius Cæsar has been celebrated for possessing amongst his other great qualities, a memory of the most extensive kind, and it is even recorded of him, that he knew the name of every soldier in one of the Roman legions.]], who could recollect, it is said,
 >
 > Five hundred soldiers names on the parade;
-
-[^241]: Julius Cæsar has been celebrated for possessing amongst his other great qualities, a memory of the most extensive kind, and it is even recorded of him, that he knew the name of every soldier in one of the Roman legions.
-
-> Or famous Magliabecchi[^242] who, I've heard,
+>
+> Or famous Magliabecchi[[Magliabecchi, librarian to the grand Duke of Tuscany, had a prodigious memory, is said to have recollected verbatim, a manuscript that had been lent to him by a gentleman, who pretended to have lost it, in order to ascertain the extent of this extraordinary man's recollection.]] who, I've heard,
 >
 > Could volumes recollect, aye, word for word.
-
-[^242]: Magliabecchi, librarian to the grand Duke of Tuscany, had a prodigious memory, is said to have recollected verbatim, a manuscript that had been lent to him by a gentleman, who pretended to have lost it, in order to ascertain the extent of this extraordinary man's recollection.
-
+>
 > Bel. Comparisons like these are wide and big,
 >
 > As betwixt the premier and the learned pig;
@@ -11759,10 +11266,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > To hear the first set played it now would be,
 >
-> Aye next to an impossibility[^243];
-
-[^243]: The original music of the old First Set is now seldom ever heard, as it has become a frequent practice with musicians, whenever a particular set is called, to play any thing but the original music. A set of their own or something composed to amuse themselves (neither to please the dancers ears nor to direct their feet) is substituted. When these liberties are taken by unskilful hands, which is too frequently the case for the sake of practice, the dancer has great cause of complaint, not only on account of tune of time also.
-
+> Aye next to an impossibility[[The original music of the old First Set is now seldom ever heard, as it has become a frequent practice with musicians, whenever a particular set is called, to play any thing but the original music. A set of their own or something composed to amuse themselves (neither to please the dancers ears nor to direct their feet) is substituted. When these liberties are taken by unskilful hands, which is too frequently the case for the sake of practice, the dancer has great cause of complaint, not only on account of tune of time also.]];
+>
 > For when the first set's called, musicians say
 >
 > Thus to each other, "Now what shall we play?"
@@ -11861,10 +11366,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Quadrilles our ball room music have improved,
 >
-> The country dance monotony's[^244] removed.
-
-[^244]: It frequently occurs in English country dancing, that one tune is repeated for an hour and a half or two hours together, should the length of the set require it.
-
+> The country dance monotony's[[It frequently occurs in English country dancing, that one tune is repeated for an hour and a half or two hours together, should the length of the set require it.]] removed.
+>
 > Bel. Besides those new quadrilles composed in France,
 >
 > What other sets in public do they dance?
@@ -11889,9 +11392,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Ability and steps are not required,
 >
-> To dance those Lancers[^245] now so much admired.
+> To dance those Lancers[[^245]] now so much admired.
 
-[^245]:
+[[^245]]:
 	To enable the reader to form his own judgement on the subject, he is here presented with the whole of the figures of
 
 	### The Lancers
@@ -11966,11 +11469,11 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > The music's prized, the tunes are danced and sung.
 >
-> Jem. But in "Der Freichutz" figures[^246], there no doubt,
+> Jem. But in "Der Freichutz" figures[[^246]], there no doubt,
 >
 > The author's genius could not bear him out;
 
-[^246]:
+[[^246]]:
 	That the reader may make his own comparison, and judge of the accuracy of the author's remarks, he has here given the figures of Der Freichutz quadrilles.
 
 	### Der Freichutz
@@ -12103,11 +11606,11 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > For they with other dances are combined
 >
-> Some of the waltz and country dance[^247] partake,
+> Some of the waltz and country dance[[^247]] partake,
 >
-> Others from form[^248] alone their titles take;
+> Others from form[[The circular quadrilles, originally introduced by the author of this Work, derive their name from their being danced in a circular form instead of the usual manner.]] alone their titles take;
 
-[^247]:
+[[^247]]:
 	The author was also the original inventor of that species denominated "Waltz quadrilles", from their combining the waltz with the quadrille figures, as he was likewise of the country dance quadrilles, so called from blending in a particular manner both these forms of dancing.
 
 	The reader is here presented with the figures of the
@@ -12214,8 +11717,6 @@ influence the gentlemen; and thus large companies are obtained.
 
 		The other three couples do the same.
 
-[^248]: The circular quadrilles, originally introduced by the author of this Work, derive their name from their being danced in a circular form instead of the usual manner.
-
 > Yet there are those who better things could dance,
 >
 > (If e'en composers would give them a chance),
@@ -12238,9 +11739,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > For if you look, I think I'm not mistaken,
 >
-> The three first figures from the first are taken[^249].
+> The three first figures from the first are taken[[^249]].
 
-[^249]:
+[[^249]]:
 
 	### The second set of quadrilles
 
@@ -12374,14 +11875,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > That talent few professors now display,
 >
-> They've not from Euclid[^250], or Archimedes[^251],
+> They've not from Euclid[[Euclid, a celebrated mathematician of antiquity.]], or Archimedes[[Archimedes, a most famous geometrician of Syracuse, who died 208 years before the birth of Christ.]],
 >
 > Drawn their resources to instruct and please;
-
-[^250]: Euclid, a celebrated mathematician of antiquity.
-
-[^251]: Archimedes, a most famous geometrician of Syracuse, who died 208 years before the birth of Christ.
-
+>
 > But from each other, taking it for granted,
 >
 > They're quite as good and regular as wanted;
@@ -12438,12 +11935,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > If dancers please, be formed a different way;
 >
-> Four tops and bottoms has each dance in turn[^252],
+> Four tops and bottoms has each dance in turn[[All quadrilles that are danced four times, as l'Eté, may be sa'd to have four tops and four bottoms.]],
 >
 > And how they're made you from this card may learn.
-
-[^252]: All quadrilles that are danced four times, as l'Eté, may be sa'd to have four tops and four bottoms.
-
+>
 > Quadrilles are either 2/4 or 6/8,
 >
 > From these two times quadrilles all emanate,
@@ -12462,10 +11957,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Bel. How many figures does each dance contain?
 >
-> Jem. Your card their names and numbers will explain[^253].
-
-[^253]: See the figures in the first set, page 192.
-
+> Jem. Your card their names and numbers will explain[[See the figures in the first set, page 192.]].
+>
 > The genuine figures have French names you'll find,
 >
 > Others are mostly of a mongrel kind;
@@ -12474,11 +11967,11 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > And give the names of those I recollect.
 >
-> There's promenade[^254], grand chaîne, balancez,
+> There's promenade[[^254]], grand chaîne, balancez,
 >
 > Dos a dos, les lignes, grand rond, traversez,
 
-[^254]:
+[[^254]]:
 	This and the other following figures are described by diagrams in "The quadrille panorama". In describing these terms where the English translation is not litera, the technical meaning is given.
 
 	* _Promenade_. The gentleman and lady cross hands, the gentleman with his right hand takes the lady's right, and with his left, takes her left hand and leads her round in a circle; there are several promenades, (videlicet) grand promenade, whole promenade, and half promenade
@@ -12510,12 +12003,10 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Queue du chat, grand quarrée, moulinet,
 >
-> Chaîne anglaise, les olivettes, l'étoile[^255],
+> Chaîne anglaise, les olivettes, l'étoile[[The above terms are, it is presumed, sufficiently correct for the purpose of this work, though perhaps not secure against the observations of the critical French scholar. The want of accents in some instances, will not, it is hoped, he too minutely noticed by the liberal reader, who will bear in mind the only object of the author, (videlicet) to give au English explanation of the French terms, in general use, in quadrille dancing.]],
 >
 > And others I can't now to memory call,
-
-[^255]: The above terms are, it is presumed, sufficiently correct for the purpose of this work, though perhaps not secure against the observations of the critical French scholar. The want of accents in some instances, will not, it is hoped, he too minutely noticed by the liberal reader, who will bear in mind the only object of the author, (videlicet) to give au English explanation of the French terms, in general use, in quadrille dancing.
-
+>
 > The whole of which you ought to understand,
 >
 > With proper steps to use at your command;
@@ -12536,10 +12027,8 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Rigaudon, pas de basque, emboitée,
 >
-> Coupée entrechats, balancez[^256],
-
-[^256]: Other steps may he used in quadrilles according to the taste of the dancer, but those given are the most general.
-
+> Coupée entrechats, balancez[[Other steps may he used in quadrilles according to the taste of the dancer, but those given are the most general.]],
+>
 > Besides the French, for persons, names, and things,
 >
 > (Which the quadrille in requisition brings)
@@ -12564,22 +12053,18 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > And how they act may by the plans be seen.
 >
-> With 4 the first set you may dance with ease[^257],
+> With 4 the first set you may dance with ease[[The first set may he danced with four by using n short finale, as chassez croisez, and l'été.]],
 >
 > Eight's more convenient, and will sooner please;
-
-[^257]: The first set may he danced with four by using n short finale, as chassez croisez, and l'été.
-
+>
 > The usual number's 8 – with those you may
 >
 > Make every figure, and the dance display.
 >
 > There's sometimes sets of 12 and 16 formed,
 >
-> Which in oblique directions are performed[^258].
-
-[^258]: Quadrilles when formed of 12 and 16 persons are sometimes danced obliquely, as will he afterwards described.
-
+> Which in oblique directions are performed[[Quadrilles when formed of 12 and 16 persons are sometimes danced obliquely, as will he afterwards described.]].
+>
 > Bel. I never liked quadrilles performed this way,
 >
 > To me they seemed confused, I needs must say,
@@ -12616,21 +12101,19 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > How many dances does a set contain?
 >
-> Jem. A set has five quadrilles, and sometimes six[^259],
+> Jem. A set has five quadrilles, and sometimes six[[^259]],
 >
 > But live they as the average number fix;
 
-[^259]:
+[[^259]]:
 	### Long and Short Sets
 
 	When these terms are used in quadrille dancing, they allude to the number of dances in the set; a long set generally consists of six, and a short set is usually of five. The first is considered a short set, and when la pastourelle is add, it is then termed a long set. A short set consists not only of a smaller number of quadrilles, but various figures are omitted in certain quadrilles, as the ladies chain in Trenise, and the finale, is likewise abridged.
 
 > The last they term "finale", means the end,
 >
-> To this some extra figure they append[^260].
-
-[^260]: Many finales have an extra figure which is performed immediately after the last couple have finished the dance, as chassez croisez, grand road, &c.
-
+> To this some extra figure they appendMany finales have an extra figure which is performed immediately after the last couple have finished the dance, as chassez croisez, grand road, &c.]].
+>
 > What's termed short sets are not alone, you'll find,
 >
 > Unto the number of quadrilles confined,
@@ -12641,13 +12124,12 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Or else some idle dancer's whim to please,
 >
-> As in Finale, and in "La trenise"[^261].
+> As in Finale, and in "La trenise"[[^261]].
 
-[^261]:
+[[^261]]:
 	### Trenise Simple
 
 	Is when the Trenise figure is performed without the chaîne des dames.
-
 
 > Bel. There's short and long finales, I've heard say;
 >
@@ -12671,9 +12153,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > For what they steal they do not hesitate
 >
-> To alter, transpose, change, and mutilate[^262].
+> To alter, transpose, change, and mutilate[[^262]].
 
-[^262]:
+[[^262]]:
 	That this practice has become too prevalent, the Author, as well as many others, considers he has some reason to complain he some time ago composed a dance to the tune of Vestris's gavotte, to be danced as a quadrille, though not strictly so; this dance, which became a favorite, is not that which, under a similar title, is included in a "Quadrille Preceptor", though he has reason to believe the latter dance was intended to be given as the original; whether that were so or not, wishing only to have the fruit of his own labours, and to derive no credit from the merits of others, he here presents a correct copy of the one composed by himself.
 
 	### The Gavotte Quadrille
@@ -12734,9 +12216,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > When the Quadrille begins, I here must state,
 >
-> The first eight bars the dancers always wait[^263];
+> The first eight bars the dancers always wait[[^263]];
 
-[^263]:
+[[^263]]:
 	### Waiting Eight Bars
 
 	The set being formed, the dancers should wait the first eight bars, and begin the dance with the second strains, if the first is not repeated, this interval of time should be filled up with the performances of the honours. To every quadrille in the set they should wait the first eight bars.
@@ -12751,13 +12233,12 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > And in that time the honours should repeat,
 >
-> And at the end, and ere you take your seat[^264].
+> And at the end, and ere you take your seat[[^264]].
 
-[^264]:
+[[^264]]:
 	### The Honours (i. e.) the Bow and Courtesy
 
 	In quadrille dancing these honours should always be made to your partner and the opposite, and to the first eight bars if music, before you begin the figure. The honours should not only be made at the commencement of each set, but likewise of each individual quadrilles, however many there may be in a set, and also at the conclusion of every set, and finally by every gentleman when he has led his partner to her seat.
-
 
 > Bel. How many bars of music are contained
 >
@@ -12771,19 +12252,19 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > There they begin the honours for to make.
 >
-> Bel. The quadrille figure bar[^265] I've often seen;
+> Bel. The quadrille figure bar[[^265]] I've often seen;
 >
 > Can you explain those dots, and what they mean?
 
-[^265]: The quadrille figure bar is a character the author has used to show what quantity of music each movement or figure will take in the performance; it is similar to the one used in English Country Dancing, but he has been here more particular, putting a division to those figures which require but 4 bars, which are signified by a bar with one dot thus ![](/bib/images/tr/wilson_04_up.svg) When the figure requires 8 bars, another dot is given ![](/bib/images/tr/wilson_08_up.svg) those requiring 12 bars have three dots ![](/bib/images/tr/wilson_12_up.svg) and for 16 bars four dots ![](/bib/images/tr/wilson_16.svg)
+[[^265]]: The quadrille figure bar is a character the author has used to show what quantity of music each movement or figure will take in the performance; it is similar to the one used in English Country Dancing, but he has been here more particular, putting a division to those figures which require but 4 bars, which are signified by a bar with one dot thus ![](/images/tr/wilson_04_up.svg) When the figure requires 8 bars, another dot is given ![](/images/tr/wilson_08_up.svg) those requiring 12 bars have three dots ![](/images/tr/wilson_12_up.svg) and for 16 bars four dots ![](/images/tr/wilson_16.svg)
 
 > Jem. It is given to show what music figures take,
 >
 > And to divide them for the dancer's sake;
 >
-> Each dot placed thus ![](/bib/images/tr/wilson_04_up.svg) four bars does represent –
+> Each dot placed thus ![](/images/tr/wilson_04_up.svg) four bars does represent –
 >
-> When there are four ![](/bib/images/tr/wilson_16.svg) then sixteen bars is meant.
+> When there are four ![](/images/tr/wilson_16.svg) then sixteen bars is meant.
 >
 > Bel. When you stand up, by what rule do you go,
 >
@@ -12795,9 +12276,9 @@ influence the gentlemen; and thus large companies are obtained.
 >
 > Look at the plan, there each position's shown,
 >
-> And top and bottom may with case be known[^266].
+> And top and bottom may with case be known[[^266]].
 
-[^266]:
+[[^266]]:
 	### Positions of the Dancers in Quadrilles Composed of Four, Eight, Twelve, and Sixteen Persons
 
 	*Figure omitted*

@@ -534,18 +534,21 @@ div.transcription p > img
 
 
 div.transcription span.note_anchor,
-div.transcription p > sup {
+div.transcription p > sup
+ {
 	vertical-align: middle;
 	top: -7px;
 	position: relative;
 	font-size: 75%;
 }
 
-div.transcription span.strikethrough {
+div.transcription span.strikethrough 
+{
 	text-decoration: line-through;
 }
 
-div.transcription span.page_number {
+div.transcription span.page_number
+{
 	font-family: "PT Serif";
 	font-size: 14px;
 	font-weight: bold;
@@ -568,7 +571,8 @@ div.transcription span.page_number {
 	-webkit-user-select: none;
 }
 
-div.transcription span.note {
+div.transcription span.note 
+{
 	font-family: "PT Serif";
 	font-size: 14px;
 	font-weight: normal;
@@ -591,9 +595,26 @@ div.transcription span.note {
 	-webkit-user-select: none;
 }
 
-div.transcription span.note span.p {
+div.transcription span.note  span.p
+{
 	display: block;
 }
+
+div.transcription span.note  span.blockquote > span.p
+{
+	display: block;
+	font-style: italic;
+}
+
+div.transcription span.note span.h3
+{
+	display: block;
+	text-align: center;
+	font-family: "PT Serif Caption";
+	font-size: 120%;
+	width: 100%;
+}
+
 
 div.transcription div.upper_roman + ol {
 	list-style-type: upper-roman;

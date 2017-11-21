@@ -8,9 +8,9 @@ Thus 1st couple contratem forward & back, balance & rig., change sides with part
 
 ### 3. Jack's Alive
 
-1st couple face the 2d & change sides, back again, down the middle, up &[Text incomplete]
+1st couple face the 2d & change sides, back again, down the middle, up &[[Text incomplete]]
 
-### {Page} 4. Snatch Fleeting Pleasures[Part of the page with dance number thorn in the original]
+### {Page} 4. Snatch Fleeting Pleasures[[Part of the page with dance number thorn in the original]]
 
 First gent, bal^ce^ to 2d lady & turn & comes to his place, then the 1st lady does the same to 2d gent, — down the middle, up, cast off & right & left.
 
@@ -34,7 +34,7 @@ The gent haze with the ladies first, & then with the gent & comes to his place. 
 
 Chasse outside up, down the middle, up, cast off, turn with partner, then with 3 lady, again with partner & then with 2 lady, balance to your partner & change sides.
 
-### {Page} 10. Pea Straw[Part of the page with dance number thorn in the original]
+### {Page} 10. Pea Straw[[Part of the page with dance number thorn in the original]]
 
 Lead outside, down 2 couple, rig. chasse between 2 and 3 couple & come opposite partner, allemande with partner, then with 2d lady, again with partner,then with 3 lady, then with 2 lady, then with partner, & then with 3 lady, balance to partner & change sides.
 
@@ -42,7 +42,7 @@ Lead outside, down 2 couple, rig. chasse between 2 and 3 couple & come opposite 
 
 1st couple chasse down outside 2 couple, contratem forward & chasse up the middle, & cast off, 2 couple then go over the same, 1st gent chasse sides with 2 lady & 1st L. with 2d G.,then all 4 join hands & chasse round to their places & rig. 1st couple cross over & right & left.
 
-### {Page} 12. Go to the Devil & Shake yourself[Last word of the title is partially damaged by fire]
+### {Page} 12. Go to the Devil & Shake yourself[[Last word of the title is partially damaged by fire]]
 
 First 3 ladies lead round the gent to their places, then 1st 3 gent lead round the ladies to places, — 1st couple down middle, up, cast off, right & left
 
@@ -54,7 +54,7 @@ First 3 ladies lead round the gent to their places, then 1st 3 gent lead round t
 
 Gent crosses over one couple, & meet his partner, — chasse up, turn partner 1/2 round, chasse down, rig., up again, cast off & right & left.
 
-### {Page} 15. Masons Ladder[Part of the page with dance number thorn in the original]
+### {Page} 15. Masons Ladder[[Part of the page with dance number thorn in the original]]
 
 Hands across 4 round & back, down the middle, up, cast off. Gent haze with gent, & lady with ladies.
 
@@ -78,7 +78,7 @@ Cross over 2 couple, up the middle, cross over 1 couple to your own side, pass y
 
 1st gent turn 2d lady, 1st lady turn 2d gent. 1st couple down middle, cast off at 3d couple, balance, 6 hands round & right & left.
 
-### {Page} 21. Chain[Page is partly damaged by the fire. _Chain_ looks more probable than _Main_ or _Plain_ here] Cotillion
+### {Page} 21. Chain[[Page is partly damaged by the fire. _Chain_ looks more probable than _Main_ or _Plain_ here]] Cotillion
 
 1st couple lead outside, 3d couple up the middle, each couple then change side with partners & 1st couple lead down the middle, & 3d couple lead outside & change sides to their places. 1st couple lead down the middle, cast off, balance, 6 hands round & back & balance.
 
@@ -184,7 +184,7 @@ Gent. chasse to the right & turns corner with every one he meet, till he get opp
 
 ### 2. Academy Cotillion
 
-Head & bottom couple contretem forward & turn with their partner, side couples do the same. **×** H & B. couples moulinett to side couples, gent chasse to left & lady to the right & turn short step & form a row on each side, all contretem forward (clap hands)[It's unclear when to clap hands — instruction is written between the lines] & backward & turn partners to places. The side couples do the same over again.
+Head & bottom couple contretem forward & turn with their partner, side couples do the same. **×** H & B. couples moulinett to side couples, gent chasse to left & lady to the right & turn short step & form a row on each side, all contretem forward (clap hands)[[It's unclear when to clap hands — instruction is written between the lines]] & backward & turn partners to places. The side couples do the same over again.
 
 ### 3. Capt. Turners Cotillion
 
@@ -194,7 +194,7 @@ One gent. at top & 1 lady at bottom contretem to each other & turn short step, c
 
 Top & bottom couple right & left, then contretem forward & backward, turn with partner, change side with left hand & back the same, Fue de sha & right & left backward (change without balance).
 
-### 5. Federal Cotillion[Figure with position of dancers was omitted in transcription]
+### 5. Federal Cotillion[[Figure with position of dancers was omitted in transcription]]
 
 Gent contretem forward to opposite lady & rig., contretem twice back — haze — 1st couple chasse before 2d, change side, 4 hands across & 1/2 round, 1st couple chasse before 2d again & change side, as before, to their places.
 
@@ -206,7 +206,7 @@ Balance to lady & rig. Chasse to right, rig. moulinette back before your partner
 
 Top & bot. couple contratem forward & rig. chasse to right & rig. Then to the left, & contratem back — While the side couple are dancing the forgoing, top & bot. couple chasse, gent to right & lady to left. Turn short step & chasse back, so as to finish the figure attogether.
 
-### 8. Star Cottillion[Cross-like figure omitted in transcription]
+### 8. Star Cottillion[[Cross-like figure omitted in transcription]]
 
 Bal^ce^ & come sidaways with partner forming the figure as represented above, all join hands & double chasse round, then each couple change side with partner & double chasse back. — Top couple lead round the bottom & then the bottom round the top.
 
@@ -534,7 +534,7 @@ Balance & change sides, down middle, balance round your partner, ditto & turn he
 
 ### {Page} 59. Liberty
 
-Balance & change sides, ditto & back[The words _ditto & back_ are written above the line, so their position might be wrong], down middle, up again, balance to your partner & turn her.
+Balance & change sides, ditto & back[[The words _ditto & back_ are written above the line, so their position might be wrong]], down middle, up again, balance to your partner & turn her.
 
 ### 60. Rose Tree
 
@@ -658,7 +658,7 @@ Balance 3 couple, change places, back again, lead down the middle, up, cast off 
 
 ### 90. Washington Forever
 
-Turn partner with right hand, set, back again with left, lead down midle, up again, cast off 1 couple, turn corners,[Page thorn, instruction can't be read] with partner, back again.
+Turn partner with right hand, set, back again with left, lead down midle, up again, cast off 1 couple, turn corners,[[Page thorn, instruction can't be read]] with partner, back again.
 
 ### {Page} 91. Charlotte Mc. Carty
 
@@ -674,4 +674,4 @@ Balance & fall down 1 couple & swing 4 down middle, swing 6, set corners & lead 
 
 ### 94. Queen Mab
 
-1st & 3d couple balance, change places, back again, down middle, up,[Page thorn, instruction can't be read] off, right & left.
+1st & 3d couple balance, change places, back again, down middle, up,[[Page thorn, instruction can't be read]] off, right & left.

@@ -633,8 +633,8 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	TODO: FILL ME IN
 	"""
 	NOTE_NUMBER_PLACEHOLDER = "%NOTE_NUMBER%"
-	START = "["
-	END = "]"
+	START = "[["
+	END = "]]"
 
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
@@ -651,38 +651,39 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		self._next_note_number = 1
 
 	def test(self, parent, block):
-		open_bracket_pos = block.find(self.START)
-		close_bracket_pos = block.find(self.END, open_bracket_pos)
+		start_pos = block.find(self.START)
+		end_pos = block.find(self.END, start_pos)
 		return (
 			#footnote exists
-			(open_bracket_pos != -1) and
+			(start_pos != -1) and
 			#is not empty - this allows to skip image markup `![](url)`
-			(close_bracket_pos != open_bracket_pos + 1)
+			(end_pos != start_pos + 1)
 		)
 
 	def run(self, parent, blocks):
 		raw_block = blocks.pop(0)
 		processed_block = ""
-		#open_bracket_pos never equals to -1 at the start
-		close_bracket_pos = -1
-		open_bracket_pos = raw_block.find(self.START)
-		while (open_bracket_pos != -1):
+		#start_pos never equals to -1 at the start
+		end_pos = -1
+		start_pos = raw_block.find(self.START)
+		while (start_pos != -1):
 			#this text does not belong to footnote and should not be handled
-			processed_block += raw_block[close_bracket_pos + 1:open_bracket_pos]
-			close_bracket_pos = raw_block.find(self.END, open_bracket_pos + 1)
-			raw_footnote = raw_block[open_bracket_pos + 1:close_bracket_pos]
-			while blocks and close_bracket_pos == -1:
+			processed_block += raw_block[end_pos + len(self.END):start_pos]
+			end_pos = raw_block.find(self.END, start_pos + len(self.START))
+			raw_footnote = raw_block[start_pos + len(self.START):end_pos]
+			while blocks and end_pos == -1:
 				#footnote is split across several blocks
 				#looking for the block ending the quote
 				raw_block = blocks.pop(0)
-				close_bracket_pos = raw_block.find(self.START)
-				raw_footnote += raw_block[0:close_bracket_pos]
+				end_pos = raw_block.find(self.END)
+				#Restore block structure which was lost during blocks parsing
+				raw_footnote += "\n\n" + raw_block[0:end_pos]
 			processed_block += self.handle_footnote(raw_footnote)
-			open_bracket_pos = raw_block.find(self.START, close_bracket_pos + 1)
+			start_pos = raw_block.find(self.START, end_pos + len(self.END))
 
-		if len(raw_block) > close_bracket_pos + 1:
+		if len(raw_block) > end_pos + 1:
 			#handling the remaining of the block, if any
-			processed_block += raw_block[close_bracket_pos + 1:]
+			processed_block += raw_block[end_pos + len(self.END):]
 		blocks.insert(0, processed_block)
 		#WARN: returning False in order to process current block with the other block parsers
 		return False
@@ -698,8 +699,14 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		self._markdown.reset()
 		converted_note = self._markdown.convert(footnote_string)\
 			.replace(self.NOTE_NUMBER_PLACEHOLDER, str(self._next_note_number) + ".")\
-			.replace("<p>", '<span class="p">')\
-			.replace("</p>", '</span>')
+		
+		for tag in ["blockquote", "h3", "p"]:
+			#block elements are not allowed inside <p> elements
+			#replacing them with span with corresponding classes
+			#in order to handle them with some css tricks
+			converted_note = converted_note\
+				.replace("<" + tag + ">", '<span class="' + tag + '">')\
+				.replace("</" + tag + ">", "</span>")\
 
 		raw_html = (
 			"<span class='{CSS_CLASS_NOTE_ANCHOR}'>{next_note_number}</span>".format(

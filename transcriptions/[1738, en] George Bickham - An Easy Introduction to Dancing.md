@@ -32,7 +32,7 @@ After your second Honour, which is shewn by Plates 2 and 3, you must make a Minu
 
 Having let go the Right Hand, you go forwards, making a half Turn to present your Left Hand, observing the same Ceremonial as in the Right; and when you have let go the Left Hand, you must make a Minuet Step aside, to the Right, obliquely backwards, as is there described in the said Plate, which brings you again into the principal Figure, which you continue for three or four Turns; afterwards you present both Hands, railing your Arms to the Height of your Breast, with your Body bent. In presenting Hands to the Lady, according to my Opinion, which I have endeavoured to express in these twelve Figures; and when you take Hands, you make a Turn or two, and the Man makes a Minuet-Step backwards, bringing his Lady up with him, whose Left Hand only he lets go, to pill off his Hat: When he has compleated his Minuet-Step, he steps with his Right Foot aside and then they both make their Honours together, the same as before they danced. I don't think it right to make a Minuet too long, for though it has always been my Opinion, that every one may be left to his own Discretion, yet it is both reasonable and becoming to set some Limits ; for though a Person dances never so well, the Figure is still the fame, therefore the shorter it's made the better.
 
-### Finis[7 pages of music and illustrations were omitted in this transcription]
+### Finis[[7 pages of music and illustrations were omitted in this transcription]]
 
 ### {Back cover} Books Printed for and Sold by George Bickham, in _May's Buildings_, near _Covent-Garden_
 

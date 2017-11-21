@@ -1,7 +1,3 @@
-# Le tango. Nouvelle danse de salon
-## Markowski, B. T. Missler
-### Transcribed by [Yuriy Chernyshov](mailto://georgthegreat@gmail.com)
-
 ### Théorie
 
 Le tango, danse d'origine américaine, est en mesure à 2/4 et se danse de la manière suivante.
