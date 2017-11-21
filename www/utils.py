@@ -632,6 +632,8 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	Works as follows:
 	TODO: FILL ME IN
 	"""
+	NOTE_NUMBER_PLACEHOLDER = "%NOTE_NUMBER%"
+
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		self._markdown = markdown.Markdown(
@@ -644,7 +646,6 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		self.reset()
 
 	def reset(self):
-		print("resetting")
 		self._next_note_number = 1
 
 	def test(self, parent, block):
@@ -659,19 +660,16 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 
 	def run(self, parent, blocks):
 		raw_block = blocks.pop(0)
-		print(f"Got raw block: {raw_block}")
 		processed_block = ""
 		#open_bracket_pos never equals to -1 at the start
 		close_bracket_pos = 0
 		open_bracket_pos = raw_block.find('[')
 		while (open_bracket_pos != -1):
-			print(f"open_bracket_pos={open_bracket_pos}, close_bracket_pos={close_bracket_pos}")
 			#this text does not belong to footnote and should not be handled
 			processed_block += raw_block[close_bracket_pos:open_bracket_pos]
 			close_bracket_pos = raw_block.find(']', open_bracket_pos + 1)
 			raw_footnote = raw_block[open_bracket_pos + 1:close_bracket_pos]
 			while blocks and close_bracket_pos == -1:
-				print("Removing the block")
 				#footnote is split across several blocks
 				#looking for the block ending the quote
 				raw_block = blocks.pop(0)
@@ -679,33 +677,28 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 				raw_footnote += raw_block[0:close_bracket_pos]
 			processed_block += self.handle_footnote(raw_footnote)
 			open_bracket_pos = raw_block.find('[', close_bracket_pos + 1)
-		
+
 		if len(raw_block) > close_bracket_pos + 1:
-			print(f"len={len(raw_block)}, close_bracket_pos={close_bracket_pos}")
 			#handling the remaining of the block, if any
 			processed_block += raw_block[close_bracket_pos + 1:]
-		print(f"Got processed block: {processed_block}")
 		blocks.insert(0, processed_block)
 		#WARN: returning False in order to process current block with the other block parsers
 		return False
 
 	def handle_footnote(self, footnote_string):
-		#WARN: using looseDetab in order to process both inline text and padded blocks
-		print(f"Handling footnote: '{footnote_string}'")
-		footnote_string = self.looseDetab(footnote_string)
+		footnote_string = (
+			#Placing placeholder in order to compile it into the first element
+			#It will be rpelaced after compilation
+			self.NOTE_NUMBER_PLACEHOLDER + " " +
+			#WARN: using looseDetab in order to process both inline text and padded blocks
+			self.looseDetab(footnote_string)
+		)
 		self._markdown.reset()
-		converted_note = self._markdown.convert(footnote_string)
-		if not converted_note.startswith("<p>"):
-			raise ValueError("converted_note starts with '{start}', while <p> was expected".format(
-				start=converted_note[0:10]
-			))
-		print(f"Converted note: '{converted_note}'")
-		#inserting note number into the first <p> element of the note
-		converted_note = "<p>" + str(self._next_note_number) + ". " + converted_note[3:]
-		converted_note = converted_note.replace("<p>", '<span class="p">')
-		converted_note = converted_note.replace("</p>", '</span>')
-		
-		print(f"Inserted number: '{converted_note}'")
+		converted_note = self._markdown.convert(footnote_string)\
+			.replace(self.NOTE_NUMBER_PLACEHOLDER, str(self._next_note_number) + ".")\
+			.replace("<p>", '<span class="p">')\
+			.replace("</p>", '</span>')
+
 		raw_html = (
 			"<span class='{CSS_CLASS_NOTE_ANCHOR}'>{next_note_number}</span>".format(
 				CSS_CLASS_NOTE_ANCHOR=const.CSS_CLASS_NOTE_ANCHOR,
