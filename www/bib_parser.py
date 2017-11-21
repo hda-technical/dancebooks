@@ -31,16 +31,15 @@ class FinalizingContext(object):
 	Contains objects required for finalizing parsed data set
 	"""
 	def __init__(self, index):
-		self._converter = markdown.Markdown(
-			extensions=[utils.MarkdownExtension(
-				cite=utils.MarkdownCite(index)
-			)]
+		self._markdown = markdown.Markdown(
+			output_format="xhtml5"
 		)
+		self._markdown.inlinePatterns.add("cite", utils.MarkdownCite(index), "_end")
 
 	def parse_markdown(self, data):
-		self._converter.reset()
+		self._markdown.reset()
 		#erasing added <p> tags
-		return self._converter.convert(data)\
+		return self._markdown.convert(data)\
 			.replace("<p>", "")\
 			.replace("</p>", "")
 

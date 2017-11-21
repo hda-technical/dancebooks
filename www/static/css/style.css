@@ -591,6 +591,10 @@ div.transcription span.note {
 	-webkit-user-select: none;
 }
 
+div.transcription span.note span.p {
+	text-indent: 0px;
+}
+
 div.transcription div.upper_roman + ol {
 	list-style-type: upper-roman;
 }

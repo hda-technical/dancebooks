@@ -542,17 +542,19 @@ class MarkdownCache(object):
 		self._lock = threading.Lock()
 		#dict: file abspath -> (source file mtime, compiled html data)
 		self._cache = dict()
-		self._converter = markdown.Markdown(
+		self._markdown = markdown.Markdown(
 			extensions=[
 				"markdown.extensions.tables",
-				"superscript",
-				MarkdownExtension(
-					page_number=MarkdownPageNumber(),
-					strikethrough=MarkdownStrikethrough(),
-					note=MarkdownNote()
-				)
+				"superscript"
 			],
 			output_format="xhtml5"
+		)
+		self._markdown.inlinePatterns.add("page_number", MarkdownPageNumber(), "_end")
+		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
+		self._markdown.parser.blockprocessors.add(
+			"note",
+			MarkdownNote(self._markdown.parser),
+			"_begin"
 		)
 
 	def get(self, abspath):
@@ -578,9 +580,9 @@ class MarkdownCache(object):
 		Helper function for performing compilation
 		of a markdown file to HTML
 		"""
-		self._converter.reset()
+		self._markdown.parser.blockprocessors["note"].reset()
 		raw_data = read_utf8_file(abspath)
-		return self._converter.convert(raw_data)
+		return self._markdown.convert(raw_data)
 
 
 class MarkdownCite(markdown.inlinepatterns.Pattern):
@@ -624,50 +626,98 @@ class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 		return span
 
 
-class MarkdownNote(markdown.inlinepatterns.Pattern):
-	def __init__(self):
-		super().__init__(r"\[(?P<note>[^\]]+)\]")
+class MarkdownNote(markdown.blockprocessors.BlockProcessor):
+	"""
+	Marks any text placed into square brackets as a note.
+	Works as follows:
+	TODO: FILL ME IN
+	"""
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self._markdown = markdown.Markdown(
+			extensions=[
+				"superscript"
+			],
+			output_format="xhtml5"
+		)
+		self._markdown.inlinePatterns.add("strikethough", MarkdownStrikethrough(), "_end")
 		self.reset()
 
 	def reset(self):
-		self.next_note_number = 1
+		print("resetting")
+		self._next_note_number = 1
 
-	def handleMatch(self, m):
-		anchor = markdown.util.etree.Element("span")
-		anchor.set("class", const.CSS_CLASS_NOTE_ANCHOR)
-		anchor.text = str(self.next_note_number)
-
-		note = markdown.util.etree.Element("span")
-		note.set("class", const.CSS_CLASS_NOTE)
-		note.text = "{next_note_number}. {note}".format(
-			next_note_number=self.next_note_number,
-			note=m.group("note")
+	def test(self, parent, block):
+		open_bracket_pos = block.find('[')
+		close_bracket_pos = block.find(']', open_bracket_pos)
+		return (
+			#footnote exists
+			(open_bracket_pos != -1) and
+			#is not empty - this allows to skip image markup `![](url)`
+			(close_bracket_pos != open_bracket_pos + 1)
 		)
 
-		parent = markdown.util.etree.Element("span")
-		parent.append(anchor)
-		parent.append(note)
+	def run(self, parent, blocks):
+		raw_block = blocks.pop(0)
+		print(f"Got raw block: {raw_block}")
+		processed_block = ""
+		#open_bracket_pos never equals to -1 at the start
+		close_bracket_pos = 0
+		open_bracket_pos = raw_block.find('[')
+		while (open_bracket_pos != -1):
+			print(f"open_bracket_pos={open_bracket_pos}, close_bracket_pos={close_bracket_pos}")
+			#this text does not belong to footnote and should not be handled
+			processed_block += raw_block[close_bracket_pos:open_bracket_pos]
+			close_bracket_pos = raw_block.find(']', open_bracket_pos + 1)
+			raw_footnote = raw_block[open_bracket_pos + 1:close_bracket_pos]
+			while blocks and close_bracket_pos == -1:
+				print("Removing the block")
+				#footnote is split across several blocks
+				#looking for the block ending the quote
+				raw_block = blocks.pop(0)
+				close_bracket_pos = raw_block.find(']')
+				raw_footnote += raw_block[0:close_bracket_pos]
+			processed_block += self.handle_footnote(raw_footnote)
+			open_bracket_pos = raw_block.find('[', close_bracket_pos + 1)
+		
+		if len(raw_block) > close_bracket_pos + 1:
+			print(f"len={len(raw_block)}, close_bracket_pos={close_bracket_pos}")
+			#handling the remaining of the block, if any
+			processed_block += raw_block[close_bracket_pos + 1:]
+		print(f"Got processed block: {processed_block}")
+		blocks.insert(0, processed_block)
+		#WARN: returning False in order to process current block with the other block parsers
+		return False
 
-		self.next_note_number += 1
-		return parent
-
-
-class MarkdownExtension(markdown.extensions.Extension):
-	"""
-	Generalized Markdown extension which accepts
-	multiple inline patterns at once
-	"""
-	def __init__(self, **patterns):
-		self.patterns = patterns
-
-	def extendMarkdown(self, md, md_globals):
-		for name, pattern in self.patterns.items():
-			md.inlinePatterns.add(name, pattern, '_end')
-
-	def reset(self):
-		for pattern in self.pattenrs.values():
-			pattern.reset()
-
+	def handle_footnote(self, footnote_string):
+		#WARN: using looseDetab in order to process both inline text and padded blocks
+		print(f"Handling footnote: '{footnote_string}'")
+		footnote_string = self.looseDetab(footnote_string)
+		self._markdown.reset()
+		converted_note = self._markdown.convert(footnote_string)
+		if not converted_note.startswith("<p>"):
+			raise ValueError("converted_note starts with '{start}', while <p> was expected".format(
+				start=converted_note[0:10]
+			))
+		print(f"Converted note: '{converted_note}'")
+		#inserting note number into the first <p> element of the note
+		converted_note = "<p>" + str(self._next_note_number) + ". " + converted_note[3:]
+		converted_note = converted_note.replace("<p>", '<span class="p">')
+		converted_note = converted_note.replace("</p>", '</span>')
+		
+		print(f"Inserted number: '{converted_note}'")
+		raw_html = (
+			"<span class='{CSS_CLASS_NOTE_ANCHOR}'>{next_note_number}</span>".format(
+				CSS_CLASS_NOTE_ANCHOR=const.CSS_CLASS_NOTE_ANCHOR,
+				next_note_number=self._next_note_number
+			) +
+			"<span class='{CSS_CLASS_NOTE}'>{converted_note}</span>".format(
+				CSS_CLASS_NOTE=const.CSS_CLASS_NOTE,
+				converted_note=converted_note
+			)
+		)
+		self._next_note_number += 1
+		return raw_html
 
 
 def get_last_name(fullname):
