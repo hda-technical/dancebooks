@@ -2900,25 +2900,25 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 > That's worshipped now eastward of Temple Bar;
 >
 > From this he augured that a specious bill[[
-	A ball-bill has recently been put forth by the professor alluded to, (who has been before noticed), printed in a particular manner. The words "Supper, Gratis," very large. The following extract will show how ingeniously it is contrived for the purposes of deception. 
-	
-	### City of London tavern. 
-	### Mister ---'s ball, February, 1824. 
-	
-	The splendor will surpass any thing of the kind ever witnessed. 
-	
-	The band will consist of violins, flutes, clarionets, serpents, violincellos, double bass's, &c. but neither 
-	
-	### six harps, 
-	
+	A ball-bill has recently been put forth by the professor alluded to, (who has been before noticed), printed in a particular manner. The words "Supper, Gratis," very large. The following extract will show how ingeniously it is contrived for the purposes of deception.
+
+	### City of London tavern.
+	### Mister ---'s ball, February, 1824.
+
+	The splendor will surpass any thing of the kind ever witnessed.
+
+	The band will consist of violins, flutes, clarionets, serpents, violincellos, double bass's, &c. but neither
+
+	### six harps,
+
 	nor
 
-	### two bands. 
-	
-	### _Supper_ will be provided. 
-	
-	Order of the dancing will be given 
-	
+	### two bands.
+
+	### _Supper_ will be provided.
+
+	Order of the dancing will be given
+
 	### gratis.
 ]],
 >
@@ -2983,7 +2983,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 > Jem. One great professor gives the town a treat,
 >
 > In what he calls "a grand and annual fête[[[[One sapient professor, who would be thought, a dealer in novelty, gave, what he Called a grand fête;" but either mistaking the meaning of the term, or wholly disregarding propriety the grand fête turned out to be nothing more than an every day ball.]]";
-> 
+>
 > He thinks the title frenchified and grand,
 >
 > That fools will praise what they don't understand,
@@ -4228,7 +4228,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 > A friend told me (on whom I can rely),
 >
 > That she proposed a minuet to try[[This circumstance was related to the author by the lady herself, who has given him permission to use her name, if necessary, for the authenticity of the fact.]],
-> 
+>
 > With one who prints "professor" in his bill,
 >
 > It was done to try the great professor's skill.
@@ -10080,303 +10080,306 @@ Jem. This is a proof of ignorance you'll find,
 
 ### The English Country Dance
 
-> A country dance[[^234]] would be a pleasing sight,
+> A country dance would be a pleasing sight,
 >
 > If all performed the steps and figures right.
 
-[[^234]]:
-	### A Country Dance
+***
 
-	As it is named, (or more properly an English country dance) almost universally known as the national dance of English, is constructed on mathematical principles, clearly displayed in its operative effect, when properly and well performed. It is formed of two principal features, videlicet figures and steps, which, for the execution, government and display of their several movements and evolutions, are united with their indispensable auxiliary, music: but independent of the scientific structure of the dance, there are secondary features, named ornaments and embellishments, and which are necessary to the performance of the figures and steps to the music, as they apply and are connected with each other in a graceful and easy manner. The figures, which form various evolutionary movements in circular, serpentine, angular, and straight lines, are formed into a variety of different lengths, (as shown by the diagrams in the complete system of English country dancing) and require a variety of different steps or movements of the feet in their performance to music appropriately adapted thereto. A country dance is formed of an indefinite number of ladies and gentlemen, not less than six. The ladies and gentlemen are placed in two rows of lines parallel with each other; the one consisting of ladies, which is called the ladies' side; and the other of gentlemen; which is called the gentlemen's side; every lady is opposite a gentleman, who are called partners. The couples being so placed, form which is termed "a set", and are demonstrated by different technical appellations, according to their situations, or the manner in which they are employed in the dance. The subjoined sketch will more clearly elucidate the form and construction of an English country dance, as formed into various sets, as Set A, Set B, Set C; also the formation of the major and minor sets, of the 1st, 2nd and 3rd or top, central, and bottom couples; likewise the leading, neutral and auxiliary couples, top and bottom of the set, &c.
+### [[Located in footnote in original]]A Country Dance
 
-	*Figure omitted*
+As it is named, (or more properly an English country dance) almost universally known as the national dance of English, is constructed on mathematical principles, clearly displayed in its operative effect, when properly and well performed. It is formed of two principal features, videlicet figures and steps, which, for the execution, government and display of their several movements and evolutions, are united with their indispensable auxiliary, music: but independent of the scientific structure of the dance, there are secondary features, named ornaments and embellishments, and which are necessary to the performance of the figures and steps to the music, as they apply and are connected with each other in a graceful and easy manner. The figures, which form various evolutionary movements in circular, serpentine, angular, and straight lines, are formed into a variety of different lengths, (as shown by the diagrams in the complete system of English country dancing) and require a variety of different steps or movements of the feet in their performance to music appropriately adapted thereto. A country dance is formed of an indefinite number of ladies and gentlemen, not less than six. The ladies and gentlemen are placed in two rows of lines parallel with each other; the one consisting of ladies, which is called the ladies' side; and the other of gentlemen; which is called the gentlemen's side; every lady is opposite a gentleman, who are called partners. The couples being so placed, form which is termed "a set", and are demonstrated by different technical appellations, according to their situations, or the manner in which they are employed in the dance. The subjoined sketch will more clearly elucidate the form and construction of an English country dance, as formed into various sets, as Set A, Set B, Set C; also the formation of the major and minor sets, of the 1st, 2nd and 3rd or top, central, and bottom couples; likewise the leading, neutral and auxiliary couples, top and bottom of the set, &c.
 
-	### Explanation of the Diagrams and Characters Contained in the Above Form and Construction of a Country Dance
-	* Leading set is that set, however many there may be, which is privileged to call the first dance, and is generally called the first set, of Set A, see figure 1 and the article "Sets and divisions of the dance".
-	* Minor set; any three couples in the general set performing the figure within themselves is termed "Minor set"; how these sets are formed and the number every dance will admit of, may be seen by the diagrams and article "Minor set".
-	* Ladies and gentlemen's side, is shown in the 1st of the Set A, and is known by, the ladies always having the top of the room or set on their right hand, and the gentlemen on their left.
-	* Across the dance, means across the set.
-	* Top of the dance or set, is from whence the dancing commences (see the form and construction of a country dance), and is on the right hand of the ladies, and on the left of the gentlemen. Should the room be square, instead of placing 3 sets parallel with each other, 4 sets might be formed, as shown at figure 12.
-	* Top couple is the same as first couple; there are the top couple in general and in the minor set, see the article "Minor set".
-	* Auxiliary couples are those that assist the leading couple in the performance of the dance, they are active and inactive; see diagram 3 and 10, and the article "Auxiliary couples".
-	* Lady and gentleman: when the appellations of lady and gentleman are made use of in a minor set, the leading couple (whether at top, centre and bottom), is meant, if no other lady or gentleman are otherwise particularly alluded to.
-	* Neutral couple, is an inactive couple not required in the performance of the figure; they generally divide the minor set, but are sometimes included in it. See Figures 1 and 4 and the article "Neutral couple".
-	* Central couple; when the leading couple is acting in the centre of a minor set, it is called the central couple, that title never belongs to the second couple: see "Minor set".
-	* Whole figure, is a figure that is whole, perfect and indivisible, beginning and ending in the same place; see diagram 10 and the article "Whole figures".
-	* Down the middle, is a movement made between the couples, in the direction of from top to bottom; see figure 2.
-	* The set: when a number of ladies and gentlemen, their partners, stand opposite each other in two parallel lines, in dancing order, whey a called a set, as shown in the plan of a country dance, and in the article "Sets and divisions of the dance".
-	* Set or setting, dancing in one place; frequently called foot or footing.
+*Figure omitted*
 
-	### Sets or Divisions of the Dance
+### Explanation of the Diagrams and Characters Contained in the Above Form and Construction of a Country Dance
+* Leading set is that set, however many there may be, which is privileged to call the first dance, and is generally called the first set, of Set A, see figure 1 and the article "Sets and divisions of the dance".
+* Minor set; any three couples in the general set performing the figure within themselves is termed "Minor set"; how these sets are formed and the number every dance will admit of, may be seen by the diagrams and article "Minor set".
+* Ladies and gentlemen's side, is shown in the 1st of the Set A, and is known by, the ladies always having the top of the room or set on their right hand, and the gentlemen on their left.
+* Across the dance, means across the set.
+* Top of the dance or set, is from whence the dancing commences (see the form and construction of a country dance), and is on the right hand of the ladies, and on the left of the gentlemen. Should the room be square, instead of placing 3 sets parallel with each other, 4 sets might be formed, as shown at figure 12.
+* Top couple is the same as first couple; there are the top couple in general and in the minor set, see the article "Minor set".
+* Auxiliary couples are those that assist the leading couple in the performance of the dance, they are active and inactive; see diagram 3 and 10, and the article "Auxiliary couples".
+* Lady and gentleman: when the appellations of lady and gentleman are made use of in a minor set, the leading couple (whether at top, centre and bottom), is meant, if no other lady or gentleman are otherwise particularly alluded to.
+* Neutral couple, is an inactive couple not required in the performance of the figure; they generally divide the minor set, but are sometimes included in it. See Figures 1 and 4 and the article "Neutral couple".
+* Central couple; when the leading couple is acting in the centre of a minor set, it is called the central couple, that title never belongs to the second couple: see "Minor set".
+* Whole figure, is a figure that is whole, perfect and indivisible, beginning and ending in the same place; see diagram 10 and the article "Whole figures".
+* Down the middle, is a movement made between the couples, in the direction of from top to bottom; see figure 2.
+* The set: when a number of ladies and gentlemen, their partners, stand opposite each other in two parallel lines, in dancing order, whey a called a set, as shown in the plan of a country dance, and in the article "Sets and divisions of the dance".
+* Set or setting, dancing in one place; frequently called foot or footing.
 
-	A country dance is formed into different sets or divisions when the company are too numerous for one set, not only that a greater variety of calls may be had, but also to prevent the fatigue occasioned by the too great length of the set, a set containing in length, or in one line,thirty or forty couples may be divided into two sets, by placing a form or drawing line across the middle of the set.
+### Sets or Divisions of the Dance
 
-	The following diagram is the form and construction of a country dance, composed of two sets, formed in one straight line or row.
+A country dance is formed into different sets or divisions when the company are too numerous for one set, not only that a greater variety of calls may be had, but also to prevent the fatigue occasioned by the too great length of the set, a set containing in length, or in one line,thirty or forty couples may be divided into two sets, by placing a form or drawing line across the middle of the set.
 
-	*Figure omitted*
+The following diagram is the form and construction of a country dance, composed of two sets, formed in one straight line or row.
 
-	When the width of the room will admit, and the company are sufficiently numerous, they may be divided into different divisions and placed in parallel lines, at a convenient distance from each other, having respectively the top of the set at the same end or part of the room: they may be distinguished from each other by numerical figures or letters, as Set 1 or Set A, Set 2 or Set B, &c. Notwithstanding that that they all branch from Set 1 or Set A, and are properly but a continuation of that set formed into divisions according to room, yet they have their respective privileges respecting the "calls". Set 1 or A call the first dance, Set 2 or B the second, Set 3 of 3 the third, &c. Should there be no more than three sets, after the call of Set 3 or C, the call goes back to Set 1 or A, and No. 2 in that set call the fourth dance; then No. 2 in Set 2 or B the fifth dance, &c. Whatever dance is called, and in which ever set it may be, the other sets are governed by it respecting tune and figures, thus: if Set C has the call, Sets A and B must consult them respecting the figure, and perform it precisely in the same manner; any alteration or deviation being considered as a mark of disrespect to the lady who calls the dance. The manner of forming this sets or divisions may be seen by "The construction of a country dance", p. 159. In forming them, they must be divided as equally as possible with respect to the number of couples, that the respective sets may finish the dance as nearly as possible at the same time. The ladies being each furnished with a ticket, bearing the name of the set to which they belong, with the number thereon inscribed according to their situation in the dance, as A No. 1, B No. 2, &c.: should place them in a conspicuous part of their dress to prevent disputes respecting places, (videlicet the "Etiquette of the ball room", in "The complete system of English country dancing"). It frequently occurs, that gentlemen's side, which ought to be avoided (except where there are not an equal number of ladies and gentlemen present) as it destroys the appearance of the construction of the dance, and tends to produce mistakes in the performance of the figures, particularly with those persons not thoroughly acquainted with the figure of the dance.
+*Figure omitted*
 
-	### Distance of Standing
+When the width of the room will admit, and the company are sufficiently numerous, they may be divided into different divisions and placed in parallel lines, at a convenient distance from each other, having respectively the top of the set at the same end or part of the room: they may be distinguished from each other by numerical figures or letters, as Set 1 or Set A, Set 2 or Set B, &c. Notwithstanding that that they all branch from Set 1 or Set A, and are properly but a continuation of that set formed into divisions according to room, yet they have their respective privileges respecting the "calls". Set 1 or A call the first dance, Set 2 or B the second, Set 3 of 3 the third, &c. Should there be no more than three sets, after the call of Set 3 or C, the call goes back to Set 1 or A, and No. 2 in that set call the fourth dance; then No. 2 in Set 2 or B the fifth dance, &c. Whatever dance is called, and in which ever set it may be, the other sets are governed by it respecting tune and figures, thus: if Set C has the call, Sets A and B must consult them respecting the figure, and perform it precisely in the same manner; any alteration or deviation being considered as a mark of disrespect to the lady who calls the dance. The manner of forming this sets or divisions may be seen by "The construction of a country dance", p. 159. In forming them, they must be divided as equally as possible with respect to the number of couples, that the respective sets may finish the dance as nearly as possible at the same time. The ladies being each furnished with a ticket, bearing the name of the set to which they belong, with the number thereon inscribed according to their situation in the dance, as A No. 1, B No. 2, &c.: should place them in a conspicuous part of their dress to prevent disputes respecting places, (videlicet the "Etiquette of the ball room", in "The complete system of English country dancing"). It frequently occurs, that gentlemen's side, which ought to be avoided (except where there are not an equal number of ladies and gentlemen present) as it destroys the appearance of the construction of the dance, and tends to produce mistakes in the performance of the figures, particularly with those persons not thoroughly acquainted with the figure of the dance.
 
-	The proper distance of the lines formed by the ladies and gentlemen from each other is about four feet and a half, and the distance of the respective couples from each other is about two feet and a half. The proper distance and the keeping of the lines truly parallel is necessary to the correct performance of the figures, every person in the set having thereby an opportunity of seeing the various evolutions of the figure performed by the leading couples, which very frequently proves of the greatest utility to those persons in the dance unacquainted with the figures, and prevents the confusion that would otherwise occur. Should the company be numerous, or the room not of sufficient length to admit the whole of the persons to stand up in one set, they may be arranged and formed according to the width of the room into other sets parallel with each other (ride "Construction of the country dance", and the article "Division of sets"), and numbered in succession, Set 1, Set 2, &c.; or distinguished by letters as Set A, Set B, &c. These divisions may be considered as the parts of first set, being properly a continuation of that set, formed into divisions for the sake of convenience. In performing the dance, the couples, by changing situations, lose the original name or character attached to them, and acquire another, according to the situation they become placed in, or the operative principle of the dance. The technical names of characters attached to the respective couples occur in every country dance, and are permanent in certain situations, and the names of many of the figures are derived from them. The learner must therefore understand them ere he can be supposed properly to connect and apply them in the formation of a country dance. The principal of them are the "minor set", the "leading couple", the "neutral couple", the "auxiliary couples", the "top", "bottom", and "central couples", or "first", "second", and "third couples".
+### Distance of Standing
 
-	### The Minor Set
+The proper distance of the lines formed by the ladies and gentlemen from each other is about four feet and a half, and the distance of the respective couples from each other is about two feet and a half. The proper distance and the keeping of the lines truly parallel is necessary to the correct performance of the figures, every person in the set having thereby an opportunity of seeing the various evolutions of the figure performed by the leading couples, which very frequently proves of the greatest utility to those persons in the dance unacquainted with the figures, and prevents the confusion that would otherwise occur. Should the company be numerous, or the room not of sufficient length to admit the whole of the persons to stand up in one set, they may be arranged and formed according to the width of the room into other sets parallel with each other (ride "Construction of the country dance", and the article "Division of sets"), and numbered in succession, Set 1, Set 2, &c.; or distinguished by letters as Set A, Set B, &c. These divisions may be considered as the parts of first set, being properly a continuation of that set, formed into divisions for the sake of convenience. In performing the dance, the couples, by changing situations, lose the original name or character attached to them, and acquire another, according to the situation they become placed in, or the operative principle of the dance. The technical names of characters attached to the respective couples occur in every country dance, and are permanent in certain situations, and the names of many of the figures are derived from them. The learner must therefore understand them ere he can be supposed properly to connect and apply them in the formation of a country dance. The principal of them are the "minor set", the "leading couple", the "neutral couple", the "auxiliary couples", the "top", "bottom", and "central couples", or "first", "second", and "third couples".
 
-	Is formed of three couples, which is sufficient for the performance of any country dance figure constituting in themselves a perfect set, so that every three couples in a general set performing a figure within themselves, is properly termed a minor set, having a top, bottom and central couple, enabling them to perform every figure from every given situation in the dance; the minor set is formed and varied by the progressive motion of the dance, and are more or less numerous, according to the number of persons composing the dance; for instance, a general set consisting of twenty-four couples (the dance being in full action) will have (when the fourth, or couple below the minor set is the neutral couple, as seen at figure 1) six minor sets; if the neutral couple is included in the minor set (as in figure 7), then there will be eight minor sets in a dance of twenty-four couples. Minor sets may be formed in any part of the general set, where it shall occur that the leading or top couple of the minor set have two couples below; videlicet a second and a third couple to act with them or where the leading couple are performing a figure in the centre; in which case, the couples forming the minor set are differently termed, the leading couple being called the central; the third the bottom; and the couple who stand second at the commencement of the figure will then be the first or top couple (see figure 5 in "The construction of a county dance"), thereby losing their original names or characters, immediately the leading couple perform the progressive figure. When first, second, and third couples, or top, centre, and bottom, are mentioned, the dancer should be acquainted as to which of two they should belong (the general or minor set) or he will be otherwise misled. In the general set, the numerical order is regulated accordingly as they are given out at the calling up of the dance; and top and bottom only relate to the top and bottom couple of the dance or general set. When the leading couple is at the top, the second couple is properly the central couple (yet it never assumes that name), being reserved for the leading couple, when they in the performance of the figure occupy the place of the second couple, who consequently become the top couple, and therefore, when the central couple is named, the leading couple alluded to are acting in the centre. The third couple become the bottom couple, immediately on the leading couple becoming the central one, and perform any figure or figures required from that situation; the minor set thereby have no nominal central couple. Such are those that finish the figure with a progressive one, and have no figure performed from the centre by the leading couple.
+### The Minor Set
 
-	### Leading Couple
+Is formed of three couples, which is sufficient for the performance of any country dance figure constituting in themselves a perfect set, so that every three couples in a general set performing a figure within themselves, is properly termed a minor set, having a top, bottom and central couple, enabling them to perform every figure from every given situation in the dance; the minor set is formed and varied by the progressive motion of the dance, and are more or less numerous, according to the number of persons composing the dance; for instance, a general set consisting of twenty-four couples (the dance being in full action) will have (when the fourth, or couple below the minor set is the neutral couple, as seen at figure 1) six minor sets; if the neutral couple is included in the minor set (as in figure 7), then there will be eight minor sets in a dance of twenty-four couples. Minor sets may be formed in any part of the general set, where it shall occur that the leading or top couple of the minor set have two couples below; videlicet a second and a third couple to act with them or where the leading couple are performing a figure in the centre; in which case, the couples forming the minor set are differently termed, the leading couple being called the central; the third the bottom; and the couple who stand second at the commencement of the figure will then be the first or top couple (see figure 5 in "The construction of a county dance"), thereby losing their original names or characters, immediately the leading couple perform the progressive figure. When first, second, and third couples, or top, centre, and bottom, are mentioned, the dancer should be acquainted as to which of two they should belong (the general or minor set) or he will be otherwise misled. In the general set, the numerical order is regulated accordingly as they are given out at the calling up of the dance; and top and bottom only relate to the top and bottom couple of the dance or general set. When the leading couple is at the top, the second couple is properly the central couple (yet it never assumes that name), being reserved for the leading couple, when they in the performance of the figure occupy the place of the second couple, who consequently become the top couple, and therefore, when the central couple is named, the leading couple alluded to are acting in the centre. The third couple become the bottom couple, immediately on the leading couple becoming the central one, and perform any figure or figures required from that situation; the minor set thereby have no nominal central couple. Such are those that finish the figure with a progressive one, and have no figure performed from the centre by the leading couple.
 
-	Is the couple going down the dance; and there will be as many leading couples as minor sets in a dance, so that a dance of sixty couples would have twenty leading couples, the dance being in full activity.
+### Leading Couple
 
-	### Auxiliary Couples
+Is the couple going down the dance; and there will be as many leading couples as minor sets in a dance, so that a dance of sixty couples would have twenty leading couples, the dance being in full activity.
 
-	Are those couples in a minor that that assist the leading couple in the performance of the figures, either actively or inactively. Some minor sets contain one, others two; but no dance can be formed without one. Their numbers are governed by the direction of figures, and the couples they employ or require in their performance. When a dance contains but one auxiliary couple, it will be composed of figures that in their performance require and employ the leading and the second couple only, or contain a neutral couple within the minor set, hence the second couple becomes the auxiliary couple, whether active or inactive: and every dance containing a figure or figures employing a whole minor set, or by any means connecting themselves with the bottom or third couples, and the neutral couple being the fourth or couple below, the minor set will have two auxiliary couples, active or inactive, according the the nature of the figures. There are some individual figures, that in their performance do no require an auxiliary couple, such as "allemande", "turn your partner", &c.; but every dance must contain one at least as no dance can be performed without a progressive figure, requiring for its performance the second couple. The third couple may be an auxiliary one at one part of the figure, and not at another; but whenever it is employed or required, it is considered as belonging to the dance, the second couple being always auxiliary.
+### Auxiliary Couples
 
-	### Active Auxiliary Couples
+Are those couples in a minor that that assist the leading couple in the performance of the figures, either actively or inactively. Some minor sets contain one, others two; but no dance can be formed without one. Their numbers are governed by the direction of figures, and the couples they employ or require in their performance. When a dance contains but one auxiliary couple, it will be composed of figures that in their performance require and employ the leading and the second couple only, or contain a neutral couple within the minor set, hence the second couple becomes the auxiliary couple, whether active or inactive: and every dance containing a figure or figures employing a whole minor set, or by any means connecting themselves with the bottom or third couples, and the neutral couple being the fourth or couple below, the minor set will have two auxiliary couples, active or inactive, according the the nature of the figures. There are some individual figures, that in their performance do no require an auxiliary couple, such as "allemande", "turn your partner", &c.; but every dance must contain one at least as no dance can be performed without a progressive figure, requiring for its performance the second couple. The third couple may be an auxiliary one at one part of the figure, and not at another; but whenever it is employed or required, it is considered as belonging to the dance, the second couple being always auxiliary.
 
-	Are those couples that actively assist the leading couple in the performance of the figures, as "right and left", "set and change sides", – "hey", – "hands six round", where the figure of the dance cannot be performed without the active assistance of the other couple or couples; for were they to remain stationary, the figure could not be completely performed. A dance may contain either one or two, or be composed of inactive auxiliary couples, according to the nature of the figures of which it may be composed (see "The complete system of English country dancing", where it is shown how the figures employ the couples, and where they begin and end). In "Sir David hunter blair" single figure, there will be one active auxiliary couple, which will be in "set and hands across and back again" (videlicet "Companion to the ball-room"). In "Nancy Dawson" there will be two active auxiliary couples employs in the figure "hey".
+### Active Auxiliary Couples
 
-	### Inactive Auxiliary Couples
+Are those couples that actively assist the leading couple in the performance of the figures, as "right and left", "set and change sides", – "hey", – "hands six round", where the figure of the dance cannot be performed without the active assistance of the other couple or couples; for were they to remain stationary, the figure could not be completely performed. A dance may contain either one or two, or be composed of inactive auxiliary couples, according to the nature of the figures of which it may be composed (see "The complete system of English country dancing", where it is shown how the figures employ the couples, and where they begin and end). In "Sir David hunter blair" single figure, there will be one active auxiliary couple, which will be in "set and hands across and back again" (videlicet "Companion to the ball-room"). In "Nancy Dawson" there will be two active auxiliary couples employs in the figure "hey".
 
-	Are those couples which, although auxiliary couples, and required in the performance of the figure, yet remain wholly stationary and inactive; as in "whole figure at top", – "cast off two couple", – "whole figure on your own sides", – "lead through top and bottom", &c. A dance may contain either one or two, or be composed wholly of active figures, according to the selection. In "the Campbell's are coming", single figure (see "Companion to the ball-room") but one auxiliary couple is required (which is inactive) that is used in the performance of the progressive figure, which employ only the leading couple. In the "Rakish highlandman", (single figure) there are two inactive auxiliary couples.
+### Inactive Auxiliary Couples
 
-	### Neutral Couple
+Are those couples which, although auxiliary couples, and required in the performance of the figure, yet remain wholly stationary and inactive; as in "whole figure at top", – "cast off two couple", – "whole figure on your own sides", – "lead through top and bottom", &c. A dance may contain either one or two, or be composed wholly of active figures, according to the selection. In "the Campbell's are coming", single figure (see "Companion to the ball-room") but one auxiliary couple is required (which is inactive) that is used in the performance of the progressive figure, which employ only the leading couple. In the "Rakish highlandman", (single figure) there are two inactive auxiliary couples.
 
-	A neutral couple is an inactive couple, not required in the figure, and one that divides the minor sets, by its being the fourth or couple below a minor set; yet it is sometimes the third or bottom couple of and included in the minor set, and is constituted, by affording space, to prevent confusion in the dance, too frequently occasioned by the figures interfering and becoming entangled with each other. Those are neutral couples to which no figure extends. When the dance is in full activity, the number of neutral couples will be in proportion to the number of minor sets contained therein, whether included in the minor set or below it. A dance consisting of thirty couples, the neutral couples included in the minor set will contain ten neutral couples, but if the neutral couple be the fourth, or couple below the minor set, then the dance will contain but seven minor sets, with seven neutral couples attached to them additionally (videlicet "The construction of a country dance"). Every minor set must have a neutral couple either included in it, or attached to it. When the neutral couple is included in the minor set, it is always formed of the third or bottom couple. The constituting of the neutral couple depends entirely on the figures employed in the dance, as all those figures which employ the whole of the minor set constitute the fourth or couple below it; the neutral couple (See "The construction of a country dance", figures 1 & 9). In the performance of "Speed the plough" (see "Companion to the ball-room") either single or double figure, the fourth or couple below the minor set would be the neutral one; the whole of the minor set being employed in one of the figures. In the "Haunter tower", single figure, the neutral couple is included in the minor set, as the figure only employs two couple out of the minor set. The above examples, it is trusted, will be found sufficient.
+### Neutral Couple
 
-	### Motion and Progression of the Dance
+A neutral couple is an inactive couple, not required in the figure, and one that divides the minor sets, by its being the fourth or couple below a minor set; yet it is sometimes the third or bottom couple of and included in the minor set, and is constituted, by affording space, to prevent confusion in the dance, too frequently occasioned by the figures interfering and becoming entangled with each other. Those are neutral couples to which no figure extends. When the dance is in full activity, the number of neutral couples will be in proportion to the number of minor sets contained therein, whether included in the minor set or below it. A dance consisting of thirty couples, the neutral couples included in the minor set will contain ten neutral couples, but if the neutral couple be the fourth, or couple below the minor set, then the dance will contain but seven minor sets, with seven neutral couples attached to them additionally (videlicet "The construction of a country dance"). Every minor set must have a neutral couple either included in it, or attached to it. When the neutral couple is included in the minor set, it is always formed of the third or bottom couple. The constituting of the neutral couple depends entirely on the figures employed in the dance, as all those figures which employ the whole of the minor set constitute the fourth or couple below it; the neutral couple (See "The construction of a country dance", figures 1 & 9). In the performance of "Speed the plough" (see "Companion to the ball-room") either single or double figure, the fourth or couple below the minor set would be the neutral one; the whole of the minor set being employed in one of the figures. In the "Haunter tower", single figure, the neutral couple is included in the minor set, as the figure only employs two couple out of the minor set. The above examples, it is trusted, will be found sufficient.
 
-	The dance being constructed, the figure set, &c., the music properly adapted there to must be selected and played to put the dance in motion; the action and progressive motion in the performance of the dance must be understood, in order that every person in it may move progressively towards the bottom and the top regularly, that equal opportunity may be afforded to each to perform their respective parts. The top couple of the general set commence the dance, and after performing the various figures set to the same tune, finish a couple nearer the bottom; and the second will by moving up, become the top couple. The dance commences again, and the leading couple each time the figure is repeated, will progressively gain a couple towards the bottom, and will repeat or perform the figure at many times, as there are couples standing up in the set, not being permitted to gain more that one couple towards the bottom each time they finish the figure, but obliged to gain one couple to preserve the progressive motion of the dance. The progressing movement does not alone belong to the leading couple, but to all persons composing the dance, either moving a couple up or down as all the couples going down the dance progressively gain a couple towards the bottom every time the figure is performed, and all the other couples forming the set will at the same time progressively move up a couple towards the top of the dance, so that the whole of the couples in the set change this situation every time the figure is performed. As soon as the top couple cat form a minor set, that is, as soon as the leading couple or couples going down the dance have gone down three couples, or performed the figure three ties, then the couple left at the top of the general set, or of any minor set, must commence. When it relates to the general set, only then each couple will, according as they stand in rotation in the dance, become successively the top couple, and so on till all the couples forming the set have in succession (what is termed) "gone down the dance", and the couple that stood at the bottom at the beginning of the dance, has progressively "worked up" to the top, and afterwards gone down three couple; that the couple called the dance begin again, and go down within three couples of the bottom, which will finish the dance. The couple that called the dance stand at the bottom for the next dance.
+### Motion and Progression of the Dance
 
-	### Country Dance Figures
+The dance being constructed, the figure set, &c., the music properly adapted there to must be selected and played to put the dance in motion; the action and progressive motion in the performance of the dance must be understood, in order that every person in it may move progressively towards the bottom and the top regularly, that equal opportunity may be afforded to each to perform their respective parts. The top couple of the general set commence the dance, and after performing the various figures set to the same tune, finish a couple nearer the bottom; and the second will by moving up, become the top couple. The dance commences again, and the leading couple each time the figure is repeated, will progressively gain a couple towards the bottom, and will repeat or perform the figure at many times, as there are couples standing up in the set, not being permitted to gain more that one couple towards the bottom each time they finish the figure, but obliged to gain one couple to preserve the progressive motion of the dance. The progressing movement does not alone belong to the leading couple, but to all persons composing the dance, either moving a couple up or down as all the couples going down the dance progressively gain a couple towards the bottom every time the figure is performed, and all the other couples forming the set will at the same time progressively move up a couple towards the top of the dance, so that the whole of the couples in the set change this situation every time the figure is performed. As soon as the top couple cat form a minor set, that is, as soon as the leading couple or couples going down the dance have gone down three couples, or performed the figure three ties, then the couple left at the top of the general set, or of any minor set, must commence. When it relates to the general set, only then each couple will, according as they stand in rotation in the dance, become successively the top couple, and so on till all the couples forming the set have in succession (what is termed) "gone down the dance", and the couple that stood at the bottom at the beginning of the dance, has progressively "worked up" to the top, and afterwards gone down three couple; that the couple called the dance begin again, and go down within three couples of the bottom, which will finish the dance. The couple that called the dance stand at the bottom for the next dance.
 
-	Are of different form and length, and take the dancer in various directions (shown by the diagrams in "The complete system of English country dancing"), before they can be of use in the systematic composition of a dance, the length of all the individual figures must be shown, and their application to the music, and also the different between long and short figures.
+### Country Dance Figures
 
-	### Long and Short Figures
+Are of different form and length, and take the dancer in various directions (shown by the diagrams in "The complete system of English country dancing"), before they can be of use in the systematic composition of a dance, the length of all the individual figures must be shown, and their application to the music, and also the different between long and short figures.
 
-	For the convenience of the dancer in the application of the figures to the music, and for setting country dance figures, all the different figures, as fas as regards their length, are brought under two heads, "long" and "short figures"; of which there are several qualities enumerated and treated on under their respective heads.
+### Long and Short Figures
 
-	### Long Figures
+For the convenience of the dancer in the application of the figures to the music, and for setting country dance figures, all the different figures, as fas as regards their length, are brought under two heads, "long" and "short figures"; of which there are several qualities enumerated and treated on under their respective heads.
 
-	Are so named, from their requiring to their performance a strain of music of eight bars, which is the longest that should be used in English country dances (videlicet the article "Strains"): they are the longest also that can be applied to the use of the tables for the systematic composition of figures. Long figures are adapted for different uses in the dance, and receive additional names from the different situations in which they are performed in the dance; shown in "The complete system of English country dancing" in the article long figures, performed at top, in the centre, and at bottom of any minor set and long progressive figures. They are as nearly as possible of the same length, and occupy the same time in their performance, whether wholly composed of figure or movement, or whether a post consists of "setting", as, for instance, "hey on your sides" consists entirely of figure movement; and "set and change sides" of half figure and half setting, yet both are performed in the same time. When a dance is wholly composed of long figures, a figure is required to each strain of eight bars, as a tune of three strains with eight bar each, would require three long figures, either with or without setting, as may best suit the nature of the dance, or the taste of the company. Where the figures in this list to which setting is attached as "set and change sides" – "set and half right and left", &c. to be performed without setting, they would require but one half or four bars of the music for their performance, and would then be constituted short figures. Hence arises the impropriety of performing them without setting. While and long figures are deemed the same, though they widely differ from each other (videlicet whole figures). The following are a list of the principle long figures used in English country dancing: as
+### Long Figures
 
-	* Swing corners
-	* Turn corners
-	* Set contrary corners
-	* Lead outsides
-	* Lead through bottom and top
-	* Hands six round
-	* Promenade third couple
-	* Whole poussette
-	* Set and change sides and back
-	* Set and change places and back again
-	* Set and half right and left and back again
-	* Round bottom and up
-	* Round top and bottom
-	* The hey
-	* Set three across, and set three in your places
-	* Cast of two couple, and back again
-	* Cast over two couple
-	* Whole figure at top
-	* Whole figure at bottom
-	* While figure on your on side
-	* Chase round two couple
-	* Chain figure six round
-	* The three ladies and three gentlemen lead through and back again
-	* Swing with right hands round the second couple, and back again
-	* Swing with right hands round two couple
-	* The first lady turns the second gentleman, the 1st gentleman turns the second lady
-	* Hands three round with second lady, hands three with second gentleman
-	* Top lady sets between the second and third ladies
-	* Hands three round with second lady, who passes under to her place
-	* Hands three with second gentleman, who passes under to his place
-	* The double triangle
-	* The first lady leads down the second gentleman, the first gentleman leads down the second lady
-	* Lead down the middle and up again, this figure though in reality a short one, has been latterly (by the practice of galloping down a dozen couple, instead of confining its performance to three, the proper limits of every figure in English country dancing) made to require eight bars to its performance instead of four, and consequently converted into a long figure. It will, however, be given in the list of short figures to which class it properly belongs; the foregoing are the principle old country dance figures.
+Are so named, from their requiring to their performance a strain of music of eight bars, which is the longest that should be used in English country dances (videlicet the article "Strains"): they are the longest also that can be applied to the use of the tables for the systematic composition of figures. Long figures are adapted for different uses in the dance, and receive additional names from the different situations in which they are performed in the dance; shown in "The complete system of English country dancing" in the article long figures, performed at top, in the centre, and at bottom of any minor set and long progressive figures. They are as nearly as possible of the same length, and occupy the same time in their performance, whether wholly composed of figure or movement, or whether a post consists of "setting", as, for instance, "hey on your sides" consists entirely of figure movement; and "set and change sides" of half figure and half setting, yet both are performed in the same time. When a dance is wholly composed of long figures, a figure is required to each strain of eight bars, as a tune of three strains with eight bar each, would require three long figures, either with or without setting, as may best suit the nature of the dance, or the taste of the company. Where the figures in this list to which setting is attached as "set and change sides" – "set and half right and left", &c. to be performed without setting, they would require but one half or four bars of the music for their performance, and would then be constituted short figures. Hence arises the impropriety of performing them without setting. While and long figures are deemed the same, though they widely differ from each other (videlicet whole figures). The following are a list of the principle long figures used in English country dancing: as
 
-	There are some few others, also a variety of new figures composed by the author, and shown by diagrams in "The complete system of English country dancing".
+* Swing corners
+* Turn corners
+* Set contrary corners
+* Lead outsides
+* Lead through bottom and top
+* Hands six round
+* Promenade third couple
+* Whole poussette
+* Set and change sides and back
+* Set and change places and back again
+* Set and half right and left and back again
+* Round bottom and up
+* Round top and bottom
+* The hey
+* Set three across, and set three in your places
+* Cast of two couple, and back again
+* Cast over two couple
+* Whole figure at top
+* Whole figure at bottom
+* While figure on your on side
+* Chase round two couple
+* Chain figure six round
+* The three ladies and three gentlemen lead through and back again
+* Swing with right hands round the second couple, and back again
+* Swing with right hands round two couple
+* The first lady turns the second gentleman, the 1st gentleman turns the second lady
+* Hands three round with second lady, hands three with second gentleman
+* Top lady sets between the second and third ladies
+* Hands three round with second lady, who passes under to her place
+* Hands three with second gentleman, who passes under to his place
+* The double triangle
+* The first lady leads down the second gentleman, the first gentleman leads down the second lady
+* Lead down the middle and up again, this figure though in reality a short one, has been latterly (by the practice of galloping down a dozen couple, instead of confining its performance to three, the proper limits of every figure in English country dancing) made to require eight bars to its performance instead of four, and consequently converted into a long figure. It will, however, be given in the list of short figures to which class it properly belongs; the foregoing are the principle old country dance figures.
 
-	### Double Long Figures
+There are some few others, also a variety of new figures composed by the author, and shown by diagrams in "The complete system of English country dancing".
 
-	This class of figures receive their name from their being double or twice the length of those called long figures; as "the three ladies lead round the three gentlemen", and "the thee gentlemen lead round the three ladies"; they require twice the length of music in their performance, videlicet: a stain of eight bars repeated, or two strains played straight through, as they cannot be divided. Some of them require setting, and some are progressive as may be seen by the diagrams in "The system of English country dancing", where their use and applications to the dance are shown.
+### Double Long Figures
 
-	### Short Figures
+This class of figures receive their name from their being double or twice the length of those called long figures; as "the three ladies lead round the three gentlemen", and "the thee gentlemen lead round the three ladies"; they require twice the length of music in their performance, videlicet: a stain of eight bars repeated, or two strains played straight through, as they cannot be divided. Some of them require setting, and some are progressive as may be seen by the diagrams in "The system of English country dancing", where their use and applications to the dance are shown.
 
-	Are as nearly as possible one half of the length of the long figures, and require to their performance four bars of the music; the half figures are of the same length, but used differently. The names of the principle short figures are given in the following list in which the half figures are included. The manner in which they are used, and the direction they take in the dance may be seen by the diagrams and classes of figures for the use of the tables for composing country dances, in "The complete system of English country dancing". When these figures are applied, two are substituted for a long one, which are frequently applied to give variety and complexity to the dance. Short and half figures were formerly very much used in the composition of dances. In the old dance books many dances are composed wholly or nearly so, of short and half figures, to render the dances complex and difficult in their performance. These figures may be applied either at the top, bottom, or in the centre, of a minor set. Short figures, although only half the length of long figures, are perfect (with the exception of short progressive figures) ending where they begin, and have no setting attached to them. Some "half figures" have setting attached to them; and in this respect differ from short figures (videlicet "Half figures"). A dance may be composed wholly of short figures videlicet the dance entitled the "Caledonian rant", contained in the "Companion to the ball room", composed of four short figures. Formerly, when proper steps were not generally applied to the performance of the figure, it was the custom to divide and sub-divide figures; but to ender them systematically applicable to the strains of country dance music, only one division has been made; this the long or whole figures require a strain of eight bars; and the short or half require only four bars, or half a strain. The following list is a list of the principle short figures: as,
+### Short Figures
 
-	* Allemande
-	* Right and left
-	* Turn your partner
-	* Hands four round
-	* Half poussette
-	* Swing round your partner
-	* Lead through the bottom
-	* Lead through the top
-	* Cross over one couple
-	* Round the bottom
-	* Round the top
-	* Hands across half round
-	* Lead down the middle and up again
-	* Swing round one couple
-	* Cast off one couple
-	* The three gentlemen turn the three ladies
-	* And chase round one couple.
+Are as nearly as possible one half of the length of the long figures, and require to their performance four bars of the music; the half figures are of the same length, but used differently. The names of the principle short figures are given in the following list in which the half figures are included. The manner in which they are used, and the direction they take in the dance may be seen by the diagrams and classes of figures for the use of the tables for composing country dances, in "The complete system of English country dancing". When these figures are applied, two are substituted for a long one, which are frequently applied to give variety and complexity to the dance. Short and half figures were formerly very much used in the composition of dances. In the old dance books many dances are composed wholly or nearly so, of short and half figures, to render the dances complex and difficult in their performance. These figures may be applied either at the top, bottom, or in the centre, of a minor set. Short figures, although only half the length of long figures, are perfect (with the exception of short progressive figures) ending where they begin, and have no setting attached to them. Some "half figures" have setting attached to them; and in this respect differ from short figures (videlicet "Half figures"). A dance may be composed wholly of short figures videlicet the dance entitled the "Caledonian rant", contained in the "Companion to the ball room", composed of four short figures. Formerly, when proper steps were not generally applied to the performance of the figure, it was the custom to divide and sub-divide figures; but to ender them systematically applicable to the strains of country dance music, only one division has been made; this the long or whole figures require a strain of eight bars; and the short or half require only four bars, or half a strain. The following list is a list of the principle short figures: as,
 
-	### Whole Figures
+* Allemande
+* Right and left
+* Turn your partner
+* Hands four round
+* Half poussette
+* Swing round your partner
+* Lead through the bottom
+* Lead through the top
+* Cross over one couple
+* Round the bottom
+* Round the top
+* Hands across half round
+* Lead down the middle and up again
+* Swing round one couple
+* Cast off one couple
+* The three gentlemen turn the three ladies
+* And chase round one couple.
 
-	The terms "whole" and "long figures" are generally confused with each other, having been considered as the same; though they have quire a different meaning, there being short whole figures, and long whole figures. The term "whole figure" does not relate to the length of the figure so names, but to their being themselves finished, perfect, and indivisible, beginning and ending in the same place. These figures are of different length: "whole figure at top" requires double the music for its performance to either "allemande" or "turn your partner"; yet they are all whole figures. The last-mentioned figures are always arranged in the class of short figures; although they might be termed while figures, as they are perfect in themselves. Head a great many of the short figures been classed with those under the head long figures (except the progressive ones which are an exception to this rile, as they should always be considered as long and short, not ending where they begin, although "whole", and "half poussette" hear a different name), they might together have been termed "whole figures". To prevent as much as possible any confusion calculated to mislead the dancer, and the different figures are separated in "The Complete System of English Country Dancing".
+### Whole Figures
 
-	### Half Figures
+The terms "whole" and "long figures" are generally confused with each other, having been considered as the same; though they have quire a different meaning, there being short whole figures, and long whole figures. The term "whole figure" does not relate to the length of the figure so names, but to their being themselves finished, perfect, and indivisible, beginning and ending in the same place. These figures are of different length: "whole figure at top" requires double the music for its performance to either "allemande" or "turn your partner"; yet they are all whole figures. The last-mentioned figures are always arranged in the class of short figures; although they might be termed while figures, as they are perfect in themselves. Head a great many of the short figures been classed with those under the head long figures (except the progressive ones which are an exception to this rile, as they should always be considered as long and short, not ending where they begin, although "whole", and "half poussette" hear a different name), they might together have been termed "whole figures". To prevent as much as possible any confusion calculated to mislead the dancer, and the different figures are separated in "The Complete System of English Country Dancing".
 
-	Are portions of certain long or whole figures divided into halves, and followed by a different figure, instead of completing the long or whole figure, and are therefore names "half figures". Those long figures are taken,and generally termed whole figures, and may be danced as "whole or perfect figures", or divided into half figures, at the pleasure of the dancer; there being whole figures at top, bottom, on your own sides, and half figures, bearing the same names formed out of them: they are generally applied to five variety and complexity to the dance in their performance; as they leave the dancer on the wrong side, they must be followed by some other half or short figure to bring the dancers back again to their own sides; but their uses are fully explained in the class of irregular figures to which they belong (in "The complete system of English country dancing"). The same time is required in their performance as in the short figures, videlicet a strain of short measure unrepeated, or half a strain of eight bars.
+### Half Figures
 
-	### Progressive Figures
+Are portions of certain long or whole figures divided into halves, and followed by a different figure, instead of completing the long or whole figure, and are therefore names "half figures". Those long figures are taken,and generally termed whole figures, and may be danced as "whole or perfect figures", or divided into half figures, at the pleasure of the dancer; there being whole figures at top, bottom, on your own sides, and half figures, bearing the same names formed out of them: they are generally applied to five variety and complexity to the dance in their performance; as they leave the dancer on the wrong side, they must be followed by some other half or short figure to bring the dancers back again to their own sides; but their uses are fully explained in the class of irregular figures to which they belong (in "The complete system of English country dancing"). The same time is required in their performance as in the short figures, videlicet a strain of short measure unrepeated, or half a strain of eight bars.
 
-	Are those figures which in their performance leave the dancers or leading couples in the second couples place, every time the figure of the dance is finished; see the plate of the "Progressive motion of a country dance" in "The system of English country dancing",and the article "Motion and progression of the dance". They derived their names from the progressive movement towards the bottom of the dance, by bringing the top or leading couple in the place of the second couples every time one of these figures is performed in any minor set, and which progressive movement of the top or leading couple bring the second couple into, or to occupy the place of the top couple. Thus it will be seen that every dance must have at least one progressive figure to take each couple in regular succession to the bottom of the dance, to enable the couples placed at the bottom gradually to move up the couple that commenced it, although one progressive figure is sufficient for the correct performance of any English country dance, yet dances may be composed of two or even three progressive figures (see "The complete system of English country dancing", p. 232), though it very rarely occurs that more than one figure of this description is used. These are a very indispensable class of figures, as no dance can be performed without one, either short or long. They are always performed from or at the top of a minor set, but never bring the dancer back to the place from which they are taken – they are therefore called progressive figures, their performance bringing the top couple progressively to the bottom of the dance by gaining a couple every time the figure is performed; thus in a set of twenty couples, nineteen progressive figures must be performed to bring every top couple in the general set to the bottom of the dance. There are fewer progressive figures that of any other class; the following progressive figures, they are as follows:
+### Progressive Figures
 
-	* Swing with right hands round second couple, then with left
-	* Swing with right hands top and centre
-	* Lead down the middle and up again
-	* Whole poussette
-	* Swing round one couple
-	* Cast off one couple
-	* Set and change places with second couple
+Are those figures which in their performance leave the dancers or leading couples in the second couples place, every time the figure of the dance is finished; see the plate of the "Progressive motion of a country dance" in "The system of English country dancing",and the article "Motion and progression of the dance". They derived their names from the progressive movement towards the bottom of the dance, by bringing the top or leading couple in the place of the second couples every time one of these figures is performed in any minor set, and which progressive movement of the top or leading couple bring the second couple into, or to occupy the place of the top couple. Thus it will be seen that every dance must have at least one progressive figure to take each couple in regular succession to the bottom of the dance, to enable the couples placed at the bottom gradually to move up the couple that commenced it, although one progressive figure is sufficient for the correct performance of any English country dance, yet dances may be composed of two or even three progressive figures (see "The complete system of English country dancing", p. 232), though it very rarely occurs that more than one figure of this description is used. These are a very indispensable class of figures, as no dance can be performed without one, either short or long. They are always performed from or at the top of a minor set, but never bring the dancer back to the place from which they are taken – they are therefore called progressive figures, their performance bringing the top couple progressively to the bottom of the dance by gaining a couple every time the figure is performed; thus in a set of twenty couples, nineteen progressive figures must be performed to bring every top couple in the general set to the bottom of the dance. There are fewer progressive figures that of any other class; the following progressive figures, they are as follows:
 
-	The length of these figures, and the directions they make in the dance may be seen in "The complete system of English country dancing", by the diagrams and classes of figures for the use of the tables.
+* Swing with right hands round second couple, then with left
+* Swing with right hands top and centre
+* Lead down the middle and up again
+* Whole poussette
+* Swing round one couple
+* Cast off one couple
+* Set and change places with second couple
 
-	### Irregular Figures
+The length of these figures, and the directions they make in the dance may be seen in "The complete system of English country dancing", by the diagrams and classes of figures for the use of the tables.
 
-	Are those figures that in their application to the dance either leave the performer on the wrong or opposite side, or below the third or bottom couple of a minor set. They are of different length: some have setting attached to them, and some are progressive figures; their length, uses, and properties are explained in "The complete system of English country dancing",
+### Irregular Figures
 
-	### Figures with Setting Attached to them
+Are those figures that in their application to the dance either leave the performer on the wrong or opposite side, or below the third or bottom couple of a minor set. They are of different length: some have setting attached to them, and some are progressive figures; their length, uses, and properties are explained in "The complete system of English country dancing",
 
-	Those figures to which setting is attached, derive their name partly from the movement, and partly from the setting, the setting is generally mentioned first: as "set and change sides" – "set contrary corners" – "set and half right an left", &c. The figure employs but half the time allowed in the music, and the setting the other half.
+### Figures with Setting Attached to them
 
-	### Of Joining or Connecting Figures
+Those figures to which setting is attached, derive their name partly from the movement, and partly from the setting, the setting is generally mentioned first: as "set and change sides" – "set contrary corners" – "set and half right an left", &c. The figure employs but half the time allowed in the music, and the setting the other half.
 
-	The uses, names, and characters used, and relative to a minor set, and the method of performing each individual figure, with their length, &c. as applied to the different parts of the dance and to the music, being known to the learner, he will be able to join and connect figures together so as to form a dance. The smallest number of figures that can be employed in the formation of a dance is two. The quantity of figures either in length or number, depends on the music to which they are set; the number of figures is governed by the number of bars or stains of the music (videlicet the scheme  showing the number of figures that may be set to any tune adapted to country dancing, videlicet p. 178). Single or double figures depend on whether the strains of the music are played once or repeated, and how many times repeated, videlicet p. 177. Treble figures may be set by repeating the strains or by playing them straight through. When short or half figures are set to strains of eight bars long measure, great attention must be paid to the playing of the music, two being required to one strain, one of which must end and the other begin in the middle of the strain; and frequently where there is little or no accent in the music to guide the dancer; the time  must however be kept, and the figures joined together on the proper note, without any hesitation or innovation on the time. Short measure (that is strain of four bars repeated) is better adapted to short or half figures, as the figures end with the strain. A perfect knowledge must be had of the beginning and ending of every strain, and their number, to enable the learner properly to begin, end, and join figures in time and place, also of what figures every dance requires, or will admit of, either long or short, and how to blend them together, so as to produce either short or easy, long or complex, single or double figures, to suit trait own taste, or to accommodate the talent of the company. There is no resting in the dance for the leading couple, till they get to the bottom, and the music is the only guide for the beginning and ending of every individual figure, as well as to the figure of the dance; however great a number of individual figures it may contain, they must all be united and connected together, so as to lose the appearance of many parts being connected, and product that of one true mathematical figure. A knowledge of the steps and their divisions, applicable to the music, is also necessary to be known and attended to.
+### Of Joining or Connecting Figures
 
-	### Long and Short Measure
+The uses, names, and characters used, and relative to a minor set, and the method of performing each individual figure, with their length, &c. as applied to the different parts of the dance and to the music, being known to the learner, he will be able to join and connect figures together so as to form a dance. The smallest number of figures that can be employed in the formation of a dance is two. The quantity of figures either in length or number, depends on the music to which they are set; the number of figures is governed by the number of bars or stains of the music (videlicet the scheme  showing the number of figures that may be set to any tune adapted to country dancing, videlicet p. 178). Single or double figures depend on whether the strains of the music are played once or repeated, and how many times repeated, videlicet p. 177. Treble figures may be set by repeating the strains or by playing them straight through. When short or half figures are set to strains of eight bars long measure, great attention must be paid to the playing of the music, two being required to one strain, one of which must end and the other begin in the middle of the strain; and frequently where there is little or no accent in the music to guide the dancer; the time  must however be kept, and the figures joined together on the proper note, without any hesitation or innovation on the time. Short measure (that is strain of four bars repeated) is better adapted to short or half figures, as the figures end with the strain. A perfect knowledge must be had of the beginning and ending of every strain, and their number, to enable the learner properly to begin, end, and join figures in time and place, also of what figures every dance requires, or will admit of, either long or short, and how to blend them together, so as to produce either short or easy, long or complex, single or double figures, to suit trait own taste, or to accommodate the talent of the company. There is no resting in the dance for the leading couple, till they get to the bottom, and the music is the only guide for the beginning and ending of every individual figure, as well as to the figure of the dance; however great a number of individual figures it may contain, they must all be united and connected together, so as to lose the appearance of many parts being connected, and product that of one true mathematical figure. A knowledge of the steps and their divisions, applicable to the music, is also necessary to be known and attended to.
 
-	Are terms the author has adopted to regulate the length of the strains, as applying to English country dance music, in order to ascertain whet quantity of music is contained in each strain or tune, as to length and number of bars; the whole of the tunes applicable to English country dancing, according to the present system, are brought under two heads, long and short measure, the long containing eight full bars of music, the short containing but four full bars of music; stains have been thus regulated, in order to render them systematically applicable to the various classes of figures, which are also classed and divided into suitable lengths, to correspond with those measures, and which when well understood, will enable the dancer with a knowledge of the number and repetitions of the strains, and with the use of the tables, in "The system of English country dancing" not only to ascertain correctly how many figures any dance will require, but of what length, quality, and different variety dances may be composed; also to ascertain how many figures long or short any dance may contain. See the article entitled "The number of figures possible to be set to any country dance tune".
+### Long and Short Measure
 
-	### The Figure Bar
+Are terms the author has adopted to regulate the length of the strains, as applying to English country dance music, in order to ascertain whet quantity of music is contained in each strain or tune, as to length and number of bars; the whole of the tunes applicable to English country dancing, according to the present system, are brought under two heads, long and short measure, the long containing eight full bars of music, the short containing but four full bars of music; stains have been thus regulated, in order to render them systematically applicable to the various classes of figures, which are also classed and divided into suitable lengths, to correspond with those measures, and which when well understood, will enable the dancer with a knowledge of the number and repetitions of the strains, and with the use of the tables, in "The system of English country dancing" not only to ascertain correctly how many figures any dance will require, but of what length, quality, and different variety dances may be composed; also to ascertain how many figures long or short any dance may contain. See the article entitled "The number of figures possible to be set to any country dance tune".
 
-	The figure bar marked thus ![](/images/tr/wilson_04_down.svg), or thus ![](/images/tr/wilson_16.svg), is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
+### The Figure Bar
 
-	### Figure of the Dance
+The figure bar marked thus ![](/images/tr/wilson_04_down.svg), or thus ![](/images/tr/wilson_16.svg), is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
 
-	Although every country dance is composed of a number of individual figures, which may consist of
+### Figure of the Dance
 
-	* set and change sides,
-	* whole figure at top,
-	* lead down the middle, and up again,
-	* allemande,
-	* lead through the bottom,
-	* right and left at top,
+Although every country dance is composed of a number of individual figures, which may consist of
 
-	&c. yet the whole movement united is called the figure of the dance. The number and length of the various individual figures depend on the length of the music, the smallest number is two, and the greatest number is sixteen. The scheme at page 178, will show what number of long or short figures can be used to all country dance tunes, of whatever length or measure.
+* set and change sides,
+* whole figure at top,
+* lead down the middle, and up again,
+* allemande,
+* lead through the bottom,
+* right and left at top,
 
-	### Stains or Parts
+&c. yet the whole movement united is called the figure of the dance. The number and length of the various individual figures depend on the length of the music, the smallest number is two, and the greatest number is sixteen. The scheme at page 178, will show what number of long or short figures can be used to all country dance tunes, of whatever length or measure.
 
-	A strain is that part of an air terminator by a double bar, and usually consists in country dances, of four, eight, or sixteen single bars; sometimes it contains twelve bars. In cotillons, we find occasionally strains of six bars; but this latter strain is extremely unfit for a country dance figure. Country dance tunes usually consist of two strains, though they frequently called parts, by those who are unacquainted with music; as, for instance, by a tune of two parts, they mean one of two strains. Part are only the arrangement of some air for different instruments, as the horn part, the trumpet part, &c. and have no relation to strains whatever. In some airs, particularly Scottish, the last strain will frequently extend to sixteen bars in long measure; but in reality, it is only eight bars repeated, with a small alteration in the last, or two last bars of the last strain, which has been written thus, for the sake of variety in the composition. While the regularity of figure at present established is adhered to, eight bars is the greatest length to which any strain can with propriety be extended, as long figures require no more. Some strains, as have been mentioned before, contain sixteen bars, without a division, as the "Caledonian laddie" (see "Companion to the ball room"), for instance, which of course require two long figures; the author has therefore, throughout his works placed a bar with s single dot, showing the dancer the middle of the strain, to denote the quantity of figure necessary to be performed in the first eight bars, so dividing it for the convenience of the dancer, as if it were two strains of eight bar each. He has equally taken this precaution in short measure, when a strain of sixteen bars occurs, and where he considered the dancer required a guide, as much as in the article "Long measure". See the article "Long and short measure" in "The complete system of English country dancing".
+### Stains or Parts
 
-	### The Length of Strains Used in Country Dance Music
+A strain is that part of an air terminator by a double bar, and usually consists in country dances, of four, eight, or sixteen single bars; sometimes it contains twelve bars. In cotillons, we find occasionally strains of six bars; but this latter strain is extremely unfit for a country dance figure. Country dance tunes usually consist of two strains, though they frequently called parts, by those who are unacquainted with music; as, for instance, by a tune of two parts, they mean one of two strains. Part are only the arrangement of some air for different instruments, as the horn part, the trumpet part, &c. and have no relation to strains whatever. In some airs, particularly Scottish, the last strain will frequently extend to sixteen bars in long measure; but in reality, it is only eight bars repeated, with a small alteration in the last, or two last bars of the last strain, which has been written thus, for the sake of variety in the composition. While the regularity of figure at present established is adhered to, eight bars is the greatest length to which any strain can with propriety be extended, as long figures require no more. Some strains, as have been mentioned before, contain sixteen bars, without a division, as the "Caledonian laddie" (see "Companion to the ball room"), for instance, which of course require two long figures; the author has therefore, throughout his works placed a bar with s single dot, showing the dancer the middle of the strain, to denote the quantity of figure necessary to be performed in the first eight bars, so dividing it for the convenience of the dancer, as if it were two strains of eight bar each. He has equally taken this precaution in short measure, when a strain of sixteen bars occurs, and where he considered the dancer required a guide, as much as in the article "Long measure". See the article "Long and short measure" in "The complete system of English country dancing".
 
-	The length of strains in country dance music seems never to have been attended to, either by composers, dances, or those who set the figures to the tunes, not has any thing systematic ever been adopted for their regulation, this is one of the reasons why figures are so irregularly performed, ans so litter understood. Numberless tunes formerly used, may be found not only containing strains of various lengths, but consisting of an odd number of bars, these dances could only be performed by the introduction of such pantomimical absurdities, as were formerly introduces in the old country dances (see the ancient and original state and style of English country dancing in "The complete system of English country dancing". As no regular figures could be set to them with any certainty, notwithstanding country dancing has since become more regular, and tunes containing an odd number of bars have been rejected, yet there are frequently found tunes containing strains of a variety of lengths, better calculated to puzzle that direct the dancer, some are so long as to reader it difficult, during its performance to divide the tunes exactly in the middle, when there is no sensible accent or signal to guide the ear, until the terminations of the strain. Formerly some well-known country dances contained twelve, sixteen, eighteen, twenty, twenty four, thirty two bars in a strain &c. Now since figures are systematically divided into different length and classes, it has been found requisite also to adopt suitable length and measures in the music, to make them correspond; as there, with regard to length, are reduced to two classes, as long and short figures, therefore the terms long and short measure, are terms the author has adopted in the music, to correspond with those figures. The irregular length of strains as the result of composers not being dancers themselves, in which case they would have seen the propriety of not extending their strains beyond eight bars, which would have rendered their compositions more useful to dancers, suitable to the figures, and convenient to musicians, by an uniform length of strains. All tunes not corresponding with these regular measures, should either be rejected, or if given, should be accompanied with suitable directions for their performance; the length of these strains in long or short measure, will be found under their respective heads, in "The complete system of English country dancing". There are some persons who imaging that a strain of country dance music consists uniformly of eight bars, that is incorrect, although it ought to be so to suit the figures, yes there are many to be found consisting of sixteen bars, and other of only found, for although they are generally the case formally, would totally exclude all single figures, from tines with eight bars in a strain in long measure, see next article, "Single and double figures".
+### The Length of Strains Used in Country Dance Music
 
-	### Single and Double Figures
+The length of strains in country dance music seems never to have been attended to, either by composers, dances, or those who set the figures to the tunes, not has any thing systematic ever been adopted for their regulation, this is one of the reasons why figures are so irregularly performed, ans so litter understood. Numberless tunes formerly used, may be found not only containing strains of various lengths, but consisting of an odd number of bars, these dances could only be performed by the introduction of such pantomimical absurdities, as were formerly introduces in the old country dances (see the ancient and original state and style of English country dancing in "The complete system of English country dancing". As no regular figures could be set to them with any certainty, notwithstanding country dancing has since become more regular, and tunes containing an odd number of bars have been rejected, yet there are frequently found tunes containing strains of a variety of lengths, better calculated to puzzle that direct the dancer, some are so long as to reader it difficult, during its performance to divide the tunes exactly in the middle, when there is no sensible accent or signal to guide the ear, until the terminations of the strain. Formerly some well-known country dances contained twelve, sixteen, eighteen, twenty, twenty four, thirty two bars in a strain &c. Now since figures are systematically divided into different length and classes, it has been found requisite also to adopt suitable length and measures in the music, to make them correspond; as there, with regard to length, are reduced to two classes, as long and short figures, therefore the terms long and short measure, are terms the author has adopted in the music, to correspond with those figures. The irregular length of strains as the result of composers not being dancers themselves, in which case they would have seen the propriety of not extending their strains beyond eight bars, which would have rendered their compositions more useful to dancers, suitable to the figures, and convenient to musicians, by an uniform length of strains. All tunes not corresponding with these regular measures, should either be rejected, or if given, should be accompanied with suitable directions for their performance; the length of these strains in long or short measure, will be found under their respective heads, in "The complete system of English country dancing". There are some persons who imaging that a strain of country dance music consists uniformly of eight bars, that is incorrect, although it ought to be so to suit the figures, yes there are many to be found consisting of sixteen bars, and other of only found, for although they are generally the case formally, would totally exclude all single figures, from tines with eight bars in a strain in long measure, see next article, "Single and double figures".
 
-	Are terms used to express the quantity of figure required in a country dance; and these depend invariable on the respective air to which they are danced. A single figure us the smallest quantity of figure that can possible be selected in one portion (or according to the usual term, set) to the tune; single figures can only be performed to short measure repeated, or to strains of long measure not repeated. To constitute what is termed a double figure, several figures must be placed together equal to twice the number of quantity required for a single figure; and the music, to admit of a double figure, will require the strains of eight bars to be repeated, and the strains of four bars to be played twice through with repeats.
+### Single and Double Figures
 
-	### The Number of Figures Possible to be Set to Any Country Dance Tune Either Long or Short
+Are terms used to express the quantity of figure required in a country dance; and these depend invariable on the respective air to which they are danced. A single figure us the smallest quantity of figure that can possible be selected in one portion (or according to the usual term, set) to the tune; single figures can only be performed to short measure repeated, or to strains of long measure not repeated. To constitute what is termed a double figure, several figures must be placed together equal to twice the number of quantity required for a single figure; and the music, to admit of a double figure, will require the strains of eight bars to be repeated, and the strains of four bars to be played twice through with repeats.
 
-	Every country dance is composed of several different figures, teen, the usual number are from three to eight; the following scheme will show what number of long and short figures can  possibly be set to all the country dance tunes, by which it will be also seen that every tune will take as many long, and twice as many short figures as there are strain in the music. The length of strains alluded to, are those of eight bars unrepeated, or if four bars repeated, which is the proper length for English country dances.
+### The Number of Figures Possible to be Set to Any Country Dance Tune Either Long or Short
 
-	* Tunes of sixteen bars composed of two strains of eight bars each, with single figures, may have set to them two long figures, or one long and two short, of four short figures.
-	* Tunes with three strains or two strains, and da capo, with single figures, may have set to them three long figures, or two long figures and two short, or one long and four short, or six short figures,
-	* Tunes with four strains or thirty two bars with single figures, may have set to them four long figures, or three long and two short, or two long and four short, or one ling and six short, or eight short.
-	* Tunes of four strains of eight bars each repeated, with double figures, may have set to them four long figures, or three long figures and two short, or two long and two long and four short, or one long and six short, or eight short.
-	* Tunes of three strains repeated, or two strains and da capo played twice thought with double figures, may have set to them six long figures, or give long and two short, or four long an four short, or three long and six short, or two long and eight short, or one long and ten short, or twelve short figures.
-	* Tunes containing sixty four bars, composed of four strains repeated, or of three strains an da capo played twice straight through with double figures, may have set to them eight long figures, or seven long and two short, or six long and four short, or three long and ten short, or two long and twelve short, on one long and fourteen short, or sixteen short figures.
-	* Tunes of four strains and da capo with single figures, may have set to them five long figures, or four long figures and two short, or three long and four short, or two long and six short, or one long and eight short, or ten short figures.
+Every country dance is composed of several different figures, teen, the usual number are from three to eight; the following scheme will show what number of long and short figures can  possibly be set to all the country dance tunes, by which it will be also seen that every tune will take as many long, and twice as many short figures as there are strain in the music. The length of strains alluded to, are those of eight bars unrepeated, or if four bars repeated, which is the proper length for English country dances.
 
-	### Country Dance Music
+* Tunes of sixteen bars composed of two strains of eight bars each, with single figures, may have set to them two long figures, or one long and two short, of four short figures.
+* Tunes with three strains or two strains, and da capo, with single figures, may have set to them three long figures, or two long figures and two short, or one long and four short, or six short figures,
+* Tunes with four strains or thirty two bars with single figures, may have set to them four long figures, or three long and two short, or two long and four short, or one ling and six short, or eight short.
+* Tunes of four strains of eight bars each repeated, with double figures, may have set to them four long figures, or three long figures and two short, or two long and two long and four short, or one long and six short, or eight short.
+* Tunes of three strains repeated, or two strains and da capo played twice thought with double figures, may have set to them six long figures, or give long and two short, or four long an four short, or three long and six short, or two long and eight short, or one long and ten short, or twelve short figures.
+* Tunes containing sixty four bars, composed of four strains repeated, or of three strains an da capo played twice straight through with double figures, may have set to them eight long figures, or seven long and two short, or six long and four short, or three long and ten short, or two long and twelve short, on one long and fourteen short, or sixteen short figures.
+* Tunes of four strains and da capo with single figures, may have set to them five long figures, or four long figures and two short, or three long and four short, or two long and six short, or one long and eight short, or ten short figures.
 
-	Country dances are performed to tunes of various length, divided into strains or parts, by upright double bars, thus ||, and when the strain is repeated, two dots are added thus :||:. These usual numbers being gour, eight, and sometimes sixteen bars, which is the greatest number, and sometimes for the sake of variety in the composition of the music, instead of repeating a strain of eight bars, the whole sixteen will be written straight through, this is sometimes done for the purpose of introducing a small alteration in the last, or two last bars, when this is the case, it generally occurs in the last strain of a tune, and may frequently be found in old Scotch tunes. A tune may sometimes be found to contain a strain with twelve bars, which measure is now seldom used. The strains in country dance tunes ought never to contain more that eight bars each, although, as has been before observed, sixteen bars are frequently written straight through, instead of repeating the strain of eight bars, and yet where this is the case, so near is it in reality to a repetition of eight bars, that with the exception of a few notes in the last, or two last bars, the music is note for note the same , and notwithstanding that many tunes are to be found particularly in the old country dance books, which contain a much greater number of bars in each strain, they must be never taken as authorities, as no dependence whatever can be placed in them, most of them having originally been songs, and introduced into country dance books, by persons totally unacquainted with the system of English country dancing. For a further elucidation of this subject, the the articles "Length of strains" and "Stains or parts".
+### Country Dance Music
 
-	### Da capo
+Country dances are performed to tunes of various length, divided into strains or parts, by upright double bars, thus ||, and when the strain is repeated, two dots are added thus :||:. These usual numbers being gour, eight, and sometimes sixteen bars, which is the greatest number, and sometimes for the sake of variety in the composition of the music, instead of repeating a strain of eight bars, the whole sixteen will be written straight through, this is sometimes done for the purpose of introducing a small alteration in the last, or two last bars, when this is the case, it generally occurs in the last strain of a tune, and may frequently be found in old Scotch tunes. A tune may sometimes be found to contain a strain with twelve bars, which measure is now seldom used. The strains in country dance tunes ought never to contain more that eight bars each, although, as has been before observed, sixteen bars are frequently written straight through, instead of repeating the strain of eight bars, and yet where this is the case, so near is it in reality to a repetition of eight bars, that with the exception of a few notes in the last, or two last bars, the music is note for note the same , and notwithstanding that many tunes are to be found particularly in the old country dance books, which contain a much greater number of bars in each strain, they must be never taken as authorities, as no dependence whatever can be placed in them, most of them having originally been songs, and introduced into country dance books, by persons totally unacquainted with the system of English country dancing. For a further elucidation of this subject, the the articles "Length of strains" and "Stains or parts".
 
-	When it occurs, signifies that the tine to which it is attached ends with the first strain, and is used as a reference to prevent the trouble of writing the strain again, and thus an air of two strains of eight bars each, that is in long measure, with da capo attached to it, consists really of three strains, and a tune of three strains and da capo is equal to four strains. In short measure it seldom makes any addition to the length of tune, as the first strain is usually played twice, the second but once, and then the da cope or first strains again, which together make but four short strains, which would be so without the da capo, as in the case the second strain would necessarily be repeated.
+### Da capo
 
-	### Progressive Movements
+When it occurs, signifies that the tine to which it is attached ends with the first strain, and is used as a reference to prevent the trouble of writing the strain again, and thus an air of two strains of eight bars each, that is in long measure, with da capo attached to it, consists really of three strains, and a tune of three strains and da capo is equal to four strains. In short measure it seldom makes any addition to the length of tune, as the first strain is usually played twice, the second but once, and then the da cope or first strains again, which together make but four short strains, which would be so without the da capo, as in the case the second strain would necessarily be repeated.
 
-	Of "Lead down and up again", – "Whole poussette", – "Swing with the right hand round one couple", &c. when performed, attention to the music is necessary, as the couples must move up the the leading couple's place, as they progressively move down, to keep the proper distance between the couples, and give the leading couple room to perform the succeeding figures, or to commence the dance again.
+### Progressive Movements
 
-	### Of Selecting Figures, and Applying the to the Dance
+Of "Lead down and up again", – "Whole poussette", – "Swing with the right hand round one couple", &c. when performed, attention to the music is necessary, as the couples must move up the the leading couple's place, as they progressively move down, to keep the proper distance between the couples, and give the leading couple room to perform the succeeding figures, or to commence the dance again.
 
-	In the selecting of figures for the composition of English country dances, it is necessary that a knowledge should be had of their various effects in the dance, notwithstanding that many of them are of the same length, and performed from the same situation, an though directed at or from the top, are yet not so well adapted to the commencement of the dance: it is the same with figures adapted to the conclusion of the dance. Care should be taken not to choose all such figures as bear too great a similarity in appearance to each other, either in form or effect, or such figures that only employ the leading couple (unless there be particular reason) the other couples being consequently unemployed, render it irksome to them, particularly if the set be numerous. One reason for their being introduced has been that the company generally being bad dancers, and not understanding figures, they have been chosen, to enable couple calling the dance to display their abilities; and by thus preventing confusion in the dance, have been in no danger of having their exclusive evolutions broken into, or spoiled, though the inability of others, they being little more that silent spectators. When a company consists of tolerably good dancers, they should be so united as to give activity and employment to the company, according to the length of the music. A dance ought not to be wholly composed of circular figures as they tend to excite giddiness in the dancers, and produce a sameness of appearance. When a dance is intended to be rendered difficult and complex, let it be composed principally of short or half figures, set to tunes in long measure; there being little or no accent in this measure for the direction of the joining of the figures. To enable good dancers to display their abilities, choose principally those figures, which bad dancers most fear, as they seldom have any steps properly adapted thereto. Slow music also tends to expose bad dancers. The most difficult figures for indifferent dancers to perform are
+### Of Selecting Figures, and Applying the to the Dance
 
-	* right and left,
-	* set and half right and left,
-	* chain figure six round, and
-	* four round,
-	* swing right hand round one couple, then with the left,
-	* set contrary corners, &c. &c.
+In the selecting of figures for the composition of English country dances, it is necessary that a knowledge should be had of their various effects in the dance, notwithstanding that many of them are of the same length, and performed from the same situation, an though directed at or from the top, are yet not so well adapted to the commencement of the dance: it is the same with figures adapted to the conclusion of the dance. Care should be taken not to choose all such figures as bear too great a similarity in appearance to each other, either in form or effect, or such figures that only employ the leading couple (unless there be particular reason) the other couples being consequently unemployed, render it irksome to them, particularly if the set be numerous. One reason for their being introduced has been that the company generally being bad dancers, and not understanding figures, they have been chosen, to enable couple calling the dance to display their abilities; and by thus preventing confusion in the dance, have been in no danger of having their exclusive evolutions broken into, or spoiled, though the inability of others, they being little more that silent spectators. When a company consists of tolerably good dancers, they should be so united as to give activity and employment to the company, according to the length of the music. A dance ought not to be wholly composed of circular figures as they tend to excite giddiness in the dancers, and produce a sameness of appearance. When a dance is intended to be rendered difficult and complex, let it be composed principally of short or half figures, set to tunes in long measure; there being little or no accent in this measure for the direction of the joining of the figures. To enable good dancers to display their abilities, choose principally those figures, which bad dancers most fear, as they seldom have any steps properly adapted thereto. Slow music also tends to expose bad dancers. The most difficult figures for indifferent dancers to perform are
 
-	Therefore, when a dance is called to be performed amongst indifferent dancers, such figures ought to be avoided, to prevent confusion. Double, and even treble figures, should be practised by the learner; but not called, unless in companies of good dancers. In selecting the figures for a dance, it is not advisable to take too many from one class, or of those performed from one situation; but to take some from each, and give them as much variety as the length of the tune and the talent of the company will admit.
+* right and left,
+* set and half right and left,
+* chain figure six round, and
+* four round,
+* swing right hand round one couple, then with the left,
+* set contrary corners, &c. &c.
 
-	### Of the Performing Figures Within Their Proper Compass
+Therefore, when a dance is called to be performed amongst indifferent dancers, such figures ought to be avoided, to prevent confusion. Double, and even treble figures, should be practised by the learner; but not called, unless in companies of good dancers. In selecting the figures for a dance, it is not advisable to take too many from one class, or of those performed from one situation; but to take some from each, and give them as much variety as the length of the tune and the talent of the company will admit.
 
-	As three couples constitute a country dance, as to number of persons, the figures are so composed as to be kept within their distance of standing. A great error, committed by many persons, particularly to be avoided, is, that a couple in "going down the middle", and in "cast off two couple", instead of confining themselves to the distance of three couple, frequently extend the figures beyond six couples, and consequently interfere with the preceding couples.
+### Of the Performing Figures Within Their Proper Compass
 
-	### Persons Calling the Dance
+As three couples constitute a country dance, as to number of persons, the figures are so composed as to be kept within their distance of standing. A great error, committed by many persons, particularly to be avoided, is, that a couple in "going down the middle", and in "cast off two couple", instead of confining themselves to the distance of three couple, frequently extend the figures beyond six couples, and consequently interfere with the preceding couples.
 
-	Should possess the necessary requisites for performing the duty they may have to execute, in setting the company an example, and dire ting them (when required) in the performance of the dance. Such a dance should be called, as they thoroughly understand, and are able to perform with facility. When part of the company are indifferent dancers, the persons forming the dance should be selected and placed according to their talent and knowledge of dancing; the best couples at and near the top, that by their performance the others may become instructed in the figure, previous to their having to lead off, otherwise it frequently happens, that the dance is obliged to be changed.
+### Persons Calling the Dance
 
-	### Silence in the Dance
+Should possess the necessary requisites for performing the duty they may have to execute, in setting the company an example, and dire ting them (when required) in the performance of the dance. Such a dance should be called, as they thoroughly understand, and are able to perform with facility. When part of the company are indifferent dancers, the persons forming the dance should be selected and placed according to their talent and knowledge of dancing; the best couples at and near the top, that by their performance the others may become instructed in the figure, previous to their having to lead off, otherwise it frequently happens, that the dance is obliged to be changed.
 
-	Should invariably be observed; but it too frequently occurs, that one half of the persons composing the dance are in conversations on subjects generally unconnected with the dance; their attention so frequently required, not only thereby becomes diverted, but the music, which is the guide for the dancer, is prevented from being distinctly heard.
+### Silence in the Dance
 
-	### Crowding to the Top
+Should invariably be observed; but it too frequently occurs, that one half of the persons composing the dance are in conversations on subjects generally unconnected with the dance; their attention so frequently required, not only thereby becomes diverted, but the music, which is the guide for the dancer, is prevented from being distinctly heard.
 
-	Is too frequently practised, but should be prevented by those whose province it may be to see that due respect is paid to the person calling the dance; it being impossible to perform the figure of the dance with effect, or correctly, when the couples stand to near to each other.
+### Crowding to the Top
 
-	### Attention to the Figure
+Is too frequently practised, but should be prevented by those whose province it may be to see that due respect is paid to the person calling the dance; it being impossible to perform the figure of the dance with effect, or correctly, when the couples stand to near to each other.
 
-	While the figure is performing, it is requisite for every person in the dance to observe, whether any of the figures require their attention and assistance for their correct performance, and what number of couples they may require; otherwise, for want of proper attentions, part of the music becomes lost, and the music and figure cannot then be finished together without much bustle, as the music must not wait on the dancers, but the dancers perform the figures and steps as properly adapted thereto.
+### Attention to the Figure
 
-	### Finishing the Figures in Their Proper Places
+While the figure is performing, it is requisite for every person in the dance to observe, whether any of the figures require their attention and assistance for their correct performance, and what number of couples they may require; otherwise, for want of proper attentions, part of the music becomes lost, and the music and figure cannot then be finished together without much bustle, as the music must not wait on the dancers, but the dancers perform the figures and steps as properly adapted thereto.
 
-	Whatever figure is performed, it should be finished in its proper place before another is commenced; the regularity of the dance must otherwise be completely destroyed. The progressive figures should be finished in the centre; and those at top, &c. that bring the dancer back to the same place, should finish in the straight line with the other couples, always observing to finish the figure with the last note of the music.
+### Finishing the Figures in Their Proper Places
 
-	### Paradoxical Observations
+Whatever figure is performed, it should be finished in its proper place before another is commenced; the regularity of the dance must otherwise be completely destroyed. The progressive figures should be finished in the centre; and those at top, &c. that bring the dancer back to the same place, should finish in the straight line with the other couples, always observing to finish the figure with the last note of the music.
 
-	For the purpose of blending amusement with instruction, and to facilitate the learner's acquirement of something more that a superficial knowledge of country dancing, as well as to convince those persons of the error who hold country dancing as simple trifling art, very easily attainable, the following positions are laid down, to show the nature, extent, and variety, of which country dancing consists, though to some persons, particularly to learners, they may appear paradoxical; yes they are self-evident truth, capable of being clearly explained by good dancers, and rendered easily demonstrable, by an attention to those parts of the work on country dancing, to which they more immediately relate.
+### Paradoxical Observations
 
-	* An English country dance may be composed either of three couples or one hundred, and its parts equally complete in both.
-	* A dance may be set with either two, or twenty figures.
-	* A dance may be selected so as to afford  dancing only to the lading couples.
-	* A dance may be set to the same music so as to actively employ the whole company.
-	* A dance may be rendered either very easy or very difficult, though performed to the same music.
-	* A dance may be selected, that requires a variety of different steps; and one may be chosen, that may be danced with the greatest propriety with only one step, and require no more.
-	* A dance may be chosen, that will keep the whole company in motion, or one that renders two-thirds of the couples inactive.
-	* A dance may be composed wholly of short figures; or wholly of long figures.
-	* A dance may be chosen, where all the figures except one finish on the wrong side.
-	* Another may be selected, where good dancers may show their dancing off the the greatest advantage; and another may be set to the same tune, and danced in the same company, where they will be unable to perform one figure correctly.
-	* One dance may contain but one progressive figure, or set with four, and both equally correct.
-	* A dance may be formed in the same room four different ways.
-	* A dance may be formed wholly of gentlemen, or wholly of ladies; or of an equal number of certain portion of each.
-	* A dance may be set actively to employ either one, two, or three couples.
-	* A dance may be formed, that will require an hour for its performance; and one to the same music, that may be completed in five minutes.
-	* A dance may be formed to contain ten neutral couples.
-	* And one may be composed to the same tune, so as not to contain any neutral couple.
-	* A dance may be composed wholly of swinging motions, or wholly without them.
-	* A dance may be composed wholly of figures that require setting, or of figures where no setting is required.
-	* A dance may be formed so as to make the third (which is the last couple of the minor set) or the couple below it, a neutral couple.
-	* A dance may contain either one or two minor sets.
-	* A dance may have at one and the same time either one... *Text incomplete here*.
+For the purpose of blending amusement with instruction, and to facilitate the learner's acquirement of something more that a superficial knowledge of country dancing, as well as to convince those persons of the error who hold country dancing as simple trifling art, very easily attainable, the following positions are laid down, to show the nature, extent, and variety, of which country dancing consists, though to some persons, particularly to learners, they may appear paradoxical; yes they are self-evident truth, capable of being clearly explained by good dancers, and rendered easily demonstrable, by an attention to those parts of the work on country dancing, to which they more immediately relate.
+
+* An English country dance may be composed either of three couples or one hundred, and its parts equally complete in both.
+* A dance may be set with either two, or twenty figures.
+* A dance may be selected so as to afford  dancing only to the lading couples.
+* A dance may be set to the same music so as to actively employ the whole company.
+* A dance may be rendered either very easy or very difficult, though performed to the same music.
+* A dance may be selected, that requires a variety of different steps; and one may be chosen, that may be danced with the greatest propriety with only one step, and require no more.
+* A dance may be chosen, that will keep the whole company in motion, or one that renders two-thirds of the couples inactive.
+* A dance may be composed wholly of short figures; or wholly of long figures.
+* A dance may be chosen, where all the figures except one finish on the wrong side.
+* Another may be selected, where good dancers may show their dancing off the the greatest advantage; and another may be set to the same tune, and danced in the same company, where they will be unable to perform one figure correctly.
+* One dance may contain but one progressive figure, or set with four, and both equally correct.
+* A dance may be formed in the same room four different ways.
+* A dance may be formed wholly of gentlemen, or wholly of ladies; or of an equal number of certain portion of each.
+* A dance may be set actively to employ either one, two, or three couples.
+* A dance may be formed, that will require an hour for its performance; and one to the same music, that may be completed in five minutes.
+* A dance may be formed to contain ten neutral couples.
+* And one may be composed to the same tune, so as not to contain any neutral couple.
+* A dance may be composed wholly of swinging motions, or wholly without them.
+* A dance may be composed wholly of figures that require setting, or of figures where no setting is required.
+* A dance may be formed so as to make the third (which is the last couple of the minor set) or the couple below it, a neutral couple.
+* A dance may contain either one or two minor sets.
+* A dance may have at one and the same time either one... *Text incomplete here*.
+
+***
 
 > This dance for sociability is famed,
 >
@@ -10964,144 +10967,147 @@ Jem. This is a proof of ignorance you'll find,
 >
 > What they call Scotch, old reckie would disown,
 >
-> Their steps nor figures would as Scotch be known[[^239]];
+> Their steps nor figures would as Scotch be known;
 
-[[^239]]:
-	There are several sets of what are termed "Scotch quadrilles", which are only Scotch as to name and tune, having no other national characteristic, being composed of French quadrille figures and steps. In order to enable those who are conversant with Scotch dancing, to judge how far these are entitled to the appellation of Scotch, the reader is here presented with the figures of
+***
 
-	### The Caledonians
+[[Located in footnote in original]]There are several sets of what are termed "Scotch quadrilles", which are only Scotch as to name and tune, having no other national characteristic, being composed of French quadrille figures and steps. In order to enable those who are conversant with Scotch dancing, to judge how far these are entitled to the appellation of Scotch, the reader is here presented with the figures of
 
-	1.	The first and opposite couples hands across and back,
+### The Caledonians
 
-		Set and turn partners,
+1.	The first and opposite couples hands across and back,
 
-		Ladies chain,
+	Set and turn partners,
 
-		Half promenade,
+	Ladies chain,
 
-		Half right and left.
+	Half promenade,
 
-	2.	First gentleman advance twice,
+	Half right and left.
 
-		The four ladies  set to gentleman at their right, and turn with both hands, each taking next lady's place,
+2.	First gentleman advance twice,
 
-		Promenade quite round.
+	The four ladies  set to gentleman at their right, and turn with both hands, each taking next lady's place,
 
-	3.	First lady and opposite gentleman advance and retire,
+	Promenade quite round.
 
-		Back to back,
+3.	First lady and opposite gentleman advance and retire,
 
-		Top couple lead between the opposite couple,
+	Back to back,
 
-		Return leading outside,
+	Top couple lead between the opposite couple,
 
-		Set at the corners, and turn with both hands to places,
+	Return leading outside,
 
-		all set in a circle.
+	Set at the corners, and turn with both hands to places,
 
-	4.	First lady and opposite gentleman advance and stop, then their partners advance,
+	all set in a circle.
 
-		Turn partners to places,
+4.	First lady and opposite gentleman advance and stop, then their partners advance,
 
-		The four ladies move to right, each taking the next lady's place and stop,
+	Turn partners to places,
 
-		The four gentlemen move to left, each taking the next gentleman's place and stop,
+	The four ladies move to right, each taking the next lady's place and stop,
 
-		The ladies repeat the same to the right,
+	The four gentlemen move to left, each taking the next gentleman's place and stop,
 
-		Then the gentlemen to the left,
+	The ladies repeat the same to the right,
 
-		All join hands and lead half round to places,
+	Then the gentlemen to the left,
 
-		All turn partners.
+	All join hands and lead half round to places,
 
-	5.	First gentleman lead his partner round inside the figure,
+	All turn partners.
 
-		The four ladies advance, join right hands and retire,
+5.	First gentleman lead his partner round inside the figure,
 
-		The the gentlemen perform the same,
+	The four ladies advance, join right hands and retire,
 
-		All set and turn partners,
+	The the gentlemen perform the same,
 
-		Chain figure of eight half round and set,
+	All set and turn partners,
 
-		All promenade to places and turn partners,
+	Chain figure of eight half round and set,
 
-		All change sides, join right hands at corners and set,
+	All promenade to places and turn partners,
 
-		Back again to places,
+	All change sides, join right hands at corners and set,
 
-		All promenade at the finish.
+	Back again to places,
 
-	The following is a set of what the author terms "Scotch quadrilles", which are adapted to Scotch steps, and he submits them to the judgement of those, who are acquainted with the national characteristic – they are entitled
+	All promenade at the finish.
 
-	### The Royal Scotch Quadrilles
+The following is a set of what the author terms "Scotch quadrilles", which are adapted to Scotch steps, and he submits them to the judgement of those, who are acquainted with the national characteristic – they are entitled
 
-	1.	The top couple half figure, contrary sides and hands across with bottom couple,
+### The Royal Scotch Quadrilles
 
-		Half figure back on your own sides, and turn partner to places,
+1.	The top couple half figure, contrary sides and hands across with bottom couple,
 
-		Swing partners with right hands into straight line long-ways, as in a reel, and
+	Half figure back on your own sides, and turn partner to places,
 
-		Set,
+	Swing partners with right hands into straight line long-ways, as in a reel, and
 
-		Hey and return to places,
+	Set,
 
-		The other three couples do the same.
+	Hey and return to places,
 
-	2.	Top and bottom couples meet and set,
+	The other three couples do the same.
 
-		Then each gentleman leas the opposite lady to the couple on his left, and set,
+2.	Top and bottom couples meet and set,
 
-		Aach four right and left,
+	Then each gentleman leas the opposite lady to the couple on his left, and set,
 
-		Swing side couples to places, and turn partners all eight,
+	Aach four right and left,
 
-		The other two couple o the same.
+	Swing side couples to places, and turn partners all eight,
 
-	3.	The top lady and bottom gentleman meet, set and pass round partners to places,
+	The other two couple o the same.
 
-		Then the top gentleman and bottom lady do the same,
+3.	The top lady and bottom gentleman meet, set and pass round partners to places,
 
-		Top and bottom couples meet,
+	Then the top gentleman and bottom lady do the same,
 
-		Each gentleman leads opposite lady to the couple on his left,
+	Top and bottom couples meet,
 
-		Set, forming two straight lines cross-ways,
+	Each gentleman leads opposite lady to the couple on his left,
 
-		Then hey,
+	Set, forming two straight lines cross-ways,
 
-		Lead through the sides,
+	Then hey,
 
-		Return to places and turn partners, all eight,
+	Lead through the sides,
 
-		The other three couples do the same.
+	Return to places and turn partners, all eight,
 
-	4.	The top lady sets to the gentleman on her right, at same time the top gentleman sets to the lady on his left, and each hands three with the couple on their own side,
+	The other three couples do the same.
 
-		The top lady and bottom gentleman advance and retire, and chassez right and left,
+4.	The top lady sets to the gentleman on her right, at same time the top gentleman sets to the lady on his left, and each hands three with the couple on their own side,
 
-		The top gentleman and bottom lady do the same,
+	The top lady and bottom gentleman advance and retire, and chassez right and left,
 
-		All eight half round and set,
+	The top gentleman and bottom lady do the same,
 
-		Continue round to places and set,
+	All eight half round and set,
 
-		The other three couples do the same.
+	Continue round to places and set,
 
-	5.	Hey on your own sides,
+	The other three couples do the same.
 
-		The star,
+5.	Hey on your own sides,
 
-		Ladies moulinet while gentlemen chassez round,
+	The star,
 
-		All set, holding hands and turn to places,
+	Ladies moulinet while gentlemen chassez round,
 
-		Chassez croissez, and
+	All set, holding hands and turn to places,
 
-		Promenade all eight,
+	Chassez croissez, and
 
-		The other three couples do the same.
+	Promenade all eight,
+
+	The other three couples do the same.
+
+***
 
 > Of these there's various sets – yet all declare
 >
@@ -11141,100 +11147,103 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Six sets, some say "they've have danced at such a ball",
 >
-> But danced the figures of the first to all[[^240]].
+> But danced the figures of the first to all.
 
-[[^240]]:
-	It frequently occurs when dancers call different sets of quadrilles, and the musicians play the original music to each set; the dancers for want of ability, perform the figures of the first set to all, and are seldom ashamed to boast of the several sets they have danced, and even to enumerate their names.
+***
 
-	### The Original, or, Old First Set of French Quadrilles
+[[Located in footnote in original]]It frequently occurs when dancers call different sets of quadrilles, and the musicians play the original music to each set; the dancers for want of ability, perform the figures of the first set to all, and are seldom ashamed to boast of the several sets they have danced, and even to enumerate their names.
 
-	1.	Le pantalon.
+### The Original, or, Old First Set of French Quadrilles
 
-		Top an bottom couple right and left,
+1.	Le pantalon.
 
-		Ladies chain,
+	Top an bottom couple right and left,
 
-		Half promenade, and
+	Ladies chain,
 
-		Half right and left,
+	Half promenade, and
 
-		The others two couples do the same.
+	Half right and left,
 
-	2.	L'été.
+	The others two couples do the same.
 
-		The top lady and bottom gentleman advance and retire,
+2.	L'été.
 
-		Chassez to right and left, cross over,
+	The top lady and bottom gentleman advance and retire,
 
-		Chassez right and left,
+	Chassez to right and left, cross over,
 
-		Return to places,
+	Chassez right and left,
 
-		Set and turn partners,
+	Return to places,
 
-		The other three couples do the same.
+	Set and turn partners,
 
-	3.	La poule.
+	The other three couples do the same.
 
-		The top lady and opposite gentleman cross over on the right hand, and set,
+3.	La poule.
 
-		Back on the left, and
+	The top lady and opposite gentleman cross over on the right hand, and set,
 
-		Set four in line,
+	Back on the left, and
 
-		Half promenade,
+	Set four in line,
 
-		The leading lady and opposite gentleman advance or retire and back to back,
+	Half promenade,
 
-		Top and bottom couples advance and retire, and half right and left to places,
+	The leading lady and opposite gentleman advance or retire and back to back,
 
-		The other three couples do the same.
+	Top and bottom couples advance and retire, and half right and left to places,
 
-	4.	Trenise.
+	The other three couples do the same.
 
-		Ladies chain, with top and bottom ladies,
+4.	Trenise.
 
-		Set and turn partners,
+	Ladies chain, with top and bottom ladies,
 
-		First couple advance twice, leaving the lady on the left of the opposite gentleman,
+	Set and turn partners,
 
-		The two ladies cross and change sides, while the gentleman passes between and sets,
+	First couple advance twice, leaving the lady on the left of the opposite gentleman,
 
-		The same repeated,
+	The two ladies cross and change sides, while the gentleman passes between and sets,
 
-		The other three couples do the same.
+	The same repeated,
 
-	5.	La pastourelle.
+	The other three couples do the same.
 
-		The first couple advance twice, leaving the lady on the left of the opposite gentleman,
+5.	La pastourelle.
 
-		The three advance and retire,
+	The first couple advance twice, leaving the lady on the left of the opposite gentleman,
 
-		Hands three round,
+	The three advance and retire,
 
-		The the gentleman advances twice,
+	Hands three round,
 
-		Hands four round, and half right and left,
+	The the gentleman advances twice,
 
-		The other three couples do the same.
+	Hands four round, and half right and left,
 
-		When the figure is repeated, the gentleman is left on the right of the opposite lady, the the leading lady man have the pas seul.
+	The other three couples do the same.
 
-	6.	Finale.
+	When the figure is repeated, the gentleman is left on the right of the opposite lady, the the leading lady man have the pas seul.
 
-		Promenade all eight,
+6.	Finale.
 
-		L'été figure,
+	Promenade all eight,
 
-		Ladies moulinet, and
+	L'été figure,
 
-		All eight set and turn,
+	Ladies moulinet, and
 
-		The other three couples do the same,
+	All eight set and turn,
 
-		Finish with chassez croissez.
+	The other three couples do the same,
 
-	Note bene. La pastourelle is sometimes omitted, as it was not originally in the first set, but subsequently introduced, and short finales are sometimes danced, which generally consist only of promenade eight, and L'été figure.
+	Finish with chassez croissez.
+
+Note bene. La pastourelle is sometimes omitted, as it was not originally in the first set, but subsequently introduced, and short finales are sometimes danced, which generally consist only of promenade eight, and L'été figure.
+
+***
 
 > Composers know what dancers of our day,
 >
@@ -11392,70 +11401,73 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Ability and steps are not required,
 >
-> To dance those Lancers[[^245]] now so much admired.
+> To dance those Lancers now so much admired.
 
-[[^245]]:
-	To enable the reader to form his own judgement on the subject, he is here presented with the whole of the figures of
+***
 
-	### The Lancers
+[[Located in footnote in original]]To enable the reader to form his own judgement on the subject, he is here presented with the whole of the figures of
 
-	1.	The first gentleman and opposite lady advance and set,
+### The Lancers
 
-		Turn with both hands, retiring to places,
+1.	The first gentleman and opposite lady advance and set,
 
-		Top couple lead between opposite couple,
+	Turn with both hands, retiring to places,
 
-		Return leading outside,
+	Top couple lead between opposite couple,
 
-		Set and turn at corners.
+	Return leading outside,
 
-	2.	First couple advance twice, leaving lady on left of opposite gentleman,
+	Set and turn at corners.
 
-		Set in the centre,
+2.	First couple advance twice, leaving lady on left of opposite gentleman,
 
-		Turn to places,
+	Set in the centre,
 
-		All advance in two lines,
+	Turn to places,
 
-		All turn partners.
+	All advance in two lines,
 
-	3.	First lady advance and stop, the the opposite gentleman,
+	All turn partners.
 
-		Both retire turning round,
+3.	First lady advance and stop, the the opposite gentleman,
 
-		The ladies' hands across quite round, at the same time the gentlemen lead round outside to the right, all resume partners and places.
+	Both retire turning round,
 
-	4.	First couple set to couple at right,
+	The ladies' hands across quite round, at the same time the gentlemen lead round outside to the right, all resume partners and places.
 
-		Set to couple at left,
+4.	First couple set to couple at right,
 
-		Change places with partners and set,
+	Set to couple at left,
 
-		Turn partners to places,
+	Change places with partners and set,
 
-		Right and left with opposite couple.
+	Turn partners to places,
 
-	5.	Chain figure of eight all quite round to places,
+	Right and left with opposite couple.
 
-		The first couple advance and turn facing the top,
+5.	Chain figure of eight all quite round to places,
 
-		Then couple at right advance behind the top couple,
+	The first couple advance and turn facing the top,
 
-		Then the couple at left and opposite couple do the same, forming two lines,
+	Then couple at right advance behind the top couple,
 
-		All change places with partners,
+	Then the couple at left and opposite couple do the same, forming two lines,
 
-		Back again,
+	All change places with partners,
 
-		The ladies cast off the their right, while the gentlemen cast off to their left,
+	Back again,
 
-		Meet and lead your partners up the centre,
+	The ladies cast off the their right, while the gentlemen cast off to their left,
 
-		Set in two lines, the ladies in one line, and gentlemen in the other,
+	Meet and lead your partners up the centre,
 
-		Turn partners to places,
+	Set in two lines, the ladies in one line, and gentlemen in the other,
 
-		All promenade at the finish.
+	Turn partners to places,
+
+	All promenade at the finish.
+
+***
 
 > Bel. They're English Dances I must here admit.
 >
@@ -11469,66 +11481,69 @@ Jem. This is a proof of ignorance you'll find,
 >
 > The music's prized, the tunes are danced and sung.
 >
-> Jem. But in "Der Freichutz" figures[[^246]], there no doubt,
+> Jem. But in "Der Freichutz" figures, there no doubt,
 >
 > The author's genius could not bear him out;
 
-[[^246]]:
-	That the reader may make his own comparison, and judge of the accuracy of the author's remarks, he has here given the figures of Der Freichutz quadrilles.
+***
 
-	### Der Freichutz
+[[Located in footnote in original]]That the reader may make his own comparison, and judge of the accuracy of the author's remarks, he has here given the figures of Der Freichutz quadrilles.
 
-	1.	La resolue.
+### Der Freichutz
 
-		Chassez croissez, four cross immediately and remain; the other four do the same,
+1.	La resolue.
 
-		Half promenade to places,
+	Chassez croissez, four cross immediately and remain; the other four do the same,
 
-		Turn your partner,
+	Half promenade to places,
 
-		Ladies chain,
+	Turn your partner,
 
-		The ladies set to gentlemen on their right, the gentlemen to ladies on their left, and turn to places.
+	Ladies chain,
 
-	2.	La divine
+	The ladies set to gentlemen on their right, the gentlemen to ladies on their left, and turn to places.
 
-		The first couple set to the couple on their right,
+2.	La divine
 
-		Hands four round,
+	The first couple set to the couple on their right,
 
-		The same couple set on their left,
+	Hands four round,
 
-		Hands four round,
+	The same couple set on their left,
 
-		Half promenade, and half right and left with opposite couple,
+	Hands four round,
 
-		The other dancers do the same.
+	Half promenade, and half right and left with opposite couple,
 
-	3.	L'elegante.
+	The other dancers do the same.
 
-		The first couple advance between the opposite couple, in returning lead outside,
+3.	L'elegante.
 
-		First lady and opposite gentleman chassez,
+	The first couple advance between the opposite couple, in returning lead outside,
 
-		Turn in the centre to their places,
+	First lady and opposite gentleman chassez,
 
-		The ladies moulinet,
+	Turn in the centre to their places,
 
-		The gentlemen take their partners left hand, and promenade to places,
+	The ladies moulinet,
 
-		The other dancers do the same.
+	The gentlemen take their partners left hand, and promenade to places,
 
-	4.	Der Freichutz.
+	The other dancers do the same.
 
-		Chassez croissez quatre,
+4.	Der Freichutz.
 
-		Pastourelle.
+	Chassez croissez quatre,
 
-	5.	La finale.
+	Pastourelle.
 
-		La grande ronde,
+5.	La finale.
 
-		L'été.
+	La grande ronde,
+
+	L'été.
+
+***
 
 > He only has three figures if you look,
 >
@@ -11606,116 +11621,119 @@ Jem. This is a proof of ignorance you'll find,
 >
 > For they with other dances are combined
 >
-> Some of the waltz and country dance[[^247]] partake,
+> Some of the waltz and country dance partake,
 >
 > Others from form[[The circular quadrilles, originally introduced by the author of this Work, derive their name from their being danced in a circular form instead of the usual manner.]] alone their titles take;
 
-[[^247]]:
-	The author was also the original inventor of that species denominated "Waltz quadrilles", from their combining the waltz with the quadrille figures, as he was likewise of the country dance quadrilles, so called from blending in a particular manner both these forms of dancing.
+***
 
-	The reader is here presented with the figures of the
+[[Located in footnote in original]]The author was also the original inventor of that species denominated "Waltz quadrilles", from their combining the waltz with the quadrille figures, as he was likewise of the country dance quadrilles, so called from blending in a particular manner both these forms of dancing.
 
-	### Waltz Quadrilles, "Les allemandes"
+The reader is here presented with the figures of the
 
-	1.	The top lady and bottom gentleman advance and retire, and chassez right and left,
+### Waltz Quadrilles, "Les allemandes"
 
-		Top and bottom couples waltz round each other twice, and
+1.	The top lady and bottom gentleman advance and retire, and chassez right and left,
 
-		Grand chain,
+	Top and bottom couples waltz round each other twice, and
 
-		The other three couples do the same.
+	Grand chain,
 
-	2.	Top lady pas seul,
+	The other three couples do the same.
 
-		Bottom gentleman ditto,
+2.	Top lady pas seul,
 
-		Each gentleman turns the lady on his left, his partner,
+	Bottom gentleman ditto,
 
-		All eight waltz round to places,
+	Each gentleman turns the lady on his left, his partner,
 
-		And chassez croissez,
+	All eight waltz round to places,
 
-		The other three couples do the same.
+	And chassez croissez,
 
-	3.	The four ladies meet in the centre set, and pass round their partners on the left,
+	The other three couples do the same.
 
-		Top and bottom couples half promenade, side couples ditto,
+3.	The four ladies meet in the centre set, and pass round their partners on the left,
 
-		All eight hands half round to places and turn partners,
+	Top and bottom couples half promenade, side couples ditto,
 
-		Top couple waltz round within the circle,
+	All eight hands half round to places and turn partners,
 
-		The other three couples successively do the same, and the grand round,
+	Top couple waltz round within the circle,
 
-		The other three couples do the same.
+	The other three couples successively do the same, and the grand round,
 
-	4.	Pastourelle figure,
+	The other three couples do the same.
 
-		(single) top couple serpentine waltz (between the couples),
+4.	Pastourelle figure,
 
-		And grand promenade.
+	(single) top couple serpentine waltz (between the couples),
 
-	5.	The top lady and bottom gentleman advance and retire twice,
+	And grand promenade.
 
-		Top and bottom couples waltz round each other twice,
+5.	The top lady and bottom gentleman advance and retire twice,
 
-		All eight waltz round to places,
+	Top and bottom couples waltz round each other twice,
 
-		Each gentleman changes places with the lady on his left, set and back again,
+	All eight waltz round to places,
 
-		All eight sauteuse waltz round,
+	Each gentleman changes places with the lady on his left, set and back again,
 
-		Top and bottom couples advance, honour to opposites, return to places, and honours to partners,
+	All eight sauteuse waltz round,
 
-		The other three couples do the same.
+	Top and bottom couples advance, honour to opposites, return to places, and honours to partners,
 
-	The reader is here likewise presented with
+	The other three couples do the same.
 
-	### A set of country dance quadrilles. The Albions
+The reader is here likewise presented with
 
-	1.	Whole figure at top (or round the second gentleman and fourth lady),
+### A set of country dance quadrilles. The Albions
 
-		Ladies chain,
+1.	Whole figure at top (or round the second gentleman and fourth lady),
 
-		Half promenade and half right and left,
+	Ladies chain,
 
-		The other three couples do the same.
+	Half promenade and half right and left,
 
-	2.	Set and change place with bottom couple, and back again,
+	The other three couples do the same.
 
-		Top and bottom couples meet, set and draw poussette,
+2.	Set and change place with bottom couple, and back again,
 
-		Each gentleman leads the opposite lady through the sides, return to places and turn partners,
+	Top and bottom couples meet, set and draw poussette,
 
-		The other two couples do the same.
+	Each gentleman leads the opposite lady through the sides, return to places and turn partners,
 
-	3.	All eight hands completely round,
+	The other two couples do the same.
 
-		Top and bottom couples lead through and change places,
+3.	All eight hands completely round,
 
-		Half figure on their own sides back to places,
+	Top and bottom couples lead through and change places,
 
-		And grand promenade,
+	Half figure on their own sides back to places,
 
-		The other two couples do the same.
+	And grand promenade,
 
-	4.	The top couple hands three with the lady on the left, then with the gentleman on the right,
+	The other two couples do the same.
 
-		The top lade advances to and places herself between the couple on her left, and the gentleman between the couple on his right,
+4.	The top couple hands three with the lady on the left, then with the gentleman on the right,
 
-		Set three and three, back to back, turn and set face to face,
+	The top lade advances to and places herself between the couple on her left, and the gentleman between the couple on his right,
 
-		All allemande and turn partners to places,
+	Set three and three, back to back, turn and set face to face,
 
-		The other three couples do the same.
+	All allemande and turn partners to places,
 
-	5.	The top lady with her right hand swings the gentleman on her right, while the top gentleman with his left hand swings the lady on his left, and turn partners,
+	The other three couples do the same.
 
-		Hey on your own sides, and
+5.	The top lady with her right hand swings the gentleman on her right, while the top gentleman with his left hand swings the lady on his left, and turn partners,
 
-		Grand chain,
+	Hey on your own sides, and
 
-		The other three couples do the same.
+	Grand chain,
+
+	The other three couples do the same.
+
+***
 
 > Yet there are those who better things could dance,
 >
@@ -11739,73 +11757,75 @@ Jem. This is a proof of ignorance you'll find,
 >
 > For if you look, I think I'm not mistaken,
 >
-> The three first figures from the first are taken[[^249]].
+> The three first figures from the first are taken.
 
-[[^249]]:
+***
 
-	### The second set of quadrilles
+### [[Located in footnote in original]]The second set of quadrilles
 
-	The first, second and third dances as in first set.
+The first, second and third dances as in first set.
 
-	* 4th
+* 4th
 
-		Ladies chain,
+	Ladies chain,
 
-		Double,
+	Double,
 
-		Set and turn partners,
+	Set and turn partners,
 
-		Advance two, chasse right and left,
+	Advance two, chasse right and left,
 
-		Cross,
+	Cross,
 
-		Chassez right and left,
+	Chassez right and left,
 
-		Cross,
+	Cross,
 
-		Turn partners,
+	Turn partners,
 
-		Half promenade,
+	Half promenade,
 
-		Half right and left.
+	Half right and left.
 
-	* 5th
+* 5th
 
-		All round,
+	All round,
 
-		Advance four,
+	Advance four,
 
-		Set,
+	Set,
 
-		Change ladies,
+	Change ladies,
 
-		Advance,
+	Advance,
 
-		Set, and
+	Set, and
 
-		Resume ladies,
+	Resume ladies,
 
-		Set and turn partners,
+	Set and turn partners,
 
-		Right and left,
+	Right and left,
 
-		The four promenade to places.
+	The four promenade to places.
 
-	* 6th
+* 6th
 
-		Right and left,
+	Right and left,
 
-		Gentleman advance twice,
+	Gentleman advance twice,
 
-		Lady the same,
+	Lady the same,
 
-		Set an turn partners,
+	Set an turn partners,
 
-		Ladies hands across, and back,
+	Ladies hands across, and back,
 
-		All eight set and turn partners, and
+	All eight set and turn partners, and
 
-		Finish with promenade all eight.
+	Finish with promenade all eight.
+
+***
 
 > The old first set is all that thousands know,
 >
@@ -11967,33 +11987,36 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And give the names of those I recollect.
 >
-> There's promenade[[^254]], grand chaîne, balancez,
+> There's promenade, grand chaîne, balancez,
 >
 > Dos a dos, les lignes, grand rond, traversez,
 
-[[^254]]:
-	This and the other following figures are described by diagrams in "The quadrille panorama". In describing these terms where the English translation is not litera, the technical meaning is given.
+***
 
-	* _Promenade_. The gentleman and lady cross hands, the gentleman with his right hand takes the lady's right, and with his left, takes her left hand and leads her round in a circle; there are several promenades, (videlicet) grand promenade, whole promenade, and half promenade
-	* _Balancez_. Set
-	* _Grand chaîne_. Great chain
-	* _Dos à dos_. Back to back
-	* _Les lignes_. The lines
-	* _Grand rond_. Great round
-	* _Traversez_. Cross over
-	* _Tour de mains_. Turn your partner with both hands
-	* _Chassez croissez_. Chassez across, change places
-	* _Queue du chat_. Promenade
-	* _Grand quarrée_. The great squares
-	* _Moulinet_. Cross hands
-	* _Chaîne de dames_. Ladies chain
-	* _Tiroir_. The top couple join both hands and take the place of the bottom couple, who pass sideways into the top couple's place – then the bottom couple join both hands, and pass between the top couple – all return to places
-	* _Chassez ouvert_. Open chassez
-	* Chassez en avant, et en arrière – Chassez forward and backward
-	* _Chaîne anglaise_. English chain
-	* _Les olivettes_. The hey
-	* _L'étoile_. The star
-	* _Poussette_. Is formed by two couples: each gentleman takes the opposite lady's hand, and they then move round each other to places
+[[Located in footnote in original]]This and the other following figures are described by diagrams in "The quadrille panorama". In describing these terms where the English translation is not litera, the technical meaning is given.
+
+* _Promenade_. The gentleman and lady cross hands, the gentleman with his right hand takes the lady's right, and with his left, takes her left hand and leads her round in a circle; there are several promenades, (videlicet) grand promenade, whole promenade, and half promenade
+* _Balancez_. Set
+* _Grand chaîne_. Great chain
+* _Dos à dos_. Back to back
+* _Les lignes_. The lines
+* _Grand rond_. Great round
+* _Traversez_. Cross over
+* _Tour de mains_. Turn your partner with both hands
+* _Chassez croissez_. Chassez across, change places
+* _Queue du chat_. Promenade
+* _Grand quarrée_. The great squares
+* _Moulinet_. Cross hands
+* _Chaîne de dames_. Ladies chain
+* _Tiroir_. The top couple join both hands and take the place of the bottom couple, who pass sideways into the top couple's place – then the bottom couple join both hands, and pass between the top couple – all return to places
+* _Chassez ouvert_. Open chassez
+* Chassez en avant, et en arrière – Chassez forward and backward
+* _Chaîne anglaise_. English chain
+* _Les olivettes_. The hey
+* _L'étoile_. The star
+* _Poussette_. Is formed by two couples: each gentleman takes the opposite lady's hand, and they then move round each other to places
+
+***
 
 > Chaîne des dames, le tiroir, chassez ouvert,
 >
@@ -12101,15 +12124,14 @@ Jem. This is a proof of ignorance you'll find,
 >
 > How many dances does a set contain?
 >
-> Jem. A set has five quadrilles, and sometimes six[[^259]],
->
-> But live they as the average number fix;
-
-[[^259]]:
+> Jem. A set has five quadrilles, and sometimes six[[
 	### Long and Short Sets
 
 	When these terms are used in quadrille dancing, they allude to the number of dances in the set; a long set generally consists of six, and a short set is usually of five. The first is considered a short set, and when la pastourelle is add, it is then termed a long set. A short set consists not only of a smaller number of quadrilles, but various figures are omitted in certain quadrilles, as the ladies chain in Trenise, and the finale, is likewise abridged.
-
+]],
+>
+> But live they as the average number fix;
+>
 > The last they term "finale", means the end,
 >
 > To this some extra figure they appendMany finales have an extra figure which is performed immediately after the last couple have finished the dance, as chassez croisez, grand road, &c.]].
@@ -12124,13 +12146,12 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Or else some idle dancer's whim to please,
 >
-> As in Finale, and in "La trenise"[[^261]].
-
-[[^261]]:
+> As in Finale, and in "La trenise"[[
 	### Trenise Simple
 
 	Is when the Trenise figure is performed without the chaîne des dames.
-
+]].
+>
 > Bel. There's short and long finales, I've heard say;
 >
 > What are they? are they danced a different way?
@@ -12153,40 +12174,43 @@ Jem. This is a proof of ignorance you'll find,
 >
 > For what they steal they do not hesitate
 >
-> To alter, transpose, change, and mutilate[[^262]].
+> To alter, transpose, change, and mutilate.
 
-[[^262]]:
-	That this practice has become too prevalent, the Author, as well as many others, considers he has some reason to complain he some time ago composed a dance to the tune of Vestris's gavotte, to be danced as a quadrille, though not strictly so; this dance, which became a favorite, is not that which, under a similar title, is included in a "Quadrille Preceptor", though he has reason to believe the latter dance was intended to be given as the original; whether that were so or not, wishing only to have the fruit of his own labours, and to derive no credit from the merits of others, he here presents a correct copy of the one composed by himself.
+***
 
-	### The Gavotte Quadrille
+[[Located in footnote in original]]That this practice has become too prevalent, the Author, as well as many others, considers he has some reason to complain he some time ago composed a dance to the tune of Vestris's gavotte, to be danced as a quadrille, though not strictly so; this dance, which became a favorite, is not that which, under a similar title, is included in a "Quadrille Preceptor", though he has reason to believe the latter dance was intended to be given as the original; whether that were so or not, wishing only to have the fruit of his own labours, and to derive no credit from the merits of others, he here presents a correct copy of the one composed by himself.
 
-	The honours to first strain of minuet de la cour.
+### The Gavotte Quadrille
 
-	The top and bottom couples set opposite to each other à la gavotte – eight bars.
+The honours to first strain of minuet de la cour.
 
-	Side couples do the same – eight bars.
+The top and bottom couples set opposite to each other à la gavotte – eight bars.
 
-	Set to partners, giving the right and left hands alternately, and go round your partners on the right to places – twelve bars.
+Side couples do the same – eight bars.
 
-	Each gentleman gives his right hand to the lady on the left, and his left alternately to his partner, then pass round with the lady on the right – twelve bars.
+Set to partners, giving the right and left hands alternately, and go round your partners on the right to places – twelve bars.
 
-	Top and bottom couples advance twice with pas de basque, and retire with emboitées – eight bars.
+Each gentleman gives his right hand to the lady on the left, and his left alternately to his partner, then pass round with the lady on the right – twelve bars.
 
-	The side couples do the same – eight bars.
+Top and bottom couples advance twice with pas de basque, and retire with emboitées – eight bars.
 
-	Top and bottom ladies advance round each other à la gavotte – twelve bars.
+The side couples do the same – eight bars.
 
-	The ladies on the sides do the same - twelve bars.
+Top and bottom ladies advance round each other à la gavotte – twelve bars.
 
-	Top and bottom couples set opposite each other as in figure 1, while the side couples chassez croissez – eight bars.
+The ladies on the sides do the same - twelve bars.
 
-	Vice versa – eight bars.
+Top and bottom couples set opposite each other as in figure 1, while the side couples chassez croissez – eight bars.
 
-	Pas de quatre four ladies – twelve bars.
+Vice versa – eight bars.
 
-	Each gentleman takes his partner's left hand and moves completely round to places with grand balloté; jetée back, and coupée entrechat à la fin.
+Pas de quatre four ladies – twelve bars.
 
-	The author of this work will always feel it is duty to expose and reprobate all mean attempts al literary piracy and plagiarism, whether affecting his own compositions or those of others.
+Each gentleman takes his partner's left hand and moves completely round to places with grand balloté; jetée back, and coupée entrechat à la fin.
+
+The author of this work will always feel it is duty to expose and reprobate all mean attempts al literary piracy and plagiarism, whether affecting his own compositions or those of others.
+
+***
 
 > There's one thing more must be attended to,
 >
@@ -12216,13 +12240,12 @@ Jem. This is a proof of ignorance you'll find,
 >
 > When the Quadrille begins, I here must state,
 >
-> The first eight bars the dancers always wait[[^263]];
-
-[[^263]]:
+> The first eight bars the dancers always wait[[
 	### Waiting Eight Bars
 
 	The set being formed, the dancers should wait the first eight bars, and begin the dance with the second strains, if the first is not repeated, this interval of time should be filled up with the performances of the honours. To every quadrille in the set they should wait the first eight bars.
-
+]];
+>
 > The honours in that interval should be
 >
 > Performed – the usual mark of courtesy.
@@ -12233,13 +12256,12 @@ Jem. This is a proof of ignorance you'll find,
 >
 > And in that time the honours should repeat,
 >
-> And at the end, and ere you take your seat[[^264]].
-
-[[^264]]:
+> And at the end, and ere you take your seat[[
 	### The Honours (i. e.) the Bow and Courtesy
 
 	In quadrille dancing these honours should always be made to your partner and the opposite, and to the first eight bars if music, before you begin the figure. The honours should not only be made at the commencement of each set, but likewise of each individual quadrilles, however many there may be in a set, and also at the conclusion of every set, and finally by every gentleman when he has led his partner to her seat.
-
+]].
+>
 > Bel. How many bars of music are contained
 >
 > In each quadrille, you have not yet explained.
@@ -12252,12 +12274,10 @@ Jem. This is a proof of ignorance you'll find,
 >
 > There they begin the honours for to make.
 >
-> Bel. The quadrille figure bar[[^265]] I've often seen;
+> Bel. The quadrille figure bar[[The quadrille figure bar is a character the author has used to show what quantity of music each movement or figure will take in the performance; it is similar to the one used in English Country Dancing, but he has been here more particular, putting a division to those figures which require but 4 bars, which are signified by a bar with one dot thus ![](/images/tr/wilson_04_up.svg) When the figure requires 8 bars, another dot is given ![](/images/tr/wilson_08_up.svg) those requiring 12 bars have three dots ![](/images/tr/wilson_12_up.svg) and for 16 bars four dots ![](/images/tr/wilson_16.svg)]] I've often seen;
 >
 > Can you explain those dots, and what they mean?
-
-[[^265]]: The quadrille figure bar is a character the author has used to show what quantity of music each movement or figure will take in the performance; it is similar to the one used in English Country Dancing, but he has been here more particular, putting a division to those figures which require but 4 bars, which are signified by a bar with one dot thus ![](/images/tr/wilson_04_up.svg) When the figure requires 8 bars, another dot is given ![](/images/tr/wilson_08_up.svg) those requiring 12 bars have three dots ![](/images/tr/wilson_12_up.svg) and for 16 bars four dots ![](/images/tr/wilson_16.svg)
-
+>
 > Jem. It is given to show what music figures take,
 >
 > And to divide them for the dancer's sake;
@@ -12276,18 +12296,21 @@ Jem. This is a proof of ignorance you'll find,
 >
 > Look at the plan, there each position's shown,
 >
-> And top and bottom may with case be known[[^266]].
+> And top and bottom may with case be known.
 
-[[^266]]:
-	### Positions of the Dancers in Quadrilles Composed of Four, Eight, Twelve, and Sixteen Persons
+***
 
-	*Figure omitted*
+### [[Located in footnote in original]]Positions of the Dancers in Quadrilles Composed of Four, Eight, Twelve, and Sixteen Persons
 
-	Some teachers call the bottom the second couple, and the couple on the right of the leading couple, the third couple, but the usual method is to reckon numerically round on the right of the top couple, as shown in the diagram for eight persons.
+*Figure omitted*
 
-	### Direction for Performing the Quadrilles
+Some teachers call the bottom the second couple, and the couple on the right of the leading couple, the third couple, but the usual method is to reckon numerically round on the right of the top couple, as shown in the diagram for eight persons.
 
-	In sets composed of eight persons (see figure 1) the first and third couples generally dance together, as do the sends and fourth. When the figure begins with two persons, as in l'été, is it performed with the first lady and third gentleman, then with the first gentleman and third lady, then the second lady and fourth gentleman, and is finished with the second gentleman and fourth lady. In a quadrille of twelve (see figure 2) when the first and fourth couple have performed the danse... _Text incomplete here_.
+### Direction for Performing the Quadrilles
+
+In sets composed of eight persons (see figure 1) the first and third couples generally dance together, as do the sends and fourth. When the figure begins with two persons, as in l'été, is it performed with the first lady and third gentleman, then with the first gentleman and third lady, then the second lady and fourth gentleman, and is finished with the second gentleman and fourth lady. In a quadrille of twelve (see figure 2) when the first and fourth couple have performed the danse... _Text incomplete here_.
+
+***
 
 > Bel. The practice is, and which you've seen no doubt
 >
