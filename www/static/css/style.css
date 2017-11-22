@@ -526,7 +526,8 @@ div.transcription table
 	width: 100%;
 }
 
-div.transcription p > img
+div.transcription p > img,
+div.transcription span.p > img
 {
 	width: 1em;
 	height: 1em;
@@ -542,7 +543,7 @@ div.transcription p > sup
 	font-size: 75%;
 }
 
-div.transcription span.strikethrough 
+div.transcription span.strikethrough
 {
 	text-decoration: line-through;
 }
@@ -571,7 +572,7 @@ div.transcription span.page_number
 	-webkit-user-select: none;
 }
 
-div.transcription span.note 
+div.transcription span.note
 {
 	font-family: "PT Serif";
 	font-size: 14px;
@@ -595,12 +596,12 @@ div.transcription span.note
 	-webkit-user-select: none;
 }
 
-div.transcription span.note  span.p
+div.transcription span.note span.p
 {
 	display: block;
 }
 
-div.transcription span.note  span.blockquote > span.p
+div.transcription span.note span.blockquote > span.p
 {
 	display: block;
 	font-style: italic;

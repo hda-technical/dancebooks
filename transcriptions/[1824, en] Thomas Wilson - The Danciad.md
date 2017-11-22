@@ -2982,7 +2982,7 @@ Enter Lucy, showing in Belinda , disguised as an Old Woman.
 >
 > Jem. One great professor gives the town a treat,
 >
-> In what he calls "a grand and annual fête[[[[One sapient professor, who would be thought, a dealer in novelty, gave, what he Called a grand fête;" but either mistaking the meaning of the term, or wholly disregarding propriety the grand fête turned out to be nothing more than an every day ball.]]";
+> In what he calls "a grand and annual fête[[One sapient professor, who would be thought, a dealer in novelty, gave, what he Called a grand fête;" but either mistaking the meaning of the term, or wholly disregarding propriety the grand fête turned out to be nothing more than an every day ball.]]";
 >
 > He thinks the title frenchified and grand,
 >
@@ -4974,8 +4974,8 @@ Chassée. Don't flatter, me, for flattery I disdain.
 	>
 	> And envies none who have superior skill.
 
-	From a wish of avoiding, as far as possible, any invidious distinctions, the Author has been induced to abandon his original intention, of dedicating this work to an eminent teacher and dancer now retired, an excellent judge of the subject.]
-].
+	From a wish of avoiding, as far as possible, any invidious distinctions, the Author has been induced to abandon his original intention, of dedicating this work to an eminent teacher and dancer now retired, an excellent judge of the subject.
+]].
 >
 > Whose talents merit more than I can say,
 >
@@ -5450,7 +5450,7 @@ masters.]]:
 >
 > For at their doors you're told to "ring and knock".
 >
-> Bel. One in a fray had his false collar[["False collar". This alludes to a certain dancing master, who recently brought his landlady before the magistrate for an assault, and tearing his false collar, when the termagant declared he had twelve to one shirt.] tore,
+> Bel. One in a fray had his false collar[["False collar". This alludes to a certain dancing master, who recently brought his landlady before the magistrate for an assault, and tearing his false collar, when the termagant declared he had twelve to one shirt.]] tore,
 >
 > He to that shirt had twelve false collars wore.
 >
