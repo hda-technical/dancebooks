@@ -318,9 +318,7 @@ Cast outside, up and down the middle, {21} cast over, four hands round with top 
 
 Three coule balance and change places, balance and back, three couple prominade single, cast off, right and left.
 
-### No. LXXII[^1]. — _Germans Delight_.
-
-[^1]: The book does not contain country dance numbered LXXI.
+### No. LXXII[The book does not contain country dance numbered LXXI.]. — _Germans Delight_.
 
 Cast outside, up again, four hands across, down the middle, up again, cast off, four hands round with the third couple, right and left at top.
 
