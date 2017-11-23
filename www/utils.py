@@ -671,7 +671,13 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 			processed_block += raw_block[end_pos + len(self.END):start_pos]
 			end_pos = raw_block.find(self.END, start_pos + len(self.START))
 			raw_footnote = raw_block[start_pos + len(self.START):end_pos]
-			while blocks and end_pos == -1:
+			while (
+				blocks and 
+				end_pos == -1 and 
+				#check the start of the block in order 
+				#to stop breaking whole markup if single block is wrong
+				(blocks[0].startswith('\t') or blocks[0].startswith(' ' * self.tab_length))
+			):
 				#footnote is split across several blocks
 				#looking for the block ending the quote
 				raw_block = blocks.pop(0)
@@ -681,7 +687,7 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 			processed_block += self.handle_footnote(raw_footnote)
 			start_pos = raw_block.find(self.START, end_pos + len(self.END))
 
-		if len(raw_block) > end_pos + 1:
+		if len(raw_block) > end_pos + len(self.END):
 			#handling the remaining of the block, if any
 			processed_block += raw_block[end_pos + len(self.END):]
 		blocks.insert(0, processed_block)
