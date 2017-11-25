@@ -4,6 +4,7 @@ import re
 #two-letter country codes mapped to list of corresponding langid
 SHORT_LANG_MAP = {
 	"ar": ["spanish"],
+	"at": ["german", "french"],
 	"au": ["english"],
 	"ca": ["english", "french"],
 	"cl": ["spanish"],
