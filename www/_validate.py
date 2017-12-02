@@ -24,7 +24,7 @@ DATA_JSON_FILENAME = "_validate.json"
 DATA_FIELDS = {
 	"added_on",
 	"altauthor",
-	"annotation",
+	"note",
 	"author",
 	"booktitle",
 	"booktype",
@@ -688,12 +688,12 @@ def validate_url_validity(item, errors):
 		for owner in owners:
 			owner_fullname = config.parser.bookkeepers.get(owner)
 			if owner_fullname:
-				annotation = item.get("annotation")
+				note = item.get("note")
 				if (
-					(not annotation) or
-					(owner_fullname not in annotation)
+					(not note) or
+					(owner_fullname not in note)
 				):
-					errors.add("Owner fullname ({owner_fullname}) should be present in annotation".format(
+					errors.add("Owner fullname ({owner_fullname}) should be present in note".format(
 						owner_fullname=owner_fullname
 					))
 

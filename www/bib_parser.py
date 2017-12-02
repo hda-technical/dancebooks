@@ -132,8 +132,8 @@ class BibItem(object):
 	def note(self):
 		return self.get_as_string("note")
 
-	def annotation(self):
-		return self.get_as_string("annotation")
+	def note(self):
+		return self.get_as_string("note")
 
 	def added_on(self):
 		return self.get_as_string("added_on")
@@ -206,14 +206,14 @@ class BibItem(object):
 		Method to be called once after parsing every entries.
 		Processes crossref tag, merging _params of current entry and parent one
 		"""
-		annotation = self.get("annotation")
-		if annotation is not None:
+		note = self.get("note")
+		if note is not None:
 			#TODO: create converter once per item set, not once per item
 			#parsing markdown and removing paragraph markup added by parser
-			new_annotation = ctx.parse_markdown(annotation)\
+			new_note = ctx.parse_markdown(note)\
 				.replace("<p>", "")\
 				.replace("</p>", "")
-			self._params["annotation"] = new_annotation
+			self._params["note"] = new_note
 
 		#crossref processing inherits some of the parameters
 		#and therefore it should go last

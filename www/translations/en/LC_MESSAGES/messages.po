@@ -477,8 +477,8 @@ msgstr "Paths to files"
 msgid "item:labels:magic-const"
 msgstr "Magic constant"
 
-msgid "item:labels:annotation"
-msgstr "Comment"
+msgid "item:labels:note"
+msgstr "Note"
 
 # Languages
 

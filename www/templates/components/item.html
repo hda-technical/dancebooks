@@ -35,7 +35,7 @@
 	"transcription",
 	"filename",
 	"magic_const",
-	"annotation",
+	"note",
 ] %}
 
 {% for param in fields %}
@@ -89,7 +89,7 @@
 				{{ _("item:language:" + value) }}
 			{% elif param == "added_on" %}
 				{{ value | dateformat("long") }}
-			{% elif param == "annotation" %}
+			{% elif param == "note" %}
 				{{ value | safe }}
 			{% elif param == "booktype" %}
 				{{ value | translate_booktype }}

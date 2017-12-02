@@ -477,7 +477,7 @@ msgstr "Пути к файлам"
 msgid "item:labels:magic-const"
 msgstr "Magic constant"
 
-msgid "item:labels:annotation"
+msgid "item:labels:note"
 msgstr "Примечание"
 
 # Languages
