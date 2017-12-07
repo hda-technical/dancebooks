@@ -811,15 +811,23 @@ def make_html_cite(item):
 
 
 morph_analyzer = pymorphy2.MorphAnalyzer()
+
+#WARN: 
+# Certain surnames can not be processed by pymorphy
+# This mapping is intended to solve the problem.
+PREDEFINED_SURNAMES = {
+	("Стратилатов", "masc"): "Стратилатова",
+	("Колесник", "femn"): "Колесник"
+}
+
 def make_genitive(nominative):
 	"""
 	Accepts name in nominanive case, returns genivive case for it
 	"""
 	def process_lexeme(lexeme, gender):
-		#NB: pymorphy can't process this specific surname properly.
-		#    This crutch is intended to solve the problem.
-		if lexeme == "Стратилатов":
-			return ("Стратилатова", gender)
+		if (lexeme, gender) in  PREDEFINED_SURNAMES:
+			assert gender is not None
+			return (PREDEFINED_SURNAMES[(lexeme, gender)], gender)
 		variants = morph_analyzer.parse(lexeme)
 		for variant in variants:
 			if "nomn" in variant.tag:
