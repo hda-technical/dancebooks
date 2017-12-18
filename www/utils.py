@@ -663,8 +663,9 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	def run(self, parent, blocks):
 		raw_block = blocks.pop(0)
 		processed_block = ""
-		#start_pos never equals to -1 at the start
-		end_pos = -1
+		#set initial value to -len(self.END) in order 
+		#to avoid skipping text from the starting block below
+		end_pos = -len(self.END)
 		start_pos = raw_block.find(self.START)
 		while (start_pos != -1):
 			#this text does not belong to footnote and should not be handled
