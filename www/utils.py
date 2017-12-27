@@ -663,7 +663,7 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	def run(self, parent, blocks):
 		raw_block = blocks.pop(0)
 		processed_block = ""
-		#set initial value to -len(self.END) in order 
+		#set initial value to -len(self.END) in order
 		#to avoid skipping text from the starting block below
 		end_pos = -len(self.END)
 		start_pos = raw_block.find(self.START)
@@ -673,9 +673,9 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 			end_pos = raw_block.find(self.END, start_pos + len(self.START))
 			raw_footnote = raw_block[start_pos + len(self.START):end_pos]
 			while (
-				blocks and 
-				end_pos == -1 and 
-				#check the start of the block in order 
+				blocks and
+				end_pos == -1 and
+				#check the start of the block in order
 				#to stop breaking whole markup if single block is wrong
 				(blocks[0].startswith('\t') or blocks[0].startswith(' ' * self.tab_length))
 			):
@@ -706,7 +706,7 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		self._markdown.reset()
 		converted_note = self._markdown.convert(footnote_string)\
 			.replace(self.NOTE_NUMBER_PLACEHOLDER, str(self._next_note_number) + ".")\
-		
+
 		for tag in ["blockquote", "h3", "p"]:
 			#block elements are not allowed inside <p> elements
 			#replacing them with span with corresponding classes
@@ -813,12 +813,14 @@ def make_html_cite(item):
 
 morph_analyzer = pymorphy2.MorphAnalyzer()
 
-#WARN: 
+#WARN:
 # Certain surnames can not be processed by pymorphy
 # This mapping is intended to solve the problem.
 PREDEFINED_SURNAMES = {
 	("Стратилатов", "masc"): "Стратилатова",
-	("Колесник", "femn"): "Колесник"
+	("Колесник", "femn"): "Колесник",
+	("Валерьевна", "femn"): "Валерьевны",
+	("Микляева", "femn"): "Микляевой"
 }
 
 def make_genitive(nominative):
