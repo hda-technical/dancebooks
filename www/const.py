@@ -151,12 +151,15 @@ CATALOGUE_PATTERN = (
 	r"(Lancelot:Ms\d{2})|"
 	#‹Ludus Pastorali› manuscript from Francine Lancelot's "La belle danse"
 	r"(Lancelot:Addendum)|"
-	#Printed books in Little-Mars's "La danse noble"
+	#Printed books in Little-Marsh's "La danse noble"
 	r"(LittleMarsh:\*?\[?c?\d{4}\]?-\w{3})|"
-	#Manuscripts in Little-Mars's "La danse noble"
+	#Manuscripts in Little-Marsh's "La danse noble"
 	r"(LittleMarsh:Ms-\d{2})|"
 	#Wilhelm Gottlieb Becker's Taschenbüchern in Lange's "Modetänze um 1800"
-	r"(Lange:\d{4}(, I{1,2})?)"
+	r"(Lange:\d{4}(, I{1,2})?)|"
+	r"(Smith:[\[\]A-Za-z\d]+)|"
+	r"(Gallo:[A-Za-z']{1,3})|"
+	r"(Marrocco:[A-Z\d, ]+)"
 )
 CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
 #map [catalogue type] -> (catalogue id, catalogue title)
@@ -164,6 +167,9 @@ CATALOGUE_MAP = {
 	"Lancelot": ("lancelot_1996", "F. Lancelot. La belle danse"),
 	"LittleMarsh": ("little_1992", "M. E. Little, C. G. Marsh. La danse noble"),
 	"Lange": ("lange_1984", "E. Lange, K.-H. Lange. Modetänze um 1800"),
+	"Smith": ("smith_1995", "A. W. Smith. Fifteenth Century Dance and Music"),
+	"Gallo": ("gallo_1979_balare", "F. A. Gallo. Il 'Balare Lombardo'"),
+	"Marrocco": ("marrocco_1981_inventory", "Inventory of 15th century Bassedanze")
 }
 
 CONFIG_PATTERN = r"dancebooks\.(?P<mode>\w+)\.conf"
