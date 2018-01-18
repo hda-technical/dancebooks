@@ -616,52 +616,6 @@ uniJenaTiles()
 	tiles uniJenaTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
-yaleWalpoleTilesUrl()
-{
-	if [ $# -ne 4 ]
-	then
-		echo "Usage: $0 image_id x y z"
-		return 1
-	fi
-
-	local IMAGE_ID=$1
-	local TILE_X=$2
-	local TILE_Y=$3
-	local TILE_Z=$4
-
-	for TILE_GROUP in `seq 0 2`
-	do
-		local URL="http://images.library.yale.edu/walpoleimages/dl/003000/$IMAGE_ID/TileGroup${TILE_GROUP}/$TILE_Z-$TILE_X-$TILE_Y.jpg"
-		curl --silent -I "$URL" | grep "HTTP/1.1 200 OK" > /dev/null
-		if [ "$?" -eq 0 ]
-		then
-			echo "$URL"
-			return
-		fi
-	done
-
-	echo "Failed to guess tile group for $URL"
-	return 1
-}
-
-yaleWalpoleTiles()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 image_id"
-		return 1
-	fi
-	local BOOK_ID=$1
-	local ZOOM=5
-	local TILE_SIZE=256
-	local OUTPUT_DIR=.
-
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=256
-
-	tiles yaleWalpoleTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
-}
-
 kunstkameraTilesUrl()
 {
 	if [ $# -ne 4 ]

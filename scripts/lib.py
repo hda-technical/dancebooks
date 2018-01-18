@@ -8,6 +8,7 @@ import subprocess
 import shutil
 import time
 import uuid
+from xml.etree import ElementTree
 
 import opster
 import requests
@@ -356,7 +357,7 @@ def nga(
 
 @opster.command()
 def hab(
-	id=("", "", "Image id to be downloaded (i. e `grafik/uh-4f-47-00192`)")
+	id=("", "", "Image id to be downloaded (e. g. `grafik/uh-4f-47-00192`)")
 ):
 	"""
 	Downloads single image from http://diglib.hab.de and http://kk.haum-bs.de
@@ -413,6 +414,41 @@ def hab(
 	output_filename = make_output_filename(id.replace("/", "."))
 	download_and_sew_tiles(tiles_number_x, tiles_number_y, TILE_SIZE, url_maker, output_filename)
 
+	
+@opster.command()
+def yale(
+	id=("", "", "Image id to be downloaded (e. g. `lwlpr11386`)")
+):
+	class UrlMaker(object):
+		"""
+		Similar to UrlMaker from hab() method. Should be deduplicated once
+		"""
+		def __init__(self, zoom):
+			self.zoom = zoom
+
+		def __call__(self, tile_x, tile_y):
+			for tile_group in [0, 1, 2]:
+				probable_url = f"http://images.library.yale.edu/walpoleimages/dl/011000/{id}/TileGroup{tile_group}/{self.zoom}-{tile_x}-{tile_y}.jpg"
+				head_response = requests.head(probable_url)
+				if head_response.status_code == 200:
+					return probable_url
+			return None
+	MAX_ZOOM = 5
+	#FIXME: replace 011000 with computed expression
+	metadata = ElementTree.fromstring(get_text(f"http://images.library.yale.edu/walpoleimages/dl/011000/{id}/ImageProperties.xml"))
+	width = int(metadata.attrib["WIDTH"])
+	height = int(metadata.attrib["HEIGHT"])
+	tile_size = int(metadata.attrib["TILESIZE"])
+	
+	output_filename = make_output_filename(id)
+	tiles_number_x = math.ceil(width / tile_size)
+	tiles_number_y = math.ceil(height / tile_size)
+	download_and_sew_tiles(
+		tiles_number_x, tiles_number_y,	tile_size,
+		UrlMaker(MAX_ZOOM),
+		output_filename
+	)
+	
 
 if __name__ == "__main__":
 	opster.dispatch()
