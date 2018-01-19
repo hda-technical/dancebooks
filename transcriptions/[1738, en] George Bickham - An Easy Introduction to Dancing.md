@@ -5,8 +5,7 @@ As it is most essential in Dancing, to know how to take the Movements, the Way t
 
 There are three Movements from the Waist to the Feet, which is that of the Hip, Knee, and Instep from there principal Movements we form all the different Steps in Dancing.
 
-But they are not brought to their Perfection, 'till the Joints have made
-their Bendings, and regain'd the Situation they were in before.
+But they are not brought to their Perfection, 'till the Joints have made their Bendings, and regain'd the Situation they were in before.
 
 {2} I shall begin then, by the Explanation of that of the Instep, which has two Ways of Moving, to wit, Tension and Extension, according to the Terms of Anatomists, which is, what we call raising the Toe and setting it down: In my Opinion, I find it the most tiresome Motion of all, because it supports the Weight of the Body in its Equilibrium, or Balance, and is the most necessary to dance well; 'tis by its greater or less Strength, that the Leg extends itself with most Ease, either in Dancing or Jumping; for the Instep, by its Strength, raises you with Sprightliness, and when you fall again, you light on your Toes. The Number of Steps on the Toes, in Dancing, make you seem somewhat more light, but it is the Hip that makes the Step, and the Instep that supports the Body and compleats it, by carrying it on with that Lightness.
 
@@ -47,4 +46,3 @@ Having let go the Right Hand, you go forwards, making a half Turn to present you
 7. Delucia Britannica : Vol. I. Or the Curiosities of Hampton-Court and _Windso-Castle_, delineated, with occasional Reflections, and 3 Copper-plates of the two Palaces, _&c_. The Whole attempted with a View, not only to engage the Attention of the Curious, but to inform the Judgments of those who have the least Taste for the Art of Painting. It being a necessary Pocket Companion for such as visit those Courts. Price bound 2 _s_. 6 _d_.
 8. The Art of Fortification delineated; with Rules for Designing, Drawing, Washing and Colouring in the most elegant Talk, particular Works and Buildings, and their Plans, Elevations, Sections, Profiles and Fronts, in civil and military Architecture: As likewise the intire Survey of a Place, with its particular Charts and the Description of Provinces, States, Kingdoms, Empires, _&c_. A Work absolutely. necessary for the Gentlemen, Officer, and Architect. Adorn'd with 23 Cuts. Price 5 _s_. bound in Calf.
 9. Eighteen Folio Copper-plates of Gardening, in a new Taste, as Temples, Arches, Gates, Bridges, Alcoves, Perterres, Tarrasses, Mounts, Vistoes, Alleys, Groves, Clumps, Cascades, Basons, Lakes, Baths, Obelisks, Hermitages, ragged Ruins and _Chinese_ House, extremely ornamental in the Gardens of the Curious, and to direct and give Hints to Gardiners in general: Likewise twenty-four different Specimens of _Chinese_ Paling or Lettice-work, of much Esteem, and have been Patterns for most Workmen in that Taste. Price 6 _s_. plain, 12 _s_. coloured.
-
