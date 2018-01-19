@@ -552,6 +552,11 @@ class MarkdownCache(object):
 		self._markdown.inlinePatterns.add("page_number", MarkdownPageNumber(), "_end")
 		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
 		self._markdown.parser.blockprocessors.add(
+			"align_right",
+			MarkdownAlignRight(self._markdown.parser),
+			"_begin"
+		)
+		self._markdown.parser.blockprocessors.add(
 			"note",
 			MarkdownNote(self._markdown.parser),
 			"_begin"
@@ -625,6 +630,27 @@ class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 		span.text = m.group("strikethrough")
 		return span
 
+
+class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
+	"""
+	Marks paragraphs starting from `>>` symbols with style="text-align: right"
+	"""
+	MARKER = ">>"
+	
+	def test(self, parent, block):
+		return block.startswith(self.MARKER)
+		
+	def run(self, parent, blocks):
+		block = blocks.pop(0)
+		p = markdown.util.etree.Element("p")
+		p.set("style", "text-align: right")
+		p.text = block[len(self.MARKER):].strip()
+		parent.append(p)
+		#WARN:
+		#Consider current block as processed
+		#This might be not the desired behaviour
+		return True
+		
 
 class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	"""

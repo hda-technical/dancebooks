@@ -16,9 +16,9 @@ Ce seroit ici l'occasion d'en étaler toute la grandeur, de parler de l'éclat d
 
 Dans le désir ardent que j'ai toujours eu de vous marquer mon attachement & mon zele, je dois me borner à vous en renouveller les assurances. Je suis avec une très-profonde soumission,
 
-monseigneur,
+MONSEIGNEUR,
 
-Vôtre très-respectueux serviteur, Rameau.
+>> Vôtre très-respectueux serviteur, Rameau.
 
 ### {vj} Préface
 
