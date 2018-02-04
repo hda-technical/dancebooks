@@ -58,7 +58,7 @@ def get_json(*args, **kwargs):
 @retry(retry_count=3)
 def get_text(*args, **kwargs):
 	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
-	if response.status_code == 200:
+	if response.status_code in (200, 404):
 		return response.content.decode("utf-8")
 	else:
 		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
@@ -76,7 +76,7 @@ def get_binary(output_filename, url_or_request):
 			for chunk in response.iter_content(BLOCK_SIZE):
 				file.write(chunk)
 	else:
-		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
+		raise ValueError(f"While getting {url_or_request!r}: Code 200 was expected. Got {response.status_code}")
 
 
 def make_output_folder(downloader, book_id):
@@ -91,15 +91,17 @@ def make_output_folder(downloader, book_id):
 def make_output_filename(base, page_number=None, extension="bmp"):
 	if page_number is None:
 		return f"{base}.{extension}"
-	else:
+	elif isinstance(page_number, int):
 		return os.path.join(base, f"{page_number:08}.{extension}")
+	else:
+		return os.path.join(base, f"{page_number}.{extension}")
 
 
 def make_temporary_folder():
 	return str(uuid.uuid4())
 
 
-def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, tile_size):
+def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, tile_size, overlap=0):
 	"""
 	Invokes montage tool from ImageMagick package to sew tiles together
 	"""
@@ -107,7 +109,7 @@ def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, 
 		"montage",
 		f"{folder}/*",
 		"-mode", "Concatenate",
-		"-geometry", f"{tile_size}x{tile_size}>",
+		"-geometry", f"{tile_size}x{tile_size}-{overlap}-{overlap}>",
 		"-tile", f"{tiles_number_x}x{tiles_number_y}",
 		output_file
 	])
@@ -119,7 +121,7 @@ def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, 
 	])
 
 
-def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename):
+def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename, overlap=0):
 	"""
 	Iterates over range(tiles_number_x) cross range(tiles_number_y),
 	produces tile url via tile_url_maker invocation,
@@ -136,7 +138,7 @@ def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker,
 					tile_file,
 					url_maker(tile_x, tile_y)
 				)
-		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size)
+		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size, overlap=overlap)
 	finally:
 		if "KEEP_TEMP" not in os.environ:
 			shutil.rmtree(tmp_folder)
@@ -218,7 +220,7 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
 
-def download_image_from_iiif(canvas_metadata, output_filename):
+def download_image_from_iiif(base_url, output_filename):
 	"""
 	Downloads single image via IIIF protocol.
 	API is documented here:
@@ -230,10 +232,9 @@ def download_image_from_iiif(canvas_metadata, output_filename):
 			top = tile_size * tile_y
 			tile_width = min(width - left, tile_size)
 			tile_height = min(height - top, tile_size)
-			return f"{id}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
+			return f"{base_url}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
 
-	id = canvas_metadata["images"][-1]["resource"]["service"]["@id"]
-	metadata = get_json(f"{id}/info.json")
+	metadata = get_json(f"{base_url}/info.json")
 	if "tiles" in metadata:
 		# Served by e. g. vatlib servant
 		tile_size = metadata["tiles"][0]["width"]
@@ -264,7 +265,8 @@ def download_book_from_iiif(manifest_url, output_folder):
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page_number:04d}")
 			continue
-		download_image_from_iiif(canvas_metadata, output_filename)
+		base_url = canvas_metadata["images"][-1]["resource"]["service"]["@id"]
+		download_image_from_iiif(base_url, output_filename)
 
 ###################
 #LIBRARY DEPENDENT FUNCTIONS
@@ -414,7 +416,7 @@ def hab(
 	output_filename = make_output_filename(id.replace("/", "."))
 	download_and_sew_tiles(tiles_number_x, tiles_number_y, TILE_SIZE, url_maker, output_filename)
 
-	
+
 @opster.command()
 def yale(
 	id=("", "", "Image id to be downloaded (e. g. `lwlpr11386`)")
@@ -439,7 +441,7 @@ def yale(
 	width = int(metadata.attrib["WIDTH"])
 	height = int(metadata.attrib["HEIGHT"])
 	tile_size = int(metadata.attrib["TILESIZE"])
-	
+
 	output_filename = make_output_filename(id)
 	tiles_number_x = math.ceil(width / tile_size)
 	tiles_number_y = math.ceil(height / tile_size)
@@ -448,7 +450,67 @@ def yale(
 		UrlMaker(MAX_ZOOM),
 		output_filename
 	)
-	
+
+
+@opster.command()
+def britishLibraryBook(
+	id=("", "", "Book id to be downloaded (e. g. `vdc_100025756343`). Warning: this id is different from the one found in online viewer. Pick one from the requested urls instead.")
+):
+	#It looks like manifest.json is not being used by The British Library
+
+	output_folder = make_output_folder("bl", id)
+	current_page = 1
+	while True:
+		base_url=f"http://access.bl.uk/IIIFImageService/ark:/81055/{id}.0x{current_page:06x}"
+		info_json_url = f"{base_url}/info.json"
+		head_response = requests.head(info_json_url)
+		if head_response.status_code != 200:
+			break
+		output_filename = make_output_filename(output_folder, current_page)
+		download_image_from_iiif(base_url, output_filename)
+		current_page += 1
+
+
+@opster.command()
+def britishLibraryManuscript(
+	id=("", "", "Page id of the manuscript to be downloaded (e. g. `add_ms_12531!1_f005r`)")
+):
+	def parse_id(full_id):
+		manuscript_id, dirty_page_id = tuple(id.split('!'))
+		clean_page_id = dirty_page_id.split("_")[1]
+		return (manuscript_id, dirty_page_id, clean_page_id)
+
+	class UrlMaker(object):
+		def __init__(self, max_zoom, manuscript_id, clean_page_id):
+			self.max_zoom = max_zoom
+			self.manuscript_id = manuscript_id
+			self.page_id = clean_page_id
+
+		def __call__(self, tile_x, tile_y):
+			url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={self.manuscript_id}!{self.page_id}_files/{self.max_zoom}/{tile_x}_{tile_y}.jpg"
+			return url
+
+	manuscript_id, dirty_page_id, clean_page_id = parse_id(id)
+	#Manuscripts portal uses deepzoom protocol. One can use this code to implement generalized downloader for it
+	image_metadata = ElementTree.fromstring(get_text(f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}.xml"))
+	size_metadata = image_metadata.getchildren()[0]
+	tile_size = int(image_metadata.attrib["TileSize"])
+	width = int(size_metadata.attrib["Width"])
+	height = int(size_metadata.attrib["Height"])
+
+	output_folder = make_output_folder("bl", manuscript_id)
+	output_filename = make_output_filename(output_folder, clean_page_id)
+
+	tiles_number_x = math.ceil(width / tile_size)
+	tiles_number_y = math.ceil(height / tile_size)
+	MAX_ZOOM = 13
+	download_and_sew_tiles(
+		tiles_number_x, tiles_number_y,	tile_size,
+		UrlMaker(MAX_ZOOM, manuscript_id, dirty_page_id),
+		output_filename,
+		overlap=1
+	)
+
 
 if __name__ == "__main__":
 	opster.dispatch()

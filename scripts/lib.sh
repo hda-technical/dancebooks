@@ -319,25 +319,6 @@ hathi()
 	done
 }
 
-britishLibrary()
-{
-	if [ $# -ne 2 ]
-	then
-		echo "Usage: $0 book_id page_count"
-		return 1
-	fi
-
-	local BOOK_ID=$1
-	local OUTPUT_DIR="british.$BOOK_ID"
-	local PAGE_COUNT=$2
-	mkdir -p "$OUTPUT_DIR"
-	for PAGE in `seq $PAGE_COUNT`
-	do
-		local OUTPUT_FILE=`printf $OUTPUT_DIR/%04d.jpg $PAGE`
-		webGet "http://access.bl.uk/IIIFImageService/${BOOK_ID}.0x`printf %06x $PAGE`/0,0,5000,5000/pct:100/0/native.jpg" "$OUTPUT_FILE"
-	done
-}
-
 vwml()
 {
 	if [ $# -ne 3 ]
