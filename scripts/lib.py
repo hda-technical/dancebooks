@@ -519,9 +519,9 @@ def hathi(
 	output_folder = make_output_folder("hathi", id)
 	meta_url = f"https://babel.hathitrust.org/cgi/imgsrv/meta?id={id}"
 	metadata = get_json(meta_url)
-	for page in range(metadata.total_items())
+	for page in range(metadata["total_items"]):
 		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page + 1};width=1000000"
-		output_file = make_output_filename(output_folder, page)
+		output_file = make_output_filename(output_folder, page, extension="jpg")
 		get_binary(output_file, url)
 
 
