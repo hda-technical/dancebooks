@@ -281,44 +281,6 @@ locMusdi()
 	done
 }
 
-hathi()
-{
-	if [ $# -ne 2 ]
-	then
-		echo "Usage: $0 book_id page_count"
-		return
-	fi
-
-	local BOOK_ID=$1
-	local PAGE_COUNT=$2
-	local OUTPUT_DIR=`makeOutputDir "hathi.$BOOK_ID"`
-
-	mkdir -p "$OUTPUT_DIR"
-	for PAGE in `seq 1 $PAGE_COUNT`
-	do
-		local OUTPUT_FILE="$OUTPUT_DIR/`printf %04d $PAGE`.jpg"
-		if [ -f "$OUTPUT_FILE" ]
-		then
-			continue
-		fi
-		while true 			
-		do
-			webGet "https://babel.hathitrust.org/cgi/imgsrv/image?id=$BOOK_ID;seq=$PAGE;width=1000000" "$OUTPUT_FILE"
-			convert "$OUTPUT_FILE" -format bmp /dev/null 2>&1 | grep -q "convert: "
-			if [ "$?" = "0" ]
-			then
-				#this file is damaged and has to be redownloaded
-				echo "File is damaged - RETRY"
-				rm "$OUTPUT_FILE"
-				sleep 10
-				continue
-			else
-				break
-			fi
-		done
-	done
-}
-
 vwml()
 {
 	if [ $# -ne 3 ]

@@ -512,5 +512,18 @@ def britishLibraryManuscript(
 	)
 
 
+@opster.command()
+def hathi(
+	id=("", "", "Id of the book to be downloaded (e. g. `wu.89005529961`)")
+):
+	output_folder = make_output_folder("hathi", id)
+	meta_url = f"https://babel.hathitrust.org/cgi/imgsrv/meta?id={id}"
+	metadata = get_json(meta_url)
+	for page in range(metadata.total_items())
+		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page + 1};width=1000000"
+		output_file = make_output_filename(output_folder, page)
+		get_binary(output_file, url)
+
+
 if __name__ == "__main__":
 	opster.dispatch()
