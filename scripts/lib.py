@@ -519,9 +519,15 @@ def hathi(
 	output_folder = make_output_folder("hathi", id)
 	meta_url = f"https://babel.hathitrust.org/cgi/imgsrv/meta?id={id}"
 	metadata = get_json(meta_url)
-	for page in range(metadata["total_items"]):
+	total_pages = metadata["total_items"]
+	print(f"Going to download {total_pages} pages to {output_folder}")
+	for page in range(total_pages):
 		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page + 1};width=1000000"
 		output_file = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_file):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
+		print(f"Downloading page {page} to {output_file}")
 		get_binary(output_file, url)
 
 
