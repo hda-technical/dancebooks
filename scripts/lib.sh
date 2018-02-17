@@ -242,44 +242,6 @@ makeOutputDir()
 #========================
 #Single image per page downloaders
 #========================
-rsl()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 book_id"
-		return 1
-	fi
-
-	local BOOK_ID=$1
-
-	webGet "http://dlib.rsl.ru/loader/view/$1?get=pdf" "rsl.$BOOK_ID.pdf"
-}
-
-locMusdi()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 book_id"
-		return 1
-	fi
-
-	local BOOK_ID=$1
-	local MAX_PAGE=1000
-	local OUTPUT_DIR="locMusdi.$BOOK_ID"
-
-	#disabling global check
-	MIN_FILE_SIZE_BYTES=0
-
-	mkdir -p "$OUTPUT_DIR"
-	for PAGE in `seq 1 $MAX_PAGE`
-	do
-		local BASENAME=`printf %04d $PAGE`
-		true && \
-			webGet "http://memory.loc.gov/musdi/$BOOK_ID/$BASENAME.tif" "$OUTPUT_DIR/$BASENAME.tif" || \
-			webGet "http://memory.loc.gov/musdi/$BOOK_ID/$BASENAME.jpg" "$OUTPUT_DIR/$BASENAME.jpg" || \
-			return 0
-	done
-}
 
 vwml()
 {
