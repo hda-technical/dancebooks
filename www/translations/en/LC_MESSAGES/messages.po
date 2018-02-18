@@ -533,7 +533,10 @@ msgid "interface:footer:golden-forests"
 msgstr "Golden Forests"
 
 msgid "interface:footer:repo"
-msgstr "GitHub repository"
+msgstr "Github repository"
+
+msgid "interface:footer:license"
+msgstr "All materials are for non-commercial usage only"
 
 msgid "interface:footer:persimmon"
 msgstr "Persimmon"

@@ -533,7 +533,10 @@ msgid "interface:footer:golden-forests"
 msgstr "Золотые леса"
 
 msgid "interface:footer:repo"
-msgstr "Репозиторий на ГитХабе"
+msgstr "Репозиторий на Гитхабе"
+
+msgid "interface:footer:license"
+msgstr "Материалы этого сайта предназначены только для некоммерческого использования"
 
 msgid "interface:footer:persimmon"
 msgstr "Хурма"
