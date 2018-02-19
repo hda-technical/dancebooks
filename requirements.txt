@@ -22,9 +22,9 @@ MarkupSafe==1.0
 opster==4.1
 packaging==16.8
 parso==0.1.1
-path.py==10.5
+path.py==11.0
 pbr==3.1.1
-pexpect==4.3.1
+pexpect==4.4.0
 pickleshare==0.7.4
 prompt-toolkit==1.0.15
 ptyprocess==0.5.2
@@ -34,8 +34,9 @@ pymorphy2==0.8
 pymorphy2-dicts==2.4.393442.3710985
 pyparsing==2.2.0
 python-stdnum==1.8.1
-pytz==2017.3
+pytz==2018.3
 requests==2.18.4
+scour==0.36
 simplegeneric==0.8.1
 six==1.11.0
 speaklater==1.3
