@@ -77,9 +77,9 @@ _From an email forwarded by Dmitry Filimonov._
 
 > Bonjour!
 >
-> J'ai les copies des certaines documents de la BNF de deux types: j'ai pris les copies moi-mêmes (ou bien prenant le photo ou bien scannant le microforme) ou j'ai demander la reproduction. Toutes les document sont dans le domaine publiques.
+> J'ai les copies des certaines documents de la BNF de deux types: j'ai pris les copies moi-mêmes (ou bien prenant le photo ou bien scannant le microforme) ou j'ai demander la reproduction. Toutes les document sont dans le domaine publique.
 > 
-> Je fais une recherche et projet non-commerciale en faisant le bibliographie des sources de la danse ici : bib.hda.org.ru et je voudrait demander est-ce que c'est possible de mettre en ligne les documents de domaine publique que j'ai reçu de la BNF ? J'ai déjà obtenu la permission des certaines bibliothèques. Bien sur qu'on va ajouter la provenance de BNF et utilisation non-commerciale.
+> Je fais une recherche et projet non-commerciale en faisant le bibliographie des sources de la danse ici : bib.hda.org.ru et je voudrais demander est-ce que c'est possible de mettre en ligne les documents de domaine publique que j'ai reçu de la BNF? J'ai déjà obtenu la permission des certaines bibliothèques. Bien sur qu'on va ajouter la provenance de BNF et utilisation non-commerciale.
 >
 > Dmitry
 
