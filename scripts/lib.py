@@ -18,7 +18,7 @@ USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/201
 HEADERS = {
 	"User-Agent": USER_AGENT
 }
-TIMEOUT = 5
+TIMEOUT = 30
 
 ###################
 #UTILITY FUNCTIONS
