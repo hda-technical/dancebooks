@@ -1014,6 +1014,7 @@ def main(
 	}
 
 	erroneous_items = dict()
+	item_id = None
 	for future in concurrent.futures.as_completed(futures):
 		try:
 			result = future.result()

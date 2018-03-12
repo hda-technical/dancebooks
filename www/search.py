@@ -55,7 +55,10 @@ def search_for_synonyms(keys, values):
 		item_values = set()
 		for key in keys:
 			item_values |= set(item.get(key) or [])
-		return search_values.issubset(item_values)
+		result = search_values.issubset(item_values)
+		if not result:
+			print(f"search_values: {search_values!r}, item_values: {item_values!r}")
+		return result
 	return search
 
 	

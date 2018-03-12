@@ -237,7 +237,7 @@ def make_searches_from_metadata(metadata):
 
 	synonym_searches = ["author"]
 	for search_key in synonym_searches:
-		search_value = metadata.get(search_key, None)
+		search_value = metadata.get(search_key)
 		if search_value is None:
 			continue
 		synonym_keys = config.www.search_synonyms.get(search_key) + [search_key]
@@ -245,7 +245,7 @@ def make_searches_from_metadata(metadata):
 
 	date_searches = ["year_from", "year_to"]
 	for search_key in date_searches:
-		search_value = metadata.get(search_key, None)
+		search_value = metadata.get(search_key)
 		if search_value is None:
 			continue
 		result[search_key] = search.search_for(
@@ -265,7 +265,7 @@ def make_searches_from_metadata(metadata):
 			for synonym in synonym_keys
 		])
 
-	volume = metadata.get("volume", None)
+	volume = metadata.get("volume")
 	if volume is not None:
 		search_for_volume = search.search_for_optional_eq(
 			"volume",
