@@ -7,7 +7,7 @@
 _Из переписки на портале udo.rsl.ru._
 
 > Здравствуйте!
-> 
+>
 > Скажите, могу ли я выложить эту и другие заказанные у вас книги на личном сайте в открытый доступ?
 >
 > Насколько мне известно, в иностранных библиотеках такое ограничение действует. Есть ли оно у РГБ?
@@ -16,7 +16,7 @@ _Из переписки на портале udo.rsl.ru._
 
 ---
 
-> Возможно с указанием источника – РГБ и без коммерческого использования 
+> Возможно с указанием источника – РГБ и без коммерческого использования
 
 ## Российская национальная библиотека
 
@@ -41,7 +41,7 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Валерия Николаевна Дворецкова,
 >
-> заведующая Службой электронной доставки документов 
+> заведующая Службой электронной доставки документов
 >
 > Российская национальная библиотека
 
@@ -50,11 +50,11 @@ _Из переписки на портале udo.rsl.ru._
 > Здравствуйте!
 >
 > Подскажите, пожалуйста (на сайте БАН информации не нашёл), есть ли какие-то ограничения на копии документов, полученных из фондов БАН (такие ограничения практикуют европейские библиотеки, в российских с такими практиками я не сталкивался). Интересуют ограничения за исключением авторских прав (документы, о которых идёт речь, опубликованы давно и не подпадают под действие закона об авторском праве).
-> 
+>
 > Могу ли я выложить полученные копии на личном некоммерческом сайте для свободного скачивания?
 >
 > Спасибо за информацию.
-> 
+>
 > Юрий.
 
 ---
@@ -64,9 +64,9 @@ _Из переписки на портале udo.rsl.ru._
 > Размещение информации на сайте Вашей организации находится не в нашей юрисдикции.
 >
 > Копия книги, полученная в нашей библиотеке, действительно не подпадает под действие закона об авторском праве.
-> 
+>
 > И размещение на сайте не преследует коммерческие цели.
-> 
+>
 > С уважением, Марина Павловна.
 >
 > Зав. читальными залами ОФО.
@@ -78,7 +78,7 @@ _From an email forwarded by Dmitry Filimonov._
 > Bonjour!
 >
 > J'ai les copies des certaines documents de la BNF de deux types: j'ai pris les copies moi-mêmes (ou bien prenant le photo ou bien scannant le microforme) ou j'ai demander la reproduction. Toutes les document sont dans le domaine publique.
-> 
+>
 > Je fais une recherche et projet non-commerciale en faisant le bibliographie des sources de la danse ici : bib.hda.org.ru et je voudrais demander est-ce que c'est possible de mettre en ligne les documents de domaine publique que j'ai reçu de la BNF? J'ai déjà obtenu la permission des certaines bibliothèques. Bien sur qu'on va ajouter la provenance de BNF et utilisation non-commerciale.
 >
 > Dmitry
@@ -116,15 +116,15 @@ _From an email forwarded by Susan de Guardiola._
 ---
 
 > UNCG:
-> 
+>
 > I am glad that you and your colleagues are pleased. UNCG owns the
 physical item, not the copyright. There are no permissions for me to
 grant - the item was scanned for your use.
 
-### Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland
+## Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland
 
 > Dear Jim.
-> 
+>
 > I've began to work with the images you've provided.
 >
 > Actually, I'm running an online dance bibliography project located here:
@@ -157,7 +157,7 @@ grant - the item was scanned for your use.
 >
 > Senior Reference Archivist
 
-### Royal College of Music, London 
+## Royal College of Music, London
 
 ---
 
@@ -170,3 +170,41 @@ grant - the item was scanned for your use.
 > All best,
 >
 > Michael Mullen
+
+## The National Library of Scotland, Edinburgh
+
+> Dear Sir / Madam,
+>
+> my name is Yuriy, I am a dance historian from Moscow, Russia.
+>
+> I am the author and maintainer of historical dance bibliography database: https://bib.hda.org.ru/
+>
+> Along with bibliographical information, I am trying to provide digital versions of the primary sources related to historical dance.
+>
+> I have received the permission to make such sources available online on a non-commercial basis from various institutions and libraries: Bibliothèque nationale de France, Russian State Library and The Royal College of Music and others.
+>
+> During my recent trip to Edinburgh I took photos of the manuscript “Contre-danse à Paris 1818” which is being held at the National Library of Scotland under call number MS 3860.
+>
+> I would like to kindly ask the library for permission to make this manuscript available online. I will cite the National Library of Scotland in the same way as the other libraries: https://bib.hda.org.ru/advanced-search?availability=available-here. Is it possible for me to do this?
+>
+> Thanks in advance.
+>
+> Best regards,
+>
+> Yuriy.
+
+---
+
+> Dear Mr Chernyshov,
+>
+> Thank you very much for your message, and please accept my apologies for this late response.  We are happy to give permission for you to mount your images of MS.3860 online, but would be grateful for an acknowledgement to the National Library of Scotland.
+>
+> Since the images are your own, we would not have to issue you with a licence.  However, please note that – with no known author – this manuscript may fall into the category of "orphan works" and may therefore still be in copyright in spite of its age.
+>
+> If convenient to you, I would be grateful for a link to the images, once they are online.
+>
+> With best wishes,
+>
+> Dr Ulrike Hogg
+>
+> Curator (Gaelic, Early Modern & Music Manuscripts) | Archives & Manuscript Collections
