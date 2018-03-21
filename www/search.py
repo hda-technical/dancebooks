@@ -2,8 +2,6 @@
 from unidecode import unidecode
 
 import datetime
-import logging
-import re
 
 from config import config
 
@@ -26,7 +24,7 @@ def search_for_string_regexp(key, regexp):
 	Creates filter for string
 	"""
 	return lambda item, key=key, regexp=regexp: (
-		item.get(key) and 
+		item.get(key) and
 		regexp.search(item.get(key))
 	)
 
@@ -55,13 +53,10 @@ def search_for_synonyms(keys, values):
 		item_values = set()
 		for key in keys:
 			item_values |= set(item.get(key) or [])
-		result = search_values.issubset(item_values)
-		if not result:
-			print(f"search_values: {search_values!r}, item_values: {item_values!r}")
-		return result
+		return search_values.issubset(item_values)
 	return search
 
-	
+
 def search_for_any(key, values):
 	"""
 	Creates filter testing if any of the values matches given key
