@@ -10,6 +10,7 @@ import time
 import uuid
 from xml.etree import ElementTree
 
+import bs4
 import opster
 import requests
 
@@ -55,7 +56,7 @@ def get_json(*args, **kwargs):
 		raise ValueError(f"While getting {args[0]}: JSON with code 200 was expected. Got {response.status_code}")
 
 
-@retry(retry_count=3)
+#@retry(retry_count=3)
 def get_text(*args, **kwargs):
 	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
 	if response.status_code in (200, 404):
@@ -64,13 +65,13 @@ def get_text(*args, **kwargs):
 		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
 
 
-@retry(retry_count=3)
-def get_binary(output_filename, url_or_request):
+#@retry(retry_count=3)
+def get_binary(output_filename, url_or_request, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
 	Accepts both url as string and request.Requests
 	"""
-	response = requests.get(url_or_request, stream=True, headers=HEADERS, timeout=TIMEOUT)
+	response = requests.get(url_or_request, *args, stream=True, headers=HEADERS, timeout=TIMEOUT, **kwargs)
 	if response.status_code == 200:
 		with open(output_filename, "wb") as file:
 			for chunk in response.iter_content(BLOCK_SIZE):
@@ -523,13 +524,38 @@ def hathi(
 	print(f"Going to download {total_pages} pages to {output_folder}")
 	for page in range(total_pages):
 		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page + 1};width=1000000"
-		output_file = make_output_filename(output_folder, page, extension="jpg")
-		if os.path.exists(output_file):
+		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:08d}")
 			continue
-		print(f"Downloading page {page} to {output_file}")
-		get_binary(output_file, url)
+		print(f"Downloading page {page} to {output_filename}")
+		get_binary(output_filename, url)
 
 
+@opster.command()
+def	vwml(
+	id=("", "", "Id of the book to be downloaded (e. g. `Wilson1808`)")
+):
+	main_url = f"https://www.vwml.org/topics/historic-dance-and-tune-books/{id}"
+	main_markup = get_text(main_url)
+	soup = bs4.BeautifulSoup(main_markup, "html.parser")
+	output_folder = make_output_folder("vwml", id)
+	for page, thumbnail in enumerate(soup.find_all("img", attrs={"class": "image_thumb"})):
+		thumbnail_url = thumbnail.attrs["src"]
+		#IT'S MAGIC!
+		full_url = thumbnail_url.replace("thumbnails", "web")
+		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
+		print(f"Saving {full_url} to {output_filename}")
+		try:
+			get_binary(output_filename, full_url, verify=False)
+		except ValueError:
+			#VWML is known to have missing pages listed in this table.
+			#Ignoring such pages
+			pass
+	
+	
 if __name__ == "__main__":
 	opster.dispatch()

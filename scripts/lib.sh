@@ -9,11 +9,6 @@
 MAX_TILE_X=50
 MAX_TILE_Y=50
 
-#Latin numbers in lowercase (from 1 to 10)
-LATIN_NUMBERS="i ii iii iv v vi vii viii ix x "
-#Extra latin number (not used)
-#"xi xii xiii xiv xv xvi xvii xviii xix xx xxi xxii xxiii xxiv xxv xxvi xxvii xxviii xxix xxx xxxi xxxii xxxiii xxxiv xxxv xxxvi xxxvii xxxviii xxxix xl"
-
 CURL_HTTP_ERROR=22
 CURL_TIMEOUT=28
 
@@ -46,6 +41,7 @@ webGet()
 		--silent \
 		--fail \
 		--retry 2 \
+		--insecure \
 		--connect-timeout 3 \
 		--retry-delay 2 \
 		--max-time 60 \
@@ -238,51 +234,6 @@ makeOutputDir()
 #========================
 #LIBRARY DEPENDENT FUNCTIONS
 #========================
-
-#========================
-#Single image per page downloaders
-#========================
-
-vwml()
-{
-	if [ $# -ne 3 ]
-	then
-		echo "Usage: $0 book_shorthand book_id page_count"
-		return 1
-	fi
-
-	local BOOK_SHORTHAND=$1
-	local BOOK_ID=$2
-	local PAGE_COUNT=$3
-	local OUTPUT_DIR="vwml.$BOOK_ID"
-
-	mkdir -p "$OUTPUT_DIR"
-	local OUTPUT_PAGE=1
-
-	#Getting pages with latin numeration first
-	for LATIN_NUMBER in $LATIN_NUMBERS
-	do
-		local NORMALIZED_NUMBER=`printf %04s $LATIN_NUMBER | sed -e 's/ /0/g'`
-		local OUTPUT_FILE="$OUTPUT_DIR/\!`printf %04d $OUTPUT_PAGE`.jpg"
-		webGet "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID$NORMALIZED_NUMBER.jpg" "$OUTPUT_FILE"
-		if [ $? -ne 0 ]
-		then
-			break
-		else
-			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
-		fi
-	done
-
-	for PAGE in `seq 1 $PAGE_COUNT`
-	do
-		local OUTPUT_FILE="$OUTPUT_DIR/`printf %04d $OUTPUT_PAGE`.jpg"
-		webGet "http://media.vwml.org/images/web/$BOOK_SHORTHAND/$BOOK_ID`printf %04d $PAGE`.jpg" "$OUTPUT_FILE"
-		if [ "$?" -eq "0" ]
-		then
-			local OUTPUT_PAGE=`expr $OUTPUT_PAGE + 1`
-		fi
-	done
-}
 
 #========================
 #Tiled page downloaders
