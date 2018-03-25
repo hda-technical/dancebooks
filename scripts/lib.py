@@ -517,6 +517,9 @@ def britishLibraryManuscript(
 def hathi(
 	id=("", "", "Id of the book to be downloaded (e. g. `wu.89005529961`)")
 ):
+	"""
+	Downloads book from http://www.hathitrust.org/
+	"""
 	output_folder = make_output_folder("hathi", id)
 	meta_url = f"https://babel.hathitrust.org/cgi/imgsrv/meta?id={id}"
 	metadata = get_json(meta_url)
@@ -536,6 +539,9 @@ def hathi(
 def	vwml(
 	id=("", "", "Id of the book to be downloaded (e. g. `Wilson1808`)")
 ):
+	"""
+	Downloads book from https://www.vwml.org/topics/historic-dance-and-tune-books
+	"""
 	main_url = f"https://www.vwml.org/topics/historic-dance-and-tune-books/{id}"
 	main_markup = get_text(main_url)
 	soup = bs4.BeautifulSoup(main_markup, "html.parser")
@@ -557,5 +563,29 @@ def	vwml(
 			pass
 	
 	
+@opster.command()
+def onb(
+	id=("", "", "Id of the book to be downloaded (e. g. `ABO_+Z178189508`)")
+):
+	"""
+	Downloads book from http://onb.ac.at/
+	"""
+	cookies = requests.cookies.RequestsCookieJar()
+	#WARN: this value might require updating
+	cookies.set("JSESSIONID", "62CDB0E796EA7E96E0A76FB91E9242AA", domain="digital.onb.ac.at", path="/")
+	metadata_url = f"http://digital.onb.ac.at/OnbViewer/service/viewer/imageData?doc={id}&from=1&to=500"
+	metadata = get_json(metadata_url, cookies=cookies)
+	output_folder = make_output_folder("onb", id)
+	image_data = metadata["imageData"]
+	print(f"Going to download {len(image_data)} images")
+	for image in image_data:
+		query_args = image["queryArgs"]
+		image_id = image["imageID"]
+		image_url = f"http://digital.onb.ac.at/OnbViewer/image?{query_args}&w=10000&h=10000&x=0&y=0&s=1.0&q=100"
+		output_filename = make_output_filename(output_folder, image_id, extension="jpg")
+		print(f"Downloading {image_id}")
+		get_binary(output_filename, image_url, cookies=cookies)
+
+		
 if __name__ == "__main__":
 	opster.dispatch()
