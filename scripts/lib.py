@@ -14,7 +14,6 @@ import bs4
 import opster
 import requests
 
-BLOCK_SIZE = 4096
 USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0"
 HEADERS = {
 	"User-Agent": USER_AGENT
@@ -44,51 +43,59 @@ def retry(retry_count, delay=0, delay_backoff=1):
 	return actual_decorator
 
 
+#using single session for all requests
+session = requests.Session()
+
+#@retry(retry_count=3)
+def make_request(*args, **kwargs):
+	"""
+	Performs the request and returns requests.Response object.
+	Accepts both raw urls and prepared requests
+	"""
+	if isinstance(args[0], str):
+		url = args[0]
+		response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
+	elif isinstance(args[0], requests.Request):
+		request = args[0].prepare()
+		url = request.url
+		args = args[1:]
+		request.headers = HEADERS
+		response = session.send(request, *args, timeout=TIMEOUT, **kwargs)
+	if response.status_code == 200:
+		return response
+	else:
+		raise ValueError(f"While getting {url}: HTTP status 200 was expected. Got {response.status_code}")	
+	
+
 #@retry(retry_count=3)
 def get_json(*args, **kwargs):
 	"""
 	Returns parsed JSON object received via HTTP GET request
 	"""
-	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
-	if response.status_code == 200:
-		return json.loads(response.content)
-	else:
-		raise ValueError(f"While getting {args[0]}: JSON with code 200 was expected. Got {response.status_code}")
+	return json.loads(make_request(*args, **kwargs).content)
 
 
 def get_xml(*args, **kwargs):
 	"""
 	Returns parsed xml (as ElementTree) received via HTTP GET request
 	"""
-	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
-	if response.status_code == 200:
-		return ElementTree.fromstring(response.content)	
-	else:
-		raise ValueError(f"While getting {args[0]}: XML with code 200 was expected. Got {response.status_code}")
+	return ElementTree.fromstring(make_request(*args, **kwargs).content)
 
-		
-#@retry(retry_count=3)
+
 def get_text(*args, **kwargs):
-	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
-	if response.status_code in (200, 404):
-		return response.content.decode("utf-8")
-	else:
-		raise ValueError(f"While getting {args[0]}: Code 200 was expected. Got {response.status_code}")
+	response = make_request(*args, **kwargs).content.decode("utf-8")
 
 
-#@retry(retry_count=3)
 def get_binary(output_filename, url_or_request, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
 	Accepts both url as string and request.Requests
 	"""
-	response = requests.get(url_or_request, *args, stream=True, headers=HEADERS, timeout=TIMEOUT, **kwargs)
-	if response.status_code == 200:
-		with open(output_filename, "wb") as file:
-			for chunk in response.iter_content(BLOCK_SIZE):
-				file.write(chunk)
-	else:
-		raise ValueError(f"While getting {url_or_request!r}: Code 200 was expected. Got {response.status_code}")
+	BLOCK_SIZE = 4096
+	response = make_request(url_or_request, *args, stream=True, **kwargs)
+	with open(output_filename, "wb") as file:
+		for chunk in response.iter_content(BLOCK_SIZE):
+			file.write(chunk)
 
 
 def make_output_folder(downloader, book_id):
@@ -119,6 +126,13 @@ class TileSewingPolicy(object):
 		self.tiles_number_y = tiles_number_y
 		self.tile_size = tile_size
 		self.overlap = overlap
+		
+	@staticmethod
+	def from_image_size(width, height, tile_size):
+		tiles_number_x = math.ceil(width / tile_size)
+		tiles_number_y = math.ceil(height / tile_size)
+		return TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size)
+		
 
 
 def sew_tiles_with_montage(folder, output_file, policy):
@@ -174,7 +188,7 @@ def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker,
 	DEPRECATED (FIXME with decorator)
 	"""
 	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, overlap)
-	download_and_sew_tiles(output_filename, url_maker, policy)
+	download_and_sew_tiles_with_policy(output_filename, url_maker, policy)
 
 
 class IIPMetadata(object):
@@ -220,17 +234,18 @@ class IIPMetadata(object):
 
 
 def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename):
-	tiles_number_x = math.ceil(metadata.width / metadata.tile_size)
-	tiles_number_y = math.ceil(metadata.height / metadata.tile_size)
-	download_and_sew_tiles(
-		tiles_number_x, tiles_number_y, metadata.tile_size,
+	policy = TileSewingPolicy.from_image_size(metadata.width, metadata.height, metadata.tile_size)
+	download_and_sew_tiles_with_policy(
+		output_filename,
 		lambda tile_x, tile_y: requests.Request(
+			"GET",
 			fastcgi_url,
 			#WARN: passing parameters as string in order to send them in urldecoded form
 			#(iip does not support urlencoded parameters)
-			params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_x * tile_y}",
-		)
-	);
+			params=f"FIF={remote_filename}&JTL={metadata.max_level},{tile_y * policy.tiles_number_x + tile_x}",
+		),
+		policy
+	)
 
 
 def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root):
@@ -344,13 +359,14 @@ def vatlib(
 @opster.command()
 def prlib(
 	id=("", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')"),
+	secondary_id=("", "", "Secondary id of the book (e. g. '5699092')"),
 	page=("p", "", "Download specified (zero-based) page only"),
 ):
 	"""
 	Downloads book from https://www.prlib.ru/
 	"""
-	metadata_url = f"https://content.prlib.ru/out_metadata/{id}/{id}.json"
-	files_root = f"/var/data/out_files/{id}"
+	metadata_url = f"https://content.prlib.ru/metadata/public/{id}/{secondary_id}/{id}.json"
+	files_root = f"/var/data/scans/public/{id}/{secondary_id}/"
 	fastcgi_url = "https://content.prlib.ru/fcgi-bin/iipsrv.fcgi"
 	output_folder = make_output_folder("prlib", id)
 	if page:
