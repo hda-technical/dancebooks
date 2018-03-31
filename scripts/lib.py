@@ -44,7 +44,7 @@ def retry(retry_count, delay=0, delay_backoff=1):
 	return actual_decorator
 
 
-@retry(retry_count=3)
+#@retry(retry_count=3)
 def get_json(*args, **kwargs):
 	"""
 	Returns parsed JSON object received via HTTP GET request
@@ -56,6 +56,17 @@ def get_json(*args, **kwargs):
 		raise ValueError(f"While getting {args[0]}: JSON with code 200 was expected. Got {response.status_code}")
 
 
+def get_xml(*args, **kwargs):
+	"""
+	Returns parsed xml (as ElementTree) received via HTTP GET request
+	"""
+	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
+	if response.status_code == 200:
+		return ElementTree.fromstring(response.content)	
+	else:
+		raise ValueError(f"While getting {args[0]}: XML with code 200 was expected. Got {response.status_code}")
+
+		
 #@retry(retry_count=3)
 def get_text(*args, **kwargs):
 	response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
@@ -101,17 +112,31 @@ def make_output_filename(base, page_number=None, extension="bmp"):
 def make_temporary_folder():
 	return str(uuid.uuid4())
 
+		
+class TileSewingPolicy(object):
+	def __init__(self, tiles_number_x, tiles_number_y, tile_size, overlap=0):
+		self.tiles_number_x = tiles_number_x
+		self.tiles_number_y = tiles_number_y
+		self.tile_size = tile_size
+		self.overlap = overlap
 
-def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, tile_size, overlap=0):
+
+def sew_tiles_with_montage(folder, output_file, policy):
 	"""
 	Invokes montage tool from ImageMagick package to sew tiles together
 	"""
+	def format_magick_geometry(policy):
+		return f"{policy.tile_size}x{policy.tile_size}-{policy.overlap}-{policy.overlap}>"
+	
+	def format_magick_tile(policy):
+		return f"{policy.tiles_number_x}x{policy.tiles_number_y}"
+	
 	subprocess.check_call([
 		"montage",
 		f"{folder}/*",
 		"-mode", "Concatenate",
-		"-geometry", f"{tile_size}x{tile_size}-{overlap}-{overlap}>",
-		"-tile", f"{tiles_number_x}x{tiles_number_y}",
+		"-geometry", format_magick_geometry(policy),
+		"-tile", format_magick_tile(policy),
 		output_file
 	])
 	subprocess.check_call([
@@ -122,27 +147,34 @@ def sew_tiles_with_montage(folder, output_file, tiles_number_x, tiles_number_y, 
 	])
 
 
-def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename, overlap=0):
-	"""
-	Iterates over range(tiles_number_x) cross range(tiles_number_y),
-	produces tile url via tile_url_maker invocation,
-	saves sewn .bmp file to output_filename
-	"""
+def download_and_sew_tiles_with_policy(output_filename, url_maker, policy):
 	tmp_folder = make_temporary_folder()
 	os.mkdir(tmp_folder)
 	try:
-		print(f"Going to download {tiles_number_x}x{tiles_number_y} tiled image in {tmp_folder}")
-		for tile_x in range(tiles_number_x):
-			for tile_y in range(tiles_number_y):
+		print(f"Going to download {policy.tiles_number_x}x{policy.tiles_number_y} tiled image in {tmp_folder}")
+		for tile_x in range(policy.tiles_number_x):
+			for tile_y in range(policy.tiles_number_y):
 				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
 				get_binary(
 					tile_file,
 					url_maker(tile_x, tile_y)
 				)
-		sew_tiles_with_montage(tmp_folder, output_filename, tiles_number_x, tiles_number_y, tile_size, overlap=overlap)
+		sew_tiles_with_montage(tmp_folder, output_filename, policy)
 	finally:
 		if "KEEP_TEMP" not in os.environ:
 			shutil.rmtree(tmp_folder)
+
+	
+def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename, overlap=0):
+	"""
+	Iterates over range(tiles_number_x) cross range(tiles_number_y),
+	produces tile url via tile_url_maker invocation,
+	saves sewn .bmp file to output_filename
+	
+	DEPRECATED (FIXME with decorator)
+	"""
+	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, overlap)
+	download_and_sew_tiles(output_filename, url_maker, policy)
 
 
 class IIPMetadata(object):
@@ -471,46 +503,73 @@ def britishLibraryBook(
 		download_image_from_iiif(base_url, output_filename)
 		current_page += 1
 
+		
+class DeepZoomUrlMaker(object):
+	def __init__(self, base_url, max_zoom):
+		self.base_url = base_url
+		self.max_zoom = max_zoom
+		
+	def __call__(self, tile_x, tile_y):
+		return f"{self.base_url}/{self.max_zoom}/{tile_x}_{tile_y}.jpg"
+	
+
+def download_image_from_deepzoom(output_filename, metadata_url, url_maker):
+	image_metadata = get_xml(metadata_url)
+	
+	tile_size = int(image_metadata.attrib["TileSize"])
+	overlap = int(image_metadata.attrib["Overlap"])
+	
+	size_metadata = image_metadata.getchildren()[0]
+	width = int(size_metadata.attrib["Width"])
+	tiles_number_x = math.ceil(width / tile_size)
+	
+	height = int(size_metadata.attrib["Height"])
+	tiles_number_y = math.ceil(height / tile_size)
+	
+	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, overlap)
+	download_and_sew_tiles_with_policy(output_filename, url_maker, policy)
+	
 
 @opster.command()
 def britishLibraryManuscript(
 	id=("", "", "Page id of the manuscript to be downloaded (e. g. `add_ms_12531!1_f005r`)")
 ):
+	"""
+	Downloads single manuscript page from http://www.bl.uk/manuscripts/Default.aspx
+	"""
 	def parse_id(full_id):
-		manuscript_id, dirty_page_id = tuple(id.split('!'))
-		clean_page_id = dirty_page_id.split("_")[1]
-		return (manuscript_id, dirty_page_id, clean_page_id)
+		manuscript_id, _, page_id = tuple(id.rpartition('_'))
+		return (manuscript_id, page_id)
 
-	class UrlMaker(object):
-		def __init__(self, max_zoom, manuscript_id, clean_page_id):
-			self.max_zoom = max_zoom
-			self.manuscript_id = manuscript_id
-			self.page_id = clean_page_id
-
-		def __call__(self, tile_x, tile_y):
-			url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={self.manuscript_id}!{self.page_id}_files/{self.max_zoom}/{tile_x}_{tile_y}.jpg"
-			return url
-
-	manuscript_id, dirty_page_id, clean_page_id = parse_id(id)
-	#Manuscripts portal uses deepzoom protocol. One can use this code to implement generalized downloader for it
-	image_metadata = ElementTree.fromstring(get_text(f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}.xml"))
-	size_metadata = image_metadata.getchildren()[0]
-	tile_size = int(image_metadata.attrib["TileSize"])
-	width = int(size_metadata.attrib["Width"])
-	height = int(size_metadata.attrib["Height"])
-
+	manuscript_id, page_id = parse_id(id)
+	#WARN: here and below base_url and metadata_url have common prefix. One might save something
+	metadata_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}.xml"
+	
 	output_folder = make_output_folder("bl", manuscript_id)
-	output_filename = make_output_filename(output_folder, clean_page_id)
-
-	tiles_number_x = math.ceil(width / tile_size)
-	tiles_number_y = math.ceil(height / tile_size)
+	output_filename = make_output_filename(output_folder, page_id)
+	
 	MAX_ZOOM = 13
-	download_and_sew_tiles(
-		tiles_number_x, tiles_number_y,	tile_size,
-		UrlMaker(MAX_ZOOM, manuscript_id, dirty_page_id),
-		output_filename,
-		overlap=1
-	)
+	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
+	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
+	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
+
+
+@opster.command()
+def makAt(
+	id=("", "", "Id of the image to be downloaded (e. g. `ki-6952-1_1`)")
+):
+	"""
+	Downloads single image from https://sammlung.mak.at/
+	"""	
+	metadata_url = f"https://sammlung.mak.at/img/zoomimages/publikationsbilder/{id}.xml"
+	
+	output_filename = make_output_filename('.', id)
+	
+	MAX_ZOOM = 11
+	base_url = f"https://sammlung.mak.at/img/zoomimages/publikationsbilder/{id}_files"
+	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
+	
+	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
 
 
 @opster.command()
