@@ -64,8 +64,8 @@ def make_request(*args, **kwargs):
 	if response.status_code == 200:
 		return response
 	else:
-		raise ValueError(f"While getting {url}: HTTP status 200 was expected. Got {response.status_code}")	
-	
+		raise ValueError(f"While getting {url}: HTTP status 200 was expected. Got {response.status_code}")
+
 
 #@retry(retry_count=3)
 def get_json(*args, **kwargs):
@@ -83,7 +83,7 @@ def get_xml(*args, **kwargs):
 
 
 def get_text(*args, **kwargs):
-	response = make_request(*args, **kwargs).content.decode("utf-8")
+	return make_request(*args, **kwargs).content.decode("utf-8")
 
 
 def get_binary(output_filename, url_or_request, *args, **kwargs):
@@ -119,20 +119,20 @@ def make_output_filename(base, page_number=None, extension="bmp"):
 def make_temporary_folder():
 	return str(uuid.uuid4())
 
-		
+
 class TileSewingPolicy(object):
 	def __init__(self, tiles_number_x, tiles_number_y, tile_size, overlap=0):
 		self.tiles_number_x = tiles_number_x
 		self.tiles_number_y = tiles_number_y
 		self.tile_size = tile_size
 		self.overlap = overlap
-		
+
 	@staticmethod
 	def from_image_size(width, height, tile_size):
 		tiles_number_x = math.ceil(width / tile_size)
 		tiles_number_y = math.ceil(height / tile_size)
 		return TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size)
-		
+
 
 
 def sew_tiles_with_montage(folder, output_file, policy):
@@ -141,10 +141,10 @@ def sew_tiles_with_montage(folder, output_file, policy):
 	"""
 	def format_magick_geometry(policy):
 		return f"{policy.tile_size}x{policy.tile_size}-{policy.overlap}-{policy.overlap}>"
-	
+
 	def format_magick_tile(policy):
 		return f"{policy.tiles_number_x}x{policy.tiles_number_y}"
-	
+
 	subprocess.check_call([
 		"montage",
 		f"{folder}/*",
@@ -161,7 +161,7 @@ def sew_tiles_with_montage(folder, output_file, policy):
 	])
 
 
-def download_and_sew_tiles_with_policy(output_filename, url_maker, policy):
+def download_and_sew_tiles(output_filename, url_maker, policy):
 	tmp_folder = make_temporary_folder()
 	os.mkdir(tmp_folder)
 	try:
@@ -177,18 +177,6 @@ def download_and_sew_tiles_with_policy(output_filename, url_maker, policy):
 	finally:
 		if "KEEP_TEMP" not in os.environ:
 			shutil.rmtree(tmp_folder)
-
-	
-def download_and_sew_tiles(tiles_number_x, tiles_number_y, tile_size, url_maker, output_filename, overlap=0):
-	"""
-	Iterates over range(tiles_number_x) cross range(tiles_number_y),
-	produces tile url via tile_url_maker invocation,
-	saves sewn .bmp file to output_filename
-	
-	DEPRECATED (FIXME with decorator)
-	"""
-	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, overlap)
-	download_and_sew_tiles_with_policy(output_filename, url_maker, policy)
 
 
 class IIPMetadata(object):
@@ -235,7 +223,7 @@ class IIPMetadata(object):
 
 def download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename):
 	policy = TileSewingPolicy.from_image_size(metadata.width, metadata.height, metadata.tile_size)
-	download_and_sew_tiles_with_policy(
+	download_and_sew_tiles(
 		output_filename,
 		lambda tile_x, tile_y: requests.Request(
 			"GET",
@@ -291,13 +279,8 @@ def download_image_from_iiif(base_url, output_filename):
 		tile_size = 1024
 	width = metadata["width"]
 	height = metadata["height"]
-	tiles_number_x = math.ceil(width / tile_size)
-	tiles_number_y = math.ceil(height / tile_size)
-	download_and_sew_tiles(
-		tiles_number_x, tiles_number_y,	tile_size,
-		UrlMaker(),
-		output_filename
-	)
+	policy = TileSewingPolicy.from_image_size(width, height, tile_size)
+	download_and_sew_tiles(output_filename,	UrlMaker(),	policy)
 
 
 def download_book_from_iiif(manifest_url, output_folder):
@@ -462,8 +445,9 @@ def hab(
 			break
 	assert(tiles_number_x is not None)
 	assert(tiles_number_y is not None)
+	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
 	output_filename = make_output_filename(id.replace("/", "."))
-	download_and_sew_tiles(tiles_number_x, tiles_number_y, TILE_SIZE, url_maker, output_filename)
+	download_and_sew_tiles(output_filename, url_maker, policy)
 
 
 @opster.command()
@@ -490,15 +474,10 @@ def yale(
 	width = int(metadata.attrib["WIDTH"])
 	height = int(metadata.attrib["HEIGHT"])
 	tile_size = int(metadata.attrib["TILESIZE"])
+	policy = TileSewingPolicy.from_image_size(width, height, tile_size)
 
 	output_filename = make_output_filename(id)
-	tiles_number_x = math.ceil(width / tile_size)
-	tiles_number_y = math.ceil(height / tile_size)
-	download_and_sew_tiles(
-		tiles_number_x, tiles_number_y,	tile_size,
-		UrlMaker(MAX_ZOOM),
-		output_filename
-	)
+	download_and_sew_tiles(output_filename, UrlMaker(MAX_ZOOM), policy)
 
 
 @opster.command()
@@ -519,32 +498,32 @@ def britishLibraryBook(
 		download_image_from_iiif(base_url, output_filename)
 		current_page += 1
 
-		
+
 class DeepZoomUrlMaker(object):
 	def __init__(self, base_url, max_zoom):
 		self.base_url = base_url
 		self.max_zoom = max_zoom
-		
+
 	def __call__(self, tile_x, tile_y):
 		return f"{self.base_url}/{self.max_zoom}/{tile_x}_{tile_y}.jpg"
-	
+
 
 def download_image_from_deepzoom(output_filename, metadata_url, url_maker):
 	image_metadata = get_xml(metadata_url)
-	
+
 	tile_size = int(image_metadata.attrib["TileSize"])
 	overlap = int(image_metadata.attrib["Overlap"])
-	
+
 	size_metadata = image_metadata.getchildren()[0]
 	width = int(size_metadata.attrib["Width"])
 	tiles_number_x = math.ceil(width / tile_size)
-	
+
 	height = int(size_metadata.attrib["Height"])
 	tiles_number_y = math.ceil(height / tile_size)
-	
+
 	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, overlap)
-	download_and_sew_tiles_with_policy(output_filename, url_maker, policy)
-	
+	download_and_sew_tiles(output_filename, url_maker, policy)
+
 
 @opster.command()
 def britishLibraryManuscript(
@@ -560,10 +539,10 @@ def britishLibraryManuscript(
 	manuscript_id, page_id = parse_id(id)
 	#WARN: here and below base_url and metadata_url have common prefix. One might save something
 	metadata_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}.xml"
-	
+
 	output_folder = make_output_folder("bl", manuscript_id)
 	output_filename = make_output_filename(output_folder, page_id)
-	
+
 	MAX_ZOOM = 13
 	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
 	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
@@ -576,15 +555,15 @@ def makAt(
 ):
 	"""
 	Downloads single image from https://sammlung.mak.at/
-	"""	
+	"""
 	metadata_url = f"https://sammlung.mak.at/img/zoomimages/publikationsbilder/{id}.xml"
-	
+
 	output_filename = make_output_filename('.', id)
-	
+
 	MAX_ZOOM = 11
 	base_url = f"https://sammlung.mak.at/img/zoomimages/publikationsbilder/{id}_files"
 	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
-	
+
 	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
 
 
@@ -636,8 +615,8 @@ def	vwml(
 			#VWML is known to have missing pages listed in this table.
 			#Ignoring such pages
 			pass
-	
-	
+
+
 @opster.command()
 def onb(
 	id=("", "", "Id of the book to be downloaded (e. g. `ABO_+Z178189508`)")
@@ -661,6 +640,6 @@ def onb(
 		print(f"Downloading {image_id}")
 		get_binary(output_filename, image_url, cookies=cookies)
 
-		
+
 if __name__ == "__main__":
 	opster.dispatch()
