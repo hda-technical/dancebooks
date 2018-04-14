@@ -264,10 +264,6 @@ class BibParser(object):
 		"""
 		Sets item param, applying additional conversion if needed.
 		"""
-		if key in config.parser.latex_params:
-			utils.validate_latex(item, key, value)
-			value = utils.parse_latex(value)
-
 		try:
 			if key in config.parser.list_params:
 				value = utils.strip_split_list(value, config.parser.list_sep)

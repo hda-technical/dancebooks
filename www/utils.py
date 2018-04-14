@@ -57,55 +57,6 @@ def require(condition, ex):
 		raise ex
 
 
-LATEX_UNPARSABLE_REGEXPS = [
-	(
-		re.compile(r"[^\\]&"),
-		"Unescaped ampersands"
-	),
-	(
-		re.compile(r"\\(?!(flat|&))"),
-		"Unsupported latex command"
-	)
-]
-
-LATEX_REPLACEMENTS = [
-	(
-		re.compile(r"\$\\flat\$"),
-		r"♭"
-	),
-	#ampersand escapements
-	(
-		re.compile(r"\\&"),
-		"&"
-	)
-]
-
-
-def validate_latex(item, key, value):
-	"""
-	Checks if LaTeX marked up string can be parsed by pdflatex
-	"""
-	item_id = item.get("id")
-	for regexp, what in LATEX_UNPARSABLE_REGEXPS:
-		if regexp.search(value):
-			logging.warning(
-				"While parsing LaTeX for {key} of {item_id} got {what}".format(
-					key=key,
-					item_id=item_id,
-					what=what
-				)
-			)
-
-
-def parse_latex(value):
-	"""
-	Attempts to remove LaTeX formatting from string
-	"""
-	for regexp, subst in LATEX_REPLACEMENTS:
-		value = regexp.sub(subst, value)
-	return value
-
-
 def profile(sort="time", limits=50):
 	"""
 	Decorator to make profiling easy

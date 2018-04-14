@@ -1,16 +1,6 @@
 NAME := dancebooks
 NAME_TESTING := $(NAME).testing
 
-BIB_FILES := $(wildcard bib/*.bib)
-
-ANC_BIBLATEX_FILES := \
-	dancebooks-biblatex.sty
-
-PDFLATEX := pdflatex --shell-escape
-LUALATEX := lualatex --shell-escape
-XELATEX  := xelatex  --shell-escape
-LATEX ?= $(LUALATEX)
-
 #Using testing conf-file in development environment
 UNITTEST_CONFIG := $(shell readlink -f configs/dancebooks.unittest.conf)
 DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.development.conf)
@@ -34,21 +24,6 @@ DEVEL_ENV := \
 
 TESTS := $(wildcard www/tests/*.py)
 TEST_TARGETS := $(TESTS:.py=.mk)
-# PDF files related targets
-
-default: test.pdf
-
-%.pdf: JOBNAME = $(@:.pdf=)
-
-%.pdf: %.tex $(BIB_FILES) $(ANC_BIBLATEX_FILES)
-	rm -f $(JOBNAME).bbl biblatex-dm.cfg
-	$(LATEX) $(JOBNAME).tex
-	biber '--listsep=|' '--namesep=|' '--xsvsep=\s*\|\s*' --validate_datamodel $(JOBNAME)
-	$(LATEX) $(JOBNAME).tex
-	(grep -iE "Datamodel" $(JOBNAME).blg || true) | cut -d ' ' -f 5- | sort | tee $(JOBNAME).validation.log
-
-pdf-clean:
-	rm -f *.aux *.bbl *.bcf *.blg *.cfg *.log *.nav *.out *.snm *.swp *.toc *.run.xml *.vrb
 
 validate:
 	cd www && \
@@ -143,16 +118,5 @@ requirements.txt:
 # Ancillary targets
 
 .PHONY: requirements.txt
-
-all.mk: test.pdf;
-
-entry-count: $(BIB_FILES)
-	echo "Items:" `cat $^ | grep -c -P '@[A-Z]+'`
-	echo "Digitized:" `cat $^ | grep -c -P '\tfilename = '`
-	echo "With keywords:" `cat $^ | grep -c -P '\tkeywords = '`
-
-clean: pdf-clean;
-
-rebuild: distclean all.mk;
 
 test: www-test;
