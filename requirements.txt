@@ -1,5 +1,6 @@
 appdirs==1.4.3
 Babel==2.5.3
+backcall==0.1.0
 backports.shutil-get-terminal-size==1.0.0
 beautifulsoup4==4.6.0
 certifi==2018.1.18
@@ -11,7 +12,7 @@ docopt==0.6.2
 Flask==0.12.2
 Flask-Babel==0.11.2
 idna==2.6
-ipython==6.2.1
+ipython==6.3.1
 ipython-genutils==0.2.0
 itsdangerous==0.24
 jedi==0.11.1
@@ -20,12 +21,13 @@ Markdown==2.6.11
 MarkdownSuperscript==2.0.0
 MarkupSafe==1.0
 opster==4.1
-packaging==16.8
+packaging==17.1
 parso==0.1.1
-path.py==11.0
-pbr==3.1.1
-pexpect==4.4.0
+path.py==11.0.1
+pbr==4.0.2
+pexpect==4.5.0
 pickleshare==0.7.4
+pkg-resources==0.0.0
 prompt-toolkit==1.0.15
 ptyprocess==0.5.2
 pyflakes==1.6.0
@@ -34,7 +36,7 @@ pymorphy2==0.8
 pymorphy2-dicts==2.4.393442.3710985
 pyparsing==2.2.0
 python-stdnum==1.8.1
-pytz==2018.3
+pytz==2018.4
 requests==2.18.4
 scour==0.36
 simplegeneric==0.8.1
