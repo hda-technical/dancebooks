@@ -204,7 +204,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 188- | Александра Константиновна Буринская | Aidé-memoire с описанием танцев | [[Буринская, 1882, стр. 368]](https://bib.hda.org.ru/books/burinskaya_1882) |
 | 188- | Friedrich Albert Zorn | Die klassische Quadrille | `[Katalog, 1894]` | |
 | 188- | Edward Eichler | Neues Menuet. Mit Choreographie und Originalmusik | | |
-| 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_<br/>_Reprinted (?) in 1921, 1950-s, later editions are available on Abebooks_ | `[Rogers, 1998]` | |
+| 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]` | |
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst | `[Leaflets]`<br/>_Not to be confused with Bernhard Klemm_ | | |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
@@ -286,6 +286,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1935 | И. Семкин | Массовые игры и танцы | `[Leaflets]` | |
 | 1936 | | Программы по хореографическим дисциплинам | | Owned by Bodhi |
 | 1938 | Curt Sachs | World History of the Dance | `[Richardson, 1960]` | |
+| 1938 | Jacuqes Henry | Modern Ballroom Dancing. A Comprehensive Guide to Present-Day Technique and to the Fundamental Principles of the Art, and a Testbook for All Teachers and Students Preparing for Examinations | [On sale, £95](https://www.abebooks.com/servlet/BookDetailsPL?bi=22790135714)<br/>[On sale, £100](https://www.abebooks.com/servlet/BookDetailsPL?bi=22696431954) |
 | 1940 | | Школьная самодеятельность | `[Leaflets]` | | |
 | 1948 | Edwin Evans | Music and the Dance | `[Richardson, 1960]` | |
 | 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
