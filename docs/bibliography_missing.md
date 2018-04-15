@@ -234,14 +234,14 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 190- | Борис Фёдорович Кейль | Пахита. Nouveau Pas d'Espagne | | [RSL](http://search.rsl.ru/ru/record/01001930835) |
 | 190- | К. В. Фельдман | Новый русско-славянский | | [NLR](https://yadi.sk/i/0otSlk7kqbVKJ) |
 | 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=784912) |
-| 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS004849373) |
+| 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004849373&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1903 | Melvin Balou Gilbert | Dancing | [Cite](https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.c2898858;seq=9;width=10000) |
 | 1904 | W. Lamb<br/>C. Arthur Pearson (publisher) | How and What to Dance<br/>_Published in London_ | `[Rogers, 1998]` | |
-| 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR copy desideratum](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS005127283) |
+| 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR copy desideratum](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS005127283&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU) |
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
-| 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS004956353) |
+| 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004956353&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1909 | | Джинджер. Новый танец | `[Yoko]` | |
-| 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS005139495) |
+| 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005139495&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1910 | Jean-Jacques Olivier<br/>W. Norbert | Une étoile de la danse au XVIIIe siècle, Barbara Campanini | `[4. Rothenfelser]` | |
 | 1910 | Donald Richard MacKenzie | Illustrated Guide to the National Dances of Scotland | [[MacKenzie, 1870]](https://bib.hda.org.ru/books/mackenzie_1870)<br/>[[MacKenzie, 1939]](https://bib.hda.org.ru/books/mackenzie_1939_highland)<br/>`[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=581090) |
 | 1910 | | Little Dandy. Новый aнглийский танец. Из оперы Шалунья | `[Yoko]` | |
@@ -250,19 +250,19 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1911 | Л. Фремо | Тобоган. Новый характерный шотландский танец | `[Yoko]` | |
 | 1911 | | Karnecik tancerza | `[Yoko]` | |
 | 1911 | | Samouczek tancow salonowych. Zebral i ulozyl salonowiec | `[Yoko]` | |
-| 1911 | И. И. Иванов | Новейший самоучитель бальных танцев | `[Yoko]` | [NLR copy desideratum](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS004983773) |
+| 1911 | И. И. Иванов | Новейший самоучитель бальных танцев | `[Yoko]` | [NLR copy desideratum](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004983773&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев | `[Yoko]` | |
 | 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев<br/>_Второе издание_ | `[Yoko]` | |
 | 1912 | | Latwju tautas dejas<br/>_Латышские народные танцы_<br/>_Серийное издание_ | `[Yoko]` | |
-| 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS004805109) |
+| 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004805109&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1913 | | Проспект и программа Школы танцев К. Б. Матсона | | |
 | 1913 | Charles Louis Napoléon d'Albert | Dancing. Technical Encyclopaedia of the Theory and Practice of the Art of Dancing | `[Guillard, 1989]` | |
 | 1914? | A. Cosmo Mitchell | A Guide to Ballroom Dancing<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914? | A. Cosmo Mitchell | New Dances<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914 | Андрей Яковлевич Левинсон | Мастера балета. Очерки истории и теории танца | | [RSL](http://search.rsl.ru/ru/record/01004191266) |
-| 1914 | | Танго | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS005068184) |
-| 1914 | | Танго | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS005068185) |
-| 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS005165864) |
+| 1914 | | Танго | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005068184&context=L&search_scope=default_scope&lang=ru_RU) |
+| 1914 | | Танго | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005068185&context=L&search_scope=default_scope&lang=ru_RU) |
+| 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005165864&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1915, January–March | | The Ladies' Home Journal<br/>_Contains dances described by Anna Pavlova_ | | |
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
 | 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | |
@@ -289,8 +289,8 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1948 | Edwin Evans | Music and the Dance | `[Richardson, 1960]` | |
 | 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
 | 1958 | Rebelo Bonito | As mouriscas. I–O influxo árabe na coreografia popular<br/>_In: Das artes e da historia da Madeira, tomo 28, pages 39–42_ | | |
-| 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS008531382) |
-| 1959 | Anthur Henry Franks | A pictorial manual of ballroom dancing | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS009309611) |
+| 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS008531382&context=L&search_scope=default_scope&lang=ru_RU) |
+| 1959 | Anthur Henry Franks | A pictorial manual of ballroom dancing | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009309611&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1950–1970? | Eduard Reeser | Story of the Waltz | `[Richardson, 1960]` | |
 | 1960–1965 | Kurt Petermann | Tanzbibliographie | | [Hathitrust](https://catalog.hathitrust.org/Record/000198061) |
 | 1972 | George S. Emmerson | A Social History of Scottish Dance: Ane Celestial Recreatioun | `[2.Rothenfelser]` | [jstor](http://www.jstor.org/stable/j.ctt1t88wt7) |
@@ -317,10 +317,10 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 
 | Date | Author | Title | References | Links |
 | ---- | ------ | ----- | ---------- | ----- |
-| 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS009832426) |
+| 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009832426&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1543 | M. Ambach | Von Tantzen, Vrtheil, Auss heiliger Schrifft, vndden alter christl. Lerert gestelt | `[Katalog, 1894]` | | |
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
-| 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS009810813)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
+| 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009810813&context=L&search_scope=default_scope)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
 | | Joachim Christian Lang | | | | |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | | |
