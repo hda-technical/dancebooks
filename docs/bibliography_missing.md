@@ -284,14 +284,14 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1934 | Francesco Pospisjl | La moresca, studio comparato con particolare giguardo all'Italia settentrionale | `[2. Rothenfelser]` | |
 | 1935 | И. Семкин | Массовые игры и танцы | `[Leaflets]` | |
 | 1936 | | Программы по хореографическим дисциплинам | | Owned by Bodhi |
-| 1938 | Curt Sachs | World History of the Dance | `[Richardson]` | |
+| 1938 | Curt Sachs | World History of the Dance | `[Richardson, 1960]` | |
 | 1940 | | Школьная самодеятельность | `[Leaflets]` | | |
-| 1948 | Edwin Evans | Music and the Dance | `[Richardson]` | |
+| 1948 | Edwin Evans | Music and the Dance | `[Richardson, 1960]` | |
 | 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
 | 1958 | Rebelo Bonito | As mouriscas. I–O influxo árabe na coreografia popular<br/>_In: Das artes e da historia da Madeira, tomo 28, pages 39–42_ | | |
 | 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS008531382) |
 | 1959 | Anthur Henry Franks | A pictorial manual of ballroom dancing | | [NLR](http://primo.nlr.ru/07NLR_VU1:default_scope:07NLR_LMS009309611) |
-| 1950–1970? | Eduard Reeser | Story of the Waltz | `[Richardson]` | |
+| 1950–1970? | Eduard Reeser | Story of the Waltz | `[Richardson, 1960]` | |
 | 1960–1965 | Kurt Petermann | Tanzbibliographie | | [Hathitrust](https://catalog.hathitrust.org/Record/000198061) |
 | 1972 | George S. Emmerson | A Social History of Scottish Dance: Ane Celestial Recreatioun | `[2.Rothenfelser]` | [jstor](http://www.jstor.org/stable/j.ctt1t88wt7) |
 | 1976 | | Documenta Choreologica. Catalogue of 16th–19th Century Sources | `[Mackler]` | |
@@ -439,6 +439,7 @@ _This part of the list is to joined with the general table_
 | 1825 | `[Charinomos, 1825]` | Carl Seidel | Charinomos | https://books.google.com/books?id=1FBjAAAAcAAJ |
 | 1857 | `[Nouveau manuel, 1857]` | Ferdinand Denis, P. Pincon, de Martonne | Nouveau manuel de bibliographie universelle" | https://books.google.com/books?id=C6g20GmnNlQC&pg=PA165 |
 | 1894 | `[Katalog, 1894]` | | Katalog für die Ausstellung der Genossenschaft Deutschen Tanzlehrer | https://bib.hda.org.ru/books/katalog_1894 | |
+| 1960 | `[Richardson, 1960]` | Philip John Sampey Richardson | The Social Dances of the Nineteenth Century in England  | https://bib.hda.org.ru/books/richardson_1960 |
 | 1977 | `[Corti, 1977]` | Gino Corti<br/>Cristiano Lamberti | Cinque balli toscani del cinquecento" | https://bib.hda.org.ru/books/corti_1977_balli |
 | 1979 | `Gallo:` | F. Alberto Gallo | Il 'Balare Lombardo' Circa 1435–1475 | https://bib.hda.org.ru/books/gallo_1979_balare |
 | 1981 | `Marrocco:` | William Thomas Marrocco | Inventory of 15th century Bassedanze, Balli & Balletti" | https://bib.hda.org.ru/books/marrocco_1981_inventory |
