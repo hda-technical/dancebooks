@@ -73,14 +73,15 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1771 | Louis Laus de Boissy | Lettre critique sur notre danse theâtrale | `[Phister, 2016]` | |
 | 1773<br/>1777<br/>1782 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1774 | | Ueber den Tanz der Alten | `[Katalog, 1894]` | |
-| 1775 | Elias Christian Fricke | Neue Cotillions oder Französische Contretänze | `[WORLDCAT]` | |
+| 1775 | Elias Christian Fricke | Neue Cotillions oder Französische Contretänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346613)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=87567416X) |
 | 1773 | Gasparo Angiolini | Lettere di Gasparo Angiolini a monsieur Noverre sopra i balli pantomimi | `[2. Rothenfelser]`<br/>`[3. Rothenfelser]` | [LOC](https://www.loc.gov/item/08019861/) |
 | 1773 | Rendall, Abell | Sixteen Cotillons or French Dances | [Cite](https://books.google.ru/books?redir_esc=y&hl=ru&id=-pNMAQAAMAAJ&q=sixteen+cotillons+abell) | |
-| 1773 | Sara Goudar | De Venise. Rémarques sur la musique & la danse ou lettres de Mr. G[...] à milord Pembroke | `[2. Rothenfelser]`<br/>`[WORLDCAT]` | |
+| 1773 | Sara Goudar | De Venise. Rémarques sur la musique & la danse ou lettres de Mr. G... à milord Pembroke | `[2. Rothenfelser]` | [V&A #1](https://nal-vam.on.worldcat.org/oclc/1012092959)<br/>[V&A #2](https://nal-vam.on.worldcat.org/oclc/1012092609)<br/>[National Art Library](https://nal-vam.on.worldcat.org/oclc/1008576501) |
+| 1773 | Sara Goudar | Supplement aux Remarques sur la musique, & la danse ou Lettres de Mr G... a Milord Pembroke | | [V&A](https://nal-vam.on.worldcat.org/oclc/1012092609)<br/>[V&A](https://nal-vam.on.worldcat.org/oclc/1008576501) |
 | 1774 | | Музыкальные увеселения. Помесячно издаваемыя: Содержащия в себе ... польские, минуеты, аглицкие, контратанцы, французские, коттильоны ... | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009684346&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1775 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement #1](https://books.google.ru/books?id=QPdLAAAAcAAJ&pg=RA2-PA27)<br/>[Advertisement 32](https://books.google.ru/books?id=rm9bAAAAcAAJ&pg=PT6) | |
 | 1776 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.ru/books?id=NwxcAAAAcAAJ&pg=PA434) | |
-| 1776 | Carl Joseph von Feldtenstein | Erweiterung der Kunst nach der Chorographie zu Tanzen<br/>_Zweyter theil_ | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]`<br/>`[WORLDCAT]` | |
+| 1776 | Carl Joseph von Feldtenstein | Erweiterung der Kunst nach der Chorographie zu Tanzen<br/>_Zweyter theil_ | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]`<br/> | [Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=236812041) |
 | 1777 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.ru/books?id=639LAAAAcAAJ&pg=PA215) | |
 | 1781 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.ru/books?id=DsNFAAAAcAAJ&pg=PA96) | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
@@ -138,7 +139,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1829 | | Описание и рисунки сорока фасонов повязывать галстук | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1062036&dbType=Y) |
 | 1820–1830? | J. S. Pollock<br/>R. W. Evans | The Mid Lothians, a New Set of Quadrilles | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=3598310) |
 | 1830? | R. Lowe<br/>J. Lowe × 2<br/>J. S. Lowe | Lowe's Ball-Conductor and Assembly Guide<br/>Third Edition<br/>Dated circa 1850 by the National Library of Scotland | `[Kickery]`<br/>`[Rogers, 1998]`<br/>`[Leaflets]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=2999807) |
-| 1830 | Carlo Blasis | Neue vollständige Tanzschule für die elegante Welt | `[WORLDCAT]`<br/>`[3. Rothenfelser]` | [Bayreuth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0="1648163"+IN+[2]&v=sunrise&l=en) |
+| 1830 | Carlo Blasis | Neue vollständige Tanzschule für die elegante Welt | `[3. Rothenfelser]` | [NYPL](http://catalog.nypl.org/record=b12282042~S1)<br/>[Bayreuth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0="1648163"+IN+[2]&v=sunrise&l=en) |
 | 1830 | J. W. Böhm | Analys des Schönen der Musik und der Tanzes | `[Unfried, 2014]` | |
 | 1830 | Eduard Friedrich David Helmke | Die kunst, sich durch Selbstunterricht in kurzer Zeit zum Weltmann un zum geschichten Tänzer zu bilden | `[Unfried, 2014]`<br/>[Advertisement](https://books.google.ru/books?id=4alFAAAAcAAJ&pg=PA378)<br/>`[Katalog, 1894]` | |
 | 1830 | Eduard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1830 | [[Helmke, 1830]](https://bib.hda.org.ru/books/helmke_1830) | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
@@ -218,7 +219,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 189- | Александр Александрович Царман | Лихой гусар. Мазурка | | |
 | 1891 | Justino Dias Lima Soares | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_6th edition_ | | BNP |
 | 1892 | Amint Freising | Leitfaden für den Tanz-Unterricht | `[Unfried, 2014]` | |
-| 1892 | Josef Herzenberger | Der Tanzsalon: Lehrbuch für den theoretischen und praktischen Tanzunterricht | `[Katalog, 1894]`<br/>`[WORLDCAT]` | |
+| 1892 | Josef Herzenberger | Der Tanzsalon: Lehrbuch für den theoretischen und praktischen Tanzunterricht | `[Katalog, 1894]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524544810002884) |
 | 1892 | William B. de Garmo | The Dance of Society<br/>_5th edition_ | `[Leaflets]` | |
 | 1894 | Ardern Holt | The Cotillon. Details of All the Newest Figures with and without Accessories | `[Rogers, 1998]` | |
 | 1894 | Justino Dias Lima Soares | Manual de dança : methodo facil para aprender a dançar sem auxilio de professor<br/>_7th edition_ | | BNP |
@@ -324,7 +325,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | | Joachim Christian Lang | | | | |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | | |
-| 1719 | Johann Peter Grünenberg | Ob einem Christen zu tantzen erlaubt sey? | `[WORLDCAT]`<br/>`[Katalog, 1894]` | |
+| 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
 | 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
