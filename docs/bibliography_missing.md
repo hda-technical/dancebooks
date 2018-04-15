@@ -45,13 +45,13 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1715? | Anthony L'Abbée<br/>Edmund Pemberton (publisher) | The Princess Royale | `LittleMarsh:[1715]-PrP` | [BL](http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004461981) |
 | 1716 | Anthony L'Abbée<br/>John Walsh (publisher) | The Princess Anna<br/>Published by Walsh | `Lancelot:1716.3s`<br/>`LittleMarsh:[1716]-PaW` | [NYPL](http://catalog.nypl.org/record=b12289349~S1)<br/>[BL](http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004461980) |
 | 1718? | John Walsh (publisher) | The Compleat Country Dancing-master Containing Great Variety of Dances, Both Old and New | `[2. Rothenfelser]` | |
-| 1724 | Christoph Ballard (publisher) | Les rondes, chansons à danser.<br/>)Suite des dix volumes_ | `[2. Rothenfelser]` | [Gallica, tome 1](http://gallica.bnf.fr/ark:/12148/bpt6k5534928f)<br/>[Gallica, tome 2](http://gallica.bnf.fr/ark:/12148/bpt6k9736644f) |
+| 1724 | Christoph Ballard (publisher) | Les rondes, chansons à danser<br/>_Suite des dix volumes_ | `[2. Rothenfelser]` | [Gallica, tome 1](http://gallica.bnf.fr/ark:/12148/bpt6k5534928f)<br/>[Gallica, tome 2](http://gallica.bnf.fr/ark:/12148/bpt6k9736644f) |
 | 1728 | John Weaver | History of the Mimes and Pantomimes, with an Historical Account of Several Performers in Dancing | `[4. Rothenfelser]` | |
 | 1728? | Pierre Rameau | Maitre de danse<br/>_Deuxième édition_ | `[2. Rothenfelser]` | |
 | 1728–1745? | Jean-Pantaléon Leclerc | Recueil de contredanses avec la basse chifrée et la table par lettre | [[Leclerc, 1738?]](https://bib.hda.org.ru/books/leclerc_1738_5e)<br/>`[3. Rothenfelser]` | | | | | | | | | | | | | | | |
 | 1730? | John Walsh (publisher) | Third Book of the Most Celebrated Jiggs, Lancashire Hornpipes, Scotch and Highland Lilts, Northern Frisks, Morris's amd Cheshire Rounds | `[2. Rothenfelser]` | |
 | 1733? | John Walsh | Caledonian Country Dances, Book the Second | `[Leaflets]` | |
-| 1736 | Pierre Jean Burette | Prima, e seconda memoria per servire alla istoria del ballo degli antichi in<br/>_in: Académie royale des inscriptions et belles-lettres. Histoire, avec les Mémoires de littérature tirez des registres de cette Académie, tome 1, pages 93-135<br/>Published in Paris | [[Burette, 1746]](https://bib.hda.org.ru/books/burette_1746)<br/>`[Charinomos, 1825]` | |
+| 1736 | Pierre Jean Burette | Prima, e seconda memoria per servire alla istoria del ballo degli antichi in<br/>_In: Académie royale des inscriptions et belles-lettres. Histoire, avec les Mémoires de littérature tirez des registres de cette Académie, tome 1, pages 93-135_<br/>_Published in Paris_ | [[Burette, 1746]](https://bib.hda.org.ru/books/burette_1746)<br/>`[Charinomos, 1825]` | |
 | 1751 | G. Waylett | Twenty Four Country Dances for the Year 1751 | `[2. Rothenfelser]` | |
 | 1750–1770? | Charles Pauli | Musik und Tanz.<br/>_In Goth. Magazin, Bd. II, Stck. 2_ | `[Charinomos, 1825]` | |
 | 1752 | Jean Lecointe | Apologie de la danse: son antiquité, sa noblesse, et ses avantages. Avec une dissertation sur le menuet | `[Charinomos, 1825]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb39317633n) |
@@ -101,7 +101,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1801 | Ernst Christian Mädel | Anfangsgründe der Tanzkunst | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43998127j) |
 | 1801 | Thomas Preston | 24 Country Dances for the Year 1801 | [ABC notation](http://www.village-music-project.org.uk/?page_id=831) |
 | 1803 | Иван Кусков | Танцевальный учитель, заключающий в себе правила и основания сего искусства | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1614321&dbType=Y) |
-| 1804 | J. Gottfried Grohmann | über die neueste Tanzkunst<br/>_in Modejournal, 1804, März, S. 113) | | |
+| 1804 | J. Gottfried Grohmann | über die neueste Tanzkunst<br/>_in Modejournal, 1804, März, Seite 113_) | | |
 | 1804 | D. J. Wendt<br/>Jean Wendt | Über den Tanz als Vergnügen und Schädlichkeit: Eine Beytrag zur Diätetik | [[Turnkunst, 1816]](http://www.deutschestextarchiv.de/book/view/jahn_turnkunst_1816?p=328)<br/>`[Nouveau manuel, 1857, #53]` | [Greisfald](https://lhgrw.gbv.de/DB=1/XMLPRS=N/PPN?PPN=334440610) |
 | 1806 | Joseph Koslovsky | Recueil choisi d'airs Russes, Francais, Italiens et de plusieurs Polonoises, Waltzers, Quadrilles et Ecossaises | | [RSL](http://search.rsl.ru/ru/record/01003329286) |
 | 1807 | Jean-Georges Noverre | Letters sur les arts imitateurs en général et sur la danse en particulier | `[4. Rothenfelser]` | |
@@ -298,7 +298,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1976 | | Documenta Choreologica. Catalogue of 16th–19th Century Sources | `[Mackler]` | |
 | 1982 | | Derra de Moroda Dance Archives. The Dance Library. Catalogue | | `[Sort]` |
 | 1982 | Maria Drabecka | Uwagi o analizie traktatów choreotechnicznych saskich misrzów tańca<br/>_In: Muzyka, 1982/3–4, pages 109–115_ | `[2. Rothenfelser]` | |
-| 1985 | Carol Marsh | French Court Dance in England, 1706–1740<br/>_Unpublished PhD thesis | [[Segal, 2009]](https://bib.hda.org.ru/books/segal_2009_hornpipe) |
+| 1985 | Carol Marsh | French Court Dance in England, 1706–1740<br/>_Unpublished PhD thesis_ | [[Segal, 2009]](https://bib.hda.org.ru/books/segal_2009_hornpipe) |
 | 1986<br/>1992 | François Gasnault | Guinguettes et lorettes. Bals publics et danse sociale à Paris entre 1830 et 1870<br/>ISBN: `2-7007-2206-X` | | [Amazon](http://a.co/acZDzSs) |
 | 1990 | Anne Martin-Fugier | La vie élégante, ou la formation de Tout-Paris<br/>ISBN: `978-2-262-03563-1` | | [Amazon](http://a.co/9fgv32a) |
 | 1991 | Eugenia Kougioumtzoglou-Roucher | Aux origines de la danse classique, le vocabulaire de la belle-danse, 1661–1701<br/>PhD Thesis, Université de Paris-Nord | `[3. Rothenfelser]` | |
@@ -339,7 +339,7 @@ _This part of the list is to joined with the general table_
 | Date | Author | Title | References | Links |
 | ---- | ------ | ----- | ---------- | ----- |
 | 1708? | Edward Isaac | The Britannia<br/>_Standalone edition_ | `LittleMarsh:[c1708]-Brt`<br/>[[Isaac, 1706]](https://bib.hda.org.ru/books/isaac_1706) | The Euing Music Library<br/>[BL]( http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004566640)<br/>Greiz Stadt- und Kreisbibliothek |
-| 1708? | Edward Isaac | The Favorite<br/>_(standalone edition) | `LittleMarsh:[c1708]-Fav` | The Euing Music Library<br/>[BL](http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004566641) |
+| 1708? | Edward Isaac | The Favorite<br/>_Standalone edition_ | `LittleMarsh:[c1708]-Fav` | The Euing Music Library<br/>[BL](http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004566641) |
 | 1708? | Edward Isaac | The Richmond (standalone edition) | `LittleMarsh:[c1708]-Rch` | The Euing Music Library<br/>[BL](http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004566650) |
 | 1708? | Edward Isaac | The Rigadoone (standalone edition) | `LittleMarsh:[c1708]-Rig` | The Euing Music Library<br/>[BL](http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004566651) |
 | 1708? | Edward Isaac | The Rondeau (standalone edition) | `LittleMarsh:[c1708]-Rnd` | The Euing Music Library<br/>[BL](http://explore.bl.uk/primo_library/libweb/action/dlDisplay.do?docId=BLL01004566652) |
@@ -393,8 +393,8 @@ _This part of the list is to joined with the general table_
 | 1640–1675 | Butler Buggins | The Measures as they are Danced in the Inner Temple Hall | London, Inner Temple Records | `Revels, Foundlings, and Unclassified, Miscellanea, Undated, &c. Vol. 27`<br/>folios 3r-6v | `[Lindahl]` | |
 | 1680? | Juan Antonio Jaque | Libro de danzar de D. Baltasar de Rojas Pantoja | Mardid, Biblioteca nacional de España | `MSS/17718` | `[3. Rothenfelser]`<br/>`[Yepes?]` | |
 | 17-- | | aka Belgioioso manuscript | Milano, Biblioteca Trivulziana | `Fondo Belgioioso, fasc. II, cartella 275, volume 2` | `[2. Rothenfelser]` | |
-| 17-- | | Contredances | Rome, Santa Cecilia's Conservatory | | `[[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi)` | |
-| 17-- | | English Country Dances | Turin, National Library | | `[[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi)` | |
+| 17-- | | Contredances | Rome, Santa Cecilia's Conservatory | | [[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi) | |
+| 17-- | | English Country Dances | Turin, National Library | | [[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi) | |
 | 17-- | | Recueil de contredanses transposées pour la viele | Paris, Bibliothèque nationale de France | `VM7-3643` | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43360196s) |
 | 1704 | André Lorin | Claim against Beauchamps on the primacy of inventing dance notation | Paris, Bibliothèque nationale de France | | | |
 | 1707 | Raoul-Auger Feuillet | Recüeil de danses ou sont contenues la poitevine, la modene, la bourree nouvelle, le charmant vanqueur, et la mattelotte | Archives dèpartementales du Calvados | ad/2 E 697 | Lancelot:Ms15.1 | |
