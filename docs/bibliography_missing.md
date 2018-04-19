@@ -98,6 +98,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1799 | | Nelson & Victory<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://s3.amazonaws.com/magnoliasoft.imageweb/nmm/supersize/f4129.jpg) | |
 | 180- | | Taschenbuch den Freunden des Tanzes gewidmer<br/>_Two volumes_ | [[Лисснер, 1811]](http://dlib.rsl.ru/viewer/01004333601#?page=10) | |
 | 180- | Jean Charles Louis Le Pitre | Das Lieblingsbuch für Damen und Herren | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43997539d) |
+| 1801 | Antonio Calegari | Gioco pitagorico | [Wiki: Musikalisches Würfelspiel] | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) |
 | 1801 | Ernst Christian Mädel | Anfangsgründe der Tanzkunst | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43998127j) |
 | 1801 | Thomas Preston | 24 Country Dances for the Year 1801 | [ABC notation](http://www.village-music-project.org.uk/?page_id=831) |
 | 1803 | Иван Кусков | Танцевальный учитель, заключающий в себе правила и основания сего искусства | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1614321&dbType=Y) |
@@ -466,6 +467,7 @@ _This part of the list is to joined with the general table_
 | 2016 | `[Phister, 2016]` | Béatrice Phister | Is Dance an Art? The Status of Ballroom and Ballet Dancing During the Second Half of the 18th Century in French and Italian Writings  | https://bib.hda.org.ru/books/proceedings_spb_2016_pfister |
 | 2016 | `[Жбанкова, 2016]` | Елена Жбанкова
 | 2016-08-14 | | | Wikisource on Tanz | https://de.wikisource.org/wiki/Tanz |
-| 2016-11-25 | | |Cross-step Waltz Bibliography | https://en.wikipedia.org/wiki/Cross-step_waltz |
+| 2016-11-25 | [Wiki: Cross-step waltz] | | Cross-step waltz | https://en.wikipedia.org/wiki/Cross-step_waltz |
 | 2017-03-01 | [Mackler] | Heather Mackler | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
 | 2017-06-17 | | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
+| 2018-04-19 | [Wiki: Musikalisches Würfelspiel] | Musikalisches Würfelspiel | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
