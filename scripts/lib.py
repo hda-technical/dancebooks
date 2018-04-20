@@ -126,13 +126,13 @@ class TileSewingPolicy(object):
 		self.tiles_number_y = tiles_number_y
 		self.tile_size = tile_size
 		self.overlap = overlap
+		self.trim = True
 
 	@staticmethod
 	def from_image_size(width, height, tile_size):
 		tiles_number_x = math.ceil(width / tile_size)
 		tiles_number_y = math.ceil(height / tile_size)
 		return TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size)
-
 
 
 def sew_tiles_with_montage(folder, output_file, policy):
@@ -153,12 +153,13 @@ def sew_tiles_with_montage(folder, output_file, policy):
 		"-tile", format_magick_tile(policy),
 		output_file
 	])
-	subprocess.check_call([
-		"convert",
-		output_file,
-		"-trim",
-		output_file
-	])
+	if policy.trim:
+		subprocess.check_call([
+			"convert",
+			output_file,
+			"-trim",
+			output_file
+		])
 
 
 def download_and_sew_tiles(output_filename, url_maker, policy):
@@ -300,15 +301,7 @@ def download_book_from_iiif(manifest_url, output_folder):
 		download_image_from_iiif(base_url, output_filename)
 
 ###################
-#LIBRARY DEPENDENT FUNCTIONS
-###################
-
-###################
-#FILE BASED DOWNLOADERS
-###################
-
-###################
-#PAGE BASED DOWNLOADERS
+#TILE BASED DOWNLOADERS
 ###################
 
 @opster.command()
@@ -566,6 +559,51 @@ def makAt(
 
 	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
 
+
+@opster.command()
+def uniJena(
+	id=("", "", "Id of the image to be downloaded, including document id (e. g. `00108217/JLM_1787_H002_0003_a`)")
+):
+	"""
+	Downloads single image from http://zs.thulb.uni-jena.de
+	
+	Requires a lot of work though
+	"""
+	class UrlMaker(object):
+		def __init__(self, zoom):
+			self.zoom = zoom
+			
+		def __call__(self, tile_x, tile_y):
+			return f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/{self.zoom}/{tile_y}/{tile_x}.jpg"
+		
+	#TODO: fix hardcoded document id
+	metadata_url = f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/imageinfo.xml"
+	metadata = get_xml(metadata_url)
+	
+	output_filename = make_output_filename("", os.path.basename(id))
+	
+	width = int(metadata.attrib["width"])
+	height = int(metadata.attrib["height"])
+	zoom = int(metadata.attrib["zoomLevel"])
+	
+	TILE_SIZE = 256
+	policy = TileSewingPolicy.from_image_size(width, height, TILE_SIZE)
+	policy.trim = False
+	
+	url_maker = UrlMaker(zoom)
+	download_and_sew_tiles(output_filename, url_maker, policy)
+	
+	subprocess.check_call([
+		"convert",
+		output_filename,
+		"-crop", f"{width}x{height}+0+0",
+		output_filename
+	])
+
+	
+###################
+#PAGE BASED DOWNLOADERS
+###################
 
 @opster.command()
 def hathi(

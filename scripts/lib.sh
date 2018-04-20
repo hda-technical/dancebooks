@@ -399,7 +399,7 @@ uniHalleTileFile()
 	generalTilesFile "$TILE_X" "$REAL_TILE_Y"
 }
 
-#quite similar to dusseldorf, with dirreferent magic numbers
+#quite similar to dusseldorf, with different magic numbers
 uniHalleTilesUrl()
 {
 	if [ $# -ne 4 ]
@@ -436,40 +436,6 @@ uniHalleTiles()
 	MIN_FILE_SIZE_BYTES=5120
 
 	tiles uniHalleTilesUrl uniHalleTileFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
-}
-
-uniJenaTilesUrl()
-{
-	if [ $# -ne 4 ]
-	then
-		echo "Usage: $0 image_id x y z"
-		return 1
-	fi
-
-	local IMAGE_ID=$1
-	local TILE_X=$2
-	local TILE_Y=$3
-	local TILE_Z=$4
-
-	echo "http://archive.thulb.uni-jena.de/tiles/hisbest/HisBest_derivate_00000416/$IMAGE_ID.tif/$TILE_Z/$TILE_Y/$TILE_X.jpg"
-}
-
-uniJenaTiles()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 image_id"
-		return 1
-	fi
-	local BOOK_ID=$1
-	local ZOOM=4
-	local TILE_SIZE=256
-	local OUTPUT_DIR=.
-
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=1
-
-	tiles uniJenaTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
 kunstkameraTilesUrl()
