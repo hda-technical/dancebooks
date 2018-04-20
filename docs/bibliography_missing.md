@@ -98,7 +98,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1799 | | Nelson & Victory<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://s3.amazonaws.com/magnoliasoft.imageweb/nmm/supersize/f4129.jpg) | |
 | 180- | | Taschenbuch den Freunden des Tanzes gewidmer<br/>_Two volumes_ | [[Лисснер, 1811]](http://dlib.rsl.ru/viewer/01004333601#?page=10) | |
 | 180- | Jean Charles Louis Le Pitre | Das Lieblingsbuch für Damen und Herren | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43997539d) |
-| 1801 | Antonio Calegari | Gioco pitagorico | [Wiki: Musikalisches Würfelspiel] | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) |
+| 1801 | Antonio Calegari | Gioco pitagorico<br/>_Music generator of unknown musical form_ | [Wiki: Musikalisches Würfelspiel] | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) |
 | 1801 | Ernst Christian Mädel | Anfangsgründe der Tanzkunst | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43998127j) |
 | 1801 | Thomas Preston | 24 Country Dances for the Year 1801 | [ABC notation](http://www.village-music-project.org.uk/?page_id=831) |
 | 1803 | Иван Кусков | Танцевальный учитель, заключающий в себе правила и основания сего искусства | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1614321&dbType=Y) |
