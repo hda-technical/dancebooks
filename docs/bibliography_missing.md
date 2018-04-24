@@ -172,7 +172,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1843 | | Листок для светских людей. Петербургские балы и маскарады<br/>_№5 за 1843 год_ | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004358933&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1844 | | The Ballroom Annual | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01010474492) |
 | 1844 | David Bogue (publisher) | The Ball-Room Preceptor; Comprising The Most Esteemed Quadrilles, Galopades, Mazourkas, & Other Fashionable Dances of the Season<br/>_4th edition_ | | [On sale, £180](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699530) |
-| 1844 | Jean Charles Louis Le Pitre | Reflexions sur l'art de la danse | `[Katalog, 1894]` | |
+| 1844 | Jean Charles Louis Le Pitre | Réflexions sur l'art de la danse, relativement à la décadence momentanée et à la renaissance actuelle des danses nationales françaises et allemandes | `[Katalog, 1894]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43997540m) |
 | 1844 | Johann Raab | Die Slowanka. Mit Choreographie und Originalmusik | `[Unfried, 2014]`<br/>`[Katalog, 1894]` | |
 | 1844 | Auguste Perrot<br/>Ardien Robert | La polka enseignée sans maitre | | [On sale, €486](https://www.abebooks.com/servlet/BookDetailsPL?bi=12996581883)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31088074n) |
 | 184- | | Современный любимейший танец полька. Девять изображений | `[Yoko]` | |
@@ -428,7 +428,7 @@ _This part of the list is to joined with the general table_
 | 1790 | François-Henri-Stanislas de L'Aulnaye | De la Saltation théâtrale, ou recherches sur l'origine, les progrès et les effets de la pantomime chez les anciens | [Найдёно случайным поиском] | [BNF](http://gallica.bnf.fr/ark:/12148/bpt6k5849412d) |
 | 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) |
 | 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.ru/books?id=BY0NAAAAYAAJ) |
-| 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Germany](http://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) |
+| 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](http://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) |
 | 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005127097&context=L&search_scope=default_scope&lang=ru_RU). Просмотрено Борисом Стратилатовым |
 
 
@@ -470,4 +470,4 @@ _This part of the list is to joined with the general table_
 | 2016-11-25 | [Wiki: Cross-step waltz] | | Cross-step waltz | https://en.wikipedia.org/wiki/Cross-step_waltz |
 | 2017-03-01 | [Mackler] | Heather Mackler | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
 | 2017-06-17 | | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
-| 2018-04-19 | [Wiki: Musikalisches Würfelspiel] | Musikalisches Würfelspiel | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
+| 2018-04-19 | [Wiki: Musikalisches Würfelspiel] | | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
