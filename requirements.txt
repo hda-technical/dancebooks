@@ -12,7 +12,7 @@ pip==10.0.1
 pkg-resources==0.0.0
 pyflakes==1.6.0
 pymorphy2==0.8
-python-stdnum==1.8.1
+python-stdnum==1.9
 requests==2.18.4
 scour==0.36
 speaklater==1.3
