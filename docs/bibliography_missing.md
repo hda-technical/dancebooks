@@ -108,7 +108,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1807 | Jean-Georges Noverre | Letters sur les arts imitateurs en général et sur la danse en particulier | `[4. Rothenfelser]` | |
 | 1808 | Goulding | 24 Country Dances for the Year 1808 | [ABC notation](http://www.village-music-project.org.uk/?page_id=827) | |
 | 1809 | Thomas Cahusac | 24 Country Dances for the Year 1809 | [ABC notation](http://www.village-music-project.org.uk/?page_id=815) | |
-| 1810 | Carl von Frankenstein | Terpsichore, Neuer Ball- und Maskenalmanach | `[Katalog, 1894]` | |
 | 181- | Алексей Дмитриевич Жилин | Journal de musique | | [NMB](https://yadi.sk/i/xmLK1Zhcqbjyu) |
 | 181- | Friedrich Weller | Neueste Berliner Lieblings-Tänze<br/>_Number 8 in series_ | `[Leaflets]`<br/>[[Weller, 1810–1820?]](https://bib.hda.org.ru/books/berliner_1810_no_07) | |
 | 1811 | Thomas Wilson | An Analysis of Country Dancing<br/>_Second edition_ | `[Leaflets]`<br/>[BL](https://www.bl.uk/collection-items/an-analysis-of-country-dancing) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003947416) |
@@ -149,7 +148,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1831 | Carl Friedrich Förster | Der Tanzlehrer oder Anweisung zur gründlichen Erlernung der Tanzkunst<br/>_Second edition_ | `[3. Rothenfelser]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43993414t) |
 | 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | |
 | 1832 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1832 | [[Helmke, 1832]](https://bib.hda.org.ru/books/helmke_1832) | [NLI](http://aleph.nli.org.il/F/?func=direct&doc_number=001825743&local_base=NNL01)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
-| 1832 | L. F. Kümmerle | Praktische Anleitung zu Leibesübungen für Mädchen : nebst einem Anhang über die Haltung des Körpers und über die Anfangsgründe der Tanzkunst | | [Dresden](https://katalogbeta.slub-dresden.de/id/0012008867/) |
 | 1831/1833 | Carl Friedrich Förster | Ecossaissen-Lehre | [Advertisement](https://books.google.ru/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.ru/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]` | |
 | 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | [Royal Academy of Music](http://www.ram.ac.uk/museum/item/15068) |
 | 1833 | Carl Friedrich Förster | Königs-Quadrillen-Lehre | [Advertisement](https://books.google.ru/books?id=V-QaAQAAMAAJ&pg=PA236) |
@@ -164,7 +162,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 184- | Г. Грациеский | Полька в Киеве | [Cite](https://books.google.ru/books?id=_HcLAQAAIAAJ&q=грациеский) | |
 | 184- | Г. Грациеский | Правила для танца «Полька» | [Cite](https://books.google.ru/books?id=_HcLAQAAIAAJ&q=грациеский) | |
 | 1844 | Г. Грациеский | Новый танцевальный калейдоскоп, или кадриль в шести турах | [Quote](https://blog.hda.org.ru/quotes/smes) | |
-| 1840 | Carl von Frankenstein | Terpsichore: neuer Ball- und Masken-Almanach | | [HVD](http://id.lib.harvard.edu/aleph/011352659/catalog)<br/>[HAAB](https://lhwei.gbv.de/DB=2/XMLPRS=N/PPN?PPN=223574503)<br/>[Halle](https://lhhal.gbv.de/DB=1/XMLPRS=N/PPN?PPN=223574503) |
 | 1842 | Z. T. Purday (publisher) | The Royal Quadrille Preceptor | | [On sale, £200](https://lhhal.gbv.de/DB=1/XMLPRS=N/PPN?PPN=223574503) |
 | 1842 | | The Ball-Room Preceptor; Comprising the Most Esteemed Quadrilles, Galopades, Mazourkas, and Other Fashionable Dances of the Present Season<br/>Published by Tilt & Bogue<br/>3rd edition | | [On sale, £150](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699660) |
 | 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
