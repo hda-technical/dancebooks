@@ -188,7 +188,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1857 | Johann Raab | Der Cotillon : in 20 neuen Figuren | | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524536370002884) |
 | 1859 | | Проект устава танцевальной школы при императорских санктпетербургских театрах | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1632555&dbType=Y) |
 | 1862 | Georg Gerster | Katechismus der Höflichkeits-, Anstands- und Präsentationlehre<br/>_Book on etiquette_ | `[Katalog, 1894]` | |
-| 1863 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_2. Auflage_ | `[Katalog, 1894]` | |
 | 1866 | | Manual de dança ou método fácil de aprender a dançar sem auxilio de mestre | | BNP |
 | 1867 | Alwin Berndt | Die Gymnastik des Tanzes | `[Katalog, 1894]` | [Dresden](http://katalogbeta.slub-dresden.de/id/0011281919/) |
 | 1868 | Wilhelm Angerstein | Volkstänze im deutschen Mittelalter | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43987709t) |
