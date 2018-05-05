@@ -269,8 +269,10 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1927 | Анна Михайловна Зеленко | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | |
 | 1927 | Анна Михайловна Зеленко | Массовые народные танцы<br/>_Первое издание_ | [[Зеленко, 1929]](https://bib.hda.org.ru/books/zelenko_1929_folk)<br/>`[Жбанкова, 2016]` | |
 | 1927 | В. Н. Гернгросс-Всеволодский | Крестьянский танец | `[Жбанкова, 2016]` | |
+| 1927 | Т. Бабаджан<br/>Агния Барто | Ритмические игры и постановки к 10 годовщине Октября | | [On sale, ₽5500](http://www.alib.ru/5_barto_agniya_ritmicheskie_igry_i_postanovki_k_10_godovwine_oktyabrya_w1t1986151614fd8beb7fbf7fa890a1e8efc33a.html) |
 | 1928 | Е. Малая<br/>В. Костюк | Танцевальные шаги и гимнастические танцы | `[Жбанкова, 2016]` | |
 | 1928 | Анна Михайловна Зеленко<br/>А. Гаврилов | Гулянье | `[Жбанкова, 2016]` | |
+| 1928 | Т. Бабаджан<br/>М. Раухвергер | 5 ритмических игр с предметами и состязаниями | | [On sale, ₽2000](http://www.alib.ru/5_babadzhan_t_5_ritmicheskih_igr_s_predmetami_i_sostyazaniyami_w1t1844df43d1ec1e5152604bbd6d0257f9ebba.html) |
 | 1930 | Viktor Junk | Handbuch des Tanzes<br/>Volkstänze | `[2. Rothenfelser]` | |
 | 1930 | Милица Евлампиевна Бурцева | Художественное движение | `[Жбанкова, 2016]` | |
 | 1930 | Милица Евлампиевна Бурцева | Методика проведения массовой пляски | `[Жбанкова, 2016]` | |
