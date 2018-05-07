@@ -5,7 +5,6 @@ import http.client
 import logging
 import os.path
 import random
-from urllib import parse as urlparse
 
 import flask
 import flask_babel
@@ -282,17 +281,15 @@ def get_book_pdf(book_id, index):
 		#using send_file in unittest mode causes ResourceWarning due to unclosed file
 		response = flask.make_response("SOME_BINARY_PDF_LIKE_DATA")
 		response.headers["Content-Type"] = "application/pdf"
+		response.headers["Content-Disposition"] = "attachment"
+		return response
 	else:
-		#native send_file as_attrachment parameter works incorrectly with unicode data
-		#adding corrent Content-Disposition header manually
-		response = flask.make_response(flask.send_file(pdf_full_path))
-	basename = os.path.basename(pdf_full_path)
-	response.headers["Content-Disposition"] = \
-		"attachment;" \
-		"filename*=UTF-8''{utf_filename}".format(
-		utf_filename=urlparse.quote(basename)
-	)
-	return response
+		basename = os.path.basename(pdf_full_path)
+		return flask.send_file(
+			pdf_full_path,
+			as_attachment=True,
+			attachment_filename=basename
+		)
 
 
 @flask_app.route(config.www.books_prefix + "/<string:item_id>/transcription", methods=["GET"])
@@ -463,7 +460,7 @@ for code in (
 	http.client.INTERNAL_SERVER_ERROR
 ):
 	flask_app.errorhandler(code)(utils_flask.http_exception_handler)
-	
+
 flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
 
 if __name__ == "__main__":

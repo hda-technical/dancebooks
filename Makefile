@@ -113,7 +113,7 @@ www-reload-production: www-test www-translations
 	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/ping')"
 
 requirements.txt:
-	pip list --not-required --local --format=freeze | sort --ignore-case | tee $@
+	pip list --local --format=freeze | sort --ignore-case | tee $@
 
 # Ancillary targets
 
