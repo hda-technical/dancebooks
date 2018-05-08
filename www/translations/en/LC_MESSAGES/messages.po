@@ -541,8 +541,8 @@ msgstr "All materials are for non-commercial usage only"
 msgid "interface:footer:persimmon"
 msgstr "Persimmon"
 
-msgid "interface:footer:tags"
-msgstr "Allowed keywords"
+msgid "interface:footer:help"
+msgstr "Questions? RTFM!"
 
 # RSS
 
@@ -550,7 +550,7 @@ msgid "rss:title"
 msgstr "New books"
 
 msgid "rss:description"
-msgstr "Latest additions to dancing books bibliography"
+msgstr "Latest additions to historical dance bibliography"
 
 msgid "rss:added-count"
 msgid_plural "rss:added-count"

@@ -541,8 +541,8 @@ msgstr "Материалы этого сайта предназначены то
 msgid "interface:footer:persimmon"
 msgstr "Хурма"
 
-msgid "interface:footer:tags"
-msgstr "Разрешённые теги"
+msgid "interface:footer:help"
+msgstr "Вопросы? У нас есть документация!"
 
 # RSS
 
@@ -550,7 +550,7 @@ msgid "rss:title"
 msgstr "Новые книги"
 
 msgid "rss:description"
-msgstr "Последние поступления танцевальных источников в библиографию"
+msgstr "Последние поступления источников в библиографию исторического танца"
 
 msgid "rss:added-count"
 msgid_plural "rss:added-count"
