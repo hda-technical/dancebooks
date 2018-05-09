@@ -496,4 +496,4 @@ _This part of the list is to joined with the general table_
 | 2017-03-01 | `[Mackler]` | Heather Mackler | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
 | 2017-06-17 | | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
 | 2018-04-19 | `[Wiki: Musikalisches Würfelspiel]` | | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
-| 2014-11-07 | `[Cooper]` | Research papers contributed by Paul Cooper, up to #03 | https://www.regencydances.org/paper000.php |
+| 2014-11-07 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, up to #03 | https://www.regencydances.org/paper000.php |
