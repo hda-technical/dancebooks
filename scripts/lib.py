@@ -447,6 +447,9 @@ def hab(
 def yale(
 	id=("", "", "Image id to be downloaded (e. g. `lwlpr11386`)")
 ):
+	"""
+	Downloads image from http://images.library.yale.edu/
+	"""
 	class UrlMaker(object):
 		"""
 		Similar to UrlMaker from hab() method. Should be deduplicated once
