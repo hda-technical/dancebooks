@@ -116,9 +116,9 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1802 |  William Morris Cahusac | 24 Country Dances for the Year 1802 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>Contains description of the _Duke of Kent's Waltz_ | |
 | 1803 | William Morris Cahusac | 24 Country Dances for the Year 1803 | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | |
 | 1803 | Иван Кусков | Танцевальный учитель, заключающий в себе правила и основания сего искусства | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1614321&dbType=Y) |
-| 1804 | Michael Kelly | Eight French Country Dances ... adapted for the pianoforte<br/>_Contains description of something similar to the first set_ч | [[Cooper, #03]](https://www.regencydances.org/paper003.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004446443) |
+| 1804 | Michael Kelly | Eight French Country Dances ... adapted for the pianoforte<br/>_Contains description of something similar to the first set_ | [[Cooper, #03]](https://www.regencydances.org/paper003.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004446443) |
 | 1804 | J. Gottfried Grohmann | über die neueste Tanzkunst<br/>_in Modejournal, 1804, März, Seite 113_) | | |
-| 1804 | D. J. Wendt<br/>Jean Wendt | Über den Tanz als Vergnügen und Schädlichkeit: Eine Beytrag zur Diätetik | [[Turnkunst, 1816]](http://www.deutschestextarchiv.de/book/view/jahn_turnkunst_1816?p=328)<br/>`[Nouveau manuel, 1857, #53]` | [Greisfald](https://lhgrw.gbv.de/DB=1/XMLPRS=N/PPN?PPN=334440610) |
+| 1804 | D. J. Wendt<br/>Jean Wendt | Über den Tanz als Vergnügen und Schädlichkeit: Eine Beytrag zur Diätetik | `[Turnkunst, 1816]`<br/>`[Nouveau manuel, 1857, #53]` | [Greisfald](https://lhgrw.gbv.de/DB=1/XMLPRS=N/PPN?PPN=334440610) |
 | 1806 | Joseph Koslovsky | Recueil choisi d'airs Russes, Francais, Italiens et de plusieurs Polonoises, Waltzers, Quadrilles et Ecossaises | | [RSL](http://search.rsl.ru/ru/record/01003329286) |
 | 1807 | Jean-Georges Noverre | Letters sur les arts imitateurs en général et sur la danse en particulier | `[4. Rothenfelser]` | |
 | 1808 | Goulding | 24 Country Dances for the Year 1808 | [ABC notation](http://www.village-music-project.org.uk/?page_id=827) | |
@@ -463,7 +463,7 @@ _This part of the list is to joined with the general table_
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
 | 1756 | `[Pauli, 1756]` | Charles Pauli | Elemens de la danse | https://bib.hda.org.ru/books/pauli_1756 |
-| 1816 | | | Handbuch der Literatur | https://books.google.ru/books?id=kjBSAAAAcAAJ, Стр. 186–187 |
+| 1816 | `[Handbuch, 1815]` | | Handbuch der Literatur, Zweyte Abtheilung, Tanzkunst | https://books.google.ru/books?id=kjBSAAAAcAAJ, Стр. 186–187 |
 | 1816 | `[Turnkunst, 1816]` | Friedrich Ludwig Jahn | Die Deutsche Turnkunst | http://www.deutschestextarchiv.de/book/view/jahn_turnkunst_1816?p=328 |
 | 1825 | `[Charinomos, 1825]` | Carl Seidel | Charinomos | https://books.google.com/books?id=1FBjAAAAcAAJ |
 | 1857 | `[Nouveau manuel, 1857]` | Ferdinand Denis, P. Pincon, de Martonne | Nouveau manuel de bibliographie universelle" | https://books.google.com/books?id=C6g20GmnNlQC&pg=PA165 |
@@ -480,8 +480,8 @@ _This part of the list is to joined with the general table_
 | 1997 | `[Lehner, 1997]` | Markus Lehner | A Manual of Sixteenth-Century Italian Dance Steps | https://bib.hda.org.ru/books/lehner_1997 |
 | 1997 | `[Lindahl]` | Greg Lindahl | Dances from the Inns of Court | |
 | 1998 | `[Rogers, 1998]` | Ellis A. Rogers | Resources for the Study of 19th Century Social Dance | https://bib.hda.org.ru/books/rogers_1998_nineteenth |
-| 1998 | | Library of Congress | [memory.loc.gov](http://memory.loc.gov/music/musdi/), [archive.org](https://archive.org/details/danceman) |
-| 2003 | | David R. Wilson | The Steps Used in Court Dancing in Fifteenth-century Italy, _3rd edition_ | https://bib.hda.org.ru/books/wilson_2003_steps |
+| 1998 | `[Library of Congress]` | Library of Congress | [memory.loc.gov](http://memory.loc.gov/music/musdi/), [archive.org](https://archive.org/details/danceman) |
+| 2003 | `[Wilson, 2003]` | David R. Wilson | The Steps Used in Court Dancing in Fifteenth-century Italy, _3rd edition_ | https://bib.hda.org.ru/books/wilson_2003_steps |
 | 2004 | `[Wortelboer, 2004]` | Dorothée Wortelboer | La baroque. Dances for the Dutch Court c. 1765 | https://bib.hda.org.ru/books/wortelboer_2004 |
 | 2004 | `[Sparti, 2004]` | Barbara Sparti | Balli to Dance and Play in a Sixteenth-century Miscellany | [2004](https://bib.hda.org.ru/books/sparti_2004_balli), [2015](https://bib.hda.org.ru/books/sparti_2015_balli) |
 | 2008 | `[2. Rothenfelser]` | | 2. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2008 |
@@ -492,9 +492,9 @@ _This part of the list is to joined with the general table_
 | 2016 | `[Heiter, 2016]` | Gerrit Berenike Heiter | Models of Physical Appearance and Behaviour at Dance Occasions | https://bib.hda.org.ru/books/proceedings_spb_2014_heiter_civility |
 | 2016 | `[Phister, 2016]` | Béatrice Phister | Is Dance an Art? The Status of Ballroom and Ballet Dancing During the Second Half of the 18th Century in French and Italian Writings  | https://bib.hda.org.ru/books/proceedings_spb_2016_pfister |
 | 2016 | `[Жбанкова, 2016]` | Елена Жбанкова
-| 2016-08-14 | | | Wikisource on Tanz | https://de.wikisource.org/wiki/Tanz |
-| 2016-11-25 | `[Wiki: Cross-step waltz]` | | Cross-step waltz | https://en.wikipedia.org/wiki/Cross-step_waltz |
+| 2016-08-14 | `[Wiki: Tanz]` | | Wikisource on Tanz | https://de.wikisource.org/wiki/Tanz |
+| 2016-11-25 | `[Wiki: Cross-step Waltz]` | | Cross-step waltz | https://en.wikipedia.org/wiki/Cross-step_waltz |
 | 2017-03-01 | `[Mackler]` | Heather Mackler | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
-| 2017-06-17 | | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
+| 2017-06-17 | `[Rudo]` | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
 | 2018-04-19 | `[Wiki: Musikalisches Würfelspiel]` | | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
 | 2014-11-07 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, up to #03 | https://www.regencydances.org/paper000.php |
