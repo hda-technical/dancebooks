@@ -152,7 +152,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 182- | Johann Christian Traub | Ueber den Tanz-Unterricht nebst Bemerkungen über Kleidung, Haltung und Verhaltungs-Regeln beim Tanzen | | [Dillingen Donau](https://opac.studienbibliothek-dillingen.de/InfoGuideClient.sdlsis/start.do?Query=10="BV013660012") |
 | 1820? | Thomas Wilson | A Companion to the Ballroom<br/>_Third edition_ | [Advertisement](https://bib.hda.org.ru/books/wilson_1820_countrydance) | |
 | 1820 | F. J. Lambert | Treatise on Dancing | `[Guillard, 1989]` | |
-| 1821 | August von Rosenhain | Bermerkungen über das Tanzen nebst einer gründlischen Anleitung zu den jetzt beliebtesten Tänzen | `[3. Rothenfelser]` | [Mecklenburg-Vorpommen](https://lhwis.gbv.de/DB=2/XMLPRS=N/PPN?PPN=357653939)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=357653939) |
+| 1821 | August von Rosenhain | Bermerkungen über das Tanzen nebst einer gründlischen Anleitung zu den jetzt beliebtesten Tänzen | `[3. Rothenfelser]` | [Schwerin](https://lhwis.gbv.de/DB=2/XMLPRS=N/PPN?PPN=357653939)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=357653939) |
 | 1822 | Carl Friedrich Förster | Anweisung zur Tanzkunst | [[Forster, 1822]](https://bib.hda.org.ru/bib/books/forster_1822)<br/>[Another copy published in Breslau] | |
 | 1822 | Fr. Wolf | Kurze Uebersicht der niedern Tanzkunst, oder: die Art und Weise seinen Körper auszubilden und einen richtigen Gang und Fester Schritt im Gehen zu erhalten | `[Charinomos, 1825]` | |
 | 1822 | Philippe Musard | Seventeenth Set of Quadrilles | | [archive.org](https://archive.org/details/Musards17thSetOfQuadrilles) |
