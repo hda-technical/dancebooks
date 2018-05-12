@@ -93,7 +93,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1782 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
 | 1786 | John Longman<br/>Francis Broderip | Twenty Four New Cotillions with their proper Figures ... now performing this present Spring Season. 1786. Book the VI<br/>_Contains description of ‹Les Pantalons› cotillion_ | [[Cooper, #03]](https://www.regencydances.org/paper003.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283048)<br/>[HVD](http://id.lib.harvard.edu/aleph/007222757/catalog) |
-| 1787 | Thompson | Twenty Four Country Dances for the Year 1787 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Thompson 24CD,1787]](https://www.cdss.org/elibrary/DFIE/Biblio/B000531.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283574) |
+| 1787 | Thompson | Twenty Four Country Dances for the Year 1787 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[Cooper, #04]](https://www.regencydances.org/paper004.php)<br/>[[DFIE: Thompson 24CD,1787]](https://www.cdss.org/elibrary/DFIE/Biblio/B000531.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283574) |
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
 | 1790–1800? | Frere | Huitieme recueil de pot poury françois et contredanses les plus à la mode | `[Leaflets]` | |
 | 1791 | | Hommage aux dames de la quadrille | | [RSL](http://search.rsl.ru/ru/record/01003499969) |
@@ -145,9 +145,11 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1817 | Thomas Wilson | The celebrated and fashionable dance "La Batteuse", with the various figures ... clearly illustrated by diagrams ... Arranged for the Piano Forte or Violin | [[Cooper, #03]](https://www.regencydances.org/paper003.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004751196) |
 | 1817 | Thomas Wilson | The Allemand, le Moulinet, and the Waltz Quadrilles with the Figures Explained by Diagrams, Together with the Waltz Minuet | [[Cooper, #03]](https://www.regencydances.org/paper003.php)<br/>[Advertisement](https://books.google.com/books?id=UwNHAAAAcAAJ&pg=PA310-IA16&dq=Le+Moulinet+wilson) | |
 | 1817 | Thomas Wilson<br/>Edward Payne<br/>Button (publisher)<br/>Whitacker (publisher) | Button, Whitaker, and Co's Miniature Edition of Payne's and Wilson's Quadrille Figures, in French and English | [Advertisement](https://books.google.com/books?id=ZANHAAAAcAAJ&pg=PA102)<br/>[[Cooper, #03]](https://www.regencydances.org/paper003.php) | |
+| 1818 | Edward Payne | The Quadrille Dancer. Explaining Every Requisite to the Attainment of the Steps and Figures Including All the Fashionable Figures in French in English | [[Cooper, #04]](https://www.regencydances.org/paper004.php) | [Stuttgart](https://wlb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKSWB-IdNr034244514) |
 | 1818? | Thomas Wilson | Quadrille Fan | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | |
 | 1818? | Thomas Wilson | The Quadrille and Cotillon Panorama<br/>_First edition_ | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[Cooper, #02]](https://www.regencydances.org/paper001.php)<br/>[[Wilson, 1822]](https://bib.hda.org.ru/books/wilson_1822_quadrille) | |
 | 1819 | Thomas Wilson | L'Assemblée, or Forty Eight Elegant New Dances for the year 1819 | [[Cooper, #02]](https://www.regencydances.org/paper002.php) | |
+| 1819? | Leon<br/>Francis Joseph Klose (composer) | The Opera Quadrilles ... with New Figures. The Music Composed, Arranged for the Harp or Piano Forte, with an Accompaniment for the Flute | [[Cooper, #05]](https://www.regencydances.org/paper005.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004453133) |
 | 1819 | Christian Wilhelm Wiener | Gründliche Anweisung zu allen gesellschaftlichen Tänzen | [Advertisement](https://books.google.ru/books?id=9WQ0AAAAMAAJ&pg=PA736) | |
 | 182- | Johann Christian Traub | Ueber den Tanz-Unterricht nebst Bemerkungen über Kleidung, Haltung und Verhaltungs-Regeln beim Tanzen | | [Dillingen Donau](https://opac.studienbibliothek-dillingen.de/InfoGuideClient.sdlsis/start.do?Query=10="BV013660012") |
 | 1820? | Thomas Wilson | A Companion to the Ballroom<br/>_Third edition_ | [Advertisement](https://bib.hda.org.ru/books/wilson_1820_countrydance) | |
@@ -437,6 +439,7 @@ _This part of the list is to joined with the general table_
 | 1805? | | Let fortune's angry tempest blow | Cambridge, Cambridge University Library | `MS.Add.9004` |[RISM](http://www.rism.org.uk/manuscripts/116377) | |
 | 181- | J. Bröckl | 12 Tänze für Pianoforte | Москва, Российская государственная библиотека | `ОР 6/муз` | | [РГБ](http://search.rsl.ru/ru/record/01004832331) |
 | 1841 | Frederick Hill | Frederick Hill's Book of Quadrilles and Country Dances | No details in Rogers. Richard? | | `[Rogers, 1998]` | |
+| 1851 | Thomas Wilson | Thomas Wilson Letter to the Royal Literary Fund with a Request of Financial Support | London, The British Library | | [[Cooper, #05]](https://www.regencydances.org/paper005.php) |
 | 19-- | Лешков | Рукопись по систематизации танцевальных учебников | Москва, Российская государственная библиотека | | | |
 | 192- | | Анкета по сбору народных плясок | Москва, ГАРФ | | | |
 | 192- | | Радиозапись обучения пляске по радио | | | | |
@@ -497,4 +500,4 @@ _This part of the list is to joined with the general table_
 | 2017-03-01 | `[Mackler]` | Heather Mackler | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
 | 2017-06-17 | `[Rudo]` | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
 | 2018-04-19 | `[Wiki: Musikalisches Würfelspiel]` | | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
-| 2014-11-07 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, up to #03 | https://www.regencydances.org/paper000.php |
+| 2014-05-12 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, up to #05 | https://www.regencydances.org/paper000.php |
