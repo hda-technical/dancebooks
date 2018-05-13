@@ -480,6 +480,9 @@ def yale(
 def britishLibraryBook(
 	id=("", "", "Book id to be downloaded (e. g. `vdc_100025756343`). Warning: this id is different from the one found in online viewer. Pick one from the requested urls instead.")
 ):
+	"""
+	Downloads a book from http://explore.bl.uk
+	"""
 	#It looks like manifest.json is not being used by The British Library
 
 	output_folder = make_output_folder("bl", id)
