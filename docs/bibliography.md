@@ -1,4 +1,4 @@
-# Historical dance bibliography: Documentation
+﻿# Historical dance bibliography: Documentation
 
 ## Информация о структуре базы данных
 

@@ -1,4 +1,4 @@
-# Historical Dance: Images Database
+﻿# Historical Dance: Images Database
 
 ## Хранимые в базе данных объекты:
 
