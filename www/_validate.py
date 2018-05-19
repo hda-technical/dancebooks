@@ -2,7 +2,6 @@
 import concurrent.futures
 import datetime
 import json
-import multiprocessing
 import logging
 import os
 import re
@@ -169,23 +168,26 @@ def fetch_filelist_from_fs():
 def fetch_backups_from_fs():
 	if not os.path.isdir(config.www.backup_dir):
 		return []
-	EXCLUDED_FOLDERS = {
-		"Ancillary sources (not in bibliography)",
+	FOLDERS_TO_VALIDATE = {
 		"Cooking",
 		"Fashion",
-		"Leaflets (not in bibliography)",
-		"Postcards",
-		"Useless"
+		"Library",
 	}
-	trim_root = lambda path: "/" + os.path.relpath(path, start=config.www.backup_dir)
+	trim_root = lambda path: os.path.relpath(path, start=config.www.backup_dir)
 	filter = lambda path: (
 		os.path.isdir(path) and
 		const.FILENAME_REGEXP.match(os.path.basename(path))
 	)
-	return set(map(
-		trim_root,
-		utils.search_in_folder(config.www.backup_dir, filter, excludes=EXCLUDED_FOLDERS)
-	))
+	backups = []
+	for basename in FOLDERS_TO_VALIDATE:
+		folder = os.path.join(config.www.backup_dir, basename)
+		backups += list(
+			map(
+				trim_root,
+				utils.search_in_folder(folder, filter)
+			)
+		)
+	return backups
 
 
 #executed once per validation run
@@ -957,6 +959,32 @@ def validate_items(items, git_added_on, make_extra_checks):
 	return result
 
 
+def validate_backups():
+	logging.info("Fetching list of backups from filesystem")
+	backups = fetch_backups_from_fs()
+	logging.info("Found {count} items in backup".format(
+		count=len(backups)
+	))
+	strange_backups_number = 0
+	for backup in backups:
+		original_filename = backup + ".pdf"
+		original_path = os.path.join(
+			#WARN: config value contains path to subfolder inside elibrary
+			os.path.dirname(config.www.elibrary_dir),
+			original_filename
+		)
+		if not os.path.isfile(original_path):
+			strange_backups_number += 1
+			logging.warn("Found strange backup in {backup_dir}: {path}".format(
+				backup_dir=config.www.backup_dir,
+				path=backup
+			))
+	if strange_backups_number > 0:
+		logging.warn("Found {strange_backups_number} strange backups".format(
+			strange_backups_number=strange_backups_number
+		))
+
+
 @opster.command()
 def main(
 	make_extra_checks=("", False, "Add some extra checks"),
@@ -975,24 +1003,7 @@ def main(
 		count=len(physically_stored)
 	))
 	if os.path.isdir(config.www.backup_dir):
-		logging.info("Fetching list of backups from filesystem")
-		backups = fetch_backups_from_fs()
-		logging.info("Found {count} items in backup".format(
-			count=len(backups)
-		))
-		strange_backups_number = 0
-		for backup in backups:
-			original = backup + ".pdf"
-			if original not in physically_stored:
-				strange_backups_number += 1
-				logging.warn("Found strange backup folder in {backup_dir}: {path}".format(
-					backup_dir=config.www.backup_dir,
-					path=backup
-				))
-		if strange_backups_number > 0:
-			logging.warn("Found {strange_backups_number} strange backups".format(
-				strange_backups_number=strange_backups_number
-			))
+		validate_backups()
 
 	for item in items:
 		filename = item.get("filename")
@@ -1001,8 +1012,8 @@ def main(
 		for file in filename:
 			physically_stored.discard(file)
 	for path in physically_stored:
-		logging.warn("Unreferenced file found in {elibrary}: {path}".format(
-			elibrary=config.www.elibrary_dir,
+		logging.warn("Unreferenced file found in {elibrary_dir}: {path}".format(
+			elibrary_dir=config.www.elibrary_dir,
 			path=path
 		))
 
