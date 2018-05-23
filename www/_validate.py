@@ -171,13 +171,11 @@ def fetch_backups_from_fs():
 	FOLDERS_TO_VALIDATE = {
 		"Cooking",
 		"Fashion",
+		"Images",
 		"Library",
 	}
 	trim_root = lambda path: os.path.relpath(path, start=config.www.backup_dir)
-	filter = lambda path: (
-		os.path.isdir(path) and
-		const.FILENAME_REGEXP.match(os.path.basename(path))
-	)
+	filter = lambda path: const.FILENAME_REGEXP.match(os.path.basename(path))
 	backups = []
 	for basename in FOLDERS_TO_VALIDATE:
 		folder = os.path.join(config.www.backup_dir, basename)
@@ -965,15 +963,27 @@ def validate_backups():
 	logging.info("Found {count} items in backup".format(
 		count=len(backups)
 	))
+
+	POSSIBLE_BACKUP_EXTENSIONS = [".pdf", ".tif"]
 	strange_backups_number = 0
 	for backup in backups:
-		original_filename = backup + ".pdf"
-		original_path = os.path.join(
-			#WARN: config value contains path to subfolder inside elibrary
-			os.path.dirname(config.www.elibrary_dir),
-			original_filename
+		backup_without_extension = (
+			#FIXME not that hacky way is required
+			os.path.splitext(backup)[0]
+			if backup.endswith(".tif") else
+			backup
 		)
-		if not os.path.isfile(original_path):
+		possible_library_paths = [
+			os.path.join(
+				#WARN: config value contains path to subfolder inside elibrary
+				os.path.dirname(config.www.elibrary_dir),
+				backup_without_extension + ext
+			)
+			for ext in POSSIBLE_BACKUP_EXTENSIONS
+		]
+		found_in_library = any(map(os.path.isfile, possible_library_paths))
+		if not found_in_library:
+			print(repr(possible_library_paths))
 			strange_backups_number += 1
 			logging.warn("Found strange backup in {backup_dir}: {path}".format(
 				backup_dir=config.www.backup_dir,
