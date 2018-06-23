@@ -321,6 +321,26 @@ def gallica(
 
 
 @opster.command()
+def encyclopedie(
+	volume=("", "", "Volume to be downloaded (e. g. '24')"),
+	page=("", "", "Page number to be downloaded (e. g. '247')")
+):
+	"""
+	Downloads single image from http://enccre.academie-sciences.fr/encyclopedie
+	"""
+	volume = int(volume)
+	page = int(page)
+
+	#there is no manifest.json file, slightly modified IIIF protocol is being used by the website
+	image_list_url = f"http://enccre.academie-sciences.fr/icefront/api/volume/{volume}/imglist"
+	image_list_metadata = get_json(image_list_url)
+	image_metadata = image_list_metadata[page]
+	image_url = f"http://enccre.academie-sciences.fr/digilib/Scaler/IIIF/{image_metadata['image']}"
+	output_file = f"{page:04d}.bmp"
+	download_image_from_iiif(image_url, output_file)
+
+
+@opster.command()
 def vatlib(
 	id=("", "", "Id of the book to be downloaded (e. g. 'MSS_Cappon.203')")
 ):
@@ -499,12 +519,13 @@ def britishLibraryBook(
 
 
 class DeepZoomUrlMaker(object):
-	def __init__(self, base_url, max_zoom):
+	def __init__(self, base_url, max_zoom, ext="jpg"):
 		self.base_url = base_url
 		self.max_zoom = max_zoom
+		self.ext = ext
 
 	def __call__(self, tile_x, tile_y):
-		return f"{self.base_url}/{self.max_zoom}/{tile_x}_{tile_y}.jpg"
+		return f"{self.base_url}/{self.max_zoom}/{tile_x}_{tile_y}.{self.ext}"
 
 
 def download_image_from_deepzoom(output_filename, metadata_url, url_maker):
@@ -572,33 +593,33 @@ def uniJena(
 ):
 	"""
 	Downloads single image from http://zs.thulb.uni-jena.de
-	
+
 	Requires a lot of work though
 	"""
 	class UrlMaker(object):
 		def __init__(self, zoom):
 			self.zoom = zoom
-			
+
 		def __call__(self, tile_x, tile_y):
 			return f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/{self.zoom}/{tile_y}/{tile_x}.jpg"
-		
+
 	#TODO: fix hardcoded document id
 	metadata_url = f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/imageinfo.xml"
 	metadata = get_xml(metadata_url)
-	
+
 	output_filename = make_output_filename("", os.path.basename(id))
-	
+
 	width = int(metadata.attrib["width"])
 	height = int(metadata.attrib["height"])
 	zoom = int(metadata.attrib["zoomLevel"])
-	
+
 	TILE_SIZE = 256
 	policy = TileSewingPolicy.from_image_size(width, height, TILE_SIZE)
 	policy.trim = False
-	
+
 	url_maker = UrlMaker(zoom)
 	download_and_sew_tiles(output_filename, url_maker, policy)
-	
+
 	subprocess.check_call([
 		"convert",
 		output_filename,
@@ -606,7 +627,7 @@ def uniJena(
 		output_filename
 	])
 
-	
+
 ###################
 #PAGE BASED DOWNLOADERS
 ###################
@@ -683,6 +704,33 @@ def onb(
 		output_filename = make_output_filename(output_folder, image_id, extension="jpg")
 		print(f"Downloading {image_id}")
 		get_binary(output_filename, image_url, cookies=cookies)
+
+
+@opster.command()
+def staatsBerlin(
+	id=("", "", "Id of the book to be downloaded (e. g. `PPN86902910X`)")
+):
+	"""
+	Downloads book from http://digital.staatsbibliothek-berlin.de/
+	"""
+
+	output_folder = make_output_folder("staatsBerlin", id)
+	page = 1
+	while True:
+		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.isfile(output_filename):
+			print(f"Skipping existing page {page}")
+		else:
+			try:
+				image_url = f"http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&metsFile={id}&divID=PHYS_{page:04d}"
+				#WARN:
+				#	it looks like there is no normal way
+				#	to get the number of pages in the book via http request
+				get_binary(output_filename, image_url)
+			except ValueError as ex:
+				print(f"No more images left. Last page was {page - 1:04d}")
+				break
+		page += 1
 
 
 if __name__ == "__main__":
