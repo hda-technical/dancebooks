@@ -65,7 +65,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 176- | Jacob von Stählin | Nachrichten von der Tanzkunst und Balletten in Rußland | | [Google](https://books.google.com/books/?id=9RlMAAAAYAAJ) |
 | 176- | Thompson | Thirty Favourite Hornpipes Which Are Now in Vogue and Performed at the Public Theatres | `[2. Rothenfelser]` | |
 | 1762 | La Hante<br/>Perrin | Chorégraphie nouvelle, ou méthode pour former & danser soi-meme les contredanses | [Advertisement](https://books.google.com/books?id=C8pZAAAAcAAJ&pg=PA141)<br/>`[Nouveau manuel, 1857, #35]` | |
-| 1763 | Josson, l'ainé | Traité abrégé de la danse | `[Charinomos, 1825]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb39317580w) |
 | 1765 | Gasparo Angiolini<br/>Pere Sanadon (translator) | Dissertation sur les ballets pantomimes des anciens | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]` | |
 | 1765? | Sauton | Methode pour apprendre la chorégraphie des contredanses nouvelles et à la mode | | [PSU](https://cat.libraries.psu.edu/uhtbin/cgisirsi/x/0/0/57/20/GV1643.M36+no.116+1765/1/X000063313116?user_id=WEBSERVER) |
 | 1766 | Jean-Georges Noverre | Théorie et pratique de la danse simple et compose<br/>_Published in Louisbourg_ | `[4. Rothenfelser]` | |
@@ -103,7 +102,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1791 | | Eighteen of the Most Favourite Country Dances<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://www.imieiventagli.it/l_allmande) |
 | 1793? | Charles Metralcourt | Twenty Four Country Dances, with proper Directions to each Dance | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004524098) |
 | 1795 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1795. With Proper Directions to Each Dance | [[Cooper, 01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1795]](https://www.cdss.org/elibrary/DFIE/Biblio/B000084.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283622) |
-| 1796 | Georg Link | Volkomenne Tanzschule aller in Kompagnien und Bällen vorkommenden Tänzen | [[Brocza, Motnik, 2014]](https://bib.hda.org.ru/books/brocza_2014_link)<br/>`[Katalog, 1894]` | |
 | 1797 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1797 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1797]](https://www.cdss.org/elibrary/DFIE/Biblio/B000086.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283634) |
 | 1799 | | Über die theatralischen Tänze und die Balletmeister Noverre, Mizzarelli und Vigano<br/>_Published in Wien_ | `[Charinomos, 1825]` | |
 | 1799 | Feray | Nouvelle Terpsichore, ou recueil de nouvelles danses angloises | `[Yoko]` | |
@@ -388,7 +386,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | Date | Author | Title | References | Links |
 | ---- | ------ | ----- | ---------- | ----- |
 | 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009832426&context=L&search_scope=default_scope&lang=ru_RU) |
-| 1543 | M. Ambach | Von Tantzen, Vrtheil, Auss heiliger Schrifft, vndden alter christl. Lerert gestelt | `[Katalog, 1894]` | | |
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
 | 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009810813&context=L&search_scope=default_scope)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
 | | Joachim Christian Lang | | | | |
