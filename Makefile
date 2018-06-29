@@ -51,21 +51,23 @@ www-translations:
 www-configs-install: www-configs-install-production www-configs-install-testing;
 
 www-configs-install-production:
-	#creating required folders
-	install --mode=775 --owner=www-data --group=www-data --directory /var/run/uwsgi
-	install --mode 755 --owner www-data --group=www-data --directory /var/log/dancebooks
+	#creating directory for logs
+	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
+	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME)
 	#installing uwsgi configs
 	install --owner=www-data --group=www-data configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
-	#installing service configs
-	install configs/service.production.conf /etc/init/$(NAME).conf
-	initctl reload-configuration
-	stop $(NAME); start $(NAME)
+	#creating upstart/systemd service
+	install --mode=644 configs/upstart.production.conf /etc/init/$(NAME).conf
+	install --mode=644 configs/systemd.production.conf /etc/systemd/system/$(NAME).service
+	$(shell initctl reload-configuration && stop $(NAME); start $(NAME) || true)
+	$(shell systemctl daemon-reload && systemctl enable $(NAME).service && systemctl stop $(NAME).service; systemctl start $(NAME).service || true)
 	#generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_PRODUCTION)" ]; \
 	then \
 		echo "Generating custom dh_param at /tmp/dh_param.pem"; \
 		openssl dhparam -out "/tmp/dh_param.pem" 2048; \
+		install --mode=700 --owner=www-data --group=www-data --directory "$(dir $(DHPARAM_PRODUCTION))"; \
 		install --mode=600 --owner=www-data --group=www-data "/tmp/dh_param.pem" "$(DHPARAM_PRODUCTION)"; \
 		rm "/tmp/dh_param.pem"; \
 	fi
@@ -77,20 +79,23 @@ www-configs-install-production:
 	install configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
 www-configs-install-testing:
-	install --mode=775 --owner=www-data --group=www-data --directory /var/run/uwsgi
-	install --mode 755 --owner www-data --group=www-data --directory /var/log/dancebooks.testing
+	#creating directory for logs
+	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
+	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME_TESTING)
 	#installing uwsgi configs
 	install --owner=www-data --group=www-data configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
-	#installing service configs
-	install configs/service.testing.conf /etc/init/$(NAME_TESTING).conf
-	initctl reload-configuration
-	stop $(NAME_TESTING); start $(NAME_TESTING)
+	#creating upstart/systemd service
+	install --mode=644 configs/upstart.testing.conf /etc/init/$(NAME_TESTING).conf
+	install --mode=644 configs/systemd.testing.conf /etc/systemd/system/$(NAME_TESTING).service
+	$(shell initctl reload-configuration && stop $(NAME_TESTING); start $(NAME_TESTING) || true)
+	$(shell systemctl daemon-reload && systemctl enable $(NAME_TESTING).service && systemctl stop $(NAME_TESTING).service; systemctl start $(NAME_TESTING).service || true)
 	#generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_TESTING)" ]; \
 	then \
 		echo "Generating custom dh_param at /tmp/dh_param.pem"; \
 		openssl dhparam -out "/tmp/dh_param.pem" 2048; \
+		install --mode=700 --owner=www-data --group=www-data --directory "$(dir $(DHPARAM_TESTING))"; \
 		install --mode=600 --owner=www-data --group=www-data "/tmp/dh_param.pem" "$(DHPARAM_TESTING)"; \
 		rm "/tmp/dh_param.pem"; \
 	fi
