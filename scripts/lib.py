@@ -14,7 +14,8 @@ import bs4
 import opster
 import requests
 
-USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0"
+#NOTE: if the website is protected by cloudflare, removing User-Agent header will help to pass it by
+USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:62.0) Gecko/20100101 Firefox/62.0"
 HEADERS = {
 	"User-Agent": USER_AGENT
 }
@@ -121,7 +122,7 @@ def make_temporary_folder():
 
 
 class TileSewingPolicy(object):
-	def __init__(self, tiles_number_x, tiles_number_y, tile_size, overlap=0):
+	def __init__(self, tiles_number_x, tiles_number_y, tile_size, overlap=None):
 		self.tiles_number_x = tiles_number_x
 		self.tiles_number_y = tiles_number_y
 		self.tile_size = tile_size
@@ -140,19 +141,29 @@ def sew_tiles_with_montage(folder, output_file, policy):
 	Invokes montage tool from ImageMagick package to sew tiles together
 	"""
 	def format_magick_geometry(policy):
-		return f"{policy.tile_size}x{policy.tile_size}-{policy.overlap}-{policy.overlap}>"
+		geometry = ""
+		if policy.tile_size is not None:
+			geometry += f"{policy.tile_size}x{policy.tile_size}"
+		if policy.overlap is not None:
+			geometry += f"-{policy.overlap}-{policy.overlap}"
+		return geometry
 
 	def format_magick_tile(policy):
 		return f"{policy.tiles_number_x}x{policy.tiles_number_y}"
 
-	subprocess.check_call([
+	cmd_line = [
 		"montage",
 		f"{folder}/*",
-		"-mode", "Concatenate",
-		"-geometry", format_magick_geometry(policy),
+		"-mode", "Concatenate"
+	]
+	geometry = format_magick_geometry(policy)
+	if geometry:
+		cmd_line += ["-geometry", geometry]
+	cmd_line += [
 		"-tile", format_magick_tile(policy),
 		output_file
-	])
+	]
+	subprocess.check_call(cmd_line)
 	if policy.trim:
 		subprocess.check_call([
 			"convert",
@@ -300,6 +311,32 @@ def download_book_from_iiif(manifest_url, output_folder):
 		base_url = canvas_metadata["images"][-1]["resource"]["service"]["@id"]
 		download_image_from_iiif(base_url, output_filename)
 
+
+MAX_TILE_NUMBER = 100
+def guess_tiles_number_x(url_maker):
+	tiles_number_x = 0
+	for tiles_number_x in range(MAX_TILE_NUMBER):
+		probable_url = url_maker(tiles_number_x, 0)
+		if probable_url is None:
+			break
+		head_response = requests.get(probable_url)
+		if head_response.status_code != 200:
+			break
+	return tiles_number_x
+
+
+def guess_tiles_number_y(url_maker):
+	tiles_number_y = 0
+	for tiles_number_y in range(MAX_TILE_NUMBER):
+		probable_url = url_maker(0, tiles_number_y)
+		if probable_url is None:
+			break
+		head_response = requests.head(probable_url)
+		if head_response.status_code != 200:
+			break
+	return tiles_number_y
+
+
 ###################
 #TILE BASED DOWNLOADERS
 ###################
@@ -425,7 +462,6 @@ def hab(
 			return None
 
 	MAX_ZOOM = 10
-	MAX_TILE_NUMBER = 100
 	TILE_SIZE = 256
 	max_zoom = None
 	for test_zoom in range(MAX_ZOOM + 1):
@@ -443,21 +479,12 @@ def hab(
 	#
 	#FIXME: one can save some requests using bisection here,
 	#but python standard library is too poor to have one
-	tiles_number_x = None
-	tiles_number_y = None
 	url_maker = UrlMaker(max_zoom)
-	for tile_x in range(MAX_TILE_NUMBER):
-		if url_maker(tile_x, 0) is None:
-			tiles_number_x = tile_x
-			print(f"Guessed tiles_number_x={tiles_number_x}")
-			break
-	for tile_y in range(MAX_TILE_NUMBER):
-		if url_maker(0, tile_y) is None:
-			tiles_number_y = tile_y
-			print(f"Guessed tiles_number_y={tiles_number_y}")
-			break
-	assert(tiles_number_x is not None)
-	assert(tiles_number_y is not None)
+	tiles_number_x = guess_tiles_number_x(url_maker)
+	print(f"Guessed tiles_number_x={tiles_number_x}")
+	tiles_number_y = guess_tiles_number_y(url_maker)
+	print(f"Guessed tiles_number_y={tiles_number_y}")
+
 	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
 	output_filename = make_output_filename(id.replace("/", "."))
 	download_and_sew_tiles(output_filename, url_maker, policy)
@@ -546,6 +573,30 @@ def download_image_from_deepzoom(output_filename, metadata_url, url_maker):
 
 
 @opster.command()
+def leidenCollection(
+	id=("", "", "Image id of the painting to be donwloaded(e. g. `js-108-jan_steen-the_fair_at_warmond_files`)")
+):
+	"""
+	Downloads single image from https://www.theleidencollection.com
+	"""
+	MAX_ZOOM = 13
+	TILE_SIZE = None
+	
+	class UrlMaker(object):
+		def __call__(self, tile_x, tile_y):
+			return f"https://www.theleidencollection.com/LeidenCollectionSamples/images/{id}_files/{MAX_ZOOM}/{tile_x}_{tile_y}.jpg"
+		
+	url_maker = UrlMaker()
+	tiles_number_x = guess_tiles_number_x(url_maker)
+	print(f"Guessed tiles_number_x={tiles_number_x}")
+	tiles_number_y = guess_tiles_number_y(url_maker)
+	print(f"Guessed tiles_number_y={tiles_number_y}")
+	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, None, None)
+	
+	output_filename = make_output_filename("", id)
+	download_and_sew_tiles(output_filename, url_maker, policy)
+
+@opster.command()
 def britishLibraryManuscript(
 	id=("", "", "Page id of the manuscript to be downloaded (e. g. `add_ms_12531!1_f005r`)")
 ):
@@ -603,7 +654,6 @@ def uniJena(
 		def __call__(self, tile_x, tile_y):
 			return f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/{self.zoom}/{tile_y}/{tile_x}.jpg"
 
-	#TODO: fix hardcoded document id
 	metadata_url = f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/imageinfo.xml"
 	metadata = get_xml(metadata_url)
 
