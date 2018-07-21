@@ -83,8 +83,8 @@ class TestHandlers(unittest.TestCase):
 				"keywords": "music, dance description, quadrille: first set",
 				"name": "Александр Сергеевич Пушкин",
 				"email": "pushkin@lyceum.net",
-				"captcha_key": "unittest",
-				"captcha_answer": "31337",
+				"captcha_key": "louis-naissanse",
+				"captcha_answer": "1638",
 			}
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
@@ -127,8 +127,8 @@ class TestHandlers(unittest.TestCase):
 				"keywords": "music, dance description, quadrille: first set, long-and-probably-unallowed-keyword",
 				"name": "Александр Сергеевич Пушкин",
 				"email": "pushkin@lyceum.net",
-				"captcha_key": "unittest",
-				"captcha_answer": "31337",
+				"captcha_key": "louis-naissanse",
+				"captcha_answer": "1638",
 			}
 		)
 		self.assertEqual(rq.status_code, http.client.BAD_REQUEST)
@@ -144,8 +144,8 @@ class TestHandlers(unittest.TestCase):
 				"message": "There is a problem with the book. Мой дядя самых честных правил",
 				"name": "Александр Сергеевич Пушкин",
 				"email": "pushkin@lyceum.net",
-				"captcha_key": "unittest",
-				"captcha_answer": "31337",
+				"captcha_key": "louis-naissanse",
+				"captcha_answer": "1638",
 			}
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
@@ -160,8 +160,8 @@ class TestHandlers(unittest.TestCase):
 				"message": "There is a problem with the book. Мой дядя самых честных правил",
 				"name": "Александр Сергеевич Пушкин",
 				"email": "pushkin@lyceum.net",
-				"captcha_key": "unittest",
-				"captcha_answer": "31337",
+				"captcha_key": "louis-naissanse",
+				"captcha_answer": "1638",
 			},
 			follow_redirects=True
 		)
@@ -192,8 +192,8 @@ class TestHandlers(unittest.TestCase):
 				"message": "There is a problem with the book. Мой дядя самых честных правил",
 				"name": "Александр Сергеевич Пушкин",
 				"email": "spamers_go_away",
-				"captcha_key": "unittest",
-				"captcha_answer": "31337",
+				"captcha_key": "louis-naissanse",
+				"captcha_answer": "1638",
 			}
 		)
 		self.assertEqual(rq.status_code, http.client.BAD_REQUEST)
