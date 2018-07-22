@@ -58,7 +58,6 @@ configs-install-production:
 	#creating upstart/systemd service
 	install --mode=644 configs/upstart.production.conf /etc/init/$(NAME).conf
 	install --mode=644 configs/systemd.production.conf /etc/systemd/system/$(NAME).service
-	$(shell initctl reload-configuration && stop $(NAME); start $(NAME) || true)
 	$(shell systemctl daemon-reload && systemctl enable $(NAME).service && systemctl stop $(NAME).service; systemctl start $(NAME).service || true)
 	#generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_PRODUCTION)" ]; \
@@ -86,7 +85,6 @@ configs-install-testing:
 	#creating upstart/systemd service
 	install --mode=644 configs/upstart.testing.conf /etc/init/$(NAME_TESTING).conf
 	install --mode=644 configs/systemd.testing.conf /etc/systemd/system/$(NAME_TESTING).service
-	$(shell initctl reload-configuration && stop $(NAME_TESTING); start $(NAME_TESTING) || true)
 	$(shell systemctl daemon-reload && systemctl enable $(NAME_TESTING).service && systemctl stop $(NAME_TESTING).service; systemctl start $(NAME_TESTING).service || true)
 	#generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_TESTING)" ]; \
