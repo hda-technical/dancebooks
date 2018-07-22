@@ -2,9 +2,7 @@ NAME := dancebooks
 NAME_TESTING := $(NAME).testing
 
 #Using testing conf-file in development environment
-UNITTEST_CONFIG := $(shell readlink -f configs/dancebooks.unittest.conf)
-DEVEL_CONFIG := $(shell readlink -f configs/dancebooks.development.conf)
-PRODUCTION_CONFIG := $(shell readlink -f configs/dancebooks.production.conf)
+CONFIG := $(shell readlink -f configs/dancebooks.conf)
 LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 TOUCH_RELOAD_TESTING := /var/run/uwsgi/$(NAME_TESTING).reload
@@ -14,12 +12,12 @@ DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
 
 UNITTEST_ENV := \
 	DANCEBOOKS_UNITTEST= \
-	CONFIG=$(UNITTEST_CONFIG) \
+	CONFIG=$(CONFIG) \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
 	PYTHONPATH=. \
 
 DEVEL_ENV := \
-	CONFIG=$(DEVEL_CONFIG) \
+	CONFIG=$(CONFIG) \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
 	PYTHONPATH=. \
 
