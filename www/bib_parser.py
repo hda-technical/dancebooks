@@ -20,7 +20,7 @@ class Availability(enum.Enum):
 
 	@staticmethod
 	def from_url(single_url, item):
-		if utils.is_url_self_served(single_url, item):
+		if utils.is_url_self_served(single_url):
 			return Availability.AvailableHere
 		else:
 			return Availability.AvailableElsewhere

@@ -662,7 +662,7 @@ def validate_url_validity(item, errors):
 				number=number
 			))
 
-		if not utils.is_url_self_served(single_url, item):
+		if not utils.is_url_self_served(single_url):
 			continue
 
 		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)

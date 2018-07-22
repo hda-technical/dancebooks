@@ -257,7 +257,7 @@ def get_book_pdf(book_id, index):
 	if (
 		(book_id != item.id()) or
 		(request_url_production not in item_url) or
-		not utils.is_url_self_served(request_url_production, item)
+		not utils.is_url_self_served(request_url_production)
 	):
 		flask.abort(404, "Book with id {book_id} isn't available for download".format(
 			book_id=book_id

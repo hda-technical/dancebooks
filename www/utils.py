@@ -233,7 +233,7 @@ def all_or_none(iterable):
 	return all(iterable) or not any(iterable)
 
 
-def is_url_self_served(url, item):
+def is_url_self_served(url):
 	split = urlparse.urlsplit(url)
 	return (
 		(split.hostname == config.www.app_domain_production) and
@@ -315,7 +315,7 @@ def is_url_accessible(url, item, method="HEAD"):
 	Tries to perform HTTP HEAD request, and if it fails with
 	status=405 (method not allowed) retries it with HTTP GET
 	"""
-	if is_url_self_served(url, item):
+	if is_url_self_served(url):
 		return True
 
 	RETRIES = 3

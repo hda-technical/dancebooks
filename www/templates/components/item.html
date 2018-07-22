@@ -65,7 +65,7 @@
 				{% for url in value %}
 					<li>
 						<a href="{{ url }}">{{ url }}</a>
-						{% if url | is_url_self_served(item) %}
+						{% if url | is_url_self_served %}
 							({{ url | self_served_url_size(item) }})
 						{% endif %}
 					</li>
