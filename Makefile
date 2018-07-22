@@ -13,6 +13,7 @@ DHPARAM_TESTING := /etc/nginx/conf/bib-test.hda.org.ru/dh_param.pem
 DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
 
 UNITTEST_ENV := \
+	DANCEBOOKS_UNITTEST= \
 	CONFIG=$(UNITTEST_CONFIG) \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
 	PYTHONPATH=. \
@@ -31,26 +32,25 @@ validate:
 	python _validate.py \
 	$(ARGS)
 
-# www-related targets
-www-debug: www-translations
+debug: translations
 	cd www && \
 	$(DEVEL_ENV) \
 	python main.py \
 
-www-test: $(TEST_TARGETS);
+test: $(TEST_TARGETS);
 
 www/tests/%.mk: www/tests/%.py
 	cd www && \
 	$(UNITTEST_ENV) \
 	python tests/`basename $<` -v \
 
-www-translations:
+translations:
 	pybabel -v -q compile -d www/translations
 
-# must be imvoked as root
-www-configs-install: www-configs-install-production www-configs-install-testing;
+# must be invoked as root
+configs-install: configs-install-production configs-install-testing;
 
-www-configs-install-production:
+configs-install-production:
 	#creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
 	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME)
@@ -78,7 +78,7 @@ www-configs-install-production:
 	#installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
-www-configs-install-testing:
+configs-install-testing:
 	#creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
 	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME_TESTING)
@@ -106,11 +106,11 @@ www-configs-install-testing:
 	#installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
 
-www-reload-testing: www-test www-translations
+reload-testing: test translations
 	@echo "Reloading"
 	bash -c "time -p (touch $(TOUCH_RELOAD_TESTING) && sleep 1 && curl --max-time 60 'https://bib-test.hda.org.ru/ping')"
 
-www-reload-production: www-test www-translations
+reload-production: test translations
 	@echo "Reloading"
 	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/ping')"
 
@@ -120,5 +120,3 @@ requirements.txt:
 # Ancillary targets
 
 .PHONY: requirements.txt
-
-test: www-test;

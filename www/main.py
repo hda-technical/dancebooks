@@ -9,7 +9,7 @@ import random
 import flask
 import flask_babel
 
-from config import config, WorkingMode
+from config import config
 import const
 import bib_parser
 import search
@@ -277,7 +277,7 @@ def get_book_pdf(book_id, index):
 	logging.info("Sending pdf file: {pdf_full_path}".format(
 		pdf_full_path=pdf_full_path
 	))
-	if config.working_mode == WorkingMode.Unittest:
+	if config.unittest_mode:
 		#using send_file in unittest mode causes ResourceWarning due to unclosed file
 		response = flask.make_response("SOME_BINARY_PDF_LIKE_DATA")
 		response.headers["Content-Type"] = "application/pdf"

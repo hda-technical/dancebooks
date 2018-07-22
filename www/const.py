@@ -173,9 +173,6 @@ CATALOGUE_MAP = {
 	"Marrocco": ("marrocco_1981_inventory", "Inventory of 15th century Bassedanze")
 }
 
-CONFIG_PATTERN = r"dancebooks\.(?P<mode>\w+)\.conf"
-CONFIG_REGEXP = re.compile(CONFIG_PATTERN)
-
 VALID_HTTP_CODES = {
 	#general OK
 	http.client.OK,

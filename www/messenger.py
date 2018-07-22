@@ -5,7 +5,7 @@ import smtplib
 
 import flask
 
-from config import config, WorkingMode
+from config import config
 
 class BasicMessage(object):
 	"""
@@ -44,8 +44,8 @@ class BasicMessage(object):
 
 		recipients = [config.bug_report.to_addr]
 
-		#do not send data in unittest mode
-		if config.working_mode == WorkingMode.Unittest:
+		if config.unittest_mode:
+			#do not send data in unittest mode
 			return
 
 		smtp = smtplib.SMTP(config.smtp.host, config.smtp.port)
