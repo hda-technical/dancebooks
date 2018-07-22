@@ -135,8 +135,6 @@ class WwwConfig(object):
 	def __init__(self, params):
 		#domains
 		self.app_domain = get_config_value("app_domain", params)
-		self.app_domain_production = get_config_value("app_domain_production", params)
-
 		#paths
 		self.books_prefix = "/books"
 		self.basic_search_prefix = "/basic-search"

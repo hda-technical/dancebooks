@@ -181,8 +181,7 @@ def format_catalogue_code(single_code):
 
 
 def format_transcription_url(item):
-	return '<a href="{prefix}/{item_id}/transcription">https://{app_domain}{prefix}/{item_id}/transcription</a>'.format(
-		app_domain=config.www.app_domain_production,
+	return '<a href="{prefix}/{item_id}/transcription">{prefix}/{item_id}/transcription</a>'.format(
 		prefix=config.www.books_prefix,
 		item_id=item.id()
 	)
@@ -380,3 +379,12 @@ def extract_email_from_request(param_name, default=_DefaultValueEmail):
 	if not EMAIL_REGEXP.match(result):
 		flask.abort(http.client.BAD_REQUEST, translate_wrong_error(param_name))
 	return result
+
+
+def require(condition, code, message):
+	"""
+	Raises ex if condition is False.
+	Just a piece of syntax sugar
+	"""
+	if (not condition):
+		flask.abort(code, message)

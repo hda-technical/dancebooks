@@ -240,31 +240,31 @@ def get_book_pdf(book_id, index):
 	TODO: I'm a huge method that isn't easy to read
 	Please, refactor me ASAP
 	"""
+	utils_flask.require(index > 0, http.client.NOT_FOUND, "Param index should be positive number")
+	
 	items = item_index["id"].get(book_id, None)
-
-	if (index <= 0):
-		flask.abort(http.client.BAD_REQUEST, "Param index should be positive number")
-
 	if items is None:
 		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(
 			book_id=book_id
 		))
-
 	item = utils.first(items)
-	item_url = item.get("url") or set()
-	request_path = flask.request.script_root + flask.request.path
-	request_url_production = "https://" + config.www.app_domain_production + request_path
-	if (
-		(book_id != item.id()) or
-		(request_url_production not in item_url) or
-		not utils.is_url_self_served(request_url_production)
-	):
-		flask.abort(404, "Book with id {book_id} isn't available for download".format(
-			book_id=book_id
-		))
-	file_name, file_size = utils.get_file_info_from_url(request_url_production, item)
+	
+	request_uri = flask.request.path
+	item_urls = item.get("url") or set()
+	filenames = item.get("filename")
+	is_url_valid = (
+		(request_uri in item_urls) and
+		utils.is_url_local(request_uri) and
+		utils.is_url_self_served(request_uri) and
+		index <= len(filenames)
+	)
+	utils_flask.require(is_url_valid, http.client.NOT_FOUND, "Book with id {book_id} is not available for download".format(
+		book_id=book_id
+	))
+	
+	filename = filenames[index - 1]
 	#filenames start from slash, trimming it
-	pdf_full_path = os.path.join(config.www.elibrary_dir, file_name[1:])
+	pdf_full_path = os.path.join(config.www.elibrary_dir, filename[1:])
 
 	if not os.path.isfile(pdf_full_path):
 		message = "Item {book_id} metadata is wrong: file for url {rel_url} is missing".format(
@@ -308,7 +308,7 @@ def get_book_markdown(item_id):
 	if transcription is None:
 		flask.abort(
 			http.client.NOT_FOUND,
-			"Trascription for item {item_id} is not available".format(
+			"Transcription for item {item_id} is not available".format(
 				item_id=item_id
 			)
 		)

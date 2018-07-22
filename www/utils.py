@@ -23,8 +23,6 @@ import const
 import search
 
 SELF_SERVED_PATTERN = (
-	"https://" +
-	re.escape(config.www.app_domain_production) +
 	re.escape(config.www.books_prefix) +
 	r"/(?P<item_id>[\w_]+)"
 )
@@ -234,11 +232,11 @@ def all_or_none(iterable):
 
 
 def is_url_self_served(url):
-	split = urlparse.urlsplit(url)
-	return (
-		(split.hostname == config.www.app_domain_production) and
-		("/pdf/" in split.path)
-	)
+	return "/pdf/" in url
+	
+
+def is_url_local(url):
+	return url.startswith("/")
 
 
 def get_file_info_from_url(url, item):
@@ -277,6 +275,8 @@ def is_url_valid(url, item):
 	"""
 	Validates urls by a number of checks
 	"""
+	if is_url_local(url):
+		return True
 	split_result = urlparse.urlsplit(url)
 	if len(split_result.scheme) == 0:
 		logging.debug("Scheme isn't specified")
@@ -781,7 +781,7 @@ def make_html_cite(item):
 	result += ". "
 	result += '<a href="{prefix}/{item_id}">{scheme}{domain}{prefix}/{item_id}</a>'.format(
 		scheme="https://",
-		domain=config.www.app_domain_production,
+		domain=config.www.app_domain,
 		prefix=config.www.books_prefix,
 		item_id=item.id()
 	)
