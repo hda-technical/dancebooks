@@ -5,7 +5,6 @@ import json
 import logging
 import unittest
 
-from config import config
 import main
 
 #normal book id, available for downloading pdf file of it
@@ -49,13 +48,13 @@ class TestHandlers(unittest.TestCase):
 				book_id=book_id
 			))
 			rq = self.client.get(
-				config.www.books_prefix + "/" + book_id,
+				"/books/" + book_id,
 				follow_redirects=True
 			)
 			self.assertEqual(rq.status_code, http.client.OK)
 
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID
+			"/books/" + TEST_OUTDATED_BOOK_ID
 		)
 		self.assertEqual(rq.status_code, http.client.MOVED_PERMANENTLY)
 
@@ -78,7 +77,7 @@ class TestHandlers(unittest.TestCase):
 	def test_post_keywords_handler(self):
 		#testing sending  correct data
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
 			data = {
 				"keywords": "music, dance description, quadrille: first set",
 				"name": "Александр Сергеевич Пушкин",
@@ -94,7 +93,7 @@ class TestHandlers(unittest.TestCase):
 
 		#testing submit without captcha authorization
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
 			data = {
 				"keywords": "music, dance description, quadrille: first set",
 				"name": "Александр Сергеевич Пушкин",
@@ -108,7 +107,7 @@ class TestHandlers(unittest.TestCase):
 
 		#testing submit with invalid email
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
 			data = {
 				"keywords": "music, dance description, quadrille: first set",
 				"name": "Александр Сергеевич Пушкин",
@@ -122,7 +121,7 @@ class TestHandlers(unittest.TestCase):
 
 		#testing submit with invalid keywords
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID + "/keywords",
 			data = {
 				"keywords": "music, dance description, quadrille: first set, long-and-probably-unallowed-keyword",
 				"name": "Александр Сергеевич Пушкин",
@@ -139,7 +138,7 @@ class TestHandlers(unittest.TestCase):
 	def test_post_bug_handler(self):
 		#testing sending correct data
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID,
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID,
 			data = {
 				"message": "There is a problem with the book. Мой дядя самых честных правил",
 				"name": "Александр Сергеевич Пушкин",
@@ -155,7 +154,7 @@ class TestHandlers(unittest.TestCase):
 
 		#test sending correct data with redirect
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID,
+			"/books/" + TEST_OUTDATED_BOOK_ID,
 			data = {
 				"message": "There is a problem with the book. Мой дядя самых честных правил",
 				"name": "Александр Сергеевич Пушкин",
@@ -172,7 +171,7 @@ class TestHandlers(unittest.TestCase):
 
 		#testing submit without captch authorization
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID,
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID,
 			data = {
 				"message": "There is a problem with the book. Мой дядя самых честных правил",
 				"name": "Александр Сергеевич Пушкин",
@@ -186,7 +185,7 @@ class TestHandlers(unittest.TestCase):
 
 		#testing submit with invalid email
 		rq = self.client.post(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID,
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID,
 
 			data = {
 				"message": "There is a problem with the book. Мой дядя самых честных правил",
@@ -203,7 +202,7 @@ class TestHandlers(unittest.TestCase):
 
 	def test_pdf_handlers(self):
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_DOWNLOADABLE_BOOK_ID + "/pdf/1",
+			"/books/" + TEST_DOWNLOADABLE_BOOK_ID + "/pdf/1",
 			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
@@ -211,27 +210,27 @@ class TestHandlers(unittest.TestCase):
 		self.assertTrue("Content-Disposition" in rq.headers)
 
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_UNDOWNLOADABLE_BOOK_ID + "/pdf/1",
+			"/books/" + TEST_UNDOWNLOADABLE_BOOK_ID + "/pdf/1",
 			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.NOT_FOUND)
 
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_OUTDATED_BOOK_ID + "/pdf/1",
+			"/books/" + TEST_OUTDATED_BOOK_ID + "/pdf/1",
 			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
 
 	def test_transcription_handlers(self):
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_MARKDOWNED_BOOK_ID + "/transcription",
+			"/books/" + TEST_MARKDOWNED_BOOK_ID + "/transcription",
 			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.OK)
 		self.assertEqual(rq.content_type, "text/html; charset=utf-8")
 
 		rq = self.client.get(
-			config.www.books_prefix + "/" + TEST_NOT_MARKDOWNED_BOOK_ID + "/transcription",
+			"/books/" + TEST_NOT_MARKDOWNED_BOOK_ID + "/transcription",
 			follow_redirects=True
 		)
 		self.assertEqual(rq.status_code, http.client.NOT_FOUND)

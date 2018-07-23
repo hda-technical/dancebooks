@@ -212,7 +212,7 @@ def search_items(show_secrets):
 		)
 
 
-@flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["GET"])
+@flask_app.route("/books/<string:book_id>", methods=["GET"])
 @utils_flask.check_id_redirections("book_id")
 @utils_flask.check_secret_cookie("show_secrets")
 @utils_flask.log_exceptions()
@@ -232,7 +232,7 @@ def get_book(book_id, show_secrets):
 	)
 
 
-@flask_app.route(config.www.books_prefix + "/<string:book_id>/pdf/<int:index>", methods=["GET"])
+@flask_app.route("/books/<string:book_id>/pdf/<int:index>", methods=["GET"])
 @utils_flask.check_id_redirections("book_id")
 @utils_flask.log_exceptions()
 def get_book_pdf(book_id, index):
@@ -241,14 +241,14 @@ def get_book_pdf(book_id, index):
 	Please, refactor me ASAP
 	"""
 	utils_flask.require(index > 0, http.client.NOT_FOUND, "Param index should be positive number")
-	
+
 	items = item_index["id"].get(book_id, None)
 	if items is None:
 		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(
 			book_id=book_id
 		))
 	item = utils.first(items)
-	
+
 	request_uri = flask.request.path
 	item_urls = item.get("url") or set()
 	filenames = item.get("filename")
@@ -261,7 +261,7 @@ def get_book_pdf(book_id, index):
 	utils_flask.require(is_url_valid, http.client.NOT_FOUND, "Book with id {book_id} is not available for download".format(
 		book_id=book_id
 	))
-	
+
 	filename = filenames[index - 1]
 	#filenames start from slash, trimming it
 	pdf_full_path = os.path.join(config.www.elibrary_dir, filename[1:])
@@ -292,7 +292,7 @@ def get_book_pdf(book_id, index):
 		)
 
 
-@flask_app.route(config.www.books_prefix + "/<string:item_id>/transcription", methods=["GET"])
+@flask_app.route("/books/<string:item_id>/transcription", methods=["GET"])
 @utils_flask.check_id_redirections("item_id")
 @utils_flask.log_exceptions()
 def get_book_markdown(item_id):
@@ -324,7 +324,7 @@ def get_book_markdown(item_id):
 	)
 
 
-@flask_app.route(config.www.books_prefix + "/<string:book_id>", methods=["POST"])
+@flask_app.route("/books/<string:book_id>", methods=["POST"])
 @utils_flask.jsonify()
 @utils_flask.log_exceptions()
 @utils_flask.check_captcha()
@@ -348,7 +348,7 @@ def edit_book(book_id):
 	return {"message": flask_babel.gettext("interface:report:thanks")}
 
 
-@flask_app.route(config.www.books_prefix + "/<string:book_id>/keywords", methods=["POST"])
+@flask_app.route("/books/<string:book_id>/keywords", methods=["POST"])
 @utils_flask.jsonify()
 @utils_flask.log_exceptions()
 @utils_flask.check_captcha()

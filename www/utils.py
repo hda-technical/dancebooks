@@ -22,10 +22,7 @@ from config import config
 import const
 import search
 
-SELF_SERVED_PATTERN = (
-	re.escape(config.www.books_prefix) +
-	r"/(?P<item_id>[\w_]+)"
-)
+SELF_SERVED_PATTERN = r"/books/(?P<item_id>[\w_]+)"
 
 SELF_SERVED_URL_PATTERN = (
 	SELF_SERVED_PATTERN +
@@ -233,7 +230,7 @@ def all_or_none(iterable):
 
 def is_url_self_served(url):
 	return "/pdf/" in url
-	
+
 
 def is_url_local(url):
 	return url.startswith("/")
@@ -587,10 +584,10 @@ class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
 	Marks paragraphs starting from `>>` symbols with style="text-align: right"
 	"""
 	MARKER = ">>"
-	
+
 	def test(self, parent, block):
 		return block.startswith(self.MARKER)
-		
+
 	def run(self, parent, blocks):
 		block = blocks.pop(0)
 		p = markdown.util.etree.Element("p")
@@ -601,7 +598,7 @@ class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
 		#Consider current block as processed
 		#This might be not the desired behaviour
 		return True
-		
+
 
 class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	"""
@@ -779,10 +776,8 @@ def make_html_cite(item):
 		result += ", "
 	result += year
 	result += ". "
-	result += '<a href="{prefix}/{item_id}">{scheme}{domain}{prefix}/{item_id}</a>'.format(
-		scheme="https://",
+	result += '<a href="/books/{item_id}">https://{domain}/books/{item_id}</a>'.format(
 		domain=config.www.app_domain,
-		prefix=config.www.books_prefix,
 		item_id=item.id()
 	)
 	return result

@@ -132,10 +132,7 @@ class ParserConfig(object):
 
 class WwwConfig(object):
 	def __init__(self, params):
-		#domains
 		self.app_domain = get_config_value("app_domain", params)
-		#paths
-		self.books_prefix = "/books"
 
 		self.search_params = get_config_value("search_params", params, transform=extract_set_from_json)
 		self.search_synonyms = get_config_value("search_synonyms", params, transform=json.loads)
