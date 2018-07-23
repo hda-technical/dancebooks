@@ -147,6 +147,7 @@ def jsonify():
 				return make_json_response(data, ex.code)
 
 			except Exception as ex:
+				logging.exception(ex)
 				data = {"message": "Internal Server Error"}
 				return make_json_response(data, http.client.INTERNAL_SERVER_ERROR)
 
@@ -156,15 +157,13 @@ def jsonify():
 
 #functions to be registered in jinja: begin
 def make_author_link(author):
-	return '<a href="{path}?author={author}">{author}</a>'.format(
-		path=config.www.basic_search_prefix,
+	return '<a href="/basic-search?author={author}">{author}</a>'.format(
 		author=author
 	)
 
 
 def make_keyword_link(keyword):
-	return '<a href="{path}?keywords={keyword}">{keyword}</a>'.format(
-		path=config.www.advanced_search_prefix,
+	return '<a href="/advanced-search?keywords={keyword}">{keyword}</a>'.format(
 		keyword=keyword
 	)
 

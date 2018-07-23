@@ -4,7 +4,6 @@ import functools
 import json
 import logging.config
 import os
-import subprocess
 
 import const
 
@@ -137,9 +136,6 @@ class WwwConfig(object):
 		self.app_domain = get_config_value("app_domain", params)
 		#paths
 		self.books_prefix = "/books"
-		self.basic_search_prefix = "/basic-search"
-		self.advanced_search_prefix = "/advanced-search"
-		self.all_fields_search_prefix = "/all-fields-search"
 
 		self.search_params = get_config_value("search_params", params, transform=extract_set_from_json)
 		self.search_synonyms = get_config_value("search_synonyms", params, transform=json.loads)

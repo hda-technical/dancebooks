@@ -61,7 +61,7 @@ class TestHandlers(unittest.TestCase):
 
 	def test_search(self):
 		#testing basic search
-		rq = self.client.get(config.www.basic_search_prefix, query_string={
+		rq = self.client.get("/basic-search", query_string={
 			"author": "Wilson",
 			"title": "Ecossoise",
 		})
@@ -69,7 +69,7 @@ class TestHandlers(unittest.TestCase):
 		self.assertTrue(TEST_UNDOWNLOADABLE_BOOK_ID in rq.data.decode())
 
 		#testing advanced search by multiple keywords
-		rq = self.client.get(config.www.advanced_search_prefix, query_string={
+		rq = self.client.get("/advanced-search", query_string={
 			"keywords": "quadrille, polka"
 		})
 		self.assertEqual(rq.status_code, http.client.OK)
