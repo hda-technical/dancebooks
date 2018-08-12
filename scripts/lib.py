@@ -146,6 +146,11 @@ def sew_tiles_with_montage(folder, output_file, policy):
 			geometry += f"{policy.tile_size}x{policy.tile_size}"
 		if policy.overlap is not None:
 			geometry += f"-{policy.overlap}-{policy.overlap}"
+		if geometry:
+			#WARN: 
+			#  Do not allow enlarging tiles.
+			#  Certain libraries (i. e. Gallica) use variable tile size
+			geometry += '>'
 		return geometry
 
 	def format_magick_tile(policy):
@@ -163,6 +168,8 @@ def sew_tiles_with_montage(folder, output_file, policy):
 		"-tile", format_magick_tile(policy),
 		output_file
 	]
+	cmd_line_repr = ' '.join(cmd_line)
+	print(f"Executing:\n    {cmd_line_repr}")
 	subprocess.check_call(cmd_line)
 	if policy.trim:
 		subprocess.check_call([
