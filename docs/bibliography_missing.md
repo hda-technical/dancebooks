@@ -334,7 +334,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]` | |
 | 1925 | Thoinot Arbeau<br/>Cyril W. Beaumont (translator) | Orchesography<br/>_English translation_ | | [Amazon, 1966 reprint](http://a.co/5H5ZyY7) |
 | 1927 | Анна Михайловна Зеленко | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | |
-| 1927 | Анна Михайловна Зеленко | Массовые народные танцы<br/>_Первое издание_ | [[Зеленко, 1929]](https://bib.hda.org.ru/books/zelenko_1929_folk)<br/>`[Жбанкова, 2016]` | |
 | 1927 | В. Н. Гернгросс-Всеволодский | Крестьянский танец | `[Жбанкова, 2016]` | |
 | 1927 | Т. Бабаджан<br/>Агния Барто | Ритмические игры и постановки к 10 годовщине Октября | | [On sale, ₽5500](http://www.alib.ru/5_barto_agniya_ritmicheskie_igry_i_postanovki_k_10_godovwine_oktyabrya_w1t1986151614fd8beb7fbf7fa890a1e8efc33a.html) |
 | 1928 | Е. Малая<br/>В. Костюк | Танцевальные шаги и гимнастические танцы | `[Жбанкова, 2016]` | |
