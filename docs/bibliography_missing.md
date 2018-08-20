@@ -354,6 +354,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1940 | | Школьная самодеятельность | `[Leaflets]` | | |
 | 1948 | Edwin Evans | Music and the Dance | `[Richardson, 1960]` | |
 | 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
+| 1952 | Лидия Ивановна Богаткова | Танец в школе<br/>_По материалам сборника Л. Богатковой «В лагере и школе»_<br/>_Издано в Ставрополе_ | | `[Bodhi]` |
 | 1958 | Rebelo Bonito | As mouriscas. I–O influxo árabe na coreografia popular<br/>_In: Das artes e da historia da Madeira, tomo 28, pages 39–42_ | | |
 | 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS008531382&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1959 | Anthur Henry Franks | A pictorial manual of ballroom dancing | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009309611&context=L&search_scope=default_scope&lang=ru_RU) |
