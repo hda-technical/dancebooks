@@ -498,7 +498,7 @@ def hab(
 
 
 @opster.command()
-def yale(
+def yaleImage(
 	id=("", "", "Image id to be downloaded (e. g. `lwlpr11386`)")
 ):
 	"""
@@ -528,6 +528,22 @@ def yale(
 
 	output_filename = make_output_filename(id)
 	download_and_sew_tiles(output_filename, UrlMaker(MAX_ZOOM), policy)
+
+	
+@opster.command()
+def yaleBook(
+	id=("", "", "Image id to be downloaded (e. g. `BRBL_Exhibitions/7/1327507/1327507`)")
+):
+	"""
+	Downloads image from https://brbl-zoom.library.yale.edu
+	"""
+	modulo = id[-1]
+	output_filename = make_output_filename("", id)
+	remote_filename = f"BRBL_Exhibitions/{modulo}/{id}/{id}.jp2"
+	fastcgi_url = "https://brbl-zoom.library.yale.edu/fcgi-bin/iipsrv.fcgi"
+	metadata_url = f"{fastcgi_url}?FIF={remote_filename}&obj=Max-size&obj=Tile-size&obj=Resolution-number"
+	metadata = IIPMetadata.from_text(get_text(metadata_url))
+	download_image_from_iip(fastcgi_url, remote_filename, metadata, output_filename)
 
 
 @opster.command()
