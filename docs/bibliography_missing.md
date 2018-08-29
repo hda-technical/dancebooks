@@ -367,7 +367,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1985 | Carol Marsh | French Court Dance in England, 1706–1740<br/>_Unpublished PhD thesis_ | [[Segal, 2009]](https://bib.hda.org.ru/books/segal_2009_hornpipe) |
 | 1986<br/>1992 | François Gasnault | Guinguettes et lorettes. Bals publics et danse sociale à Paris entre 1830 et 1870<br/>ISBN: `2-7007-2206-X` | | [Amazon](http://a.co/acZDzSs) |
 | 1990 | Anne Martin-Fugier | La vie élégante, ou la formation de Tout-Paris<br/>ISBN: `978-2-262-03563-1` | | [Amazon](http://a.co/9fgv32a) |
-| 1991 | Eugenia Kougioumtzoglou-Roucher | Aux origines de la danse classique, le vocabulaire de la belle-danse, 1661–1701<br/>PhD Thesis, Université de Paris-Nord | `[3. Rothenfelser]` | |
+| 1991 | Eugenia Kougioumtzoglou-Roucher | Aux origines de la danse classique, le vocabulaire de la belle-danse, 1661–1701<br/>_PhD Thesis, Université de Paris-Nord_ | `[3. Rothenfelser]` | |
 | 1992 | Carles Mas i Garcia<br/>Sophie Rousseau | Tactus et tempo des musiques à danser. Pour une lecture dans le texte original<br/>_In: Le cahier de maître Guillaume, 1992_ | `[3. Rothenfelser]` | |
 | 1993 | Guglielmo | De pratica seu arte tripudii. On the Practice or Art of Dancing<br/>Edited, translated and introduced by Barbara Sparti | | Owned by Glorf |
 | 1995 | A. Montandon | Bibliographie des traités de savoir-vivre en Europe | `[Heiter, 2016]` | |

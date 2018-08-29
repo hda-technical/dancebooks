@@ -2,7 +2,7 @@
 
 Ниже приводятся фрагменты переписки с представителями библиотек касательно возможности выкладывания материалов, полученных из библиотек на сайте библиографии.
 
-## Российская государственная библиотека
+## Российская государственная библиотека, Москва
 
 _Из переписки на портале udo.rsl.ru._
 
@@ -18,7 +18,7 @@ _Из переписки на портале udo.rsl.ru._
 
 > Возможно с указанием источника – РГБ и без коммерческого использования
 
-## Российская национальная библиотека
+## Российская национальная библиотека, Санкт-Петербург
 
 > Здравствуйте!
 >
@@ -45,7 +45,7 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Российская национальная библиотека
 
-## Библиотека российской академии наук
+## Библиотека российской академии наук, Санкт-Петербург
 
 > Здравствуйте!
 >
@@ -87,7 +87,7 @@ _Из переписки на портале udo.rsl.ru._
 > 
 > Служба электронной доставки  ГПИБ России.
 
-## Bibliothèque nationale de France
+## Bibliothèque nationale de France, Paris
 
 _From an email forwarded by Dmitry Filimonov._
 
@@ -109,7 +109,7 @@ _From an email forwarded by Dmitry Filimonov._
 >
 > Cordialement
 >
-> DANET Nadège
+> Danet Nadège
 >
 > Pôle redevance
 >
@@ -224,3 +224,39 @@ grant - the item was scanned for your use.
 > Dr Ulrike Hogg
 >
 > Curator (Gaelic, Early Modern & Music Manuscripts) | Archives & Manuscript Collections
+
+## Univertätsbibliothek Salzburg / Derra de Moroda Tanzarchiv, Salzburg
+
+> I am the author and maintainer of the world largest historical dance bibliography: https://bib.hda.org.ru/
+>
+> Along with thorough bibliographical information / links to the digital versions of the primary sources, I am trying to provice (when it is possible links to the primary sources not yes available at the library website). All the content is licensed under CC-BY-NC-SA noncommercial license.
+>
+> I have got permission to put these books from various libraries including the Russian State Library, the Bibliothèque nationale de France, the National Library of Scotland and many others.
+>
+> Here is an example of such book: https://bib.hda.org.ru/books/malpied_1762_elemens
+>
+> Derra de Moroda Tanzarchiv and Salzburg Universitety Library hold a lot of primary sources, which are not available online. So far, I was using EOD portal to order such books, and their license forbids to put ordered items online.
+>
+> I would like to ask for permission to publish these books on my personal website under non-commercial license. I will credit Salzburg University library for each entry I put online.
+>
+> Could you (or the other member of the staff) give me such permission?
+>
+> Regards,
+>
+> Yuriy.
+
+---
+
+> Dear Yuriy Chernyshov,
+>
+> since the books ordered from EoD are public domain, you are in fact allowed to put items online as far as the University Library of Salzburg is concerned.
+> 
+> You are actually not allowed to publish public domain works under a CC-BY-NC-SA license since these licenses can only be applied by the author of the work or the institution who digitized the work. Creative Commons offers a Public Domain Mark to be used for works in the public domain (http://creativecommons.org/publicdomain/mark/1.0/), but it’s not necessary to add a license. Just credit the University of Salzburg.
+>
+> For more information and permissions from the Derra de Moroda Archive you can also contact irene.brandenburg@sbg.ac.at
+>
+> If you have any further questions, please contact us.
+>
+> Kind regards
+>
+> Linda Ohrtmann
