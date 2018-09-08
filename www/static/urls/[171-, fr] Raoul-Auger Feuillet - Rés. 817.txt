@@ -1,24 +1,24 @@
 Contains a printed copy of ‹La pavane de saisons›. See https://bib.hda.org.ru/books/pecour_1700_pavane
 Contains a printed copy of ‹L'allemande›. See https://bib.hda.org.ru/books/pecour_1702_allemande
 Contains a printed copy of ‹La triomphante>. See https://bib.hda.org.ru/books/feuillet_1702_trioumphante
-http://gallica.bnf.fr/ark:/12148/bpt6k859945c
-http://gallica.bnf.fr/ark:/12148/bpt6k8599427
-http://gallica.bnf.fr/ark:/12148/bpt6k859955q
-http://gallica.bnf.fr/ark:/12148/bpt6k8599563
-http://gallica.bnf.fr/ark:/12148/bpt6k859957g
-http://gallica.bnf.fr/ark:/12148/bpt6k859943m
-http://gallica.bnf.fr/ark:/12148/bpt6k8599440
-http://gallica.bnf.fr/ark:/12148/bpt6k859946r
-http://gallica.bnf.fr/ark:/12148/bpt6k8599474
-http://gallica.bnf.fr/ark:/12148/bpt6k859953z
-http://gallica.bnf.fr/ark:/12148/bpt6k8599516
-http://gallica.bnf.fr/ark:/12148/bpt6k859952k
-http://gallica.bnf.fr/ark:/12148/bpt6k859934n
-http://gallica.bnf.fr/ark:/12148/bpt6k859932w
-http://gallica.bnf.fr/ark:/12148/bpt6k8599338
-http://gallica.bnf.fr/ark:/12148/bpt6k8599351
-http://gallica.bnf.fr/ark:/12148/bpt6k859936d
-http://gallica.bnf.fr/ark:/12148/bpt6k310060w
-http://gallica.bnf.fr/ark:/12148/bpt6k3100618
-http://gallica.bnf.fr/ark:/12148/bpt6k310062n
-http://gallica.bnf.fr/ark:/12148/bpt6k3100631
+https://gallica.bnf.fr/ark:/12148/bpt6k859945c
+https://gallica.bnf.fr/ark:/12148/bpt6k8599427
+https://gallica.bnf.fr/ark:/12148/bpt6k859955q
+https://gallica.bnf.fr/ark:/12148/bpt6k8599563
+https://gallica.bnf.fr/ark:/12148/bpt6k859957g
+https://gallica.bnf.fr/ark:/12148/bpt6k859943m
+https://gallica.bnf.fr/ark:/12148/bpt6k8599440
+https://gallica.bnf.fr/ark:/12148/bpt6k859946r
+https://gallica.bnf.fr/ark:/12148/bpt6k8599474
+https://gallica.bnf.fr/ark:/12148/bpt6k859953z
+https://gallica.bnf.fr/ark:/12148/bpt6k8599516
+https://gallica.bnf.fr/ark:/12148/bpt6k859952k
+https://gallica.bnf.fr/ark:/12148/bpt6k859934n
+https://gallica.bnf.fr/ark:/12148/bpt6k859932w
+https://gallica.bnf.fr/ark:/12148/bpt6k8599338
+https://gallica.bnf.fr/ark:/12148/bpt6k8599351
+https://gallica.bnf.fr/ark:/12148/bpt6k859936d
+https://gallica.bnf.fr/ark:/12148/bpt6k310060w
+https://gallica.bnf.fr/ark:/12148/bpt6k3100618
+https://gallica.bnf.fr/ark:/12148/bpt6k310062n
+https://gallica.bnf.fr/ark:/12148/bpt6k3100631

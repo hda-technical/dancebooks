@@ -1,4 +1,4 @@
-http://gallica.bnf.fr/ark:/12148/bpt6k200280r
-http://gallica.bnf.fr/ark:/12148/bpt6k2002814
-http://gallica.bnf.fr/ark:/12148/bpt6k200282h
-http://gallica.bnf.fr/ark:/12148/bpt6k200283w
+https://gallica.bnf.fr/ark:/12148/bpt6k200280r
+https://gallica.bnf.fr/ark:/12148/bpt6k2002814
+https://gallica.bnf.fr/ark:/12148/bpt6k200282h
+https://gallica.bnf.fr/ark:/12148/bpt6k200283w

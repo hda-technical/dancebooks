@@ -353,13 +353,13 @@ def gallica(
 	id=("", "", "Id of the book to be downloaded (e. g. 'btv1b7200356s')")
 ):
 	"""
-	Downloads book from http://gallica.bnf.fr/
+	Downloads book from https://gallica.bnf.fr/
 
 	NB: There is an option to download high resolution raw images
 	(see JSON path manifest["sequences"][0]["canvases"][0]["images"][0]["resource"]["@id"]).
 	It does not look standard for IIIF protocol, hence it is not used in this helper script.
 	"""
-	manifest_url = f"http://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
+	manifest_url = f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 	output_folder = make_output_folder("gallica", id)
 	download_book_from_iiif(manifest_url, output_folder)
 
