@@ -35,7 +35,7 @@ Having let go the Right Hand, you go forwards, making a half Turn to present you
 
 ### {Back cover} Books Printed for and Sold by George Bickham, in _May's Buildings_, near _Covent-Garden_
 
-<div class="upper_roman"></div>
+<div class="next_ol_list_style_type_upper_roman"></div>
 
 1. Pastime Improved, by a new Pack of Cards, called, the _Beau Mode_ or the _Bath, Turnbridge and Scarborough_ Portraits,to a great Likeness, with the Round Heads, Flat Heads, Short Heads, Long Heads, Straight Heads, Covered Heads, Broad Heads and the Narrow Heads, engraved on Copper-plates, with Pips like the common Cards. Price 2 _s_.
 2. County cards: Containing Descriptions or all the Counties and Cities in _England_ and _Wales_, as to their Foundations, Government, Trade, Fairs and Markets, Members for Parliaments, Churches in each Distances from London, Oxford and Cambridge, with their Arms and Common Seals; engraved on Copper-plates with Pips like Common Cards. Price 1 _s_.

@@ -10264,7 +10264,7 @@ Are terms the author has adopted to regulate the length of the strains, as apply
 
 ### The Figure Bar
 
-The figure bar marked thus ![](/images/tr/wilson_04_down.svg), or thus ![](/images/tr/wilson_16.svg), is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
+The figure bar marked thus <span class="next_img_size_1em"></span>![](/images/tr/wilson_04_down.svg), or thus <span class="next_img_size_1em"></span>![](/images/tr/wilson_16.svg), is used to divide one part of a figure from the rest, and to point out to the dancer how much figure is to be performed to each strain of the music, first having but one dot, denotes, that the strain belonging to that part of the figure to which it is set is to be played but once; the second having two dots, shows the strains to be repeated or played twice. The figure or figures placed before each strain of the music to which the figure-bar refers.The first bar relates to the first strain, the second the the second strain, and so on to the rest. In order to point out the division of the figure and music more clearly,the author has in his own works, when da capo occurs in short measure, divided the figure, by placing a bar with a single dot at the end of the capo strain, besides that which would naturally occur at the end of the capo, as in "The haunted tower", and "La belle Catherine" (see "Companion to the ball room"), because it cannot be considered like the first, a strain repeated, being in reality two different strains. The dots to divide these strains are always placed at the top of the bar, those to all others, whether in long or short measure, are always placed under the bar.
 
 ### Figure of the Dance
 
@@ -12274,7 +12274,7 @@ The author of this work will always feel it is duty to expose and reprobate all 
 >
 > There they begin the honours for to make.
 >
-> Bel. The quadrille figure bar[[The quadrille figure bar is a character the author has used to show what quantity of music each movement or figure will take in the performance; it is similar to the one used in English Country Dancing, but he has been here more particular, putting a division to those figures which require but 4 bars, which are signified by a bar with one dot thus ![](/images/tr/wilson_04_up.svg) When the figure requires 8 bars, another dot is given ![](/images/tr/wilson_08_up.svg) those requiring 12 bars have three dots ![](/images/tr/wilson_12_up.svg) and for 16 bars four dots ![](/images/tr/wilson_16.svg)]] I've often seen;
+> Bel. The quadrille figure bar[[The quadrille figure bar is a character the author has used to show what quantity of music each movement or figure will take in the performance; it is similar to the one used in English Country Dancing, but he has been here more particular, putting a division to those figures which require but 4 bars, which are signified by a bar with one dot thus <span class="next_img_size_1em"></span>![](/images/tr/wilson_04_up.svg) When the figure requires 8 bars, another dot is given <span class="next_img_size_1em"></span>![](/images/tr/wilson_08_up.svg) those requiring 12 bars have three dots <span class="next_img_size_1em"></span>![](/images/tr/wilson_12_up.svg) and for 16 bars four dots <span class="next_img_size_1em"></span>![](/images/tr/wilson_16.svg)]] I've often seen;
 >
 > Can you explain those dots, and what they mean?
 >
@@ -12282,9 +12282,9 @@ The author of this work will always feel it is duty to expose and reprobate all 
 >
 > And to divide them for the dancer's sake;
 >
-> Each dot placed thus ![](/images/tr/wilson_04_up.svg) four bars does represent –
+> Each dot placed thus <span class="next_img_size_1em"></span>![](/images/tr/wilson_04_up.svg) four bars does represent –
 >
-> When there are four ![](/images/tr/wilson_16.svg) then sixteen bars is meant.
+> When there are four <span class="next_img_size_1em"></span>![](/images/tr/wilson_16.svg) then sixteen bars is meant.
 >
 > Bel. When you stand up, by what rule do you go,
 >

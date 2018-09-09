@@ -526,17 +526,9 @@ div.transcription table
 	width: 100%;
 }
 
-div.transcription p > img,
-div.transcription span.p > img
-{
-	width: 1em;
-	height: 1em;
-}
-
-
 div.transcription span.note_anchor,
 div.transcription p > sup
- {
+{
 	vertical-align: middle;
 	top: -7px;
 	position: relative;
@@ -617,6 +609,13 @@ div.transcription span.note span.h3
 }
 
 
-div.transcription div.upper_roman + ol {
+div.transcription div.next_old_list_style_type_upper_roman + ol
+{
 	list-style-type: upper-roman;
+}
+
+div.transcription span.next_img_size_1em + img
+{
+	width: 1em;
+	height: 1em;
 }
