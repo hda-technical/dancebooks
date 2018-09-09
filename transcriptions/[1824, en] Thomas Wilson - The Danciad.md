@@ -12134,7 +12134,7 @@ The first, second and third dances as in first set.
 >
 > The last they term "finale", means the end,
 >
-> To this some extra figure they appendMany finales have an extra figure which is performed immediately after the last couple have finished the dance, as chassez croisez, grand road, &c.]].
+> To this some extra figure they append[[Many finales have an extra figure which is performed immediately after the last couple have finished the dance, as chassez croisez, grand road, &c.]].
 >
 > What's termed short sets are not alone, you'll find,
 >

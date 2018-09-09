@@ -608,7 +608,10 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	"""
 	NOTE_NUMBER_PLACEHOLDER = "%NOTE_NUMBER%"
 	START = "[["
+	START_MARK_LENGTH = len(START)
 	END = "]]"
+	END_MARK_LENGTH = len(END)
+	FOOTNOTE_TAGS = ["blockquote", "h3", "p"]
 
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
@@ -626,68 +629,80 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 
 	def test(self, parent, block):
 		start_pos = block.find(self.START)
-		end_pos = block.find(self.END, start_pos)
-		return (
-			#footnote exists
-			(start_pos != -1) and
-			#is not empty - this allows to skip image markup `![](url)`
-			(end_pos != start_pos + 1)
-		)
+		return (start_pos != -1)
 
 	def run(self, parent, blocks):
 		raw_block = blocks.pop(0)
 		processed_block = ""
-		#set initial value to -len(self.END) in order
-		#to avoid skipping text from the starting block below
-		end_pos = -len(self.END)
+		# set initial value to -len(self.END) in order
+		# to avoid skipping text from the starting block below
 		start_pos = raw_block.find(self.START)
+		end_pos = None
+		# external cycle allowing to handle multiple footnotes is a single block
 		while (start_pos != -1):
 			#this text does not belong to footnote and should not be handled
-			processed_block += raw_block[end_pos + len(self.END):start_pos]
-			end_pos = raw_block.find(self.END, start_pos + len(self.START))
-			raw_footnote = raw_block[start_pos + len(self.START):end_pos]
-			while (
-				blocks and
-				end_pos == -1 and
-				#check the start of the block in order
-				#to stop breaking whole markup if single block is wrong
-				(blocks[0].startswith('\t') or blocks[0].startswith(' ' * self.tab_length))
-			):
-				#footnote is split across several blocks
-				#looking for the block ending the quote
-				raw_block = blocks.pop(0)
-				end_pos = raw_block.find(self.END)
-				#Restore block structure which was lost during blocks parsing
-				raw_footnote += "\n\n" + raw_block[0:end_pos]
+			processed_block += raw_block[0 if end_pos is None else (end_pos + self.END_MARK_LENGTH):start_pos]
+			end_pos = raw_block.find(self.END, start_pos + self.START_MARK_LENGTH)
+			if end_pos != -1:
+				raw_footnote = raw_block[start_pos + len(self.START):end_pos]
+			else:
+				# No ending mark in this block.
+				# Continue with popping next blocks 
+				raw_footnote = self.looseDetab(raw_block[start_pos + self.START_MARK_LENGTH:])
+				while (
+					blocks and
+					end_pos == -1 and
+					# check the start of the block in order
+					# to stop on the first detabbeb block 
+					# instead of breaking the whole markup if single block is wrong
+					(blocks[0].startswith('\t') or blocks[0].startswith(' ' * self.tab_length))
+				):
+					# footnote is split across several blocks
+					# looking for the ending mark 
+					raw_block = blocks.pop(0)
+					end_pos = raw_block.find(self.END)
+					#Restore block structure which was lost during blocks parsing
+					raw_footnote += "\n\n"
+					if end_pos == -1:
+						# ending mark was not found yet
+						# taking entire block into footnote
+						raw_footnote += self.looseDetab(raw_block)
+					else:
+						# ending mark found
+						raw_footnote += self.looseDetab(raw_block[:end_pos])
 			processed_block += self.handle_footnote(raw_footnote)
-			start_pos = raw_block.find(self.START, end_pos + len(self.END))
+			start_pos = raw_block.find(self.START, end_pos + self.END_MARK_LENGTH)
 
-		if len(raw_block) > end_pos + len(self.END):
+		if len(raw_block) > end_pos + self.END_MARK_LENGTH:
 			#handling the remaining of the block, if any
-			processed_block += raw_block[end_pos + len(self.END):]
+			processed_block += raw_block[end_pos + self.END_MARK_LENGTH:]
 		blocks.insert(0, processed_block)
 		#WARN: returning False in order to process current block with the other block parsers
 		return False
 
 	def handle_footnote(self, footnote_string):
-		footnote_string = (
-			#Placing placeholder in order to compile it into the first element
-			#It will be rpelaced after compilation
-			self.NOTE_NUMBER_PLACEHOLDER + " " +
-			#WARN: using looseDetab in order to process both inline text and padded blocks
-			self.looseDetab(footnote_string)
-		)
 		self._markdown.reset()
-		converted_note = self._markdown.convert(footnote_string)\
-			.replace(self.NOTE_NUMBER_PLACEHOLDER, str(self._next_note_number) + ".")\
-
-		for tag in ["blockquote", "h3", "p"]:
+		converted_note = self._markdown.convert(footnote_string)
+		# adding current footnote number to the first tag of converted footnote
+		converted_note = converted_note.replace('>', '>' + str(self._next_note_number) + ". ", 1)
+		
+		#WARN: 
+		#    Removing line breaks from converted note 
+		#    in order to place entire footnote into singlge markdown block.
+		#    At the time (Markdown=2.6.11) the following markup 
+		#    is being parsed into two blocks (one header, one text):
+		#	 ```
+		#    ### Test header
+		#    test text
+		converted_note = converted_note.replace('\n', '')
+		
+		for tag in self.FOOTNOTE_TAGS:
 			#block elements are not allowed inside <p> elements
 			#replacing them with span with corresponding classes
 			#in order to handle them with some css tricks
 			converted_note = converted_note\
 				.replace("<" + tag + ">", '<span class="' + tag + '">')\
-				.replace("</" + tag + ">", "</span>")\
+				.replace("</" + tag + ">", "</span>")
 
 		raw_html = (
 			"<span class='{CSS_CLASS_NOTE_ANCHOR}'>{next_note_number}</span>".format(
