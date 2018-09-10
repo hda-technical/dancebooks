@@ -168,12 +168,13 @@ def fetch_filelist_from_fs():
 def fetch_backups_from_fs():
 	if not os.path.isdir(config.www.backup_dir):
 		return []
-	FOLDERS_TO_VALIDATE = {
+	FOLDERS_TO_VALIDATE = [
 		"Cooking",
 		"Fashion",
+		"Games",
 		"Images",
 		"Library",
-	}
+	]
 	trim_root = lambda path: os.path.relpath(path, start=config.www.backup_dir)
 	filter = lambda path: const.FILENAME_REGEXP.match(os.path.basename(path))
 	backups = []
