@@ -16,7 +16,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1558 | Giovanni della Casa | Il Galateo<br/>_Book on etiquette_ | First issue in Italian | | |
 | 1571 | Pierre Phalese | Liber primus Leviorum carminum | | |
 | 1578 | Giorgio Mainerio | Il primo libro de balli | | |
-| 1587 | Prospero Luti | Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda<br/>_Published in Perugia_ | [[Luti, 1589]](https://bib.hda.org.ru/books/luti_1589)<br/>`[Lehner, 1997]` | |
+| 1587 | Prospero Luti | Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda<br/>_Published in Perugia_ | [[Luti, 1589]](https://bib.hda.org.ru/books/luti_1589)<br/>`[Lehner, 1997]`<br/>`[LOST?]` | |
 | 1589 | Prospero Luti | Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda<br/>_Published in Perugia_ | [[Luti, 1589]](https://bib.hda.org.ru/books/luti_1589)<br/>`[Lehner, 1997]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb30848304q)<br/>[Kubikat](http://aleph.mpg.de/F?func=direct&doc_number=000328166&local_base=kub01) |
 | 1591 | Christofano Malvezzi | Intermedii et concerti fatti per la commedia rappresentata in Firenze nelle nozze del serenissimo Don Ferdinando Medici <...><br/>_«Nono» part contains description of «Ballo dell'ultimo intermedia»_ | `[Sparti, 2004]` | [IMSLP](http://imslp.org/wiki/Intermedii_et_concerti_(Vincenti,_Giacomo)) |
 | 1600 | Livio Lupi | Mutanze di gagliarda, tordiglione, passo e mezzo, canario e passegi | [[Lupi, 1607]](https://bib.hda.org.ru/books/lupi_1607)<br/>`[Lehner, 1997]` | [Roma](http://opacbiblioroma.cineca.it/Record/RMLE037763/Description) |
