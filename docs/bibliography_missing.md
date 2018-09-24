@@ -333,6 +333,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | |
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
 | 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]` | |
+| 1925 | Max von Boehn | Der Tanz | [Modern edition](https://books.google.com/books?id=qZOj-PRgKcEC) | |
 | 1925 | Thoinot Arbeau<br/>Cyril W. Beaumont (translator) | Orchesography<br/>_English translation_ | | [Amazon, 1966 reprint](http://a.co/5H5ZyY7) |
 | 1927 | Анна Михайловна Зеленко | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | |
 | 1927 | В. Н. Гернгросс-Всеволодский | Крестьянский танец | `[Жбанкова, 2016]` | |
