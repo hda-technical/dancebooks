@@ -271,6 +271,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]` | |
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst | `[Leaflets]`<br/>_Not to be confused with Bernhard Klemm_ | | |
+| 1881 | Gustave Desrat | Le cotillon: vade-mecum du conducteur de cotillon | [Google](https://books.google.com/books?id=V0tJAQAAMAAJ) | [BNF](https://catalogue.bnf.fr/ark:/12148/cb30335186j)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=UDK_ALMA_DS21538951260002884&context=L&vid=UDK&search_scope=default_scope&tab=default_tab&lang=de_DE) |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
 | 1882 | Константин Аполлонович Скальковский | Балет, его история и место в ряду изящных искусств | | [On sale, ₽15000](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=2175231&dbType=Y)<br/>[NLR](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS004565138&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU) |
