@@ -292,7 +292,7 @@ def validate_single_filename(abspath, filename, item, errors):
 	"""
 	Checks if file is accessible and matches item metadata
 	"""
-
+	
 	if not os.path.isfile(abspath):
 		errors.add("File [{abspath}] is not accessible".format(
 			abspath=abspath
@@ -1011,7 +1011,7 @@ def main(
 	logging.info("Found {count} physically stored items".format(
 		count=len(physically_stored)
 	))
-	if os.path.isdir(config.www.backup_dir):
+	if config.www.backup_dir and os.path.isdir(config.www.backup_dir):
 		validate_backups()
 
 	for item in items:

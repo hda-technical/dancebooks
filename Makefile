@@ -2,7 +2,7 @@ NAME := dancebooks
 NAME_TESTING := $(NAME).testing
 
 #Using testing conf-file in development environment
-CONFIG := $(shell readlink -f configs/dancebooks.conf)
+CONFIG := $(shell readlink -f configs/dancebooks.json)
 LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 TOUCH_RELOAD_TESTING := /var/run/uwsgi/$(NAME_TESTING).reload

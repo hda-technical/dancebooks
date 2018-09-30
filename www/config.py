@@ -1,97 +1,53 @@
 import collections
-import configparser
 import functools
 import json
 import logging.config
 import os
 
+import yaml
+
 import const
-
-def get_config_value(
-	key,
-	params,
-	transform=None,
-	check=None
-):
-	"""
-	Retrieves non-optional config field,
-	transforming it of necessary
-	"""
-	if key not in params:
-		raise ValueError("{key} param wasn't found".format(
-			key=key
-		))
-	value = params[key]
-	if transform is not None:
-		value = transform(value)
-	if check is not None:
-		if not check(value):
-			raise ValueError("Check failed for {key}={value}".format(
-				key=key,
-				value=value
-			))
-	return value
-
-
-def extract_set_from_json(value):
-	return set(json.loads(value))
-
-
-def make_ordered_json_extractor():
-	decoder = json.JSONDecoder(object_pairs_hook=collections.OrderedDict)
-	return lambda value, decoder=decoder: decoder.decode(value)
-
 
 class SmtpConfig(object):
 	def __init__(self, params):
-		self.host = get_config_value("host", params)
-		self.port = get_config_value("port", params, transform=int)
-		self.user = get_config_value("user", params)
-		self.password = get_config_value("password", params)
-		self.email = get_config_value("email", params)
+		self.host = params["host"]
+		self.port = params["port"]
+		self.user = params["user"]
+		self.password = params["password"]
+		self.email = params["email"]
 
 
 class BugReportConfig(object):
 	def __init__(self, params):
-		self.to_addr = get_config_value("to_addr", params)
-		self.to_name = get_config_value("to_name", params)
+		self.to_addr = params["to_addr"]
+		self.to_name = params["to_name"]
 
 
 class ParserConfig(object):
 	def __init__(self, params):
 		#some directories
-		self.bibdata_dir = get_config_value(
-			"bibdata_dir",
-			params,
-			transform=os.path.abspath,
-			check=os.path.isdir
-		)
-		self.markdown_dir = get_config_value(
-			"markdown_dir",
-			params,
-			transform=os.path.abspath,
-			check=os.path.isdir
-		)
+		self.bibdata_dir = os.path.abspath(params["bibdata_dir"])
+		self.markdown_dir = os.path.abspath(params["markdown_dir"])
 
 		#field type specification
-		self.list_params = get_config_value("list_params", params, transform=extract_set_from_json)
-		self.file_list_params = get_config_value("file_list_params", params, transform=extract_set_from_json)
-		self.keyword_list_params = get_config_value("keyword_list_params", params, transform=extract_set_from_json)
-		self.int_params = get_config_value("int_params", params, transform=extract_set_from_json)
-		self.year_params = get_config_value("year_params", params, transform=extract_set_from_json)
-		self.date_params = get_config_value("date_params", params, transform=extract_set_from_json)
-		self.bool_params = get_config_value("bool_params", params, transform=extract_set_from_json)
+		self.list_params = set(params["list_params"])
+		self.file_list_params = set(params["file_list_params"])
+		self.keyword_list_params = set(params["keyword_list_params"])
+		self.int_params = set(params["int_params"])
+		self.year_params = set(params["year_params"])
+		self.date_params = set(params["date_params"])
+		self.bool_params = set(params["bool_params"])
 
 		#other values
-		self.list_sep = get_config_value("list_sep", params)
-		self.date_format = get_config_value("date_format", params)
-		self.blocked_domains = get_config_value("blocked_domains", params, transform=extract_set_from_json)
-		self.blocked_domains_http = get_config_value("blocked_domains_http", params, transform=extract_set_from_json)
-		self.domains_allowed_301 = get_config_value("domains_allowed_301", params, transform=extract_set_from_json)
+		self.list_sep = params["list_sep"]
+		self.date_format = params["date_format"]
+		self.blocked_domains = set(params["blocked_domains"])
+		self.blocked_domains_http = set(params["blocked_domains_http"])
+		self.domains_allowed_301 = set(params["domains_allowed_301"])
 
 		#keywords param is loaded from a single config value,
 		#but is splitted into a number of config fields with predictable meaning
-		keywords = get_config_value("keywords", params, transform=make_ordered_json_extractor())
+		keywords = params["keywords"]
 		self.keywords = set()
 		self.category_keywords = collections.OrderedDict()
 		for category, cat_keywords in keywords.items():
@@ -100,12 +56,12 @@ class ParserConfig(object):
 				self.keywords.add(keyword)
 				self.category_keywords[category].append(keyword)
 
-		self.bookkeepers = get_config_value("bookkeepers", params, transform=json.loads)
+		self.bookkeepers = params["bookkeepers"]
 
 		#suffixes parsing
-		self.start_suffix = get_config_value("start_suffix", params)
-		self.end_suffix = get_config_value("end_suffix", params)
-		self.circa_suffix = get_config_value("circa_suffix", params)
+		self.start_suffix = params["start_suffix"]
+		self.end_suffix = params["end_suffix"]
+		self.circa_suffix = params["circa_suffix"]
 
 		#generating additional params
 		suffix_adder = lambda string, suffix: string + suffix
@@ -132,66 +88,44 @@ class ParserConfig(object):
 
 class WwwConfig(object):
 	def __init__(self, params):
-		self.app_domain = get_config_value("app_domain", params)
+		self.app_domain = params["app_domain"]
 
-		self.search_params = get_config_value("search_params", params, transform=extract_set_from_json)
-		self.search_synonyms = get_config_value("search_synonyms", params, transform=json.loads)
-		self.index_params = get_config_value("index_params", params, transform=extract_set_from_json)
-		self.inverted_index_params = get_config_value("inverted_index_params", params, transform=extract_set_from_json)
-		self.index_unique_params = get_config_value(
-			"index_unique_params",
-			params,
-			transform=extract_set_from_json,
-			check=(lambda value, index_params=self.index_params: value.issubset(index_params))
-		)
+		self.search_params = set(params["search_params"])
+		self.search_synonyms = params["search_synonyms"]
+		self.index_params = set(params["index_params"])
+		self.inverted_index_params = set(params["inverted_index_params"])
+		self.index_unique_params = set(params["index_unique_params"])
 		self.indexed_search_params = self.search_params & self.index_params
 		self.nonindexed_search_params = self.search_params - self.index_params
-		self.languages = get_config_value("languages", params, transform=json.loads)
-		self.date_formats = get_config_value("date_formats", params, transform=json.loads)
-		self.order_by_keys = get_config_value("order_by_keys", params, transform=extract_set_from_json)
-		self.elibrary_dir = get_config_value(
-			"elibrary_dir",
-			params,
-			check=os.path.isdir
-		)
-		self.backup_dir = get_config_value(
-			"backup_dir",
-			params
-		)
+		self.languages = params["languages"]
+		self.date_formats = params["date_formats"]
+		self.order_by_keys = set(params["order_by_keys"])
+		self.elibrary_dir = params["elibrary_dir"]
+		self.backup_dir = params["backup_dir"]
 
 		#security params
-		self.secret_cookie_key = get_config_value("secret_cookie_key", params)
-		self.secret_cookie_value = get_config_value("secret_cookie_value", params)
-		self.secret_questions = get_config_value("secret_questions", params, transform=json.loads)
-		self.id_redirections = get_config_value("id_redirections", params, transform=json.loads)
+		self.secret_cookie_key = params["secret_cookie_key"]
+		self.secret_cookie_value = params["secret_cookie_value"]
+		self.secret_questions = params["secret_questions"]
+		self.id_redirections = params["id_redirections"]
+
 
 class Config(object):
-	@staticmethod
-	def get_params(config, fallback, section):
-		params = dict()
-		if (fallback is not None) and (section in fallback):
-			params.update(fallback[section])
-		if section in config:
-			params.update(config[section])
-		return params
-
 	def __init__(self, path):
-		config = configparser.ConfigParser(interpolation=None)
-		config.read(path)
+		with open(path, "rt") as config_file:
+			json_config = json.load(config_file)
+		#handling secrets
+		if "secrets" in json_config:
+			secrets_path = os.path.join(os.path.dirname(path), json_config["secrets"])
+			with open(secrets_path, "rt") as secrets_json_file:
+				secrets_config = json.load(secrets_json_file)
+			for key, value in secrets_config.items():
+				json_config[key].update(value)
 
-		fallback = None
-		if "DEFAULT" in config:
-			if "fallback" in config["DEFAULT"]:
-				fallback_path = os.path.join(
-					os.path.dirname(path),
-					config["DEFAULT"]["fallback"]
-				)
-				fallback = configparser.ConfigParser()
-				fallback.read(fallback_path)
-		self.smtp = SmtpConfig(Config.get_params(config, fallback, "SMTP"))
-		self.bug_report = BugReportConfig(Config.get_params(config, fallback, "BUG_REPORT"))
-		self.parser = ParserConfig(Config.get_params(config, fallback, "PARSER"))
-		self.www = WwwConfig(Config.get_params(config, fallback, "WWW"))
+		self.smtp = SmtpConfig(json_config["smtp"])
+		self.bug_report = BugReportConfig(json_config["bug_report"])
+		self.parser = ParserConfig(json_config["parser"])
+		self.www = WwwConfig(json_config["www"])
 		self.unittest_mode = "DANCEBOOKS_UNITTEST" in os.environ
 
 
@@ -199,15 +133,21 @@ def setup_logging(config_path):
 	logging.config.fileConfig(config_path)
 
 config_path = os.environ.get(const.ENV_CONFIG, None)
+if config_path is None:
+	raise RuntimeError(
+		"Config was not found. "
+		"Please, specify {env_var} environment variable".format(
+			env_var=const.ENV_CONFIG
+		)
+	)
 config = Config(config_path)
 
-config_path = os.environ.get(const.ENV_LOGGING_CONFIG, None)
-if config_path is None:
+logging_config_path = os.environ.get(const.ENV_LOGGING_CONFIG, None)
+if logging_config_path is None:
 	raise RuntimeError(
 		"Logging config was not found. "
 		"Please, specify {env_var} environment variable".format(
 			env_var=const.ENV_LOGGING_CONFIG
 		)
 	)
-setup_logging(config_path)
-
+setup_logging(logging_config_path)
