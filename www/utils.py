@@ -493,7 +493,7 @@ class MarkdownCache(object):
 		self._markdown = markdown.Markdown(
 			extensions=[
 				"markdown.extensions.tables",
-				"superscript"
+				"mdx_superscript"
 			],
 			output_format="xhtml5"
 		)
@@ -617,7 +617,7 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		super().__init__(*args, **kwargs)
 		self._markdown = markdown.Markdown(
 			extensions=[
-				"superscript"
+				"mdx_superscript"
 			],
 			output_format="xhtml5"
 		)
