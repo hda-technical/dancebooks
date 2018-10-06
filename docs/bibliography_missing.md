@@ -299,7 +299,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 190- | Борис Фёдорович Кейль | Пахита. Nouveau Pas d'Espagne | | [RSL](http://search.rsl.ru/ru/record/01001930835) |
 | 190- | К. В. Фельдман | Новый русско-славянский | | [NLR](https://yadi.sk/i/0otSlk7kqbVKJ) |
 | 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=784912) |
-| 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004849373&context=L&search_scope=default_scope&lang=ru_RU) |
+| 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004849373&context=L&search_scope=default_scope&lang=ru_RU)<br/>`SPTL: Н 727(А)` |
 | 1903 | Melvin Balou Gilbert | Dancing | [Cite](https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.c2898858;seq=9;width=10000) |
 | 1904 | W. Lamb<br/>C. Arthur Pearson (publisher) | How and What to Dance<br/>_Published in London_ | `[Rogers, 1998]` | |
 | 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR copy desideratum](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS005127283&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU) |
@@ -322,6 +322,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004805109&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1913 | | Проспект и программа Школы танцев К. Б. Матсона | | |
 | 1913 | Charles Louis Napoléon d'Albert | Dancing. Technical Encyclopaedia of the Theory and Practice of the Art of Dancing | `[Guillard, 1989]` | |
+| 1914 | Михаил Михайлович Бонч-Томашевский | Книга о танго. Искусство и сексуальность | | [RSL](https://search.rsl.ru/ru/record/01004188739)<br/>`SPTL: Б 817` |
 | 1914? | A. Cosmo Mitchell | A Guide to Ballroom Dancing<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914? | A. Cosmo Mitchell | New Dances<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914 | Андрей Яковлевич Левинсон | Мастера балета. Очерки истории и теории танца | | [RSL](http://search.rsl.ru/ru/record/01004191266) |
@@ -332,28 +333,37 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
 | 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | |
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
+| 1922 | Денис Иванович Лешков | Библиографические листы русского библиологического общества. Лист II, февраль<br/>_Содержит статью (??) под названием _Танцовальный словарь_ | | `SPTL: Б 593` |
 | 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]` | |
+| 1924 | Максим Владимирович Соколовский | Комсомольские танцы | | `SPTL: С 596(Б)` |
 | 1925 | Max von Boehn | Der Tanz | [Modern edition](https://books.google.com/books?id=qZOj-PRgKcEC) | |
 | 1925 | Thoinot Arbeau<br/>Cyril W. Beaumont (translator) | Orchesography<br/>_English translation_ | | [Amazon, 1966 reprint](http://a.co/5H5ZyY7) |
-| 1927 | Анна Михайловна Зеленко | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | |
+| 1926 | Алексей Александрович Гвоздев (commentator)<br/>_Гептахор (коллектив авторов)_ | Ритм и культура танца<br/>_Published by Academia_ | | [RSL](https://search.rsl.ru/ru/record/01009133657)<br/>`SPTL: Р 551` |
+| 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS006725710&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU)<br/>`SPTL: В 399` |
 | 1927 | В. Н. Гернгросс-Всеволодский | Крестьянский танец | `[Жбанкова, 2016]` | |
 | 1927 | Т. Бабаджан<br/>Агния Барто | Ритмические игры и постановки к 10 годовщине Октября | | [On sale, ₽5500](http://www.alib.ru/5_barto_agniya_ritmicheskie_igry_i_postanovki_k_10_godovwine_oktyabrya_w1t1986151614fd8beb7fbf7fa890a1e8efc33a.html) |
 | 1928 | Е. Малая<br/>В. Костюк | Танцевальные шаги и гимнастические танцы | `[Жбанкова, 2016]` | |
 | 1928 | Анна Михайловна Зеленко<br/>А. Гаврилов | Гулянье | `[Жбанкова, 2016]` | |
 | 1928 | Т. Бабаджан<br/>М. Раухвергер | 5 ритмических игр с предметами и состязаниями | | [On sale, ₽2000](http://www.alib.ru/5_babadzhan_t_5_ritmicheskih_igr_s_predmetami_i_sostyazaniyami_w1t1844df43d1ec1e5152604bbd6d0257f9ebba.html) |
+| 1928 | Валеска Герт | Программа вечера танца к гастролям в Ленинграде | | `SPTL: Г 400(А)` |
+| 1928 | Константин Сотонин | Система нотной записи движений человеческого тела | | [RSL](https://search.rsl.ru/ru/record/01009256420)<br/>`SPTL: С 675(Б)` |
 | 1930 | Viktor Junk | Handbuch des Tanzes<br/>Volkstänze | `[2. Rothenfelser]` | |
 | 1930 | Милица Евлампиевна Бурцева | Художественное движение | `[Жбанкова, 2016]` | |
-| 1930 | Милица Евлампиевна Бурцева | Методика проведения массовой пляски | `[Жбанкова, 2016]` | |
+| 1930 | Милица Евлампиевна Бурцева | Методика проведения массовой пляски | `[Жбанкова, 2016]` | [RSL](https://search.rsl.ru/ru/record/01009016126)<br/>`SPTL: Б 917` |
 | 1931 | Н. А. Александрова<br/>Милица Евлампиевна Бурцева<br/>Е. Шишмарёва | Массовые агит-пляски | `[Жбанкова, 2016]` | |
+| 1931 | Б. В. Бурлаков | Массовые игры и пляски | | [RSL](https://search.rsl.ru/ru/record/01009269702)<br/>`SPTL: Б 915` |
 | 1932 | Valentin Parnac | Histoire de la danse | | [On sale, ₽6000](http://www.alib.ru/5_parnah_v_istoriya_tanca_histoire_de_la_danse_par_valentin_parnac_w1t241546dca3ac4a7c560ed9ceec07a1e6a000.html) |
 | 1933 | | Массовые игры и пляски<br/>Составлено бригадой Государственной студии музыкального движения «Гептахор» | | [On sale, ₽7000](http://www.alib.ru/5_massovye_plyaski_i_igry_w1t2543144a6446263669e84871b63bee025f4f.html)<br/>[RSL](http://search.rsl.ru/ru/record/01009302983) |
 | 1934 | Н. А. Александрова | Массовые танцы | | |
 | 1934 | Francesco Pospisjl | La moresca, studio comparato con particolare giguardo all'Italia settentrionale | `[2. Rothenfelser]` | |
 | 1935 | И. Семкин | Массовые игры и танцы | `[Leaflets]` | |
 | 1936 | | Программы по хореографическим дисциплинам | | Owned by Bodhi |
+| 1938 | Николай Петрович Чаплыгин | Бальные и западные танцы<br/>_Ноты_ | | [RSL](https://search.rsl.ru/ru/record/01002019296)<br/>[RSL](https://search.rsl.ru/ru/record/01002019295)<br/>[RSL](https://search.rsl.ru/ru/record/01002019294)<br/>`SPTL: Б 214` |
 | 1938 | Curt Sachs | World History of the Dance | `[Richardson, 1960]` | |
 | 1938 | Jacuqes Henry | Modern Ballroom Dancing. A Comprehensive Guide to Present-Day Technique and to the Fundamental Principles of the Art, and a Testbook for All Teachers and Students Preparing for Examinations | [On sale, £95](https://www.abebooks.com/servlet/BookDetailsPL?bi=22790135714)<br/>[On sale, £100](https://www.abebooks.com/servlet/BookDetailsPL?bi=22696431954) |
+| 1939 | Андрей Васильевич Лопухов | Основы характерного танца. Учебник для хореографических училищ | | [RSL](https://search.rsl.ru/ru/record/01005193992)<br/>`SPTL: Л 776(Б)` | 
 | 1940 | | Школьная самодеятельность | `[Leaflets]` | | |
+| 1940 | | Учебный план и программы курсов для руководителей танцевальных коллективов | | `SPTL: У 914` |
 | 1948 | Edwin Evans | Music and the Dance | `[Richardson, 1960]` | |
 | 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
 | 1952 | Лидия Ивановна Богаткова | Танец в школе<br/>_По материалам сборника Л. Богатковой «В лагере и школе»_<br/>_Издано в Ставрополе_ | | `[Bodhi]` |
