@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import concurrent.futures
 import datetime
 import json
 import logging
@@ -1028,30 +1027,22 @@ def main(
 		))
 
 	logging.info("Going to process {0} items".format(len(items)))
-	executor = concurrent.futures.ProcessPoolExecutor(max_workers=1)#multiprocessing.cpu_count())
-	futures = {
-		executor.submit(validate_items, items_batch, git_added_on, make_extra_checks): None
-		for items_batch in utils.batched(items, 100)
-	}
-
 	erroneous_items = dict()
-	item_id = None
-	for future in concurrent.futures.as_completed(futures):
+	for item in items:
 		try:
-			result = future.result()
-			for item_id, errors in result.items():
-				if not errors:
-					continue
-				erroneous_items[item_id] = errors
-				if log_all_errors:
-					for error in errors:
-						logging.debug("Errors for {item_id}: {error}".format(
-							item_id=item_id,
-							error=error
-						))
+			errors = validate_item(item, git_added_on, make_extra_checks)
+			if not errors:
+				continue
+			erroneous_items[item.id()] = errors
+			if log_all_errors:
+				for error in errors:
+					logging.debug("Errors for {item_id}: {error}".format(
+						item_id=item.id(),
+						error=error
+					))
 		except Exception as ex:
 			logging.exception("Exception while validating {item_id} ({source}): {ex}".format(
-				item_id=item_id,
+				item_id=item.id(),
 				source=item.source(),
 				ex=ex
 			))
