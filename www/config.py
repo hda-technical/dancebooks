@@ -162,16 +162,7 @@ class WwwConfig(object):
 		#security params
 		self.secret_cookie_key = get_config_value("secret_cookie_key", params)
 		self.secret_cookie_value = get_config_value("secret_cookie_value", params)
-		secret_question_keys = get_config_value("secret_question_keys", params, transform=json.loads)
-		secret_question_answers = get_config_value("secret_question_answers", params, transform=json.loads)
-		self.secret_questions = {
-			key: answer
-			for key, answer in zip(
-				secret_question_keys,
-				secret_question_answers
-			)
-		}
-
+		self.secret_questions = get_config_value("secret_questions", params, transform=json.loads)
 		self.id_redirections = get_config_value("id_redirections", params, transform=json.loads)
 
 class Config(object):

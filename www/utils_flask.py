@@ -80,7 +80,7 @@ def check_captcha():
 		@functools.wraps(func)
 		def wrapper(*args, **kwargs):
 			captcha_key = extract_string_from_request("captcha_key", None)
-			captcha_answer = extract_int_from_request("captcha_answer", None)
+			captcha_answer = extract_string_from_request("captcha_answer", None)
 
 			if captcha_key is None:
 				flask.abort(http.client.FORBIDDEN, translate_missing_error("captcha-key"))
