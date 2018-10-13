@@ -330,17 +330,11 @@
             "serial_number",
             "number"
         ],
-        "secret_questions": [
-            {
-                "louis-naissanse": "1638"
-            },
-            {
-                "revolution": "1789"
-            },
-            {
-                "congress": "1814"
-            }
-        ],
+        "secret_questions": {
+            "louis-naissanse": "1638",
+            "revolution": "1789",
+            "congress": "1814"
+        },
         "id_redirections": {
             "anleitung_1798": "anleitung_1790_contretanze",
             "arbeau_1589": "tabourot_1589",
