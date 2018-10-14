@@ -4,8 +4,6 @@ import json
 import logging.config
 import os
 
-import yaml
-
 import const
 
 class SmtpConfig(object):
