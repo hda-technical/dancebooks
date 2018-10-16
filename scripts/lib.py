@@ -785,7 +785,9 @@ def onb(
 	"""
 	cookies = requests.cookies.RequestsCookieJar()
 	#WARN: this value might require updating
-	cookies.set("JSESSIONID", "62CDB0E796EA7E96E0A76FB91E9242AA", domain="digital.onb.ac.at", path="/")
+	#	   FIXME: it can be obtained by sending request to 
+	#	   http://digital.onb.ac.at/OnbViewer/viewer.faces?doc={id}
+	cookies.set("JSESSIONID", "A1579FE74A1C057F5111D969C3B2F7E3", domain="digital.onb.ac.at", path="/")
 	metadata_url = f"http://digital.onb.ac.at/OnbViewer/service/viewer/imageData?doc={id}&from=1&to=500"
 	metadata = get_json(metadata_url, cookies=cookies)
 	output_folder = make_output_folder("onb", id)
