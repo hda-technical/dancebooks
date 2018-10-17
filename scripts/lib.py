@@ -147,7 +147,7 @@ def sew_tiles_with_montage(folder, output_file, policy):
 		if policy.overlap is not None:
 			geometry += f"-{policy.overlap}-{policy.overlap}"
 		if geometry:
-			#WARN: 
+			#WARN:
 			#  Do not allow enlarging tiles.
 			#  Certain libraries (i. e. Gallica) use variable tile size
 			geometry += '>'
@@ -275,7 +275,7 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
 
-def download_image_from_iiif(base_url, output_filename):
+def download_image_from_iiif(base_url, output_filename, basename="native.jpg"):
 	"""
 	Downloads single image via IIIF protocol.
 	API is documented here:
@@ -287,7 +287,7 @@ def download_image_from_iiif(base_url, output_filename):
 			top = tile_size * tile_y
 			tile_width = min(width - left, tile_size)
 			tile_height = min(height - top, tile_size)
-			return f"{base_url}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/native.jpg"
+			return f"{base_url}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/{basename}"
 
 	metadata = get_json(f"{base_url}/info.json")
 	if "tiles" in metadata:
@@ -394,6 +394,27 @@ def vatlib(
 	manifest_url = f"http://digi.vatlib.it/iiif/{id}/manifest.json"
 	output_folder = make_output_folder("vatlib", id)
 	download_book_from_iiif(manifest_url, output_folder)
+
+
+@opster.command()
+def mecklenburgVorpommern(
+	id=("", "", "Id of the book to be downloaded (e. g. 'PPN880809493')")
+):
+	"""
+	Downloads book from http://www.digitale-bibliothek-mv.de
+	"""
+	# it looks like Mecklenburg-Vorpommern does not use manifest.json
+	output_folder = make_output_folder("mecklenburg_vorpommern", id)
+	for page in range(1, 1000):
+		output_filename = make_output_filename(output_folder, page)
+		if os.path.isfile(output_filename):
+			print(f"Skipping existing page {page}")
+			continue
+		try:
+			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/rest/image/PPN880809493/{page:08d}.tif"
+			download_image_from_iiif(base_url, output_filename, basename="default.jpg")
+		except ValueError as ex:
+			break
 
 
 @opster.command()
@@ -529,7 +550,7 @@ def yaleImage(
 	output_filename = make_output_filename(id)
 	download_and_sew_tiles(output_filename, UrlMaker(MAX_ZOOM), policy)
 
-	
+
 @opster.command()
 def yaleBook(
 	id=("", "", "Image id to be downloaded (e. g. `BRBL_Exhibitions/7/1327507/1327507`)")
@@ -604,18 +625,18 @@ def leidenCollection(
 	"""
 	MAX_ZOOM = 13
 	TILE_SIZE = None
-	
+
 	class UrlMaker(object):
 		def __call__(self, tile_x, tile_y):
 			return f"https://www.theleidencollection.com/LeidenCollectionSamples/images/{id}_files/{MAX_ZOOM}/{tile_x}_{tile_y}.jpg"
-		
+
 	url_maker = UrlMaker()
 	tiles_number_x = guess_tiles_number_x(url_maker)
 	print(f"Guessed tiles_number_x={tiles_number_x}")
 	tiles_number_y = guess_tiles_number_y(url_maker)
 	print(f"Guessed tiles_number_y={tiles_number_y}")
 	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, None, None)
-	
+
 	output_filename = make_output_filename("", id)
 	download_and_sew_tiles(output_filename, url_maker, policy)
 
