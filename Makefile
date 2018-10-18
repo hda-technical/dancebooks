@@ -56,7 +56,6 @@ configs-install-production:
 	install --owner=www-data --group=www-data configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
 	#creating upstart/systemd service
-	install --mode=644 configs/upstart.production.conf /etc/init/$(NAME).conf
 	install --mode=644 configs/systemd.production.conf /etc/systemd/system/$(NAME).service
 	$(shell systemctl daemon-reload && systemctl enable $(NAME).service && systemctl stop $(NAME).service; systemctl start $(NAME).service || true)
 	#generating custom dh_param.pem if needed
@@ -83,7 +82,6 @@ configs-install-testing:
 	install --owner=www-data --group=www-data configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
 	#creating upstart/systemd service
-	install --mode=644 configs/upstart.testing.conf /etc/init/$(NAME_TESTING).conf
 	install --mode=644 configs/systemd.testing.conf /etc/systemd/system/$(NAME_TESTING).service
 	$(shell systemctl daemon-reload && systemctl enable $(NAME_TESTING).service && systemctl stop $(NAME_TESTING).service; systemctl start $(NAME_TESTING).service || true)
 	#generating custom dh_param.pem if needed
