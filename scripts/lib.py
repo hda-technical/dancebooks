@@ -102,7 +102,9 @@ def get_binary(output_filename, url_or_request, *args, **kwargs):
 def make_output_folder(downloader, book_id):
 	folder_name = "{downloader}_{book_id}".format(
 		downloader=downloader,
-		book_id=book_id
+		book_id=book_id\
+			.replace('/', '_')
+			.replace(':', '_')
 	)
 	os.makedirs(folder_name, exist_ok=True)
 	return folder_name
