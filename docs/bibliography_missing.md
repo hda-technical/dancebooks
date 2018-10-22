@@ -234,10 +234,9 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm]` | |
 | 1831 | Joseph Binns Hart | Hart's Grenadier Quadrilles | [Cover](http://www.bridgemanimages.com/en-GB/asset/610771) | |
 | 1831 | Eduard Friedrich David Helmke | Neue Tanz- und Bildunschule<br/>_2. Auflage_ | `[Klemm]`<br/>[[Helmke, 1829]](https://bib.hda.org.ru/books/helmke_1829_tanz) | |
 | 1831 | А. Krüger | Die algemein beliebtesten Contre-Tanz-Touren, wie solche auf den Bällen und in Familientränzchen in Berlin getanzt werden | `[Klemm]` | |
-| 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | |
+| 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | [Royal Academy of Music](http://www.ram.ac.uk/museum/item/15068) |
 | 1832 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1832<br/>_Good quality copy needed_ | [[Helmke, 1832]](https://bib.hda.org.ru/books/helmke_1832) | [NLI](http://aleph.nli.org.il/F/?func=direct&doc_number=001825743&local_base=NNL01)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
 | 1831/1833 | Carl Friedrich Förster | Eccossaisen-Lehre, oder die Kunst 16 verschiedene Eccossaisen mit allen dezugehörigen Pas und Touren in kurzer Zeit anständig tanzen | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.com/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]`<br/>`[Klemm]` | |
-| 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | [Royal Academy of Music](http://www.ram.ac.uk/museum/item/15068) |
 | 1832 | Gustav Weirich | Drei Contre-Tänze in 20 verschiedenen Touren. Seinen Scholaren gewidmet | `[Klemm]`<br/>[Advertisement](https://books.google.com/books?id=kiNMAAAAcAAJ&pg=RA1-PA56) | |
 | 1833 | Carl Friedrich Förster | Königs-Quadrillen-Lehre | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236) |
 | 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334) | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
@@ -369,7 +368,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm]` | |
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
 | 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | |
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
-| 1922 | Денис Иванович Лешков | Библиографические листы русского библиологического общества. Лист II, февраль<br/>_Содержит статью (??) под названием _Танцовальный словарь_ | | `SPTL: Б 593` |
+| 1922 | Денис Иванович Лешков | Библиографические листы русского библиологического общества. Лист II, февраль<br/>_Содержит статью (??) под названием «Танцовальный словарь»_ | | `SPTL: Б 593` |
 | 1922 | А. А. Сидоров | Современный танец | | [RSL](https://search.rsl.ru/ru/record/01009159637)<br/>[On sale, ₽10000](http://www.alib.ru/5_sidorov_a_a_sovremennyj_tanec_w1t190248750bbf98f2c0ab7e71124e97a81d12.html)<br/>[On sale, ₽7000](http://www.alib.ru/5_sidorov_a_a_sovremennyj_tanec_w1t197718af1fbad42302efe628399ab6de1533.html) |
 | 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]` | |
 | 1924 | Максим Владимирович Соколовский | Комсомольские танцы | | `SPTL: С 596(Б)` |
