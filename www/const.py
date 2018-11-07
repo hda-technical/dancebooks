@@ -9,7 +9,7 @@ SHORT_LANG_MAP = {
 	"ca": ["english", "french"],
 	"ch": ["french"],
 	"cl": ["spanish"],
-	"cz": ["czech"],
+	"cz": ["czech", "german"],
 	"de": ["german", "french"],
 	"dk": ["danish"],
 	"en": ["english"],
@@ -54,6 +54,7 @@ LONG_LANG_MAP = {
 	},
 	"czech.bib": {
 		"czech",
+		"german"
 	},
 	"danish.bib": {
 		"danish",
