@@ -111,12 +111,14 @@ def make_output_folder(downloader, book_id):
 
 
 def make_output_filename(base, page=None, extension="bmp"):
-	if page is None:
-		return f"{base}.{extension}"
-	elif isinstance(page, int):
-		return os.path.join(base, f"{page:08}.{extension}")
-	else:
-		return os.path.join(base, f"{page}.{extension}")
+	result = base
+	if isinstance(page, int):
+		result = os.path.join(result, f"{page:08}")
+	elif page is not None:
+		result = os.path.join(result, page)
+	if extension is not None:
+		result += "." + extension
+	return result
 
 
 def make_temporary_folder():
@@ -803,12 +805,14 @@ def onb(
 	"""
 	Downloads book from http://onb.ac.at/
 	"""
-	cookies = requests.cookies.RequestsCookieJar()
-	#WARN: this value might require updating
-	#	   FIXME: it can be obtained by sending request to
-	#	   http://digital.onb.ac.at/OnbViewer/viewer.faces?doc={id}
-	cookies.set("JSESSIONID", "A1579FE74A1C057F5111D969C3B2F7E3", domain="digital.onb.ac.at", path="/")
-	metadata_url = f"http://digital.onb.ac.at/OnbViewer/service/viewer/imageData?doc={id}&from=1&to=500"
+	# First, normalizing id
+	id = id.replace('/', '_')
+	
+	# Second, obtaining JSESSIONID cookie value
+	viewer_url = f"http://digital.onb.ac.at/OnbViewer/viewer.faces?doc={id}"
+	viewer_response = requests.get(viewer_url)
+	cookies = viewer_response.cookies
+	metadata_url = f"http://digital.onb.ac.at/OnbViewer/service/viewer/imageData?doc={id}&from=1&to=1000"
 	metadata = get_json(metadata_url, cookies=cookies)
 	output_folder = make_output_folder("onb", id)
 	image_data = metadata["imageData"]
@@ -817,7 +821,10 @@ def onb(
 		query_args = image["queryArgs"]
 		image_id = image["imageID"]
 		image_url = f"http://digital.onb.ac.at/OnbViewer/image?{query_args}&w=10000&h=10000&x=0&y=0&s=1.0&q=100"
-		output_filename = make_output_filename(output_folder, image_id, extension="jpg")
+		output_filename = make_output_filename(output_folder, image_id, extension=None)
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing image {image_id}")
+			continue
 		print(f"Downloading {image_id}")
 		get_binary(output_filename, image_url, cookies=cookies)
 
