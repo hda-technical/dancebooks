@@ -110,13 +110,13 @@ def make_output_folder(downloader, book_id):
 	return folder_name
 
 
-def make_output_filename(base, page_number=None, extension="bmp"):
-	if page_number is None:
+def make_output_filename(base, page=None, extension="bmp"):
+	if page is None:
 		return f"{base}.{extension}"
-	elif isinstance(page_number, int):
-		return os.path.join(base, f"{page_number:08}.{extension}")
+	elif isinstance(page, int):
+		return os.path.join(base, f"{page:08}.{extension}")
 	else:
-		return os.path.join(base, f"{page_number}.{extension}")
+		return os.path.join(base, f"{page}.{extension}")
 
 
 def make_temporary_folder():
@@ -312,12 +312,12 @@ def download_book_from_iiif(manifest_url, output_folder):
 	"""
 	manifest = get_json(manifest_url)
 	canvases = manifest["sequences"][0]["canvases"]
-	for page_number, canvas_metadata in enumerate(canvases):
-		output_filename = make_output_filename(output_folder, page_number)
+	for page, metadata in enumerate(canvases):
+		output_filename = make_output_filename(output_folder, page)
 		if os.path.isfile(output_filename):
-			print(f"Skip downloading existing page #{page_number:04d}")
+			print(f"Skip downloading existing page #{page:04d}")
 			continue
-		base_url = canvas_metadata["images"][-1]["resource"]["service"]["@id"]
+		base_url = metadata["images"][-1]["resource"]["service"]["@id"]
 		download_image_from_iiif(base_url, output_filename)
 
 
@@ -675,15 +675,18 @@ def polona(
 	entity_url = f"https://polona.pl/api/entities/{id}"
 	entity_metadata = get_json(entity_url)
 	output_folder = make_output_folder("polona", id)
-	for page_number, page_metadata in enumerate(entity_metadata["scans"]):
+	for page, page_metadata in enumerate(entity_metadata["scans"]):
+		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
 		found = False
 		for image_metadata in page_metadata["resources"]:
 			if image_metadata["mime"] == "image/jpeg":
-				output_filename = make_output_filename(output_folder, page_number, extension="jpg")
 				get_binary(output_filename, image_metadata["url"])
 				found = True
 		if not found:
-			raise Exception(f"JPEG file was not found in image_metadata for page {page_number}")
+			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
 
 @opster.command()
 def makAt(
