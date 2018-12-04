@@ -33,7 +33,7 @@ def retry(retry_count, delay=0, delay_backoff=1):
 			current_delay = delay
 			try:
 				return func(*args, **kwargs)
-			except Exception as ex:
+			except Exception:
 				if retry_number >= retry_count:
 					raise RuntimeError(f"Failed to get results after {retry_number} retries")
 				else:
@@ -173,7 +173,7 @@ def sew_tiles_with_montage(folder, output_file, policy):
 	cmd_line_repr = ' '.join(cmd_line)
 	print(f"Executing:\n    {cmd_line_repr}")
 	subprocess.check_call(cmd_line)
-	if policy.trim:
+	if policy.trim and ("NO_TRIM" not in os.environ):
 		subprocess.check_call([
 			"convert",
 			output_file,
@@ -415,7 +415,7 @@ def mecklenburgVorpommern(
 		try:
 			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/rest/image/PPN880809493/{page:08d}.tif"
 			download_image_from_iiif(base_url, output_filename, basename="default.jpg")
-		except ValueError as ex:
+		except ValueError:
 			break
 
 
@@ -626,7 +626,6 @@ def leidenCollection(
 	Downloads single image from https://www.theleidencollection.com
 	"""
 	MAX_ZOOM = 13
-	TILE_SIZE = None
 
 	class UrlMaker(object):
 		def __call__(self, tile_x, tile_y):
@@ -664,7 +663,7 @@ def britishLibraryManuscript(
 	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
 	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
 	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
-	
+
 @opster.command()
 def polona(
 	id=("", "", "Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)")
@@ -809,7 +808,7 @@ def onb(
 	"""
 	cookies = requests.cookies.RequestsCookieJar()
 	#WARN: this value might require updating
-	#	   FIXME: it can be obtained by sending request to 
+	#	   FIXME: it can be obtained by sending request to
 	#	   http://digital.onb.ac.at/OnbViewer/viewer.faces?doc={id}
 	cookies.set("JSESSIONID", "A1579FE74A1C057F5111D969C3B2F7E3", domain="digital.onb.ac.at", path="/")
 	metadata_url = f"http://digital.onb.ac.at/OnbViewer/service/viewer/imageData?doc={id}&from=1&to=500"
@@ -847,7 +846,7 @@ def staatsBerlin(
 				#	it looks like there is no normal way
 				#	to get the number of pages in the book via http request
 				get_binary(output_filename, image_url)
-			except ValueError as ex:
+			except ValueError:
 				print(f"No more images left. Last page was {page - 1:04d}")
 				break
 		page += 1
