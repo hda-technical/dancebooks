@@ -277,29 +277,60 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
 
-def download_image_from_iiif(base_url, output_filename, basename="native.jpg"):
+def download_image_from_iiif(base_url, output_filename):
 	"""
 	Downloads single image via IIIF protocol.
 	API is documented here:
 	http://iiif.io/about/
 	"""
+	DESIRED_QUALITIES = ["color", "native", "default"]
+	DESIRED_FORMATS = ["png", "tif", "jpg"]
+	
 	class UrlMaker(object):
 		def __call__(self, tile_x, tile_y):
 			left = tile_size * tile_x
 			top = tile_size * tile_y
 			tile_width = min(width - left, tile_size)
 			tile_height = min(height - top, tile_size)
-			return f"{base_url}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/{basename}"
+			tile_url = f"{base_url}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/{desired_quality}.{desired_format}"
+			return tile_url
 
-	metadata = get_json(f"{base_url}/info.json")
+	metadata_url = f"{base_url}/info.json"
+	metadata = get_json(metadata_url)
 	if "tiles" in metadata:
 		# Served by e. g. vatlib servant
 		tile_size = metadata["tiles"][0]["width"]
 	else:
-		# Served by e. g. gallica servant
+		# Served by e. g. Gallica servant
 		tile_size = 1024
 	width = metadata["width"]
 	height = metadata["height"]
+	
+	desired_quality = "default"
+	desired_format = "jpg"
+	profile = metadata.get("profile")
+	if (profile is not None) and (len(profile) >= 2) and (profile is not str):
+		# Profile is not served by Gallica servant, but served by e. g. British Library servant
+		# Complex condition helps to ignore missing metadata fields, see e. g.:
+		# https://gallica.bnf.fr/iiif/ark:/12148/btv1b10508435s/f1/info.json
+		# http://www.digitale-bibliothek-mv.de/viewer/rest/image/PPN880809493/00000001.tif/info.json
+		if "qualities" in profile[1]:
+			available_qualities = profile[1]["qualities"]
+			for quality in DESIRED_QUALITIES:
+				if quality in available_qualities:
+					desired_quality = quality
+					break
+			else:
+				raise RuntimeError(f"Can not choose desired image quality. Available qualities: {available_qualities!r}")
+		if "formats" in profile[1]:
+			available_formats = profile[1]["formats"]
+			for format in DESIRED_FORMATS:
+				if format in available_formats:
+					desired_format = format
+					break
+			else:
+				raise RuntimeError(f"Can not choose desired image format. Available formats: {available_formats!r}")
+
 	policy = TileSewingPolicy.from_image_size(width, height, tile_size)
 	download_and_sew_tiles(output_filename,	UrlMaker(),	policy)
 
@@ -356,10 +387,6 @@ def gallica(
 ):
 	"""
 	Downloads book from https://gallica.bnf.fr/
-
-	NB: There is an option to download high resolution raw images
-	(see JSON path manifest["sequences"][0]["canvases"][0]["images"][0]["resource"]["@id"]).
-	It does not look standard for IIIF protocol, hence it is not used in this helper script.
 	"""
 	manifest_url = f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 	output_folder = make_output_folder("gallica", id)
@@ -413,8 +440,8 @@ def mecklenburgVorpommern(
 			print(f"Skipping existing page {page}")
 			continue
 		try:
-			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/rest/image/PPN880809493/{page:08d}.tif"
-			download_image_from_iiif(base_url, output_filename, basename="default.jpg")
+			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/rest/image/{id}/{page:08d}.tif"
+			download_image_from_iiif(base_url, output_filename)
 		except ValueError:
 			break
 
@@ -571,27 +598,14 @@ def yaleBook(
 
 @opster.command()
 def britishLibraryBook(
-	id=("", "", "Book id to be downloaded (e. g. `vdc_100025756343`). Warning: this id is different from the one found in online viewer. Pick one from the requested urls instead.")
+	id=("", "", "Book id to be downloaded (e. g. `vdc_100026052453`, as it is displayed in the viewer url)")
 ):
 	"""
 	Downloads a book from http://explore.bl.uk
 	"""
-	#It looks like manifest.json is not being used by The British Library
-
 	output_folder = make_output_folder("bl", id)
-	current_page = 0
-	while True:
-		current_page += 1
-		base_url=f"http://access.bl.uk/IIIFImageService/ark:/81055/{id}.0x{current_page:06x}"
-		info_json_url = f"{base_url}/info.json"
-		head_response = requests.head(info_json_url)
-		if head_response.status_code != 200:
-			break
-		output_filename = make_output_filename(output_folder, current_page)
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{current_page:08d}")
-			continue
-		download_image_from_iiif(base_url, output_filename)
+	manifest_url = f"https://api.bl.uk/metadata/iiif/ark:/81055/{id}.0x000001/manifest.json"
+	download_book_from_iiif(manifest_url, output_folder)
 
 
 class DeepZoomUrlMaker(object):
