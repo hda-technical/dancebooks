@@ -579,16 +579,19 @@ def britishLibraryBook(
 	#It looks like manifest.json is not being used by The British Library
 
 	output_folder = make_output_folder("bl", id)
-	current_page = 1
+	current_page = 0
 	while True:
+		current_page += 1
 		base_url=f"http://access.bl.uk/IIIFImageService/ark:/81055/{id}.0x{current_page:06x}"
 		info_json_url = f"{base_url}/info.json"
 		head_response = requests.head(info_json_url)
 		if head_response.status_code != 200:
 			break
 		output_filename = make_output_filename(output_folder, current_page)
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{current_page:08d}")
+			continue
 		download_image_from_iiif(base_url, output_filename)
-		current_page += 1
 
 
 class DeepZoomUrlMaker(object):
