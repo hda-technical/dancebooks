@@ -124,18 +124,19 @@ def make_temporary_folder():
 
 
 class TileSewingPolicy(object):
-	def __init__(self, tiles_number_x, tiles_number_y, tile_size, overlap=None):
+	def __init__(self, tiles_number_x, tiles_number_y, tile_size, image_width=None, image_height=None, overlap=None):
 		self.tiles_number_x = tiles_number_x
 		self.tiles_number_y = tiles_number_y
 		self.tile_size = tile_size
+		self.image_width = image_width
+		self.image_height = image_height
 		self.overlap = overlap
-		self.trim = True
 
 	@staticmethod
 	def from_image_size(width, height, tile_size):
 		tiles_number_x = math.ceil(width / tile_size)
 		tiles_number_y = math.ceil(height / tile_size)
-		return TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size)
+		return TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, image_width=width, image_height=height)
 
 
 def sew_tiles_with_montage(folder, output_file, policy):
@@ -158,6 +159,7 @@ def sew_tiles_with_montage(folder, output_file, policy):
 	def format_magick_tile(policy):
 		return f"{policy.tiles_number_x}x{policy.tiles_number_y}"
 
+	# Sewing tiles
 	cmd_line = [
 		"montage",
 		f"{folder}/*",
@@ -170,16 +172,19 @@ def sew_tiles_with_montage(folder, output_file, policy):
 		"-tile", format_magick_tile(policy),
 		output_file
 	]
-	cmd_line_repr = ' '.join(cmd_line)
-	print(f"Executing:\n    {cmd_line_repr}")
+	print(f"Sewing tiles with:\n    {' '.join(cmd_line)}")
 	subprocess.check_call(cmd_line)
-	if policy.trim and ("NO_TRIM" not in os.environ):
-		subprocess.check_call([
+	
+	if policy.image_width and policy.image_height:
+		# Cropping extra boundaries (right and bottom) added during sewing
+		cmd_line = [
 			"convert",
 			output_file,
-			"-trim",
+			"-extent", f"{policy.image_width}x{policy.image_height}",
 			output_file
-		])
+		]
+		print(f"Cropping output image with:\n    {' '.join(cmd_line)}")
+		subprocess.check_call(cmd_line)
 
 
 def download_and_sew_tiles(output_filename, url_maker, policy):
@@ -626,18 +631,16 @@ def download_image_from_deepzoom(output_filename, metadata_url, url_maker):
 
 	size_metadata = image_metadata.getchildren()[0]
 	width = int(size_metadata.attrib["Width"])
-	tiles_number_x = math.ceil(width / tile_size)
-
 	height = int(size_metadata.attrib["Height"])
-	tiles_number_y = math.ceil(height / tile_size)
 
-	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, overlap)
+	policy = TileSewingPolicy.from_image_size(width, height, tile_size)
+	policy.overlap = overlap
 	download_and_sew_tiles(output_filename, url_maker, policy)
 
 
 @opster.command()
 def leidenCollection(
-	id=("", "", "Image id of the painting to be donwloaded(e. g. `js-108-jan_steen-the_fair_at_warmond_files`)")
+	id=("", "", "Image id of the painting to be downloaded(e. g. `js-108-jan_steen-the_fair_at_warmond_files`)")
 ):
 	"""
 	Downloads single image from https://www.theleidencollection.com
@@ -653,7 +656,7 @@ def leidenCollection(
 	print(f"Guessed tiles_number_x={tiles_number_x}")
 	tiles_number_y = guess_tiles_number_y(url_maker)
 	print(f"Guessed tiles_number_y={tiles_number_y}")
-	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, None, None)
+	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size=None, overlap=None)
 
 	output_filename = make_output_filename("", id)
 	download_and_sew_tiles(output_filename, url_maker, policy)
@@ -727,7 +730,7 @@ def uniJena(
 	id=("", "", "Id of the image to be downloaded, including document id (e. g. `00108217/JLM_1787_H002_0003_a`)")
 ):
 	"""
-	Downloads single image from http://zs.thulb.uni-jena.de
+	Downloads single image from https://zs.thulb.uni-jena.de
 
 	Requires a lot of work though
 	"""
@@ -736,9 +739,9 @@ def uniJena(
 			self.zoom = zoom
 
 		def __call__(self, tile_x, tile_y):
-			return f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/{self.zoom}/{tile_y}/{tile_x}.jpg"
+			return f"https://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/{self.zoom}/{tile_y}/{tile_x}.jpg"
 
-	metadata_url = f"http://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/imageinfo.xml"
+	metadata_url = f"https://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/imageinfo.xml"
 	metadata = get_xml(metadata_url)
 
 	output_filename = make_output_filename("", os.path.basename(id))
@@ -749,7 +752,6 @@ def uniJena(
 
 	TILE_SIZE = 256
 	policy = TileSewingPolicy.from_image_size(width, height, TILE_SIZE)
-	policy.trim = False
 
 	url_maker = UrlMaker(zoom)
 	download_and_sew_tiles(output_filename, url_maker, policy)
