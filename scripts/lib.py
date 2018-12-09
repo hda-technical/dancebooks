@@ -683,29 +683,7 @@ def britishLibraryManuscript(
 	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
 	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
 	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
-
-@opster.command()
-def polona(
-	id=("", "", "Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)")
-):
-	"""
-	Downloads book from https://polona.pl
-	"""
-	entity_url = f"https://polona.pl/api/entities/{id}"
-	entity_metadata = get_json(entity_url)
-	output_folder = make_output_folder("polona", id)
-	for page, page_metadata in enumerate(entity_metadata["scans"]):
-		output_filename = make_output_filename(output_folder, page, extension="jpg")
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{page:08d}")
-			continue
-		found = False
-		for image_metadata in page_metadata["resources"]:
-			if image_metadata["mime"] == "image/jpeg":
-				get_binary(output_filename, image_metadata["url"])
-				found = True
-		if not found:
-			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
+	
 
 @opster.command()
 def makAt(
@@ -869,6 +847,30 @@ def staatsBerlin(
 				print(f"No more images left. Last page was {page - 1:04d}")
 				break
 		page += 1
+
+
+@opster.command()
+def polona(
+	id=("", "", "Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)")
+):
+	"""
+	Downloads book from https://polona.pl
+	"""
+	entity_url = f"https://polona.pl/api/entities/{id}"
+	entity_metadata = get_json(entity_url)
+	output_folder = make_output_folder("polona", id)
+	for page, page_metadata in enumerate(entity_metadata["scans"]):
+		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
+		found = False
+		for image_metadata in page_metadata["resources"]:
+			if image_metadata["mime"] == "image/jpeg":
+				get_binary(output_filename, image_metadata["url"])
+				found = True
+		if not found:
+			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
 
 
 if __name__ == "__main__":
