@@ -360,7 +360,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
 | 1908? | Peter Müller | Anstands- und Tanzlehre Kommando d. Contre-danse, Norddeutsche Française, Quadrille à la cour | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=390745111) |
 | 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004956353&context=L&search_scope=default_scope&lang=ru_RU) |
-| 1909 | | Джинджер. Новый танец | `[Yoko]` | |
 | 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005139495&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1910 | Jean-Jacques Olivier<br/>W. Norbert | Une étoile de la danse au XVIIIe siècle, Barbara Campanini | `[4. Rothenfelser]` | |
 | 1910 | Donald Richard MacKenzie | Illustrated Guide to the National Dances of Scotland | [[MacKenzie, 1870]](https://bib.hda.org.ru/books/mackenzie_1870)<br/>[[MacKenzie, 1939]](https://bib.hda.org.ru/books/mackenzie_1939_highland)<br/>`[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=581090) |
