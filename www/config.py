@@ -108,6 +108,11 @@ class WwwConfig(object):
 		self.id_redirections = params["id_redirections"]
 
 
+class DatabaseConfig(object):
+	def __init__(self, params):
+		self.connection_string = params["connection_string"]
+
+
 class Config(object):
 	def __init__(self, path):
 		with open(path, "rt") as config_file:
@@ -118,12 +123,16 @@ class Config(object):
 			with open(secrets_path, "rt") as secrets_json_file:
 				secrets_config = json.load(secrets_json_file)
 			for key, value in secrets_config.items():
-				json_config[key].update(value)
+				if key in json_config:
+					json_config[key].update(value)
+				else:
+					json_config[key] = value
 
 		self.smtp = SmtpConfig(json_config["smtp"])
 		self.bug_report = BugReportConfig(json_config["bug_report"])
 		self.parser = ParserConfig(json_config["parser"])
 		self.www = WwwConfig(json_config["www"])
+		self.db = DatabaseConfig(json_config["db"])
 		self.unittest_mode = "DANCEBOOKS_UNITTEST" in os.environ
 
 
