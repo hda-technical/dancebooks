@@ -574,22 +574,22 @@ _This part of the list is to joined with the general table_
 | 1816 | `[Handbuch, 1815]` | | Handbuch der Literatur, Zweyte Abtheilung, Tanzkunst | https://books.google.com/books?id=kjBSAAAAcAAJ, Стр. 186–187 |
 | 1816 | `[Turnkunst, 1816]` | Friedrich Ludwig Jahn | Die Deutsche Turnkunst | http://www.deutschestextarchiv.de/book/view/jahn_turnkunst_1816?p=328 |
 | 1825 | `[Charinomos, 1825]` | Carl Seidel | Charinomos | https://books.google.com/books?id=1FBjAAAAcAAJ |
-| 1855–1910 | `[Klemm]` | Bernhard Klemm | Katechismus der Tanzkunst | https://bib.hda.org.ru/advanced-search?author=bernhard%20klemm&langid=german |
+| 1855–1910 | `[Klemm]` | Bernhard Klemm | Katechismus der Tanzkunst | [bib.hda.org.ru lookup](https://bib.hda.org.ru/advanced-search?author=bernhard%20klemm&langid=german). Bibliography is not present in editions 1, 5. 4th edition is not available |
 | 1857 | `[Nouveau manuel, 1857]` | Ferdinand Denis, P. Pincon, de Martonne | Nouveau manuel de bibliographie universelle" | https://books.google.com/books?id=C6g20GmnNlQC&pg=PA165 |
 | 1894 | `[Katalog, 1894]` | | Katalog für die Ausstellung der Genossenschaft Deutschen Tanzlehrer | https://bib.hda.org.ru/books/katalog_1894 | |
 | 1960 | `[Richardson, 1960]` | Philip John Sampey Richardson | The Social Dances of the Nineteenth Century in England  | https://bib.hda.org.ru/books/richardson_1960 |
 | 1977 | `[Corti, 1977]` | Gino Corti<br/>Cristiano Lamberti | Cinque balli toscani del cinquecento" | https://bib.hda.org.ru/books/corti_1977_balli |
 | 1979 | `Gallo:` | F. Alberto Gallo | Il 'Balare Lombardo' Circa 1435–1475 | https://bib.hda.org.ru/books/gallo_1979_balare |
-| 1981 | `Marrocco:` | William Thomas Marrocco | Inventory of 15th century Bassedanze, Balli & Balletti" | https://bib.hda.org.ru/books/marrocco_1981_inventory |
+| 1981 | `Marrocco:` | William Thomas Marrocco | Inventory of 15th Century Bassedanze, Balli & Balletti" | https://bib.hda.org.ru/books/marrocco_1981_inventory |
 | 1989 | `[Guillard, 1989]` | Yves Guillard | Early Scottish Reel Setting Steps | https://bib.hda.org.ru/books/guillard_1989 |
 | 1992 | `LittleMarsh:` | Meredith Ellis Little<br/> Carol G. Marsh | La danse noble | https://bib.hda.org.ru/books/little_1992 |
 | 1995 | `Smith:` | A. William Smith | Fifteenth Century Dance and Music | https://bib.hda.org.ru/books/smith_1995 |
 | 1996 | `Lancelot:` | Francine Lancelot | La belle dance, catalogue raisonné fait en l'an 1995" | https://bib.hda.org.ru/books/lancelot_1996 |
 | 1996 | `[Sparti, 1996]` | Barbara Sparti | Breaking Down Barriers in the Study of Renaissance and Baroque Dance | https://bib.hda.org.ru/books/sparti_1996_barriers |
 | 1997 | `[Lehner, 1997]` | Markus Lehner | A Manual of Sixteenth-Century Italian Dance Steps | https://bib.hda.org.ru/books/lehner_1997 |
-| 1997 | `[Lindahl]` | Greg Lindahl | Dances from the Inns of Court | |
+| 1997 | `[Lindahl]` | Greg Lindahl | Dances from the Inns of Court | http://www.pbm.com/~lindahl/dance/ioc/intro.html |
 | 1998 | `[Rogers, 1998]` | Ellis A. Rogers | Resources for the Study of 19th Century Social Dance | https://bib.hda.org.ru/books/rogers_1998_nineteenth |
-| 1998 | `[Library of Congress]` | Library of Congress | [memory.loc.gov](http://memory.loc.gov/music/musdi/), [archive.org](https://archive.org/details/danceman) |
+| 1998 | `[Library of Congress]` | | Library of Congress | [memory.loc.gov](http://memory.loc.gov/music/musdi/), [archive.org](https://archive.org/details/danceman) |
 | 2003 | `[Wilson, 2003]` | David R. Wilson | The Steps Used in Court Dancing in Fifteenth-century Italy, _3rd edition_ | https://bib.hda.org.ru/books/wilson_2003_steps |
 | 2004 | `[Wortelboer, 2004]` | Dorothée Wortelboer | La baroque. Dances for the Dutch Court c. 1765 | https://bib.hda.org.ru/books/wortelboer_2004 |
 | 2004 | `[Sparti, 2004]` | Barbara Sparti | Balli to Dance and Play in a Sixteenth-century Miscellany | [2004](https://bib.hda.org.ru/books/sparti_2004_balli), [2015](https://bib.hda.org.ru/books/sparti_2015_balli) |
