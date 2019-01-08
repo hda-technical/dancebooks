@@ -47,7 +47,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1715? | Richard Shirley | La Silvie | `LittleMarsh:[c1715]-Aim`<br/>`[LOST?]` | |
 | 1715? | Anthony L'Abbée<br/>Edmund Pemberton (publisher) | The Princess Royale | `LittleMarsh:[1715]-PrP` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004461981) |
 | 1716 | Anthony L'Abbée<br/>John Walsh (publisher) | The Princess Anna<br/>Published by Walsh | `Lancelot:1716.3s`<br/>`LittleMarsh:[1716]-PaW` | [NYPL](http://catalog.nypl.org/record=b12289349~S1)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004461980) |
-| 1718? | John Walsh (publisher) | The Compleat Country Dancing-master Containing Great Variety of Dances, Both Old and New | `[2. Rothenfelser]` | |
+| 1718? | John Walsh (publisher) | The Compleat Country Dancing-master Containing Great Variety of Dances, Both Old and New, Particularly Those Perform'd at the Several Masquerades<br/>_Dated 1731 by Bernhard Klemm_ | `[2. Rothenfelser]`<br/>`[Klemm #06]` | |
 | 1724 | Christoph Ballard (publisher) | Les rondes, chansons à danser<br/>_Suite des dix volumes_ | `[2. Rothenfelser]` | [Gallica, tome 1](http://gallica.bnf.fr/ark:/12148/bpt6k5534928f)<br/>[Gallica, tome 2](http://gallica.bnf.fr/ark:/12148/bpt6k9736644f) |
 | 1728 | John Weaver | History of the Mimes and Pantomimes, with an Historical Account of Several Performers in Dancing | `[4. Rothenfelser]` | |
 | 1728? | Pierre Rameau | Maitre de danse<br/>_Deuxième édition_ | `[2. Rothenfelser]` | |
@@ -55,6 +55,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1730? | John Walsh (publisher) | Third Book of the Most Celebrated Jiggs, Lancashire Hornpipes, Scotch and Highland Lilts, Northern Frisks, Morris's amd Cheshire Rounds | `[2. Rothenfelser]` | |
 | 1733? | John Walsh | Caledonian Country Dances, Book the Second | `[Leaflets]` | |
 | 1736 | Pierre Jean Burette | Prima, e seconda memoria per servire alla istoria del ballo degli antichi in<br/>_In: Académie royale des inscriptions et belles-lettres. Histoire, avec les Mémoires de littérature tirez des registres de cette Académie, tome 1, pages 93-135_<br/>_Published in Paris_ | [[Burette, 1746]](https://bib.hda.org.ru/books/burette_1746)<br/>`[Charinomos, 1825]` | |
+| 17-- | Pierre Jean Burette | Deux memoires pour servir à l'histoire de la danse des anciens. Memoires de l'académie des inscriptions | `[Klemm #03]`<br/>`[Klemm #06]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43989839h) |
 | 1751 | G. Waylett | Twenty Four Country Dances for the Year 1751 | `[2. Rothenfelser]` | |
 | 1750–1770? | Charles Pauli | Musik und Tanz.<br/>_In Goth. Magazin, Bd. II, Stck. 2_ | `[Charinomos, 1825]` | |
 | 1752 | Jean Lecointe | Apologie de la danse: son antiquité, sa noblesse, et ses avantages. Avec une dissertation sur le menuet | `[Charinomos, 1825]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb39317633n) |
@@ -73,17 +74,17 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1768? | Matthew Welch (publisher) | A Variety of English Country Dances for the present Year ... by Cards | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE:Welch Dance Cards,1768]](https://www.cdss.org/elibrary/DFIE/Biblio/B000853.htm) | Cecil Sharp Library |
 | 1768? | Simon Guillaume | Positions et attitudes de l'Allemande, etc. | | [PSU](http://cat.libraries.psu.edu/uhtbin/cgisirsi/x/0/0/57/5/3?searchdata1=3404748{CKEY}&user_id=WEBSERVER)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001539157)<br/>[Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=876138873)<br/>[Württemberg](https://wlb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKSWB-IdNr020378491)<br/>[Switzerland](http://data.rero.ch/01-R005344034/html) |
 | 1768 | Giovanni Battista Gherardi | Fourteen Cotillons or French Dances, the figures new compos'd by Monsieur Gherardi ... To which Mr. Gherardi has subjoin'd ye Music of four Allemands ye most in Vogue in Paris, Set for the Harpsichord, Violin or German Flute. (A Second Book of Cotillons, etc.) (A third Book of French Country Dances or Cotillons, etc.) | [[Cooper, #02]](https://www.regencydances.org/paper002.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004357751) |
-| 1768/1769 | Theodorus Franciscus Petersen | Practische Einleitung in der Chorégraphie ...  für das erste hable Jahr 1768<br/>_Good quality copy needed_ | [[Petersen, 1768]](https://bib.hda.org.ru/books/petersen_1768)<br/>`[Klemm #02]`<br/>`[Klemm #03]` | [Stanford](https://searchworks.stanford.edu/view/1395290)<br/>[København](https://bibliotek.dk/linkme.php?rec.id=810010-katalog%3A005383999) |
+| 1768/1769 | Theodorus Franciscus Petersen | Practische Einleitung in der Chorégraphie ...  für das erste hable Jahr 1768<br/>_Good quality copy needed_ | [[Petersen, 1768]](https://bib.hda.org.ru/books/petersen_1768)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Stanford](https://searchworks.stanford.edu/view/1395290)<br/>[København](https://bibliotek.dk/linkme.php?rec.id=810010-katalog%3A005383999) |
 | 1769 | Theodorus Franciscus Petersen | Practische Einleitung in der Chorégraphie ...  für das 2. und letzte habljahr 1769<br/>_Good quality copy needed_ | `[Klemm #02]` | | 
 | 1769 | Charles Thompson<br/>Samuel Thompson | Thompson's Twenty Four Country Dances for the Year 1769 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Thompson 24CD,1769]](https://www.cdss.org/elibrary/DFIE/Biblio/B000515.htm) | Library of Congress |
 | 1760–1780? | | _Contredanses françaises et allemandes_ | | [RSL](http://search.rsl.ru/ru/search#s=pubyear&q=contredanse) |
 | 1771 | S. Markordt (publisher) | XII contredanes avec figures et acompagnement à 7 instruments | `[Wortelboer, 2004]`<br/>`[Leaflets]` |
 | 1771 | Louis Laus de Boissy | Lettre critique sur notre danse theâtrale | `[Phister, 2016]` | |
-| 1771 | | Gedanken von Tänzen, in einem Sendschreiben<br/>_Published in Hamburg_<br/>_Maybe an antidance treatise_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1771 | | Gedanken von Tänzen, in einem Sendschreiben<br/>_Published in Hamburg_<br/>_Maybe an antidance treatise_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1773 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1773 | James Fishar<br/>John Johnson (publisher) | Sixteen Cotillons, Sixteen Minuets, Twelve Allemands and Twelve Hornpipes. | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004337825) |
 | 1773 | Gasparo Angiolini | Lettere di Gasparo Angiolini a monsieur Noverre sopra i balli pantomimi | `[2. Rothenfelser]`<br/>`[3. Rothenfelser]` | [LOC](https://www.loc.gov/item/08019861/) |
-| 1773 | Rendall, Abell | Sixteen Cotillons or French Dances | [Cite](https://books.google.com/books?redir_esc=y&hl=ru&id=-pNMAQAAMAAJ&q=sixteen+cotillons+abell) | |
+| 1773 | Rendall, Abell | Sixteen Cotillons or French Dances | [Cite](https://books.google.com/books?&id=-pNMAQAAMAAJ&q=sixteen+cotillons+abell) | |
 | 1773 | Sara Goudar | De Venise. Rémarques sur la musique & la danse ou lettres de Mr. G... à milord Pembroke | `[2. Rothenfelser]` | [V&A #1](https://nal-vam.on.worldcat.org/oclc/1012092959)<br/>[V&A #2](https://nal-vam.on.worldcat.org/oclc/1012092609)<br/>[National Art Library](https://nal-vam.on.worldcat.org/oclc/1008576501) |
 | 1773 | Sara Goudar | Supplement aux Remarques sur la musique, & la danse ou Lettres de Mr G... a Milord Pembroke | | [V&A](https://nal-vam.on.worldcat.org/oclc/1012092609)<br/>[V&A](https://nal-vam.on.worldcat.org/oclc/1008576501) |
 | 1774 | | Ueber den Tanz der Alten | `[Katalog, 1894]`<br/>`[Klemm #03]` | |
@@ -91,14 +92,15 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1775 | Elias Christian Fricke | Neue Cotillions oder Französische Contretänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346613)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=87567416X) |
 | 1775 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement #1](https://books.google.com/books?id=QPdLAAAAcAAJ&pg=RA2-PA27)<br/>[Advertisement 32](https://books.google.com/books?id=rm9bAAAAcAAJ&pg=PT6) | |
 | 1776 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=NwxcAAAAcAAJ&pg=PA434) | |
-| 1776 | Carl Joseph von Feldtenstein | Erweiterung der Kunst nach der Chorographie zu Tanzen<br/>_Zweyter theil_<br/>_Published in Braunschweig_ | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]`<br/>`[Klemm #02]`<br/>`[Klemm #03]` | [Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=236812041) |
+| 1776 | Carl Joseph von Feldtenstein | Erweiterung der Kunst nach der Chorographie zu Tanzen<br/>_Zweyter theil_<br/>_Published in Braunschweig_ | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=236812041) |
 | 1777 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1777 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=639LAAAAcAAJ&pg=PA215) | |
 | 1781 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=DsNFAAAAcAAJ&pg=PA96) | |
 | 1782 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
-| 1783 | Barthold Friedrich Schulz | Anweisung zum guten regelmäßigen Tanzen; nebst 12 neuen englischen Tänzen<br/>_Published in Hamburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>[Advertisement](https://books.google.com/books?id=e3G6m7fhlT8C&pg=PA361) | |
+| 1783 | Barthold Friedrich Schulz | Anweisung zum guten regelmäßigen Tanzen; nebst 12 neuen englischen Tänzen<br/>_Published in Hamburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=e3G6m7fhlT8C&pg=PA361) | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
-| 1785 | | Etwas übers Tanzen, zu Beherzigung der Wiener Schönen; von einem Freunde der Offenherzigkeit<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
+| 1785 | | Etwas übers Tanzen, zu Beherzigung der Wiener Schönen; von einem Freunde der Offenherzigkeit<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1786 | John Longman<br/>Francis Broderip | Twenty Four New Cotillions with their proper Figures ... now performing this present Spring Season. 1786. Book the VI<br/>_Contains description of ‹Les Pantalons› cotillion_ | [[Cooper, #03]](https://www.regencydances.org/paper003.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283048)<br/>[HVD](http://id.lib.harvard.edu/aleph/007222757/catalog) |
 | 1787 | Thompson | Twenty Four Country Dances for the Year 1787 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[Cooper, #04]](https://www.regencydances.org/paper004.php)<br/>[[DFIE: Thompson 24CD,1787]](https://www.cdss.org/elibrary/DFIE/Biblio/B000531.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283574) |
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
@@ -107,7 +109,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1791 | | Fourteen New Country Dances for 1791 with Their Proper Figures<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://manchesterartgallery.org/collections/search/collection/?id=1922.1060) | |
 | 1791 | | _The fan depicting the likeness of Princess Frederica Charlotte of Prussia who married Frederick Duke of York on 2nd September 1791 and is printed with music, words and instructions for 16 popular dances of the day_ | | [Low quality image](https://www.jerseyheritage.org/collection-items/paper-fan) |
 | 1791 | | Eighteen of the Most Favourite Country Dances<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://www.imieiventagli.it/l_allmande) |
-| 1791 | Theodorus Franciscus Petersen | Practische vollständige Einleitung in die Choregraphie oder Tanzzeichnungskunst, nach dem französ. Original<br/>_Published in Schleswig_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1791 | Theodorus Franciscus Petersen | Practische vollständige Einleitung in die Choregraphie oder Tanzzeichnungskunst, nach dem französ. Original<br/>_Published in Schleswig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1793? | Charles Metralcourt | Twenty Four Country Dances, with proper Directions to each Dance | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004524098) |
 | 1795 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1795. With Proper Directions to Each Dance | [[Cooper, 01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1795]](https://www.cdss.org/elibrary/DFIE/Biblio/B000084.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283622) |
 | 1797 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1797 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1797]](https://www.cdss.org/elibrary/DFIE/Biblio/B000086.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283634) |
@@ -198,8 +200,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1820? | Thomas Wilson | A Companion to the Ball Room<br/>_Third edition_ | [[Wilson, 1820]](https://bib.hda.org.ru/books/wilson_1820_countrydance) | |
 | 1820 | F. J. Lambert | Treatise on Dancing | `[Guillard, 1989]` | |
 | 1821 | Thomas Wilson | Thompson's Twenty Four Country Dances for the year 1821 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
-| 1821–1823 | | Choix de rondes à danser | `[Klemm #03]` | [1821 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k54486775)<br/>[1822 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k5448716t)<br/>[1823 @ BNF](https://catalogue.bnf.fr/ark:/12148/cb44007042n) |
-| 1822 | Carl Friedrich Förster | Anweisung zur Tanzkunst<br/>_Published in Breslau_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>[[Forster, 1822]](https://bib.hda.org.ru/bib/books/forster_1822) | |
+| 1821–1823 | | Choix de rondes à danser | `[Klemm #03]`<br/>`[Klemm #06]` | [1821 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k54486775)<br/>[1822 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k5448716t)<br/>[1823 @ BNF](https://catalogue.bnf.fr/ark:/12148/cb44007042n) |
+| 1822 | Carl Friedrich Förster | Anweisung zur Tanzkunst<br/>_Published in Breslau_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Forster, 1822]](https://bib.hda.org.ru/bib/books/forster_1822) | |
 | 1822 | Fr. Wolf | Kurze Uebersicht der niedern Tanzkunst, oder: die Art und Weise seinen Körper auszubilden und einen richtigen Gang und Fester Schritt im Gehen zu erhalten | `[Charinomos, 1825]`<br/>`[Klemm #03]` | |
 | 1822 | Philippe Musard | Seventeenth Set of Quadrilles | | [archive.org](https://archive.org/details/Musards17thSetOfQuadrilles) |
 | 1822 | Thomas Wilson | The Quadrille and Cotillion Panorama<br/>_Third edition_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
@@ -207,9 +209,9 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1822 | Thomas Wilson | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the Year 1822 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1823 | | La harpе du nord<br/>_Нужны тетради: 1823/07–12_ | | ИРЛИ РАН, №7, 8, 9, 10, 12<br/>NLR, `М 970-2/С.280`, (№ 8, 9, 12) |
 | 1823 | Thomas Wilson (fake author?)<br/>T. Plummer (publisher) | The Complete English Quadrille Preceptor for 1823 | [[Cooper, #03]](https://www.regencydances.org/paper003.php)<br/>[[Cooper, #06]](https://www.regencydances.org/paper006.php) | [Newcastle](https://libsearch.ncl.ac.uk/primo-explore/fulldisplay?docid=NCL_ALMA2156878470002411&context=L&vid=NEWUI&search_scope=NotPC&tab=default_tab&lang=en_US) |
-| 1823 | Jean Charles Louis Le Pitre | Vollständige Theorie der eleganten und höheren Tanzkunst | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1823 | Jean Charles Louis Le Pitre | Vollständige Theorie der eleganten und höheren Tanzkunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1822–1825 | | Pieces detachees tirees du journal de musique "La harpe du nord" | | [RSL](http://search.rsl.ru/ru/record/01002068603) |
-| 1824 | C. Friedrich Engelmann | Die Kunst zu Walzen | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1824 | C. Friedrich Engelmann | Die Kunst zu Walzen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1824 | Juan Ignacio de Iztueta | Guicuzpoaco dantza | `[Nouveau manuel, 1857, #60]` | [Gallica](http://gallica.bnf.fr/ark:/12148/bpt6k8894479/) |
 | 1824 | Thomas Wilson | Whitaker and Compy's Twenty Four Country Dances, for the Year 1824, Adapted for the Violin, German Flute or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004742496 |
 | 1824 | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the year 1824 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
@@ -220,36 +222,37 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1826–1827 | Mrs. Charles Wilson | The St. James's Quadrilles, or Wilson's 1st Set | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1826–1827 | Mrs. Charles Wilson | The Wanstead Quadrilles, or Wilson's 2nd Set | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1827 | J. P. Boulogne | The Ball-Room or the Juvenile Pupil's Assistant | `[Leaflets]`<br/>[Kickery](http://www.kickery.com/2016/03/sixdrilles-1.html) | |
-| 1827 | Jean Charles Louis Le Pitre | _Reissue, under alternative title, of [https://bib.hda.org.ru/books/lepitre_1819_lieblingsbuch]_ | `[Klemm #02]`<br/>`[Klemm #03] | |
+| 1827 | Jean Charles Louis Le Pitre | _Reissue, under alternative title, of [https://bib.hda.org.ru/books/lepitre_1819_lieblingsbuch]_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1828 | Carl Friedrich Förster | Der Tanzlehrer oder Anweisung zur gründlichen Erlernung der Tanzkunst<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=IssVAQAAIAAJ&pg=PA536) | |
 | 1828? | Thomas Wilson | _A Dramatic Piece, also a New Work on Dancing_<br/>_It is unclear if this work was ever published_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://books.google.com/books?id=468CAAAAIAAJ&pg=PA756) | |
 | 1820–1830? | J. S. Pollock<br/>R. W. Evans | The Mid Lothians, a New Set of Quadrilles | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=3598310) |
-| 1829 | Carl Friedrich Förster | Der Tanzlehrer oder Anweisung zur gründlichen Erlernung der Tanzkunst<br/>_Published in Leipzig_ | `[Klemm #02]` | |
+| 1829 | Carl Friedrich Förster | Der Tanzlehrer oder Anweisung zur gründlichen Erlernung der Tanzkunst<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1829 | Johann Christian Traub | Über den Tanz-Unterricht nebst Bemerkungen über Kleidung, Haltung und Verhaltungs-Regeln beim Tanzen | `[Klemm #02]` | [Dillingen Donau](https://opac.studienbibliothek-dillingen.de/InfoGuideClient.sdlsis/start.do?Query=10="BV013660012")<br/>[Württemberg](https://wlb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKSWB-IdNr043356494) |
+| 1830 | | Manuel de la danse de société ou l'education physique mise a la portée du tout le monde | `[Klemm #06]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb439908920) |
 | 1830 | Gotthelf Tschütter<br/>A. Engelbrecht (composer) | Der Familienball im geselligen Kreise, oder alle nur mögliche bei einem Balle vorkommende Tänze in 140 Touren<br/>_Published in Friese_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
 | 1830? | R. Lowe<br/>J. Lowe × 2<br/>J. S. Lowe | Lowe's Ball-Conductor and Assembly Guide<br/>Third Edition<br/>Dated circa 1850 by the National Library of Scotland | `[Kickery]`<br/>`[Rogers, 1998]`<br/>`[Leaflets]`<br/>[[Cooper, #03]](https://www.regencydances.org/paper003.php) | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=2999807) |
 | 1830 | Carlo Blasis | Neue vollständige Tanzschule für die elegante Welt, oder faßliche und umfassende Anleitung zum gesellschaftlichen und theatralischen Tanze | `[3. Rothenfelser]`<br/>`[Klemm #02]`<br/>`[Klemm #03]` | [NYPL](http://catalog.nypl.org/record=b12282042~S1)<br/>[Bayreuth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0="1648163"+IN+[2]&v=sunrise&l=en) |
 | 1830 | J. W. Böhm | Analys des Schönen der Musik und der Tanzes | `[Unfried, 2014]` | |
-| 1830/1831 | Eduard Friedrich David Helmke | Die Kunst, sich durch Selbstunterricht in kurzer Zeit zum Weltmann un zum Geschichten Tänzer zu bilden | `[Unfried, 2014]`<br/>[Advertisement](https://books.google.com/books?id=4alFAAAAcAAJ&pg=PA378)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]` | |
-| 1830 | Eduard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1830<br/>_Good quality copy needed_ | [[Helmke, 1830]](https://bib.hda.org.ru/books/helmke_1830)<br/>`[Klemm #02]`<br/>`[Klemm #03]` | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
-| 1831 | Eduard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1831 | `[Unfried, 2014]`<br/>`[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1830/1831 | Eduard Friedrich David Helmke | Die Kunst, sich durch Selbstunterricht in kurzer Zeit zum Weltmann un zum Geschichten Tänzer zu bilden | `[Unfried, 2014]`<br/>[Advertisement](https://books.google.com/books?id=4alFAAAAcAAJ&pg=PA378)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1830 | Eduard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1830<br/>_Good quality copy needed_ | [[Helmke, 1830]](https://bib.hda.org.ru/books/helmke_1830)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
+| 1831 | Eduard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1831 | `[Unfried, 2014]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1831 | Joseph Binns Hart | Hart's Grenadier Quadrilles | [Cover](http://www.bridgemanimages.com/en-GB/asset/610771) | |
-| 1831 | Eduard Friedrich David Helmke | Neue Tanz- und Bildunschule<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>[[Helmke, 1829]](https://bib.hda.org.ru/books/helmke_1829_tanz) | |
-| 1831 | А. Krüger | Die algemein beliebtesten Contre-Tanz-Touren, wie solche auf den Bällen und in Familientränzchen in Berlin getanzt werden<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
-| 1831 | Giacomo Costa | Saggio analitico-pratico all'arte della danza per uso di civile conversazione<br/>_4 volumi con tavole_<br/>_Published in Torino_ | `[Klemm #03]`<br/>[Advertisement](https://books.google.ru/books?id=RdsqAAAAYAAJ&pg=PA435) | [Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=467361754)<br/>[NYPL](http://catalog.nypl.org/record=b12280213~S1)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004045042) |
-| 1831 | Max Joseph Franken | Die Galopade, wie sie getanzt werder soll. Eine vollständige Anweisung zum Selbstunterrichte in diesem Lieblingstanze<br/>_2. Auflage_ | `[Klemm, #03]` | |
+| 1831 | Eduard Friedrich David Helmke | Neue Tanz- und Bildunschule<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Helmke, 1829]](https://bib.hda.org.ru/books/helmke_1829_tanz) | |
+| 1831 | А. Krüger | Die algemein beliebtesten Contre-Tanz-Touren, wie solche auf den Bällen und in Familientränzchen in Berlin getanzt werden<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1831 | Giacomo Costa | Saggio analitico-pratico all'arte della danza per uso di civile conversazione<br/>_4 volumi con tavole_<br/>_Published in Torino_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.ru/books?id=RdsqAAAAYAAJ&pg=PA435) | [Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=467361754)<br/>[NYPL](http://catalog.nypl.org/record=b12280213~S1)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004045042) |
+| 1831 | Max Joseph Franken | Die Galopade, wie sie getanzt werder soll. Eine vollständige Anweisung zum Selbstunterrichte in diesem Lieblingstanze<br/>_2. Auflage_ | `[Klemm, #03]`<br/>`[Klemm #06]` | |
 | 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | [Royal Academy of Music](http://www.ram.ac.uk/museum/item/15068) |
-| 1832 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1832<br/>_Good quality copy needed_ | [[Helmke, 1832]](https://bib.hda.org.ru/books/helmke_1832)<br/>`[Klemm #02]`<br/>`[Klemm #03]` | [NLI](http://aleph.nli.org.il/F/?func=direct&doc_number=001825743&local_base=NNL01)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
-| 1831/1833 | Carl Friedrich Förster | Eccossaisen-Lehre, oder die Kunst 16 verschiedene Eccossaisen mit allen dezugehörigen Pas und Touren in kurzer Zeit anständig tanzen<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.com/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1832 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1832<br/>_Good quality copy needed_ | [[Helmke, 1832]](https://bib.hda.org.ru/books/helmke_1832)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [NLI](http://aleph.nli.org.il/F/?func=direct&doc_number=001825743&local_base=NNL01)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
+| 1831/1833 | Carl Friedrich Förster | Eccossaisen-Lehre, oder die Kunst 16 verschiedene Eccossaisen mit allen dezugehörigen Pas und Touren in kurzer Zeit anständig tanzen<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.com/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1822/1832 | Gustav Weirich | Drei Contre-Tänze in 20 verschiedenen Touren. Seinen Scholaren gewidmet | `[Klemm #02]`<br/>`[Klemm #03]`<br/>[Advertisement](https://books.google.com/books?id=kiNMAAAAcAAJ&pg=RA1-PA56) | |
 | 1833 | Carl Friedrich Förster | Königs-Quadrillen-Lehre | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236) |
-| 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | `[Klemm #02]`<br/>`[Klemm #03]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334) | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
-| 1835 | J. G. Häcker | Der selbstlehrende Tanzmeister<br/>_Good quality copy_ | [[Häcker, 1835]](https://bib.hda.org.ru/books/hacker_1835)<br/>`[Klemm #03]` | [Berlin](http://www.ifskb.de/) |
+| 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334) | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
+| 1835 | J. G. Häcker | Der selbstlehrende Tanzmeister<br/>_Good quality copy_ | [[Häcker, 1835]](https://bib.hda.org.ru/books/hacker_1835)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Berlin](http://www.ifskb.de/) |
 | 1835 | Пьер Роде<br/>Пьер Мари Франсуа де Саль Байо<br/>Родольф Крейцер | Скрипичный учитель, или собрание для изучения на скрипке необходимых правил<br/>_Издание третье_ | [Quote](http://blog.hda.org.ru/quotes/novyie-knigi) | |
 | 1836 | Марцинкевич<br/>Матвей Иванович Бернард | Les graces. Кадриль | [Cite](http://search.rsl.ru/ru/record/01000265975) | |
 | 1837 | Luigi Bartolotti | Della danza domestica | `[Leaflets]` | |
 | 1838 | | A Manual of Private Ballroom Dancing | `[Guillard, 1989]` | |
-| 1838 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | | [Giessen](https://opac.uni-giessen.de/DB=1/PPNSET?PPN=221521437)<br/>[Bayreth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0%3D%221648145%22+IN+%5B2%5D&v=sunrise&l=de)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UDK&search_scope=default_scope&docId=UDK_ALMA_DS21538878500002884&fn=permalink) |
+| 1838 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Klemm #03]`<br/>`[Klemm #06]` | [Giessen](https://opac.uni-giessen.de/DB=1/PPNSET?PPN=221521437)<br/>[Bayreth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0%3D%221648145%22+IN+%5B2%5D&v=sunrise&l=de)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UDK&search_scope=default_scope&docId=UDK_ALMA_DS21538878500002884&fn=permalink) |
 | 1839 | | Aux quatre lanciers, новый английский кадриль | [Advertisement](https://vivaldi.nlr.ru/pn000105706/view#page=3) | |
 | 1839 | Thomas Wilson | The Quadrille and Cotillon Panorama<br/>_Fouth edition_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 184- | Г. Грациеский | Полька в Киеве | [Cite](https://books.google.com/books?id=_HcLAQAAIAAJ&q=грациеский) | |
@@ -260,64 +263,70 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
 | 1842? | Adam Rabel | Kleine Sammlung geselliger Tänze | `[Unfried, 2014]` | |
 | 1843 | | Листок для светских людей. Петербургские балы и маскарады<br/>_№5 за 1843 год_ | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004358933&context=L&search_scope=default_scope&lang=ru_RU) |
-| 1844 | Adam Rabel | Die Lance-Quadrille. Mit 4 Tafeln Abbildungen und einer neuen Musik<br/>_2. Auflage_<br/>_Published in Wien_ | `[Klemm #02]` | |
+| 1844 | Adam Rabel | Die Lance-Quadrille. Mit 4 Tafeln Abbildungen und einer neuen Musik<br/>_2. Auflage_<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1844 | | The Ballroom Annual | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01010474492) |
 | 1844 | David Bogue (publisher) | The Ball-Room Preceptor; Comprising The Most Esteemed Quadrilles, Galopades, Mazourkas, & Other Fashionable Dances of the Season<br/>_4th edition_ | | [On sale, £180](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699530) |
-| 1844 | Jean Charles Louis Le Pitre | Réflexions sur l'art de la danse, relativement à la décadence momentanée et à la renaissance actuelle des danses nationales françaises et allemandes | `[Katalog, 1894]`<br/>`[Klemm #03]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43997540m) |
+| 1844 | Jean Charles Louis Le Pitre | Réflexions sur l'art de la danse, relativement à la décadence momentanée et à la renaissance actuelle des danses nationales françaises et allemandes | `[Katalog, 1894]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43997540m) |
 | 1844 | Auguste Perrot<br/>Ardien Robert | La polka enseignée sans maitre | | [On sale, €486](https://www.abebooks.com/servlet/BookDetailsPL?bi=12996581883)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31088074n) |
-| 1844 | H. G. Clarke (publisher) | The Ball Room Annual | `[Klemm #02]` | [NYPL](http://catalog.nypl.org/record=b12276128~S1) |
+| 1844 | H. G. Clarke (publisher) | The Ball Room Annual | `[Klemm #02]`<br/>`[Klemm #03]<br/>`[Klemm #06]` | [NYPL](http://catalog.nypl.org/record=b12276128~S1) |
 | 184- | | Современный любимейший танец полька. Девять изображений | `[Yoko]` | |
 | 1844–1860? | Johann Raab<br/>Maximilien Gorski<br/>Mieczyslaw Hlasko | Wiener Tanzschule. III Band. Inhalt: Körtanz und Mazur mit Choreographie und Nationalmusik | `[Unfried, 2014]`<br/>`[Katalog, 1894]` | |
 | 1844–1860? | Johann Raab<br/>Maximilien Gorski<br/>Mieczyslaw Hlasko | Wiener Tanzschule. IV Band. Inhalt: L'Alliance und Mazur-Quadrille | `[Unfried, 2014]`<br/>`[Katalog, 1894]` | |
+| 1845 | Theodor Hentschke | Allgemeine Tanzkunst. Theorie und Geschichte antike und moderne (gesellschaftliche und theatratische) Tanzkunst und Schilderund der maisten National- ynd Charaktertänze | `[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Hentschke, 1836]](https://bib.hda.org.ru/books/hentshke_1836) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001673446)<br/>[Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=37324522X)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=37324522X) |
 | 1846 | David Bogue (publisher) | The Ball-room Preceptor and Polka Guide<br/>_Edition number is not known_ | `[Rogers, 1998]` | |
 | 1846–1852? | Johann Raab<br/>F. W. Swoboda | Concordia Quadrille | [Advertisement](https://books.google.com/books?id=zLwzAQAAIAAJ&pg=PA199) | |
 | 1846 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Unfried, 2014]` | |
-| 1846 | Mieczyslaw Hlasko | Die Mazur (Polnischer Nationaltanz); gründlich und für Jedermann leicht faßlich beschriben, mit Abbildung der Figuren und einer Nationalmusikversehen | `[3. Rothenfelser]`<br/>`[Klemm #03]` | [Google](https://books.google.com/books?id=gAVUHAAACAAJ) |
-| 1847 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_Published in Leipzig_ | [Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156) | |
-| 1847 | Eduard Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]` | |
+| 1846 | Mieczyslaw Hlasko | Die Mazur (Polnischer Nationaltanz); gründlich und für Jedermann leicht faßlich beschrieben, mit Abbildung der Figuren und einer Nationalmusikversehen<br/>_Dated 1857 by Bernhard Klemm (different edition?)_ | `[3. Rothenfelser]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Google](https://books.google.com/books?id=gAVUHAAACAAJ) |
+| 1847 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_Published in Leipzig_ | [Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #06]` | |
+| 1847 | Eduard Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1848 | August Bournonville | Mit teaterliv: erindringer og tidsbilleder | `[2. Rothenfelser]` | |
 | 1850? | Friedrich Gottermann | Die erste Contretanz-Quadrille (Francaise) und Quadrille à la cour (Les Lanciers). Ein Bücheln bei der Erlernung dieser Tänze<br/>_Published in Rostock_ | [Worldcat](http://www.worldcat.org/oclc/247855742) | |
-| 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]` | |
-| 1850–1860? | Jean Jacques | Tanz-Album oder der unerschöpfliche Maitre auf dem Ballsaal<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1850–1860? | Jean Jacques | Tanz-Album oder der unerschöpfliche Maitre auf dem Ballsaal<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1850–1880? | | Die Union-Quadrille<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
 | 1850–1880? | Rudolf Voß | Tanz-Tourent. Contre-Tanz — Lancier — Alliance — Quadrille — Mignon — Cotillon — Pariser Polka<br/>_4. Auflage_ | `[Klemm #03]` | |
 | 1849 | Francisco Gomes da Fonseca | Nova arte de aprender a dançar ou methodo facil de aprender as contradanças francezas | | BNP |
-| 1851 | Henmann Görwitz | Die Tanz-Assecuranz humoristisch-sociale Standrede in der Repräsentantenkammer der Frauen | `[Klemm #02]`<br/>`[Klemm #03]` | [HAAB](https://lhwei.gbv.de/DB=2/LNG=EN/CLK?IKT=12&TRM=55898116X) |
-| 1852 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_3. Auflage_ | `[Klemm #02]` | |
+| 1851 | Henmann Görwitz | Die Tanz-Assecuranz humoristisch-sociale Standrede in der Repräsentantenkammer der Frauen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [HAAB](https://lhwei.gbv.de/DB=2/LNG=EN/CLK?IKT=12&TRM=55898116X) |
+| 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1852 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_3. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | | Wiener Tanzschule. Gründliche und für jedermann leicht faßliche Darstellung der beliebtesten und modernsten Tänze | | [Universitätsbibliothek Salzburg copy desideratum ](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma71184520410003341) |
 | 1854 | Julius Kurth | Der gewandte Ball- und Vortänzer | `[Unfried, 2014]` | |
-| 1854 | August Bournonville | Der Tanz | `[Klemm #02]` | |
-| 1854 | Ernst Buchen | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]` | |
-| 1855 | J. C. Dürholz | Practischer Leitfaden für Tänzer und Tänzerinnen nebst Choreogrpahie der neuesten Contre-Tänze und Polonaisen<br/>_Published in Berleburg_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
-| 1855 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_3. Auflage_<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1854 | August Bournonville | Der Tanz | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1854 | Ernst Buchen | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1855 | J. C. Dürholz | Practischer Leitfaden für Tänzer und Tänzerinnen nebst Choreographie der neuesten Contre-Tänze und Polonaisen<br/>_Published in Berleburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1855 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_3. Auflage_<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1857 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #02]` | |
-| 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
+| 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1857 | Friedrich Wilhelm Rocco | Die natürliche und künstliche Bewegung des Körpers | `[Katalog, 1894]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=475078551)<br/>[HAAB](https://lhwei.gbv.de/DB=2/XMLPRS=N/PPN?PPN=475078551)<br/>[Leipzig](https://katalog.ub.uni-leipzig.de/Record/0001457432) |
-| 1857 | Johann Raab | Der Cotillon : in 20 neuen Figuren. Mit faßlicher, genauer und ausführlicher Beschreibung und Zeichnung aller Touren für Tänzer und Nichttänzer | `[Klemm #02]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524536370002884) |
-| 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]` | [ONB](http://data.onb.ac.at/rec/AC09173622) |
-| 1857 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_4. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]` | |
-| 1858 | F. M. Hessemer | Reckische Tanzgespräche. Ein poetisches Frag- und Antwortspiel<br/>_Published in Frankfurt am Main_ | `[Klemm #03]` | |
-| 1859 | F. W. Ganthe | Vom Tanzen Altes und Neues oder: Es wird fortgetanzt. Mit poet. Ballbouquet zu Neujahr 1860 | [Advertisement](https://books.google.ru/books?id=vHK9lAT89dEC&pg=PA90)<br/>`[Klemm #02]`<br/>`[Klemm #03]` | [Salzburg](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma21161702000003341) |
-| 1860 | Ludwig Kilanni | Der Kör-Tanz (Erste ungarische National-Quadrille). Mit Abbildungen der 6 Touren und einer National-Musik<br/>_Published in Wien_ | `[Klemm #03]` | | 
+| 1857 | Johann Raab | Der Cotillon : in 20 neuen Figuren. Mit faßlicher, genauer und ausführlicher Beschreibung und Zeichnung aller Touren für Tänzer und Nichttänzer | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524536370002884) |
+| 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [ONB](http://data.onb.ac.at/rec/AC09173622) |
+| 1857 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_4. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1858 | F. M. Hessemer | Reckische Tanzgespräche. Ein poetisches Frag- und Antwortspiel<br/>_Published in Frankfurt am Main_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1859 | A. Münchenberg | Zur Austhetik des Tanzes<br>In: _Wiener Blätter für Musk, Theater und Kunst, Nr. 44, 45, 46, 47, 48, 50, 51 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1859 | F. W. Ganthe | Vom Tanzen Altes und Neues oder: Es wird fortgetanzt. Mit poet. Ballbouquet zu Neujahr 1860 | [Advertisement](https://books.google.ru/books?id=vHK9lAT89dEC&pg=PA90)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Salzburg](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma21161702000003341) |
+| 1859 | Philippe Gawlikowski | Guide complet de la danse<br/>_Édition 2_ | | [NYPL](http://catalog.nypl.org/record=b10058976~S1) |
+| 1860 | Ludwig Kilanni | Der Kör-Tanz (Erste ungarische National-Quadrille). Mit Abbildungen der 6 Touren und einer National-Musik<br/>_Published in Wien_ | `[Klemm #03]`<br/>`[Klemm #06]` | | 
 | 1862 | Georg Gerster | Katechismus der Höflichkeits-, Anstands- und Präsentationlehre<br/>_Book on etiquette_ | `[Katalog, 1894]` | |
 | 1863 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001327338) |
-| 1864 | M. Reif | Die Quadrille française (die Contretänze), deren Geschichte und genane Beschreibung, zugleich eine kritische Beleuchtung der in Norddeutschland, namentlich in Schlesien under der obigen Bezeichnung gelehrten Tänze | `[Klemm #03]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=470818174)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003066340) |
-| 1865 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze<br/>_2. Auflage_ | `[Klemm #03]` | |
+| 1864 | M. Reif | Die Quadrille française (die Contretänze), deren Geschichte und genane Beschreibung, zugleich eine kritische Beleuchtung der in Norddeutschland, namentlich in Schlesien under der obigen Bezeichnung gelehrten Tänze | `[Klemm #03]`<br/>`[Klemm #06]` | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=470818174)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003066340) |
+| 1865 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze<br/>_2. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1866 | | Manual de dança ou método fácil de aprender a dançar sem auxilio de mestre | | BNP |
 | 1866 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_7. Auflage_ | | [Olomouc/EOD](https://search.books2ebooks.eu/Record/vkol_vkol001058881) |
 | 1867 | Alwin Berndt | Die Gymnastik des Tanzes | `[Katalog, 1894]` | [Dresden](http://katalogbeta.slub-dresden.de/id/0011281919/) |
-| 1867 | Albert Czerwiski | Mademoiselle Marie Anne Cupis de Camargo und die beiden Vestris<br/>_In: Freya, Illustrirte Blätter für die gebildete Welt, 1867, 3. Heft_ | `[Klemm #03]` | |
+| 1867 | Albert Czerwiski | Mademoiselle Marie Anne Cupis de Camargo und die beiden Vestris<br/>_In: Freya, Illustrirte Blätter für die gebildete Welt, 1867, 3. Heft_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1868 | Wilhelm Angerstein | Volkstänze im deutschen Mittelalter | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43987709t) |
 | 1869 | Jørgen Moe | Besøg i et bondebryllup<br/>_Visit to a rustic wedding_ | `[2. Rothenfelser]` | |
 | 1869 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_2nd edition_ | | BNP |
-| 1871 | Karl Link | Die Tanzkunst vom theoretischen und ästhetischen Standpunkte. Kurzgefaßte Anleitung als Vorbegriff für den praktischen Tanzunterricht | `[Klemm #03]` | [Kopenhague](https://rex.kb.dk/primo-explore/fulldisplay?docid=KGL01001845230&context=L&vid=NUI&search_scope=KGL&tab=default_tab&lang=da_DK) |
+| 1871 | Karl Link | Die Tanzkunst vom theoretischen und ästhetischen Standpunkte. Kurzgefaßte Anleitung als Vorbegriff für den praktischen Tanzunterricht | `[Klemm #03]`<br/>`[Klemm #06]` | [Kopenhague](https://rex.kb.dk/primo-explore/fulldisplay?docid=KGL01001845230&context=L&vid=NUI&search_scope=KGL&tab=default_tab&lang=da_DK) |
 | 1871 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_3rd edition_ | | BNP |
 | 1871 | Oskar Guttmann | Grundsätze der ästhetischen Bildung des menschlichen Körpers. Praktisches Lehrbuch zum Selbstunterricht für alle gebildeten Stände, insbesondere für Bühnenkünstler<br/>_Book on physical education._ | `[Klemm #03]` | [Cincinnati](https://huc.on.worldcat.org/oclc/172998951)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001548753) |
-| 1873 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #03]` | |
-| 1873 | August Krüger | Der Contre-Tanz und die Quadrille à la cour. Zum Ausrufen eingerichtet<br/>_Published in Berlin_ | `[Klemm #03]` | |
+| 1873 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1873 | August Krüger | Der Contre-Tanz und die Quadrille à la cour. Zum Ausrufen eingerichtet<br/>_Published in Berlin_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1874 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_4th edition_ | | BNP |
 | 1874 | | Arte ou methodo facil de aprender a dansar as contradansas francezas<br/>_4th edition_ | | BNP |
-| 1874 | Wilhelm Jerwitz | Der kleine Tanzmeister als Retter in der Noth. Zur Erinnerung des Erlernten<br/>_Published in Dresden_ | `[Klemm #03]`
+| 1874 | Wilhelm Jerwitz | Der kleine Tanzmeister als Retter in der Noth. Zur Erinnerung des Erlernten<br/>_Published in Dresden_ | `[Klemm #03]`<br/>`[Klemm #06]` |
+| 1875 | Philippe Gawlikowski | Guide complet de la danse<br/>_Édition 4_<br/>_Published by Jules Taride_ | `[Klemm #06]` | |
+| 1875 | Jean Jacques | Der Maitre de plaisir beim Tanze. Sammlung neuester und beliebtester Tanz-Ordnungen<br/>_11. Auflage_ | `[Klemm #06]` | | 
 | 1879 | William B. de Garmo | The Dance of Society<br/>_Second edition_ | `[Leaflets]` | |
 | 188- | Александра Константиновна Буринская | Aidé-memoire с описанием танцев | [[Буринская, 1882, стр. 368]](https://bib.hda.org.ru/books/burinskaya_1882) |
 | 188- | Friedrich Albert Zorn | Die klassische Quadrille | `[Katalog, 1894]` | |
@@ -336,7 +345,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 189- | | Der kleine Tanzmeister. Unentbehrliches Hülfsbüchlein für Damen und Herren<br/>_6. Auflage_ | | [On sale, €88](https://www.abebooks.com/servlet/BookDetailsPL?bi=22684143266) |
 | 189- | Александр Александрович Царман | Лихой гусар. Мазурка | | |
 | 1891 | Justino Dias Lima Soares | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_6th edition_ | | BNP |
-| 1892 | Amint Freising | Leitfaden für den Tanz-Unterricht | `[Unfried, 2014]` | |
+| 1891 | Max Beneke | Über Takt im Tanz | `[Klemm #06]` | |
+| 1892 | Amint Freising | Leitfaden für den Tanz-Unterricht | `[Unfried, 2014]`<br/>`[Klemm #06]` | |
 | 1892 | Josef Herzenberger | Der Tanzsalon: Lehrbuch für den theoretischen und praktischen Tanzunterricht | `[Katalog, 1894]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524544810002884) |
 | 1892 | William B. de Garmo | The Dance of Society<br/>_5th edition_ | `[Leaflets]` | |
 | 1894 | Ardern Holt | The Cotillon. Details of All the Newest Figures with and without Accessories | `[Rogers, 1998]` | |
@@ -571,7 +581,7 @@ _This part of the list is to joined with the general table_
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
 | 1756 | `[Pauli, 1756]` | Charles Pauli | Elemens de la danse | https://bib.hda.org.ru/books/pauli_1756 |
-| 1816 | `[Handbuch, 1815]` | | Handbuch der Literatur, Zweyte Abtheilung, Tanzkunst | https://books.google.com/books?id=kjBSAAAAcAAJ, Стр. 186–187 |
+| 1816 | `[Handbuch, 1815]` | | Handbuch der Literatur, Zweyte Abtheilung, Tanzkunst | https://books.google.com/books?id=kjBSAAAAcAAJ&pg=RA2-PA186 |
 | 1816 | `[Turnkunst, 1816]` | Friedrich Ludwig Jahn | Die Deutsche Turnkunst | http://www.deutschestextarchiv.de/book/view/jahn_turnkunst_1816?p=328 |
 | 1825 | `[Charinomos, 1825]` | Carl Seidel | Charinomos | https://books.google.com/books?id=1FBjAAAAcAAJ |
 | 1855–1910 | `[Klemm]` | Bernhard Klemm | Katechismus der Tanzkunst | [bib.hda.org.ru lookup](https://bib.hda.org.ru/advanced-search?author=bernhard%20klemm&langid=german). Bibliography is not present in editions 1, 5. 4th edition is not available |
