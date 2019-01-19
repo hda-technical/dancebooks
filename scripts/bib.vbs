@@ -58,14 +58,14 @@ end sub
 sub open(arg)
 	on error resume next
 	set tempFile = fs.GetFile(WScript.ScriptFullName)
-	strFolder = fs.GetParentFolderName(tempFile) 
+	strFolder = fs.GetParentFolderName(fs.GetParentFolderName(tempFile))
 
 	arg = mid(arg,5)
 	arg = replace(arg,"//","/")
 	arg = replace(arg,"\\","\")
 	arg = replace(arg,"/","\")
 
-	path = strFolder + urlDecode(arg)
+	path = strFolder + "\" + urlDecode(arg)
 	res = shell.Run("""" + path + """")
 	if Err.Number <> 0 then
 		msgbox "No such file. Try re-syncing the library.", vbSystemModal, "Bibiography URL Handler"

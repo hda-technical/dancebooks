@@ -271,9 +271,8 @@ class BibParser(object):
 				value = utils.strip_split_list(value, config.parser.list_sep)
 				filesize_value = []
 				for single_filename in value:
-					#filenames start from slash, trimming it
-					abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
-					if (os.path.isfile(abspath)):
+					abspath = os.path.join(config.www.elibrary_dir, single_filename)
+					if os.path.isfile(abspath):
 						filesize_value.append(os.path.getsize(abspath))
 					else:
 						logging.warn("File is not accessible: {0}".format(abspath))

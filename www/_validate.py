@@ -152,11 +152,24 @@ def fetch_added_on_from_git():
 
 
 def fetch_filelist_from_fs():
+	# These folders are not included in the bibliography
 	EXCLUDED_FOLDERS = {
 		"Ancillary sources (not in bibliography)",
-		"Leaflets (not in bibliography)"
+		"Cooking",
+		"Cooking",
+		"Fashion",
+		"Fencing",
+		"Games",
+		"Historical Dance Music",
+		"Images",
+		"Leaflets (not in bibliography)",
+		"Music",
+		"Sort",
+		"Theatre",
+		"Transcriptions",
+		"Video",
 	}
-	trim_root = lambda path: "/" + os.path.relpath(path, start=config.www.elibrary_dir)
+	trim_root = lambda path: os.path.relpath(path, start=config.www.elibrary_dir)
 	filter = lambda path: os.path.isfile(path) and path.endswith(".pdf")
 	return set(map(
 		trim_root,
@@ -876,8 +889,7 @@ def validate_filename(item, errors):
 				keyword=NOT_DIGITIZED_KEYWORD
 			))
 	for single_filename in filename:
-		#filename starts with slash - trimming it
-		abspath = os.path.join(config.www.elibrary_dir, single_filename[1:])
+		abspath = os.path.join(config.www.elibrary_dir, single_filename)
 		validate_single_filename(abspath, single_filename, item, errors)
 
 

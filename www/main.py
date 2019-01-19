@@ -263,8 +263,7 @@ def get_book_pdf(book_id, index):
 	))
 
 	filename = filenames[index - 1]
-	#filenames start from slash, trimming it
-	pdf_full_path = os.path.join(config.www.elibrary_dir, filename[1:])
+	pdf_full_path = os.path.join(config.www.elibrary_dir, filename)
 
 	if not os.path.isfile(pdf_full_path):
 		message = "Item {book_id} metadata is wrong: file for url {rel_url} is missing".format(

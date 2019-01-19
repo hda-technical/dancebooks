@@ -76,7 +76,7 @@
 			{% elif param == "filename" %}
 				<ul>
 				{% for filename in value %}
-					<li><a href="bib://{{ filename[1:] }}">{{ filename }}</a></li>
+					<li><a href="bib://{{ filename }}">{{ filename }}</a></li>
 				{% endfor %}
 				</ul>
 			{% elif param == "catalogue" %}
