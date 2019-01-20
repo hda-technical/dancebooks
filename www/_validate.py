@@ -152,31 +152,31 @@ def fetch_added_on_from_git():
 
 
 def fetch_filelist_from_fs():
-	# These folders are not included in the bibliography
+	if not os.path.isdir(config.www.elibrary_dir):
+		return []
+	FOLDERS_TO_VALIDATE = [
+		"Library"
+	]
 	EXCLUDED_FOLDERS = {
 		"Ancillary sources (not in bibliography)",
-		"Cooking",
-		"Cooking",
-		"Fashion",
-		"Fencing",
-		"Games",
-		"Historical Dance Music",
-		"Images",
 		"Leaflets (not in bibliography)",
-		"Music",
-		"Sort",
-		"Theatre",
-		"Transcriptions",
-		"Video",
 	}
 	trim_root = lambda path: os.path.relpath(path, start=config.www.elibrary_dir)
 	filter = lambda path: os.path.isfile(path) and path.endswith(".pdf")
-	return set(map(
-		trim_root,
-		utils.search_in_folder(config.www.elibrary_dir, filter, excludes=EXCLUDED_FOLDERS)
-	))
+	stored_files = []
+	for basename in FOLDERS_TO_VALIDATE:
+		folder = os.path.join(config.www.elibrary_dir, basename)
+		stored_files += list(
+			map(
+				trim_root,
+				utils.search_in_folder(folder, filter, excludes=EXCLUDED_FOLDERS)
+			)
+		)
+	return set(stored_files)
 
 
+# FIXME: This method is similar to the previous one.
+#		 I should work on deduplicating them.
 def fetch_backups_from_fs():
 	if not os.path.isdir(config.www.backup_dir):
 		return []
@@ -198,7 +198,7 @@ def fetch_backups_from_fs():
 				utils.search_in_folder(folder, filter)
 			)
 		)
-	return backups
+	return set(backups)
 
 
 #executed once per validation run
@@ -305,7 +305,7 @@ def validate_single_filename(abspath, filename, item, errors):
 	"""
 	Checks if file is accessible and matches item metadata
 	"""
-	
+
 	if not os.path.isfile(abspath):
 		errors.add("File [{abspath}] is not accessible".format(
 			abspath=abspath
@@ -987,8 +987,7 @@ def validate_backups():
 		)
 		possible_library_paths = [
 			os.path.join(
-				#WARN: config value contains path to subfolder inside elibrary
-				os.path.dirname(config.www.elibrary_dir),
+				config.www.elibrary_dir,
 				backup_without_extension + ext
 			)
 			for ext in POSSIBLE_BACKUP_EXTENSIONS
