@@ -10,9 +10,9 @@ import flask_babel
 import unidecode
 import werkzeug
 
-from config import config
-import const
-import utils
+from dancebooks.config import config
+from dancebooks import const
+from dancebooks import utils
 
 def http_exception_handler(ex):
 	"""

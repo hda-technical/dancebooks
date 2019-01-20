@@ -3,7 +3,7 @@
 
 import unittest
 
-import utils
+from dancebooks import utils
 
 class UtilsTest(unittest.TestCase):
 	def test_making_genitive(self):

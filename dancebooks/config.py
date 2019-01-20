@@ -4,7 +4,7 @@ import json
 import logging.config
 import os
 
-import const
+from dancebooks import const
 
 class SmtpConfig(object):
 	def __init__(self, params):

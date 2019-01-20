@@ -9,16 +9,13 @@ import random
 import flask
 import flask_babel
 
-from config import config
-import const
-import bib_parser
-import search
-import messenger
-import utils
-import utils_flask
-
-if (not os.path.exists("templates")):
-	raise RuntimeError("Should run from root folder")
+from dancebooks.config import config
+from dancebooks import const
+from dancebooks import bib_parser
+from dancebooks import search
+from dancebooks import messenger
+from dancebooks import utils
+from dancebooks import utils_flask
 
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 
@@ -435,12 +432,14 @@ def get_books_rss(lang):
 	return response
 
 
+STATIC_TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "templates/static")
+STATIC_FILES_DIR = os.path.join(os.path.dirname(__file__), "static")
 @flask_app.route("/<path:filename>", methods=["GET"])
 @utils_flask.log_exceptions()
 def everything_else(filename):
-	if os.path.isfile(os.path.join("templates/static", filename)):
+	if os.path.isfile(os.path.join(STATIC_TEMPLATES_DIR, filename)):
 		return flask.render_template("static/" + filename)
-	elif os.path.isfile(os.path.join("static", filename)):
+	elif os.path.isfile(os.path.join(STATIC_FILES_DIR, filename)):
 		return flask_app.send_static_file(filename)
 	else:
 		flask.abort(http.client.NOT_FOUND, flask.request.base_url)

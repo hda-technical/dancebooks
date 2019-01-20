@@ -9,8 +9,8 @@
         "to_name": "Yuriy Chernyshov"
     },
     "parser": {
-        "bibdata_dir": "../bib",
-        "markdown_dir": "../transcriptions",
+        "bibdata_dir": "bib",
+        "markdown_dir": "transcriptions",
         "list_sep": "|",
         "list_params": [
             "location",

@@ -10,15 +10,15 @@ import opster
 from stdnum import isbn
 from stdnum import issn
 
-from config import config
-import const
-import bib_parser
-import utils
+from dancebooks.config import config
+from dancebooks import const
+from dancebooks import bib_parser
+from dancebooks import utils
 
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 
 #filename for storing previous validation state
-DATA_JSON_FILENAME = "_validate.json"
+DATA_JSON_FILENAME = os.path.join(os.path.dirname(__file__), "validate.json")
 DATA_FIELDS = {
 	"added_on",
 	"altauthor",

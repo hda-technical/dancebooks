@@ -1,8 +1,8 @@
 import collections
 import logging
 
-from config import config
-import const
+from dancebooks.config import config
+from dancebooks import const
 
 class Index(object):
 	def __init__(self, items):

@@ -2,11 +2,11 @@
 #coding: utf-8
 import unittest
 
-import bib_parser
-import const
-import index
-import search
-import utils
+from dancebooks import bib_parser
+from dancebooks import const
+from dancebooks import index
+from dancebooks import search
+from dancebooks import utils
 
 TEST_ITEMS = \
 r"""

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 #coding: utf-8
 
-from babel.messages import pofile
-
-import utils
-
 import collections
 import logging
 import os
 import unittest
 
-LOCALIZATION_BASEDIR = "translations"
+from babel.messages import pofile
+
+from dancebooks import utils
+
+LOCALIZATION_BASEDIR = "www/translations"
 MESSAGES_REL_PATH = "LC_MESSAGES/messages.po"
 
 class LocalizationTest(unittest.TestCase):

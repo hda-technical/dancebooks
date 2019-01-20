@@ -8,10 +8,10 @@ import os.path
 
 import markdown
 
-from config import config
-import const
-import index as search_index
-import utils
+from dancebooks.config import config
+from dancebooks import const
+from dancebooks import index as search_index
+from dancebooks import utils
 
 class Availability(enum.Enum):
 	Unavailable = "unavailable"

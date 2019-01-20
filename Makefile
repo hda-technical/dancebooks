@@ -1,14 +1,13 @@
 NAME := dancebooks
 NAME_TESTING := $(NAME).testing
 
-#Using testing conf-file in development environment
-CONFIG := $(shell readlink -f configs/dancebooks.json)
-LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
-
 TOUCH_RELOAD_TESTING := /var/run/uwsgi/$(NAME_TESTING).reload
 TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME).reload
 DHPARAM_TESTING := /etc/nginx/conf/bib-test.hda.org.ru/dh_param.pem
 DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
+
+CONFIG := $(shell readlink -f configs/dancebooks.json)
+LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
 
 UNITTEST_ENV := \
 	DANCEBOOKS_UNITTEST= \
@@ -21,26 +20,23 @@ DEVEL_ENV := \
 	LOGGING_CONFIG=$(LOGGING_CONFIG) \
 	PYTHONPATH=. \
 
-TESTS := $(wildcard www/tests/*.py)
+TESTS := $(wildcard tests/*.py)
 TEST_TARGETS := $(TESTS:.py=.mk)
 
 validate:
-	cd www && \
 	$(DEVEL_ENV) \
-	python _validate.py \
+	python scripts/validate.py \
 	$(ARGS)
 
 debug: translations
-	cd www && \
 	$(DEVEL_ENV) \
-	python main.py \
+	python www/main.py \
 
 test: $(TEST_TARGETS);
 
-www/tests/%.mk: www/tests/%.py
-	cd www && \
+tests/%.mk: tests/%.py
 	$(UNITTEST_ENV) \
-	python tests/`basename $<` -v \
+	python $^ -v \
 
 translations:
 	pybabel -v -q compile -d www/translations

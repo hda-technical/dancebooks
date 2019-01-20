@@ -5,7 +5,7 @@ import smtplib
 
 import flask
 
-from config import config
+from dancebooks.config import config
 
 class BasicMessage(object):
 	"""

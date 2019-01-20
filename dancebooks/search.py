@@ -3,7 +3,7 @@ from unidecode import unidecode
 
 import datetime
 
-from config import config
+from dancebooks.config import config
 
 def simplify(str):
 	return unidecode(str.lower())

@@ -18,9 +18,9 @@ import markdown
 import pymorphy2
 import requests
 
-from config import config
-import const
-import search
+from dancebooks.config import config
+from dancebooks import const
+from dancebooks import search
 
 SELF_SERVED_PATTERN = r"/books/(?P<item_id>[\w_]+)"
 

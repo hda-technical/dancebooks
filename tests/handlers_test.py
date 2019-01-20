@@ -5,7 +5,7 @@ import json
 import logging
 import unittest
 
-import main
+from www import main
 
 #normal book id, available for downloading pdf file of it
 TEST_DOWNLOADABLE_BOOK_ID = "zarman_1905_russlav"
