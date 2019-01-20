@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 #coding: utf-8
 
+import os
+import sys
 import unittest
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks import utils
 
 class UtilsTest(unittest.TestCase):

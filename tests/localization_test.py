@@ -4,10 +4,12 @@
 import collections
 import logging
 import os
+import sys
 import unittest
 
 from babel.messages import pofile
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks import utils
 
 LOCALIZATION_BASEDIR = "www/translations"

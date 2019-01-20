@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 #coding: utf-8
+
 import http.client
 import json
 import logging
+import os
+import sys
 import unittest
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from www import main
 
 #normal book id, available for downloading pdf file of it

@@ -24,8 +24,9 @@ class BugReportConfig(object):
 class ParserConfig(object):
 	def __init__(self, params):
 		#some directories
-		self.bibdata_dir = os.path.abspath(params["bibdata_dir"])
-		self.markdown_dir = os.path.abspath(params["markdown_dir"])
+		repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+		self.bibdata_dir = os.path.join(repo_root, params["bibdata_dir"])
+		self.markdown_dir = os.path.join(repo_root, params["markdown_dir"])
 
 		#field type specification
 		self.list_params = set(params["list_params"])
@@ -139,22 +140,9 @@ class Config(object):
 def setup_logging(config_path):
 	logging.config.fileConfig(config_path)
 
-config_path = os.environ.get(const.ENV_CONFIG, None)
-if config_path is None:
-	raise RuntimeError(
-		"Config was not found. "
-		"Please, specify {env_var} environment variable".format(
-			env_var=const.ENV_CONFIG
-		)
-	)
+config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "configs/dancebooks.json")
 config = Config(config_path)
 
-logging_config_path = os.environ.get(const.ENV_LOGGING_CONFIG, None)
-if logging_config_path is None:
-	raise RuntimeError(
-		"Logging config was not found. "
-		"Please, specify {env_var} environment variable".format(
-			env_var=const.ENV_LOGGING_CONFIG
-		)
-	)
+DEFAULT_LOGGING_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "configs/logger.development.conf")
+logging_config_path = os.environ.get(const.ENV_LOGGING_CONFIG, DEFAULT_LOGGING_PATH)
 setup_logging(logging_config_path)

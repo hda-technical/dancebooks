@@ -6,36 +6,16 @@ TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME).reload
 DHPARAM_TESTING := /etc/nginx/conf/bib-test.hda.org.ru/dh_param.pem
 DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
 
-CONFIG := $(shell readlink -f configs/dancebooks.json)
-LOGGING_CONFIG := $(shell readlink -f configs/logger.development.conf)
-
-UNITTEST_ENV := \
-	DANCEBOOKS_UNITTEST= \
-	CONFIG=$(CONFIG) \
-	LOGGING_CONFIG=$(LOGGING_CONFIG) \
-	PYTHONPATH=. \
-
-DEVEL_ENV := \
-	CONFIG=$(CONFIG) \
-	LOGGING_CONFIG=$(LOGGING_CONFIG) \
-	PYTHONPATH=. \
-
 TESTS := $(wildcard tests/*.py)
 TEST_TARGETS := $(TESTS:.py=.mk)
 
-validate:
-	$(DEVEL_ENV) \
-	python scripts/validate.py \
-	$(ARGS)
-
 debug: translations
-	$(DEVEL_ENV) \
 	python www/main.py \
 
 test: $(TEST_TARGETS);
 
 tests/%.mk: tests/%.py
-	$(UNITTEST_ENV) \
+	DANCEBOOKS_UNITTEST= \
 	python $^ -v \
 
 translations:

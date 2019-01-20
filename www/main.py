@@ -3,12 +3,14 @@
 
 import http.client
 import logging
-import os.path
+import os
 import random
+import sys
 
 import flask
 import flask_babel
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks.config import config
 from dancebooks import const
 from dancebooks import bib_parser
