@@ -86,6 +86,7 @@
             "books.google.com",
             "digi.vatlib.it",
             "gallica.bnf.fr",
+            "nbn-resolving.de",
             "polona.pl",
             "www.loc.gov",
             "www.vwml.org"
@@ -500,7 +501,7 @@
             "zarman_1908": "zarman_1908_tarantella",
             "zorn_1900": "zorn_1900_dirigeur",
             "zorn_1905": "zorn_1905_grammar",
-			"tanzmusic_1810_allgemeine": "tanzmusik_1810_allgemeine"
+            "tanzmusic_1810_allgemeine": "tanzmusik_1810_allgemeine"
         }
     }
 }
