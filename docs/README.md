@@ -7,4 +7,5 @@
 * [Historical dance bibliography: Transcriptions](https://github.com/hda-technical/docs/blob/master/bibliography_transcriptions.md)
 * [HDA/Images documentation](https://github.com/hda-technical/docs/blob/master/images.md)
 * [HDA/Library documentation](https://github.com/hda-technical/docs/blob/master/library.md)
+* [HDA/Library backups documentation](https://github.com/hda-technical/docs/blob/master/library_backups.md)
 * [HDA/Music documentation](https://github.com/hda-technical/docs/blob/master/music.md)
