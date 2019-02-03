@@ -176,7 +176,7 @@ def sew_tiles_with_montage(folder, output_file, policy):
 	]
 	print(f"Sewing tiles with:\n    {' '.join(cmd_line)}")
 	subprocess.check_call(cmd_line)
-	
+
 	if policy.image_width and policy.image_height:
 		# Cropping extra boundaries (right and bottom) added during sewing
 		cmd_line = [
@@ -292,7 +292,7 @@ def download_image_from_iiif(base_url, output_filename):
 	"""
 	DESIRED_QUALITIES = ["color", "native", "default"]
 	DESIRED_FORMATS = ["png", "tif", "jpg"]
-	
+
 	class UrlMaker(object):
 		def __call__(self, tile_x, tile_y):
 			left = tile_size * tile_x
@@ -312,7 +312,7 @@ def download_image_from_iiif(base_url, output_filename):
 		tile_size = 1024
 	width = metadata["width"]
 	height = metadata["height"]
-	
+
 	desired_quality = "default"
 	desired_format = "jpg"
 	profile = metadata.get("profile")
@@ -685,7 +685,7 @@ def britishLibraryManuscript(
 	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
 	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
 	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
-	
+
 
 @opster.command()
 def makAt(
@@ -813,7 +813,7 @@ def onb(
 		flavour = "RepViewer"
 	else:
 		raise RuntimeError(f"Can not determine flavour for {id}")
-	
+
 	# Second, obtaining JSESSIONID cookie value
 	viewer_url = f"http://digital.onb.ac.at/{flavour}/viewer.faces?doc={id}"
 	viewer_response = requests.get(viewer_url)
@@ -884,6 +884,52 @@ def polona(
 				found = True
 		if not found:
 			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
+
+
+@opster.command()
+def haab(
+	id=("", "", "Id of the book to be downloaded (e. g. `1286758696_1822000000/EPN_798582804`)")
+):
+	"""
+	Downloads book from https://haab-digital.klassik-stiftung.de/viewer/rest/image/1286758696_1822000000/EPN_798582804_0522.tif/full/10000,10000/0/default.jpg
+	"""
+	def make_url(page):
+		return f"https://haab-digital.klassik-stiftung.de/viewer/rest/image/{id}_{page:04d}.tif/full/10000,10000/0/default.jpg"
+	output_folder = make_output_folder("haab", id)
+	page = 0
+	# HAAB server returns 403 for non-existing pages. First,
+	while True:
+		page_url = make_url(page)
+		head_response = requests.head(page_url)
+		if head_response.status_code == 200:
+			print(f"Found starting page {page:04d}")
+			break
+		page += 1
+
+	exception_count = 0
+	while True:
+		page_url = make_url(page)
+		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			page += 1
+			continue
+		try:
+			print(f"Downloading page #{page:08d}")
+			get_binary(output_filename, page_url)
+			page += 1
+		except ValueError as ex:
+			page += 1
+			#WARN:
+			#	Certain pages can return 403 even in the middle of the book.
+			# 	Skipping certain number of such pages.
+			exception_count += 1
+			if exception_count < 10:
+				print(f"Got ValueError while getting page {page:08d}: {ex}")
+				continue
+			else:
+				print(f"Got exception while getting page {page:08d}: {ex}. Exception limit was reached, downloader will exit now.")
+				break
 
 
 if __name__ == "__main__":
