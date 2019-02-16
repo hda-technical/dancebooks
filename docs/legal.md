@@ -82,9 +82,9 @@ _Из переписки на портале udo.rsl.ru._
 ---
 
 > На данное издание (полученное по каналам ЭДД, но не из электронной библиотеки) не распространяется действие авторского права, Вы можете размещать его свободно.
-> 
+>
 > С уважением,
-> 
+>
 > Служба электронной доставки  ГПИБ России.
 
 ## Bibliothèque nationale de France, Paris
@@ -250,7 +250,7 @@ grant - the item was scanned for your use.
 > Dear Yuriy Chernyshov,
 >
 > since the books ordered from EoD are public domain, you are in fact allowed to put items online as far as the University Library of Salzburg is concerned.
-> 
+>
 > You are actually not allowed to publish public domain works under a CC-BY-NC-SA license since these licenses can only be applied by the author of the work or the institution who digitized the work. Creative Commons offers a Public Domain Mark to be used for works in the public domain (http://creativecommons.org/publicdomain/mark/1.0/), but it’s not necessary to add a license. Just credit the University of Salzburg.
 >
 > For more information and permissions from the Derra de Moroda Archive you can also contact irene.brandenburg@sbg.ac.at
@@ -260,3 +260,28 @@ grant - the item was scanned for your use.
 > Kind regards
 >
 > Linda Ohrtmann
+
+## Newcastle University Library
+
+Excerpts from [Copyright, Permission, Acknowledgements and Data Protection](https://www.ncl.ac.uk/library/special-collections/using/copyright.php) and [Copy and Re-Use Service](https://www.ncl.ac.uk/library/special-collections/using/scanning-photocopying.php) pages provided by the library.
+
+> **Re-Use**
+>
+> The library has no additional charges for commercial and non-commercial reuse. However you must:
+>
+> * Seek copyright permission from the creator or designated third party where copyright exemptions do not apply.
+> * Acknowledge the University Library appropriately.
+>
+> For specific guidance on copyright and acknowledgements, please see our Copyright, Permission, Acknowledgements and Data Protection page.
+
+> **Copyright in Special Collections and Archives**
+>
+> Although we may physically hold material in our collections for research purposes, UK legislation may not allow ourselves or others to copy because the intellectual property still belongs to the creator or a designated third party.
+>
+> Exceptions to this do apply, including:
+>
+> * Where copyright covering the material has expired
+> * Where copying is covered by 'fair dealing' exemptions (this is where the copy is for the purpose of research or private study only)
+> * Where copying is for educational use within a teaching environment
+>
+> Where none of these apply copyright permission must be obtained from the copyright owner before any copying from our rare books and archives takes place.

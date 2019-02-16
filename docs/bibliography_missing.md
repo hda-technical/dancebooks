@@ -207,7 +207,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1822 | Thomas Wilson | Thompson's Twenty Four Country Dances for the year 1822 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004700758) |
 | 1822 | Thomas Wilson | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the Year 1822 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1823 | | La harpе du nord<br/>_Нужны тетради: 1823/07–12_ | | ИРЛИ РАН, №7, 8, 9, 10, 12<br/>NLR, `М 970-2/С.280`, (№ 8, 9, 12) |
-| 1823 | Thomas Wilson (fake author?)<br/>T. Plummer (publisher) | The Complete English Quadrille Preceptor for 1823 | [[Cooper, #03]](https://www.regencydances.org/paper003.php)<br/>[[Cooper, #06]](https://www.regencydances.org/paper006.php) | [Newcastle](https://libsearch.ncl.ac.uk/primo-explore/fulldisplay?docid=NCL_ALMA2156878470002411&context=L&vid=NEWUI&search_scope=NotPC&tab=default_tab&lang=en_US) |
 | 1823 | Jean Charles Louis Le Pitre | Vollständige Theorie der eleganten und höheren Tanzkunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1822–1825 | | Pieces detachees tirees du journal de musique "La harpe du nord" | | [RSL](http://search.rsl.ru/ru/record/01002068603) |
 | 1824 | C. Friedrich Engelmann | Die Kunst zu Walzen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
