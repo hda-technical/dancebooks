@@ -1,3 +1,5 @@
+import contextlib
+
 import sqlalchemy
 from sqlalchemy import schema as sql_schema
 from sqlalchemy import types as sql_types
@@ -23,7 +25,8 @@ class Backup(_Base):
 _engine = sqlalchemy.create_engine(config.db.connection_url)
 _session_maker = sql_session.sessionmaker(bind=_engine)
 
+@contextlib.contextmanager
 def make_transaction():
-	return _session_maker()
+	yield _session_maker()
 
 __all__ = [Backup, make_transaction]
