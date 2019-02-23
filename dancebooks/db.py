@@ -11,8 +11,9 @@ from dancebooks.config import config
 _Base = sql_declarative.declarative_base()
 
 class Backup(_Base):
-	__tablename__ = "service.backups"
-	
+	__tablename__ = "backups"
+	__table_args__ = {"schema": "service"}
+
 	id = sql_schema.Column(sql_types.BigInteger, primary_key=True)
 	path = sql_schema.Column(sql_types.String, nullable=False)
 	provenance = sql_schema.Column(sql_types.String, nullable=False)
