@@ -389,8 +389,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1914? | A. Cosmo Mitchell | A Guide to Ballroom Dancing<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914? | A. Cosmo Mitchell | New Dances<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914 | Андрей Яковлевич Левинсон | Мастера балета. Очерки истории и теории танца | | [RSL](http://search.rsl.ru/ru/record/01004191266) |
-| 1914 | | Танго | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005068184&context=L&search_scope=default_scope&lang=ru_RU) |
-| 1914 | | Танго | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005068185&context=L&search_scope=default_scope&lang=ru_RU) |
+| 1914 | | Танго. Мурочка-Манюрочка! Новый сборник лучших куплетов | |  [NLR #1](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005068184&context=L&search_scope=default_scope&lang=ru_RU)<br/>[NLR #2](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005068185&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005165864&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1915, January–March | | The Ladies' Home Journal<br/>_Contains dances described by Anna Pavlova_ | | |
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
