@@ -116,8 +116,20 @@ class DatabaseConfig(object):
 		self.user = params["user"]
 		self.password = params["password"]
 		self.database_name = params["database_name"]
-		self.connection_string = f"host={self.host} port={self.port} user={self.user} password={self.password} dbname={self.database_name}"
-		self.connection_url = f"postgresql://{self.user}:{self.password}@{self.host}:{self.port}/{self.database_name}"
+		self.options = params["options"]
+
+	@property
+	def connection_string(self):
+		#TODO: handle self.options
+		return (
+			f"host={self.host} port={self.port} "
+			f"user={self.user} password={self.password} "
+			f"dbname={self.database_name}"
+		)
+
+	@property
+	def connection_url(self):
+		return f"postgresql://{self.user}:{self.password}@{self.host}:{self.port}/{self.database_name}"
 
 
 class Config(object):

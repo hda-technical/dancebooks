@@ -23,7 +23,10 @@ class Backup(_Base):
 	image_size_y = sql_schema.Column(sql_types.BigInteger, nullable=False)
 	note = sql_schema.Column(sql_types.String, nullable=False)
 
-_engine = sqlalchemy.create_engine(config.db.connection_url)
+_engine = sqlalchemy.create_engine(
+	config.db.connection_url,
+	connect_args=config.db.options
+)
 _session_maker = sql_session.sessionmaker(bind=_engine)
 
 @contextlib.contextmanager
