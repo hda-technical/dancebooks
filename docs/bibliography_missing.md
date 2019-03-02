@@ -529,6 +529,7 @@ _This part of the list is to joined with the general table_
 | 1630 | Cesare Negri | Arte para aprender a danzar | Mardid, Biblioteca nacional de España | `MSS/14085` | `[2. Rothenfelser]`<br/>`[3. Rothenfelser]` | |
 | 1630–1633? | Elias Ashmole | Copye of the Oulde Measures | Oxford, Bodleian Library | `Rawlinson D.864`<br/>folios 199r-199v | `[Lindahl]` | |
 | 1640–1675 | Butler Buggins | The Measures as they are Danced in the Inner Temple Hall | London, Inner Temple Records | `Revels, Foundlings, and Unclassified, Miscellanea, Undated, &c. Vol. 27`<br/>folios 3r-6v | `[Lindahl]` | |
+| 1640–1700? | | _Manuscript Cassel_ | Kassel, Landes- und Murhardsche Bibliothek der Stadt Kassel | | [[Écorcheville, 1906]](https://bib.hda.org.ru/books/cassel_1906) |
 | 1680? | Juan Antonio Jaque | Libro de danzar de D. Baltasar de Rojas Pantoja | Mardid, Biblioteca nacional de España | `MSS/17718` | `[3. Rothenfelser]`<br/>`[Yepes?]` | |
 | 17-- | | aka Belgioioso manuscript | Milano, Biblioteca Trivulziana | `Fondo Belgioioso, fasc. II, cartella 275, volume 2` | `[2. Rothenfelser]` | |
 | 17-- | | Contredances | Rome, Santa Cecilia's Conservatory | | [[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi) | |
@@ -547,6 +548,7 @@ _This part of the list is to joined with the general table_
 | 1792 | Карл Готлоб Брейткопф | Терпсихора в клавираусцуге | Москва, Российская государственная библиотека | `ОР 392/муз` | | [РГБ](http://search.rsl.ru/ru/record/01005519453) |
 | 1805? | | Let fortune's angry tempest blow | Cambridge, Cambridge University Library | `MS.Add.9004` |[RISM](http://www.rism.org.uk/manuscripts/116377) | |
 | 181- | J. Bröckl | 12 Tänze für Pianoforte | Москва, Российская государственная библиотека | `ОР 6/муз` | | [РГБ](http://search.rsl.ru/ru/record/01004832331) |
+| 1829–1830 | Arthur Saint-Léon | Cahiers d'exercices | Paris, Bibliothèque nationale de France | `Rés. 1137` | `[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb44003243k) |
 | 1841 | Frederick Hill | Frederick Hill's Book of Quadrilles and Country Dances | No details in Rogers. Richard? | | `[Rogers, 1998]` | |
 | 1851 | Thomas Wilson | Thomas Wilson Letter to the Royal Literary Fund with a Request of Financial Support | London, The British Library | | [[Cooper, #05]](https://www.regencydances.org/paper005.php) |
 | 19-- | Лешков | Рукопись по систематизации танцевальных учебников | Москва, Российская государственная библиотека | | | |
