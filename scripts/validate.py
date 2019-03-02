@@ -496,24 +496,16 @@ def validate_isbn(item, errors):
 	if isbn_list is None:
 		return
 	for idx, single_isbn in enumerate(isbn_list):
-		if not isbn.is_valid(single_isbn):
-			errors.add("ISBN #{idx} isn't valid".format(
-				idx=idx
-			))
+		try:
+			isbn.validate(single_isbn)
+		except isbn.ValidationError as ex:
+			errors.add(f"ISBN #{idx} ({single_isbn}) is not valid: {ex}")
 			continue
 		formatted = isbn.format(single_isbn)
 		if (formatted != single_isbn):
-			errors.add("ISBN #{idx} ({single_isbn}) should be reformatted to {formatted}".format(
-				idx=idx,
-				single_isbn=single_isbn,
-				formatted=formatted
-			))
+			errors.add(f"ISBN #{idx} ({single_isbn}) should be reformatted to {formatted}")
 		if (isbn.isbn_type(single_isbn) != 'ISBN13'):
-			errors.add("ISBN-10 #{idx} ({single_isbn}) should be reformatted to ISBN-13 {formatted}".format(
-				idx=idx,
-				single_isbn=single_isbn,
-				formatted=isbn.to_isbn13(single_isbn)
-			))
+			errors.add(f"ISBN-10 #{idx} ({single_isbn}) should be reformatted to ISBN-13 {formatted}")
 
 
 def validate_issn(item, errors):
