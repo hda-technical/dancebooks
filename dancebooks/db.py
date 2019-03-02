@@ -1,4 +1,5 @@
 import contextlib
+import os.path
 
 import sqlalchemy
 from sqlalchemy import schema as sql_schema
@@ -23,6 +24,10 @@ class Backup(_Base):
 	image_size_y = sql_schema.Column(sql_types.BigInteger, nullable=False)
 	note = sql_schema.Column(sql_types.String, nullable=False)
 
+	@property
+	def name(self):
+		return os.path.basename(self.path)
+
 _engine = sqlalchemy.create_engine(
 	config.db.connection_url,
 	connect_args=config.db.options
@@ -31,6 +36,12 @@ _session_maker = sql_session.sessionmaker(bind=_engine)
 
 @contextlib.contextmanager
 def make_transaction():
-	yield _session_maker()
+	try:
+		txn = _session_maker()
+		yield txn
+	except:
+		txn.rollback()
+	finally:
+		txn.close()
 
 __all__ = [Backup, make_transaction]

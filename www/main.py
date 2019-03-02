@@ -8,12 +8,14 @@ import random
 import sys
 
 import flask
+from flaskext import markdown as flask_markdown
 import flask_babel
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks.config import config
-from dancebooks import const
 from dancebooks import bib_parser
+from dancebooks import const
+from dancebooks import db
 from dancebooks import search
 from dancebooks import messenger
 from dancebooks import utils
@@ -32,6 +34,7 @@ flask_app = flask.Flask(__name__)
 flask_app.config["BABEL_DEFAULT_LOCALE"] = utils.first(config.www.languages)
 flask_app.config["USE_EVALEX"] = False
 babel_app = flask_babel.Babel(flask_app)
+flask_markdown_app = flask_markdown.Markdown(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
@@ -265,9 +268,9 @@ def get_book_pdf(book_id, index):
 	pdf_full_path = os.path.join(config.www.elibrary_dir, filename)
 
 	if not os.path.isfile(pdf_full_path):
-		message = "Item {book_id} metadata is wrong: file for url {rel_url} is missing".format(
+		message = "Item {book_id} metadata is wrong: file for {requiest_uri} is missing".format(
 			book_id=book_id,
-			rel_url=request_url_production
+			rel_url=request_uri
 		)
 		logging.error(message)
 		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
@@ -432,6 +435,22 @@ def get_books_rss(lang):
 	))
 	response.content_type = "application/rss+xml; charset=utf-8"
 	return response
+
+
+@flask_app.route("/backups", methods=["GET"])
+@utils_flask.log_exceptions()
+def get_backups():
+	format = utils_flask.extract_string_from_request("format", default="html")
+	with db.make_transaction() as session:
+		backups = session.query(db.Backup).all()
+	if format == "html":
+		return flask.render_template("backups.html", backups=backups)
+		pass
+	elif format == "json":
+		pass
+	else:
+		flask.abort(http.client.BAD_REQUEST, f"Unknown format: {format}")
+
 
 
 STATIC_TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "templates/static")

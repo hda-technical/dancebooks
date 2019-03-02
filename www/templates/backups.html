@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+	<head>
+        {% include "components/head-meta-common.html" %}
+        {% include "components/head-link.html" %}
+        {% include "components/head-script.html" %}
+        <title>{{ _("interface:title") }}</title>
+    </head>
+	<body>
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
+		<!-- FIXME: this page is not localized (and it is not clear, if it should be) -->
+		<h2>In database: {{ backups | length }} backups.</h2>
+		<div class="center">
+			<table id="backups">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Provenance</th>
+					<th>Image size</th>
+					<th>Aspect ratio</th>
+					<th>Note</th>
+				</tr>
+				{% for backup in backups %}
+				<tr>
+					<td class="narrow align_right">{{ backup.id }}</td>
+					<td width="30%" class="monospace grey_background">{{ backup.name }}</td>
+					<td class="align_center">{{ backup.provenance | markdown }}</td>
+					<td class="narrow">{{ backup.image_size_x }}x{{ backup.image_size_y }}</td>
+					<td class="narrow">{{ backup.aspect_ratio_x }}x{{ backup.aspect_ratio_y }}</td>
+					<td width="30%">{{ backup.note | markdown }}</td>
+				</tr>
+				{% endfor%}
+			</table>
+			<hr/>
+			{% include "components/footer.html" %}
+		</div>
+	</body>
+</html>

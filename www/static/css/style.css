@@ -254,6 +254,21 @@ li
 	text-align: center;
 }
 
+.align_center
+{
+	text-align: center;
+}
+
+.align_right:
+{
+	text-align: right;
+}
+
+.narrow
+{
+	width: 1%
+}
+
 .italic
 {
 	font-style: italic;
@@ -274,6 +289,17 @@ li
 .bold
 {
 	font-weight: bold;
+}
+
+.monospace
+{
+	font-family: monospace;
+}
+
+.grey_backgroun
+{
+	color: #000000;
+	background-color: #555555;
 }
 
 .content
@@ -618,4 +644,11 @@ div.transcription span.next_img_size_1em + img
 {
 	width: 1em;
 	height: 1em;
+}
+
+table.backups,
+table.backups td,
+table.backups th
+{
+	border: solid 1px black;
 }
