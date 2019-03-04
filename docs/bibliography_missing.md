@@ -48,6 +48,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1716 | Anthony L'Abbée<br/>John Walsh (publisher) | The Princess Anna<br/>Published by Walsh | `Lancelot:1716.3s`<br/>`LittleMarsh:[1716]-PaW` | [NYPL](http://catalog.nypl.org/record=b12289349~S1)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004461980) |
 | 1718? | John Walsh (publisher) | The Compleat Country Dancing-master Containing Great Variety of Dances, Both Old and New, Particularly Those Perform'd at the Several Masquerades<br/>_Dated 1731 by Bernhard Klemm_ | `[2. Rothenfelser]`<br/>`[Klemm #06]` | |
 | 1724 | Christoph Ballard (publisher) | Les rondes, chansons à danser<br/>_Suite des dix volumes_ | `[2. Rothenfelser]` | [Gallica, tome 1](http://gallica.bnf.fr/ark:/12148/bpt6k5534928f)<br/>[Gallica, tome 2](http://gallica.bnf.fr/ark:/12148/bpt6k9736644f) |
+| 1727? | Gottfried Taubert<br/>_Published in Zerbst_ | Kurtzer Entwurff der Nutzbarkeit des Künstlichen Tantz-Exercitii: In welchem Gezeiget wird wieviel selbiges zu einer gefällig-machenden Aufführung bey jungen Leuten beyträgt; Auch insonderheit Wie man bey aller Gelegenheit könne 1. Regel-richtig stehen 2. Regel-richtig gehen und 3. Regel-richtige Reverentze machen Zum Gebrauch der Repetition vor die Scholaren verfasset | `[Шабалина, 2019]`<br/>`[Transcriptions]`<br/>[[Germanorum, 1914]](https://archive.org/details/bibliothecagerma07hayn/page/582)<br/>[[Georgi, 1742]](https://books.google.com/books?id=UwU_AAAAcAAJ&pg=PA190)<br/>Also in: _Bibliotheca Zochiana Sive Catalogus Librorum, Bd. 3, 1752, S. 1044_<br/>Also in: _Каталог книг, изданных к Михайловой ярмарке в Лейпциге в 1727 году_ | `NLR` |
 | 1728 | John Weaver | History of the Mimes and Pantomimes, with an Historical Account of Several Performers in Dancing | `[4. Rothenfelser]` | |
 | 1728? | Pierre Rameau | Maitre de danse<br/>_Deuxième édition_ | `[2. Rothenfelser]` | |
 | 1728–1745? | Jean-Pantaléon Leclerc | Recueil de contredanses avec la basse chifrée et la table par lettre | [[Leclerc, 1734?]](https://bib.hda.org.ru/books/leclerc_1734_3e)<br/>[[Leclerc, 1738?]](https://bib.hda.org.ru/books/leclerc_1738_5e)<br/>[[Leclerc, 1742?]](https://bib.hda.org.ru/books/leclerc_1742_7e)<br/>`[3. Rothenfelser]` | |
@@ -55,6 +56,8 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1733? | John Walsh | Caledonian Country Dances, Book the Second | `[Leaflets]` | |
 | 1736 | Pierre Jean Burette | Prima, e seconda memoria per servire alla istoria del ballo degli antichi in<br/>_In: Académie royale des inscriptions et belles-lettres. Histoire, avec les Mémoires de littérature tirez des registres de cette Académie, tome 1, pages 93-135_<br/>_Published in Paris_ | [[Burette, 1746]](https://bib.hda.org.ru/books/burette_1746)<br/>`[Charinomos, 1825]` | |
 | 17-- | Pierre Jean Burette | Deux memoires pour servir à l'histoire de la danse des anciens. Memoires de l'académie des inscriptions | `[Klemm #03]`<br/>`[Klemm #06]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43989839h) |
+| 1748 | Gottfried Taubert<br/>_Attributed as being translated from French_ | Eines sehr berühmten französischen Tanzmeisters drey Regeln der Nutzbarkeit des künstlichen Tanzexercitii
+Stehen, Gehen und Reverenzmachen, verfertiget von den besten Tanzmeister in Paris Mr ***. und ietzo Wegen Vortreflichkeit aus dem Französischen ins Deutsche übersetzt worden, von N. N. | `[Шабалина, 2019]` | [Württemberg](https://wlb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKSWB-IdNr030084180) |
 | 1751 | G. Waylett | Twenty Four Country Dances for the Year 1751 | `[2. Rothenfelser]` | |
 | 1750–1770? | Charles Pauli | Musik und Tanz.<br/>_In Goth. Magazin, Bd. II, Stck. 2_ | `[Charinomos, 1825]` | |
 | 1752 | Jean Lecointe | Apologie de la danse: son antiquité, sa noblesse, et ses avantages. Avec une dissertation sur le menuet | `[Charinomos, 1825]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb39317633n) |
@@ -468,6 +471,13 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | | |
 | 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
+| 1719 | Christoph Matthaeus Seidel<br/>_Published by Gedicke in Berlin_ | Die Beantwortung Etlicher Durch Misbrauch der Heiligen Schrifft erzwungenen Gegensprüche, Mit welchen Das welt-übliche Tantz-Spiel- und Lust-Wesen Entschuldiget | `[Шабалина, 2019]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746)<br/>[HVD](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746) |
+| 1719 | A. G. Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]` | |
+| 1720 | Johann Wilhelm Kellners<br/>_Published in Frankfirt and Leipzig_ | Hoff-Raths und Pfänners in Halle Anhang zu seinem Tantz-Greuel | `[Шабалина, 2019]` | |
+| 1723 | _Published in Jena_ | Gründliches Gespräch vom Tantzen, in welchem die Tantz-Gründe untersuchet und nach der Wahrheit beurtheilet werden | `[Шабалина, 2019]` | |
+| 1738 | Hansel<br/>_Ander Theil_<br/>_Published by Waisenhaus in Züllichau_ | Des Schlüssels zur Erkenntniß und Verabscheuung des Heydnischen Tantz- und Lust-Wesens in der Christenheit | `[Шабалина, 2019]` | |
+| 1743 | J. G. Carpzov<br/>_Published by P. Böckmann in Lübeck_ | Unterricht vom Spielen und Tantzen, in zween Wochenpredigten vorgetragen und mit einigen Anmerckungen und Anhang erläutert | `[Шабалина, 2019]` | |
+| 1745 | J. P. C. Sturm | Evangelisches Zeugnis wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können | `[Шабалина, 2019]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
 | 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
@@ -541,10 +551,11 @@ _This part of the list is to joined with the general table_
 | 17-- | | English Country Dances | Turin, National Library | | [[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi) | |
 | 17-- | | Recueil de contredanses transposées pour la viele | Paris, Bibliothèque nationale de France | `VM7-3643` | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43360196s) |
 | 1704 | André Lorin | Claim against Beauchamps on the primacy of inventing dance notation | Paris, Bibliothèque nationale de France | | | |
-| 1707 | Raoul-Auger Feuillet | Recüeil de danses ou sont contenues la poitevine, la modene, la bourree nouvelle, le charmant vanqueur, et la mattelotte | Archives dèpartementales du Calvados | ad/2 E 697 | `Lancelot:Ms15.1` | |
+| 1707 | Raoul-Auger Feuillet | Recüeil de danses ou sont contenues la poitevine, la modene, la bourree nouvelle, le charmant vanqueur, et la mattelotte | Archives dèpartementales du Calvados | `ad/2 E 697` | `Lancelot:Ms15.1` | |
 | 171- | | Recueil de dances | Unknown Private Collection in USA | | `Lancelot:Ms05.2` | |
 | 1717 | Raoul-Auger Feuillet<br/>Carlo Cesare Scaletta (translator) | Choregraphie ò vero l'arte di descrivere i balli per caratteri figure e segni demostrativi | Chicago, Newberry Library | `VAULT Case MS 5310` | [[Dradi, 2016]](https://bib.hda.org.ru/books/proceedings_rothenfelser_2016)<br/>`[Mackler]`<br/>`[4. Rothenfelser]` |
-| 1759 | Joseph Rattier | Observaciones, principios, y reglas del arte de la danza | Biblioteca nacional de España | Barbieri MSS/14059/16 | [Cite]( https://books.google.com/books?id=L_HDx_z2AaIC&pg=PA451)<br/>[Advertisement](https://bib.hda.org.ru/books/rattier_1759_approbacion) | |
+| 1740–1746? | Gottfried Taubert | Kurtzer Entwurff von der Zuläβigkeit des sowol natürlichen als künstlichen Tantz-Exercitii; in welchem Der Ursprung, Fortgang, Verbeβerung, unterschiedlicher Gebrauch, vielfältiger Nutzen und andere Eigenschafften mehr kürtz[lich] gezeiget: Wie auch die vornehmste Schein-Gründe derer Tantzhaβer angeführet, und gründlich wider- leget werden | Санкт-Петербург, Российская национальная библиотека | | `[Шабалина, 2019]`<br/>`[Transcriptions]` | |
+| 1759 | Joseph Rattier | Observaciones, principios, y reglas del arte de la danza | Biblioteca nacional de España | `Barbieri MSS/14059/16` | [Cite]( https://books.google.com/books?id=L_HDx_z2AaIC&pg=PA451)<br/>[Advertisement](https://bib.hda.org.ru/books/rattier_1759_approbacion) | |
 | 1760 | Adam Friedrich Lenz | Anfangsgründe und nöthige Regeln zur Tanzkunst. Nebst einer Anzahl Englischer Contry-Tänze und deren richtige Beschreibung | Schwerin, Landesbibliothek Mecklenburg-Vorpommern Günther Ecker | `Mus 37425` | | [Schwerin](https://lhwis.gbv.de/DB=2/TTL=1/LNG=EN/PPN?PPN=491886012) |
 | 177-? | Grahl | Contra Danses | Москва, Российская государственная библиотека | `Ф.183.1 №1421` | | [РГБ](http://search.rsl.ru/ru/record/01005425511) |
 | 1772 | Garcia | Garcia Manuscript | | | `[Mackler]`<br/>[[Russell, 1995]](http://openmusiclibrary.org/article/104013/)<br/>[[Greening, 1997]](http://openmusiclibrary.org/article/474673/) | |
@@ -587,7 +598,7 @@ _This part of the list is to joined with the general table_
 | 1816 | `[Handbuch, 1815]` | | Handbuch der Literatur, Zweyte Abtheilung, Tanzkunst | https://books.google.com/books?id=kjBSAAAAcAAJ&pg=RA2-PA186 |
 | 1816 | `[Turnkunst, 1816]` | Friedrich Ludwig Jahn | Die Deutsche Turnkunst | http://www.deutschestextarchiv.de/book/view/jahn_turnkunst_1816?p=328 |
 | 1825 | `[Charinomos, 1825]` | Carl Seidel | Charinomos | https://books.google.com/books?id=1FBjAAAAcAAJ |
-| 1855–1910 | `[Klemm]` | Bernhard Klemm | Katechismus der Tanzkunst | [bib.hda.org.ru lookup](https://bib.hda.org.ru/advanced-search?author=bernhard%20klemm&langid=german). Bibliography is not present in editions 1, 5, 7, 8. 4th edition is not available |
+| 1855–1910 | `[Klemm]` | Bernhard Klemm | Katechismus der Tanzkunst | [2nd edition](https://bib.hda.org.ru/books/klemm_1863), [3rd edition](https://bib.hda.org.ru/books/klemm_1876), [6th edition](https://bib.hda.org.ru/books/klemm_1894). No bibliography in 1rd, 5th, 7th, 8th editions. 4th edition is not available |
 | 1857 | `[Nouveau manuel, 1857]` | Ferdinand Denis, P. Pincon, de Martonne | Nouveau manuel de bibliographie universelle" | https://books.google.com/books?id=C6g20GmnNlQC&pg=PA165 |
 | 1894 | `[Katalog, 1894]` | | Katalog für die Ausstellung der Genossenschaft Deutschen Tanzlehrer | https://bib.hda.org.ru/books/katalog_1894 | |
 | 1960 | `[Richardson, 1960]` | Philip John Sampey Richardson | The Social Dances of the Nineteenth Century in England  | https://bib.hda.org.ru/books/richardson_1960 |
@@ -608,15 +619,16 @@ _This part of the list is to joined with the general table_
 | 2004 | `[Sparti, 2004]` | Barbara Sparti | Balli to Dance and Play in a Sixteenth-century Miscellany | [2004](https://bib.hda.org.ru/books/sparti_2004_balli), [2015](https://bib.hda.org.ru/books/sparti_2015_balli) |
 | 2008 | `[2. Rothenfelser]` | | 2. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2008 |
 | 2012 | `[3. Rothenfelser]` | | 3. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2012 |
-| 2012 | `[Yoko]` | Евгения Соленикова | `Ancillary sources (not in bibliography)/Bibliographies of the others/Евгения Соленикова.ods` |
+| 2012 | `[Yoko]` | Евгения Соленикова | | `Ancillary sources (not in bibliography)/Bibliographies of the others/Евгения Соленикова.ods` |
 | 2014 | `[Unfried, 2014]` | Hannelore Unfried | Der „freie, fessellose und fantastereiche Mazur” | https://bib.hda.org.ru/books/unfried_2014 |
 | 2016 | `[4. Rothenfelser]` | | 4. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2016 |
 | 2016 | `[Heiter, 2016]` | Gerrit Berenike Heiter | Models of Physical Appearance and Behaviour at Dance Occasions | https://bib.hda.org.ru/books/proceedings_spb_2014_heiter_civility |
 | 2016 | `[Phister, 2016]` | Béatrice Phister | Is Dance an Art? The Status of Ballroom and Ballet Dancing During the Second Half of the 18th Century in French and Italian Writings  | https://bib.hda.org.ru/books/proceedings_spb_2016_pfister |
-| 2016 | `[Жбанкова, 2016]` | Елена Жбанкова
+| 2016 | `[Жбанкова, 2016]` | Елена Жбанкова |  Массовая пляска как средство идеологического, физического и эстетического воспитания в советской России 1920-x годов | https://bib.hda.org.ru/books/proceedings_spb_2016_zhbankova |
 | 2016-08-14 | `[Wiki: Tanz]` | | Wikisource on Tanz | https://de.wikisource.org/wiki/Tanz |
 | 2016-11-25 | `[Wiki: Cross-step Waltz]` | | Cross-step waltz | https://en.wikipedia.org/wiki/Cross-step_waltz |
-| 2017-03-01 | `[Mackler]` | Heather Mackler | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
+| 2017-03-01 | `[Mackler]` | Heather Mackler | | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
 | 2017-06-17 | `[Rudo]` | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
-| 2018-04-19 | `[Wiki: Musikalisches Würfelspiel]` | | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
+| 2018-04-19 | `[Wiki: Musikalisches Würfelspiel]` | | Musikalisches Würfelspiel | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
+| 2019-02-23 | `[Шабалина, 2019]` | Татьяна Васильевна Шабалина | Изготовлено Готфридом Таубертом, танцмейстером в Цербсте | Статья ещё не опубликована, есть [запись доклада](https://youtu.be/UfoKmu88FlY). |
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, up to #06 | https://www.regencydances.org/paper000.php |
