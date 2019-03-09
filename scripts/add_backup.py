@@ -14,7 +14,7 @@ if __name__ == "__main__":
 		line = line.strip(" \n").strip("|")
 		paths, provenance, aspect_ratio, image_size, note = list(map(str.strip, line.split('|')))
 		aspect_ratio_x, aspect_ratio_y = map(int, aspect_ratio.strip('`').split('x'))
-		image_size_x, image_size_y = map(int, aspect_ratio.strip('`').split('x'))
+		image_size_x, image_size_y = map(int, image_size.strip('`').split('x'))
 		unquote = lambda s: s.strip('`')
 		paths = list(map(unquote, paths.split('<br/>')))
 		if note and note[-1] != '.':
