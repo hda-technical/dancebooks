@@ -758,7 +758,7 @@ def locMusdi(
 	Downloads book from Library of Congress Music/Dance instruction
 	"""
 	# Some ids are known to be missing
-	MISSING_IDS = ["050", "054", "057", "061"]
+	MISSING_IDS = ["050", "054", "057", "061", "071", "078", "083"]
 	if len(id) != 3:
 		print("Expected id to have 3 digits. Please, recheck the ID.")
 		sys.exit(1)
