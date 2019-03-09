@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import functools
+import http.client
 import json
 import math
 import os
@@ -748,6 +749,44 @@ def uniJena(
 #PAGE BASED DOWNLOADERS
 ###################
 
+
+@opster.command()
+def locMusdi(
+	id=("", "", "Id of the book to be downloaded (e. g. `056`)")
+):
+	"""
+	Downloads book from Library of Congress Music/Dance instruction
+	"""
+	# Some ids are known to be missing
+	MISSING_IDS = ["050", "054", "057", "061"]
+	if len(id) != 3:
+		print("Expected id to have 3 digits. Please, recheck the ID.")
+		sys.exit(1)
+	if id in MISSING_IDS:
+		print(f"The book with id musdi.{id} is known to be missing. Please, recheck the ID.")
+		sys.exit(1)
+	output_folder = make_output_folder("locMusdi", id)
+	for page in range(1, 1000):
+		base_url = f"https://memory.loc.gov/music/musdi/{id}/{page:04d}"
+		url = None
+		for extension in ["tif", "jpg"]:
+			output_filename = make_output_filename(output_folder, page, extension=extension)
+			if os.path.exists(output_filename):
+				break
+			maybe_url = base_url + "." + extension
+			head_response = requests.head(maybe_url)
+			if head_response.status_code == http.client.OK:
+				url = maybe_url
+				break
+		if url is None:
+			break
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
+		print(f"Downloading page #{page:08d}")
+		get_binary(output_filename, url)
+
+
 @opster.command()
 def hathi(
 	id=("", "", "Id of the book to be downloaded (e. g. `wu.89005529961`)")
@@ -760,8 +799,8 @@ def hathi(
 	metadata = get_json(meta_url)
 	total_pages = metadata["total_items"]
 	print(f"Going to download {total_pages} pages to {output_folder}")
-	for page in range(total_pages):
-		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page + 1};width=1000000"
+	for page in range(1, total_pages):
+		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page};width=1000000"
 		output_filename = make_output_filename(output_folder, page, extension="jpg")
 		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:08d}")
@@ -891,7 +930,7 @@ def haab(
 	id=("", "", "Id of the book to be downloaded (e. g. `1286758696_1822000000/EPN_798582804`)")
 ):
 	"""
-	Downloads book from https://haab-digital.klassik-stiftung.de/viewer/rest/image/1286758696_1822000000/EPN_798582804_0522.tif/full/10000,10000/0/default.jpg
+	Downloads book from https://haab-digital.klassik-stiftung.de/
 	"""
 	def make_url(page):
 		return f"https://haab-digital.klassik-stiftung.de/viewer/rest/image/{id}_{page:04d}.tif/full/10000,10000/0/default.jpg"
