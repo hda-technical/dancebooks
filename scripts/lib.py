@@ -752,13 +752,15 @@ def uniJena(
 
 @opster.command()
 def locMusdi(
-	id=("", "", "Id of the book to be downloaded (e. g. `056`)")
+	id=("", "", "Id of the book to be downloaded (e. g. `056`)"),
+	start_from=("", 1, "The number of the first page in the sequence (defaults to 1)")
 ):
 	"""
 	Downloads book from Library of Congress Music/Dance instruction
 	"""
+	start_from = int(start_from)
 	# Some ids are known to be missing
-	MISSING_IDS = ["050", "054", "057", "061", "071", "078", "083"]
+	MISSING_IDS = ["050", "054", "057", "061", "071", "078", "083", "095", "100"]
 	if len(id) != 3:
 		print("Expected id to have 3 digits. Please, recheck the ID.")
 		sys.exit(1)
@@ -766,7 +768,7 @@ def locMusdi(
 		print(f"The book with id musdi.{id} is known to be missing. Please, recheck the ID.")
 		sys.exit(1)
 	output_folder = make_output_folder("locMusdi", id)
-	for page in range(1, 1000):
+	for page in range(start_from, 1000):
 		base_url = f"https://memory.loc.gov/music/musdi/{id}/{page:04d}"
 		url = None
 		for extension in ["tif", "jpg"]:
