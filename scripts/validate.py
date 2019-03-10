@@ -838,6 +838,14 @@ def validate_added_on(item, git_added_on, errors):
 		errors.add(f"Item added_on is {item_date}, while git suggests {git_date}")
 
 
+def validate_note(item, errors):
+	note = item.get("note")
+	if note is None:
+		return
+	if note[-1] != '.':
+		errors.add(f"Item note does not end with the dot")
+
+
 def validate_item(item, git_added_on, make_extra_checks):
 	errors = set()
 	validate_id(item, errors)
@@ -861,6 +869,8 @@ def validate_item(item, git_added_on, make_extra_checks):
 	validate_source_file(item, errors)
 	validate_partial_fields(item, errors)
 	validate_added_on(item, git_added_on, errors)
+	#FIXME: this is a good validation, but it causes more then 1000 errors.
+	#validate_note(item, errors)
 	if make_extra_checks:
 		validate_title_starts_from_shorthand(item, errors)
 		validate_url_accessibility(item, errors)
