@@ -191,10 +191,12 @@ def sew_tiles_with_montage(folder, output_file, policy):
 
 
 def download_and_sew_tiles(output_filename, url_maker, policy):
+	if os.path.exists(output_filename):
+		print(f"Skip downloading existing file {output_filename}")
 	tmp_folder = make_temporary_folder()
 	os.mkdir(tmp_folder)
 	try:
-		print(f"Going to download {policy.tiles_number_x}x{policy.tiles_number_y} tiled image in {tmp_folder}")
+		print(f"Downloading {policy.tiles_number_x}x{policy.tiles_number_y} tiled image to {output_filename}")
 		for tile_x in range(policy.tiles_number_x):
 			for tile_y in range(policy.tiles_number_y):
 				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
@@ -760,7 +762,10 @@ def locMusdi(
 	"""
 	start_from = int(start_from)
 	# Some ids are known to be missing
-	MISSING_IDS = ["050", "054", "057", "061", "071", "078", "083", "095", "100"]
+	MISSING_IDS = [
+		"050", "054", "057", "061", "071", 
+		"078", "083", "095", "100", "103",
+	]
 	if len(id) != 3:
 		print("Expected id to have 3 digits. Please, recheck the ID.")
 		sys.exit(1)
