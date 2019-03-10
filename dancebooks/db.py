@@ -1,4 +1,5 @@
 import contextlib
+import logging
 import os.path
 
 import sqlalchemy
@@ -39,7 +40,8 @@ def make_transaction():
 	try:
 		txn = _session_maker()
 		yield txn
-	except:
+	except Exception:
+		logging.exception("Rolling session back due to exception")
 		txn.rollback()
 	finally:
 		txn.close()
