@@ -309,13 +309,9 @@ def validate_single_filename(abspath, filename, item, errors):
 	"""
 
 	if not os.path.isfile(abspath):
-		errors.add("File [{abspath}] is not accessible".format(
-			abspath=abspath
-		))
+		errors.add(f"File [{abspath}] is not accessible")
 	if not utils.isfile_case_sensitive(abspath):
-		errors.add("File [{abspath}] is not accessible in case-sensitive mode".format(
-			abspath=abspath
-		))
+		errors.add(f"File [{abspath}] is not accessible in case-sensitive mode")
 
 	booktype = item.get("booktype")
 	validate_periodical_filename(filename, item, errors)
@@ -345,10 +341,7 @@ def validate_single_filename(abspath, filename, item, errors):
 			(item.has(meta_field)) and
 			(meta_field not in metadata)
 		):
-			errors.add("Field {meta_field} is not specified in filename [{filename}]".format(
-				meta_field=meta_field,
-				filename=filename
-			))
+			errors.add(f"Field {meta_field} is not specified in filename [{filename}]")
 
 	meta_keywords = metadata.get("keywords", {})
 	source_file = item.get("source_file")
@@ -362,14 +355,10 @@ def validate_single_filename(abspath, filename, item, errors):
 	for search_key, search_func in searches.items():
 		if not search_func(item):
 			errors.add(
-				"Item is not searchable by {search_key} extracted from filename {abspath}.\n"
-				"    Item has: {item_value}\n"
-				"    Search has: {search_value}".format(
-				search_key=search_key,
-				item_value=item.get(search_key),
-				search_value=metadata[search_key],
-				abspath=abspath
-			))
+				f"Item is not searchable by {search_key} extracted from filename {abspath}.\n"
+				f"    Item has: {item.get(search_key)}\n"
+				f"    Search has: {metadata[search_key]}"
+			)
 
 
 #single parameter group validations (executed once per entry)
@@ -401,9 +390,7 @@ def validate_parser_generated_fields(item, errors):
 	OBLIGATORY_FIELDS = ["booktype", "source", "year_from", "year_to", "year_circa"]
 	for field in OBLIGATORY_FIELDS:
 		if not item.has(field):
-			errors.add("Parser hasn't generated obligatory field {field}".format(
-				field=field
-			))
+			errors.add(f"Parser hasn't generated obligatory field {field}")
 
 
 def validate_obligatory_fields(item, errors):
@@ -417,9 +404,7 @@ def validate_obligatory_fields(item, errors):
 	OBLIGATORY_FIELDS = ["langid", "year", "added_on"]
 	for field in OBLIGATORY_FIELDS:
 		if not item.has(field):
-			errors.add("Obligatory field {field} is missing".format(
-				field=field
-			))
+			errors.add(f"Obligatory field {field} is missing")
 
 
 def validate_allowed_fields(item, errors):
@@ -428,9 +413,7 @@ def validate_allowed_fields(item, errors):
 	"""
 	diff = item.fields() - ALLOWED_FIELDS
 	if len(diff) > 0:
-		errors.add("Fields {fields!r} aren't allowed".format(
-			fields=diff
-		))
+		errors.add(f"Fields {diff!r} are not allowed")
 
 
 def validate_translation_fields(item, errors):
@@ -452,9 +435,7 @@ def validate_translation_fields(item, errors):
 
 	for field in TRANSLATION_OBLIGATORY_FIELDS:
 		if not item.has(field):
-			errors.add("Field {field} is required for translations".format(
-				field=field
-			))
+			errors.add(f"Field {field} is required for translations")
 
 
 def validate_shorthand(item, errors):
@@ -470,9 +451,7 @@ def validate_shorthand(item, errors):
 		errors.add("Shorthand is missing")
 
 	if shorthand and (len(shorthand) > MAX_SHORTHAND_LENGTH):
-		errors.add("Shorthand is oversized (max length is {max_length})".format(
-			max_length=MAX_SHORTHAND_LENGTH
-		))
+		errors.add(f"Shorthand is oversized (max length is {MAX_SHORTHAND_LENGTH})")
 
 
 def validate_title_starts_from_shorthand(item, errors):
@@ -517,16 +496,10 @@ def validate_issn(item, errors):
 		return
 	for idx, single_issn in enumerate(issn_list):
 		if not issn.is_valid(single_issn):
-			errors.add("ISSN #{idx} isn't valid".format(
-				idx=idx
-			))
+			errors.add(f"ISSN #{idx} [{single_issn}] isn't valid")
 		formatted = issn.format(single_issn)
 		if (formatted != single_issn):
-			errors.add("ISSN #{idx} ({single_issn}) should be reformatted to {formatted}".format(
-				idx=idx,
-				single_issn=single_issn,
-				formatted=formatted
-			))
+			errors.add(f"ISSN #{idx} [{single_issn}] should be reformatted to [{formatted}]")
 
 
 def validate_booktype(item, errors):
@@ -562,38 +535,26 @@ def validate_booktype(item, errors):
 		return
 
 	if (booktype not in VALID_BOOKTYPES):
-		errors.add("Booktype {booktype} invalid".format(
-			booktype=booktype
-		))
+		errors.add(f"Booktype {booktype} is invalid")
 
 	if (booktype == "article"):
 		journaltitle = item.get("journaltitle")
 		if journaltitle is None:
-			errors.add("Field journaltitle expected for booktype {booktype}".format(
-				booktype=booktype
-			))
+			errors.add(f"Field journaltitle expected for booktype {booktype}")
 		pages = item.get("pages")
 		if pages is None:
-			errors.add("Field pages expected for booktype {booktype}".format(
-				booktype=booktype
-			))
+			errors.add(f"Field pages expected for booktype {booktype}")
 	if (booktype in ("inproceedings", "inbook")):
 		booktitle = item.get("booktitle")
 		if booktitle is None:
-			errors.add("Field booktitle expected for booktype {booktype}".format(
-				booktype=booktype
-			))
+			errors.add(f"Field booktitle expected for booktype {booktype}")
 	if (booktype == "thesis"):
 		thesis_type = item.get("type")
 		if thesis_type is None:
-			errors.add("Field type expected for booktype {booktype}".format(
-				booktype=booktype
-			))
+			errors.add(f"Field type expected for booktype {booktype}")
 		institution = item.get("institution")
 		if institution is None:
-			errors.add("Field institution  expected for booktype {booktype}".format(
-				booktype=booktype
-			))
+			errors.add(f"Field institution  expected for booktype {booktype}")
 
 	if item.get("number"):
 		if booktype not in PERIODICAL_BOOKTYPES:
@@ -609,9 +570,7 @@ def validate_catalogue_code(item, errors):
 		return
 	for single_code in catalogue:
 		if not const.CATALOGUE_REGEXP.match(single_code):
-			errors.add("Catalogue code {single_code} doesn't match CATALOGUE_REGEXP".format(
-				single_code=single_code
-			))
+			errors.add(f"Catalogue code {single_code} doesn't match CATALOGUE_REGEXP")
 
 
 def validate_library_fields(item, errors):
@@ -629,9 +588,7 @@ def validate_library_fields(item, errors):
 	];
 	for field in REQUIRED_FIELDS:
 		if not item.has(field):
-			errors.add("Field {field} is missing".format(
-				field=field
-			))
+			errors.add(f"Field {field} is missing")
 
 
 def validate_commentator(item, errors):
@@ -662,21 +619,16 @@ def validate_url_validity(item, errors):
 	item_id = item.get("id")
 	if url is None:
 		return
-	for number, single_url in enumerate(url):
+	for idx, single_url in enumerate(url):
 		if not utils.is_url_valid(single_url, item):
-			errors.add("Field url with value [{single_url}] and number {number} is wrong".format(
-				single_url=single_url,
-				number=number
-			))
+			errors.add(f"Field url with value [{single_url}] and number #{idx} is wrong")
 
 		if not utils.is_url_self_served(single_url):
 			continue
 
 		match = utils.SELF_SERVED_URL_REGEXP.match(single_url)
 		if not match:
-			errors.add("Self served url [{single_url}] doesn't match SELF_SERVED_URL_REGEXP".format(
-				single_url=single_url
-			))
+			errors.add(f"Self served url [{single_url}] doesn't match SELF_SERVED_URL_REGEXP")
 			continue
 		if (match.group("item_id") != item_id):
 			errors.add("Wrong item_id specified in self-served url")
@@ -686,23 +638,16 @@ def validate_url_validity(item, errors):
 		metadata = utils.extract_metadata_from_file(single_filename)
 		owners = metadata.get("owner").split("+")
 		if not owners:
-			errors.add("Owner specification expected for self-served url #{number} (url={url}, filename={filename})".format(
-				number=number,
-				url=single_url,
-				filename=single_filename
-			))
+			errors.add(f"Owner specification expected for self-served url #{number} [{url}], stored at [{single_filename}]")
 			continue
 		for owner in owners:
 			owner_fullname = config.parser.bookkeepers.get(owner)
 			if owner_fullname:
 				note = item.get("note")
-				if (
-					(not note) or
-					(owner_fullname not in note)
-				):
-					errors.add("Owner fullname ({owner_fullname}) should be present in note".format(
-						owner_fullname=owner_fullname
-					))
+				if note is None:
+					errors.add(f"Owner fullname ({owner_fullname}) should be present in note, but the note is missing")
+				elif owner_fullname not in note:
+					errors.add(f"Owner fullname ({owner_fullname}) should be present in note, but it is not")
 
 
 def validate_url_accessibility(item, errors):
@@ -714,10 +659,7 @@ def validate_url_accessibility(item, errors):
 		return
 	for number, single_url in enumerate(url):
 		if not utils.is_url_accessible(single_url, item):
-			errors.add("Field url with value [{single_url}] and number {number} is unaccessible".format(
-				single_url=single_url,
-				number=number
-			))
+			errors.add(f"Field url with value [{single_url}] and number {number} is unaccessible")
 
 
 def validate_transcription_filename(item, errors):
@@ -766,15 +708,9 @@ def validate_partial_fields(item, errors):
 		if value is None:
 			continue
 		if not is_partial:
-			errors.add("Field {field} is not allowed for booktype {booktype}".format(
-				field=field,
-				booktype=booktype
-			))
+			errors.add(f"Field {field} is not allowed for booktype {booktype}")
 		if (regexp is not None) and not regexp.match(value):
-			errors.add("Field {field}={value} doesn't match format regexp".format(
-				field=field,
-				value=value
-			))
+			errors.add(f"Field {field}={value} doesn't match format regexp")
 
 
 def validate_volume(item, errors):
@@ -788,18 +724,13 @@ def validate_volume(item, errors):
 			errors.add("Field volume can't be negative")
 	if volumes is not None:
 		if volumes <= 1:
-			errors.add("Field volumes should be 2 or more (got {volumes})".format(
-				volumes=volumes
-			))
+			errors.add(f"Field volumes should be 2 or more (got {volumes})")
 	if (
 		(volume is not None) and
 		(volumes is not None)
 	):
 		if (volume > volumes):
-			errors.add("Field volume ({volume}) can't exceed field volumes ({volumes})".format(
-				volume=volume,
-				volumes=volumes
-			))
+			errors.add(f"Field volume ({volume}) can't exceed field volumes ({volumes})")
 
 
 def validate_series(item, errors):
@@ -817,9 +748,7 @@ def validate_series(item, errors):
 	OBLIGATORY_SERIAL_FIELDS = ["series", "serial_number"]
 	for field in OBLIGATORY_SERIAL_FIELDS:
 		if not item.has(field):
-			errors.add("Field {field} expected for serial books".format(
-				field=field
-			))
+			errors.add(f"Field {field} expected for serial books")
 
 
 def validate_edition(item, errors):
@@ -830,9 +759,7 @@ def validate_edition(item, errors):
 	if edition is None:
 		return
 	if edition <= 1:
-		errors.add("Field edition should be 2 or more (got {edition})".format(
-			edition=edition
-		))
+		errors.add(f"Field edition should be 2 or more (got {edition})")
 
 
 def validate_keywords(item, errors):
@@ -845,16 +772,11 @@ def validate_keywords(item, errors):
 
 	unallowed_keywords = (keywords - config.parser.keywords)
 	for keyword in unallowed_keywords:
-		errors.add("Keyword [{keyword}] is unallowed".format(
-			keyword=keyword
-		))
+		errors.add(f"Keyword [{keyword}] is unallowed")
 	for keyword in keywords:
 		parent_keyword = utils.extract_parent_keyword(keyword)
 		if parent_keyword not in keywords:
-			errors.add("Parent keyword [{parent_keyword} is missing for keyword [{keyword}]".format(
-				parent_keyword=parent_keyword,
-				keyword=keyword
-			))
+			errors.add(f"Parent keyword [{parent_keyword} is missing for keyword [{keyword}]")
 	if ("useless" in keywords) and (len(keywords) != 1):
 		errors.add("Keyword [useless] can't be combined with other keywords")
 
@@ -873,15 +795,11 @@ def validate_filename(item, errors):
 	keywords = set(item.get("keywords") or {})
 	if filename is None:
 		if (NOT_DIGITIZED_KEYWORD not in keywords):
-			errors.add("Keyword {keyword} should be specified".format(
-				keyword=NOT_DIGITIZED_KEYWORD
-			))
+			errors.add(f"Keyword {NOT_DIGITIZED_KEYWORD} should be specified")
 		return
 	else:
 		if (NOT_DIGITIZED_KEYWORD in keywords):
-			errors.add("Keyword {keyword} shouldn't be specified".format(
-				keyword=NOT_DIGITIZED_KEYWORD
-			))
+			errors.add(f"Keyword {NOT_DIGITIZED_KEYWORD} shouldn't be specified")
 	for single_filename in filename:
 		abspath = os.path.join(config.www.elibrary_dir, single_filename)
 		validate_single_filename(abspath, single_filename, item, errors)
@@ -909,20 +827,15 @@ def validate_source_file(item, errors):
 
 	source_langs = const.LONG_LANG_MAP[source_file]
 	if langid not in source_langs:
-		errors.add("Item language {item_lang} doesn't match any of source file languages ({source_langs})".format(
-			item_lang=langid,
-			source_langs=", ".join(source_langs)
-		))
+		source_langs_string = ", ".join(source_langs)
+		errors.add(f"Item language {langid} doesn't match any of source file languages ({source_langs_string})")
 
 
 def validate_added_on(item, git_added_on, errors):
 	git_date = git_added_on[item.id()]
 	item_date = item.get("added_on")
 	if item_date != git_date:
-		errors.add("Item added_on is {item_date}, while git suggests {git_date}".format(
-			item_date=item_date,
-			git_date=git_date
-		))
+		errors.add(f"Item added_on is {item_date}, while git suggests {git_date}")
 
 
 def validate_item(item, git_added_on, make_extra_checks):
@@ -966,9 +879,7 @@ def validate_items(items, git_added_on, make_extra_checks):
 def validate_backups():
 	logging.info("Fetching list of backups from filesystem")
 	backups = fetch_backups_from_fs()
-	logging.info("Found {count} items in backup".format(
-		count=len(backups)
-	))
+	logging.info(f"Found {len(backups)} items in backup")
 
 	POSSIBLE_BACKUP_EXTENSIONS = [".pdf", ".tif"]
 	strange_backups_number = 0
@@ -989,14 +900,9 @@ def validate_backups():
 		found_in_library = any(map(os.path.isfile, possible_library_paths))
 		if not found_in_library:
 			strange_backups_number += 1
-			logging.warn("Found strange backup in {backup_dir}: {path}".format(
-				backup_dir=config.www.backup_dir,
-				path=backup
-			))
+			logging.warn(f"Found strange backup in {config.www.backup_dir}: {backup}")
 	if strange_backups_number > 0:
-		logging.warn("Found {strange_backups_number} strange backups".format(
-			strange_backups_number=strange_backups_number
-		))
+		logging.warn(f"Found {strange_backups_number} strange backups")
 
 
 @opster.command()
@@ -1013,9 +919,7 @@ def main(
 	git_added_on = fetch_added_on_from_git()
 	logging.info("Fetching list of pdf from filesystem")
 	physically_stored = fetch_filelist_from_fs()
-	logging.info("Found {count} physically stored items".format(
-		count=len(physically_stored)
-	))
+	logging.info(f"Found {len(physically_stored)} physically stored items")
 	if config.www.backup_dir and os.path.isdir(config.www.backup_dir):
 		validate_backups()
 
@@ -1026,12 +930,9 @@ def main(
 		for file in filename:
 			physically_stored.discard(file)
 	for path in physically_stored:
-		logging.warn("Unreferenced file found in {elibrary_dir}: {path}".format(
-			elibrary_dir=config.www.elibrary_dir,
-			path=path
-		))
+		logging.warn(f"Unreferenced file found in {config.www.elibrary_dir}: {path}")
 
-	logging.info("Going to process {0} items".format(len(items)))
+	logging.info(f"Going to process {len(items)} items")
 	erroneous_items = dict()
 	for item in items:
 		try:
@@ -1041,16 +942,9 @@ def main(
 			erroneous_items[item.id()] = errors
 			if log_all_errors:
 				for error in errors:
-					logging.debug("Errors for {item_id}: {error}".format(
-						item_id=item.id(),
-						error=error
-					))
+					logging.debug(f"Errors for {item.id()}: {error}")
 		except Exception as ex:
-			logging.exception("Exception while validating {item_id} ({source}): {ex}".format(
-				item_id=item.id(),
-				source=item.source(),
-				ex=ex
-			))
+			logging.exception(f"Exception while validating {item.id()} ({item.source()}): {ex}")
 
 	update_validation_data(
 		erroneous_items,
@@ -1058,9 +952,7 @@ def main(
 		ignore_added_errors
 	)
 	if erroneous_items:
-		logging.warning("Found {items_count} erroneous items".format(
-			items_count=len(erroneous_items)
-		))
+		logging.warning(f"Found {len(erroneous_items)} erroneous items")
 
 
 if __name__ == "__main__":
