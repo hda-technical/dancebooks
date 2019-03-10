@@ -765,12 +765,21 @@ def locMusdi(
 	MISSING_IDS = [
 		"050", "054", "057", "061", "071", 
 		"078", "083", "095", "100", "103",
+		"106", "111", "116", "120", "135",
+		"152", "172", "173", "175", "176",
+		"180", "185", "192", "193", "196",
+		"206", "223", "231", "232", "234",
+		"238", "244", "249",
 	]
+	MAX_ID = 252
 	if len(id) != 3:
 		print("Expected id to have 3 digits. Please, recheck the ID.")
 		sys.exit(1)
 	if id in MISSING_IDS:
 		print(f"The book with id musdi.{id} is known to be missing. Please, recheck the ID.")
+		sys.exit(1)
+	if int(id) > MAX_ID:
+		print(f"The maximum id is musdi.{MAX_ID}. Please, recheck the ID.")
 		sys.exit(1)
 	output_folder = make_output_folder("locMusdi", id)
 	for page in range(start_from, 1000):
