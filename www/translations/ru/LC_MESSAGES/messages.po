@@ -474,8 +474,8 @@ msgstr "Транскрипция"
 msgid "item:labels:filename"
 msgstr "Пути к файлам"
 
-msgid "item:labels:magic-const"
-msgstr "Magic constant"
+msgid "item:labels:provenance"
+msgstr "Происхождение"
 
 msgid "item:labels:note"
 msgstr "Примечание"

@@ -34,7 +34,7 @@
 	"url",
 	"transcription",
 	"filename",
-	"magic_const",
+	"provenance",
 	"note",
 ] %}
 
@@ -49,7 +49,7 @@
 		{% set value = item.get_as_string(param) %}
 	{% endif %}
 	{% if value %}
-		{% if (param not in ("filename", "magic_const")) or show_secrets %} {# secrets filtering: start #}
+		{% if (param not in ("filename", "provenance")) or show_secrets %} {# secrets filtering: start #}
 			<div class="bib_item_left">{{ _("item:labels:" + param.replace("_", "-")) }}:</div>
 			<div class="bib_item_right">
 			{% if param == "id" %}

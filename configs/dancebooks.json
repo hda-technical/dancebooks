@@ -29,7 +29,7 @@
             "url",
             "catalogue",
             "library_code",
-            "magic_const"
+            "provenance"
         ],
         "file_list_params": [
             "filename"
@@ -57,7 +57,7 @@
             "url",
             "origlanguage",
             "transcription",
-            "magic_const"
+            "provenance"
         ],
         "markdown_params": [
             "note"
@@ -280,7 +280,7 @@
             "transcription",
             "catalogue",
             "all_fields",
-            "magic_const"
+            "provenance"
         ],
         "search_synonyms": {
             "author": [

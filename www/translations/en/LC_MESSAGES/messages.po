@@ -474,8 +474,8 @@ msgstr "Transcription"
 msgid "item:labels:filename"
 msgstr "Paths to files"
 
-msgid "item:labels:magic-const"
-msgstr "Magic constant"
+msgid "item:labels:provenance"
+msgstr "Provenance"
 
 msgid "item:labels:note"
 msgstr "Note"
