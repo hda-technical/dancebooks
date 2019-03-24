@@ -1,4 +1,5 @@
 import contextlib
+import json
 import logging
 import os.path
 
@@ -11,6 +12,31 @@ from sqlalchemy.orm import session as sql_session
 from dancebooks.config import config
 
 _Base = sql_declarative.declarative_base()
+
+
+# Cudos to Sansha B:
+# https://stackoverflow.com/questions/5022066/how-to-serialize-sqlalchemy-result-to-json
+#
+# Stack Overflow driven development is one honking great idea — let's do more of those!
+class SqlAlchemyEncoder(json.JSONEncoder):
+
+	def default(self, obj):
+		if isinstance(obj.__class__, sql_declarative.DeclarativeMeta):
+			# an SQLAlchemy class
+			fields = {}
+			for field in dir(obj):
+				if field.startswith('_'):
+					# private fields should not be encoded
+					continue
+				if field == 'metadata':
+					# metadata keyword is reserved by sqlalchemy
+					continue
+				data = obj.__getattribute__(field)
+				fields[field] = data
+			# a json-encodable dict
+			return fields
+		return super().default(obj)
+
 
 class Backup(_Base):
 	__tablename__ = "backups"

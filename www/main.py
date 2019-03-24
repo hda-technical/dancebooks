@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import http.client
+import json
 import logging
 import os
 import random
@@ -447,10 +448,11 @@ def get_backups():
 		return flask.render_template("backups.html", backups=backups)
 		pass
 	elif format == "json":
-		pass
+		response = flask.make_response(json.dumps(backups, cls=db.SqlAlchemyEncoder))
+		response.content_type = "application/json; charset=utf-8"
+		return response
 	else:
 		flask.abort(http.client.BAD_REQUEST, f"Unknown format: {format}")
-
 
 
 STATIC_TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "templates/static")
