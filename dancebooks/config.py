@@ -4,6 +4,8 @@ import json
 import logging.config
 import os
 
+import pyjson5
+
 from dancebooks import const
 
 class SmtpConfig(object):
@@ -135,7 +137,7 @@ class DatabaseConfig(object):
 class Config(object):
 	def __init__(self, path):
 		with open(path, "rt") as config_file:
-			json_config = json.load(config_file)
+			json_config = pyjson5.load(config_file)
 		#handling secrets
 		if "secrets" in json_config:
 			secrets_path = os.path.join(os.path.dirname(path), json_config["secrets"])

@@ -64,20 +64,25 @@
         ],
         "date_format": "%Y-%m-%d",
         "blocked_domains": [
+            //use permalinks provided by hathitrust instead
             "babel.hathitrust.org",
+            //use books.google.com instead
             "books.google.by",
             "books.google.co.uk",
             "books.google.fr",
             "books.google.ru",
             "books.google.ua",
             "dance.goldenforests.ru",
+            //use gallica.bnf.fr links instead
             "catalogue.bnf.fr",
             "dhds.org.uk",
             "dlib.rsl.ru",
             "hdl.loc.gov",
             "mirrorland.rpg.ru",
+            //use nbn-resolving.de permalinks instead
             "opacplus.bsb-muenchen.de",
             "digitalcollections.nypl.org",
+            //use nbn-resolving.de permalinks instead
             "reader.digitale-sammlungen.de",
             "jscholarship.library.jhu.edu"
         ],
