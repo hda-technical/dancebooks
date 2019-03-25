@@ -362,6 +362,26 @@ def download_book_from_iiif(manifest_url, output_folder):
 		download_image_from_iiif(base_url, output_filename)
 
 
+
+def download_book_from_iiif_fast(manifest_url, output_folder):
+	"""
+	Downloads entire book via IIIF protocol.
+	Issues single request per image, but might be unsupported by certain backends.
+
+	API is documented here:
+	http://iiif.io/about/
+	"""
+	manifest = get_json(manifest_url)
+	canvases = manifest["sequences"][0]["canvases"]
+	for page, metadata in enumerate(canvases):
+		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+		full_url = metadata["images"][-1]["resource"]["@id"]
+		get_binary(output_filename, full_url)
+
+
 MAX_TILE_NUMBER = 100
 def guess_tiles_number_x(url_maker):
 	tiles_number_x = 0
@@ -400,7 +420,7 @@ def gallica(
 	"""
 	manifest_url = f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 	output_folder = make_output_folder("gallica", id)
-	download_book_from_iiif(manifest_url, output_folder)
+	download_book_from_iiif_fast(manifest_url, output_folder)
 
 
 @opster.command()
@@ -763,7 +783,7 @@ def locMusdi(
 	start_from = int(start_from)
 	# Some ids are known to be missing
 	MISSING_IDS = [
-		"050", "054", "057", "061", "071", 
+		"050", "054", "057", "061", "071",
 		"078", "083", "095", "100", "103",
 		"106", "111", "116", "120", "135",
 		"152", "172", "173", "175", "176",
