@@ -1,7 +1,10 @@
 import http.client
 import re
 
-#two-letter country codes mapped to list of corresponding langid
+#Two-letter country codes mapped to list of corresponding langid
+#
+#Most of the codes are defined in `ISO 3166-1 alpha-2` standard.
+#See: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 
 SHORT_LANG_MAP = {
 	"ar": ["spanish"],
 	"at": ["german", "french"],
@@ -17,13 +20,14 @@ SHORT_LANG_MAP = {
 	"fr": ["french"],
 	"ie": ["english"],
 	"it": ["italian", "french"],
-#ln is currently unassigned according to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+	#ln is currently unassigned according to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 	"ln": ["latin"],
 	"nl": ["dutch", "german"],
 	"pl": ["polish"],
 	"pt": ["portuguese"],
 	"ru": ["russian", "french", "german"],
 	"sc": ["english"],
+	"si": ["slovenian", "english", "german"],
 	"sw": ["swedish"],
 	"ua": ["ukrainian"],
 	"us": ["english"],
