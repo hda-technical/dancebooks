@@ -403,6 +403,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1922 | А. А. Сидоров | Современный танец | | [RSL](https://search.rsl.ru/ru/record/01009159637)<br/>[On sale, ₽10000](http://www.alib.ru/5_sidorov_a_a_sovremennyj_tanec_w1t190248750bbf98f2c0ab7e71124e97a81d12.html)<br/>[On sale, ₽7000](http://www.alib.ru/5_sidorov_a_a_sovremennyj_tanec_w1t197718af1fbad42302efe628399ab6de1533.html) |
 | 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]` | |
 | 1924 | Максим Владимирович Соколовский | Комсомольские танцы | | `SPTL: С 596(Б)` |
+| 1925 | Аркадий Георгиевич Харлампиев | Коллективный отдых в рабочем клубе. Забавы, игры, танцы, хор | `[Жбанкова? 2019-2]` | [RSL](https://search.rsl.ru/ru/record/01009111315) |
 | 1925 | Max von Boehn | Der Tanz | [Modern edition](https://books.google.com/books?id=qZOj-PRgKcEC) | |
 | 1925 | Thoinot Arbeau<br/>Cyril W. Beaumont (translator) | Orchesography<br/>_English translation_ | | [Amazon, 1966 reprint](http://a.co/5H5ZyY7) |
 | 1926 | Алексей Александрович Гвоздев (commentator)<br/>_Гептахор (коллектив авторов)_ | Ритм и культура танца<br/>_Published by Academia_ | | [RSL](https://search.rsl.ru/ru/record/01009133657)<br/>`SPTL: Р 551` |
@@ -625,7 +626,8 @@ _This part of the list is to joined with the general table_
 | 2016 | `[4. Rothenfelser]` | | 4. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2016 |
 | 2016 | `[Heiter, 2016]` | Gerrit Berenike Heiter | Models of Physical Appearance and Behaviour at Dance Occasions | https://bib.hda.org.ru/books/proceedings_spb_2014_heiter_civility |
 | 2016 | `[Phister, 2016]` | Béatrice Phister | Is Dance an Art? The Status of Ballroom and Ballet Dancing During the Second Half of the 18th Century in French and Italian Writings  | https://bib.hda.org.ru/books/proceedings_spb_2016_pfister |
-| 2016 | `[Жбанкова, 2016]` | Елена Жбанкова |  Массовая пляска как средство идеологического, физического и эстетического воспитания в советской России 1920-x годов | https://bib.hda.org.ru/books/proceedings_spb_2016_zhbankova |
+| 2016 | `[Жбанкова, 2016]` | Елена Жбанкова | Массовая пляска как средство идеологического, физического и эстетического воспитания в советской России 1920-x годов | https://bib.hda.org.ru/books/proceedings_spb_2016_zhbankova |
+| 2019 | `[Жбанкова, 2019-2]` | Елена Жбанкова | Танец как основная составная часть массовых праздников второй половины 1920-х годов | https://bib.hda.org.ru/books/proceedings_spb_2018_zhbankova_mass |
 | 2016-08-14 | `[Wiki: Tanz]` | | Wikisource on Tanz | https://de.wikisource.org/wiki/Tanz |
 | 2016-11-25 | `[Wiki: Cross-step Waltz]` | | Cross-step waltz | https://en.wikipedia.org/wiki/Cross-step_waltz |
 | 2017-03-01 | `[Mackler]` | Heather Mackler | | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
