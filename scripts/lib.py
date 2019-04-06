@@ -135,6 +135,7 @@ class TileSewingPolicy(object):
 		self.image_height = image_height
 		self.overlap = overlap
 		self.trim = False
+		self.reverse_axis_y = False
 
 	@staticmethod
 	def from_image_size(width, height, tile_size):
@@ -209,7 +210,11 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 		print(f"Downloading {policy.tiles_number_x}x{policy.tiles_number_y} tiled image to {output_filename}")
 		for tile_x in range(policy.tiles_number_x):
 			for tile_y in range(policy.tiles_number_y):
-				tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
+				if policy.reverse_axis_y:
+					MAX_TILE_NUMBER_Y = 50
+					tile_file = os.path.join(tmp_folder, f"{MAX_TILE_NUMBER_Y - tile_y:08d}_{tile_x:08d}.jpg")
+				else:
+					tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
 				get_binary(
 					tile_file,
 					url_maker(tile_x, tile_y)
@@ -418,7 +423,7 @@ def guess_tiles_zoom(url_maker_maker):
 	return zoom
 
 
-def guess_tiles_number_x(url_maker):
+def guess_tiles_number_x(url_maker, min_file_size=None):
 	MAX_TILE_NUMBER_X = 100
 	
 	tiles_number_x = 0
@@ -429,11 +434,15 @@ def guess_tiles_number_x(url_maker):
 		head_response = requests.head(probable_url, headers=HEADERS)
 		if head_response.status_code != 200:
 			break
+		if min_file_size is not None:
+			content_length = int(head_response.headers["Content-Length"])
+			if content_length < min_file_size:
+				break
 		tiles_number_x = (test_x + 1)
 	return tiles_number_x
 
 
-def guess_tiles_number_y(url_maker):
+def guess_tiles_number_y(url_maker, min_file_size=None):
 	MAX_TILE_NUMBER_Y = 100
 	
 	tiles_number_y = 0
@@ -444,6 +453,10 @@ def guess_tiles_number_y(url_maker):
 		head_response = requests.head(probable_url, headers=HEADERS)
 		if head_response.status_code != 200:
 			break
+		if min_file_size is not None:
+			content_length = int(head_response.headers["Content-Length"])
+			if content_length < min_file_size:
+				break
 		tiles_number_y = (test_y + 1)
 	return tiles_number_y
 
@@ -562,6 +575,54 @@ def belgiumRoyalLibrary(
 		policy.trim = True
 		download_and_sew_tiles(output_filename, url_maker, policy)
 		page += 1
+
+
+@opster.command()
+def uniDuesseldorf(
+	first=("", "", "First page to be downloaded (e. g. '1910311')"),
+	last=("", "", "Last page to be downloaded (e. g. '1911077')")
+):
+	"""
+	Downloads set of images from http://digital.ub.uni-duesseldorf.de
+	"""
+	# Automatic definition of max zoom level is hard, 
+	# since backend does not return error status even if the request if wrong
+	ZOOM = 6
+
+	# Instead of returning an error, backend will send blank image.
+	# In order to detect proper time for stopping the iteration,
+	# we will check if tile size is greater than this number of bytes
+	MIN_FILE_SIZE = 5120
+	
+	class UrlMaker(object):
+		def __init__(self, page):
+			self.page = page
+		
+		def __call__(self, tile_x, tile_y):
+			# Some unknown number with unspecified purpose
+			# It can change from item to item
+			UNKNOWN_NUMBER=1862
+			return f"http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/{UNKNOWN_NUMBER}/1.0.0/{page}/{ZOOM}/{tile_x}/{tile_y}.jpg"
+			
+	first = int(first)
+	last = int(last)
+	TILE_SIZE = 512
+
+	for page in range(first, last + 1):
+		output_filename = make_output_filename(base="", page=page)
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page {page}")
+			continue
+		url_maker = UrlMaker(page)
+		
+		tiles_number_x = guess_tiles_number_x(url_maker, min_file_size=5120)
+		print(f"Guessed tiles_number_x={tiles_number_x}")
+		tiles_number_y = guess_tiles_number_y(url_maker, min_file_size=5120)
+		print(f"Guessed tiles_number_y={tiles_number_y}")
+		policy = TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
+		policy.trim = True
+		policy.reverse_axis_y = True
+		download_and_sew_tiles(output_filename, url_maker, policy)
 
 
 @opster.command()
