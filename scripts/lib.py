@@ -134,6 +134,7 @@ class TileSewingPolicy(object):
 		self.image_width = image_width
 		self.image_height = image_height
 		self.overlap = overlap
+		self.trim = False
 
 	@staticmethod
 	def from_image_size(width, height, tile_size):
@@ -188,7 +189,16 @@ def sew_tiles_with_montage(folder, output_file, policy):
 		]
 		print(f"Cropping output image with:\n    {' '.join(cmd_line)}")
 		subprocess.check_call(cmd_line)
-
+	elif policy.trim:
+		# Trimming extra boundaries automatically
+		cmd_line = [
+			"convert",
+			output_file,
+			"-trim",
+			output_file
+		]
+		print(f"Trimming output image with:\n    {' '.join(cmd_line)}")
+		subprocess.check_call(cmd_line)
 
 def download_and_sew_tiles(output_filename, url_maker, policy):
 	if os.path.exists(output_filename):
@@ -382,28 +392,59 @@ def download_book_from_iiif_fast(manifest_url, output_folder):
 		get_binary(output_filename, full_url)
 
 
-MAX_TILE_NUMBER = 100
-def guess_tiles_number_x(url_maker):
-	tiles_number_x = 0
-	for tiles_number_x in range(MAX_TILE_NUMBER):
-		probable_url = url_maker(tiles_number_x, 0)
-		if probable_url is None:
-			break
-		head_response = requests.get(probable_url)
+
+# These methods try to guess tiles number using HEAD requests with given UrlMaker
+# 
+# url_maker_maker should be a callable accepting zoom in the arguments.
+# It should return UrlMaker
+#
+# url_maker should be a callable accepting (x, y) in the arguments.
+# It should return None when corresponding tile does not exist.
+#
+# FIXME:
+#	one can save some requests using bisection here,
+# 	but python standard library is too poor to have one.
+
+def guess_tiles_zoom(url_maker_maker):
+	MAX_ZOOM = 10
+	
+	zoom = 0
+	for test_zoom in range(MAX_ZOOM):
+		probable_url = url_maker_maker(test_zoom)(0, 0)
+		head_response = requests.head(probable_url, headers=HEADERS)
 		if head_response.status_code != 200:
 			break
+		zoom = test_zoom
+	return zoom
+
+
+def guess_tiles_number_x(url_maker):
+	MAX_TILE_NUMBER_X = 100
+	
+	tiles_number_x = 0
+	for test_x in range(MAX_TILE_NUMBER_X):
+		probable_url = url_maker(test_x, 0)
+		if probable_url is None:
+			break
+		head_response = requests.head(probable_url, headers=HEADERS)
+		if head_response.status_code != 200:
+			break
+		tiles_number_x = (test_x + 1)
 	return tiles_number_x
 
 
 def guess_tiles_number_y(url_maker):
+	MAX_TILE_NUMBER_Y = 100
+	
 	tiles_number_y = 0
-	for tiles_number_y in range(MAX_TILE_NUMBER):
-		probable_url = url_maker(0, tiles_number_y)
+	for test_y in range(MAX_TILE_NUMBER_Y):
+		probable_url = url_maker(0, test_y)
 		if probable_url is None:
 			break
-		head_response = requests.head(probable_url)
+		head_response = requests.head(probable_url, headers=HEADERS)
 		if head_response.status_code != 200:
 			break
+		tiles_number_y = (test_y + 1)
 	return tiles_number_y
 
 
@@ -455,13 +496,6 @@ def bnfCandide(
 
 	assert(max_zoom is not None)
 	print(f"Guessed max_zoom={max_zoom}")
-	#The site does not use any metadata and simply sends unnecessary requests to backend
-	#Guessing tiles_number_x, tiles_number_y using HEAD requests with guessed max_zoom
-	#
-	#UrlMaker returns None when corresponding tile does not exist
-	#
-	#FIXME: one can save some requests using bisection here,
-	#but python standard library is too poor to have one
 	url_maker = UrlMaker(max_zoom)
 	tiles_number_x = guess_tiles_number_x(url_maker)
 	print(f"Guessed tiles_number_x={tiles_number_x}")
@@ -470,7 +504,64 @@ def bnfCandide(
 
 	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
 	output_filename = make_output_filename(id.replace("/", "."))
-	download_and_sew_tiles(output_filename, url_maker, policy)	
+	download_and_sew_tiles(output_filename, url_maker, policy)
+
+
+@opster.command()
+def belgiumRoyalLibrary(
+	id=("", "", "Id of the book to be downloaded (e. g. 'A0524435')"),
+	volume=("", "", "Volume of the book to be downloaded (e. g. '1')")
+):
+	class UrlMaker(object):		
+		def __init__(self, zoom, page_root_url):
+			self.zoom = zoom
+			self.page_root_url = page_root_url
+
+		def __call__(self, tile_x, tile_y):
+			probable_url = f"{page_root_url}/{self.zoom}-{tile_x}-{tile_y}.jpg"
+			return probable_url
+
+
+	volume = int(volume)
+	assert(id[0].isalpha())
+	assert(id[1:].isdigit())
+	slash_separated_id = '/'.join(id)
+	dash_deparated_id = id[0] + '-' + id[1:]
+	base_url = f"https://viewerd.kbr.be/display/{slash_separated_id}/0000-00-00_{volume:02d}/zoomtiles/BE-KBR00_{dash_deparated_id}_0000-00-00_{volume:02d}"
+	
+	# We have to provide referer with each request being dispatched.
+	# This is easiest, though very dirty way to do it.
+	referer = f"https://viewerd.kbr.be/gallery.php?map={slash_separated_id}/0000-00-00_{volume:02d}/"
+	HEADERS["Referer"] = referer
+	
+	output_folder = make_output_folder("belgiumRoyalLibrary", f"{id}_{volume:02d}")
+	page = 1
+	
+	TILE_SIZE = 768
+	while True:
+		output_filename = make_output_filename(output_folder, page)
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page {page:04d}")
+			page += 1
+			continue
+
+		page_root_url = f"{base_url}_{page:04d}"
+		url_maker_maker = lambda zoom: UrlMaker(zoom, page_root_url)
+		tiles_zoom = guess_tiles_zoom(url_maker_maker)
+		print(f"Guessed tiles_zoom={tiles_zoom}")
+		url_maker = UrlMaker(tiles_zoom, page_root_url)
+		
+		tiles_number_x = guess_tiles_number_x(url_maker)
+		print(f"Guessed tiles_number_x={tiles_number_x}")
+		tiles_number_y = guess_tiles_number_y(url_maker)
+		print(f"Guessed tiles_number_y={tiles_number_y}")
+		if (tiles_number_x == 0) or (tiles_number_y == 0):
+			print(f"Page {page:04d} was not found")
+			break
+		policy = TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
+		policy.trim = True
+		download_and_sew_tiles(output_filename, url_maker, policy)
+		page += 1
 
 
 @opster.command()
@@ -609,13 +700,6 @@ def hab(
 			break
 	assert(max_zoom is not None)
 	print(f"Guessed max_zoom={max_zoom}")
-	#The site does not use any metadata and simply sends unnecessary requests to backend
-	#Guessing tiles_number_x, tiles_number_y using HEAD requests with guessed max_zoom
-	#
-	#UrlMaker returns None when corresponding tile does not exist
-	#
-	#FIXME: one can save some requests using bisection here,
-	#but python standard library is too poor to have one
 	url_maker = UrlMaker(max_zoom)
 	tiles_number_x = guess_tiles_number_x(url_maker)
 	print(f"Guessed tiles_number_x={tiles_number_x}")
