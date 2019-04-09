@@ -807,14 +807,15 @@ def yaleImage(
 
 @opster.command()
 def yaleBook(
-	id=("", "", "Image id to be downloaded (e. g. `BRBL_Exhibitions/7/1327507/1327507`)")
+	id=("", "", "Image id to be downloaded (e. g. `1327507`)"),
+	chapter=("", "", "Chapter to download from (e. g. `PATREQIMGX12`)")
 ):
 	"""
 	Downloads image from https://brbl-zoom.library.yale.edu
 	"""
-	modulo = id[-1]
+	
 	output_filename = make_output_filename("", id)
-	remote_filename = f"BRBL_Exhibitions/{modulo}/{id}/{id}.jp2"
+	remote_filename = f"{chapter}/{id[-1]}/{id}/{id}.jp2"
 	fastcgi_url = "https://brbl-zoom.library.yale.edu/fcgi-bin/iipsrv.fcgi"
 	metadata_url = f"{fastcgi_url}?FIF={remote_filename}&obj=Max-size&obj=Tile-size&obj=Resolution-number"
 	metadata = IIPMetadata.from_text(get_text(metadata_url))
