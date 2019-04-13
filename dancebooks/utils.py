@@ -706,16 +706,11 @@ def make_cite_label(item):
 	if (author is None) and (shorthand is None):
 		raise ValueError("Can't make cite label without author or shorthand")
 	if shorthand is not None:
-		return '[{shorthand}, {year}]'.format(
-			shorthand=shorthand,
-			year=year
-		)
+		return f"[{shorthand}, {year}]"
 	elif len(author) <= const.MAX_AUTHORS_IN_CITE_LABEL:
 		### WARN: this code doesn't process repeated surnames in any way
-		return '[{surnames}, {year}]'.format(
-			surnames=", ".join(map(get_last_name, author)),
-			year=year
-		)
+		surnames=", ".join(map(get_last_name, author)),
+		return f"[{surnames}, {year}]"
 	else:
 		if langid == "russian":
 			postfix = "и др."
@@ -760,10 +755,7 @@ def make_html_cite(item):
 		result += ", "
 	result += year
 	result += ". "
-	result += '<a href="/books/{item_id}">https://{domain}/books/{item_id}</a>'.format(
-		domain=config.www.app_domain,
-		item_id=item.id()
-	)
+	result += f'<a href="/books/{item.id()}">https://{config.www.app_domain}/books/{item.id()}</a>'
 	return result
 
 

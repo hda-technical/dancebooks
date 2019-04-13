@@ -154,31 +154,21 @@ def jsonify():
 
 #functions to be registered in jinja: begin
 def make_author_link(author):
-	return '<a href="/basic-search?author={author}">{author}</a>'.format(
-		author=author
-	)
+	return f'<a href="/basic-search?author={author}">{author}</a>'
 
 
 def make_keyword_link(keyword):
-	return '<a href="/advanced-search?keywords={keyword}">{keyword}</a>'.format(
-		keyword=keyword
-	)
+	return f'<a href="/advanced-search?keywords={keyword}">{keyword}</a>'
 
 
 def format_catalogue_code(single_code):
-	cat_type, cat_code = single_code.split(const.CATALOGUE_SEPARATOR)
-	item_id, title = const.CATALOGUE_MAP[cat_type];
-	return '<a href="/books/{item_id}">{title}</a>: {code}'.format(
-		item_id=item_id,
-		title=title,
-		code=cat_code
-	)
+	catalogue_type, catalogue_code = single_code.split(const.CATALOGUE_SEPARATOR)
+	item_id, title = const.CATALOGUE_MAP[catalogue_type];
+	return f'<a href="/books/{item_id}">{title}</a>: {catalogue_code}'
 
 
 def format_transcription_url(item):
-	return '<a href="/books/{item_id}/transcription">/books/{item_id}/transcription</a>'.format(
-		item_id=item.id()
-	)
+	return f'<a href="/books/{item.id()}/transcription">/books/{item.id()}/transcription</a>'
 
 
 def format_guid_for_rss(items):
@@ -187,9 +177,7 @@ def format_guid_for_rss(items):
 
 
 def format_item_id(item_id):
-	return '<a href="/books/{item_id}">{item_id}</a>'.format(
-		item_id=item_id
-	)
+	return f'<a href="/books/{item_id}">{item_id}</a>'
 
 
 def format_transcribed_by(item):
