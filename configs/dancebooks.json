@@ -267,6 +267,7 @@
     },
     "www": {
         "app_domain": "bib.hda.org.ru",
+        "backup_metadata_url": "https://bib.hda.org.ru/backups?format=json",
         "search_params": [
             "author",
             "availability",

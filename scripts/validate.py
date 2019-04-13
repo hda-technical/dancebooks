@@ -8,6 +8,7 @@ import subprocess
 import sys
 
 import opster
+import requests
 from stdnum import isbn
 from stdnum import issn
 
@@ -890,6 +891,16 @@ def validate_backups():
 	logging.info("Fetching list of backups from filesystem")
 	backups = fetch_backups_from_fs()
 	logging.info(f"Found {len(backups)} items in backup")
+
+	logging.info(f"Fetching backup metadata from {config.www.backup_metadata_url}")
+	metadata = requests.get(config.www.backup_metadata_url).json()
+	logging.info(f"Fetched {len(metadata)} backups metadata")
+
+	for metadatum in metadata:
+		backup_id = metadatum["id"]
+		full_path = os.path.join(config.www.backup_dir, metadatum["path"])
+		if not os.path.exists(full_path):
+			logging.warn(f"Backup #{backup_id} at {full_path} does not exists")
 
 	POSSIBLE_BACKUP_EXTENSIONS = [".pdf", ".tif"]
 	strange_backups_number = 0

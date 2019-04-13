@@ -1,6 +1,5 @@
 import collections
 import functools
-import json
 import logging.config
 import os
 
@@ -103,6 +102,7 @@ class WwwConfig(object):
 		self.order_by_keys = set(params["order_by_keys"])
 		self.elibrary_dir = params["elibrary_dir"]
 		self.backup_dir = params["backup_dir"]
+		self.backup_metadata_url = params["backup_metadata_url"]
 
 		#security params
 		self.secret_cookie_key = params["secret_cookie_key"]
@@ -142,7 +142,7 @@ class Config(object):
 		if "secrets" in json_config:
 			secrets_path = os.path.join(os.path.dirname(path), json_config["secrets"])
 			with open(secrets_path, "rt") as secrets_json_file:
-				secrets_config = json.load(secrets_json_file)
+				secrets_config = pyjson5.load(secrets_json_file)
 			for key, value in secrets_config.items():
 				if key in json_config:
 					json_config[key].update(value)
