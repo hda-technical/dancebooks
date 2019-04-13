@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 
 import os
+import subprocess
 import sys
 
 import opster
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from dancebooks import db
+from dancebooks.config import config
 from dancebooks import const
+from dancebooks import db
 
 NOT_DEFINED = "NOT_DEFINED"
 
@@ -72,6 +74,28 @@ def update(
 			print("Updated successfully")
 		else:
 			print("Nothing to modify")
+
+
+@opster.command()
+def make_dump(
+	path=("", "backups.dump", "Folder to save pg_dump toa")
+):
+	env = {
+		"PGHOST": config.db.host,
+		"PGPORT": str(config.db.port),
+		"PGUSER": config.db.user,
+		"PGPASSWORD": config.db.password,
+		"PGDATABASE": config.db.database_name
+	}
+	cmd = [
+		"pg_dump",
+		f"--schema={db.Backup.__table_args__['schema']}",
+		"--format=d",
+		f"--file={path}"
+	]
+	subprocess.check_call(cmd, env=env)
+	print(f"Backed up database to {path}")
+
 
 if __name__ == "__main__":
 	opster.dispatch()
