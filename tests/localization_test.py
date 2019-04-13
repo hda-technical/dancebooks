@@ -52,13 +52,8 @@ class LocalizationTest(unittest.TestCase):
 			)
 			for index, message in enumerate(message_list):
 				if message != first_message_list[index]:
-					logging.debug("Mismatch at position {index}. {first_locale} has {first_message}, {locale} has {message}".format(
-						index=index,
-						first_locale=first_locale,
-						first_message=first_message_list[index],
-						locale=locale,
-						message=message
-					))
+					first_message = first_message_list[index],
+					logging.debug(f"Mismatch at position {index}. {first_locale} has {first_message}, {locale} has {message}")
 					has_mismatches = True
 		self.assertFalse(has_mismatches)
 

@@ -147,9 +147,7 @@ def search_items(show_secrets):
 
 	order_by = flask.request.values.get("orderBy", const.DEFAULT_ORDER_BY)
 	if order_by not in config.www.order_by_keys:
-		flask.abort(http.client.BAD_REQUEST, "Key {order_by} is not supported for ordering".format(
-			order_by=order_by
-		))
+		flask.abort(http.client.BAD_REQUEST, f"Key {order_by} is not supported for ordering")
 
 	#if request_args is empty, we should render empty search form
 	if len(request_args) == 0:
@@ -187,7 +185,7 @@ def search_items(show_secrets):
 				if param_filter is not None:
 					searches.append(param_filter)
 	except Exception as ex:
-		flask.abort(http.client.BAD_REQUEST, "Some of the search parameters are wrong: {0}".format(ex))
+		flask.abort(http.client.BAD_REQUEST, f"Some of the search parameters are wrong: {ex}")
 
 	found_items = list(sorted(
 		filter(search.and_(searches), found_items),
@@ -209,9 +207,7 @@ def search_items(show_secrets):
 	else:
 		flask.abort(
 			http.client.BAD_REQUEST,
-			"Unsupported output format {format}".format(
-				format=format
-			)
+			f"Unsupported output format {format}"
 		)
 
 
@@ -222,7 +218,7 @@ def search_items(show_secrets):
 def get_book(book_id, show_secrets):
 	items = item_index["id"].get(book_id, None)
 	if items is None:
-		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(book_id=book_id))
+		flask.abort(http.client.NOT_FOUND, f"Book with id {book_id} was not found")
 
 	item = utils.first(items)
 	captcha_key = random.choice(list(config.www.secret_questions.keys()))
@@ -247,9 +243,7 @@ def get_book_pdf(book_id, index):
 
 	items = item_index["id"].get(book_id, None)
 	if items is None:
-		flask.abort(http.client.NOT_FOUND, "Book with id {book_id} was not found".format(
-			book_id=book_id
-		))
+		flask.abort(http.client.NOT_FOUND, f"Book with id {book_id} was not found")
 	item = utils.first(items)
 
 	request_uri = flask.request.path
@@ -261,24 +255,17 @@ def get_book_pdf(book_id, index):
 		utils.is_url_self_served(request_uri) and
 		index <= len(filenames)
 	)
-	utils_flask.require(is_url_valid, http.client.NOT_FOUND, "Book with id {book_id} is not available for download".format(
-		book_id=book_id
-	))
+	utils_flask.require(is_url_valid, http.client.NOT_FOUND, f"Book with id {book_id} is not available for download")
 
 	filename = filenames[index - 1]
 	pdf_full_path = os.path.join(config.www.elibrary_dir, filename)
 
 	if not os.path.isfile(pdf_full_path):
-		message = "Item {book_id} metadata is wrong: file for {requiest_uri} is missing".format(
-			book_id=book_id,
-			rel_url=request_uri
-		)
+		message = f"Item {book_id} metadata is wrong: file for {request_uri} is missing"
 		logging.error(message)
 		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
-	logging.info("Sending pdf file: {pdf_full_path}".format(
-		pdf_full_path=pdf_full_path
-	))
+	logging.info(f"Sending pdf file: {pdf_full_path}")
 	if config.unittest_mode:
 		#using send_file in unittest mode causes ResourceWarning due to unclosed file
 		response = flask.make_response("SOME_BINARY_PDF_LIKE_DATA")
@@ -302,7 +289,7 @@ def get_book_markdown(item_id):
 	if items is None:
 		flask.abort(
 			http.client.NOT_FOUND,
-			"Item with id {item_id} was not found".format(item_id=item_id)
+			f"Item with id {item_id} was not found"
 		)
 
 	item = utils.first(items)
@@ -310,9 +297,7 @@ def get_book_markdown(item_id):
 	if transcription is None:
 		flask.abort(
 			http.client.NOT_FOUND,
-			"Transcription for item {item_id} is not available".format(
-				item_id=item_id
-			)
+			f"Transcription for item {item_id} is not available"
 		)
 
 	markdown_file = os.path.join(
@@ -334,7 +319,7 @@ def edit_book(book_id):
 	items = item_index["id"].get(book_id, None)
 
 	if items is None:
-		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
+		flask.abort(http.client.NOT_FOUND, f"Book with id {id} was not found")
 
 	message = utils_flask.extract_string_from_request("message")
 	from_name = utils_flask.extract_string_from_request("name")
@@ -358,7 +343,7 @@ def edit_book_keywords(book_id):
 	items = item_index["id"].get(book_id, None)
 
 	if items is None:
-		flask.abort(http.client.NOT_FOUND, "Book with id {id} was not found".format(id=id))
+		flask.abort(http.client.NOT_FOUND, f"Book with id {id} was not found")
 
 	suggested_keywords = utils_flask.extract_keywords_from_request("keywords")
 	from_name = utils_flask.extract_string_from_request("name")
@@ -416,9 +401,7 @@ def get_options():
 @utils_flask.log_exceptions()
 def rss_redirect():
 	lang = get_locale()
-	return flask.redirect("/rss/{lang}/books".format(
-		lang=lang
-	))
+	return flask.redirect(f"/rss/{lang}/books")
 
 
 @flask_app.route("/rss/<string:lang>/books", methods=["GET"])

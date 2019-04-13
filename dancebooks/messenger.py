@@ -16,10 +16,7 @@ class BasicMessage(object):
 		self.book = book
 		self.from_addr = from_addr
 		self.from_name = from_name
-		self.base_url="http://{app_domain}{book_prefix}".format(
-			app_domain=config.www.app_domain,
-			book_prefix="/books"
-		)
+		self.base_url = f"http://{config.www.app_domain}/books"
 
 	def send(self):
 		msg = email.mime.text.MIMEText(str(self), "html")
@@ -71,7 +68,7 @@ class ErrorReport(BasicMessage):
 		)
 
 	def subject(self):
-		return "dancebooks: Error reports for {id}".format(id=self.book.id())
+		return f"dancebooks: Error reports for {self.book.id()}"
 
 
 class KeywordsSuggest(BasicMessage):
@@ -90,5 +87,5 @@ class KeywordsSuggest(BasicMessage):
 		)
 
 	def subject(self):
-		return "dancebooks: Keywords suggestion for {id}".format(id=self.book.id())
+		return f"dancebooks: Keywords suggestion for {self.book.id()}"
 

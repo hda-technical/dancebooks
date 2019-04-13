@@ -185,9 +185,7 @@ def search_for(key, value):
 		#should be checked on the very first place
 		if key in config.parser.bool_params:
 			if value not in {"true", "false"}:
-				raise ValueError("Boolean value for {key} expected".format(
-					key=key
-				))
+				raise ValueError(f"Boolean value for {key} expected")
 			return search_for_key_presence(key, (value == "true"))
 
 		elif key in config.parser.list_params:

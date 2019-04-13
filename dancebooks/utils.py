@@ -108,9 +108,7 @@ def extract_metadata_from_file(path):
 	basename = os.path.basename(path)
 	match = const.FILENAME_REGEXP.match(basename)
 	if not match:
-		raise ValueError("Filename {basename} does not match FILENAME_REGEXP".format(
-			basename=basename
-		))
+		raise ValueError(f"Filename {basename} does not match FILENAME_REGEXP")
 
 	year = match.group("year")
 	year_from = int(year.replace("-", "0"))
@@ -243,24 +241,17 @@ def get_file_info_from_url(url, item):
 	match = SELF_SERVED_URL_REGEXP.match(url)
 	require(
 		match,
-		ValueError("Received url ({url}) doesn't match SELF_SERVED_URL_REGEXP".format(
-			url=url
-		))
+		ValueError(f"Received url ({url}) doesn't match SELF_SERVED_URL_REGEXP")
 	)
 	extracted_id = match.group("item_id")
 	extracted_index = int(match.group("pdf_index")) - 1
 	require(
 		extracted_id == item.id(),
-		ValueError("Extracted item_id ({extracted}) doesn't match item id ({received}".format(
-			extracted=extracted_id,
-			received=item.id()
-		))
+		ValueError(f"Extracted item_id ({extracted_id}) doesn't match item id ({item.id()}")
 	)
 	require(
 		(extracted_index >= 0) and (extracted_index < len(item.get("filename"))),
-		ValueError("Extracted pdf index ({extracted_index}) isn't in filename list boundaries".format(
-			extracted_index=extracted_index
-		))
+		ValueError(f"Extracted pdf index ({extracted_index}) isn't in filename list boundaries")
 	)
 	return (
 		item.get("filename")[extracted_index],
@@ -288,9 +279,7 @@ def is_url_valid(url, item):
 	#validating blocked domains
 	for blocked_domain in config.parser.blocked_domains:
 		if split_result.hostname.endswith(blocked_domain):
-			logging.debug("Domain {hostname} is blocked".format(
-				hostname=split_result.hostname
-			))
+			logging.debug(f"Domain {split_result.hostname} is blocked")
 			return False
 
 	#validating domains blocked for insecure (http) access
@@ -298,9 +287,7 @@ def is_url_valid(url, item):
 		(split_result.hostname in config.parser.blocked_domains_http) and
 		(split_result.scheme == "http")
 	):
-		logging.debug("Domain {hostname} is blocked for insecure access".format(
-			hostname=split_result.hostname
-		))
+		logging.debug(f"Domain {split_result.hostname} is blocked for insecure access")
 		return False
 
 	return True
@@ -327,7 +314,7 @@ def is_url_accessible(url, item, method="HEAD"):
 			elif method == "GET":
 				response = requests.get(url, allow_redirects=False, verify=True, headers=HEADERS)
 			else:
-				raise ValueError("Unexpected method {method}".format(method=method))
+				raise ValueError(f"Unexpected method {method}")
 			if response.status_code not in (
 				http.client.INTERNAL_SERVER_ERROR,
 				http.client.SERVICE_UNAVAILABLE
@@ -336,10 +323,7 @@ def is_url_accessible(url, item, method="HEAD"):
 				#retrying in
 				break
 	except Exception as ex:
-		logging.debug("HTTP request for {url} raised an exception: {ex}".format(
-			url=url,
-			ex=ex
-		))
+		logging.debug(f"HTTP request for {url} raised an exception: {ex!r}")
 		return False
 	if (
 		# some libraries (e. g. lib.ugent.be return strange errors for HEAD requests
@@ -359,11 +343,7 @@ def is_url_accessible(url, item, method="HEAD"):
 		)
 	)
 	if not is_valid:
-		logging.debug("HTTP request for {url} returned code {code}: {reason}".format(
-			url=url,
-			code=response.status_code,
-			reason=response.reason
-		))
+		logging.debug(f"HTTP request for {url} returned code {response.status_code}: {response.reason}")
 		return False
 
 	return True
@@ -376,7 +356,7 @@ def parse_year(year):
 	"""
 	match = YEAR_REGEXP.match(year)
 	if not match:
-		raise ValueError("Failed to parse year {year}".format(year=year))
+		raise ValueError(f"Failed to parse year {year}")
 
 	year_from = match.group("year_from")
 	year_from = int(year_from)
@@ -437,18 +417,16 @@ def extract_parent_keyword(keyword):
 	return keyword
 
 
-def pretty_print_file_size(size_value):
+def pretty_print_file_size(size):
 	"""
 	Returns string containing pretty printed file size
 	"""
-	size_unit_index = 0
-	while (size_value > const.FILE_SIZE_EXPONENT):
-		size_unit_index += 1
-		size_value /= const.FILE_SIZE_EXPONENT
-	return "{size:0.1f} {unit}".format(
-		size=size_value,
-		unit=const.FILE_SIZE_UNITS[size_unit_index]
-	)
+	unit_index = 0
+	while (size > const.FILE_SIZE_EXPONENT):
+		unit_index += 1
+		size /= const.FILE_SIZE_EXPONENT
+	unit = const.FILE_SIZE_UNITS[unit_index]
+	return f"{size:0.1f} {unit}"
 
 
 def isfile_case_sensitive(abspath):
@@ -546,7 +524,7 @@ class MarkdownCite(markdown.inlinepatterns.Pattern):
 	def handleMatch(self, m):
 		a = markdown.util.etree.Element("a")
 		id = m.group("id")
-		a.set("href", "/books/{id}".format(id=id))
+		a.set("href", f"/books/{id}")
 		item = first(self._index["id"][id])
 		a.text = item.get("cite_label")
 		return a
@@ -647,18 +625,18 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 				raw_footnote = raw_block[start_pos + len(self.START):end_pos]
 			else:
 				# No ending mark in this block.
-				# Continue with popping next blocks 
+				# Continue with popping next blocks
 				raw_footnote = self.looseDetab(raw_block[start_pos + self.START_MARK_LENGTH:])
 				while (
 					blocks and
 					end_pos == -1 and
 					# check the start of the block in order
-					# to stop on the first detabbeb block 
+					# to stop on the first detabbeb block
 					# instead of breaking the whole markup if single block is wrong
 					(blocks[0].startswith('\t') or blocks[0].startswith(' ' * self.tab_length))
 				):
 					# footnote is split across several blocks
-					# looking for the ending mark 
+					# looking for the ending mark
 					raw_block = blocks.pop(0)
 					end_pos = raw_block.find(self.END)
 					#Restore block structure which was lost during blocks parsing
@@ -685,17 +663,17 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		converted_note = self._markdown.convert(footnote_string)
 		# adding current footnote number to the first tag of converted footnote
 		converted_note = converted_note.replace('>', '>' + str(self._next_note_number) + ". ", 1)
-		
-		#WARN: 
-		#    Removing line breaks from converted note 
+
+		#WARN:
+		#    Removing line breaks from converted note
 		#    in order to place entire footnote into singlge markdown block.
-		#    At the time (Markdown=2.6.11) the following markup 
+		#    At the time (Markdown=2.6.11) the following markup
 		#    is being parsed into two blocks (one header, one text):
 		#	 ```
 		#    ### Test header
 		#    test text
 		converted_note = converted_note.replace('\n', '')
-		
+
 		for tag in self.FOOTNOTE_TAGS:
 			#block elements are not allowed inside <p> elements
 			#replacing them with span with corresponding classes
@@ -705,14 +683,8 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 				.replace("</" + tag + ">", "</span>")
 
 		raw_html = (
-			"<span class='{CSS_CLASS_NOTE_ANCHOR}'>{next_note_number}</span>".format(
-				CSS_CLASS_NOTE_ANCHOR=const.CSS_CLASS_NOTE_ANCHOR,
-				next_note_number=self._next_note_number
-			) +
-			"<span class='{CSS_CLASS_NOTE}'>{converted_note}</span>".format(
-				CSS_CLASS_NOTE=const.CSS_CLASS_NOTE,
-				converted_note=converted_note
-			)
+			f"<span class='{const.CSS_CLASS_NOTE_ANCHOR}'>{self._next_note_number}</span>"
+			f"<span class='{const.CSS_CLASS_NOTE}'>{converted_note}</span>"
 		)
 		self._next_note_number += 1
 		return raw_html
@@ -749,11 +721,8 @@ def make_cite_label(item):
 			postfix = "и др."
 		else:
 			postfix = "et al."
-		return "[{surnames}, {postfix}, {year}]".format(
-				surnames=", ".join(map(get_last_name, author[0:const.MAX_AUTHORS_IN_CITE_LABEL])),
-				postfix=postfix,
-				year=year
-			)
+		surnames=", ".join(map(get_last_name, author[0:const.MAX_AUTHORS_IN_CITE_LABEL])),
+		return f"[{surnames}, {postfix}, {year}]"
 
 
 def make_html_cite(item):

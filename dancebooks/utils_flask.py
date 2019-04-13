@@ -61,10 +61,9 @@ def check_id_redirections(param_name):
 			old_id = kwargs[param_name]
 			if old_id in config.www.id_redirections:
 				new_id = config.www.id_redirections[old_id]
-				new_url = re.sub(
-					r"\/{old_id}".format(old_id=old_id),
-					r"/{new_id}".format(new_id=new_id),
-					flask.request.url
+				new_url = flask.request.url.replace(
+					"/" + old_id,
+					"/" + new_id
 				)
 				return flask.redirect(
 					new_url,
@@ -123,9 +122,7 @@ def log_exceptions():
 			try:
 				return func(*args, **kwargs)
 			except Exception as ex:
-				logging.exception("Exception occurred: {ex}".format(
-					ex=ex
-				))
+				logging.exception(f"Exception occurred: {ex!r}")
 				raise
 		return wrapper
 	return real_decorator
@@ -238,9 +235,7 @@ def translate_wrong_error(key):
 
 
 def translate_month(month):
-	return flask_babel.gettext(const.BABEL_MONTH_PREFIX + "{month:02}".format(
-		month=month
-	))
+	return flask_babel.gettext(const.BABEL_MONTH_PREFIX + f"{month:02d}")
 
 
 def format_date(item):

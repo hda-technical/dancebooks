@@ -48,9 +48,7 @@ class TestHandlers(unittest.TestCase):
 		self.assertTrue("Set-Cookie" in rq.headers)
 
 		for book_id in BOOK_IDS:
-			logging.debug("Requesting book: {book_id}".format(
-				book_id=book_id
-			))
+			logging.debug(f"Requesting book: {book_id}")
 			rq = self.client.get(
 				"/books/" + book_id,
 				follow_redirects=True

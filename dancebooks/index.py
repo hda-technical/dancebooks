@@ -24,11 +24,7 @@ class Index(object):
 				(index_param in config.www.index_unique_params) and
 				(value in subindex)
 			):
-				logging.error("Value {value} is not unique for unique index by {index_param}".format(
-					value=value,
-					index_param=index_param
-				))
-
+				logging.error(f"Value {value} is not unique for unique index by {index_param}")
 
 		def append_to_subindex(subindex, item, index_param, value):
 			"""

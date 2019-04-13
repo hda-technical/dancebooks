@@ -132,9 +132,6 @@ class BibItem(object):
 	def note(self):
 		return self.get_as_string("note")
 
-	def note(self):
-		return self.get_as_string("note")
-
 	def added_on(self):
 		return self.get_as_string("added_on")
 
@@ -178,10 +175,7 @@ class BibItem(object):
 
 	def set(self, key, value):
 		if key in self._params:
-			raise RuntimeError("Can't set the parameter '{key}' twice for item {id}".format(
-				key=key,
-				id=self._params.get("id", None)
-			))
+			raise RuntimeError(f"Can't set {key} twice for item {self.id()}")
 		self._params[key] = value
 		#TODO: move to finalize_item()
 		self._params["all_fields"] += BibItem.value_to_string(value, "")
@@ -254,11 +248,7 @@ class BibParser(object):
 		"""
 		Raises human-readable Exception based on parser state and current file position
 		"""
-		raise ValueError("In state={state}: wrong syntax at (line {line}, #{char})".format(
-			state=self.state,
-			line=self.line,
-			char=self.char
-		))
+		raise ValueError(f"In state={self.state}: wrong syntax at (line {self.line}, #{self.char})")
 
 	def set_item_param(self, item, key, value):
 		"""
@@ -275,7 +265,7 @@ class BibParser(object):
 					if os.path.isfile(abspath):
 						filesize_value.append(os.path.getsize(abspath))
 					else:
-						logging.warn("File is not accessible: {0}".format(abspath))
+						logging.warn(f"File is not accessible: {abspath}")
 						filesize_value.append(0)
 				item.set(const.FILE_SIZE_PARAM, filesize_value)
 			elif key in config.parser.keyword_list_params:
@@ -342,14 +332,12 @@ class BibParser(object):
 			source_file = os.path.basename(path)
 			items = self._parse_string(data)
 			for item in items:
+				source_line = item.get("source_line")
 				self.set_item_param(item, "source_file", source_file)
-				self.set_item_param(item, "source", "{source_file}:{source_line:04d}".format(
-					source_file=source_file,
-					source_line=item.get("source_line"))
-				)
+				self.set_item_param(item, "source", f"{source_file}:{source_line:04d}")
 			return items
 		except Exception as ex:
-			raise Exception("While parsing {0}: {1}".format(path, ex))
+			raise Exception(f"While parsing {path}: {ex!r}")
 
 	def _parse_string(self, data):
 		"""
