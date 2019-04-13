@@ -900,7 +900,7 @@ def validate_backups():
 		backup_id = metadatum["id"]
 		full_path = os.path.join(config.www.backup_dir, metadatum["path"])
 		if not os.path.exists(full_path):
-			logging.warn(f"Backup #{backup_id} at {full_path} does not exists")
+			logging.warn(f"Backup #{backup_id} at '{full_path}' does not exists")
 
 	POSSIBLE_BACKUP_EXTENSIONS = [".pdf", ".tif"]
 	strange_backups_number = 0

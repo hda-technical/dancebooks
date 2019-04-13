@@ -4,7 +4,7 @@ import re
 #Two-letter country codes mapped to list of corresponding langid
 #
 #Most of the codes are defined in `ISO 3166-1 alpha-2` standard.
-#See: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 
+#See: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 SHORT_LANG_MAP = {
 	"ar": ["spanish"],
 	"at": ["german", "french"],
@@ -221,3 +221,5 @@ CSS_CLASS_STRIKETHROUGH = "strikethrough"
 CSS_CLASS_PAGE_NUMBER = "page_number"
 CSS_CLASS_NOTE = "note"
 CSS_CLASS_NOTE_ANCHOR = "note_anchor"
+
+SIZE_DELIMETER = "x"

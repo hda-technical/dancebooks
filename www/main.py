@@ -443,7 +443,7 @@ def get_books_rss(lang):
 def get_backups():
 	format = utils_flask.extract_string_from_request("format", default="html")
 	with db.make_transaction() as session:
-		backups = session.query(db.Backup).all()
+		backups = session.query(db.Backup).order_by(db.Backup.id).all()
 	if format == "html":
 		return flask.render_template("backups.html", backups=backups)
 		pass
