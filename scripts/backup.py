@@ -12,12 +12,38 @@ from dancebooks import const
 from dancebooks import db
 
 NOT_DEFINED = "NOT_DEFINED"
+SIZE_FORMAT = f"W{const.SIZE_DELIMETER}H"
 
 @opster.command()
-def add(
-	path=("", "", "Backup path")
-):
-	raise NotImplementedError()
+def add():
+	backup = db.Backup()
+	backup.path = input("Enter path: ")
+	expected_pdf_path = os.path.join(
+		config.www.elibrary_dir,
+		backup.path + ".pdf"
+	)
+	if not os.path.isfile(expected_pdf_path):
+		print("Original file for this backup was not found in elibrary")
+		sys.exit(1)
+
+	backup.provenance = input("Enter provenance (markdown supported): ")
+	backup.aspect_ratio_x, backup.aspect_ratio_y = map(
+		int,
+		input(f"Enter aspect ratio ({SIZE_FORMAT}): ").split(const.SIZE_DELIMETER)
+	)
+	backup.image_size_x, backup.image_size_y = map(
+		int,
+		input(f"Enter image size ({SIZE_FORMAT}): ").split(const.SIZE_DELIMETER)
+	)
+	backup.note = input("Enter note (markdown supported): ")
+	if backup.note and backup.note[-1] != '.':
+		print("The note must end with a dot.")
+		sys.exit(1)
+
+	with db.make_transaction() as session:
+		session.add(backup)
+		session.commit()
+		print(f"Added backup #{backup.id}")
 
 
 @opster.command()
@@ -44,8 +70,8 @@ def update(
 	path=("", NOT_DEFINED, "Set backup path to the given value"),
 	provenance=("", NOT_DEFINED, "Set backup provenance to the given value (markdown supported)"),
 	note=("", NOT_DEFINED, "Set backup note to the given value (markdown supported)"),
-	image_size=("", NOT_DEFINED, "Set backup image size to the given value (WxH)"),
-	aspect_ratio=("", NOT_DEFINED, "Set backup image aspect ratio to the given value (WxH)")
+	image_size=("", NOT_DEFINED, f"Set backup image size to the given value ({SIZE_FORMAT})"),
+	aspect_ratio=("", NOT_DEFINED, f"Set backup image aspect ratio to the given value ({SIZE_FORMAT})")
 ):
 	if id == 0:
 		print("Backup id is required")
@@ -74,6 +100,23 @@ def update(
 			print("Updated successfully")
 		else:
 			print("Nothing to modify")
+
+
+@opster.command()
+def delete(
+	id=("", 0, "Id of the backup to be deleted")
+):
+	if id == 0:
+		print("Backup id is required")
+		sys.exit(1)
+	with db.make_transaction() as session:
+		backup = session.query(db.Backup).get(id)
+		print(f"You are going to delete backup #{id} at '{backup.path}'")
+		confirmation = input("Type YES to continue: ")
+		if confirmation == "YES":
+			session.delete(backup)
+			session.commit()
+			print(f"Backup #{id} was deleted")
 
 
 @opster.command()
