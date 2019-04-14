@@ -18,6 +18,8 @@ SIZE_FORMAT = f"W{const.SIZE_DELIMETER}H"
 def add():
 	backup = db.Backup()
 	backup.path = input("Enter path: ")
+	# Fixing Windows-style paths
+	backup.path = backup.path.replace('\\', '/')
 	expected_pdf_path = os.path.join(
 		config.www.elibrary_dir,
 		backup.path + ".pdf"
