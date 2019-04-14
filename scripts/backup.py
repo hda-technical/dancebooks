@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import datetime
 import os
 import subprocess
 import sys
@@ -125,6 +126,7 @@ def delete(
 def make_dump(
 	path=("", "backups.dump", "Folder to save pg_dump toa")
 ):
+	output_folder = datetime.date.today().isoformat()
 	env = {
 		"PGHOST": config.db.host,
 		"PGPORT": str(config.db.port),
@@ -136,7 +138,7 @@ def make_dump(
 		"pg_dump",
 		f"--schema={db.Backup.__table_args__['schema']}",
 		"--format=d",
-		f"--file={path}"
+		f"--file={output_folder}"
 	]
 	subprocess.check_call(cmd, env=env)
 	print(f"Backed up database to {path}")
