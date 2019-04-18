@@ -829,7 +829,7 @@ def britishLibraryBook(
 	"""
 	output_folder = make_output_folder("bl", id)
 	manifest_url = f"https://api.bl.uk/metadata/iiif/ark:/81055/{id}.0x000001/manifest.json"
-	download_book_from_iiif(manifest_url, output_folder)
+	download_book_from_iiif_fast(manifest_url, output_folder)
 
 
 class DeepZoomUrlMaker(object):
