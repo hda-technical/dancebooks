@@ -62,7 +62,7 @@ def get(
 		print(f"Provenance:\n{backup.provenance}")
 		print(f"Note:\n{backup.note}")
 		print(f"Image size: {backup.image_size_x}{const.SIZE_DELIMETER}{backup.image_size_y}")
-		print(f"Aspect ration: {backup.aspect_ratio_x}{const.SIZE_DELIMETER}{backup.aspect_ratio_y}")
+		print(f"Aspect ratio: {backup.aspect_ratio_x}{const.SIZE_DELIMETER}{backup.aspect_ratio_y}")
 
 
 @opster.command()
