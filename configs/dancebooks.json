@@ -92,10 +92,11 @@
             "books.google.com",
             "digi.vatlib.it",
             "gallica.bnf.fr",
+			"haab-digital.klassik-stiftung.de",
             "nbn-resolving.de",
             "polona.pl",
             "www.loc.gov",
-            "www.vwml.org"
+            "www.vwml.org",
         ],
         "domains_allowed_301": [
             "digitalarchive.wm.edu",

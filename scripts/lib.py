@@ -597,9 +597,10 @@ def uniDuesseldorf(
 			self.page = page
 
 		def __call__(self, tile_x, tile_y):
-			# Some unknown number with unspecified purpose
-			# It can change from item to item
-			UNKNOWN_NUMBER=1862
+			# Some unknown number with unspecified purpose.
+			# It can change from item to item if looked in web browser console,
+			# yet looks like it does not have any effect of the resulting image.
+			UNKNOWN_NUMBER = 1862
 			return f"http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/{UNKNOWN_NUMBER}/1.0.0/{page}/{ZOOM}/{tile_x}/{tile_y}.jpg"
 
 	first = int(first)
@@ -1163,7 +1164,7 @@ def haab(
 	Downloads book from https://haab-digital.klassik-stiftung.de/
 	"""
 	def make_url(page):
-		return f"https://haab-digital.klassik-stiftung.de/viewer/rest/image/{id}_{page:04d}.tif/full/10000,10000/0/default.jpg"
+		return f"https://haab-digital.klassik-stiftung.de/viewer/rest/image/{id}_{page:04d}.tif/full/full/0/default.jpg"
 	output_folder = make_output_folder("haab", id)
 	page = 0
 	# HAAB server returns 403 for non-existing pages. First,
