@@ -77,6 +77,8 @@
             "catalogue.bnf.fr",
             "dhds.org.uk",
             "dlib.rsl.ru",
+            //use nbn-resolving.de permalinks instead
+			"haab-digital.klassik-stiftung.de",
             "hdl.loc.gov",
             "mirrorland.rpg.ru",
             //use nbn-resolving.de permalinks instead
@@ -92,7 +94,6 @@
             "books.google.com",
             "digi.vatlib.it",
             "gallica.bnf.fr",
-			"haab-digital.klassik-stiftung.de",
             "nbn-resolving.de",
             "polona.pl",
             "www.loc.gov",
