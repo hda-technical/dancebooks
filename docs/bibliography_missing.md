@@ -529,6 +529,7 @@ _This part of the list is to joined with the general table_
 | 1540–1560? | | Tuscan Manuscript<br/>_Cited as “Tuscan balli” by Barbara Sparti_<br/>_Dated by Barbara Sparti_ | Firenze, Biblioteca nazionale centrale | `Magliabecchiana XIX. 31` | `[Corti, 1977]`<br/>`[Sparti, 1996]`<br/>`[Sparti, 2004]`<br/>`[Transcriptions]` | |
 | 1559 | Christiano Lamberti | Letter with La caccia<br/>_Dated April 15, 1559_ | Firenze, Archivio di stato | `Carte Strozziane, I. 22, f. 138r-140v` | `[Corti, 1977]`<br/>`[Sparti,1996]`<br/>`[Sparti, 2004]`<br/>`[4. Rothenfelser]`<br/>`[Transcriptions]` | |
 | 1564–1575 | | Chigi Codex<br/>Dated before 1581 by Barbara Sparti | Vatican, Biblioteca Vaticana | `Chigi Codex S. V. 6 (3)`<br/>folios 24r–33v<br/>`Chigiana, C. VIII. 234` | `[Sparti, 2004]`<br/>`[4. Rothenfelser]`<br/>`[Transcriptions]` | |
+| 1570–1580? | | | Dulwich College, London | `Ms. XCIV/f.28` | [[Daye, Thorp, 2018]](https://bib.hda.org.ru/books/daye_2018_measures) | |
 | 1580 | | Martel d'amore. Baletto di Lione Tolosa hebreo fatto in concerto da quattro cavalieri et da quattro dame | Modena, Biblioteca Estense | `Alpha K.2.14 (Ital. 1707)`<br/>folio 33 | [[Bosi, 2005]](https://bib.hda.org.ru/books/bosi_2005_duchessa)<br/>`[Transcriptions]` | |
 | 1575–1625 | | Anonymous and untitled folios in the collection of items by J. Stowe | London, British Library | `Harleian 367`<br/>folios 178-179 | `[Lindahl]` | |
 | 1594 | John Willoughbye | The olde Measures | Taunton, Somerset Record Office | `DD/WO 55/7, item 36` | `[Lindahl]` | |
