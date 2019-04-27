@@ -709,14 +709,14 @@ def make_cite_label(item):
 		return f"[{shorthand}, {year}]"
 	elif len(author) <= const.MAX_AUTHORS_IN_CITE_LABEL:
 		### WARN: this code doesn't process repeated surnames in any way
-		surnames=", ".join(map(get_last_name, author)),
+		surnames = ", ".join(map(get_last_name, author))
 		return f"[{surnames}, {year}]"
 	else:
 		if langid == "russian":
 			postfix = "и др."
 		else:
 			postfix = "et al."
-		surnames=", ".join(map(get_last_name, author[0:const.MAX_AUTHORS_IN_CITE_LABEL])),
+		surnames = ", ".join(map(get_last_name, author[0:const.MAX_AUTHORS_IN_CITE_LABEL]))
 		return f"[{surnames}, {postfix}, {year}]"
 
 
