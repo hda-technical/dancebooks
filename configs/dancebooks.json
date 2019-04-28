@@ -78,7 +78,7 @@
             "dhds.org.uk",
             "dlib.rsl.ru",
             //use nbn-resolving.de permalinks instead
-			"haab-digital.klassik-stiftung.de",
+            "haab-digital.klassik-stiftung.de",
             "hdl.loc.gov",
             "mirrorland.rpg.ru",
             //use nbn-resolving.de permalinks instead
@@ -515,8 +515,9 @@
             "burchenal_1918": "burchenal_1918_american",
             "ambrogio_1471_ital_476": "ambrosio_1471_ital_476",
             "hart_1820": "hart_1820_lancers",
+            "malpied_1781_traite": "malpied_1785_traite",
             "egan_1819": "",
-            "ware_1909": ""
+            "ware_1909": "",
         }
     }
 }
