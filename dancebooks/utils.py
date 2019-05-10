@@ -525,7 +525,11 @@ class MarkdownCite(markdown.inlinepatterns.Pattern):
 		a = markdown.util.etree.Element("a")
 		id = m.group("id")
 		a.set("href", f"/books/{id}")
-		item = first(self._index["id"][id])
+		try:
+			item = first(self._index["id"][id])
+		except StopIteration as ex:
+			logging.error(f"Could not find index entry for id={id}")
+			raise
 		a.text = item.get("cite_label")
 		return a
 
