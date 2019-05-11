@@ -15,19 +15,23 @@ from dancebooks import db
 NOT_DEFINED = "NOT_DEFINED"
 SIZE_FORMAT = f"W{const.SIZE_DELIMETER}H"
 
+def fixup_path(path):
+	# Fixing Windows-style paths
+	path = path.replace('\\', '/')
+	expected_pdf_path = os.path.join(
+	    config.www.elibrary_dir,
+	    path + ".pdf"
+	)
+	if os.path.isfile(expected_pdf_path):
+		return path
+	raise ValueError("Original file for this backup was not found in elibrary")
+
+
 @opster.command()
 def add():
 	backup = db.Backup()
 	backup.path = input("Enter path: ")
-	# Fixing Windows-style paths
-	backup.path = backup.path.replace('\\', '/')
-	expected_pdf_path = os.path.join(
-		config.www.elibrary_dir,
-		backup.path + ".pdf"
-	)
-	if not os.path.isfile(expected_pdf_path):
-		print("Original file for this backup was not found in elibrary")
-		sys.exit(1)
+	backup.path = fixup_path(backup.path)
 
 	backup.provenance = input("Enter provenance (markdown supported): ")
 	backup.aspect_ratio_x, backup.aspect_ratio_y = map(
@@ -83,7 +87,7 @@ def update(
 		backup = session.query(db.Backup).get(id)
 		modified = False
 		if path != NOT_DEFINED:
-			backup.path = path
+			backup.path = fixup_path(path)
 			modified = True
 		if provenance != NOT_DEFINED:
 			backup.provenance = provenance
