@@ -95,6 +95,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1775 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement #1](https://books.google.com/books?id=QPdLAAAAcAAJ&pg=RA2-PA27)<br/>[Advertisement 32](https://books.google.com/books?id=rm9bAAAAcAAJ&pg=PT6) | |
 | 1776 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=NwxcAAAAcAAJ&pg=PA434) | |
 | 1776 | Carl Joseph von Feldtenstein | Erweiterung der Kunst nach der Chorographie zu Tanzen<br/>_Zweyter theil_<br/>_Published in Braunschweig_ | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=236812041) |
+| after 1776 | Welch | Minuet de la cour | `[Russell, 2007]` | |
 | 1777 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1777 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=639LAAAAcAAJ&pg=PA215) | |
 | 1781 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=DsNFAAAAcAAJ&pg=PA96) | |
@@ -276,6 +277,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1844–1860? | Johann Raab<br/>Maximilien Gorski<br/>Mieczyslaw Hlasko | Wiener Tanzschule. III Band. Inhalt: Körtanz und Mazur mit Choreographie und Nationalmusik | `[Unfried, 2014]`<br/>`[Katalog, 1894]` | |
 | 1844–1860? | Johann Raab<br/>Maximilien Gorski<br/>Mieczyslaw Hlasko | Wiener Tanzschule. IV Band. Inhalt: L'Alliance und Mazur-Quadrille | `[Unfried, 2014]`<br/>`[Katalog, 1894]` | |
 | 1845 | Theodor Hentschke | Allgemeine Tanzkunst. Theorie und Geschichte antike und moderne (gesellschaftliche und theatratische) Tanzkunst und Schilderund der maisten National- ynd Charaktertänze | `[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Hentschke, 1836]](https://bib.hda.org.ru/books/hentshke_1836) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001673446)<br/>[Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=37324522X)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=37324522X) |
+| 1845 | Augustus Stafford O'Brien | A Treatise Concerning Minuets in General, and Concerning _Lady Jesrsey's Minuet_ in Particular | `[Russell, 2007]` | [UMASS](https://fcaw.library.umass.edu/F/?func=direct&doc_number=001564645&doc_library=FCL01) |
 | 1846 | David Bogue (publisher) | The Ball-room Preceptor and Polka Guide<br/>_Edition number is not known_ | `[Rogers, 1998]` | |
 | 1846–1852? | Johann Raab<br/>F. W. Swoboda | Concordia Quadrille | [Advertisement](https://books.google.com/books?id=zLwzAQAAIAAJ&pg=PA199) | |
 | 1846 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Unfried, 2014]` | |
@@ -283,6 +285,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1847 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_Published in Leipzig_ | [Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #06]` | |
 | 1847 | Eduard Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1848 | August Bournonville | Mit teaterliv: erindringer og tidsbilleder | `[2. Rothenfelser]` | |
+| 1848 | Suinglé | Petits Secrets in Dancing for the Use of Pupils<br/>_Published in Edinburgh by Andrew Murray_ | `[Russell, 2007]` | |
 | 1850? | Friedrich Gottermann | Die erste Contretanz-Quadrille (Francaise) und Quadrille à la cour (Les Lanciers). Ein Bücheln bei der Erlernung dieser Tänze<br/>_Published in Rostock_ | [Worldcat](http://www.worldcat.org/oclc/247855742) | |
 | 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1850–1860? | Jean Jacques | Tanz-Album oder der unerschöpfliche Maitre auf dem Ballsaal<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -330,6 +333,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1874 | Wilhelm Jerwitz | Der kleine Tanzmeister als Retter in der Noth. Zur Erinnerung des Erlernten<br/>_Published in Dresden_ | `[Klemm #03]`<br/>`[Klemm #06]` |
 | 1875 | Philippe Gawlikowski | Guide complet de la danse<br/>_Édition 4_<br/>_Published by Jules Taride_ | `[Klemm #06]` | |
 | 1875 | Jean Jacques | Der Maitre de plaisir beim Tanze. Sammlung neuester und beliebtester Tanz-Ordnungen<br/>_11. Auflage_ | `[Klemm #06]` | |
+| 1876 | Allen Dodworth | Minuet de la Cour. Steps, Movements and Figures<br/>_Published by Edward Hopkins in New York_ | `[Russell, 2007]` | |
 | 1879 | William B. de Garmo | The Dance of Society<br/>_Second edition_ | `[Leaflets]` | |
 | 188- | Александра Константиновна Буринская | Aidé-memoire с описанием танцев | [[Буринская, 1882, стр. 368]](https://bib.hda.org.ru/books/burinskaya_1882) |
 | 188- | Friedrich Albert Zorn | Die klassische Quadrille | `[Katalog, 1894]` | |
@@ -340,16 +344,22 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
 | 1882 | Константин Аполлонович Скальковский | Балет, его история и место в ряду изящных искусств | | [On sale, ₽15000](http://www.alib.ru/5_baletoman_skalnmnkovskij_k_balet_ego_istoriya_i_mesto_v_ryadu_izyawnyh_iskusstv_w1t821d49b5553655f8fe16aa397fd5a52f287.html)<br/>[NLR](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS004565138&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU) |
+| 1882 | Charles Coote | Le minuet de la cour, Arranged for the Pianoforte | `[Russell, 2007]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004280118) |
+| 1883 | Gustave Desrat | Nouveau traité de la danse et du cotillon contenant la théorie et l'histoire des danses anciennes et modernes<br/>_Published by H. Delarue in Paris_ | `[Russell, 2007]` | |
+| 1884 | Charles Perin<br/>Laborde<br/>A. Milton | Le menuet de la cour, 1643, with All the Figures ... Explained | `[Russell, 2007]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004529203) |
+| after 1883 | | Petit manuel de la danse suivi des principales figures du cotillon | `[Russell, 2007]` | |
 | 1886?<br/>1902 | David Anderson | Ball-room Guide. New and Complete Edition | `[Guillard, 1989]` | |
 | 1886 | Wilhelm Jerwitz | Quadrillen Wegweiser | | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411479504) |
 | 1887, 1893 | Edmund Wallner | Polonaise, Contretanz, Cotillon: ein Tanz-Vademecum | `[Katalog, 1894]` | |
 | 1889 | Eduard Reisinger | Die Tanzkunst<br/>_3. Auflage_ | | |
+| 1889 | Désiré Vestris | Les danses d'autrefois, de la pavane à la gavotte | `[Russell, 2007]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb31567511b)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003783504) |
 | 189- | A. Handrl | Quadrille und Contretanz | `[Katalog, 1894]` | |
 | 189- | | Der kleine Tanzmeister. Unentbehrliches Hülfsbüchlein für Damen und Herren<br/>_6. Auflage_ | | [On sale, €88](https://www.abebooks.com/servlet/BookDetailsPL?bi=22684143266) |
 | 189- | Александр Александрович Царман | Лихой гусар. Мазурка | | |
+| 1890? | Robert Coote | How to Dance the Old Dances. A New Edition of Famous Ball Room Guide | `[Russel, 2007]`<br/>[[Coote, 1876]](https://bib.hda.org.ru/books/coote_1876_guide) | |
 | 1891 | Justino Dias Lima Soares | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_6th edition_ | | BNP |
 | 1891 | Max Beneke | Über Takt im Tanz | `[Klemm #06]` | |
-| 1892 | Amint Freising | Leitfaden für den Tanz-Unterricht | `[Unfried, 2014]`<br/>`[Klemm #06]` | |
+| 1892 | Amint Freising | Leitfaden für den Tanz-Unterricht | `[Unfried, 2014]`<br/>`[Klemm #06]`<br/>`[Russell, 2007]` | |
 | 1892 | Josef Herzenberger | Der Tanzsalon: Lehrbuch für den theoretischen und praktischen Tanzunterricht | `[Katalog, 1894]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524544810002884) |
 | 1892 | William B. de Garmo | The Dance of Society<br/>_5th edition_ | `[Leaflets]` | |
 | 1894 | Ardern Holt | The Cotillon. Details of All the Newest Figures with and without Accessories | `[Rogers, 1998]` | |
@@ -410,11 +420,13 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS006725710&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU)<br/>`SPTL: В 399` |
 | 1927 | В. Н. Гернгросс-Всеволодский | Крестьянский танец | `[Жбанкова, 2016]` | |
 | 1927 | Т. Бабаджан<br/>Агния Барто | Ритмические игры и постановки к 10 годовщине Октября | | [On sale, ₽5500](http://www.alib.ru/5_barto_agniya_ritmicheskie_igry_i_postanovki_k_10_godovwine_oktyabrya_w1t1986151614fd8beb7fbf7fa890a1e8efc33a.html) |
+| 1927–1929? | S. (Selma?) Jaffé | Der Tanz im Selbstunterricht | [Inhaltsverzeichnis](https://d-nb.info/580985733/04)<br/>`[Russell, 2007]` | [Worldcat] |
 | 1928 | Е. Малая<br/>В. Костюк | Танцевальные шаги и гимнастические танцы | `[Жбанкова, 2016]` | |
 | 1928 | Анна Михайловна Зеленко<br/>А. Гаврилов | Гулянье | `[Жбанкова, 2016]` | |
 | 1928 | Т. Бабаджан<br/>М. Раухвергер | 5 ритмических игр с предметами и состязаниями | | [On sale, ₽2000](http://www.alib.ru/5_babadzhan_t_5_ritmicheskih_igr_s_predmetami_i_sostyazaniyami_w1t1844df43d1ec1e5152604bbd6d0257f9ebba.html) |
 | 1928 | Валеска Герт | Программа вечера танца к гастролям в Ленинграде | | `SPTL: Г 400(А)` |
 | 1928 | Константин Сотонин | Система нотной записи движений человеческого тела | | [RSL](https://search.rsl.ru/ru/record/01009256420)<br/>`SPTL: С 675(Б)` |
+| 1929<br/>1963 (reprint) | Cyril W. Beaumont | A Bibliography of Dancing | `[Russell, 2007]` | |
 | 1930 | Viktor Junk | Handbuch des Tanzes<br/>Volkstänze | `[2. Rothenfelser]` | |
 | 1930 | Милица Евлампиевна Бурцева | Художественное движение | `[Жбанкова, 2016]` | |
 | 1930 | Милица Евлампиевна Бурцева | Методика проведения массовой пляски | `[Жбанкова, 2016]` | [RSL](https://search.rsl.ru/ru/record/01009016126)<br/>`SPTL: Б 917` |
@@ -562,7 +574,7 @@ _This part of the list is to joined with the general table_
 | 1793 | Asa Willcox | Asa Willcox’s Book of Figures | Chicago, Newberry Library | `VAULT Case MS V 168 .971` | [Transcription in [Willcox, 1918]](https://bib.hda.org.ru/books/willcox_1918) | [Chicago, Newberry LIbrary](https://webvoyage.carli.illinois.edu/nby/cgi-bin/Pwebrecon.cgi?DB=local&v1=1&BBRecID=771635) |
 | 1805? | | Let fortune's angry tempest blow | Cambridge, Cambridge University Library | `MS.Add.9004` |[RISM](http://www.rism.org.uk/manuscripts/116377) | |
 | 181- | J. Bröckl | 12 Tänze für Pianoforte | Москва, Российская государственная библиотека | `ОР 6/муз` | | [РГБ](http://search.rsl.ru/ru/record/01004832331) |
-| 1829–1830 | Arthur Saint-Léon | Cahiers d'exercices | Paris, Bibliothèque nationale de France | `Rés. 1137` | `[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb44003243k) |
+| 1829–1830 | Michel Saint-Léon | Cahiers d'exercices | Paris, Bibliothèque nationale de France | `Rés. 1137` | `[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb44003243k) |
 | 1841 | Frederick Hill | Frederick Hill's Book of Quadrilles and Country Dances | No details in Rogers. Richard? | | `[Rogers, 1998]` | |
 | 1851 | Thomas Wilson | Thomas Wilson Letter to the Royal Literary Fund with a Request of Financial Support | London, The British Library | | [[Cooper, #05]](https://www.regencydances.org/paper005.php) |
 | 19-- | Лешков | Рукопись по систематизации танцевальных учебников | Москва, Российская государственная библиотека | | | |
@@ -616,6 +628,7 @@ _This part of the list is to joined with the general table_
 | 2003 | `[Wilson, 2003]` | David R. Wilson | The Steps Used in Court Dancing in Fifteenth-century Italy, _3rd edition_ | https://bib.hda.org.ru/books/wilson_2003_steps |
 | 2004 | `[Wortelboer, 2004]` | Dorothée Wortelboer | La baroque. Dances for the Dutch Court c. 1765 | https://bib.hda.org.ru/books/wortelboer_2004 |
 | 2004 | `[Sparti, 2004]` | Barbara Sparti | Balli to Dance and Play in a Sixteenth-century Miscellany | [2004](https://bib.hda.org.ru/books/sparti_2004_balli), [2015](https://bib.hda.org.ru/books/sparti_2015_balli) |
+| 2007 | `[Russell, 2007]` | Tilden Russell, Dominique Bourassa | The minuet de la cour
 | 2008 | `[2. Rothenfelser]` | | 2. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2008 |
 | 2012 | `[3. Rothenfelser]` | | 3. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2012 |
 | 2012 | `[Yoko]` | Евгения Соленикова | | `Ancillary sources (not in bibliography)/Bibliographies of the others/Евгения Соленикова.ods` |
