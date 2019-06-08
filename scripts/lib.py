@@ -625,6 +625,18 @@ def uniDuesseldorf(
 
 
 @opster.command()
+def uniGoettingen(
+	id=("", "", "Id of the book to be downloaded (e. g. 'PPN722203519')")
+):
+	"""
+	Downloads book from https://gdz.sub.uni-goettingen.de
+	"""
+	manifest_url = f"https://manifests.sub.uni-goettingen.de/iiif/presentation/{id}/manifest"
+	output_folder = make_output_folder("goettingen", id)
+	download_book_from_iiif(manifest_url, output_folder)
+
+
+@opster.command()
 def encyclopedie(
 	volume=("", "", "Volume to be downloaded (e. g. '24')"),
 	page=("", "", "Page number to be downloaded (e. g. '247')")
