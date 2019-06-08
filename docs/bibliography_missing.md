@@ -39,6 +39,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1700 | Antoine Pointel (publisher) | Airs de danses angloises hollandoises et françoises à deux parties<br/>_Published in Amsterdam_ | `[3. Rothenfelser]` | |
 | 1700 | Louis Pécour | La nouvelle mariée | `[LOST?]`<br/>`LittleMarsh:*[1700]-Nmr` | |
 | 1703 | Samuel Rudolph Behr | 9 Choreographed Dances | `[LOST?]` | |
+| 1703 | Samuel Rudolph Behr | Curieuser Tantz-Informator, welchen durch angenehme Discurse, Deschreibung artigen Qualitäten mancher tantzenden Person in seiner Information sich darstellet | `[Germanorum, 1914]`<br/>[[Russell, 2017]](https://books.google.com/books?id=xUE7DwAAQBAJ&pg=PA54&dq=Curieuser+Tantz-Informator)<br/>[LOST?] | |
 | 1707 | Richard Nash | Bath. Rules Laid Down by Richard Nash, Esq., M. C., Put Up by Authority in the Pump Room, and Observed at Bath Assemblies During His Reign | [[Cooper, #25]](https://www.regencydances.org/paper025.php) | [Low resolution copy](https://www.bathintime.co.uk/catalog/product/view/id/26467) |
 | 1709 | Raoul-Auger Feuillet | Choregraphie ou l'art de d'écrire la dance<br/>_Looks like a misprint_ | `[2. Rothenfelser]`<br/>`[3. Rothenfelser]` | |
 | 1710? | Raoul-Auger Feuillet<br/>John Weaver (translator) | Orchesography, or the Art of Dancing<br/>_Looks like a misprint_ | `[2. Rothenfelser]` | |
@@ -67,6 +68,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1758 | Pablo Minguet e Yrol | Arte de danzar á la francesa, adornado con quarenta y tantas láminas que enseñan el modo de hacer todos los passos de las danzas de corte<br/>_Alternative copies_ | [[Yrol, 1758]](https://bib.hda.org.ru/books/yrol_1758_arte) | [BNF](http://catalogue.bnf.fr/ark:/12148/cb30950723j) |
 | 1758 | Thomas Cahusac | 24 Country Dances for the Year 1758 | [ABC notation](http://www.village-music-project.org.uk/?page_id=815) | |
 | 1759 | N. Gautier | XXIV contredances angloises mises à la porté de tout le monde | `[Wortelboer, 2004]`<br/>`[Leaflets]` | |
+| 1759 | Louis de Cahusac | Der alte und neue Tanz<br/>In: _Sammlung vermischter Schriften zur Beförderung der schönen Wissenschaften und der freyen Künste, bd. 1–2_ | `[Germanorum, 1914]` | [Worldcat]<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003237549) |
 | 176- | Jacob von Stählin | Nachrichten von der Tanzkunst und Balletten in Rußland | | [Google](https://books.google.com/books/?id=9RlMAAAAYAAJ) |
 | 176- | Thompson | Thirty Favourite Hornpipes Which Are Now in Vogue and Performed at the Public Theatres | `[2. Rothenfelser]` | |
 | 1762 | La Hante<br/>Perrin | Chorégraphie nouvelle, ou méthode pour former & danser soi-meme les contredanses | [Advertisement](https://books.google.com/books?id=C8pZAAAAcAAJ&pg=PA141)<br/>`[Nouveau manuel, 1857, #35]` | |
@@ -214,12 +216,13 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1823 | | La harpе du nord<br/>_Нужны тетради: 1823/07–12_ | | ИРЛИ РАН, №7, 8, 9, 10, 12<br/>NLR, `М 970-2/С.280`, (№ 8, 9, 12) |
 | 1823 | Jean Charles Louis Le Pitre | Vollständige Theorie der eleganten und höheren Tanzkunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1822–1825 | | Pieces detachees tirees du journal de musique "La harpe du nord" | | [RSL](http://search.rsl.ru/ru/record/01002068603) |
-| 1824 | C. Friedrich Engelmann | Die Kunst zu Walzen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1824 | C. Friedrich Engelmann | Die Kunst zu Walzen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1824 | Juan Ignacio de Iztueta | Guicuzpoaco dantza | `[Nouveau manuel, 1857, #60]` | [Gallica](http://gallica.bnf.fr/ark:/12148/bpt6k8894479/) |
 | 1824 | Thomas Wilson | Whitaker and Compy's Twenty Four Country Dances, for the Year 1824, Adapted for the Violin, German Flute or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004742496 |
 | 1824 | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the year 1824 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1825 | Joseph Binns Hart | Hart's Fifteenth Set of Quadrilles | | [archive.org](https://archive.org/details/Harts15thQuadrilles) |
 | 1825 | | Methodo facil de dançar as quadrilhas geralmente chamadas contradanças francesas | | BNP |
+| 1825 | C. Bencke | Taschenbuch der Tanzkunst | `[Germanorum, 1914]` | |
 | 1826 | Goulding | 24 Country Dances for the Year 1826 | [ABC notation](http://www.village-music-project.org.uk/?page_id=827) |
 | 1826? | Thomas Wilson | The Complete System of English Country Dancing<br/>_Second edition_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>Advertised in _The Morning Post_, 29th December 1826 | |
 | 1826–1827 | Mrs. Charles Wilson | The St. James's Quadrilles, or Wilson's 1st Set | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
@@ -255,7 +258,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1836 | Марцинкевич<br/>Матвей Иванович Бернард | Les graces. Кадриль | [Cite](http://search.rsl.ru/ru/record/01000265975) | |
 | 1837 | Luigi Bartolotti | Della danza domestica | `[Leaflets]` | |
 | 1838 | | A Manual of Private Ballroom Dancing | `[Guillard, 1989]` | |
-| 1838 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Klemm #03]`<br/>`[Klemm #06]` | [Giessen](https://opac.uni-giessen.de/DB=1/PPNSET?PPN=221521437)<br/>[Bayreth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0%3D%221648145%22+IN+%5B2%5D&v=sunrise&l=de)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UDK&search_scope=default_scope&docId=UDK_ALMA_DS21538878500002884&fn=permalink) |
+| 1838 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Giessen](https://opac.uni-giessen.de/DB=1/PPNSET?PPN=221521437)<br/>[Bayreth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0%3D%221648145%22+IN+%5B2%5D&v=sunrise&l=de)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UDK&search_scope=default_scope&docId=UDK_ALMA_DS21538878500002884&fn=permalink) |
 | 1839 | | Aux quatre lanciers, новый английский кадриль | [Advertisement](https://vivaldi.nlr.ru/pn000105706/view#page=3) | |
 | 1839 | Thomas Wilson | The Quadrille and Cotillon Panorama<br/>_Fouth edition_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 184- | Г. Грациеский | Полька в Киеве | [Cite](https://books.google.com/books?id=_HcLAQAAIAAJ&q=грациеский) | |
@@ -282,12 +285,12 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1846–1852? | Johann Raab<br/>F. W. Swoboda | Concordia Quadrille | [Advertisement](https://books.google.com/books?id=zLwzAQAAIAAJ&pg=PA199) | |
 | 1846 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Unfried, 2014]` | |
 | 1846 | Mieczyslaw Hlasko | Die Mazur (Polnischer Nationaltanz); gründlich und für Jedermann leicht faßlich beschrieben, mit Abbildung der Figuren und einer Nationalmusikversehen<br/>_Dated 1857 by Bernhard Klemm (different edition?)_ | `[3. Rothenfelser]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Google](https://books.google.com/books?id=gAVUHAAACAAJ) |
-| 1847 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_Published in Leipzig_ | [Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #06]` | |
-| 1847 | Eduard Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1847 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_Published by Gerhard in Leipzig_ | [Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #06]` | |
+| 1847 | Eduard Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1848 | August Bournonville | Mit teaterliv: erindringer og tidsbilleder | `[2. Rothenfelser]` | |
 | 1848 | Suinglé | Petits Secrets in Dancing for the Use of Pupils<br/>_Published in Edinburgh by Andrew Murray_ | `[Russell, 2007]` | |
 | 1850? | Friedrich Gottermann | Die erste Contretanz-Quadrille (Francaise) und Quadrille à la cour (Les Lanciers). Ein Bücheln bei der Erlernung dieser Tänze<br/>_Published in Rostock_ | [Worldcat](http://www.worldcat.org/oclc/247855742) | |
-| 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1850–1860? | Jean Jacques | Tanz-Album oder der unerschöpfliche Maitre auf dem Ballsaal<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1850–1880? | | Die Union-Quadrille<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1850–1880? | Rudolf Voß | Tanz-Touren. Contre-Tanz — Lancier — Alliance — Quadrille — Mignon — Cotillon — Pariser Polka<br/>_4. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -297,9 +300,9 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1852 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_3. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | | Wiener Tanzschule. Gründliche und für jedermann leicht faßliche Darstellung der beliebtesten und modernsten Tänze | | [Universitätsbibliothek Salzburg copy desideratum ](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma71184520410003341) |
 | 1854 | Julius Kurth | Der gewandte Ball- und Vortänzer | `[Unfried, 2014]` | |
-| 1854 | August Bournonville | Der Tanz | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1854 | Ernst Buchen | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1855 | J. C. Dürholz | Practischer Leitfaden für Tänzer und Tänzerinnen nebst Choreographie der neuesten Contre-Tänze und Polonaisen<br/>_Published in Berleburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1854 | August Bournonville | Der Tanz | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
+| 1852–1854? | Ernst Buchey | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
+| 1855 | J. C. Dürholz | Practischer Leitfaden für Tänzer und Tänzerinnen nebst Choreographie der neuesten Contre-Tänze und Polonaisen<br/>_Published in Berleburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1855 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_3. Auflage_<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1857 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #02]` | |
 | 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -319,7 +322,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1866 | | Manual de dança ou método fácil de aprender a dançar sem auxilio de mestre | | BNP |
 | 1866 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_7. Auflage_ | | [Olomouc/EOD](https://search.books2ebooks.eu/Record/vkol_vkol001058881) |
 | 1867 | Alwin Berndt | Die Gymnastik des Tanzes | `[Katalog, 1894]` | [Dresden](http://katalogbeta.slub-dresden.de/id/0011281919/) |
-| 1867 | Albert Czerwiski | Mademoiselle Marie Anne Cupis de Camargo und die beiden Vestris<br/>_In: Freya, Illustrirte Blätter für die gebildete Welt, 1867, 3. Heft_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1867 | Albert Czerwiski | Mademoiselle Marie Anne Cupis de Camargo und die beiden Vestris<br/>_In: Freya, Illustrirte Blätter für die gebildete Welt, 1867, 3. Heft_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
+| 1868 | Ludwig Celler | Les danses sous les Valois | `[Germanorum, 2014]` | |
 | 1868 | Wilhelm Angerstein | Volkstänze im deutschen Mittelalter | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43987709t) |
 | 1869 | Jørgen Moe | Besøg i et bondebryllup<br/>_Visit to a rustic wedding_ | `[2. Rothenfelser]` | |
 | 1869 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_2nd edition_ | | BNP |
@@ -366,7 +370,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1894 | Justino Dias Lima Soares | Manual de dança : methodo facil para aprender a dançar sem auxilio de professor<br/>_7th edition_ | | BNP |
 | 1897 | David Anderson | New, Enlarged, and Complete Ball-room Guide | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=974560) |
 | 1898 | | Бальный шёпот. Па де катр | | [NLR](https://yadi.sk/i/5D9OmCiPqbVLt) |
-| 1898 | Henri Cellarius | 100 neue Cotillon-Touren | | [Google](https://books.google.com/books?id=IjSUPgAACAAJ) |
+| 1898 | Henri Cellarius | 100 neue Cotillon-Touren<br/>_Published by F. Bartholomäus in Erfurt_ | `[Germanorum, 1914]` | [Google](https://books.google.com/books?id=IjSUPgAACAAJ)> |
 | 1899 | Александр Алексеевич Горский | Хореография. Примеры для чтения | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS001284446&context=L&search_scope=default_scope&lang=ru_RU) |
 | 1900 | Graham MacNeilage | How to Dance the Eightsome Reel, Scotch Reel, Reel of Tulloch, Strathspey and Reel Steps | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002331353) |
 | 1900 | J. G. Atkinson, junior | Scottish National Dances | `[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=978495) |
@@ -381,6 +385,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1904 | W. Lamb<br/>C. Arthur Pearson (publisher) | How and What to Dance<br/>_Published in London_ | `[Rogers, 1998]` | |
 | 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR copy desideratum](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS005127283&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU) |
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
+| 1907 | Carl Sandmeier | Sichere Anleitung zur Selbsterlernung aller üblichen Rund-Tänze<br/>_Published in Zürich_<br/>_4. Auflage_ | `[Germanorum, 1914]` | Swiss National Library<br/>Universitätsbibliothek Basel |
 | 1908? | Peter Müller | Anstands- und Tanzlehre Kommando d. Contre-danse, Norddeutsche Française, Quadrille à la cour | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=390745111) |
 | 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS004956353&context=L&search_scope=default_scope&lang=ru_RU) |
 | 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005139495&context=L&search_scope=default_scope&lang=ru_RU) |
@@ -477,23 +482,28 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | Date | Author | Title | References | Links |
 | ---- | ------ | ----- | ---------- | ----- |
 | 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009832426&context=L&search_scope=default_scope&lang=ru_RU) |
+| 1525 | Caspar Brunner | Rathschlag  wider die gottlosen Tanz | `[Germanorum, 1914]` | |
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
 | 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009810813&context=L&search_scope=default_scope)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
-| | Joachim Christian Lang | | | | |
+| 1700 | | Kurtze Vorstellung, was von dem Welt-üblischen Zechen und Tantzen nach der Regel Gottes Worts und nach der Beschaffenheit des wahren Christenthums zu halten | `[Germanorum, 1914]` | [UB Marburg: XIX c B 435?] |
+| 1704 | Johann Christian Lang | Bedenken Vernunft-mässiges bescheidenes und unparteyisches, uber die durch mancherley öffentliche Schrifften angeregte Streitigkeiten vom Tantzen | `[Germanorum, 1914]` | [BSB](https://nbn-resolving.de/urn:nbn:de:bvb:12-bsb10597997-6) |
+| 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | | |
 | 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
 | 1719 | Christoph Matthaeus Seidel<br/>_Published by Gedicke in Berlin_ | Die Beantwortung Etlicher Durch Misbrauch der Heiligen Schrifft erzwungenen Gegensprüche, Mit welchen Das welt-übliche Tantz-Spiel- und Lust-Wesen Entschuldiget | `[Шабалина, 2019]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746)<br/>[HVD](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746) |
-| 1719 | A. G. Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]` | |
+| 1719 | Aegidius Günther Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
 | 1720 | Johann Wilhelm Kellners<br/>_Published in Frankfirt and Leipzig_ | Hoff-Raths und Pfänners in Halle Anhang zu seinem Tantz-Greuel | `[Шабалина, 2019]` | |
 | 1723 | _Published in Jena_ | Gründliches Gespräch vom Tantzen, in welchem die Tantz-Gründe untersuchet und nach der Wahrheit beurtheilet werden | `[Шабалина, 2019]` | |
 | 1738 | Hansel<br/>_Ander Theil_<br/>_Published by Waisenhaus in Züllichau_ | Des Schlüssels zur Erkenntniß und Verabscheuung des Heydnischen Tantz- und Lust-Wesens in der Christenheit | `[Шабалина, 2019]` | |
-| 1743 | J. G. Carpzov<br/>_Published by P. Böckmann in Lübeck_ | Unterricht vom Spielen und Tantzen, in zween Wochenpredigten vorgetragen und mit einigen Anmerckungen und Anhang erläutert | `[Шабалина, 2019]` | |
 | 1745 | J. P. C. Sturm | Evangelisches Zeugnis wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können | `[Шабалина, 2019]` | |
+| 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
 | 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
 | 1801 | Johann Evangelist Wetzler | über den Einfluß des Tanzens auf die Gesundheit nebst Verhaltungsregeln | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #51]` | |
+| 1858 | | Elzine und Deliska oder der Tanz. Erzählung für christliche Jungfrauen<br/>_Published by Cremer in Aachen_<br/>_Translated from the French_ | `[Germanorum, 1914]` | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035%3D%22BV013812550%22+IN+%5B2%5D&v=uba&l=de)<br/>[Tubingen](https://rds-tue.ibs-bw.de/opac/RDSIndex/Search?lookfor=oclc%3A249239436)<br/>[Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=363826335) |
+| 1877 | J. Bethcke | Ist Tanzen Sünde? Aus den Schriften lutherischer Kirchenväter<br/>_Published in Stettin_ | `[Germanorum, 1914]` | |
 
 
 ## Scores with choreographies
@@ -577,12 +587,13 @@ _This part of the list is to joined with the general table_
 | 1829–1830 | Michel Saint-Léon | Cahiers d'exercices | Paris, Bibliothèque nationale de France | `Rés. 1137` | `[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb44003243k) |
 | 1841 | Frederick Hill | Frederick Hill's Book of Quadrilles and Country Dances | No details in Rogers. Richard? | | `[Rogers, 1998]` | |
 | 1851 | Thomas Wilson | Thomas Wilson Letter to the Royal Literary Fund with a Request of Financial Support | London, The British Library | | [[Cooper, #05]](https://www.regencydances.org/paper005.php) |
+| 1887 | Ludovic Celler | Die Tänze unter den Valois<br/>_Translated from the French by Albert Czerwinski_ | | | `[Germanorum, 1914]` | |
 | 19-- | Лешков | Рукопись по систематизации танцевальных учебников | Москва, Российская государственная библиотека | | | |
 | 192- | | Анкета по сбору народных плясок | Москва, ГАРФ | | | |
 | 192- | | Радиозапись обучения пляске по радио | | | | |
-| 192- | | Протоколы заседаний секции по пляске НТК ВСФК | Москва, ГАРФ | `Ф. 7576. Оп. 3. Д.4` | `[Жбанкова, 2016]` |
-| 192- | | | Москва, ГАРФ | `Ф. 7576. Оп. 17. Д.13` | `[Жбанкова, 2016]` |
-| 1926 | | Протокол дискуссии по вопросу о пляске | Москва, ГАРФ | `Ф. 7576. Оп. 28. Д.19` | `[Жбанкова, 2016]` |
+| 192- | | Протоколы заседаний секции по пляске НТК ВСФК | Москва, ГАРФ | `Ф. 7576. Оп. 3. Д.4` | `[Жбанкова, 2016]` | |
+| 192- | | | Москва, ГАРФ | `Ф. 7576. Оп. 17. Д.13` | `[Жбанкова, 2016]` | |
+| 1926 | | Протокол дискуссии по вопросу о пляске | Москва, ГАРФ | `Ф. 7576. Оп. 28. Д.19` | `[Жбанкова, 2016]` | |
 
 ## Entries believed to be useless
 
