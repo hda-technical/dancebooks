@@ -486,7 +486,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
 | 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS009810813&context=L&search_scope=default_scope)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
 | 1700 | | Kurtze Vorstellung, was von dem Welt-üblischen Zechen und Tantzen nach der Regel Gottes Worts und nach der Beschaffenheit des wahren Christenthums zu halten | `[Germanorum, 1914]` | [UB Marburg: XIX c B 435?] |
-| 1704 | Johann Christian Lang | Bedenken Vernunft-mässiges bescheidenes und unparteyisches, uber die durch mancherley öffentliche Schrifften angeregte Streitigkeiten vom Tantzen | `[Germanorum, 1914]` | [BSB](https://nbn-resolving.de/urn:nbn:de:bvb:12-bsb10597997-6) |
 | 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | | |
