@@ -213,10 +213,8 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 					tile_file = os.path.join(tmp_folder, f"{MAX_TILE_NUMBER_Y - tile_y:08d}_{tile_x:08d}.jpg")
 				else:
 					tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
-				get_binary(
-					tile_file,
-					url_maker(tile_x, tile_y)
-				)
+				url = url_maker(tile_x, tile_y)
+				get_binary(tile_file, url)
 		sew_tiles_with_montage(tmp_folder, output_filename, policy)
 	finally:
 		if "KEEP_TEMP" not in os.environ:
@@ -375,7 +373,6 @@ def download_book_from_iiif(manifest_url, output_folder):
 		download_image_from_iiif(base_url, output_filename)
 
 
-
 def download_book_from_iiif_fast(manifest_url, output_folder):
 	"""
 	Downloads entire book via IIIF protocol.
@@ -393,7 +390,6 @@ def download_book_from_iiif_fast(manifest_url, output_folder):
 			continue
 		full_url = metadata["images"][-1]["resource"]["@id"]
 		get_binary(output_filename, full_url)
-
 
 
 # These methods try to guess tiles number using HEAD requests with given UrlMaker
@@ -914,6 +910,23 @@ def britishLibraryManuscript(
 	MAX_ZOOM = 13
 	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
 	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
+	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
+
+
+@opster.command()
+def henryFord(
+	id=("", "", "Id of the image to be downloaded (e. g. `4_cgntCY2Bj2ZpaKCjjXrWcNSEjlsU_Mk6ZUJByJ4smfJUNCpbPL_8dPavSb0DwGNavju8-nAYNsFUXP1jmb1KuGO2_RIzJoMfr8QvK5JTc/thf97207`")
+):
+	"""
+	Downloads single image from https://www.thehenryford.org/
+	"""
+	metadata_url = f"https://www.thehenryford.org/linkedpub-image/{id}.dzi"
+	basename = os.path.basename(id)
+
+	MAX_ZOOM = 12
+	base_url = f"https://www.thehenryford.org/linkedpub-image/{id}_files"
+	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM, ext="jpeg")
+	output_filename = f"henryFord_{basename}.bmp"
 	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
 
 
