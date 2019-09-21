@@ -72,6 +72,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 176- | Jacob von Stählin | Nachrichten von der Tanzkunst und Balletten in Rußland | | [Google](https://books.google.com/books/?id=9RlMAAAAYAAJ) |
 | 176- | Thompson | Thirty Favourite Hornpipes Which Are Now in Vogue and Performed at the Public Theatres | `[2. Rothenfelser]` | |
 | 1762 | La Hante<br/>Perrin | Chorégraphie nouvelle, ou méthode pour former & danser soi-meme les contredanses | [Advertisement](https://books.google.com/books?id=C8pZAAAAcAAJ&pg=PA141)<br/>`[Nouveau manuel, 1857, #35]` | |
+| 1763–1770? | Pierre Hoegi | A Tabular System Whereby the Art of Composing Minuets Is Made So Easy That Any Person, Without the Least Knowledge of Musick, May Compose Ten Thousand, All Different, in the Most Pleasing and Correct Manner | `music: generator`<br/>`[Hedges, 1978]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004415410)<br/>[LOC](https://www.loc.gov/item/12000082/) |
 | 1765 | Gasparo Angiolini<br/>Pere Sanadon (translator) | Dissertation sur les ballets pantomimes des anciens | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]` | |
 | 1765? | Sauton | Methode pour apprendre la chorégraphie des contredanses nouvelles et à la mode | | [PSU](https://cat.libraries.psu.edu/uhtbin/cgisirsi/x/0/0/57/20/GV1643.M36+no.116+1765/1/X000063313116?user_id=WEBSERVER) |
 | 1766 | Jean-Georges Noverre | Théorie et pratique de la danse simple et compose<br/>_Published in Louisbourg_ | `[4. Rothenfelser]` | |
@@ -100,7 +101,11 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | after 1776 | Welch | Minuet de la cour | `[Russell, 2007]` | |
 | 1777 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1777 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=639LAAAAcAAJ&pg=PA215) | |
+| 1780–1800? | Ludwig Fischer | Musikalisches Würfelspiel oder Kunst, durch Würfel Kinder (-und auch Grossen!) leicht und auf angenehme Weise die Noten im Violin- und Bass-Schlüssel zu lehrnen | `music: generator`<br/>`[Hedges, 1978]` | |
+| 1780–1800? | J. C. Graf | Musikspiel oder Tabelle, unzahlige Märsche für Pianoforte oder andere Intrumente mittlest Würfel zu erfinden | `music: generator`<br/>`[Hedges, 1978]` | |
+| 1780–1800? | Pasquale Ricci | Au plus heureaux jeux harmonique pour composer des minuets ou des contredances au sort d'un dex | `music: generator`<br/>`[Hedges, 1978]` | |
 | 1781 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=DsNFAAAAcAAJ&pg=PA96) | |
+| 1781 | Maximilian Stadler | Table pour composer des minuets et des trios à la infinie | `music: generator`<br/>`[Hedges, 1978]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43362239q) |
 | 1782 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1783 | Barthold Friedrich Schulz | Anweisung zum guten regelmäßigen Tanzen; nebst 12 neuen englischen Tänzen<br/>_Published in Hamburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=e3G6m7fhlT8C&pg=PA361) | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
@@ -108,6 +113,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1785 | | Etwas übers Tanzen, zu Beherzigung der Wiener Schönen; von einem Freunde der Offenherzigkeit<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1786 | John Longman<br/>Francis Broderip | Twenty Four New Cotillions with their proper Figures ... now performing this present Spring Season. 1786. Book the VI<br/>_Contains description of ‹Les Pantalons› cotillion_ | [[Cooper, #03]](https://www.regencydances.org/paper003.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283048)<br/>[HVD](http://id.lib.harvard.edu/aleph/007222757/catalog) |
 | 1787 | Thompson | Twenty Four Country Dances for the Year 1787 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[Cooper, #04]](https://www.regencydances.org/paper004.php)<br/>[[DFIE: Thompson 24CD,1787]](https://www.cdss.org/elibrary/DFIE/Biblio/B000531.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283574) |
+| 1788 | Michael Johann Friedrich Wiedeburg | Musikalisches Charten-Spiel ex G dur<br/>_Published in Wien by A. F. Winter_ | `music: generator`<br/>`[Hedges, 1978]` | [Stanford](https://searchworks.stanford.edu/view/3774431) |
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
 | 1790–1800? | Frere | Huitieme recueil de pot poury françois et contredanses les plus à la mode | `[Leaflets]` | |
 | 1791 | | Hommage aux dames de la quadrille | | [RSL](http://search.rsl.ru/ru/record/01003499969) |
@@ -116,10 +122,12 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1791 | | Eighteen of the Most Favourite Country Dances<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://www.imieiventagli.it/l_allmande) |
 | 1791 | Theodorus Franciscus Petersen | Practische vollständige Einleitung in die Choregraphie oder Tanzzeichnungskunst, nach dem französ. Original<br/>_Published in Schleswig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1793? | Charles Metralcourt | Twenty Four Country Dances, with proper Directions to each Dance | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004524098) |
+| 1793 | Wolfgang Amadeus Mozart (fake?) | Anleitung zum componiren von Polonoise<br/>_Published in Berlin by Johann Hummel_ | `music: generator`<br/>`[Hedges, 1978]` | |
 | 1795 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1795. With Proper Directions to Each Dance | [[Cooper, 01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1795]](https://www.cdss.org/elibrary/DFIE/Biblio/B000084.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283622) |
 | 1795 | | Карманная книга для любителей музыки на 1795 год | `[Leaflets]` | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?docid=07NLR_LMS009684294&context=L&vid=07NLR_VU1&search_scope=default_scope&tab=default_tab&lang=ru_RU) |
 | 1797 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1797 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1797]](https://www.cdss.org/elibrary/DFIE/Biblio/B000086.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283634) |
 | 1797 | Johann Christian Siede | Versuch eines Leitfadens für Anstand, Solidität, Reiz, Grazie und weibliche Schönheit der aufblühender weiblichen Jugend. Nebst einem Anhange, welcher noch einige besondere Gesundheits- und Schönheits-Lehren und einige höhere Regeln der guten Lebensart und der Etiquette enthält | `[Klemm #03]`<br/>`[Klemm #06]` | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035%3D%22BV008883841%22+IN+%5B2%5D&v=uba&l=de)<br/>[Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=57512136X)<br/>[Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=57512136X)<br/>[UCLA](https://catalog.library.ucla.edu/vwebv/search?searchCode1=GKEY&searchType=2&searchArg1=ucoclc241307393) |
+| 1798 | Friedrich Gottlob Hayn | Anleitung mit Würfeln Anglaisen zu componieren<br/>_Published in Dresden_ | `music: generator`<br/>`[Hedges, 1978]` | |
 | 1799 | | Über die theatralischen Tänze und die Balletmeister Noverre, Mizzarelli und Vigano<br/>_Published in Wien_ | `[Charinomos, 1825]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1799 | Feray | Nouvelle Terpsichore, ou recueil de nouvelles danses angloises | `[Yoko]` | |
 | 1799 | | Nelson & Victory<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://s3.amazonaws.com/magnoliasoft.imageweb/nmm/supersize/f4129.jpg) | |
@@ -127,9 +135,11 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1800–1810? | | Taschenbuch den Freunden des Tanzes gewidmer<br/>_Two volumes_ | [[Лисснер, 1811]](http://dlib.rsl.ru/viewer/01004333601#?page=10) | |
 | 1800 | | Taschenbuch für Liebhaber der schönen Tanzkunst<br/>_Complete copy needed_ | `[Klemm #02]??`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Taschenbuch, 1800]](https://bib.hda.org.ru/books/taschenbuch_1800_liebhaber) | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035="BV003915947"+IN+[2]&v=uba&l=de) |
-| 1801 | Antonio Calegari | Gioco pitagorico<br/>_Music generator of unknown musical form_ | `[Wiki: Musikalisches Würfelspiel]` | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) |
 | 1801 | Thomas Preston | 24 Country Dances for the Year 1801 | [ABC notation](http://www.village-music-project.org.uk/?page_id=831) |
 | 1801 | Christian August Fischer (publisher) | Neuer Tanz- und Ball-Kalender für das Jahr 1801 | | [Google](https://books.google.com/books?id=Sz5GAQAAMAAJ)<br/>[HathiTrust](https://hdl.handle.net/2027/osu.32435013319512) |
+| 1801 | C. H. Fielder | Musicalisches Würfelspiel oder der unerschöpfliche Ecossaisen-Componist | `music: generator`<br/>`[Hedges, 1978]` | |
+| 1802 | Antonio Callegari | L'art de composer de la musique sans en connaitre les elemens | `music: generator`<br/>`[Hedges, 1978]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004251689) |
+| 1802 | Antonio Callegari | Wie die Würfel fallen! Ein Scherz der Tonkunst, um mit drei Würfeln leicht Walzer zu setzen | `music: generator`<br/>`[Hedges, 1978]` | |
 | 1802 |  William Morris Cahusac | 24 Country Dances for the Year 1802 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>Contains description of the _Duke of Kent's Waltz_ | |
 | 1803 | Johann Wendt | Über den Tanz als Vergnügen und Schädlichkeit | | [Heidelberg](https://katalog.ub.uni-heidelberg.de/titel/1569236)<br/>[Zurich](https://www.recherche-portal.ch/primo-explore/fulldisplay?docid=ebi01_prod003444318&context=L&vid=ZAD&search_scope=default_scope&tab=default_tab&lang=de_DE) |
 | 1803 | William Morris Cahusac | 24 Country Dances for the Year 1803 | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | |
@@ -144,6 +154,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 181- | Алексей Дмитриевич Жилин | Journal de musique | | [NMB](https://yadi.sk/i/xmLK1Zhcqbjyu) |
 | 181- | Friedrich Weller | Neueste Berliner Lieblings-Tänze<br/>_Number 8 in series_ | `[Leaflets]`<br/>[[Weller, 1810–1820?]](https://bib.hda.org.ru/books/berliner_1810_no_07) | |
 | 1810 | Thomas Wilson | The Treasures of Terpsichore for 1810. Containing All the Most Fashionable English Country Dances for the Present Year, with Various Proper Figures Adapted to Each Dance, Being a Continuation to The Treasures of Terpsichore for 1809 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [Google](https://books.google.com/books?id=P0H7GgAACAAJ) |
+| 1811 | Giovanni Catrufo | Barême musical, ou l'art de composer de la musique sans en connaitre les principes | `music: generator`<br/>`[Hedges, 1978]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb44903236v)<br/>[BNF](https://catalogue.bnf.fr/ark:/12148/cb44840498w)<br/>[BNF](https://catalogue.bnf.fr/ark:/12148/cb43990350p) |
 | 1811 | Hopkins<br/>Button, Whitaker (publishers) | Le Sylphe. An Elegant Collection of Twenty Four Country Dances, for the Year 1811, Adapted for the German Flute, Violin, Flageolet or Oboe | | [Oxford](http://solo.bodleian.ox.ac.uk/OXVU1:LSCOP_OX:oxfaleph012147021 |
 | 1811 | Thomas Wilson | An Analysis of Country Dancing<br/>_Second edition_ | `[Leaflets]`<br/>[BL](https://www.bl.uk/collection-items/an-analysis-of-country-dancing) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003947416)<br/>[[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://books.google.com/books?id=-OgRAAAAYAAJ&pg=PA154) |
 | 1811 | Thomas Wilson | _Wilson's Original Collection of Country Dance Music for the Year 1811_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://bib.hda.org.ru/books/wilson_1811_supplement) | |
@@ -597,18 +608,20 @@ _This part of the list is to joined with the general table_
 
 ## Entries believed to be useless
 
-| Date | Author | Title | References | Links |
-| ---- | ------ | ----- | ---------- | ----- |
-| 1740 | Jean-Baptiste du Bos | Reflexions critiques sur la poesie et la peinture.<br/>_Chapitre sur les danses des anciens_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](http://gallica.bnf.fr/ark:/12148/bpt6k6544468q/f252.image) |
-| 1746 | Charles Batteux | les beaux arts reduits a un même principe.<br/>_Section sur la musique et sur la danse_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](http://gallica.bnf.fr/ark:/12148/bpt6k50428g/f275.image) |
-| 1767? | Claude-Joseph Dorat | La déclamation théâtrale.<br/>_Chant quatrième. De la danse. Возможно, есть более ранние издания_ | `[Nouveau manuel, 1857, #37]` | [Google](https://books.google.com/books?id=NeHhNmFzRAUC) |
-| 1790 | François-Henri-Stanislas de L'Aulnaye | De la Saltation théâtrale, ou recherches sur l'origine, les progrès et les effets de la pantomime chez les anciens | [Найдёно случайным поиском] | [BNF](http://gallica.bnf.fr/ark:/12148/bpt6k5849412d) |
-| 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) |
-| 1807 | Ferdinand Kringsteiner | Der Tanzmeister. Eine Posse mit Gesang in drey Aufzügen | _Это фарс с песнями._<br/>`[Klemm #02]` | [Wien/EOD](https://search.books2ebooks.eu/Record/wbr_LQD0188828) |
-| 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) |
-| 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](http://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) |
-| 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | _Какая-то искусствоведческая хрень_<br/>`[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) |
-| 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | Просмотрено Борисом Стратилатовым. | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005127097&context=L&search_scope=default_scope&lang=ru_RU) |
+| Date | Author | Title | References | Links | Comment |
+| ---- | ------ | ----- | ---------- | ----- | ------- |
+| 1740 | Jean-Baptiste du Bos | Reflexions critiques sur la poesie et la peinture.<br/>_Chapitre sur les danses des anciens_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](http://gallica.bnf.fr/ark:/12148/bpt6k6544468q/f252.image) | |
+| 1746 | Charles Batteux | les beaux arts reduits a un même principe.<br/>_Section sur la musique et sur la danse_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](http://gallica.bnf.fr/ark:/12148/bpt6k50428g/f275.image) | |
+| 1754–1778? | Carl Philipp Emanuel Bach | Einfall einen doppelten Contrapunct in der Octave von sechs Tacten zu machen ohne die Regeln davon zu wissen | `music: generator`<br/>`[Hedges, 1978]` | | Генератор камерной, не танцевальной музыки |
+| 1767? | Claude-Joseph Dorat | La déclamation théâtrale.<br/>_Chant quatrième. De la danse. Возможно, есть более ранние издания_ | `[Nouveau manuel, 1857, #37]` | [Google](https://books.google.com/books?id=NeHhNmFzRAUC) | |
+| 1790 | François-Henri-Stanislas de L'Aulnaye | De la Saltation théâtrale, ou recherches sur l'origine, les progrès et les effets de la pantomime chez les anciens | [Найдёно случайным поиском] | [BNF](http://gallica.bnf.fr/ark:/12148/bpt6k5849412d) | |
+| 1801 | Antonio Calegari | Gioco pitagorico musicale col quale potra ornuno, anco senza sapere di Musica, formarsi una seria quasi infinita di picciole Ariette, e Duettini pertutti li Caratteri, Rondo, Preghiere, Polacche, Cori, ec., il tutto coll-accompagnamento del Pianoforte o Arpa, o altri Strumenti | `music: generator`<br/>`[Wiki: Musikalisches Würfelspiel]`<br/>`[Hedges, 1978]` | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) | Генератор камерной, не танцевальной музыки |
+| 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) | |
+| 1807 | Ferdinand Kringsteiner | Der Tanzmeister. Eine Posse mit Gesang in drey Aufzügen | `[Klemm #02]` | [Wien/EOD](https://search.books2ebooks.eu/Record/wbr_LQD0188828) | Это фарс с песнями. |
+| 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) | |
+| 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](http://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
+| 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) | Какая-то искусствоведческая хрень |
+| 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | Просмотрено Борисом Стратилатовым. | [NLR](http://primo.nlr.ru/primo-explore/fulldisplay?vid=07NLR_VU1&docid=07NLR_LMS005127097&context=L&search_scope=default_scope&lang=ru_RU) | |
 
 
 ## Bibliographies already consulted
@@ -625,6 +638,7 @@ _This part of the list is to joined with the general table_
 | 1914 | `[Germanorum, 1914]` | Hugo Hayn | Bibliotheca Germanorum, erotica & curiosa | https://archive.org/details/bibliothecagerma07hayn/page/532 |
 | 1960 | `[Richardson, 1960]` | Philip John Sampey Richardson | The Social Dances of the Nineteenth Century in England  | https://bib.hda.org.ru/books/richardson_1960 |
 | 1977 | `[Corti, 1977]` | Gino Corti<br/>Cristiano Lamberti | Cinque balli toscani del cinquecento" | https://bib.hda.org.ru/books/corti_1977_balli |
+| 1978 | `[Hedges, 1978]` | Stephen A. Hedges | Dice Music in the Eighteen Century | https://www.jstor.org/stable/734136 |
 | 1979 | `Gallo:` | F. Alberto Gallo | Il 'Balare Lombardo' Circa 1435–1475 | https://bib.hda.org.ru/books/gallo_1979_balare |
 | 1981 | `Marrocco:` | William Thomas Marrocco | Inventory of 15th Century Bassedanze, Balli & Balletti" | https://bib.hda.org.ru/books/marrocco_1981_inventory |
 | 1989 | `[Guillard, 1989]` | Yves Guillard | Early Scottish Reel Setting Steps | https://bib.hda.org.ru/books/guillard_1989 |
