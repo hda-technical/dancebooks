@@ -552,7 +552,7 @@ _This part of the list is to joined with the general table_
 
 | Date | Author | Title | Library | Call number | References | Links |
 |----- | ------ | ----- | ------- | ----------- | ---------- | ----- |
-| 1450 | | Foligno collection of dances<br/>_aka Jacobili manuscript_ | Foligno, Seminario Vescovile, Biblioteca Seminarile I. Iacobilli | `D I 42, folios 1-4` | `Gallo:Fol`<br/>`Marocco:FBJ, D.I.42`<br/>`Smith:FOLj` | |
+| 1450 | | Foligno collection of dances<br/>_aka Jacobili manuscript_ | Foligno, Seminario Vescovile, Biblioteca Seminarile I. Iacobilli | `D I 42, folios 1-4` | `Gallo:Fol`<br/>`Marocco:FBJ, D.I.42`<br/>`Smith:FOLj` | [Biblioteca Ludovica Jacobilli](http://www.jacobilli.it/) |
 | 1450 | Guglielmo | De pratica seu arte tripudii vulgare opusculum<br/>_aka Florence fragment_ | Firenze, Biblioteca Nazionale Centrale | `palat. 1021`<br/>folios 55–56 | `Gallo:FN'`<br/>`Smith:Fn2` | |
 | 1470 | Eliner Gunter<br/>Edward Gunter | Personal notebook | Oxford, Bodleian Library | `Rawlinson Poet. 108`<br/>folios 10r–11r | `[Lindahl]` | |
 | 1470–1500 | Guglielmo<br/>Francesco Fineschi (probable author) | Guglielmo treatise<br/>_aka The Siena Manuscript_<br/>_Dated circa 1474 by Barbara Sparti_ | Siena, Biblioteca comunale degli Intronati | `L.V. 29` | [[Sainato, 2016]](https://bib.hda.org.ru/books/sainato_2016)<br/>`Gallo:S`<br/>`Marocco:SBC, L.V.29`<br/>`Smith:Sc`<br/>`[Sparti, 1996]` | [Italy](http://www.comune.siena.it/) |
@@ -577,7 +577,7 @@ _This part of the list is to joined with the general table_
 | 1601 | Antonio di Fiorenza | La barriera | Unspecified private collection | | `[Sparti, 2004]` | |
 | 1607 | John Ramsey | Practise for Dauncinge | Oxford, Bodleian Library | `Douce 280`<br/>folios 66av-66bv | `[Lindahl]` | |
 | 1620–1650? | Engelbert Kæmpfer | Personal collection of traveller Engelbert Kæmpfer relating to late 17th-century Persia, including dance music, and Russian travel diaries | London, British Library | `Sloane MS 2923` | | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002115302) |
-| 1614–1615? | Ludovico Jacobilli | Modo di ballare | Foligno, Seminario Vescovile, Biblioteca Seminarile I. Iacobilli | `A. III`<br/>folios 102–104 | `[Lehner, 1997]`<br/>`[Sparti, 2004]`<br/>`[2. Rothenfelser]` | |
+| 1614–1615? | Ludovico Jacobilli | Modo di ballare | Foligno, Seminario Vescovile, Biblioteca Seminarile L. Jacobilli | `A. III`<br/>folios 102–104 | `[Lehner, 1997]`<br/>`[Sparti, 2004]`<br/>`[2. Rothenfelser]` | [Biblioteca Ludovica Jacobilli](http://www.jacobilli.it/) |
 | 1616 | | Copia dell'inventione di un balletto fatto dalla Serenissima Infante Isabella di Savoia d'Este questo carnevale prossimo passato (due copie)<br/>Includes stage plan of _Balletto a otto_ | Modena, Archivio di Stato | `Archivio Estense, Archivio per Materie, Spettacoli pubblici, 9/A` | [[Bosi, 2005]](https://bib.hda.org.ru/books/bosi_2005_duchessa) | |
 | 1619? | Barthélemy de Montagut | Louange de la danse. Avec les observations necessaires pour en acquerir la perfection | London, British Library | `Royal Collection, MS 16E XXXIX` | [[Montagut, 2000]](https://bib.hda.org.ru/books/montagut_2000) | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002107209) |
 | 1630–1633? | Elias Ashmole | Copye of the Oulde Measures | Oxford, Bodleian Library | `Rawlinson D.864`<br/>folios 199r-199v | `[Lindahl]` | |
