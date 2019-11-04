@@ -33,6 +33,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1664 | Guillaume Dumanoir | Le mariage de la musique avec la dance | First issue<br/>[[Manoir, 1870]](https://bib.hda.org.ru/books/manoir_1870)<br/>`[Mackler]`| |
 | 1669 | David Elias Heidenreich | Eintracht stärckt Heyrath: Oder, Ballet Der Welgerathenen Ehe <...> | `[3. Rothenfelser]` | |
 | 1688 | Antoine Pointel (publisher) | Deusieme recueil de dances et contre-dances, avec la basse continue. Prepre à joüer sur toutes sortes d'intrements<br/>_Published in Amsterdam_ | `[3. Rothenfelser]` | |
+| 1688 | | The Academy of Armory and Blazon<br/>_Third Book_ | `[Swaine]`<br/>[Transcription](https://quod.lib.umich.edu/e/eebo/A44230.0001.001/1:12.3.187?rgn=div3;view=fulltext) | EEBO |
 | 1699–1701 | A. Wolfgang (publisher) | Recueil des opéras, des ballets, et des plus belles pièces en musique, qui ont été représentées depuis 10 ou 12 ans jusqu'à présent devant sa Majesté Très-chrétienne<br/>Published in Amsterdam | `[4. Rothenfelser]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb33571376d) |
 | 1700–1706? | les Héretiers (publisher) | Recueil des opéras, des ballets, et des plus belles pièces en musique, qui ont été représentées depuis 10 ou 12 ans jusqu'à présent devant sa Majesté Très-chrétienne<br/>_Published in Amsterdam_ | `[4. Rothenfelser]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb440083792) |
 | 1699 | Andre Danican Philidor, l'ainé | Suite de danses pour les violons et hautbois, qui se joüent ordinairement aux bals chez le Roy<br/>_Livre premier_ | `[3. Rothenfelser]`<br/>`[May be in BNF]`<br/>[[Philidor, 1712]](https://bib.hda.org.ru/books/philidor_1712) | |
@@ -581,9 +582,11 @@ _This part of the list is to joined with the general table_
 | 1616 | | Copia dell'inventione di un balletto fatto dalla Serenissima Infante Isabella di Savoia d'Este questo carnevale prossimo passato (due copie)<br/>Includes stage plan of _Balletto a otto_ | Modena, Archivio di Stato | `Archivio Estense, Archivio per Materie, Spettacoli pubblici, 9/A` | [[Bosi, 2005]](https://bib.hda.org.ru/books/bosi_2005_duchessa) | |
 | 1619? | Barthélemy de Montagut | Louange de la danse. Avec les observations necessaires pour en acquerir la perfection | London, British Library | `Royal Collection, MS 16E XXXIX` | [[Montagut, 2000]](https://bib.hda.org.ru/books/montagut_2000) | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002107209) |
 | 1630–1633? | Elias Ashmole | Copye of the Oulde Measures | Oxford, Bodleian Library | `Rawlinson D.864`<br/>folios 199r-199v | `[Lindahl]` | |
+| 1640? | | aka _The Stephens Manuscript_ | London, The British Library | `MS Add 41996 F` | `[Swaine]`<br/>[Transcription](https://andrewswaine.uk/articles/stephens-transcript) | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002085808) |
 | 1640–1675 | Butler Buggins | The Measures as they are Danced in the Inner Temple Hall | London, Inner Temple Records | `Revels, Foundlings, and Unclassified, Miscellanea, Undated, &c. Vol. 27`<br/>folios 3r-6v | `[Lindahl]` | |
 | 1640–1700? | | _Manuscript Cassel_ | Kassel, Landes- und Murhardsche Bibliothek der Stadt Kassel | | [[Écorcheville, 1906]](https://bib.hda.org.ru/books/cassel_1906) |
-| 17-- | | aka Belgioioso manuscript | Milano, Biblioteca Trivulziana | `Fondo Belgioioso, fasc. II, cartella 275, volume 2` | `[2. Rothenfelser]` | |
+| 1667 | Jeffrey Boys | Gallen Almanack for 1667<br/>_Owned by Jeffrey Boys, with 12 months of diary notes written in, and 16 country dances written in the back_ | Oxford, Bodleian Library | `[Swaine]`<br/>[Transcription](https://andrewswaine.uk/articles/boys-transcript) | |
+| 17-- | | _aka Belgioioso Manuscript_ | Milano, Biblioteca Trivulziana | `Fondo Belgioioso, fasc. II, cartella 275, volume 2` | `[2. Rothenfelser]` | |
 | 17-- | | Contredances | Rome, Santa Cecilia's Conservatory | | [[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi) | |
 | 17-- | | English Country Dances | Turin, National Library | | [[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi) | |
 | 17-- | | Recueil de contredanses transposées pour la viele | Paris, Bibliothèque nationale de France | `VM7-3643` | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43360196s) |
@@ -596,6 +599,7 @@ _This part of the list is to joined with the general table_
 | 177-? | Grahl | Contra Danses | Москва, Российская государственная библиотека | `Ф.183.1 №1421` | | [РГБ](http://search.rsl.ru/ru/record/01005425511) |
 | 1772 | Garcia | Garcia Manuscript | | | `[Mackler]`<br/>[[Russell, 1995]](http://openmusiclibrary.org/article/104013/)<br/>[[Greening, 1997]](http://openmusiclibrary.org/article/474673/) | |
 | 1789 | Albert Joseph Brame | Petit répertoire de pas françaises et figures usités dans les contredanses françasies | Harvard Library | `Theatre Collection TS 552.15.14.98` | | [HVD](http://id.lib.harvard.edu/aleph/013826608/catalog) |
+| 179- | William Jones | The “Llangadfan” dances | United Kingdom, Wales, Aberystwyth, The National Library of Wales | `Add MSS 171E` | `[Swaine]` | [NLW](https://www.library.wales/index.php) |
 | 179- | Gergoux | Choix de Contredanses, Waltz, Sauteuses, Anglaises, Bourrées, Rondes, & ca | Paris, Bibliothèque national de France | `RES VMC MS-22` | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb433638984) |
 | 1792 | Карл Готлоб Брейткопф | Терпсихора в клавираусцуге | Москва, Российская государственная библиотека | `ОР 392/муз` | | [РГБ](http://search.rsl.ru/ru/record/01005519453) |
 | 1793 | Asa Willcox | Asa Willcox’s Book of Figures | Chicago, Newberry Library | `VAULT Case MS V 168 .971` | [Transcription in [Willcox, 1918]](https://bib.hda.org.ru/books/willcox_1918) | [Chicago, Newberry LIbrary](https://webvoyage.carli.illinois.edu/nby/cgi-bin/Pwebrecon.cgi?DB=local&v1=1&BBRecID=771635) |
@@ -678,3 +682,4 @@ _This part of the list is to joined with the general table_
 | 2018-04-19 | `[Wiki: Musikalisches Würfelspiel]` | | Musikalisches Würfelspiel | https://de.wikipedia.org/wiki/Musikalisches_Würfelspiel |
 | 2019-02-23 | `[Шабалина, 2019]` | Татьяна Васильевна Шабалина | Изготовлено Готфридом Таубертом, танцмейстером в Цербсте | Статья ещё не опубликована, есть [запись доклада](https://youtu.be/UfoKmu88FlY). |
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #01–06 + #25 | https://www.regencydances.org/paper000.php |
+| 2019-11-01 | `[Swaine]` | Andrew Swaine | List of historical sources | https://andrewswaine.uk/sources |
