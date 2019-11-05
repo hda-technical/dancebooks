@@ -1,1 +1,1 @@
-See [bibliography.md](https://github.com/hda-technical/docs/blob/master/bibliography.md) here.
+See [docs](docs/README.md) subdirectory.
