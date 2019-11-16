@@ -921,7 +921,7 @@ def validate_backups():
 		found_in_library = any(map(os.path.isfile, possible_library_paths))
 		if not found_in_library:
 			strange_backups_number += 1
-			logging.warn(f"Found strange backup in {config.www.backup_dir}: {backup}")
+			logging.warn(f"Backup {config.www.backup_dir}/{backup} is not present in the library")
 	if strange_backups_number > 0:
 		logging.warn(f"Found {strange_backups_number} strange backups")
 
