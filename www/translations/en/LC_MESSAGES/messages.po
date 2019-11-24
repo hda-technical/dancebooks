@@ -256,6 +256,9 @@ msgstr "Italian"
 msgid "search:language:latin"
 msgstr "Latin"
 
+msgid "search:language:latvian"
+msgstr "Latvian"
+
 msgid "search:language:polish"
 msgstr "Polish"
 
@@ -505,6 +508,9 @@ msgstr "Italian"
 
 msgid "item:language:latin"
 msgstr "Latin"
+
+msgid "item:language:latvian"
+msgstr "Latvian"
 
 msgid "item:language:polish"
 msgstr "Polish"
