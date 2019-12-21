@@ -8,4 +8,5 @@
 * [HDA/Images documentation](images.md)
 * [HDA/Library documentation](library.md)
 * [HDA/Library backups documentation](library_backups.md)
-* [HDA/Music documentation](music.md)
+* [Music. HDA/Music documentation](music.md)
+* [Music. List of albums suitable for historical dancing](music_cds.md)
