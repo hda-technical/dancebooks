@@ -17,6 +17,7 @@ SHORT_LANG_MAP = {
 	"dk": ["danish"],
 	"en": ["english"],
 	"es": ["spanish"],
+	"fi": ["finnish"],
 	"fr": ["french"],
 	"ie": ["english"],
 	"it": ["italian", "french"],
@@ -71,6 +72,9 @@ LONG_LANG_MAP = {
 	},
 	"english.bib": {
 		"english",
+	},
+	"finnish.bib": {
+		"finnish"
 	},
 	"french.bib": {
 		"french",

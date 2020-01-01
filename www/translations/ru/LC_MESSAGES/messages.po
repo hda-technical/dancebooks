@@ -244,6 +244,9 @@ msgstr "Голландский"
 msgid "search:language:english"
 msgstr "Английский"
 
+msgid "search:language:finnish"
+msgstr "Финский"
+
 msgid "search:language:french"
 msgstr "Французский"
 
@@ -496,6 +499,9 @@ msgstr "Голландский"
 
 msgid "item:language:english"
 msgstr "Английский"
+
+msgid "item:language:finnish"
+msgstr "Финский"
 
 msgid "item:language:french"
 msgstr "Французский"
