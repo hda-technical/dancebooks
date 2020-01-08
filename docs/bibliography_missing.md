@@ -304,7 +304,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1846 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Unfried, 2014]` | |
 | 1846 | Mieczyslaw Hlasko | Die Mazur (Polnischer Nationaltanz); gründlich und für Jedermann leicht faßlich beschrieben, mit Abbildung der Figuren und einer Nationalmusikversehen<br/>_Dated 1857 by Bernhard Klemm (different edition?)_ | `[3. Rothenfelser]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Google](https://books.google.com/books?id=gAVUHAAACAAJ) |
 | 1847 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_Published by Gerhard in Leipzig_ | [Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #06]` | |
-| 1847 | Eduard Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
+| 1847 | Eduard Georg Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1848 | August Bournonville | Mit teaterliv: erindringer og tidsbilleder | `[2. Rothenfelser]` | |
 | 1848 | Suinglé | Petits Secrets in Dancing for the Use of Pupils<br/>_Published in Edinburgh by Andrew Murray_ | `[Russell, 2007]` | |
 | 1850? | Friedrich Gottermann | Die erste Contretanz-Quadrille (Francaise) und Quadrille à la cour (Les Lanciers). Ein Bücheln bei der Erlernung dieser Tänze<br/>_Published in Rostock_ | [Worldcat](http://www.worldcat.org/oclc/247855742) | |
@@ -326,9 +326,12 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1857 | Friedrich Wilhelm Rocco | Die natürliche und künstliche Bewegung des Körpers | `[Katalog, 1894]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=475078551)<br/>[HAAB](https://lhwei.gbv.de/DB=2/XMLPRS=N/PPN?PPN=475078551)<br/>[Leipzig](https://katalog.ub.uni-leipzig.de/Record/0001457432) |
 | 1857 | Johann Raab | Der Cotillon : in 20 neuen Figuren. Mit faßlicher, genauer und ausführlicher Beschreibung und Zeichnung aller Touren für Tänzer und Nichttänzer | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524536370002884) |
-| 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [ONB](http://data.onb.ac.at/rec/AC09173622) |
+| 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [ÖNB](http://data.onb.ac.at/rec/AC09173622) |
 | 1857 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_4. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1857 | Eduard Georg Eichler | Reichs-Quadrille im Rococco- Ecossaise- oder Polka-Tremblant-Schritte | [Title page](https://yadi.sk/i/yJTwI_8OlTDP0A) | [ÖNB #1](http://data.onb.ac.at/rec/AC09238594)<br/>[ÖNB #2](http://data.onb.ac.at/rec/AC09217669) |
+| 1857? | Edward Georg Eichler<br/>Jules Martin (translator) | Empire Quadrilles | [Title page](https://yadi.sk/i/qZDhduHLCoxiYA) | |
 | 1858 | F. M. Hessemer | Reckische Tanzgespräche. Ein poetisches Frag- und Antwortspiel<br/>_Published in Frankfurt am Main_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1859 | Eduard Georg Eichler | Neuestes Arrangement der Reichs-Quadrille mit einer Variation-Brillante in der Schlussfigur. Im allbekannten Quadrille-Schritte, pas de contredance, entworfen und den Lehrern und Freunden der Tanzkunst gewidmet | | [NYPL](http://catalog.nypl.org/record=b12277382~S1) |
 | 1859 | A. Münchenberg | Zur Austhetik des Tanzes<br>In: _Wiener Blätter für Musik, Theater und Kunst_, Nr. 44, 45, 46, 47, 48, 50, 51 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1859 | F. W. Ganthe | Vom Tanzen Altes und Neues oder: Es wird fortgetanzt. Mit poet. Ballbouquet zu Neujahr 1860 | [Advertisement](https://books.google.ru/books?id=vHK9lAT89dEC&pg=PA90)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Salzburg](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma21161702000003341) |
 | 1859 | Philippe Gawlikowski | Guide complet de la danse<br/>_Édition 2_ | | [NYPL](http://catalog.nypl.org/record=b10058976~S1) |
@@ -359,7 +362,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1879 | William B. de Garmo | The Dance of Society<br/>_Second edition_ | `[Leaflets]` | |
 | 188- | Александра Константиновна Буринская | Aidé-memoire с описанием танцев | [[Буринская, 1882, стр. 368]](https://bib.hda.org.ru/books/burinskaya_1882) |
 | 188- | Friedrich Albert Zorn | Die klassische Quadrille | `[Katalog, 1894]` | |
-| 188- | Eduard Eichler | Neues Menuet. Mit Choreographie und Originalmusik | | |
+| 188- | Eduard Georg Eichler | Neues Menuet. Mit Choreographie und Originalmusik | | |
 | 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]` | |
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst<br/>_Should not be confused with Bernhard Klemm's book with the same title_ | `[Leaflets]` | | |
