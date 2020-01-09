@@ -120,6 +120,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1787 | Thompson | Twenty Four Country Dances for the Year 1787 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[Cooper, #04]](https://www.regencydances.org/paper004.php)<br/>[[DFIE: Thompson 24CD,1787]](https://www.cdss.org/elibrary/DFIE/Biblio/B000531.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283574) |
 | 1788 | Michael Johann Friedrich Wiedeburg | Musikalisches Charten-Spiel ex G dur<br/>_Published in Wien by A. F. Winter_ | `music: generator`<br/>`[Hedges, 1978]` | [Stanford](https://searchworks.stanford.edu/view/3774431) |
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
+| 1799 | Мари Лепренс де Бомон | Наставление молодым госпожам, вступающим в свет и брачные союзы, служащее продолжением Юношескому училищу, где изъясняются должности как в разсуждении их самих, так и в разсуждении их детей<br/>_Второе издание_ | | [RSL](https://search.rsl.ru/ru/record/01003335475) |
 | 1790–1800? | Frere | Huitieme recueil de pot poury françois et contredanses les plus à la mode | `[Leaflets]` | |
 | 1791 | | Hommage aux dames de la quadrille | | [RSL](http://search.rsl.ru/ru/record/01003499969) |
 | 1791 | | Fourteen New Country Dances for 1791 with Their Proper Figures<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://manchesterartgallery.org/collections/search/collection/?id=1922.1060) | |
@@ -150,6 +151,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1802 |  William Morris Cahusac | 24 Country Dances for the Year 1802 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>Contains description of the _Duke of Kent's Waltz_ | |
 | 1803 | Johann Wendt | Über den Tanz als Vergnügen und Schädlichkeit | | [Heidelberg](https://katalog.ub.uni-heidelberg.de/titel/1569236)<br/>[Zurich](https://www.recherche-portal.ch/primo-explore/fulldisplay?docid=ebi01_prod003444318&context=L&vid=ZAD&search_scope=default_scope&tab=default_tab&lang=de_DE) |
 | 1803 | William Morris Cahusac | 24 Country Dances for the Year 1803 | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | |
+| 1804 | Иоганн Людвиг Эвальд | Наука сделаться доброю девицею, доброю супругою, матерью и хозяйкою, или Ручная книга для девиц, супруг и матерей | | [RSL](https://search.rsl.ru/ru/record/01002903019) |
 | 1804 | Michael Kelly | Eight French Country Dances ... adapted for the pianoforte<br/>_Contains description of something similar to the first set_ | [[Cooper, #03]](https://www.regencydances.org/paper003.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004446443) |
 | 1804 | J. Gottfried Grohmann | über die neueste Tanzkunst<br/>_in Modejournal, 1804, März, Seite 113_) | | |
 | 1804 | D. J. Wendt<br/>Jean Wendt<br/>Johann Wendt | Über den Tanz als Vergnügen und Schädlichkeit: Eine Beytrag zur Diätetik<br/>_2. Auflage_ | `[Turnkunst, 1816]`<br/>`[Nouveau manuel, 1857, #53]` | [Greisfald](https://lhgrw.gbv.de/DB=1/XMLPRS=N/PPN?PPN=334440610) |
