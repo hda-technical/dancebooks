@@ -1,5 +1,6 @@
 # Historical Dance Association activities
 
+* [License](license.md)
 * [Common definitions](common.md)
 * [Legal information from the libraries](legal.md)
 * [Historical dance bibliography: Documentation](bibliography.md)

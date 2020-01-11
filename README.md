@@ -1,1 +1,1 @@
-See [docs](docs/README.md) subdirectory.
+See [docs/README.md](docs/README.md).
