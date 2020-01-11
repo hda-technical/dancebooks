@@ -99,7 +99,7 @@ def update(
 			backup.image_size_x, backup.image_size_y = map(int, image_size.split(const.SIZE_DELIMETER))
 			modified = True
 		if aspect_ratio != NOT_DEFINED:
-			backup.aspect_ratio_x, backup.aspect_ratio_y = map(int, image_size.split(const.SIZE_DELIMETER))
+			backup.aspect_ratio_x, backup.aspect_ratio_y = map(int, aspect_ratio.split(const.SIZE_DELIMETER))
 			modified = True
 		if modified:
 			session.add(backup)
