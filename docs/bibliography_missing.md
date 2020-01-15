@@ -86,7 +86,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1768/1769 | Theodorus Franciscus Petersen | Practische Einleitung in der Chorégraphie ...  für das erste hable Jahr 1768<br/>_Good quality copy needed_ | [[Petersen, 1768]](https://bib.hda.org.ru/books/petersen_1768)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Stanford](https://searchworks.stanford.edu/view/1395290)<br/>[København](https://bibliotek.dk/linkme.php?rec.id=810010-katalog%3A005383999) |
 | 1769 | Theodorus Franciscus Petersen | Practische Einleitung in der Chorégraphie ...  für das 2. und letzte habljahr 1769<br/>_Good quality copy needed_ | `[Klemm #02]` | |
 | 1769 | Charles Thompson<br/>Samuel Thompson | Thompson's Twenty Four Country Dances for the Year 1769 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Thompson 24CD,1769]](https://www.cdss.org/elibrary/DFIE/Biblio/B000515.htm) | Library of Congress |
-| 1760–1780? | | _Contredanses françaises et allemandes_ | | [RSL](http://search.rsl.ru/ru/search#s=pubyear&q=contredanse) |
+| 1760–1780? | | _Contredanses françaises et allemandes_ | | [RSL/Rare](http://search.rsl.ru/ru/search#s=pubyear&q=contredanse) |
 | 1771 | S. Markordt (publisher) | XII contredanes avec figures et acompagnement à 7 instruments | `[Wortelboer, 2004]`<br/>`[Leaflets]` |
 | 1771 | Louis Laus de Boissy | Lettre critique sur notre danse theâtrale | `[Phister, 2016]` | |
 | 1771 | | Gedanken von Tänzen, in einem Sendschreiben<br/>_Published in Hamburg_<br/>_Maybe an antidance treatise_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -122,7 +122,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
 | 1799 | Мари Лепренс де Бомон | Наставление молодым госпожам, вступающим в свет и брачные союзы, служащее продолжением Юношескому училищу, где изъясняются должности как в разсуждении их самих, так и в разсуждении их детей<br/>_Второе издание_ | | [RSL](https://search.rsl.ru/ru/record/01003335475) |
 | 1790–1800? | Frere | Huitieme recueil de pot poury françois et contredanses les plus à la mode | `[Leaflets]` | |
-| 1791 | | Hommage aux dames de la quadrille | | [RSL](http://search.rsl.ru/ru/record/01003499969) |
+| 1791 | | Hommage aux dames de la quadrille | | [RSL/Rare](http://search.rsl.ru/ru/record/01003499969) |
 | 1791 | | Fourteen New Country Dances for 1791 with Their Proper Figures<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://manchesterartgallery.org/collections/search/collection/?id=1922.1060) | |
 | 1791 | | _The fan depicting the likeness of Princess Frederica Charlotte of Prussia who married Frederick Duke of York on 2nd September 1791 and is printed with music, words and instructions for 16 popular dances of the day_ | | [Low quality image](https://www.jerseyheritage.org/collection-items/paper-fan) |
 | 1791 | | Eighteen of the Most Favourite Country Dances<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://www.imieiventagli.it/l_allmande) |
@@ -240,6 +240,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1824 | Juan Ignacio de Iztueta | Guicuzpoaco dantza | `[Nouveau manuel, 1857, #60]` | [Gallica](http://gallica.bnf.fr/ark:/12148/bpt6k8894479/) |
 | 1824 | Thomas Wilson | Whitaker and Compy's Twenty Four Country Dances, for the Year 1824, Adapted for the Violin, German Flute or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004742496 |
 | 1824 | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the year 1824 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
+| 1825 | | Калейдакустикон. Музыкальное упражнение для составления 214 миллионов вальсов и более играющим на форте-пиано | `music: generator`<br/>[[Kuhlau, 1817–1821?]](https://bib.hda.org.ru/books/kuhlau_1820_kaleidakustikon) | [RSL/Rare](https://search.rsl.ru/ru/record/01001928188) | 
 | 1825 | Joseph Binns Hart | Hart's Fifteenth Set of Quadrilles | | [archive.org](https://archive.org/details/Harts15thQuadrilles) |
 | 1825 | | Methodo facil de dançar as quadrilhas geralmente chamadas contradanças francesas | | BNP |
 | 1825 | C. Bencke | Taschenbuch der Tanzkunst | `[Germanorum, 1914]` | |
