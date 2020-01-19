@@ -561,6 +561,11 @@ div.transcription p > sup
 	font-size: 75%;
 }
 
+div.transcription span.smallcaps
+{
+	font-variant: small-caps;
+}
+
 div.transcription span.strikethrough
 {
 	text-decoration: line-through;

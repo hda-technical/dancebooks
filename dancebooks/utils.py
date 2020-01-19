@@ -476,6 +476,7 @@ class MarkdownCache(object):
 			output_format="xhtml5"
 		)
 		self._markdown.inlinePatterns.add("page_number", MarkdownPageNumber(), "_end")
+		self._markdown.inlinePatterns.add("smallcaps", MarkdownSmallCaps(), "_end")
 		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
 		self._markdown.parser.blockprocessors.add(
 			"align_right",
@@ -548,7 +549,7 @@ class MarkdownPageNumber(markdown.inlinepatterns.Pattern):
 class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 	"""
 	Marks the text enclosed into doubled tildas as strikethrough,
-	thus emulates the syntax of github flavoured markdown:
+	thus emulating the syntax of github flavoured markdown:
 	https://help.github.com/articles/basic-writing-and-formatting-syntax/
 	"""
 	def __init__(self):
@@ -558,6 +559,22 @@ class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 		span = markdown.util.etree.Element("span")
 		span.set("class", const.CSS_CLASS_STRIKETHROUGH)
 		span.text = m.group("strikethrough")
+		return span
+
+
+class MarkdownSmallCaps(markdown.inlinepatterns.Pattern):
+	"""
+	Marks the text enclosed into doubled exclamation mark as small caps.
+	The syntax was suggested in one of the pandoc issues:
+	https://github.com/jgm/pandoc/issues/2761
+	"""
+	def __init__(self):
+		super().__init__(r"!!(?P<smallcaps>[^!]+)!!")
+
+	def handleMatch(self, m):
+		span = markdown.util.etree.Element("span")
+		span.set("class", const.CSS_CLASS_SMALLCAPS)
+		span.text = m.group("smallcaps")
 		return span
 
 
