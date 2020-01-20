@@ -104,6 +104,10 @@
 | The King's Noyse | Royal delight | 2CD | `CD` | | да |
 | The Assembly Players | Dance and danceability | Аккордеон | `flac` | | да |
 | The Assembly Players | Pat Shaw Playford | Аккордеон | `flac` | | да |
+| [The Pemberley Players](https://www.fainmusic.co.uk/pemberleyplayers.html) | [The Pride and Prejudice Collection. Volume I](https://www.fainmusic.co.uk/pandp1.html) | | `mp3` | | |
+| The Pemberley Players | [The Pride and Prejudice Collection. Volume II](https://www.fainmusic.co.uk/pandp2.html) | | `mp3` | | |
+| The Pemberley Players | [The Pride and Prejudice Collection. Volume III](https://www.fainmusic.co.uk/pandp3.html) | | нет | | |
+| The Pemberley Players | [The Pride and Prejudice Collection. Volume IV](https://www.fainmusic.co.uk/pandp4.html) | | нет | | |
 | Orange and Blue, The Ranchers | The English Dancing Master | 2CD, Аккордеон, Переиздание винила | `flac` | | да |
 | Chris Dewhurst, Sue Stapledon | Playford pops | Аккордеон | `flac` | | да |
 | Paul Hutchinson, John Hymas | Emperor of the Moon | Аккордеон | `flac` | | да |
