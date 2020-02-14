@@ -225,6 +225,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1820 | Thomas Wilson | The Dancing<br/>_Volume 1_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1820? | Thomas Wilson | A Companion to the Ball Room<br/>_Third edition_ | [[Wilson, 1820]](https://bib.hda.org.ru/books/wilson_1820_countrydance) | |
 | 1820 | F. J. Lambert | Treatise on Dancing | `[Guillard, 1989]` | |
+| 1810–1830? | | Contrdanse | | [NLB](http://unicat.nlb.by/opac/pls/pages.view_doc?off=0&siz=&qid=96856&format=full&nn=2768) |
 | 1821 | Thomas Wilson | Thompson's Twenty Four Country Dances for the year 1821 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1821–1823 | | Choix de rondes à danser | `[Klemm #03]`<br/>`[Klemm #06]` | [1821 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k54486775)<br/>[1822 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k5448716t)<br/>[1823 @ BNF](https://catalogue.bnf.fr/ark:/12148/cb44007042n) |
 | 1822 | Carl Friedrich Förster | Anweisung zur Tanzkunst<br/>_Published in Breslau_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Forster, 1822]](https://bib.hda.org.ru/bib/books/forster_1822) | |
@@ -312,6 +313,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1847 | Eduard Georg Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.ru/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1848 | August Bournonville | Mit teaterliv: erindringer og tidsbilleder | `[2. Rothenfelser]` | |
 | 1848 | Suinglé | Petits Secrets in Dancing for the Use of Pupils<br/>_Published in Edinburgh by Andrew Murray_ | `[Russell, 2007]` | |
+| 1850? | Е. Гендрикова | Матросская полька | | [NLB](http://unicat.nlb.by/opac/pls/pages.view_doc?off=0&siz=&qid=96856&format=full&nn=134) |
 | 1850? | Friedrich Gottermann | Die erste Contretanz-Quadrille (Francaise) und Quadrille à la cour (Les Lanciers). Ein Bücheln bei der Erlernung dieser Tänze<br/>_Published in Rostock_ | [Worldcat](http://www.worldcat.org/oclc/247855742) | |
 | 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1850–1860? | Jean Jacques | Tanz-Album oder der unerschöpfliche Maitre auf dem Ballsaal<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -465,6 +467,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1931 | Б. В. Бурлаков | Массовые игры и пляски | | [RSL](https://search.rsl.ru/ru/record/01009269702)<br/>`SPTL: Б 915` |
 | 1932 | Valentin Parnac | Histoire de la danse | | [On sale, ₽6000](http://www.alib.ru/5_parnah_v_istoriya_tanca_histoire_de_la_danse_par_valentin_parnac_w1t241546dca3ac4a7c560ed9ceec07a1e6a000.html) |
 | 1933 | | Массовые игры и пляски<br/>Составлено бригадой Государственной студии музыкального движения «Гептахор» | | [On sale, ₽7000](http://www.alib.ru/5_massovye_plyaski_i_igry_w1t2543144a6446263669e84871b63bee025f4f.html)<br/>[RSL](http://search.rsl.ru/ru/record/01009302983) |
+| 1933 | Всеволод Николаевич Всеволодский-Гернгросс | Игры народов СССР | | [RSL/Restricted](https://search.rsl.ru/ru/record/01006599537) |
 | 1934 | Н. А. Александрова | Массовые танцы | | |
 | 1934 | Francesco Pospisjl | La moresca, studio comparato con particolare giguardo all'Italia settentrionale | `[2. Rothenfelser]` | |
 | 1935 | И. Семкин | Массовые игры и танцы | `[Leaflets]` | |
@@ -473,8 +476,15 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1938 | Curt Sachs | World History of the Dance | `[Richardson, 1960]` | |
 | 1938 | Jacuqes Henry | Modern Ballroom Dancing. A Comprehensive Guide to Present-Day Technique and to the Fundamental Principles of the Art, and a Testbook for All Teachers and Students Preparing for Examinations | [On sale, £95](https://www.abebooks.com/servlet/BookDetailsPL?bi=22790135714)<br/>[On sale, £100](https://www.abebooks.com/servlet/BookDetailsPL?bi=22696431954) |
 | 1939 | Андрей Васильевич Лопухов | Основы характерного танца. Учебник для хореографических училищ | | [RSL](https://search.rsl.ru/ru/record/01005193992)<br/>`SPTL: Л 776(Б)` |
+| 1939 | | Шакон<br/>_Published in «Парные танцы» series_ | | [RSL](https://search.rsl.ru/ru/record/01005208038) |
 | 1940 | | Школьная самодеятельность | `[Leaflets]` | | |
 | 1940 | | Учебный план и программы курсов для руководителей танцевальных коллективов | | `SPTL: У 914` |
+| 1941 | С. Я. Степанов | Котильон | | `[Bodhi]` |
+| 1941 | Б. В. Щербинин<br/>Б. Фомин | Лаун-тенис | | [RSL](https://search.rsl.ru/ru/record/01005243505) |
+| 1947 | Л. Богаткова | Вальс | | [RSL](https://search.rsl.ru/ru/record/01005766625) |
+| 1947 | Л. Богаткова | Вязанка | | [RSL](https://search.rsl.ru/ru/record/01005775759) |
+| 1947 | Л. Богаткова | Полонез | | [RSL](https://search.rsl.ru/ru/record/01006006866) |
+| 1947 | Л. Богаткова | Танцы | | [RSL](https://search.rsl.ru/ru/record/01005591167)<br/>[NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS008186291) |
 | 1948 | Edwin Evans | Music and the Dance | `[Richardson, 1960]` | |
 | 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
 | 1952 | Лидия Ивановна Богаткова | Танец в школе<br/>_По материалам сборника Л. Богатковой «В лагере и школе»_<br/>_Издано в Ставрополе_ | | `[Bodhi]` |
