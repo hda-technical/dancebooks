@@ -349,7 +349,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1865 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze<br/>_2. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1866 | | Manual de dança ou método fácil de aprender a dançar sem auxilio de mestre | | BNP |
 | 1866 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_7. Auflage_ | | [Olomouc/EOD](https://search.books2ebooks.eu/Record/vkol_vkol001058881) |
-| 1867 | Alwin Berndt | Die Gymnastik des Tanzes | `[Katalog, 1894]` | [Dresden](http://katalogbeta.slub-dresden.de/id/0011281919/) |
+| 1867 | Alwin Berndt | Die Gymnastik des Tanzes | `[Katalog, 1894]` | [Dresden](https://katalog.slub-dresden.de/id/0-1115591398/) |
 | 1867 | Albert Czerwiski | Mademoiselle Marie Anne Cupis de Camargo und die beiden Vestris<br/>_In: Freya, Illustrirte Blätter für die gebildete Welt, 1867, 3. Heft_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1868 | Ludwig Celler | Les danses sous les Valois | `[Germanorum, 2014]` | |
 | 1868 | Wilhelm Angerstein | Volkstänze im deutschen Mittelalter | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43987709t) |
