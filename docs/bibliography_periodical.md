@@ -17,6 +17,7 @@
 | 1821–1865 | Petit courrier des dames | http://digital.ub.uni-duesseldorf.de/ihd/periodical/titleinfo/1908614 | Нет |
 | 1823–1833 | Дамский журнал | http://search.rsl.ru/ru/record/01004940147<br/>https://rutracker.org/forum/viewtopic.php?t=5408052 | Да |
 | 1825–1864 | Северная пчела | https://rutracker.org/forum/viewtopic.php?t=3622308<br/>https://rutracker.org/forum/viewtopic.php?t=3829703<br/>http://nlr.ru/res/inv/ukazat55/record_full.php?record_ID=119425 | Да (но зачем?) |
+| 1834–1865 | Библиотека для чтения | https://ru.wikisource.org/wiki/Библиотека_для_чтения | Нет |
 | 1834–1889 | Journal des demoiselles | Google books | Да (с гугла) |
 | 1842–2003 | The Illustrated London News | https://iln.org.uk/ | Нет | 
 | 1842–1891 | The Ladies' National Magazine<br/>Peterson's Magazine | https://catalog.hathitrust.org/Record/006062071 | Нет |
