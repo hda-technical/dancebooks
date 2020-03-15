@@ -101,7 +101,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1775 | Elias Christian Fricke | Neue Cotillions oder Französische Contretänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346613)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=87567416X) |
 | 1775 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement #1](https://books.google.com/books?id=QPdLAAAAcAAJ&pg=RA2-PA27)<br/>[Advertisement 32](https://books.google.com/books?id=rm9bAAAAcAAJ&pg=PT6) | |
 | 1776 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=NwxcAAAAcAAJ&pg=PA434) | |
-| 1776 | Carl Joseph von Feldtenstein | Erweiterung der Kunst nach der Chorographie zu Tanzen<br/>_Zweyter theil_<br/>_Published in Braunschweig_ | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=236812041) |
+| 1776 | Carl Joseph von Feldtenstein | Erweiterung der Kunst nach der Chorographie zu Tanzen<br/>_Zweyter theil_<br/>_Published in Braunschweig_ | `[2. Rothenfelser]`<br/>`[4. Rothenfelser]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=236812041) |
 | after 1776 | Welch | Minuet de la cour | `[Russell, 2007]` | |
 | 1777 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
 | 1777 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=639LAAAAcAAJ&pg=PA215) | |
@@ -228,7 +228,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1810–1830? | | Contrdanse | | [NLB](http://unicat.nlb.by/opac/pls/pages.view_doc?off=0&siz=&qid=96856&format=full&nn=2768) |
 | 1821 | Thomas Wilson | Thompson's Twenty Four Country Dances for the year 1821 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1821–1823 | | Choix de rondes à danser | `[Klemm #03]`<br/>`[Klemm #06]` | [1821 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k54486775)<br/>[1822 @ Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k5448716t)<br/>[1823 @ BNF](https://catalogue.bnf.fr/ark:/12148/cb44007042n) |
-| 1822 | Carl Friedrich Förster | Anweisung zur Tanzkunst<br/>_Published in Breslau_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Forster, 1822]](https://bib.hda.org.ru/bib/books/forster_1822) | |
+| 1822 | Carl Friedrich Förster | Anweisung zur Tanzkunst<br/>_Published in Breslau_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]`<br/>[[Forster, 1822]](https://bib.hda.org.ru/bib/books/forster_1822) | |
 | 1822 | Fr. Wolf | Kurze Uebersicht der niedern Tanzkunst, oder: die Art und Weise seinen Körper auszubilden und einen richtigen Gang und Fester Schritt im Gehen zu erhalten | `[Charinomos, 1825]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1822 | Philippe Musard | Seventeenth Set of Quadrilles | | [archive.org](https://archive.org/details/Musards17thSetOfQuadrilles) |
 | 1822 | Thomas Wilson | The Quadrille and Cotillion Panorama<br/>_Third edition_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
@@ -273,7 +273,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1831 | Max Joseph Franken | Die Galopade, wie sie getanzt werder soll. Eine vollständige Anweisung zum Selbstunterrichte in diesem Lieblingstanze<br/>_2. Auflage_ | `[Klemm, #03]`<br/>`[Klemm #06]` | |
 | 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | [Royal Academy of Music](http://www.ram.ac.uk/museum/item/15068) |
 | 1832 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1832<br/>_Good quality copy needed_ | [[Helmke, 1832]](https://bib.hda.org.ru/books/helmke_1832)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [NLI](http://aleph.nli.org.il/F/?func=direct&doc_number=001825743&local_base=NNL01)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
-| 1831/1833 | Carl Friedrich Förster | Eccossaisen-Lehre, oder die Kunst 16 verschiedene Eccossaisen mit allen dezugehörigen Pas und Touren in kurzer Zeit anständig tanzen<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.com/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1831/1833 | Carl Friedrich Förster | Eccossaisen-Lehre, oder die Kunst 16 verschiedene Eccossaisen mit allen dezugehörigen Pas und Touren in kurzer Zeit anständig tanzen<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.com/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1822/1832 | Gustav Weirich | Drei Contre-Tänze in 20 verschiedenen Touren. Seinen Scholaren gewidmet | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=kiNMAAAAcAAJ&pg=RA1-PA56) | |
 | 1833 | Carl Friedrich Förster | Königs-Quadrillen-Lehre | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236) |
 | 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334) | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
@@ -525,7 +525,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1700 | | Kurtze Vorstellung, was von dem Welt-üblischen Zechen und Tantzen nach der Regel Gottes Worts und nach der Beschaffenheit des wahren Christenthums zu halten | `[Germanorum, 1914]` | [UB Marburg: XIX c B 435?] |
 | 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
-| 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | | |
+| 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
+| 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | |
 | 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
 | 1719 | Christoph Matthaeus Seidel<br/>_Published by Gedicke in Berlin_ | Die Beantwortung Etlicher Durch Misbrauch der Heiligen Schrifft erzwungenen Gegensprüche, Mit welchen Das welt-übliche Tantz-Spiel- und Lust-Wesen Entschuldiget | `[Шабалина, 2019]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746)<br/>[HVD](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746) |
 | 1719 | Aegidius Günther Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
@@ -539,7 +540,9 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
 | 1801 | Johann Evangelist Wetzler | über den Einfluß des Tanzens auf die Gesundheit nebst Verhaltungsregeln | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #51]` | |
 | 1858 | | Elzine und Deliska oder der Tanz. Erzählung für christliche Jungfrauen<br/>_Published by Cremer in Aachen_<br/>_Translated from the French_ | `[Germanorum, 1914]` | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035%3D%22BV013812550%22+IN+%5B2%5D&v=uba&l=de)<br/>[Tubingen](https://rds-tue.ibs-bw.de/opac/RDSIndex/Search?lookfor=oclc%3A249239436)<br/>[Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=363826335) |
+| 1870 | | Erörterung. Neue, der alter Frage: Ob Tantzen Sünde sey? in einer freundlichen Unterredung zwischen Eusebio und Philocomo<br/>_Translated from the Danish book of 1740._ | `[Germanorum, 1914]` | |
 | 1877 | J. Bethcke | Ist Tanzen Sünde? Aus den Schriften lutherischer Kirchenväter<br/>_Published in Stettin_ | `[Germanorum, 1914]` | |
+| 1893 | Gustav Falke | Tanz und Ancacht. Gedichte aus Tag und Traum | `[Germanorum, 1914]` | |
 
 
 ## Scores with choreographies
