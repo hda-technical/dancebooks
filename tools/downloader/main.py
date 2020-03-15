@@ -959,6 +959,9 @@ def staatsBerlin(
 def difmoe(
 	id=("", "", "UUID of the book to be downloaded (e. g. `c96b8876-b4f8-48a5-8221-3949392b1a5c`)")
 ):
+	"""
+	Downloads book from https://www.difmoe.eu/
+	"""
 	get_book_from_difmoe(id)
 
 
