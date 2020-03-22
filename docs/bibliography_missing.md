@@ -449,6 +449,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1925 | Аркадий Георгиевич Харлампиев | Коллективный отдых в рабочем клубе. Забавы, игры, танцы, хор | `[Жбанкова? 2019-2]` | [RSL](https://search.rsl.ru/ru/record/01009111315) |
 | 1925 | Max von Boehn | Der Tanz | [Modern edition](https://books.google.com/books?id=qZOj-PRgKcEC) | |
 | 1925 | Thoinot Arbeau<br/>Cyril W. Beaumont (translator) | Orchesography<br/>_English translation_ | | [Amazon, 1966 reprint](http://a.co/5H5ZyY7) |
+| 1925, №4 | | Деревенский театр<br/>_Содержит описания танцев «Петли», «Деревенская кадриль» от Анны Михайловны Зеленко_ | [[Зеленко, Шитик, 1927]](https://bib.hda.org.ru/books/zelenko_1927_promenade) | |
 | 1926 | Алексей Александрович Гвоздев (commentator)<br/>_Гептахор (коллектив авторов)_ | Ритм и культура танца<br/>_Published by Academia_ | | [RSL](https://search.rsl.ru/ru/record/01009133657)<br/>`SPTL: Р 551` |
 | 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS006725710)<br/>`SPTL: В 399` |
 | 1927 | В. Н. Гернгросс-Всеволодский | Крестьянский танец | `[Жбанкова, 2016]` | |
