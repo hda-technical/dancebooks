@@ -18,20 +18,21 @@ SIZE_FORMAT = f"W{const.SIZE_DELIMETER}H"
 def fixup_path(path):
 	# Fixing Windows-style paths
 	path = path.replace('\\', '/')
-	expected_pdf_path = os.path.join(
+	return os.path.join(
 	    config.www.elibrary_dir,
 	    path + ".pdf"
 	)
-	if os.path.isfile(expected_pdf_path):
-		return path
-	raise ValueError("Original file for this backup was not found in elibrary")
 
 
 @opster.command()
-def add():
+def add(
+	force=("", False, "Do not check PDF file presence")
+):
 	backup = db.Backup()
 	backup.path = input("Enter path: ")
 	backup.path = fixup_path(backup.path)
+	if not os.path.isfile(backup.path) and not force:
+		raise ValueError("Original file for this backup was not found in elibrary")
 
 	backup.provenance = input("Enter provenance (markdown supported): ")
 	backup.aspect_ratio_x, backup.aspect_ratio_y = map(
