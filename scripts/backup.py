@@ -128,9 +128,7 @@ def delete(
 
 
 @opster.command()
-def make_dump(
-	path=("", "backups.dump", "Folder to save pg_dump toa")
-):
+def make_dump():
 	output_folder = datetime.date.today().isoformat()
 	env = {
 		"PGHOST": config.db.host,
@@ -146,7 +144,7 @@ def make_dump(
 		f"--file={output_folder}"
 	]
 	subprocess.check_call(cmd, env=env)
-	print(f"Backed up database to {path}")
+	print(f"Backed up database to {output_folder}")
 
 
 if __name__ == "__main__":
