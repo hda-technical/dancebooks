@@ -329,6 +329,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1852–1854? | Ernst Buchey | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1855 | J. C. Dürholz | Practischer Leitfaden für Tänzer und Tänzerinnen nebst Choreographie der neuesten Contre-Tänze und Polonaisen<br/>_Published in Berleburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1855 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_3. Auflage_<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1855 | Пётр Петрович Сухонин | Русские хороводы | | [RSL](https://search.rsl.ru/ru/record/01003563356) |
 | 1857 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #02]` | |
 | 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1857 | Friedrich Wilhelm Rocco | Die natürliche und künstliche Bewegung des Körpers | `[Katalog, 1894]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=475078551)<br/>[HAAB](https://lhwei.gbv.de/DB=2/XMLPRS=N/PPN?PPN=475078551)<br/>[Leipzig](https://katalog.ub.uni-leipzig.de/Record/0001457432) |
