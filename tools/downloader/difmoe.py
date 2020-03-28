@@ -1,8 +1,3 @@
-import json
-from xml.etree import ElementTree
-
-import requests
-
 import utils
 
 

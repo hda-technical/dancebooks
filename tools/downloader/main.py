@@ -17,6 +17,7 @@ import requests
 
 from utils import *  # TODO: fix imports
 from difmoe import get_book_from_difmoe
+from hathitrust import get_book_from_hathitrust
 
 
 class IIPMetadata(object):
@@ -839,28 +840,13 @@ def locMusdi(
 			continue
 		print(f"Downloading page #{page:08d}")
 		get_binary(output_filename, url)
-
+		
 
 @opster.command()
-def hathi(
+def hathitrust(
 	id=("", "", "Id of the book to be downloaded (e. g. `wu.89005529961`)")
 ):
-	"""
-	Downloads book from http://www.hathitrust.org/
-	"""
-	output_folder = make_output_folder("hathi", id)
-	meta_url = f"https://babel.hathitrust.org/cgi/imgsrv/meta?id={id}"
-	metadata = get_json(meta_url)
-	total_pages = metadata["total_items"]
-	print(f"Going to download {total_pages} pages to {output_folder}")
-	for page in range(1, total_pages):
-		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page};width=1000000"
-		output_filename = make_output_filename(output_folder, page, extension="jpg")
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{page:08d}")
-			continue
-		print(f"Downloading page {page} to {output_filename}")
-		get_binary(output_filename, url)
+	get_book_from_hathitrust(id)
 
 
 @opster.command()
