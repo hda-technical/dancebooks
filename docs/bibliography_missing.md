@@ -408,6 +408,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 190- | А. Вивьен | Pas d'Espagne. Nouvelle danse de salon | | [RSL](http://search.rsl.ru/ru/record/01002052387) |
 | 190- | Борис Фёдорович Кейль | Пахита. Nouveau Pas d'Espagne | | [RSL](http://search.rsl.ru/ru/record/01001930835) |
 | 190- | К. В. Фельдман | Новый русско-славянский | | [NLR](https://yadi.sk/i/0otSlk7kqbVKJ) |
+| 1901 | Pietro Onorati | Manuale dei balli di società con l'aggiunta dei lancieri e del cotillon<br/>_Published in Napoli by “Libreria editrice internazionale”_ | | [NYPL](http://catalog.nypl.org/record=b12276555~S1) |
 | 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=784912) |
 | 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004849373)<br/>`SPTL: Н 727(А)` |
 | 1903 | Melvin Balou Gilbert | Dancing | [Cite](https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.c2898858;seq=9;width=10000) |
@@ -706,3 +707,4 @@ _This part of the list is to joined with the general table_
 | 2019-02-23 | `[Шабалина, 2019]` | Татьяна Васильевна Шабалина | Изготовлено Готфридом Таубертом, танцмейстером в Цербсте | Статья ещё не опубликована, есть [запись доклада](https://youtu.be/UfoKmu88FlY). |
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #01–06 + #25 | https://www.regencydances.org/paper000.php |
 | 2019-11-01 | `[Swaine]` | Andrew Swaine | List of historical sources | https://andrewswaine.uk/sources |
+| 2020-04-09 | `[Corbella]` | Maurizio Corbella | Brevi note sulla riproposta dei ballabili del "Carnevalone" ottocentesco a Milano | http://www.mauriziocorbella.it/carmi/800ballabili.html |
