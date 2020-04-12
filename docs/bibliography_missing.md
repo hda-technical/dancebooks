@@ -285,6 +285,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1838 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Giessen](https://opac.uni-giessen.de/DB=1/PPNSET?PPN=221521437)<br/>[Bayreth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0%3D%221648145%22+IN+%5B2%5D&v=sunrise&l=de)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UDK&search_scope=default_scope&docId=UDK_ALMA_DS21538878500002884&fn=permalink) |
 | 1839 | | Aux quatre lanciers, новый английский кадриль | [Advertisement](https://vivaldi.nlr.ru/pn000105706/view#page=3) | |
 | 1839 | Thomas Wilson | The Quadrille and Cotillon Panorama<br/>_Fouth edition_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
+| 1840 | Luigi Casini | La conversazione ossia composizione e direzione delle quadriglie e waltz scritta<br/>_Published in Bologna by Sassi e Amoretti_ | `[Corbella]` | |
 | 184- | Г. Грациеский | Полька в Киеве | [Cite](https://books.google.com/books?id=_HcLAQAAIAAJ&q=грациеский) | |
 | 184- | Г. Грациеский | Правила для танца «Полька» | [Cite](https://books.google.com/books?id=_HcLAQAAIAAJ&q=грациеский) | |
 | 1844 | Г. Грациеский | Новый танцевальный калейдоскоп, или кадриль в шести турах | [Quote](https://blog.hda.org.ru/quotes/smes) | |
@@ -354,6 +355,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1867 | Albert Czerwiski | Mademoiselle Marie Anne Cupis de Camargo und die beiden Vestris<br/>_In: Freya, Illustrirte Blätter für die gebildete Welt, 1867, 3. Heft_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1868 | Ludwig Celler | Les danses sous les Valois | `[Germanorum, 2014]` | |
 | 1868 | Wilhelm Angerstein | Volkstänze im deutschen Mittelalter | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43987709t) |
+| 1868 | Giovanni Poletti | Il  dilettante di quadriglie contenente le istruzioni per ben comandare e dirigere le medesime sì in francese che in italiano<br/>_Published in Milano by Carlo Barbini_ | `[Corbella]` | [HVD](http://id.lib.harvard.edu/alma/990065397540203941/catalog) |
 | 1869 | Jørgen Moe | Besøg i et bondebryllup<br/>_Visit to a rustic wedding_ | `[2. Rothenfelser]` | |
 | 1869 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_2nd edition_ | | BNP |
 | 1871 | Karl Link | Die Tanzkunst vom theoretischen und ästhetischen Standpunkte. Kurzgefaßte Anleitung als Vorbegriff für den praktischen Tanzunterricht | `[Klemm #03]`<br/>`[Klemm #06]` | [Kopenhague](https://rex.kb.dk/primo-explore/fulldisplay?docid=KGL01001845230&context=L&vid=NUI&search_scope=KGL&tab=default_tab&lang=da_DK) |
@@ -397,10 +399,12 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1892 | William B. de Garmo | The Dance of Society<br/>_5th edition_ | `[Leaflets]` | |
 | 1894 | Ardern Holt | The Cotillon. Details of All the Newest Figures with and without Accessories | `[Rogers, 1998]` | |
 | 1894 | Justino Dias Lima Soares | Manual de dança : methodo facil para aprender a dançar sem auxilio de professor<br/>_7th edition_ | | BNP |
+| 1895 | Enrico Pichetti | Il manuale di ballo<br/>_Published in Roma by Gregoriana_ | `[Corbella]` | |
 | 1897 | David Anderson | New, Enlarged, and Complete Ball-room Guide | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=974560) |
 | 1898 | | Бальный шёпот. Па де катр | | [NLR](https://yadi.sk/i/5D9OmCiPqbVLt) |
 | 1898 | Henri Cellarius | 100 neue Cotillon-Touren<br/>_Published by F. Bartholomäus in Erfurt_ | `[Germanorum, 1914]` | [Google](https://books.google.com/books?id=IjSUPgAACAAJ) |
 | 1899 | Александр Алексеевич Горский | Хореография. Примеры для чтения | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS001284446) |
+| 1899 | Vincenzo Tesi | Manuale completo per i balli di società<br/>_Published in Catanzaro by Tipografia del Giornale Il Sud_ | `[Corbella]` | |
 | 1900 | Graham MacNeilage | How to Dance the Eightsome Reel, Scotch Reel, Reel of Tulloch, Strathspey and Reel Steps | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002331353) |
 | 1900 | J. G. Atkinson, junior | Scottish National Dances | `[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=978495) |
 | 190- | Н. Ширяев | Pas d'Espagne | | [RSL](http://search.rsl.ru/ru/record/01002066571) |
@@ -434,6 +438,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004805109) |
 | 1913 | | Проспект и программа Школы танцев К. Б. Матсона | | |
 | 1913 | Charles Louis Napoléon d'Albert | Dancing. Technical Encyclopaedia of the Theory and Practice of the Art of Dancing | `[Guillard, 1989]` | |
+| 1914 | Enrico Pichetti | La furlana vénitienne, célèbre danse<br/>_Published by Hachette in Paris_ | | [BNF](https://catalogue.bnf.fr/ark:/12148/cb311051632) |
 | 1914 | Михаил Михайлович Бонч-Томашевский | Книга о танго. Искусство и сексуальность | | [RSL](https://search.rsl.ru/ru/record/01004188739)<br/>`SPTL: Б 817` |
 | 1914? | A. Cosmo Mitchell | A Guide to Ballroom Dancing<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914? | A. Cosmo Mitchell | New Dances<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
