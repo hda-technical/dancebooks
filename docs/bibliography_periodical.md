@@ -21,7 +21,7 @@
 | 1834–1889 | Journal des demoiselles | Google books | Да (с гугла) |
 | 1842–2003 | The Illustrated London News | https://iln.org.uk/ | Нет | 
 | 1842–1891 | The Ladies' National Magazine<br/>Peterson's Magazine | https://catalog.hathitrust.org/Record/006062071 | Нет |
-| 1845–1849 | Иллюстрация: еженедельное издание всего полезного и изящного | http://search.rsl.ru/ru/record/01003192357<br/>http://search.rsl.ru/ru/record/01003353086 | Да (частично) |
+| 1845–1849 | Иллюстрация: еженедельное издание всего полезного и изящного | [1845, том 01](http://search.rsl.ru/ru/record/01003192357)<br/>[1846, том 03](https://search.rsl.ru/ru/record/01003192424)<br/>[1847, том 04](https://search.rsl.ru/ru/record/01003192421)<br/>[1847, том 05](https://search.rsl.ru/ru/record/01003192409)<br/>[1848, том 06–07](https://search.rsl.ru/ru/record/01003192392) | Да (частично) |
 | 1856–1910 | Westermann's illustrierte deutsche Monatshefte | https://de.wikisource.org/wiki/Westermanns_Monatshefte | Нет |
 | 1857–1898 | Der Bazar | http://digital.ub.uni-duesseldorf.de/ihd/periodical/titleinfo/2083461 | Нет |
 | 1857–1940 | Le monde illustré | https://gallica.bnf.fr/ark:/12148/cb32818319d/date | Нет |
