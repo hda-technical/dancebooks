@@ -4,7 +4,7 @@ import logging
 from dancebooks.config import config
 from dancebooks import const
 
-class Index(object):
+class Index:
 	def __init__(self, items):
 		self.update(items)
 

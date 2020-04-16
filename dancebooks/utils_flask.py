@@ -247,27 +247,27 @@ def format_date(item):
 
 
 #parsing parameter helpers: begin
-class _DefaultValueString(object):
+class _DefaultValueString:
 	pass
 
 
-class _DefaultValueInt(object):
+class _DefaultValueInt:
 	pass
 
 
-class _DefaultValueJson(object):
+class _DefaultValueJson:
 	pass
 
 
-class _DefaultValueEmail(object):
+class _DefaultValueEmail:
 	pass
 
 
-class _DefaultValueList(object):
+class _DefaultValueList:
 	pass
 
 
-class _DefaultValueKeywords(object):
+class _DefaultValueKeywords:
 	pass
 
 

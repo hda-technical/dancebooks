@@ -457,7 +457,7 @@ def render_to_csv(items):
 	return stream.getvalue()
 
 
-class MarkdownCache(object):
+class MarkdownCache:
 	"""
 	Class capable of caching markdown files in compiled HTML form
 	(ready to be sent to client).

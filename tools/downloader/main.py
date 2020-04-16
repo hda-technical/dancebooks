@@ -20,7 +20,7 @@ from difmoe import get_book_from_difmoe
 from hathitrust import get_book_from_hathitrust
 
 
-class IIPMetadata(object):
+class IIPMetadata:
 	def __init__(self, tile_size, width, height, max_level):
 		self.tile_size = tile_size
 		self.width = width
@@ -106,7 +106,7 @@ def download_image_from_iiif(base_url, output_filename):
 	DESIRED_QUALITIES = ["color", "native", "default"]
 	DESIRED_FORMATS = ["png", "tif", "jpg"]
 
-	class UrlMaker(object):
+	class UrlMaker:
 		def __call__(self, tile_x, tile_y):
 			left = tile_size * tile_x
 			top = tile_size * tile_y
@@ -279,7 +279,7 @@ def bnfCandide(
 	"""
 	#The site does not use any metadata and simply sends unnecessary requests to backend
 	#Using head requests to get maximum available zoom and
-	class UrlMaker(object):
+	class UrlMaker:
 		def __init__(self, zoom):
 			self.zoom = zoom
 
@@ -318,7 +318,7 @@ def belgiumRoyalLibrary(
 	id=("", "", "Id of the book to be downloaded (e. g. 'A0524435')"),
 	volume=("", "", "Volume of the book to be downloaded (e. g. '1')")
 ):
-	class UrlMaker(object):
+	class UrlMaker:
 		def __init__(self, zoom, page_root_url):
 			self.zoom = zoom
 			self.page_root_url = page_root_url
@@ -387,7 +387,7 @@ def uniDuesseldorf(
 	# we will check if tile size is greater than this number of bytes
 	MIN_FILE_SIZE = 5120
 
-	class UrlMaker(object):
+	class UrlMaker:
 		def __init__(self, page):
 			self.page = page
 
@@ -544,7 +544,7 @@ def hab(
 	"""
 	#The site does not use any metadata and simply sends unnecessary requests to backend
 	#Using head requests to get maximum available zoom and
-	class UrlMaker(object):
+	class UrlMaker:
 		def __init__(self, zoom):
 			self.zoom = zoom
 
@@ -585,7 +585,7 @@ def yaleImage(
 	"""
 	Downloads image from http://images.library.yale.edu/
 	"""
-	class UrlMaker(object):
+	class UrlMaker:
 		"""
 		Similar to UrlMaker from hab() method. Should be deduplicated once
 		"""
@@ -640,7 +640,7 @@ def britishLibraryBook(
 	download_book_from_iiif_fast(manifest_url, output_folder)
 
 
-class DeepZoomUrlMaker(object):
+class DeepZoomUrlMaker:
 	def __init__(self, base_url, max_zoom, ext="jpg"):
 		self.base_url = base_url
 		self.max_zoom = max_zoom
@@ -674,7 +674,7 @@ def leidenCollection(
 	"""
 	MAX_ZOOM = 13
 
-	class UrlMaker(object):
+	class UrlMaker:
 		def __call__(self, tile_x, tile_y):
 			return f"https://www.theleidencollection.com/LeidenCollectionSamples/images/{id}_files/{MAX_ZOOM}/{tile_x}_{tile_y}.jpg"
 
@@ -756,7 +756,7 @@ def uniJena(
 
 	Requires a lot of work though
 	"""
-	class UrlMaker(object):
+	class UrlMaker:
 		def __init__(self, zoom):
 			self.zoom = zoom
 

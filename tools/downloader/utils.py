@@ -112,7 +112,7 @@ def make_temporary_folder():
 	return str(uuid.uuid4())
 	
 
-class TileSewingPolicy(object):
+class TileSewingPolicy:
 	def __init__(self, tiles_number_x, tiles_number_y, tile_size, image_width=None, image_height=None, overlap=None):
 		self.tiles_number_x = tiles_number_x
 		self.tiles_number_y = tiles_number_y

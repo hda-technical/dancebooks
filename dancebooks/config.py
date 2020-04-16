@@ -7,7 +7,7 @@ import pyjson5
 
 from dancebooks import const
 
-class SmtpConfig(object):
+class SmtpConfig:
 	def __init__(self, params):
 		self.host = params["host"]
 		self.port = params["port"]
@@ -16,13 +16,13 @@ class SmtpConfig(object):
 		self.email = params["email"]
 
 
-class BugReportConfig(object):
+class BugReportConfig:
 	def __init__(self, params):
 		self.to_addr = params["to_addr"]
 		self.to_name = params["to_name"]
 
 
-class ParserConfig(object):
+class ParserConfig:
 	def __init__(self, params):
 		#some directories
 		repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -86,7 +86,7 @@ class ParserConfig(object):
 		))
 
 
-class WwwConfig(object):
+class WwwConfig:
 	def __init__(self, params):
 		self.app_domain = params["app_domain"]
 
@@ -111,7 +111,7 @@ class WwwConfig(object):
 		self.id_redirections = params["id_redirections"]
 
 
-class DatabaseConfig(object):
+class DatabaseConfig:
 	def __init__(self, params):
 		self.host = params["host"]
 		self.port = params["port"]
@@ -134,7 +134,7 @@ class DatabaseConfig(object):
 		return f"postgresql://{self.user}:{self.password}@{self.host}:{self.port}/{self.database_name}"
 
 
-class Config(object):
+class Config:
 	def __init__(self, path):
 		with open(path, "rt") as config_file:
 			json_config = pyjson5.load(config_file)

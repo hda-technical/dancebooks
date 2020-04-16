@@ -26,7 +26,7 @@ class Availability(enum.Enum):
 			return Availability.AvailableElsewhere
 
 
-class FinalizingContext(object):
+class FinalizingContext:
 	"""
 	Contains objects required for finalizing parsed data set
 	"""
@@ -44,7 +44,7 @@ class FinalizingContext(object):
 			.replace("</p>", "")
 
 
-class BibItem(object):
+class BibItem:
 	"""
 	Class representing a bibliography item
 	"""
@@ -231,7 +231,7 @@ class ParserState(enum.Enum):
 	DoneReadingValue = 10
 
 
-class BibParser(object):
+class BibParser:
 	"""
 	Class for parsing .bib files, folders and multiline strings
 	"""

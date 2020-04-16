@@ -7,7 +7,7 @@ import flask
 
 from dancebooks.config import config
 
-class BasicMessage(object):
+class BasicMessage:
 	"""
 	Basic message class capable of sending
 	string replresentation of the self
