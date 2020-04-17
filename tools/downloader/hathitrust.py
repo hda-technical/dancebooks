@@ -9,7 +9,7 @@ def get_book_from_hathitrust(id):
 	metadata = utils.get_json(metadata_url)
 	total_pages = metadata["total_items"]
 	print(f"Going to download {total_pages} pages to {output_folder}")
-	for page in range(1, total_pages):
+	for page in range(1, total_pages + 1):
 		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id};seq={page};width=1000000"
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
 		if os.path.exists(output_filename):
