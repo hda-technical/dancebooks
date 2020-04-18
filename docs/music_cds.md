@@ -233,9 +233,10 @@
 | Ensemble Buon Tempo | Höfische Lustbarkeiten | XVI, XVIII, XIX | `CD` | | да |
 | Ensemble Buon Tempo | Ergötzliches Tantz-Vergnügen | ECD, XVIII, XIX, XX | `mp3` | | |
 | Orchestre Jean Betanberry | Bal Champetre 1900 | XIX, XX | `flac` | да | |
-| [HDA](https://hda.org.ru/music), Ансамбль Александры Нероновой | Музыка для исторических танцев №1 | XVIII, XIX, Диски не печатались | `flac` | | |
-| HDA, Ансамбль Александры Нероновой | Музыка для исторических танцев №2 | XVIII, XIX, Диски не печатались | `flac` | да | |
-| HDA, Ансамбль Александры Нероновой | Музыка для исторических танцев №3 | XIX, Диски не печатались | `flac` | да | |
+| [HDA](https://hda.org.ru/music), Ансамбль Александры Нероновой | [Музыка для исторических танцев №1](https://hda.org.ru/hdm1/) | XVIII, XIX, Диски не печатались | `flac` | да | |
+| [HDA](https://hda.org.ru/music), Ансамбль Александры Нероновой | [Музыка для исторических танцев №2](https://hda.org.ru/hdm2/) | XVIII, XIX, Диски не печатались | `flac` | да | |
+| [HDA](https://hda.org.ru/music), Ансамбль Александры Нероновой | [Музыка для исторических танцев №3](https://hda.org.ru/hdm3/) | XIX, Диски не печатались | `flac` | да | |
+| [HDA](https://hda.org.ru/music), Ансамбль Александры Нероновой | [Музыка для исторических танцев №4](https://hda.org.ru/hdm4/) | XIX, Диски не печатались | `flac` | нет | |
 | [Capella de ministrers](https://capelladeministrers.com/index.php/en/) | La Spagna | XVII | `CD` | | да |
 | Atrium Musicae de Madrid | La Spagna | XVI, XVII | `flac` | | |
 | The White Star Orchestra | Titanic | XIX, XX | `CD` | да | |
