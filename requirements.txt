@@ -8,6 +8,7 @@ Markdown==3.2.1
 MarkdownSuperscript==2.1.1
 opster==4.2
 pip==20.0.2
+pip-chill==1.0.0
 pyflakes==2.2.0
 pyjson5==1.4.7
 pymorphy2==0.8
