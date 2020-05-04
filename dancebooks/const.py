@@ -25,7 +25,7 @@ SHORT_LANG_MAP = {
 	"ln": ["latin"],
 	"lt": ["latvian"],
 	"nl": ["dutch", "german", "french"],
-	"pl": ["polish"],
+	"pl": ["french", "polish"],
 	"pt": ["portuguese"],
 	"ru": ["russian", "french", "german"],
 	"sc": ["english"],
@@ -56,11 +56,11 @@ LONG_LANG_MAP = {
 		"french",
 	},
 	"chilean.bib": {
-		"spanish"
+		"spanish",
 	},
 	"czech.bib": {
 		"czech",
-		"german"
+		"german",
 	},
 	"danish.bib": {
 		"danish",
@@ -74,11 +74,11 @@ LONG_LANG_MAP = {
 		"english",
 	},
 	"finnish.bib": {
-		"finnish"
+		"finnish",
 	},
 	"french.bib": {
 		"french",
-		"latin"
+		"latin",
 	},
 	"german.bib": {
 		"german",
@@ -88,13 +88,14 @@ LONG_LANG_MAP = {
 	"italian.bib": {
 		"french",
 		"italian",
-		"latin"
+		"latin",
 	},
 	"mexican.bib": {
 		"spanish",
 	},
 	"polish.bib": {
 		"polish",
+		"french",
 	},
 	"portuguese.bib": {
 		"portuguese",
