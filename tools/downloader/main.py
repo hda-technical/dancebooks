@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 
-import functools
 import http.client
 import json
-import math
 import os
 import subprocess
-import shutil
 import time
-import uuid
 from xml.etree import ElementTree
 
 import bs4

@@ -1,5 +1,9 @@
 import json
 import os
+import math
+import shutil
+import subprocess
+import uuid
 from xml.etree import ElementTree
 
 import requests
@@ -194,7 +198,7 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 	tmp_folder = make_temporary_folder()
 	os.mkdir(tmp_folder)
 	try:
-		print(f"Downloading {policy.tiles_number_x}x{policy.tiles_number_y} tiled image to {output_filename}")
+		print(f"Downloading {policy.tiles_number_x}x{policy.tiles_number_y} tiled image ({policy.width}x{policy.height}) to {output_filename}")
 		for tile_x in range(policy.tiles_number_x):
 			for tile_y in range(policy.tiles_number_y):
 				if policy.reverse_axis_y:
