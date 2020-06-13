@@ -921,12 +921,12 @@ def staatsBerlin(
 	output_folder = make_output_folder("staatsBerlin", id)
 	page = 1
 	while True:
-		output_filename = make_output_filename(output_folder, page, extension="jpg")
+		output_filename = make_output_filename(output_folder, page, extension="tif")
 		if os.path.isfile(output_filename):
 			print(f"Skipping existing page {page}")
 		else:
 			try:
-				image_url = f"http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&metsFile={id}&divID=PHYS_{page:04d}"
+				image_url = f"https://content.staatsbibliothek-berlin.de/dms/{id}/800/0/{page:08d}.tif?original=true"
 				#WARN:
 				#	it looks like there is no normal way
 				#	to get the number of pages in the book via http request
