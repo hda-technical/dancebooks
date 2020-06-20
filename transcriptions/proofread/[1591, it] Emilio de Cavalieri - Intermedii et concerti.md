@@ -1,15 +1,15 @@
-### {Page} Ballo dell'ultimo intermedio[[Initially uploaded to [IMSLP](https://imslp.org/wiki/Intermedii_et_concerti_(Vincenti,_Giacomo)), the text was proofread against typos, and the orthography was reverted to match the original.]]
+### {Page} Ballo dell'vltimo intermedio[[Initially uploaded to [IMSLP](https://imslp.org/wiki/Intermedii_et_concerti_(Vincenti,_Giacomo)), the text was proofread against typos, and the orthography was reverted to match the original. Only the part with dance description was transcribed.]]
 
 QVesto disegno ci ha da rappresentare il Palco: & i numeri rappresentano le persone,
-il qual segno, ò freggio, come si chiami, che è dietro a'numeri hanno hauer uolte 
+il qual segno, ò freggio, come si chiami, che è dietro a'numeri hanno hauer uolte
 le spalle; cosi seguirà stando in Scena, et in çiascuna attione, che nel presente Ballo s'interuenga.
 
-Ritrouandosi tutti in su la Scena come si dimostra si lascerà passar dodici pause e di 
+Ritrouandosi tutti in su la Scena come si dimostra si lascerà passar dodici pause e di
 poi .I.7.[[Picture uses ✠ sign instead of I. Latin cross was in the original typeset to reference it. Maltese one was used in the transcription due to its availability in the Unicode.]] che son segnati passeranno auanti con due seguiti, & alla fine di quei si troueranno
-in Luna come qui sopra si uede. Auuertendo, che i Vinti che restano staranno 
+in Luna come qui sopra si uede. Auuertendo, che i Vinti che restano staranno
 fermi, e dipoi i Sette, daranno principio al presente Ballo.
 
-QVesto Ballo sarà principiato da Sette Persone; cioè da Quattro Dame, e Tre 
+QVesto Ballo sarà principiato da Sette Persone; cioè da Quattro Dame, e Tre
 Huomini, lequali saráno queste le Dame .✠.3.5.7. e questi .2.4.6. gli Huomini, &
 insieme col pie sinistro faranno la Riuerenza, & à man sinistra le continenze, e una Riuerenza
 à man sinistra, e .2. cangi co'l pie sinistro, & uno seguito trangato auanti, &
@@ -19,8 +19,8 @@ auanti su'l pie sinistro, & uno in dietro su'l destro, & una scorsa di un seguit
 i luoghi, & il simile faranno le Dame.
 
 {Page} Le Dame sole saranno col sinistro auanti doi passi, & un seguito pigliandosi per mano e
-continenze breve à destra, & uno seguito scorso uoltandosi à sinistra tornando à lor 
-luoghi; e dipoi gli Huomini faranno à sinistra tre continenze, e due trabocchetti, & 
+continenze breve à destra, & uno seguito scorso uoltandosi à sinistra tornando à lor
+luoghi; e dipoi gli Huomini faranno à sinistra tre continenze, e due trabocchetti, &
 una spezzata girata à sinistra, & il simile à destra; e dipoi le Dame faranno due seguiti
 in uolta à man sinistra, e poi gli Huomini faranno una mutanza di quattro tempi
 di Gagliarda due capriole, e subito le Dame faranno una intrecciata, che trovandosi
