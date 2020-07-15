@@ -409,7 +409,9 @@ og saa fremdeles.
 6te — og op igjen.
 
 7de — Første og tredie C. og tredie D. dandser rundt om første Dame; 4 C og 4 D. det samme om anden Dame til venstre Side;
+
 8de — tilbage til høire.
+
 9 og 10 T. De to opførende Par Valz, og begynde saa med det næstfølgende Par.
 
 ### Figaro.
