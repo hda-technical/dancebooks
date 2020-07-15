@@ -406,7 +406,9 @@ De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 5te — 6 rundt til venstre Side;
 
 6te — tilbage til høire.
-7de — Første C. dandser op paa Damesiden og første D. paa Cavaliersiden; de vende fig ved Enden
+
+7de — Første C. dandser op paa Damesiden og første D. paa Cavaliersiden; de vende sig ved Enden
+
 8de — og dandser nu op paa deres egen Side.
 
 ### Vexeldandsen
