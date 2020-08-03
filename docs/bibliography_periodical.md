@@ -29,6 +29,7 @@
 | 1867–1895 | Новый русский базар | https://rutracker.org/forum/viewtopic.php?t=4902380<br/>http://search.rsl.ru/ru/record/01007888504<br/>http://search.rsl.ru/ru/record/01007907707<br/>http://search.rsl.ru/ru/record/01007911873<br/>http://search.rsl.ru/ru/record/01004487216 | Да |
 | 1868–1916 | Модный свет (c 1884 года «Модный свет и модный магазин») | https://rutracker.org/forum/viewtopic.php?t=4901237 | Да |
 | 1874–1876 | Моды и рукоделия | https://rutracker.org/forum/viewtopic.php?t=4632959 | Да |
+| 1878–1879 | Специальный журнал для мужского и дамского белья | [1878](https://rusneb.ru/catalog/000200_000018_RU_NLR_INFOCOMM6_5000006141/) | Да |
 | 1885–1918 | Вестник моды [без суффиксов] | https://rutracker.org/forum/viewtopic.php?t=4892099 | Да |
 | 1889–1896 | Вестник моды для модисток | https://rutracker.org/forum/viewtopic.php?t=4892740 | Да |
 | 1894–1906 | Вестник моды для портних | https://rutracker.org/forum/viewtopic.php?t=4892607 | Да |
