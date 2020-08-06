@@ -101,6 +101,11 @@
 | Bare Necessities | Mrs. Beveridge's triumph | | `flac` | | да |
 | Bare Necessities | Invitation to waltz | | `flac` | | да |
 | Bare Necessities | Fast friends | | `flac` | | да |
+| [Chestnut](https://chestnut.fr/en/categorie-produit/album/) | Les oubliées | | нет | | |
+| Chestnut | Les choix d'amarillis | | нет | | |
+| Chestnut | Sugar and Spice | | нет | | |
+| Chestnut | The Toddler | | нет | | |
+| Chestnut | Step Stately | | нет | | |
 | The King's Noyse | Royal delight | 2CD | `CD` | | да |
 | The Assembly Players | Dance and danceability | Аккордеон | `flac` | | да |
 | The Assembly Players | Pat Shaw Playford | Аккордеон | `flac` | | да |
@@ -136,6 +141,8 @@
 | [Naxos / Marco Polo](https://www.naxos.com/) | French Ballroom Favorites | | `mp3` | | |
 | Naxos / Marco Polo | Johann Strauss I: Edition | 25CD | `CD` | | |
 | Naxos / Marco Polo | Johann Strauss II: The complete orchestral edition | 52CD | `CD` | | |
+| Naxos / Marco Polo | Josef Strauss: Edition | 26CD. YouTube: [v01](https://www.youtube.com/playlist?list=OLAK5uy_ldECrM9vkcTK_erCrYJSZvSaLpvdrA8_k), [v02](https://www.youtube.com/playlist?list=OLAK5uy_kdpWPK6Q-KuKP8Z4nlVdjAjvxHqCToiLs) | нет | | |
+| Naxos / Marci Polo | Hans Christian Lumbye: Orchestral Works | 11CD. [YouTube](https://www.youtube.com/channel/UCmdzb37FZA7-J0aE8kDos2Q/playlists). | нет | | |
 | Orchestre symphonique de la R. T. B. F. | Carnet de bal | | `mp3` | | |
 | Quatuor de Cuivres | Le bal du kiosque Е musique | | `mp3` | | |
 | D. C. Hall New Concert and Quadrille Band | Grand concert! | `CD` | да | да |
