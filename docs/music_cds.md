@@ -107,7 +107,7 @@
 | Chestnut | The Toddler | | нет | | |
 | Chestnut | Step Stately | | нет | | |
 | The King's Noyse | Royal delight | 2CD | `CD` | | да |
-| The Assembly Players | Dance and danceability | Аккордеон | `flac` | | да |
+| [The Assembly Players](https://www.nicolasbroadbridge.com/The_Assembly_Players.html) | Dance and danceability | Аккордеон | `flac` | | да |
 | The Assembly Players | Pat Shaw Playford | Аккордеон | `flac` | | да |
 | [The Pemberley Players](https://www.fainmusic.co.uk/pemberleyplayers.html) | [The Pride and Prejudice Collection. Volume I](https://www.fainmusic.co.uk/pandp1.html) | | `mp3` | | |
 | The Pemberley Players | [The Pride and Prejudice Collection. Volume II](https://www.fainmusic.co.uk/pandp2.html) | | `mp3` | | |
