@@ -106,6 +106,7 @@
 | Chestnut | Sugar and Spice | | нет | | |
 | Chestnut | The Toddler | | нет | | |
 | Chestnut | Step Stately | | нет | | |
+| Childgrove | Early Instincts | | `mp3` | | |
 | The King's Noyse | Royal delight | 2CD | `CD` | | да |
 | [The Assembly Players](https://www.nicolasbroadbridge.com/The_Assembly_Players.html) | Dance and danceability | Аккордеон | `flac` | | да |
 | The Assembly Players | Pat Shaw Playford | Аккордеон | `flac` | | да |
@@ -262,3 +263,7 @@
 | Freeland Barbour | Music for Old Time Dancing, Vol. 4 | XIX, XX, Французский аккордеон | нет | | |
 | Freeland Barbour | Music for Old Time Dancing, Vol. 5 | XIX, XX, Французский аккордеон | нет | | |
 | Freeland Barbour | Music for Old Time Dancing, Vol. 6 | XIX, XX, Французский аккордеон | нет | | |
+
+## Альтернативные подборки дисков:
+
+* [Подборка дисков](https://www.cdss.org/images/documents/how-to/ecdrecordinglistcdss.pdf) с записями _English Country Dances_ от CDSS (также доступно в `Ancillary sources (not in bibliography)/Bibliographies of the others/CDSS ECD Discography.pdf`).
