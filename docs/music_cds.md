@@ -84,56 +84,56 @@
 
 ## English Country Dances
 
-| Исполнитель | Название | Примечание | Наличие | HDA/Music | Буклет оцифрован |
-| ----------- | -------- | ---------- | ------- | --------- | ---------------- |
-| [Bare Necessities](https://www.cds-boston.org/ecdc/) | Favorites of the Boston Centre | | `flac` | | да |
-| Bare Necessities | More favorites of the Boston Centre | | `flac` | | да |
-| Bare Necessities | Simple pleasures | | `flac` | | да |
-| Bare Necessities | Modern treasures | | `flac` | | да |
-| Bare Necessities | At home | | `flac` | | да |
-| Bare Necessities | At the ball | | `flac` | | да |
-| Bare Necessities | By request | | `flac` | | да |
-| Bare Necessities | By choice | | `flac` | | да |
-| Bare Necessities | Strong roots | | `flac` | | да |
-| Bare Necessities | New shoots | | `flac` | | да |
-| Bare Necessities | A new English ball | | `flac` | | да |
-| Bare Necessities | A Playford ball | | `flac` | | да |
-| Bare Necessities | Mrs. Beveridge's triumph | | `flac` | | да |
-| Bare Necessities | Invitation to waltz | | `flac` | | да |
-| Bare Necessities | Fast friends | | `flac` | | да |
-| [Chestnut](https://chestnut.fr/en/categorie-produit/album/) | Les oubliées | | нет | | |
-| Chestnut | Les choix d'amarillis | | нет | | |
-| Chestnut | Sugar and Spice | | нет | | |
-| Chestnut | The Toddler | | нет | | |
-| Chestnut | Step Stately | | нет | | |
-| Childgrove | Early Instincts | | `mp3` | | |
-| The King's Noyse | Royal delight | 2CD | `CD` | | да |
-| [The Assembly Players](https://www.nicolasbroadbridge.com/The_Assembly_Players.html) | Dance and danceability | Аккордеон | `flac` | | да |
-| The Assembly Players | Pat Shaw Playford | Аккордеон | `flac` | | да |
-| [The Pemberley Players](https://www.fainmusic.co.uk/pemberleyplayers.html) | [The Pride and Prejudice Collection. Volume I](https://www.fainmusic.co.uk/pandp1.html) | | `mp3` | | |
-| The Pemberley Players | [The Pride and Prejudice Collection. Volume II](https://www.fainmusic.co.uk/pandp2.html) | | `mp3` | | |
-| The Pemberley Players | [The Pride and Prejudice Collection. Volume III](https://www.fainmusic.co.uk/pandp3.html) | | нет | | |
-| The Pemberley Players | [The Pride and Prejudice Collection. Volume IV](https://www.fainmusic.co.uk/pandp4.html) | | нет | | |
-| Orange and Blue, The Ranchers | The English Dancing Master | 2CD, Аккордеон, Переиздание винила | `flac` | | да |
-| Chris Dewhurst, Sue Stapledon | Playford pops | Аккордеон | `flac` | | да |
-| Paul Hutchinson, John Hymas | Emperor of the Moon | Аккордеон | `flac` | | да |
-| [The York Waits](http://www.theyorkwaits.org.uk/) | Punk's Delight | Not listed on the website | `flac` | | |
-| Playford Consort | [Altenglische Country Dances](https://musicbrainz.org/release/122f3cf9-9a36-42e2-9f14-599a63ed1653) | | `mp3` | | |
-| [Ferdinand Grüneis, Roswitha Busch-Hofer](http://www.altenglische-country-dances.de/) | Altenglische Country Dances | 2CD | нет | | |
-| [Lautten Compagney](https://www.lauttencompagney.de/) | Chirping of the Nightingale | | `mp3` | | |
-| Social Musick | The Lovers Luck | 2CD | `mp3` | | |
-| Ashley Hutchings, John Kickpatrick | The Compleat Dancing Master | Аккордеон | `mp3` | | |
-| [Early Music New York](https://www.earlymusicny.org/) | Colonial capers: Odes, Anthems, Jigs & Reels | Исполнение не фонтан (ИМХО) | `mp3` | | |
-| Hesperus | Early American Roots | Исполнение не фонтан (ИМХО) | `mp3` | | |
-| Cilantrio | [Mr. Roodman's Fancies](https://www.youtube.com/playlist?list=OLAK5uy_kG4rELdhSkocAKI-tmYSg3ys2jRlB4uyE) | Modern ECD | `aac` | | |
-| Liz Donaldson | [English Echoes](https://www.youtube.com/playlist?list=OLAK5uy_kdEtdUvUYzcI5NErTMxvoohQ2YSA44db8) | | `aac` | | |
-| Liz Donaldson | [English Echoes II](https://www.youtube.com/playlist?list=PLDpel4DUKtur1BGq7kRKRsK-B0WJBnzlu) | | `aac` | | |
-| Roguery | [Impropriety, Volume I](https://www.youtube.com/playlist?list=OLAK5uy_luw5W00sOtR8MMGef_zpz7pqDhlKaIt90) | Modern ECD | `aac` | | |
-| Roguery | [Impropriety, Volume II](https://www.youtube.com/playlist?list=OLAK5uy_lnCyT38JCR99V4cM3ms7pQrslz3XbTD2U) | Modern ECD | `aac` | | |
-| Roguery | [Impropriety, Volume III](https://www.youtube.com/playlist?list=OLAK5uy_lFN3KCJTFHWfkgCcvzaIAUPOUN0Y-YZIc) | Modern ECD | `aac` | | |
-| Roguery | [Impropriety, Volume IV](https://www.youtube.com/playlist?list=OLAK5uy_mYQ01gXliii1nfXm5YeU_fC_rjgckAOhI) | Modern ECD | `aac` | | |
-| Roguery | [Minding the Gap](https://www.youtube.com/playlist?list=OLAK5uy_nLQ2lJfxhd0_RZL0TsceBwwJowjcx_XZw) | Modern ECD | `aac` | | |
-| Roguery | [A New Leaf](https://www.youtube.com/playlist?list=OLAK5uy_kAUGMlGqN7cP4wQvb9zo5KquYaGq1gUz4) | Modern ECD | `aac` | | |
+| Исполнитель | Год | Название | Примечание | Наличие | HDA/Music | Буклет оцифрован |
+| ----------- | --- | -------- | ---------- | ------- | --------- | ---------------- |
+| [Bare Necessities](https://www.cds-boston.org/ecdc/) | 1999 | Favorites of the Boston Centre | | `flac` | | да |
+| Bare Necessities | 1999 | More favorites of the Boston Centre | | `flac` | | да |
+| Bare Necessities | 2000 | Simple pleasures | | `flac` | | да |
+| Bare Necessities | 2000 | Modern treasures | | `flac` | | да |
+| Bare Necessities | 2001 | At home | | `flac` | | да |
+| Bare Necessities | 2002 | At the ball | | `flac` | | да |
+| Bare Necessities | 2003 | By request | | `flac` | | да |
+| Bare Necessities | 2004 | By choice | | `flac` | | да |
+| Bare Necessities | 2006 | Strong roots | | `flac` | | да |
+| Bare Necessities | 2007 | New shoots | | `flac` | | да |
+| Bare Necessities | 2008 | A new English ball | | `flac` | | да |
+| Bare Necessities | 2009 | A Playford ball | | `flac` | | да |
+| Bare Necessities | 2010 | Mrs. Beveridge's triumph | | `flac` | | да |
+| Bare Necessities | 2011 | Invitation to waltz | | `flac` | | да |
+| Bare Necessities | 2011 | Fast friends | | `flac` | | да |
+| [Chestnut](https://chestnut.fr/en/categorie-produit/album/) | | Les oubliées | | нет | | |
+| Chestnut | | Les choix d'amarillis | | нет | | |
+| Chestnut | | Sugar and Spice | | нет | | |
+| Chestnut | | The Toddler | | нет | | |
+| Chestnut | | Step Stately | | нет | | |
+| Childgrove | | Early Instincts | | `mp3` | | |
+| The King's Noyse | | Royal delight | 2CD | `CD` | | да |
+| [The Assembly Players](https://www.nicolasbroadbridge.com/The_Assembly_Players.html) | | Dance and danceability | Аккордеон | `flac` | | да |
+| The Assembly Players | | Pat Shaw Playford | Аккордеон | `flac` | | да |
+| [The Pemberley Players](https://www.fainmusic.co.uk/pemberleyplayers.html) | | [The Pride and Prejudice Collection. Volume I](https://www.fainmusic.co.uk/pandp1.html) | | `mp3` | | |
+| The Pemberley Players | | [The Pride and Prejudice Collection. Volume II](https://www.fainmusic.co.uk/pandp2.html) | | `mp3` | | |
+| The Pemberley Players | | [The Pride and Prejudice Collection. Volume III](https://www.fainmusic.co.uk/pandp3.html) | | нет | | |
+| The Pemberley Players | | [The Pride and Prejudice Collection. Volume IV](https://www.fainmusic.co.uk/pandp4.html) | | нет | | |
+| Orange and Blue, The Ranchers | | The English Dancing Master | 2CD, Аккордеон, Переиздание винила | `flac` | | да |
+| Chris Dewhurst, Sue Stapledon | | Playford pops | Аккордеон | `flac` | | да |
+| Paul Hutchinson, John Hymas | | Emperor of the Moon | Аккордеон | `flac` | | да |
+| [The York Waits](http://www.theyorkwaits.org.uk/) | | Punk's Delight | Not listed on the website | `flac` | | |
+| Playford Consort | | [Altenglische Country Dances](https://musicbrainz.org/release/122f3cf9-9a36-42e2-9f14-599a63ed1653) | | `mp3` | | |
+| [Ferdinand Grüneis, Roswitha Busch-Hofer](http://www.altenglische-country-dances.de/) | | Altenglische Country Dances | 2CD | нет | | |
+| [Lautten Compagney](https://www.lauttencompagney.de/) | | Chirping of the Nightingale | | `mp3` | | |
+| Social Musick | | The Lovers Luck | 2CD | `mp3` | | |
+| Ashley Hutchings, John Kickpatrick | | The Compleat Dancing Master | Аккордеон | `mp3` | | |
+| [Early Music New York](https://www.earlymusicny.org/) | | Colonial capers: Odes, Anthems, Jigs & Reels | Исполнение не фонтан (ИМХО) | `mp3` | | |
+| Hesperus | | Early American Roots | Исполнение не фонтан (ИМХО) | `mp3` | | |
+| Cilantrio | | [Mr. Roodman's Fancies](https://www.youtube.com/playlist?list=OLAK5uy_kG4rELdhSkocAKI-tmYSg3ys2jRlB4uyE) | Modern ECD | `aac` | | |
+| Liz Donaldson | | [English Echoes](https://www.youtube.com/playlist?list=OLAK5uy_kdEtdUvUYzcI5NErTMxvoohQ2YSA44db8) | | `aac` | | |
+| Liz Donaldson | | [English Echoes II](https://www.youtube.com/playlist?list=PLDpel4DUKtur1BGq7kRKRsK-B0WJBnzlu) | | `aac` | | |
+| Roguery | | [Impropriety, Volume I](https://www.youtube.com/playlist?list=OLAK5uy_luw5W00sOtR8MMGef_zpz7pqDhlKaIt90) | Modern ECD | `aac` | | |
+| Roguery | | [Impropriety, Volume II](https://www.youtube.com/playlist?list=OLAK5uy_lnCyT38JCR99V4cM3ms7pQrslz3XbTD2U) | Modern ECD | `aac` | | |
+| Roguery | | [Impropriety, Volume III](https://www.youtube.com/playlist?list=OLAK5uy_lFN3KCJTFHWfkgCcvzaIAUPOUN0Y-YZIc) | Modern ECD | `aac` | | |
+| Roguery | | [Impropriety, Volume IV](https://www.youtube.com/playlist?list=OLAK5uy_mYQ01gXliii1nfXm5YeU_fC_rjgckAOhI) | Modern ECD | `aac` | | |
+| Roguery | | [Minding the Gap](https://www.youtube.com/playlist?list=OLAK5uy_nLQ2lJfxhd0_RZL0TsceBwwJowjcx_XZw) | Modern ECD | `aac` | | |
+| Roguery | | [A New Leaf](https://www.youtube.com/playlist?list=OLAK5uy_kAUGMlGqN7cP4wQvb9zo5KquYaGq1gUz4) | Modern ECD | `aac` | | |
 
 ## XIX
 
