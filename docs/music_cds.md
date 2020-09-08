@@ -163,7 +163,9 @@
 | The Orchestra of the Gilded Age | The Grand Victorian Ballroom | | `CD` | да | да |
 | The Orchestra of the Gilded Age | North & South | | `CD` | да | да |
 | [The Triskelion All-Stars](https://vk.com/artist/thetriskelionall_stars) | [Take Me Out to the Ball Game](https://music.yandex.ru/artist/2879350/tracks) | | `mp3/partial` | | |
-| Barry Collette, Innovation Chamber Orchestra | [Music for Powick Asylum](https://music.yandex.ru/album/2579939/track/22429804) | | `mp3` | | |
+| Barry Collette, Innovation Chamber Orchestra | [Music for Powick Asylum](https://music.yandex.ru/album/2579939/track/22429804) | | нет | | |
+| Bangers and Mash | [Breakfast at Fezziwig's](https://people.well.com/user/cwj/bangersandmash/BatF.html) | | нет | | |
+| Bangers and Mash | [Sir Roger de Coverly](https://people.well.com/user/cwj/bangersandmash/SRdC.html) | | нет | | |
 
 ## Mixed
 
