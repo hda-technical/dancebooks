@@ -86,7 +86,8 @@
 
 | Исполнитель | Год | Название | Примечание | Наличие | HDA/Music | Буклет оцифрован |
 | ----------- | --- | -------- | ---------- | ------- | --------- | ---------------- |
-| [Bare Necessities](https://www.cds-boston.org/ecdc/) | 1999 | Favorites of the Boston Centre | | `flac` | | да |
+| [Bare Necessities](https://www.cds-boston.org/ecdc/) | 1989 | English Country Dances | | `flac` | | |
+| Bare Necessities | 1999 | Favorites of the Boston Centre | | `flac` | | да |
 | Bare Necessities | 1999 | More favorites of the Boston Centre | | `flac` | | да |
 | Bare Necessities | 2000 | Simple pleasures | | `flac` | | да |
 | Bare Necessities | 2000 | Modern treasures | | `flac` | | да |
