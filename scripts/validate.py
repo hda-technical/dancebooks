@@ -455,18 +455,6 @@ def validate_shorthand(item, errors):
 		errors.add(f"Shorthand is oversized (max length is {MAX_SHORTHAND_LENGTH})")
 
 
-def validate_title_starts_from_shorthand(item, errors):
-	"""
-	Checks if title starts from shorthand
-	"""
-	title = item.get("title") or item.get("incipit")
-	shorthand = item.get("shorhand")
-	if (shorthand is None):
-		return
-	if not title.startswith(shorthand):
-		errors.add("Title should begin with shorthand")
-
-
 def validate_isbn(item, errors):
 	"""
 	Checks ISBN for validity.
@@ -873,7 +861,6 @@ def validate_item(item, git_added_on, make_extra_checks):
 	#FIXME: this is a good validation, but it causes more then 1000 errors.
 	#validate_note(item, errors)
 	if make_extra_checks:
-		validate_title_starts_from_shorthand(item, errors)
 		validate_url_accessibility(item, errors)
 	return errors
 
