@@ -40,7 +40,12 @@ def strip_split_list(value, sep):
 	"""
 	Splits string on a given separator, strips spaces from resulting words
 	"""
-	return [word.strip() for word in value.split(sep)]
+	return list(
+		filter(
+			None,
+			(word.strip() for word in value.split(sep))
+		)
+	)
 
 
 def require(condition, ex):
