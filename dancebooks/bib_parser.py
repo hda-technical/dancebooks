@@ -447,8 +447,6 @@ class BibParser:
 					self.state = ParserState.DoneReadingValue
 					self.key = ""
 					self.lexeme = ""
-				elif c.isspace() and c != ' ':
-					self.raise_error()
 				else:
 					self.lexeme += c
 
