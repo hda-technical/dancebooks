@@ -83,19 +83,26 @@ def get_text(*args, **kwargs):
 def get_binary(output_filename, url_or_request, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
-	Accepts both url as string and request.Requests
+	Accepts both url as string and request.Requests.
+
+	Returns size of the data that was downloaded.
 	"""
+	total_size = 0
 	BLOCK_SIZE = 4096
 	response = make_request(url_or_request, *args, stream=True, **kwargs)
 	with open(output_filename, "wb") as file:
 		for chunk in response.iter_content(BLOCK_SIZE):
+			total_size += len(chunk)
 			file.write(chunk)
+	return total_size
 
 
 def make_output_folder(downloader, book_id):
 	clean_book_id = book_id\
 		.replace('/', '_')\
-		.replace(':', '_')
+		.replace(':', '_')\
+		.replace('\\', '_')\
+
 	folder_name = f"{downloader}_{clean_book_id}"
 	os.makedirs(folder_name, exist_ok=True)
 	return folder_name
@@ -114,7 +121,7 @@ def make_output_filename(base, page=None, extension="bmp"):
 
 def make_temporary_folder():
 	return str(uuid.uuid4())
-	
+
 
 class TileSewingPolicy:
 	def __init__(self, tiles_number_x, tiles_number_y, tile_size, image_width=None, image_height=None, overlap=None):

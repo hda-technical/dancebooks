@@ -1,7 +1,7 @@
 import utils
 
 
-def get_book_from_difmoe(id):
+def get(id):
 	children_url = f"https://kramerius.difmoe.eu/search/api/v5.0/item/uuid:{id}/children"
 	children = utils.get_json(children_url)
 	print(f"Downloading {len(children)} images from kramerius.difmoe.eu")

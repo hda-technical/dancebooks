@@ -12,8 +12,9 @@ import opster
 import requests
 
 from utils import *  # TODO: fix imports
-from difmoe import get_book_from_difmoe
-from hathitrust import get_book_from_hathitrust
+import difmoe
+import hathitrust
+import internet_culturale
 
 
 class IIPMetadata:
@@ -842,7 +843,20 @@ def locMusdi(
 def hathitrust(
 	id=("", "", "Id of the book to be downloaded (e. g. `wu.89005529961`)")
 ):
-	get_book_from_hathitrust(id)
+	"""
+	Downloads book from the HathiTrust Digital Library (https://www.hathitrust.org/)
+	"""
+	hathitrust.get(id)
+
+
+@opster.command()
+def culturale(
+	id=("", "", "Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)")
+):
+	"""
+	Downloads book from Internet Culturale, Biblioteca Digitale Italiana (http://www.internetculturale.it/)
+	"""
+	internet_culturale.get(id)
 
 
 @opster.command()
@@ -944,7 +958,7 @@ def difmoe(
 	"""
 	Downloads book from https://www.difmoe.eu/
 	"""
-	get_book_from_difmoe(id)
+	difmoe.get(id)
 
 
 @opster.command()

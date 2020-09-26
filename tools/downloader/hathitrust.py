@@ -3,7 +3,7 @@ import os
 import utils
 
 
-def get_book_from_hathitrust(id):
+def get(id):
 	output_folder = utils.make_output_folder("hathitrust", id)
 	metadata_url = f"https://babel.hathitrust.org/cgi/imgsrv/meta?id={id}"
 	metadata = utils.get_json(metadata_url)
