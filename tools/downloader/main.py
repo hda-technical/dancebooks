@@ -9,14 +9,8 @@ import bs4
 import opster
 import requests
 
-# utility imports
 from utils import *  # TODO: fix imports
 import iiif
-
-# per-provider downloader imports
-import difmoe
-import hathitrust
-import internet_culturale
 
 
 class IIPMetadata:
@@ -754,16 +748,18 @@ def hathitrust(
 	"""
 	Downloads book from the HathiTrust Digital Library (https://www.hathitrust.org/)
 	"""
+	import hathitrust
 	hathitrust.get(id)
 
 
 @opster.command()
-def culturale(
+def internet_culturale(
 	id=("", "", "Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)")
 ):
 	"""
 	Downloads book from Internet Culturale, Biblioteca Digitale Italiana (http://www.internetculturale.it/)
 	"""
+	import internet_culturale
 	internet_culturale.get(id)
 
 
@@ -866,6 +862,7 @@ def difmoe(
 	"""
 	Downloads book from https://www.difmoe.eu/
 	"""
+	import difmoe
 	difmoe.get(id)
 
 
@@ -937,6 +934,17 @@ def haab(
 			else:
 				print(f"Got exception while getting page {page:08d}: {ex}. Exception limit was reached, downloader will exit now.")
 				break
+
+
+@opster.command()
+def fulda(
+	id=("", "", "Id of the book to be downloaded (e. g. `PPN446487767`)")
+):
+	"""
+	Downloads book from https://fuldig.hs-fulda.de
+	"""
+	import fulda
+	fulda.get(id)
 
 
 if __name__ == "__main__":
