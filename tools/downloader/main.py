@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 
 import http.client
-import json
 import os
 import subprocess
-import time
 from xml.etree import ElementTree
 
 import bs4
 import opster
 import requests
 
+# utility imports
 from utils import *  # TODO: fix imports
+import iiif
+
+# per-provider downloader imports
 import difmoe
 import hathitrust
 import internet_culturale
@@ -25,11 +27,11 @@ class IIPMetadata:
 		self.max_level = max_level
 
 	@staticmethod
-	def from_json(json):
+	def from_json(data):
 		tile_size = 256
-		width = int(json["d"][-1]["w"])
-		height = int(json["d"][-1]["h"])
-		max_level = json["m"]
+		width = int(data["d"][-1]["w"])
+		height = int(data["d"][-1]["h"])
+		max_level = data["m"]
 		return IIPMetadata(tile_size, width, height, max_level)
 
 	@staticmethod
@@ -92,100 +94,6 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 		else:
 			print(f"Downloading page #{page_number:04d}")
 			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
-
-
-def download_image_from_iiif(base_url, output_filename):
-	"""
-	Downloads single image via IIIF protocol.
-	API is documented here:
-	http://iiif.io/about/
-	"""
-	DESIRED_QUALITIES = ["color", "native", "default"]
-	DESIRED_FORMATS = ["png", "tif", "jpg"]
-
-	class UrlMaker:
-		def __call__(self, tile_x, tile_y):
-			left = tile_size * tile_x
-			top = tile_size * tile_y
-			tile_width = min(width - left, tile_size)
-			tile_height = min(height - top, tile_size)
-			tile_url = f"{base_url}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/{desired_quality}.{desired_format}"
-			return tile_url
-
-	metadata_url = f"{base_url}/info.json"
-	metadata = get_json(metadata_url)
-	if "tiles" in metadata:
-		# Served by e. g. vatlib servant
-		tile_size = metadata["tiles"][0]["width"]
-	else:
-		# Served by e. g. Gallica servant
-		tile_size = 1024
-	width = metadata["width"]
-	height = metadata["height"]
-
-	desired_quality = "default"
-	desired_format = "jpg"
-	profile = metadata.get("profile")
-	if (profile is not None) and (len(profile) >= 2) and (profile is not str):
-		# Profile is not served by Gallica servant, but served by e. g. British Library servant
-		# Complex condition helps to ignore missing metadata fields, see e. g.:
-		# https://gallica.bnf.fr/iiif/ark:/12148/btv1b10508435s/f1/info.json
-		# http://www.digitale-bibliothek-mv.de/viewer/rest/image/PPN880809493/00000001.tif/info.json
-		if "qualities" in profile[1]:
-			available_qualities = profile[1]["qualities"]
-			for quality in DESIRED_QUALITIES:
-				if quality in available_qualities:
-					desired_quality = quality
-					break
-			else:
-				raise RuntimeError(f"Can not choose desired image quality. Available qualities: {available_qualities!r}")
-		if "formats" in profile[1]:
-			available_formats = profile[1]["formats"]
-			for format in DESIRED_FORMATS:
-				if format in available_formats:
-					desired_format = format
-					break
-			else:
-				raise RuntimeError(f"Can not choose desired image format. Available formats: {available_formats!r}")
-
-	policy = TileSewingPolicy.from_image_size(width, height, tile_size)
-	download_and_sew_tiles(output_filename,	UrlMaker(),	policy)
-
-
-def download_book_from_iiif(manifest_url, output_folder):
-	"""
-	Downloads entire book via IIIF protocol.
-	API is documented here:
-	http://iiif.io/about/
-	"""
-	manifest = get_json(manifest_url)
-	canvases = manifest["sequences"][0]["canvases"]
-	for page, metadata in enumerate(canvases):
-		output_filename = make_output_filename(output_folder, page)
-		if os.path.isfile(output_filename):
-			print(f"Skip downloading existing page #{page:04d}")
-			continue
-		base_url = metadata["images"][-1]["resource"]["service"]["@id"]
-		download_image_from_iiif(base_url, output_filename)
-
-
-def download_book_from_iiif_fast(manifest_url, output_folder):
-	"""
-	Downloads entire book via IIIF protocol.
-	Issues single request per image, but might be unsupported by certain backends.
-
-	API is documented here:
-	http://iiif.io/about/
-	"""
-	manifest = get_json(manifest_url)
-	canvases = manifest["sequences"][0]["canvases"]
-	for page, metadata in enumerate(canvases):
-		output_filename = make_output_filename(output_folder, page, extension="jpg")
-		if os.path.isfile(output_filename):
-			print(f"Skip downloading existing page #{page:04d}")
-			continue
-		full_url = metadata["images"][-1]["resource"]["@id"]
-		get_binary(output_filename, full_url)
 
 
 # These methods try to guess tiles number using HEAD requests with given UrlMaker
@@ -264,7 +172,7 @@ def bnfGallica(
 	"""
 	manifest_url = f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 	output_folder = make_output_folder("gallica", id)
-	download_book_from_iiif_fast(manifest_url, output_folder)
+	iiif.download_book_fast(manifest_url, output_folder)
 
 
 @opster.command()
@@ -425,7 +333,7 @@ def uniGoettingen(
 	"""
 	manifest_url = f"https://manifests.sub.uni-goettingen.de/iiif/presentation/{id}/manifest"
 	output_folder = make_output_folder("goettingen", id)
-	download_book_from_iiif(manifest_url, output_folder)
+	iiif.download_book(manifest_url, output_folder)
 
 
 @opster.command()
@@ -445,7 +353,7 @@ def encyclopedie(
 	image_metadata = image_list_metadata[page]
 	image_url = f"http://enccre.academie-sciences.fr/digilib/Scaler/IIIF/{image_metadata['image']}"
 	output_file = f"{page:04d}.bmp"
-	download_image_from_iiif(image_url, output_file)
+	iiif.download_image(image_url, output_file)
 
 
 @opster.command()
@@ -457,7 +365,7 @@ def vatlib(
 	"""
 	manifest_url = f"http://digi.vatlib.it/iiif/{id}/manifest.json"
 	output_folder = make_output_folder("vatlib", id)
-	download_book_from_iiif(manifest_url, output_folder)
+	iiif.download_book(manifest_url, output_folder)
 
 
 @opster.command()
@@ -476,7 +384,7 @@ def mecklenburgVorpommern(
 			continue
 		try:
 			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/rest/image/{id}/{page:08d}.tif"
-			download_image_from_iiif(base_url, output_filename)
+			iiif.download_image(base_url, output_filename)
 		except ValueError:
 			break
 
@@ -634,7 +542,7 @@ def britishLibraryBook(
 	"""
 	output_folder = make_output_folder("bl", id)
 	manifest_url = f"https://api.bl.uk/metadata/iiif/ark:/81055/{id}.0x000001/manifest.json"
-	download_book_from_iiif_fast(manifest_url, output_folder)
+	iiif.download_book_fast(manifest_url, output_folder)
 
 
 class DeepZoomUrlMaker:
@@ -837,7 +745,7 @@ def locMusdi(
 			continue
 		print(f"Downloading page #{page:08d}")
 		get_binary(output_filename, url)
-		
+
 
 @opster.command()
 def hathitrust(
@@ -950,7 +858,7 @@ def staatsBerlin(
 				break
 		page += 1
 
-		
+
 @opster.command()
 def difmoe(
 	id=("", "", "UUID of the book to be downloaded (e. g. `c96b8876-b4f8-48a5-8221-3949392b1a5c`)")
