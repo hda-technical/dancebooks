@@ -175,6 +175,7 @@ def sew_tiles_with_montage(folder, output_file, policy):
 		output_file
 	]
 	print(f"Sewing tiles with:\n    {' '.join(cmd_line)}")
+	print("    WARN: if this stage seems to be slow, consider rising the limits in /etc/ImageMagick-6/policy.xml.")
 	subprocess.check_call(cmd_line)
 
 	if policy.image_width and policy.image_height:
