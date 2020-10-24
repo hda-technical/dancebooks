@@ -10,6 +10,7 @@ import opster
 import requests
 
 from utils import *  # TODO: fix imports
+import deep_zoom
 import iiif
 
 
@@ -539,31 +540,6 @@ def britishLibraryBook(
 	iiif.download_book_fast(manifest_url, output_folder)
 
 
-class DeepZoomUrlMaker:
-	def __init__(self, base_url, max_zoom, ext="jpg"):
-		self.base_url = base_url
-		self.max_zoom = max_zoom
-		self.ext = ext
-
-	def __call__(self, tile_x, tile_y):
-		return f"{self.base_url}/{self.max_zoom}/{tile_x}_{tile_y}.{self.ext}"
-
-
-def download_image_from_deepzoom(output_filename, metadata_url, url_maker):
-	image_metadata = get_xml(metadata_url)
-
-	tile_size = int(image_metadata.attrib["TileSize"])
-	overlap = int(image_metadata.attrib["Overlap"])
-
-	size_metadata = image_metadata.getchildren()[0]
-	width = int(size_metadata.attrib["Width"])
-	height = int(size_metadata.attrib["Height"])
-
-	policy = TileSewingPolicy.from_image_size(width, height, tile_size)
-	policy.overlap = overlap
-	download_and_sew_tiles(output_filename, url_maker, policy)
-
-
 @opster.command()
 def leidenCollection(
 	id=("", "", "Image id of the painting to be downloaded(e. g. `js-108-jan_steen-the_fair_at_warmond_files`)")
@@ -601,14 +577,14 @@ def britishLibraryManuscript(
 	manuscript_id, page_id = parse_id(id)
 	#WARN: here and below base_url and metadata_url have common prefix. One might save something
 	metadata_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}.xml"
-
+	print(metadata_url)
 	output_folder = make_output_folder("bl", manuscript_id)
 	output_filename = make_output_filename(output_folder, page_id)
 
 	MAX_ZOOM = 13
 	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
-	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
-	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
+	url_maker = deep_zoom.UrlMaker(base_url, MAX_ZOOM)
+	deep_zoom.download_image(output_filename, metadata_url, url_maker)
 
 
 @opster.command()
@@ -623,9 +599,9 @@ def henryFord(
 
 	MAX_ZOOM = 12
 	base_url = f"https://www.thehenryford.org/linkedpub-image/{id}_files"
-	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM, ext="jpeg")
+	url_maker = deep_zoom.UrlMaker(base_url, MAX_ZOOM, ext="jpeg")
 	output_filename = f"henryFord_{basename}.bmp"
-	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
+	deep_zoom.download_image(output_filename, metadata_url, url_maker)
 
 
 @opster.command()
@@ -641,9 +617,9 @@ def makAt(
 
 	MAX_ZOOM = 11
 	base_url = f"https://sammlung.mak.at/img/zoomimages/publikationsbilder/{id}_files"
-	url_maker = DeepZoomUrlMaker(base_url, MAX_ZOOM)
+	url_maker = deep_zoom.UrlMaker(base_url, MAX_ZOOM)
 
-	download_image_from_deepzoom(output_filename, metadata_url, url_maker)
+	deep_zoom.download_image(output_filename, metadata_url, url_maker)
 
 
 @opster.command()
