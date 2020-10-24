@@ -923,5 +923,16 @@ def fulda(
 	fulda.get(id)
 
 
+@opster.command()
+def cambridge(
+	id=("", "", "Id of the image to be downloaded (e. g. `PR-INC-00000-A-00007-00002-00888-000-00420`)")
+):
+	"""
+	Downloads image from https://images.lib.cam.ac.uk
+	"""
+	import cambridge
+	cambridge.get(id)
+
+
 if __name__ == "__main__":
 	opster.dispatch()
