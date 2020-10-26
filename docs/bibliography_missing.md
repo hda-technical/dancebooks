@@ -1,4 +1,4 @@
-﻿# Historical dance bibliography: Entries known to be missing
+# Historical dance bibliography: Entries known to be missing
 
 _This table is intended to be accurate, yet sometimes it is slightly outdated._
 
@@ -193,7 +193,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1816? | Thomas Wilson<br/>Button (publisher)<br/>John Whitaker | Selection of Dances, Reels & Waltzes<br/>_Number 30 is the series_<br/>_Contains description of the Cambridge Waltz_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1816? | Thomas Wilson<br/>Button (publisher)<br/>John Whitaker | Selection of Dances, Reels & Waltzes<br/>_Number 31 is the series_<br/>_Contains a set of quadrilles_ | [[Cooper, #03]](https://www.regencydances.org/paper003.php)<br/>[[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1816 | Thomas Wilson | A Technical Ball Room Dictionary | [[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://books.google.com/books?id=gGI3AQAAMAAJ&pg=PA157) | |
-| 1816 | Thomas Wilson | A Companion to the Ball Room<br/>_First edition_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://books.google.com/books?id=hLAUAAAAQAAJ&pg=PA612) | |
 | 1816 | Thomas Wilson | Le Sylphe, an Elegant Collection of Twenty Four Country Dances. For the Year 1816. Adapted for the German Flute, Violin, Flageolet or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1817 | John Cherry | A Treatise on Modern Dancing | `[LOST?]`<br/>[[Cooper, #16]](http://regencydances.org/paper016.php) | |
 | 1817? | Thomas Wilson | Quadrille Instructor<br/>_First edition_ | [[Cooper, #02]](https://www.regencydances.org/paper002.php)<br/>[[Cooper, #03]](https://www.regencydances.org/paper003.php)<br/>[[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://books.google.com/books?id=uzYaAQAAIAAJ&pg=PA59) | |
@@ -241,7 +240,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1824 | Juan Ignacio de Iztueta | Guicuzpoaco dantza | `[Nouveau manuel, 1857, #60]` | [Gallica](http://gallica.bnf.fr/ark:/12148/bpt6k8894479/) |
 | 1824 | Thomas Wilson | Whitaker and Compy's Twenty Four Country Dances, for the Year 1824, Adapted for the Violin, German Flute or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004742496 |
 | 1824 | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the year 1824 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
-| 1825 | | Калейдакустикон. Музыкальное упражнение для составления 214 миллионов вальсов и более играющим на форте-пиано | `music: generator`<br/>[[Kuhlau, 1817–1821?]](https://bib.hda.org.ru/books/kuhlau_1820_kaleidakustikon) | [RSL/Rare](https://search.rsl.ru/ru/record/01001928188) | 
+| 1825 | | Калейдакустикон. Музыкальное упражнение для составления 214 миллионов вальсов и более играющим на форте-пиано | `music: generator`<br/>[[Kuhlau, 1817–1821?]](https://bib.hda.org.ru/books/kuhlau_1820_kaleidakustikon) | [RSL/Rare](https://search.rsl.ru/ru/record/01001928188) |
 | 1825 | Joseph Binns Hart | Hart's Fifteenth Set of Quadrilles | | [archive.org](https://archive.org/details/Harts15thQuadrilles) |
 | 1825 | | Methodo facil de dançar as quadrilhas geralmente chamadas contradanças francesas | | BNP |
 | 1825 | C. Bencke | Taschenbuch der Tanzkunst | `[Germanorum, 1914]` | |
