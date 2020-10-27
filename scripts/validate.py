@@ -887,7 +887,7 @@ def validate_backups():
 		backup_id = metadatum["id"]
 		full_path = os.path.join(config.www.backup_dir, metadatum["path"])
 		if not os.path.exists(full_path):
-			logging.warn(f"Backup #{backup_id} at '{full_path}' does not exists")
+			logging.warning(f"Backup #{backup_id} at '{full_path}' does not exists")
 
 	POSSIBLE_BACKUP_EXTENSIONS = [".pdf", ".tif"]
 	strange_backups_number = 0
@@ -908,9 +908,9 @@ def validate_backups():
 		found_in_library = any(map(os.path.isfile, possible_library_paths))
 		if not found_in_library:
 			strange_backups_number += 1
-			logging.warn(f"Backup {config.www.backup_dir}/{backup} is not present in the library")
+			logging.warning(f"Backup {config.www.backup_dir}/{backup} is not present in the library")
 	if strange_backups_number > 0:
-		logging.warn(f"Found {strange_backups_number} strange backups")
+		logging.warning(f"Found {strange_backups_number} strange backups")
 
 
 @opster.command()
@@ -938,7 +938,7 @@ def main(
 		for file in filename:
 			physically_stored.discard(file)
 	for path in physically_stored:
-		logging.warn(f"Unreferenced file found in {config.www.elibrary_dir}: {path}")
+		logging.warning(f"Unreferenced file found in {config.www.elibrary_dir}: {path}")
 
 	logging.info(f"Going to process {len(items)} items")
 	erroneous_items = dict()
