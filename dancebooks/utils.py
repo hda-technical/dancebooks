@@ -592,7 +592,14 @@ class MarkdownHyphen(markdown.inlinepatterns.Pattern):
 	* `[-?]` (represents missing hyphen)
 	"""
 	def __init__(self):
-		super().__init__(r"((?P<preservable_hyphen>-)|(?P<removable_hyphen>\[-\])|(?P<missing_hyphen>\[-\??\]))\s*\r?\n")
+		super().__init__(
+			r"("
+				r"(?P<preservable_hyphen>-)|"
+				r"(?P<removable_hyphen>\[-\])|"
+				r"(?P<missing_hyphen>\[-\??\])"
+			r")"
+			r"\s*\r?\n"
+		)
 
 	def handleMatch(self, m):
 		if m["preservable_hyphen"]:
