@@ -67,6 +67,7 @@ DATA_FIELDS = {
 	"title",
 	"type",
 	"transcription",
+	"transcription_features",
 	"transcriber",
 	"translator",
 	"type",
