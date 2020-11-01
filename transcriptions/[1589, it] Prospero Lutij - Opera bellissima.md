@@ -473,7 +473,7 @@ le incruciate, che fan tempo,
 17 Il Passeggio è mutanza di vna ripresetta in
 sotto piede battendo in terra, i, piedi disugua[-]
 li, e con gratia, il groppetto di tre botte giran
-{18} girando[[In the source the page ends with "giran" and next page starts with the full word "girando"]] la vita di riuerscio, vn fioretto, che resta in
+{18} girando[[In the source page 17 ends with _giran_ and the next page starts with the full word _girando_]] la vita di riuerscio, vn fioretto, che resta in
 aria, che fà tempo.
 
 21 Due Zoppetti col piede alto, e fermo, volta la
