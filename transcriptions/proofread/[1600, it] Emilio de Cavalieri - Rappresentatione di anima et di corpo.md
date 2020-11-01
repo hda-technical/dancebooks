@@ -59,4 +59,4 @@ Et se il palco non fusse capace di ballare in quattro, almeno ballisi in due:
 ritrovi.
 
 Le stanze del ballo siano cantate da tutti dentro, & di fuori; & tutti gli
-stromenti, che si può, si mettino ne' Ritornelli
+stromenti, che si può, si mettino ne' Ritornelli.
