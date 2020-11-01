@@ -24,7 +24,7 @@ translations:
 # must be invoked as root
 configs-install: configs-install-production configs-install-testing;
 
-configs-install-production: translations
+configs-install-production:
 	#creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
 	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME)
@@ -50,7 +50,7 @@ configs-install-production: translations
 	#installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
-configs-install-testing: translations
+configs-install-testing:
 	#creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
 	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME_TESTING)
