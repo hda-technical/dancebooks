@@ -483,6 +483,7 @@ class MarkdownCache:
 		self._markdown.inlinePatterns.add("page_number", MarkdownPageNumber(), "_end")
 		self._markdown.inlinePatterns.add("smallcaps", MarkdownSmallCaps(), "_end")
 		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
+		self._markdown.inlinePatterns.add("hyphen", MarkdownHyphen(), "_end")
 		self._markdown.parser.blockprocessors.add(
 			"align_right",
 			MarkdownAlignRight(self._markdown.parser),
@@ -581,6 +582,25 @@ class MarkdownSmallCaps(markdown.inlinepatterns.Pattern):
 		span.set("class", const.CSS_CLASS_SMALLCAPS)
 		span.text = m.group("smallcaps")
 		return span
+
+
+class MarkdownHyphen(markdown.inlinepatterns.Pattern):
+	"""
+	Handles hyphenation signs.
+	At the time, removes both
+	* `[-]` (represents printed hyphen). These are kept in the transcription to make typed text match the printed one.
+	* `[-?]` (represents missing hyphen)
+	"""
+	def __init__(self):
+		super().__init__(r"((?P<preservable_hyphen>-)|(?P<removable_hyphen>\[-\])|(?P<missing_hyphen>\[-\??\]))\s*\r?\n")
+
+	def handleMatch(self, m):
+		if m["preservable_hyphen"]:
+			# preserve the hyphen
+			return "-"
+		else:
+			# remove non-meaning hyphen
+			return ""
 
 
 class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
