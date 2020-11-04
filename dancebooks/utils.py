@@ -389,7 +389,7 @@ def read_utf8_file(path):
 
 def first(iterable):
 	"""
-	Returns first item in a containter
+	Returns first item in a container
 	"""
 	return next(iter(iterable))
 
