@@ -7,7 +7,7 @@ import re
 #See: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 SHORT_LANG_MAP = {
 	"ar": ["spanish"],
-	"at": ["german", "french"],
+	"at": ["german", "french", "italian"],
 	"au": ["english"],
 	"ca": ["english", "french"],
 	"ch": ["french"],
@@ -50,6 +50,7 @@ LONG_LANG_MAP = {
 	"austrian.bib": {
 		"german",
 		"french",
+		"italian",
 	},
 	"canadian.bib": {
 		"english",
