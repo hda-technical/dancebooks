@@ -1,4 +1,5 @@
-### {Page} Ballo dell'vltimo intermedio[[Initially uploaded to [IMSLP](https://imslp.org/wiki/Intermedii_et_concerti_(Vincenti,_Giacomo)), the text was proofread against typos, and the orthography was reverted to match the original. Only the part with dance description was transcribed.]]
+### {Page} BALLO
+DELL'VLTIMO INTERMEDIO[[Initially uploaded to [IMSLP](https://imslp.org/wiki/Intermedii_et_concerti_(Vincenti,_Giacomo)), the text was proofread against typos, and the orthography was reverted to match the original. Only the part with dance description was transcribed.]]
 
 QVesto disegno ci ha da rappresentare il Palco: & i numeri rappresentano le persone,
 il qual segno, ò freggio, come si chiami, che è dietro a'numeri hanno hauer uol[-]
