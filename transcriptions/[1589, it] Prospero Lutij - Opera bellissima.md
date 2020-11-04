@@ -1,17 +1,17 @@
 ### {Page} OPERA
-### BELLISSIMA
-### NELLA QVALE
-### SI CONTENGONO MOLTE
-### PARTITE ET PASSEGGI
-### DI GAGLIARDA.
+BELLISSIMA
+NELLA QVALE
+SI CONTENGONO MOLTE
+PARTITE ET PASSEGGI
+DI GAGLIARDA.
 
 ### Con la quale ciascuno in breue tempo
-### potrà facilmente imparare
-### di Ballare,
+potrà facilmente imparare
+di Ballare,
 
 ### Composta nuouamente per Prospero Lutij di Sulmona,
-### Al Ill.^mo^ Signore Il Signor Francesco Maria
-### de Marchesi del Monte.
+Al Ill.^mo^ Signore Il Signor Francesco Maria
+de Marchesi del Monte.
 
 ### _CON LICENTIA DE' SVPERIORI_
 
@@ -20,9 +20,9 @@
 {Page}
 
 ### {Page} ALL'ILLVSTRISS.^mo^ SIG.
-### IL SIG.^or^ FRANCESCOMARIA
-### DE MARCHESI
-### DEL MONTE
+IL SIG.^or^ FRANCESCOMARIA
+DE MARCHESI
+DEL MONTE
 
 QVANDO pensassi che V.S. Il[-?]
 lustrissima fosse per accettare
@@ -184,7 +184,7 @@ tura nel molto, che haurei potuto dire intorno à ciò, proemizan[-?]
 do, hauesse egli potuto, leggendo, prendere in qualche parte.
 
 ### {9} PARTITE DI GAGLIARDA
-### di Prospero Lutij di Sulmona,
+di Prospero Lutij di Sulmona,
 
 ET prima si dirà del modo, e delle manie[-]
 re delle Capriole. così della capriola fat[-?]
@@ -214,9 +214,9 @@ in aria, passi le gambe inanti, & in dietro in croce
 & torni à cadere con gratia di doue si è leuato.
 
 ### {10} QVI INCOMINCIANO
-### i, passeggi, & le Partite di
-### Gagliarda. Passeggio
-### Primo.
+i, passeggi, & le Partite di
+Gagliarda. Passeggio
+Primo.
 
 1 IL Passeggio semplice detto li cinque passi; il qua[-?]
 le si fà vniuersalmẽte in tutto il ballare di Gagliar[-?]
@@ -431,7 +431,7 @@ so in aria col pie, ch'è in terra. La cadenza, fatto ser[-?]
 peggiando la sala.
 
 ### Queste quatro Partite, che seguitano
-### sono ritratatte di Capriole.
+sono ritratatte di Capriole.
 
 17 Doi Zoppetti col piede alto per lo inanti con
 vn tracacciar di piedi, due passi per lo inanti, ada[-]

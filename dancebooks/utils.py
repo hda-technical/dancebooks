@@ -484,6 +484,12 @@ class MarkdownCache:
 		self._markdown.inlinePatterns.add("smallcaps", MarkdownSmallCaps(), "_end")
 		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
 		self._markdown.inlinePatterns.add("hyphen", MarkdownHyphen(), "_end")
+		del self._markdown.parser.blockprocessors["hashheader"]
+		self._markdown.parser.blockprocessors.add(
+			"wrapped_hash_header",
+			WrappedHashHeaderProcessor(self._markdown.parser),
+			"_begin"
+		)
 		self._markdown.parser.blockprocessors.add(
 			"align_right",
 			MarkdownAlignRight(self._markdown.parser),
@@ -629,6 +635,30 @@ class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
 		#Consider current block as processed
 		#This might be not the desired behaviour
 		return True
+
+
+class WrappedHashHeaderProcessor(markdown.blockprocessors.BlockProcessor):
+	"""
+	Process hash-prefixed headers, 
+	but considers lines in the same paragraph
+	to be continue the header, rather than to begin a new paragraph.
+	
+	Based on the original python-markdown implementation.
+	"""
+
+	# Detect a header at start of any line in block
+	RE = re.compile(r"^(?P<level>#{1,6})(?P<header>(?:\\.|[^\\])*?)#*(?:\n|$)")
+
+	def test(self, parent, block):
+		return bool(self.RE.search(block))
+
+	def run(self, parent, blocks):
+		block = blocks.pop(0)
+		m = self.RE.search(block)
+		wrapped = block[m.end():]
+		# Create header using named groups from RE
+		h = markdown.util.etree.SubElement(parent, "h%d" % len(m.group("level")))
+		h.text = m.group("header").strip() + "\n" + wrapped
 
 
 class MarkdownNote(markdown.blockprocessors.BlockProcessor):
