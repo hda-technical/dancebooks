@@ -483,6 +483,7 @@ class MarkdownCache:
 		self._markdown.inlinePatterns.add("page_number", MarkdownPageNumber(), "_end")
 		self._markdown.inlinePatterns.add("smallcaps", MarkdownSmallCaps(), "_end")
 		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
+		self._markdown.inlinePatterns.add("subscript", MarkdownSubscript(), "_end")
 		self._markdown.inlinePatterns.add("hyphen", MarkdownHyphen(), "_end")
 		del self._markdown.parser.blockprocessors["hashheader"]
 		self._markdown.parser.blockprocessors.add(
@@ -574,6 +575,20 @@ class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 		return span
 
 
+class MarkdownSubscript(markdown.inlinepatterns.Pattern):
+	"""
+	Marks the text enclosed into ↓ (U+2193) as subscript
+	"""
+	def __init__(self):
+		super().__init__(r"↓(?P<subscript>[^↓]+)↓")
+
+	def handleMatch(self, m):
+		span = markdown.util.etree.Element("span")
+		span.set("class", const.CSS_CLASS_SUBSCRIPT)
+		span.text = m.group("subscript")
+		return span
+
+
 class MarkdownSmallCaps(markdown.inlinepatterns.Pattern):
 	"""
 	Marks the text enclosed into doubled exclamation mark as small caps.
@@ -639,10 +654,10 @@ class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
 
 class WrappedHashHeaderProcessor(markdown.blockprocessors.BlockProcessor):
 	"""
-	Process hash-prefixed headers, 
+	Process hash-prefixed headers,
 	but considers lines in the same paragraph
 	to be continue the header, rather than to begin a new paragraph.
-	
+
 	Based on the original python-markdown implementation.
 	"""
 

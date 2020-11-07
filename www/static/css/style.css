@@ -561,6 +561,14 @@ div.transcription p > sup
 	font-size: 75%;
 }
 
+div.transcription p > span.subscript
+{
+	vertical-align: middle;
+	bottom: -4px;
+	position: relative;
+	font-size: 75%;
+}
+
 div.transcription span.smallcaps
 {
 	font-variant: small-caps;
