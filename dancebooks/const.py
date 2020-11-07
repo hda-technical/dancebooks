@@ -227,6 +227,7 @@ MAX_AUTHORS_IN_CITE_LABEL = 2
 
 CSS_CLASS_STRIKETHROUGH = "strikethrough"
 CSS_CLASS_SUBSCRIPT = "subscript"
+CSS_CLASS_SUPERSCRIPT = "superscript"
 CSS_CLASS_SMALLCAPS = "smallcaps"
 CSS_CLASS_PAGE_NUMBER = "page_number"
 CSS_CLASS_NOTE = "note"

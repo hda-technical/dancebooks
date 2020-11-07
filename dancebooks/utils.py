@@ -476,7 +476,6 @@ class MarkdownCache:
 		self._markdown = markdown.Markdown(
 			extensions=[
 				"markdown.extensions.tables",
-				"mdx_superscript"
 			],
 			output_format="xhtml5"
 		)
@@ -484,6 +483,7 @@ class MarkdownCache:
 		self._markdown.inlinePatterns.add("smallcaps", MarkdownSmallCaps(), "_end")
 		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
 		self._markdown.inlinePatterns.add("subscript", MarkdownSubscript(), "_end")
+		self._markdown.inlinePatterns.add("superscript", MarkdownSuperscript(), "_end")
 		self._markdown.inlinePatterns.add("hyphen", MarkdownHyphen(), "_end")
 		del self._markdown.parser.blockprocessors["hashheader"]
 		self._markdown.parser.blockprocessors.add(
@@ -573,6 +573,19 @@ class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 		span.set("class", const.CSS_CLASS_STRIKETHROUGH)
 		span.text = m.group("strikethrough")
 		return span
+
+
+class MarkdownSuperscript(markdown.inlinepatterns.Pattern):
+	"""
+	Marks the text enclosed into ^ as superscript
+	"""
+	def __init__(self):
+		super().__init__(r"\^(?P<superscript>[^\^]+)\^")
+
+	def handleMatch(self, m):
+		element = markdown.util.etree.Element("sup")
+		element.text = m.group("superscript")
+		return element
 
 
 class MarkdownSubscript(markdown.inlinepatterns.Pattern):
@@ -692,12 +705,10 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		self._markdown = markdown.Markdown(
-			extensions=[
-				"mdx_superscript"
-			],
 			output_format="xhtml5"
 		)
 		self._markdown.inlinePatterns.add("strikethough", MarkdownStrikethrough(), "_end")
+		self._markdown.inlinePatterns.add("superscript", MarkdownSuperscript(), "_end")
 		self.reset()
 
 	def reset(self):
