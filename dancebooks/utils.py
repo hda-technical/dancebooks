@@ -541,7 +541,7 @@ class MarkdownCite(markdown.inlinepatterns.Pattern):
 		a.set("href", f"/books/{id}")
 		try:
 			item = first(self._index["id"][id])
-		except StopIteration as ex:
+		except StopIteration:
 			logging.error(f"Could not find index entry for id={id}")
 			raise
 		a.text = item.get("cite_label")
