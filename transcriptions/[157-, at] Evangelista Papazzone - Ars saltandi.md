@@ -128,7 +128,7 @@ doppij Bat.^e^ 5. T .1.
 
 Li Sei passi con sfiorez[-]
 zati alti di piedi di
-{6}
+{6r}
 Tremoli Bat.^e^ 5. T .1.
 
 Li quattro passi genocchiati in
