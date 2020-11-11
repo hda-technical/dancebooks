@@ -30,7 +30,7 @@ forze mie, grato delli infiniti
 benefficij & fauori da lei rice[-]
 uuti, sforzandomi in oltre di
 farmene ogni di'più grato &
-meriteuole. Acetti dunq+z+ la
+meriteuole. Acetti dunq↓z↓ la
 Ma.^tà^ Vrã questo mio basso
 & humil presente, Et con
 {2v}
@@ -98,13 +98,13 @@ scriueranno per ordine con
 i suoi passaggi e mudanze.
 
 ### L’ordine che si deue tenere
-nelli cinq+z+ passi, mudanze
+nelli cinq↓z↓ passi, mudanze
 & passaggi.
 
 Et Primieramente li passi Cinque
 Contrapassati.
 
-Bat.^e^ 5. Temp. 1. 
+Bat.^e^ 5. Temp. 1.
 
 {5v}
 Li passi Cinque piegati
@@ -112,7 +112,7 @@ delicati Bat.^e^ 5. T. .1.
 
 Li passi quattro dritti e
 genocchiati Bat.^e^ 5. T .1.
- 
+
 Li Sei passi con vno
 fioretto. Bat.^e^ 5. T .1.
 
@@ -128,17 +128,17 @@ Li quattro passi genocchiati in
 uolta Bat.^e^ 5. T .1.
 
 Li Passi Cinque con Capriola
-Bat.^e^ 5. T .1. 
+Bat.^e^ 5. T .1.
 
 Li Passi sei contra misura
 con leuata di gamba,
-Bat.^e^ 5. T .1. 
+Bat.^e^ 5. T .1.
 
 Li passi Cinque rouersi inuolta
 Bat.^e^ 5. T .1.
 
 ### {6v} Prencipio delli
-Passaggi 
+Passaggi
 
 E Primieramente Bat.^e^ 5.
 Campanella dritta. T .1.
@@ -164,7 +164,7 @@ Bot.^e^ 2 Crosate et mezza
 Campanella in uolta.
 Bat.^e^ 5. T .1.
 
-{7v} 
+{7v}
 Bot.^e^ 3. Di Campanella
 in uolta con Salto tondo
 Bat. 5. T .1.
