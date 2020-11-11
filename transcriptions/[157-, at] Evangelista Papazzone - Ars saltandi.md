@@ -1,6 +1,12 @@
+----
+
+This transcription is based on a partial transcription by [Marko Motnik](http://fagisis.de/allUngaresca-pdfs/Motnik.pdf). Here the transcription is full and errors in the transcripton were corrected.
+
+----
+
 {Front cover} Ars Saltandi
 
-{Ir} {Iv} {IIr} {IIv} {IIIr} {IIIv}
+{Ir-IIIv} [Blank Pages]
 
 ### {1r} Al Sereni.^mo^ Ridolfo Re
 d’Vngheria, Arciduca
@@ -46,6 +52,7 @@ longamẽte felice.
 Della R. Ma.^tà^ V.^a^
 
 >> Humil.^mo^ et minimo Seru.^re^
+
 >> Euangelista Papazzone.
 
 ###{3r} Segue l’ordine che deue tener
@@ -353,7 +360,7 @@ doppie gambate e contra
 tempi & salti Tondi
 Bat.^e^ 21. T 4.
 
-/ /[[Two strokes at the end of page that coud signify the end of section (?)]]
+/ /[[Two strokes at the end of page that could signify the end of section (?)]]
 
 {15r}
 Bot.^e^ 5. Di Pontezzata
@@ -377,7 +384,7 @@ reccacciate, con salti doppij
 tondi inuolta
 Bat.^e^ 9. T .2.
 
-/ /[[Two strokes at the end of page that coud signify the end of section (?)]]
+/ /[[Two strokes at the end of page that could signify the end of section (?)]]
 
 {16r}
 Bot.^a^ 1. Di Gallon con cam[-]
@@ -621,11 +628,7 @@ lbro comprese, trouarà
 tutto'l ballar che mai
 L’huomo possi fare.
 
-{26v}
-
-...
-
-{32v}
+{26v-32v} [Blank Pages]
 
 {Endpaper} 596
 
