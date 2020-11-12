@@ -26,7 +26,8 @@ Dipoi si muouino tutti atre e faccino tre passi i(n) trauerso p(er) uno e uoltin
 
 Dipoi seguita la treccia di otto trapassini oue ogniuno torna al luogo suo entrando due uolte p(er) uno e debbi auertire i(n) q(uest)a trecca che la donna uadi semp(re) dreto aq(ue)llo glie ama(n) rittae fatta la treccia si ritro uerranno i(n) triangolo come prima dipoi faccino le riuerenze come disop(ra) dipoi la do(n)na facci u(n) dopio i(n) uolta ama(n) ritta et i(n) q(uest)o medesimo tempo gli huomini si partino co(n) tre passi et mettinla nel mezzo et e,
 
-### Finito
+>> Finito
+
 ### Balletto chiamato Ippiter composto p(er) Giouannino
 
 Imprima piglinsi p(er) mano ensieme faccino le riprese dipoi quei da lato si fermino et la donna si parta e facci dua scempi et 4 passetti e uoltisi dipoi quei da lato faccino il medesimo contro alla donna dipoi tutti atre faccino i(n)dreto dua trapassini dipoi col pie mancho faccino dua passi i(n)anzi et una reuerenza tutti atre et seguitino col fare i(n)sieme u(n) doppio i(n) uolta a ma(n) ma(n)cha et uno a ma(n) ritta
@@ -35,7 +36,8 @@ Dipoi la donna dia la mano aquello che glie i(n) sulla man ritta et co(n) 4 pass
 
 Dipoi tutti atre faccino tre passi i(n)trauerso et la donna uadi p(er) il mezzo di loro et uoltinsi e faccino u(n) doppio i(n) uolta a ma(n) ritta e le riprese dipoi idua si fermino e la donna sola facci u(n) trapassino e f ermisi et que da lato ne faccino unaltro edipoi tutti atre i(n) u(n) medesimo te(m)po faccino unaltro trapassino i(n)anzi dipoi faccino una reuerenza col pie mancho e quei da lato seguitino di fare u(n) doppio i(n) uolta i(n) sulla mancha e unaltro i(n)su la ritta et i(n) q(uest)o tempo medesimo la do(n)na facci u(n) doppio i(n) uolta a ma(n) mancha e dipoi co(n) cinque passettini si ritorni nel mezzo di loro et e,
 
-### Finito
+>> Finito
+
 ### Balletto chiamato Lasso composto p(er) Giouannino
 
 Primame(n)te tutti atre sarechino come una mezza luna e, senza pigliarsi p(er) mano faccino i(n)sieme le continenze e uoltinsi alquanto p(er) inlato e dipoi faccino dreto luno a, laltro dua scempi e, uoltinsi cosi p(er) i(n)lato e, faccino dua mezze riprese e dipoi la uolta i(n) sul lato ritto i(m)prima mouendo il pie mancho, e, la reuerenza Dipoi escha q(ue)llo che fa la man mancha co(n) dua scempi e dia dipoi la ma(n) ritta alla donna et ella alui e co(n) 4 passetti i(n) u(n) tempo medesimo schambinsi eluogi, dipoi il medesimo ch(e) si ritroua nel luogo d(e)lla donna escha unaltra uolta co(n) dua scempi e dia la ma(n) ritta al compagnio et egli alui et au(n) tempo medesimo co(n) 4 passetti siscambino iluogi, dipoi la donna che si troua la prima debbe tornare nel mezzo si che facci dua scempi e dando la mano co(n) 4 passetti schambi il luogo co(n) q(ue)llo che si ritroua nel suo luogo et cosi finq(ue) la donna si ritrouerra nel mezzo al suo luogo et gli huomini si saranno luno alaltro schambiati iluogi Dipoi stando cosi faccino come disopra dreto luno alaltro dua scempi 4 passetti e uoltinsi p(er) i(n)lato e faccino le mezze riprese co(n)la uolta come disop(ra) e una reuerenza
@@ -44,7 +46,8 @@ Dipoi tornino afare come disopra uscendo un p(er) uolta ta(n)to ch(e) ciascuno d
 
 Dipoi tutti atre i(n)cerchio uadino i(n)anzi dreto luno alaltro (el primo sia q(ue)llo a man stancha) tre trapassini e u(n) passo dipoi uoltisi faccia e faccinne tre altri con u(n) passo dipoi subito i(n)comincino la treccia la quale e di 8 trapassini oue la donna d(e)bbe restare al luogo suo egli huomini luno a laltro schambiarsi iluogi dipoi tutti i(n)sieme faccino le mezze riprese e, la uolta col pie mancho come disopra et una reuerenza et e
 
-### Finito
+>> Finito
+
 ### Balletto chiamato No(n) mi parto composto p(er) Giouannino
 
 Primame(n)te senza pigliarsi p(er) mano arechinsi tutti come una mezza luna dipoi quello che e, a man stancha facci dua doppi i(n) uolta e prima sulla man stancha dipoi i(n) sulla ritta e dipoi dia la man ritta alla donna e, lei alui ecosi presi p(er) mano girino atondo tre trapassini et un passo, ciascuno p(er)o tornando al luogo suo Et la donna subito ch(e) a, fatto q(uest)o lasci con la man ritta lhuomo e alaltro ch(e) a lei e, aman ritta dia la man mancha et lui alei et girino i(n)sieme i(n) uolta p(er) presi p(er) mano tre trapassini et un passo e, ciascuno torni al luogo suo, dipoi tutti atre i(n)sieme faccino una reuerenza Dipoi escha quello che e ama(n) mancha che fu il primo e faccia dua scempi ritirandosi quasi i(n)contro alla donna e, co(n) 4 passetti la uadia atrouare e, porgagli la mano dritta et ella alui ensieme presi p(er) mano si faccino una reuerenza dipoi lascinsi e la donna stia ferma et lui torni i(n)dreto dua scempi et tirisi uerso il compagnio et alui ne uadia co(n) 4 passetti ediali la mana epresi p(er) mano si faccino una reuerenza p(er) uno dipoi lascinsi el compagnio stia fermo e lui torni adreto dua scempi et co(n) 4 passetti uadia acanto al compagnio disotto, cioe mettendo lo nel mezzo Dipoi la donna che resta a ma(n) stancha entri faccendo la treccia di cinque trapassini et u(n) passo tornando pero glihomini e, la donna onde si partirono q(ua)n(do) incominciorono la trecca dipoi tutti atre i(n)sieme faccino la reuere(n)za
@@ -55,7 +58,8 @@ Ecosi lui anchora debbe fare il medesimo che ha fatto il compagnio e, la donna i
 
 Dipoi aq(uest)o si fa la fine che cosi si chiama E prima tutti atre i(n) cerchio faccino le co(n)tinenze e, la uolta di lasso dipoi uadino i(n) cerchio luno dreto alaltro dua passi u(n) trapassino e, tre passi dipoi faccino le riprese lunge ama(n)mancha et altretta(n)ta ama(n) ritta dipoi si riuoltin faccia e faccino le co(n)tinenze la uolta e la riuere(n)za et e
 
-### Finito
+>> Finito
+
 ### Balletto chiamato i Tromboni composto p(er) Giouannino
 
 Prima la donna al solito nel mezzo e presi p(er) mano faccino la riuerenza e le co(n)tinenze e tre riprese ama(n) mancha, lasciandosi la mano faccendo ama(n) mancha la uolta col pie ritto e dipoi subito si ripiglino p(er) mano faccendo ama(n) ritta altre tre riprese e q(uest)o faccino tutti i(n)sieme dipoi resti fermo la donna e, li huomini eschino co(n) dua passi i(n) trauerso dandosi la man ritta e schambinsi i luogi e ferminsi et la donna escha con dua passi i(n)trauerso e uolti il uiso agl huomini et cosi tutti atre faccino una reuerenzetta i(n)anzi col pie mancho e, poi col detto pie una adreto dipoi quei da lato stien fermi e, la donna co(n) 4 passetti torni nel mezzo di loro epiglinsi tutti atre p(er) mano e come disopra faccino le riprese a man mancha et la uolta col pie ritto e seguitino le riprese a ma(n) ritta
@@ -70,7 +74,8 @@ Dia dipoi la do(n)na aquello che glie sulla ma(n) ritta la sua ma(n) ritta et eg
 
 Dipoi quello che si troua alla man ritta d(e)lla donna gli dia la man ritta faccendo la treccia di sette trapassini et un passo e, questo faccino tutti atre sempre nel passare da(n)dosi le maniet al fine li huomi si debbano hauer cambiati iluogi e dipoi come disopra faccino le riuerenze e dipoi que da lato stien fermi et la donna faccia 4 passetti e tornise nel mezzo di loro e piglinsi p(er) mano e faccino come disopra le riprese conla uolta et una reuerenza et e
 
-### Finito
+>> Finito
+
 ### Balletto chiamato la Traditora composto p(er) il Papa
 
 Prima tutti a tre si debbino accomodare come una mezzaluna et senza pigliargli p(er) le mani faccino la reuerenza le continenze dua scempi e, 4 passetti dipoi fatto tutto q(uest)o i(n)sieme debbe quello che e aman mancha d(e)lle donna uoltarsegli e dandosi le mani ritte girino atondo 3 trapassini et u(n) passo tornando ciascuno al luogo suo dipoi la donna si uolti aquello che glie ama(n) ritta e dandosi le mani girino come disopra quei tre trapassini et u(n) passo e fatto q(uest)o la donna resti fuori e accommodata a modo di triangolo e dipoi tutti i(n)sieme faccino una reuerenza dipoi quei da lato faccino la uolta di lasso et i(n) quel medesimo te(m)po debbe la do(n)na co(n) 4 passetti tornare nel mezzo di loro
@@ -79,12 +84,14 @@ Tutti atre dipoi faccino i(n)cerchio luno dietro alaltro tre passi i(n) trauerso
 
 Faccino dipoi i(n)cerchio dua scempi e 2 trapassini e continenze e la donna dipoi escha d(e)l mezzo co(n) 4 passetti et i(n) q(uest)o medesimo tempo quegli da lato dandosi la mana schambinsi iluogi co(n) 4 passetti seguita la treccia di 8 trapassini e nel cominciarla la donna dia la ma(n) ritta aq(ue)llo che glie i(n) su cotal mano e cosi uanno tutti seguitando e nel passarsi dandosi le mani i(n) modo ch(e) nel lultimo la do(n)na torna al suo luogo et li huomini si debbano essersi cambiato iluogi dipoi i(n)sieme faccino una reuerenzaet quegli da lato faccino la uolta et i(n) q(uest)o tempo medesimo la donna torni nel mezzo co(n) 4 passetti et cosi quegli da glinlati si ritrouerranno hauersi iluogi cambiati et la donna come nel principio nel mezzo et e
 
-### Finito
+>> Finito
+
 ### Balletto composto p(er) Giouannino Lucretia chiamato
 
 Primame(n)te piglinsi p(er) mano e faccino la reuerenza e lascinsi e, faccino un trapassino i(n) uolta a ma(n) mancha co(n)la ripresa sotto il pie mancho dipoi ripiglinsi p(er) mano et faccino p(er) il diritto d(e)lla sala tre trepassini et un passo e dipoi uoltinsi e faccinne altre e, u(n) passo i(n) modo che si tornera(n)no aluogi loro dipoi ferminsi quei da lato et la donna facci i(n) uolta un trapassino con la ripresa fermisi dipoi et quei da lato faccino il medesimo dipoi uoltisi la donna a q(ue)llo che gli dal lato mancho e diagli la man ritta et egli alei e faccino dua trapassini e torninsene aluogi loro ne si fermino ma seguitando i(n)sieme col compagnio faccino la treccia di cinq(ue) trapassini e, u(n) passo e ciaschuno torni al luogo suo dipoi stien fermi quei da lato e la do(n)na facci i(n) uolta a ma(n) mancha u(n) trapassino e fermisi e li huomini faccino il medesimo e ferminsi et la donna si parta d(e)l mezzo e facci p(er) il diritto della sala tre trapassini et u(n) passo e uoltisi e subito segua faccendu(n) i(n) uolta u(n) trapassino e fermisi dipoi quei da lato ne faccino uno d(ei) trapassini i(n) uolta et i(n)sieme faccino p(er) il diritto d(e)lla sala 3 trapassini e, un passo i(n)modo ch(e) si trouino aca(n)to allado(n)na e uoltinsi e faccino u(n) trapassino i(n) uolta et ferminsi et la donna sola facci i(n) uolta u(n) trapassino dipoi piglinsi tutti a tre p(er) mano et i(n)sieme faccino i(n)anzi tre passi e, mezzo e co(n) imedesimi passi tornino i(n)dreto e, cosi p(re)si p(er) mano faccino le mezze riprese e lasciandosi le mani faccino tutti i(n)sieme u(n) trapassino  i(n) uolta come disop(ra) et e,
 
-### Finito
+>> Finito
+
 ### Balletto chiamato che Faralla composto p(er) il Lanzino
 
 Aconciar si debbano p(er) il diritto d(e)lla sala i(n) triangolo e far tutti i(n)sieme una riuerenza e la uolta e unaltra reuerenza dipoi muouinsi tutti a tre e faccino dua sce(m)pi e 4 passetti e la donna passi p(er) il mezzo di loro faccendo il medesimo dipoi gli huomini si uoltono luno alaltro e fanno dua scempi e dannosi la mana e fanno 4 passetti e cosi sischambino iluogi et i(n) q(uest)o tempo la donna fa dua scempi e la uolta dipoi si uolta aquello che glie a ma(n) ritta e faccinsi una reuerenza dipoi si uolti alaltro e faccinne unaltra ma la do(n)na d(e)bbe far q(uest)a col pie ritto e lhuomo gli d(e)bbe rispondere col mancho dipoi quei da lato fanno la uolta di lasso et i(n) q(uest)o tempo co(n) cinque passettini la do(n)na siri torni nel mezzo di loro epiglinsi p(er) mano
@@ -100,7 +107,8 @@ Dipoi la do(n)na da la ma(n) ritta et egli alei aq(ue)llo i(n)tendo ch(e) glie a
 
 Dipoi la do(n)na si uolti a quello ch(e) glie ama(n) ritta e dia gli la mano et egli alei e faccino passandosi enel passar dandosi la mana u(n) trapassino et u(n) passo e uoltinsi e sequita(n)o faccendo un altro trapassino e u(n) passo come ipassati i(n)modo ch(e)si uerranno atornare aluogi loro dipo la do(n)na dia la ma(n) mancha aquello che glie a ma(n) mancha e facci ilmedesimo che a fatto co(n) il compagio dipoi seguita la donna e da la ma(n) ritta aquello glie a ma(n) ritta e tutti i(n)sieme dandosi la mana fanno la treccia di sei trapassini et cosi ciascuno torna al suo luogo dipoi fanno dua sce(m)pi adreto discostandosi la do(n)na da lihuomini e la uolta fanno dipoi la riuerenza dua scempi (i)nanzi e la uolta ma la do(n)na i(n) q(ue)l tempo ch(e) gli huomini fanno la uolta lei torna i(n)mezzo di loro co(n) 4 passetti et e,
 
-### Finito
+>> Finito
+
 ### Balletto chiamato La Reale composto p(er) il Papa
 
 Piglinsi p(er) mano e faccino le co(n)tinenze tutti i(n)sieme e dipoi li huomini faccino la uolta et i(n) q(uest)o medesimo tempo la donna escha co(n) 4 passetti dipoi tutti i(n)sieme faccino dua scempi e 4 passetti, ma la donna alor rincontro passa p(er) il lor mezzo co(n) idetti dua scempi et 4 passetti et tutti luno alaltro si uoltino il uiso e trouinsi i(n) triangolo dipoi faccino le co(n)tinenze et una reuerenza e q(uest)o tutti i(n)sieme dipoi seguitino tutti atre e faccino u(n) passo i(n)trauerso i(n)anzi e tre passi adreto col pie ritto i(n)modo ch(e) tornano onde si partirono
@@ -111,7 +119,8 @@ Seguitino i(n)sieme e faccino dua passi u(n) trapassino e, tre passi la do(n)na 
 
 La treccia seguita dappoi di 8 trapassini oue alsolito si muoue la donna dando la ma(n) ritta aq(ue)llo ch(e)glie sulla ma(n) ritta etutti atre come sogliano faccino la d(e)tta treccia oue poi al fine si d(e)bbano li huomini hauer cambiato i luogi e la do(n)na esser tornata al suo e si trouano i(n) triangolo partasi la do(n)na e uadia e tochi la ma(n) ritta aq(ue)llo ch(e) glie ama(n) ritta e fa(n)nosi una reuerenza et dipoi la do(n)na ua aquelaltro e fa(n)no il simile dipoi la do(n)na si torna nel mezzo di loro co(n) 4 passetti et i(n) q(uest)o medesimo tempo li huomini fa(n)no la uolta e cosi i(n) fila si piglino p(er) mano e faccino una reuerenza et e,
 
-### Finito
+>> Finito
+
 ### Balletto chiamato La Franciosetta composto p(er) Giouannino
 
 Saper debbi che tre parte di q(uest)o ballano tutti atre i(n)sieme le ballano eprima aconcinsi i(n) triangolo e faccino una reuerenza dipoi tre passi i(n)trauerso e semp(re) i(n) triangolo dipoi la uolta de tromboni cioe col pie ritto i(n)sieme co(n) la sua ripresa ama(n) ritta dipoi faccino dua scempi i(n)controsi luno alaltro dimodo che tanto si ritrouino acosto che si piglino tutti p(er) mano efaccino una reuerenza e dipoi faccino dua scempi i(n)dreto e la uolta e dipoi cosi come i(n) triangolo si ritrouano faccino tre trapassini e u(n) passo e la riuere(n)za
@@ -122,7 +131,8 @@ Seguitano dipoi fare tre passi i(n)trauerso simili aquegli che feciano i(n) la 2
 
 Seguita a queste tre parte la fine oue la do(n)na d(e)bbe dar la ma(n) ritta aq(ue)llo che glie ama(n) ritta et egli alei ecosi p(re)si p(er) mano girino tre trapassini et un passo ciascuno tornando al luogo suo dipoi uoltisi la donna aquello d(e)lla ma(n) mancha et secho faccia 3 trapassini et u(n) passo e sempre si ritrouano i(n) triangolo e cosi faccino luno uer laltro dua scempi nel mezo i(n)modo ch(e) si ritrouerra(n)no ta(n)to luno alaltro acosto ch(e) si possano pigliar p(er) mano e piglinsi efaccino una reuerenza e dipoi faccino dua scempi adreto e la uolta di lasso dipoi fanno dua passi uerso luno alaltro e rimettano la donna i(n) mezzo et e
 
-### Finito
+>> Finito
+
 ### Balletto chiamato Lo Dimostra composto p(er) Gioua(n)nino
 
 Primame(n)te aconcinsi i(n) triangolo eq(ue)llo che e i(n)anzi alla ma(n) mancha d(e)lla donna i(n)cominci a ballar solo e facci dua scempi i(n)uerso il compagnio e dipoi sistorca alquanto uerso ladonna et uer lei facci 4 passetti dipoi p(er)ch(e) acosto si ritrouerra alla donna tirisi i(n)dreto u(n) trapassino e dipoi facci una mezza ripresa i(n) sul lato ritto e facci dipoi u(n)doppio i(n) uolta ama(n) mancha et uno ama(n) ritta et co(n)essi si ritroui al suo luogo dipoi tutti atre faccino i(n)cerchio dua scempi e, 4 passetti e uoltisi faccia et unaltra uolta faccino dua scempi e, 4 passetti dipoi tutti atre faccino i(n)sieme una treccia di 8 trapassini e ciascuno come i(n) la treccia d(e)lla uita torni al suo luogo dipoi quello ch(e) nel principio ballo solo d(e)bbe unaltra uolta far solo dua scempi uerso il suo co(m)pagnio dipoi uoltandosi alqua(n)to come nel principio uerso la do(n)na facci 4 passetti et cosi trouandosi apresso alla do(n)na gli d(e)bbe fare una reuerenza col pie ritto et ella alui col d(e)tto pie dipoi fermisi la do(n)na et egli co(n) u(n) doppio i(n) uolta si ritorni al suo luogo
@@ -135,7 +145,8 @@ Ma i(n)q(ue)lla p(rim)a parte seguiua la treccia di 8 trapassini ne pero mutauan
 
 Dipoi tutti i(n)sieme faccino 4 passi i(n)trauerso et q(uest)o semp(re) faccino i(n) triangolo luno dreto laltro ma auertisci ch(e) q(ua)n(do) fanno detti passi i(n)trauerso et ch(e) nel passo fanno quella ripresa i(n)questi passi ne debbon far dua una cioe i(n)sul lato mancho et una i(n)sul ritto e ciaschuno torni i(n) triangolo al luogo suo dipoi la do(n)na dia la ma(n) ritta a quello ch(e) glie sulla ma(n) ritta et egli alei et cosi presi p(er) mano faccino tre trapassini et u(n) passo e ciascuno torni al luogo suo dipoi uoltisi aquelaltro e diali la man mancha et egli alei et faccino girando atondo idetti tre trapassini et u(n) passo dipoi tutti a tre faccino le riprese girando tutti i(n) triangolo e seguitino faccendo u(n) doppio i(n) uolta a ma(n) mancha dipoi muouinsi g lhuomini co(n) dua passi et uadino arimetter la do(n)na nel mezzo et e
 
-### Finito
+>> Finito
+
 ### Balletto chiamato La Villanella composto p(er) Giouannino
 
 Aconcinsi prima come una mezza luna dipoi la donna dia la sua man ritta aquello che glie aman ma(n)cha e faccinsi una reuerenza dipoi uoltisi la do(n)na aq(ue)llo ch(e) glie aman ritta e dandosi le mani ritte faccino la medesima riuere(n)za come disop(ra) dipoi tutti atre faccino i(n) cerchio dua passi et u(n) trapassino e q(uest)o medesimo faccino i(n)sieme et i(n) cerchio tre uolte dipoi faccino tutti u(n) dopio i(n) uolta ama(n) ritta e faccino dipoi i(n) cerchio le riprese e dipoi faccino ama(n) mancha u(n) doppio i(n) uolta et unaltro ama(n) ritta tutti atre ne pero guastandosi di cerchio
@@ -144,7 +155,8 @@ Seguita dipoi una treccia di passi i(n)trauerso fra tutti i(n)modo ch(e) ciascun
 
 Dipoi faccino tutti i(n)sieme tre trapassini e, u(n) passo dipoi quello ch(e) si ritroua i(n)anzi cioe ama(n) mancha passi dina(n)zi alla do(n)na faccendo tre altri trapassini et u(n) passo et i(n) q(uest)o medesimo tempo quel di dreto ne facci tre altri passando dreto alla donna ecosi sischambino iluogi et i(n) q(uest)o tempola do(n)na no(n) si muoue dipoi glhuomini stanno fermi et la do(n)na fa u(n) doppio i(n) uolta ama(n) ma(n)cha et un altro ama(n) ritta dipoi tutti i(n)sieme et i(n) cerchio faccino tre trapassini et u(n) passo dipoi tutti atre faccino i(n)sieme dua doppi i(n) uolta uno ama(n) ma(n)cha et laltro ama(n) ritta et e
 
-### Finito
+>> Finito
+
 ### Balletto chiamato Baramattio composto p(er) Giouannino
 
 Prima piglinsi p(er) mano et i(n)sieme faccino le co(n)tine(n)ze et la riuerenza dipoi cosi p(re)si p(er) mano seguitino far dua scempi e 4 passetti e fatto iquatro passetti la donna si uolta et cosi i(n) u(n) tempo medesimo fanno le mezze riprese e, la uolta
@@ -159,7 +171,8 @@ Dia dipoi la do(n)na la ma(n) ritta aq(ue)llo ch(e) glie a ma(n) ritta et cosi p
 
 Seguita ch(e) faccino una treccia di 8 trapassini oue al solito lihuomini sischambiano il luogo et la do(n)na ritorna al suo dipoi faccino le mezze riprese et li huomini faccino la uolta et i(n) q(uest)o medesimo te(m)po  la do(n)na entri nel mezzo di loro con 4 passetti et e,
 
-### Finito
+>> Finito
+
 ### Balletto chiamato Fiametta composto p(er) il Lanzino
 
 Quatro sono aballare dua huomini e due do(n)ne e ciaschuno h(uom)o ha p(er) mano la sua donna ama(n) ritta e tutti aquatro si piglino p(er) la mano ecosi p(re)si p(er) mano aco(n)cinsi i(n) fila et faccino i(n)sieme tutto q(ue)llo ch(e) i(n) q(uest)o ballo far deono
@@ -168,5 +181,6 @@ Eprima faccino una reuerenza e le co(n)tinenze dipoi dua scempi e que dua ch(e) 
 
 Dipoi d(e)bbano tutti i(n)sieme far la treccia e i(n)comincino cosi, quei d(e)l mezzo ch(e) sara(n)no una do(n)na et un huomo si uoltino cosi p(er) i(n)lato et aico(m)pagni dien loro la man ritta che sono da lato et eglino aloro et cosi faccino la detta treccia laquale e, di 8 trapassini et nel fine d(e)lla detta treccia tutti d(e)bbano schambiar luogo cioe que che di drentro si ritrouauano tornino di fuori eque di fuori tornino didentro dipoi tutti et i(n) u(n) tempo medesimo faccino la uolta et e
 
-### Finito
+>> Finito
+
 ### Ego Cosmus Ticcius Faciebam
