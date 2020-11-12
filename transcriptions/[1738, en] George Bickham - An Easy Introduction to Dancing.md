@@ -1,4 +1,5 @@
 ### {1} An easy introduction to dancing, &c
+
 ### Of the Movements in General
 
 As it is most essential in Dancing, to know how to take the Movements, the Way to perform them justly is, to know them well, and to know them thoroughly, to understand the Power of Motion, which is what I shall endeavour to make you apprehend by the Rules of Art.
