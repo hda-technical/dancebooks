@@ -224,3 +224,66 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 			
 def first(iterable):
 	return next(iter(iterable))
+	
+	
+# These methods try to guess tiles number using HEAD requests with given UrlMaker
+#
+# url_maker_maker should be a callable accepting zoom in the arguments.
+# It should return UrlMaker
+#
+# url_maker should be a callable accepting (x, y) in the arguments.
+# It should return None when corresponding tile does not exist.
+#
+# FIXME:
+#	one can save some requests using bisection here,
+# 	but python standard library is too poor to have one.
+
+def guess_tiles_zoom(url_maker_maker):
+	MAX_ZOOM = 10
+
+	zoom = 0
+	for test_zoom in range(MAX_ZOOM):
+		probable_url = url_maker_maker(test_zoom)(0, 0)
+		head_response = requests.head(probable_url, headers=HEADERS)
+		if head_response.status_code != 200:
+			break
+		zoom = test_zoom
+	return zoom
+
+
+def guess_tiles_number_x(url_maker, min_file_size=None):
+	MAX_TILE_NUMBER_X = 100
+
+	tiles_number_x = 0
+	for test_x in range(MAX_TILE_NUMBER_X):
+		probable_url = url_maker(test_x, 0)
+		if probable_url is None:
+			break
+		head_response = requests.head(probable_url, headers=HEADERS)
+		if head_response.status_code != 200:
+			break
+		if min_file_size is not None:
+			content_length = int(head_response.headers["Content-Length"])
+			if content_length < min_file_size:
+				break
+		tiles_number_x = (test_x + 1)
+	return tiles_number_x
+
+
+def guess_tiles_number_y(url_maker, min_file_size=None):
+	MAX_TILE_NUMBER_Y = 100
+
+	tiles_number_y = 0
+	for test_y in range(MAX_TILE_NUMBER_Y):
+		probable_url = url_maker(0, test_y)
+		if probable_url is None:
+			break
+		head_response = requests.head(probable_url, headers=HEADERS)
+		if head_response.status_code != 200:
+			break
+		if min_file_size is not None:
+			content_length = int(head_response.headers["Content-Length"])
+			if content_length < min_file_size:
+				break
+		tiles_number_y = (test_y + 1)
+	return tiles_number_y
