@@ -392,6 +392,17 @@ def habBook(
 	"""
 	import hab
 	hab.get_book(id)
+	
+
+@opster.command()
+def darmstadt(
+	id=("", "", "Book id to be downloaded (e. g. `Mus-Ms-1827`)")
+):
+	"""
+	Downloads book from http://tudigit.ulb.tu-darmstadt.de
+	"""
+	import darmstadt
+	darmstadt.get(id)
 
 
 @opster.command()

@@ -94,4 +94,5 @@ def download_book_fast(manifest_url, output_folder):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
 		full_url = metadata["images"][-1]["resource"]["@id"]
+		print(f"Downloading page #{page:04d} from {full_url}")
 		utils.get_binary(output_filename, full_url)
