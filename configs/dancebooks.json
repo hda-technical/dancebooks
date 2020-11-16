@@ -82,9 +82,11 @@
             //use nbn-resolving.de permalinks instead
             "haab-digital.klassik-stiftung.de",
             "hdl.loc.gov",
-            "mirrorland.rpg.ru",
             //use nbn-resolving.de permalinks instead
             "opacplus.bsb-muenchen.de",
+            //use nbn-resolving.de permalinks instead
+            "mdz-nbn-resolving.de",
+            "mirrorland.rpg.ru",
             //use nbn-resolving.de permalinks instead
             "reader.digitale-sammlungen.de",
             "jscholarship.library.jhu.edu"
@@ -540,13 +542,13 @@
             "artemiev_1891_past": "artemiev_1890_past",
             "bartolotti_1839": "bortolotti_1839_domestica",
             "walker_1914": "walker_1914_3rd",
-			"kushenov_dmitrevskiy_1808": "dmitrevskiy_1808_printed",
-			"vigell_1841_upprop_24": "vigell_1920_upprop_24",
-			"koslovsky_1796_polonaise": "koslovsky_1796_polonaise_narischkin",
-			"wilson_1820_countrydance": "wilson_1820_companion",
-			"pappazzoni_1576": "papazzone_1572",
-			"dubrueil_1718_wiesbaden": "dubreil_1718_hessoise",
-			"dubrueil_1730": "dubreil_1730_carlstadt",
+            "kushenov_dmitrevskiy_1808": "dmitrevskiy_1808_printed",
+            "vigell_1841_upprop_24": "vigell_1920_upprop_24",
+            "koslovsky_1796_polonaise": "koslovsky_1796_polonaise_narischkin",
+            "wilson_1820_countrydance": "wilson_1820_companion",
+            "pappazzoni_1576": "papazzone_1572",
+            "dubrueil_1718_wiesbaden": "dubreil_1718_hessoise",
+            "dubrueil_1730": "dubreil_1730_carlstadt",
         }
     }
 }

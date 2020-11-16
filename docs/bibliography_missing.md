@@ -656,7 +656,7 @@ _This part of the list is to joined with the general table_
 | 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) | |
 | 1807 | Ferdinand Kringsteiner | Der Tanzmeister. Eine Posse mit Gesang in drey Aufzügen | `[Klemm #02]` | [Wien/EOD](https://search.books2ebooks.eu/Record/wbr_LQD0188828) | Это фарс с песнями. |
 | 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) | |
-| 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](http://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
+| 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](https://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) | Какая-то искусствоведческая хрень |
 | 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | Просмотрено Борисом Стратилатовым. | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127097) | |
 
