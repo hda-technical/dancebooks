@@ -1,0 +1,24 @@
+site_name: Библиография исторического танца
+docs_dir: docs
+site_dir: docs_static
+nav:
+  - Общая информация:
+    - Лицензия: license.md
+    - Legal information from the libraries: legal.md
+    - Общие определения: common.md
+  - Библиография:
+    - Общая информация: bibliography.md
+    - Периодика: bibliography_periodical.md
+    - Библиотека HDA: library.md
+    - Отсутствующие записи: bibliography_missing.md
+    - Транскрипции: bibliography_transcriptions.md
+  - Иконография: images.md
+  - Музыка:
+    - Устройство архива с музыкой: music.md
+    - Альбомы для исторических танцев: music_cds.md
+  - Резервные копии: library_backups.md
+plugins: []
+theme:
+  name: material
+  language: ru
+strict: true

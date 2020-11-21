@@ -1,4 +1,4 @@
-﻿# Historical dance bibliography: Transcriptions
+# Historical dance bibliography: Transcriptions
 
 Транскрипция — это набранный текст источника (книги или манускрипта). Транскрипции упрощают работу с источником и предоставляют некоторые дополнительные возможности (например, поиск по тексту). Примеры набранных транскрипций лежат [тут](https://github.com/hda-technical/dancebooks/tree/master/transcriptions), в обработанном виде их можно найти [здесь](https://bib.hda.org.ru/advanced-search?transcription=true).
 
@@ -36,9 +36,9 @@
 	| `* Элемент` | Создаёт маркированный список элементов. Элементы списков не отделяются друг от друга пустой строкой. |
 	| `1. Элемент` | Создаёт нумерованный список элементов. Элементы списков не отделяются друг от друга пустой строкой. |
 	| `***` | Создаёт горизонтальную линию. |
-	| `>` | Будучи поставленной в начале строки, помечает текст как стихотворение или цитату. См. [пример](https://raw.githubusercontent.com/hda-technical/dancebooks/master/transcriptions/%5B1824%2C%20en%5D%20Thomas%20Wilson%20-%20The%20Danciad.md). |
+	| `>` | Будучи поставленной в начале строки, помечает текст как стихотворение или цитату. См. [пример](https://raw.githubusercontent.com/hda-technical/dancebooks/master/transcriptions/[1824, en] Thomas Wilson - The Danciad.md). |
 	| `>>` | Будучи поставленной в начале строки, сдвигает текст в правую часть страницы. Обычно используется для разметки подписей. |
-	| `\|` и `-` | Используется для разметки таблиц. См. [описание правил](http://pythonhosted.org/Markdown/extensions/tables.html) и [пример](https%3A%2F%2Fraw.githubusercontent.com%2Fhda-technical%2Fdancebooks%2Fmaster%2Ftranscriptions%2F%5B1839,%20ru%5D%20%D0%90.%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BD%20-%20%D0%98%D0%B7%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%82%D0%B0%D0%BD%D1%86%D0%B5%D0%B2.md). |
+	| `\|` и `-` | Используется для разметки таблиц. См. [описание правил](http://pythonhosted.org/Markdown/extensions/tables.html) и [пример](https://raw.githubusercontent.com/hda-technical/dancebooks/master/transcriptions/[1839, ru] А. Максин - Изучение бальных танцев.md). |
 
 	Если вы не уверены в точности транскрибирования, добавьте сноску.
 
@@ -108,7 +108,7 @@
 | `Ъ` | ер, твёрдый знак в конце слова | удаляется |
 | `Ѳ` | фита | `Ф` |
 | `Ѵ` | ижица | `И` |
-	
+
 ### Про манускрипты
 
 Изучением письменности вообще и манускриптов в частности занимается наука [палеография](https://ru.wikipedia.org/wiki/Палеография). Если вы разбираете сложный манускрипт, вам может пригодиться [инструкция](https://script.byu.edu/Pages/home.aspx) по чтению манускриптов на разных европейских языках.
