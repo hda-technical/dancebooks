@@ -17,7 +17,7 @@ def get_manuscript(id):
 	manuscript_id, page_id = parse_id(id)
 	#WARN: here and below base_url and metadata_url have common prefix. One might save something
 	metadata_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}.xml"
-	output_filename = utils.make_output_filename(f"bl_{id}.bmp")
+	output_filename = f"bl_{id}.bmp"
 
 	MAX_ZOOM = 13
 	base_url = f"http://www.bl.uk/manuscripts/Proxy.ashx?view={id}_files"
