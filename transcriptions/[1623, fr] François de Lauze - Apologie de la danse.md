@@ -1,4 +1,4 @@
-### {Page} A Monseignevr:[[Originally transcribed for [_Observatorie de la vie littéraire_](http://obvil.sorbonne-universite.site/corpus/danse/lauze_apologie-danse_1623_orig) as a part of _Discours sur la danse_ project. This text is released under [CC BY-NC-ND 3.0 license](https://creativecommons.org/licenses/by-nc-nd/3.0/).]]
+### {Page} A Monseignevr:
 
 ### Monseignevr le marqvis
 de _Buckingham_ Grand Escuier, & Grand
