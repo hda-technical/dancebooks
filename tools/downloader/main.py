@@ -820,6 +820,17 @@ def cambridge(
 	"""
 	import cambridge
 	cambridge.get(id)
+	
+	
+@opster.command()
+def bodleian(
+	id=("", "", "Id of the image to be downloaded (e. g. `1273e6f5-ee79-4f6b-9014-a9065a93b9ff`)")
+):
+	"""
+	Downloads image from https://digital.bodleian.ox.ac.uk
+	"""
+	import bodleian
+	bodleian.get(id)
 
 
 if __name__ == "__main__":
