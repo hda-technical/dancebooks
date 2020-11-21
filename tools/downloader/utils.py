@@ -97,12 +97,15 @@ def get_binary(output_filename, url_or_request, *args, **kwargs):
 	return total_size
 
 
-def make_output_folder(downloader, book_id):
-	clean_book_id = book_id\
+def cleanup_filename(bad_name):
+	return bad_name\
 		.replace('/', '_')\
 		.replace(':', '_')\
 		.replace('\\', '_')\
 
+
+def make_output_folder(downloader, book_id):
+	clean_book_id = cleanup_filename(book_id)
 	folder_name = f"{downloader}_{clean_book_id}"
 	os.makedirs(folder_name, exist_ok=True)
 	return folder_name
