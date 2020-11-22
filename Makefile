@@ -46,6 +46,9 @@ configs-install-production:
 	#installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
+	# install directory for mkdocs static site
+	install --owner=$(USER) --group=$(USER) --directory /usr/share/hda
+
 configs-install-testing:
 	#creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
@@ -72,6 +75,12 @@ configs-install-testing:
 	#installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
 
+	# install directory for mkdocs static site
+	install --owner=$(USER) --group=$(USER) --directory /usr/share/hda
+
+docs:
+	mkdocs build
+
 reload-testing: test translations
 	@echo "Reloading"
 	bash -c "time -p (touch $(TOUCH_RELOAD_TESTING) && sleep 1 && curl --max-time 60 'https://bib-test.hda.org.ru/ping')"
@@ -86,4 +95,4 @@ requirements.txt:
 
 # Ancillary targets
 
-.PHONY: requirements.txt
+.PHONY: requirements.txt docs

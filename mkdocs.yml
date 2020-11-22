@@ -1,6 +1,6 @@
 site_name: Библиография исторического танца
 docs_dir: docs
-site_dir: docs_static
+site_dir: /usr/share/hda/docs
 nav:
   - Общая информация:
     - Лицензия: license.md
