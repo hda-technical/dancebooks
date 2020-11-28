@@ -17,11 +17,12 @@ SIZE_FORMAT = f"W{const.SIZE_DELIMETER}H"
 
 def fixup_path(path):
 	# Fixing Windows-style paths
-	path = path.replace('\\', '/')
-	return os.path.join(
-	    config.www.elibrary_dir,
-	    path + ".pdf"
-	)
+	return path.replace('\\', '/')
+
+
+def make_library_path(path):
+	full_path = os.path.join(config.www.elibrary_dir, path)
+	return os.path.splitext(full_path)[0] + ".pdf"
 
 
 @opster.command()
@@ -31,7 +32,9 @@ def add(
 	backup = db.Backup()
 	backup.path = input("Enter path: ")
 	backup.path = fixup_path(backup.path)
-	if not os.path.isfile(backup.path) and not force:
+
+	library_path = make_library_path(backup.path)
+	if not os.path.isfile(library_path) and not force:
 		raise ValueError("Original file for this backup was not found in elibrary")
 
 	backup.provenance = input("Enter provenance (markdown supported): ")
@@ -88,7 +91,11 @@ def update(
 		backup = session.query(db.Backup).get(id)
 		modified = False
 		if path != NOT_DEFINED:
-			backup.path = fixup_path(path)
+			path = fixup_path(path)
+			library_path = make_library_path(path)
+			if not os.path.isfile(library_path):
+				raise ValueError("Original file for this backup was not found in elibrary")
+			backup.path = path
 			modified = True
 		if provenance != NOT_DEFINED:
 			backup.provenance = provenance
