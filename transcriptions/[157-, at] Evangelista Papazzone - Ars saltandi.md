@@ -1,9 +1,3 @@
-----
-
-This transcription is based on a partial transcription by [Marko Motnik](http://fagisis.de/allUngaresca-pdfs/Motnik.pdf). Here the transcription is full and errors in the transcripton were corrected.
-
-----
-
 {Front cover} Ars Saltandi
 
 {Ir-IIIv} [Blank Pages]
