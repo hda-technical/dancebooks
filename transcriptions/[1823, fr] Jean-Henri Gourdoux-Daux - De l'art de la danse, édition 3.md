@@ -1,4 +1,4 @@
-{Frontispiece} _N. B._ L'Auteur croit devoir prier le Public de ne point le confondre avec un artiste du même nom, qui, depuis quelque tems, fait annoncer de toutes parts un nouveau Cours de danse[[Originally transcribed for [_Observatorie de la vie littéraire_](http://obvil.sorbonne-universite.site/corpus/danse/lauze_apologie-danse_1623_orig) as a part of _Discours sur la danse_ project. This text is released under [CC BY-NC-ND 3.0 license](https://creativecommons.org/licenses/by-nc-nd/3.0/).]].
+{Frontispiece} _N. B._ L'Auteur croit devoir prier le Public de ne point le confondre avec un artiste du même nom, qui, depuis quelque tems, fait annoncer de toutes parts un nouveau Cours de danse.
 
 ### {Page} Introduction.
 
