@@ -1,4 +1,4 @@
-### {Page} _Auuertimenti per la presente Rappresentatione, à chi volesse farla recitar cantando_[[Initially uploaded to [IMSLP](https://imslp.org/wiki/Rappresentatione_di_Anima_e_di_Corpo_(Cavalieri,_Emilio_de')), the text was proofread against typos, and the orthography was reverted to match the original. Only the part with dance description was transcribed. This text is released under [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).]]
+### {Page} _Auuertimenti per la presente Rappresentatione, à chi volesse farla recitar cantando_
 
 Si sono poste le parole senza musica in vltimo, & co'i numeri conformi
 à quelli, che sono alla musica, acciò rendino facilità in ordi[-]
