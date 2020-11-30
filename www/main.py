@@ -7,6 +7,7 @@ import logging
 import os
 import random
 import sys
+import datetime
 
 import flask
 from flaskext import markdown as flask_markdown
@@ -415,7 +416,7 @@ def get_books_rss(lang):
 
 	response = flask.make_response(flask.render_template(
 		"rss/books.xml",
-		item_index=item_index["added_on"]
+		item_index={date: item if date < datetime.now().date() for date, item in item_index["added_on"].items()}
 	))
 	response.content_type = "application/rss+xml; charset=utf-8"
 	return response
