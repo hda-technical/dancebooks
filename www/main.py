@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+import datetime as dt
 import http.client
 import json
 import logging
@@ -415,7 +416,11 @@ def get_books_rss(lang):
 
 	response = flask.make_response(flask.render_template(
 		"rss/books.xml",
-		item_index=item_index["added_on"]
+		item_index={
+			date: item
+			for date, item in item_index["added_on"].items()
+			if date < dt.datetime.now() - dt.timedelta(days=1)
+		}
 	))
 	response.content_type = "application/rss+xml; charset=utf-8"
 	return response
