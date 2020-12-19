@@ -15,14 +15,12 @@ SHORT_LANG_MAP = {
 	"cz": ["czech", "german"],
 	"de": ["german", "french"],
 	"dk": ["danish"],
-	"en": ["english"],
+	"en": ["english", "latin"],
 	"es": ["spanish"],
 	"fi": ["finnish"],
-	"fr": ["french"],
+	"fr": ["french", "latin"],
 	"ie": ["english"],
 	"it": ["italian", "french"],
-	#ln is currently unassigned according to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-	"ln": ["latin"],
 	"lt": ["latvian"],
 	"nl": ["dutch", "german", "french"],
 	"pl": ["french", "polish"],
@@ -73,6 +71,7 @@ LONG_LANG_MAP = {
 	},
 	"english.bib": {
 		"english",
+		"latin",
 	},
 	"finnish.bib": {
 		"finnish",
