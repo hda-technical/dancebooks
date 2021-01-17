@@ -89,7 +89,7 @@
             "mirrorland.rpg.ru",
             //use nbn-resolving.de permalinks instead
             "reader.digitale-sammlungen.de",
-            "jscholarship.library.jhu.edu"
+            "jscholarship.library.jhu.edu",
         ],
         "blocked_domains_http": [
             "archive.org",
@@ -106,11 +106,11 @@
         "domains_allowed_301": [
             "digitalarchive.wm.edu",
             "archiv.riga-digitalis.eu",
-            "www.purl.org"
+            "www.purl.org",
         ],
         "keywords": {
             "xvi": [
-                "pavane"
+                "pavane",
             ],
             "baroque": [
                 "allemande",
@@ -121,7 +121,7 @@
                 "landler",
                 "minuet",
                 "perigourdine",
-                "saraband"
+                "saraband",
             ],
             "country-dance": [
                 "circle",
@@ -146,7 +146,7 @@
                 "spanish dance",
                 "swedish dance",
                 "tempete",
-                "virginia reel"
+                "virginia reel",
             ],
             "xix": [
                 "allemande",
@@ -194,7 +194,7 @@
                 "waltz: hesitation",
                 "waltz: new trois temps",
                 "waltz: sautese",
-                "waltz: trois temps"
+                "waltz: trois temps",
             ],
             "xx": [
                 "animal dance",
@@ -218,7 +218,7 @@
                 "waltz",
                 "waltz: boston",
                 "waltz: canter",
-                "waltz: hesitation"
+                "waltz: hesitation",
             ],
             "extras": [
                 "antidance",
@@ -241,11 +241,13 @@
                 "reissue",
                 "research",
                 "reverences",
+                "system:google:us only",
+                "system:google:problematic scan",
                 "tempo",
                 "tempo: italian",
                 "tempo: malzel",
                 "transcription",
-                "useless"
+                "useless",
             ]
         },
         "bookkeepers": {
@@ -549,9 +551,9 @@
             "pappazzoni_1576": "papazzone_1572",
             "dubrueil_1718_wiesbaden": "dubreil_1718_hessoise",
             "dubrueil_1730": "dubreil_1730_carlstadt",
-			"dubrueil_1718_munich": "dubreil_1717_bavaroise",
-			"olivier_1700": "olivier_1718_princesse",
-			"payne_2003": "payne_2003_almain",
+            "dubrueil_1718_munich": "dubreil_1717_bavaroise",
+            "olivier_1700": "olivier_1718_princesse",
+            "payne_2003": "payne_2003_almain",
         }
     }
 }
