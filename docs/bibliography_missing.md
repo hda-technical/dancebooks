@@ -268,7 +268,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1831 | Eduard Friedrich David Helmke | Neue Tanz- und Bildunschule<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Helmke, 1829]](https://bib.hda.org.ru/books/helmke_1829_tanz) | |
 | 1831 | А. Krüger | Die algemein beliebtesten Contre-Tanz-Touren, wie solche auf den Bällen und in Familientränzchen in Berlin getanzt werden<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1831 | Giacomo Costa | Saggio analitico-pratico all'arte della danza per uso di civile conversazione<br/>_4 volumi con tavole_<br/>_Published in Torino_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=RdsqAAAAYAAJ&pg=PA435) | [Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=467361754)<br/>[NYPL](http://catalog.nypl.org/record=b12280213~S1)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004045042) |
-| 1831 | Max Joseph Franken | Die Galopade, wie sie getanzt werder soll. Eine vollständige Anweisung zum Selbstunterrichte in diesem Lieblingstanze<br/>_2. Auflage_ | `[Klemm, #03]`<br/>`[Klemm #06]` | |
+| 1831 | Max Joseph Franken | Die Galopade, wie sie getanzt werder soll. Eine vollständige Anweisung zum Selbstunterrichte in diesem Lieblingstanze<br/>_2. Auflage_ | `[Klemm, #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | [Royal Academy of Music](http://www.ram.ac.uk/museum/item/15068) |
 | 1832 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1832<br/>_Good quality copy needed_ | [[Helmke, 1832]](https://bib.hda.org.ru/books/helmke_1832)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [NLI](http://aleph.nli.org.il/F/?func=direct&doc_number=001825743&local_base=NNL01)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
 | 1831/1833 | Carl Friedrich Förster | Eccossaisen-Lehre, oder die Kunst 16 verschiedene Eccossaisen mit allen dezugehörigen Pas und Touren in kurzer Zeit anständig tanzen<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.com/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
@@ -329,8 +329,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1855 | J. C. Dürholz | Practischer Leitfaden für Tänzer und Tänzerinnen nebst Choreographie der neuesten Contre-Tänze und Polonaisen<br/>_Published in Berleburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1855 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_3. Auflage_<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1855 | Пётр Петрович Сухонин | Русские хороводы | | [RSL](https://search.rsl.ru/ru/record/01003563356) |
-| 1857 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #02]` | |
-| 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1857 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #02]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001321472) |
+| 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1857 | Friedrich Wilhelm Rocco | Die natürliche und künstliche Bewegung des Körpers | `[Katalog, 1894]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=475078551)<br/>[HAAB](https://lhwei.gbv.de/DB=2/XMLPRS=N/PPN?PPN=475078551)<br/>[Leipzig](https://katalog.ub.uni-leipzig.de/Record/0001457432) |
 | 1857 | Johann Raab | Der Cotillon : in 20 neuen Figuren. Mit faßlicher, genauer und ausführlicher Beschreibung und Zeichnung aller Touren für Tänzer und Nichttänzer | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524536370002884) |
 | 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [ÖNB](http://data.onb.ac.at/rec/AC09173622) |
@@ -359,7 +359,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1871 | Karl Link | Die Tanzkunst vom theoretischen und ästhetischen Standpunkte. Kurzgefaßte Anleitung als Vorbegriff für den praktischen Tanzunterricht | `[Klemm #03]`<br/>`[Klemm #06]` | [Kopenhague](https://rex.kb.dk/primo-explore/fulldisplay?docid=KGL01001845230&context=L&vid=NUI&search_scope=KGL&tab=default_tab&lang=da_DK) |
 | 1871 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_3rd edition_ | | BNP |
 | 1871 | Oskar Guttmann | Grundsätze der ästhetischen Bildung des menschlichen Körpers. Praktisches Lehrbuch zum Selbstunterricht für alle gebildeten Stände, insbesondere für Bühnenkünstler<br/>_Book on physical education._ | `[Klemm #03]` | [Cincinnati](https://huc.on.worldcat.org/oclc/172998951)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001548753) |
-| 1873 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1873 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung<br/>_Erste Auflage (??)_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1873 | August Krüger | Der Contre-Tanz und die Quadrille à la cour. Zum Ausrufen eingerichtet<br/>_Published in Berlin_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1874 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_4th edition_ | | BNP |
 | 1874 | | Arte ou methodo facil de aprender a dansar as contradansas francezas<br/>_4th edition_ | | BNP |
@@ -376,6 +376,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst<br/>_Should not be confused with Bernhard Klemm's book with the same title_ | `[Leaflets]` | | |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
+| 1882 | Amint Freising | Der Tanz. Nach älteren Schriften bearbeitet | `[Germanorum, 1914]` | [Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=844229881) |
 | 1882 | Константин Аполлонович Скальковский | Балет, его история и место в ряду изящных искусств | | [On sale, ₽15000](http://www.alib.ru/5_baletoman_skalnmnkovskij_k_balet_ego_istoriya_i_mesto_v_ryadu_izyawnyh_iskusstv_w1t821d49b5553655f8fe16aa397fd5a52f287.html)<br/>[NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004565138) |
 | 1882 | Charles Coote | Le minuet de la cour, Arranged for the Pianoforte | `[Russell, 2007]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004280118) |
 | 1883 | Gustave Desrat | Nouveau traité de la danse et du cotillon contenant la théorie et l'histoire des danses anciennes et modernes<br/>_Published by H. Delarue in Paris_ | `[Russell, 2007]` | |
@@ -392,7 +393,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1890? | Robert Coote | How to Dance the Old Dances. A New Edition of Famous Ball Room Guide | `[Russel, 2007]`<br/>[[Coote, 1876]](https://bib.hda.org.ru/books/coote_1876_guide) | |
 | 1891 | Justino Dias Lima Soares | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_6th edition_ | | BNP |
 | 1891 | Max Beneke | Über Takt im Tanz | `[Klemm #06]` | |
-| 1892 | Amint Freising | Leitfaden für den Tanz-Unterricht | `[Unfried, 2014]`<br/>`[Klemm #06]`<br/>`[Russell, 2007]` | |
 | 1892 | Josef Herzenberger | Der Tanzsalon: Lehrbuch für den theoretischen und praktischen Tanzunterricht | `[Katalog, 1894]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524544810002884) |
 | 1892 | William B. de Garmo | The Dance of Society<br/>_5th edition_ | `[Leaflets]` | |
 | 1894 | Ardern Holt | The Cotillon. Details of All the Newest Figures with and without Accessories | `[Rogers, 1998]` | |
