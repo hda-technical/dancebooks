@@ -32,5 +32,5 @@ def get(id):
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing image {image_id}")
 			continue
-		print(f"Downloading {image_id}")
+		print(f"Downloading {image_id} from {image_url}")
 		utils.get_binary(output_filename, image_url, cookies=cookies)
