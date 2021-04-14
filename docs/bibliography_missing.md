@@ -1,4 +1,4 @@
-# Historical dance bibliography: Entries known to be missing
+﻿# Historical dance bibliography: Entries known to be missing
 
 _This table is intended to be accurate, yet sometimes it is slightly outdated._
 
@@ -456,7 +456,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1925, №4 | | Деревенский театр<br/>_Содержит описания танцев «Петли», «Деревенская кадриль» от Анны Михайловны Зеленко_ | [[Зеленко, Шитик, 1927]](https://bib.hda.org.ru/books/zelenko_1927_promenade) | |
 | 1926 | Алексей Александрович Гвоздев (commentator)<br/>_Гептахор (коллектив авторов)_ | Ритм и культура танца<br/>_Published by Academia_ | | [RSL](https://search.rsl.ru/ru/record/01009133657)<br/>`SPTL: Р 551` |
 | 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS006725710)<br/>`SPTL: В 399` |
-| 1927 | В. Н. Гернгросс-Всеволодский | Крестьянский танец | `[Жбанкова, 2016]` | |
 | 1927 | Т. Бабаджан<br/>Агния Барто | Ритмические игры и постановки к 10 годовщине Октября | | [On sale, ₽5500](http://www.alib.ru/5_barto_agniya_ritmicheskie_igry_i_postanovki_k_10_godovwine_oktyabrya_w1t1986151614fd8beb7fbf7fa890a1e8efc33a.html) |
 | 1927–1929? | S. (Selma?) Jaffé | Der Tanz im Selbstunterricht | [Inhaltsverzeichnis](https://d-nb.info/580985733/04)<br/>`[Russell, 2007]` | [Worldcat] |
 | 1928 | Е. Малая<br/>В. Костюк | Танцевальные шаги и гимнастические танцы | `[Жбанкова, 2016]` | |

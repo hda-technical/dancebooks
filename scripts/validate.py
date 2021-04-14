@@ -94,6 +94,7 @@ ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 MULTIENTRY_BOOKTYPES = {
 	"article",
 	"proceedings",
+	"mvproceedings",
 	"inproceedings",
 	"collection",
 	"incollection",
@@ -507,6 +508,7 @@ def validate_booktype(item, errors):
 		"mvbook",
 
 		"proceedings",
+		"mvproceedings",
 		"inproceedings",
 
 		"reference",
