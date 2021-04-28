@@ -6,7 +6,11 @@ import datetime
 from dancebooks.config import config
 
 def simplify(str):
-	return unidecode(str.lower())
+	str = str.lower()
+	# unidecode does not handle Cyrillic properly.
+	# Add a crutch to fix it.
+	str = str.replace('ё', 'е')
+	return unidecode(str)
 
 def search_for_string(key, value):
 	"""
