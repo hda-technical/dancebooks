@@ -243,6 +243,9 @@ def format_date(item):
 	day = item.get("day")
 
 	if all([year_from, month, day]):
+		# Month field may contain ranges in the datamodel.
+		# Whenever the day is set, month is guaranteed to contain single number.
+		month = int(month)
 		date = datetime.date(year_from, month, day)
 		return flask_babel.format_date(date, format="d MMMM y")
 	elif all([year_from, month]):
