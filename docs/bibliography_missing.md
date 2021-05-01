@@ -442,7 +442,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1914 | Андрей Яковлевич Левинсон | Мастера балета. Очерки истории и теории танца | | [RSL](http://search.rsl.ru/ru/record/01004191266) |
 | 1914 | | Танго. Мурочка-Манюрочка! Новый сборник лучших куплетов | |  [NLR #1](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068184)<br/>[NLR #2](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068185) |
 | 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005165864) |
-| 1915, January–March | | The Ladies' Home Journal<br/>_Contains dances described by Anna Pavlova_ | | |
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
 | 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | |
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
