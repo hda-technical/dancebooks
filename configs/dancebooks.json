@@ -44,7 +44,6 @@
             "part",
             "number",
             "serial_number",
-            "month",
             "day"
         ],
         "year_params": [

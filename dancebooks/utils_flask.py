@@ -223,7 +223,14 @@ def translate_wrong_error(key):
 
 
 def translate_month(month):
-	return flask_babel.gettext(const.BABEL_MONTH_PREFIX + f"{month:02d}")
+	def translate_one(singular_month):
+		singular_month = int(singular_month)
+		return flask_babel.gettext(const.BABEL_MONTH_PREFIX + f"{singular_month:02d}")
+	bounds = month.split('-')
+	if len(bounds) == 2:
+		return '–'.join(translate_one(bound) for bound in bounds)
+	assert len(bounds) == 1
+	return translate_one(bounds[0])
 
 
 def format_date(item):

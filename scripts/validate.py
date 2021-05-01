@@ -726,6 +726,33 @@ def validate_volume(item, errors):
 			errors.add(f"Field volume ({volume}) can't exceed field volumes ({volumes})")
 
 
+MONTH_REGEXP = re.compile(r"(?P<start>\d+)(-(?P<end>\d+))?")
+def validate_month(item, errors):
+	def validate_single(month):
+		month = int(month)
+		if (month < 1 or month > 12):
+			errors.add(f"Month {month} should be in range 1..12")
+			return
+	month = item.get("month")
+	if month is None:
+		return
+	match = MONTH_REGEXP.fullmatch(month)
+	if not match:
+		errors.add(f"Field month ({month}) does not match {MONTH_REGEXP.pattern!r}")
+		return
+	validate_single(match["start"])
+	if (end := match["end"]) is not None:
+		validate_single(end)
+
+
+def validate_pages(item, errors):
+	pass
+
+
+def validate_number(item, errors):
+	pass
+
+
 def validate_series(item, errors):
 	"""
 	Checks series and number parameters for validity
@@ -856,6 +883,9 @@ def validate_item(item, git_added_on, make_extra_checks):
 	validate_commentator(item, errors)
 	validate_url_validity(item, errors)
 	validate_volume(item, errors)
+	validate_month(item, errors)
+	validate_pages(item, errors)
+	validate_number(item, errors)
 	validate_series(item, errors)
 	validate_keywords(item, errors)
 	validate_filename(item, errors)
