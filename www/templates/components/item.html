@@ -97,7 +97,7 @@
 				{{ item | format_date }}
 			{% elif param == "pages" %}
 				{{ value | format_pages }}
-			{% elif param == "number" %}
+			{% elif param == "number" or param == "serial_number" %}
 				{{ value | format_number }}
 			{% else %}
 				{{ value }}
