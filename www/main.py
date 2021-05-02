@@ -52,6 +52,7 @@ flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.translat
 flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.translate_keyword_ref
 flask_app.jinja_env.filters["is_url_self_served"] = utils.is_url_self_served
 flask_app.jinja_env.filters["format_date"] = utils_flask.format_date
+flask_app.jinja_env.filters["format_pages"] = utils_flask.format_pages
 flask_app.jinja_env.filters["format_catalogue_code"] = utils_flask.format_catalogue_code
 flask_app.jinja_env.filters["format_item_id"] = utils_flask.format_item_id
 flask_app.jinja_env.filters["format_transcription_url"] = utils_flask.format_transcription_url

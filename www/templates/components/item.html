@@ -95,6 +95,8 @@
 				{{ value | translate_booktype }}
 			{% elif param == "date" %}
 				{{ item | format_date }}
+			{% elif param == "pages" %}
+				{{ value | format_pages }}
 			{% else %}
 				{{ value }}
 			{% endif %}

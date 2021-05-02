@@ -233,6 +233,10 @@ def translate_month(month):
 	return translate_one(bounds[0])
 
 
+def format_pages(pages):
+	# change dash to ndash
+	return pages.replace('-', '–')
+
 def format_date(item):
 	year = item.get("year");
 	if item.get("year_circa"):
