@@ -142,7 +142,7 @@ FILENAME_PATTERN = (
 	#   (something copy) — for books with multiple different copies known
 	r"(?:"
 		r"(?:, tome (?P<volume>\d+))|"
-		r"(?:, number (?P<number>\d+))|"
+		r"(?:, number (?P<number>[\w\- ]+))|"
 		r"(?:, édition (?P<edition>\d+))|"
 		r"(?:, partie (?P<part>\d+))|"
 		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"

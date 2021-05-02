@@ -761,10 +761,6 @@ def validate_pages(item, errors):
 		return
 
 
-def validate_number(item, errors):
-	pass
-
-
 def validate_series(item, errors):
 	"""
 	Checks series and number parameters for validity
@@ -897,7 +893,6 @@ def validate_item(item, git_added_on, make_extra_checks):
 	validate_volume(item, errors)
 	validate_month(item, errors)
 	validate_pages(item, errors)
-	validate_number(item, errors)
 	validate_series(item, errors)
 	validate_keywords(item, errors)
 	validate_filename(item, errors)

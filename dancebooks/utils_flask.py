@@ -237,6 +237,12 @@ def format_pages(pages):
 	# change dash to ndash
 	return pages.replace('-', '–')
 
+
+def format_number(number):
+	# change dash to ndash
+	return number.replace('-', '–')
+
+
 def format_date(item):
 	year = item.get("year");
 	if item.get("year_circa"):

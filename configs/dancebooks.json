@@ -42,8 +42,6 @@
             "volumes",
             "edition",
             "part",
-            "number",
-            "serial_number",
             "day"
         ],
         "year_params": [

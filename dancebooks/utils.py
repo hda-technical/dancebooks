@@ -98,14 +98,14 @@ def search_in_folder(path, filter, excludes={}):
 
 def extract_metadata_from_file(path):
 	"""
-	Extracts dictionary contating the following fields:
+	Extracts dictionary with the following fields:
 
 	* year (interval)
 	* language (string)
 	* author ([string])
 	* title (string)
 	* volume (integer)
-	* number (integer)
+	* number (string)
 	* edition (integer)
 	* part (integer)
 	* keywords ([string])
@@ -125,15 +125,18 @@ def extract_metadata_from_file(path):
 		"langid": const.SHORT_LANG_MAP[match.group("langid")]
 	}
 
-	PLAIN_PARAMS = {"volume", "edition", "part", "number", "title"}
+	PLAIN_PARAMS = {"volume", "edition", "part", "title"}
 	for param in PLAIN_PARAMS:
 		value = match.group(param)
 		if value is None:
 			continue
-		if (param in config.parser.int_params) and value.isdecimal():
+		if param in config.parser.int_params:
 			result[param] = int(value)
 		else:
 			result[param] = value
+
+	if (number := match.group("number")) is not None:
+		result["number"] = number.lstrip("0")
 
 	author = match.group("author")
 	if (author is not None):
