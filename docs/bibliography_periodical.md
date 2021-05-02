@@ -26,6 +26,7 @@
 | 1857–1898 | Der Bazar | http://digital.ub.uni-duesseldorf.de/ihd/periodical/titleinfo/2083461 | Нет |
 | 1857–1940 | Le monde illustré | https://gallica.bnf.fr/ark:/12148/cb32818319d/date | Нет |
 | 1862–1883 | Модный магазин (с 1884 года объединён с «Модным светом» | https://rutracker.org/forum/viewtopic.php?t=4898192 | Да |
+| 1863–1917 | Русский архив | https://runivers.ru/lib/book7627/ | Нет |
 | 1867–1895 | Новый русский базар | https://rutracker.org/forum/viewtopic.php?t=4902380<br/>http://search.rsl.ru/ru/record/01007888504<br/>http://search.rsl.ru/ru/record/01007907707<br/>http://search.rsl.ru/ru/record/01007911873<br/>http://search.rsl.ru/ru/record/01004487216 | Да |
 | 1868–1916 | Модный свет (c 1884 года «Модный свет и модный магазин») | https://rutracker.org/forum/viewtopic.php?t=4901237 | Да |
 | 1874–1876 | Моды и рукоделия | https://rutracker.org/forum/viewtopic.php?t=4632959 | Да |
