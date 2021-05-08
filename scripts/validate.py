@@ -629,11 +629,11 @@ def validate_url_validity(item, errors):
 
 		single_filename, single_filesize = utils.get_file_info_from_url(single_url, item)
 		metadata = utils.extract_metadata_from_file(single_filename)
-		owners = metadata.get("owner").split("+")
-		if not owners:
-			errors.add(f"Owner specification expected for self-served url #{number} [{url}], stored at [{single_filename}]")
+
+		if (owners := metadata.get("owner")) is None:
+			errors.add(f"Owner specification expected for self-served url #{idx} [{url}], stored at [{single_filename}]")
 			continue
-		for owner in owners:
+		for owner in owners.split("+"):
 			owner_fullname = config.parser.bookkeepers.get(owner)
 			if owner_fullname:
 				note = item.get("note")
