@@ -21,8 +21,10 @@ def fixup_path(path):
 
 
 def make_library_path(path):
-	full_path = os.path.join(config.www.elibrary_dir, path)
-	return os.path.splitext(full_path)[0] + ".pdf"
+	path, maybe_ext = os.path.splitext(path)
+	if len(maybe_ext) > 4:
+		path += maybe_ext
+	return os.path.join(config.www.elibrary_dir, path) + ".pdf"
 
 
 @opster.command()
@@ -35,7 +37,7 @@ def add(
 
 	library_path = make_library_path(backup.path)
 	if not os.path.isfile(library_path) and not force:
-		raise ValueError("Original file for this backup was not found in elibrary")
+		raise ValueError(f"Original file for this backup ({library_path}) was not found in elibrary")
 
 	backup.provenance = input("Enter provenance (markdown supported): ")
 	backup.aspect_ratio_x, backup.aspect_ratio_y = map(
