@@ -128,7 +128,7 @@ FILENAME_PATTERN = (
 	#author: optional, can contain
 	#   spaces (Thomas Wilson),
 	#   dots (N. Malpied),
-	#   commas (Louis Pecour, Jacque Dezais)
+	#   commas (Louis Pecour, Jacques Dezais)
 	#(question mark at the end makes regexp non-greedy)
 	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
 	#title: sequence of words, digits, spaces, punctuation

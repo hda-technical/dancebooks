@@ -96,6 +96,11 @@ def search_in_folder(path, filter, excludes={}):
 	return results
 
 
+class FileMetadata(dict):
+	def __init__(self):
+		self.incomplete = False
+
+
 def extract_metadata_from_file(path):
 	"""
 	Extracts dictionary with the following fields:
@@ -119,11 +124,10 @@ def extract_metadata_from_file(path):
 	year_from = int(year.replace("-", "0"))
 	year_to = int(year.replace("-", "9"))
 
-	result = {
-		"year_from": year_from,
-		"year_to": year_to,
-		"langid": const.SHORT_LANG_MAP[match.group("langid")]
-	}
+	result = FileMetadata()
+	result["year_from"] = year_from
+	result["year_to"] = year_to
+	result["langid"] = const.SHORT_LANG_MAP[match.group("langid")]
 
 	PLAIN_PARAMS = {"volume", "edition", "part", "title"}
 	for param in PLAIN_PARAMS:
@@ -142,11 +146,14 @@ def extract_metadata_from_file(path):
 	if (author is not None):
 		result["author"] = strip_split_list(author, ",")
 
-	keywords = match.group("keywords")
-	if keywords is not None:
+	if (keywords := match.group("keywords")) is not None:	
 		result["keywords"] = set()
 		for keyword in strip_split_list(keywords, ","):
-			if (keyword.endswith(" copy")):
+			if keyword.startswith("incomplete "):
+				result.incomplete = True
+				keyword = keyword[len("incomplete ")]
+			# no else, as 'incomplete NLR copy' is a valid keyword
+			if keyword.endswith(" copy"):
 				for owner in config.parser.bookkeepers:
 					if keywords.startswith(owner):
 						result["owner"] = owner
