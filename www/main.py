@@ -92,7 +92,7 @@ def get_locale():
 		return utils.first(config.www.languages)
 
 
-@flask_app.route("/secret-cookie", methods=["GET"])
+@flask_app.get("/secret-cookie")
 @utils_flask.log_exceptions()
 def secret_cookie():
 	response = flask.make_response(flask.redirect("/"))
@@ -105,7 +105,7 @@ def secret_cookie():
 	return response
 
 
-@flask_app.route("/ui-lang/<string:lang>", methods=["GET"])
+@flask_app.get("/ui-lang/<string:lang>")
 @utils_flask.log_exceptions()
 def choose_ui_lang(lang):
 	next_url = flask.request.referrer or "/"
@@ -122,7 +122,7 @@ def choose_ui_lang(lang):
 		flask.abort(http.client.NOT_FOUND, "Language isn't available")
 
 
-@flask_app.route("/", methods=["GET"])
+@flask_app.get("/")
 @utils_flask.log_exceptions()
 @utils_flask.check_secret_cookie("show_secrets")
 def root(show_secrets):
@@ -133,10 +133,10 @@ def root(show_secrets):
 	)
 
 
-@flask_app.route("/search", methods=["GET"])
-@flask_app.route("/basic-search", methods=["GET"])
-@flask_app.route("/advanced-search", methods=["GET"])
-@flask_app.route("/all-fields-search", methods=["GET"])
+@flask_app.get("/search")
+@flask_app.get("/basic-search")
+@flask_app.get("/advanced-search")
+@flask_app.get("/all-fields-search")
 @utils_flask.check_secret_cookie("show_secrets")
 @utils_flask.log_exceptions()
 def search_items(show_secrets):
@@ -214,7 +214,7 @@ def search_items(show_secrets):
 		)
 
 
-@flask_app.route("/books/<string:book_id>", methods=["GET"])
+@flask_app.get("/books/<string:book_id>")
 @utils_flask.check_id_redirections("book_id")
 @utils_flask.check_secret_cookie("show_secrets")
 @utils_flask.log_exceptions()
@@ -234,7 +234,7 @@ def get_book(book_id, show_secrets):
 	)
 
 
-@flask_app.route("/books/<string:book_id>/pdf/<int:index>", methods=["GET"])
+@flask_app.get("/books/<string:book_id>/pdf/<int:index>")
 @utils_flask.check_id_redirections("book_id")
 @utils_flask.log_exceptions()
 def get_book_pdf(book_id, index):
@@ -284,7 +284,7 @@ def get_book_pdf(book_id, index):
 		)
 
 
-@flask_app.route("/books/<string:item_id>/transcription", methods=["GET"])
+@flask_app.get("/books/<string:item_id>/transcription")
 @utils_flask.check_id_redirections("item_id")
 @utils_flask.log_exceptions()
 def get_book_markdown(item_id):
@@ -314,7 +314,7 @@ def get_book_markdown(item_id):
 	)
 
 
-@flask_app.route("/books/<string:book_id>", methods=["POST"])
+@flask_app.post("/books/<string:book_id>")
 @utils_flask.jsonify()
 @utils_flask.log_exceptions()
 @utils_flask.check_captcha()
@@ -338,7 +338,7 @@ def edit_book(book_id):
 	return {"message": flask_babel.gettext("interface:report:thanks")}
 
 
-@flask_app.route("/books/<string:book_id>/keywords", methods=["POST"])
+@flask_app.post("/books/<string:book_id>/keywords")
 @utils_flask.jsonify()
 @utils_flask.log_exceptions()
 @utils_flask.check_captcha()
@@ -362,7 +362,7 @@ def edit_book_keywords(book_id):
 	return {"message": flask_babel.gettext("interface:report:thanks")}
 
 
-@flask_app.route("/options", methods=["GET"])
+@flask_app.get("/options")
 @utils_flask.jsonify()
 @utils_flask.log_exceptions()
 def get_options():
@@ -400,14 +400,14 @@ def get_options():
 	}
 
 
-@flask_app.route("/rss/books", methods=["GET"])
+@flask_app.get("/rss/books")
 @utils_flask.log_exceptions()
 def rss_redirect():
 	lang = get_locale()
 	return flask.redirect(f"/rss/{lang}/books")
 
 
-@flask_app.route("/rss/<string:lang>/books", methods=["GET"])
+@flask_app.get("/rss/<string:lang>/books")
 @utils_flask.log_exceptions()
 def get_books_rss(lang):
 	if lang in config.www.languages:
@@ -428,7 +428,7 @@ def get_books_rss(lang):
 	return response
 
 
-@flask_app.route("/backups", methods=["GET"])
+@flask_app.get("/backups")
 @utils_flask.log_exceptions()
 def get_backups():
 	format = utils_flask.extract_string_from_request("format", default="html")
@@ -447,7 +447,7 @@ def get_backups():
 
 STATIC_TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "templates/static")
 STATIC_FILES_DIR = os.path.join(os.path.dirname(__file__), "static")
-@flask_app.route("/<path:filename>", methods=["GET"])
+@flask_app.get("/<path:filename>")
 @utils_flask.log_exceptions()
 def everything_else(filename):
 	if os.path.isfile(os.path.join(STATIC_TEMPLATES_DIR, filename)):
@@ -458,7 +458,7 @@ def everything_else(filename):
 		flask.abort(http.client.NOT_FOUND, flask.request.base_url)
 
 
-@flask_app.route("/ping", methods=["GET"])
+@flask_app.get("/ping")
 def ping():
 	return "OK"
 
