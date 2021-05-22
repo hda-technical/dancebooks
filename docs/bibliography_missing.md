@@ -370,6 +370,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 188- | Александра Константиновна Буринская | Aidé-memoire с описанием танцев | [[Буринская, 1882, стр. 368]](https://bib.hda.org.ru/books/burinskaya_1882) |
 | 188- | Friedrich Albert Zorn | Die klassische Quadrille | `[Katalog, 1894]` | |
 | 188- | Eduard Georg Eichler | Neues Menuet. Mit Choreographie und Originalmusik | | |
+| 188- | E. Gärtner | Contre-danse und Quadrille à la Cour<br/>_6. Auflage_<br/>_Published by Volgen & Klein in Landsberg am Lech_<br/>_Dated approximately_ | `[Germanorum, 1914]` |
 | 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]` | |
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst<br/>_Should not be confused with Bernhard Klemm's book with the same title_ | `[Leaflets]` | | |
@@ -540,6 +541,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1745 | J. P. C. Sturm | Evangelisches Zeugnis wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können | `[Шабалина, 2019]` | |
 | 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
+| 1770 | | Gedanken vom Tanzen, in einem Sendschreiben an einem Freund<br/>_Publihed by Herold in Hamburg_ | `[Germanorum, 1914]` | |
 | 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
 | 1801 | Johann Evangelist Wetzler | über den Einfluß des Tanzens auf die Gesundheit nebst Verhaltungsregeln | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #51]` | |
