@@ -90,11 +90,6 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 			print(f"Downloading page #{page_number:04d}")
 			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
-
-###################
-#TILE BASED DOWNLOADERS
-###################
-
 @opster.command()
 def bnf_gallica(
 	id=("", "", "Id of the book to be downloaded (e. g. 'btv1b7200356s')")
@@ -172,6 +167,16 @@ def belgiumRoyalLibrary(
 		policy.trim = True
 		download_and_sew_tiles(output_filename, url_maker, policy)
 		page += 1
+
+@opster.command()
+def bsb(
+	id=("", "", "Id of the book to be downloaded (e. g. 'bsb10029940')"),
+):
+	"""
+	Downloads book from https://www.digitale-sammlungen.de
+	"""
+	import bsb
+	bsb.get_book(id)
 
 
 @opster.command()
