@@ -89,7 +89,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1771 | S. Markordt (publisher) | XII contredanes avec figures et acompagnement à 7 instruments | `[Wortelboer, 2004]`<br/>`[Leaflets]` |
 | 1771 | Louis Laus de Boissy | Lettre critique sur notre danse theâtrale | `[Phister, 2016]` | |
 | 1771 | | Gedanken von Tänzen, in einem Sendschreiben<br/>_Published in Hamburg_<br/>_Maybe an antidance treatise_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1773 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
+| 1773 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346615) |
 | 1773 | James Fishar<br/>John Johnson (publisher) | Sixteen Cotillons, Sixteen Minuets, Twelve Allemands and Twelve Hornpipes. | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004337825) |
 | 1773 | Gasparo Angiolini | Lettere di Gasparo Angiolini a monsieur Noverre sopra i balli pantomimi | `[2. Rothenfelser]`<br/>`[3. Rothenfelser]` | [LOC](https://www.loc.gov/item/08019861/) |
 | 1773 | Rendall, Abell | Sixteen Cotillons or French Dances | [Cite](https://books.google.com/books?&id=-pNMAQAAMAAJ&q=sixteen+cotillons+abell) | |
@@ -110,7 +110,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1780? | Maximilian Stadler | Anleitung zur musikalischen Composition durch Würfelspiel | `music: generator`<br/>`[Thielen, 2009]` | |
 | 1781 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=DsNFAAAAcAAJ&pg=PA96) | |
 | 1781 | Maximilian Stadler | Table pour composer des minuets et des trios à la infinie | `music: generator`<br/>`[Hedges, 1978]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43362239q) |
-| 1782 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]` | |
+| 1782 | Elias Christian Fricke | Ganz neue Englische Tänze mit den Touren | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346618) |
 | 1783 | Barthold Friedrich Schulz | Anweisung zum guten regelmäßigen Tanzen; nebst 12 neuen englischen Tänzen<br/>_Published in Hamburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=e3G6m7fhlT8C&pg=PA361) | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
