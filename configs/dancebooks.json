@@ -79,14 +79,14 @@
             //use nbn-resolving.de permalinks instead
             "haab-digital.klassik-stiftung.de",
             "hdl.loc.gov",
-            //use nbn-resolving.de permalinks instead
-            "opacplus.bsb-muenchen.de",
-            //use nbn-resolving.de permalinks instead
-            "mdz-nbn-resolving.de",
             "mirrorland.rpg.ru",
-            //use nbn-resolving.de permalinks instead
-            "reader.digitale-sammlungen.de",
             "jscholarship.library.jhu.edu",
+			//use nbn-resolving.de permalinks instead
+            "mdz-nbn-resolving.de",
+            "opacplus.bsb-muenchen.de",
+            "reader.digitale-sammlungen.de",
+            "www.digitale-sammlungen.de",
+			
         ],
         "blocked_domains_http": [
             "archive.org",
