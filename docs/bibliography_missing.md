@@ -539,13 +539,16 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | |
 | 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
+| 1701 | J. C. Hercker | Vom liederlichschen Sonntags-Tanzen<br/>_Published in Leipzig_ | `[Germanorum, 1914]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | |
 | 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
 | 1719 | Christoph Matthaeus Seidel<br/>_Published by Gedicke in Berlin_ | Die Beantwortung Etlicher Durch Misbrauch der Heiligen Schrifft erzwungenen Gegensprüche, Mit welchen Das welt-übliche Tantz-Spiel- und Lust-Wesen Entschuldiget | `[Шабалина, 2019]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746)<br/>[HVD](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746) |
 | 1719–1720? | Aegidius Günther Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
 | 1720 | Johann Wilhelm Kellners<br/>_Published in Frankfirt and Leipzig_ | Hoff-Raths und Pfänners in Halle Anhang zu seinem Tantz-Greuel | `[Шабалина, 2019]` | |
 | 1723 | _Published in Jena_ | Gründliches Gespräch vom Tantzen, in welchem die Tantz-Gründe untersuchet und nach der Wahrheit beurtheilet werden | `[Шабалина, 2019]` | |
-| 1738 | Hansel<br/>_Ander Theil_<br/>_Published by Waisenhaus in Züllichau_ | Des Schlüssels zur Erkenntniß und Verabscheuung des Heydnischen Tantz- und Lust-Wesens in der Christenheit | `[Шабалина, 2019]` | |
+| 1735 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Published in Züllichau_ | `[Germanorum, 1914]` | |
+| 1737 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Zweiter Druck_<br/>_Published in Züllichau_ | `[Germanorum, 1914]` | |
+| 1738 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Ander Theil_<br/>_Published in (Züllichau / Berlin)? by Waisenhaus_ | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
 | 1745 | J. P. C. Sturm | Evangelisches Zeugnis wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können | `[Шабалина, 2019]` | |
 | 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
