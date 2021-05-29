@@ -274,7 +274,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1822/1832 | Gustav Weirich | Drei Contre-Tänze in 20 verschiedenen Touren. Seinen Scholaren gewidmet | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=kiNMAAAAcAAJ&pg=RA1-PA56) | |
 | 1833 | Carl Friedrich Förster | Königs-Quadrillen-Lehre | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236) |
 | 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334) | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
-| 1835 | J. G. Häcker | Der selbstlehrende Tanzmeister<br/>_Good quality copy_ | [[Häcker, 1835]](https://bib.hda.org.ru/books/hacker_1835)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Berlin](http://www.ifskb.de/) |
+| 1835 | J. G. Häcker | Der selbstlehrende Tanzmeister<br/>_Good quality copy_ | [[Häcker, 1835]](https://bib.hda.org.ru/books/hacker_1835)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [SMB / Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=876381964)<br/>[PHOTOCOPY @ UDK / Berlin](https://udk-berlin.hosted.exlibrisgroup.com/permalink/f/1b2jonm/UDK_ALMA_DS21538893510002884)<br/>[DHDS / Köln](https://aleph.zbsport.de/F/8F9MHNPSSJ22IVFV41CQTMA997BGCHH2NIXGN4EN7R5FGHIY1F-02027?func=item-global&doc_library=ZBS01&doc_number=000182065&year=&volume=&sub_library=) |
 | 1835 | Пьер Роде<br/>Пьер Мари Франсуа де Саль Байо<br/>Родольф Крейцер | Скрипичный учитель, или собрание для изучения на скрипке необходимых правил<br/>_Издание третье_ | [Quote](http://blog.hda.org.ru/quotes/novyie-knigi) | |
 | 1836 | Марцинкевич<br/>Матвей Иванович Бернард | Les graces. Кадриль | [Cite](http://search.rsl.ru/ru/record/01000265975) | |
 | 1837 | Luigi Bartolotti | Della danza domestica | `[Leaflets]` | |
@@ -369,13 +369,14 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1875 | Philippe Gawlikowski | Guide complet de la danse<br/>_Édition 4_<br/>_Published by Jules Taride_ | `[Klemm #06]` | |
 | 1875 | Jean Jacques | Der Maitre de plaisir beim Tanze. Sammlung neuester und beliebtester Tanz-Ordnungen<br/>_11. Auflage_ | `[Klemm #06]` | |
 | 1876 | Allen Dodworth | Minuet de la Cour. Steps, Movements and Figures<br/>_Published by Edward Hopkins in New York_ | `[Russell, 2007]` | |
+| 1878–1880 | Carl Haraschin | Album der Cotillon-Touren | `[Germanorum, 1914]` | [2. Auflage @ HVD](http://id.lib.harvard.edu/alma/990076889650203941/catalog)<br/>[3. Auflage @ SBB / Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=39110442X)<br/> [4. Auflage @ NYPL](https://www.nypl.org/research/research-catalog/bib/b12293028) |
 | 1879 | William B. de Garmo | The Dance of Society<br/>_Second edition_ | `[Leaflets]` | |
 | 188- | Александра Константиновна Буринская | Aidé-memoire с описанием танцев | [[Буринская, 1882, стр. 368]](https://bib.hda.org.ru/books/burinskaya_1882) |
 | 188- | Friedrich Albert Zorn | Die klassische Quadrille | `[Katalog, 1894]` | |
 | 188- | Eduard Georg Eichler | Neues Menuet. Mit Choreographie und Originalmusik | | |
 | 188- | E. Gärtner | Contre-danse und Quadrille à la Cour<br/>_6. Auflage_<br/>_Published by Volgen & Klein in Landsberg am Lech_<br/>_Dated approximately_ | `[Germanorum, 1914]` |
 | 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
-| 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]` | |
+| 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001590546)<br/>[SMB / Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=862955807)<br/>[UDK / Berlin](https://udk-berlin.hosted.exlibrisgroup.com/permalink/f/1b2jonm/UDK_ALMA_DS21538943440002884) |
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst<br/>_Should not be confused with Bernhard Klemm's book with the same title_ | `[Leaflets]` | | |
 | 1880–1900? | A. Handt | Contredanse & Quadrille à la cour. Die Touren dieser Tänze in französischer Sprache mit deutschen Anmerkungen<br/>_Published in Erfurt by Fr. Bartholomaus_ | `[Germanorum, 1914]` | |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
@@ -535,12 +536,12 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009810813)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
 | 1700 | | Kurtze Vorstellung, was von dem Welt-üblischen Zechen und Tantzen nach der Regel Gottes Worts und nach der Beschaffenheit des wahren Christenthums zu halten | `[Germanorum, 1914]` | [UB Marburg: XIX c B 435?] |
 | 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
-| 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
+| 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | |
 | 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | |
 | 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
 | 1719 | Christoph Matthaeus Seidel<br/>_Published by Gedicke in Berlin_ | Die Beantwortung Etlicher Durch Misbrauch der Heiligen Schrifft erzwungenen Gegensprüche, Mit welchen Das welt-übliche Tantz-Spiel- und Lust-Wesen Entschuldiget | `[Шабалина, 2019]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746)<br/>[HVD](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746) |
-| 1719 | Aegidius Günther Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
+| 1719–1720? | Aegidius Günther Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
 | 1720 | Johann Wilhelm Kellners<br/>_Published in Frankfirt and Leipzig_ | Hoff-Raths und Pfänners in Halle Anhang zu seinem Tantz-Greuel | `[Шабалина, 2019]` | |
 | 1723 | _Published in Jena_ | Gründliches Gespräch vom Tantzen, in welchem die Tantz-Gründe untersuchet und nach der Wahrheit beurtheilet werden | `[Шабалина, 2019]` | |
 | 1738 | Hansel<br/>_Ander Theil_<br/>_Published by Waisenhaus in Züllichau_ | Des Schlüssels zur Erkenntniß und Verabscheuung des Heydnischen Tantz- und Lust-Wesens in der Christenheit | `[Шабалина, 2019]` | |
