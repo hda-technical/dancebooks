@@ -318,7 +318,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1850–1880? | | Die Union-Quadrille<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1850–1880? | Rudolf Voß | Tanz-Touren. Contre-Tanz — Lancier — Alliance — Quadrille — Mignon — Cotillon — Pariser Polka<br/>_4. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1849 | Francisco Gomes da Fonseca | Nova arte de aprender a dançar ou methodo facil de aprender as contradanças francezas | | BNP |
-| 1851 | Henmann Görwitz | Die Tanz-Assecuranz humoristisch-sociale Standrede in der Repräsentantenkammer der Frauen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [HAAB](https://lhwei.gbv.de/DB=2/LNG=EN/CLK?IKT=12&TRM=55898116X) |
+| 1851 | Henmann Görwitz | Die Tanz-Assecuranz humoristisch-sociale Standrede in der Repräsentantenkammer der Frauen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [HAAB](https://lhwei.gbv.de/DB=2/LNG=EN/CLK?IKT=12&TRM=55898116X) |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_3. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | | Wiener Tanzschule. Gründliche und für jedermann leicht faßliche Darstellung der beliebtesten und modernsten Tänze | | [Universitätsbibliothek Salzburg copy desideratum ](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma71184520410003341) |
@@ -341,8 +341,9 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1859 | A. Münchenberg | Zur Austhetik des Tanzes<br>In: _Wiener Blätter für Musik, Theater und Kunst_, Nr. 44, 45, 46, 47, 48, 50, 51 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1859 | F. W. Ganthe | Vom Tanzen Altes und Neues oder: Es wird fortgetanzt. Mit poet. Ballbouquet zu Neujahr 1860 | [Advertisement](https://books.google.com/books?id=vHK9lAT89dEC&pg=PA90)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Salzburg](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma21161702000003341) |
 | 1859 | Philippe Gawlikowski | Guide complet de la danse<br/>_Édition 2_ | | [NYPL](http://catalog.nypl.org/record=b10058976~S1) |
-| 1860 | Ludwig Kilanni | Der Kör-Tanz (Erste ungarische National-Quadrille). Mit Abbildungen der 6 Touren und einer National-Musik<br/>_Published in Wien_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1859 | F. W. Genthe | Vom Tanzen altes und neues oder Es wird fortgetanzt. Mit poet. Ballbouquet zum Neujahr 1860<br/>_Published by Eisleben in Reichardt_ | `[Germanorum, 1914]` | [Switzerland](https://abn-primo.hosted.exlibrisgroup.com/permalink/f/17uelnu/41ABN_ALEPH_DS000380495) |
+| 1860 | Ludwig Kilanni | Der Kör-Tanz (Erste ungarische National-Quadrille). Mit Abbildungen der 6 Touren und einer National-Musik<br/>_Published in Wien_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1860 | Göhle | Ball-Souffleur. Commando französ. Beschreibung ung deutsch<br/>_Published in Dresden by Meingold & Söhne_ | `[Germanorum, 1914]` | |
 | 1862 | Georg Gerster | Katechismus der Höflichkeits-, Anstands- und Präsentationlehre<br/>_Book on etiquette_ | `[Katalog, 1894]` | |
 | 1862–1875? | Georg Gerster | Die Tanzkunst mit Choregraphie der Positionen<br/>_2. Auflage_ | `[Germanorum, 1914]` | |
 | 1863 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001327338) |
@@ -534,7 +535,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]` | |
 | 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | |
-| 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
+| 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
 | 1719 | Christoph Matthaeus Seidel<br/>_Published by Gedicke in Berlin_ | Die Beantwortung Etlicher Durch Misbrauch der Heiligen Schrifft erzwungenen Gegensprüche, Mit welchen Das welt-übliche Tantz-Spiel- und Lust-Wesen Entschuldiget | `[Шабалина, 2019]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746)<br/>[HVD](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=232326746) |
 | 1719 | Aegidius Günther Hellmund<br/>_Published by Schulz in Halberstadt_ | Theologische Antwort auf die Frage: Ob das heutige weltliche Tantzen Sünde sey? | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
 | 1720 | Johann Wilhelm Kellners<br/>_Published in Frankfirt and Leipzig_ | Hoff-Raths und Pfänners in Halle Anhang zu seinem Tantz-Greuel | `[Шабалина, 2019]` | |
