@@ -377,6 +377,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]` | |
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst<br/>_Should not be confused with Bernhard Klemm's book with the same title_ | `[Leaflets]` | | |
+| 1880–1900? | A. Handt | Contredanse & Quadrille à la cour. Die Touren dieser Tänze in französischer Sprache mit deutschen Anmerkungen<br/>_Published in Erfurt by Fr. Bartholomaus_ | `[Germanorum, 1914]` | |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
 | 1882 | Amint Freising | Der Tanz. Nach älteren Schriften bearbeitet | `[Germanorum, 1914]` | [Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=844229881) |
@@ -394,6 +395,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 189- | | Der kleine Tanzmeister. Unentbehrliches Hülfsbüchlein für Damen und Herren<br/>_6. Auflage_ | | [On sale, €88](https://www.abebooks.com/servlet/BookDetailsPL?bi=22684143266) |
 | 189- | Александр Александрович Царман | Лихой гусар. Мазурка | | |
 | 1890? | Robert Coote | How to Dance the Old Dances. A New Edition of Famous Ball Room Guide | `[Russel, 2007]`<br/>[[Coote, 1876]](https://bib.hda.org.ru/books/coote_1876_guide) | |
+| 1890? | Marie Dufke | Quadrille français (Contredanse). Quadrille à la cour (Lancier)<br/>_2. Auflage_<br/>_Published in Danzig by Theodor Bertling_ | | [Gdansk](http://katalog.nukat.edu.pl/lib/item?id=chamo:3014622) |
 | 1891 | Justino Dias Lima Soares | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_6th edition_ | | BNP |
 | 1891 | Max Beneke | Über Takt im Tanz | `[Klemm #06]` | |
 | 1892 | Josef Herzenberger | Der Tanzsalon: Lehrbuch für den theoretischen und praktischen Tanzunterricht | `[Katalog, 1894]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524544810002884) |
@@ -408,6 +410,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1899 | Vincenzo Tesi | Manuale completo per i balli di società<br/>_Published in Catanzaro by Tipografia del Giornale Il Sud_ | `[Corbella]` | |
 | 1900 | Graham MacNeilage | How to Dance the Eightsome Reel, Scotch Reel, Reel of Tulloch, Strathspey and Reel Steps | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002331353) |
 | 1900 | J. G. Atkinson, junior | Scottish National Dances | `[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=978495) |
+| 1900? | Gustav Engelhardt | Contredanse und Quadrille à la cour Anordnungen derselben, nebst Entwurf zu einem kurzen deutschen Commando | | [Leipzig](https://katalog.ub.uni-leipzig.de/Record/0-1568624832) |
 | 190- | Н. Ширяев | Pas d'Espagne | | [RSL](http://search.rsl.ru/ru/record/01002066571) |
 | 190- | А. Д. Кулеша | Чары красоты. Pas d'espagne. Danse nouvelle pour le piano | | [RSL](http://search.rsl.ru/ru/record/01002057435) |
 | 190- | А. Вивьен | Pas d'Espagne. Nouvelle danse de salon | | [RSL](http://search.rsl.ru/ru/record/01002052387) |
