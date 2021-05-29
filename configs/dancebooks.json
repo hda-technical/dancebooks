@@ -75,19 +75,19 @@
             //use gallica.bnf.fr links instead
             "catalogue.bnf.fr",
             "dhds.org.uk",
-            "dlib.rsl.ru",
-            //use nbn-resolving.de permalinks instead
-            "haab-digital.klassik-stiftung.de",
+            "dlib.rsl.ru",          
             "hdl.loc.gov",
             "mirrorland.rpg.ru",
             "jscholarship.library.jhu.edu",
-			//use nbn-resolving.de permalinks instead
+            
+            //use nbn-resolving.de permalinks instead
+            "digital.slub-dresden.de",
+            "haab-digital.klassik-stiftung.de",
             "mdz-nbn-resolving.de",
             "opacplus.bsb-muenchen.de",
             "reader.digitale-sammlungen.de",
-			"stimmbuecher.digitale-sammlungen.de",
+            "stimmbuecher.digitale-sammlungen.de",
             "www.digitale-sammlungen.de",
-			
         ],
         "blocked_domains_http": [
             "archive.org",
