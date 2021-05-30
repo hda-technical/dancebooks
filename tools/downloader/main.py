@@ -364,7 +364,7 @@ def habBook(
 	"""
 	import hab
 	hab.get_book(id)
-	
+
 
 @opster.command()
 def darmstadt(
@@ -792,8 +792,8 @@ def cambridge(
 	"""
 	import cambridge
 	cambridge.get(id)
-	
-	
+
+
 @opster.command()
 def bodleian(
 	id=("", "", "Id of the image to be downloaded (e. g. `1273e6f5-ee79-4f6b-9014-a9065a93b9ff`)")
@@ -803,6 +803,17 @@ def bodleian(
 	"""
 	import bodleian
 	bodleian.get(id)
+
+
+@opster.command()
+def goettingen(
+	id=("", "", "Id of the image to be downloaded (e. g. `PPN1748520709`)")
+):
+	"""
+	Downloads book from https://gdz.sub.uni-goettingen.de
+	"""
+	import goettingen
+	goettingen.get_book(id)
 
 
 if __name__ == "__main__":
