@@ -6,7 +6,7 @@
 | | Leipziger Mode-Magazin des neuesten deutschen, französischen und englischen Geschmacks | | Нет |
 | 1785–1786 | Cabinet des modes, ou les modes nouvelles | [Чёрно-белые сканы @ Paris bibliothèques](https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000555102) | Нет |
 | 1789 | Galerie des modes et costumes français | https://gallica.bnf.fr/ark:/12148/bpt6k1056746t | Нет |
-| 1786–1827 | Journal des Luxus und der Moden | [Цветные сканы из Universität Düsseldorf (ссылка мертва)](http://digital.ub.uni-duesseldorf.de/urn/urn:nbn:de:hbz:061:1-29000)<br/>[Чёрно-белые сканы 1787–1812 @ Jena](http://zs.thulb.uni-jena.de/receive/jportal_jpjournal_00000029) | Да (в процессе обработки)<br/>Модные гравюры сложены в `HDA/Fashion` |
+| 1786–1827 | Journal des Luxus und der Moden | [Цветные сканы из Universität Düsseldorf (ссылка мертва)](http://digital.ub.uni-duesseldorf.de/urn/urn:nbn:de:hbz:061:1-29000)<br/>[Чёрно-белые сканы 1787–1812 @ Jena](https://zs.thulb.uni-jena.de/receive/jportal_jpjournal_00000029) | Да (в процессе обработки)<br/>Модные гравюры сложены в `HDA/Fashion` |
 | 1790–1791 | Journal de la mode et du goût | [Чёрно-белые сканы @ Gallica](https://gallica.bnf.fr/ark:/12148/cb32798156j/date) | Да (чёрно-белые сканы) |
 | | Der neuesten Moden Almanach | | Нет |
 | 1798–1882 | Allgemeine musikalische Zeitung | https://de.wikisource.org/wiki/Allgemeine_musikalische_Zeitung | Нет |
