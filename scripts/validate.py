@@ -347,7 +347,7 @@ def validate_single_filename(abspath, filename, item, errors):
 		):
 			errors.add(f"Field {meta_field} is not specified in filename [{filename}]")
 	
-	if metadata.incomplete and "missing" not in (item.get("note") or ""):
+	if metadata.incomplete and (item.get("note") is None):
 		errors.add("Incomplete entries must have lacunas described in the 'note' field")
 
 	searches = utils.make_searches_from_metadata(metadata)
