@@ -688,7 +688,7 @@ _This part of the list is to joined with the general table_
 | 1855–1910 | `[Klemm]` | Bernhard Klemm | Katechismus der Tanzkunst | [2nd edition](https://bib.hda.org.ru/books/klemm_1863), [3rd edition](https://bib.hda.org.ru/books/klemm_1876), [6th edition](https://bib.hda.org.ru/books/klemm_1894). No bibliography in 1rd, 5th, 7th, 8th editions. 4th edition is not available |
 | 1857 | `[Nouveau manuel, 1857]` | Ferdinand Denis, P. Pincon, de Martonne | Nouveau manuel de bibliographie universelle" | https://books.google.com/books?id=C6g20GmnNlQC&pg=PA165 |
 | 1894 | `[Katalog, 1894]` | | Katalog für die Ausstellung der Genossenschaft Deutschen Tanzlehrer | https://bib.hda.org.ru/books/katalog_1894 | |
-| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Bibliotheca Germanorum, erotica & curiosa | https://archive.org/details/bibliothecagerma07hayn/page/532 |
+| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (A..H) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
 | 1960 | `[Richardson, 1960]` | Philip John Sampey Richardson | The Social Dances of the Nineteenth Century in England  | https://bib.hda.org.ru/books/richardson_1960 |
 | 1977 | `[Corti, 1977]` | Gino Corti<br/>Cristiano Lamberti | Cinque balli toscani del cinquecento" | https://bib.hda.org.ru/books/corti_1977_balli |
 | 1978 | `[Hedges, 1978]` | Stephen A. Hedges | Dice Music in the Eighteen Century | https://www.jstor.org/stable/734136 |
@@ -726,3 +726,15 @@ _This part of the list is to joined with the general table_
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #01–06 + #25 | https://www.regencydances.org/paper000.php |
 | 2019-11-01 | `[Swaine]` | Andrew Swaine | List of historical sources | https://andrewswaine.uk/sources |
 | 2020-04-09 | `[Corbella]` | Maurizio Corbella | Brevi note sulla riproposta dei ballabili del "Carnevalone" ottocentesco a Milano | http://www.mauriziocorbella.it/carmi/800ballabili.html |
+
+## Bibliographies not yet consulted / consulted partially
+
+| Date | Nickname | Author | Title | Links |
+| ---- | -------- | ------ | ----- | ----- |
+| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (J..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
+| 1936–1941 | `[Magriel]` | Paul David Magriel | A Bibliography of Dancing | https://bib.hda.org.ru/books/magriel_1936_bibliography<br/>https://bib.hda.org.ru/books/magriel_1941_bibliography |
+| 1994 | `[Terpsichore]` | Madison U. Sowell | The Art of Terpsichore. From Renaissance Festivals to Romantic Ballets. An Exhibition of Dance-related Rare Books and Prints in Honor of the Annual Conference of the Society of Dance History Scholars Held at Brigham Young University | https://bib.hda.org.ru/books/terpsichore_1994_exhibition |
+| 1997 | `[Lindahl Annotated]` | Greg Lindahl | Annotated Bibliography of Renaissance Dance| `Ancillary sources (not in bibliography)/Bibliographies of the others/Greg Lindahl - Annotated bibliography of Renaissance dance.pdf` |
+| 2001 | `[Bohlin, 2001]` | Peter Bohlin | Country Dances from a Swedish Perspective | https://bib.hda.org.ru/books/bohlin_2001_swedish |
+| 2014 | `[tance.edu.pl]` |  Instytut Muzyki i Tańca | Bibliografia. Taniec tradycyjny | http://www.tance.edu.pl/pl/bibliografia |
+| 2021 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #07–24 + #26–50 | https://www.regencydances.org/paper000.php |
