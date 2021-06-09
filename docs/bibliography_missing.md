@@ -738,3 +738,4 @@ _This part of the list is to joined with the general table_
 | 2001 | `[Bohlin, 2001]` | Peter Bohlin | Country Dances from a Swedish Perspective | https://bib.hda.org.ru/books/bohlin_2001_swedish |
 | 2014 | `[tance.edu.pl]` |  Instytut Muzyki i Tańca | Bibliografia. Taniec tradycyjny | http://www.tance.edu.pl/pl/bibliografia |
 | 2021 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #07–24 + #26–50 | https://www.regencydances.org/paper000.php |
+| 2021 | `[Dansböcker]` | | Dansböcker | https://musikverket.se/svensktvisarkiv/dansbocker/ |
