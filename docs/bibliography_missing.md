@@ -737,5 +737,6 @@ _This part of the list is to joined with the general table_
 | 1997 | `[Lindahl Annotated]` | Greg Lindahl | Annotated Bibliography of Renaissance Dance| `Ancillary sources (not in bibliography)/Bibliographies of the others/Greg Lindahl - Annotated bibliography of Renaissance dance.pdf` |
 | 2001 | `[Bohlin, 2001]` | Peter Bohlin | Country Dances from a Swedish Perspective | https://bib.hda.org.ru/books/bohlin_2001_swedish |
 | 2014 | `[tance.edu.pl]` |  Instytut Muzyki i Tańca | Bibliografia. Taniec tradycyjny | http://www.tance.edu.pl/pl/bibliografia |
+| 2015 | `[Pendlebury, 2015]` | Celia Pendlebury | Jigs, Reels and Hornpipes: A History of “Traditional” Dance Tunes of Britain and Ireland | https://bib.hda.org.ru/books/pendlebury_2015_traditional |
 | 2021 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #07–24 + #26–50 | https://www.regencydances.org/paper000.php |
 | 2021 | `[Dansböcker]` | | Dansböcker | https://musikverket.se/svensktvisarkiv/dansbocker/ |
