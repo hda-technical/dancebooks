@@ -509,6 +509,17 @@ def makAt(
 
 
 @opster.command()
+def npg(
+	id=("", "", "Id of the image to be downloaded (e. g. `mw61074`)")
+):
+	"""
+	Downloads single image from https://www.npg.org.uk
+	"""
+	import npg
+	npg.get(id)
+
+
+@opster.command()
 def uniJena(
 	id=("", "", "Id of the image to be downloaded, including document id (e. g. `00108217/JLM_1787_H002_0003_a`)")
 ):

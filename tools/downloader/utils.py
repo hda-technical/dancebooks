@@ -9,8 +9,12 @@ from xml.etree import ElementTree
 import requests
 
 
-#NOTE: if the website is protected by cloudflare, removing User-Agent header will help to pass it by
-USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:62.0) Gecko/20100101 Firefox/62.0"
+# FIXME:
+# 	If the website responds with 4xx errors, changing User-Agent might help.
+# 	In particularly, CloudFlare works well with curl.
+#
+# USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:62.0) Gecko/20100101 Firefox/62.0"
+USER_AGENT = "curl/7.68.0"
 HEADERS = {
 	"User-Agent": USER_AGENT
 }
@@ -55,10 +59,8 @@ def make_request(*args, **kwargs):
 		args = args[1:]
 		request.headers = HEADERS
 		response = session.send(request, *args, timeout=TIMEOUT, **kwargs)
-	if response.status_code == 200:
-		return response
-	else:
-		raise ValueError(f"While getting {url}: HTTP status 200 was expected. Got {response.status_code}")
+	response.raise_for_status()
+	return response
 
 
 #@retry(retry_count=3)
