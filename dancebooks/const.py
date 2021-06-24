@@ -17,7 +17,12 @@ SHORT_LANG_MAP = {
 	"dk": ["danish"],
 	"en": ["english", "latin"],
 	"es": ["spanish"],
-	"fi": ["finnish"],
+	"fi": [
+		"finnish",
+		# Swedish was the only official language of Finland until 1863.
+		# See https://en.wikipedia.org/wiki/Finland_Swedish for details
+		"swedish",
+	],
 	"fr": ["french", "latin"],
 	"ie": ["english"],
 	"it": ["italian", "french"],
@@ -75,6 +80,7 @@ LONG_LANG_MAP = {
 	},
 	"finnish.bib": {
 		"finnish",
+		"swedish",
 	},
 	"french.bib": {
 		"french",
