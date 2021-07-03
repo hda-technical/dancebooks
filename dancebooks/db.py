@@ -23,19 +23,13 @@ class SqlAlchemyEncoder(json.JSONEncoder):
 	def default(self, obj):
 		if isinstance(obj.__class__, sql_declarative.DeclarativeMeta):
 			# an SQLAlchemy class
-			fields = {}
-			for field in dir(obj):
-				if field.startswith('_'):
-					# private fields should not be encoded
-					continue
-				if field == 'metadata':
-					# metadata keyword is reserved by sqlalchemy
-					continue
-				data = obj.__getattribute__(field)
-				fields[field] = data
-			# a json-encodable dict
-			return fields
-		return super().default(obj)
+			return {
+				col.name: obj.__getattribute__(col.name)
+				for col in obj.__table__.columns
+			}
+		else:
+			# fallbak to default
+			return super().default(obj)
 
 
 class Backup(_Base):
