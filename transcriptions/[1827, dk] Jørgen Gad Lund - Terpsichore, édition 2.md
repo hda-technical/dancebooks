@@ -368,7 +368,7 @@ De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 
 6te — tilbage til høire.
 
-7de — Første C. dandser op paa Damesiden og første D. paa Cavaliersiden; de vende sig ved Enden
+7de — Første C. dandser op paa Damesiden og første D. ned paa Cavaliersiden; de vende sig ved Enden
 
 8de — og dandser nu paa deres egen Side.
 
