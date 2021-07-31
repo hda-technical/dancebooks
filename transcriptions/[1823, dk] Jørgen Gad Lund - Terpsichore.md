@@ -399,7 +399,7 @@ De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 
 2den Tour. {32} det samme med venstre Haand og slutter nu imellem tredie C. og D. og første D. imellem anden C. og D.;
 
-3die — balancerer for hinanden. Første C. skiftet Plads imellem anden og tredie D. og første D. imellem første og anden C.;
+3die — balancerer for hinanden. Første C. skifter Plads imellem anden og tredie D. og første D. imellem første og anden C.;
 
 4de — balancerer igjen.
 
