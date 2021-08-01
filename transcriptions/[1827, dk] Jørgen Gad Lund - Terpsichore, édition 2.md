@@ -360,7 +360,7 @@ De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 
 2den — det samme med venstre Haand og slutter nu imellem tredie C. og D. og første D. imellem anden C. og D.;
 
-3die — balancerer for hinanden. Første C. skiftet Plads imellem anden og tredie D. og første D. imellem første og anden C.;
+3die — balancerer for hinanden. Første C. skifter Plads imellem anden og tredie D. og første D. imellem første og anden C.;
 
 4de — balancerer igjen.
 
@@ -368,7 +368,7 @@ De 3 øverste Cavalierer og 3 Damer give hinanden Hænderne.
 
 6te — tilbage til høire.
 
-7de — Første C. dandser op paa Damesiden og første D. paa Cavaliersiden; de vende sig ved Enden
+7de — Første C. dandser op paa Damesiden og første D. ned paa Cavaliersiden; de vende sig ved Enden
 
 8de — og dandser nu paa deres egen Side.
 
