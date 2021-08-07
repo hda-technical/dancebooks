@@ -825,6 +825,17 @@ def goettingen(
 	"""
 	import goettingen
 	goettingen.get_book(id)
+	
+	
+@opster.command()
+def nb_no(
+	id=("", "", "Id of the book to be downloaded (e. g. `172099`)")
+):
+	"""
+	Downloads book from https://www.nb.no
+	"""
+	import nb_no
+	nb_no.get(id)
 
 
 if __name__ == "__main__":
