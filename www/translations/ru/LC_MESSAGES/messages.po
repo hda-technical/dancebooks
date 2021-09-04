@@ -262,6 +262,9 @@ msgstr "Латынь"
 msgid "search:language:latvian"
 msgstr "Латышский"
 
+msgid "search:language:norvegian"
+msgstr "Норвежский"
+
 msgid "search:language:polish"
 msgstr "Польский"
 
@@ -517,6 +520,9 @@ msgstr "Латынь"
 
 msgid "item:language:latvian"
 msgstr "Латышский"
+
+msgid "item:language:norvegian"
+msgstr "Норвежский"
 
 msgid "item:language:polish"
 msgstr "Польский"
