@@ -28,7 +28,7 @@ SHORT_LANG_MAP = {
 	"it": ["italian", "french"],
 	"lt": ["latvian"],
 	"nl": ["dutch", "german", "french"],
-	"no": ["norvegian"],
+	"no": ["norwegian"],
 	"pl": ["french", "polish"],
 	"pt": ["portuguese"],
 	"ru": ["russian", "french", "german"],
@@ -100,8 +100,8 @@ LONG_LANG_MAP = {
 	"mexican.bib": {
 		"spanish",
 	},
-	"norvegian.bib": {
-		"norvegian",
+	"norwegian.bib": {
+		"norwegian",
 	},
 	"polish.bib": {
 		"polish",

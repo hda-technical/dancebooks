@@ -262,8 +262,8 @@ msgstr "Latin"
 msgid "search:language:latvian"
 msgstr "Latvian"
 
-msgid "search:language:norvegian"
-msgstr "Norvegian"
+msgid "search:language:norwegian"
+msgstr "Norwegian"
 
 msgid "search:language:polish"
 msgstr "Polish"
@@ -521,8 +521,8 @@ msgstr "Latin"
 msgid "item:language:latvian"
 msgstr "Latvian"
 
-msgid "item:language:norvegian"
-msgstr "Norvegian"
+msgid "item:language:norwegian"
+msgstr "Norwegian"
 
 msgid "item:language:polish"
 msgstr "Polish"
