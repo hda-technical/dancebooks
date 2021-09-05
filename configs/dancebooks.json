@@ -71,8 +71,11 @@
             "books.google.fr",
             "books.google.ru",
             "books.google.ua",
+			//use self-hosted files instead
             "dance.goldenforests.ru",
-            //use gallica.bnf.fr links instead
+			//use taju.uniarts.fi instead
+			"doria.fi",
+            //use gallica.bnf.fr instead
             "catalogue.bnf.fr",
             "dhds.org.uk",
             "dlib.rsl.ru",          
