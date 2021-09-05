@@ -61,8 +61,9 @@
         ],
         "date_format": "%Y-%m-%d",
         "blocked_domains": [
-            //use permalinks provided by hathitrust instead
+            //use hdl.handle.net permalinks instead
             "babel.hathitrust.org",
+
             //use books.google.com instead
             "books.google.by",
             "books.google.co.uk",
@@ -71,18 +72,23 @@
             "books.google.fr",
             "books.google.ru",
             "books.google.ua",
-			//use self-hosted files instead
+
+            //use self-hosted files instead
             "dance.goldenforests.ru",
-			//use taju.uniarts.fi instead
-			"doria.fi",
+
+            //use urn.fi permalinks instead
+            "doria.fi",
+            "taju.uniarts.fi",
+
             //use gallica.bnf.fr instead
             "catalogue.bnf.fr",
+
             "dhds.org.uk",
-            "dlib.rsl.ru",          
+            "dlib.rsl.ru",
             "hdl.loc.gov",
             "mirrorland.rpg.ru",
             "jscholarship.library.jhu.edu",
-            
+
             //use nbn-resolving.de permalinks instead
             "digital.slub-dresden.de",
             "haab-digital.klassik-stiftung.de",
@@ -102,8 +108,9 @@
             "imslp.org",
             "nbn-resolving.de",
             "polona.pl",
-			"resolver.sub.uni-goettingen.de",
-			"urn.nb.no",
+            "resolver.sub.uni-goettingen.de",
+            "urn.fi",
+            "urn.nb.no",
             "www.loc.gov",
             "www.vwml.org",
             "zs.thulb.uni-jena.de",
