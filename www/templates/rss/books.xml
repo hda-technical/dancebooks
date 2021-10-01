@@ -1,36 +1,36 @@
 {% set RFC_DATETIME_FORMAT = "%a, %d %b %Y 00:00:00 +0000"  %}
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ _("rss:title") }}</title>
-		<description>{{ _("rss:description") }}</description>
-		<language>{{ _("common:locale") }}</language>
-		<link>https://bib.hda.org.ru</link>
+    <channel>
+        <title>{{ _("rss:title") }}</title>
+        <description>{{ _("rss:description") }}</description>
+        <language>{{ _("common:locale") }}</language>
+        <link>https://bib.hda.org.ru</link>
 {% set last_date = item_index | sort | last %}
 {% set last_date_string = last_date.strftime(RFC_DATETIME_FORMAT) %}
-		<lastBuildDate>{{ last_date_string }}</lastBuildDate>
-		<pubDate>{{ last_date_string }}</pubDate>
-		<atom:link href="https://bib.hda.org.ru/rss/books" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>{{ last_date_string }}</lastBuildDate>
+        <pubDate>{{ last_date_string }}</pubDate>
+        <atom:link href="https://bib.hda.org.ru/rss/books" rel="self" type="application/rss+xml"/>
 {% for date, entries in item_index | dictsort | reverse | batch(25) | first %}
-		<item>
-			<title>{{ ngettext("rss:added-count", "rss:added-count", entries | length) }}</title>
-			<description><![CDATA[
-				<ul>
-	{% for entry in entries %}
-		{% set id = entry.id() %}
-		{% set author = entry.author() %}
-		{% set title = entry.title() or entry.incipit() %}
-		{% set year = entry.year() %}
-					<li><a href="https://bib.hda.org.ru/books/{{ id }}">[{{ year }}] {% if author %} {{ author }} — {% endif %} {{ title }}</a></li>
-	{% endfor %}
-				</ul>
-			]]></description>
-	{% set date_string = date.strftime("%Y-%m-%d") %}
-			<link>https://bib.hda.org.ru/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
-			<guid>{{ entries | format_guid_for_rss }}</guid>
-	{% set rfc_date_string = date.strftime(RFC_DATETIME_FORMAT) %}
-			<pubDate>{{ rfc_date_string }}</pubDate>
-		</item>
+        <item>
+            <title>{{ ngettext("rss:added-count", "rss:added-count", entries | length) }}</title>
+            <description><![CDATA[
+                <ul>
+{% for entry in entries %}
+    {% set id = entry.id() %}
+    {% set author = entry.author() %}
+    {% set title = entry.title() or entry.incipit() %}
+    {% set year = entry.year() %}
+                    <li><a href="https://bib.hda.org.ru/books/{{ id }}">[{{ year }}] {% if author %} {{ author }} — {% endif %} {{ title }}</a><br/></li>
 {% endfor %}
-	</channel>
+                </ul>
+            ]]></description>
+    {% set date_string = date.strftime("%Y-%m-%d") %}
+            <link>https://bib.hda.org.ru/advanced-search?added_on_from={{ date_string }}&amp;added_on_to={{ date_string }}</link>
+            <guid>{{ entries | format_guid_for_rss }}</guid>
+    {% set rfc_date_string = date.strftime(RFC_DATETIME_FORMAT) %}
+            <pubDate>{{ rfc_date_string }}</pubDate>
+        </item>
+{% endfor %}
+    </channel>
 </rss>
