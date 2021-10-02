@@ -222,8 +222,7 @@ def search_for(key, value):
 		else:
 			return search_for_string(key, value)
 
-	synonyms = config.www.search_synonyms.get(key, [])
-	synonyms.append(key)
+	synonyms = config.www.search_synonyms.get(key, []) + [key]
 	searches = [
 		simple_search_for(synonym, value)
 		for synonym in synonyms
