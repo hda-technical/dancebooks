@@ -836,6 +836,17 @@ def nb_no(
 	"""
 	import nb_no
 	nb_no.get(id)
+	
+
+@opster.command()
+def kb_dk(
+	id=("", "", "Id of the book to be downloaded (e. g. `object125610`)")
+):
+	"""
+	Downloads book from http://www5.kb.dk
+	"""
+	import kb_dk
+	kb_dk.get(id)
 
 
 if __name__ == "__main__":

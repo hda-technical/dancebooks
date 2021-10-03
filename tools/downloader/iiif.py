@@ -67,7 +67,7 @@ def download_book(manifest_url, output_folder):
 	API is documented here:
 	http://iiif.io/about/
 	"""
-	manifest =utils.get_json(manifest_url)
+	manifest = utils.get_json(manifest_url)
 	canvases = manifest["sequences"][0]["canvases"]
 	for page, metadata in enumerate(canvases):
 		output_filename = utils.make_output_filename(output_folder, page)
@@ -86,7 +86,7 @@ def download_book_fast(manifest_url, output_folder):
 	API is documented here:
 	http://iiif.io/about/
 	"""
-	manifest =utils.get_json(manifest_url)
+	manifest = utils.get_json(manifest_url)
 	canvases = manifest["sequences"][0]["canvases"]
 	for page, metadata in enumerate(canvases):
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
