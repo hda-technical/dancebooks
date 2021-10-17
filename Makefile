@@ -85,7 +85,7 @@ reload-production: test translations
 	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/ping')"
 
 requirements.txt:
-	pip freeze --isolated --requirement requirements.txt | grep -B1000 'added by pip freeze' | grep -v 'added by pip freeze' > requirements.txt.tmp
+	pip freeze --isolated --requirement requirements.txt | grep -B1000 'added by pip freeze' | grep -v 'added by pip freeze' | sort --ignore-case > requirements.txt.tmp
 	mv -f requirements.txt.tmp requirements.txt
 
 # Ancillary targets
