@@ -849,5 +849,16 @@ def kb_dk(
 	kb_dk.get(id)
 
 
+@opster.command()
+def shpl(
+	id=("", "", "Id of the book to be downloaded (e. g. `63678`)")
+):
+	"""
+	Downloads book from http://elib.shpl.ru
+	"""
+	import shpl
+	shpl.get(id)
+
+
 if __name__ == "__main__":
 	opster.dispatch()
