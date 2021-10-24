@@ -11,7 +11,8 @@ def validate_format(ctx, param, value):
 	try:
 		width, height = map(int, value.split('x'))
 		return (width, height)
-	except:
+	except Exception as ex:
+		print(repr(ex))
 		raise click.BadParameter('format should be {width}x{height}')
 	
 
@@ -25,25 +26,51 @@ def add_image(pdf, path):
 	pdf.image(str(path), x=x, y=y)
 
 
-@click.command()
+def is_path_valid(path):
+	return path.is_file() and path.suffix in [".jpg"]
+
+
+@click.group()
+def main():
+	pass
+
+
+@main.command(name="map")
 @click.option("--output-size", callback=validate_format)
-def main(output_size):
+def do_map(output_size):
+	"""
+	Convert set of images from current directory into a set of pdf files.
+	"""
+	width, height = output_size
+	print(f"Will generate images of size {width}x{height}")
+	
+	dir = pathlib.Path(".")
+	for idx, path in enumerate(dir.iterdir()):
+		if not is_path_valid(path):
+			print(f"Skipping non-image object at {path}")
+			continue
+		output_path = path.with_suffix(".pdf")
+		print(f"Converting {path} to {output_path}")
+		pdf = fpdf.FPDF(unit="pt", format=(width, height))
+		add_image(pdf, path)
+		pdf.output(output_path)
+		
+
+@main.command()
+@click.option("--output-size", callback=validate_format)
+def merge(output_size):
 	"""
 	Converts set of images from current directory into a single pdf file.
 	"""
 	width, height = output_size
 	
-	print(f"Will generate image of size {width}x{height}")
+	print(f"Will generate images of size {width}x{height}")
 	pdf = fpdf.FPDF(unit="pt", format=(width, height))
 	
 	dir = pathlib.Path(".")
 	for idx, path in enumerate(dir.iterdir()):
-		if not path.is_file():
-			print(f"Skipping non-file item at {path}")
-			continue
-		if path.suffix not in [".jpg"]:
-			print(f"Skipping non-image file at {path}")
-			continue
+		if not is_path_valid(path):
+			print(f"Skipping non-image object at {path}")
 		print(f"Adding {path} as page #{idx:04d}")
 		add_image(pdf, path)
 		
