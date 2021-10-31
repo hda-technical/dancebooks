@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import pathlib
+import sys
 
 import click
 import fpdf
@@ -9,6 +10,8 @@ import PIL as pil
 
 def validate_format(ctx, param, value):
 	try:
+		if value == "unchanged":
+			return None
 		width, height = map(int, value.split('x'))
 		return (width, height)
 	except Exception as ex:
@@ -16,12 +19,22 @@ def validate_format(ctx, param, value):
 		raise click.BadParameter('format should be {width}x{height}')
 	
 
-def add_image(pdf, path):
+def get_image_size(path):
 	img = pil.Image.open(path)
-	tw, th = pdf.fw_pt, pdf.fh_pt
-	iw, ih = img.size
+	width, height = img.size
+	return (width, height)
+
+
+def get_offset(*, img_size, target_size):
+	iw, ih = img_size
+	tw, th = target_size
 	x = (tw - iw) // 2 
 	y = (th - ih) // 2
+	return (x, y)
+
+
+def add_image(pdf, path, *, position):
+	x, y = position
 	pdf.add_page()
 	pdf.image(str(path), x=x, y=y)
 
@@ -41,8 +54,11 @@ def do_map(output_size):
 	"""
 	Convert set of images from current directory into a set of pdf files.
 	"""
-	width, height = output_size
-	print(f"Will generate images of size {width}x{height}")
+	if output_size is None:
+		print(f"Will not change image size during generation")
+	else:
+		width, height = output_size
+		print(f"Will generate images of size {width}x{height}")
 	
 	dir = pathlib.Path(".")
 	for idx, path in enumerate(dir.iterdir()):
@@ -51,8 +67,17 @@ def do_map(output_size):
 			continue
 		output_path = path.with_suffix(".pdf")
 		print(f"Converting {path} to {output_path}")
-		pdf = fpdf.FPDF(unit="pt", format=(width, height))
-		add_image(pdf, path)
+		if output_size is None:
+			width, height = get_image_size(path)
+			pdf = fpdf.FPDF(unit="pt", format=(width, height))
+			add_image(pdf, path, position=(0, 0))
+		else:
+			x, y = get_offset(
+				img_size=get_image_size(path),
+				target_size=(width, height)
+			)
+			pdf = fpdf.FPDF(unit="pt", format=(width, height))
+			add_image(pdf, path, position=(x, y))
 		pdf.output(output_path)
 		
 
@@ -62,6 +87,9 @@ def merge(output_size):
 	"""
 	Converts set of images from current directory into a single pdf file.
 	"""
+	if output_size is None:
+		print(f"Unchanged output path is not supported by merge handler yet")
+		sys.exit(1)
 	width, height = output_size
 	
 	print(f"Will generate images of size {width}x{height}")
@@ -72,6 +100,10 @@ def merge(output_size):
 		if not is_path_valid(path):
 			print(f"Skipping non-image object at {path}")
 		print(f"Adding {path} as page #{idx:04d}")
+		x, y = get_offset(
+			img_size=get_image_size(),
+			target_size=(width, height)
+		)
 		add_image(pdf, path)
 		
 	output_file = "output.pdf"
