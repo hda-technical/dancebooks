@@ -455,7 +455,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | |
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
 | 1922 | Денис Иванович Лешков | Библиографические листы русского библиологического общества. Лист II, февраль<br/>_Содержит статью (??) под названием «Танцовальный словарь»_ | | `SPTL: Б 593` |
-| 1922 | А. А. Сидоров | Современный танец | | [RSL](https://search.rsl.ru/ru/record/01009159637)<br/>[On sale, ₽10000](http://www.alib.ru/5_sidorov_a_a_sovremennyj_tanec_w1t190248750bbf98f2c0ab7e71124e97a81d12.html)<br/>[On sale, ₽7000](http://www.alib.ru/5_sidorov_a_a_sovremennyj_tanec_w1t197718af1fbad42302efe628399ab6de1533.html) |
 | 1922 | Бела Г. Герман | Искусство танца. Настольная книга любителя танцев и культурного человека<br/>Второе издание<br/>_Издано в Харбине_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009723097) |
 | 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]` | |
 | 1924 | Максим Владимирович Соколовский | Комсомольские танцы | | `SPTL: С 596(Б)` |
