@@ -30,6 +30,7 @@ SHORT_LANG_MAP = {
 	"it": ["italian", "french"],
 	"lt": ["latvian"],
 	"nl": ["dutch", "german", "french"],
+	"nz": ["english"],
 	"no": ["norwegian"],
 	"pl": ["french", "polish"],
 	"pt": ["portuguese"],
