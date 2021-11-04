@@ -98,14 +98,19 @@ MULTIENTRY_BOOKTYPES = {
 	"inproceedings",
 	"collection",
 	"incollection",
-	"inbook"
+	"inbook",
 }
 
+# Entry types that can be nested in the other bibliographed entries
 PARTIAL_BOOKTYPES = {
+	# article -> periodical
 	"article",
+	# inproceeding -> proceedings
 	"inproceedings",
+	# incollection -> collection
 	"incollection",
-	"inbook"
+	# inbook -> book
+	"inbook",
 }
 
 def fetch_added_on_from_git():
@@ -684,21 +689,13 @@ def validate_partial_fields(item, errors):
 	"""
 	Checks if pages field matches PAGES_REGEX
 	"""
-	PARTIAL_FIELDS = {
-		"pages": const.PAGES_REGEXP,
-		"crossref": None
-	}
 	booktype = item.get("booktype")
-	is_partial = (booktype in PARTIAL_BOOKTYPES)
-
-	for field, regexp in PARTIAL_FIELDS.items():
-		value = item.get(field)
-		if value is None:
-			continue
-		if not is_partial:
-			errors.add(f"Field {field} is not allowed for booktype {booktype}")
-		if (regexp is not None) and not regexp.match(value):
-			errors.add(f"Field {field}={value} doesn't match format regexp")
+	if booktype not in PARTIAL_BOOKTYPES:
+		if (crossref := item.get("crossref")) is not None:
+			errors.add(f"Entry of type {booktype} can not have crossref field")
+		pages = item.get("pages")
+		if (pages := item.get("pages")) is not None:
+			errors.add(f"Entry of type {booktype} can not have pages field")
 
 
 def validate_volume(item, errors):
