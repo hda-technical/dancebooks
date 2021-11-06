@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
+import math
 import pathlib
+import os
+import subprocess
 import sys
 
 import click
@@ -8,29 +11,30 @@ import fpdf
 import PIL as pil
 
 
+def round_up(value, divisor):
+	return math.ceil(value / divisor) * divisor
+
+
 def validate_format(ctx, param, value):
 	try:
 		if value == "unchanged":
 			return None
 		width, height = map(int, value.split('x'))
+
+		# round up to divisable of 16, as required by jpegtran
+		width = round_up(width, 16)
+		height = round_up(height, 16)
+
 		return (width, height)
 	except Exception as ex:
 		print(repr(ex))
 		raise click.BadParameter('format should be {width}x{height}')
-	
+
 
 def get_image_size(path):
 	img = pil.Image.open(path)
 	width, height = img.size
 	return (width, height)
-
-
-def get_offset(*, img_size, target_size):
-	iw, ih = img_size
-	tw, th = target_size
-	x = (tw - iw) // 2 
-	y = (th - ih) // 2
-	return (x, y)
 
 
 def add_image(pdf, path, *, position):
@@ -43,14 +47,38 @@ def is_path_valid(path):
 	return path.is_file() and path.suffix in [".jpg"]
 
 
+def crop_jpeg_image(*, output_size, input_path, output_path):
+	"""
+	Losslessly crop given jpeg file via jpegtran invocation
+	"""
+	def get_offset_for_cropping():
+		iw, ih = get_image_size(input_path)
+		tw, th = output_size
+		assert iw >= tw
+		assert ih >= th
+		x = (iw - tw) // 2
+		y = (ih - th) // 2
+		return (x, y)
+
+	width, height = output_size
+	x, y = get_offset_for_cropping()
+	target_geometry = f"{width}x{height}+{x}+{y}"
+	subprocess.check_call([
+		"jpegtran",
+		"-perfect",
+		"-crop", target_geometry,
+		"-outfile", str(output_path), str(input_path)
+	])
+
+
 @click.group()
 def main():
 	pass
 
 
-@main.command(name="map")
+@main.command()
 @click.option("--output-size", callback=validate_format)
-def do_map(output_size):
+def convert(output_size):
 	"""
 	Convert set of images from current directory into a set of pdf files.
 	"""
@@ -59,7 +87,7 @@ def do_map(output_size):
 	else:
 		width, height = output_size
 		print(f"Will generate images of size {width}x{height}")
-	
+
 	dir = pathlib.Path(".")
 	for idx, path in enumerate(dir.iterdir()):
 		if not is_path_valid(path):
@@ -71,45 +99,20 @@ def do_map(output_size):
 			width, height = get_image_size(path)
 			pdf = fpdf.FPDF(unit="pt", format=(width, height))
 			add_image(pdf, path, position=(0, 0))
-		else:
-			x, y = get_offset(
-				img_size=get_image_size(path),
-				target_size=(width, height)
-			)
-			pdf = fpdf.FPDF(unit="pt", format=(width, height))
-			add_image(pdf, path, position=(x, y))
-		pdf.output(output_path)
-		
+			pdf.output(output_path)
+			continue
 
-@main.command()
-@click.option("--output-size", callback=validate_format)
-def merge(output_size):
-	"""
-	Converts set of images from current directory into a single pdf file.
-	"""
-	if output_size is None:
-		print(f"Unchanged output path is not supported by merge handler yet")
-		sys.exit(1)
-	width, height = output_size
-	
-	print(f"Will generate images of size {width}x{height}")
-	pdf = fpdf.FPDF(unit="pt", format=(width, height))
-	
-	dir = pathlib.Path(".")
-	for idx, path in enumerate(dir.iterdir()):
-		if not is_path_valid(path):
-			print(f"Skipping non-image object at {path}")
-		print(f"Adding {path} as page #{idx:04d}")
-		x, y = get_offset(
-			img_size=get_image_size(),
-			target_size=(width, height)
+		cropped_path = path.with_suffix(".tmp.jpg")
+		crop_jpeg_image(
+			output_size=(width, height),
+			input_path=path,
+			output_path=cropped_path,
 		)
-		add_image(pdf, path)
-		
-	output_file = "output.pdf"
-	print(f"Generating result file at {output_file}")
-	pdf.output(output_file)
+		pdf = fpdf.FPDF(unit="pt", format=(width, height))
+		add_image(pdf, cropped_path, position=(0, 0))
+		pdf.output(output_path)
 
+		os.remove(cropped_path)
 
 
 if __name__ == "__main__":
