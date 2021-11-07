@@ -13,7 +13,7 @@ SHORT_LANG_MAP = {
 	"ch": ["french"],
 	"cl": ["spanish"],
 	"cz": ["czech", "german"],
-	"de": ["german", "french"],
+	"de": ["german", "french", "latin"],
 	"dk": ["danish"],
 	"en": ["english", "latin"],
 	"es": ["spanish"],
