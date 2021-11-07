@@ -672,10 +672,9 @@ def	vwml(
 			pass
 
 
-@opster.command()
-def onb(
-	id=("", "", "Id of the book to be downloaded (e. g. `ABO_+Z178189508`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `ABO_+Z178189508`)")
+def onb(id):
 	"""
 	Downloads book from http://onb.ac.at/
 	"""
@@ -869,7 +868,7 @@ def shpl(
 
 
 if __name__ == "__main__":
-	if sys.argv[1] in ("hathitrust"):
+	if sys.argv[1] in ("hathitrust", "onb"):
 		# dispatch via click
 		main()
 	else:
