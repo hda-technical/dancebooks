@@ -721,7 +721,6 @@ _This part of the list is to joined with the general table_
 | 2016 | `[Phister, 2016]` | Béatrice Phister | Is Dance an Art? The Status of Ballroom and Ballet Dancing During the Second Half of the 18th Century in French and Italian Writings  | https://bib.hda.org.ru/books/proceedings_spb_2016_pfister |
 | 2016 | `[Жбанкова, 2016]` | Елена Жбанкова | Массовая пляска как средство идеологического, физического и эстетического воспитания в советской России 1920-x годов | https://bib.hda.org.ru/books/proceedings_spb_2016_zhbankova |
 | 2019 | `[Жбанкова, 2019-2]` | Елена Жбанкова | Танец как основная составная часть массовых праздников второй половины 1920-х годов | https://bib.hda.org.ru/books/proceedings_spb_2018_zhbankova_mass |
-| 2016-08-14 | `[Wiki: Tanz]` | | Wikisource on Tanz | https://de.wikisource.org/wiki/Tanz |
 | 2016-11-25 | `[Wiki: Cross-step Waltz]` | | Cross-step waltz | https://en.wikipedia.org/wiki/Cross-step_waltz |
 | 2017-03-01 | `[Mackler]` | Heather Mackler | | `Ancillary sources (not in bibliography)/Bibliographies of the others/Heather Mackler.pdf` |
 | 2017-06-17 | `[Rudo]` | Kimber Rudo | Fascinating Rhythms. A Collation of Primary Sources | https://daletremont.com/ |
@@ -730,6 +729,7 @@ _This part of the list is to joined with the general table_
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #01–06 + #25 | https://www.regencydances.org/paper000.php |
 | 2019-11-01 | `[Swaine]` | Andrew Swaine | List of historical sources | https://andrewswaine.uk/sources |
 | 2020-04-09 | `[Corbella]` | Maurizio Corbella | Brevi note sulla riproposta dei ballabili del "Carnevalone" ottocentesco a Milano | http://www.mauriziocorbella.it/carmi/800ballabili.html |
+| 2021-07-13 | `[Wiki: Tanz]` | | Wikisource on Tanz | https://de.wikisource.org/wiki/Tanz |
 
 ## Bibliographies not yet consulted / consulted partially
 

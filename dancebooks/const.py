@@ -39,7 +39,7 @@ SHORT_LANG_MAP = {
 	"si": ["slovenian", "english", "german"],
 	"sw": ["swedish", "french"],
 	"ua": ["ukrainian"],
-	"us": ["english"],
+	"us": ["english", "german"],
 }
 
 #filename mapped to langid
