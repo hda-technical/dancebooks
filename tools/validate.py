@@ -7,7 +7,7 @@ import re
 import subprocess
 import sys
 
-import opster
+import click
 import requests
 from stdnum import isbn
 from stdnum import issn
@@ -215,8 +215,8 @@ def fetch_backups_from_fs():
 #executed once per validation run
 def update_validation_data(
 	errors,
-	ignore_missing_ids,
-	ignore_added_errors
+	remove_missing_ids,
+	store_new_errors
 ):
 	"""
 	Checks if no book_ids were lost since
@@ -268,9 +268,9 @@ def update_validation_data(
 		for lost_id in lost_ids:
 			logging.warning("    " + lost_id)
 
-	if (not previous_data_exists) or (lost_ids and ignore_missing_ids):
+	if (not previous_data_exists) or (lost_ids and remove_missing_ids):
 		validation_data["ids"] = list(current_ids)
-	if (not previous_data_exists) or (new_errors and ignore_added_errors):
+	if (not previous_data_exists) or (new_errors and store_new_errors):
 		validation_data["errors"] = list(new_errors)
 	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
 		validation_data_file.write(json.dumps(validation_data))
@@ -946,13 +946,12 @@ def validate_backups():
 		logging.warning(f"Found {strange_backups_number} strange backups")
 
 
-@opster.command()
-def main(
-	make_extra_checks=("", False, "Add some extra checks"),
-	log_all_errors=("", False, "Log all errors, not only newly introduced ones"),
-	ignore_missing_ids=("", False, "Update validation data even when some ids were lost"),
-	ignore_added_errors=("", False, "Update validation data even when new errors were introduced"),
-):
+@click.command()
+@click.option("--extra", "make_extra_checks", default=False, help="Make extra validations (slow)")
+@click.option("--store-new-errors", "store_new_errors", default=False, help="Store new errors and ignore them in the future")
+@click.option("--remove-missing-ids", "remove_missing_ids", default=False, help="Remove lost ids from persistent storage")
+@click.option("--log", type=click.Choice(["all", "new"], case_sensitive=False), default="new", help="Whether to log all errors or only new ones")
+def main(*, make_extra_checks, log, store_new_errors, remove_missing_ids):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
@@ -981,7 +980,7 @@ def main(
 			if not errors:
 				continue
 			erroneous_items[item.id()] = errors
-			if log_all_errors:
+			if log == "all":
 				for error in errors:
 					logging.debug(f"Errors for {item.id()}: {error}")
 		except Exception as ex:
@@ -989,12 +988,12 @@ def main(
 
 	update_validation_data(
 		erroneous_items,
-		ignore_missing_ids,
-		ignore_added_errors
+		remove_missing_ids,
+		store_new_errors,
 	)
 	if erroneous_items:
 		logging.warning(f"Found {len(erroneous_items)} erroneous items")
 
 
 if __name__ == "__main__":
-	main.command()
+	main()
