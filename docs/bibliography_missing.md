@@ -233,7 +233,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1822 | Thomas Wilson | Thompson's Twenty Four Country Dances for the year 1822 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004700758) |
 | 1822 | Thomas Wilson | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the Year 1822 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1823 | | La harpе du nord<br/>_Нужны тетради: 1823/07–12_ | | ИРЛИ РАН, №7, 8, 9, 10, 12<br/>NLR, `М 970-2/С.280`, (№ 8, 9, 12) |
-| 1823 | Jean Charles Louis Le Pitre | Vollständige Theorie der eleganten und höheren Tanzkunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1823 | Jean Charles Louis Le Pitre | Vollständige Theorie der eleganten und höheren Tanzkunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1822–1825 | | Pieces detachees tirees du journal de musique "La harpe du nord" | | [RSL](http://search.rsl.ru/ru/record/01002068603) |
 | 1824–1825? | C. Friedrich Engelmann | Die Kunst zu Walzen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]`<br/>`[Handbuch, 1840]` | |
 | 1824 | Juan Ignacio de Iztueta | Guicuzpoaco dantza | `[Nouveau manuel, 1857, #60]` | [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k8894479/) |
@@ -248,7 +248,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1826–1827 | Mrs. Charles Wilson | The St. James's Quadrilles, or Wilson's 1st Set | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1826–1827 | Mrs. Charles Wilson | The Wanstead Quadrilles, or Wilson's 2nd Set | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1827 | J. P. Boulogne | The Ball-Room or the Juvenile Pupil's Assistant | `[Leaflets]`<br/>[Kickery](http://www.kickery.com/2016/03/sixdrilles-1.html) | |
-| 1827 | Jean Charles Louis Le Pitre | _Reissue, under alternative title, of [https://bib.hda.org.ru/books/lepitre_1819_lieblingsbuch]_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1827 | Jean Charles Louis Le Pitre | _Reissue, under alternative (**and unspecified**) title, of [[Pitre, 1819]](https://bib.hda.org.ru/books/lepitre_1819_lieblingsbuch)_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1827 | А. Верстовский (compiler)<br/>Венцель (publisher) | Музыкальный альбом, изданный А. Верстовским на 1828 год | | [RSL](https://search.rsl.ru/ru/record/01001957800) |
 | 1828 | Carl Friedrich Förster | Der Tanzlehrer oder Anweisung zur gründlichen Erlernung der Tanzkunst<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=IssVAQAAIAAJ&pg=PA536) | |
 | 1828? | Thomas Wilson | _A Dramatic Piece, also a New Work on Dancing_<br/>_It is unclear if this work was ever published_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://books.google.com/books?id=468CAAAAIAAJ&pg=PA756) | |
@@ -265,7 +265,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1830 | Eduard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1830<br/>_Good quality copy needed_ | [[Helmke, 1830]](https://bib.hda.org.ru/books/helmke_1830)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
 | 1831 | Eduard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1831 | `[Unfried, 2014]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103) |
 | 1831 | Eduard Friedrich David Helmke | Neue Tanz- und Bildunschule<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Helmke, 1829]](https://bib.hda.org.ru/books/helmke_1829_tanz) | |
-| 1831 | А. Krüger | Die algemein beliebtesten Contre-Tanz-Touren, wie solche auf den Bällen und in Familientränzchen in Berlin getanzt werden<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1831 | Аugust Krüger | Die algemein beliebtesten Contre-Tanz-Touren, wie solche auf den Bällen und in Familientränzchen in Berlin getanzt werden<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1831 | Giacomo Costa | Saggio analitico-pratico all'arte della danza per uso di civile conversazione<br/>_4 volumi con tavole_<br/>_Published in Torino_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=RdsqAAAAYAAJ&pg=PA435) | [Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=467361754)<br/>[NYPL](http://catalog.nypl.org/record=b12280213~S1)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004045042) |
 | 1831 | Max Joseph Franken | Die Galopade, wie sie getanzt werder soll. Eine vollständige Anweisung zum Selbstunterrichte in diesem Lieblingstanze<br/>_2. Auflage_ | `[Klemm, #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1832 | Joseph Binns Hart | Hart's New Caledonian or Allandale Quadrilles | `[Leaflets]` | [Royal Academy of Music](http://www.ram.ac.uk/museum/item/15068) |
@@ -289,7 +289,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1844 | Г. Грациеский | Новый танцевальный калейдоскоп, или кадриль в шести турах | [Quote](https://blog.hda.org.ru/quotes/smes) | |
 | 1842 | Z. T. Purday (publisher) | The Royal Quadrille Preceptor | | [On sale, £200](https://www.abebooks.com/servlet/BookDetailsPL?bi=7582886756) |
 | 1842 | Tilt & Bogue (publishers) | The Ball-Room Preceptor; Comprising the Most Esteemed Quadrilles, Galopades, Mazourkas, and Other Fashionable Dances of the Present Season<br/>_3rd edition_ | | [On sale, £150](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699660) |
-| 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
+| 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | `[Germanorum, 1914]` | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
 | 1842? | Adam Rabel | Kleine Sammlung geselliger Tänze | `[Unfried, 2014]` | |
 | 1843 | | Листок для светских людей. Петербургские балы и маскарады<br/>_№5 за 1843 год_ | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004358933) |
 | 1844 | Adam Rabel | Die Lance-Quadrille. Mit 4 Tafeln Abbildungen und einer neuen Musik<br/>_2. Auflage_<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -348,6 +348,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1862 | Georg Gerster | Katechismus der Höflichkeits-, Anstands- und Präsentationlehre<br/>_Book on etiquette_ | `[Katalog, 1894]` | |
 | 1862–1875? | Georg Gerster | Die Tanzkunst mit Choregraphie der Positionen<br/>_2. Auflage_ | `[Germanorum, 1914]` | |
 | 1863 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001327338) |
+| 1863 | | Die Lieblingstänze des modernen Ballsaals | `[Germanorum, 1914]` | |
 | 1864 | M. Reif | Die Quadrille française (die Contretänze), deren Geschichte und genane Beschreibung, zugleich eine kritische Beleuchtung der in Norddeutschland, namentlich in Schlesien under der obigen Bezeichnung gelehrten Tänze | `[Klemm #03]`<br/>`[Klemm #06]` | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=470818174)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003066340) |
 | 1865 | Isidor | Aufforderung zum Tanz<br/>_Humoreske_<br/>_Published in Zerbst_ | `[Germanorum, 1914]` | |
 | 1865 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze<br/>_2. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -364,7 +365,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1871 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_3rd edition_ | | BNP |
 | 1871 | Oskar Guttmann | Grundsätze der ästhetischen Bildung des menschlichen Körpers. Praktisches Lehrbuch zum Selbstunterricht für alle gebildeten Stände, insbesondere für Bühnenkünstler<br/>_Book on physical education._ | `[Klemm #03]` | [Cincinnati](https://huc.on.worldcat.org/oclc/172998951)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001548753) |
 | 1873 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung<br/>_Erste Auflage (??)_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
-| 1873 | August Krüger | Der Contre-Tanz und die Quadrille à la cour. Zum Ausrufen eingerichtet<br/>_Published in Berlin_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1873 | August Krüger | Der Contre-Tanz und die Quadrille à la cour. Zum Ausrufen eingerichtet<br/>_Published in Berlin_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1874 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_4th edition_ | | BNP |
 | 1874 | | Arte ou methodo facil de aprender a dansar as contradansas francezas<br/>_4th edition_ | | BNP |
 | 1874 | Wilhelm Jerwitz | Der kleine Tanzmeister als Retter in der Noth. Zur Erinnerung des Erlernten<br/>_Published in Dresden_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` |
@@ -381,6 +382,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001590546)<br/>[SMB / Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=862955807)<br/>[UDK / Berlin](https://udk-berlin.hosted.exlibrisgroup.com/permalink/f/1b2jonm/UDK_ALMA_DS21538943440002884) |
 | 1880–1900? | Margitta Roséri | Katechismus der Tanzkunst<br/>_Should not be confused with Bernhard Klemm's book with the same title_ | `[Leaflets]` | | |
 | 1880–1900? | A. Handt | Contredanse & Quadrille à la cour. Die Touren dieser Tänze in französischer Sprache mit deutschen Anmerkungen<br/>_Published in Erfurt by Fr. Bartholomaus_ | `[Germanorum, 1914]` | |
+| 1881 | Adam Reichert | Die moderne Tanzkunst vom ästetischen und theoretischen Standpunkte | | [ÖNB](http://data.onb.ac.at/rec/AC10237835) |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
 | 1882 | Amint Freising | Der Tanz. Nach älteren Schriften bearbeitet | `[Germanorum, 1914]` | [Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=844229881) |
@@ -537,11 +539,12 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1525 | Caspar Brunner | Rathschlag  wider die gottlosen Tanz | `[Germanorum, 1914]` | |
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
 | 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009810813)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
-| 1700 | | Kurtze Vorstellung, was von dem Welt-üblischen Zechen und Tantzen nach der Regel Gottes Worts und nach der Beschaffenheit des wahren Christenthums zu halten | `[Germanorum, 1914]` | [UB Marburg: XIX c B 435?] |
-| 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
+| 1661 | Joh. Lassenius | Adelische Tisch-Reden in sich begreifende zwölf Lehrreiche nützliche und Anmuthige Gespräche | `[Germanorum, 1914]` | |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | |
 | 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
+| 1700 | | Kurtze Vorstellung, was von dem Welt-üblischen Zechen und Tantzen nach der Regel Gottes Worts und nach der Beschaffenheit des wahren Christenthums zu halten | `[Germanorum, 1914]` | [UB Marburg: XIX c B 435?] |
 | 1701 | J. C. Hercker | Vom liederlichschen Sonntags-Tanzen<br/>_Published in Leipzig_ | `[Germanorum, 1914]` | |
+| 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
 | 1716 | Johann Wilheml Kellner von Zinnendorff<br/>_Jan Willem van Keller_<br/>Ehrenfried Walthern von Tschirnhauß | Tanz-Greuel. Das ist vollkomene Acta Publica <...> | `[Germanorum, 1914]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | |
 | 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
@@ -557,6 +560,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
 | 1770 | | Gedanken vom Tanzen, in einem Sendschreiben an einem Freund<br/>_Publihed by Herold in Hamburg_ | `[Germanorum, 1914]` | |
+| 1793 | G. Leon | Die Weihe der Tanzkunst | `[Germanorum, 1914]` | |
 | 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
 | 1801 | Johann Evangelist Wetzler | über den Einfluß des Tanzens auf die Gesundheit nebst Verhaltungsregeln | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #51]` | |
