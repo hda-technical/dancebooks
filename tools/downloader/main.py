@@ -3,15 +3,22 @@
 import http.client
 import os
 import subprocess
+import sys
 from xml.etree import ElementTree
 
 import bs4
+import click
 import opster
 import requests
 
 from utils import *  # TODO: fix imports
 import deep_zoom
 import iiif
+
+
+@click.group()
+def main():
+	pass
 
 
 class IIPMetadata:
@@ -614,15 +621,16 @@ def locMusdi(
 		get_binary(output_filename, url)
 
 
-@opster.command()
-def hathitrust(
-	id=("", "", "Id of the book to be downloaded (e. g. `wu.89005529961`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)")
+@click.option("--from", "from_page", help="First page to be downloaded", type=int, default=None)
+@click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=None)
+def hathitrust(id, from_page, to_page):
 	"""
 	Downloads book from the HathiTrust Digital Library (https://www.hathitrust.org/)
 	"""
 	import hathitrust
-	hathitrust.get(id)
+	hathitrust.get(id=id, from_page=from_page, to_page=to_page)
 
 
 @opster.command()
@@ -861,4 +869,9 @@ def shpl(
 
 
 if __name__ == "__main__":
-	opster.dispatch()
+	if sys.argv[1] in ("hathitrust"):
+		# dispatch via click
+		main()
+	else:
+		# dispatch via opster
+		opster.dispatch()
