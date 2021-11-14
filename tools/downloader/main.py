@@ -175,10 +175,10 @@ def belgiumRoyalLibrary(
 		download_and_sew_tiles(output_filename, url_maker, policy)
 		page += 1
 
-@opster.command()
-def bsb(
-	id=("", "", "Id of the book to be downloaded (e. g. 'bsb10029940')"),
-):
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)")
+def bsb(id):
 	"""
 	Downloads book from https://www.digitale-sammlungen.de
 	"""
@@ -868,7 +868,11 @@ def shpl(
 
 
 if __name__ == "__main__":
-	if sys.argv[1] in ("hathitrust", "onb"):
+	if sys.argv[1] in (
+		"bsb",
+		"hathitrust",
+		"onb",
+	):
 		# dispatch via click
 		main()
 	else:
