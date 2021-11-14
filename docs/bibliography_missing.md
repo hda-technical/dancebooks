@@ -59,6 +59,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1733? | John Walsh | Caledonian Country Dances, Book the Second | `[Leaflets]` | |
 | 1736 | Pierre Jean Burette | Prima, e seconda memoria per servire alla istoria del ballo degli antichi in<br/>_In: Académie royale des inscriptions et belles-lettres. Histoire, avec les Mémoires de littérature tirez des registres de cette Académie, tome 1, pages 93-135_<br/>_Published in Paris_ | [[Burette, 1746]](https://bib.hda.org.ru/books/burette_1746)<br/>`[Charinomos, 1825]` | |
 | 17-- | Pierre Jean Burette | Deux memoires pour servir à l'histoire de la danse des anciens. Memoires de l'académie des inscriptions | `[Klemm #03]`<br/>`[Klemm #06]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43989839h) |
+| 1749 | Martin Martinelli | Nutzreiche Ergötzlichkeiten. Das ist Wälsche und teutsche Gespräch-Ubungen, welche die Arth toscanisch zu reden enthalten = Giova e diletta<br/>_Part on Gespräch handelt vom Tantzen | `[Germanorum, 1914]` | |
 | 1751 | G. Waylett | Twenty Four Country Dances for the Year 1751 | `[2. Rothenfelser]` | |
 | 1750–1770? | Charles Pauli | Musik und Tanz.<br/>_In Goth. Magazin, Bd. II, Stck. 2_ | `[Charinomos, 1825]` | |
 | 1750–1770? | | Cabala per componendi minuetti<br/>_or_ Cabala per Comporre Minuetti | `music: generator`<br/>`[Thielen, 2009]` | |
@@ -319,6 +320,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1850–1880? | Rudolf Voß | Tanz-Touren. Contre-Tanz — Lancier — Alliance — Quadrille — Mignon — Cotillon — Pariser Polka<br/>_4. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1849 | Francisco Gomes da Fonseca | Nova arte de aprender a dançar ou methodo facil de aprender as contradanças francezas | | BNP |
 | 1851 | Henmann Görwitz | Die Tanz-Assecuranz humoristisch-sociale Standrede in der Repräsentantenkammer der Frauen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [HAAB](https://lhwei.gbv.de/DB=2/LNG=EN/CLK?IKT=12&TRM=55898116X) |
+| 1851 | | Der grosse X'sche Maskenball, mit allen seinen Vorkommissen<br/>_Published in Grimma_ | `[Germanorum, 1914]` | |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_3. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | | Wiener Tanzschule. Gründliche und für jedermann leicht faßliche Darstellung der beliebtesten und modernsten Tänze | | [Universitätsbibliothek Salzburg copy desideratum ](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma71184520410003341) |
@@ -389,6 +391,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1882 | Константин Аполлонович Скальковский | Балет, его история и место в ряду изящных искусств | | [On sale, ₽15000](http://www.alib.ru/5_baletoman_skalnmnkovskij_k_balet_ego_istoriya_i_mesto_v_ryadu_izyawnyh_iskusstv_w1t821d49b5553655f8fe16aa397fd5a52f287.html)<br/>[NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004565138) |
 | 1882 | Charles Coote | Le minuet de la cour, Arranged for the Pianoforte | `[Russell, 2007]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004280118) |
 | 1883 | Gustave Desrat | Nouveau traité de la danse et du cotillon contenant la théorie et l'histoire des danses anciennes et modernes<br/>_Published by H. Delarue in Paris_ | `[Russell, 2007]` | |
+| 1883–1888? | | Die Literatur des Tanzes und der Komplimentirbücher. Ein Katalog für Bibliotheken, Antiquare, etc.<br/>_Published by Friedrich Bärtholomaus in Erfurt_ | `[Germanorum, 1914]` | |
 | 1884 | Charles Perin<br/>Laborde<br/>A. Milton | Le menuet de la cour, 1643, with All the Figures ... Explained | `[Russell, 2007]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004529203) |
 | after 1883 | | Petit manuel de la danse suivi des principales figures du cotillon | `[Russell, 2007]` | |
 | 1885 | Joh. Irger | Neuchö Tanz<br/>_Published by Friedrich und Companie in Ried_ | `[Germanorum, 1914]` | |
@@ -560,6 +563,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
 | 1770 | | Gedanken vom Tanzen, in einem Sendschreiben an einem Freund<br/>_Publihed by Herold in Hamburg_ | `[Germanorum, 1914]` | |
+| 1792 | Lipowsky | Ueber der übermässigen Tanz<br/>_Published in Prag_ | `[Germanorum, 1914]` | |
 | 1793 | G. Leon | Die Weihe der Tanzkunst | `[Germanorum, 1914]` | |
 | 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
