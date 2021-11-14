@@ -682,15 +682,13 @@ def onb(id):
 	onb.get(id)
 
 
-@opster.command()
-def staatsBerlin(
-	id=("", "", "Id of the book to be downloaded (e. g. `PPN86902910X`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `PPN670016500`)")
+def staats_berlin(id):
 	"""
 	Downloads book from http://digital.staatsbibliothek-berlin.de/
 	"""
-
-	output_folder = make_output_folder("staatsBerlin", id)
+	output_folder = make_output_folder("staats_berlin", id)
 	page = 1
 	while True:
 		output_filename = make_output_filename(output_folder, page, extension="tif")
@@ -872,6 +870,7 @@ if __name__ == "__main__":
 		"bsb",
 		"hathitrust",
 		"onb",
+		"staats-berlin",
 	):
 		# dispatch via click
 		main()
