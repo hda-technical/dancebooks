@@ -15,6 +15,7 @@ SHORT_LANG_MAP = {
 	"cz": ["czech", "german"],
 	"de": ["german", "french", "latin"],
 	"dk": ["danish"],
+	"ee": ["estonian"],
 	"en": ["english", "latin"],
 	"es": ["spanish"],
 	"fi": [
@@ -81,6 +82,9 @@ LONG_LANG_MAP = {
 	"english.bib": {
 		"english",
 		"latin",
+	},
+	"estonian.bib": {
+		"estonian",
 	},
 	"finnish.bib": {
 		"finnish",

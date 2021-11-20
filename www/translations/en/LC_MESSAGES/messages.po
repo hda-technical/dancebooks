@@ -244,6 +244,9 @@ msgstr "Dutch"
 msgid "search:language:english"
 msgstr "English"
 
+msgid "search:language:estonian"
+msgstr "Estonian"
+
 msgid "search:language:finnish"
 msgstr "Finnish"
 
@@ -532,6 +535,9 @@ msgstr "Portuguese"
 
 msgid "item:language:russian"
 msgstr "Russian"
+
+msgid "item:language:estonian"
+msgstr "Estonian"
 
 msgid "item:language:spanish"
 msgstr "Spanish"
