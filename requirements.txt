@@ -13,6 +13,7 @@ pip==21.3
 pyflakes==2.4.0
 pyjson5==1.5.2
 pymorphy2==0.9.1
+pytest==6.2.5
 python-stdnum==1.17
 requests==2.26.0
 SQLAlchemy==1.4.25

@@ -6,13 +6,12 @@ TOUCH_RELOAD_PRODUCTION := /var/run/uwsgi/$(NAME).reload
 DHPARAM_TESTING := /etc/nginx/conf/bib-test.hda.org.ru/dh_param.pem
 DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
 
-TESTS := $(wildcard tests/*.py)
-TEST_TARGETS := $(TESTS:.py=.mk)
 
 debug: translations
 	python www/main.py \
 
-test: $(TEST_TARGETS);
+test: tests/handlers_test.mk tests/parser_test.mk tests/utils_test.mk
+	pytest tests/localization_test.py
 
 tests/%.mk: tests/%.py
 	DANCEBOOKS_UNITTEST= \

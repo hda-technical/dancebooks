@@ -506,6 +506,9 @@ msgstr "Dutch"
 msgid "item:language:english"
 msgstr "English"
 
+msgid "item:language:estonian"
+msgstr "Estonian"
+
 msgid "item:language:finnish"
 msgstr "Finnish"
 
@@ -535,9 +538,6 @@ msgstr "Portuguese"
 
 msgid "item:language:russian"
 msgstr "Russian"
-
-msgid "item:language:estonian"
-msgstr "Estonian"
 
 msgid "item:language:spanish"
 msgstr "Spanish"
