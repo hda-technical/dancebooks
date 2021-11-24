@@ -146,7 +146,7 @@ def extract_metadata_from_file(path):
 	if (author is not None):
 		result["author"] = strip_split_list(author, ",")
 
-	if (keywords := match.group("keywords")) is not None:	
+	if (keywords := match.group("keywords")) is not None:
 		result["keywords"] = set()
 		for keyword in strip_split_list(keywords, ","):
 			if keyword.startswith("incomplete "):
@@ -884,11 +884,15 @@ morph_analyzer = pymorphy2.MorphAnalyzer()
 # Certain surnames can not be processed by pymorphy
 # This mapping is intended to solve the problem.
 PREDEFINED_SURNAMES = {
+	("Бонч", "masc"): "Бонч",
+	("Бонч", "femn"): "Бонч",
+	("Бруевич", "masc"): "Бруевича",
 	("Стратилатов", "masc"): "Стратилатова",
 	("Колесник", "femn"): "Колесник",
 	("Валерьевна", "femn"): "Валерьевны",
 	("Микляева", "femn"): "Микляевой",
 	("Еремина", "femn"): "Ереминой",
+	("Эльяш", "masc"): "Эльяша",
 }
 
 def make_genitive(nominative):
