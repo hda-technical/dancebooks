@@ -99,17 +99,14 @@ desktop.ini
 *.vssscc
 *.vspscc
 
-# make/automake/autoconfigure
-.deps
-.lib
-# de facto standard extension for additional makefile targets
-*.mk
-
 # GNU babel files
 *.mo
 *.pot
 
+# Various Python caches
+__pycache__
+.pytest_cache
+
 # put your own ignores below this line (don't forget about new line in the end of file)
 *.pdf
-transcriptions/*.html
-mwe/mwe.bib
+
