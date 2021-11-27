@@ -61,10 +61,10 @@
         ],
         "date_format": "%Y-%m-%d",
         "blocked_domains": [
-            //use hdl.handle.net permalinks instead
+            // use hdl.handle.net permalinks instead
             "babel.hathitrust.org",
 
-            //use books.google.com instead
+            // use books.google.com instead
             "books.google.by",
             "books.google.co.uk",
             "books.google.cz",
@@ -73,14 +73,14 @@
             "books.google.ru",
             "books.google.ua",
 
-            //use self-hosted files instead
+            // use self-hosted files instead
             "dance.goldenforests.ru",
 
-            //use urn.fi permalinks instead
+            // use urn.fi permalinks instead
             "doria.fi",
             "taju.uniarts.fi",
 
-            //use gallica.bnf.fr instead
+            // use gallica.bnf.fr instead
             "catalogue.bnf.fr",
 
             "dhds.org.uk",
@@ -89,7 +89,7 @@
             "mirrorland.rpg.ru",
             "jscholarship.library.jhu.edu",
 
-            //use nbn-resolving.de permalinks instead
+            // use nbn-resolving.de permalinks instead
             "digital.slub-dresden.de",
             "haab-digital.klassik-stiftung.de",
             "mdz-nbn-resolving.de",
@@ -109,6 +109,7 @@
             "nbn-resolving.de",
             "polona.pl",
             "resolver.sub.uni-goettingen.de",
+            "richardpowers.com",
             "urn.fi",
             "urn.nb.no",
             "www.loc.gov",
