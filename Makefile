@@ -10,12 +10,9 @@ DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
 debug: translations
 	python www/main.py \
 
-test: tests/handlers_test.mk
-	pytest tests/localization_test.py tests/utils_test.py tests/parser_test.py
-
-tests/%.mk: tests/%.py
+test:
 	DANCEBOOKS_UNITTEST= \
-	python $^ -v \
+	pytest tests
 
 translations:
 	pybabel -v -q compile -d www/translations
