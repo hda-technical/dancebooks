@@ -97,6 +97,9 @@
             "reader.digitale-sammlungen.de",
             "stimmbuecher.digitale-sammlungen.de",
             "www.digitale-sammlungen.de",
+			
+			// use modern www.nypl.org permalinks instead
+			"catalog.nypl.org",
         ],
         "blocked_domains_http": [
             "archive.org",
