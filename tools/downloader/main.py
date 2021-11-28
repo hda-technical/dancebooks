@@ -865,10 +865,20 @@ def shpl(
 	shpl.get(id)
 
 
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `122cdc10-0032-0130-6561-58d385a7bc34`)")
+def nypl(id):
+	"""
+	Downloads image sequence from https://digitalcollections.nypl.org/
+	"""
+	import nypl
+	nypl.get(id)
+
 if __name__ == "__main__":
 	if sys.argv[1] in (
 		"bsb",
 		"hathitrust",
+		"nypl",
 		"onb",
 		"staats-berlin",
 	):

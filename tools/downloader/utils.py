@@ -116,7 +116,7 @@ def make_output_folder(downloader, book_id):
 def make_output_filename(base, page=None, extension="bmp"):
 	result = base
 	if isinstance(page, int):
-		result = os.path.join(result, f"{page:08}")
+		result = os.path.join(result, f"{page:04d}")
 	elif page is not None:
 		result = os.path.join(result, page)
 	if extension is not None:
