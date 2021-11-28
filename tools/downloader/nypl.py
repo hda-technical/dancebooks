@@ -1,3 +1,5 @@
+import os.path
+
 import utils
 
 
@@ -8,7 +10,10 @@ def get(id):
 	captures = metadata["response"]["captures"]
 	print(f"Going to download {len(captures)} images")
 	for idx, capture in enumerate(captures):
-		url = capture["high_res_link"]
 		output_filename = utils.make_output_filename(output_folder, page=idx, extension="tif")
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading exising page #{idx:04d}")
+			continue
+		url = capture["high_res_link"]
 		print(f"Downloading page #{idx:04d}")
 		utils.get_binary(output_filename, url)
