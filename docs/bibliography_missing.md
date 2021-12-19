@@ -659,7 +659,6 @@ _This part of the list is to joined with the general table_
 | 181- | J. Bröckl | 12 Tänze für Pianoforte | Москва, Российская государственная библиотека | `ОР 6/муз` | | [РГБ](http://search.rsl.ru/ru/record/01004832331) |
 | 1829–1830 | Michel Saint-Léon | _aka Cahiers d'exercices_ | Paris, Bibliothèque nationale de France | `RES-1137` | [Cahier 3](https://bib.hda.org.ru/books/leon_1830_cahier3)<br/>`[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb44003243k) |
 | 1830–1835 | Michel Saint-Léon | _aka Chorégraphies et musiques de divers ballets et exercices_ | Paris, Bibliothèque nationale de France | `RES-1140` | `[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43993796t) |
-| 1841 | Frederick Hill | Frederick Hill's Book of Quadrilles and Country Dances | | | `[Rogers, 1998]`<br/>[[MacFadyen, 2009]](https://archive.rscds.org/index.php/frederick-hills-book-of-quadrilles-country-dances-etc-etc) | |
 | 1851 | Thomas Wilson | Thomas Wilson Letter to the Royal Literary Fund with a Request of Financial Support | London, The British Library | | [[Cooper, #05]](https://www.regencydances.org/paper005.php) |
 | 1887 | Ludovic Celler | Die Tänze unter den Valois<br/>_Translated from the French by Albert Czerwinski_ | | | `[Germanorum, 1914]` | |
 | 19-- | Лешков | Рукопись по систематизации танцевальных учебников | Москва, Российская государственная библиотека | | | |
