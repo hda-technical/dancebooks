@@ -26,7 +26,7 @@ SELF_SERVED_PATTERN = r"/books/(?P<item_id>[\w_]+)"
 
 SELF_SERVED_URL_PATTERN = (
 	SELF_SERVED_PATTERN +
-	"/pdf/(?P<pdf_index>\d+)"
+	r"/pdf/(?P<pdf_index>\d+)"
 )
 SELF_SERVED_URL_REGEXP = re.compile(SELF_SERVED_URL_PATTERN)
 
@@ -489,27 +489,28 @@ class MarkdownCache:
 			],
 			output_format="xhtml5"
 		)
-		self._markdown.inlinePatterns.add("page_number", MarkdownPageNumber(), "_end")
-		self._markdown.inlinePatterns.add("smallcaps", MarkdownSmallCaps(), "_end")
-		self._markdown.inlinePatterns.add("strikethrough", MarkdownStrikethrough(), "_end")
-		self._markdown.inlinePatterns.add("subscript", MarkdownSubscript(), "_end")
-		self._markdown.inlinePatterns.add("superscript", MarkdownSuperscript(), "_end")
-		self._markdown.inlinePatterns.add("hyphen", MarkdownHyphen(), "_end")
-		del self._markdown.parser.blockprocessors["hashheader"]
-		self._markdown.parser.blockprocessors.add(
-			"wrapped_hash_header",
+		self._markdown.inlinePatterns.register(MarkdownPageNumber(), name="page_number", priority=-1)
+		self._markdown.inlinePatterns.register(MarkdownSmallCaps(), name="smallcaps", priority=-2)
+		self._markdown.inlinePatterns.register(MarkdownStrikethrough(), name="strikethrough", priority=-3)
+		self._markdown.inlinePatterns.register(MarkdownSubscript(), name="subscript", priority=-4)
+		self._markdown.inlinePatterns.register(MarkdownSuperscript(), name="superscript", priority=-5)
+		self._markdown.inlinePatterns.register(MarkdownHyphen(), name="hyphen", priority=-6)
+		
+		self._markdown.parser.blockprocessors.deregister("hashheader")
+		self._markdown.parser.blockprocessors.register(
 			WrappedHashHeaderProcessor(self._markdown.parser),
-			"_begin"
+			name="wrapped_hash_header",
+			priority=1000,
 		)
-		self._markdown.parser.blockprocessors.add(
-			"align_right",
+		self._markdown.parser.blockprocessors.register(
 			MarkdownAlignRight(self._markdown.parser),
-			"_begin"
+			name="align_right",
+			priority=1001,
 		)
-		self._markdown.parser.blockprocessors.add(
-			"note",
+		self._markdown.parser.blockprocessors.register(
 			MarkdownNote(self._markdown.parser),
-			"_begin"
+			name="note",
+			priority=1002,
 		)
 
 	def get(self, abspath):
@@ -717,8 +718,8 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 		self._markdown = markdown.Markdown(
 			output_format="xhtml5"
 		)
-		self._markdown.inlinePatterns.add("strikethough", MarkdownStrikethrough(), "_end")
-		self._markdown.inlinePatterns.add("superscript", MarkdownSuperscript(), "_end")
+		self._markdown.inlinePatterns.register(MarkdownStrikethrough(), name="strikethough", priority=-1)
+		self._markdown.inlinePatterns.register(MarkdownSuperscript(), name="superscript", priority=-2)
 		self.reset()
 
 	def reset(self):

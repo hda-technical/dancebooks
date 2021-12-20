@@ -34,7 +34,7 @@ class FinalizingContext:
 		self._markdown = markdown.Markdown(
 			output_format="xhtml5"
 		)
-		self._markdown.inlinePatterns.add("cite", utils.MarkdownCite(index), "_end")
+		self._markdown.inlinePatterns.register(utils.MarkdownCite(index), name="cite", priority=-1)
 
 	def parse_markdown(self, data):
 		self._markdown.reset()
