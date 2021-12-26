@@ -12,6 +12,7 @@ import os.path
 import pstats
 import re
 import threading
+import xml.etree.ElementTree as xml
 from urllib import parse as urlparse
 
 import markdown
@@ -547,7 +548,7 @@ class MarkdownCite(markdown.inlinepatterns.Pattern):
 		self._index = index
 
 	def handleMatch(self, m):
-		a = markdown.util.etree.Element("a")
+		a = xml.Element("a")
 		id = m.group("id")
 		a.set("href", f"/books/{id}")
 		try:
@@ -564,7 +565,7 @@ class MarkdownPageNumber(markdown.inlinepatterns.Pattern):
 		super().__init__(r"\{(?P<page_number>[^\{\}]+)\}")
 
 	def handleMatch(self, m):
-		span = markdown.util.etree.Element("span")
+		span = xml.Element("span")
 		span.set("class", const.CSS_CLASS_PAGE_NUMBER)
 		span.text = m.group("page_number")
 		return span
@@ -580,7 +581,7 @@ class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 		super().__init__(r"\~\~(?P<strikethrough>[^\~]+)\~\~")
 
 	def handleMatch(self, m):
-		span = markdown.util.etree.Element("span")
+		span = xml.Element("span")
 		span.set("class", const.CSS_CLASS_STRIKETHROUGH)
 		span.text = m.group("strikethrough")
 		return span
@@ -594,7 +595,7 @@ class MarkdownSuperscript(markdown.inlinepatterns.Pattern):
 		super().__init__(r"\^(?P<superscript>[^\^]+)\^")
 
 	def handleMatch(self, m):
-		element = markdown.util.etree.Element("sup")
+		element = xml.Element("sup")
 		element.text = m.group("superscript")
 		return element
 
@@ -607,7 +608,7 @@ class MarkdownSubscript(markdown.inlinepatterns.Pattern):
 		super().__init__(r"↓(?P<subscript>[^↓]+)↓")
 
 	def handleMatch(self, m):
-		span = markdown.util.etree.Element("span")
+		span = xml.Element("span")
 		span.set("class", const.CSS_CLASS_SUBSCRIPT)
 		span.text = m.group("subscript")
 		return span
@@ -623,7 +624,7 @@ class MarkdownSmallCaps(markdown.inlinepatterns.Pattern):
 		super().__init__(r"!!(?P<smallcaps>[^!]+)!!")
 
 	def handleMatch(self, m):
-		span = markdown.util.etree.Element("span")
+		span = xml.Element("span")
 		span.set("class", const.CSS_CLASS_SMALLCAPS)
 		span.text = m.group("smallcaps")
 		return span
@@ -666,7 +667,7 @@ class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
 
 	def run(self, parent, blocks):
 		block = blocks.pop(0)
-		p = markdown.util.etree.Element("p")
+		p = xml.Element("p")
 		p.set("style", "text-align: right")
 		p.text = block[len(self.MARKER):].strip()
 		parent.append(p)
@@ -696,7 +697,7 @@ class WrappedHashHeaderProcessor(markdown.blockprocessors.BlockProcessor):
 		m = self.RE.search(block)
 		wrapped = block[m.end():]
 		# Create header using named groups from RE
-		h = markdown.util.etree.SubElement(parent, "h%d" % len(m.group("level")))
+		h = xml.SubElement(parent, "h%d" % len(m.group("level")))
 		h.text = m.group("header").strip() + "\n" + wrapped
 
 
