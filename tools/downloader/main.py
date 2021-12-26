@@ -177,7 +177,7 @@ def belgiumRoyalLibrary(
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)")
+@click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)", required=True)
 def bsb(id):
 	"""
 	Downloads book from https://www.digitale-sammlungen.de
@@ -622,7 +622,7 @@ def locMusdi(
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)")
+@click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)", required=True)
 @click.option("--from", "from_page", help="First page to be downloaded", type=int, default=None)
 @click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=None)
 def hathitrust(id, from_page, to_page):
@@ -673,7 +673,7 @@ def	vwml(
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `ABO_+Z178189508`)")
+@click.option("--id", help="Id of the book to be downloaded (e. g. `ABO_+Z178189508`)", required=True)
 def onb(id):
 	"""
 	Downloads book from http://onb.ac.at/
@@ -683,7 +683,7 @@ def onb(id):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `PPN670016500`)")
+@click.option("--id", help="Id of the book to be downloaded (e. g. `PPN670016500`)", required=True)
 def staats_berlin(id):
 	"""
 	Downloads book from http://digital.staatsbibliothek-berlin.de/
@@ -866,7 +866,7 @@ def shpl(
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `122cdc10-0032-0130-6561-58d385a7bc34`)")
+@click.option("--id", help="Id of the book to be downloaded (e. g. `122cdc10-0032-0130-6561-58d385a7bc34`)", required=True)
 def nypl(id):
 	"""
 	Downloads image sequence from https://digitalcollections.nypl.org/
