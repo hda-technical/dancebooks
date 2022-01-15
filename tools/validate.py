@@ -655,13 +655,17 @@ def validate_url_accessibility(item, errors):
 			errors.add(f"Field url with value [{single_url}] and number {number} is unaccessible")
 
 
-def validate_transcription_filename(item, errors):
+def validate_transcription(item, errors):
 	"""
 	Checks if transcription is valid, accessible and named correctly
 	"""
 	transcription = item.get("transcription")
 	if transcription is None:
 		return
+	
+	transcriber = item.get("transcriber")
+	if transcriber is None:
+		errors.add(f"Transcribed entry must has transcriber specified")
 
 	abspath = os.path.join(config.parser.markdown_dir, transcription)
 	validate_single_filename(
@@ -873,7 +877,7 @@ def validate_item(item, git_added_on, make_extra_checks):
 	validate_obligatory_fields(item, errors)
 	validate_allowed_fields(item, errors)
 	validate_translation_fields(item, errors)
-	validate_transcription_filename(item, errors)
+	validate_transcription(item, errors)
 	validate_catalogue_code(item, errors)
 	validate_library_fields(item, errors)
 	validate_shorthand(item, errors)
