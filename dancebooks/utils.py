@@ -885,7 +885,7 @@ morph_analyzer = pymorphy2.MorphAnalyzer()
 #WARN:
 # Certain surnames can not be processed by pymorphy
 # This mapping is intended to solve the problem.
-PREDEFINED_SURNAMES = {
+PREDEFINED_SURNAMES_PYMORPHY = {
 	("Бонч", "masc"): "Бонч",
 	("Бонч", "femn"): "Бонч",
 	("Бруевич", "masc"): "Бруевича",
@@ -897,14 +897,15 @@ PREDEFINED_SURNAMES = {
 	("Эльяш", "masc"): "Эльяша",
 }
 
-def make_genitive(nominative):
+
+def make_genitive_via_pymorphy(nominative):
 	"""
 	Accepts name in nominanive case, returns genivive case for it
 	"""
 	def process_lexeme(lexeme, gender):
-		if (lexeme, gender) in  PREDEFINED_SURNAMES:
+		if predefined := PREDEFINED_SURNAMES_PYMORPHY.get((lexeme, gender)):
 			assert gender is not None
-			return (PREDEFINED_SURNAMES[(lexeme, gender)], gender)
+			return (predefined, gender)
 		variants = morph_analyzer.parse(lexeme)
 		for variant in variants:
 			if "nomn" in variant.tag:
@@ -935,3 +936,53 @@ def make_genitive(nominative):
 			inflected_sublexemes.append(inflected_sublexeme)
 		processed.append('-'.join(inflected_sublexemes))
 	return " ".join(processed)
+
+
+from pytrovich.detector import PetrovichGenderDetector
+from pytrovich.enums import Case, Gender, NamePart
+from pytrovich.maker import PetrovichDeclinationMaker
+
+PYTR_DETECTOR = PetrovichGenderDetector()
+PYTR_DECLINATOR = PetrovichDeclinationMaker()
+PREDEFINED_SURNAMES_PYTROVICH = {
+	("Бонч", Gender.MALE): "Бонч",
+	("Бонч", Gender.FEMALE): "Бонч",
+}
+
+def make_genitive_via_petrovich(nominative):
+	def decline_first_name(name):
+		pass
+	def decline_last_name(last, *, gender):
+		parts = []
+		# handle doubled last-names
+		for part in last.split('-'):
+			if predefined := PREDEFINED_SURNAMES_PYTROVICH.get((part, gender)):
+				parts.append(predefined)
+			else:
+				part = PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, part)
+				parts.append(part)
+		return "-".join(parts)
+		
+	lexemes = nominative.split()
+	if len(lexemes) == 1:
+		# only {lastname}
+		gender = PYTR_DETECTOR.detect(lastname=lexemes[0])
+		last = PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, lexemes[0])
+		return last
+	elif len(lexemes) == 2:
+		# {firstname} {lastname}
+		gender = PYTR_DETECTOR.detect(firstname=lexemes[0])
+		first = PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, lexemes[0])
+		last = decline_last_name(lexemes[1], gender=gender)
+		return f"{first} {last}"
+	elif len(lexemes) == 3:
+		# {firstname} {middlename} {lastname}
+		gender = PYTR_DETECTOR.detect(firstname=lexemes[0])
+		first = PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, lexemes[0])
+		middle = PYTR_DECLINATOR.make(NamePart.MIDDLENAME, gender, Case.GENITIVE, lexemes[1])
+		last = decline_last_name(lexemes[2], gender=gender)
+		return f"{first} {middle} {last}"
+	else:
+		raise ValueError(f"Unsupported name length for {nominative}")
+
+make_genitive = make_genitive_via_petrovich
