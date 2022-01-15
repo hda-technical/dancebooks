@@ -11,6 +11,9 @@ from dancebooks.utils import make_genitive_via_pymorphy, make_genitive_via_petro
 
 @pytest.mark.parametrize("make_genitive", [make_genitive_via_pymorphy, make_genitive_via_petrovich])
 def test_making_genitive(make_genitive):
+	# latin text - should be preserved without exceptions
+	assert make_genitive("University of Aberdeen") == "University of Aberdeen"
+
 	# only lastname
 	assert make_genitive("Навальный") == "Навального"
 	assert make_genitive("Навальная") == "Навальной"

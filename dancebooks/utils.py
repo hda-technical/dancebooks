@@ -406,17 +406,17 @@ def first(iterable):
 
 
 def batched(iterable, size):
-    """
-    Batches input iterable, producing batches of size (or less) items
-    """
-    sourceiter = iter(iterable)
-    while True:
-        batchiter = itertools.islice(sourceiter, size)
-        # When sourceiter becames empty,
-        # islice returns empty iterator (without raising StopIteration)
-        #
-        # Invoking next on batchiter in order to raise StopIteration when needed
-        yield [next(batchiter)] + list(batchiter)
+	"""
+	Batches input iterable, producing batches of size (or less) items
+	"""
+	sourceiter = iter(iterable)
+	while True:
+		batchiter = itertools.islice(sourceiter, size)
+		# When sourceiter becames empty,
+		# islice returns empty iterator (without raising StopIteration)
+		#
+		# Invoking next on batchiter in order to raise StopIteration when needed
+		yield [next(batchiter)] + list(batchiter)
 
 
 def extract_parent_keyword(keyword):
@@ -496,7 +496,7 @@ class MarkdownCache:
 		self._markdown.inlinePatterns.register(MarkdownSubscript(), name="subscript", priority=-4)
 		self._markdown.inlinePatterns.register(MarkdownSuperscript(), name="superscript", priority=-5)
 		self._markdown.inlinePatterns.register(MarkdownHyphen(), name="hyphen", priority=-6)
-		
+
 		self._markdown.parser.blockprocessors.deregister("hashheader")
 		self._markdown.parser.blockprocessors.register(
 			WrappedHashHeaderProcessor(self._markdown.parser),
@@ -950,8 +950,16 @@ PREDEFINED_SURNAMES_PYTROVICH = {
 }
 
 def make_genitive_via_petrovich(nominative):
-	def decline_first_name(name):
-		pass
+
+	def has_cyrillic(text):
+		return bool(re.search('[\u0400-\u04FF]', text))
+
+	def decline_first_name(name, *, gender):
+		return PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, name)
+
+	def decline_middle_name(name, *, gender):
+		return PYTR_DECLINATOR.make(NamePart.MIDDLENAME, gender, Case.GENITIVE, name)
+
 	def decline_last_name(last, *, gender):
 		parts = []
 		# handle doubled last-names
@@ -959,27 +967,30 @@ def make_genitive_via_petrovich(nominative):
 			if predefined := PREDEFINED_SURNAMES_PYTROVICH.get((part, gender)):
 				parts.append(predefined)
 			else:
-				part = PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, part)
-				parts.append(part)
+				declined = PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, part)
+				parts.append(declined)
 		return "-".join(parts)
-		
+
+	if not has_cyrillic(nominative):
+		return nominative
+
 	lexemes = nominative.split()
 	if len(lexemes) == 1:
 		# only {lastname}
 		gender = PYTR_DETECTOR.detect(lastname=lexemes[0])
-		last = PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, lexemes[0])
+		last = decline_last_name(lexemes[0], gender=gender)
 		return last
 	elif len(lexemes) == 2:
 		# {firstname} {lastname}
 		gender = PYTR_DETECTOR.detect(firstname=lexemes[0])
-		first = PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, lexemes[0])
+		first = decline_first_name(lexemes[0], gender=gender)
 		last = decline_last_name(lexemes[1], gender=gender)
 		return f"{first} {last}"
 	elif len(lexemes) == 3:
 		# {firstname} {middlename} {lastname}
 		gender = PYTR_DETECTOR.detect(firstname=lexemes[0])
-		first = PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, lexemes[0])
-		middle = PYTR_DECLINATOR.make(NamePart.MIDDLENAME, gender, Case.GENITIVE, lexemes[1])
+		first = decline_first_name(lexemes[0], gender=gender)
+		middle = decline_middle_name(lexemes[1], gender=gender)
 		last = decline_last_name(lexemes[2], gender=gender)
 		return f"{first} {middle} {last}"
 	else:
