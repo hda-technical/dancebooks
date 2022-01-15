@@ -351,7 +351,7 @@ def validate_single_filename(abspath, filename, item, errors):
 			(meta_field not in metadata)
 		):
 			errors.add(f"Field {meta_field} is not specified in filename [{filename}]")
-	
+
 	if metadata.incomplete and (item.get("note") is None):
 		errors.add("Incomplete entries must have lacunas described in the 'note' field")
 
@@ -739,7 +739,7 @@ def validate_month(item, errors):
 
 # WARN:
 #	[mancini_1620_ballo] uses folio numeration, thus recto and verso suffixes are legal.
-#	[wilson_1914_hesitation] and [wilson_1914_one_step] are taken from _The Atlanta Constitution_, 
+#	[wilson_1914_hesitation] and [wilson_1914_one_step] are taken from _The Atlanta Constitution_,
 #	which uses block-based numeration. Thus capital letter suffixes are legal too.
 PAGES_REGEXP = re.compile(r"(?P<start>\d+)[rvMF]?(-(?P<end>\d+)[rv]?)?")
 def validate_pages(item, errors):
@@ -947,9 +947,9 @@ def validate_backups():
 
 
 @click.command()
-@click.option("--extra", "make_extra_checks", default=False, help="Make extra validations (slow)")
-@click.option("--store-new-errors", "store_new_errors", default=False, help="Store new errors and ignore them in the future")
-@click.option("--remove-missing-ids", "remove_missing_ids", default=False, help="Remove lost ids from persistent storage")
+@click.option("--extra", "make_extra_checks", is_flag=True, default=False, help="Make extra validations (slow)")
+@click.option("--store-new-errors", "store_new_errors", is_flag=True, default=False, help="Store new errors and ignore them in the future")
+@click.option("--remove-missing-ids", "remove_missing_ids", is_flag=True, default=False, help="Remove lost ids from persistent storage")
 @click.option("--log", type=click.Choice(["all", "new"], case_sensitive=False), default="new", help="Whether to log all errors or only new ones")
 def main(*, make_extra_checks, log, store_new_errors, remove_missing_ids):
 	"""
