@@ -40,13 +40,22 @@ SHORT_LANG_MAP = {
 	"si": ["slovenian", "english", "german"],
 	"sw": ["swedish", "french"],
 	"ua": ["ukrainian"],
-	"us": ["english", "german"],
+	"us": [
+		# We do not distinct American and British English, they are just English
+		"english",
+		# German-written books appeared in German American society in the North.
+		# See: https://en.wikipedia.org/wiki/German_Americans
+		"german",
+		# Louisiana is a French-speaking state
+		"french",
+	],
 }
 
-#filename mapped to langid
+# filename mapped to langid
 LONG_LANG_MAP = {
 	"american.bib": {
 		"english",
+		"french",
 	},
 	"argentine.bib": {
 		"spanish",
