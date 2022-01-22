@@ -1,6 +1,6 @@
 site_name: Библиография исторического танца
 docs_dir: docs
-site_dir: /usr/share/hda/docs
+site_dir: ./docs-build
 nav:
   - Общая информация:
     - Лицензия: license.md
@@ -19,6 +19,6 @@ nav:
   - Резервные копии: library_backups.md
 plugins: []
 theme:
-  name: material
-  language: ru
+  name: mkdocs
+  nav_style: dark
 strict: true
