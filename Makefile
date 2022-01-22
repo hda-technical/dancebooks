@@ -46,9 +46,6 @@ configs-install-production:
 	#installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
-	# install directory for mkdocs static site
-	install --owner=$(USER) --group=$(USER) --directory /usr/share/hda
-
 configs-install-testing:
 	#creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
@@ -74,9 +71,6 @@ configs-install-testing:
 	service nginx reload
 	#installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
-
-	# install directory for mkdocs static site
-	install --owner=$(USER) --group=$(USER) --directory /usr/share/hda
 
 docs:
 	mkdocs build
