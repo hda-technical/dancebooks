@@ -400,11 +400,6 @@ def get_options():
 	}
 
 
-@flask_app.get("/docs")
-def get_docs():
-	return flask.redirect("/docs/index.html")
-
-
 @flask_app.get("/rss/books")
 @utils_flask.log_exceptions()
 def rss_redirect():
@@ -455,6 +450,9 @@ STATIC_FILES_DIR = os.path.join(os.path.dirname(__file__), "static")
 @flask_app.get("/<path:filename>")
 @utils_flask.log_exceptions()
 def everything_else(filename):
+	if filename.endswith("/"):
+		filename += "index.html"
+
 	if os.path.isfile(os.path.join(STATIC_TEMPLATES_DIR, filename)):
 		return flask.render_template("static/" + filename)
 	elif os.path.isfile(os.path.join(STATIC_FILES_DIR, filename)):
