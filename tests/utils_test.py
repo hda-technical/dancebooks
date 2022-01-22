@@ -5,11 +5,11 @@ import sys
 import pytest
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from dancebooks.utils import make_genitive_via_pymorphy, make_genitive_via_petrovich
+from dancebooks.utils import make_genitive_via_petrovich
 
 
 
-@pytest.mark.parametrize("make_genitive", [make_genitive_via_pymorphy, make_genitive_via_petrovich])
+@pytest.mark.parametrize("make_genitive", [make_genitive_via_petrovich])
 def test_making_genitive(make_genitive):
 	# latin text - should be preserved without exceptions
 	assert make_genitive("University of Aberdeen") == "University of Aberdeen"

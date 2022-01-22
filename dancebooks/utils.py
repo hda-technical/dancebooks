@@ -16,7 +16,6 @@ import xml.etree.ElementTree as xml
 from urllib import parse as urlparse
 
 import markdown
-import pymorphy2
 import requests
 
 from dancebooks.config import config
@@ -878,64 +877,6 @@ def make_html_cite(item):
 	result += ". "
 	result += f'<a href="/books/{item.id()}">https://{config.www.app_domain}/books/{item.id()}</a>'
 	return result
-
-
-morph_analyzer = pymorphy2.MorphAnalyzer()
-
-#WARN:
-# Certain surnames can not be processed by pymorphy
-# This mapping is intended to solve the problem.
-PREDEFINED_SURNAMES_PYMORPHY = {
-	("Бонч", "masc"): "Бонч",
-	("Бонч", "femn"): "Бонч",
-	("Бруевич", "masc"): "Бруевича",
-	("Стратилатов", "masc"): "Стратилатова",
-	("Колесник", "femn"): "Колесник",
-	("Валерьевна", "femn"): "Валерьевны",
-	("Микляева", "femn"): "Микляевой",
-	("Еремина", "femn"): "Ереминой",
-	("Эльяш", "masc"): "Эльяша",
-}
-
-
-def make_genitive_via_pymorphy(nominative):
-	"""
-	Accepts name in nominanive case, returns genivive case for it
-	"""
-	def process_lexeme(lexeme, gender):
-		if predefined := PREDEFINED_SURNAMES_PYMORPHY.get((lexeme, gender)):
-			assert gender is not None
-			return (predefined, gender)
-		variants = morph_analyzer.parse(lexeme)
-		for variant in variants:
-			if "nomn" in variant.tag:
-				tags = {"gent"}
-				if gender is not None:
-					tags.add(gender)
-				inflected = variant.inflect(tags).word
-				if lexeme[0].isupper():
-					return (inflected.capitalize(), variant.tag.gender)
-				else:
-					return (inflected, variant.tag.gender)
-		#fall back to defaults when no matching variants were found
-		return (lexeme, "masc")
-
-	#special trick with gender definition is required for
-	gender = None
-	processed = []
-	#pymorphy2 doesn't handle entire phrases - splitting into individual words
-	for lexeme in nominative.split():
-		#even though hyphen-separate surnames can be inflected properly without being split,
-		#one needs to handle them individually in order to capitalize them
-		sublexemes = lexeme.split('-')
-		inflected_sublexemes = []
-		for sublexeme in sublexemes:
-			inflected_sublexeme, guessed_gender = process_lexeme(sublexeme, gender)
-			if gender is None:
-				gender = guessed_gender
-			inflected_sublexemes.append(inflected_sublexeme)
-		processed.append('-'.join(inflected_sublexemes))
-	return " ".join(processed)
 
 
 from pytrovich.detector import PetrovichGenderDetector
