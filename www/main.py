@@ -400,6 +400,11 @@ def get_options():
 	}
 
 
+@flask_app.get("/docs")
+def get_docs():
+	return flask.redirect("/docs/index.html")
+
+
 @flask_app.get("/rss/books")
 @utils_flask.log_exceptions()
 def rss_redirect():
