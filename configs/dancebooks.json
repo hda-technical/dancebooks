@@ -97,9 +97,9 @@
             "reader.digitale-sammlungen.de",
             "stimmbuecher.digitale-sammlungen.de",
             "www.digitale-sammlungen.de",
-			
-			// use modern www.nypl.org permalinks instead
-			"catalog.nypl.org",
+            
+            // use modern www.nypl.org permalinks instead
+            "catalog.nypl.org",
         ],
         "blocked_domains_http": [
             "archive.org",
@@ -109,6 +109,7 @@
             "digital.slub-dresden.de",
             "gallica.bnf.fr",
             "imslp.org",
+            "levysheetmusic.mse.jhu.edu",
             "nbn-resolving.de",
             "polona.pl",
             "resolver.sub.uni-goettingen.de",
