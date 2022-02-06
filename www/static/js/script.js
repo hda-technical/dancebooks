@@ -44,7 +44,8 @@ bib.utils = (function() {
 		 * @param key: key to extract
 		 */
 		extractFromLocation: function(key) {
-			return new URL(window.location).searchParams.get(key);
+			var extracted = new URL(window.location).searchParams.get(key);
+			return extracted || "";
 		},
 
 		/*
