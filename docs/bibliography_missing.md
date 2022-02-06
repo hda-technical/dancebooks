@@ -615,7 +615,6 @@ _This part of the list is to joined with the general table_
 | 1480? | Guglielmo | De pratica seu arte tripudii vulgare opusculum<br/>_aka The New York Manuscript_ | New York, New York Public Library for the Performing Arts | `MGZMB-Res. 72-254` | `Gallo:NY`<br/>`Marocco:NYPL, 72-254`<br/>`Smith:NYp` | |
 | 1510 | Guglielmo | De pratica seu arte tripudii vulgare opusculum<br/>_aka The Second Florence Manuscript_<br/>_Dated by Barbara Sparti_ | Firenze, Biblioteca Medicea Laurenziana | `Antinori 13` | `Gallo:FL`<br/>`Marocco:FML, A 13`<br/>`Smith:Fl`<br/>`[Sparti, 1996]` | |
 | 1517 | | Stribaldi roll | Turin, Archivi Biscaretti | `Mazzo 4, no. 4` | | |
-| 1540–1560? | | Tuscan Manuscript<br/>_Cited as “Tuscan balli” by Barbara Sparti_<br/>_Dated by Barbara Sparti_ | Firenze, Biblioteca nazionale centrale | `Magliabecchiana XIX. 31` | `[Corti, 1977]`<br/>`[Sparti, 1996]`<br/>`[Sparti, 2004]`<br/>`[Transcriptions]` | |
 | 1559 | Christiano Lamberti | Letter with La caccia<br/>_Dated April 15, 1559_ | Firenze, Archivio di stato | `Carte Strozziane, I. 22, f. 138r-140v` | `[Corti, 1977]`<br/>`[Sparti,1996]`<br/>`[Sparti, 2004]`<br/>`[4. Rothenfelser]`<br/>`[Transcriptions]` | |
 | 1564–1575 | | Chigi Codex<br/>Dated before 1581 by Barbara Sparti | Vatican, Biblioteca Vaticana | `Chigi Codex S. V. 6 (3)`<br/>folios 24r–33v<br/>`Chigiana, C. VIII. 234` | `[Sparti, 2004]`<br/>`[4. Rothenfelser]`<br/>`[Transcriptions]` | |
 | 1570–1580? | | | Dulwich College, London | `Ms. XCIV/f.28` | [[Daye, Thorp, 2018]](https://bib.hda.org.ru/books/daye_2018_measures) | |
