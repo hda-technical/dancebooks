@@ -97,10 +97,10 @@ def download_book_from_iip(metadata_url, fastcgi_url, output_folder, files_root)
 			print(f"Downloading page #{page_number:04d}")
 			download_image_from_iip(fastcgi_url, remote_filename, iip_page_metadata, output_filename)
 
-@opster.command()
-def bnf_gallica(
-	id=("", "", "Id of the book to be downloaded (e. g. 'btv1b7200356s')")
-):
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `btv1b7200356s`)", required=True)
+def gallica(id):
 	"""
 	Downloads book from https://gallica.bnf.fr/
 	"""
@@ -108,10 +108,9 @@ def bnf_gallica(
 	bnf.get_gallica(id)
 
 
-@opster.command()
-def bnf_candide(
-	id=("", "", "Id of the image to be downloaded (e. g. 'can_097')")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `can_097`)", required=True)
+def candide(id):
 	"""
 	Downloads book from http://classes.bnf.fr/candide/
 	"""
@@ -877,6 +876,8 @@ def nypl(id):
 if __name__ == "__main__":
 	if sys.argv[1] in (
 		"bsb",
+		"candide",
+		"gallica",
 		"hathitrust",
 		"nypl",
 		"onb",
