@@ -24,12 +24,16 @@ def main():
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `btv1b7200356s`)", required=True)
-def gallica(id):
+@click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)
+def gallica(id, page):
 	"""
 	Downloads book from https://gallica.bnf.fr/
 	"""
 	import bnf
-	bnf.get_gallica(id)
+	if page:
+		bnf.get_gallica_page(id, page)
+	else:
+		bnf.get_gallica_book(id)
 
 
 @main.command()

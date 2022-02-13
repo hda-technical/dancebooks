@@ -1,8 +1,10 @@
+import functools
 import json
 import os
 import math
 import shutil
 import subprocess
+import time
 import uuid
 from xml.etree import ElementTree
 
@@ -44,7 +46,7 @@ def retry(retry_count, delay=0, delay_backoff=1):
 	return actual_decorator
 
 
-#@retry(retry_count=3)
+@retry(retry_count=3)
 def make_request(*args, **kwargs):
 	"""
 	Performs the request and returns requests.Response object.
@@ -82,6 +84,7 @@ def get_text(*args, **kwargs):
 	return make_request(*args, **kwargs).content.decode("utf-8")
 
 
+@retry(retry_count=3)
 def get_binary(output_filename, url_or_request, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
