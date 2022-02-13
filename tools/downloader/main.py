@@ -223,33 +223,14 @@ def mecklenburgVorpommern(
 			break
 
 
-@opster.command()
-def prlib(
-	id=("", "", "Book id to be downloaded (e. g. '20596C08-39F0-4E7C-92C3-ABA645C0E20E')"),
-	secondary_id=("", "", "Secondary id of the book (e. g. '5699092')"),
-	page=("p", "", "Download specified (zero-based) page only"),
-):
-	"""
-	Downloads book from https://www.prlib.ru/
-	"""
-	metadata_url = f"https://content.prlib.ru/metadata/public/{id}/{secondary_id}/{id}.json"
-	files_root = f"/var/data/scans/public/{id}/{secondary_id}/"
-	fastcgi_url = "https://content.prlib.ru/fcgi-bin/iipsrv.fcgi"
-	output_folder = make_output_folder("prlib", id)
-	if page:
-		page = int(page)
-		output_filename = make_output_filename(output_folder, page)
-		metadata = get_json(metadata_url)
-		page_metadata = metadata[page]
-		remote_filename = os.path.join(files_root, page_metadata["f"])
-		iip.download_image(fastcgi_url, remote_filename, page_metadata, output_filename)
-	else:
-		iip.download_book(
-			metadata_url=metadata_url,
-			fastcgi_url=fastcgi_url,
-			files_root=files_root,
-			output_folder=output_folder
-		)
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `20596C08-39F0-4E7C-92C3-ABA645C0E20E`)", required=True)
+@click.option("--secondary-id", help="Secondary id of the book (e. g. '5699092')", required=False, type=int, default=0)
+@click.option("--page", help="Download specified (zero-based) page only", required=False, default=None)
+def prlib(id, secondary_id, page):
+	import prlib
+	prlib.get(id, secondary_id, page)
 
 
 @opster.command()
@@ -805,6 +786,7 @@ if __name__ == "__main__":
 		"hathitrust",
 		"nypl",
 		"onb",
+		"prlib",
 		"staats-berlin",
 	):
 		# dispatch via click
