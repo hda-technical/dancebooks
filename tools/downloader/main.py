@@ -231,7 +231,7 @@ def mecklenburgVorpommern(
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `20596C08-39F0-4E7C-92C3-ABA645C0E20E`)", required=True)
 @click.option("--secondary-id", help="Secondary id of the book (e. g. '5699092')", required=False, type=int, default=0)
-@click.option("--page", help="Download specified (zero-based) page only", required=False, default=None)
+@click.option("--page", help="Download specified (zero-based) page only", required=False, type=int, default=None)
 def prlib(id, secondary_id, page):
 	import prlib
 	prlib.get(id, secondary_id, page)

@@ -1,3 +1,5 @@
+import os
+
 import iip
 import utils
 
@@ -13,10 +15,14 @@ def get(id, secondary_id, page):
 	if page:
 		page = int(page)
 		output_filename = utils.make_output_filename(output_folder, page)
-		metadata = utils.get_json(metadata_url)
-		page_metadata = metadata[page]
+		page_metadata = utils.get_json(metadata_url)["pgs"][page]
 		remote_filename = os.path.join(files_root, page_metadata["f"])
-		iip.download_image(fastcgi_url, remote_filename, page_metadata, output_filename)
+		iip.download_image(
+			fastcgi_url,
+			remote_filename,
+			iip.Metadata.from_json(page_metadata),
+			output_filename,
+		)
 	else:
 		iip.download_book(
 			metadata_url=metadata_url,
