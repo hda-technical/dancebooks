@@ -292,14 +292,17 @@ def is_url_valid(url, item):
 		return False
 
 	#validating blocked domains
+	hostname = split_result.hostname
+	if hostname.startswith("www."):
+		hostname = hostname[4:]
 	for blocked_domain in config.parser.blocked_domains:
-		if split_result.hostname.endswith(blocked_domain):
+		if hostname.endswith(blocked_domain):
 			logging.debug(f"Domain {split_result.hostname} is blocked")
 			return False
 
 	#validating domains blocked for insecure (http) access
 	if (
-		(split_result.hostname in config.parser.blocked_domains_http) and
+		(hostname in config.parser.blocked_domains_http) and
 		(split_result.scheme == "http")
 	):
 		logging.debug(f"Domain {split_result.hostname} is blocked for insecure access")
