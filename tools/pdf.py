@@ -37,10 +37,14 @@ def get_image_size(path):
 	return (width, height)
 
 
-def add_image(pdf, path, *, position):
+def convert_to_pdf(img: pil.Image, output_path: pathlib.Path, *, position):
 	x, y = position
+	w_inch = img.width / img.info["dpi"][0]
+	h_inch = img.height / img.info["dpi"][1]
+	pdf = fpdf.FPDF(unit="in", format=(w_inch, h_inch))
 	pdf.add_page()
-	pdf.image(str(path), x=x, y=y)
+	pdf.image(img.filename, x=x, y=y, w=w_inch, h=h_inch)
+	pdf.output(output_path)
 
 
 def is_path_valid(path):
@@ -96,10 +100,8 @@ def convert(output_size):
 		output_path = path.with_suffix(".pdf")
 		print(f"Converting {path} to {output_path}")
 		if output_size is None:
-			width, height = get_image_size(path)
-			pdf = fpdf.FPDF(unit="pt", format=(width, height))
-			add_image(pdf, path, position=(0, 0))
-			pdf.output(output_path)
+			img = pil.Image.open(path)
+			convert_to_pdf(img, output_path, position=(0, 0))
 			continue
 
 		cropped_path = path.with_suffix(".tmp.jpg")
@@ -108,10 +110,8 @@ def convert(output_size):
 			input_path=path,
 			output_path=cropped_path,
 		)
-		pdf = fpdf.FPDF(unit="pt", format=(width, height))
-		add_image(pdf, cropped_path, position=(0, 0))
-		pdf.output(output_path)
-
+		img = pil.Image.open(cropped_path)
+		convert_to_pdf(img, output_path, position=(0, 0))
 		os.remove(cropped_path)
 
 
