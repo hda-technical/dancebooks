@@ -8,7 +8,6 @@ from xml.etree import ElementTree
 
 import bs4
 import click
-import opster
 import requests
 
 from utils import *  # TODO: fix imports
@@ -46,11 +45,13 @@ def candide(id):
 	bnf.get_candide(id)
 
 
-@opster.command()
-def belgiumRoyalLibrary(
-	id=("", "", "Id of the book to be downloaded (e. g. 'A0524435')"),
-	volume=("", "", "Volume of the book to be downloaded (e. g. '1')")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `A0524435`)", required=True)
+@click.option("--volume", help="Volume of the book to be downloaded (e. g. '1')", required=True)
+def belgiumRoyalLibrary(id, volume):
+	"""
+	Downloads a book from https://www.kbr.be
+	"""
 	class UrlMaker:
 		def __init__(self, zoom, page_root_url):
 			self.zoom = zoom
@@ -113,11 +114,10 @@ def bsb(id):
 	bsb.get_book(id)
 
 
-@opster.command()
-def uniDuesseldorf(
-	first=("", "", "First page to be downloaded (e. g. '1910311')"),
-	last=("", "", "Last page to be downloaded (e. g. '1911077')")
-):
+@main.command()
+@click.option("--first", type=int, help="First page to be downloaded (e. g. '1910311')", required=True)
+@click.option("--last", type=int, help="First page to be downloaded (e. g. '1911077')", required=True)
+def uniDuesseldorf(first, last):
 	"""
 	Downloads set of images from http://digital.ub.uni-duesseldorf.de
 	"""
@@ -129,6 +129,7 @@ def uniDuesseldorf(
 	# In order to detect proper time for stopping the iteration,
 	# we will check if tile size is greater than this number of bytes
 	MIN_FILE_SIZE = 5120
+	TILE_SIZE = 512
 
 	class UrlMaker:
 		def __init__(self, page):
@@ -141,9 +142,6 @@ def uniDuesseldorf(
 			UNKNOWN_NUMBER = 1862
 			return f"http://digital.ub.uni-duesseldorf.de/image/tile/wc/nop/{UNKNOWN_NUMBER}/1.0.0/{page}/{ZOOM}/{tile_x}/{tile_y}.jpg"
 
-	first = int(first)
-	last = int(last)
-	TILE_SIZE = 512
 
 	for page in range(first, last + 1):
 		output_filename = make_output_filename(base="", page=page)
@@ -162,10 +160,9 @@ def uniDuesseldorf(
 		download_and_sew_tiles(output_filename, url_maker, policy)
 
 
-@opster.command()
-def uniGoettingen(
-	id=("", "", "Id of the book to be downloaded (e. g. 'PPN722203519')")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. 'PPN722203519')", required=True)
+def uniGoettingen(id):
 	"""
 	Downloads book from https://gdz.sub.uni-goettingen.de
 	"""
@@ -174,17 +171,13 @@ def uniGoettingen(
 	iiif.download_book(manifest_url, output_folder)
 
 
-@opster.command()
-def encyclopedie(
-	volume=("", "", "Volume to be downloaded (e. g. '24')"),
-	page=("", "", "Page number to be downloaded (e. g. '247')")
-):
+@main.command()
+@click.option("--volume", type=int, help="Volume to be downloaded (e. g. '24')", required=True)
+@click.option("--page", type=int, help="Page number to be downloaded (e. g. '247')", required=True)
+def encyclopedie(volume, page):
 	"""
 	Downloads single image from http://enccre.academie-sciences.fr/encyclopedie
 	"""
-	volume = int(volume)
-	page = int(page)
-
 	#there is no manifest.json file, slightly modified IIIF protocol is being used by the website
 	image_list_url = f"http://enccre.academie-sciences.fr/icefront/api/volume/{volume}/imglist"
 	image_list_metadata = get_json(image_list_url)
@@ -194,10 +187,9 @@ def encyclopedie(
 	iiif.download_image(image_url, output_file)
 
 
-@opster.command()
-def vatlib(
-	id=("", "", "Id of the book to be downloaded (e. g. 'MSS_Cappon.203')")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. 'MSS_Cappon.203')", required=True)
+def vatlib(id):
 	"""
 	Downloads book from http://digi.vatlib.it/
 	"""
@@ -206,10 +198,9 @@ def vatlib(
 	iiif.download_book(manifest_url, output_folder)
 
 
-@opster.command()
-def mecklenburgVorpommern(
-	id=("", "", "Id of the book to be downloaded (e. g. 'PPN880809493')")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. 'PPN880809493')", required=True)
+def mecklenburgVorpommern(id):
 	"""
 	Downloads book from http://www.digitale-bibliothek-mv.de
 	"""
@@ -233,14 +224,16 @@ def mecklenburgVorpommern(
 @click.option("--secondary-id", help="Secondary id of the book (e. g. '5699092')", required=False, type=int, default=0)
 @click.option("--page", help="Download specified (zero-based) page only", required=False, type=int, default=None)
 def prlib(id, secondary_id, page):
+	"""
+	Download a book from https://www.prlib.ru/
+	"""
 	import prlib
 	prlib.get(id, secondary_id, page)
 
 
-@opster.command()
-def nga(
-	id=("", "", "Image id to be downloaded (e. g. `49035`)")
-):
+@main.command()
+@click.option("--id", help="Image id to be downloaded (e. g. `49035`)", required=True)
+def nga(id):
 	"""
 	Downloads single image from https://www.nga.gov
 	"""
@@ -258,10 +251,9 @@ def nga(
 	)
 
 
-@opster.command()
-def habImage(
-	id=("", "", "Image id to be downloaded (e. g. `grafik/uh-4f-47-00192`)")
-):
+@main.command()
+@click.option("--id", help="Image id to be downloaded (e. g. `grafik/uh-4f-47-00192`)", required=True)
+def habImage(id):
 	"""
 	Downloads single image from http://diglib.hab.de and http://kk.haum-bs.de
 	(both redirect to Virtuelles Kupferstichkabinett website, which is too hard to be typed)
@@ -270,10 +262,9 @@ def habImage(
 	hab.get_image(id)
 
 
-@opster.command()
-def habBook(
-	id=("", "", "Book id to be downloaded (e. g. `mss/120-1-extrav`)")
-):
+@main.command()
+@click.option("--id", help="Book id to be downloaded (e. g. `mss/120-1-extrav`)", required=True)
+def habBook(id):
 	"""
 	Downloads book from http://diglib.hab.de
 	"""
@@ -281,10 +272,9 @@ def habBook(
 	hab.get_book(id)
 
 
-@opster.command()
-def darmstadt(
-	id=("", "", "Book id to be downloaded (e. g. `Mus-Ms-1827`)")
-):
+@main.command()
+@click.option("--id", help="Book id to be downloaded (e. g. `Mus-Ms-1827`)", required=True)
+def darmstadt(id):
 	"""
 	Downloads book from http://tudigit.ulb.tu-darmstadt.de
 	"""
@@ -292,10 +282,9 @@ def darmstadt(
 	darmstadt.get(id)
 
 
-@opster.command()
-def yaleImage(
-	id=("", "", "Image id to be downloaded (e. g. `lwlpr11386`)")
-):
+@main.command()
+@click.option("--id", help="Image id to be downloaded (e. g. `lwlpr11386`)", required=True)
+def yaleImage(id):
 	"""
 	Downloads image from http://images.library.yale.edu/
 	"""
@@ -325,11 +314,10 @@ def yaleImage(
 	download_and_sew_tiles(output_filename, UrlMaker(MAX_ZOOM), policy)
 
 
-@opster.command()
-def yaleBook(
-	id=("", "", "Image id to be downloaded (e. g. `1327507`)"),
-	chapter=("", "", "Chapter to download from (e. g. `PATREQIMGX12`)")
-):
+@main.command()
+@click.option("--id", help="Image id to be downloaded (e. g. `1327507`)", required=True)
+@click.option("--chapter", help="Chapter to download from (e. g. `PATREQIMGX12`)", required=True)
+def yaleBook(id, chapter):
 	"""
 	Downloads image from https://brbl-zoom.library.yale.edu
 	"""
@@ -342,10 +330,9 @@ def yaleBook(
 	iip.download_image(fastcgi_url, remote_filename, metadata, output_filename)
 
 
-@opster.command()
-def bl_book(
-	id=("", "", "Book id to be downloaded (e. g. `vdc_100026052453`, as it is displayed in the viewer url)")
-):
+@main.command()
+@click.option("--id", help="Book id to be downloaded (e. g. `vdc_100026052453`, as it is displayed in the viewer url)", required=True)
+def bl_book(id):
 	"""
 	Downloads a book from http://explore.bl.uk
 	"""
@@ -353,10 +340,9 @@ def bl_book(
 	bl.get_book(id)
 
 
-@opster.command()
-def bl_manuscript(
-	id=("", "", "Page id of the manuscript to be downloaded (e. g. `add_ms_12531!1_f005r`)")
-):
+@main.command()
+@click.option("--id", help="Page id of the manuscript to be downloaded (e. g. `add_ms_12531!1_f005r`)", required=True)
+def bl_manuscript(id):
 	"""
 	Downloads single manuscript page from http://www.bl.uk/manuscripts/Default.aspx
 	"""
@@ -364,10 +350,9 @@ def bl_manuscript(
 	bl.get_manuscript(id)
 
 
-@opster.command()
-def leidenCollection(
-	id=("", "", "Image id of the painting to be downloaded(e. g. `js-108-jan_steen-the_fair_at_warmond_files`)")
-):
+@main.command()
+@click.option("--id", help="Image id of the painting to be downloaded(e. g. `js-108-jan_steen-the_fair_at_warmond_files`)", required=True)
+def leidenCollection(id):
 	"""
 	Downloads single image from https://www.theleidencollection.com
 	"""
@@ -388,10 +373,9 @@ def leidenCollection(
 	download_and_sew_tiles(output_filename, url_maker, policy)
 
 
-@opster.command()
-def henryFord(
-	id=("", "", "Id of the image to be downloaded (e. g. `4_cgntCY2Bj2ZpaKCjjXrWcNSEjlsU_Mk6ZUJByJ4smfJUNCpbPL_8dPavSb0DwGNavju8-nAYNsFUXP1jmb1KuGO2_RIzJoMfr8QvK5JTc/thf97207`")
-):
+@main.command()
+@click.option("--id", help="Id of the image to be downloaded (e. g. `4_cgntCY2Bj2ZpaKCjjXrWcNSEjlsU_Mk6ZUJByJ4smfJUNCpbPL_8dPavSb0DwGNavju8-nAYNsFUXP1jmb1KuGO2_RIzJoMfr8QvK5JTc/thf97207`", required=True)
+def henryFord(id):
 	"""
 	Downloads single image from https://www.thehenryford.org/
 	"""
@@ -405,10 +389,9 @@ def henryFord(
 	deep_zoom.download_image(output_filename, metadata_url, url_maker)
 
 
-@opster.command()
-def makAt(
-	id=("", "", "Id of the image to be downloaded (e. g. `ki-6952-1_1`)")
-):
+@main.command()
+@click.option("--id", help="Id of the image to be downloaded (e. g. `ki-6952-1_1`)", required=True)
+def makAt(id):
 	"""
 	Downloads single image from https://sammlung.mak.at/
 	"""
@@ -423,10 +406,9 @@ def makAt(
 	deep_zoom.download_image(output_filename, metadata_url, url_maker)
 
 
-@opster.command()
-def npg(
-	id=("", "", "Id of the image to be downloaded (e. g. `mw61074`)")
-):
+@main.command()
+@click.option("--id", help="Id of the image to be downloaded (e. g. `mw61074`)", required=True)
+def npg(id):
 	"""
 	Downloads single image from https://www.npg.org.uk
 	"""
@@ -434,10 +416,9 @@ def npg(
 	npg.get(id)
 
 
-@opster.command()
-def uniJena(
-	id=("", "", "Id of the image to be downloaded, including document id (e. g. `00108217/JLM_1787_H002_0003_a`)")
-):
+@main.command()
+@click.option("--id", help="Id of the image to be downloaded, including document id (e. g. `00108217/JLM_1787_H002_0003_a`)", required=True)
+def uniJena(id):
 	"""
 	Downloads single image from https://zs.thulb.uni-jena.de
 
@@ -478,15 +459,13 @@ def uniJena(
 ###################
 
 
-@opster.command()
-def locMusdi(
-	id=("", "", "Id of the book to be downloaded (e. g. `056`)"),
-	start_from=("", 1, "The number of the first page in the sequence (defaults to 1)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `056`)", required=True)
+@click.option("--start", type=int, default=1, help="The number of the first page in the sequence")
+def locMusdi(id, start):
 	"""
 	Downloads book from Library of Congress Music/Dance instruction
 	"""
-	start_from = int(start_from)
 	# Some ids are known to be missing
 	MISSING_IDS = [
 		"050", "054", "057", "061", "071",
@@ -508,7 +487,7 @@ def locMusdi(
 		print(f"The maximum id is musdi.{MAX_ID}. Please, recheck the ID.")
 		sys.exit(1)
 	output_folder = make_output_folder("locMusdi", id)
-	for page in range(start_from, 1000):
+	for page in range(start, 1000):
 		base_url = f"https://memory.loc.gov/music/musdi/{id}/{page:04d}"
 		url = None
 		for extension in ["tif", "jpg"]:
@@ -541,10 +520,9 @@ def hathitrust(id, from_page, to_page):
 	hathitrust.get(id=id, from_page=from_page, to_page=to_page)
 
 
-@opster.command()
-def internet_culturale(
-	id=("", "", "Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)", required=True)
+def internet_culturale(id):
 	"""
 	Downloads book from Internet Culturale, Biblioteca Digitale Italiana (http://www.internetculturale.it/)
 	"""
@@ -552,10 +530,9 @@ def internet_culturale(
 	internet_culturale.get(id)
 
 
-@opster.command()
-def	vwml(
-	id=("", "", "Id of the book to be downloaded (e. g. `Wilson1808`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `Wilson1808`)", required=True)
+def	vwml(id):
 	"""
 	Downloads book from https://www.vwml.org/topics/historic-dance-and-tune-books
 	"""
@@ -615,10 +592,9 @@ def staats_berlin(id):
 		page += 1
 
 
-@opster.command()
-def difmoe(
-	id=("", "", "UUID of the book to be downloaded (e. g. `c96b8876-b4f8-48a5-8221-3949392b1a5c`)")
-):
+@main.command()
+@click.option("--id", help="UUID of the book to be downloaded (e. g. `c96b8876-b4f8-48a5-8221-3949392b1a5c`)", required=True)
+def difmoe(id):
 	"""
 	Downloads book from https://www.difmoe.eu/
 	"""
@@ -626,10 +602,9 @@ def difmoe(
 	difmoe.get(id)
 
 
-@opster.command()
-def polona(
-	id=("", "", "Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)")
-):
+@main.command()
+@click.option("--id", help="Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)", required=True)
+def polona(id):
 	"""
 	Downloads book from https://polona.pl
 	"""
@@ -650,10 +625,9 @@ def polona(
 			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
 
 
-@opster.command()
-def haab(
-	id=("", "", "Id of the book to be downloaded (e. g. `1286758696_1822000000/EPN_798582804`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `1286758696_1822000000/EPN_798582804`)", required=True)
+def haab(id):
 	"""
 	Downloads book from https://haab-digital.klassik-stiftung.de/
 	"""
@@ -696,10 +670,9 @@ def haab(
 				break
 
 
-@opster.command()
-def fulda(
-	id=("", "", "Id of the book to be downloaded (e. g. `PPN446487767`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `PPN446487767`)", required=True)
+def fulda(id):
 	"""
 	Downloads book from https://fuldig.hs-fulda.de
 	"""
@@ -707,10 +680,9 @@ def fulda(
 	fulda.get(id)
 
 
-@opster.command()
-def cambridge(
-	id=("", "", "Id of the image to be downloaded (e. g. `PR-INC-00000-A-00007-00002-00888-000-00420`)")
-):
+@main.command()
+@click.option("--id", help="Id of the image to be downloaded (e. g. `PR-INC-00000-A-00007-00002-00888-000-00420`)", required=True)
+def cambridge(id):
 	"""
 	Downloads image from https://images.lib.cam.ac.uk
 	"""
@@ -718,10 +690,9 @@ def cambridge(
 	cambridge.get(id)
 
 
-@opster.command()
-def bodleian(
-	id=("", "", "Id of the image to be downloaded (e. g. `1273e6f5-ee79-4f6b-9014-a9065a93b9ff`)")
-):
+@main.command()
+@click.option("--id", help="Id of the image to be downloaded (e. g. `1273e6f5-ee79-4f6b-9014-a9065a93b9ff`)", required=True)
+def bodleian(id):
 	"""
 	Downloads image from https://digital.bodleian.ox.ac.uk
 	"""
@@ -729,10 +700,9 @@ def bodleian(
 	bodleian.get(id)
 
 
-@opster.command()
-def goettingen(
-	id=("", "", "Id of the image to be downloaded (e. g. `PPN1748520709`)")
-):
+@main.command()
+@click.option("--id", help="Id of the image to be downloaded (e. g. `PPN1748520709`)", required=True)
+def goettingen(id):
 	"""
 	Downloads book from https://gdz.sub.uni-goettingen.de
 	"""
@@ -740,10 +710,9 @@ def goettingen(
 	goettingen.get_book(id)
 	
 	
-@opster.command()
-def nb_no(
-	id=("", "", "Id of the book to be downloaded (e. g. `172099`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `172099`)", required=True)
+def nb_no(id):
 	"""
 	Downloads book from https://www.nb.no
 	"""
@@ -751,10 +720,9 @@ def nb_no(
 	nb_no.get(id)
 	
 
-@opster.command()
-def kb_dk(
-	id=("", "", "Id of the book to be downloaded (e. g. `object125610`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `object125610`)", required=True)
+def kb_dk(id):
 	"""
 	Downloads book from http://www5.kb.dk
 	"""
@@ -762,10 +730,9 @@ def kb_dk(
 	kb_dk.get(id)
 
 
-@opster.command()
-def shpl(
-	id=("", "", "Id of the book to be downloaded (e. g. `63678`)")
-):
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `63678`)", required=True)
+def shpl(id):
 	"""
 	Downloads book from http://elib.shpl.ru
 	"""
@@ -782,19 +749,6 @@ def nypl(id):
 	import nypl
 	nypl.get(id)
 
+
 if __name__ == "__main__":
-	if sys.argv[1] in (
-		"bsb",
-		"candide",
-		"gallica",
-		"hathitrust",
-		"nypl",
-		"onb",
-		"prlib",
-		"staats-berlin",
-	):
-		# dispatch via click
-		main()
-	else:
-		# dispatch via opster
-		opster.dispatch()
+	main()
