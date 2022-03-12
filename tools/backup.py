@@ -5,7 +5,7 @@ import os
 import subprocess
 import sys
 
-import opster
+import click
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks.config import config
@@ -27,10 +27,14 @@ def make_library_path(path):
 	return os.path.join(config.www.elibrary_dir, path) + ".pdf"
 
 
-@opster.command()
-def add(
-	force=("", False, "Do not check PDF file presence")
-):
+@click.group()
+def main():
+	pass
+
+
+@main.command()
+@click.option("--force", is_flag=True, help="Do not check PDF file presence")
+def add(force):
 	backup = db.Backup()
 	backup.path = input("Enter path: ")
 	backup.path = fixup_path(backup.path)
@@ -59,10 +63,9 @@ def add(
 		print(f"Added backup #{backup.id}")
 
 
-@opster.command()
-def get(
-	id=("", 0, "Id of the backup to be updated"),
-):
+@main.command()
+@click.option("--id", type=int, required=True, help="Id of the backup to be updated")
+def get(id):
 	if id == 0:
 		print("Backup id is required")
 		sys.exit(1)
@@ -75,16 +78,19 @@ def get(
 		print(f"Aspect ratio: {backup.aspect_ratio_x}{const.SIZE_DELIMETER}{backup.aspect_ratio_y}")
 
 
-@opster.command()
+@main.command()
+@click.option("--id", type=int, required=True, help="Id of the backup to be updated")
+@click.option("--path", type=str, default=None, help="Set backup path to the given value")
+@click.option("--provenance", type=str, default=None, help="Set backup provenance to the given value (markdown supported)")
+@click.option("--note", type=str, default=None, help="Set backup note to the given value (markdown supported)")
+@click.option("--image-size", type=str, default=None, help=f"Set backup image size to the given value ({SIZE_FORMAT})")
+@click.option("--aspect-ratio", type=str, default=None, help=f"Set backup image aspect ratio to the given value ({SIZE_FORMAT})")
 def update(
-	id=("", 0, "Id of the backup to be updated"),
-	# opster does not allow checking if the option was defined.
-	# Workaround this by passing ugly default.
-	path=("", NOT_DEFINED, "Set backup path to the given value"),
-	provenance=("", NOT_DEFINED, "Set backup provenance to the given value (markdown supported)"),
-	note=("", NOT_DEFINED, "Set backup note to the given value (markdown supported)"),
-	image_size=("", NOT_DEFINED, f"Set backup image size to the given value ({SIZE_FORMAT})"),
-	aspect_ratio=("", NOT_DEFINED, f"Set backup image aspect ratio to the given value ({SIZE_FORMAT})")
+	path,
+	provenance,
+	note,
+	image_size,
+	aspect_ratio,
 ):
 	if id == 0:
 		print("Backup id is required")
@@ -92,23 +98,23 @@ def update(
 	with db.make_transaction() as session:
 		backup = session.query(db.Backup).get(id)
 		modified = False
-		if path != NOT_DEFINED:
+		if path is not None:
 			path = fixup_path(path)
 			library_path = make_library_path(path)
 			if not os.path.isfile(library_path):
 				raise ValueError("Original file for this backup was not found in elibrary")
 			backup.path = path
 			modified = True
-		if provenance != NOT_DEFINED:
+		if provenance is not None:
 			backup.provenance = provenance
 			modified = True
-		if note != NOT_DEFINED:
+		if note is not None:
 			backup.note = note
 			modified = True
-		if image_size != NOT_DEFINED:
+		if image_size is not None:
 			backup.image_size_x, backup.image_size_y = map(int, image_size.split(const.SIZE_DELIMETER))
 			modified = True
-		if aspect_ratio != NOT_DEFINED:
+		if aspect_ratio is not None:
 			backup.aspect_ratio_x, backup.aspect_ratio_y = map(int, aspect_ratio.split(const.SIZE_DELIMETER))
 			modified = True
 		if modified:
@@ -119,10 +125,9 @@ def update(
 			print("Nothing to modify")
 
 
-@opster.command()
-def delete(
-	id=("", 0, "Id of the backup to be deleted")
-):
+@main.command()
+@click.option("--id", type=int, required=True, help="Id of the backup to be deleted")
+def delete():
 	if id == 0:
 		print("Backup id is required")
 		sys.exit(1)
@@ -136,7 +141,7 @@ def delete(
 			print(f"Backup #{id} was deleted")
 
 
-@opster.command()
+@main.command()
 def make_dump():
 	output_folder = datetime.date.today().isoformat()
 	env = {
@@ -157,4 +162,4 @@ def make_dump():
 
 
 if __name__ == "__main__":
-	opster.dispatch()
+	main()
