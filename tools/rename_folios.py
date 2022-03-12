@@ -2,13 +2,13 @@
 
 import os
 
-import opster
+import click
 
-@opster.command()
-def main(
-	start=("", 1, "First folio number"),
-	prefix=("", "", "Prefix to be added to all folio numbers")
-):
+
+@click.command()
+@click.option("--start", default=1, type=int, help="First folio number")
+@click.option("--prefix", default="", help="Prefix to be added to all folio numbers")
+def main(start, prefix):
 	filenames = []
 	for entry in os.scandir("."):
 		if not entry.is_file():
@@ -35,4 +35,4 @@ def main(
 	
 
 if __name__ == "__main__":
-	main.command()
+	main()
