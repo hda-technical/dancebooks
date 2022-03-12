@@ -9,7 +9,7 @@ ipython==8.0.1
 Markdown==3.3.6
 mkdocs==1.2.3
 opster==4.2
-Pillow==9.0.0
+Pillow==9.0.1
 pip==21.3.1
 pyflakes==2.4.0
 pyjson5==1.6.1
