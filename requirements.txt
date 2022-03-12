@@ -8,9 +8,7 @@ fpdf==1.7.2
 ipython==8.1.1
 Markdown==3.3.6
 mkdocs==1.2.3
-opster==4.2
 Pillow==9.0.1
-pip==22.0.4
 pyflakes==2.4.0
 pyjson5==1.6.1
 pytest==7.0.1
