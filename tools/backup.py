@@ -86,15 +86,13 @@ def get(id):
 @click.option("--image-size", type=str, default=None, help=f"Set backup image size to the given value ({SIZE_FORMAT})")
 @click.option("--aspect-ratio", type=str, default=None, help=f"Set backup image aspect ratio to the given value ({SIZE_FORMAT})")
 def update(
+	id,
 	path,
 	provenance,
 	note,
 	image_size,
 	aspect_ratio,
 ):
-	if id == 0:
-		print("Backup id is required")
-		sys.exit(1)
 	with db.make_transaction() as session:
 		backup = session.query(db.Backup).get(id)
 		modified = False
