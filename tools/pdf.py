@@ -38,9 +38,10 @@ def get_image_size(path):
 
 
 def convert_to_pdf(img: pil.Image, output_path: pathlib.Path, *, position):
+	DEFAULT_DPI = (600, 600)
 	x, y = position
-	w_inch = img.width / img.info["dpi"][0]
-	h_inch = img.height / img.info["dpi"][1]
+	w_inch = img.width / img.info.get("dpi", DEFAULT_DPI)[0]
+	h_inch = img.height / img.info.get("dpi", DEFAULT_DPI)[1]
 	pdf = fpdf.FPDF(unit="in", format=(w_inch, h_inch))
 	pdf.add_page()
 	pdf.image(img.filename, x=x, y=y, w=w_inch, h=h_inch)
