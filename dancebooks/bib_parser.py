@@ -360,14 +360,14 @@ class BibParser:
 					self.raise_error()
 
 			elif self.state == ParserState.ReadingId:
-				if c.isspace():
+				if c.isspace() or c == ',':
 					self.set_item_param(item, "id", self.lexeme)
-					self.state = ParserState.WaitingForCommaAfterId
 					self.lexeme = ""
-				elif c == ',':
-					self.set_item_param(item, "id", self.lexeme)
-					self.state = ParserState.WaitingForKey
-					self.lexeme = ""
+					if c.isspace():
+						self.state = ParserState.WaitingForCommaAfterId
+					else:
+						# c is comma
+						self.state = ParserState.WaitingForKey
 				else:
 					self.lexeme += c
 
