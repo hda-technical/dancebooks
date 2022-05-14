@@ -17,10 +17,10 @@
             <description><![CDATA[
                 <ul>
 {% for entry in entries %}
-    {% set id = entry.id() %}
-    {% set author = entry.author() %}
-    {% set title = entry.title() or entry.incipit() %}
-    {% set year = entry.year() %}
+    {% set id = entry.id %}
+    {% set author = entry.author %}
+    {% set title = entry.title or entry.incipit %}
+    {% set year = entry.year %}
                     <li><a href="https://bib.hda.org.ru/books/{{ id }}">[{{ year }}] {% if author %} {{ author }} — {% endif %} {{ title }}</a><br/></li>
 {% endfor %}
                 </ul>

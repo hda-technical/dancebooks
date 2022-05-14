@@ -68,7 +68,7 @@ class ErrorReport(BasicMessage):
 		)
 
 	def subject(self):
-		return f"dancebooks: Error reports for {self.book.id()}"
+		return f"dancebooks: Error reports for {self.book.id}"
 
 
 class KeywordsSuggest(BasicMessage):
@@ -87,5 +87,5 @@ class KeywordsSuggest(BasicMessage):
 		)
 
 	def subject(self):
-		return f"dancebooks: Keywords suggestion for {self.book.id()}"
+		return f"dancebooks: Keywords suggestion for {self.book.id}"
 

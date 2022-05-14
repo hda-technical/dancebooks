@@ -60,8 +60,8 @@ def test_parse_string():
 	assert keywords == EXPECTED_KEYWORDS
 
 	item1 = next(iter(item_index["id"]["id_1"]))
-	assert '{' not in item1.title()
-	assert '}' not in item1.title()
+	assert '{' not in item1.title
+	assert '}' not in item1.title
 
 
 def test_search_items():
@@ -129,7 +129,7 @@ def test_inverted_index_search():
 	filtered_items = item_index["keywords"][INVERTED_KEY]
 
 	assert len(filtered_items) == 1
-	assert utils.first(filtered_items).id() == "id_2"
+	assert utils.first(filtered_items).id == "id_2"
 
 
 def test_cite_formatting():

@@ -168,11 +168,11 @@ def format_catalogue_code(single_code):
 
 
 def format_transcription_url(item):
-	return f'<a href="/books/{item.id()}/transcription">/books/{item.id()}/transcription</a>'
+	return f'<a href="/books/{item.id}/transcription">/books/{item.id}/transcription</a>'
 
 
 def format_guid_for_rss(items):
-	get_id = lambda item: item.id()
+	get_id = lambda item: item.id
 	return "|".join(map(get_id, sorted(items, key=get_id)))
 
 

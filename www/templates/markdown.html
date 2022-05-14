@@ -4,9 +4,9 @@
         {% include "components/head-meta-common.html" %}
         {% include "components/head-link.html" %}
         {% include "components/head-script.html" %}
-        <meta name="og:title" content="{{ item.title() }}"/>
+        <meta name="og:title" content="{{ item.title }}"/>
         <meta name="og:type" content="book"/>
-        <meta name="og:description" content="Transcription of the book by {{ item.author() }}"/>
+        <meta name="og:description" content="Transcription of the book by {{ item.author }}"/>
         <meta name="og:image" content="/images/icon/persimmon.032x032.png"/>
         <meta name="og:url" content="{{ request.url }}"/>
         <title>{{ _("interface:title") }}</title>
@@ -14,11 +14,11 @@
 	<body>
 		{% include "components/choose-lang.html" %}
 		{% include "components/header.html" %}
-		<h2>{{ _("interface:transcription:title") }} {{ item.id() | format_item_id | safe }}:</h2>
+		<h2>{{ _("interface:transcription:title") }} {{ item.id | format_item_id | safe }}:</h2>
 		<h3>{{ _("interface:transcription:transcribed-by") }} {{ item | format_transcribed_by }}</h3>
 		<div class="content transcription">
-			<h1>{% if item.author() %}{{ item.author() }}{% endif %}</h1>
-			<h2>{{ item.title() }}</h2>
+			<h1>{% if item.author %}{{ item.author }}{% endif %}</h1>
+			<h2>{{ item.title }}</h2>
 			{% if item.get("transcription_note") %}
 				<hr/>
 				{{ item.get("transcription_note") | markdown }}

@@ -371,7 +371,7 @@ def validate_id(item, errors):
 	Checks item for id presence and validity
 	Raises ValueError if no id present
 	"""
-	item_id = item.id()
+	item_id = item.id
 	utils.require(
 		item_id is not None,
 		ValueError("Some items do not own the id")
@@ -856,7 +856,7 @@ def validate_source_file(item, errors):
 
 
 def validate_added_on(item, git_added_on, errors):
-	git_date = git_added_on[item.id()]
+	git_date = git_added_on[item.id]
 	item_date = item.get("added_on")
 	if item_date != git_date:
 		errors.add(f"Item added_on is {item_date}, while git suggests {git_date}")
@@ -907,7 +907,7 @@ def validate_items(items, git_added_on, make_extra_checks):
 	for item in items:
 		errors = validate_item(item, git_added_on, make_extra_checks)
 		if errors:
-			result[item.id()] = errors
+			result[item.id] = errors
 	return result
 
 
@@ -983,12 +983,12 @@ def main(*, make_extra_checks, log, store_new_errors, remove_missing_ids):
 			errors = validate_item(item, git_added_on, make_extra_checks)
 			if not errors:
 				continue
-			erroneous_items[item.id()] = errors
+			erroneous_items[item.id] = errors
 			if log == "all":
 				for error in errors:
-					logging.debug(f"Errors for {item.id()}: {error}")
+					logging.debug(f"Errors for {item.id}: {error}")
 		except Exception as ex:
-			logging.exception(f"Exception while validating {item.id()} ({item.source()}): {ex}")
+			logging.exception(f"Exception while validating {item.id} ({item.source}): {ex}")
 
 	update_validation_data(
 		erroneous_items,

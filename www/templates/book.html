@@ -8,10 +8,10 @@
         {% include "components/head-meta-common.html" %}
         {% include "components/head-link.html" %}
         {% include "components/head-script.html" %}
-        <meta name="og:title" content="{{ item.title() or item.incipit() }}"/>
+        <meta name="og:title" content="{{ item.title or item.incipit }}"/>
         <meta name="og:type" content="book"/>
-		{% if item.author() %}
-        <meta name="og:description" content="A book by {{ item.author() }}"/>
+		{% if item.author %}
+        <meta name="og:description" content="A book by {{ item.author }}"/>
 		{% else %}
 		<meta name="og:description" content="An anonymously written book"/>
 		{% endif %}
@@ -22,7 +22,7 @@
 	<body>
 		{% include "components/choose-lang.html" %}
 		{% include "components/header.html" %}
-		<h2>{{ _("interface:single-entry") }} {{ item.id() }}:</h2>
+		<h2>{{ _("interface:single-entry") }} {{ item.id }}:</h2>
 		<div class="content">
 			{% include "components/item.html" %}
 			<div id="citeData">
@@ -43,7 +43,7 @@
 				<span class="action" id="keywordFormToggle">{{ _("interface:report:keyword-form-title") }}</span>
 			</div>
 			<div id="reportForm" class="center hidden">
-				<form action="/books/{{ item.id() }}" method="post">
+				<form action="/books/{{ item.id }}" method="post">
 					<table>
 						<tr>
 							<td>{{ _("interface:report:name") }}:</td>
@@ -75,7 +75,7 @@
 				<button id="reportFormSubmitter">{{ _("interface:buttons:send") }}</button>
 			</div>
 			<div id="keywordForm" class="center hidden">
-				<form action="/books/{{ item.id() }}/keywords" method="post">
+				<form action="/books/{{ item.id }}/keywords" method="post">
 					<table>
 						<tr>
 							<td>{{ _("interface:report:name") }}:</td>

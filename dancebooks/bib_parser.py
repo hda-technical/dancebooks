@@ -58,80 +58,85 @@ class BibItem:
 	def __hash__(self):
 		return hash(self.get("id"))
 
-	# ancillary fields
+	@property
 	def type(self):
 		return self.get_as_string("type")
 
+	@property
 	def id(self):
 		return self.get_as_string("id")
 
+	@property
 	def source(self):
 		return self.get_as_string("source")
 
-	# data fields
+	@property
 	def author(self):
 		return self.get_as_string("author")
 
+	@property
 	def shorthand(self):
 		return self.get_as_string("shorthand")
 
+	@property
 	def title(self):
 		return self.get_as_string("title")
 
+	@property
 	def incipit(self):
 		return self.get_as_string("incipit")
 
+	@property
 	def publisher(self):
 		return self.get_as_string("publisher")
 
+	@property
 	def series(self):
 		return self.get_as_string("series")
 
+	@property
 	def number(self):
 		return self.get_as_string("number")
 
+	@property
 	def edition(self):
 		return self.get_as_string("edition")
 
+	@property
 	def volume(self):
 		return self.get_as_string("volume")
 
+	@property
 	def volumes(self):
 		return self.get_as_string("volumes")
 
+	@property
 	def location(self):
 		return self.get_as_string("location")
 
+	@property
 	def year(self):
 		return self.get_as_string("year")
 
+	@property
 	def keywords(self):
 		return self.get_as_string("keywords")
 
+	@property
 	def url(self):
 		return self.get_as_string("url")
 
+	@property
 	def filename(self):
 		return self.get_as_string("filename")
 
+	@property
 	def note(self):
 		return self.get_as_string("note")
 
+	@property
 	def added_on(self):
 		return self.get_as_string("added_on")
-
-	#not-implemented params
-	#
-	#type (thesis type)
-	#institution
-	#isbn
-	#pages
-	#crossref
-	#booktitle
-	#origlanguage
-	#translator
-	#commentator
-	#editor
 
 	@staticmethod
 	def value_to_string(value, sep=","):
@@ -160,7 +165,7 @@ class BibItem:
 
 	def set(self, key, value):
 		if key in self._params:
-			raise RuntimeError(f"Can't set {key} twice for item {self.id()}")
+			raise RuntimeError(f"Can't set {key} twice for item {self.id}")
 		self._params[key] = value
 		#TODO: move to finalize_item()
 		self._params["all_fields"] += BibItem.value_to_string(value, "")

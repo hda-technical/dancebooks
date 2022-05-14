@@ -261,8 +261,8 @@ def get_file_info_from_url(url, item):
 	extracted_id = match.group("item_id")
 	extracted_index = int(match.group("pdf_index")) - 1
 	require(
-		extracted_id == item.id(),
-		ValueError(f"Extracted item_id ({extracted_id}) doesn't match item id ({item.id()}")
+		extracted_id == item.id,
+		ValueError(f"Extracted item_id ({extracted_id}) doesn't match item id ({item.id}")
 	)
 	require(
 		(extracted_index >= 0) and (extracted_index < len(item.get("filename"))),
@@ -878,7 +878,7 @@ def make_html_cite(item):
 		result += ", "
 	result += year
 	result += ". "
-	result += f'<a href="/books/{item.id()}">https://{config.www.app_domain}/books/{item.id()}</a>'
+	result += f'<a href="/books/{item.id}">https://{config.www.app_domain}/books/{item.id}</a>'
 	return result
 
 
