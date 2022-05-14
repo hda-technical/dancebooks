@@ -200,17 +200,17 @@ def search_items(show_secrets):
 	elif order_by == "author":
 		key_func = lambda item: item.get("author") or []
 	elif order_by == "location":
-		key_func = lambda item: item.get("location") or ""
+		key_func = lambda item: item.get("location") or []
 	elif order_by == "series":
 		key_func = lambda item: item.get("series") or ""
 	elif order_by == "number":
-		key_func = lambda item: item.get("number") or 0
+		key_func = lambda item: item.get("number") or ""
 	elif order_by == "serial_number":
-		key_func = lambda item: item.get("serial_number") or 0
-	
+		key_func = lambda item: item.get("serial_number") or ""
+
 	found_items = list(sorted(found_items, key=key_func))
-	
-	
+
+
 
 	format = flask.request.values.get("format", "html")
 	if (format == "html"):
