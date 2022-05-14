@@ -1,10 +1,12 @@
 # coding: utf-8
 import concurrent.futures
+import dataclasses
 import datetime
 import enum
 import logging
 import multiprocessing
 import os.path
+import typing as tp
 
 from dancebooks.config import config
 from dancebooks import const
@@ -25,19 +27,49 @@ class Availability(enum.Enum):
 			return Availability.AvailableElsewhere
 
 
+class FinalizingContext:
+	"""
+	Contains objects required for finalizing parsed data set
+	"""
+	def __init__(self, index):
+		self._renderer = markdown.make_note_renderer(index)
+
+	def parse_markdown(self, data):
+		self._renderer.reset()
+		# erasing added <p> tags
+		return self._renderer.convert(data)\
+			.removeprefix("<p>")\
+			.removesuffix("</p>")
+
+
+@dataclasses.dataclass()
 class BibItem:
 	"""
 	Class representing a bibliography item
 	"""
+	# mandatory parameters which can be set at item construction point (i. e. after parsing item identifier)
+	_id: str
+	_type: str
+	source_file: str
+	source_line: int
 
-	def __init__(self):
-		self._params = {
+	# additional parameters some of which are mandatory.
+	# these will be set during parameter parsing.
+	author: tp.List[str] = None
+	altauthor: tp.List[str] = None
+	pseudo_author: tp.List[str] = None
+	compiler: tp.List[str] = None
+
+	title: str = None
+	incipit: str = None
+	shorthand: str = None
+
+	_params: tp.Dict[str, tp.Any] = dataclasses.field(
+		default_factory=lambda: {
 			"all_fields": "",
 			"availability": set([Availability.Unavailable])
 		}
-
-	def __hash__(self):
-		return hash(self.get("id"))
+	)
 
 	def get_heuristical_authors(self):
 		return self.get("author") or self.get("pseudo_author") or self.get("compiler")
@@ -46,33 +78,15 @@ class BibItem:
 	def type(self):
 		return self.get_as_string("type")
 
-	@property
+	def __hash__(self):
+		return hash(self.id)
+
 	def id(self):
-		return self.get_as_string("id")
+		return self._id
 
 	@property
 	def source(self):
-		return self.get_as_string("source")
-
-	@property
-	def author(self):
-		return self.get_as_string("author")
-
-	@property
-	def shorthand(self):
-		return self.get_as_string("shorthand")
-
-	@property
-	def title(self):
-		return self.get_as_string("title")
-
-	@property
-	def incipit(self):
-		return self.get_as_string("incipit")
-
-	@property
-	def publisher(self):
-		return self.get_as_string("publisher")
+		return f"{self.source_file}:{self.source_line:04d}"
 
 	@property
 	def series(self):
@@ -142,10 +156,10 @@ class BibItem:
 			return None
 
 	def get(self, key):
-		return self._params.get(key, None)
+		return getattr(self, key, None) or self._params.get(key, None)
 
 	def has(self, key):
-		return (key in self._params)
+		return hasattr(self, key) or (key in self._params)
 
 	def set(self, key, value):
 		if key in self._params:
@@ -169,7 +183,7 @@ class BibItem:
 	def finalize(self):
 		"""
 		Method to be called once after parsing every entries.
-		Renders note from 
+		Renders note from
 		"""
 		self.set("cite_label", utils.make_cite_label(self))
 
@@ -280,20 +294,17 @@ class BibParser:
 		data = utils.read_utf8_file(path)
 		try:
 			source_file = os.path.basename(path)
-			items = self._parse_string(data)
-			for item in items:
-				source_line = item.get("source_line")
-				self.set_item_param(item, "source_file", source_file)
-				self.set_item_param(item, "source", f"{source_file}:{source_line:04d}")
-			return items
+			return self._parse_string(data, source_file=source_file)
 		except Exception as ex:
 			raise Exception(f"While parsing {path}: {ex!r}")
 
-	def _parse_string(self, data):
+	def _parse_string(self, data, *, source_file):
 		"""
 		Returns list of parsed BibItem
 		"""
-		item = BibItem()
+		item = None
+		item_type = None
+		item_source_line = None
 		items = []
 		self.line = 1
 		self.char = 1
@@ -316,8 +327,8 @@ class BibParser:
 					if not self.lexeme:
 						#empty item type is not allowed
 						self.raise_error()
-					self.set_item_param(item, "type", self.lexeme.lower())
-					self.set_item_param(item, "source_line", self.line)
+					item_type = self.lexeme.lower()
+					item_source_line = self.line
 					self.state = ParserState.WaitingForId
 					self.lexeme = ""
 				else:
@@ -335,7 +346,13 @@ class BibParser:
 
 			elif self.state == ParserState.ReadingId:
 				if c.isspace() or c == ',':
-					self.set_item_param(item, "id", self.lexeme)
+					assert item is None
+					item = BibItem(
+						_id=self.lexeme,
+						type=item_type,
+						source_file=source_file,
+						source_line=item_source_line,
+					)
 					self.lexeme = ""
 					if c.isspace():
 						self.state = ParserState.WaitingForCommaAfterId
@@ -405,7 +422,7 @@ class BibParser:
 					continue
 				elif c == ')':
 					items.append(item)
-					item = BibItem()
+					item = None
 					self.state = ParserState.NoItem
 				elif c == ',':
 					self.state = ParserState.WaitingForKey
