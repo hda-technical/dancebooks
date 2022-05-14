@@ -48,21 +48,6 @@ class BibItem:
 	"""
 	Class representing a bibliography item
 	"""
-	KEY_TO_DEFAULT_VALUE = {
-		"year_from": 0,
-		"added_on": datetime.date(1970, 1, 1),
-		"author": [],
-		"location": [],
-		"source": "",
-		"series": "",
-		"number": 0,
-		"serial_number": 0
-	}
-
-	@staticmethod
-	def key_to_key_func(key):
-		default = BibItem.KEY_TO_DEFAULT_VALUE[key]
-		return lambda item, key=key, default=default: item.get(key) or default
 
 	def __init__(self):
 		self._params = {
@@ -303,10 +288,6 @@ class BibParser:
 			parsed_items += future.result()
 		executor.shutdown()
 
-		parsed_items = list(sorted(
-			parsed_items,
-			key=BibItem.key_to_key_func(const.DEFAULT_ORDER_BY)
-		))
 		item_index = search_index.Index(parsed_items)
 		fin_ctx = FinalizingContext(item_index)
 		for item in parsed_items:

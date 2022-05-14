@@ -190,10 +190,27 @@ def search_items(show_secrets):
 	except Exception as ex:
 		flask.abort(http.client.BAD_REQUEST, f"Some of the search parameters are wrong: {ex}")
 
-	found_items = list(sorted(
-		filter(search.and_(searches), found_items),
-		key=bib_parser.BibItem.key_to_key_func(order_by)
-	))
+	found_items = filter(search.and_(searches), found_items)
+	if order_by == "year_from":
+		key_func = lambda item: item.get("year_from")
+	elif order_by == "source":
+		key_func = lambda item: item.get("source")
+	elif order_by == "added_on":
+		key_func = lambda item: item.get("added_on")
+	elif order_by == "author":
+		key_func = lambda item: item.get("author") or []
+	elif order_by == "location":
+		key_func = lambda item: item.get("location") or ""
+	elif order_by == "series":
+		key_func = lambda item: item.get("series") or ""
+	elif order_by == "number":
+		key_func = lambda item: item.get("number") or 0
+	elif order_by == "serial_number":
+		key_func = lambda item: item.get("serial_number") or 0
+	
+	found_items = list(sorted(found_items, key=key_func))
+	
+	
 
 	format = flask.request.values.get("format", "html")
 	if (format == "html"):
