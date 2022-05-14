@@ -204,18 +204,13 @@ class BibItem:
 		if note is not None:
 			#TODO: create converter once per item set, not once per item
 			#parsing markdown and removing paragraph markup added by parser
-			new_note = ctx.parse_markdown(note)\
-				.replace("<p>", "")\
-				.replace("</p>", "")
-			self._params["note"] = new_note
+			self._params["note"] = ctx.parse_markdown(note)
 
 		#crossref processing inherits some of the parameters
 		#and therefore it should go last
 		crossref = self.get("crossref")
 		if crossref is not None:
-			self._params["crossref"] = ctx.parse_markdown("[" + crossref + "]")\
-				.replace("<p>", "")\
-				.replace("</p>", "")
+			self._params["crossref"] = ctx.parse_markdown("[" + crossref + "]")
 
 class ParserState(enum.Enum):
 	NoItem = 0
