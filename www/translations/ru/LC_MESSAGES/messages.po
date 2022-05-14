@@ -309,6 +309,9 @@ msgstr "Сборник"
 msgid "search:booktype:incollection"
 msgstr "Статья в сборнике"
 
+msgid "search:booktype:mvproceedings"
+msgstr "Многотомный сборник статей"
+
 msgid "search:booktype:mvreference"
 msgstr "Многотомная энциклопедия или словарь"
 

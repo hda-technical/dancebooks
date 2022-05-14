@@ -309,6 +309,9 @@ msgstr "Collection"
 msgid "search:booktype:incollection"
 msgstr "Article in a collection"
 
+msgid "search:booktype:mvproceedings"
+msgstr "Multivolume conference proceedings"
+
 msgid "search:booktype:mvreference"
 msgstr "Multivolume encyclopaedia"
 
