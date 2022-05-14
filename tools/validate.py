@@ -71,7 +71,7 @@ DATA_FIELDS = {
 	"transcription_features",
 	"transcription_note",
 	"translator",
-	"type",
+	"thesis_type",
 	"url",
 	"volume",
 	"volumes",
@@ -542,9 +542,9 @@ def validate_booktype(item, errors):
 		if booktitle is None:
 			errors.add(f"Field booktitle expected for booktype {booktype}")
 	if (booktype == "thesis"):
-		thesis_type = item.get("type")
+		thesis_type = item.get("thesis_type")
 		if thesis_type is None:
-			errors.add(f"Field type expected for booktype {booktype}")
+			errors.add(f"Field thesis_type expected for booktype {booktype}")
 		institution = item.get("institution")
 		if institution is None:
 			errors.add(f"Field institution  expected for booktype {booktype}")
