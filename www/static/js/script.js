@@ -412,8 +412,8 @@ bib.search = (function() {
 		fillFromOptions("source_file", sourceFiles);
 	};
 
-	var fillBooktypes = function(booktypes) {
-		fillFromOptions("booktype", booktypes);
+	var fillEntryTypes = function(types) {
+		fillFromOptions("type", types);
 	};
 
 	var updateKeywords = function() {
@@ -500,7 +500,7 @@ bib.search = (function() {
 		fillLanguages(data.languages);
 		fillSourceFiles(data.source_files);
 		fillKeywords(data.keywords);
-		fillBooktypes(data.booktypes);
+		fillEntryTypes(data.types);
 	};
 
 	var formatCatalogueCode = function() {

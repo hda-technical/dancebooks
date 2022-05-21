@@ -27,7 +27,7 @@ items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_di
 
 langids = sorted(langid for langid in item_index["langid"].keys() if not langid.startswith("!"))
 source_files = sorted(item_index["source_file"].keys())
-booktypes = sorted(item_index["booktype"].keys())
+types = sorted(item_index["type"].keys())
 markdown_cache = utils.MarkdownCache()
 
 debug_mode = False
@@ -47,7 +47,7 @@ flask_app.jinja_env.filters["author_link"] = utils_flask.make_author_link
 flask_app.jinja_env.filters["keyword_link"] = utils_flask.make_keyword_link
 flask_app.jinja_env.filters["as_set"] = utils_flask.as_set
 flask_app.jinja_env.filters["translate_language"] = utils_flask.translate_language
-flask_app.jinja_env.filters["translate_booktype"] = utils_flask.translate_booktype
+flask_app.jinja_env.filters["translate_type"] = utils_flask.translate_type
 flask_app.jinja_env.filters["translate_keyword_category"] = utils_flask.translate_keyword_cat
 flask_app.jinja_env.filters["translate_keyword_ref"] = utils_flask.translate_keyword_ref
 flask_app.jinja_env.filters["is_url_self_served"] = utils.is_url_self_served
@@ -399,9 +399,9 @@ def get_options():
 		for category, category_keywords in config.parser.category_keywords.items()
 	]
 
-	opt_booktypes = [
-		(booktype, utils_flask.translate_booktype(booktype))
-		for booktype in booktypes
+	opt_types = [
+		(type, utils_flask.translate_type(type))
+		for type in types
 	]
 
 	opt_source_files = [
@@ -413,7 +413,7 @@ def get_options():
 		"languages": opt_languages,
 		"keywords": opt_keywords,
 		"source_files": opt_source_files,
-		"booktypes": opt_booktypes
+		"types": opt_types
 	}
 
 

@@ -233,7 +233,7 @@ ENV_LOGGING_CONFIG = "LOGGING_CONFIG"
 DEFAULT_ORDER_BY = "year_from"
 
 BABEL_LANG_PREFIX = "search:language:"
-BABEL_BOOKTYPE_PREFIX = "search:booktype:"
+BABEL_ENTRY_TYPE_PREFIX = "search:type:"
 BABEL_KEYWORD_CATEGORY_PREFIX = "search:keywords:category:"
 BABEL_MISSING_ERROR_PREFIX = "errors:missing:"
 BABEL_WRONG_ERROR_PREFIX = "errors:wrong:"

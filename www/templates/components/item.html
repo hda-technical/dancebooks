@@ -11,7 +11,7 @@
 	"crossref",
 	"added_on",
 	"source",
-	"booktype",
+	"type",
 	"date",
 	"publisher",
 	"plate_number",
@@ -91,8 +91,8 @@
 				{{ value | dateformat("long") }}
 			{% elif param == "note" %}
 				{{ value | safe }}
-			{% elif param == "booktype" %}
-				{{ value | translate_booktype }}
+			{% elif param == "type" %}
+				{{ value | translate_type }}
 			{% elif param == "date" %}
 				{{ item | format_date }}
 			{% elif param == "pages" %}

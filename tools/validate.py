@@ -28,7 +28,7 @@ DATA_FIELDS = {
 	"note",
 	"author",
 	"booktitle",
-	"booktype",
+	"type",
 	"catalogue",
 	"cite_label",
 	"commentator",
@@ -91,7 +91,7 @@ ANCILLARY_FIELDS = {
 
 ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 
-MULTIENTRY_BOOKTYPES = {
+MULTIENTRY_ENTRY_TYPES = {
 	"article",
 	"proceedings",
 	"mvproceedings",
@@ -102,7 +102,7 @@ MULTIENTRY_BOOKTYPES = {
 }
 
 # Entry types that can be nested in the other bibliographed entries
-PARTIAL_BOOKTYPES = {
+PARTIAL_ENTRY_TYPES = {
 	# article -> periodical
 	"article",
 	# inproceeding -> proceedings
@@ -280,15 +280,15 @@ def validate_periodical_filename(filename, item, errors):
 	if filename.endswith(".md"):
 		#periodical transcriptions are validated by this code too
 		return
-	booktype = item.get("booktype")
+	type = item.get("type")
 
-	is_periodical_booktype = booktype in ("article", "periodical")
+	is_periodical_type = type in ("article", "periodical")
 	is_periodical_filename = filename.startswith("/Periodical/")
 	if not is_periodical_filename:
 		return
 
 	if not all([
-		is_periodical_booktype,
+		is_periodical_type,
 		is_periodical_filename
 	]):
 		errors.add("Only articles should be stored in '/Periodical' subfolder")
@@ -322,12 +322,12 @@ def validate_single_filename(abspath, filename, item, errors):
 	if not utils.isfile_case_sensitive(abspath):
 		errors.add(f"File [{abspath}] is not accessible in case-sensitive mode")
 
-	booktype = item.get("booktype")
+	type = item.get("type")
 	validate_periodical_filename(filename, item, errors)
 	validate_short_desription_filename(filename, item, errors)
 	validate_etiquette_filename(filename, item, errors)
 
-	if booktype in MULTIENTRY_BOOKTYPES:
+	if type in MULTIENTRY_ENTRY_TYPES:
 		return
 	metadata = utils.extract_metadata_from_file(filename)
 	#validating optional author, edition, tome
@@ -335,7 +335,7 @@ def validate_single_filename(abspath, filename, item, errors):
 	optional_meta_fields = [
 		"author"
 	]
-	if booktype:
+	if type:
 		optional_meta_fields += [
 			"edition",
 			"volume",
@@ -385,13 +385,13 @@ def validate_id(item, errors):
 def validate_parser_generated_fields(item, errors):
 	"""
 	Checks presence of the following fields:
-	* booktype
+	* type
 	* source
 	* year_from
 	* year_to
 	* year_circa
 	"""
-	OBLIGATORY_FIELDS = ["booktype", "source", "year_from", "year_to", "year_circa"]
+	OBLIGATORY_FIELDS = ["type", "source", "year_from", "year_to", "year_circa"]
 	for field in OBLIGATORY_FIELDS:
 		if not item.has(field):
 			errors.add(f"Parser hasn't generated obligatory field {field}")
@@ -494,12 +494,12 @@ def validate_issn(item, errors):
 			errors.add(f"ISSN #{idx} [{single_issn}] should be reformatted to [{formatted}]")
 
 
-def validate_booktype(item, errors):
+def validate_type(item, errors):
 	"""
-	Checks if booktype belongs to a valid list.
-	Performs extra checks for field presence based on booktype
+	Checks if type belongs to a valid list.
+	Performs extra checks for field presence based on type
 	"""
-	VALID_BOOKTYPES = {
+	VALID_ENTRY_TYPES = {
 		"article",
 		"periodical",
 
@@ -520,37 +520,37 @@ def validate_booktype(item, errors):
 		"thesis",
 		"unpublished",
 	}
-	#volumes tag should be present for these booktypes
-	PERIODICAL_BOOKTYPES = {"periodical", "article"}
+	#volumes tag should be present for these types
+	PERIODICAL_ENTRY_TYPES = {"periodical", "article"}
 
-	booktype = item.get("booktype")
-	if booktype is None:
+	type = item.get("type")
+	if type is None:
 		return
 
-	if (booktype not in VALID_BOOKTYPES):
-		errors.add(f"Booktype {booktype} is invalid")
+	if (type not in VALID_ENTRY_TYPES):
+		errors.add(f"Entry type {type} is invalid")
 
-	if (booktype == "article"):
+	if (type == "article"):
 		journaltitle = item.get("journaltitle")
 		if journaltitle is None:
-			errors.add(f"Field journaltitle expected for booktype {booktype}")
+			errors.add(f"Field journaltitle expected for type {type}")
 		pages = item.get("pages")
 		if pages is None:
-			errors.add(f"Field pages expected for booktype {booktype}")
-	if (booktype in ("inproceedings", "inbook")):
+			errors.add(f"Field pages expected for type {type}")
+	if (type in ("inproceedings", "inbook")):
 		booktitle = item.get("booktitle")
 		if booktitle is None:
-			errors.add(f"Field booktitle expected for booktype {booktype}")
-	if (booktype == "thesis"):
+			errors.add(f"Field booktitle expected for entry type {type}")
+	if (type == "thesis"):
 		thesis_type = item.get("thesis_type")
 		if thesis_type is None:
-			errors.add(f"Field thesis_type expected for booktype {booktype}")
+			errors.add(f"Field thesis_type expected for entry type {type}")
 		institution = item.get("institution")
 		if institution is None:
-			errors.add(f"Field institution  expected for booktype {booktype}")
+			errors.add(f"Field institution expected for type {type}")
 
 	if item.get("number"):
-		if booktype not in PERIODICAL_BOOKTYPES:
+		if type not in PERIODICAL_ENTRY_TYPES:
 			errors.add("Field number can only be set for periodicals")
 
 
@@ -571,8 +571,8 @@ def validate_library_fields(item, errors):
 	Checks if library-related params with storage specifications
 	are available for @unpublished
 	"""
-	booktype = item.get("booktype");
-	if (booktype != "unpublished"):
+	type = item.get("type");
+	if (type != "unpublished"):
 		return
 	REQUIRED_FIELDS = [
 		"library",
@@ -662,7 +662,7 @@ def validate_transcription(item, errors):
 	transcription = item.get("transcription")
 	if transcription is None:
 		return
-	
+
 	transcriber = item.get("transcriber")
 	if transcriber is None:
 		errors.add(f"Transcribed entry must has transcriber specified")
@@ -693,13 +693,13 @@ def validate_partial_fields(item, errors):
 	"""
 	Checks if pages field matches PAGES_REGEX
 	"""
-	booktype = item.get("booktype")
-	if booktype not in PARTIAL_BOOKTYPES:
+	type = item.get("type")
+	if type not in PARTIAL_ENTRY_TYPES:
 		if (crossref := item.get("crossref")) is not None:
-			errors.add(f"Entry of type {booktype} can not have crossref field")
+			errors.add(f"Entry of type {type} can not have crossref field")
 		pages = item.get("pages")
 		if (pages := item.get("pages")) is not None:
-			errors.add(f"Entry of type {booktype} can not have pages field")
+			errors.add(f"Entry of type {type} can not have pages field")
 
 
 def validate_volume(item, errors):
@@ -812,8 +812,8 @@ def validate_filename(item, errors):
 	NOT_DIGITIZED_KEYWORD = "not digitized"
 	filename = item.get("filename")
 
-	booktype = item.get("booktype")
-	if booktype in MULTIENTRY_BOOKTYPES:
+	type = item.get("type")
+	if type in MULTIENTRY_ENTRY_TYPES:
 		return
 
 	keywords = set(item.get("keywords") or {})
@@ -883,7 +883,7 @@ def validate_item(item, git_added_on, make_extra_checks):
 	validate_shorthand(item, errors)
 	validate_isbn(item, errors)
 	validate_issn(item, errors)
-	validate_booktype(item, errors)
+	validate_type(item, errors)
 	validate_commentator(item, errors)
 	validate_url_validity(item, errors)
 	validate_volume(item, errors)

@@ -298,7 +298,7 @@
         "search_params": [
             "author",
             "availability",
-            "booktype",
+            "type",
             "title",
             "langid",
             "publisher",
@@ -336,7 +336,7 @@
             "filename",
             "added_on",
             "source_file",
-            "booktype",
+            "type",
             "catalogue",
             "plate_number"
         ],

@@ -191,7 +191,7 @@ msgstr "Language"
 msgid "search:labels:source-file"
 msgstr "Source file"
 
-msgid "search:labels:booktype"
+msgid "search:labels:type"
 msgstr "Entry type"
 
 msgid "search:labels:publisher"
@@ -286,48 +286,48 @@ msgstr "Swedish"
 msgid "search:language:ukrainian"
 msgstr "Ukrainian"
 
-# Search: Booktype select options
+# Search: entry type select options
 
-msgid "search:booktype:article"
+msgid "search:type:article"
 msgstr "Paper or magazine article"
 
-msgid "search:booktype:book"
+msgid "search:type:book"
 msgstr "Book"
 
-msgid "search:booktype:inbook"
+msgid "search:type:inbook"
 msgstr "Standalone part of the book"
 
-msgid "search:booktype:inproceedings"
+msgid "search:type:inproceedings"
 msgstr "Conference article"
 
-msgid "search:booktype:mvbook"
+msgid "search:type:mvbook"
 msgstr "Multivolume book"
 
-msgid "search:booktype:collection"
+msgid "search:type:collection"
 msgstr "Collection"
 
-msgid "search:booktype:incollection"
+msgid "search:type:incollection"
 msgstr "Article in a collection"
 
-msgid "search:booktype:mvproceedings"
+msgid "search:type:mvproceedings"
 msgstr "Multivolume conference proceedings"
 
-msgid "search:booktype:mvreference"
+msgid "search:type:mvreference"
 msgstr "Multivolume encyclopaedia"
 
-msgid "search:booktype:periodical"
+msgid "search:type:periodical"
 msgstr "Entire paper or magazine"
 
-msgid "search:booktype:proceedings"
+msgid "search:type:proceedings"
 msgstr "Conference proceedings"
 
-msgid "search:booktype:reference"
+msgid "search:type:reference"
 msgstr "Encyclopaedia or dictionary"
 
-msgid "search:booktype:thesis"
+msgid "search:type:thesis"
 msgstr "Thesis"
 
-msgid "search:booktype:unpublished"
+msgid "search:type:unpublished"
 msgstr "Manuscript"
 
 # Search results ordering
@@ -453,7 +453,7 @@ msgstr "Added to database"
 msgid "item:labels:source"
 msgstr "Source"
 
-msgid "item:labels:booktype"
+msgid "item:labels:type"
 msgstr "Entry type"
 
 msgid "item:labels:edition"

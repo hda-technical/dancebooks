@@ -59,8 +59,8 @@ class BibItem:
 		return hash(self.get("id"))
 
 	# ancillary fields
-	def booktype(self):
-		return self.get_as_string("booktype")
+	def type(self):
+		return self.get_as_string("type")
 
 	def id(self):
 		return self.get_as_string("id")
@@ -342,7 +342,7 @@ class BibParser:
 					if not self.lexeme:
 						#empty item type is not allowed
 						self.raise_error()
-					self.set_item_param(item, "booktype", self.lexeme.lower())
+					self.set_item_param(item, "type", self.lexeme.lower())
 					self.set_item_param(item, "source_line", self.line)
 					self.state = ParserState.WaitingForId
 					self.lexeme = ""

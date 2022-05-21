@@ -200,8 +200,8 @@ def translate_language(langid):
 	return flask_babel.gettext(const.BABEL_LANG_PREFIX + langid)
 
 
-def translate_booktype(booktype):
-	return flask_babel.gettext(const.BABEL_BOOKTYPE_PREFIX + booktype)
+def translate_type(type):
+	return flask_babel.gettext(const.BABEL_ENTRY_TYPE_PREFIX + type)
 
 
 def translate_keyword_cat(category):

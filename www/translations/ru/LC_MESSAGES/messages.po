@@ -191,7 +191,7 @@ msgstr "Язык"
 msgid "search:labels:source-file"
 msgstr "Исходный файл"
 
-msgid "search:labels:booktype"
+msgid "search:labels:type"
 msgstr "Тип записи"
 
 msgid "search:labels:publisher"
@@ -286,48 +286,48 @@ msgstr "Шведский"
 msgid "search:language:ukrainian"
 msgstr "Украинский"
 
-# Search: Booktype select options
+# Search: entry type select options
 
-msgid "search:booktype:article"
+msgid "search:type:article"
 msgstr "Статья в газете или журнале"
 
-msgid "search:booktype:book"
+msgid "search:type:book"
 msgstr "Книга"
 
-msgid "search:booktype:inbook"
+msgid "search:type:inbook"
 msgstr "Самостоятельная часть книги"
 
-msgid "search:booktype:inproceedings"
+msgid "search:type:inproceedings"
 msgstr "Статья с конференции"
 
-msgid "search:booktype:mvbook"
+msgid "search:type:mvbook"
 msgstr "Многотомная книга"
 
-msgid "search:booktype:collection"
+msgid "search:type:collection"
 msgstr "Сборник"
 
-msgid "search:booktype:incollection"
+msgid "search:type:incollection"
 msgstr "Статья в сборнике"
 
-msgid "search:booktype:mvproceedings"
+msgid "search:type:mvproceedings"
 msgstr "Многотомный сборник статей"
 
-msgid "search:booktype:mvreference"
+msgid "search:type:mvreference"
 msgstr "Многотомная энциклопедия или словарь"
 
-msgid "search:booktype:periodical"
+msgid "search:type:periodical"
 msgstr "Газета или журнал целиком"
 
-msgid "search:booktype:proceedings"
+msgid "search:type:proceedings"
 msgstr "Сборник статей с конференции"
 
-msgid "search:booktype:reference"
+msgid "search:type:reference"
 msgstr "Энциклопедия или словарь"
 
-msgid "search:booktype:thesis"
+msgid "search:type:thesis"
 msgstr "Диссертация :)"
 
-msgid "search:booktype:unpublished"
+msgid "search:type:unpublished"
 msgstr "Манускрипт"
 
 # Search results ordering
@@ -453,7 +453,7 @@ msgstr "Дата добавления в базу"
 msgid "item:labels:source"
 msgstr "Строка в файле"
 
-msgid "item:labels:booktype"
+msgid "item:labels:type"
 msgstr "Тип записи"
 
 msgid "item:labels:edition"
