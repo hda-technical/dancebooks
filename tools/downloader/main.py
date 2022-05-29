@@ -525,8 +525,18 @@ def internet_culturale(id):
 	"""
 	Downloads book from Internet Culturale, Biblioteca Digitale Italiana (http://www.internetculturale.it/)
 	"""
-	import internet_culturale
-	internet_culturale.get(id)
+	import sbn
+	sbn.get_internet_culturale(id)
+
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:N:MUS006101`)", required=True)
+def sbn(id):
+	"""
+	Downloads book from  Servizio Bibliotecario Nazionale (sbn.it)
+	"""
+	import sbn
+	sbn.get_sbn(id)
 
 
 @main.command()

@@ -86,7 +86,7 @@ def _download_image_fast(metadata, page, output_filename):
 
 def download_book_fast(manifest_url, output_folder):
 	"""
-	Downloads entire book via IIIF protocol.
+	Downloads entire book via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
 
 	API is documented here:
@@ -122,3 +122,23 @@ def download_page_fast(manifest_url, output_folder, *, page):
 		page=page,
 		output_filename=output_filename, 
 	)
+
+
+def download_book_fast_v3(manifest_url, output_folder):
+	"""
+	Downloads entire book via IIIF protocol (v3).
+	Issues single request per image, but might be unsupported by certain backends.
+
+	API is documented here:
+	http://iiif.io/about/
+	"""
+	print(f"GET {manifest_url}")
+	manifest = utils.get_json(manifest_url)
+	for page, metadata in enumerate(manifest["items"]):
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+		image_url = metatata["items"][0]["items"][0]["body"]["id"]
+		print(f"Downloading page #{page:04d} from {image_url}")
+		utils.get_binary(output_filename, image_url)
