@@ -253,7 +253,7 @@
 | The White Star Orchestra | Titanic | XIX, XX | `CD` | да | |
 | Ensemble orchestral de Marseille | Le bal des citoyens | XVIII, XIX, CD из 1988 года | `CD` | | |
 | The Peascod Gatherers | Penta pentamere 2 | XVI, ECD, Диски не печатались (?) | `flac` | | |
-| [regencydances.org](http://regencydances.org/), Ensemble Musica Humana | Twelve Cotillions by Giovanni Gallini | XVIII | нет | | |
+| [regencydances.org](https://www.regencydances.org/), Ensemble Musica Humana | Twelve Cotillions by Giovanni Gallini | XVIII | нет | | |
 | regencydances.org, , Ensemble Musica Humana | Country Dances by Thomas Skillern | ECD | нет | | |
 | regencydances.org, The Fortuna Trio | Country Dances by Thomas Wilson | ECD | нет | | |
 | regencydances.org, The Fortuna Trio | Three Quadrille Sets by Thomas Wilson | XIX | нет | | |
