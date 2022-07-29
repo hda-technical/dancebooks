@@ -203,7 +203,8 @@ CATALOGUE_PATTERN = (
 	r"(Lange:\d{4}(, I{1,2})?)|"
 	r"(Smith:[\[\]A-Za-z\d]+)|"
 	r"(Gallo:[A-Za-z']{1,3})|"
-	r"(Marrocco:[A-Z\d, ]+)"
+	r"(Marrocco:[A-Z\d, ]+)|"
+	r"(NLR[2J]:I\.\d+[a-z]?)"
 )
 CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
 #map [catalogue type] -> (catalogue id, catalogue title)
@@ -213,7 +214,9 @@ CATALOGUE_MAP = {
 	"Lange": ("lange_1984", "E. Lange, K.-H. Lange. Modetänze um 1800"),
 	"Smith": ("smith_1995", "A. W. Smith. Fifteenth Century Dance and Music"),
 	"Gallo": ("gallo_1979_balare", "F. A. Gallo. Il 'Balare Lombardo'"),
-	"Marrocco": ("marrocco_1981_inventory", "Inventory of 15th century Bassedanze")
+	"Marrocco": ("marrocco_1981_inventory", "Inventory of 15th century Bassedanze"),
+	"NLR2": ("nlr_catalogue_2005", "Сводный каталог российских нотных изданий"),
+	"NLRJ": ("nlr_catalogue_2008_jusupov", "Юсуповская коллекция"),
 }
 
 VALID_HTTP_CODES = {

@@ -386,7 +386,7 @@
             "borel_klerk_1905": "clerc_1905_description",
             "burgmuller_1848": "burgmuller_1848_english",
             "burgmuller_1848_english": "burgmuller_1848_american",
-            "carel_1770_contredanse_145": "cuisse_1768_suite",
+            "carel_1770_contredanse_G145": "cuisse_1768_suite",
             "carpentier_1882": "carpenter_1882",
             "castle_1914": "castle_1914_modern",
             "cellarius_1844": "cellarius_1844_polka_first",
@@ -577,6 +577,7 @@
             "collinet_1823_soirees": "collinet_1819_soirees",
             "koslovsky_1791": "koslovsky_1796_polonaise_narischkin",
             "hart_1829_herz": "herz_1829_hart",
+            "joguel_1820_douze": "joguel_1824_douze",
         }
     }
 }
