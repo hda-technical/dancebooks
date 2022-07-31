@@ -97,7 +97,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1773 | Sara Goudar | De Venise. Rémarques sur la musique & la danse ou lettres de Mr. G... à milord Pembroke | `[2. Rothenfelser]` | [V&A #1](https://nal-vam.on.worldcat.org/oclc/1012092959)<br/>[V&A #2](https://nal-vam.on.worldcat.org/oclc/1012092609)<br/>[National Art Library](https://nal-vam.on.worldcat.org/oclc/1008576501) |
 | 1773 | Sara Goudar | Supplement aux Remarques sur la musique, & la danse ou Lettres de Mr G... a Milord Pembroke | | [V&A](https://nal-vam.on.worldcat.org/oclc/1012092609)<br/>[V&A](https://nal-vam.on.worldcat.org/oclc/1008576501) |
 | 1774 | | Ueber den Tanz der Alten | `[Katalog, 1894]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1774 | | Музыкальные увеселения. Помесячно издаваемыя: Содержащия в себе ... польские, минуеты, аглицкие, контратанцы, французские, коттильоны ... | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009684346) |
+| 1774 | | Музыкальные увеселения. Помесячно издаваемыя: Содержащия в себе ... польские, минуеты, аглицкие, контратанцы, французские, коттильоны ... | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009684346) |
 | 1775 | Elias Christian Fricke | Neue Cotillions oder Französische Contretänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346613)<br/>[Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=87567416X) |
 | 1775 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement #1](https://books.google.com/books?id=QPdLAAAAcAAJ&pg=RA2-PA27)<br/>[Advertisement 32](https://books.google.com/books?id=rm9bAAAAcAAJ&pg=PT6) | |
 | 1776 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=NwxcAAAAcAAJ&pg=PA434) | |
@@ -130,7 +130,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1793? | Charles Metralcourt | Twenty Four Country Dances, with proper Directions to each Dance | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004524098) |
 | 1793 | Wolfgang Amadeus Mozart (fake?) | Anleitung zum componiren von Polonoise<br/>_Published in Berlin by Johann Hummel_ | `music: generator`<br/>`[Hedges, 1978]` | |
 | 1795 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1795. With Proper Directions to Each Dance | [[Cooper, 01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1795]](https://www.cdss.org/elibrary/DFIE/Biblio/B000084.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283622) |
-| 1795 | | Карманная книга для любителей музыки на 1795 год | `[Leaflets]` | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009684294) |
+| 1795 | | Карманная книга для любителей музыки на 1795 год | `[Leaflets]` | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009684294) |
 | 1797 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1797 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1797]](https://www.cdss.org/elibrary/DFIE/Biblio/B000086.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283634) |
 | 1797 | Johann Christian Siede | Versuch eines Leitfadens für Anstand, Solidität, Reiz, Grazie und weibliche Schönheit der aufblühender weiblichen Jugend. Nebst einem Anhange, welcher noch einige besondere Gesundheits- und Schönheits-Lehren und einige höhere Regeln der guten Lebensart und der Etiquette enthält | `[Klemm #03]`<br/>`[Klemm #06]` | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035%3D%22BV008883841%22+IN+%5B2%5D&v=uba&l=de)<br/>[Erfurt](http://opac.uni-erfurt.de/DB=1/LNG=EN/CLK?IKT=12&TRM=57512136X)<br/>[Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=57512136X)<br/>[UCLA](https://catalog.library.ucla.edu/vwebv/search?searchCode1=GKEY&searchType=2&searchArg1=ucoclc241307393) |
 | 1798 | Friedrich Gottlob Hayn | Anleitung mit Würfeln Anglaisen zu componieren<br/>_Published in Dresden_ | `music: generator`<br/>`[Hedges, 1978]`<br/>`[Thielen, 2009]` | |
@@ -292,7 +292,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1842 | Tilt & Bogue (publishers) | The Ball-Room Preceptor; Comprising the Most Esteemed Quadrilles, Galopades, Mazourkas, and Other Fashionable Dances of the Present Season<br/>_3rd edition_ | | [On sale, £150](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699660) |
 | 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | `[Germanorum, 1914]` | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
 | 1842? | Adam Rabel | Kleine Sammlung geselliger Tänze | `[Unfried, 2014]` | |
-| 1843 | | Листок для светских людей. Петербургские балы и маскарады<br/>_№5 за 1843 год_ | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004358933) |
+| 1843 | | Листок для светских людей. Петербургские балы и маскарады<br/>_№5 за 1843 год_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004358933) |
 | 1844 | Adam Rabel | Die Lance-Quadrille. Mit 4 Tafeln Abbildungen und einer neuen Musik<br/>_2. Auflage_<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1844 | | The Ballroom Annual | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01010474492) |
 | 1844 | David Bogue (publisher) | The Ball-Room Preceptor; Comprising The Most Esteemed Quadrilles, Galopades, Mazourkas, & Other Fashionable Dances of the Season<br/>_4th edition_ | | [On sale, £180](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699530) |
@@ -387,7 +387,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
 | 1882 | Amint Freising | Der Tanz. Nach älteren Schriften bearbeitet | `[Germanorum, 1914]` | [Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=844229881) |
-| 1882 | Константин Аполлонович Скальковский | Балет, его история и место в ряду изящных искусств | | [On sale, ₽15000](http://www.alib.ru/5_baletoman_skalnmnkovskij_k_balet_ego_istoriya_i_mesto_v_ryadu_izyawnyh_iskusstv_w1t821d49b5553655f8fe16aa397fd5a52f287.html)<br/>[NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004565138) |
+| 1882 | Константин Аполлонович Скальковский | Балет, его история и место в ряду изящных искусств | | [On sale, ₽15000](http://www.alib.ru/5_baletoman_skalnmnkovskij_k_balet_ego_istoriya_i_mesto_v_ryadu_izyawnyh_iskusstv_w1t821d49b5553655f8fe16aa397fd5a52f287.html)<br/>[NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004565138) |
 | 1882 | Charles Coote | Le minuet de la cour, Arranged for the Pianoforte | `[Russell, 2007]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004280118) |
 | 1883 | Gustave Desrat | Nouveau traité de la danse et du cotillon contenant la théorie et l'histoire des danses anciennes et modernes<br/>_Published by H. Delarue in Paris_ | `[Russell, 2007]` | |
 | 1883–1888? | | Die Literatur des Tanzes und der Komplimentirbücher. Ein Katalog für Bibliotheken, Antiquare, etc.<br/>_Published by Friedrich Bärtholomaus in Erfurt_ | `[Germanorum, 1914]` | |
@@ -415,7 +415,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1897 | David Anderson | New, Enlarged, and Complete Ball-room Guide | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=974560) |
 | 1898 | | Бальный шёпот. Па де катр | | [NLR](https://yadi.sk/i/5D9OmCiPqbVLt) |
 | 1898 | Henri Cellarius | 100 neue Cotillon-Touren<br/>_Published by F. Bartholomäus in Erfurt_ | `[Germanorum, 1914]` | [Google](https://books.google.com/books?id=IjSUPgAACAAJ) |
-| 1899 | Александр Алексеевич Горский | Хореография. Примеры для чтения | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS001284446) |
+| 1899 | Александр Алексеевич Горский | Хореография. Примеры для чтения | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS001284446) |
 | 1899 | Vincenzo Tesi | Manuale completo per i balli di società<br/>_Published in Catanzaro by Tipografia del Giornale Il Sud_ | `[Corbella]` | |
 | 1900 | Graham MacNeilage | How to Dance the Eightsome Reel, Scotch Reel, Reel of Tulloch, Strathspey and Reel Steps | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002331353) |
 | 1900 | J. G. Atkinson, junior | Scottish National Dances | `[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=978495) |
@@ -427,15 +427,15 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 190- | К. В. Фельдман | Новый русско-славянский | | [NLR](https://yadi.sk/i/0otSlk7kqbVKJ) |
 | 1901 | Pietro Onorati | Manuale dei balli di società con l'aggiunta dei lancieri e del cotillon<br/>_Published in Napoli by “Libreria editrice internazionale”_ | | [NYPL](http://catalog.nypl.org/record=b12276555~S1) |
 | 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=784912) |
-| 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004849373)<br/>`SPTL: Н 727(А)` |
+| 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004849373)<br/>`SPTL: Н 727(А)` |
 | 1903 | Melvin Balou Gilbert | Dancing | [Cite](https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.c2898858;seq=9;width=10000) |
 | 1904 | W. Lamb<br/>C. Arthur Pearson (publisher) | How and What to Dance<br/>_Published in London_ | `[Rogers, 1998]` | |
-| 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR copy desideratum](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127283) |
+| 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR copy desideratum](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127283) |
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
 | 1907 | Carl Sandmeier | Sichere Anleitung zur Selbsterlernung aller üblichen Rund-Tänze<br/>_Published in Zürich_<br/>_4. Auflage_ | `[Germanorum, 1914]` | Swiss National Library<br/>Universitätsbibliothek Basel |
 | 1908? | Peter Müller | Anstands- und Tanzlehre Kommando d. Contre-danse, Norddeutsche Française, Quadrille à la cour | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=390745111) |
-| 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004956353) |
-| 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005139495) |
+| 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004956353) |
+| 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005139495) |
 | 1910 | Jean-Jacques Olivier<br/>W. Norbert | Une étoile de la danse au XVIIIe siècle, Barbara Campanini | `[4. Rothenfelser]` | |
 | 1910 | Donald Richard MacKenzie | Illustrated Guide to the National Dances of Scotland | [[MacKenzie, 1870]](https://bib.hda.org.ru/books/mackenzie_1870)<br/>[[MacKenzie, 1939]](https://bib.hda.org.ru/books/mackenzie_1939_highland)<br/>`[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=581090) |
 | 1910 | | Little Dandy. Новый aнглийский танец. Из оперы Шалунья | `[Yoko]` | |
@@ -444,11 +444,11 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1911 | Л. Фремо | Тобоган. Новый характерный шотландский танец | `[Yoko]` | |
 | 1911 | | Karnecik tancerza | `[Yoko]` | |
 | 1911 | | Samouczek tancow salonowych. Zebral i ulozyl salonowiec | `[Yoko]` | |
-| 1911 | И. И. Иванов | Новейший самоучитель бальных танцев | `[Yoko]` | [NLR copy desideratum](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004983773) |
+| 1911 | И. И. Иванов | Новейший самоучитель бальных танцев | `[Yoko]` | [NLR copy desideratum](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004983773) |
 | 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев | `[Yoko]` | |
 | 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев<br/>_Второе издание_ | `[Yoko]` | |
 | 1912 | | Latwju tautas dejas<br/>_Латышские народные танцы_<br/>_Серийное издание_ | `[Yoko]` | |
-| 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004805109) |
+| 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004805109) |
 | 1913 | | Проспект и программа Школы танцев К. Б. Матсона | | |
 | 1913 | Charles Louis Napoléon d'Albert | Dancing. Technical Encyclopaedia of the Theory and Practice of the Art of Dancing | `[Guillard, 1989]` | |
 | 1914 | Enrico Pichetti | La furlana vénitienne, célèbre danse<br/>_Published by Hachette in Paris_ | | [BNF](https://catalogue.bnf.fr/ark:/12148/cb311051632) |
@@ -456,8 +456,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1914? | A. Cosmo Mitchell | A Guide to Ballroom Dancing<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914? | A. Cosmo Mitchell | New Dances<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914 | Андрей Яковлевич Левинсон | Мастера балета. Очерки истории и теории танца | | [RSL](http://search.rsl.ru/ru/record/01004191266) |
-| 1914 | | Танго. Мурочка-Манюрочка! Новый сборник лучших куплетов | |  [NLR #1](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068184)<br/>[NLR #2](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068185) |
-| 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005165864) |
+| 1914 | | Танго. Мурочка-Манюрочка! Новый сборник лучших куплетов | |  [NLR #1](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068184)<br/>[NLR #2](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068185) |
+| 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005165864) |
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
 | 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | |
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
@@ -470,7 +470,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1925 | Thoinot Arbeau<br/>Cyril W. Beaumont (translator) | Orchesography<br/>_English translation_ | | [Amazon, 1966 reprint](http://a.co/5H5ZyY7) |
 | 1925, №4 | | Деревенский театр<br/>_Содержит описания танцев «Петли», «Деревенская кадриль» от Анны Михайловны Зеленко_ | [[Зеленко, Шитик, 1927]](https://bib.hda.org.ru/books/zelenko_1927_promenade) | |
 | 1926 | Алексей Александрович Гвоздев (commentator)<br/>_Гептахор (коллектив авторов)_ | Ритм и культура танца<br/>_Published by Academia_ | | [RSL](https://search.rsl.ru/ru/record/01009133657)<br/>`SPTL: Р 551` |
-| 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS006725710)<br/>`SPTL: В 399` |
+| 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS006725710)<br/>`SPTL: В 399` |
 | 1927 | Т. Бабаджан<br/>Агния Барто | Ритмические игры и постановки к 10 годовщине Октября | | [On sale, ₽5500](http://www.alib.ru/5_barto_agniya_ritmicheskie_igry_i_postanovki_k_10_godovwine_oktyabrya_w1t1986151614fd8beb7fbf7fa890a1e8efc33a.html) |
 | 1927–1929? | S. (Selma?) Jaffé | Der Tanz im Selbstunterricht | [Inhaltsverzeichnis](https://d-nb.info/580985733/04)<br/>`[Russell, 2007]` | [Worldcat] |
 | 1928 | Е. Малая<br/>В. Костюк | Танцевальные шаги и гимнастические танцы | `[Жбанкова, 2016]` | |
@@ -508,8 +508,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
 | 1952 | Лидия Ивановна Богаткова | Танец в школе<br/>_По материалам сборника Л. Богатковой «В лагере и школе»_<br/>_Издано в Ставрополе_ | | `[Bodhi]` |
 | 1958 | Rebelo Bonito | As mouriscas. I–O influxo árabe na coreografia popular<br/>_In: Das artes e da historia da Madeira, tomo 28, pages 39–42_ | | |
-| 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS008531382) |
-| 1959 | Anthur Henry Franks | A pictorial manual of ballroom dancing | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009309611) |
+| 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS008531382) |
+| 1959 | Anthur Henry Franks | A pictorial manual of ballroom dancing | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009309611) |
 | 1950–1970? | Eduard Reeser | Story of the Waltz | `[Richardson, 1960]` | |
 | 1960–1965 | Kurt Petermann | Tanzbibliographie | | [Hathitrust](https://catalog.hathitrust.org/Record/000198061) |
 | 1972 | George S. Emmerson | A Social History of Scottish Dance: Ane Celestial Recreatioun | `[2.Rothenfelser]` | [jstor](http://www.jstor.org/stable/j.ctt1t88wt7) |
@@ -537,10 +537,10 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 
 | Date | Author | Title | References | Links |
 | ---- | ------ | ----- | ---------- | ----- |
-| 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009832426) |
+| 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009832426) |
 | 1525 | Caspar Brunner | Rathschlag  wider die gottlosen Tanz | `[Germanorum, 1914]` | |
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
-| 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009810813)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
+| 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009810813)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
 | 1661 | Joh. Lassenius | Adelische Tisch-Reden in sich begreifende zwölf Lehrreiche nützliche und Anmuthige Gespräche | `[Germanorum, 1914]` | |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | |
 | 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
@@ -683,7 +683,7 @@ _This part of the list is to joined with the general table_
 | 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) | |
 | 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](https://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) | Какая-то искусствоведческая хрень |
-| 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | Просмотрено Борисом Стратилатовым. | [NLR](http://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127097) | |
+| 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | Просмотрено Борисом Стратилатовым. | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127097) | |
 
 
 ## Bibliographies already consulted
