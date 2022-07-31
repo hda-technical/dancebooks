@@ -46,6 +46,17 @@ def candide(id):
 
 
 @main.command()
+@click.option("--document-id", help="Id of the paper to be downloaded (e. g. `4466/5537594`)", required=True)
+@click.option("--page", type=int, help="Id of the page to be downloaded (e. g. `11`)", required=True)
+def retronews(document_id, page):
+	"""
+	Downloads single page from https://www.retronews.fr
+	"""
+	import bnf
+	bnf.get_retronews(document_id=document_id, page=page)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `A0524435`)", required=True)
 @click.option("--volume", help="Volume of the book to be downloaded (e. g. '1')", required=True)
 def belgiumRoyalLibrary(id, volume):

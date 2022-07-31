@@ -55,3 +55,19 @@ def get_candide(id):
 	policy = utils.TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
 	output_filename = utils.make_output_filename(id.replace("/", "."))
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
+
+
+def get_retronews(*, document_id, page):
+	metadata_url = f"https://pv5web.retronews.fr/api/document/{document_id}/page/{page}"
+	metadata = utils.get_json(metadata_url)
+
+	output_folder = utils.make_output_folder("retronews", document_id)
+	output_filename = utils.make_output_filename(output_folder, page=page)
+
+	policy = utils.TileSewingPolicy.from_image_size(
+		width=metadata["width"],
+		height=metadata["height"],
+		tile_size=512,
+	)
+	url_maker = lambda tile_x, tile_y: f"https://pv5web.retronews.fr/api/document/{document_id}/page/{page}/tile/{tile_x}/{tile_y}/0"
+	utils.download_and_sew_tiles(output_filename, url_maker, policy)
