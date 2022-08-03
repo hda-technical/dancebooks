@@ -113,7 +113,7 @@
             "loc.gov",
             "nbn-resolving.de",
             "polona.pl",
-			"primo.nlr.ru",
+            "primo.nlr.ru",
             "prlib.ru",
             "resolver.sub.uni-goettingen.de",
             "richardpowers.com",
@@ -581,6 +581,7 @@
             "joguel_1820_douze": "joguel_1824_douze",
             "sichra_1820_polonoise": "sychra_1810_polonoise",
             "tashcenbuch_1795": "taschenbuch_1795_unterhaltung",
+            "vaniu_1820": "vanin_1823_trois",
         }
     }
 }
