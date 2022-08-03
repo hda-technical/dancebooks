@@ -216,6 +216,7 @@ CATALOGUE_MAP = {
 	"Gallo": ("gallo_1979_balare", "F. A. Gallo. Il 'Balare Lombardo'"),
 	"Marrocco": ("marrocco_1981_inventory", "Inventory of 15th century Bassedanze"),
 	"NLR2": ("nlr_catalogue_2005", "Сводный каталог российских нотных изданий"),
+	"NLR4": ("nlr_catalogue_2017_foreign", "Сводный каталог российских нотных изданий"),
 	"NLRJ": ("nlr_catalogue_2008_jusupov", "Юсуповская коллекция"),
 }
 
