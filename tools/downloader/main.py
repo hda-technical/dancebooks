@@ -646,6 +646,19 @@ def polona(id):
 
 
 @main.command()
+@click.option("--book-id", help="Id of the book to be downloaded (e. g. `93346204`)", required=True)
+@click.option("--first-page-id", type=int, help="If of the first page to be downloaded (e. g. `93968359`)", required=True)
+@click.option("--last-page-id", type=int, help="If of the first page to be downloaded (e. g. `93968555`)", required=True)
+def pl_academica(*, book_id, first_page_id, last_page_id):
+	import pl
+	pl.get_academica(
+		book_id=book_id,
+		first_page_id=first_page_id,
+		last_page_id=last_page_id,
+	)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `1286758696_1822000000/EPN_798582804`)", required=True)
 def haab(id):
 	"""
