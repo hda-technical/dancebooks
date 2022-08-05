@@ -624,25 +624,12 @@ def difmoe(id):
 
 @main.command()
 @click.option("--id", help="Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)", required=True)
-def polona(id):
+def pl_polona(id):
 	"""
 	Downloads book from https://polona.pl
 	"""
-	entity_url = f"https://polona.pl/api/entities/{id}"
-	entity_metadata = get_json(entity_url)
-	output_folder = make_output_folder("polona", id)
-	for page, page_metadata in enumerate(entity_metadata["scans"]):
-		output_filename = make_output_filename(output_folder, page, extension="jpg")
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{page:08d}")
-			continue
-		found = False
-		for image_metadata in page_metadata["resources"]:
-			if image_metadata["mime"] == "image/jpeg":
-				get_binary(output_filename, image_metadata["url"])
-				found = True
-		if not found:
-			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
+	import pl
+	pl.get_polona(id=id)
 
 
 @main.command()

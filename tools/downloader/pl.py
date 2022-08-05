@@ -1,3 +1,5 @@
+import os
+
 import deep_zoom
 import utils
 
@@ -18,3 +20,21 @@ def get_academica(*, book_id, first_page_id, last_page_id):
 			metadata_url=metadata_url,
 			url_maker=url_maker,
 		)
+
+
+def get_polona(*, id):
+	metadata_url = f"https://polona.pl/api/entities/{id}"
+	metadata = utils.get_json(metadata_url)
+	output_folder = utils.make_output_folder("polona", id)
+	for page, page_metadata in enumerate(metadata["scans"]):
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
+		found = False
+		for image_metadata in page_metadata["resources"]:
+			if image_metadata["mime"] == "image/jpeg":
+				utils.get_binary(output_filename, image_metadata["url"])
+				found = True
+		if not found:
+			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
