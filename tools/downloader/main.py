@@ -646,10 +646,19 @@ def pl_academica(*, book_id, first_page_id, last_page_id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `6444409`)", required=True)
+def de_karlsruhe(*, id):
+	"""
+	Downloads book from https://digital.blb-karlsruhe.de
+	"""
+	import de
+	de.get_karlsruhe(id=id)
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `1286758696_1822000000/EPN_798582804`)", required=True)
 def haab(id):
 	"""
-	Downloads book from https://haab-digital.klassik-stiftung.de/
+	Downloads book from https://haab-digital.klassik-stiftung.de
 	"""
 	def make_url(page):
 		return f"https://haab-digital.klassik-stiftung.de/viewer/rest/image/{id}_{page:04d}.tif/full/full/0/default.jpg"
