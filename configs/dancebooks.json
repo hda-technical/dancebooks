@@ -97,7 +97,7 @@
             "reader.digitale-sammlungen.de",
             "stimmbuecher.digitale-sammlungen.de",
             "www.digitale-sammlungen.de",
-            
+
             // use modern www.nypl.org permalinks instead
             "catalog.nypl.org",
         ],
@@ -121,6 +121,7 @@
             "urn.nb.no",
             "vwml.org",
             "www.abdn.ac.uk",
+            "www.musenalm.de",
             "zs.thulb.uni-jena.de",
         ],
         "domains_allowed_301": [
