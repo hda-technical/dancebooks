@@ -91,6 +91,7 @@
 
             // use nbn-resolving.de permalinks instead
             "digital.slub-dresden.de",
+            "digital.blb-karlsruhe.de",
             "haab-digital.klassik-stiftung.de",
             "mdz-nbn-resolving.de",
             "opacplus.bsb-muenchen.de",
