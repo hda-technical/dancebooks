@@ -655,48 +655,14 @@ def de_karlsruhe(*, id):
 	de.get_karlsruhe(id=id)
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `1286758696_1822000000/EPN_798582804`)", required=True)
-def haab(id):
+@click.option("--first-id", help="Id of the book to be downloaded (e. g. `86571696X`)", required=True)
+@click.option("--second-id", help="Id of the book to be downloaded (e. g. `EPN_390287636`)", required=True)
+def de_haab(*, first_id, second_id):
 	"""
 	Downloads book from https://haab-digital.klassik-stiftung.de
 	"""
-	def make_url(page):
-		return f"https://haab-digital.klassik-stiftung.de/viewer/rest/image/{id}_{page:04d}.tif/full/full/0/default.jpg"
-	output_folder = make_output_folder("haab", id)
-	page = 0
-	# HAAB server returns 403 for non-existing pages. First,
-	while True:
-		page_url = make_url(page)
-		head_response = requests.head(page_url)
-		if head_response.status_code == 200:
-			print(f"Found starting page {page:04d}")
-			break
-		page += 1
-
-	exception_count = 0
-	while True:
-		page_url = make_url(page)
-		output_filename = make_output_filename(output_folder, page, extension="jpg")
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{page:08d}")
-			page += 1
-			continue
-		try:
-			print(f"Downloading page #{page:08d}")
-			get_binary(output_filename, page_url)
-			page += 1
-		except ValueError as ex:
-			page += 1
-			#WARN:
-			#	Certain pages can return 403 even in the middle of the book.
-			# 	Skipping certain number of such pages.
-			exception_count += 1
-			if exception_count < 10:
-				print(f"Got ValueError while getting page {page:08d}: {ex}")
-				continue
-			else:
-				print(f"Got exception while getting page {page:08d}: {ex}. Exception limit was reached, downloader will exit now.")
-				break
+	import de
+	de.get_haab(first_id=first_id, second_id=second_id)
 
 
 @main.command()

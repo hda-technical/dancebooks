@@ -46,7 +46,8 @@ def retry(retry_count, delay=0, delay_backoff=1):
 	return actual_decorator
 
 
-@retry(retry_count=3)
+# FIXME: retry decorator hides HTTPError raised by raise_for_status.
+# @retry(retry_count=3)
 def make_request(*args, **kwargs):
 	"""
 	Performs the request and returns requests.Response object.

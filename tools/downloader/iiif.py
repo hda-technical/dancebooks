@@ -120,7 +120,7 @@ def download_page_fast(manifest_url, output_folder, *, page):
 	_download_image_fast(
 		metadata=canvases[page],
 		page=page,
-		output_filename=output_filename, 
+		output_filename=output_filename,
 	)
 
 
