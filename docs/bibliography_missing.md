@@ -86,7 +86,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1768/1769 | Theodorus Franciscus Petersen | Practische Einleitung in der Chorégraphie ...  für das erste hable Jahr 1768<br/>_Good quality copy needed_ | [[Petersen, 1768]](https://bib.hda.org.ru/books/petersen_1768)<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Handbuch, 1840]` | [Stanford](https://searchworks.stanford.edu/view/1395290)<br/>[København](https://bibliotek.dk/linkme.php?rec.id=810010-katalog%3A005383999) |
 | 1769 | Theodorus Franciscus Petersen | Practische Einleitung in der Chorégraphie ...  für das 2. und letzte habljahr 1769<br/>_Good quality copy needed_ | `[Klemm #02]` | |
 | 1769 | Charles Thompson<br/>Samuel Thompson | Thompson's Twenty Four Country Dances for the Year 1769 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Thompson 24CD,1769]](https://www.cdss.org/elibrary/DFIE/Biblio/B000515.htm) | Library of Congress |
-| 1760–1780? | | _Contredanses françaises et allemandes_ | | [RSL/Rare](http://search.rsl.ru/ru/search#s=pubyear&q=contredanse) |
+| 1760–1780? | | _Contredanses françaises et allemandes_ | | [RSL/Rare](https://search.rsl.ru/ru/search#s=pubyear&q=contredanse) |
 | 1771 | S. Markordt (publisher) | XII contredanes avec figures et acompagnement à 7 instruments | `[Wortelboer, 2004]`<br/>`[Leaflets]` |
 | 1771 | Louis Laus de Boissy | Lettre critique sur notre danse theâtrale | `[Phister, 2016]` | |
 | 1771 | | Gedanken von Tänzen, in einem Sendschreiben<br/>_Published in Hamburg_<br/>_Maybe an antidance treatise_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -122,7 +122,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
 | 1799 | Мари Лепренс де Бомон | Наставление молодым госпожам, вступающим в свет и брачные союзы, служащее продолжением Юношескому училищу, где изъясняются должности как в разсуждении их самих, так и в разсуждении их детей<br/>_Второе издание_ | | [RSL](https://search.rsl.ru/ru/record/01003335475) |
 | 1790–1800? | Frere | Huitieme recueil de pot poury françois et contredanses les plus à la mode | `[Leaflets]` | |
-| 1791 | | Hommage aux dames de la quadrille | | [RSL/Rare](http://search.rsl.ru/ru/record/01003499969) |
+| 1791 | | Hommage aux dames de la quadrille | | [RSL/Rare](https://search.rsl.ru/ru/record/01003499969) |
 | 1791 | | Fourteen New Country Dances for 1791 with Their Proper Figures<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://manchesterartgallery.org/collections/search/collection/?id=1922.1060) | |
 | 1791 | | _The fan depicting the likeness of Princess Frederica Charlotte of Prussia who married Frederick Duke of York on 2nd September 1791 and is printed with music, words and instructions for 16 popular dances of the day_ | | [Low quality image](https://www.jerseyheritage.org/collection-items/paper-fan) |
 | 1791 | | Eighteen of the Most Favourite Country Dances<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://www.imieiventagli.it/l_allmande) |
@@ -156,7 +156,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1804 | J. Gottfried Grohmann | über die neueste Tanzkunst<br/>_in Modejournal, 1804, März, Seite 113_) | | |
 | 1804 | D. J. Wendt<br/>Jean Wendt<br/>Johann Wendt | Über den Tanz als Vergnügen und Schädlichkeit: Eine Beytrag zur Diätetik<br/>_2. Auflage_ | `[Turnkunst, 1816]`<br/>`[Nouveau manuel, 1857, #53]` | [Greisfald](https://lhgrw.gbv.de/DB=1/XMLPRS=N/PPN?PPN=334440610) |
 | 1804 | Schwan (publisher) | Taschenbuch für Tanzlustige<br/>_Published in Mannheim_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1806 | Joseph Koslovsky | Recueil choisi d'airs Russes, Francais, Italiens et de plusieurs Polonoises, Waltzers, Quadrilles et Ecossaises | | [RSL](http://search.rsl.ru/ru/record/01003329286) |
+| 1806 | Joseph Koslovsky | Recueil choisi d'airs Russes, Francais, Italiens et de plusieurs Polonoises, Waltzers, Quadrilles et Ecossaises | | [RSL](https://search.rsl.ru/ru/record/01003329286) |
 | 1807 | Jean-Georges Noverre | Letters sur les arts imitateurs en général et sur la danse en particulier | `[4. Rothenfelser]` | |
 | 1808 | Goulding | 24 Country Dances for the Year 1808 | [ABC notation](http://www.village-music-project.org.uk/?page_id=827) | |
 | 1809 | Thomas Cahusac | 24 Country Dances for the Year 1809 | [ABC notation](http://www.village-music-project.org.uk/?page_id=815) | |
@@ -171,7 +171,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1812 | Archibald Duff | Part First of a Choice Selection of Minuets | `[Guillard, 1989]` | |
 | 1812 | Thomas Wilson | _All the Select New Fashionable Dances for 1812_<br/>_Standalone part of The Treasures of Terpsichore_ | [Advertisement](https://bib.hda.org.ru/books/wilson_1811_countrydance)<br/>[[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1812 | Thomas Wilson<br/>Button, Whitaker (publishers) | Button & Whitaker's Twenty Four Country Dances. For the year 1812, adapted for the Violin, German Flute or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
-| 1812 | Пьер Роде<br/>Пьер Мари Франсуа де Саль Байо<br/>Родольф Крейцер | Скрипичная школа Роде, Байльота и Крейцера | [[Роде, Байо, и др., 1812]](https://bib.hda.org.ru/books/rode_1812) | [RSL](http://search.rsl.ru/ru/record/01001988902) |
+| 1812 | Пьер Роде<br/>Пьер Мари Франсуа де Саль Байо<br/>Родольф Крейцер | Скрипичная школа Роде, Байльота и Крейцера | [[Роде, Байо, и др., 1812]](https://bib.hda.org.ru/books/rode_1812) | [RSL](https://search.rsl.ru/ru/record/01001988902) |
 | 1813 | Wilhelm Klingenbrunner | Tändeley und Ernst: ein Taschenbuch für gesellschaftliche Unterhaltungen | `[Unfried, 2014]` | |
 | 1813 | Thomas Wilson<br/>Button, Whitaker (publishers) | Thompson's Twenty Four Country Dances, for the Year 1813 Adapted for the Violin, German Flute or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [Google](https://books.google.com/books?id=EglymwEACAAJ) |
 | 1813 | Thomas Wilson<br/>Button, Whitaker (publishers) | Le Sylphe. An Elegant Collection of Twenty Four Country Dances, for the year 1813, adapted for the German Flute, Violin, Flageolet or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004691263) |
@@ -235,7 +235,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1822 | Thomas Wilson | Forty Eight Fashionable Country Dances, Reels and Waltzes, for the Year 1822 | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
 | 1823 | | La harpе du nord<br/>_Нужны тетради: 1823/07–12_ | | ИРЛИ РАН, №7, 8, 9, 10, 12<br/>NLR, `М 970-2/С.280`, (№ 8, 9, 12) |
 | 1823 | Jean Charles Louis Le Pitre | Vollständige Theorie der eleganten und höheren Tanzkunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
-| 1822–1825 | | Pieces detachees tirees du journal de musique "La harpe du nord" | | [RSL](http://search.rsl.ru/ru/record/01002068603) |
+| 1822–1825 | | Pieces detachees tirees du journal de musique "La harpe du nord" | | [RSL](https://search.rsl.ru/ru/record/01002068603) |
 | 1824–1825? | C. Friedrich Engelmann | Die Kunst zu Walzen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]`<br/>`[Handbuch, 1840]` | |
 | 1824 | Juan Ignacio de Iztueta | Guicuzpoaco dantza | `[Nouveau manuel, 1857, #60]` | [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k8894479/) |
 | 1824 | Thomas Wilson | Whitaker and Compy's Twenty Four Country Dances, for the Year 1824, Adapted for the Violin, German Flute or Oboe | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004742496 |
@@ -277,7 +277,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103)<br/>[SBB / Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411985159) |
 | 1835 | J. G. Häcker | Der selbstlehrende Tanzmeister<br/>_Good quality copy_ | [[Häcker, 1835]](https://bib.hda.org.ru/books/hacker_1835)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [SMB / Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=876381964)<br/>[PHOTOCOPY @ UDK / Berlin](https://udk-berlin.hosted.exlibrisgroup.com/permalink/f/1b2jonm/UDK_ALMA_DS21538893510002884)<br/>[DHDS / Köln](https://aleph.zbsport.de/F/8F9MHNPSSJ22IVFV41CQTMA997BGCHH2NIXGN4EN7R5FGHIY1F-02027?func=item-global&doc_library=ZBS01&doc_number=000182065&year=&volume=&sub_library=) |
 | 1835 | Пьер Роде<br/>Пьер Мари Франсуа де Саль Байо<br/>Родольф Крейцер | Скрипичный учитель, или собрание для изучения на скрипке необходимых правил<br/>_Издание третье_ | [Quote](http://blog.hda.org.ru/quotes/novyie-knigi) | |
-| 1836 | Марцинкевич<br/>Матвей Иванович Бернард | Les graces. Кадриль | [Cite](http://search.rsl.ru/ru/record/01000265975) | |
+| 1836 | Марцинкевич<br/>Матвей Иванович Бернард | Les graces. Кадриль | [Cite](https://search.rsl.ru/ru/record/01000265975) | |
 | 1837 | Luigi Bartolotti | Della danza domestica | `[Leaflets]` | |
 | 1838 | | A Manual of Private Ballroom Dancing | `[Guillard, 1989]` | |
 | 1838 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Giessen](https://opac.uni-giessen.de/DB=1/PPNSET?PPN=221521437)<br/>[Bayreth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0%3D%221648145%22+IN+%5B2%5D&v=sunrise&l=de)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UDK&search_scope=default_scope&docId=UDK_ALMA_DS21538878500002884&fn=permalink) |
@@ -420,10 +420,10 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1900 | Graham MacNeilage | How to Dance the Eightsome Reel, Scotch Reel, Reel of Tulloch, Strathspey and Reel Steps | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002331353) |
 | 1900 | J. G. Atkinson, junior | Scottish National Dances | `[Guillard, 1989]` | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=978495) |
 | 1900? | Gustav Engelhardt | Contredanse und Quadrille à la cour Anordnungen derselben, nebst Entwurf zu einem kurzen deutschen Commando | | [Leipzig](https://katalog.ub.uni-leipzig.de/Record/0-1568624832) |
-| 190- | Н. Ширяев | Pas d'Espagne | | [RSL](http://search.rsl.ru/ru/record/01002066571) |
-| 190- | А. Д. Кулеша | Чары красоты. Pas d'espagne. Danse nouvelle pour le piano | | [RSL](http://search.rsl.ru/ru/record/01002057435) |
-| 190- | А. Вивьен | Pas d'Espagne. Nouvelle danse de salon | | [RSL](http://search.rsl.ru/ru/record/01002052387) |
-| 190- | Борис Фёдорович Кейль | Пахита. Nouveau Pas d'Espagne | | [RSL](http://search.rsl.ru/ru/record/01001930835) |
+| 190- | Н. Ширяев | Pas d'Espagne | | [RSL](https://search.rsl.ru/ru/record/01002066571) |
+| 190- | А. Д. Кулеша | Чары красоты. Pas d'espagne. Danse nouvelle pour le piano | | [RSL](https://search.rsl.ru/ru/record/01002057435) |
+| 190- | А. Вивьен | Pas d'Espagne. Nouvelle danse de salon | | [RSL](https://search.rsl.ru/ru/record/01002052387) |
+| 190- | Борис Фёдорович Кейль | Пахита. Nouveau Pas d'Espagne | | [RSL](https://search.rsl.ru/ru/record/01001930835) |
 | 190- | К. В. Фельдман | Новый русско-славянский | | [NLR](https://yadi.sk/i/0otSlk7kqbVKJ) |
 | 1901 | Pietro Onorati | Manuale dei balli di società con l'aggiunta dei lancieri e del cotillon<br/>_Published in Napoli by “Libreria editrice internazionale”_ | | [NYPL](http://catalog.nypl.org/record=b12276555~S1) |
 | 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=784912) |
@@ -455,7 +455,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1914 | Михаил Михайлович Бонч-Томашевский | Книга о танго. Искусство и сексуальность | | [RSL](https://search.rsl.ru/ru/record/01004188739)<br/>`SPTL: Б 817` |
 | 1914? | A. Cosmo Mitchell | A Guide to Ballroom Dancing<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
 | 1914? | A. Cosmo Mitchell | New Dances<br/>_Published in Aberdeen_ | `[Rogers, 1998]` | |
-| 1914 | Андрей Яковлевич Левинсон | Мастера балета. Очерки истории и теории танца | | [RSL](http://search.rsl.ru/ru/record/01004191266) |
+| 1914 | Андрей Яковлевич Левинсон | Мастера балета. Очерки истории и теории танца | | [RSL](https://search.rsl.ru/ru/record/01004191266) |
 | 1914 | | Танго. Мурочка-Манюрочка! Новый сборник лучших куплетов | |  [NLR #1](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068184)<br/>[NLR #2](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068185) |
 | 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005165864) |
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
@@ -485,7 +485,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1931 | Н. А. Александрова<br/>Милица Евлампиевна Бурцева<br/>Е. Шишмарёва | Массовые агит-пляски | `[Жбанкова, 2016]` | |
 | 1931 | Б. В. Бурлаков | Массовые игры и пляски | | [RSL](https://search.rsl.ru/ru/record/01009269702)<br/>`SPTL: Б 915` |
 | 1932 | Valentin Parnac | Histoire de la danse | | [On sale, ₽6000](http://www.alib.ru/5_parnah_v_istoriya_tanca_histoire_de_la_danse_par_valentin_parnac_w1t241546dca3ac4a7c560ed9ceec07a1e6a000.html) |
-| 1933 | | Массовые игры и пляски<br/>Составлено бригадой Государственной студии музыкального движения «Гептахор» | | [On sale, ₽7000](http://www.alib.ru/5_massovye_plyaski_i_igry_w1t2543144a6446263669e84871b63bee025f4f.html)<br/>[RSL](http://search.rsl.ru/ru/record/01009302983) |
+| 1933 | | Массовые игры и пляски<br/>Составлено бригадой Государственной студии музыкального движения «Гептахор» | | [On sale, ₽7000](http://www.alib.ru/5_massovye_plyaski_i_igry_w1t2543144a6446263669e84871b63bee025f4f.html)<br/>[RSL](https://search.rsl.ru/ru/record/01009302983) |
 | 1933 | Всеволод Николаевич Всеволодский-Гернгросс | Игры народов СССР | | [RSL/Restricted](https://search.rsl.ru/ru/record/01006599537) |
 | 1934 | Н. А. Александрова | Массовые танцы | | |
 | 1934 | Francesco Pospisjl | La moresca, studio comparato con particolare giguardo all'Italia settentrionale | `[2. Rothenfelser]` | |
@@ -505,7 +505,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1947 | Л. Богаткова | Полонез | | [RSL](https://search.rsl.ru/ru/record/01006006866) |
 | 1947 | Л. Богаткова | Танцы | | [RSL](https://search.rsl.ru/ru/record/01005591167)<br/>[NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS008186291) |
 | 1948 | Edwin Evans | Music and the Dance | `[Richardson, 1960]` | |
-| 1950 | | Сборник новых бальных танцев | | [RSL](http://search.rsl.ru/ru/record/01006019265) |
+| 1950 | | Сборник новых бальных танцев | | [RSL](https://search.rsl.ru/ru/record/01006019265) |
 | 1952 | Лидия Ивановна Богаткова | Танец в школе<br/>_По материалам сборника Л. Богатковой «В лагере и школе»_<br/>_Издано в Ставрополе_ | | `[Bodhi]` |
 | 1958 | Rebelo Bonito | As mouriscas. I–O influxo árabe na coreografia popular<br/>_In: Das artes e da historia da Madeira, tomo 28, pages 39–42_ | | |
 | 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS008531382) |
@@ -524,14 +524,14 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1992 | Carles Mas i Garcia<br/>Sophie Rousseau | Tactus et tempo des musiques à danser. Pour une lecture dans le texte original<br/>_In: Le cahier de maître Guillaume, 1992_ | `[3. Rothenfelser]` | |
 | 1993<br/>2003 (Reprint) | Guglielmo Ebreo | De pratica seu arte tripudii. On the Practice or Art of Dancing<br/>Edited, translated and introduced by Barbara Sparti | | Owned by Glorf |
 | 1995 | A. Montandon | Bibliographie des traités de savoir-vivre en Europe | `[Heiter, 2016]` | |
-| 1999 | Анна Викторовна Колесникова | Бал в истории русской культуры | | [RSL](http://search.rsl.ru/ru/record/01000265975) |
+| 1999 | Анна Викторовна Колесникова | Бал в истории русской культуры | | [RSL](https://search.rsl.ru/ru/record/01000265975) |
 | 2001 | Alessandro Pontremolli | Un'inedita racolta di contradanze con del Settecento<br/>_In: Aspetti della cultura di danza nell'Europa del Settecento_ | `[2. Rothenfelser]` | |
-| 2004 | Елена Васильевна Жбанкова | Искусство движения в русской культуре конца XIX века-1920-х годов: | | [RSL](http://search.rsl.ru/ru/record/01002633321) |
-| 2005 | Ольга Васильевна Дружининская | Лексика бала в русском языке XVIII–XIX веков | | [RSL](http://search.rsl.ru/ru/record/01002851181) |
-| 2008 | Ольга Васильевна Дружининская | Бал как культурное явление XIX века: из истории слов | | [RSL](http://search.rsl.ru/ru/record/01004324142) |
+| 2004 | Елена Васильевна Жбанкова | Искусство движения в русской культуре конца XIX века-1920-х годов: | | [RSL](https://search.rsl.ru/ru/record/01002633321) |
+| 2005 | Ольга Васильевна Дружининская | Лексика бала в русском языке XVIII–XIX веков | | [RSL](https://search.rsl.ru/ru/record/01002851181) |
+| 2008 | Ольга Васильевна Дружининская | Бал как культурное явление XIX века: из истории слов | | [RSL](https://search.rsl.ru/ru/record/01004324142) |
 | 2009 | Albert Garcia Espuche et al. | Dansa i música, Barcelona 1700<br/>_Транскрипция лекции выполненная Carles Mas i Garcia_<br/>_In: Monografies del Museu d'història, Ajuntament de Barcelona and Institut de Cultura 2_<br/>_Contains neudruck of Francesc Olivelles manuscript_ | `[3. Rothenfelser]` | [On sale, €12](http://ajuntament.barcelona.cat/barcelonallibres/ca/publicacions/dansa-i-música) |
 | 2010 | Marie Demeillez | Un plaisir sage et régle | `[Heiter, 2016]` | |
-| 2014 | Юлия Михайловна Симаева | Педагогическое обеспечение преподавания хореографии в общеобразовательных учебных заведениях России | | [RSL](http://search.rsl.ru/ru/record/01007523525) |
+| 2014 | Юлия Михайловна Симаева | Педагогическое обеспечение преподавания хореографии в общеобразовательных учебных заведениях России | | [RSL](https://search.rsl.ru/ru/record/01007523525) |
 
 ## Antidance books
 
@@ -645,16 +645,16 @@ _This part of the list is to joined with the general table_
 | 1740–1746? | Gottfried Taubert | Kurtzer Entwurff von der Zuläβigkeit des sowol natürlichen als künstlichen Tantz-Exercitii; in welchem Der Ursprung, Fortgang, Verbeβerung, unterschiedlicher Gebrauch, vielfältiger Nutzen und andere Eigenschafften mehr kürtz[lich] gezeiget: Wie auch die vornehmste Schein-Gründe derer Tantzhaβer angeführet, und gründlich wider- leget werden | Санкт-Петербург, Российская национальная библиотека | | `[Шабалина, 2019]`<br/>`[Transcriptions]` | |
 | 1752 | Philip Gumpenhueber (scriber)<br/>Gottfried Tauber (translator / author)<br/>Raoul-Auger Feuillet (author) | Choregraphie, oder die Kunst einen Tanz durch characteres, figuren, und andere Zeichen zu beschreiben vermittels derer in jeder (so die fundament gefasset) von ihre selbst alle artenn der Tänze ohne sonderliche Mühe erlernen kan | Chicago, Newberry Library | VAULT Case Ms 5308 | | [Chicago, Newberry Library](https://i-share-nby.primo.exlibrisgroup.com/permalink/01CARLI_NBY/i5mcb2/alma991836198805867) |
 | 1760 | Adam Friedrich Lenz | Anfangsgründe und nöthige Regeln zur Tanzkunst. Nebst einer Anzahl Englischer Contry-Tänze und deren richtige Beschreibung | Schwerin, Landesbibliothek Mecklenburg-Vorpommern Günther Ecker | `Mus 37425` | | [Schwerin](https://lhwis.gbv.de/DB=2/TTL=1/LNG=EN/PPN?PPN=491886012) |
-| 177-? | Grahl | Contra Danses | Москва, Российская государственная библиотека | `Ф.183.1 №1421` | | [РГБ](http://search.rsl.ru/ru/record/01005425511) |
+| 177-? | Grahl | Contra Danses | Москва, Российская государственная библиотека | `Ф.183.1 №1421` | | [РГБ](https://search.rsl.ru/ru/record/01005425511) |
 | 1772 | Garcia | Garcia Manuscript | | | `[Mackler]`<br/>[[Russell, 1995]](http://openmusiclibrary.org/article/104013/)<br/>[[Greening, 1997]](http://openmusiclibrary.org/article/474673/) | |
 | 1789 | Albert Joseph Brame | Petit répertoire de pas françaises et figures usités dans les contredanses françasies | Harvard Library | `Theatre Collection TS 552.15.14.98` | | [HVD](http://id.lib.harvard.edu/aleph/013826608/catalog) |
 | 179- | William Jones | The “Llangadfan” dances | United Kingdom, Wales, Aberystwyth, The National Library of Wales | `Add MSS 171E` | `[Swaine]` | [NLW](https://www.library.wales/index.php) |
 | 179- | Gergoux | Choix de Contredanses, Waltz, Sauteuses, Anglaises, Bourrées, Rondes, & ca | Paris, Bibliothèque national de France | `RES VMC MS-22` | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb433638984) |
 | 1790? | Eliza Austen, née Hancock (Eliza de Feuillide) | Unbound music manuscript leaf | UK, Winchester, Hampshire Record Office | `CHWJA/19/12` | [Low quality](https://archive.org/details/austen1679003-2001) | [Winchester Register Office](https://www.hants.gov.uk/birthsdeathsandceremonies/findregisteroffices/winchester) |
-| 1792 | Карл Готлоб Брейткопф | Терпсихора в клавираусцуге | Москва, Российская государственная библиотека | `ОР 392/муз` | | [РГБ](http://search.rsl.ru/ru/record/01005519453) |
+| 1792 | Карл Готлоб Брейткопф | Терпсихора в клавираусцуге | Москва, Российская государственная библиотека | `ОР 392/муз` | | [РГБ](https://search.rsl.ru/ru/record/01005519453) |
 | 1793 | Asa Willcox | Asa Willcox’s Book of Figures | Chicago, Newberry Library | `VAULT Case MS V 168 .971` | [Transcription in [Willcox, 1918]](https://bib.hda.org.ru/books/willcox_1918) | [Chicago, Newberry LIbrary](https://webvoyage.carli.illinois.edu/nby/cgi-bin/Pwebrecon.cgi?DB=local&v1=1&BBRecID=771635) |
 | 1805? | | Let fortune's angry tempest blow | Cambridge, Cambridge University Library | `MS.Add.9004` |[RISM](http://www.rism.org.uk/manuscripts/116377) | |
-| 181- | J. Bröckl | 12 Tänze für Pianoforte | Москва, Российская государственная библиотека | `ОР 6/муз` | | [РГБ](http://search.rsl.ru/ru/record/01004832331) |
+| 181- | J. Bröckl | 12 Tänze für Pianoforte | Москва, Российская государственная библиотека | `ОР 6/муз` | | [РГБ](https://search.rsl.ru/ru/record/01004832331) |
 | 1829–1830 | Michel Saint-Léon | _aka Cahiers d'exercices_ | Paris, Bibliothèque nationale de France | `RES-1137` | [Cahier 3](https://bib.hda.org.ru/books/leon_1830_cahier3)<br/>`[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb44003243k) |
 | 1830–1835 | Michel Saint-Léon | _aka Chorégraphies et musiques de divers ballets et exercices_ | Paris, Bibliothèque nationale de France | `RES-1140` | `[Leaflets]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43993796t) |
 | 1851 | Thomas Wilson | Thomas Wilson Letter to the Royal Literary Fund with a Request of Financial Support | London, The British Library | | [[Cooper, #05]](https://www.regencydances.org/paper005.php) |
