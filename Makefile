@@ -75,11 +75,11 @@ configs-install-testing:
 docs:
 	mkdocs build
 
-reload-testing: test translations
+reload-testing: docs test translations
 	@echo "Reloading"
 	bash -c "time -p (touch $(TOUCH_RELOAD_TESTING) && sleep 1 && curl --max-time 60 'https://bib-test.hda.org.ru/ping')"
 
-reload-production: test translations
+reload-production: docs test translations
 	@echo "Reloading"
 	bash -c "time -p (touch $(TOUCH_RELOAD_PRODUCTION) && sleep 1 && curl --max-time 60 'https://bib.hda.org.ru/ping')"
 
