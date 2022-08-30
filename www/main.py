@@ -32,10 +32,17 @@ markdown_cache = utils.MarkdownCache()
 
 debug_mode = False
 
-flask_app = flask.Flask(__name__)
+
+def init_apps():
+	logging.info("Starting up")
+	flask_app = flask.Flask(__name__)
+	babel_app = flask_babel.Babel(flask_app)
+	return (flask_app, babel_app)
+
+
+flask_app, babel_app = init_apps()
 flask_app.config["BABEL_DEFAULT_LOCALE"] = utils.first(config.www.languages)
 flask_app.config["USE_EVALEX"] = False
-babel_app = flask_babel.Babel(flask_app)
 flask_markdown_app = flask_markdown.Markdown(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
@@ -70,10 +77,6 @@ flask_app.jinja_env.filters["self_served_url_size"] = jinja_self_served_url_size
 #filling jinja global variables
 flask_app.jinja_env.globals["config"] = config
 flask_app.jinja_env.globals["utils"] = utils
-
-@flask_app.before_first_request
-def initialize():
-	logging.info("Starting up")
 
 
 @babel_app.localeselector
