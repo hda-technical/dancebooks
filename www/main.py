@@ -286,19 +286,12 @@ def get_book_pdf(book_id, index):
 		flask.abort(http.client.INTERNAL_SERVER_ERROR, message)
 
 	logging.info(f"Sending pdf file: {pdf_full_path}")
-	if config.unittest_mode:
-		#using send_file in unittest mode causes ResourceWarning due to unclosed file
-		response = flask.make_response("SOME_BINARY_PDF_LIKE_DATA")
-		response.headers["Content-Type"] = "application/pdf"
-		response.headers["Content-Disposition"] = "attachment"
-		return response
-	else:
-		basename = os.path.basename(pdf_full_path)
-		return flask.send_file(
-			pdf_full_path,
-			as_attachment=True,
-			attachment_filename=basename
-		)
+	basename = os.path.basename(pdf_full_path)
+	return flask.send_file(
+		pdf_full_path,
+		as_attachment=True,
+		download_name=basename
+	)
 
 
 @flask_app.get("/books/<string:item_id>/transcription")

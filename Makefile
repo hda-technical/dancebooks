@@ -12,7 +12,7 @@ debug: translations
 
 test:
 	DANCEBOOKS_UNITTEST= \
-	pytest tests
+	pytest -v tests
 
 translations:
 	pybabel -v -q compile -d www/translations
