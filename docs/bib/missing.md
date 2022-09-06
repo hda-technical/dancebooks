@@ -111,6 +111,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1788 | Michael Johann Friedrich Wiedeburg | Musikalisches Charten-Spiel ex G dur<br/>_Published in Wien by A. F. Winter_ | `music: generator`<br/>`[Hedges, 1978]` | [Stanford](https://searchworks.stanford.edu/view/3774431) |
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
 | 1790–1800? | Frere | Huitieme recueil de pot poury françois et contredanses les plus à la mode | `[Leaflets]` | |
+| 1790–1799 | Joseph Fajenza | Versuch einer Erklärung über die gewöhnlichen Gattungen der Tänze und dem Unterricht in denselben. Dem verehrungswürden Publikum Lembergs, besonders meinen Gönnern und Freunden gewidmet<br/>_gedruckt mit Piller'schen Schriften im Lemberg_ | `[5. Rothenfelser]` | [Wrocław](https://virtua2019.ossolineum.pl:8483/lib/item?id=chamo:272028) |
 | 1791 | | Hommage aux dames de la quadrille | | [RSL/Rare](https://search.rsl.ru/ru/record/01003499969) |
 | 1791 | | Fourteen New Country Dances for 1791 with Their Proper Figures<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://manchesterartgallery.org/collections/search/collection/?id=1922.1060) | |
 | 1791 | | _The fan depicting the likeness of Princess Frederica Charlotte of Prussia who married Frederick Duke of York on 2nd September 1791 and is printed with music, words and instructions for 16 popular dances of the day_ | | [Low quality image](https://www.jerseyheritage.org/collection-items/paper-fan) |
@@ -765,6 +766,7 @@ _This part of the list is to joined with the general table_
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #01–06 + #25 | https://www.regencydances.org/paper000.php |
 | 2019-11-01 | `[Swaine]` | Andrew Swaine | List of historical sources | https://andrewswaine.uk/sources |
 | 2020-04-09 | `[Corbella]` | Maurizio Corbella | Brevi note sulla riproposta dei ballabili del "Carnevalone" ottocentesco a Milano | http://www.mauriziocorbella.it/carmi/800ballabili.html |
+| 2022 | `[5. Rothenfelser]` | | 5. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/rothenfelser_2022 |
 | 2023-02-26 | `[Wiki: Tanz]` | | Wikisource on Tanz | [Listing page](https://de.wikisource.org/wiki/Tanz), [Changelog](https://de.wikisource.org/w/index.php?title=Tanz&action=history) |
 | 2024-09-16 | `[Powers Free]` | Richard Powers | Freely available primary source scans | [Download page](https://www.richardpowers.com/free-downloads), [archive.org Wayback Machine](https://web.archive.org/web/20230000000000*/https://www.richardpowers.com/free-downloads) |
 
