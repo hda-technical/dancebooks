@@ -121,7 +121,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1787 | Thompson | Twenty Four Country Dances for the Year 1787 | [[Cooper, #01]](https://www.regencydances.org/paper001.php)<br/>[[Cooper, #04]](https://www.regencydances.org/paper004.php)<br/>[[DFIE: Thompson 24CD,1787]](https://www.cdss.org/elibrary/DFIE/Biblio/B000531.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283574) |
 | 1788 | Michael Johann Friedrich Wiedeburg | Musikalisches Charten-Spiel ex G dur<br/>_Published in Wien by A. F. Winter_ | `music: generator`<br/>`[Hedges, 1978]` | [Stanford](https://searchworks.stanford.edu/view/3774431) |
 | 1788 | John Griffiths | A Collection of Country Dances and Cotillions | `[Mackler]` | |
-| 1799 | Мари Лепренс де Бомон | Наставление молодым госпожам, вступающим в свет и брачные союзы, служащее продолжением Юношескому училищу, где изъясняются должности как в разсуждении их самих, так и в разсуждении их детей<br/>_Второе издание_ | | [RSL](https://search.rsl.ru/ru/record/01003335475) |
 | 1790–1800? | Frere | Huitieme recueil de pot poury françois et contredanses les plus à la mode | `[Leaflets]` | |
 | 1791 | | Hommage aux dames de la quadrille | | [RSL/Rare](https://search.rsl.ru/ru/record/01003499969) |
 | 1791 | | Fourteen New Country Dances for 1791 with Their Proper Figures<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://manchesterartgallery.org/collections/search/collection/?id=1922.1060) | |
