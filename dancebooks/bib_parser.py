@@ -6,11 +6,9 @@ import logging
 import multiprocessing
 import os.path
 
-import markdown
-
 from dancebooks.config import config
 from dancebooks import const
-from dancebooks import markdown as md_helpers
+from dancebooks import markdown
 from dancebooks import index as search_index
 from dancebooks import utils
 
@@ -32,17 +30,14 @@ class FinalizingContext:
 	Contains objects required for finalizing parsed data set
 	"""
 	def __init__(self, index):
-		self._markdown = markdown.Markdown(
-			output_format="xhtml5"
-		)
-		self._markdown.inlinePatterns.register(md_helpers.MarkdownCite(index), name="cite", priority=-1)
+		self._renderer = markdown.make_note_renderer(index)
 
 	def parse_markdown(self, data):
-		self._markdown.reset()
-		#erasing added <p> tags
-		return self._markdown.convert(data)\
-			.replace("<p>", "")\
-			.replace("</p>", "")
+		self._renderer.reset()
+		# erasing added <p> tags
+		return self._renderer.convert(data)\
+			.removeprefix("<p>")\
+			.removesuffix("</p>")
 
 
 class BibItem:

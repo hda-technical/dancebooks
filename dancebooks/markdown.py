@@ -10,6 +10,47 @@ from dancebooks import const
 from dancebooks import utils
 
 
+def make_transcription_renderer():
+	renderer = markdown.Markdown(
+		extensions=[
+			"markdown.extensions.tables",
+		],
+		output_format="xhtml5"
+	)
+	renderer.inlinePatterns.register(MarkdownPageNumber(), name="page_number", priority=-1)
+	renderer.inlinePatterns.register(MarkdownSmallCaps(), name="smallcaps", priority=-2)
+	renderer.inlinePatterns.register(MarkdownStrikethrough(), name="strikethrough", priority=-3)
+	renderer.inlinePatterns.register(MarkdownSubscript(), name="subscript", priority=-4)
+	renderer.inlinePatterns.register(MarkdownSuperscript(), name="superscript", priority=-5)
+	renderer.inlinePatterns.register(MarkdownHyphen(), name="hyphen", priority=-6)
+
+	renderer.parser.blockprocessors.deregister("hashheader")
+	renderer.parser.blockprocessors.register(
+		WrappedHashHeaderProcessor(renderer.parser),
+		name="wrapped_hash_header",
+		priority=1000,
+	)
+	renderer.parser.blockprocessors.register(
+		MarkdownAlignRight(renderer.parser),
+		name="align_right",
+		priority=1001,
+	)
+	renderer.parser.blockprocessors.register(
+		MarkdownNote(renderer.parser),
+		name="note",
+		priority=1002,
+	)
+	return renderer
+
+
+def make_note_renderer(index):
+	renderer = markdown.Markdown(
+		output_format="xhtml5"
+	)
+	renderer.inlinePatterns.register(MarkdownCite(index), name="cite", priority=-1)
+	return renderer
+
+
 class MarkdownCache:
 	"""
 	Class capable of caching markdown files in compiled HTML form
@@ -21,35 +62,7 @@ class MarkdownCache:
 		self._lock = threading.Lock()
 		#dict: file abspath -> (source file mtime, compiled html data)
 		self._cache = dict()
-		self._markdown = markdown.Markdown(
-			extensions=[
-				"markdown.extensions.tables",
-			],
-			output_format="xhtml5"
-		)
-		self._markdown.inlinePatterns.register(MarkdownPageNumber(), name="page_number", priority=-1)
-		self._markdown.inlinePatterns.register(MarkdownSmallCaps(), name="smallcaps", priority=-2)
-		self._markdown.inlinePatterns.register(MarkdownStrikethrough(), name="strikethrough", priority=-3)
-		self._markdown.inlinePatterns.register(MarkdownSubscript(), name="subscript", priority=-4)
-		self._markdown.inlinePatterns.register(MarkdownSuperscript(), name="superscript", priority=-5)
-		self._markdown.inlinePatterns.register(MarkdownHyphen(), name="hyphen", priority=-6)
-
-		self._markdown.parser.blockprocessors.deregister("hashheader")
-		self._markdown.parser.blockprocessors.register(
-			WrappedHashHeaderProcessor(self._markdown.parser),
-			name="wrapped_hash_header",
-			priority=1000,
-		)
-		self._markdown.parser.blockprocessors.register(
-			MarkdownAlignRight(self._markdown.parser),
-			name="align_right",
-			priority=1001,
-		)
-		self._markdown.parser.blockprocessors.register(
-			MarkdownNote(self._markdown.parser),
-			name="note",
-			priority=1002,
-		)
+		self._renderer = make_transcription_renderer()
 
 	def get(self, abspath):
 		"""
@@ -58,25 +71,25 @@ class MarkdownCache:
 		"""
 		with self._lock:
 			modified_at = os.path.getmtime(abspath)
-			compiled_at, compiled_data = self._cache.get(abspath, (None, None))
+			rendered_at, rendered_data = self._cache.get(abspath, (None, None))
 			if (
-				(compiled_at is not None) and
-				(modified_at <= compiled_at)
+				(rendered_at is not None) and
+				(modified_at <= rendered_at)
 			):
-				return compiled_data
-		compiled_data = self.compile(abspath)
+				return rendered_data
+		rendered_data = self.render(abspath)
 		with self._lock:
-			self._cache[abspath] = (modified_at, compiled_data)
-		return compiled_data
+			self._cache[abspath] = (modified_at, rendered_data)
+		return rendered_data
 
-	def compile(self, abspath):
+	def render(self, abspath):
 		"""
 		Helper function for performing compilation
 		of a markdown file to HTML
 		"""
-		self._markdown.parser.blockprocessors["note"].reset()
+		self._renderer.reset()
 		raw_data = utils.read_utf8_file(abspath)
-		return self._markdown.convert(raw_data)
+		return self._renderer.convert(raw_data)
 
 
 class MarkdownCite(markdown.inlinepatterns.Pattern):
