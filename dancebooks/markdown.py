@@ -203,16 +203,16 @@ class MarkdownHyphen(markdown.inlinepatterns.Pattern):
 				r"(?P<removable>\[-\])|"
 				r"(?P<forgotten>\[-\?\])"
 			r")"
-			r"\s*\r?\n"
+			r"\s*\r?\n\s*"
 		)
 
 	def handleMatch(self, m):
 		if m["preservable"]:
 			# preserve the hyphen
-			return "-\n"
+			return "-"
 		else:
 			# remove non-meaning hyphen
-			return "\n"
+			return ""
 
 
 class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):

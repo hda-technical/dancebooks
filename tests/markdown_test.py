@@ -60,22 +60,14 @@ def test_hyphen():
 Preservable hyphen-
 separated text
 """
-	assert render(input) == \
-'''
-<p>Preservable hyphen-
-separated text</p>
-'''.strip()
+	assert render(input) == '<p>Preservable hyphen-separated text</p>'
 
 	input = \
 """
 Removable hyphen[-]
 separated text
 """
-	assert render(input) == \
-'''
-<p>Removable hyphen
-separated text</p>
-'''.strip()
+	assert render(input) == '<p>Removable hyphenseparated text</p>'
 
 	input = \
 """
@@ -83,8 +75,13 @@ Forgotten hyphen[-?]
 separated text
 """
 
-	assert render(input) == \
-'''
-<p>Forgotten hyphen
-separated text</p>
-'''.strip()
+	assert render(input) == '<p>Forgotten hyphenseparated text</p>'
+	
+	
+def test_combinations():
+	input = \
+"""
+### Hyphenated multi[-]
+    line header
+"""
+	assert render(input) == '<h3>Hyphenated multiline header</h3>'
