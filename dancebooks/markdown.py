@@ -10,6 +10,15 @@ from dancebooks import const
 from dancebooks import utils
 
 
+CSS_CLASS_STRIKETHROUGH = "strikethrough"
+CSS_CLASS_SUBSCRIPT = "subscript"
+CSS_CLASS_SUPERSCRIPT = "superscript"
+CSS_CLASS_SMALLCAPS = "smallcaps"
+CSS_CLASS_PAGE_NUMBER = "page_number"
+CSS_CLASS_NOTE = "note"
+CSS_CLASS_NOTE_ANCHOR = "note_anchor"
+
+
 def make_transcription_renderer():
 	renderer = markdown.Markdown(
 		extensions=[
@@ -116,7 +125,7 @@ class MarkdownPageNumber(markdown.inlinepatterns.Pattern):
 
 	def handleMatch(self, m):
 		span = xml.Element("span")
-		span.set("class", const.CSS_CLASS_PAGE_NUMBER)
+		span.set("class", CSS_CLASS_PAGE_NUMBER)
 		span.text = m.group("page_number")
 		return span
 
@@ -132,7 +141,7 @@ class MarkdownStrikethrough(markdown.inlinepatterns.Pattern):
 
 	def handleMatch(self, m):
 		span = xml.Element("span")
-		span.set("class", const.CSS_CLASS_STRIKETHROUGH)
+		span.set("class", CSS_CLASS_STRIKETHROUGH)
 		span.text = m.group("strikethrough")
 		return span
 
@@ -159,7 +168,7 @@ class MarkdownSubscript(markdown.inlinepatterns.Pattern):
 
 	def handleMatch(self, m):
 		span = xml.Element("span")
-		span.set("class", const.CSS_CLASS_SUBSCRIPT)
+		span.set("class", CSS_CLASS_SUBSCRIPT)
 		span.text = m.group("subscript")
 		return span
 
@@ -175,7 +184,7 @@ class MarkdownSmallCaps(markdown.inlinepatterns.Pattern):
 
 	def handleMatch(self, m):
 		span = xml.Element("span")
-		span.set("class", const.CSS_CLASS_SMALLCAPS)
+		span.set("class", CSS_CLASS_SMALLCAPS)
 		span.text = m.group("smallcaps")
 		return span
 
@@ -190,20 +199,20 @@ class MarkdownHyphen(markdown.inlinepatterns.Pattern):
 	def __init__(self):
 		super().__init__(
 			r"("
-				r"(?P<preservable_hyphen>-)|"
-				r"(?P<removable_hyphen>\[-\])|"
-				r"(?P<missing_hyphen>\[-\??\])"
+				r"(?P<preservable>-)|"
+				r"(?P<removable>\[-\])|"
+				r"(?P<forgotten>\[-\?\])"
 			r")"
 			r"\s*\r?\n"
 		)
 
 	def handleMatch(self, m):
-		if m["preservable_hyphen"]:
+		if m["preservable"]:
 			# preserve the hyphen
-			return "-"
+			return "-\n"
 		else:
 			# remove non-meaning hyphen
-			return ""
+			return "\n"
 
 
 class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
@@ -248,7 +257,10 @@ class WrappedHashHeaderProcessor(markdown.blockprocessors.BlockProcessor):
 		wrapped = block[m.end():]
 		# Create header using named groups from RE
 		h = xml.SubElement(parent, "h%d" % len(m.group("level")))
-		h.text = m.group("header").strip() + "\n" + wrapped
+		h.text = m.group("header").strip()
+		if wrapped:
+			h.text += "\n"
+			h.text += wrapped
 
 
 class MarkdownNote(markdown.blockprocessors.BlockProcessor):
@@ -354,8 +366,8 @@ class MarkdownNote(markdown.blockprocessors.BlockProcessor):
 				.replace("</" + tag + ">", "</span>")
 
 		raw_html = (
-			f"<span class='{const.CSS_CLASS_NOTE_ANCHOR}'>{self._next_note_number}</span>"
-			f"<span class='{const.CSS_CLASS_NOTE}'>{converted_note}</span>"
+			f"<span class='{CSS_CLASS_NOTE_ANCHOR}'>{self._next_note_number}</span>"
+			f"<span class='{CSS_CLASS_NOTE}'>{converted_note}</span>"
 		)
 		self._next_note_number += 1
 		return raw_html
