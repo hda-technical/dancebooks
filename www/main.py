@@ -19,13 +19,14 @@ from dancebooks import bib_parser
 from dancebooks import const
 from dancebooks import db
 from dancebooks import search
+from dancebooks import markdown
 from dancebooks import messenger
 from dancebooks import utils
 from dancebooks import utils_flask
 
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 
-markdown_cache = utils.MarkdownCache()
+markdown_cache = markdown.MarkdownCache()
 
 debug_mode = False
 

@@ -10,6 +10,7 @@ import markdown
 
 from dancebooks.config import config
 from dancebooks import const
+from dancebooks import markdown as md_helpers
 from dancebooks import index as search_index
 from dancebooks import utils
 
@@ -34,7 +35,7 @@ class FinalizingContext:
 		self._markdown = markdown.Markdown(
 			output_format="xhtml5"
 		)
-		self._markdown.inlinePatterns.register(utils.MarkdownCite(index), name="cite", priority=-1)
+		self._markdown.inlinePatterns.register(md_helpers.MarkdownCite(index), name="cite", priority=-1)
 
 	def parse_markdown(self, data):
 		self._markdown.reset()
