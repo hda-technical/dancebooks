@@ -25,9 +25,6 @@ from dancebooks import utils_flask
 
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 
-langids = sorted(langid for langid in item_index["langid"].keys() if not langid.startswith("!"))
-source_files = sorted(item_index["source_file"].keys())
-types = sorted(item_index["type"].keys())
 markdown_cache = utils.MarkdownCache()
 
 debug_mode = False
@@ -379,12 +376,15 @@ def edit_book_keywords(book_id):
 @utils_flask.jsonify()
 @utils_flask.log_exceptions()
 def get_options():
-	opt_languages = [
+	options = dict()
+
+	options["languages"] = [
 		(langid, utils_flask.translate_language(langid))
-		for langid in langids
+		for langid in item_index["langid"].keys()
+		if not langid.startswith("!")
 	]
 
-	opt_keywords = [
+	options["keywords"] = [
 		(
 			category,
 			{
@@ -395,22 +395,17 @@ def get_options():
 		for category, category_keywords in config.parser.category_keywords.items()
 	]
 
-	opt_types = [
+	options["types"] = [
 		(type, utils_flask.translate_type(type))
-		for type in types
+		for type in sorted(item_index["type"].keys())
 	]
 
-	opt_source_files = [
+	options["source_files"] = [
 		(source_file, source_file)
-		for source_file in source_files
+		for source_file in sorted(item_index["source_file"].keys())
 	]
-
-	return {
-		"languages": opt_languages,
-		"keywords": opt_keywords,
-		"source_files": opt_source_files,
-		"types": opt_types
-	}
+	
+	return options
 
 
 @flask_app.get("/rss/books")
