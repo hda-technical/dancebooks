@@ -322,28 +322,21 @@ ser, man zehlet hier nur 1. 2. 3.
 
 > O| Himmel! wie | pflegen Ver | liebte zu | schertzen,
 
-> {14} Mit | ihrer ver | bundenen | Liebe und | Treu:[[примечание автора в книге: Besitze 3. zu
-Anfang.]]
+> {14} Mit | ihrer ver | bundenen | Liebe und | Treu:[[Besitze 3. zu Anfang.]]
 >
 > Man | weiß nicht, was | unter ver | bundenen | Hertzen,
 >
-> Noch | unverbun | denen vor | Unterschied | sey.[[примечание автора в книге: Besitze 3. zu
-Anfang der 3.
-Zeil.]]
+> Noch | unverbun | denen vor | Unterschied | sey.[[Besitze 3. zu Anfang der 3. Zeil.]]
 >
 > 2. Clausul.
 >
 > Wer | heute was | liebet, der | hasset es | morgen,
 >
-> Das | ist ja ie | tzunder grand | mode und | Brauch.[[примечание автора в книге: Besitze
-3. zu Anfang
-der andern
-Claus.]]
+> Das | ist ja ie | tzunder grand | mode und | Brauch.[[Besitze 3. zu Anfang der andern Claus.]]
 >
 > Dar | unter ent | schlaffen die | nichtigen | Sorgen,
 >
-> Ich | liebe nur | eine, die | liebet mich | auch.[[примечание автора в книге: Besitze 3. zu Au[-]
-fang der dritten Claus.]]
+> Ich | liebe nur | eine, die | liebet mich | auch.[[Besitze 3. zu Aufang der dritten Claus.]]
 
 Auff solche Weise kan die Cadance der übrigen zwo 
 Clausuln dieser alten Passepied nach denen ersten zwo 
@@ -409,9 +402,7 @@ im Tantzen ausmachen.
 >
 > {16} Ach ja, so muß sich | der Glaube vernichten,
 >
-> Welcher auff blo|ssem Betruge besteht.
-
->> Repetatur.
+> Welcher auff blo|ssem Betruge besteht.[[Repetatur.]]
 
 > 2.
 >
