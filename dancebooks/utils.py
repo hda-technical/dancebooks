@@ -552,7 +552,7 @@ PREDEFINED_SURNAMES_PYTROVICH = {
 	("Бонч", Gender.FEMALE): "Бонч",
 }
 
-def make_genitive_via_petrovich(nominative):
+def make_genitive(nominative):
 
 	def has_cyrillic(text):
 		return bool(re.search('[\u0400-\u04FF]', text))
@@ -598,5 +598,3 @@ def make_genitive_via_petrovich(nominative):
 		return f"{first} {middle} {last}"
 	else:
 		raise ValueError(f"Unsupported name length for {nominative}")
-
-make_genitive = make_genitive_via_petrovich
