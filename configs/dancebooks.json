@@ -134,8 +134,12 @@
         "keywords": {
             "xvi": [
                 "pavane",
+                "pavane: espagnole",
+                "volte",
             ],
             "baroque": [
+                "branle: suite",
+                "branle: cassandra",
                 "allemande",
                 "courant",
                 "galliard",
@@ -144,6 +148,7 @@
                 "landler",
                 "minuet",
                 "perigourdine",
+                "passamezzo",
                 "saraband",
             ],
             "country-dance": [
