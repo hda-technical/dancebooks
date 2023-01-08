@@ -314,7 +314,7 @@ Il faut d'abord sçavoir que le vrai pas de menuet est composé de quatre pas, (
 {77} droit sur la pointe & les jambes éten[-]
 duës; à la fin de ce pas vous laissez
 doucement poser le talon droit à terre,
-poir laisser plier son genoüil, qui par
+pour laisser plier son genoüil, qui par
 ce mouvement fait lever la jambe gau[-]
 che, qui se passe en avant en faisant
 un demi-coupé échappé, qui est le
@@ -335,7 +335,7 @@ me que l'autre est composé de quatre
 pas, qui se commencent par deux de[-]
 mi-coupez, le premier du pied droit,
 & le second du pied gauche, ensuite
-deux pas marchez sur la ponte des
+deux pas marchez sur la pointe des
 pieds, sçavoir l'un du droit & l'autre
 {78} du gauche, ce qui s'execute dans le cours de deux mesures à trois tems, dont l'une s'appelle cadence, & la seconde contrecadence. Pour le bien comprendre on le peut diviser en trois parties égales; la premiere est pour le premier demi-coupé, la seconde pour le deuxiéme, & les deux autres pas marché pour la troisiéme; ce que l'on ne doit pas être plus de tems à les faire, que celui que l'on met à faire un demi-coupé; on doit aussi observer qu'en faisant ce dernier pas il faut laisser poser le talon afin que le pied posant entierement à terre on soit plus ferme pour plier; en recommançant un autre pas. Mais pour en donner une intelligence plus facile, je vais décrire la maniere de faire ce pas de suite, afin de n'en pas retarder l'execution.
 
