@@ -310,11 +310,34 @@ Pour les faire en arriere & de côté, c'est la même regle, qui est de ne passe
 
 Ayant exprimé intelligiblement la maniere la plus facile pour faire les demi-coupez, qui sont la base & le fondement des differens pas, & que le menuet, qui est la danse la plus en usage, je vais vous en donner la methode la plus facile pour parvenir à le bien danser.
 
-Il faut d'abord sçavoir que le vrai pas de menuet est composé de quatre pas, (qui cependant par leurs liaisons, suivant le terme de l'art ne font qu'un seul pas), ce pas de menuet a trois mouvemens & un pas marché sur la pointe du pied; sçavoir, le premier est un demi-coupé du pied droit, & un du pied gauche, un pas marché du pied {77} droit sur la pointe & les jambes étenduës; à la fin de ce pas vous laissez doucement poser le talon droit à terre, poir laisser plier son genoüil, qui par ce mouvement fait lever la jambe gauche, qui se passe en avant en faisant un demi-coupé échappé, qui est le troisiéme mouvement de ce pas de menuet & son quatriéme pas.
+Il faut d'abord sçavoir que le vrai pas de menuet est composé de quatre pas, (qui cependant par leurs liaisons, suivant le terme de l'art ne font qu'un seul pas), ce pas de menuet a trois mouvemens & un pas marché sur la pointe du pied; sçavoir, le premier est un demi-coupé du pied droit, & un du pied gauche, un pas marché du pied 
+{77} droit sur la pointe & les jambes éten[-]
+duës; à la fin de ce pas vous laissez
+doucement poser le talon droit à terre,
+poir laisser plier son genoüil, qui par
+ce mouvement fait lever la jambe gau[-]
+che, qui se passe en avant en faisant
+un demi-coupé échappé, qui est le
+troisiéme mouvement de ce pas de me[-]
+nuet & son quatriéme pas.
 
-Mais comme ce pas ne convient pas à tout le monde, parce qu'il faut posseder beaucoup de force dans le cou-de-pied; c'est pourquoi on en a adouci l'usage, en ne faisant faire que deux mouvemens, cette maniere est plus facile, & c'est celle que je vais décrire.
+Mais comme ce pas ne convient
+pas à tout le monde, parce qu'il faut
+posseder beaucoup de force dans le
+cou-de-pied; c'est pourquoi on en a
+adouci l'usage, en ne faisant faire que
+deux mouvemens, cette maniere est
+plus facile, & c'est celle que je vais
+décrire.
 
-Il faut sçavoir que ce pas, de même que l'autre est composé de quatre pas, qui se commencent par deux demi-coupez, le premier du pied droit, & le second du pied gauche, ensuite deux pas marchez sur la ponte des pieds, sçavoir l'un du droit & l'autre {78} du gauche, ce qui s'execute dans le cours de deux mesures à trois tems, dont l'une s'appelle cadence, & la seconde contrecadence. Pour le bien comprendre on le peut diviser en trois parties égales; la premiere est pour le premier demi-coupé, la seconde pour le deuxiéme, & les deux autres pas marché pour la troisiéme; ce que l'on ne doit pas être plus de tems à les faire, que celui que l'on met à faire un demi-coupé; on doit aussi observer qu'en faisant ce dernier pas il faut laisser poser le talon afin que le pied posant entierement à terre on soit plus ferme pour plier; en recommançant un autre pas. Mais pour en donner une intelligence plus facile, je vais décrire la maniere de faire ce pas de suite, afin de n'en pas retarder l'execution.
+Il faut sçavoir que ce pas, de mê[-]
+me que l'autre est composé de quatre
+pas, qui se commencent par deux de[-]
+mi-coupez, le premier du pied droit,
+& le second du pied gauche, ensuite
+deux pas marchez sur la ponte des
+pieds, sçavoir l'un du droit & l'autre
+{78} du gauche, ce qui s'execute dans le cours de deux mesures à trois tems, dont l'une s'appelle cadence, & la seconde contrecadence. Pour le bien comprendre on le peut diviser en trois parties égales; la premiere est pour le premier demi-coupé, la seconde pour le deuxiéme, & les deux autres pas marché pour la troisiéme; ce que l'on ne doit pas être plus de tems à les faire, que celui que l'on met à faire un demi-coupé; on doit aussi observer qu'en faisant ce dernier pas il faut laisser poser le talon afin que le pied posant entierement à terre on soit plus ferme pour plier; en recommançant un autre pas. Mais pour en donner une intelligence plus facile, je vais décrire la maniere de faire ce pas de suite, afin de n'en pas retarder l'execution.
 
 Ayant donc le pied gauche devant, vous apportez le corps dessus, en approchant le pied droit auprès du gauche {79} à la premiere position, & de la plier sans poser le droit à terre, & lorsque vous êtes assez pliez, vous passez le pied droit devant vous à la quatriéme position, & vous élever du même tems sur la pointe du pied en étendant les deux jambes près l'une de l'autre, de même qu'il est représenté par la quatriéme figure des demi-coupez, que l'on nomme équilibre, & de suite vous posez le talon droit à terre, pour avoir le corps plus ferme, & plier du même tems sur le droit sans poser le gauche, & de là le passer devant, de même que vous avez fait du pied droit, jusqu'à la quatriéme position, & du même tems s'élever dessus; & marcher les deux autres pas sur la pointe des pieds l'un du droit & l'autre du gauche, mais au dernier il faut poser le talon à terre, afin de prendre votre pas de menuet avec plus de fermeté.
 
