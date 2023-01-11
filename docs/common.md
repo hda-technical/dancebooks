@@ -152,6 +152,7 @@
 | `memoirs` |
 | `music` |
 | `music: generator` | Книга с описанием процедуры генерации музыки (обычно с использованием игральных кубиков) | Source containing description of music generation using dices |
+| `music: orchestra` | Музыка для оркестра |
 | `not digitized` |
 | `reissue` |
 | `research` |
