@@ -11,7 +11,7 @@ from sqlalchemy.orm import session as sql_session
 
 from dancebooks.config import config
 
-_Base = sql_declarative.declarative_base()
+_Base = sqlalchemy.orm.declarative_base()
 
 
 # Cudos to Sansha B:
