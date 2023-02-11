@@ -31,10 +31,25 @@ markdown_cache = markdown.MarkdownCache()
 debug_mode = False
 
 
+def get_locale():
+	"""
+	Extracts locale from request
+	"""
+	lang = (
+		flask.request.cookies.get("lang", None) or
+		getattr(flask.g, "lang", None) or
+		flask.request.accept_languages.best_match(config.www.languages)
+	)
+	if lang in config.www.languages:
+		return lang
+	else:
+		return utils.first(config.www.languages)
+
+
 def init_apps():
 	logging.info("Starting up")
 	flask_app = flask.Flask(__name__)
-	babel_app = flask_babel.Babel(flask_app)
+	babel_app = flask_babel.Babel(flask_app, locale_selector=get_locale)
 	return (flask_app, babel_app)
 
 
@@ -75,22 +90,6 @@ flask_app.jinja_env.filters["self_served_url_size"] = jinja_self_served_url_size
 #filling jinja global variables
 flask_app.jinja_env.globals["config"] = config
 flask_app.jinja_env.globals["utils"] = utils
-
-
-@babel_app.localeselector
-def get_locale():
-	"""
-	Extracts locale from request
-	"""
-	lang = (
-		flask.request.cookies.get("lang", None) or
-		getattr(flask.g, "lang", None) or
-		flask.request.accept_languages.best_match(config.www.languages)
-	)
-	if lang in config.www.languages:
-		return lang
-	else:
-		return utils.first(config.www.languages)
 
 
 @flask_app.get("/secret-cookie")
@@ -405,7 +404,7 @@ def get_options():
 		(source_file, source_file)
 		for source_file in sorted(item_index["source_file"].keys())
 	]
-	
+
 	return options
 
 
