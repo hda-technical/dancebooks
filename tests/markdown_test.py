@@ -42,6 +42,9 @@ def test_small_caps():
 	input = "!!Small caps!!"
 	assert render(input) == '<p><span class="smallcaps">Small caps</span></p>'
 
+	input = "S!!mall!! caps in the M!!iddle!!"
+	assert render(input) == '<p>S<span class="smallcaps">mall</span> caps in the M<span class="smallcaps">iddle</span></p>'
+
 
 def test_page_number():
 	input = "{42} Start of page 42"
@@ -76,8 +79,8 @@ separated text
 """
 
 	assert render(input) == '<p>Forgotten hyphenseparated text</p>'
-	
-	
+
+
 def test_combinations():
 	input = \
 """
