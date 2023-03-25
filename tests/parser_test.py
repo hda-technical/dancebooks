@@ -26,11 +26,21 @@ r"""
 @book(
 	id_2,
 	author = {Людовик Петровский | Николай Проклович Петров},
+	pseudo_author = {Людвиг ван Бетховен},
 	title = {Побрюзжим на досуге},
 	langid = {russian},
 	location = {Москва | Одесса},
 	year = {1825},
 	keywords = {grumbling | historical dance}
+)
+
+@book(
+	id_3,
+	pseudo_author = {Ф. В. Раевский},
+	title = {Дирижёр через Ё},
+	langid = {russian},
+	location = {Санкт-Петербург},
+	year = {1896}
 )
 """
 )
@@ -38,6 +48,7 @@ SEARCH_INDEX = index.Index(TEST_ITEMS)
 
 TUDOR_1491 = TEST_ITEMS[0]
 PETROVSKY_1825 = TEST_ITEMS[1]
+RAEVSKY_1896 = TEST_ITEMS[2]
 
 
 def test_indexing():
@@ -56,6 +67,7 @@ def test_indexing():
 		"!cinquecento",
 		"!renaissance",
 		"!grumbling",
+		"!historical dance",
 	}
 
 
@@ -122,15 +134,23 @@ def test_inverted_index_search():
 	assert INVERTED_KEY in subindex
 	filtered_items = SEARCH_INDEX["keywords"][INVERTED_KEY]
 
-	assert len(filtered_items) == 1
-	assert utils.first(filtered_items).id == "id_2"
+	assert len(filtered_items) == 2
+	assert {item.id for item in filtered_items} == {"id_2", "id_3"}
 
 
-def test_cite_formatting():
+def test_html_cite_formatting():
 	assert utils.make_html_cite(PETROVSKY_1825) == (
 		"<em>Людовик Петровский, Николай Проклович Петров</em> "
 		"Побрюзжим на досуге. "
 		"Москва, Одесса, "
 		"1825. "
 		'<a href="/books/id_2">https://bib.hda.org.ru/books/id_2</a>'
+	)
+
+	assert utils.make_html_cite(RAEVSKY_1896) == (
+		"<em>Ф. В. Раевский</em> "
+		"Дирижёр через Ё. "
+		"Санкт-Петербург, "
+		"1896. "
+		'<a href="/books/id_3">https://bib.hda.org.ru/books/id_3</a>'
 	)

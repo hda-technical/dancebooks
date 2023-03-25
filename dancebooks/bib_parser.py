@@ -54,6 +54,9 @@ class BibItem:
 	def __hash__(self):
 		return hash(self.get("id"))
 
+	def get_heuristical_authors(self):
+		return self.get("author") or self.get("pseudo_author") or self.get("compiler")
+
 	@property
 	def type(self):
 		return self.get_as_string("type")

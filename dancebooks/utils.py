@@ -482,12 +482,12 @@ def make_cite_label(item):
 	bibliography style in square brackets
 	"""
 	shorthand = item.get("shorthand")
-	author = item.get("author") or item.get("pseudo_author") or item.get("compiler")
+	author = item.get_heuristical_authors()
 	year = item.get("year")
 	langid = item.get("langid")
 	if (author is None) and (shorthand is None):
 		raise ValueError("Can't make cite label without author or shorthand")
-	if shorthand is not None:
+	if shorthand:
 		return f"[{shorthand}, {year}]"
 	elif len(author) <= const.MAX_AUTHORS_IN_CITE_LABEL:
 		### WARN: this code doesn't process repeated surnames in any way
@@ -507,7 +507,7 @@ def make_html_cite(item):
 	Returns full citation, formatted according to some simple style
 	"""
 	result = ""
-	author = item.get("author")
+	author = item.get_heuristical_authors()
 	langid = item.get("langid")
 	title = item.get("title") or item.get("incipit")
 	location = item.get("location")
@@ -515,7 +515,7 @@ def make_html_cite(item):
 	journaltitle = item.get("journaltitle")
 	number = item.get("number")
 	year = item.get("year")
-	if author is not None:
+	if author:
 		result += "<em>"
 		result += ", ".join(author[0:const.MAX_AUTHORS_IN_CITE_LABEL])
 		if len(author) > const.MAX_AUTHORS_IN_CITE_LABEL:
