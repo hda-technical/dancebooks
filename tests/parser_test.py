@@ -10,12 +10,12 @@ from dancebooks import index
 from dancebooks import search
 from dancebooks import utils
 
-TEST_ITEMS = \
+TEST_ITEMS = bib_parser.BibParser()._parse_string(
 r"""
 @book(
 	id_1,
-	author = {Henry Eight | Anne Boleyn | Catherine of Aragon},
-	title = {Six Wifes of Henry Eight. Some Words \& Letters \& Other Stuff Here},
+	author = {Henry Eight of Tudor | Anne Boleyn | Catherine of Aragon},
+	title = {Six Wives of Henry Eight. Some Words \& Letters \& Other Stuff Here},
 	langid = {english},
 	location = {London},
 	year = {1491—1547?},
@@ -33,46 +33,43 @@ r"""
 	keywords = {grumbling | historical dance}
 )
 """
+)
+SEARCH_INDEX = index.Index(TEST_ITEMS)
 
-EXPECTED_LANGUAGES = set(["russian", "english"])
-EXPECTED_KEYWORDS = set([
-	"renaissance",
-	"cinquecento",
-	"grumbling",
-	"historical dance",
-	"!cinquecento",
-	"!renaissance",
-	"!grumbling",
-])
+TUDOR_1491 = TEST_ITEMS[0]
+PETROVSKY_1825 = TEST_ITEMS[1]
 
 
-def test_parse_string():
+def test_indexing():
 	"""
 	Tests if string can be succesfully parsed by BibParser
 	"""
-	items = bib_parser.BibParser()._parse_string(TEST_ITEMS)
-	item_index = index.Index(items)
+	languages = set(langid for langid in SEARCH_INDEX["langid"].keys() if not langid.startswith("!"))
+	keywords = set(SEARCH_INDEX["keywords"].keys())
 
-	languages = set(langid for langid in item_index["langid"].keys() if not langid.startswith("!"))
-	keywords = set(item_index["keywords"].keys())
+	assert languages ==  {"russian", "english"}
+	assert keywords == {
+		"renaissance",
+		"cinquecento",
+		"grumbling",
+		"historical dance",
+		"!cinquecento",
+		"!renaissance",
+		"!grumbling",
+	}
 
-	assert languages == EXPECTED_LANGUAGES
-	assert keywords == EXPECTED_KEYWORDS
 
-	item1 = next(iter(item_index["id"]["id_1"]))
-	assert '{' not in item1.title
-	assert '}' not in item1.title
+def test_parsing():
+	assert '{' not in TUDOR_1491.title
+	assert '}' not in TUDOR_1491.title
 
 
 def test_search_items():
 	"""
-	Tests if parsed items can be searched by a bunch of parameters
+	Tests if parsed TEST_ITEMS can be searched by a bunch of parameters
 	"""
-	items = bib_parser.BibParser()._parse_string(TEST_ITEMS)
-	item_index = index.Index(items)
-
 	author_search = search.search_for_iterable("author", "Петров")
-	filtered_items = filter(author_search, items)
+	filtered_items = filter(author_search, TEST_ITEMS)
 	assert len(list(filtered_items)) == 1
 
 	# testing exact match
@@ -80,7 +77,7 @@ def test_search_items():
 		search.search_for("year_from", 1825),
 		search.search_for("year_to", 1825)
 	])
-	filtered_items = filter(year_search, items)
+	filtered_items = filter(year_search, TEST_ITEMS)
 	assert len(list(filtered_items)) == 1
 
 	# testing partial intersection
@@ -88,7 +85,7 @@ def test_search_items():
 		search.search_for("year_from", 1500),
 		search.search_for("year_to", 1600)
 	])
-	filtered_items = filter(year_search, items)
+	filtered_items = filter(year_search, TEST_ITEMS)
 	assert len(list(filtered_items)) == 1
 
 	# testing inner containment
@@ -96,7 +93,7 @@ def test_search_items():
 		search.search_for("year_from", 1499),
 		search.search_for("year_to", 1501)
 	])
-	filtered_items = filter(year_search, items)
+	filtered_items = filter(year_search, TEST_ITEMS)
 	assert len(list(filtered_items)) == 1
 
 	# testing outer containment
@@ -104,37 +101,33 @@ def test_search_items():
 		search.search_for("year_from", 1400),
 		search.search_for("year_to", 1600)
 	])
-	filtered_items = filter(year_search, items)
+	filtered_items = filter(year_search, TEST_ITEMS)
 	assert len(list(filtered_items)) == 1
 
-	filtered_items = item_index["keywords"]["grumbling"]
+	filtered_items = SEARCH_INDEX["keywords"]["grumbling"]
 	assert len(list(filtered_items)) == 1
 
 	filtered_items = \
-		item_index["keywords"]["cinquecento"] & \
-		item_index["keywords"]["historical dance"]
+		SEARCH_INDEX["keywords"]["cinquecento"] & \
+		SEARCH_INDEX["keywords"]["historical dance"]
 	assert len(list(filtered_items)) == 1
 
 
 def test_inverted_index_search():
-	items = bib_parser.BibParser()._parse_string(TEST_ITEMS)
-	item_index = index.Index(items)
-
 	DIRECT_KEY = "cinquecento"
 	INVERTED_KEY = const.INVERTED_INDEX_KEY_PREFIX + DIRECT_KEY
-	subindex = item_index["keywords"]
+	subindex = SEARCH_INDEX["keywords"]
 
 	assert DIRECT_KEY in subindex
 	assert INVERTED_KEY in subindex
-	filtered_items = item_index["keywords"][INVERTED_KEY]
+	filtered_items = SEARCH_INDEX["keywords"][INVERTED_KEY]
 
 	assert len(filtered_items) == 1
 	assert utils.first(filtered_items).id == "id_2"
 
 
 def test_cite_formatting():
-	items = bib_parser.BibParser()._parse_string(TEST_ITEMS)
-	assert utils.make_html_cite(items[-1]) == (
+	assert utils.make_html_cite(PETROVSKY_1825) == (
 		"<em>Людовик Петровский, Николай Проклович Петров</em> "
 		"Побрюзжим на досуге. "
 		"Москва, Одесса, "
