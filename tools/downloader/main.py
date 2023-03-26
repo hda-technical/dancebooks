@@ -623,13 +623,15 @@ def difmoe(id):
 
 
 @main.command()
+@click.option("--first", type=int, help="First page to be downloaded", default=0)
+@click.option("--last", type=int, help="First page to be downloaded", default=10000)
 @click.option("--id", help="Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)", required=True)
-def pl_polona(id):
+def pl_polona(id, first, last):
 	"""
 	Downloads book from https://polona.pl
 	"""
 	import pl
-	pl.get_polona(id=id)
+	pl.get_polona(id=id, first=first, last=last)
 
 
 @main.command()

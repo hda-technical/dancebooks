@@ -22,11 +22,16 @@ def get_academica(*, book_id, first_page_id, last_page_id):
 		)
 
 
-def get_polona(*, id):
+def get_polona(*, id, first, last):
 	metadata_url = f"https://polona.pl/api/entities/{id}"
 	metadata = utils.get_json(metadata_url)
 	output_folder = utils.make_output_folder("polona", id)
-	for page, page_metadata in enumerate(metadata["scans"]):
+	
+	scans = metadata["scans"]
+	if len(scans) < last:
+		last = len(scans)
+	for page in range(first, last + 1):
+		page_metadata = metadata["scans"][page]
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
 		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:08d}")
