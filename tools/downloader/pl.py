@@ -34,6 +34,7 @@ def get_polona(*, id):
 		found = False
 		for image_metadata in page_metadata["resources"]:
 			if image_metadata["mime"] == "image/jpeg":
+				print(f"Downloading page #{page:08d}")
 				utils.get_binary(output_filename, image_metadata["url"])
 				found = True
 		if not found:
