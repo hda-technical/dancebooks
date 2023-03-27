@@ -619,7 +619,6 @@ _This part of the list is to joined with the general table_
 | 1570–1580? | | | Dulwich College, London | `Ms. XCIV/f.28` | [[Daye, Thorp, 2018]](https://bib.hda.org.ru/books/daye_2018_measures) | |
 | 1580 | | Martel d'amore. Baletto di Lione Tolosa hebreo fatto in concerto da quattro cavalieri et da quattro dame | Modena, Biblioteca Estense | `Alpha K.2.14 (Ital. 1707)`<br/>folio 33 | [[Bosi, 2005]](https://bib.hda.org.ru/books/bosi_2005_duchessa)<br/>[[Bosi, 2008]](https://bib.hda.org.ru/books/bosi_2008_duchessa)<br/>`[Transcriptions]` | |
 | 1575–1625 | | Anonymous and untitled folios in the collection of items by J. Stowe | London, British Library | `Harleian 367`<br/>folios 178-179 | `[Lindahl]` | |
-| 1594 | John Willoughbye | The olde Measures | Taunton, Somerset Record Office | `DD/WO 55/7, item 36` | `[Lindahl]` | |
 | 1600–1620? | | Articolo ottavo. Esatta descrizione del gioca della moresca | Venice, Achivo di stato | `Scuole Piccole e Suufagi, buste 738–742` | `[2. Rothenfelser]` | |
 | 1600–1620? | | _Rime di diversi_<br/>Contains verso for _Martel d'amore_ | Modena, Biblioteca Estense | `Alpha T.5.13 (Ital. 769)` | [[Bosi, 2005]](https://bib.hda.org.ru/books/bosi_2005_duchessa)<br/>`[Transcriptions]` | |
 | 1600? | Johannes Cellarius | Album Amicorum | London, British Library | `Add. 27579` | `[Viona]` | |
