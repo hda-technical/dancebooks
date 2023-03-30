@@ -618,7 +618,7 @@ intenda di raggion di
 {26r}
 ballar, con i passaggi e
 mudanze in questo
-lbro comprese, trouarà
+libro comprese, trouarà
 tutto'l ballar che mai
 L’huomo possi fare.
 
