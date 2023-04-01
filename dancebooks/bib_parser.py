@@ -273,7 +273,7 @@ class BibParser:
 	def parse_folder(path):
 		"""
 		Parses all .bib files in given folder.
-		Returns a tuple (parsed_iten, search_index) containing all items found
+		Returns a tuple (parsed_items, search_index) containing all items found
 		"""
 		if not os.path.isdir(path):
 			raise Exception("Path to folder expected")
@@ -296,7 +296,6 @@ class BibParser:
 		fin_ctx = FinalizingContext(item_index)
 		for item in parsed_items:
 			item.finalize_item_set(fin_ctx)
-		item_index.update(parsed_items)
 		return (parsed_items, item_index)
 
 	def _parse_file(self, path):
