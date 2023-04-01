@@ -181,25 +181,20 @@ class BibItem:
 	def fields(self):
 		return set(self._params.keys())
 
-	def finalize_item(self):
-		self.set("cite_label", utils.make_cite_label(self))
-
-	def finalize_item_set(self, ctx):
+	def finalize(self, ctx):
 		"""
 		Method to be called once after parsing every entries.
 		Processes crossref tag, merging _params of current entry and parent one
 		"""
-		note = self.get("note")
-		if note is not None:
-			#TODO: create converter once per item set, not once per item
-			#parsing markdown and removing paragraph markup added by parser
+		if note := self.get("note"):
+			# TODO: create converter once per item set, not once per item
+			# parsing markdown and removing paragraph markup added by parser
 			self._params["note"] = ctx.parse_markdown(note)
-
-		#crossref processing inherits some of the parameters
-		#and therefore it should go last
-		crossref = self.get("crossref")
-		if crossref is not None:
+			
+		if crossref := self.get("crossref"):
 			self._params["crossref"] = ctx.parse_markdown("[" + crossref + "]")
+
+		self.set("cite_label", utils.make_cite_label(self))
 
 class ParserState(enum.Enum):
 	NoItem = 0
@@ -295,7 +290,7 @@ class BibParser:
 		item_index = search_index.Index(parsed_items)
 		fin_ctx = FinalizingContext(item_index)
 		for item in parsed_items:
-			item.finalize_item_set(fin_ctx)
+			item.finalize(fin_ctx)
 		return (parsed_items, item_index)
 
 	def _parse_file(self, path):
@@ -433,7 +428,6 @@ class BibParser:
 				if c.isspace():
 					continue
 				elif c == ')':
-					item.finalize_item()
 					items.append(item)
 					item = BibItem()
 					self.state = ParserState.NoItem
