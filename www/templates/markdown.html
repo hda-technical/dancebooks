@@ -19,12 +19,12 @@
 		<div class="content transcription">
 			<h1>{% if item.author %}{{ item.author }}{% endif %}</h1>
 			<h2>{{ item.title }}</h2>
-			{% if item.get("transcription_note") %}
+			{% if transcription_note %}
 				<hr/>
-				{{ item.get("transcription_note") | markdown }}
+				{{ transcription_note | safe }}
 			{% endif %}
 			<hr/>
-			{{ markdown_data | safe }}
+			{{ transcription_data | safe }}
 			<hr/>
 			{% include "components/footer.html" %}
 		</div>

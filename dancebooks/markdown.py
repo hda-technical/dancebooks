@@ -86,19 +86,22 @@ class MarkdownCache:
 				(modified_at <= rendered_at)
 			):
 				return rendered_data
-		rendered_data = self.render(abspath)
+		rendered_data = self.render_from_file(abspath)
 		with self._lock:
 			self._cache[abspath] = (modified_at, rendered_data)
 		return rendered_data
 
-	def render(self, abspath):
+	def render_from_str(self, raw_data):
+		self._renderer.reset()
+		return self._renderer.convert(raw_data)
+
+	def render_from_file(self, abspath):
 		"""
 		Helper function for performing compilation
 		of a markdown file to HTML
 		"""
-		self._renderer.reset()
 		raw_data = utils.read_utf8_file(abspath)
-		return self._renderer.convert(raw_data)
+		return self.render_from_str(raw_data)
 
 
 class MarkdownCite(markdown.inlinepatterns.Pattern):

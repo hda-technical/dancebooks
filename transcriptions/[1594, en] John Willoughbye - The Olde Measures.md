@@ -28,7 +28,7 @@ both wayes:/
 
 ### The Queenes Almaine
 
-A double forward & a double backe, :2: singles syde, Caste off[[There is a stroke after f and since at the end of 16th century in England the orthography was "caste off", this stoke is transcribed as a ligature for "ff".]] A double ~~roun[de]~~
+A double forward & a double backe, :2: singles syde, Caste off[[There is a stroke after f and since at the end of 16th century in England the orthography was "caste off", this stoke is transcribed as a ligature for "ff".]] A double ~~roun~~
 rounde, A double forwarde w^th^ your righte legge & a double backe, 2
 singles syde Caste off & a double rounde .5 doubles forwarde,
 & a double backe, 2: singles caste off A double rounde, A double

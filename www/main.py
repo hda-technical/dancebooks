@@ -27,6 +27,7 @@ from dancebooks import utils_flask
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
 
 markdown_cache = markdown.MarkdownCache()
+note_renderer = markdown.make_note_renderer(item_index)
 
 debug_mode = False
 
@@ -297,7 +298,7 @@ def get_book_pdf(book_id, index):
 @flask_app.get("/books/<string:item_id>/transcription")
 @utils_flask.check_id_redirections("item_id")
 @utils_flask.log_exceptions()
-def get_book_markdown(item_id):
+def get_transcription(item_id):
 	items = item_index["id"].get(item_id)
 	if items is None:
 		flask.abort(
@@ -313,13 +314,14 @@ def get_book_markdown(item_id):
 			f"Transcription for item {item_id} is not available"
 		)
 
-	markdown_file = os.path.join(
-		config.parser.markdown_dir,
-		transcription
-	)
+	transcription_path = f"{config.parser.markdown_dir}/{transcription}"
+	transcription_note = item.get("transcription_note")
+	if transcription_note:
+		transcription_note = note_renderer.convert(transcription_note)
 	return flask.render_template(
 		"markdown.html",
-		markdown_data=markdown_cache.get(markdown_file),
+		transcription_note=transcription_note,
+		transcription_data=markdown_cache.get(transcription_path),
 		item=item
 	)
 
