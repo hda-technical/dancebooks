@@ -68,17 +68,18 @@ class MarkdownCache:
 	Tracks file changing and recompiles files when necessary
 	"""
 	def __init__(self):
-		self._lock = threading.Lock()
 		#dict: file abspath -> (source file mtime, compiled html data)
 		self._cache = dict()
+		self._cache_lock = threading.Lock()
 		self._renderer = make_transcription_renderer()
+		self._render_lock = threading.Lock()
 
 	def get(self, abspath):
 		"""
 		Main entry point of the function.
 		abspath is path to be read and compiled
 		"""
-		with self._lock:
+		with self._cache_lock:
 			modified_at = os.path.getmtime(abspath)
 			rendered_at, rendered_data = self._cache.get(abspath, (None, None))
 			if (
@@ -87,13 +88,14 @@ class MarkdownCache:
 			):
 				return rendered_data
 		rendered_data = self.render_from_file(abspath)
-		with self._lock:
+		with self._cache_lock:
 			self._cache[abspath] = (modified_at, rendered_data)
 		return rendered_data
 
 	def render_from_str(self, raw_data):
-		self._renderer.reset()
-		return self._renderer.convert(raw_data)
+		with self._render_lock:
+			self._renderer.reset()
+			return self._renderer.convert(raw_data)
 
 	def render_from_file(self, abspath):
 		"""
