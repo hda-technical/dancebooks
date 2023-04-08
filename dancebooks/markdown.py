@@ -17,6 +17,20 @@ CSS_CLASS_SMALLCAPS = "smallcaps"
 CSS_CLASS_PAGE_NUMBER = "page_number"
 CSS_CLASS_NOTE = "note"
 CSS_CLASS_NOTE_ANCHOR = "note_anchor"
+	
+
+class _MtRenderer:
+	"""
+	Wraps markdown.Markdown object and locks it for thread-safety purposes
+	"""
+	def __init__(self, md_renderer):
+		self._lock = threading.Lock()
+		self._renderer = md_renderer
+
+	def convert(self, markup):
+		with self._lock:
+			self._renderer.reset()
+			return self._renderer.convert(markup)
 
 
 def make_transcription_renderer():
@@ -49,7 +63,7 @@ def make_transcription_renderer():
 		name="note",
 		priority=1002,
 	)
-	return renderer
+	return _MtRenderer(renderer)
 
 
 def make_note_renderer(index):
@@ -57,7 +71,7 @@ def make_note_renderer(index):
 		output_format="xhtml5"
 	)
 	renderer.inlinePatterns.register(MarkdownCite(index), name="cite", priority=-1)
-	return renderer
+	return _MtRenderer(renderer)
 
 
 class MarkdownCache:
@@ -72,7 +86,6 @@ class MarkdownCache:
 		self._cache = dict()
 		self._cache_lock = threading.Lock()
 		self._renderer = make_transcription_renderer()
-		self._render_lock = threading.Lock()
 
 	def get(self, abspath):
 		"""
@@ -93,9 +106,7 @@ class MarkdownCache:
 		return rendered_data
 
 	def render_from_str(self, raw_data):
-		with self._render_lock:
-			self._renderer.reset()
-			return self._renderer.convert(raw_data)
+		return self._renderer.convert(raw_data)
 
 	def render_from_file(self, abspath):
 		"""

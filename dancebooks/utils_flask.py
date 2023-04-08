@@ -12,7 +12,9 @@ import werkzeug
 
 from dancebooks.config import config
 from dancebooks import const
+from dancebooks import markdown as md
 from dancebooks import utils
+
 
 def http_exception_handler(ex):
 	"""
@@ -241,6 +243,10 @@ def format_pages(pages):
 def format_number(number):
 	# change dash to ndash
 	return number.replace('-', '–')
+	
+	
+def format_crossref(crossref, item_index):
+	return utils.first(item_index["id"][crossref]).get("cite_label")
 
 
 def format_date(item):
@@ -387,3 +393,37 @@ def require(condition, code, message):
 	"""
 	if (not condition):
 		flask.abort(code, message)
+
+
+def fill_jinja_filters(filters, item_index):
+	note_renderer = md.make_note_renderer(item_index)
+	
+	def format_crossref(crossref):
+		# erasing added <p> tags
+		return note_renderer.convert(f"[{crossref}]")\
+			.removeprefix("<p>")\
+			.removesuffix("</p>")
+			
+	def format_note(note):
+		return note_renderer.convert(note)\
+			.removeprefix("<p>")\
+			.removesuffix("</p>")
+	
+	filters["author_link"] = make_author_link
+	filters["keyword_link"] = make_keyword_link
+	filters["as_set"] = as_set
+	filters["translate_language"] = translate_language
+	filters["translate_type"] = translate_type
+	filters["translate_keyword_category"] = translate_keyword_cat
+	filters["translate_keyword_ref"] = translate_keyword_ref
+	filters["is_url_self_served"] = utils.is_url_self_served
+	filters["format_date"] = format_date
+	filters["format_pages"] = format_pages
+	filters["format_number"] = format_number
+	filters["format_catalogue_code"] = format_catalogue_code
+	filters["format_item_id"] = format_item_id
+	filters["format_transcription_url"] = format_transcription_url
+	filters["format_guid_for_rss"] = format_guid_for_rss
+	filters["format_transcribed_by"] = format_transcribed_by
+	filters["format_crossref"] = format_crossref
+	filters["format_note"] = format_note

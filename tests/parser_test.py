@@ -13,7 +13,7 @@ from dancebooks import utils
 TEST_ITEMS = bib_parser.BibParser()._parse_string(
 r"""
 @book(
-	id_1,
+	tudor_1491,
 	author = {Henry Eight of Tudor | Anne Boleyn | Catherine of Aragon},
 	title = {Six Wives of Henry Eight. Some Words \& Letters \& Other Stuff Here},
 	langid = {english},
@@ -24,7 +24,7 @@ r"""
 )
 
 @book(
-	id_2,
+	petrovsky_1825,
 	author = {Людовик Петровский | Николай Проклович Петров},
 	pseudo_author = {Людвиг ван Бетховен},
 	title = {Побрюзжим на досуге},
@@ -35,12 +35,28 @@ r"""
 )
 
 @book(
-	id_3,
+	raevsky_1896,
 	pseudo_author = {Ф. В. Раевский},
 	title = {Дирижёр через Ё},
 	langid = {russian},
 	location = {Санкт-Петербург},
 	year = {1896}
+)
+
+@article(
+	mayak_1924,
+	author = {В. В. Маяковский},
+	title = {В «Правде» пишется правда. В «Известиях» — известия},
+	crossref = {pravda_1924},
+	year = {1924}
+)
+
+@periodical(
+	pravda_1924,
+	shorthand = {Правда},
+	title = {Правда},
+	year = {1924},
+	number = {1}
 )
 """
 )
@@ -49,6 +65,7 @@ SEARCH_INDEX = index.Index(TEST_ITEMS)
 TUDOR_1491 = TEST_ITEMS[0]
 PETROVSKY_1825 = TEST_ITEMS[1]
 RAEVSKY_1896 = TEST_ITEMS[2]
+MAYAK_1924 = TEST_ITEMS[3]
 
 
 def test_indexing():
@@ -74,6 +91,12 @@ def test_indexing():
 def test_parsing():
 	assert '{' not in TUDOR_1491.title
 	assert '}' not in TUDOR_1491.title
+	assert MAYAK_1924.get("crossref") == "pravda_1924"
+
+
+def test_html_rendering():
+	# FIXME: TODO
+	pass
 
 
 def test_search_items():
@@ -134,8 +157,8 @@ def test_inverted_index_search():
 	assert INVERTED_KEY in subindex
 	filtered_items = SEARCH_INDEX["keywords"][INVERTED_KEY]
 
-	assert len(filtered_items) == 2
-	assert {item.id for item in filtered_items} == {"id_2", "id_3"}
+	assert len(filtered_items) == 4
+	assert {item.id for item in filtered_items} == {"petrovsky_1825", "raevsky_1896", "mayak_1924", "pravda_1924"}
 
 
 def test_html_cite_formatting():
@@ -144,7 +167,7 @@ def test_html_cite_formatting():
 		"Побрюзжим на досуге. "
 		"Москва, Одесса, "
 		"1825. "
-		'<a href="/books/id_2">https://bib.hda.org.ru/books/id_2</a>'
+		'<a href="/books/petrovsky_1825">https://bib.hda.org.ru/books/petrovsky_1825</a>'
 	)
 
 	assert utils.make_html_cite(RAEVSKY_1896) == (
@@ -152,5 +175,5 @@ def test_html_cite_formatting():
 		"Дирижёр через Ё. "
 		"Санкт-Петербург, "
 		"1896. "
-		'<a href="/books/id_3">https://bib.hda.org.ru/books/id_3</a>'
+		'<a href="/books/raevsky_1896">https://bib.hda.org.ru/books/raevsky_1896</a>'
 	)

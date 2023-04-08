@@ -25,21 +25,6 @@ class Availability(enum.Enum):
 			return Availability.AvailableElsewhere
 
 
-class FinalizingContext:
-	"""
-	Contains objects required for finalizing parsed data set
-	"""
-	def __init__(self, index):
-		self._renderer = markdown.make_note_renderer(index)
-
-	def parse_markdown(self, data):
-		self._renderer.reset()
-		# erasing added <p> tags
-		return self._renderer.convert(data)\
-			.removeprefix("<p>")\
-			.removesuffix("</p>")
-
-
 class BibItem:
 	"""
 	Class representing a bibliography item
@@ -166,7 +151,7 @@ class BibItem:
 		if key in self._params:
 			raise RuntimeError(f"Can't set {key} twice for item {self.id}")
 		self._params[key] = value
-		#TODO: move to finalize_item()
+		#TODO: move to finalize()
 		self._params["all_fields"] += BibItem.value_to_string(value, "")
 		#warning handling value in a dirty unconfigured way
 		if key == "url":
@@ -181,19 +166,11 @@ class BibItem:
 	def fields(self):
 		return set(self._params.keys())
 
-	def finalize(self, ctx):
+	def finalize(self):
 		"""
 		Method to be called once after parsing every entries.
-		Processes crossref tag, merging _params of current entry and parent one
+		Renders note from 
 		"""
-		if note := self.get("note"):
-			# TODO: create converter once per item set, not once per item
-			# parsing markdown and removing paragraph markup added by parser
-			self._params["note"] = ctx.parse_markdown(note)
-			
-		if crossref := self.get("crossref"):
-			self._params["crossref"] = ctx.parse_markdown("[" + crossref + "]")
-
 		self.set("cite_label", utils.make_cite_label(self))
 
 class ParserState(enum.Enum):
@@ -288,9 +265,8 @@ class BibParser:
 		executor.shutdown()
 
 		item_index = search_index.Index(parsed_items)
-		fin_ctx = FinalizingContext(item_index)
 		for item in parsed_items:
-			item.finalize(fin_ctx)
+			item.finalize()
 		return (parsed_items, item_index)
 
 	def _parse_file(self, path):

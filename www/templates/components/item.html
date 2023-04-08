@@ -55,7 +55,7 @@
 			{% if param == "id" %}
 				{{ value | format_item_id | safe }}
 			{% elif param == "crossref" %}
-				{{ value | safe }}
+				{{ value | format_crossref | safe }}
 			{% elif param in ["author", "pseudo_author"] %}
 				{{ value | map("author_link") | map("safe") | join(", ") }}
 			{% elif param == "keywords" %}
@@ -90,7 +90,7 @@
 			{% elif param == "added_on" %}
 				{{ value | dateformat("long") }}
 			{% elif param == "note" %}
-				{{ value | safe }}
+				{{ value | format_note | safe }}
 			{% elif param == "type" %}
 				{{ value | translate_type }}
 			{% elif param == "date" %}
