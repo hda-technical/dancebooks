@@ -60,8 +60,7 @@ def test_page_number():
 def test_hyphen():
 	input = \
 """
-Preservable hyphen-
-separated text
+Preservable hyphen-separated text
 """
 	assert render(input) == '<p>Preservable hyphen-separated text</p>'
 
@@ -81,10 +80,31 @@ separated text
 	assert render(input) == '<p>Forgotten hyphenseparated text</p>'
 
 
+def test_guess():
+	input = \
+"""
+fac[e?]
+th[en?]
+stil[l?]
+[hands?]
+plac[es?]
+an[d go?]
+"""
+
+	assert render(input) == """
+<p>fac[e]
+th[en]
+stil[l]
+[hands]
+plac[es]
+an[d go]</p>
+""".strip()
+
+
 def test_combinations():
 	input = \
 """
 ### Hyphenated multi[-]
-    line header
+    line header with multi-lingual gu[es?]ses
 """
-	assert render(input) == '<h3>Hyphenated multiline header</h3>'
+	assert render(input) == '<h3>Hyphenated multiline header with multi-lingual gu[es]ses</h3>'

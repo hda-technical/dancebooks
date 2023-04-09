@@ -46,6 +46,7 @@ def make_transcription_renderer():
 	renderer.inlinePatterns.register(MarkdownSubscript(), name="subscript", priority=-4)
 	renderer.inlinePatterns.register(MarkdownSuperscript(), name="superscript", priority=-5)
 	renderer.inlinePatterns.register(MarkdownHyphen(), name="hyphen", priority=-6)
+	renderer.inlinePatterns.register(MarkdownGuess(), name="guess", priority=-7)
 
 	renderer.parser.blockprocessors.deregister("hashheader")
 	renderer.parser.blockprocessors.register(
@@ -209,8 +210,8 @@ class MarkdownHyphen(markdown.inlinepatterns.Pattern):
 	"""
 	Handles hyphenation signs.
 	At the time, removes both
-	* `[-]` (represents printed hyphen). These are kept in the transcription to make typed text match the printed one.
-	* `[-?]` (represents missing hyphen)
+	* `[-]` Represents printed hyphen. These are kept in the transcription to make typed text match the printed one
+	* `[-?]` Represents missing hyphen. These are kept in the transcription to make typ
 	"""
 	def __init__(self):
 		super().__init__(
@@ -229,6 +230,19 @@ class MarkdownHyphen(markdown.inlinepatterns.Pattern):
 		else:
 			# remove non-meaning hyphen
 			return ""
+
+
+class MarkdownGuess(markdown.inlinepatterns.Pattern):
+	"""
+	Handles parts of the text guesses during transcription
+	Renders `fa[ce?]` as `fa[ce]`.
+	"""
+	def __init__(self):
+		super().__init__(r"\[(?P<guess>[\w\s]+)\?\]")
+
+	def handleMatch(self, m):
+		guess = m["guess"]
+		return f"[{guess}]"
 
 
 class MarkdownAlignRight(markdown.blockprocessors.BlockProcessor):
