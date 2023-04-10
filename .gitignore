@@ -109,4 +109,5 @@ __pycache__
 
 # put your own ignores below this line (don't forget about new line in the end of file)
 *.pdf
-
+www/static/docs
+migrations.yml

@@ -1,17 +1,16 @@
 import contextlib
+import enum
 import json
 import logging
 import os.path
 
-import sqlalchemy
-from sqlalchemy import schema as sql_schema
-from sqlalchemy import types as sql_types
+import sqlalchemy as sql
 from sqlalchemy.ext import declarative as sql_declarative
 from sqlalchemy.orm import session as sql_session
 
 from dancebooks.config import config
 
-_Base = sqlalchemy.orm.declarative_base()
+_Base = sql.orm.declarative_base()
 
 
 # Cudos to Sansha B:
@@ -32,24 +31,30 @@ class SqlAlchemyEncoder(json.JSONEncoder):
 			return super().default(obj)
 
 
+class BackupType(enum.Enum):
+	nas = 1
+	s3 = 2
+
+
 class Backup(_Base):
 	__tablename__ = "backups"
 	__table_args__ = {"schema": "service"}
 
-	id = sql_schema.Column(sql_types.BigInteger, primary_key=True)
-	path = sql_schema.Column(sql_types.String, nullable=False)
-	provenance = sql_schema.Column(sql_types.String, nullable=False)
-	aspect_ratio_x = sql_schema.Column(sql_types.BigInteger, nullable=False)
-	aspect_ratio_y = sql_schema.Column(sql_types.BigInteger, nullable=False)
-	image_size_x = sql_schema.Column(sql_types.BigInteger, nullable=False)
-	image_size_y = sql_schema.Column(sql_types.BigInteger, nullable=False)
-	note = sql_schema.Column(sql_types.String, nullable=False)
+	id = sql.schema.Column(sql.types.BigInteger, primary_key=True)
+	type = sql.schema.Column(sql.types.Enum(BackupType), default=BackupType.s3)
+	path = sql.schema.Column(sql.types.String, nullable=False)
+	provenance = sql.schema.Column(sql.types.String, nullable=False)
+	aspect_ratio_x = sql.schema.Column(sql.types.BigInteger, nullable=False)
+	aspect_ratio_y = sql.schema.Column(sql.types.BigInteger, nullable=False)
+	image_size_x = sql.schema.Column(sql.types.BigInteger, nullable=False)
+	image_size_y = sql.schema.Column(sql.types.BigInteger, nullable=False)
+	note = sql.schema.Column(sql.types.String, nullable=False)
 
 	@property
 	def name(self):
 		return os.path.basename(self.path)
 
-_engine = sqlalchemy.create_engine(
+_engine = sql.create_engine(
 	config.db.connection_url,
 	connect_args=config.db.options
 )
