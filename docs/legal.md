@@ -285,3 +285,31 @@ Excerpts from [Copyright, Permission, Acknowledgements and Data Protection](http
 > * Where copying is for educational use within a teaching environment
 >
 > Where none of these apply copyright permission must be obtained from the copyright owner before any copying from our rare books and archives takes place.
+
+## York University in Toronto, Canada
+
+> Hello Mary
+>
+> While online copy remains incomplete, I would like to make the complete copy available on my website.
+>
+> Could you, please, clarify the license of the files provided by archive.org?
+>
+> (also, if any license / copyright is applied to the photos sent by you, please, let me know).
+
+---
+
+> Yuriy,
+>
+> The short excerpt that I provided to you is permitted under Canadian fair dealing guidelines for personal research.
+> I regret that I am unable to advise you regarding copyright/licensing issues with respect to further use of the material.
+> Please also note that the Internet Archive is hosted in the US.
+>
+> Mary
+>
+> ---
+>
+> Mary Kandiuk MA MLS
+>
+> Visual Arts, Design, Theatre and Dance Librarian / Senior Librarian
+>
+> York University Libraries
