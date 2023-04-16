@@ -70,7 +70,7 @@ def get(id):
 		print("Backup id is required")
 		sys.exit(1)
 	with db.make_transaction() as session:
-		backup = session.query(db.Backup).get(id)
+		backup = session.get(db.Backup, id)
 		print(f"Path:\n{backup.path}")
 		print(f"Provenance:\n{backup.provenance}")
 		print(f"Note:\n{backup.note}")
@@ -94,7 +94,7 @@ def update(
 	aspect_ratio,
 ):
 	with db.make_transaction() as session:
-		backup = session.query(db.Backup).get(id)
+		backup = session.get(db.Backup, id)
 		modified = False
 		if path is not None:
 			path = fixup_path(path)
@@ -130,7 +130,7 @@ def delete():
 		print("Backup id is required")
 		sys.exit(1)
 	with db.make_transaction() as session:
-		backup = session.query(db.Backup).get(id)
+		backup = session.get(db.Backup, id)
 		print(f"You are going to delete backup #{id} at '{backup.path}'")
 		confirmation = input("Type YES to continue: ")
 		if confirmation == "YES":
