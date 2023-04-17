@@ -125,7 +125,7 @@ def update(
 
 @main.command()
 @click.option("--id", type=int, required=True, help="Id of the backup to be deleted")
-def delete():
+def delete(id):
 	if id == 0:
 		print("Backup id is required")
 		sys.exit(1)
