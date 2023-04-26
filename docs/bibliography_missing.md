@@ -349,7 +349,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1860 | Göhle | Ball-Souffleur. Commando französ. Beschreibung ung deutsch<br/>_Published in Dresden by Meingold & Söhne_ | `[Germanorum, 1914]` | |
 | 1862 | Georg Gerster | Katechismus der Höflichkeits-, Anstands- und Präsentationlehre<br/>_Book on etiquette_ | `[Katalog, 1894]` | |
 | 1862–1875? | Georg Gerster | Die Tanzkunst mit Choregraphie der Positionen<br/>_2. Auflage_ | `[Germanorum, 1914]` | |
-| 1863 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001327338) |
 | 1863 | | Die Lieblingstänze des modernen Ballsaals | `[Germanorum, 1914]` | |
 | 1864 | M. Reif | Die Quadrille française (die Contretänze), deren Geschichte und genane Beschreibung, zugleich eine kritische Beleuchtung der in Norddeutschland, namentlich in Schlesien under der obigen Bezeichnung gelehrten Tänze | `[Klemm #03]`<br/>`[Klemm #06]` | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=470818174)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003066340) |
 | 1865 | Isidor | Aufforderung zum Tanz<br/>_Humoreske_<br/>_Published in Zerbst_ | `[Germanorum, 1914]` | |
