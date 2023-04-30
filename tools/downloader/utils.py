@@ -27,27 +27,26 @@ TIMEOUT = 30
 session = requests.Session()
 
 
-def retry(retry_count, delay=0, delay_backoff=1):
+def retry(try_count, delay=0, delay_backoff=1):
 	def actual_decorator(func):
 		@functools.wraps(func)
 		def do_retry(*args, **kwargs):
 			retry_number = 0
 			current_delay = delay
-			try:
-				return func(*args, **kwargs)
-			except Exception:
-				if retry_number >= retry_count:
-					raise RuntimeError(f"Failed to get results after {retry_number} retries")
-				else:
+			for try_number in range(try_count):
+				try:
+					return func(*args, **kwargs)
+				except Exception as ex:
+					print(f"Got exception: {ex}, will retry in {current_delay} seconds")
 					time.sleep(current_delay)
 					current_delay *= delay_backoff
-					retry_number += 1
+			raise RuntimeError(f"Failed to get results after {try_number} retries")
 		return do_retry
 	return actual_decorator
 
 
 # FIXME: retry decorator hides HTTPError raised by raise_for_status.
-# @retry(retry_count=3)
+# @retry(try_count=3)
 def make_request(*args, **kwargs):
 	"""
 	Performs the request and returns requests.Response object.
@@ -66,7 +65,7 @@ def make_request(*args, **kwargs):
 	return response
 
 
-#@retry(retry_count=3)
+#@retry(try_count=3)
 def get_json(*args, **kwargs):
 	"""
 	Returns parsed JSON object received via HTTP GET request
@@ -85,7 +84,7 @@ def get_text(*args, **kwargs):
 	return make_request(*args, **kwargs).content.decode("utf-8")
 
 
-@retry(retry_count=3)
+@retry(try_count=3, delay=30, delay_backoff=2)
 def get_binary(output_filename, url_or_request, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
