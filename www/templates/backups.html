@@ -25,10 +25,10 @@
 				<tr>
 					<td class="narrow align_right">{{ backup.id }}</td>
 					<td width="30%" class="monospace grey_background">{{ backup.name }}</td>
-					<td class="align_center">{{ backup.provenance | markdown }}</td>
+					<td class="align_center">{{ backup.provenance | format_note | safe }}</td>
 					<td class="narrow">{{ backup.image_size_x }}x{{ backup.image_size_y }}</td>
 					<td class="narrow">{{ backup.aspect_ratio_x }}x{{ backup.aspect_ratio_y }}</td>
-					<td width="30%">{{ backup.note | markdown }}</td>
+					<td width="30%">{{ backup.note | format_note | safe }}</td>
 				</tr>
 				{% endfor%}
 			</table>

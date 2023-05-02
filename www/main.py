@@ -10,7 +10,6 @@ import random
 import sys
 
 import flask
-from flaskext import markdown as flask_markdown
 import flask_babel
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -57,7 +56,6 @@ def init_apps():
 flask_app, babel_app = init_apps()
 flask_app.config["BABEL_DEFAULT_LOCALE"] = utils.first(config.www.languages)
 flask_app.config["USE_EVALEX"] = False
-flask_markdown_app = flask_markdown.Markdown(flask_app)
 
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
