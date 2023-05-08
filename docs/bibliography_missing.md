@@ -540,7 +540,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009832426) |
 | 1525 | Caspar Brunner | Rathschlag  wider die gottlosen Tanz | `[Germanorum, 1914]` | |
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
-| 1579 | Lambert Daneau | Traité des danses | `[Nouveau manuel, 1857, #05]` | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009810813)<br/>[BNF](http://catalogue.bnf.fr/ark:/12148/cb31991264z) |
 | 1661 | Joh. Lassenius | Adelische Tisch-Reden in sich begreifende zwölf Lehrreiche nützliche und Anmuthige Gespräche | `[Germanorum, 1914]` | |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | |
 | 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
