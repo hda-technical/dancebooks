@@ -84,7 +84,7 @@ def get_text(*args, **kwargs):
 	return make_request(*args, **kwargs).content.decode("utf-8")
 
 
-@retry(try_count=3, delay=30, delay_backoff=2)
+@retry(try_count=5, delay=30, delay_backoff=1.5)
 def get_binary(output_filename, url_or_request, *args, **kwargs):
 	"""
 	Writes binary data received via HTTP GET request to output_filename
@@ -228,12 +228,12 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 	finally:
 		if "KEEP_TEMP" not in os.environ:
 			shutil.rmtree(tmp_folder)
-			
-			
+
+
 def first(iterable):
 	return next(iter(iterable))
-	
-	
+
+
 # These methods try to guess tiles number using HEAD requests with given UrlMaker
 #
 # url_maker_maker should be a callable accepting zoom in the arguments.
