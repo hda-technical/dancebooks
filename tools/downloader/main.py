@@ -56,6 +56,17 @@ def retronews(document_id, page):
 	bnf.get_retronews(document_id=document_id, page=page)
 
 
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `IE17209883`)", required=True)
+def be_libis(id):
+	"""
+	Downloads a book from https://repository.teneo.libis.be/
+	"""
+	import be
+	be.get_libis(id)
+
+
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `A0524435`)", required=True)
 @click.option("--volume", help="Volume of the book to be downloaded (e. g. '1')", required=True)
