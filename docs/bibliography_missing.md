@@ -532,6 +532,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 2009 | Albert Garcia Espuche et al. | Dansa i música, Barcelona 1700<br/>_Транскрипция лекции выполненная Carles Mas i Garcia_<br/>_In: Monografies del Museu d'història, Ajuntament de Barcelona and Institut de Cultura 2_<br/>_Contains neudruck of Francesc Olivelles manuscript_ | `[3. Rothenfelser]` | [On sale, €12](http://ajuntament.barcelona.cat/barcelonallibres/ca/publicacions/dansa-i-música) |
 | 2010 | Marie Demeillez | Un plaisir sage et régle | `[Heiter, 2016]` | |
 | 2014 | Юлия Михайловна Симаева | Педагогическое обеспечение преподавания хореографии в общеобразовательных учебных заведениях России | | [RSL](https://search.rsl.ru/ru/record/01007523525) |
+| 2018 | Jennifer Nevile | Footprints of the Dance. An Early Seventeenth-Century Dance Master's Notebook | [Google](https://books.google.rs/books?id=let5DwAAQBAJ) | |
 
 ## Antidance books
 
@@ -625,6 +626,7 @@ _This part of the list is to joined with the general table_
 | 1607 | John Ramsey | Practise for Dauncinge | Oxford, Bodleian Library | `Douce 280`<br/>folios 66av-66bv | `[Lindahl]` | |
 | 1620–1650? | Engelbert Kæmpfer | Personal collection of traveller Engelbert Kæmpfer relating to late 17th-century Persia, including dance music, and Russian travel diaries | London, British Library | `Sloane MS 2923` | | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002115302) |
 | 1614–1615? | Ludovico Jacobilli | Modo di ballare | Foligno, Seminario Vescovile, Biblioteca Seminarile L. Jacobilli | `A. III. 19`<br/>folios 102–104 | `[Lehner, 1997]`<br/>`[Sparti, 2004]`<br/>`[2. Rothenfelser]`<br/>`[Transcriptions]` | [Biblioteca Lodovico Jacobilli](http://www.jacobilli.it/) |
+| 1614–1619? | | _aka the Stockholm Manuscript_ | Stockholm, Kungliga Biblioteket | `Cod. Holm S 253` | `[Neville, 2018]` |
 | 1616 | | Copia dell'inventione di un balletto fatto dalla Serenissima Infante Isabella di Savoia d'Este questo carnevale prossimo passato (due copie)<br/>Includes stage plan of _Balletto a otto_ | Modena, Archivio di Stato | `Archivio Estense, Archivio per Materie, Spettacoli pubblici, 9/A` | [[Bosi, 2005]](https://bib.hda.org.ru/books/bosi_2005_duchessa) | |
 | 1619? | Barthélemy de Montagut | Louange de la danse. Avec les observations necessaires pour en acquerir la perfection | London, British Library | `Royal Collection, MS 16E XXXIX` | [[Montagut, 2000]](https://bib.hda.org.ru/books/montagut_2000) | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002107209) |
 | 1640? | | aka _The Stephens Manuscript_ | London, The British Library | `MS Add 41996 F` | `[Swaine]`<br/>[Transcription](https://andrewswaine.uk/articles/stephens-transcript) | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002085808) |
