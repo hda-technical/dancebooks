@@ -93,9 +93,9 @@ Sit on þ^e^ South side
 
 Hon^rs^[[Honours]]
 
-Quadrian pavin {left right forwards // left right backwards[[The text after the brace is written in two lines, "//" is an end of line here.]]
+Quadrian pavin {left right forwards // left right backwards[[The text after the brace is written in two lines, "//" is an end of the line here.]]
 
-Essex measure {Forward backward Stop the same again. // fall back Set lead up fall back.[[The text after the brace is written in two lines, "//" is an end of line here.]]
+Essex measure {Forward backward Stop the same again. // fall back Set lead up fall back.[[The text after the brace is written in two lines, "//" is an end of the line here.]]
 
 Sit doun
 
@@ -128,7 +128,7 @@ in the Inner-Temple-Hall
 
 Tricatees
 
-Argulius.[[Last two lines are written in the lower left (when you place the thext in a readable direction) corner of this quadrant.]]
+Argulius.[[Last two lines are written in the lower left (when you place the text in a readable direction) corner of this quadrant.]]
 
 ### An Holy Dance[[Right lower part.]]
 > Holy Sister please you to dance
