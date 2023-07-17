@@ -1,5 +1,4 @@
-{1r}
-### A Coppy of the old Measures in þ^e^[[A shorthand for "the".]]
+### {1r} A Coppy of the old Measures in þ^e^[[A shorthand for "the".]]
     Inner Temple.[[This folio has empty musical staves on both sides. The names of the dances are written to the left of the staves before the descriptions. The descriptions are written between the musical staves.]]
 
 ### 1^st^:
@@ -124,13 +123,14 @@ as they were first begun and taught by
 Robert Holeman a dancing=Master
 before 1640 and Continu'd ever since
 in the Inner-Temple-Hall
->>M^r^ Butler Buggins.
+>> M^r^ Butler Buggins.
 
 Tricatees
 
 Argulius.[[Last two lines are written in the lower left (when you place the text in a readable direction) corner of this quadrant.]]
 
 ### An Holy Dance[[Right lower part.]]
+
 > Holy Sister please you to dance
 > 
 > With a Holy Brother for Recreation
