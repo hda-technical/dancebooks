@@ -64,7 +64,7 @@ def add(force):
 
 
 @main.command()
-@click.option("--id", type=int, required=True, help="Id of the backup to be updated")
+@click.option("--id", type=int, required=True, help="Id of the backup to be shown")
 def get(id):
 	if id == 0:
 		print("Backup id is required")
@@ -85,6 +85,7 @@ def get(id):
 @click.option("--note", type=str, default=None, help="Set backup note to the given value (markdown supported)")
 @click.option("--image-size", type=str, default=None, help=f"Set backup image size to the given value ({SIZE_FORMAT})")
 @click.option("--aspect-ratio", type=str, default=None, help=f"Set backup image aspect ratio to the given value ({SIZE_FORMAT})")
+@click.option("--type", type=str, default=None, help="Set backup to the given value")
 def update(
 	id,
 	path,
@@ -92,6 +93,7 @@ def update(
 	note,
 	image_size,
 	aspect_ratio,
+	type,
 ):
 	with db.make_transaction() as session:
 		backup = session.get(db.Backup, id)
@@ -114,6 +116,9 @@ def update(
 			modified = True
 		if aspect_ratio is not None:
 			backup.aspect_ratio_x, backup.aspect_ratio_y = map(int, aspect_ratio.split(const.SIZE_DELIMETER))
+			modified = True
+		if type is not None:
+			backup.type = type
 			modified = True
 		if modified:
 			session.add(backup)
