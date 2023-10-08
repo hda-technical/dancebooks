@@ -4,11 +4,13 @@ import http
 import iiif
 import utils
 
+import requests
 from requests.exceptions import HTTPError
 
 
 def get_haab(*, first_id, second_id):
 	output_folder = utils.make_output_folder("haab", first_id)
+	first_found = False
 
 	for page in range(1, 1000):
 		base_url = f"https://haab-digital.klassik-stiftung.de/viewer/api/v1/records/{first_id}/files/images/{second_id}_{page:04d}.tif"
@@ -21,12 +23,22 @@ def get_haab(*, first_id, second_id):
 		try:
 			manifest_url = f"{base_url}/info.json"
 			utils.get_text(manifest_url)
+			first_found = True
+			# Proceed to download
 		except HTTPError as ex:
 			if ex.response.status_code == http.client.NOT_FOUND:
-				# There is no way to get the total number of pages in the document.
-				# Catch 404 and exit on the first error.
-				break
+				if first_found:
+					# There is no way to get the number of the last page in the document.
+					# Exit on first HTTP 404 response received.
+					break
+				else:
+					# There is no way to get the number of the first page in the document.
+					# Continue catching HTTP 404 until we find one.
+					print(f"Got HTTP 404 while trying to get page {page:04d}")
+					continue
+			raise
 
+		print(f"Will download from {manifest_url}")
 		iiif.download_image(
 			base_url=base_url,
 			output_filename=output_filename,

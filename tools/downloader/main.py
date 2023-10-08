@@ -4,6 +4,7 @@ import http.client
 import os
 import subprocess
 import sys
+import traceback
 from xml.etree import ElementTree
 
 import bs4
@@ -762,4 +763,4 @@ if __name__ == "__main__":
 	try:
 		main()
 	except Exception as ex:
-		print(f"Download failed: {ex}")
+		traceback.print_exc()
