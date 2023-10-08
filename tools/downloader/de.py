@@ -38,7 +38,6 @@ def get_haab(*, first_id, second_id):
 					continue
 			raise
 
-		print(f"Will download from {manifest_url}")
 		iiif.download_image(
 			base_url=base_url,
 			output_filename=output_filename,
