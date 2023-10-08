@@ -8,6 +8,7 @@ import time
 import uuid
 from xml.etree import ElementTree
 
+import PIL.Image
 import requests
 
 
@@ -149,6 +150,15 @@ class TileSewingPolicy:
 		return TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, image_width=width, image_height=height)
 
 
+def sew_tiles_with_pillow(folder, output_file, policy):
+    result = PIL.Image.new("RGB", (policy.image_width, policy.image_height))
+    for tile_x in range(policy.tiles_number_x):
+        for tile_y in range(policy.tiles_number_y):
+            tile_image = PIL.Image.open(f"{folder}/{tile_y:08d}_{tile_x:08d}.jpg")
+            result.paste(tile_image, (tile_x * policy.tile_size, tile_y * policy.tile_size))
+    result.save(output_file, "BMP")
+
+
 def sew_tiles_with_montage(folder, output_file, policy):
 	"""
 	Invokes montage tool from ImageMagick package to sew tiles together
@@ -224,7 +234,7 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 					tile_file = os.path.join(tmp_folder, f"{tile_y:08d}_{tile_x:08d}.jpg")
 				url = url_maker(tile_x, tile_y)
 				get_binary(tile_file, url)
-		sew_tiles_with_montage(tmp_folder, output_filename, policy)
+		sew_tiles_with_pillow(tmp_folder, output_filename, policy)
 	finally:
 		if "KEEP_TEMP" not in os.environ:
 			shutil.rmtree(tmp_folder)
