@@ -277,32 +277,32 @@ def is_url_valid(url, item):
 	"""
 	if is_url_local(url):
 		return True
-	split_result = urlparse.urlsplit(url)
-	if len(split_result.scheme) == 0:
-		logging.debug("Scheme isn't specified")
+	split = urlparse.urlsplit(url)
+	if split.scheme not in ("http", "https"):
+		logging.debug(f"Scheme {split.scheme!r} is wrong")
 		return False
-	elif len(split_result.netloc) == 0:
+	if not split.netloc:
 		logging.debug("Network location isn't specified")
 		return False
-	elif len(split_result.fragment) != 0:
+	if split.fragment:
 		logging.debug("Fragments aren't allowed")
 		return False
 
 	#validating blocked domains
-	hostname = split_result.hostname
+	hostname = split.hostname
 	if hostname.startswith("www."):
 		hostname = hostname[4:]
 	for blocked_domain in config.parser.blocked_domains:
 		if hostname.endswith(blocked_domain):
-			logging.debug(f"Domain {split_result.hostname} is blocked")
+			logging.debug(f"Domain {split.hostname} is blocked")
 			return False
 
 	#validating domains blocked for insecure (http) access
 	if (
 		(hostname in config.parser.blocked_domains_http) and
-		(split_result.scheme == "http")
+		(split.scheme == "http")
 	):
-		logging.debug(f"Domain {split_result.hostname} is blocked for insecure access")
+		logging.debug(f"Domain {split.hostname} is blocked for insecure access")
 		return False
 
 	return True
