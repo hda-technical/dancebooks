@@ -84,8 +84,13 @@
             "catalogue.bnf.fr",
 
             "dhds.org.uk",
+
+            // use search.rsl.ru permalinks instead
             "dlib.rsl.ru",
+
+            // use www.loc.gov permalinks instead
             "hdl.loc.gov",
+
             "mirrorland.rpg.ru",
             "jscholarship.library.jhu.edu",
 
