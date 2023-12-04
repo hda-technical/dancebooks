@@ -138,8 +138,8 @@ class TileSewingPolicy:
 		self.tiles_number_x = tiles_number_x
 		self.tiles_number_y = tiles_number_y
 		self.tile_size = tile_size
-		self.image_width = image_width
-		self.image_height = image_height
+		self.image_width = image_width or self.tiles_number_x * self.tile_size
+		self.image_height = image_height or self.tiles_number_y * self.tile_size
 		self.overlap = overlap
 		self.trim = False
 		self.reverse_axis_y = False
@@ -152,8 +152,6 @@ class TileSewingPolicy:
 
 
 def download_and_sew_tiles(output_filename, url_maker, policy):
-	if policy.trim:
-		raise NotImplementedError("TODO: support trim in this code")
 	if policy.overlap is not None:
 		raise NotImplementedError("TODO: support overlap in this code")
 	if policy.reverse_axis_y:
@@ -166,6 +164,10 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 			url = url_maker(tile_x, tile_y)
 			tile_image = get_image(url)
 			result.paste(tile_image, (tile_x * policy.tile_size, tile_y * policy.tile_size))
+			
+	if policy.trim:
+		result = result.crop(result.getbbox())
+
 	result.save(output_filename, "BMP")
 
 

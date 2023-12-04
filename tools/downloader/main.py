@@ -70,61 +70,13 @@ def be_libis(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `A0524435`)", required=True)
-@click.option("--volume", help="Volume of the book to be downloaded (e. g. '1')", required=True)
-def belgiumRoyalLibrary(id, volume):
+@click.option("--volume", help="Volume of the book to be downloaded (e. g. `0`)", required=True, type=int, default=0)
+def be_kbr(id, volume):
 	"""
 	Downloads a book from https://www.kbr.be
 	"""
-	class UrlMaker:
-		def __init__(self, zoom, page_root_url):
-			self.zoom = zoom
-			self.page_root_url = page_root_url
-
-		def __call__(self, tile_x, tile_y):
-			probable_url = f"{page_root_url}/{self.zoom}-{tile_x}-{tile_y}.jpg"
-			return probable_url
-
-
-	volume = int(volume)
-	assert(id[0].isalpha())
-	assert(id[1:].isdigit())
-	slash_separated_id = '/'.join(id)
-	dash_deparated_id = id[0] + '-' + id[1:]
-	base_url = f"https://viewerd.kbr.be/display/{slash_separated_id}/0000-00-00_{volume:02d}/zoomtiles/BE-KBR00_{dash_deparated_id}_0000-00-00_{volume:02d}"
-
-	# We have to provide referer with each request being dispatched.
-	# This is easiest, though very dirty way to do it.
-	referer = f"https://viewerd.kbr.be/gallery.php?map={slash_separated_id}/0000-00-00_{volume:02d}/"
-	HEADERS["Referer"] = referer
-
-	output_folder = make_output_folder("belgiumRoyalLibrary", f"{id}_{volume:02d}")
-	page = 1
-
-	TILE_SIZE = 768
-	while True:
-		output_filename = make_output_filename(output_folder, page)
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page {page:04d}")
-			page += 1
-			continue
-
-		page_root_url = f"{base_url}_{page:04d}"
-		url_maker_maker = lambda zoom: UrlMaker(zoom, page_root_url)
-		tiles_zoom = guess_tiles_zoom(url_maker_maker)
-		print(f"Guessed tiles_zoom={tiles_zoom}")
-		url_maker = UrlMaker(tiles_zoom, page_root_url)
-
-		tiles_number_x = guess_tiles_number_x(url_maker)
-		print(f"Guessed tiles_number_x={tiles_number_x}")
-		tiles_number_y = guess_tiles_number_y(url_maker)
-		print(f"Guessed tiles_number_y={tiles_number_y}")
-		if (tiles_number_x == 0) or (tiles_number_y == 0):
-			print(f"Page {page:04d} was not found")
-			break
-		policy = TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
-		policy.trim = True
-		download_and_sew_tiles(output_filename, url_maker, policy)
-		page += 1
+	import be
+	be.get_kbr(id, volume)
 
 
 @main.command()
