@@ -476,7 +476,8 @@ def validate_isbn(item, errors):
 		if (formatted != single_isbn):
 			errors.add(f"ISBN #{idx} ({single_isbn}) should be reformatted to {formatted}")
 		if (isbn.isbn_type(single_isbn) != 'ISBN13'):
-			errors.add(f"ISBN-10 #{idx} ({single_isbn}) should be reformatted to ISBN-13 {formatted}")
+			isbn13 = isbn.to_isbn13(single_isbn)
+			errors.add(f"ISBN-10 #{idx} ({single_isbn}) should be reformatted to ISBN-13 {isbn13}")
 
 
 def validate_issn(item, errors):
