@@ -279,7 +279,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1836 | Марцинкевич<br/>Матвей Иванович Бернард | Les graces. Кадриль | [Cite](https://search.rsl.ru/ru/record/01000265975) | |
 | 1837 | Luigi Bartolotti | Della danza domestica | `[Leaflets]` | |
 | 1838 | | A Manual of Private Ballroom Dancing | `[Guillard, 1989]` | |
-| 1838 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Giessen](https://opac.uni-giessen.de/DB=1/PPNSET?PPN=221521437)<br/>[Bayreth](https://katalog.uni-bayreuth.de/TouchPoint_touchpoint/perma.do?q=0%3D%221648145%22+IN+%5B2%5D&v=sunrise&l=de)<br/>[Berlin](https://udk-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UDK&search_scope=default_scope&docId=UDK_ALMA_DS21538878500002884&fn=permalink) |
 | 1839 | Eduard Friedrich David Helmke | Die Kunst, sich durch Selbstunterricht in kurzer Zeit zum Weltmann un zum Geschichten Tänzer zu bilden<br/>_Neue Ausgabe_<br/>_Published in Leipzig by Carl Drobisch | `[Germanorum, 1914]` | |
 | 1839 | | Aux quatre lanciers, новый английский кадриль | [Advertisement](https://vivaldi.nlr.ru/pn000105706/view#page=3) | |
 | 1839 | Thomas Wilson | The Quadrille and Cotillon Panorama<br/>_Fouth edition_<br/>_Citation needed_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php) | |
