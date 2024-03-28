@@ -63,7 +63,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1750–1770? | Charles Pauli | Musik und Tanz.<br/>_In Goth. Magazin, Bd. II, Stck. 2_ | `[Charinomos, 1825]` | |
 | 1750–1770? | | Cabala per componendi minuetti<br/>_or_ Cabala per Comporre Minuetti | `music: generator`<br/>`[Thielen, 2009]` | |
 | 1750–1770? | Johann Kade | Ballett-Tabellen, nach denen auch diejenigen, welche keine Music-Verständigen sind, soviel Menuette als ihnen beliebt, selbst machen können | `music: generator`<br/>`[Thielen, 2009]` |
-| 1752 | Jean Lecointe | Apologie de la danse: son antiquité, sa noblesse, et ses avantages. Avec une dissertation sur le menuet | `[Charinomos, 1825]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb39317633n) |
 | 1752 | Jean Lecointe<br/>J. Peyton (translator) | An Apology for Dancing; Shewing Its Antiquity, Excellences, and Advantages. With a Dissertation upon the Minuet | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002107193) (marked as destroyed) |
 | 1753 | William Hogarth | The Analysis of Beauty | [Wikipedia](https://en.wikipedia.org/wiki/The_Analysis_of_Beauty) | |
 | 1754? | John Walsh (compiler) | The Compleat Country Dancing Master, volume 5 | `[Mackler]` | |
