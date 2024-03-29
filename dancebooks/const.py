@@ -30,7 +30,12 @@ SHORT_LANG_MAP = {
 	"ie": ["english"],
 	"it": ["italian", "french"],
 	"lt": ["latvian"],
-	"nl": ["dutch", "german", "french"],
+	"nl": [
+		"dutch",
+		"english",
+		"german",
+		"french",
+	],
 	"nz": ["english"],
 	"no": ["norwegian"],
 	"pl": ["french", "polish"],
@@ -85,6 +90,7 @@ LONG_LANG_MAP = {
 	},
 	"dutch.bib": {
 		"dutch",
+		"english",
 		"french",
 		"german",
 	},
