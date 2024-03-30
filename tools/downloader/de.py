@@ -49,3 +49,24 @@ def get_karlsruhe(*, id):
 	# Invoking download_book_fast will cause downloading of a lower-resolution copy of the image.
 	# Fallback to a tile-based downloader for the higher resolution.
 	iiif.download_book(manifest_url, output_folder)
+
+
+def get_gwlb(*, id):
+	output_folder = utils.make_output_folder("gwlb", id)
+	page = 0
+	while True:
+		page += 1
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+
+		page_url = f"https://digitale-sammlungen.gwlb.de/content/{id}/jpgs/default/{page:08d}.jpg"
+		try:
+			print(f"Downloading page #{page:04d} from {page_url}")
+			utils.get_binary(output_filename, page_url, allow_redirects=False)
+		except HTTPError as ex:
+			# FIXME: this does not work
+			if ex.response.status_code == http.client.FOUND:
+				# gwlb.de starts an infinite redirection cycle in case of requesting a non-existing file
+				break

@@ -612,6 +612,17 @@ def pl_academica(*, book_id, first_page_id, last_page_id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `1759078042`)", required=True)
+def de_gwlb(*, id):
+	"""
+	Downloads book from http://digitale-sammlungen.gwlb.de
+	(click on DFG-Viewer to get the id)
+	"""
+	import de
+	de.get_gwlb(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `6444409`)", required=True)
 def de_karlsruhe(*, id):
 	"""
