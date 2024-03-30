@@ -537,6 +537,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 15-- | | Question d'importance, si les danses sont defenduёs aux chrétiens? | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009832426) |
 | 1525 | Caspar Brunner | Rathschlag  wider die gottlosen Tanz | `[Germanorum, 1914]` | |
 | 1564 | François d'Estienne | Traité des danses | `[Nouveau manuel, 1857, #04]` | |
+| 1635 | Narren-Kurtzweil | Oder Greul des Dantzens<br/>_Published in Ynssprugg (Innsbruck?)_<br/>_Republished in 1695, 1752, 1754_ | `[Germanorum, 1914]` | |
 | 1661 | Joh. Lassenius | Adelische Tisch-Reden in sich begreifende zwölf Lehrreiche nützliche und Anmuthige Gespräche | `[Germanorum, 1914]` | |
 | 1677 | Johann Ludwig Hartmann | Tantz Teuffel : in III. Theilen ; neben einem Anhang vom Praecendentz Teuffel | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | |
 | 1697 | Johann Conrad Kesler<br/>Johann Heinrich Wiegleb | Erklärung. Gründ- und ausführlische, der Frage: Was von dem Weltüblichen Tantzen zu halten sey | `[Germanorum, 1914]` | |
@@ -563,6 +564,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
 | 1801 | Johann Evangelist Wetzler | über den Einfluß des Tanzens auf die Gesundheit nebst Verhaltungsregeln | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #51]` | |
+| 1807 | Adolph Schmidt | Nahrung für weibliche Seelen, welche beglückend auch selbst glücklich sayn und bleiben möchten.<br/>_Published in Hamburg_ | `[Germanorum, 1914]` | [Bryn Mawr, Pennsylvania](https://tripod.brynmawr.edu/permalink/01TRI_INST/1fa7h1r/alma991005529259704921)<br/>[Mecklenburg-Vorpommern](https://opac.lbs-wismar.gbv.de/DB=2/XMLPRS=N/PPN?PPN=345626079)<br/>[Erfurt](https://opac.uni-erfurt.de/DB=1/XMLPRS=N/PPN?PPN=345626079) |
 | 1858 | | Elzine und Deliska oder der Tanz. Erzählung für christliche Jungfrauen<br/>_Published by Cremer in Aachen_<br/>_Translated from the French_ | `[Germanorum, 1914]` | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035%3D%22BV013812550%22+IN+%5B2%5D&v=uba&l=de)<br/>[Tubingen](https://rds-tue.ibs-bw.de/opac/RDSIndex/Search?lookfor=oclc%3A249239436)<br/>[Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=363826335) |
 | 1862 | Joseph Hillebrand | Die Tanzbelustigungen beurtheilt nach der Lehre der heil. Schrift | `[Germanorum, 1914]` | |
 | 1870 | | Erörterung. Neue, der alter Frage: Ob Tantzen Sünde sey? in einer freundlichen Unterredung zwischen Eusebio und Philocomo<br/>_Translated from the Danish book of 1740._ | `[Germanorum, 1914]` | |
@@ -622,7 +624,6 @@ _This part of the list is to joined with the general table_
 | 1607 | John Ramsey | Practise for Dauncinge | Oxford, Bodleian Library | `Douce 280`<br/>folios 66av-66bv | `[Lindahl]` | |
 | 1620–1650? | Engelbert Kæmpfer | Personal collection of traveller Engelbert Kæmpfer relating to late 17th-century Persia, including dance music, and Russian travel diaries | London, British Library | `Sloane MS 2923` | | [BL](http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002115302) |
 | 1614–1615? | Ludovico Jacobilli | Modo di ballare | Foligno, Seminario Vescovile, Biblioteca Seminarile L. Jacobilli | `A. III. 19`<br/>folios 102–104 | `[Lehner, 1997]`<br/>`[Sparti, 2004]`<br/>`[2. Rothenfelser]`<br/>`[Transcriptions]` | [Biblioteca Lodovico Jacobilli](http://www.jacobilli.it/) |
-| 1614–1619? | | _aka the Stockholm Manuscript_ | Stockholm, Kungliga Biblioteket | `Cod. Holm S 253` | `[Neville, 2018]` |
 | 1616 | | Copia dell'inventione di un balletto fatto dalla Serenissima Infante Isabella di Savoia d'Este questo carnevale prossimo passato (due copie)<br/>Includes stage plan of _Balletto a otto_ | Modena, Archivio di Stato | `Archivio Estense, Archivio per Materie, Spettacoli pubblici, 9/A` | [[Bosi, 2005]](https://bib.hda.org.ru/books/bosi_2005_duchessa) | |
 | 1640–1675 | Butler Buggins | The Measures as they are Danced in the Inner Temple Hall | London, Inner Temple Records | `Revels, Foundlings, and Unclassified, Miscellanea, Undated, &c. Vol. 27`<br/>folios 3r-6v | `[Lindahl]` | |
 | 1640–1700? | | _Manuscript Cassel_ | Kassel, Landes- und Murhardsche Bibliothek der Stadt Kassel | | [[Écorcheville, 1906]](https://bib.hda.org.ru/books/cassel_1906) |
@@ -674,6 +675,7 @@ _This part of the list is to joined with the general table_
 | 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) | |
 | 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](https://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) | Какая-то искусствоведческая хрень |
+| 1857 | F. von Nonsens (pseudonym) | Der Opernhausball | `[Germanorum, 1914]` | [Google / BL](https://books.google.com/books?vid=BL:A0018896359) | Романтическая поэма про бал |
 | 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | Просмотрено Борисом Стратилатовым. | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127097) | |
 
 
