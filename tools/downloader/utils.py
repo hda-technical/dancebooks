@@ -108,14 +108,14 @@ def get_image(url_or_request, *args, **kwargs):
 	return PIL.Image.open(io.BytesIO(response.content))
 
 
-def cleanup_filename(bad_name):
-	return bad_name\
+def cleanup_filename(bad_name: int | str):
+	return str(bad_name)\
 		.replace('/', '_')\
 		.replace(':', '_')\
 		.replace('\\', '_')\
 
 
-def make_output_folder(downloader, book_id):
+def make_output_folder(downloader, book_id: int | str):
 	clean_book_id = cleanup_filename(book_id)
 	folder_name = f"{downloader}_{clean_book_id}"
 	os.makedirs(folder_name, exist_ok=True)

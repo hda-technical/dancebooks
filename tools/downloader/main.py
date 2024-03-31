@@ -22,6 +22,18 @@ def main():
 	pass
 
 
+
+@main.command()
+@click.option("--first", help="First page to be downloaded (e. g. `8076189`)", type=int, required=True)
+@click.option("--last", help="Last page (inclusive) to be downloaded (e. g. `8076299`)", type=int, required=True)
+def at_ubs(*, first, last):
+	"""
+	Downloads book from https://eplus.uni-salzburg.at
+	"""
+	import at
+	at.get_ubs(first=first, last=last)
+
+
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `btv1b7200356s`)", required=True)
 @click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)
