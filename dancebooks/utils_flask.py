@@ -166,7 +166,10 @@ def make_keyword_link(keyword):
 def format_catalogue_code(single_code):
 	catalogue_type, catalogue_code = single_code.split(const.CATALOGUE_SEPARATOR)
 	item_id, title = const.CATALOGUE_MAP[catalogue_type];
-	return f'<a href="/books/{item_id}">{title}</a>: {catalogue_code}'
+	if item_id:
+		return f'<a href="/books/{item_id}">{title}</a>: {catalogue_code}'
+	else:
+		return f'<span>{title}</span>: {catalogue_code}'
 
 
 def format_transcription_url(item):

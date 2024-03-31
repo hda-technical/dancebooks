@@ -195,24 +195,25 @@ ID_REGEXP = re.compile(ID_PATTERN)
 PAGES_PATTERN = r"\d+(–\d+)?"
 PAGES_REGEXP = re.compile(PAGES_PATTERN)
 
-CATALOGUE_PATTERN = (
+CATALOGUE_PATTERN = "|".join([
 	#Printed books in Francine Lancelot's "La belle danse"
-	r"(Lancelot:\d{4}\.\d)|"
+	r"(Lancelot:\d{4}\.\d)",
 	#Manuscripts in Francine Lancelot's "La belle danse"
-	r"(Lancelot:Ms\d{2})|"
+	r"(Lancelot:Ms\d{2})",
 	#‹Ludus Pastorali› manuscript from Francine Lancelot's "La belle danse"
-	r"(Lancelot:Addendum)|"
+	r"(Lancelot:Addendum)",
 	#Printed books in Little-Marsh's "La danse noble"
-	r"(LittleMarsh:\*?\[?c?\d{4}\]?-\w{3})|"
+	r"(LittleMarsh:\*?\[?c?\d{4}\]?-\w{3})",
 	#Manuscripts in Little-Marsh's "La danse noble"
-	r"(LittleMarsh:Ms-\d{2})|"
+	r"(LittleMarsh:Ms-\d{2})",
 	#Wilhelm Gottlieb Becker's Taschenbüchern in Lange's "Modetänze um 1800"
-	r"(Lange:\d{4}(, I{1,2})?)|"
-	r"(Smith:[\[\]A-Za-z\d]+)|"
-	r"(Gallo:[A-Za-z']{1,3})|"
-	r"(Marrocco:[A-Z\d, ]+)|"
-	r"(NLR[24J]:I{1,2}\.\d+[a-z]?)"
-)
+	r"(Lange:\d{4}(, I{1,2})?)",
+	r"(Smith:[\[\]A-Za-z\d]+)",
+	r"(Gallo:[A-Za-z']{1,3})",
+	r"(Marrocco:[A-Z\d, ]+)",
+	r"(NLR[24J]:I{1,2}\.\d+[a-z]?)",
+	r"(DdM:\d{4})",
+])
 CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
 #map [catalogue type] -> (catalogue id, catalogue title)
 CATALOGUE_MAP = {
@@ -225,6 +226,7 @@ CATALOGUE_MAP = {
 	"NLR2": ("nlr_catalogue_2005", "Сводный каталог российских нотных изданий"),
 	"NLR4": ("nlr_catalogue_2017_foreign", "Сводный каталог российских нотных изданий"),
 	"NLRJ": ("nlr_catalogue_2008_jusupov", "Юсуповская коллекция"),
+	"DdM": (None, "Derra de Moroda Tanzarchiv"),
 }
 
 VALID_HTTP_CODES = {
