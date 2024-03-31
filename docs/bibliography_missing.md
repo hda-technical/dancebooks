@@ -271,7 +271,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1831/1833 | Carl Friedrich Förster | Eccossaisen-Lehre, oder die Kunst 16 verschiedene Eccossaisen mit allen dezugehörigen Pas und Touren in kurzer Zeit anständig tanzen<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236)<br/>[Advertisement](https://books.google.com/books?id=5ShEAAAAYAAJ&pg=PA239)<br/>`[Katalog, 1894]`<br/>`[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1822/1832 | Gustav Weirich | Drei Contre-Tänze in 20 verschiedenen Touren. Seinen Scholaren gewidmet | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=kiNMAAAAcAAJ&pg=RA1-PA56) | |
 | 1833 | Carl Friedrich Förster | Königs-Quadrillen-Lehre | [Advertisement](https://books.google.com/books?id=V-QaAQAAMAAJ&pg=PA236) |
-| 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103)<br/>[SBB / Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411985159) |
+| 1833 | Edouard Friedrich David Helmke | Almanach der neuesten Modetänze für das Jahr 1833 | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001645334)<br/>[Jena](https://kataloge.thulb.uni-jena.de/DB=1/LNG=DU/CLK?IKT=12&TRM=600308103)<br/>[SBB / Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411985159) (desideratum) |
 | 1835 | J. G. Häcker | Der selbstlehrende Tanzmeister<br/>_Good quality copy_ | [[Häcker, 1835]](https://bib.hda.org.ru/books/hacker_1835)<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [SMB / Berlin](https://opac.smb.spk-berlin.de/LNG=EN/CLK?IKT=12&TRM=876381964)<br/>[PHOTOCOPY @ UDK / Berlin](https://udk-berlin.hosted.exlibrisgroup.com/permalink/f/1b2jonm/UDK_ALMA_DS21538893510002884)<br/>[DHDS / Köln](https://aleph.zbsport.de/F/8F9MHNPSSJ22IVFV41CQTMA997BGCHH2NIXGN4EN7R5FGHIY1F-02027?func=item-global&doc_library=ZBS01&doc_number=000182065&year=&volume=&sub_library=) |
 | 1835 | Пьер Роде<br/>Пьер Мари Франсуа де Саль Байо<br/>Родольф Крейцер | Скрипичный учитель, или собрание для изучения на скрипке необходимых правил<br/>_Издание третье_ | [Quote](http://blog.hda.org.ru/quotes/novyie-knigi) | |
 | 1836 | Марцинкевич<br/>Матвей Иванович Бернард | Les graces. Кадриль | [Cite](https://search.rsl.ru/ru/record/01000265975) | |
@@ -395,7 +395,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1886?<br/>1902 | David Anderson | Ball-room Guide. New and Complete Edition | `[Guillard, 1989]` | |
 | 1886 | Wilhelm Jerwitz | Quadrillen Wegweiser | | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411479504) |
 | 1887, 1893 | Edmund Wallner | Polonaise, Contretanz, Cotillon: ein Tanz-Vademecum | `[Katalog, 1894]` | |
-| 1889 | Eduard Reisinger | Die Tanzkunst<br/>_3. Auflage_ | | |
+| 1889 | Eduard Reisinger | Die Tanzkunst und die Tänze<br/>_3. Auflage_<br/>_Published in Wien_ | `[Germanorum, 1914]` | [kb.dk](https://soeg.kb.dk/permalink/45KBDK_KGL/1pioq0f/alma99122796989905763) |
 | 1889 | Désiré Vestris | Les danses d'autrefois, de la pavane à la gavotte | `[Russell, 2007]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb31567511b)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003783504) |
 | 189- | A. Handrl | Quadrille und Contretanz | `[Katalog, 1894]` | |
 | 189- | | Der kleine Tanzmeister. Unentbehrliches Hülfsbüchlein für Damen und Herren<br/>_6. Auflage_ | | [On sale, €88](https://www.abebooks.com/servlet/BookDetailsPL?bi=22684143266) |
@@ -431,6 +431,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
 | 1907 | Carl Sandmeier | Sichere Anleitung zur Selbsterlernung aller üblichen Rund-Tänze<br/>_Published in Zürich_<br/>_4. Auflage_ | `[Germanorum, 1914]` | Swiss National Library<br/>Universitätsbibliothek Basel |
 | 1908 | E. von Rauch | Das grosse Buch der Tanzkunst | `[Germanorum, 1914]` | [HathiTrust (US only)](https://hdl.handle.net/2027/nyp.33433004635508) |
+| 1908 | Franz von Reznicek | Der Tanz | `[Germanorum, 1914]` | [UB Düsseldorf](https://katalog.ulb.hhu.de/Record/990021747090206443) |
 | 1908? | Peter Müller | Anstands- und Tanzlehre Kommando d. Contre-danse, Norddeutsche Française, Quadrille à la cour | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=390745111) |
 | 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004956353) |
 | 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005139495) |
@@ -558,6 +559,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1736 | Johann Andreas Kiliani | Erbetenes Urtheil über den bisher heftig bestrittenen Punct vom Tantzen | `[Germanorum, 1914]` | |
 | 1737 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Zweiter Druck_<br/>_Published in Züllichau_ | `[Germanorum, 1914]` | |
 | 1738 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Ander Theil_<br/>_Published in (Züllichau / Berlin)? by Waisenhaus_ | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
+| 1738 | J. Seb. Renz | De religiosis saltationibus veterum Judaeorum<br/>_Published in Lipsiae_ | `[Germanorum, 1914]` | [Köln](https://primo.zbsport.dshs-koeln.de/permalink/49HBZ_ZBS/18h80sa/alma990000140260806478) |
 | 1745 | J. P. C. Sturm | Evangelisches Zeugnis wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können | `[Шабалина, 2019]` | |
 | 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
@@ -739,7 +741,7 @@ _This part of the list is to joined with the general table_
 
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
-| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (J..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
+| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (Rügen..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
 | 1936–1941 | `[Magriel]` | Paul David Magriel | A Bibliography of Dancing | https://bib.hda.org.ru/books/magriel_1936_bibliography<br/>https://bib.hda.org.ru/books/magriel_1941_bibliography |
 | 1994 | `[Terpsichore]` | Madison U. Sowell | The Art of Terpsichore. From Renaissance Festivals to Romantic Ballets. An Exhibition of Dance-related Rare Books and Prints in Honor of the Annual Conference of the Society of Dance History Scholars Held at Brigham Young University | https://bib.hda.org.ru/books/terpsichore_1994_exhibition |
 | 1997 | `[Lindahl Annotated]` | Greg Lindahl | Annotated Bibliography of Renaissance Dance| `Ancillary sources (not in bibliography)/Bibliographies of the others/Greg Lindahl - Annotated bibliography of Renaissance dance.pdf` |
