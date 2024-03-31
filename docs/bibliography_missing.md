@@ -290,7 +290,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | `[Germanorum, 1914]` | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
 | 1842? | Adam Rabel | Kleine Sammlung geselliger Tänze | `[Unfried, 2014]` | |
 | 1843 | | Листок для светских людей. Петербургские балы и маскарады<br/>_№5 за 1843 год_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004358933) |
-| 1844 | Adam Rabel | Die Lance-Quadrille. Mit 4 Tafeln Abbildungen und einer neuen Musik<br/>_2. Auflage_<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
+| 1844 | Adam Rabel | Die Lance-Quadrille. Mit 4 Tafeln Abbildungen und einer neuen Musik<br/>_2. Auflage_<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1844 | | The Ballroom Annual | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01010474492) |
 | 1844 | David Bogue (publisher) | The Ball-Room Preceptor; Comprising The Most Esteemed Quadrilles, Galopades, Mazourkas, & Other Fashionable Dances of the Season<br/>_4th edition_ | | [On sale, £180](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699530) |
 | 1844 | Jean Charles Louis Le Pitre | Réflexions sur l'art de la danse, relativement à la décadence momentanée et à la renaissance actuelle des danses nationales françaises et allemandes | `[Katalog, 1894]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43997540m) |
@@ -331,8 +331,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1855 | Пётр Петрович Сухонин | Русские хороводы | | [RSL](https://search.rsl.ru/ru/record/01003563356) |
 | 1857 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #02]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001321472) |
 | 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
-| 1857 | Johann Raab | Der Cotillon : in 20 neuen Figuren. Mit faßlicher, genauer und ausführlicher Beschreibung und Zeichnung aller Touren für Tänzer und Nichttänzer | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524536370002884) |
-| 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | [ÖNB](http://data.onb.ac.at/rec/AC09173622) |
+| 1857 | Johann Raab | Der Cotillon : in 20 neuen Figuren. Mit faßlicher, genauer und ausführlicher Beschreibung und Zeichnung aller Touren für Tänzer und Nichttänzer | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524536370002884) |
+| 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [ÖNB](http://data.onb.ac.at/rec/AC09173622) |
 | 1857 | Mieczysław Hłasko | Die Mazur (Polnischer Nationaltanz); gründlich und für Jedermann leicht faßlich beschrieben, mit Abbildung der Figuren und einer Nationalmusikversehen | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1857 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_4. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1857 | Eduard Georg Eichler | Reichs-Quadrille im Rococco- Ecossaise- oder Polka-Tremblant-Schritte | [Title page](https://yadi.sk/i/yJTwI_8OlTDP0A) | [ÖNB #1](http://data.onb.ac.at/rec/AC09238594)<br/>[ÖNB #2](http://data.onb.ac.at/rec/AC09217669) |
@@ -349,7 +349,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1862 | Georg Gerster | Katechismus der Höflichkeits-, Anstands- und Präsentationlehre<br/>_Book on etiquette_ | `[Katalog, 1894]` | |
 | 1862–1875? | Georg Gerster | Die Tanzkunst mit Choregraphie der Positionen<br/>_2. Auflage_ | `[Germanorum, 1914]` | |
 | 1863 | | Die Lieblingstänze des modernen Ballsaals | `[Germanorum, 1914]` | |
-| 1864 | M. Reif | Die Quadrille française (die Contretänze), deren Geschichte und genane Beschreibung, zugleich eine kritische Beleuchtung der in Norddeutschland, namentlich in Schlesien under der obigen Bezeichnung gelehrten Tänze | `[Klemm #03]`<br/>`[Klemm #06]` | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=470818174)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003066340) |
+| 1864 | M. Reif | Die Quadrille française (die Contretänze), deren Geschichte und genane Beschreibung, zugleich eine kritische Beleuchtung der in Norddeutschland, namentlich in Schlesien under der obigen Bezeichnung gelehrten Tänze | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=470818174)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003066340) |
 | 1865 | Isidor | Aufforderung zum Tanz<br/>_Humoreske_<br/>_Published in Zerbst_ | `[Germanorum, 1914]` | |
 | 1865 | Richard Fricke | Der elegante Ballordner. Sammlung neuester und geschmackvollster Gesellschaftstänze<br/>_2. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1866 | | Manual de dança ou método fácil de aprender a dançar sem auxilio de mestre | | BNP |
@@ -366,6 +366,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1871 | Oskar Guttmann | Grundsätze der ästhetischen Bildung des menschlichen Körpers. Praktisches Lehrbuch zum Selbstunterricht für alle gebildeten Stände, insbesondere für Bühnenkünstler<br/>_Book on physical education._ | `[Klemm #03]` | [Cincinnati](https://huc.on.worldcat.org/oclc/172998951)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001548753) (reported missing as of April 2023) |
 | 1873 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung<br/>_Erste Auflage (??)_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1873 | August Krüger | Der Contre-Tanz und die Quadrille à la cour. Zum Ausrufen eingerichtet<br/>_Published in Berlin_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
+| 1873 | M. Reif | Grundzüge und Gesetze deutschen Akademie der Tanzlehrkunst<br/>_2. Auflage_ | `[Germanorum, 1914]` | [Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=470817186) (desideratum) |
 | 1874 | | Manual de dança ou methodo facil de aprender a dançar sem auxilio de mestre<br/>_4th edition_ | | BNP |
 | 1874 | | Arte ou methodo facil de aprender a dansar as contradansas francezas<br/>_4th edition_ | | BNP |
 | 1874 | Wilhelm Jerwitz | Der kleine Tanzmeister als Retter in der Noth. Zur Erinnerung des Erlernten<br/>_Published in Dresden_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` |
@@ -430,6 +431,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127283) (marked as desideratum) |
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
 | 1907 | Carl Sandmeier | Sichere Anleitung zur Selbsterlernung aller üblichen Rund-Tänze<br/>_Published in Zürich_<br/>_4. Auflage_ | `[Germanorum, 1914]` | Swiss National Library<br/>Universitätsbibliothek Basel |
+| 1908 | E. von Rauch | Das grosse Buch der Tanzkunst | `[Germanorum, 1914]` | [HathiTrust (US only)](https://hdl.handle.net/2027/nyp.33433004635508) |
 | 1908? | Peter Müller | Anstands- und Tanzlehre Kommando d. Contre-danse, Norddeutsche Française, Quadrille à la cour | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=390745111) |
 | 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004956353) |
 | 191- | | Танго (серия «Заочные уроки на мандолине», №6) | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005139495) |
