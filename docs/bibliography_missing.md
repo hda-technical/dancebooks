@@ -63,7 +63,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1750–1770? | Charles Pauli | Musik und Tanz.<br/>_In Goth. Magazin, Bd. II, Stck. 2_ | `[Charinomos, 1825]` | |
 | 1750–1770? | | Cabala per componendi minuetti<br/>_or_ Cabala per Comporre Minuetti | `music: generator`<br/>`[Thielen, 2009]` | |
 | 1750–1770? | Johann Kade | Ballett-Tabellen, nach denen auch diejenigen, welche keine Music-Verständigen sind, soviel Menuette als ihnen beliebt, selbst machen können | `music: generator`<br/>`[Thielen, 2009]` |
-| 1752 | Jean Lecointe<br/>J. Peyton (translator) | An Apology for Dancing; Shewing Its Antiquity, Excellences, and Advantages. With a Dissertation upon the Minuet | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002107193) (marked as destroyed) |
+| 1752 | Jean Lecointe<br/>J. Peyton (translator) | An Apology for Dancing; Shewing Its Antiquity, Excellences, and Advantages. With a Dissertation upon the Minuet | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002107193) (desideratum) |
 | 1753 | William Hogarth | The Analysis of Beauty | [Wikipedia](https://en.wikipedia.org/wiki/The_Analysis_of_Beauty) | |
 | 1754? | John Walsh (compiler) | The Compleat Country Dancing Master, volume 5 | `[Mackler]` | |
 | 1757? | Johann Philipp Kirnberger | Der neue Menuetten- Trio- und Polonesen Compositor | `music: generator`<br/>`[Thielen, 2009]` | |
@@ -322,7 +322,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1851 | | Der grosse X'sche Maskenball, mit allen seinen Vorkommissen<br/>_Published in Grimma_ | `[Germanorum, 1914]` | |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_3. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1852 | | Wiener Tanzschule. Gründliche und für jedermann leicht faßliche Darstellung der beliebtesten und modernsten Tänze | | [UB Salzburg](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma71184520410003341) (marked as desideratum) |
+| 1852 | | Wiener Tanzschule. Gründliche und für jedermann leicht faßliche Darstellung der beliebtesten und modernsten Tänze | | [UB Salzburg](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma71184520410003341) (desideratum) |
 | 1854 | Julius Kurth | Der gewandte Ball- und Vortänzer | `[Unfried, 2014]` | |
 | 1854 | August Bournonville | Der Tanz | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1852–1854? | Ernst Buchey | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
@@ -381,7 +381,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 188- | E. Gärtner | Contre-danse und Quadrille à la Cour<br/>_6. Auflage_<br/>_Published by Volgen & Klein in Landsberg am Lech_<br/>_Dated approximately_ | `[Germanorum, 1914]` |
 | 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001590546)<br/>[SMB / Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=862955807)<br/>[UDK / Berlin](https://udk-berlin.hosted.exlibrisgroup.com/permalink/f/1b2jonm/UDK_ALMA_DS21538943440002884) |
-| 1880–1900? | A. Handt | Contredanse & Quadrille à la cour. Die Touren dieser Tänze in französischer Sprache mit deutschen Anmerkungen<br/>_Published in Erfurt by Fr. Bartholomaus_ | `[Germanorum, 1914]` | [Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=373054815) (marked as desideratum) |
+| 1880–1900? | A. Handt | Contredanse & Quadrille à la cour. Die Touren dieser Tänze in französischer Sprache mit deutschen Anmerkungen<br/>_Published in Erfurt by Fr. Bartholomaus_ | `[Germanorum, 1914]` | [Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=373054815) (desideratum) |
 | 1881 | Adam Reichert | Die moderne Tanzkunst vom ästetischen und theoretischen Standpunkte | | [ÖNB](http://data.onb.ac.at/rec/AC10237835) |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
@@ -428,7 +428,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=784912) |
 | 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004849373)<br/>`SPTL: Н 727(А)` |
 | 1903 | Melvin Balou Gilbert | Dancing | [Cite](https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.c2898858;seq=9;width=10000) |
-| 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127283) (marked as desideratum) |
+| 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127283) (desideratum) |
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
 | 1907 | Carl Sandmeier | Sichere Anleitung zur Selbsterlernung aller üblichen Rund-Tänze<br/>_Published in Zürich_<br/>_4. Auflage_ | `[Germanorum, 1914]` | Swiss National Library<br/>Universitätsbibliothek Basel |
 | 1908 | E. von Rauch | Das grosse Buch der Tanzkunst | `[Germanorum, 1914]` | [HathiTrust (US only)](https://hdl.handle.net/2027/nyp.33433004635508) |
@@ -443,7 +443,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1911 | Л. Фремо | Тобоган. Новый характерный шотландский танец | `[Yoko]` | |
 | 1911 | | Karnecik tancerza | `[Yoko]` | |
 | 1911 | | Samouczek tancow salonowych. Zebral i ulozyl salonowiec | `[Yoko]` | |
-| 1911 | И. И. Иванов | Новейший самоучитель бальных танцев | `[Yoko]` | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004983773) (marked as desideratum) |
+| 1911 | И. И. Иванов | Новейший самоучитель бальных танцев | `[Yoko]` | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004983773) (desideratum) |
 | 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев | `[Yoko]` | |
 | 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев<br/>_Второе издание_ | `[Yoko]` | |
 | 1912 | | Latwju tautas dejas<br/>_Латышские народные танцы_<br/>_Серийное издание_ | `[Yoko]` | |
@@ -458,8 +458,8 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1914 | | Танго. Мурочка-Манюрочка! Новый сборник лучших куплетов | |  [NLR #1](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068184)<br/>[NLR #2](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005068185) |
 | 1915 | | Барыня (серия «Игра на 2-х р. гармонии» №10) | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005165864) |
 | 1916 | | Manual de dança e de cotillon : método fácil para aprender a dançar sem auxílio de professor<br/>_9th edition_ | | BNP |
-| 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01000894416) (marked as destroyed) |
-| 1919 | Reid (brothers) | Latest Dances, and How to Dance Them | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01000858626) (marked as destroyed) |
+| 1919 | Geoffrey d'Egville | How and What to Dance | `[Cross-step Waltz]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01000894416) (desideratum) |
+| 1919 | Reid (brothers) | Latest Dances, and How to Dance Them | | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01000858626) (desideratum) |
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
 | 1922 | Денис Иванович Лешков | Библиографические листы русского библиологического общества. Лист II, февраль<br/>_Содержит статью (??) под названием «Танцовальный словарь»_ | | `SPTL: Б 593` |
 | 1922 | Бела Г. Герман | Искусство танца. Настольная книга любителя танцев и культурного человека<br/>Второе издание<br/>_Издано в Харбине_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009723097) |
