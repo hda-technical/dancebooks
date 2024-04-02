@@ -430,7 +430,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127283) (desideratum) |
 | 1907 | Василий Степанов | Современные народные собрания, игры, танцы и песни, частушки и другие в деревне | | [SHPL](http://unis.shpl.ru/Pages/BooksCard.aspx?bookId=1682251&dbType=Y) |
 | 1907 | Carl Sandmeier | Sichere Anleitung zur Selbsterlernung aller üblichen Rund-Tänze<br/>_Published in Zürich_<br/>_4. Auflage_ | `[Germanorum, 1914]` | Swiss National Library<br/>Universitätsbibliothek Basel |
-| 1908 | E. von Rauch | Das grosse Buch der Tanzkunst | `[Germanorum, 1914]` | [HathiTrust (US only)](https://hdl.handle.net/2027/nyp.33433004635508) |
 | 1908 | Franz von Reznicek | Der Tanz | `[Germanorum, 1914]` | [UB Düsseldorf](https://katalog.ulb.hhu.de/Record/990021747090206443) |
 | 1908? | Peter Müller | Anstands- und Tanzlehre Kommando d. Contre-danse, Norddeutsche Française, Quadrille à la cour | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=390745111) |
 | 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004956353) |
