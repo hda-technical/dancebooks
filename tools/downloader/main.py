@@ -635,6 +635,17 @@ def de_gwlb(*, id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `43333035X`)", required=True)
+def de_slub(*, id):
+	"""
+	Downloads book from https://digital.slub-dresden.de/
+	(download single image to get the id)
+	"""
+	import de
+	de.get_slub(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `6444409`)", required=True)
 def de_karlsruhe(*, id):
 	"""

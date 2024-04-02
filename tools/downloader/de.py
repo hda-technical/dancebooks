@@ -43,6 +43,7 @@ def get_haab(*, first_id, second_id):
 			output_filename=output_filename,
 		)
 
+
 def get_karlsruhe(*, id):
 	manifest_url = f"https://digital.blb-karlsruhe.de/i3f/v20/{id}/manifest"
 	output_folder = utils.make_output_folder("karlsruhe", id)
@@ -69,4 +70,24 @@ def get_gwlb(*, id):
 			# FIXME: this does not work
 			if ex.response.status_code == http.client.FOUND:
 				# gwlb.de starts an infinite redirection cycle in case of requesting a non-existing file
+				break
+				
+				
+def get_slub(*, id):
+	output_folder = utils.make_output_folder("slub", id)
+	page = 0
+	while True:
+		page += 1
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+		
+		page_url = f"https://digital.slub-dresden.de/data/kitodo/RollSyst_{id}/RollSyst_{id}_tif/jpegs/{page:08d}.tif.original.jpg"
+		print(f"Downloading page #{page:04d} from {page_url}")
+		try:
+			utils.get_binary(output_filename, page_url)
+		except HTTPError as ex:
+			if ex.response.status_code == http.client.NOT_FOUND:
+				print("Got HTTP 404, stopping download")
 				break
