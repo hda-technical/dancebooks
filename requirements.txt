@@ -8,7 +8,7 @@ fpdf==1.7.2
 ipython==8.22.2
 Markdown==3.6
 mkdocs==1.5.3
-pillow==10.2.0
+pillow==10.3.0
 pipdeptree==2.16.2
 pyflakes==3.2.0
 pyjson5==1.6.6
