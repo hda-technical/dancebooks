@@ -83,7 +83,7 @@ def get_slub(*, id):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
 		
-		page_url = f"https://digital.slub-dresden.de/data/kitodo/RollSyst_{id}/RollSyst_{id}_tif/jpegs/{page:08d}.tif.original.jpg"
+		page_url = f"https://digital.slub-dresden.de/data/kitodo/{id}/{id}_tif/jpegs/{page:08d}.tif.original.jpg"
 		print(f"Downloading page #{page:04d} from {page_url}")
 		try:
 			utils.get_binary(output_filename, page_url)

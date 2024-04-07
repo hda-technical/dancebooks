@@ -635,7 +635,7 @@ def de_gwlb(*, id):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `43333035X`)", required=True)
+@click.option("--id", help="Id of the book to be downloaded (e. g. `RollSyst_43333035X`)", required=True)
 def de_slub(*, id):
 	"""
 	Downloads book from https://digital.slub-dresden.de/
