@@ -111,7 +111,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1781 | Simon Guillaume | Les Charmes de la Volupté, Almanach dansant | [Advertisement](https://books.google.com/books?id=DsNFAAAAcAAJ&pg=PA96) | |
 | 1781 | Maximilian Stadler | Table pour composer des minuets et des trios à la infinie | `music: generator`<br/>`[Hedges, 1978]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb43362239q) |
 | 1782 | Elias Christian Fricke | Ganz neue Englische Tänze mit den Touren | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346618) |
-| 1783 | Barthold Friedrich Schulz | Anweisung zum guten regelmäßigen Tanzen; nebst 12 neuen englischen Tänzen<br/>_Published in Hamburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[Advertisement](https://books.google.com/books?id=e3G6m7fhlT8C&pg=PA361) | |
+| 1783 | Barthold Friedrich Schulz | Anweisung zum guten regelmäßigen Tanzen; nebst 12 neuen englischen Tänzen<br/>_Published in Hamburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]`<br/>[Advertisement](https://books.google.com/books?id=e3G6m7fhlT8C&pg=PA361) | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
 | 1784 | Joseph Lanz | Portefeuille Englischer Tänze | [Article](http://heinerfischle.de/history/kette-e.htm) | |
 | 1785 | | Etwas übers Tanzen, zu Beherzigung der Wiener Schönen; von einem Freunde der Offenherzigkeit<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
@@ -138,6 +138,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1800–1850? | Müller (publisher) | Theorie der Tanzkunst, mit Betrachtung über den Nutzen ihrer Anwendung bei Erziehung der Jugend und den Werth derselben für Herren
 und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1800–1810? | | Taschenbuch den Freunden des Tanzes gewidmer<br/>_Two volumes_ | [[Лисснер, 1811]](http://dlib.rsl.ru/viewer/01004333601#?page=10) | |
+| 1800 | | Sammlung verschiedener Aufsätze für junge Leute. Schatzkästlein für junge Leute, die gerne Tanzen<br/>_Publisher in Frankfurt_ | `[Germanorum, 1914]` | |
 | 1800 | Wilhelm Ferdinand Rong | Der Musicdirector. Kartenspiel. Dominospiel | `music: generator`<br/>`[Thielen, 2009]` | |
 | 1800 | | Taschenbuch für Liebhaber der schönen Tanzkunst<br/>_Complete copy needed_ | `[Klemm #02]??`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Taschenbuch, 1800]](https://bib.hda.org.ru/books/taschenbuch_1800_liebhaber) | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035="BV003915947"+IN+[2]&v=uba&l=de) |
 | 1801 | Thomas Preston | 24 Country Dances for the Year 1801 | [ABC notation](http://www.village-music-project.org.uk/?page_id=831) |
@@ -284,6 +285,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 184- | Г. Грациеский | Полька в Киеве | [Cite](https://books.google.com/books?id=_HcLAQAAIAAJ&q=грациеский) | |
 | 184- | Г. Грациеский | Правила для танца «Полька» | [Cite](https://books.google.com/books?id=_HcLAQAAIAAJ&q=грациеский) | |
 | 1844 | Г. Грациеский | Новый танцевальный калейдоскоп, или кадриль в шести турах | [Quote](https://blog.hda.org.ru/quotes/smes) | |
+| 1842 | E. von Saldern | Die Bälle der eleganten Welt<br/>_Published in Nordhausen, Thuringia_ | `[Germanorum, 1914]` | |
 | 1842 | Z. T. Purday (publisher) | The Royal Quadrille Preceptor | | [On sale, £200](https://www.abebooks.com/servlet/BookDetailsPL?bi=7582886756) |
 | 1842 | Tilt & Bogue (publishers) | The Ball-Room Preceptor; Comprising the Most Esteemed Quadrilles, Galopades, Mazourkas, and Other Fashionable Dances of the Present Season<br/>_3rd edition_ | | [On sale, £150](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699660) |
 | 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | `[Germanorum, 1914]` | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
@@ -314,6 +316,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1850? | Friedrich Gottermann | Die erste Contretanz-Quadrille (Francaise) und Quadrille à la cour (Les Lanciers). Ein Bücheln bei der Erlernung dieser Tänze<br/>_Published in Rostock_ | [Worldcat](http://www.worldcat.org/oclc/247855742) | |
 | 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1850–1860? | Jean Jacques | Tanz-Album oder der unerschöpfliche Maitre auf dem Ballsaal<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
+| 1850–1900? | Schakwitz | Tanz-Album<br/>_6. Auflage_<br/>_Published in Berlin_ | `[Germanorum, 1914]` | |
 | 1850–1880? | | Die Union-Quadrille<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1850–1880? | Rudolf Voß | Tanz-Touren. Contre-Tanz — Lancier — Alliance — Quadrille — Mignon — Cotillon — Pariser Polka<br/>_4. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1849 | Francisco Gomes da Fonseca | Nova arte de aprender a dançar ou methodo facil de aprender as contradanças francezas | | BNP |
@@ -673,7 +676,9 @@ _This part of the list is to joined with the general table_
 | 1767? | Claude-Joseph Dorat | La déclamation théâtrale.<br/>_Chant quatrième. De la danse. Возможно, есть более ранние издания_ | `[Nouveau manuel, 1857, #37]` | [Google](https://books.google.com/books?id=NeHhNmFzRAUC) | |
 | 1788 | Michael Johann Friedrich Weideburg | Musikalisches Charten-Spiel ex g dur | `music: generator`<br/>`[Thielen, 2009]` | | Генератор камерной, не танцевальной музыки |
 | 1790 | François-Henri-Stanislas de L'Aulnaye | De la Saltation théâtrale, ou recherches sur l'origine, les progrès et les effets de la pantomime chez les anciens | [Найдёно случайным поиском] | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k5849412d) | |
+| 1795 | | Rügen einiger Mißbräuche und Inkonvenienzen unsers sogenannten philosophischen Jahrhunderts | `[Germanorum, 1914]` | [SLUB](http://nbn-resolving.de/urn:nbn:de:bsz:14-db-id3369230749) | Танцам посвящена лишь маленькая глава на страницах 72–73. |
 | 1801 | Antonio Calegari | Gioco pitagorico musicale col quale potra ornuno, anco senza sapere di Musica, formarsi una seria quasi infinita di picciole Ariette, e Duettini pertutti li Caratteri, Rondo, Preghiere, Polacche, Cori, ec., il tutto coll-accompagnamento del Pianoforte o Arpa, o altri Strumenti | `music: generator`<br/>`[Wiki: Musikalisches Würfelspiel]`<br/>`[Hedges, 1978]`<br/>`[Thielen, 2009]` | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) | Генератор камерной, не танцевальной музыки |
+| 1802 | Johann Ferdinand Schlez | Kleine romantische Volksschriften<br/>_Tome 1, part 3: Schatzkästlein für junge Leute, die gerne tanzen_ | `[Germanorum, 1914]` | [HAAB](https://nbn-resolving.org/urn:nbn:de:gbv:32-1-10003271725) |
 | 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) | |
 | 1807 | Ferdinand Kringsteiner | Der Tanzmeister. Eine Posse mit Gesang in drey Aufzügen | `[Klemm #02]` | [Wien/EOD](https://search.books2ebooks.eu/Record/wbr_LQD0188828) | Это фарс с песнями. |
 | 1812 | Fil-adel-φια | Der Maskirte Ball am 3ten Februar 1812 | `[Germanorum, 1914]` | [BSB](https://nbn-resolving.de/urn:nbn:de:bvb:12-bsb10105043-6) | Это какая-то сатира, там рассказано исключительно про еду и напитки. |
@@ -681,6 +686,7 @@ _This part of the list is to joined with the general table_
 | 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](https://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) | Какая-то искусствоведческая хрень |
 | 1857 | F. von Nonsens (pseudonym) | Der Opernhausball | `[Germanorum, 1914]` | [Google / BL](https://books.google.com/books?vid=BL:A0018896359) | Романтическая поэма про бал |
+| 1865 | Hans Leonhard Schaeufelein | La danse des noces<br/>_Published in Paris_ | `[Germanorum, 1914]` | [Google / Lausanne](https://books.google.com/books?id=lDs_AAAAcAAJ) | Сборник гравюр очередного немца, работавшего в жанре _свадебные танцы_ |
 | 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | Просмотрено Борисом Стратилатовым. | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127097) | |
 
 
