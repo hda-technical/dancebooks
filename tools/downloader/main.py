@@ -187,23 +187,12 @@ def vatlib(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. 'PPN880809493')", required=True)
-def mecklenburgVorpommern(id):
+def de_mv(id):
 	"""
 	Downloads book from http://www.digitale-bibliothek-mv.de
 	"""
-	# it looks like Mecklenburg-Vorpommern does not use manifest.json
-	output_folder = make_output_folder("mecklenburg_vorpommern", id)
-	for page in range(1, 1000):
-		output_filename = make_output_filename(output_folder, page)
-		if os.path.isfile(output_filename):
-			print(f"Skipping existing page {page}")
-			continue
-		try:
-			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/rest/image/{id}/{page:08d}.tif"
-			iiif.download_image(base_url, output_filename)
-		except ValueError:
-			break
-
+	import de
+	de.get_mv(id=id)
 
 
 @main.command()

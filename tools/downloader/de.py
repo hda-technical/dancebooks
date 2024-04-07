@@ -52,6 +52,22 @@ def get_karlsruhe(*, id):
 	iiif.download_book(manifest_url, output_folder)
 
 
+def get_mv(*, id):
+	# it looks like Mecklenburg-Vorpommern does not use manifest.json
+	output_folder = utils.make_output_folder("mv", id)
+	for page in range(1, 1000):
+		output_filename = utils.make_output_filename(output_folder, page)
+		if os.path.isfile(output_filename):
+			print(f"Skipping existing page {page}")
+			continue
+		try:
+			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/api/v1/records/{id}/files/images/{page:08d}.tif"
+			iiif.download_image(base_url, output_filename)
+		except ValueError:
+			# stop upon first HTTP 404 response
+			break
+
+
 def get_gwlb(*, id):
 	output_folder = utils.make_output_folder("gwlb", id)
 	page = 0
@@ -66,11 +82,9 @@ def get_gwlb(*, id):
 		try:
 			print(f"Downloading page #{page:04d} from {page_url}")
 			utils.get_binary(output_filename, page_url, allow_redirects=False)
-		except HTTPError as ex:
-			# FIXME: this does not work
-			if ex.response.status_code == http.client.FOUND:
-				# gwlb.de starts an infinite redirection cycle in case of requesting a non-existing file
-				break
+		except ValueError:
+			# gwlb.de starts an infinite redirection cycle in case of requesting a non-existing file
+			break
 				
 				
 def get_slub(*, id):
