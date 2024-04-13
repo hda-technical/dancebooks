@@ -138,6 +138,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1800–1850? | Müller (publisher) | Theorie der Tanzkunst, mit Betrachtung über den Nutzen ihrer Anwendung bei Erziehung der Jugend und den Werth derselben für Herren
 und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1800–1810? | | Taschenbuch den Freunden des Tanzes gewidmer<br/>_Two volumes_ | [[Лисснер, 1811]](http://dlib.rsl.ru/viewer/01004333601#?page=10) | |
+| 1800–1900? | | Kurze Anweisung, wie man sich vor, bei und nach dem Tanzen verhalten muss<br/>_Published in Aschersleben by Strohmann_ | `[Germanorum, 1914]` | |f
 | 1800 | | Sammlung verschiedener Aufsätze für junge Leute. Schatzkästlein für junge Leute, die gerne Tanzen<br/>_Publisher in Frankfurt_ | `[Germanorum, 1914]` | |
 | 1800 | Wilhelm Ferdinand Rong | Der Musicdirector. Kartenspiel. Dominospiel | `music: generator`<br/>`[Thielen, 2009]` | |
 | 1800 | | Taschenbuch für Liebhaber der schönen Tanzkunst<br/>_Complete copy needed_ | `[Klemm #02]??`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Taschenbuch, 1800]](https://bib.hda.org.ru/books/taschenbuch_1800_liebhaber) | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035="BV003915947"+IN+[2]&v=uba&l=de) |
@@ -339,6 +340,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1857 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_4. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1857 | Eduard Georg Eichler | Reichs-Quadrille im Rococco- Ecossaise- oder Polka-Tremblant-Schritte | [Title page](https://yadi.sk/i/yJTwI_8OlTDP0A) | [ÖNB #1](http://data.onb.ac.at/rec/AC09238594)<br/>[ÖNB #2](http://data.onb.ac.at/rec/AC09217669) |
 | 1857? | Edward Georg Eichler<br/>Jules Martin (translator) | Empire Quadrilles | [Title page](https://yadi.sk/i/qZDhduHLCoxiYA) | |
+| 1857? | L. H. Stoige | Quadrille française und Lanciers, geordnet nach dem Bestimmungen der deutschen Academie der Tanzlehrkunst<br/>_Published in Aschersleben by Ernst Schlegel_ | `[Germanorum, 1914]` | |
 | 1857 | Fr. Bartholomaus (publisher) | Quadrille à la cour<br/>_Published in Erfurt_ | `[Germanorum, 1914]` | |
 | 1858 | F. M. Hessemer | Neckische Tanzgespräche. Ein poetisches Frag- und Antwortspiel<br/>_Published in Frankfurt am Main_<br/>_1. Auflage in 1858_<br/>_2. Auflage in 1880?_<br/>_3. Auflage in 1895?_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [2. Auflage @ Württember](https://wlb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SOPAC00&sp=SAKSWB-IdNr1453616446)<br/>[3. Auflage @ Halle-Merseburg](https://lhhal.gbv.de/DB=1/XMLPRS=N/PPN?PPN=409787590)<br/>[3. Auflage @ SBB / Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=409787590) |
 | 1859 | Eduard Georg Eichler | Neuestes Arrangement der Reichs-Quadrille mit einer Variation-Brillante in der Schlussfigur. Im allbekannten Quadrille-Schritte, pas de contredance, entworfen und den Lehrern und Freunden der Tanzkunst gewidmet | | [NYPL](http://catalog.nypl.org/record=b12277382~S1) |
@@ -410,6 +412,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1891 | Max Beneke | Über Takt im Tanz | `[Klemm #06]` | |
 | 1892 | Josef Herzenberger | Der Tanzsalon: Lehrbuch für den theoretischen und praktischen Tanzunterricht | `[Katalog, 1894]` | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21524544810002884) |
 | 1892 | William B. de Garmo | The Dance of Society<br/>_5th edition_ | `[Leaflets]` | |
+| 1892 | Otto Stoige |  Menuet à la reine authentisch mit derjenigen | | [UB Bayreth](https://katalog.uni-bayreuth.de/TouchPoint/perma.do?q=+1035="BV040366727"+IN+[2]&v=ubt&b=0&l=de) |
 | 1894 | Ardern Holt | The Cotillon. Details of All the Newest Figures with and without Accessories | `[Rogers, 1998]` | |
 | 1894 | Justino Dias Lima Soares | Manual de dança : methodo facil para aprender a dançar sem auxilio de professor<br/>_7th edition_ | | BNP |
 | 1895 | Enrico Pichetti | Il manuale di ballo<br/>_Published in Roma by Gregoriana_ | `[Corbella]` | |
@@ -550,6 +553,7 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1700 | | Kurtze Vorstellung, was von dem Welt-üblischen Zechen und Tantzen nach der Regel Gottes Worts und nach der Beschaffenheit des wahren Christenthums zu halten | `[Germanorum, 1914]` | [UB Marburg: XIX c B 435?] |
 | 1701 | J. C. Hercker | Vom liederlichschen Sonntags-Tanzen<br/>_Published in Leipzig_ | `[Germanorum, 1914]` | |
 | 1705 | Georg Albrechten | Bedencken vom Tantzen, zur Uberzeugung dass man zu dieser Zeit und auf die allenthalben übliche Weise, mit gutem Gewissen nicht tantzen könne | `[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411828045) |
+| 1712 | | Ein christliches Send-Schreiben an gute Freunde<br/>_Anhang eines Bedenckens vom Tantzen_ | `[Germanorum, 1914]`<br/>[BSB, 1516](https://opacplus.bsb-muenchen.de/title/BV001548765) | |
 | 1716 | Johann Wilheml Kellner von Zinnendorff<br/>_Jan Willem van Keller_<br/>Ehrenfried Walthern von Tschirnhauß | Tanz-Greuel. Das ist vollkomene Acta Publica <...> | `[Germanorum, 1914]` | |
 | 1719 | Daniel Wülfer Bedenken | Tänzen an Sonntagen | `[Katalog, 1894]` | |
 | 1719 | Johann Peter Grünenberg | De saltatione christiano licita oder Ob einem Christen zu tantzen erlaubt sey? | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=150761929)<br/>[Strasbourg](http://www.sudoc.fr/13599196X) |
@@ -562,14 +566,15 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1737 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Zweiter Druck_<br/>_Published in Züllichau_ | `[Germanorum, 1914]` | |
 | 1738 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Ander Theil_<br/>_Published in (Züllichau / Berlin)? by Waisenhaus_ | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
 | 1738 | J. Seb. Renz | De religiosis saltationibus veterum Judaeorum<br/>_Published in Lipsiae_ | `[Germanorum, 1914]` | [Köln](https://primo.zbsport.dshs-koeln.de/permalink/49HBZ_ZBS/18h80sa/alma990000140260806478) |
-| 1745 | J. P. C. Sturm | Evangelisches Zeugnis wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können | `[Шабалина, 2019]` | |
+| 1745 | J. P. C. Sturm | Evangelisches Zeugnis Wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können<br/>_Published in Franckfurth am Mayn_ | `[Germanorum, 1914]`<br/>`[Шабалина, 2019]` | |
 | 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
 | 1770 | | Gedanken vom Tanzen, in einem Sendschreiben an einem Freund<br/>_Publihed by Herold in Hamburg_ | `[Germanorum, 1914]` | |
+| 1790 | Karl Gottlob Sonntag | Ueber Spiel, Tanz und Theater, in Beziehung auf die erwachsenere Jugend | `[Germanorum, 1914]` | [UB Erfurt](https://opac.uni-erfurt.de/DB=1/XMLPRS=N/PPN?PPN=858351471) |
 | 1792 | Lipowsky | Ueber der übermässigen Tanz<br/>_Published in Prag_ | `[Germanorum, 1914]` | |
 | 1792 | G. A. Ibbeken | Paradoxa des Pregiders zu Bergefeld. Menschenfreuden und Menschenleiden betreffend.<br/>_Published in Schleswig_ | `[Germanorum, 1914]` | BL (FIXME provide permalink) |
 | 1793 | G. Leon | Die Weihe der Tanzkunst | `[Germanorum, 1914]` | |
-| 1795 | G. L. W. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]` | |
+| 1795 | Geo. L. Wilh. Sponitzer | das Tanzen in pathologisch-moralischer Hinsicht erwogen | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #48]`<br/>`[Germanorum, 1914]` | |
 | 1799 | Salomon Jacob Wolf | Beweis dass das Walzen eine Hauptquelle der Schwäche des Körpers | `[Katalog, 1894]`<br/>`[Nouveau manuel, 1857, #50]` | |
 | 1801 | Johann Evangelist Wetzler | über den Einfluß des Tanzens auf die Gesundheit nebst Verhaltungsregeln | `[Turnkunst, 1816]`<br/>`[Charinomos, 1825]`<br/>`[Nouveau manuel, 1857, #51]` | |
 | 1807 | Adolph Schmidt | Nahrung für weibliche Seelen, welche beglückend auch selbst glücklich sayn und bleiben möchten.<br/>_Published in Hamburg_ | `[Germanorum, 1914]` | [Bryn Mawr, Pennsylvania](https://tripod.brynmawr.edu/permalink/01TRI_INST/1fa7h1r/alma991005529259704921)<br/>[Mecklenburg-Vorpommern](https://opac.lbs-wismar.gbv.de/DB=2/XMLPRS=N/PPN?PPN=345626079)<br/>[Erfurt](https://opac.uni-erfurt.de/DB=1/XMLPRS=N/PPN?PPN=345626079) |
@@ -746,7 +751,7 @@ _This part of the list is to joined with the general table_
 
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
-| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (Rügen..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
+| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (Tänze..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
 | 1936–1941 | `[Magriel]` | Paul David Magriel | A Bibliography of Dancing | https://bib.hda.org.ru/books/magriel_1936_bibliography<br/>https://bib.hda.org.ru/books/magriel_1941_bibliography |
 | 1994 | `[Terpsichore]` | Madison U. Sowell | The Art of Terpsichore. From Renaissance Festivals to Romantic Ballets. An Exhibition of Dance-related Rare Books and Prints in Honor of the Annual Conference of the Society of Dance History Scholars Held at Brigham Young University | https://bib.hda.org.ru/books/terpsichore_1994_exhibition |
 | 1997 | `[Lindahl Annotated]` | Greg Lindahl | Annotated Bibliography of Renaissance Dance| `Ancillary sources (not in bibliography)/Bibliographies of the others/Greg Lindahl - Annotated bibliography of Renaissance dance.pdf` |
