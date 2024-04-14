@@ -84,6 +84,18 @@ def _download_image_fast(metadata, page, output_filename):
 	utils.get_binary(output_filename, full_url)
 
 
+def download_image_fast_v1(base_url, output_filename):
+	"""
+	Download image as a single tile
+	"""
+	info_url = f"{base_url}/info.json"
+	info = utils.get_json(info_url)
+	w = info["width"]
+	h = info["height"]
+	img_url = f"{base_url}/0,0,{w},{h}/{w},{h}/0/default.jpg"
+	utils.get_binary(output_filename, img_url)
+
+
 def download_book_fast(manifest_url, output_folder):
 	"""
 	Downloads entire book via IIIF protocol (v2).
