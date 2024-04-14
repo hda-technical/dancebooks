@@ -145,7 +145,6 @@ und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Kl
 | 1800 | Wilhelm Ferdinand Rong | Der Musicdirector. Kartenspiel. Dominospiel | `music: generator`<br/>`[Thielen, 2009]` | |
 | 1800 | | Taschenbuch für Liebhaber der schönen Tanzkunst<br/>_Complete copy needed_ | `[Klemm #02]??`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>[[Taschenbuch, 1800]](https://bib.hda.org.ru/books/taschenbuch_1800_liebhaber) | [Augsburg](https://opac.bibliothek.uni-augsburg.de/TouchPoint/perma.do?q=+1035="BV003915947"+IN+[2]&v=uba&l=de) |
 | 1801 | Thomas Preston | 24 Country Dances for the Year 1801 | [ABC notation](http://www.village-music-project.org.uk/?page_id=831) |
-| 1801 | Christian August Fischer (publisher) | Neuer Tanz- und Ball-Kalender für das Jahr 1801 | | [Google](https://books.google.com/books?id=Sz5GAQAAMAAJ)<br/>[HathiTrust](https://hdl.handle.net/2027/osu.32435013319512) |
 | 1801 | C. H. Fielder | Musicalisches Würfelspiel oder der unerschöpfliche Ecossaisen-Componist | `music: generator`<br/>`[Hedges, 1978]`<br/>`[Thielen, 2009]` | |
 | 1802 | Antonio Callegari | L'art de composer de la musique sans en connaitre les elemens | `music: generator`<br/>`[Hedges, 1978]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004251689) |
 | 1802 | Antonio Callegari | Wie die Würfel fallen! Ein Scherz der Tonkunst, um mit drei Würfeln leicht Walzer zu setzen | `music: generator`<br/>`[Hedges, 1978]` | |
