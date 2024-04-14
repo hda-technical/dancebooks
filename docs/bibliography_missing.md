@@ -88,7 +88,8 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1771 | S. Markordt (publisher) | XII contredanes avec figures et acompagnement à 7 instruments | `[Wortelboer, 2004]`<br/>`[Leaflets]` |
 | 1771 | Louis Laus de Boissy | Lettre critique sur notre danse theâtrale | `[Phister, 2016]` | |
 | 1771 | | Gedanken von Tänzen, in einem Sendschreiben<br/>_Published in Hamburg_<br/>_Maybe an antidance treatise_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1773 | Elias Christian Fricke | Neue Englische Tänze | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346615) |
+| 1772 | Elias Christian Fricke | Neue Englische Tänze nebst darzu gehöriger vollstimmigen Musik<br/>_Published in Helmstädt_ | `[Bärtholomaus]` | |
+| 1773 | Elias Christian Fricke | Neue Englische Tänze nebst darzu gehöriger vollstimmigen Musik<br/>_Published in Blankenburg und Quedlinburg by Christian August Reussner_ | `[Katalog, 1894]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004346615) |
 | 1773 | James Fishar<br/>John Johnson (publisher) | Sixteen Cotillons, Sixteen Minuets, Twelve Allemands and Twelve Hornpipes. | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004337825) |
 | 1773 | Gasparo Angiolini | Lettere di Gasparo Angiolini a monsieur Noverre sopra i balli pantomimi | `[2. Rothenfelser]`<br/>`[3. Rothenfelser]` | [LOC](https://www.loc.gov/item/08019861/) |
 | 1773 | Rendall, Abell | Sixteen Cotillons or French Dances | [Cite](https://books.google.com/books?&id=-pNMAQAAMAAJ&q=sixteen+cotillons+abell) | |
@@ -124,6 +125,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1791 | | Fourteen New Country Dances for 1791 with Their Proper Figures<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://manchesterartgallery.org/collections/search/collection/?id=1922.1060) | |
 | 1791 | | _The fan depicting the likeness of Princess Frederica Charlotte of Prussia who married Frederick Duke of York on 2nd September 1791 and is printed with music, words and instructions for 16 popular dances of the day_ | | [Low quality image](https://www.jerseyheritage.org/collection-items/paper-fan) |
 | 1791 | | Eighteen of the Most Favourite Country Dances<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://www.imieiventagli.it/l_allmande) |
+| 1791 | |  Zwölf neue englische Tänze im Clavierauszuge | | [BL FIXME] |
 | 1793? | Charles Metralcourt | Twenty Four Country Dances, with proper Directions to each Dance | [[Cooper, #01]](https://www.regencydances.org/paper001.php) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004524098) |
 | 1793 | Wolfgang Amadeus Mozart (fake?) | Anleitung zum componiren von Polonoise<br/>_Published in Berlin by Johann Hummel_ | `music: generator`<br/>`[Hedges, 1978]` | |
 | 1795 | Thomas Cahusac | Twelve Country Dances, with Their Basses, for the Year 1795. With Proper Directions to Each Dance | [[Cooper, 01]](https://www.regencydances.org/paper001.php)<br/>[[DFIE: Cahusac 12CD,1795]](https://www.cdss.org/elibrary/DFIE/Biblio/B000084.htm) | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004283622) |
@@ -751,6 +753,7 @@ _This part of the list is to joined with the general table_
 
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
+| 18-- | `[Bärtholomaus]` | Fr. Bärtholomaus (?) | Unidentified catalogue referenced by multiple others | |
 | 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (Tänze..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
 | 1936–1941 | `[Magriel]` | Paul David Magriel | A Bibliography of Dancing | https://bib.hda.org.ru/books/magriel_1936_bibliography<br/>https://bib.hda.org.ru/books/magriel_1941_bibliography |
 | 1994 | `[Terpsichore]` | Madison U. Sowell | The Art of Terpsichore. From Renaissance Festivals to Romantic Ballets. An Exhibition of Dance-related Rare Books and Prints in Honor of the Annual Conference of the Society of Dance History Scholars Held at Brigham Young University | https://bib.hda.org.ru/books/terpsichore_1994_exhibition |
