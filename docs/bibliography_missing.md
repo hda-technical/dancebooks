@@ -136,10 +136,12 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1799 | | Über die theatralischen Tänze und die Balletmeister Noverre, Mizzarelli und Vigano<br/>_Published in Wien_ | `[Charinomos, 1825]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1799 | Feray | Nouvelle Terpsichore, ou recueil de nouvelles danses angloises | `[Yoko]` | |
 | 1799 | | Nelson & Victory<br/>_Fan covered with country dance descriptions_ | | [Low quality image](http://s3.amazonaws.com/magnoliasoft.imageweb/nmm/supersize/f4129.jpg) | |
+| 1796 | | Terpsichore, ein Taschenbuch für das Jahr 1796 | | [ÖNB]( http://data.onb.ac.at/rec/AC10370891)
+| 1799 | | Terpsichore, ein Almanach für junge Damen auf das Jahr 1799<br/>_Published in Wien by Joseph Grämmer_ | `[Germanorum, 1914]` | |
+| 1817 | | Terpsichore, ein Taschenbuch für 1817<br/>_Published in Wien by Joseph Grämmer_ | `[Germanorum, 1914]` | |
 | 1799–1801? | Georg Gottlieb Kallenbach | Jeu de dés musical pour apprendre à comp, des anglaises, des valses etc. | `music: generator`<br/>`[Thielen, 2009]` | |
-| 1800–1850? | Müller (publisher) | Theorie der Tanzkunst, mit Betrachtung über den Nutzen ihrer Anwendung bei Erziehung der Jugend und den Werth derselben für Herren
-und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
-| 1800–1810? | | Taschenbuch den Freunden des Tanzes gewidmer<br/>_Two volumes_ | [[Лисснер, 1811]](http://dlib.rsl.ru/viewer/01004333601#?page=10) | |
+| 1800–1850? | Müller (publisher) | Theorie der Tanzkunst, mit Betrachtung über den Nutzen ihrer Anwendung bei Erziehung der Jugend und den Werth derselben für Herren und Damen gebildeter Stände<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
+| 1800–1810? | | Taschenbuch den Freunden des Tanzes gewidmet<br/>_Two volumes_ | [[Лисснер, 1811]](http://dlib.rsl.ru/viewer/01004333601#?page=10) | |
 | 1800–1900? | | Kurze Anweisung, wie man sich vor, bei und nach dem Tanzen verhalten muss<br/>_Published in Aschersleben by Strohmann_ | `[Germanorum, 1914]` | |f
 | 1800 | | Sammlung verschiedener Aufsätze für junge Leute. Schatzkästlein für junge Leute, die gerne Tanzen<br/>_Publisher in Frankfurt_ | `[Germanorum, 1914]` | |
 | 1800 | Wilhelm Ferdinand Rong | Der Musicdirector. Kartenspiel. Dominospiel | `music: generator`<br/>`[Thielen, 2009]` | |
@@ -686,6 +688,7 @@ _This part of the list is to joined with the general table_
 | 1788 | Michael Johann Friedrich Weideburg | Musikalisches Charten-Spiel ex g dur | `music: generator`<br/>`[Thielen, 2009]` | | Генератор камерной, не танцевальной музыки |
 | 1790 | François-Henri-Stanislas de L'Aulnaye | De la Saltation théâtrale, ou recherches sur l'origine, les progrès et les effets de la pantomime chez les anciens | [Найдёно случайным поиском] | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k5849412d) | |
 | 1795 | | Rügen einiger Mißbräuche und Inkonvenienzen unsers sogenannten philosophischen Jahrhunderts | `[Germanorum, 1914]` | [SLUB](http://nbn-resolving.de/urn:nbn:de:bsz:14-db-id3369230749) | Танцам посвящена лишь маленькая глава на страницах 72–73. |
+| 1796 | Taschenkalender mis Scennen aus Wiens neuesten Balleten auf das Jahr 1796 für Freunde der Tanzkunst und Mimick<br/>_Published in Wien by Mathias Ludwig_ | `[Germanorum, 1914]` | | Описания танцев нет, только гравюры с балетами. |
 | 1801 | Antonio Calegari | Gioco pitagorico musicale col quale potra ornuno, anco senza sapere di Musica, formarsi una seria quasi infinita di picciole Ariette, e Duettini pertutti li Caratteri, Rondo, Preghiere, Polacche, Cori, ec., il tutto coll-accompagnamento del Pianoforte o Arpa, o altri Strumenti | `music: generator`<br/>`[Wiki: Musikalisches Würfelspiel]`<br/>`[Hedges, 1978]`<br/>`[Thielen, 2009]` | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) | Генератор камерной, не танцевальной музыки |
 | 1802 | Johann Ferdinand Schlez | Kleine romantische Volksschriften<br/>_Tome 1, part 3: Schatzkästlein für junge Leute, die gerne tanzen_ | `[Germanorum, 1914]` | [HAAB](https://nbn-resolving.org/urn:nbn:de:gbv:32-1-10003271725) |
 | 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) | |
@@ -756,7 +759,7 @@ _This part of the list is to joined with the general table_
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
 | 18-- | `[Bärtholomaus]` | Fr. Bärtholomaus (?) | Unidentified catalogue referenced by multiple others | |
-| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (Tänzwuth..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
+| 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa (Töllner..Z) | https://archive.org/details/bibliothecagerma07hayn/page/532 |
 | 1936–1941 | `[Magriel]` | Paul David Magriel | A Bibliography of Dancing | https://bib.hda.org.ru/books/magriel_1936_bibliography<br/>https://bib.hda.org.ru/books/magriel_1941_bibliography |
 | 1994 | `[Terpsichore]` | Madison U. Sowell | The Art of Terpsichore. From Renaissance Festivals to Romantic Ballets. An Exhibition of Dance-related Rare Books and Prints in Honor of the Annual Conference of the Society of Dance History Scholars Held at Brigham Young University | https://bib.hda.org.ru/books/terpsichore_1994_exhibition |
 | 1997 | `[Lindahl Annotated]` | Greg Lindahl | Annotated Bibliography of Renaissance Dance| `Ancillary sources (not in bibliography)/Bibliographies of the others/Greg Lindahl - Annotated bibliography of Renaissance dance.pdf` |
