@@ -1,3 +1,4 @@
+import os
 import requests
 
 import iiif
@@ -71,3 +72,22 @@ def get_retronews(*, document_id, page):
 	)
 	url_maker = lambda tile_x, tile_y: f"https://pv5web.retronews.fr/api/document/{document_id}/page/{page}/tile/{tile_x}/{tile_y}/0"
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
+
+
+def get_tolosana(*, id):
+	output_folder = utils.make_output_folder("tolosana", id)
+	page = 0
+	while True:
+		page += 1
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			utils.notify_skip(page)
+
+		url = f"https://documents.univ-toulouse.fr/pages/PPN{id}/{page}.jpg"
+		try:
+			print(f"Downloading page {page:04d} from {url}")
+			utils.get_binary(output_filename, url)
+		except ValueError:
+			# Not found indicates the end of the sequences
+			print(f"Got HTTP 404, considering job done")
+			break

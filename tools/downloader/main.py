@@ -59,6 +59,16 @@ def fr_candide(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the books to be downloaded (e. g. `098461435`)", required=True)
+def fr_tolosana(id):
+	"""
+	Downloads book from https://tolosana.univ-toulouse.fr
+	"""
+	import fr
+	fr.get_tolosana(id=id)
+
+
+@main.command()
 @click.option("--document-id", help="Id of the paper to be downloaded (e. g. `4466/5537594`)", required=True)
 @click.option("--page", type=int, help="Id of the page to be downloaded (e. g. `11`)", required=True)
 def fr_retronews(document_id, page):

@@ -236,3 +236,7 @@ def guess_tiles_number_y(url_maker, min_file_size=None):
 				break
 		tiles_number_y = (test_y + 1)
 	return tiles_number_y
+
+
+def notify_skip(page):
+	print(f"Skip downloading existing page {page:04d}")
