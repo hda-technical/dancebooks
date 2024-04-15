@@ -37,36 +37,36 @@ def at_ubs(*, first, last):
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `btv1b7200356s`)", required=True)
 @click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)
-def gallica(id, page):
+def fr_gallica(id, page):
 	"""
 	Downloads book from https://gallica.bnf.fr/
 	"""
-	import bnf
+	import fr
 	if page:
-		bnf.get_gallica_page(id, page)
+		fr.get_gallica_page(id, page)
 	else:
-		bnf.get_gallica_book(id)
+		fr.get_gallica_book(id)
 
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `can_097`)", required=True)
-def candide(id):
+def fr_candide(id):
 	"""
 	Downloads book from http://classes.bnf.fr/candide/
 	"""
-	import bnf
-	bnf.get_candide(id)
+	import fr
+	fr.get_candide(id)
 
 
 @main.command()
 @click.option("--document-id", help="Id of the paper to be downloaded (e. g. `4466/5537594`)", required=True)
 @click.option("--page", type=int, help="Id of the page to be downloaded (e. g. `11`)", required=True)
-def retronews(document_id, page):
+def fr_retronews(document_id, page):
 	"""
 	Downloads single page from https://www.retronews.fr
 	"""
-	import bnf
-	bnf.get_retronews(document_id=document_id, page=page)
+	import fr
+	fr.get_retronews(document_id=document_id, page=page)
 
 
 
