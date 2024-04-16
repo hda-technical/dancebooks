@@ -19,6 +19,9 @@ import iip
 
 @click.group()
 def main():
+	"""
+	Downloads...
+	"""
 	pass
 
 
@@ -28,7 +31,7 @@ def main():
 @click.option("--last", help="Last page (inclusive) to be downloaded (e. g. `8076299`)", type=int, required=True)
 def at_ubs(*, first, last):
 	"""
-	Downloads book from https://eplus.uni-salzburg.at
+	book from eplus.uni-salzburg.at
 	"""
 	import at
 	at.get_ubs(first=first, last=last)
@@ -39,7 +42,7 @@ def at_ubs(*, first, last):
 @click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)
 def fr_gallica(id, page):
 	"""
-	Downloads book from https://gallica.bnf.fr/
+	book from gallica.bnf.fr
 	"""
 	import fr
 	if page:
@@ -52,7 +55,7 @@ def fr_gallica(id, page):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `can_097`)", required=True)
 def fr_candide(id):
 	"""
-	Downloads book from http://classes.bnf.fr/candide/
+	book from classes.bnf.fr/candide
 	"""
 	import fr
 	fr.get_candide(id)
@@ -62,7 +65,7 @@ def fr_candide(id):
 @click.option("--id", help="Id of the books to be downloaded (e. g. `098461435`)", required=True)
 def fr_tolosana(id):
 	"""
-	Downloads book from https://tolosana.univ-toulouse.fr
+	book from tolosana.univ-toulouse.fr
 	"""
 	import fr
 	fr.get_tolosana(id=id)
@@ -73,7 +76,7 @@ def fr_tolosana(id):
 @click.option("--page", type=int, help="Id of the page to be downloaded (e. g. `11`)", required=True)
 def fr_retronews(document_id, page):
 	"""
-	Downloads single page from https://www.retronews.fr
+	single page from www.retronews.fr
 	"""
 	import fr
 	fr.get_retronews(document_id=document_id, page=page)
@@ -84,7 +87,7 @@ def fr_retronews(document_id, page):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `IE17209883`)", required=True)
 def be_libis(id):
 	"""
-	Downloads a book from https://repository.teneo.libis.be/
+	book from repository.teneo.libis.be
 	"""
 	import be
 	be.get_libis(id)
@@ -95,7 +98,7 @@ def be_libis(id):
 @click.option("--volume", help="Volume of the book to be downloaded (e. g. `0`)", required=True, type=int, default=0)
 def be_kbr(id, volume):
 	"""
-	Downloads a book from https://www.kbr.be
+	book from www.kbr.be
 	"""
 	import be
 	be.get_kbr(id, volume)
@@ -105,7 +108,7 @@ def be_kbr(id, volume):
 @click.option("--id", help="Id of the page to be downloaded (e. g. `fad2738c-c223-4a68-8044-c9fd73c8efd6`)", required=True)
 def cz_kramerius(id):
 	"""
-	Downloads a book from https://www.digitalniknihovna.cz/
+	book from www.digitalniknihovna.cz
 	"""
 	import cz
 	cz.get_kramerius(id=id)
@@ -115,7 +118,7 @@ def cz_kramerius(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)", required=True)
 def bsb(id):
 	"""
-	Downloads book from https://www.digitale-sammlungen.de
+	book from www.digitale-sammlungen.de
 	"""
 	import bsb
 	bsb.get_book(id)
@@ -126,7 +129,7 @@ def bsb(id):
 @click.option("--last", type=int, help="First page to be downloaded (e. g. '1911077')", required=True)
 def uniDuesseldorf(first, last):
 	"""
-	Downloads set of images from http://digital.ub.uni-duesseldorf.de
+	set of images from digital.ub.uni-duesseldorf.de
 	"""
 	# Automatic definition of max zoom level is hard,
 	# since backend does not return error status even if the request if wrong
@@ -171,7 +174,7 @@ def uniDuesseldorf(first, last):
 @click.option("--id", help="Id of the book to be downloaded (e. g. 'PPN722203519')", required=True)
 def uniGoettingen(id):
 	"""
-	Downloads book from https://gdz.sub.uni-goettingen.de
+	book from gdz.sub.uni-goettingen.de
 	"""
 	manifest_url = f"https://manifests.sub.uni-goettingen.de/iiif/presentation/{id}/manifest"
 	output_folder = make_output_folder("goettingen", id)
@@ -183,7 +186,7 @@ def uniGoettingen(id):
 @click.option("--page", type=int, help="Page number to be downloaded (e. g. '247')", required=True)
 def encyclopedie(volume, page):
 	"""
-	Downloads single image from http://enccre.academie-sciences.fr/encyclopedie
+	single image enccre.academie-sciences.fr/encyclopedie
 	"""
 	#there is no manifest.json file, slightly modified IIIF protocol is being used by the website
 	image_list_url = f"http://enccre.academie-sciences.fr/icefront/api/volume/{volume}/imglist"
@@ -198,7 +201,7 @@ def encyclopedie(volume, page):
 @click.option("--id", help="Id of the book to be downloaded (e. g. 'MSS_Cappon.203')", required=True)
 def vatlib(id):
 	"""
-	Downloads book from http://digi.vatlib.it/
+	book from digi.vatlib.it
 	"""
 	manifest_url = f"http://digi.vatlib.it/iiif/{id}/manifest.json"
 	output_folder = make_output_folder("vatlib", id)
@@ -209,7 +212,7 @@ def vatlib(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. 'PPN880809493')", required=True)
 def de_mv(id):
 	"""
-	Downloads book from http://www.digitale-bibliothek-mv.de
+	book from www.digitale-bibliothek-mv.de
 	"""
 	import de
 	de.get_mv(id=id)
@@ -220,7 +223,7 @@ def de_mv(id):
 @click.option("--page", help="Download specified (zero-based) page only", required=False, type=int, default=None)
 def prlib(id, page):
 	"""
-	Download a book from https://www.prlib.ru/
+	book from www.prlib.ru
 	"""
 	import prlib
 	prlib.get(id, page)
@@ -230,7 +233,7 @@ def prlib(id, page):
 @click.option("--id", help="Image id to be downloaded (e. g. `49035`)", required=True)
 def nga(id):
 	"""
-	Downloads single image from https://www.nga.gov
+	single image from www.nga.gov
 	"""
 	slashed_image_id = "/".join(id) #will produce "4/9/0/3/5" from "49035-primary-0-nativeres"
 	remote_filename = f"/public/objects/{slashed_image_id}/{id}-primary-0-nativeres.ptif"
@@ -250,8 +253,7 @@ def nga(id):
 @click.option("--id", help="Image id to be downloaded (e. g. `grafik/uh-4f-47-00192`)", required=True)
 def habImage(id):
 	"""
-	Downloads single image from http://diglib.hab.de and http://kk.haum-bs.de
-	(both redirect to Virtuelles Kupferstichkabinett website, which is too hard to be typed)
+	single image from diglib.hab.de or kk.haum-bs.de
 	"""
 	import hab
 	hab.get_image(id)
@@ -261,7 +263,7 @@ def habImage(id):
 @click.option("--id", help="Book id to be downloaded (e. g. `mss/120-1-extrav`)", required=True)
 def habBook(id):
 	"""
-	Downloads book from http://diglib.hab.de
+	book from diglib.hab.de
 	"""
 	import hab
 	hab.get_book(id)
@@ -271,7 +273,7 @@ def habBook(id):
 @click.option("--id", help="Book id to be downloaded (e. g. `Mus-Ms-1827`)", required=True)
 def darmstadt(id):
 	"""
-	Downloads book from http://tudigit.ulb.tu-darmstadt.de
+	book from tudigit.ulb.tu-darmstadt.de
 	"""
 	import darmstadt
 	darmstadt.get(id)
@@ -281,7 +283,7 @@ def darmstadt(id):
 @click.option("--id", help="Image id to be downloaded (e. g. `lwlpr11386`)", required=True)
 def yaleImage(id):
 	"""
-	Downloads image from http://images.library.yale.edu/
+	image from images.library.yale.edu
 	"""
 	class UrlMaker:
 		"""
@@ -314,7 +316,7 @@ def yaleImage(id):
 @click.option("--chapter", help="Chapter to download from (e. g. `PATREQIMGX12`)", required=True)
 def yaleBook(id, chapter):
 	"""
-	Downloads image from https://brbl-zoom.library.yale.edu
+	image from brbl-zoom.library.yale.edu
 	"""
 
 	output_filename = make_output_filename("", id)
@@ -329,7 +331,7 @@ def yaleBook(id, chapter):
 @click.option("--id", help="Book id to be downloaded (e. g. `vdc_100026052453`, as it is displayed in the viewer url)", required=True)
 def bl_book(id):
 	"""
-	Downloads a book from http://explore.bl.uk
+	book from explore.bl.uk
 	"""
 	import bl
 	bl.get_book(id)
@@ -339,7 +341,7 @@ def bl_book(id):
 @click.option("--id", help="Page id of the manuscript to be downloaded (e. g. `add_ms_12531!1_f005r`)", required=True)
 def bl_manuscript(id):
 	"""
-	Downloads single manuscript page from http://www.bl.uk/manuscripts/Default.aspx
+	single page from www.bl.uk/manuscripts
 	"""
 	import bl
 	bl.get_manuscript(id)
@@ -349,7 +351,7 @@ def bl_manuscript(id):
 @click.option("--id", help="Image id of the painting to be downloaded(e. g. `js-108-jan_steen-the_fair_at_warmond_files`)", required=True)
 def leidenCollection(id):
 	"""
-	Downloads single image from https://www.theleidencollection.com
+	single image from www.theleidencollection.com
 	"""
 	MAX_ZOOM = 13
 
@@ -372,7 +374,7 @@ def leidenCollection(id):
 @click.option("--id", help="Id of the image to be downloaded (e. g. `4_cgntCY2Bj2ZpaKCjjXrWcNSEjlsU_Mk6ZUJByJ4smfJUNCpbPL_8dPavSb0DwGNavju8-nAYNsFUXP1jmb1KuGO2_RIzJoMfr8QvK5JTc/thf97207`", required=True)
 def henryFord(id):
 	"""
-	Downloads single image from https://www.thehenryford.org/
+	single image from www.thehenryford.org
 	"""
 	metadata_url = f"https://www.thehenryford.org/linkedpub-image/{id}.dzi"
 	basename = os.path.basename(id)
@@ -388,7 +390,7 @@ def henryFord(id):
 @click.option("--id", help="Id of the image to be downloaded (e. g. `ki-6952-1_1`)", required=True)
 def makAt(id):
 	"""
-	Downloads single image from https://sammlung.mak.at/
+	single image from sammlung.mak.at
 	"""
 	metadata_url = f"https://sammlung.mak.at/img/zoomimages/publikationsbilder/{id}.xml"
 
@@ -405,7 +407,7 @@ def makAt(id):
 @click.option("--id", help="Id of the image to be downloaded (e. g. `mw61074`)", required=True)
 def npg(id):
 	"""
-	Downloads single image from https://www.npg.org.uk
+	single image from www.npg.org.uk
 	"""
 	import npg
 	npg.get(id)
@@ -415,9 +417,7 @@ def npg(id):
 @click.option("--id", help="Id of the image to be downloaded, including document id (e. g. `00108217/JLM_1787_H002_0003_a`)", required=True)
 def uniJena(id):
 	"""
-	Downloads single image from https://zs.thulb.uni-jena.de
-
-	Requires a lot of work though
+	single image from zs.thulb.uni-jena.de
 	"""
 	class UrlMaker:
 		def __init__(self, zoom):
@@ -459,7 +459,7 @@ def uniJena(id):
 @click.option("--start", type=int, default=1, help="The number of the first page in the sequence")
 def locMusdi(id, start):
 	"""
-	Downloads book from Library of Congress Music/Dance instruction
+	book from www.loc.gov
 	"""
 	# Some ids are known to be missing
 	MISSING_IDS = [
@@ -509,7 +509,7 @@ def locMusdi(id, start):
 @click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=None)
 def hathitrust(id, from_page, to_page):
 	"""
-	Downloads book from the HathiTrust Digital Library (https://www.hathitrust.org/)
+	book from www.hathitrust.org
 	"""
 	import hathitrust
 	hathitrust.get(id=id, from_page=from_page, to_page=to_page)
@@ -519,7 +519,7 @@ def hathitrust(id, from_page, to_page):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)", required=True)
 def internet_culturale(id):
 	"""
-	Downloads book from Internet Culturale, Biblioteca Digitale Italiana (http://www.internetculturale.it/)
+	book from www.internetculturale.it
 	"""
 	import sbn
 	sbn.get_internet_culturale(id)
@@ -529,7 +529,7 @@ def internet_culturale(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:N:MUS006101`)", required=True)
 def sbn(id):
 	"""
-	Downloads book from  Servizio Bibliotecario Nazionale (sbn.it)
+	book from sbn.it
 	"""
 	import sbn
 	sbn.get_sbn(id)
@@ -539,7 +539,7 @@ def sbn(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `Wilson1808`)", required=True)
 def	vwml(id):
 	"""
-	Downloads book from https://www.vwml.org/topics/historic-dance-and-tune-books
+	book from www.vwml.org/topics/historic-dance-and-tune-books
 	"""
 	main_url = f"https://www.vwml.org/topics/historic-dance-and-tune-books/{id}"
 	main_markup = get_text(main_url)
@@ -566,7 +566,7 @@ def	vwml(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `ABO_+Z178189508`)", required=True)
 def onb(id):
 	"""
-	Downloads book from http://onb.ac.at/
+	book from onb.ac.at
 	"""
 	import onb
 	onb.get(id)
@@ -576,7 +576,7 @@ def onb(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `PPN670016500`)", required=True)
 def staats_berlin(id):
 	"""
-	Downloads book from http://digital.staatsbibliothek-berlin.de/
+	book from digital.staatsbibliothek-berlin.de
 	"""
 	output_folder = make_output_folder("staats_berlin", id)
 	page = 1
@@ -601,7 +601,7 @@ def staats_berlin(id):
 @click.option("--id", help="UUID of the book to be downloaded (e. g. `c96b8876-b4f8-48a5-8221-3949392b1a5c`)", required=True)
 def difmoe(id):
 	"""
-	Downloads book from https://www.difmoe.eu/
+	book from www.difmoe.eu
 	"""
 	import difmoe
 	difmoe.get(id)
@@ -613,7 +613,7 @@ def difmoe(id):
 @click.option("--id", help="Base64-encoded id of the book to be downloaded (e. g. `Nzg4NDk0MzY`, can be found in permalink)", required=True)
 def pl_polona(id, first, last):
 	"""
-	Downloads book from https://polona.pl
+	book from polona.pl
 	"""
 	import pl
 	pl.get_polona(id=id, first=first, last=last)
@@ -636,7 +636,8 @@ def pl_academica(*, book_id, first_page_id, last_page_id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `1759078042`)", required=True)
 def de_gwlb(*, id):
 	"""
-	Downloads book from http://digitale-sammlungen.gwlb.de
+	book from digitale-sammlungen.gwlb.de
+
 	(click on DFG-Viewer to get the id)
 	"""
 	import de
@@ -647,7 +648,7 @@ def de_gwlb(*, id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `RollSyst_43333035X`)", required=True)
 def de_slub(*, id):
 	"""
-	Downloads book from https://digital.slub-dresden.de/
+	book from digital.slub-dresden.de
 	(download single image to get the id)
 	"""
 	import de
@@ -658,7 +659,7 @@ def de_slub(*, id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `6444409`)", required=True)
 def de_karlsruhe(*, id):
 	"""
-	Downloads book from https://digital.blb-karlsruhe.de
+	book from digital.blb-karlsruhe.de
 	"""
 	import de
 	de.get_karlsruhe(id=id)
@@ -668,7 +669,7 @@ def de_karlsruhe(*, id):
 @click.option("--second-id", help="Id of the book to be downloaded (e. g. `EPN_390287636`)", required=True)
 def de_haab(*, first_id, second_id):
 	"""
-	Downloads book from https://haab-digital.klassik-stiftung.de
+	book from haab-digital.klassik-stiftung.de
 	"""
 	import de
 	de.get_haab(first_id=first_id, second_id=second_id)
@@ -678,7 +679,7 @@ def de_haab(*, first_id, second_id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `PPN446487767`)", required=True)
 def fulda(id):
 	"""
-	Downloads book from https://fuldig.hs-fulda.de
+	book from fuldig.hs-fulda.de
 	"""
 	import fulda
 	fulda.get(id)
@@ -688,7 +689,7 @@ def fulda(id):
 @click.option("--id", help="Id of the image to be downloaded (e. g. `PR-INC-00000-A-00007-00002-00888-000-00420`)", required=True)
 def cambridge(id):
 	"""
-	Downloads image from https://images.lib.cam.ac.uk
+	image from images.lib.cam.ac.uk
 	"""
 	import cambridge
 	cambridge.get(id)
@@ -698,7 +699,7 @@ def cambridge(id):
 @click.option("--id", help="Id of the image to be downloaded (e. g. `1273e6f5-ee79-4f6b-9014-a9065a93b9ff`)", required=True)
 def bodleian(id):
 	"""
-	Downloads image from https://digital.bodleian.ox.ac.uk
+	image from digital.bodleian.ox.ac.uk
 	"""
 	import bodleian
 	bodleian.get(id)
@@ -708,7 +709,7 @@ def bodleian(id):
 @click.option("--id", help="Id of the image to be downloaded (e. g. `PPN1748520709`)", required=True)
 def goettingen(id):
 	"""
-	Downloads book from https://gdz.sub.uni-goettingen.de
+	book from gdz.sub.uni-goettingen.de
 	"""
 	import goettingen
 	goettingen.get_book(id)
@@ -718,7 +719,7 @@ def goettingen(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `172099`)", required=True)
 def nb_no(id):
 	"""
-	Downloads book from https://www.nb.no
+	book from www.nb.no
 	"""
 	import nb_no
 	nb_no.get(id)
@@ -728,7 +729,7 @@ def nb_no(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `object125610`)", required=True)
 def kb_dk(id):
 	"""
-	Downloads book from http://www5.kb.dk
+	book from www5.kb.dk
 	"""
 	import kb_dk
 	kb_dk.get(id)
@@ -738,7 +739,7 @@ def kb_dk(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `63678`)", required=True)
 def shpl(id):
 	"""
-	Downloads book from http://elib.shpl.ru
+	book from elib.shpl.ru
 	"""
 	import shpl
 	shpl.get(id)
@@ -748,7 +749,7 @@ def shpl(id):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `122cdc10-0032-0130-6561-58d385a7bc34`)", required=True)
 def nypl(id):
 	"""
-	Downloads image sequence from https://digitalcollections.nypl.org/
+	image set from digitalcollections.nypl.org
 	"""
 	import nypl
 	nypl.get(id)
