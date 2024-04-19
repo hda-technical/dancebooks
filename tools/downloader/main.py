@@ -116,12 +116,12 @@ def cz_kramerius(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)", required=True)
-def bsb(id):
+def de_bsb(id):
 	"""
 	book from www.digitale-sammlungen.de
 	"""
-	import bsb
-	bsb.get_book(id)
+	import de
+	de.get_bsb(id=id)
 
 
 @main.command()

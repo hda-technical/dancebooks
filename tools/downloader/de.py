@@ -8,6 +8,12 @@ import requests
 from requests.exceptions import HTTPError
 
 
+def get_bsb(*, id):
+	manifest_url = f"https://api.digitale-sammlungen.de/iiif/presentation/v2/{id}/manifest"
+	output_folder = utils.make_output_folder("bsb", id)
+	iiif.download_book_fast(manifest_url, output_folder)
+
+
 def get_haab(*, first_id, second_id):
 	output_folder = utils.make_output_folder("haab", first_id)
 	first_found = False
