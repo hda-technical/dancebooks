@@ -355,15 +355,14 @@
             "source_file",
             "type",
             "catalogue",
-            "plate_number"
+            "plate_number",
         ],
         "inverted_index_params": [
             "keywords",
-            "langid"
+            "langid",
         ],
         "index_unique_params": [
             "id",
-            "catalogue"
         ],
         "languages": [
             "en",
