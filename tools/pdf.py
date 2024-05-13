@@ -31,20 +31,28 @@ def validate_format(ctx, param, value):
 		raise click.BadParameter('format should be {width}x{height}')
 
 
-def get_image_size(path):
-	img = pil.Image.open(path)
-	width, height = img.size
-	return (width, height)
-
-
-def convert_to_pdf(img: pil.Image, output_path: pathlib.Path, *, position):
-	DEFAULT_DPI = (600, 600)
-	x, y = position
-	w_inch = img.width / img.info.get("dpi", DEFAULT_DPI)[0]
-	h_inch = img.height / img.info.get("dpi", DEFAULT_DPI)[1]
-	pdf = fpdf.FPDF(unit="in", format=(w_inch, h_inch))
+def convert_to_pdf(
+	img: pil.Image, 
+	output_path: pathlib.Path, 
+	*,
+	size=None,
+	position=(0, 0),
+):
+	if size is None:
+		size = img.size
+	x_dpi, y_dpi = img.info.get("dpi", (600, 600))
+	pdf = fpdf.FPDF(
+		unit="in",
+		format=(size[0] / x_dpi, size[1] / y_dpi)
+	)
 	pdf.add_page()
-	pdf.image(img.filename, x=x, y=y, w=w_inch, h=h_inch)
+	pdf.image(
+		img.filename, 
+		x=position[0] / x_dpi,
+		y=position[1] / y_dpi,
+		w=img.size[0] / x_dpi,
+		h=img.size[1] / y_dpi,
+	)
 	pdf.output(output_path)
 
 
@@ -52,28 +60,38 @@ def is_path_valid(path):
 	return path.is_file() and path.suffix in [".jpg"]
 
 
-def crop_jpeg_image(*, output_size, input_path, output_path):
+def get_crop_offset(img, *, output_size):
+	iw, ih = img.size
+	tw, th = output_size
+	x = (iw - tw) // 2
+	y = (ih - th) // 2
+	return (x, y)
+
+
+def get_position(img, *, output_size):
+	x, y = get_crop_offset(img, output_size=output_size)
+	return (-x, -y)
+
+def crop_jpeg_image(img, *, output_size, output_path):
 	"""
 	Losslessly crop given jpeg file via jpegtran invocation
 	"""
-	def get_offset_for_cropping():
-		iw, ih = get_image_size(input_path)
-		tw, th = output_size
-		assert iw >= tw
-		assert ih >= th
-		x = (iw - tw) // 2
-		y = (ih - th) // 2
-		return (x, y)
 
 	width, height = output_size
-	x, y = get_offset_for_cropping()
-	target_geometry = f"{width}x{height}+{x}+{y}"
-	subprocess.check_call([
-		"jpegtran",
-		"-perfect",
-		"-crop", target_geometry,
-		"-outfile", str(output_path), str(input_path)
-	])
+	x, y = get_crop_offset(img, output_size=output_size)
+	if x > 0 or y > 0:
+		x = max(x, 0)
+		y = max(y, 0)
+		target_geometry = f"{width}x{height}+{x}+{y}"
+		subprocess.check_call([
+			"jpegtran",
+			"-perfect",
+			"-crop", target_geometry,
+			"-outfile", str(output_path), img.filename
+		])
+		return pil.Image.open(img.filename)
+	else:
+		return img
 
 
 @click.group()
@@ -100,20 +118,23 @@ def convert(output_size):
 			continue
 		output_path = path.with_suffix(".pdf")
 		print(f"Converting {path} to {output_path}")
+		img = pil.Image.open(path)
 		if output_size is None:
-			img = pil.Image.open(path)
-			convert_to_pdf(img, output_path, position=(0, 0))
+			convert_to_pdf(img, output_path)
 			continue
 
 		cropped_path = path.with_suffix(".tmp.jpg")
-		crop_jpeg_image(
-			output_size=(width, height),
-			input_path=path,
+		
+		img = crop_jpeg_image(
+			img,
+			output_size=output_size,
 			output_path=cropped_path,
 		)
-		img = pil.Image.open(cropped_path)
-		convert_to_pdf(img, output_path, position=(0, 0))
-		os.remove(cropped_path)
+		
+		x, y = get_position(img, output_size=output_size)
+		convert_to_pdf(img, output_path, size=output_size, position=(x, y))
+		if os.path.exists(cropped_path):
+			os.remove(cropped_path)
 
 
 if __name__ == "__main__":
