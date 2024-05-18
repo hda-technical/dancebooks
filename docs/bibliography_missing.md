@@ -472,7 +472,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1922 | Paul Boucher | Toutes les danses pour tous | `[Cross-step Waltz]` | |
 | 1922 | Денис Иванович Лешков | Библиографические листы русского библиологического общества. Лист II, февраль<br/>_Содержит статью (??) под названием «Танцовальный словарь»_ | | `SPTL: Б 593` |
 | 1922 | Бела Г. Герман | Искусство танца. Настольная книга любителя танцев и культурного человека<br/>Второе издание<br/>_Издано в Харбине_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009723097) |
-| 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]` | |
+| 1924 | A. Peters | Les leçons de danse<br/>Series | `[Cross-step Waltz]`<br/>[[peters_1920_pasodoble]](https://bib.hda.org.ru/books/peters_1920_pasodoble)<br/>[[peters_1920_boston]](https://bib.hda.org.ru/books/peters_1920_boston) | |
 | 1924 | Максим Владимирович Соколовский | Комсомольские танцы | | `SPTL: С 596(Б)` |
 | 1925 | Аркадий Георгиевич Харлампиев | Коллективный отдых в рабочем клубе. Забавы, игры, танцы, хор | `[Жбанкова? 2019-2]` | [RSL](https://search.rsl.ru/ru/record/01009111315) |
 | 1925 | Max von Boehn | Der Tanz | [Modern edition](https://books.google.com/books?id=qZOj-PRgKcEC) | |
