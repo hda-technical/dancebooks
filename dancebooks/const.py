@@ -44,6 +44,7 @@ SHORT_LANG_MAP = {
 	"sc": ["english"],
 	"si": ["slovenian", "english", "german"],
 	"se": ["swedish", "french"],
+	"sw": ["german"],
 	"ua": ["ukrainian"],
 	"us": [
 		# We do not distinct American and British English, they are just English
@@ -147,6 +148,10 @@ LONG_LANG_MAP = {
 	},
 	"swedish.bib": {
 		"swedish",
+		"french",
+	},
+	"swiss.bib": {
+		"german",
 		"french",
 	},
 }
