@@ -43,7 +43,7 @@ SHORT_LANG_MAP = {
 	"ru": ["russian", "french", "german"],
 	"sc": ["english"],
 	"si": ["slovenian", "english", "german"],
-	"sw": ["swedish", "french"],
+	"se": ["swedish", "french"],
 	"ua": ["ukrainian"],
 	"us": [
 		# We do not distinct American and British English, they are just English
