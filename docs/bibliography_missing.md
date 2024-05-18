@@ -333,7 +333,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1852–1854? | Ernst Buchey | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1854 | Louis Köhler | Volks Tänze aller Nationen der Erde ... für das Pianoforte<br/>_Published in  Braunschweig by G. M. Meyer Jr._ | | [BL FIXME] |
 | 1855 | J. C. Dürholz | Practischer Leitfaden für Tänzer und Tänzerinnen nebst Choreographie der neuesten Contre-Tänze und Polonaisen<br/>_Published in Berleburg_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
-| 1855 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_3. Auflage_<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1855 | Пётр Петрович Сухонин | Русские хороводы | | [RSL](https://search.rsl.ru/ru/record/01003563356) |
 | 1857 | Amint Freising | Neuestes Tanz- und Ball-Album, Anleitung zum besseren Verständnitz der Ballordnung | `[Klemm #02]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001321472) |
 | 1857 | Amint Freising | Quadrille à la cour (Les Lanciers). Zusammengestellt von Mitgliedern des Königl. Corps de Ballet zu Berlin<br/>_Published in Berlin_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
@@ -422,7 +421,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1895 | Enrico Pichetti | Il manuale di ballo<br/>_Published in Roma by Gregoriana_ | `[Corbella]` | |
 | 1897 | David Anderson | New, Enlarged, and Complete Ball-room Guide | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=974560) |
 | 1898 | | Бальный шёпот. Па де катр | | [NLR](https://yadi.sk/i/5D9OmCiPqbVLt) |
-| 1898 | Henri Cellarius | 100 neue Cotillon-Touren<br/>_Published by F. Bartholomäus in Erfurt_ | `[Germanorum, 1914]` | [Google](https://books.google.com/books?id=IjSUPgAACAAJ) |
+| 1898 | Henri Cellarius | 100 neue Cotillon-Touren<br/>_6. Auflage_<br/>_Published by F. Bartholomäus in Erfurt_ | `[Germanorum, 1914]` | [Google](https://books.google.com/books?id=IjSUPgAACAAJ) |
 | 1899 | Александр Алексеевич Горский | Хореография. Примеры для чтения | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS001284446) |
 | 1899 | Vincenzo Tesi | Manuale completo per i balli di società<br/>_Published in Catanzaro by Tipografia del Giornale Il Sud_ | `[Corbella]` | |
 | 1900 | Graham MacNeilage | How to Dance the Eightsome Reel, Scotch Reel, Reel of Tulloch, Strathspey and Reel Steps | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002331353) |
