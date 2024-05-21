@@ -136,14 +136,16 @@ def extract_metadata_from_file(path):
 		else:
 			result[param] = value
 
-	if (number := match.group("number")) is not None:
+	if number := match.group("number1"):
+		result["number"] = number.lstrip("0")
+	if number := match.group("number2"):
 		result["number"] = number.lstrip("0")
 
 	author = match.group("author")
-	if (author is not None):
+	if author := match.group("author"):
 		result["author"] = strip_split_list(author, ",")
 
-	if (keywords := match.group("keywords")) is not None:
+	if keywords := match.group("keywords"):
 		result["keywords"] = set()
 		for keyword in strip_split_list(keywords, ","):
 			if keyword.startswith("incomplete "):
@@ -168,14 +170,14 @@ def make_searches_from_metadata(metadata):
 	"""
 	result = {}
 
-	edition = metadata.get("edition")
-	if edition is not None:
+	
+	if edition := metadata.get("edition"):
 		result["edition"] = search.search_for_eq("edition", edition)
-	part = metadata.get("part")
-	if part is not None:
+	
+	if part := metadata.get("part"):
 		result["part"] = search.search_for_eq("part", part)
-	number = metadata.get("number")
-	if number is not None:
+	
+	if number := metadata.get("number"):
 		result["number"] = search.or_([
 			search.search_for_eq("number", number),
 			search.search_for_eq("serial_number", number)

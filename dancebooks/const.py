@@ -161,21 +161,23 @@ META_HAS_OWNER = "has_owner"
 
 #a structired pattern for file basename
 METADATA_PATTERN = r"(?:incomplete|[\w\s\-\&\+\.']+ copy)"
-FILENAME_PATTERN = (
-	#year: digits can be replaced by dashes
+FILENAME_REGEXP = re.compile(
+	# year: digits can be replaced by dashes
 	r"\[(?P<year>[\d\-]+), "
-	#lang: two-letter code
+	# lang: two-letter code
 	r"(?P<langid>\w{2})\] "
-	#author: optional, can contain
+	# author: optional, can contain
 	#   spaces (Thomas Wilson),
 	#   dots (N. Malpied),
 	#   commas (Louis Pecour, Jacques Dezais)
-	#(question mark at the end makes regexp non-greedy)
+	# (question mark at the end makes regexp non-greedy)
 	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
-	#title: sequence of words, digits, spaces, punctuation
-	#(question mark at the end makes regexp non-greedy)
+	# optional serial number which can be prefixed to a title
+	r"(?:(?P<number1>\d+)\. )?"
+	# title: sequence of words, digits, spaces, punctuation
+	# (question mark at the end makes regexp non-greedy)
 	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”“№!\?\(\);]+?)"
-	#metadata: optional sequence of predefined values
+	# metadata: optional sequence of predefined values
 	#   tome (, tome 2)
 	#   edition (, edition 10)
 	#   part(, partie 1)
@@ -183,7 +185,7 @@ FILENAME_PATTERN = (
 	#   (something copy) — for books with multiple different copies known
 	r"(?:"
 		r"(?:, tome (?P<volume>\d+))|"
-		r"(?:, number (?P<number>[\w\- ]+))|"
+		r"(?:, number (?P<number2>[\w\- ]+))|"
 		r"(?:, édition (?P<edition>\d+))|"
 		r"(?:, partie (?P<part>\d+))|"
 		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"
@@ -192,7 +194,6 @@ FILENAME_PATTERN = (
 	r"(\.pdf|\.md|)"
 	"$"
 )
-FILENAME_REGEXP = re.compile(FILENAME_PATTERN)
 
 ID_PATTERN = r"[a-z][a-z_0-9]+"
 ID_REGEXP = re.compile(ID_PATTERN)
