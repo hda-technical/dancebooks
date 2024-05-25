@@ -1,3 +1,4 @@
+import logging
 import os.path
 import re
 import threading
@@ -17,7 +18,7 @@ CSS_CLASS_SMALLCAPS = "smallcaps"
 CSS_CLASS_PAGE_NUMBER = "page_number"
 CSS_CLASS_NOTE = "note"
 CSS_CLASS_NOTE_ANCHOR = "note_anchor"
-	
+
 
 class _MtRenderer:
 	"""
