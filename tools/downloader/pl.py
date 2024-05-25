@@ -1,6 +1,7 @@
 import os
 
 import deep_zoom
+import iiif
 import utils
 
 
@@ -22,25 +23,7 @@ def get_academica(*, book_id, first_page_id, last_page_id):
 		)
 
 
-def get_polona(*, id, first, last):
-	metadata_url = f"https://polona.pl/api/entities/{id}"
-	metadata = utils.get_json(metadata_url)
+def get_polona(*, id):
+	manifest_url = f"https://polona.pl/api/search-index/search/iiif/{id}/manifest.json"
 	output_folder = utils.make_output_folder("polona", id)
-	
-	scans = metadata["scans"]
-	if len(scans) < last:
-		last = len(scans)
-	for page in range(first, last + 1):
-		page_metadata = metadata["scans"][page]
-		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{page:08d}")
-			continue
-		found = False
-		for image_metadata in page_metadata["resources"]:
-			if image_metadata["mime"] == "image/jpeg":
-				print(f"Downloading page #{page:08d}")
-				utils.get_binary(output_filename, image_metadata["url"])
-				found = True
-		if not found:
-			raise Exception(f"JPEG file was not found in image_metadata for page {page}")
+	iiif.download_book_fast_v3(manifest_url, output_folder)

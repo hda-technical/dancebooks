@@ -151,6 +151,6 @@ def download_book_fast_v3(manifest_url, output_folder):
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
-		image_url = metatata["items"][0]["items"][0]["body"]["id"]
+		image_url = metadata["items"][0]["items"][0]["body"]["id"]
 		print(f"Downloading page #{page:04d} from {image_url}")
 		utils.get_binary(output_filename, image_url)
