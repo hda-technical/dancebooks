@@ -434,8 +434,6 @@
             "giraudet_1890": "giraudet_1890_traite",
             "giraudet_1890_moderne": "giraudet_1913_moderne",
             "glover_1846": "glover_1846_lee_walker",
-            "gourdoux_daux_1819": "gourdoux_daux_1819_bnf",
-            "gourdoux_daux_1819_undated": "gourdoux_daux_1819_bne",
             "grant_1893": "grant_1893_teachers",
             "guillaume_1769_caracteres": "guillaume_1770_caracteres",
             "hart_1815": "hart_1829_thirteenth_duet",
@@ -612,6 +610,10 @@
             "collinet_1825_unique": "collinet_1829_unique",
             "gotz_1777": "gotz_1775_mannheim",
             "dubois_1769_allemandes": "dubois_1784_allemandes",
+            "gourdoux_daux_1819": "gourdoux_daux_1819_recueil",
+            "gourdoux_daux_1819_bne": "gourdoux_daux_1819_recueil",
+            "gourdoux_daux_1819_bnf": "gourdoux_daux_1819_recueil",
+            "gourdoux_daux_1819_undated": "gourdoux_daux_1819_recueil",
         }
     }
 }
