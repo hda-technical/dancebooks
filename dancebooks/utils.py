@@ -290,21 +290,29 @@ def is_url_valid(url, item):
 		logging.debug("Fragments aren't allowed")
 		return False
 
-	#validating blocked domains
-	hostname = split.hostname
-	if hostname.startswith("www."):
-		hostname = hostname[4:]
-	for blocked_domain in config.parser.blocked_domains:
-		if hostname.endswith(blocked_domain):
-			logging.debug(f"Domain {split.hostname} is blocked")
+	host = split.hostname
+	
+	# normalize host
+	host_normailized = host.removeprefix("www.")
+	
+	# validating blocked domains
+	if host_normailized in config.parser.blocked_domains:
+		logging.debug(f"{host=} is blocked")
+		return False
+
+	if re := const.URL_REGEXPS.get(host):
+		match = re.match(url)
+		if not match:
+			logging.debug(f"URL {url} should match {re.pattern}")
 			return False
 
-	#validating domains blocked for insecure (http) access
+	# validating domains blocked for insecure (http) access
+	# FIXME: this is a deprecated solution for the case, rewrite using URL_REGEXP
 	if (
-		(hostname in config.parser.blocked_domains_http) and
+		(host in config.parser.blocked_domains_http) and
 		(split.scheme == "http")
 	):
-		logging.debug(f"Domain {split.hostname} is blocked for insecure access")
+		logging.debug(f"{host=} is blocked for insecure access")
 		return False
 
 	return True

@@ -273,3 +273,7 @@ INVERTED_INDEX_KEY_PREFIX = "!"
 MAX_AUTHORS_IN_CITE_LABEL = 2
 
 SIZE_DELIMETER = "x"
+
+URL_REGEXPS = {
+	"polona.pl": re.compile(r"https://polona.pl/item-view/(?P<guid>[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"),
+}
