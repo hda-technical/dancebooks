@@ -330,22 +330,20 @@ def validate_single_filename(abspath, filename, item, errors):
 	if type in MULTIENTRY_ENTRY_TYPES:
 		return
 	metadata = utils.extract_metadata_from_file(filename)
-	#validating optional author, edition, tome
-	#in case when item specifies value, but filename does not
-	optional_meta_fields = [
-		"author"
+	# validating optional author, edition, tome
+	# in case when item specifies value, but filename does not
+	mandatory_meta_fields = [
+		# French contredanse 1-folio edition might omit the author's name
+		# "author",
+		"edition",
+		"volume",
+		# For serial books, no number is present in metadata
+		# Temporary disable check here
+		# "number",
+		"part",
 	]
-	if type:
-		optional_meta_fields += [
-			"edition",
-			"volume",
-			#For serial books, no number is present in metadata
-			#Temporary disable check here
-			#"number",
-			"part"
-		]
 
-	for meta_field in optional_meta_fields:
+	for meta_field in mandatory_meta_fields:
 		if (
 			(item.has(meta_field)) and
 			(meta_field not in metadata)
