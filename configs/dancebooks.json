@@ -107,6 +107,9 @@
 
             // use modern www.nypl.org permalinks instead
             "catalog.nypl.org",
+            
+            // use soeg.kb.dk permalinks instead
+            "rex.kb.dk",
         ],
         "blocked_domains_http": [
             "archive.org",
@@ -614,7 +617,7 @@
             "gourdoux_daux_1819_bne": "gourdoux_daux_1819_recueil",
             "gourdoux_daux_1819_bnf": "gourdoux_daux_1819_recueil",
             "gourdoux_daux_1819_undated": "gourdoux_daux_1819_recueil",
-			"moroda_1982": "moroda_1982_catalogue",
+            "moroda_1982": "moroda_1982_catalogue",
         }
     }
 }
