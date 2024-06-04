@@ -109,6 +109,7 @@
             "catalog.nypl.org",
             
             // use soeg.kb.dk permalinks instead
+            "img.kb.dk",
             "rex.kb.dk",
         ],
         "blocked_domains_http": [
