@@ -108,8 +108,11 @@
             // use modern www.nypl.org permalinks instead
             "catalog.nypl.org",
             
+            // It would be nice to ban this and use soeg.kb.dk permalinks instead.
+            // Unfortunately, certain entries are not catologues in the latter catalogue.
+            // "img.kb.dk"
+            
             // use soeg.kb.dk permalinks instead
-            "img.kb.dk",
             "rex.kb.dk",
         ],
         "blocked_domains_http": [
