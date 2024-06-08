@@ -105,7 +105,7 @@ def be_kbr(id, volume):
 
 
 @main.command()
-@click.option("--id", help="Id of the page to be downloaded (e. g. `fad2738c-c223-4a68-8044-c9fd73c8efd6`)", required=True)
+@click.option("--id", help="Id of the book to be downloaded (e. g. `fad2738c-c223-4a68-8044-c9fd73c8efd6`)", required=True)
 def cz_kramerius(id):
 	"""
 	book from www.digitalniknihovna.cz
