@@ -125,6 +125,16 @@ def de_bsb(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `ppn1727545419`)", required=True)
+def de_rosdok(id):
+	"""
+	book from rosdok.uni-rostock.de
+	"""
+	import de
+	de.get_rosdok(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `1981185920/49609/13562386-aa42-4089-921f-069524552928` (find manifest request to get it))", required=True)
 def de_unihalle(id):
 	"""

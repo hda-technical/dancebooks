@@ -91,8 +91,30 @@ def get_gwlb(*, id):
 		except ValueError:
 			# gwlb.de starts an infinite redirection cycle in case of requesting a non-existing file
 			break
-				
-				
+
+
+def get_rosdok(*, id):
+	output_folder = utils.make_output_folder("rosdok", id)
+	page = 0
+	while True:
+		page += 1
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+
+		# slashes has to be twice-encoded, otherwise the server returns 404
+		slash = "%252F"
+		page_url = f"https://rosdok.uni-rostock.de/iiif/image-api/rosdok{slash}{id}{slash}phys_{page:04d}/full/full/0/native.jpg"
+		print(f"Downloading page #{page:04d} from {page_url}")
+		try:
+			utils.get_binary(output_filename, page_url)
+		except HTTPError as ex:
+			if ex.response.status_code == http.client.NOT_FOUND:
+				print("Got HTTP 404, stopping download")
+				break
+
+
 def get_slub(*, id):
 	output_folder = utils.make_output_folder("slub", id)
 	page = 0
