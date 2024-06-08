@@ -458,7 +458,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев<br/>_Второе издание_ | `[Yoko]` | |
 | 1912 | | Latwju tautas dejas<br/>_Латышские народные танцы_<br/>_Серийное издание_ | `[Yoko]` | |
 | 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004805109) |
-| 1913 | | Проспект и программа Школы танцев К. Б. Матсона | | |
 | 1913 | Charles Louis Napoléon d'Albert | Dancing. Technical Encyclopaedia of the Theory and Practice of the Art of Dancing | `[Guillard, 1989]` | |
 | 1914 | Enrico Pichetti | La furlana vénitienne, célèbre danse<br/>_Published by Hachette in Paris_ | | [BNF](https://catalogue.bnf.fr/ark:/12148/cb311051632) |
 | 1914 | Михаил Михайлович Бонч-Томашевский | Книга о танго. Искусство и сексуальность | | [RSL](https://search.rsl.ru/ru/record/01004188739)<br/>`SPTL: Б 817` |
