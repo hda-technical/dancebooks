@@ -78,12 +78,6 @@ def download_book(manifest_url, output_folder):
 		download_image(base_url, output_filename)
 
 
-def _download_image_fast(metadata, page, output_filename):
-	full_url = metadata["images"][-1]["resource"]["@id"]
-	print(f"Downloading page #{page:04d} from {full_url}")
-	utils.get_binary(output_filename, full_url)
-
-
 def download_image_fast_v1(base_url, output_filename):
 	"""
 	Download image as a single tile
@@ -94,6 +88,19 @@ def download_image_fast_v1(base_url, output_filename):
 	h = info["height"]
 	img_url = f"{base_url}/0,0,{w},{h}/{w},{h}/0/default.jpg"
 	utils.get_binary(output_filename, img_url)
+
+
+def _download_image_fast(metadata, page, output_filename):
+	url = None
+	if not url:
+		# Certain installations (only opendata.uni-halle.de so far)
+		# provide higher resolution images in 'rendering' section
+		url = metadata.get("rendering", [{}])[-1].get("@id", "")
+	if not url:
+		url = metadata["images"][-1]["resource"]["@id"]
+
+	print(f"Downloading page #{page:04d} from {url}")
+	utils.get_binary(output_filename, url)
 
 
 def download_book_fast(manifest_url, output_folder):

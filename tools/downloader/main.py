@@ -125,6 +125,16 @@ def de_bsb(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `1981185920/49609/13562386-aa42-4089-921f-069524552928` (find manifest request to get it))", required=True)
+def de_unihalle(id):
+	"""
+	book from opendata.uni-halle.de
+	"""
+	import de
+	de.get_unihalle(id=id)
+
+
+@main.command()
 @click.option("--first", type=int, help="First page to be downloaded (e. g. '1910311')", required=True)
 @click.option("--last", type=int, help="First page to be downloaded (e. g. '1911077')", required=True)
 def uniDuesseldorf(first, last):

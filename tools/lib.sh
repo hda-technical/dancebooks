@@ -292,61 +292,6 @@ princetonTiles()
 	tiles princetonTilesUrl generalTilesFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
 }
 
-uniHalleTileFile()
-{
-	if [ $# -ne 2 ]
-	then
-		echo "Usage: $0 x y"
-		return 1
-	fi
-
-	local TILE_X=$1
-	local TILE_Y=$2
-	#dusseldorf tiles are numbered from bottom to top
-	local REAL_TILE_Y=`expr $MAX_TILE - $TILE_Y`
-
-	generalTilesFile "$TILE_X" "$REAL_TILE_Y"
-}
-
-#quite similar to dusseldorf, with different magic numbers
-uniHalleTilesUrl()
-{
-	if [ $# -ne 4 ]
-	then
-		echo "Usage: $0 image_id x y z"
-		return 1
-	fi
-
-	local IMAGE_ID=$1
-	local TILE_X=$2
-	local TILE_Y=$3
-	local TILE_Z=$4
-
-	#some unknown number with unspecified purpose
-	local UNKNOWN_NUMBER=1157
-	local VERSION=1.0.0
-
-	echo "http://digitale.bibliothek.uni-halle.de/image/tile/wc/nop/$UNKNOWN_NUMBER/$VERSION/$IMAGE_ID/$TILE_Z/$TILE_X/$TILE_Y.jpg"
-}
-
-uniHalleTiles()
-{
-	if [ $# -ne 1 ]
-	then
-		echo "Usage: $0 image_id"
-		return 1
-	fi
-	local BOOK_ID=$1
-	local ZOOM=3
-	local TILE_SIZE=512
-	local OUTPUT_DIR=.
-
-	#overriding global constant
-	MIN_FILE_SIZE_BYTES=5120
-
-	tiles uniHalleTilesUrl uniHalleTileFile dullValidate $BOOK_ID $ZOOM $TILE_SIZE $OUTPUT_DIR
-}
-
 kunstkameraTilesUrl()
 {
 	if [ $# -ne 4 ]

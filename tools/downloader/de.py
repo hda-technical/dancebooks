@@ -111,3 +111,9 @@ def get_slub(*, id):
 			if ex.response.status_code == http.client.NOT_FOUND:
 				print("Got HTTP 404, stopping download")
 				break
+
+
+def get_unihalle(*, id):
+	output_folder = utils.make_output_folder("halle", id.split('/')[0])
+	manifest_url = f"https://opendata.uni-halle.de/json/iiif/{id}/manifest"
+	iiif.download_book_fast(manifest_url, output_folder)
