@@ -2,8 +2,8 @@
 
 ## Common
 * [License](common/license.md)
-* [Common definitions](common.md)
-* [Legal information from the libraries](legal.md)
+* [List of libraries](common/libraries.md)
+* [Tags](common/tags.md)
 
 ## Historical Dance Bibliography
 * [Overview](bib/index.md)

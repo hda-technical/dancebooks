@@ -6,6 +6,7 @@ nav:
   - Общая информация:
     - Лицензия: common/license.md
     - Теги: common/tags.md
+    - Библиотеки: common/libraries.md
   - Библиография:
     - Общая информация: bib/index.md
     - Периодика: bib/periodical.md
