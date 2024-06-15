@@ -4,20 +4,19 @@ site_dir: ./www/static/docs
 nav:
   - index.md
   - Общая информация:
-    - Лицензия: license.md
-    - Legal information from the libraries: legal.md
-    - Общие определения: common.md
+    - Лицензия: common/license.md
+    - Теги: common/tags.md
   - Библиография:
-    - Общая информация: bibliography.md
-    - Периодика: bibliography_periodical.md
-    - Библиотека HDA: library.md
-    - Отсутствующие записи: bibliography_missing.md
-    - Транскрипции: bibliography_transcriptions.md
+    - Общая информация: bib/index.md
+    - Периодика: bib/periodical.md
+    - Библиотека HDA: bib/library.md
+    - Отсутствующие записи: bib/missing.md
+    - Транскрипции: bib/transcriptions.md
   - Иконография: images.md
   - Музыка:
     - Устройство архива с музыкой: music.md
     - Альбомы для исторических танцев: music_cds.md
-  - Резервные копии: library_backups.md
+  - Резервные копии: backups.md
 plugins: []
 theme:
   name: mkdocs
