@@ -113,7 +113,7 @@ def download_book_fast(manifest: dict | str, output_folder):
 	http://iiif.io/about/
 	"""
 	if isinstance(manifest, str):
-		manifest = utils.get_json(manifest_url)
+		manifest = utils.get_json(manifest)
 	canvases = manifest["sequences"][0]["canvases"]
 	for page, metadata in enumerate(canvases):
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
