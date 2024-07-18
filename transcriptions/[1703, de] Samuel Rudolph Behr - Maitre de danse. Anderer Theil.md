@@ -1,4 +1,4 @@
-### {Page[[9]]} Summarien
+### {Page} Summarien
 
 ### Derer Grillen.
 
@@ -10,7 +10,7 @@ Vorrede / Verse und
 Worte: Es märe 
 alles ausgeschrie[-]
 ben / uñ über die Mu[-]
-sicalien {Page[[10]]} im Tantz-
+sicalien {Page} im Tantz-
 Buche.
 
 2. Grille / von Com[-]
@@ -24,7 +24,7 @@ maassen der Men[-]
 schen / welch sich 
 auch in der Tantz-
 Kunst üben wollen / 
-{Page[[11]]} zuvor von dem Mai[-]
+{Page} zuvor von dem Mai[-]
 tre müssen judiciret 
 werden / nemlich 
 wie diese dey solcher 
@@ -37,7 +37,7 @@ abduciret werden.
 4. Grille / wie die 
 Schritte im Tan[-]
 tzen ferme zu ma[-]
-chen {Page[[12]]} seynd / uud[[опечатка нужно: und]] wie
+chen {Page} seynd / uud[[опечатка нужно: und]] wie
 jedes Pas und iede 
 Bewegung im tan[-]
 tzen mit Vortheil 
@@ -50,7 +50,7 @@ ohne einige force
 machen möge.
 
 5. Grille / wie ein Tantz-
-Meister {Page[[13]]} einen Scho[-]
+Meister {Page} einen Scho[-]
 lar auch ferner zu 
 informiren hat / daß 
 wenn er in denen 
@@ -63,7 +63,7 @@ ter Manier und air
 verrichten soll. 
 
 6. Grille / was ferner 
-{Page[[14]]} für Nutzen ein 
+{Page} für Nutzen ein 
 Mensch von solcher 
 löblichen und hon[-]
 netten Leibes-U[-]
@@ -77,7 +77,7 @@ der Musicalischen
 Composition ver[-]
 stehen.
 
-{Page[[15]]} 8. Grille / wie auch 
+{Page} 8. Grille / wie auch 
 bey solcher mehr ge[-]
 dachten Leibes-H[-]
 bung die menschli[-]
@@ -90,11 +90,11 @@ Authoris Chara[-]
 cteribus, welche 
 er für sich erfun[-]
 den / und wormit 
-{Page[[16]]} ein und andere Tantze 
+{Page} ein und andere Tantze 
 auffgezeichnet wer[-]
 den können.
 
-{Page[[17]]} 1. Grille. 
+### {Page} 1. Grille. 
 
 ### Uber de Titel / die 
     Vorrede / Verse uñ 
@@ -107,7 +107,7 @@ den können.
 Daß schon vor langen 
 Jahren und noch biß 
 diese Stunde viel Bü[-]
-cher {Page[[18]]} in Druck heraus gegeben / 
+cher {Page} in Druck heraus gegeben / 
 zu welchen die Vorrede nicht 
 vom Authore selbst / sondern 
 von andern dazu verfertiget 
@@ -127,7 +127,7 @@ den Titul eines Buchs anbelan[-]
 get / ist ebebfalls notorium und 
 bekandt / daß hierinne einem ie[-]
 den Buchführer frey stehet / 
-{Page[[19]]} was das Haupt-Wort eines 
+{Page} was das Haupt-Wort eines 
 Buchs anbetrifft / nach Befin[-]
 den solches zu verbessern / des[-]
 wegen folget hernach nicht / daß 
@@ -143,11 +143,11 @@ ben / dienet zur Antwort / wie
 ich ja selber auff den Titul mei[-]
 nes Tantz-Buchs erwehnet / 
 wie daß ich mir unterschiede[-]
-ner gelehrter Leute und kluger  
+ner gelehrter Leute und kluger 
 Musicorum Schrifften / so 
 von diesem galanten Tantz-
 Exercitio geschrieben / confe[-]
-riret {Page[[20]]} / und hernach mahls / wie 
+riret {Page} / und hernach mahls / wie 
 in meinem Tantz-Buche zu le[-]
 sen seyn wird / nebst meiner ei[-]
 genen Invention colligiret / 
@@ -167,7 +167,7 @@ nach hier nicht die Rede seyn / daß
 das gantze Werck aus andern 
 Büchern geschrieben ist. Und 
 daß mir nun auch von alten 
-{Page[[21]]} alt väterischen-unvermögen[-]
+{Page} alt väterischen-unvermögen[-]
 den und der Music unverstän[-]
 digen auch andern super-klu[-]
 gen Leuten / daß ich die Musica[-]
@@ -186,7 +186,7 @@ will / der lasse es bleiben. Und
 nachdem nun solche alte und 
 andere super kluge Grillenfän[-]
 gerichte Leute anietzo sich ge[-]
-funden {Page[[22]]} /welche allerhand absur[-]
+funden {Page} /welche allerhand absur[-]
 de judicia über mein herausge[-]
 gebenes Tantz-Buch gefället;
 So bin ich bewogen worden / ih[-]
@@ -206,7 +206,7 @@ mit der günstige Liebhaber mit
 noch ferneren Nutzen von der 
 Tantz-Knnst[[опечатка, нужно: Tantz-Kunst]] denen darbey 
 nochmaligen annectirten Mu[-]
-sicalien {Page[[23]]} vergnüget werden mö[-]
+sicalien {Page} vergnüget werden mö[-]
 ge.
 
 Schlüßlichen recommendire 
@@ -220,7 +220,7 @@ Leipzig den 1. Jan.
 >>Samuel Rudolph
 Behr.
 
-{Page[[24]]} 2. Grille.
+### {Page} 2. Grille.
 
 ### Von Composition 
     einer Opera.
@@ -238,7 +238,7 @@ auch sehr gut kömmet / wenn die[-]
 ser bey Componirung einer O[-]
 pera eine solche Materia von ei[-]
 ner Historia vor die Hand nim[-]
-met {Page[[25]]} / in welcher so wohl unter[-]
+met {Page} / in welcher so wohl unter[-]
 schiedene Machinen / Verände[-]
 rungẽ des Theatri als auch der 
 Enteréen und Täntzen / nebstei[-]
@@ -257,7 +257,7 @@ Zuschauer / so wohl die Music-
 Verständigen / als auch ande[-]
 re zu contentiren seyn.
 
-{Page[[26]]} 3. Grille. 
+### {Page} 3. Grille. 
 
 ### Wie die Gliedmaassen 
     der Menschen / wel[-]
@@ -272,7 +272,7 @@ meister das Absehen seiner
 Kunst auff dreyerley Stücke
 zu richten hat / wie er 1.) bey ied[-]
 wedem Bau alle die zur Archi[-]
-tectur {Page[[27]]} gehörigen principia ob[-]
+tectur {Page} gehörigen principia ob[-]
 serviren. 2.) Wie er daraus
 ein dauerhafftes und zugleich
 ein zierliches und wohl pro[-]
@@ -292,7 +292,7 @@ weisen habe / auff daß 2.) dersel[-]
 be mit der Zeit einem fermen
 und zierlichen Tantz machen /
 und dann 3.) auch hierdurch zu
-{Page[[28]]} dem vorgesetzten Zweck und
+{Page} dem vorgesetzten Zweck und
 Nutzen des Tantzens / welcher in
 einer Gschickligkeit 1.) der Füs[-]
 se / 2.) des Leibes / 3.) der Arme /
@@ -312,7 +312,7 @@ ment eines guten Gebäudes le[-]
 gen will / vorhero in allem und
 iedem wohl in Augenschein neh[-]
 men muß / allhier auch in der
-{Page[[29]]} Tantz-Kunst das Naturel der
+{Page} Tantz-Kunst das Naturel der
 Persohn / so tantzen lernen will
 gnau zu judiciren / ob solches
 auch gut und geschickt ist / der[-]
@@ -332,7 +332,7 @@ müssen / unterschieden werden /
 in allen also wohl erforschen kön[-]
 nen Doch ehe ich weiter etwas
 von denen Eintheilungen der 
-{Page[[30]]} Beine / der Arme und anderer 
+{Page} Beine / der Arme und anderer 
 Glieder wie sie beym Tantzen 
 laboriren müssen / gedencken wil
 ich zuvor / weil ich in meiner 
@@ -352,7 +352,7 @@ Extensionem, Adductionem
 
 1.) FLEXIO geschiehet durch 
 diese Musculos, als: Psoam, 
-{Page[[31]]} lliacum internum & Pecti[-]
+{Page} lliacum internum & Pecti[-]
 næum.
 
 2.) EXTENSIO, per Glutæos, 
@@ -372,7 +372,7 @@ drehet werden.
 
 Es wird auch hierbey ge[-]
 setzet Circulairement, welche 
-{Page[[32]]} durch dieser 4. benennten spe[-]
+{Page} durch dieser 4. benennten spe[-]
 cierum Musc: verrichtet wird.
 
 ### Das Schien-Bein 
@@ -392,7 +392,7 @@ werts gezogen wird.
 2.) EXTENSIO, wenn das 
 Schien-Bein durch 4. Mu[-]
 sculos, als Rectum, Vastum 
-{Page[[33]]} internum, externum, &
+{Page} internum, externum, &
 cruralem, gerade gezogen 
 wird.
 
@@ -413,7 +413,7 @@ duciret und abduciret.
 Musc: Tibiæum, & peronæ[-]
 um anticum.
 
-{Page[[34]]} 2.) Extendiret / durch Gaste[-]
+{Page} 2.) Extendiret / durch Gaste[-]
 rocnemios, soleum und 
 Plantarem. (die drey ersteren 
 machen die Waden)
@@ -424,7 +424,7 @@ posticum.
 4.) Abduciret durch Peronæ[-]
 um posticum.
 
-### Was uun[опечатка, должно быть: nun]] die Arme an[-]
+### Was uun[[опечатка, должно быть: nun]] die Arme an[-]
     betrifft
 
 Welche auch hauptsächlich in 
@@ -433,7 +433,7 @@ werden müssen: So geschichet
 des Armes mouvement auff 
 fünfferley Art / als auffwerts / 
 unterwerts / vor- und rück[-]
-werts {Page[[35]]} und in die Kunde / (wel[-]
+werts {Page} und in die Kunde / (wel[-]
 che letztere Art aber aus den vier 
 vorhergehenden einig bestehet / 
 denn sie hat keine eigene Mu[-]
@@ -454,7 +454,7 @@ Immersus.
 Kückwerts / 2. Musc: infraspi[-]
 natus und rotundus minor.
 
-{Page[[36]]} Alle diese 9. benannte Muscu[-]
+{Page} Alle diese 9. benannte Muscu[-]
 li humeriformiren ein mouve[-]
 ment rond und wenn alle diese 
 successivement movirer werdẽ / 
@@ -474,8 +474,8 @@ longum & brevem, bra[-]
 chiæum externum, & Anco[-]
 næum.
 
-### {Page[[37]]} Die Arm-Schiene hat
-4.Musc.
+### {Page} Die Arm-Schiene hat
+    4. Musc.
 
 Zwey / welche den Radium mit 
 der äuserlichen Hand inwerts 
@@ -493,27 +493,28 @@ nen menschlichen Gliedern bey
 iedem Pas und Schritt und Be[-]
 wegungen im Tantzen können 
 appliciret / und dahero einem 
-{Page[[38]]} Maitre de dance zu wissen sehr 
+{Page} Maitre de dance zu wissen sehr 
 nöthig crachtet werden / soll in 
 nachfolgender vierdten Grille 
 hauptsächlich deduciret wer[-]
 den.
 
 ### 4. Grille.
-Wie die Schritte im 
-Tantzen ferme zu 
-machen sind / und 
-wie iedes Pas und 
-iede Bewegung im 
-Tantzen mit Vor[-]
-theil und geschickt 
-{Page[[39]]} laboriret werden 
-soll / darmit her[-]
-nachmahls derselbe 
-einen ieden Tantz 
-zierlich und ohne 
-eintzige force ma[-]
-chen möge.
+
+### Wie die Schritte im 
+    Tantzen ferme zu 
+    machen sind / und 
+    wie iedes Pas und 
+    iede Bewegung im 
+    Tantzen mit Vor[-]
+    theil und geschickt 
+    {Page} laboriret werden 
+    soll / darmit her[-]
+    nachmahls derselbe 
+    einen ieden Tantz 
+    zierlich und ohne 
+    eintzige force ma[-]
+    chen möge.
 
 VOrnemlich nun kan ein 
 Maitre solches alles dem 
@@ -523,7 +524,7 @@ mittelst derer[[возможно опечатка]] Hülffe alle Kün[-]
 ste und alles andere was zu 
 bewundern stehet / ans Licht 
 gebracht werden muß / zu sol[-]
-cher {Page[[40]]} galanten Leibes-Ubung 
+cher {Page} galanten Leibes-Ubung 
 ausersehen:) durch die Cou[-]
 rante demonstriren; denn die[-]
 se lehret den Scholar 1.) die 
@@ -543,7 +544,7 @@ wie hernach auch einer aus sol[-]
 chen Biegungen unten auff de[-]
 nen Füssen wiederum sich gut 
 heben soll. In Summa / gleich[-]
-wie {Page[[41]]} ich schon in meinem heraus[-]
+wie {Page} ich schon in meinem heraus[-]
 gegebenen Tantz Buche erweh[-]
 net / die Courante ist ein solches 
 Fundament der Tantz-Kunst / 
@@ -562,7 +563,7 @@ gewisse schlechte / so wohl steiffe
 als gebogene Schritte darzu zu 
 præpariren / und also demselben 
 hierdurch einen fermen Leib 
-{Page[[42]]} und Fuß zu machen wissen. 
+{Page} und Fuß zu machen wissen. 
 Die steiffen Schritte anlan[-]
 gend / so muß er dem Scholar 
 zuvor auff auswertsen geho[-]
@@ -582,7 +583,7 @@ solche Extensio verrichtet wird.
 Dannenhero wenn ich das 
 Bein auswerts und gestreckt 
 vorne auff den Fuß mit zusam[-]
-men {Page[[43]]} gezogenen Schenckeln fer[-]
+men {Page} gezogenen Schenckeln fer[-]
 me fortsetze / so wird 1.) dasselbe 
 oben an denen Hüfften extendi[-]
 ret / durch diese Musculos, als: 
@@ -602,7 +603,7 @@ ctum, Vastum internum, ex[-]
 ternum, & cruralem.
 
 4.) Endlich die Extensio des 
-{Page[[44]]} äuseren Fusses geschiehet durch 
+{Page} äuseren Fusses geschiehet durch 
 Gasterocnemios, soleum und 
 Plantarem, (welche drey erste[-]
 ren auch die Waden machen:)
@@ -622,7 +623,7 @@ verrichten.
 
 Was nun 2.) die gebogenen 
 Schritte anbetrifft / hierinne 
-{Page[[45]]} muß der Scholar auf diese Wei[-]
+{Page} muß der Scholar auf diese Wei[-]
 se informiret werden: Ich las[-]
 se ihn von einem Beine zum 
 andern gebogen vor- und dar- 
@@ -643,7 +644,7 @@ Hüfften flectiret durch diese
 Musculos, als: Psoam, Iliacum 
 internum & Pectinæum.
 
-{Page[[46]]} 2.) Adduciret aber / median[-]
+{Page} 2.) Adduciret aber / median[-]
 te Tricipite, wenn unter weh[-]
 renden solchen gebogenẽ Schrit[-]
 ten die Schenckel inwerts zu[-]
@@ -664,7 +665,7 @@ het durch 3. Musc: als: Bicipi[-]
 pitem, seminervosum & semi[-]
 membranosum. 
 
-{Page[[47]]} 5.) Adductio geschiehet per 
+{Page} 5.) Adductio geschiehet per 
 Sartorium und Gracilem, wel[-]
 che function auch hierinnen ist / 
 daß er ein Bein über das andere 
@@ -683,7 +684,7 @@ anticum.
 
 8.) Adduciret / nemlich wenn 
 ich die Zeen des Fusses vorne 
-{Page[[48]]} nach dem Schien-Bein anziehe / 
+{Page} nach dem Schien-Bein anziehe / 
 durch Tibiæum posticum.
 
 9.) Abduciret / da die Zeen 
@@ -703,7 +704,7 @@ um vom Leibe wegführe. 2)
 Hoch / wenn ich einen Arm um 
 andern gebogen in die Höhe 
 führe / und den andern iedoch 
-{Page[[49]]} nur ein wenig ausgestrecket 
+{Page} nur ein wenig ausgestrecket 
 und sachte wiederum sincken las[-]
 se.
 
@@ -724,7 +725,7 @@ tundum minorem.
 
 Das Mouvement des hohen
 porte de Brah, da ein Arm ge[-]
-bogen {Page[[50]]} in die Höhe geführet / 
+bogen {Page} in die Höhe geführet / 
 der andere wiederum ein wenig 
 ausgestrecket und sachte fallen 
 gelassen wird / auch fürnemlich 
@@ -744,7 +745,7 @@ rem, und latissimum dorsi.
 
 Ich erinnere mich zwar anie[-]
 tzo hierbey auch / daß ich so wohl 
-{Page[[51]]} von vielen Täntzern als auch 
+{Page} von vielen Täntzern als auch 
 Maitres von Tantzen selbst gese[-]
 hen / was das mouvement im 
 niedrigen porte de Brah anbe[-]
@@ -764,7 +765,7 @@ cken / als supinatorem longum
 & brevem ) gemachet / und dar[-]
 bey aber die Arme wenig oder 
 gar nicht moviret; Wie kröp[-]
-licht {Page[[52]]} und unartig nun solches 
+licht {Page} und unartig nun solches 
 einem Menschen in Tantzen 
 verstellet / wenn er seine Glied[-]
 massen nicht frey und unge[-]
@@ -785,7 +786,7 @@ tzen / als auch andern Begeben[-]
 heiten / die beste air zu geben 
 hat.
 
-{Page[[53]]} Nun wollen wir auch ferner 
+{Page} Nun wollen wir auch ferner 
 sehen / wie bey einem und an[-]
 dern Tantze / darinne so wohl 
 unterschiedene zierliche Schritte 
@@ -805,7 +806,7 @@ ste Stück ist die Courante, weil /
 wie ich schon vormahls gedacht / 
 die hauptsächlichsten principis 
 der Tantz-Kunst darinne anzu[-]
-treffen {Page[[54]]} sind / und woraus auch 
+treffen {Page} sind / und woraus auch 
 alle andere Täntze componi[-]
 ret werden / diese wollen wir ein 
 wenig betrachten / und darbey 
@@ -825,7 +826,7 @@ weder auff dem rechten oder lin[-]
 cken Beine zu machen / so müssen 
 unter wehrender dieser / (wor[-]
 inne zugleich die Schien-Beine 
-{Page[[55]]} durch die 3. Musculos, Bicipi[-]
+{Page} durch die 3. Musculos, Bicipi[-]
 tem, seminervosum & semi[-]
 membranosum, hinter oder seit[-]
 werts gezogen / und unten dar[-]
@@ -845,12 +846,12 @@ um inwerts adducire und zu[-]
 sammen ziehe / und nach solcher 
 Coupé die Beine durch die be[-]
 nannte 4. Muscul: als / Rectum, 
-{Page[[56]]} Vastum internum, externum, 
+{Page} Vastum internum, externum, 
 & cruralem, und dann unten 
 die Füsse durch diese Musculos, 
 Gasterocnemios, soleum und 
-Plantarem wieder gerade ziehe[/?]
-uñ mit steiffen Schritten fortsetze[/?]
+Plantarem wieder gerade ziehe[/ ?]
+uñ mit steiffen Schritten fortsetze[/ ?]
 mir der Leib / welchen ich aber 
 auch zuvor auff das jenige 
 Bein und diesen fuß / worauff 
@@ -865,7 +866,7 @@ fuß / welcher inzwischen in der
 Lufft gehen müssen / wieder 
 nieder zur Erden gesetzet wor[-]
 den / so ferme nut fortgehen / 
-{Page[[57]]} und mir weder zur rechten noch 
+{Page} und mir weder zur rechten noch 
 zur lincken Hand / weder vor[-]
 noch rückwerts wancken wird / 
 sondern man kan alsdenn ohn[-]
@@ -885,7 +886,7 @@ Tantz-Buche erwehnet / per[-]
 pendiculairen Lienie zu führen / 
 er keinen eintzigen Schritt im 
 Tantzen reine und feste wird 
-{Page[[58]]} machen können / indem die Glie[-]
+{Page} machen können / indem die Glie[-]
 der der Menschen / wie sie die Na[-]
 tur selbst / auch in dieser galan[-]
 ten Liebes-Ubung der Welt ge[-]
@@ -905,7 +906,7 @@ stehet ihnen wohl an / wenn sie
 1.) den Leib über die Gebühr 
 vorwerts schiessen lassen / und 
 salv. ven. 2.) den Podex wie 
-{Page[[59]]} weit hinter sich hinaus stre[-]
+{Page} weit hinter sich hinaus stre[-]
 cken / auch wohl 3.) allezeit im 
 Tantzen das Maul und dessen 
 Lippen von einer Seite zur 
@@ -925,7 +926,7 @@ drigen Standes (die ebenfalls
 wohl von der Tantz-Kunst zu 
 raisonniren gewust) selbst die[-]
 serwegen æstimiret werden / 
-{Page[[60]]} auch mehr und viel eher und bes[-]
+{Page} auch mehr und viel eher und bes[-]
 ser einen Scholar in ermeldte[t?]
 Tantz-Kunst zu instruiren und 
 zu lernen wissen / auch selbsten
@@ -945,7 +946,7 @@ nen hierdurch sich zu recom[-]
 mendiren / vielmehr sich prosti[-]
 tuiren.
 
-{Page[[61]]} 2.) Endlich komme ich nun 
+{Page} 2.) Endlich komme ich nun 
 auch auff die Capriolen, welche 
 beym Tantzen in einer und an[-]
 dern Entrée mit gemachet wer[-]
@@ -965,7 +966,7 @@ nier (welche auch noch heute
 zu Tage pflegen die Hand[-]
 wercks-Gesellen zu machen / 
 wenn sie in denen Bier-Häu[-]
-sern {Page[[62]]} tantzen) ein paar mahl mit 
+sern {Page} tantzen) ein paar mahl mit 
 denen Schuh-Absätzen zusam[-]
 men schlagen. Figuriret aber / 
 so ich nach gefastem tempo wie[-]
@@ -985,7 +986,7 @@ einander coupire und schnei[-]
 de.
 
 Und also auff diese beyde Ar[-]
-ten {Page[[63]]} der geraden Capriolen wer[-]
+ten {Page} der geraden Capriolen wer[-]
 den auch die andern Seiten-
 Sprünge / zurück und vor ge[-]
 machet. Doch habe ich noch ei[-]
@@ -1005,7 +1006,7 @@ machen sind.
 Wie nun aber / und aus was 
 für articulationibus und Ge[-]
 lencke der menschlichen Glied[-]
-massen {Page[[64]]} alle ietzt gedachte Sprin[-]
+massen {Page} alle ietzt gedachte Sprin[-]
 ge / damit sie auch fein reine kom[-]
 men / zu machen sind / soll folgen[-]
 der gestalt wiederum, sehr deut[-]
@@ -1026,7 +1027,7 @@ schnurgerade Lienie / auch stets
 rechten Balance behalten wer[-]
 den möge. 
 
-{Page[[65]]} Bey dem Tempo, so sind 1.) 
+{Page} Bey dem Tempo, so sind 1.) 
 die Hüfft-Beine / woraus auch 
 nothwendig alle Capriolen zu 
 machen / durch Hülffe derer 
@@ -1046,7 +1047,7 @@ ternum, externum & crura[-]
 lem extendiret werden. Wor[-]
 bey denn 4.) ebenfalls unten die 
 füsse / so fürnehmlich die Ca[-]
-priole {Page[[66]]} zu schneiden haben / ihre 
+priole {Page} zu schneiden haben / ihre 
 Extension durch diese Muscu[-]
 los, Gasterocnemios, soleum 
 und Plantarem erlangen müs[-]
@@ -1066,7 +1067,7 @@ die Capriole schneiden müssen)
 wiederum zu- und ein wenig 
 übereinander ziehe. Und auff 
 solche Weise werden letzlichen die 
-{Page[[67]]} andern Capriolen, sie mögen 
+{Page} andern Capriolen, sie mögen 
 nun gehen auff die Seite / vor[-]
 werts / hinterwerts / entweder 
 in die Runde / gerade in die Höhe / 
@@ -1086,7 +1087,7 @@ gnugsam ist gezeiget worden /
 die menschlichen Gliedmassen 
 zu judiciren und zu erforschen 
 weiß / wie nemlich diese und je[-]
-ne {Page[[68]]} Glieder / welche im Tantzen 
+ne {Page} Glieder / welche im Tantzen 
 laboriren und arbeiten müssen / 
 sich articuliren und lencken / und 
 so fort an. 
@@ -1106,7 +1107,7 @@ zu machen pfleget / eines Man[-]
 nes hoch hat iemahls gesprun[-]
 gen werden können) ingleichen 
 ferner auch so ein Maitre vor[-]
-giebet {Page[[69]]} / daßer seines Orths kei[-]
+giebet {Page} / daßer seines Orths kei[-]
 nen andern mehr habe / der 
 hierinne wisse / was er verste[-]
 he / ja auch über dieses meldet / 
@@ -1126,7 +1127,7 @@ tre in dieser Tantz-Kunst nicht
 præstiret was zu præstiren ge[-]
 wesen / auch hiernechst iemahls 
 gezeiget / daß er in oberwehnten 
-{Page[[70]]} und andern disciplinen mehr 
+{Page} und andern disciplinen mehr 
 sehr selbst versiret ist / wiederum 
 durch seine Information gewie[-]
 sen / daß er verstehet / einen Scho[-]
@@ -1146,7 +1147,7 @@ cher sich bedüncket in seiner
 Tantz-Kunst gar zu klug zu 
 seyn / und durch dieses ermeldte 
 Vorgeben für andern / so er dar[-]
-inne {Page[[71]]} neben sich hat / hervor zu 
+inne {Page} neben sich hat / hervor zu 
 thun / auch wohl diese bey denen 
 Menschen hin und wieder durch 
 absurdes Vorbringen und üble 
@@ -1166,7 +1167,7 @@ solle. Doch daß ich auch wie[-]
 der auff mein letztes komme / 
 wenn nun aber ein Maitre einen 
 Scholar also zu informiren und 
-{Page[[72]]} darbey seine Gliedmassen zu 
+{Page} darbey seine Gliedmassen zu 
 judiciren weiß / worvon oben 
 allbereit ausführlich ist gehan[-]
 delt worden / so versichre daß je[-]
@@ -1183,7 +1184,7 @@ wird verrichten können.
     ferner zu informi[-]
     ren hat, daß wenn er 
     in denen Pas oder 
-{Page[[73]]} Schrittẽ zum Tan[-]
+{Page} Schrittẽ zum Tan[-]
     tzen und der Caden[-]
     ce perfectioniret 
     ist / auch ieden Tantz 
@@ -1199,7 +1200,7 @@ verrichtet werden / denn so ein
 Mensch gleich gut tantzet / auch
 incomparable die Cadence hö[-]
 ret / wenn er aber im Tantzen
-{Page[[74]]} die Arme unbeweglich hangen
+{Page} die Arme unbeweglich hangen
 lässer / und hierbey solche nicht
 lebhafft und geschickt zu movi[-]
 ren weiß / wird doch alles todt
@@ -1219,7 +1220,7 @@ zu gebrauchen pfleget.
 
 Underns hoch / dieses kömmt
 gut bey denen Sarabandes, En[-]
-trées, {Page[[75]]} Ballets und andern star[-]
+trées, {Page} Ballets und andern star[-]
 cken frischen Täntzen.
 
 Das niedrige porte de Bras 
@@ -1239,7 +1240,7 @@ führet werden.
 
 Das hohe porte de Bras in
 denen Sarab: und andern fri[-]
-schen {Page[[76]]} Täntzen aber / ist mit ein[em?]
+schen {Page} Täntzen aber / ist mit ein[em?]
 Arm um andern / und nicht [mit?]
 beyden zugleich zu mache[n?]
 und nemlich weider auff di[ese?]
@@ -1259,7 +1260,7 @@ so fort an.
 Wenn ein Scholar hierinne 
 auch geschickt ist / hat der Maitre 
 ferner bey demselben zu obser[-]
-viren {Page[[77]]} / daß er in tantzen nicht af[-]
+viren {Page} / daß er in tantzen nicht af[-]
 fectiret / massen es denn öffters 
 zit geschehen pfleget / wenn man[-]
 [che?]r Mench tantzet / entweder die 
@@ -1273,13 +1274,13 @@ weit auffsperret / und so er es ja
 zusammen behält / dennoch unter 
 wehrenden tantzen die Zunge 
 darinne hin und wieder kol[-]
-lert / oder die Lippe[[какая именно е?]] des Mauls 
+lert / oder die Lippé des Mauls 
 von einer Seite zur andern 
 käuet / wordurch er vermeynet 
 den Tantz noch weit besser zu 
 verrichten / als wie ihme die Na[-]
 tur hier zu præpariret hat / item 
-{Page[[78]]} etliche Persohnen gedencken 
+{Page} etliche Persohnen gedencken 
 auch hierbey in tantzen zu cher[-]
 miren / uñ machen solche possier[-]
 liche Gesichter / daß horrible über 
@@ -1294,7 +1295,7 @@ che unanständige Mienen
 beym Tantzen sehen 
 lassen möge.
 
-### 6. {Page[[79]]} Grille.
+### 6. {Page} Grille.
 
 ### Was ferner für Nutzen 
     der Mensch von sol[-]
@@ -1310,7 +1311,7 @@ solche einem Menschen zu wege
 bringen kan / soll folgender ge[-]
 stalt dargethan werden.
 
-{Page[[80]]} Was nun die Bewegungs 
+{Page} Was nun die Bewegungs 
 Krafft der äusserlichen Glied 
 massen welche von denen Men[-]
 schen durch solche zierliche Leibes[-]
@@ -1331,7 +1332,7 @@ mann die äusserliche Bewe[-]
 gung des Gemüths gar zu 
 sehr spahret / auch die Bewe[-]
 gung des Geblüts zu stocken 
-{Page[[81]]} und faul zu werden anfänget / 
+{Page} und faul zu werden anfänget / 
 daß also hierdurch / so keine rechte 
 Bewegung in denen Sen- und 
 Blut- Adern mehr ist / ein 
@@ -1352,7 +1353,7 @@ schickt hervor zu thun weiß /
 und absonderlich kan ein Maitre 
 de dance dieses einem Scholar 
 durch Ballette dociren / darinne 
-{Page[[82]]} vermittelst sittsamer und zierli[-]
+{Page} vermittelst sittsamer und zierli[-]
 cher äusserlicher Bewegung 
 derer füsse und des gantzen 
 Leibes ohne einige Wörter[-]
@@ -1370,7 +1371,7 @@ wird.
     muß nothwendig 
     die Music und auch 
     etwas von der Mu[-]
-    sicalischen {Page[[83]]} Compo[-]
+    sicalischen {Page} Compo[-]
     sition verstehen.
 
 ES ist gezeiget worden / wie 
@@ -1389,7 +1390,7 @@ len Zweiffel durch die Bewegung
 des Gemüths erst recht erre[-]
 get / bessert / andert und stillt / 
 ja dieselbe / wenn sie nach der 
-{Page[[84]]} Kunst eingerichtet ist / auch eine 
+{Page} Kunst eingerichtet ist / auch eine 
 gantz Magische Erregung der 
 Geister mit sich führet / wie denn 
 alle Affecten / von Liebe / Lust und 
@@ -1409,7 +1410,7 @@ und sonderlich in denen Ballets /
 (da allerhand Gemüths-Nei[-]
 gungen und andere Dinge 
 deutlich dargestellet werden 
-{Page[[85]]} müssen) vor Geist und Leben 
+{Page} müssen) vor Geist und Leben 
 zu geben hat? und wo hierinne 
 der gröste Nachdruck in der 
 Music stecket? 
@@ -1430,7 +1431,7 @@ hierzu zu machen sind / damit
 man auch gleich hierinne hö[-]
 ret / was ein Täntzer durch die 
 Bewegung des Gemüths 
-{Page[[86]]} præsentiren und verrichten 
+{Page} præsentiren und verrichten 
 soll.
 
 Verstehet nun aber ein Maitre 
@@ -1451,7 +1452,7 @@ dieses lange noch nichts zur Sa[-]
 che / sondern es bleibet doch dar[-]
 bey / wo bey einem Tantz-Mei[-]
 ster dieses necessarium requisi[-]
-tum, {Page[[87]]} da er nemlich einigen Ver[-]
+tum, {Page} da er nemlich einigen Ver[-]
 stand von der Music und de[-]
 ren Composition haben soll / er[-]
 mangelt / daß er noch kein per[-]
@@ -1471,7 +1472,7 @@ wort dienen müssen / daß es
 schlimm gnug sey / vor diejeni[-]
 gen / so Tantz-Meister seyn 
 wollen / aber keinen eintzigen 
-{Page[[88]]} Verstand von der Music und 
+{Page} Verstand von der Music und 
 derselben nöthigen Composi[-]
 tion haben / wordurch doch 
 der Menschen Gemüther in 
@@ -1492,7 +1493,7 @@ Tractate 1699. in Druck her[-]
 aus gegeben / und  zwar gantz hin[-]
 tan zuletzt / da er in was vor 
 Werth die Music bey denen Al[-]
-ten {Page[[89]]} gewesen / gedencket / auch pag. 
+ten {Page} gewesen / gedencket / auch pag. 
 96. zugleich mit angemercket / 
 wie daß dem Heil. Augustin: 
 (weil zuvor Plutarchus 65. de 
@@ -1512,7 +1513,7 @@ welchem den Nahmen der
 Music zu geben / nichts anders 
 sey / als diese göttliche Wissen[-]
 schafft verunehren und ver[-]
-nichtigen. {Page[[90]]} Nun glaubt man 
+nichtigen. {Page} Nun glaubt man 
 gar wohl daß diese herrliche Mu[-]
 sic / zumahl wenn sie bey garsti[-]
 gen und unflätigen Schand Lie[-]
@@ -1532,7 +1533,7 @@ zu Tage bey allen Menschen
 fast schon in der gantzen Welt 
 bekandt / daß erwehnte Music 
 bey honnetter und zierlicher 
-{Page[[91]]} Sing-Kunst / auch der erbah[-]
+{Page} Sing-Kunst / auch der erbah[-]
 ren Leibes-Ubung in der Tantz-
 Kunst gar wohl zuzulassen ist.
 
@@ -1551,7 +1552,7 @@ ben; Dannenhero müssen die[-]
 jenigen / welche entweder selbst 
 profession darvon machen / oder 
 sich nur in etwas starck darinne
-{Page[[92]]} exerciren wollen / zu sehen / daß
+{Page} exerciren wollen / zu sehen / daß
 sie stets ihre Gliedmassen / welche 
 ohnedem scharff in solchem Ex[-]
 ercitio laboriren und allerhand 
@@ -1571,7 +1572,7 @@ liche Alteration und Verstel[-]
 lung der innerlichen Affecten 
 und Begierden / ingleichen durch 
 Debauchen / es sey vom Venus-
-Spiel {Page[[93]]} / oder fressen / Sauffen 
+Spiel {Page} / oder fressen / Sauffen 
 allerhand vieler hitziger Ge[-]
 träncke und unordentliche Re[-]
 gierung der Affecten ver[-]
@@ -1591,7 +1592,7 @@ des Todes gewärtig seyn / denn
 so balde nur die Kräffte der Le[-]
 bens-Geister (welche so wohl 
 die nechsten Urhebere der Ge[-]
-sundheit- {Page[[94]]} als auch der Kranck-
+sundheit- {Page} als auch der Kranck-
 heiten seynd / so in dem menschli[-]
 chen Cörper sich ereignen) von 
 ihrer natürlichen Art abwei[-]
@@ -1612,7 +1613,7 @@ er seine Glieder also bey Kräff[-]
 ten erhält / daß er sie auch in die[-]
 ser honnetten Liebes-Ubung 
 allezeit frisch und munter ge[-]
-brauchen {Page[[95]]} / und darmit beym 
+brauchen {Page} / und darmit beym 
 Tantzen was Fermes und ge[-]
 schicktes machen kan.
 
@@ -1631,7 +1632,7 @@ mensch bekañt machet / auch
 einigen Nutzen in selbst-Auf[-]
 zeichnung der Täntze / so er 
 gelernet und nicht vergessen 
-{Page[[96]]} will / bringen werden / und 
+{Page} will / bringen werden / und 
 damit derselbe siehet / wie 
 solche zu gebrauchen / habe 
 ich ein paar bekandte Tän[-]
@@ -1644,7 +1645,7 @@ nebst der darzu gehörigen
 Music in ihre Figuren 
 setzen wollen.
 
-### Un {Page[[97]]} den Autorem.
+### Un {Page} den Autorem.
 
 > Wer hohe Geister hegt / der 
 >
@@ -1674,7 +1675,7 @@ setzen wollen.
 >
 > Papyre bringen / 
 >
-> So {Page[[98]]} reibt der blasse Neid sich an 
+> So {Page} reibt der blasse Neid sich an 
 >
 > Ihm früh und spath. 
 >
@@ -1712,7 +1713,7 @@ lich Grillen hecken /
 >
 > so kan / wie Er / verlachen / 
 >
-> Gedenckend; {Page[[99]]} daß der Mensch 
+> Gedenckend; {Page} daß der Mensch 
 >
 > noch nicht gebohren sen / 
 >
@@ -1750,66 +1751,14 @@ Joh. Wilhelm Bleibtreu /
 
 SS. Theol.Stud. 
 
-### CHARACTERES. {Page[[101]]}
+### CHARACTERES. {Page}
 
-1. Ist ein Pas grave. [[текст оформлен в виде таблицы с графическими обозначениями]]
-2. Eine halbe Coupé.
-3. Eine gantze Coupé.
-4. Ein Pas de Me[-]
-nuet.
-5. Ein Pas de Bour[-]
-rèe.
-6. Ein Contretems.
-7. Ein Contretems mit 
-dem Pas grave.
-8. Ist Balancement.
-9. Ein streiffer Schritt.
-10. Ein halb Pas Ba[-]
-lancé.
-11. Ein pas tombé.
-12. Ein Pas de Rigau[-]
-don.
-13. Ein gebogen Pas.
-14. Ein Pas Chassé, auff 
-die Seite vorne übern 
-Fuß.
-15. Ein Pas Chassé, auff 
-diese Seite hintern 
-Fuß.
-16. Pascoulant.
-17. Ein Pas de Cissaus.
-18. Eine gantze piroüête 
-vorne über den Fuß.
-19. Eine gantze piroüête 
-zurück hinter den 
-Fuß.
-20. Ein halber Sprung 
-da man auff ein Bein 
-alleine springet.
-21. Ein gantzer Sprung 
-auff beyde Beine zu[-]
-gleich.
-22. Eine halbe piroüete
-vorne über den Fuß.
-23. Eine halbe piroüête 
-zurück hinter den 
-Fuß.
-24. Eine Tourné auff 
-den lincken Fusse nach 
-der rechten Hand.
-25. Eine Tourné auff 
-den rechten Fusse nach 
-der rechten Hand.
-26. Eine Tourné auff 
-den rechten Fusse nach 
-der lincken Hand.
-27. Eine Tourné auff 
-den lincken Fusse nach 
-der lincken Hand.
-28. Eine kleine Tour
-vom Beine. 
-29. Eine grosse Tour 
-vom Beine.
+| 1. Ist ein Pas grave. | 6. Ein Contretems. | 11. Ein pas tombé. | 16. Pascoulant. | 21. Ein gantzer Sprung auff beyde Beine zugleich. | 26. Eine Tourné auff den rechten Fusse nach der lincken Hand. |
+| ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| 2. Eine halbe Coupé. | 7. Ein Contretems mit dem Pas grave. | 12. Ein Pas de Rigaudon. | 17. Ein Pas de Cissaus. | 22. Eine halbe piroüete vorne über den Fuß. | 27. Eine Tourné auff den lincken Fusse nach der lincken Hand. |
+| 3. Eine gantze Coupé. | 8. Ist Balancement. | 13. Ein gebogen Pas. | 18. Eine gantze piroüête vorne über den Fuß. | 23. Eine halbe piroüête zurück hinter den Fuß. | 28. Eine kleine Tour vom Beine. |
+| 4. Ein Pas de Menuet. | 9. Ein streiffer Schritt. | 14. Ein Pas Chassé, auff die Seite vorne übern Fuß. | 19. Eine gantze piroüête zurück hinter den Fuß. | 24. Eine Tourné auff den lincken Fusse nach der rechten Hand. | 29. Eine grosse Tour vom Beine. |
+| 5. Ein Pas de Bourrèe. | 10. Ein halb Pas Balancé. | 15. Ein Pas Chassé, auff diese Seite hintern Fuß. | 20. Ein halber Sprung da man auff ein Bein alleine springet. | 25. Eine Tourné auff den rechten Fusse nach der rechten Hand. |  |
 
 NB. Die Zieffern so an denen Characteribus angezeichnet stehen / zeigen sie pas oder Schritte an / wie sie nach einander folgen. Und 
 die dinnen Striche / woran theils die Characteres, theils auch nur an der Seite gezeichnet stehen / sind die Figuren der Täntze 
