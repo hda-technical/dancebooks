@@ -313,3 +313,36 @@ Excerpts from [Copyright, Permission, Acknowledgements and Data Protection](http
 > Visual Arts, Design, Theatre and Dance Librarian / Senior Librarian
 >
 > York University Libraries
+
+## Biblioteca civica del comune del Rovereto
+
+**FREE DOWNLOADS WERE NOT PERMITTED.**
+
+> Dear Chiara,
+>
+> thanks a lot for the scans.
+>
+> While these scans are quite good for my personal use,
+> I also run a bibliography website at bib.hda.org.ru,
+> where many of the primary sources are listed and available for free download.
+> Could you, please, clarify the license status of the scans you have sent to me?
+> For example, Universitätsbiliothek Salzburg licenses their scans under CC-BY license,
+> so I put them online even if the library does not.
+
+---
+
+> Dear Yuriy,
+>
+> I am writing to follow up on your request of 22 June 2024.
+>
+> After a careful consideration of your proposal,
+> I regret to inform you that according to our policy
+> we cannot allow you to upload the scans on your bibliography website for free download.
+>
+> ...
+>
+> Please, do not hesitate to get in touch if you any further question or request.
+>
+> With best wishes,
+>
+> Thomas DC
