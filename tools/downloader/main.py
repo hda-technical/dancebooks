@@ -145,6 +145,16 @@ def de_unihalle(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `418f9526-f9cf-422e-9a73-2064fb1ae820`)", required=True)
+def it_rovereto(id):
+	"""
+	book from digitallibrary.bibliotecacivica.rovereto.tn.it
+	"""
+	import it
+	it.get_rovereto(id=id)
+
+
+@main.command()
 @click.option("--first", type=int, help="First page to be downloaded (e. g. '1910311')", required=True)
 @click.option("--last", type=int, help="First page to be downloaded (e. g. '1911077')", required=True)
 def uniDuesseldorf(first, last):

@@ -61,13 +61,14 @@ def download_image(base_url, output_filename):
 	utils.download_and_sew_tiles(output_filename, UrlMaker(), policy)
 
 
-def download_book(manifest_url, output_folder):
+def download_book(manifest: str | dict, output_folder):
 	"""
 	Downloads entire book via IIIF protocol.
 	API is documented here:
 	http://iiif.io/about/
 	"""
-	manifest = utils.get_json(manifest_url)
+	if isinstance(manifest, str):
+		manifest = utils.get_json(manifest)
 	canvases = manifest["sequences"][0]["canvases"]
 	for page, metadata in enumerate(canvases):
 		output_filename = utils.make_output_filename(output_folder, page)
@@ -103,7 +104,7 @@ def _download_image_fast(metadata, page, output_filename):
 	utils.get_binary(output_filename, url)
 
 
-def download_book_fast(manifest_url, output_folder):
+def download_book_fast(manifest: dict | str, output_folder):
 	"""
 	Downloads entire book via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
@@ -111,7 +112,8 @@ def download_book_fast(manifest_url, output_folder):
 	API is documented here:
 	http://iiif.io/about/
 	"""
-	manifest = utils.get_json(manifest_url)
+	if isinstance(manifest, str):
+		manifest = utils.get_json(manifest_url)
 	canvases = manifest["sequences"][0]["canvases"]
 	for page, metadata in enumerate(canvases):
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
