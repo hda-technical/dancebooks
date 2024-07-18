@@ -145,6 +145,16 @@ def de_unihalle(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)", required=True)
+def it_internet_culturale(id):
+	"""
+	book from www.internetculturale.it
+	"""
+	import it
+	it.get_internet_culturale(id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `418f9526-f9cf-422e-9a73-2064fb1ae820`)", required=True)
 def it_rovereto(id):
 	"""
@@ -152,6 +162,26 @@ def it_rovereto(id):
 	"""
 	import it
 	it.get_rovereto(id=id)
+
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:N:MUS006101`)", required=True)
+def it_sbn(id):
+	"""
+	book from sbn.it
+	"""
+	import it
+	it.get_sbn(id)
+
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. 'MSS_Cappon.203')", required=True)
+def it_vatlib(id):
+	"""
+	book from digi.vatlib.it
+	"""
+	import it
+	it.get_valtib(id=id)
 
 
 @main.command()
@@ -225,17 +255,6 @@ def encyclopedie(volume, page):
 	image_url = f"http://enccre.academie-sciences.fr/digilib/Scaler/IIIF/{image_metadata['image']}"
 	output_file = f"{page:04d}.bmp"
 	iiif.download_image(image_url, output_file)
-
-
-@main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. 'MSS_Cappon.203')", required=True)
-def vatlib(id):
-	"""
-	book from digi.vatlib.it
-	"""
-	manifest_url = f"http://digi.vatlib.it/iiif/{id}/manifest.json"
-	output_folder = make_output_folder("vatlib", id)
-	iiif.download_book(manifest_url, output_folder)
 
 
 @main.command()
@@ -543,26 +562,6 @@ def hathitrust(id, from_page, to_page):
 	"""
 	import hathitrust
 	hathitrust.get(id=id, from_page=from_page, to_page=to_page)
-
-
-@main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)", required=True)
-def internet_culturale(id):
-	"""
-	book from www.internetculturale.it
-	"""
-	import sbn
-	sbn.get_internet_culturale(id)
-
-
-@main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:N:MUS006101`)", required=True)
-def sbn(id):
-	"""
-	book from sbn.it
-	"""
-	import sbn
-	sbn.get_sbn(id)
 
 
 @main.command()
