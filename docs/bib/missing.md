@@ -319,7 +319,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1850? | Albert Czerwinski | Contretanz-Büchlein. Theorie der Menuet (la Duchesse), der Lanciers, des Prince Impérial und der Variétés parisiennes, nebst Contretanz-Commands<br/>_3. Auflage_<br/>_Published in Danzig_ | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1850–1860? | Jean Jacques | Tanz-Album oder der unerschöpfliche Maitre auf dem Ballsaal<br/>_2. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1850–1900? | Schakwitz | Tanz-Album<br/>_6. Auflage_<br/>_Published in Berlin_ | `[Germanorum, 1914]` | |
-| 1850–1880? | | Die Union-Quadrille<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Rovereto](https://strutture-provincia.primo.exlibrisgroup.com/permalink/39SBT_INST/1eb0c6r/alma991007184719706186) |
 | 1850–1880? | Rudolf Voß | Tanz-Touren. Contre-Tanz — Lancier — Alliance — Quadrille — Mignon — Cotillon — Pariser Polka<br/>_4. Auflage_ | `[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1849 | Francisco Gomes da Fonseca | Nova arte de aprender a dançar ou methodo facil de aprender as contradanças francezas | | BNP |
 | 1851 | Henmann Görwitz | Die Tanz-Assecuranz humoristisch-sociale Standrede in der Repräsentantenkammer der Frauen | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [HAAB](https://lhwei.gbv.de/DB=2/LNG=EN/CLK?IKT=12&TRM=55898116X) |
