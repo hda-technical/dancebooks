@@ -6,36 +6,24 @@ DANSES DE VILLE.
 _Dedié à 
 Son Altesse Serenissime 
 Mademoiselle de Baujaulois 
-et Mise au jour Par le S.^r^ RAMEAU Maitre 
-à Danser Ordinaire de la M[aisen?] de 
+et_ Mise au jour Par le S.^r^ RAMEAU _Maitre 
+à Danser Ordinaire de la Maison de 
 Sa Magesté Catholique, la Reine Seconde 
-Douximere d’Espagne._
+Douairriere d’Espagne._
 
-_Et-seul privilegié du Roy pow laeorection 
+_Et-seul privilegié du Roy pour la corection 
 et augmentation de la Choregraphie_ 
 
 _Ouvrage
 tres utile pour toutes Personnes qui ont Sçu 
 ou qui apprennent à Danser, puis que par le 
-Secour [?te?] ce livre, on peut Se remettre facile
-ment[??]ns toutes les Danses que l’on à appris._ 
-[On tronve
-memes
-le livre
-Maître?][[текст плохо виден]]
-[ -oend 5.^-^ broché 
---- 6 --liez ----- ?]
-[dans les 
-endroi
-dev
-avan
-ser ?]
-[chez?]
-_A PARIS
-l’Autre faubourg S.^t^ Germain, 
-rue de Seine vis avis la rue du 
-Colombier chez le S^r^ Pitet loueur de 
-Carosse à la Vierge._
+Secour de ce livre, on peut Se remettre facile
+ment dans toutes les Danses que l’on à appris._
+| On trouve memes le livre Maitre | Sevend 5.^tt^ broché et 6.^tt^ reliez en veau| dans les endroi
+du a Da[n-?]ser |
+| ----------- | ---------- | ----------|
+| chez | _A PARIS L’Autre faubourg S.^t^ Germain rue de bussi, à la Cour Imperiod. 
+le S.^r^ Boivin rue S.^t^ Honoré a la regle D'or. le S.^r^ Le Clerc rue du roule a la Croix d'or.[[Другая версия: A PARIS l’Autre faubourg S.^t^ Germain, rue de Seine vis avis la rue du Colombier chez le S^r^ Pitet loueur de Carosse à la Vierge.]]_  | |
 
 ### {Page} A 
     SON ALTESSE SERENISSIME 
@@ -1719,7 +1707,7 @@ simple._ 5
 CHAP. III. _De la maniere de tenir le 
 Livre._ 10 
  
-CHAP. IV. _Des differentes Marches._17
+CHAP. IV. _Des differentes Marches._ 17
 
 CHAP. V. _Des Signes differens qui ex[-]
 priment les mouvemens & autres 
@@ -1783,7 +1771,7 @@ de Musique_
  
 _Etremis en Choregraphie Suivant 
 la Nouvelle Correction et augmentation 
-du S.^r^ R!!AMEAU! M.^tre^ Danser Ordinaire 
+du S.^r^ R!!AMEAU!! M.^tre^ Danser Ordinaire 
 de la Maison de la Reine seconde douair 
 riere d’Espagne Seul Privilegié du 
 Roy pour l’Art décrire toutes Sortes de 
