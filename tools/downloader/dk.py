@@ -10,7 +10,7 @@ import utils
 URL_REGEXP = re.compile(r'var jsonurl = (\[.*\]);')
 
 
-def get(id):
+def get_kb(*, id):
 	html_url = f"http://www5.kb.dk/manus/musman/2010/dec/viser/{id}/en/"
 	html = bs4.BeautifulSoup(utils.get_text(html_url))
 	for script in html.find_all("script"):

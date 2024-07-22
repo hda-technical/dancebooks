@@ -3,13 +3,13 @@ import iiif
 import utils
 
 
-def get_book(id):
+def get_bl_book(*, id):
 	output_folder = utils.make_output_folder("bl", id)
 	manifest_url = f"https://api.bl.uk/metadata/iiif/ark:/81055/{id}.0x000001/manifest.json"
 	iiif.download_book_fast(manifest_url, output_folder)
 
 
-def get_manuscript(id):
+def get_bl_manuscript(*, id):
 	def parse_id(full_id):
 		manuscript_id, _, page_id = tuple(id.rpartition('_'))
 		return (manuscript_id, page_id)

@@ -10,7 +10,7 @@ import utils
 INIT_REGEXP = re.compile(r'initDocview\((.*)\)')
 
 
-def get(id):
+def get(id=id):
 	main_page_url = f"http://elib.shpl.ru/ru/nodes/{id}"
 	main_page = bs4.BeautifulSoup(utils.get_text(main_page_url))
 	for script in main_page.find_all("script"):

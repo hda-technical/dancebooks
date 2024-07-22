@@ -378,22 +378,22 @@ def yaleBook(id, chapter):
 
 @main.command()
 @click.option("--id", help="Book id to be downloaded (e. g. `vdc_100026052453`, as it is displayed in the viewer url)", required=True)
-def bl_book(id):
+def uk_bl_book(id):
 	"""
 	book from explore.bl.uk
 	"""
-	import bl
-	bl.get_book(id)
+	import uk
+	uk.get_bl_book(id=id)
 
 
 @main.command()
 @click.option("--id", help="Page id of the manuscript to be downloaded (e. g. `add_ms_12531!1_f005r`)", required=True)
-def bl_manuscript(id):
+def uk_bl_manuscript(id):
 	"""
 	single page from www.bl.uk/manuscripts
 	"""
-	import bl
-	bl.get_manuscript(id)
+	import uk
+	uk.get_bl_manuscript(id=id)
 
 
 @main.command()
@@ -556,12 +556,12 @@ def locMusdi(id, start):
 @click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)", required=True)
 @click.option("--from", "from_page", help="First page to be downloaded", type=int, default=None)
 @click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=None)
-def hathitrust(id, from_page, to_page):
+def us_hathitrust(id, from_page, to_page):
 	"""
 	book from www.hathitrust.org
 	"""
-	import hathitrust
-	hathitrust.get(id=id, from_page=from_page, to_page=to_page)
+	import us
+	us.get_hathitrust(id=id, from_page=from_page, to_page=to_page)
 
 
 @main.command()
@@ -593,12 +593,12 @@ def	vwml(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `ABO_+Z178189508`)", required=True)
-def onb(id):
+def at_onb(id):
 	"""
 	book from onb.ac.at
 	"""
-	import onb
-	onb.get(id)
+	import at
+	at.get_onb(id=id)
 
 
 @main.command()
@@ -744,32 +744,32 @@ def goettingen(id):
 	
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `172099`)", required=True)
-def nb_no(id):
+def no_nb(id):
 	"""
 	book from www.nb.no
 	"""
-	import nb_no
-	nb_no.get(id)
+	import no
+	no.get_nb(id=id)
 	
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `object125610`)", required=True)
-def kb_dk(id):
+def dk_kb(id):
 	"""
 	book from www5.kb.dk
 	"""
-	import kb_dk
-	kb_dk.get(id)
+	import dk
+	dk.get_kb(id=id)
 
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `63678`)", required=True)
-def shpl(id):
+def ru_shpl(id):
 	"""
 	book from elib.shpl.ru
 	"""
-	import shpl
-	shpl.get(id)
+	import ru
+	ru.get_shpl(id=id)
 
 
 @main.command()
