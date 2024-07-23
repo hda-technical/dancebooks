@@ -1234,33 +1234,25 @@ ti.
 _I Passi del Ballo Nobile sono 
 i seguenti._
 
-| Semplice, o Natu[-]
-rale. |  _Simple, ou Natu[-]
-rel._ |
+| Semplice, o Naturale. |  _Simple, ou Naturel._ |
 | ----------------------------- | ------------------------------ |
-|Piegato,e Rialza[-]
-to. | _Plié, & Relevé._ |
+|Piegato, e Rialzato. | _Plié, & Relevé._ |
 | Pirola. | _Piroüette._ |
 | Saltante. | _Sauté._ |
 | Gittato. | _Jetté._ |
 | Mezzo Gittato. | _Demi-Jetté._ |
 | Mezzo Tronco. | _Demi-Coupé._ |
 | Tronco. | _Coupé._ |
-| Sfuggito. | _Eschapé, ou Sail[-]
-li._ |
+| Sfuggito. | _Eschapé, ou Sailli._ |
 | Scacciato. | _Chassé._ |
-| Fioretto. |  _De Bouréé, ou 
-Fleuret._ |
-{28} | Contratempo. | _Contre[-]
-temps._ |
-| Mezzo Contrat[-]
-tempo. | _Demi-Contretemps._ |
+| Fioretto. |  _De Bouréé, ou Fleuret._ |
+| Contratempo. {28} | _Contretemps._ |
+| Mezzo Contrattempo. | _Demi-Contretemps._ |
 | Di Rigodone. | _De Rigaudon._ |
 | Di Sissone. | _De Sissonne._ |
 | Unito. | _Assemblé._ |
 | Di Gagliarda. | _De Gagliarde._ |
-| Grave. | _Grave,ou de Cou[-]
-rante._ |
+| Grave. | _Grave,ou de Courante._ |
 | Bilanciato. | _Balancé._ |
 | Cadente. | _Tombé._ |
 | La Sdrucciolata. | _Glissade._ |
