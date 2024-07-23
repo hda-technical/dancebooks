@@ -19,9 +19,10 @@ tres utile pour toutes Personnes qui ont Sçu
 ou qui apprennent à Danser, puis que par le 
 Secour de ce livre, on peut Se remettre facile
 ment dans toutes les Danses que l’on à appris._
+
 | On trouve memes le livre Maitre | Sevend 5.^tt^ broché et 6.^tt^ reliez en veau| dans les endroi
 du a Da[n-?]ser |
-| ----------- | ---------- | ----------|
+| ------------ | -------------- | -----------|
 | chez | _A PARIS L’Autre faubourg S.^t^ Germain rue de bussi, à la Cour Imperiod. 
 le S.^r^ Boivin rue S.^t^ Honoré a la regle D'or. le S.^r^ Le Clerc rue du roule a la Croix d'or.[[Другая версия: A PARIS l’Autre faubourg S.^t^ Germain, rue de Seine vis avis la rue du Colombier chez le S^r^ Pitet loueur de Carosse à la Vierge.]]_  | |
 
