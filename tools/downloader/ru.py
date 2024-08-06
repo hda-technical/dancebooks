@@ -1,5 +1,6 @@
 import json
 import re
+import textwrap
 
 import bs4
 import requests
@@ -10,9 +11,12 @@ import utils
 INIT_REGEXP = re.compile(r'initDocview\((.*)\)')
 
 
-def get(id=id):
+def get_shpl(*, id):
 	main_page_url = f"http://elib.shpl.ru/ru/nodes/{id}"
-	main_page = bs4.BeautifulSoup(utils.get_text(main_page_url))
+	main_page = bs4.BeautifulSoup(
+		utils.get_text(main_page_url),
+		features="html.parser"
+	)
 	for script in main_page.find_all("script"):
 		if match := INIT_REGEXP.search(script.text.strip()):
 			metadata = json.loads(match.group(1))
@@ -23,8 +27,10 @@ def get(id=id):
 	last_page = pages[-1]["id"]
 	# Assume max_zoom to be equal to 8. Proper value can be found in metadata
 	dta_url = f"http://elib.shpl.ru/pages/[{first_page}:{last_page}]/zooms/8"
-	print(f"""
-Downloading from shpl.ru is not supported via this tool.
-Paste the following url into DownThemAll browser extension:
-{dta_url}
-""")
+	print(textwrap.dedent(
+		f"""
+		Downloading from shpl.ru is not supported via this tool.
+		Paste the following url into DownThemAll browser extension:
+		{dta_url}
+		"""
+	).strip())
