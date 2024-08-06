@@ -11,8 +11,11 @@ PREVIEW_URL_REGEXP = re.compile(r"https://www.prlib.ru/sites/default/files/book_
 
 
 def _detect_identifiers(book_id):
-	html = utils.get_text(f"https://www.prlib.ru/item/{book_id}")
-	soup = bs4.BeautifulSoup(html, "html.parser")
+	book_url = f"https://www.prlib.ru/item/{book_id}"
+	soup = bs4.BeautifulSoup(
+		utils.get_text(book_url),
+		features="html.parser",
+	)
 	preview_url = soup.find("meta", attrs={"property": "og:image"})["content"]
 	if m := PREVIEW_URL_REGEXP.match(preview_url):
 		primary_id, secondary_id = m.group(1, 2)

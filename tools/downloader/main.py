@@ -571,8 +571,11 @@ def	vwml(id):
 	book from www.vwml.org/topics/historic-dance-and-tune-books
 	"""
 	main_url = f"https://www.vwml.org/topics/historic-dance-and-tune-books/{id}"
-	main_markup = get_text(main_url)
-	soup = bs4.BeautifulSoup(main_markup, "html.parser")
+	
+	soup = bs4.BeautifulSoup(
+		get_text(main_url),
+		features="html.parser",
+	)
 	output_folder = make_output_folder("vwml", id)
 	for page, thumbnail in enumerate(soup.find_all("img", attrs={"class": "image_thumb"})):
 		thumbnail_url = thumbnail.attrs["src"]
