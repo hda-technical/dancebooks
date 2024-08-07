@@ -270,12 +270,12 @@ def de_mv(id):
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `335368`)", required=True)
 @click.option("--page", help="Download specified (zero-based) page only", required=False, type=int, default=None)
-def prlib(id, page):
+def ru_prlib(id, page):
 	"""
 	book from www.prlib.ru
 	"""
-	import prlib
-	prlib.get(id, page)
+	import ru
+	ru.get_prlib(id=id, page=page)
 
 
 @main.command()
@@ -454,12 +454,12 @@ def makAt(id):
 
 @main.command()
 @click.option("--id", help="Id of the image to be downloaded (e. g. `mw61074`)", required=True)
-def npg(id):
+def uk_npg(id):
 	"""
 	single image from www.npg.org.uk
 	"""
-	import npg
-	npg.get(id)
+	import uk
+	uk.get_npg(id=id)
 
 
 @main.command()
@@ -717,22 +717,22 @@ def fulda(id):
 
 @main.command()
 @click.option("--id", help="Id of the image to be downloaded (e. g. `PR-INC-00000-A-00007-00002-00888-000-00420`)", required=True)
-def cambridge(id):
+def uk_cambridge(id):
 	"""
 	image from images.lib.cam.ac.uk
 	"""
-	import cambridge
-	cambridge.get(id)
+	import uk
+	uk.get_cambridge(id=id)
 
 
 @main.command()
 @click.option("--id", help="Id of the image to be downloaded (e. g. `1273e6f5-ee79-4f6b-9014-a9065a93b9ff`)", required=True)
-def bodleian(id):
+def uk_bodleian(id):
 	"""
 	image from digital.bodleian.ox.ac.uk
 	"""
-	import bodleian
-	bodleian.get(id)
+	import uk
+	uk.get_bodleian(id=id)
 
 
 @main.command()
@@ -777,12 +777,12 @@ def ru_shpl(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `122cdc10-0032-0130-6561-58d385a7bc34`)", required=True)
-def nypl(id):
+def us_nypl(id):
 	"""
 	image set from digitalcollections.nypl.org
 	"""
-	import nypl
-	nypl.get(id)
+	import us
+	us.get_nypl(id=id)
 
 
 if __name__ == "__main__":
