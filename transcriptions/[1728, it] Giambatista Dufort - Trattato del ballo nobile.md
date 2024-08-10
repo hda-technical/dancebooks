@@ -1,20 +1,3 @@
-### TRATTATO 
-    DEL 
-    BALLO NOBILE 
-    DI 
-    GIAMBATISTA 
-    DUFORT 
-    INDIRIZZATO 
-    _All' Eccellenza_ 
-    DELLE SIGNORE DAME, E 
-    DE' SIGNORI CAVALIERI 
-    NAPOLETANI. 
-    IN NAPOLI MDCCXXVIII. 
-    Nella Stamperia di Felice Mosca. 
-***
-  _Con licenza de' Superiori._ 
-
-
 ### {Page} ECCELLENZE
 
 LE signorili, e gene[-]
@@ -127,7 +110,7 @@ addì 6. Novembre 1728.
 
 Dell' Ecc. VV. 
 
->>_Umiliss. divotiss., ed ebbligatiss. Servidoý vere_ 
+>> _Umiliss. divotiss., ed ebbligatiss. Servidoý vere_
 
 >> Giambatista Dufort.
 
@@ -374,7 +357,7 @@ Kal.Septembris, anno cIoIocc!!XXVIII!!.
 Em. V. 
 
 >> _Humill. ac Addictiss. Famulus_ 
->>
+
 >> Dominicus Vanalesta. 
 
 _Attenta supradicta relatione, Im[-]
@@ -426,7 +409,7 @@ Agosto 1728.
 Di V.E. 
 
 >> _Umiliss. e Devotiss. Servidore_
->>
+
 >> Domenico Gentile. 
 
 _Visa relatione imprimatur, & in 
@@ -441,121 +424,6 @@ _Provisum per S.E. Neap_. 27. _Augusti_
 1728. 
 
 >> Mastellonus. 
-
-### {Page} INDICE 
-    DE' CAPITOLI.
-
-***
-
-Cap.I. _Del Ballo, e delle parti, che 
-lo compongono_. pag. 1  
-
-Cap.ii. _Delle Positure de' Piedi_. 4  
-
-Cap.iii. _Dell' Equilibrio del Cor[-]
-po_. 11
-
-Cap.iv. _De'Movimenti del Corpo_. 16
-
-Cap.v. _Della Cadenza_. 20
-
-Cap.vi. _De' Passi del Ballo Nobi[-]
-le_. 25
-
-Cap.vii. _Dichiarazione de' segni, che 
-si trovano nelle Figure de' Pas[-]
-si_. 29
-
-Cap.viii. _Del Passo Semplice, o Na[-]
-turale_. 36
-
-Cap.ix. _Del Passo Picgato, e Rial[-]
-zato_. 38
-
-Cap.x. _Della Pirola_. 39
-
-Cap.xi. _Del Passo Saltante_. 44
-
-Cap.xii. _Del Passo Gittato_. 46
-
-Cap.xiii. _Del Passo Mezzo gittato_. 47
-
-{Page} Cap.xiv. _Del Passo Mezzo tron[-]
-co_. 48
-
-Cap.xv. _Del Passo Tronco_. 50
-
-Cap.xvi. _Del Passo Sfuggito_. 53
-
-Cap.xvii. _Del Passo Scacciato_. 55
-
-Cap.xviii. _Del Fioretto_. 57
-
-Cap.xix. _Del Contrattempo_. 64
-
-Cap.xx. _Del Mezzo contrattem[-]
-po_. 66
-
-Cap.xxi. _Del Passo di Rigodone_. 68
-
-Cap.xxii. _Del Passo di Sissone_. 71
-
-Cap.xxiii. _Del Passo Unito_. 74
-
-Cap.xxiv. _Del Passo di Gagliarda_. 76
-
-Cap.xxv. _Del Passo Grave_. 77
-
-Cap.xxvi. _Del Passo Bilanciato_. 80
-
-Cap.xxvii. _Del Passo Cadente_. 83
-
-Cap.xxviii. _Della Sdrucciolata_. 86
-
-Cap.xxix. _Del Passo Staccato_. 88
-
-Cap.xxx. _Del Giro della Gamba, 
-Battimento del Piede, e de' Movi[-]
-menti del Ginocchio, da' Franzesi 
-detto Balonné_. 90
-
-Cap.xxxi. _Del Movimento delle 
-Braccia_. 93
-
-Cap.xxxii. _Della Riverenza_. 100
-
-Cap.xxxiii. _Della Figura_. 105
-
-{Page} Cap.xxxiv. _Avvertimenti generali 
-a coloro, che vogliono perfetta[-]
-mente imprendere il Ballo Nobi[-]
-le_. 109
-***
-
-Cap.i. _Del Minuetto, e delle parti, 
-che lo compongono_. 117
-
-Cap.ii. _Del Passo del Minuetto_. 121
-
-Cap.iii. _Del Movimento delle Brac[-]
-cia del Minuetto_. 130
-
-Cap.iv. _Della Cadenza del Minuet[-]
-to_. 133
-
-Cap.v. _Della Figura del Minuet[-]
-to_. 136
-
-Cap.vi. _D'alcuni altri passi, ed orna[-]
-menti, co'quali si può rendere più 
-leggiadro il Minuetto_. 143
-
-***
-
-_Della Contradanza_. 150
-
-_Delle Riverenze fuor della Danza_. 
-156
 
 ### {1} TRATTATO
     DEL
@@ -1234,33 +1102,25 @@ ti.
 _I Passi del Ballo Nobile sono 
 i seguenti._
 
-| Semplice, o Natu[-]
-rale. |  _Simple, ou Natu[-]
-rel._ |
+| Semplice, o Naturale. |  _Simple, ou Naturel._ |
 | ----------------------------- | ------------------------------ |
-|Piegato,e Rialza[-]
-to. | _Plié, & Relevé._ |
+|Piegato,e Rialzato. | _Plié, & Relevé._ |
 | Pirola. | _Piroüette._ |
 | Saltante. | _Sauté._ |
 | Gittato. | _Jetté._ |
 | Mezzo Gittato. | _Demi-Jetté._ |
 | Mezzo Tronco. | _Demi-Coupé._ |
 | Tronco. | _Coupé._ |
-| Sfuggito. | _Eschapé, ou Sail[-]
-li._ |
+| Sfuggito. | _Eschapé, ou Sailli._ |
 | Scacciato. | _Chassé._ |
-| Fioretto. |  _De Bouréé, ou 
-Fleuret._ |
-{28} | Contratempo. | _Contre[-]
-temps._ |
-| Mezzo Contrat[-]
-tempo. | _Demi-Contretemps._ |
+| Fioretto. |  _De Bouréé, ou Fleuret._ |
+| {28} Contratempo. | _Contretemps._ |
+| Mezzo Contrattempo. | _Demi-Contretemps._ |
 | Di Rigodone. | _De Rigaudon._ |
 | Di Sissone. | _De Sissonne._ |
 | Unito. | _Assemblé._ |
 | Di Gagliarda. | _De Gagliarde._ |
-| Grave. | _Grave,ou de Cou[-]
-rante._ |
+| Grave. | _Grave,ou de Courante._ |
 | Bilanciato. | _Balancé._ |
 | Cadente. | _Tombé._ |
 | La Sdrucciolata. | _Glissade._ |
