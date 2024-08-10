@@ -3395,7 +3395,7 @@ with the right Foot, is sideways, the same Way, and receives the
 Body[[first upon the Toe and afterwards upon the Heel. See in some Measure the second Figure in Plate VI. and second Figure in Plate X]], which it supports, 'till the third or fourth Note is expir[-]
 ed[[See the Point or first Figure in Plate VI]], according to the Time in which it is done, that is, whe[-]
 ther it be of triple or common; upon which the last Step or _light 
-Stamp_ is made, the same Way crossing before the right[[See the second Figure in Plate XI, with 
+Stamp_ is made, the same Way crossing before the right[[See the second Figure in Plate XI]], with 
 the Knees bent in readiness to proceed to the _Chassee_ following, 
 which is performed in like Manner, but on the contrary Foot.
 
@@ -4296,7 +4296,7 @@ whole Round, the left Foot which was upon the _Point_ is taken
 up from the Ground, turning quite round to the left Hand in 
 the Air, with the Leg or whole Quarter extended in the Air, 
 the Toe pointed, and Knee stiff, as in the circular Motion, 
-about half a Foot from the Floor[[See the first Figure in Plate XV. If with the other Foot, see the second Figure in Plate I, the second Figure in Plate XV, the second Figure in Plates IV and VI, and lastly the second Figure in the aforesaid Plate XV). The Body, at the very Juncture 
+about half a Foot from the Floor[[See the first Figure in Plate XV. If with the other Foot, see the second Figure in Plate I, the second Figure in Plate XV, the second Figure in Plates IV and VI, and lastly the second Figure in the aforesaid Plate XV]]. The Body, at the very Juncture 
 the Rise or Spring is given, rises upon the Toe or Instep, as erect 
 as a _Pyramid_, and turns round along with it, finishing to the up[-]
 per Part of the Room as at first, only with the Toe in the Air; 
