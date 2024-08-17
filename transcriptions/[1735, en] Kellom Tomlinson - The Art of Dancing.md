@@ -1,36 +1,3 @@
-THE
-ART
-OF
-DANCING[[Книга 1744 года ничем не отличается от опубликованной в 1735 году, за исключением незначительных добавленных слов во вступительной части. Ошибки первой публикации не исправлены во второй. Нумерация страниц осталась неизменной (то есть это тот же набор), даже несмотря на то, что во втором издании картинки сосредоточены не в конце книги, а распределены равномерным слоем по всей книге.]]
-Explained by
-READING and FIGURES;
- 
-Whereby the
-M!!ANNER!! of Performing the STEPS
-IS MADE EASY
-By a N!!EW!! and F!!AMILIAR!! METHOD:
- 
-Being the
-ORIGINAL WORK
-First Design'd in the YEAR 1724,
-And now Published by
-_KELLOM TOMLINSON_, Dancing-Master.
- ***
-In TWO BOOKS.
-***
-—_Tulit_ alter _Honores_.
- 
-_LONDON:_[[вариант 1744: 
-The SECOND EDITION
-LONDON.
-Printed for the AUTHOR:
-And are to be had at his House the Red and Gold Flower Pot in Great Ormond-street, the End next Lamb’s-Conduit.
-MDCCXLIV.]]
-Printed for the AUTHOR:
-And are to be had of him, at the Red and Gold Flower Pot next Door to EDWARDS's Coffee-House, over against the Bull and Gate, in High-Holbourn.
-***
-MDCCXXXV.
-
 {Page} The F!!IRST!! B!!OOK!! treats of the beautiful Attitudes or Postures of S!!TANDING!!, the 
 different Positions from whence the S!!TEPS!! of D!!ANCING!! are to be taken and performed; 
 and likewise of the Manner of W!!ALKING!! gracefully. The several Sorts of B!!OWS!! and 
@@ -65,7 +32,7 @@ have hereunto set our Hands this twelfth Day of_ February 1728.
 >> H!!ENRY!! C!!AREY!!, _Master of Music_.
 
 {Page} To the R!!IGHT!! H!!ONOURABLE!!
-C_ATHERINE_
+_CATHERINE_
 Viscountess FAUCONBERG.
 
 M!!ADAM!!,
@@ -136,9 +103,10 @@ all Respect and Esteem,
     LIST
     OF THE
     SUBSCRIBERS NAMES.
+
 ***
  
-N. B. _This_ + _Mark shews that the Subscriber, before whose Name it is placed, 
+N. B. _This_ ✝ _Mark shews that the Subscriber, before whose Name it is placed, 
 died while this Work has been carrying on._
  
 ### A.
@@ -157,7 +125,7 @@ shire _Bart_.
 
 William Andrews _Esq_;
 
-+ Mrs. Eleanor Andrews.
+✝ Mrs. Eleanor Andrews.
 
 _Mr._ A. Labbé, _Dancing-Master to their 
 Royal Highnesses the young Princesses._
@@ -171,7 +139,7 @@ the County of_ Worcester, _Bart_.
 
 _The Lady_ Blount.
 
-+ _Sir_ William Blacket, _of_ NewCastle, _Bart_.
+✝ _Sir_ William Blacket, _of_ NewCastle, _Bart_.
 
 John Basket, _Esq_; _three Setts_.
 
@@ -182,7 +150,7 @@ Edward Brett: Bainbrigg _of_ Derby _Esq_;
 {Page} Ed. Bigland _of_ Long W--n _near_ Lough[-]
 borough _Esq_;
 
-+ William Bourke, _Gent_.
+✝ William Bourke, _Gent_.
 
 _Miss_ Bullar.
 
@@ -221,10 +189,10 @@ Castlehaven.
 _The right Honourable_ Elizabeth, _Coun[-]
 tess of_ Castlehaven.
 
-+ _The Right Honourable_ Ann, _Countess 
+✝ _The Right Honourable_ Ann, _Countess 
 Dowager of_ Clanrickard.
 
-+ _The right Honourable the Lady_ Frances 
+✝ _The right Honourable the Lady_ Frances 
 Clifton.
 
 _Sir_ Richard Corbet, _Bart_.
@@ -234,7 +202,7 @@ byshire.
 
 _Mrs_. Anna-Maria Calmady, _of_ Devon.
 
-+ Francis Cottington, _of_ Founthill-Gif[-]
+✝ Francis Cottington, _of_ Founthill-Gif[-]
 fard, _Esq_;
 
 W— C—, _Esq_;
@@ -302,7 +270,7 @@ conberg.
 _The Right Hon_. Catherine, _Viscoun[-]
 tess_ Fauconberg.
 
-+ _The Lady_ Fust _of_ Hill _near_ Gloucester.
+✝ _The Lady_ Fust _of_ Hill _near_ Gloucester.
 
 C. Fleetwood, _of_ Gerards-Bromley _in_ 
 Staffordshire, _Esq_;
@@ -317,9 +285,9 @@ H. Gaylor, _M_. _D_.
 
 _Mr_. Leech Glover, _Dancing-Master_.
  
- ### {Page} H.
+### {Page} H.
  
- + _The Right Honourable the Lady_ Mary 
+✝ _The Right Honourable the Lady_ Mary 
 Howard, _of_ Worksop.
 
 _The Hon. Mrs_. Winifrede Howard, _of_ 
@@ -341,7 +309,7 @@ same County_, _Esq_;
 
 M. Hare _Esq_;
 
-+ Richard Holland, _Esq_;
+✝ Richard Holland, _Esq_;
 
 William Herbert, _Gent_.
 
@@ -367,7 +335,7 @@ _Mr_. Joseph Jackson, _Dancing-Master_.
  
 _The Right Hon. the Lord_ Kingsale.
 
-+ _The Right Hon. the Lady_ Frances 
+✝ _The Right Hon. the Lady_ Frances 
 Keightley.
 
 _Mr_. Ascough Kirk, _of_ Stamford, _Dan[-]
@@ -419,7 +387,7 @@ Theatre in_ Dublin.
  
 ### N.
  
-+ _His Grace_ Thomas _late Duke of_ Nor[-]
+✝ _His Grace_ Thomas _late Duke of_ Nor[-]
 folk.
 
 _His Grace_ Edward _Duke of_ Norfolk.
@@ -440,7 +408,7 @@ Trent_, Staffordshire.
 Joseph Offley, _of_ Norton-hall, Derby, 
 _Esq_;
 
-+ Thomas O'Brien, _Esq_;
+✝ Thomas O'Brien, _Esq_;
  
 ### {Page} P.
  
@@ -448,7 +416,7 @@ _His Grace_ William _Duke of_ Powis.
 
 _Her Grace_ Margaret _Duchess of_ Portland.
 
-+ J. Pearson, _M. D_.
+✝ J. Pearson, _M. D_.
 
 _Mr_. P. P. _of_ Litchfield.
 
@@ -458,7 +426,7 @@ _Mrs_. Mary Peacock.
 
 _Mrs_. Charlott Pigott.
 
-+ _Mr_. Edmond Pemberton _Dancing-
+✝ _Mr_. Edmond Pemberton _Dancing-
 Master_.
  
 ### R.
@@ -477,9 +445,9 @@ Richard Russel _Gent_.
  
 ### S.
  
-+ _The right Hon_. William _Earl of_ Stafford.
+✝ _The right Hon_. William _Earl of_ Stafford.
 
-+ _The right Hon_. Ann _Countess of_ Stafford.
+✝ _The right Hon_. Ann _Countess of_ Stafford.
 
 _The Right Hon_. Mary, _Countess of_ 
 Shrewsbury.
@@ -501,7 +469,7 @@ ty of_ Derby _Esq_;
 _Miss_ Elizabeth Stanley _Daughter to 
 Sir_ Edward Stanley, _Bart_.
 
-+ _Mrs_. Elizabeth Smith _of_ Great 
+✝ _Mrs_. Elizabeth Smith _of_ Great 
 James Street.
 
 Thomas Southcote, _Esq_;
@@ -511,7 +479,7 @@ Lincolnshire, _Esq_;
 
 J. Strickland, _Gent_.
 
-+ William Somerset, _Gent_.
+✝ William Somerset, _Gent_.
 
 Richard Stanley, _Gent_.
 
@@ -532,7 +500,7 @@ _The Hon_. _Mrs_ Ann Thompson.
 
 Wilbraham Tufton, _Esq_;
 
-+ John Tufton, _Esq_;
+✝ John Tufton, _Esq_;
 
 _Mr_. James Tully, _Dancing-Master_.
 
@@ -558,7 +526,7 @@ County _of_ Lincoln, _Esq_;
 
 _Mrs_. Alethea Walpole.
 
-+ _Mrs_. Mary Walpole.
+✝ _Mrs_. Mary Walpole.
 
 Ernle Washbourne, _of_ Washbourne, 
 _in_ Worcestershire, _Esq_;
@@ -792,121 +760,7 @@ vent which Confusion for the future, I shall acknowledge my self obli[-]
 ged to those, who, instead of either singly, shall be pleased to call 
 me by both conjunctly,_ Kellom Tomlinson.
 
-### {Page} THE CONTENTS.
-
-### BOOK I.
-
-I. O_F_ Standing. page 3
-
-II. _Of_ Walking. 5
-
-III. _Of_ Bowing, _or the different Sorts of_ Honours. 7
-
-IV. _Of the_ Dancing-Room. 18 
-
-V. _Of the_ Coupee _of one Step or_ Half Coupee. 25
-
-VI. _Of the_ Coupee. 26
-
-VII. _Of the_ Coupee _with two Movements._ 27
-
-VIII. _Of the_ Bouree-Step _or_ Fleuret. 29
-
-IX. _Of the_ Bouree _with two Movements._ 32
-
-X. _Of the_ Pasgrave _or_ March. 33
-
-XI. _Of the_ Point _and_ March. 34
-
-XII. _Of the_ Spring _or_ Bound. 36
-
-XIII. _Of the_ Close _or_ Jump. 37
-
-XIV. _Of the_ Spring _or_ Leap. 39
-
-XV. _Of the_ Rigadoon-Step _of one Spring, open in the same Place and_ Close. 41
-
-XVI. _Of the_ Rigadoon-Step _of two Springs or_ Sissonne. 44
-
-XVII. _Of the_ Galliard _and_ Falling Step. 48
-
-XVIII. _Of the_ Bouree _with a_ Bound. 52 
-
-XIX. _Of the_ Slip _before and then behind, or_ Slip _behind and afterwards before, 
-and_ Half Coupee _sideways._ 54
-
-XX. _Of the_ Hop _or_ Contretemp. 58
-
-XXI. _Of the_ Chassee _or_ Driving Step. 64
-
-XXII. _Of the_ Chassee _or_ Driving Step _of two Movements or_ Bounding Coupees. 71
-
-XXIII. _Of the_ Beaten Coupee _or_ Hop. 74
-
-XXIV. _Of the_ Chassee _or_ Driving Step, _of three_ Springs _in the same Place, from 
-the third Position._ 77
-
-XXV. _Of the_ Flying Chassee _or_ Driving Step _backwards, with a_ Close _and_ Cou[-]
-pee _to a Measure._ 79
-
-XXVI. _Of the_ Hop _of two Movements, from the fifth Position round in two half 
-Turns._ 81
-
-XXVII. _Of the_ Chaconne _or_ Passacaille Step. 83
-
-XXVIII. _Of the_ Hop _and two_ Chassees _or_ Drives _round in the same Place._ 84
-
-{Page} XXIX. _Of the_ Fall, Spring _with both Feet at the same Time, and_ Coupee 
-_to a Measure._ page 86
-
-XXX. _Of the_ Close _beating before and falling behind in the third Position,_ upright 
-Spring _changing to the same before, and_ Coupee _to a Measure._ 88
-
-XXXI. _Of the_ Pirouette. 90
-
-XXXII. _Of the_ Pirouette _introduced by a_ Coupee. 96
-
-XXXIII. _Of the_ Bouree _before and behind, and behind and before, advancing in 
-a whole Turn._ 98
-
-### BOOK. II.
-
-I. O_F the_ Minuet Step. 130[[опечатка, должно быть 103]]
-
-II. _Of the_ Hop _in the_ Minuet. 113
-
-III. _Of the_ Double Bouree _upon the same Place._ 115
-
-IV. _Of the_ Balance. 118
-
-V. _Of the two_ Coulees _or_ Marches. 119
-
-VI. _Of the_ Slip _behind and_ Half Coupee _forwards to the right and left Hands, each 
-to a_ Minuet Step. 120
-
-_And of_ Dancing _the_ Minuet _in general._ 124
-
-VII. _Of the Figure of_ S _Reversed or second Division._ 126
-
-VIII. _Of_ Presenting _the_ right Arm _or third Part._ 128
-
-IX. _Of the fourth Division or_ Presenting _of the_ left Arm. 131
-
-X. _Of the fifth Division or second_ S. 133
-
-XI. _Of the sixth Division or_ Presenting _of_ both Arms _and Conclusion._ 135
-
-XII. _Of the_ Mistakes _in_ Dancing _of a_ Minuet, _with their_ Ocasions _and_ Rules 
-_to prevent them._ 137
-
-XIII. _Of_ Time, _or some Account what_ Time _is; with Rules to be observed in Keep[-]
-ing it._ 141
-
-XIV. _Of the Movement of the Arms in_ Dancing. 152
-
-XV. _Of_ Country Dancing. 156
-
-{Page} An Explanation of the _Characters_ or _Steps_ contained in the Tables 
+{Page} [[Table of contents omitted in this transcription]] An Explanation of the _Characters_ or _Steps_ contained in the Tables 
 of Plate E, in the exact Order they are treated of in this Work, 
 shewing the different Ways in which the said Steps are performed 
 whether forwards, backwards, sideways, or round, _&c_. in 
@@ -916,7 +770,7 @@ Idea of the Steps, but also be very entertaining to the curious
 Reader.
 
 ### The Steps treated of in BOOK I.
- 
+
 TABLE I. The _HALF COUPEE._
 
 FIG. 1. _Forwards with either Foot._
@@ -6290,7 +6144,9 @@ The left Side.
 The right Side.
 
 The lower End.
+
 ### The Art of Dancing.
+
 The 
 half Coupee
 tho’ avery agree
