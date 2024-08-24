@@ -115,6 +115,9 @@
             
             // use soeg.kb.dk permalinks instead
             "rex.kb.dk",
+            
+            // use kramerius5.nkp.cz instead
+            "kramerius.nkp.cz",
         ],
         "blocked_domains_http": [
             "archive.org",
