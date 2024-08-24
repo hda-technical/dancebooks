@@ -106,12 +106,22 @@ def be_kbr(id, volume):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `fad2738c-c223-4a68-8044-c9fd73c8efd6`)", required=True)
-def cz_kramerius(id):
+def cz_mzk(id):
 	"""
-	book from www.digitalniknihovna.cz
+	book from www.digitalniknihovna.cz/mzk
 	"""
 	import cz
-	cz.get_kramerius(id=id)
+	cz.get_mzk(id=id)
+
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `d725b6c0-85ff-11dc-a0f9-000d606f5dc6`)", required=True)
+def cz_nkp(id):
+	"""
+	book from www.digitalniknihovna.cz/nkp
+	"""
+	import cz
+	cz.get_nkp(id=id)
 
 
 @main.command()
