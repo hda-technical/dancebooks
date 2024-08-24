@@ -231,17 +231,6 @@ def uniDuesseldorf(first, last):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. 'PPN722203519')", required=True)
-def uniGoettingen(id):
-	"""
-	book from gdz.sub.uni-goettingen.de
-	"""
-	manifest_url = f"https://manifests.sub.uni-goettingen.de/iiif/presentation/{id}/manifest"
-	output_folder = make_output_folder("goettingen", id)
-	iiif.download_book(manifest_url, output_folder)
-
-
-@main.command()
 @click.option("--volume", type=int, help="Volume to be downloaded (e. g. '24')", required=True)
 @click.option("--page", type=int, help="Page number to be downloaded (e. g. '247')", required=True)
 def encyclopedie(volume, page):
