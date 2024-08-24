@@ -300,32 +300,32 @@ def nga(id):
 
 @main.command()
 @click.option("--id", help="Image id to be downloaded (e. g. `grafik/uh-4f-47-00192`)", required=True)
-def habImage(id):
+def de_hab_image(id):
 	"""
 	single image from diglib.hab.de or kk.haum-bs.de
 	"""
-	import hab
-	hab.get_image(id)
+	import de
+	de.get_hab_image(id=id)
 
 
 @main.command()
 @click.option("--id", help="Book id to be downloaded (e. g. `mss/120-1-extrav`)", required=True)
-def habBook(id):
+def de_hab_book(id):
 	"""
 	book from diglib.hab.de
 	"""
-	import hab
-	hab.get_book(id)
+	import de
+	de.get_hab_book(id=id)
 
 
 @main.command()
 @click.option("--id", help="Book id to be downloaded (e. g. `Mus-Ms-1827`)", required=True)
-def darmstadt(id):
+def de_darmstadt(id):
 	"""
 	book from tudigit.ulb.tu-darmstadt.de
 	"""
-	import darmstadt
-	darmstadt.get(id)
+	import de
+	de.get_darmstadt(id=id)
 
 
 @main.command()
@@ -707,12 +707,12 @@ def de_haab(*, first_id, second_id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `PPN446487767`)", required=True)
-def fulda(id):
+def de_fulda(id):
 	"""
 	book from fuldig.hs-fulda.de
 	"""
-	import fulda
-	fulda.get(id)
+	import de
+	de.get_fulda(id=id)
 
 
 @main.command()
@@ -737,12 +737,12 @@ def uk_bodleian(id):
 
 @main.command()
 @click.option("--id", help="Id of the image to be downloaded (e. g. `PPN1748520709`)", required=True)
-def goettingen(id):
+def de_goettingen(id):
 	"""
 	book from gdz.sub.uni-goettingen.de
 	"""
-	import goettingen
-	goettingen.get_book(id)
+	import de
+	de.get_goettingen(id=id)
 	
 	
 @main.command()

@@ -1,5 +1,5 @@
-import os
 import http
+import os
 
 import iiif
 import utils
@@ -12,6 +12,45 @@ def get_bsb(*, id):
 	manifest_url = f"https://api.digitale-sammlungen.de/iiif/presentation/v2/{id}/manifest"
 	output_folder = utils.make_output_folder("bsb", id)
 	iiif.download_book_fast(manifest_url, output_folder)
+
+
+def get_darmstadt(*, id):
+	output_folder = utils.make_output_folder("darmstadt", id)
+	manifest_url = f"http://tudigit.ulb.tu-darmstadt.de/show/iiif/{id}/manifest.json"
+	iiif.download_book_fast(manifest_url, output_folder)
+
+
+def get_fulda(*, id):
+	output_folder = utils.make_output_folder("fulda", id)
+	for page in range(1, 1000):
+		# it looks like Fulda library does not use manifest.json, hence it is not possible to guess number of pages in the book in advance
+		image_url = f"https://fuldig.hs-fulda.de/viewer/rest/image/{id}/{page:08d}.tif/full/10000,/0/default.jpg"
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
+		print(f"Downloading page {page} to {output_filename}")
+		try:
+			utils.get_binary(output_filename, image_url)
+		except ValueError:
+			break
+
+
+def get_goettingen(*, id):
+	# No manifest could be found, just iterate over pages while we can
+	output_folder = utils.make_output_folder("goettingen", id)
+	for page in range(1, 1000):
+		page_url = f"https://gdz.sub.uni-goettingen.de/iiif/image/gdz:{id}:{page:08d}/full/max/0/default.jpg"
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if not os.path.isfile(output_filename):
+			try:
+				print(f"Downloading page #{page:04d} from {page_url}")
+				utils.get_binary(output_filename, page_url)
+			except ValueError:
+				print(f"Got HTTP error on page #{page:04d}. Considering download as complete")
+				return
+		else:
+			print(f"Skip existing page #{page:08d}")
 
 
 def get_haab(*, first_id, second_id):
@@ -48,6 +87,59 @@ def get_haab(*, first_id, second_id):
 			base_url=base_url,
 			output_filename=output_filename,
 		)
+
+
+def get_hab_book(*, id):
+	output_folder = utils.make_output_folder("hab", id)
+	page = 0
+	for page in range(1, 1000):
+		url = f"http://diglib.hab.de/{id}/max/{page:05d}.jpg"
+		output_filename = utils.make_output_filename(output_folder, page=page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:05d}")
+			continue
+		try:
+			print(f"Downloading page #{page:05d} from {url}")
+			utils.get_binary(output_filename, url)
+		except ValueError:
+			break
+
+
+def get_hab_image(*, id):
+	# hab.de site does not use any metadata and just sends unnecessary requests to backend
+	# Using head requests to get maximum available zoom and
+	class UrlMaker:
+		def __init__(self, zoom):
+			self.zoom = zoom
+
+		def __call__(self, tile_x, tile_y):
+			for tile_group in [0, 1, 2]:
+				probable_url = f"http://diglib.hab.de/varia/{id}/TileGroup{tile_group}/{self.zoom}-{tile_x}-{tile_y}.jpg"
+				head_response = requests.head(probable_url)
+				if head_response.status_code == 200:
+					return probable_url
+			return None
+
+	MAX_ZOOM = 10
+	TILE_SIZE = 256
+	max_zoom = None
+	for test_zoom in range(MAX_ZOOM + 1):
+		if UrlMaker(test_zoom)(0, 0) is not None:
+			max_zoom = test_zoom
+		else:
+			# current zoom is not available - consider previous one to be maximal
+			break
+	assert(max_zoom is not None)
+	print(f"Guessed max_zoom={max_zoom}")
+	url_maker = UrlMaker(max_zoom)
+	tiles_number_x = utils.guess_tiles_number_x(url_maker)
+	print(f"Guessed tiles_number_x={tiles_number_x}")
+	tiles_number_y = utils.guess_tiles_number_y(url_maker)
+	print(f"Guessed tiles_number_y={tiles_number_y}")
+
+	policy = utils.TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
+	output_filename = utils.make_output_filename(id.replace("/", "."))
+	utils.download_and_sew_tiles(output_filename, url_maker, policy)
 
 
 def get_karlsruhe(*, id):
