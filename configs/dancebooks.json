@@ -116,8 +116,11 @@
             // use soeg.kb.dk permalinks instead
             "rex.kb.dk",
             
-            // use kramerius5.nkp.cz instead
+            // use www.digitalniknihovna.cz instead
+            "kramerius.mzk.cz",
             "kramerius.nkp.cz",
+            "kramerius5.mzk.cz",
+            "kramerius5.nkp.cz",
         ],
         "blocked_domains_http": [
             "archive.org",
