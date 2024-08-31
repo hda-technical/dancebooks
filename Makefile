@@ -21,16 +21,16 @@ translations:
 configs-install: configs-install-production configs-install-testing;
 
 configs-install-production:
-	#creating directory for logs
+	# creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
 	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME)
-	#installing uwsgi configs
+	# installing uwsgi configs
 	install --owner=www-data --group=www-data configs/uwsgi.production.conf /etc/uwsgi/apps-available/$(NAME).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME).conf /etc/uwsgi/apps-enabled/$(NAME).conf
-	#creating upstart/systemd service
+	# creating upstart/systemd service
 	install --mode=644 configs/systemd.production.conf /etc/systemd/system/$(NAME).service
 	$(shell systemctl daemon-reload && systemctl enable $(NAME).service && systemctl stop $(NAME).service; systemctl start $(NAME).service || true)
-	#generating custom dh_param.pem if needed
+	# generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_PRODUCTION)" ]; \
 	then \
 		echo "Generating custom dh_param at /tmp/dh_param.pem"; \
@@ -39,24 +39,23 @@ configs-install-production:
 		install --mode=600 --owner=www-data --group=www-data "/tmp/dh_param.pem" "$(DHPARAM_PRODUCTION)"; \
 		rm "/tmp/dh_param.pem"; \
 	fi
-	#installing nginx configs
-	install --owner=www-data --group=www-data configs/nginx.production.conf /etc/nginx/sites-available/$(NAME).conf
-	ln -sf /etc/nginx/sites-available/$(NAME).conf /etc/nginx/sites-enabled/$(NAME).conf
+	# installing nginx configs
+	install --owner=www-data --group=www-data configs/nginx.production.conf /etc/nginx/sites-enabled/$(NAME).conf
 	service nginx reload
-	#installing logrotate configs (no reload / restart is required)
+	# installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.production.conf /etc/logrotate.d/$(NAME).conf
 
 configs-install-testing:
-	#creating directory for logs
+	# creating directory for logs
 	install --mode=755 --owner=www-data --group=www-data --directory /var/log/uwsgi/app
 	install --mode 755 --owner www-data --group=www-data --directory /var/log/$(NAME_TESTING)
-	#installing uwsgi configs
+	# installing uwsgi configs
 	install --owner=www-data --group=www-data configs/uwsgi.testing.conf /etc/uwsgi/apps-available/$(NAME_TESTING).conf
 	ln -sf /etc/uwsgi/apps-available/$(NAME_TESTING).conf /etc/uwsgi/apps-enabled/$(NAME_TESTING).conf
-	#creating upstart/systemd service
+	# creating upstart/systemd service
 	install --mode=644 configs/systemd.testing.conf /etc/systemd/system/$(NAME_TESTING).service
 	$(shell systemctl daemon-reload && systemctl enable $(NAME_TESTING).service && systemctl stop $(NAME_TESTING).service; systemctl start $(NAME_TESTING).service || true)
-	#generating custom dh_param.pem if needed
+	# generating custom dh_param.pem if needed
 	if [ ! -f "$(DHPARAM_TESTING)" ]; \
 	then \
 		echo "Generating custom dh_param at /tmp/dh_param.pem"; \
@@ -65,11 +64,10 @@ configs-install-testing:
 		install --mode=600 --owner=www-data --group=www-data "/tmp/dh_param.pem" "$(DHPARAM_TESTING)"; \
 		rm "/tmp/dh_param.pem"; \
 	fi
-	#installing nginx configs
-	install --owner=www-data --group=www-data configs/nginx.testing.conf /etc/nginx/sites-available/$(NAME_TESTING).conf
-	ln -sf /etc/nginx/sites-available/$(NAME_TESTING).conf /etc/nginx/sites-enabled/$(NAME_TESTING).conf
+	# installing nginx configs
+	install --owner=www-data --group=www-data configs/nginx.testing.conf /etc/nginx/sites-enabled/$(NAME_TESTING).conf
 	service nginx reload
-	#installing logrotate configs (no reload / restart is required)
+	# installing logrotate configs (no reload / restart is required)
 	install configs/logrotate.testing.conf /etc/logrotate.d/$(NAME_TESTING).conf
 
 docs:
