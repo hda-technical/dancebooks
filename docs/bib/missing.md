@@ -452,8 +452,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1911 | | Karnecik tancerza | `[Yoko]` | |
 | 1911 | | Samouczek tancow salonowych. Zebral i ulozyl salonowiec | `[Yoko]` | |
 | 1911 | И. И. Иванов | Новейший самоучитель бальных танцев | `[Yoko]` | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004983773) (desideratum) |
-| 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев | `[Yoko]` | |
-| 1912 | | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев<br/>_Второе издание_ | `[Yoko]` | |
+| 1912 | К. Б. Матсон<br>K. Matson | Dejas skola. Rokasgrahmata paschmahzibdi. Школа танцев | `[Yoko]` | |
 | 1912 | | Latwju tautas dejas<br/>_Латышские народные танцы_<br/>_Серийное издание_ | `[Yoko]` | |
 | 1912 | О. П. Светлов | Светский благовоспитанный молодой человек<br/>_Издание 5_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004805109) |
 | 1913 | Charles Louis Napoléon d'Albert | Dancing. Technical Encyclopaedia of the Theory and Practice of the Art of Dancing | `[Guillard, 1989]` | |

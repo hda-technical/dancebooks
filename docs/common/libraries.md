@@ -314,6 +314,18 @@ Excerpts from [Copyright, Permission, Acknowledgements and Data Protection](http
 >
 > York University Libraries
 
+## Latvijas Nacionālā bibliotēka
+
+Excerpts from [Digitization on Request] rules of the library and the [Copyright Law](https://likumi.lv/ta/en/en/id/5138-copyright-law) of the Republic.
+
+> Lietotajam ir tiesības saņemt darba digitālo kopiju no LNB krājuma materiāliem un lietot to,
+> ievērojot Latvijas Republikā spēkā esošos normatīvos aktus un Autortiesību likumu.
+
+---
+
+> Copyright shall be in effect for the entire lifetime of an author and for 70 years after the death of an author,
+> except for the cases specified in Section 37 of this Law.
+
 ## Biblioteca civica del comune del Rovereto
 
 **FREE DOWNLOADS WERE NOT PERMITTED.**
