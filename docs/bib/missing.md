@@ -752,8 +752,8 @@ _This part of the list is to joined with the general table_
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #01–06 + #25 | https://www.regencydances.org/paper000.php |
 | 2019-11-01 | `[Swaine]` | Andrew Swaine | List of historical sources | https://andrewswaine.uk/sources |
 | 2020-04-09 | `[Corbella]` | Maurizio Corbella | Brevi note sulla riproposta dei ballabili del "Carnevalone" ottocentesco a Milano | http://www.mauriziocorbella.it/carmi/800ballabili.html |
-| 2022-12-05 | `[Powers Free]` | Richard Powers | Freely available primary source scans | [Download page](https://www.richardpowers.com/free-downloads), [archive.org Wayback Machine](https://web.archive.org/web/20230000000000*/https://www.richardpowers.com/free-downloads) |
 | 2023-02-26 | `[Wiki: Tanz]` | | Wikisource on Tanz | [Listing page](https://de.wikisource.org/wiki/Tanz), [Changelog](https://de.wikisource.org/w/index.php?title=Tanz&action=history) |
+| 2024-09-16 | `[Powers Free]` | Richard Powers | Freely available primary source scans | [Download page](https://www.richardpowers.com/free-downloads), [archive.org Wayback Machine](https://web.archive.org/web/20230000000000*/https://www.richardpowers.com/free-downloads) |
 
 ## Bibliographies not yet consulted / consulted partially
 
