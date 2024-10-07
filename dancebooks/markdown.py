@@ -38,6 +38,7 @@ def make_transcription_renderer():
 	renderer = markdown.Markdown(
 		extensions=[
 			"markdown.extensions.tables",
+			MarkdownNoteExtension(),
 		],
 		output_format="xhtml5"
 	)
@@ -59,11 +60,6 @@ def make_transcription_renderer():
 		MarkdownAlignRight(renderer.parser),
 		name="align_right",
 		priority=1001,
-	)
-	renderer.parser.blockprocessors.register(
-		MarkdownNote(renderer.parser),
-		name="note",
-		priority=1002,
 	)
 	return _MtRenderer(renderer)
 
@@ -292,6 +288,24 @@ class WrappedHashHeaderProcessor(markdown.blockprocessors.BlockProcessor):
 		if wrapped:
 			h.text += "\n"
 			h.text += wrapped
+
+
+class MarkdownNoteExtension(markdown.extensions.Extension):
+	"""
+	This boilerplate code is needed to make MarkdownNote properly resettable
+	"""
+
+	def extendMarkdown(self, md):
+		self.rdr = MarkdownNote(md.parser)
+		md.registerExtension(self)
+		md.parser.blockprocessors.register(
+			self.rdr,
+			name="note",
+			priority=1002,
+		)
+
+	def reset(self):
+		self.rdr.reset()
 
 
 class MarkdownNote(markdown.blockprocessors.BlockProcessor):
