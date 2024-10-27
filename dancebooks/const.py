@@ -166,7 +166,7 @@ LONG_LANG_MAP = {
 META_INCOMPLETE = "incomplete"
 META_HAS_OWNER = "has_owner"
 
-#a structired pattern for file basename
+# structured pattern for file basename
 METADATA_PATTERN = r"(?:incomplete|[\w\s\-\&\+\.']+ copy)"
 FILENAME_REGEXP = re.compile(
 	# year: digits can be replaced by dashes
