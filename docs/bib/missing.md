@@ -679,25 +679,35 @@ _This part of the list is to joined with the general table_
 
 | Date | Author | Title | References | Links | Comment |
 | ---- | ------ | ----- | ---------- | ----- | ------- |
+| 168- | Jean-Baptiste Lully | aka _Airs de ballets et d'opéras_ | | [BNF](https://gallica.bnf.fr/ark:/12148/btv1b10508435s) | Только музыка, без хореографии. |
+| 1690 | Pierre Beauchamps et al. | Ballets des Iesuistes | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k103668z) | Только музыка, без хореографии. |
 | 1740 | Jean-Baptiste du Bos | Reflexions critiques sur la poesie et la peinture.<br/>_Chapitre sur les danses des anciens_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k6544468q/f252.image) | |
 | 1746 | Charles Batteux | Les beaux arts reduits a un même principe.<br/>_Section sur la musique et sur la danse_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k50428g/f275.image) | |
 | 1754–1778? | Carl Philipp Emanuel Bach | Einfall einen doppelten Contrapunct in der Octave von sechs Tacten zu machen ohne die Regeln davon zu wissen | `music: generator`<br/>`[Hedges, 1978]` | | Генератор камерной, не танцевальной музыки |
 | 1767? | Claude-Joseph Dorat | La déclamation théâtrale.<br/>_Chant quatrième. De la danse. Возможно, есть более ранние издания_ | `[Nouveau manuel, 1857, #37]` | [Google](https://books.google.com/books?id=NeHhNmFzRAUC) | |
+| 1768 | Jean-Jacques Rousseau | Dictionnaire de musique | | [BNF](https://gallica.bnf.fr/ark:/12148/btv1b8626119d) | Энциклопедия. |
 | 1788 | Michael Johann Friedrich Weideburg | Musikalisches Charten-Spiel ex g dur | `music: generator`<br/>`[Thielen, 2009]` | | Генератор камерной, не танцевальной музыки |
 | 1790 | François-Henri-Stanislas de L'Aulnaye | De la Saltation théâtrale, ou recherches sur l'origine, les progrès et les effets de la pantomime chez les anciens | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k5849412d) | |
 | 1795 | | Rügen einiger Mißbräuche und Inkonvenienzen unsers sogenannten philosophischen Jahrhunderts | `[Germanorum, 1914]` | [SLUB](http://nbn-resolving.de/urn:nbn:de:bsz:14-db-id3369230749) | Танцам посвящена лишь маленькая глава на страницах 72–73. |
 | 1796 | Taschenkalender mis Scennen aus Wiens neuesten Balleten auf das Jahr 1796 für Freunde der Tanzkunst und Mimick<br/>_Published in Wien by Mathias Ludwig_ | `[Germanorum, 1914]` | | Описания танцев нет, только гравюры с балетами. |
 | 1801 | Antonio Calegari | Gioco pitagorico musicale col quale potra ornuno, anco senza sapere di Musica, formarsi una seria quasi infinita di picciole Ariette, e Duettini pertutti li Caratteri, Rondo, Preghiere, Polacche, Cori, ec., il tutto coll-accompagnamento del Pianoforte o Arpa, o altri Strumenti | `music: generator`<br/>`[Wiki: Musikalisches Würfelspiel]`<br/>`[Hedges, 1978]`<br/>`[Thielen, 2009]` | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) | Генератор камерной, не танцевальной музыки |
 | 1802 | Johann Ferdinand Schlez | Kleine romantische Volksschriften<br/>_Tome 1, part 3: Schatzkästlein für junge Leute, die gerne tanzen_ | `[Germanorum, 1914]` | [HAAB](https://nbn-resolving.de/urn:nbn:de:gbv:32-1-10003271725) |
+| 1803 | Jean-Augustin Amar Du Rivier<br/>Louis François Jauffret | La gymnastique de la jeunesse | | [BNF](https://gallica.bnf.fr/ark:/12148/bd6t5336026x)<br/>[Google / BSB](https://books.google.rs/books?id=IelMAAAAcAAJ) | Книга про гимнастику, а не про танцы. |
+| 1804 | Johann Christoph Friedrich Guts Muths | Gymnastik für die Jugend | | [Google / BSB](https://books.google.rs/books?id=AKpAAAAAcAAJ) | Книга про гимнастику, а не про танцы. |
 | 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) | |
 | 1807 | Ferdinand Kringsteiner | Der Tanzmeister. Eine Posse mit Gesang in drey Aufzügen | `[Klemm #02]` | [Wien/EOD](https://search.books2ebooks.eu/Record/wbr_LQD0188828) | Это фарс с песнями. |
 | 1812 | Fil-adel-φια | Der Maskirte Ball am 3ten Februar 1812 | `[Germanorum, 1914]` | [BSB](https://nbn-resolving.de/urn:nbn:de:bvb:12-bsb10105043-6) | Это какая-то сатира, там рассказано исключительно про еду и напитки. |
+| 1814 | Александр Петрович Вельяшев | Описание праздника, данного в Москве 19 мая 1814 | | [SHPL](http://elib.shpl.ru/ru/nodes/23231) | Описание праздника, ничего про танцы нет. |
+| 1816 | | Le cle du caveau | | [RSL](https://search.rsl.ru/ru/record/01002068171) | Тексты песенок, некоторые про танцы. |
 | 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) | |
 | 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](https://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
+| 1835 | | Encyclopédie pittoresque de la musique | | [Google / UChicago](https://books.google.rs/books?id=SHhFAQAAMAAJ) | Содержит статью про _болеро_, но не более. |
+| 1851 | Hugo Rothstein | Die Gymnastik | | [Google / UGent](https://books.google.com/books?id=ShMUAAAAQAAJ) | Книга про гимнастику, а не про танцы. |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) | Какая-то искусствоведческая хрень |
 | 1857 | F. von Nonsens (pseudonym) | Der Opernhausball | `[Germanorum, 1914]` | [Google / BL](https://books.google.com/books?vid=BL:A0018896359) | Романтическая поэма про бал |
 | 1860 | Rigolboche (pseudonym)<br/>Amelia Marguerite Badel (real name) | Mémoirs de Rigolboche | `DdM:4245` | [UBS](https://ubsearch.sbg.ac.at/permalink/f/16hc907/USB_alma21142154190003341)<br/>[archive.org UToronto](https://archive.org/details/mmoiresderigol00blumuoft) | Мемуары, а не танцевальный учебник. |
 | 1865 | Hans Leonhard Schaeufelein | La danse des noces<br/>_Published in Paris_ | `[Germanorum, 1914]` | [Google / Lausanne](https://books.google.com/books?id=lDs_AAAAcAAJ) | Сборник гравюр очередного немца, работавшего в жанре _свадебные танцы_ |
+| 1898 | Алексей Дмитриевич Бутовский | Телесные упражнения и внеклассные занятия в кадетских корпусах | | [SHPL](http://elib.shpl.ru/ru/nodes/11616) | Книга про телесные упражнения, а не про танцы. |
 | 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127097) | Просмотрено Борисом Стратилатовым. |
 | 1928 | Anna Pawlowa | Tanzende Füsse. Der Weg meines Lebens<br/>_Published by Carl Reissner in Dresden_ | `DdM:313` | [UBS](https://ubsearch.sbg.ac.at/permalink/f/16hc907/USB_alma2197685300003341) | Мемуары, а не танцевальный учебник. |
 | 1929 | André Levinson | La danse d'aujourd'hui. Etudes - Notes - Portraits<br/>_Published in Paris_ | `DdM:345` | [UBS](https://eplus.uni-salzburg.at/obvusboa/content/titleinfo/6646514) | Книга про современный сценический (а не социальный) танец. |
