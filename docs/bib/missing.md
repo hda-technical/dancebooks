@@ -538,7 +538,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 2009 | Albert Garcia Espuche et al. | Dansa i música, Barcelona 1700<br/>_Транскрипция лекции выполненная Carles Mas i Garcia_<br/>_In: Monografies del Museu d'història, Ajuntament de Barcelona and Institut de Cultura 2_<br/>_Contains neudruck of Francesc Olivelles manuscript_ | `[3. Rothenfelser]` | [On sale, €12](http://ajuntament.barcelona.cat/barcelonallibres/ca/publicacions/dansa-i-música) |
 | 2010 | Marie Demeillez | Un plaisir sage et régle | `[Heiter, 2016]` | |
 | 2014 | Юлия Михайловна Симаева | Педагогическое обеспечение преподавания хореографии в общеобразовательных учебных заведениях России | | [RSL](https://search.rsl.ru/ru/record/01007523525) |
-| 2018 | Jennifer Nevile | Footprints of the Dance. An Early Seventeenth-Century Dance Master's Notebook | [Google](https://books.google.rs/books?id=let5DwAAQBAJ) | |
+| 2018 | Jennifer Nevile | Footprints of the Dance. An Early Seventeenth-Century Dance Master's Notebook | [Google](https://books.google.com/books?id=let5DwAAQBAJ) | |
 
 ## Antidance books
 
@@ -692,8 +692,8 @@ _This part of the list is to joined with the general table_
 | 1796 | Taschenkalender mis Scennen aus Wiens neuesten Balleten auf das Jahr 1796 für Freunde der Tanzkunst und Mimick<br/>_Published in Wien by Mathias Ludwig_ | `[Germanorum, 1914]` | | Описания танцев нет, только гравюры с балетами. |
 | 1801 | Antonio Calegari | Gioco pitagorico musicale col quale potra ornuno, anco senza sapere di Musica, formarsi una seria quasi infinita di picciole Ariette, e Duettini pertutti li Caratteri, Rondo, Preghiere, Polacche, Cori, ec., il tutto coll-accompagnamento del Pianoforte o Arpa, o altri Strumenti | `music: generator`<br/>`[Wiki: Musikalisches Würfelspiel]`<br/>`[Hedges, 1978]`<br/>`[Thielen, 2009]` | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1616934) | Генератор камерной, не танцевальной музыки |
 | 1802 | Johann Ferdinand Schlez | Kleine romantische Volksschriften<br/>_Tome 1, part 3: Schatzkästlein für junge Leute, die gerne tanzen_ | `[Germanorum, 1914]` | [HAAB](https://nbn-resolving.de/urn:nbn:de:gbv:32-1-10003271725) |
-| 1803 | Jean-Augustin Amar Du Rivier<br/>Louis François Jauffret | La gymnastique de la jeunesse | | [BNF](https://gallica.bnf.fr/ark:/12148/bd6t5336026x)<br/>[Google / BSB](https://books.google.rs/books?id=IelMAAAAcAAJ) | Книга про гимнастику, а не про танцы. |
-| 1804 | Johann Christoph Friedrich Guts Muths | Gymnastik für die Jugend | | [Google / BSB](https://books.google.rs/books?id=AKpAAAAAcAAJ) | Книга про гимнастику, а не про танцы. |
+| 1803 | Jean-Augustin Amar Du Rivier<br/>Louis François Jauffret | La gymnastique de la jeunesse | | [BNF](https://gallica.bnf.fr/ark:/12148/bd6t5336026x)<br/>[Google / BSB](https://books.google.com/books?id=IelMAAAAcAAJ) | Книга про гимнастику, а не про танцы. |
+| 1804 | Johann Christoph Friedrich Guts Muths | Gymnastik für die Jugend | | [Google / BSB](https://books.google.com/books?id=AKpAAAAAcAAJ) | Книга про гимнастику, а не про танцы. |
 | 1806 | Berchoux | La danse, ou les dieux de l'Opera | `[Nouveau manuel, 1857, #56]` | [Google](https://books.google.com/books?id=8745AAAAcAAJ) | |
 | 1807 | Ferdinand Kringsteiner | Der Tanzmeister. Eine Posse mit Gesang in drey Aufzügen | `[Klemm #02]` | [Wien/EOD](https://search.books2ebooks.eu/Record/wbr_LQD0188828) | Это фарс с песнями. |
 | 1812 | Fil-adel-φια | Der Maskirte Ball am 3ten Februar 1812 | `[Germanorum, 1914]` | [BSB](https://nbn-resolving.de/urn:nbn:de:bvb:12-bsb10105043-6) | Это какая-то сатира, там рассказано исключительно про еду и напитки. |
@@ -701,7 +701,7 @@ _This part of the list is to joined with the general table_
 | 1816 | | Le cle du caveau | | [RSL](https://search.rsl.ru/ru/record/01002068171) | Тексты песенок, некоторые про танцы. |
 | 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) | |
 | 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](https://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
-| 1835 | | Encyclopédie pittoresque de la musique | | [Google / UChicago](https://books.google.rs/books?id=SHhFAQAAMAAJ) | Содержит статью про _болеро_, но не более. |
+| 1835 | | Encyclopédie pittoresque de la musique | | [Google / UChicago](https://books.google.com/books?id=SHhFAQAAMAAJ) | Содержит статью про _болеро_, но не более. |
 | 1851 | Hugo Rothstein | Die Gymnastik | | [Google / UGent](https://books.google.com/books?id=ShMUAAAAQAAJ) | Книга про гимнастику, а не про танцы. |
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]` | [Google](https://books.google.com/books?id=EaNAAAAAcAAJ) | Какая-то искусствоведческая хрень |
 | 1857 | F. von Nonsens (pseudonym) | Der Opernhausball | `[Germanorum, 1914]` | [Google / BL](https://books.google.com/books?vid=BL:A0018896359) | Романтическая поэма про бал |
