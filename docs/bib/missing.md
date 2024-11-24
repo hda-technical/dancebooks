@@ -681,9 +681,12 @@ _This part of the list is to joined with the general table_
 | ---- | ------ | ----- | ---------- | ----- | ------- |
 | 168- | Jean-Baptiste Lully | aka _Airs de ballets et d'opéras_ | | [BNF](https://gallica.bnf.fr/ark:/12148/btv1b10508435s) | Только музыка, без хореографии. |
 | 1690 | Pierre Beauchamps et al. | Ballets des Iesuistes | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k103668z) | Только музыка, без хореографии. |
+| 1705 | Johann Christoph Wagenseil | Von Erziehung Eines Jungen Printzen | | [BSB](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10687427-0) | Дневники о воспитании, без описания танцев. |
+| 1715 | Amaranthes | Nutzbares, galantes und curiöses Frauenzimmer-Lexicon | | [HAB](http://diglib.hab.de/drucke/ae-12/start.htm) | Словарь без описания танцев. |
 | 1740 | Jean-Baptiste du Bos | Reflexions critiques sur la poesie et la peinture.<br/>_Chapitre sur les danses des anciens_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k6544468q/f252.image) | |
 | 1746 | Charles Batteux | Les beaux arts reduits a un même principe.<br/>_Section sur la musique et sur la danse_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k50428g/f275.image) | |
 | 1754–1778? | Carl Philipp Emanuel Bach | Einfall einen doppelten Contrapunct in der Octave von sechs Tacten zu machen ohne die Regeln davon zu wissen | `music: generator`<br/>`[Hedges, 1978]` | | Генератор камерной, не танцевальной музыки |
+| 1761 | Joseph-Antoine-Toussaint Dinouart | L'éloquence du corps, ou l'action du prédicateur | | [Google / Léon](https://books.google.com/books?id=q9M1COxlKLEC) | Книга про гимнастику, а не про танцы. |
 | 1767? | Claude-Joseph Dorat | La déclamation théâtrale.<br/>_Chant quatrième. De la danse. Возможно, есть более ранние издания_ | `[Nouveau manuel, 1857, #37]` | [Google](https://books.google.com/books?id=NeHhNmFzRAUC) | |
 | 1768 | Jean-Jacques Rousseau | Dictionnaire de musique | | [BNF](https://gallica.bnf.fr/ark:/12148/btv1b8626119d) | Энциклопедия. |
 | 1788 | Michael Johann Friedrich Weideburg | Musikalisches Charten-Spiel ex g dur | `music: generator`<br/>`[Thielen, 2009]` | | Генератор камерной, не танцевальной музыки |
@@ -709,6 +712,7 @@ _This part of the list is to joined with the general table_
 | 1865 | Hans Leonhard Schaeufelein | La danse des noces<br/>_Published in Paris_ | `[Germanorum, 1914]` | [Google / Lausanne](https://books.google.com/books?id=lDs_AAAAcAAJ) | Сборник гравюр очередного немца, работавшего в жанре _свадебные танцы_ |
 | 1898 | Алексей Дмитриевич Бутовский | Телесные упражнения и внеклассные занятия в кадетских корпусах | | [SHPL](http://elib.shpl.ru/ru/nodes/11616) | Книга про телесные упражнения, а не про танцы. |
 | 1906 | | Кек-вок. Юмористический сборник. Выпуск 1 | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127097) | Просмотрено Борисом Стратилатовым. |
+| 1912 | Жюль Амедей Барбе д'Оревильи | Дендизм и Джордж Брэммель | | [RSL](https://search.rsl.ru/ru/record/01003788118) | Книга про дендизм в целом, а не про танцы. |
 | 1928 | Anna Pawlowa | Tanzende Füsse. Der Weg meines Lebens<br/>_Published by Carl Reissner in Dresden_ | `DdM:313` | [UBS](https://ubsearch.sbg.ac.at/permalink/f/16hc907/USB_alma2197685300003341) | Мемуары, а не танцевальный учебник. |
 | 1929 | André Levinson | La danse d'aujourd'hui. Etudes - Notes - Portraits<br/>_Published in Paris_ | `DdM:345` | [UBS](https://eplus.uni-salzburg.at/obvusboa/content/titleinfo/6646514) | Книга про современный сценический (а не социальный) танец. |
 
