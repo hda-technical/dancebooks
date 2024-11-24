@@ -679,17 +679,20 @@ _This part of the list is to joined with the general table_
 
 | Date | Author | Title | References | Links | Comment |
 | ---- | ------ | ----- | ---------- | ----- | ------- |
+| 1636 | | La comédie italienne, boutade | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k1513869b) | Либретто без хореографии. |
 | 168- | Jean-Baptiste Lully | aka _Airs de ballets et d'opéras_ | | [BNF](https://gallica.bnf.fr/ark:/12148/btv1b10508435s) | Только музыка, без хореографии. |
 | 1690 | Pierre Beauchamps et al. | Ballets des Iesuistes | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k103668z) | Только музыка, без хореографии. |
 | 1705 | Johann Christoph Wagenseil | Von Erziehung Eines Jungen Printzen | | [BSB](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10687427-0) | Дневники о воспитании, без описания танцев. |
 | 1715 | Amaranthes | Nutzbares, galantes und curiöses Frauenzimmer-Lexicon | | [HAB](http://diglib.hab.de/drucke/ae-12/start.htm) | Словарь без описания танцев. |
+| 1724 | John Thurmond | An Exact Description of the Two Fam'd Entertainments of Harlequin Doctor Faustus | | [Google / BL](https://books.google.com/books?id=ok1Uqq_y8mUC) | Либретто без хореографии. |
 | 1740 | Jean-Baptiste du Bos | Reflexions critiques sur la poesie et la peinture.<br/>_Chapitre sur les danses des anciens_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k6544468q/f252.image) | |
 | 1746 | Charles Batteux | Les beaux arts reduits a un même principe.<br/>_Section sur la musique et sur la danse_ | `[Pauli, 1756]`<br/>`[Charinomos, 1825]` | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k50428g/f275.image) | |
+| 1747 | | Raccolta d'opuscoli scientifici, e filologici | | [Google](https://books.google.com/books?id=lL4njsb3mlsC) | Энциклопедия. Содержит статью _Sopra le antiche salttationi_. |
 | 1754–1778? | Carl Philipp Emanuel Bach | Einfall einen doppelten Contrapunct in der Octave von sechs Tacten zu machen ohne die Regeln davon zu wissen | `music: generator`<br/>`[Hedges, 1978]` | | Генератор камерной, не танцевальной музыки |
 | 1761 | Joseph-Antoine-Toussaint Dinouart | L'éloquence du corps, ou l'action du prédicateur | | [Google / Léon](https://books.google.com/books?id=q9M1COxlKLEC) | Книга про гимнастику, а не про танцы. |
 | 1767? | Claude-Joseph Dorat | La déclamation théâtrale.<br/>_Chant quatrième. De la danse. Возможно, есть более ранние издания_ | `[Nouveau manuel, 1857, #37]` | [Google](https://books.google.com/books?id=NeHhNmFzRAUC) | |
 | 1768 | Jean-Jacques Rousseau | Dictionnaire de musique | | [BNF](https://gallica.bnf.fr/ark:/12148/btv1b8626119d) | Энциклопедия. |
-| 1788 | Michael Johann Friedrich Weideburg | Musikalisches Charten-Spiel ex g dur | `music: generator`<br/>`[Thielen, 2009]` | | Генератор камерной, не танцевальной музыки |
+| 1788 | Michael Johann Friedrich Weideburg | Musikalisches Charten-Spiel ex g dur | `music: generator`<br/>`[Thielen, 2009]` | `music: generator` | Генератор камерной, не танцевальной музыки |
 | 1790 | François-Henri-Stanislas de L'Aulnaye | De la Saltation théâtrale, ou recherches sur l'origine, les progrès et les effets de la pantomime chez les anciens | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k5849412d) | |
 | 1795 | | Rügen einiger Mißbräuche und Inkonvenienzen unsers sogenannten philosophischen Jahrhunderts | `[Germanorum, 1914]` | [SLUB](http://nbn-resolving.de/urn:nbn:de:bsz:14-db-id3369230749) | Танцам посвящена лишь маленькая глава на страницах 72–73. |
 | 1796 | Taschenkalender mis Scennen aus Wiens neuesten Balleten auf das Jahr 1796 für Freunde der Tanzkunst und Mimick<br/>_Published in Wien by Mathias Ludwig_ | `[Germanorum, 1914]` | | Описания танцев нет, только гравюры с балетами. |
@@ -702,7 +705,8 @@ _This part of the list is to joined with the general table_
 | 1812 | Fil-adel-φια | Der Maskirte Ball am 3ten Februar 1812 | `[Germanorum, 1914]` | [BSB](https://nbn-resolving.de/urn:nbn:de:bvb:12-bsb10105043-6) | Это какая-то сатира, там рассказано исключительно про еду и напитки. |
 | 1814 | Александр Петрович Вельяшев | Описание праздника, данного в Москве 19 мая 1814 | | [SHPL](http://elib.shpl.ru/ru/nodes/23231) | Описание праздника, ничего про танцы нет. |
 | 1816 | | Le cle du caveau | | [RSL](https://search.rsl.ru/ru/record/01002068171) | Тексты песенок, некоторые про танцы. |
-| 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [Google](https://books.google.com/books?id=BY0NAAAAYAAJ) | |
+| 1820 | Robustiano Gironi | Le danze dei greci | | [archive.org](https://archive.org/details/ledanzedeigrecid00giro) | Книга про танцы в античности. |
+| 1829 | Giustina Renier Michiel | Origine delle feste veneziane | `[2. Rothenfelser]` | [HathiTrust](https://catalog.hathitrust.org/Record/009725570) | |
 | 1834–1838? | Gaetano Duro<br/>Pasquale Chiodi | Tarantella: ballo napolitano.<br/>_Tarantella music and drawing_ | `[4. Rothenfelser]` | [Stuttgart](https://nbn-resolving.de/urn:nbn:de:bsz:24-digibib-bsz4967427364) | |
 | 1835 | | Encyclopédie pittoresque de la musique | | [Google / UChicago](https://books.google.com/books?id=SHhFAQAAMAAJ) | Содержит статью про _болеро_, но не более. |
 | 1851 | Hugo Rothstein | Die Gymnastik | | [Google / UGent](https://books.google.com/books?id=ShMUAAAAQAAJ) | Книга про гимнастику, а не про танцы. |
