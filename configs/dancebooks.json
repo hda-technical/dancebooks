@@ -64,6 +64,9 @@
             // use hdl.handle.net permalinks instead
             "babel.hathitrust.org",
 
+			// use root-relative links instead
+            "bib.hda.org.ru",
+			
             // use books.google.com instead
             "books.google.by",
             "books.google.co.uk",
@@ -124,7 +127,7 @@
         ],
         "blocked_domains_http": [
             "archive.org",
-            "bib.hda.org.ru",
+			"bdh.bne.es",
             "books.google.com",
             "digi.vatlib.it",
             "digital.slub-dresden.de",
