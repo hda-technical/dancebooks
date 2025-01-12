@@ -23,4 +23,6 @@ plugins: []
 theme:
   name: mkdocs
   nav_style: dark
+extra_css:
+  - style.css
 strict: true
