@@ -1,4 +1,4 @@
-# Historical Dance Association activities
+﻿# Historical Dance Association activities
 
 ## Common
 * [License](common/license.md)
@@ -11,6 +11,7 @@
 * [Transcriptions](bib/transcriptions.md)
 * [HDA/Library](bib/library.md)
 * [Periodical editions](bib/periodical.md)
+* [Pablo Minguet y Yrol known publications](bib/yrol.md)
 
 ## Other activities
 * [HDA/Images documentation](images.md)
