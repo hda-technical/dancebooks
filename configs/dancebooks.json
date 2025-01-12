@@ -637,6 +637,14 @@
             "berdusi_1553_tenor": "berdusi_1553_opera",
             "berdusi_1553_altus": "berdusi_1553_opera",
             "yakovlev_1905_chantecler": "yakovlev_1910_chantecler",
+			"yrol_1737_first": "yrol_1737_arte_1st",
+			"yrol_1740_third": "yrol_1740_arte_3rd",
+			"yrol_1757": "yrol_1757_quadernillo",
+			"yrol_1758_arte": "yrol_1758_arte_3rd",
+			"yrol_1758_breve": "yrol_1758_breve_danzas",
+			"yrol_1760": "yrol_1760_arte_noble",
+			"minguet_1760_arte_pt": "yrol_1760_arte_pt",
+			"yrol_1764": "yrol_1764_breve_passos",
         }
     }
 }
