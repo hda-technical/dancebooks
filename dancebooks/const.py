@@ -9,6 +9,7 @@ SHORT_LANG_MAP = {
 	"ar": ["spanish"],
 	"at": ["german", "french", "italian"],
 	"au": ["english"],
+	"be": ["french"],
 	"ca": ["english", "french"],
 	"ch": ["french"],
 	"cl": ["spanish"],
@@ -77,6 +78,9 @@ LONG_LANG_MAP = {
 		"german",
 		"french",
 		"italian",
+	},
+	"belgian.bib": {
+		"french",
 	},
 	"canadian.bib": {
 		"english",
