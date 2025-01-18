@@ -124,6 +124,9 @@
             "kramerius.nkp.cz",
             "kramerius5.mzk.cz",
             "kramerius5.nkp.cz",
+
+            // use unprefixed fagisis.de instead
+            "www.fagisis.de",
         ],
         "blocked_domains_http": [
             "archive.org",
@@ -132,6 +135,7 @@
             "digi.vatlib.it",
             "digital.slub-dresden.de",
             "digital.ub.uni-duesseldorf.de",
+            "fagisis.de",
             "gallica.bnf.fr",
             "hdl.handle.net",
             "historicaldance.org.uk",
