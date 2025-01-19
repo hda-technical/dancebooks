@@ -113,11 +113,12 @@
             "catalog.nypl.org",
             
             // It would be nice to ban this and use soeg.kb.dk permalinks instead.
-            // Unfortunately, certain entries are not catologues in the latter catalogue.
+            // Unfortunately, certain entries are not catologued in the latter catalogue.
             // "img.kb.dk"
             
             // use soeg.kb.dk permalinks instead
             "rex.kb.dk",
+            "www5.kb.dk",
             
             // use www.digitalniknihovna.cz instead
             "kramerius.mzk.cz",
