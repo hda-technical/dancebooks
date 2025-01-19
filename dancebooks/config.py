@@ -42,7 +42,7 @@ class ParserConfig:
 		self.list_sep = params["list_sep"]
 		self.date_format = params["date_format"]
 		self.blocked_domains = set(params["blocked_domains"])
-		self.blocked_domains_http = set(params["blocked_domains_http"])
+		self.domains_allowed_http = set(params["domains_allowed_http"])
 		self.domains_allowed_301 = set(params["domains_allowed_301"])
 
 		#keywords param is loaded from a single config value,
