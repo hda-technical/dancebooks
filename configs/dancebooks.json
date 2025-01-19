@@ -123,6 +123,9 @@
             "rex.kb.dk",
             "www5.kb.dk",
 
+            // use libris.kb.se permalinks instead
+            "urn.kb.se",
+
             // use www.digitalniknihovna.cz instead
             "kramerius.mzk.cz",
             "kramerius.nkp.cz",
