@@ -305,10 +305,7 @@ def is_url_valid(url, item):
 
 	# validating domains blocked for insecure (http) access
 	# FIXME: this is a deprecated solution for the case, rewrite using URL_REGEXP
-	if (
-		(host in config.parser.blocked_domains_http) and
-		(split.scheme == "http")
-	):
+	if split.scheme == "http" and host not in config.parser.domains_allowed_http:
 		logging.debug(f"{host=} is blocked for insecure access")
 		return False
 
