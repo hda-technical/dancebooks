@@ -130,7 +130,7 @@
         ],
         "blocked_domains_http": [
             "archive.org",
-            "bdh.bne.es",
+            "bdh.bne.es",			
             "books.google.com",
             "cdm16235.contentdm.oclc.org",
             "chroniclingamerica.loc.gov",
@@ -146,6 +146,7 @@
             "imslp.org",
             "levysheetmusic.mse.jhu.edu",
             "loc.gov",
+            "mediatheque.cnd.fr",
             "nbn-resolving.de",
             "polona.pl",
             "primo.nlr.ru",
