@@ -66,7 +66,7 @@
 
             // use root-relative links instead
             "bib.hda.org.ru",
-            
+
             // use books.google.com instead
             "books.google.by",
             "books.google.co.uk",
@@ -98,6 +98,9 @@
             "mirrorland.rpg.ru",
             "jscholarship.library.jhu.edu",
 
+            // use imslp.org permalinks instead
+            "imslp.net",
+
             // use nbn-resolving.de permalinks instead
             "digital.slub-dresden.de",
             "digital.blb-karlsruhe.de",
@@ -111,15 +114,15 @@
 
             // use modern www.nypl.org permalinks instead
             "catalog.nypl.org",
-            
+
             // It would be nice to ban this and use soeg.kb.dk permalinks instead.
             // Unfortunately, certain entries are not catologued in the latter catalogue.
             // "img.kb.dk"
-            
+
             // use soeg.kb.dk permalinks instead
             "rex.kb.dk",
             "www5.kb.dk",
-            
+
             // use www.digitalniknihovna.cz instead
             "kramerius.mzk.cz",
             "kramerius.nkp.cz",
@@ -131,7 +134,7 @@
         ],
         "blocked_domains_http": [
             "archive.org",
-            "bdh.bne.es",			
+            "bdh.bne.es",
             "books.google.com",
             "cdm16235.contentdm.oclc.org",
             "chroniclingamerica.loc.gov",

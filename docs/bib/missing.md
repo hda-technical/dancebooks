@@ -27,7 +27,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1635–1639? | Giovanni Battista Doni | Trattato della musica scenica | `[4. Rothenfelser]` | |
 | 1639 | Edigio Longo | Relatione delle feste fatte in Napoli dall'eccellessimo signor duca di Medina de las Torres, vice re del regno, per la nascita della serenissima infa[n]ta di Spagna | | [archive.org](https://archive.org/details/relationedellefe00perr) |
 | 1641 | Nicholas de Saint-Hubert | La maniere de composer et faire reussir des ballets | `[4. Rothenfelser]` | |
-| 1645 | Gasparo Zanetti | Il scolaro per imparar a suonare di violino, et altri stromenti<br/>_Musical book_ | `[Lehner, 1997]` | [IMSLP](http://imslp.net/wiki/Il_scolaro_(Zanetti,_Gasparo)) |
+| 1645 | Gasparo Zanetti | Il scolaro per imparar a suonare di violino, et altri stromenti<br/>_Musical book_ | `[Lehner, 1997]` | [IMSLP](http://imslp.org/wiki/Il_scolaro_(Zanetti,_Gasparo)) |
 | 1651 | Angelo Tarachio | Introduzzione al balleto die dodeci Cesare augusti<br/>_Published in Mantua_ | `[4. Rothenfelser]` | |
 | 1657 | John Playford (compiler) | The Dancing Master<br/>_3rd edition_ | [[DFIE:Playford DM 1-03A,1657]](http://www.cdss.org/elibrary/DFIE/Index.htm) | [Glasgow](http://encore.lib.gla.ac.uk/iii/encore/record/C__Rb1619879) |
 | 1664 | Guillaume Dumanoir | Le mariage de la musique avec la dance | First issue<br/>[[Manoir, 1870]](https://bib.hda.org.ru/books/manoir_1870)<br/>`[Mackler]`| |
