@@ -13,7 +13,7 @@ def get_libis(id):
 def get_kbr(id, volume):
 	class UrlMaker:
 		def __init__(self, *, zoom, page):
-			self.id_dashed = id[0] + '-' + id[1:]
+			self.id_dashed = id[0] + '-' + '1' + id[1:]
 			self.id_slashed = '/'.join(id)
 			self.zoom = zoom
 			self.page = page
