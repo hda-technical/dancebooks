@@ -96,12 +96,16 @@ def be_libis(id):
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `A0524435`)", required=True)
 @click.option("--volume", help="Volume of the book to be downloaded (e. g. `0`)", required=True, type=int, default=0)
-def be_kbr(id, volume):
+@click.option("--page", help="Page number to be downloaded", required=False, type=int, default=None)
+def be_kbr(id, volume, page):
 	"""
 	book from www.kbr.be
 	"""
 	import be
-	be.get_kbr(id, volume)
+	if page:
+		be.get_kbr_page(id=id, volume=volume, page=page)
+	else:
+		be.get_kbr_book(id=id, volume=volume)
 
 
 @main.command()
