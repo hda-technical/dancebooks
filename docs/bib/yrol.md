@@ -17,10 +17,7 @@
 | [BNE / R4203(2)]       |   |   |   |   |   |   |   | ? |
 | [BNE / R4203(5)]       |   |   |   | ? |   |   |   |   |
 | [BNE / R4203(?)]       |   |   |   | ! |   |   |   |   |
-| [BNE / R7862(1)]       |   |   | ✓ |   |   |   |   |   |
-| [BNE / R7862(2)]       |   |   |   | ✓ |   |   |   |   |
-| [BNE / R7862(3)]       |   |   |   |   |   | ✓ |   |   |
-| [BNE / R7862(4)]       |   |   |   |   |   |   |   | ✓ |
+| BNE / R7862 (см. ниже) |   |   | ✓ | ✓ |   | ✓ |   | ✓ |
 | [BNE / R14607(?)]      |   |   | ! |   |   |   |   |   |
 | [BNE / R14607(2)]      |   |   |   | ? |   |   |   |   |
 | [BNE / R14607(4)]      |   |   |   |   |   |   |   | ? |
@@ -42,14 +39,18 @@ NB:
 * `!` means that the source is not available online and could not be cross-verified.
 * `?` means that the source is listed in the library catalogue, but no digital copy is available.
 
+`BNE / R7862`: 
+
+1. https://bdh.bne.es/bnesearch/detalle/bdh0000161354
+2. https://bdh.bne.es/bnesearch/detalle/bdh0000175380
+3. https://bdh.bne.es/bnesearch/detalle/bdh0000061851
+4. https://bdh.bne.es/bnesearch/detalle/bdh0000061855
+
+
 [LOC / GV1590.M6]:      https://lccn.loc.gov/13019257
 [BNE / R1431(2)]:       https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
 [BNE / R4203(2)]:       https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017413679708606
 [BNE / R4203(5)]:       https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
-[BNE / R7862(1)]:       https://bdh.bne.es/bnesearch/detalle/bdh0000161354
-[BNE / R7862(2)]:       https://bdh.bne.es/bnesearch/detalle/bdh0000175380
-[BNE / R7862(3)]:       https://bdh.bne.es/bnesearch/detalle/bdh0000061851
-[BNE / R7862(4)]:       https://bdh.bne.es/bnesearch/detalle/bdh0000061855
 [BNE / R14607(2)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
 [BNE / R14607(4)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017413679708606
 [BNE / R14620(2)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
