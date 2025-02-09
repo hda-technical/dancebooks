@@ -160,13 +160,22 @@ def de_unihalle(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `Teca:20:NT0000:RMLE032585`)", required=True)
-def it_internet_culturale(id):
+def it_internet_culturale(id=id):
 	"""
 	book from www.internetculturale.it
 	"""
 	import it
 	it.get_internet_culturale(id)
 
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `zm4621890`)", required=True)
+def it_hertziana(id):
+	"""
+	book from dlib.biblhertz.it
+	"""
+	import it
+	it.get_hertziana(id=id)
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `418f9526-f9cf-422e-9a73-2064fb1ae820`)", required=True)

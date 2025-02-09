@@ -6,7 +6,7 @@ import iiif
 import utils
 
 
-def get_internet_culturale(id):
+def get_internet_culturale(*, id):
 	full_id = _make_full_id(id)
 	# FIXME: this xpath is just broken
 	# metadata_url = f"http://www.internetculturale.it/jmms/magparser?id={full_id}&teca={prefix}&mode=all"
@@ -28,6 +28,12 @@ def get_internet_culturale(id):
 		if data_size == 0:
 			os.remove(output_filename)
 			break
+
+
+def get_hertziana(*, id):
+	manifest_url = f"https://dlib.biblhertz.it/iiif/{id}/manifest2.json"
+	output_folder = utils.make_output_folder("hertziana", id)
+	iiif.download_book_fast(manifest_url, output_folder)
 
 
 def get_rovereto(*, id):
