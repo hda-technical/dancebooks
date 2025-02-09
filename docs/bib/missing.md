@@ -17,7 +17,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1571 | Pierre Phalese | Liber primus Leviorum carminum | | |
 | 1578 | Giorgio Mainerio | Il primo libro de balli | | |
 | 1587 | Prospero Lutij | Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda<br/>_Published in Perugia_ | [[Luti, 1589]](https://bib.hda.org.ru/books/luti_1589)<br/>`[Lehner, 1997]`<br/>`[LOST?]` | |
-| 1589 | Prospero Lutij | Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda<br/>_Alternative copies_ | [[Luti, 1589]](https://bib.hda.org.ru/books/luti_1589)<br/>`[Lehner, 1997]` | [Kubikat](http://aleph.mpg.de/F?func=direct&doc_number=000328166&local_base=kub01) |
 | 1600 | Livio Lupi | Mutanze di gagliarda, tordiglione, passo e mezzo, canario e passegi | [[Lupi, 1607]](https://bib.hda.org.ru/books/lupi_1607)<br/>`[Lehner, 1997]` | [Roma](http://opacbiblioroma.cineca.it/Record/RMLE037763/Description) |
 | 1607 | Livio Lupi | Libro di gagliarda, tordiglione, passo è mezzo canares è passeggi<br/>_Alternative copies_ | [[Lupi, 1607]](https://bib.hda.org.ru/books/lupi_1607) | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21526528480002884)<br/>[Florence](http://216.147.215.202/F/9QQLML8CRNKU3C7Y68AIMSUARTTSJ9LB4BDDVT7BS29TJ3N8GS-15726?func=full-set-set&set_number=000201&set_entry=000001&format=999) |
 | 1608 | Jacques Mangeant (publisher) | Airs nouveaux accompagnes des plus belles chansons a danser | `[3. Rothenfelser]` | |
@@ -25,7 +24,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1620 | Filippo degli Alessandri | Discorso sopra il ballo et le buone creanze necessarie ad un gentil’huomo & ad una gentildonna | `[Sparti,1996]` | |
 | 1631 | Cesare Gonzaga | Inventioni di balletto nelle reali nozze della maesta, del re Ferdinando terzo, d'Ungheria e Bohemia<br/>_Published in Wien_ | `[4. Rothenfelser]` | |
 | 1635–1639? | Giovanni Battista Doni | Trattato della musica scenica | `[4. Rothenfelser]` | |
-| 1639 | Edigio Longo | Relatione delle feste fatte in Napoli dall'eccellessimo signor duca di Medina de las Torres, vice re del regno, per la nascita della serenissima infa[n]ta di Spagna | | [archive.org](https://archive.org/details/relationedellefe00perr) |
 | 1641 | Nicholas de Saint-Hubert | La maniere de composer et faire reussir des ballets | `[4. Rothenfelser]` | |
 | 1645 | Gasparo Zanetti | Il scolaro per imparar a suonare di violino, et altri stromenti<br/>_Musical book_ | `[Lehner, 1997]` | [IMSLP](http://imslp.org/wiki/Il_scolaro_(Zanetti,_Gasparo)) |
 | 1651 | Angelo Tarachio | Introduzzione al balleto die dodeci Cesare augusti<br/>_Published in Mantua_ | `[4. Rothenfelser]` | |
