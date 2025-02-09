@@ -689,7 +689,11 @@ def de_slub(*, id):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `6444409`)", required=True)
+@click.option(
+	"--id",
+	help="Id of the book to be downloaded extracted from https://digital.blb-karlsruhe.de/blbihd/content/titleinfo/{id}",
+	required=True,
+)
 def de_karlsruhe(*, id):
 	"""
 	book from digital.blb-karlsruhe.de
