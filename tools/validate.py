@@ -250,7 +250,7 @@ def update_validation_data(
 	new_errors = set(errors.keys())
 	added_errors = new_errors - old_errors
 	if len(added_errors) > 0:
-		logging.error("Following new erroneous entries were introduced")
+		logging.error(f"{len(added_errors)} new erroneous entries were introduced")
 		for erroneous_id in added_errors:
 			logging.error("    " + str(erroneous_id))
 			for error_text in errors[erroneous_id]:
