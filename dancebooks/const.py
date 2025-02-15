@@ -287,4 +287,5 @@ SIZE_DELIMETER = "x"
 
 URL_REGEXPS = {
 	"polona.pl": re.compile(r"https://polona.pl/item-view/(?P<guid>[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"),
+	"www.itma.ie": re.compile(r"https://www.itma.ie/texts/[\w-]+/"),
 }
