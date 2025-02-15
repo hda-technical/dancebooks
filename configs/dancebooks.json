@@ -134,6 +134,10 @@
 
             // use unprefixed fagisis.de instead
             "www.fagisis.de",
+
+            // use idn.duke.edu permalinks instead
+            "library.duke.edu",
+            "repository.duke.edu",
         ],
         "blocked_domains_http": [
             "archive.org",
