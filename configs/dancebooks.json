@@ -138,6 +138,9 @@
             // use idn.duke.edu permalinks instead
             "library.duke.edu",
             "repository.duke.edu",
+
+            // use plain doi.org instead
+            "dx.doi.org",
         ],
         "blocked_domains_http": [
             "archive.org",
