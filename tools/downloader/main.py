@@ -374,18 +374,12 @@ def yaleImage(id):
 
 @main.command()
 @click.option("--id", help="Image id to be downloaded (e. g. `1327507`)", required=True)
-@click.option("--chapter", help="Chapter to download from (e. g. `PATREQIMGX12`)", required=True)
-def yaleBook(id, chapter):
+def us_yale_book(id):
 	"""
-	image from brbl-zoom.library.yale.edu
+	book from collections.library.yale.edu
 	"""
-
-	output_filename = make_output_filename("", id)
-	remote_filename = f"{chapter}/{id[-1]}/{id}/{id}.jp2"
-	fastcgi_url = "https://brbl-zoom.library.yale.edu/fcgi-bin/iipsrv.fcgi"
-	metadata_url = f"{fastcgi_url}?FIF={remote_filename}&obj=Max-size&obj=Tile-size&obj=Resolution-number"
-	metadata = IIPMetadata.from_text(get_text(metadata_url))
-	iip.download_image(fastcgi_url, remote_filename, metadata, output_filename)
+	import us
+	us.get_yale_book(id=id)
 
 
 @main.command()

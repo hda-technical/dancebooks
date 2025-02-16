@@ -1,5 +1,6 @@
 import os
 
+import iiif
 import utils
 
 
@@ -36,3 +37,9 @@ def get_nypl(*, id):
 		url = capture["high_res_link"]
 		print(f"Downloading page #{idx:04d}")
 		utils.get_binary(output_filename, url)
+
+
+def get_yale_book(*, id):
+	manifest_url = f"https://collections.library.yale.edu/manifests/{id}"
+	output_folder = utils.make_output_folder("yale", id)
+	iiif.download_book_fast_v3(manifest_url, output_folder)
