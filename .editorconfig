@@ -15,6 +15,9 @@ indent_style = tab
 [debian/control]
 indent_style = space
 
+[dancebooks.json]
+indent_style = space
+
 [*.md]
 charset = utf-8-bom
 
