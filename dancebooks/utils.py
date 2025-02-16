@@ -170,13 +170,13 @@ def make_searches_from_metadata(metadata):
 	"""
 	result = {}
 
-	
+
 	if edition := metadata.get("edition"):
 		result["edition"] = search.search_for_eq("edition", edition)
-	
+
 	if part := metadata.get("part"):
 		result["part"] = search.search_for_eq("part", part)
-	
+
 	if number := metadata.get("number"):
 		result["number"] = search.or_([
 			search.search_for_eq("number", number),
@@ -286,15 +286,12 @@ def is_url_valid(url, item):
 	if not split.netloc:
 		logging.debug("Network location isn't specified")
 		return False
-	if split.fragment:
-		logging.debug("Fragments aren't allowed")
-		return False
 
 	host = split.hostname
-	
+
 	# normalize host
 	host_normailized = host.removeprefix("www.")
-	
+
 	# validating blocked domains
 	if host_normailized in config.parser.blocked_domains:
 		logging.debug(f"{host=} is blocked")

@@ -141,6 +141,10 @@
 
             // use plain doi.org instead
             "dx.doi.org",
+
+            // use tiaki.natlib.govt.nz (online catalogue) permalinks instead
+            "natlib.govt.nz",
+            "ndhadeliver.natlib.govt.nz",
         ],
         "blocked_domains_http": [
             "archive.org",
