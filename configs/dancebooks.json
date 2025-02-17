@@ -104,6 +104,7 @@
             // use nbn-resolving.de permalinks instead
             "digital.slub-dresden.de",
             "digital.blb-karlsruhe.de",
+            "digitale.bibliothek.uni-halle.de",
             "haab-digital.klassik-stiftung.de",
             "mdz-nbn-resolving.de",
             "nbn-resolving.org",
@@ -147,6 +148,9 @@
             // use tiaki.natlib.govt.nz (online catalogue) permalinks instead
             "natlib.govt.nz",
             "ndhadeliver.natlib.govt.nz",
+
+            // Trove is an aggregator, use library-specific permalinks instead
+            "trove.nla.gov.au",
         ],
         "blocked_domains_http": [
             "archive.org",
