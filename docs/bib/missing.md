@@ -729,7 +729,7 @@ _This part of the list is to joined with the general table_
 | 1825 | `[Charinomos, 1825]` | Carl Seidel | Charinomos | https://books.google.com/books?id=1FBjAAAAcAAJ |
 | 1840 | `[Handbuch, 1840]` | Johann Samuel Ersch | Handbuch der deutschen Literatur seit der Mitte des achtzehnten Jahrhunderts bis auf die neueste Zeit. Literatur der schönen Künste. | https://books.google.com/books?id=u-1LAAAAcAAJ&pg=PA1059 |
 | 1855–1910 | `[Klemm]` | Bernhard Klemm | Katechismus der Tanzkunst | [2nd edition](https://bib.hda.org.ru/books/klemm_1863), [3rd edition](https://bib.hda.org.ru/books/klemm_1876), [6th edition](https://bib.hda.org.ru/books/klemm_1894). No bibliography in 1rd, 5th, 7th, 8th editions. 4th edition is not available |
-| 1857 | `[Nouveau manuel, 1857]` | Ferdinand Denis, P. Pincon, de Martonne | Nouveau manuel de bibliographie universelle" | https://books.google.com/books?id=C6g20GmnNlQC&pg=PA165 |
+| 1857 | `[Nouveau manuel, 1857]` | Ferdinand Denis, P. Pincon, de Martonne | Nouveau manuel de bibliographie universelle | https://books.google.com/books?id=C6g20GmnNlQC&pg=PA165 |
 | 1894 | `[Katalog, 1894]` | | Katalog für die Ausstellung der Genossenschaft Deutschen Tanzlehrer | https://bib.hda.org.ru/books/katalog_1894 | |
 | 1914 | `[Germanorum, 1914]` | Hugo Hayn | Biblioteca Germanorum, erotica & curiosa | https://archive.org/details/bibliothecagerma07hayn/page/532 |
 | 1960 | `[Richardson, 1960]` | Philip John Sampey Richardson | The Social Dances of the Nineteenth Century in England | https://bib.hda.org.ru/books/richardson_1960 |
