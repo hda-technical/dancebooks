@@ -18,7 +18,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1578 | Giorgio Mainerio | Il primo libro de balli | | |
 | 1587 | Prospero Lutij | Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda<br/>_Published in Perugia_ | [[Luti, 1589]](https://bib.hda.org.ru/books/luti_1589)<br/>`[Lehner, 1997]`<br/>`[LOST?]` | |
 | 1600 | Livio Lupi | Mutanze di gagliarda, tordiglione, passo e mezzo, canario e passegi | `[Lehner, 1997]` | [Roma / Alessandrina](http://id.sbn.it/bid/RMLE037763) |
-| 1607 | Livio Lupi | Libro di gagliarda, tordiglione, passo è mezzo canares è passeggi<br/>_Alternative copies_ | [[Lupi, 1607]](https://bib.hda.org.ru/books/lupi_1607) | [Berlin](https://udk-berlin.hosted.exlibrisgroup.com:443/UDK:default_scope:UDK_ALMA_DS21526528480002884)<br/>[Florence](http://216.147.215.202/F/9QQLML8CRNKU3C7Y68AIMSUARTTSJ9LB4BDDVT7BS29TJ3N8GS-15726?func=full-set-set&set_number=000201&set_entry=000001&format=999) |
+| 1607 | Livio Lupi | Libro di gagliarda, tordiglione, passo è mezzo canares è passeggi | [[Lupi, 1607]](https://bib.hda.org.ru/books/lupi_1607) | `Unidentified private collection` |
 | 1608 | Jacques Mangeant (publisher) | Airs nouveaux accompagnes des plus belles chansons a danser | `[3. Rothenfelser]` | |
 | 1616 | Pietro Paolo Melli da Reggio | Intavolatura di liuto attiorbato<br/>_Mutlivolume book_ | `[4. Rothenfelser]`<br/>[Naxos](https://www.naxos.com/catalogue/item.asp?item_code=TC600002) | |
 | 1620 | Filippo degli Alessandri | Discorso sopra il ballo et le buone creanze necessarie ad un gentil’huomo & ad una gentildonna | `[Sparti,1996]` | |
