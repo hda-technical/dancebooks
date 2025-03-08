@@ -784,3 +784,4 @@ _This part of the list is to joined with the general table_
 | 2015 | `[Pendlebury, 2015]` | Celia Pendlebury | Jigs, Reels and Hornpipes: A History of “Traditional” Dance Tunes of Britain and Ireland | https://bib.hda.org.ru/books/pendlebury_2015_traditional |
 | 2021 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #07–24 + #26–50 | https://www.regencydances.org/paper000.php |
 | 2021 | `[Dansböcker]` | | Dansböcker | https://musikverket.se/svensktvisarkiv/dansbocker/ |
+| 2025 | `[INHA]` | | Répertoire des contredanses | https://digital.inha.fr/contredanses/s/contredanses/item |
