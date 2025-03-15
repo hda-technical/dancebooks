@@ -15,8 +15,8 @@ import requests
 #	If the website responds with 4xx errors, changing User-Agent might help.
 #	In particularly, CloudFlare works well with curl.
 #
-# USER_AGENT = "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:62.0) Gecko/20100101 Firefox/62.0"
-USER_AGENT = "curl/7.68.0"
+# USER_AGENT = "curl/7.68.0"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:62.0) Gecko/20100101 Firefox/137.0"
 HEADERS = {
 	"User-Agent": USER_AGENT
 }
@@ -100,7 +100,7 @@ def get_binary(output_filename, url_or_request, *args, **kwargs):
 			total_size += len(chunk)
 			file.write(chunk)
 	return total_size
-	
+
 
 @retry(try_count=5, delay=30, delay_backoff=1.5)
 def get_image(url_or_request, *args, **kwargs):
@@ -164,7 +164,7 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 			url = url_maker(tile_x, tile_y)
 			tile_image = get_image(url)
 			result.paste(tile_image, (tile_x * policy.tile_size, tile_y * policy.tile_size))
-			
+
 	if policy.trim:
 		result = result.crop(result.getbbox())
 

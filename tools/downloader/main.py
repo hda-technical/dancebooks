@@ -62,6 +62,16 @@ def fr_candide(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `72006`)", required=True)
+def fr_inha(id):
+	"""
+	book from bibliotheque-numerique.inha.fr
+	"""
+	import fr
+	fr.get_inha(id)
+
+
+@main.command()
 @click.option("--id", help="Id of the books to be downloaded (e. g. `098461435`)", required=True)
 def fr_tolosana(id):
 	"""
@@ -577,7 +587,7 @@ def	vwml(id):
 	book from www.vwml.org/topics/historic-dance-and-tune-books
 	"""
 	main_url = f"https://www.vwml.org/topics/historic-dance-and-tune-books/{id}"
-	
+
 	soup = bs4.BeautifulSoup(
 		get_text(main_url),
 		features="html.parser",
@@ -753,8 +763,8 @@ def de_goettingen(id):
 	"""
 	import de
 	de.get_goettingen(id=id)
-	
-	
+
+
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `172099`)", required=True)
 def no_nb(id):
@@ -763,7 +773,7 @@ def no_nb(id):
 	"""
 	import no
 	no.get_nb(id=id)
-	
+
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `object125610`)", required=True)

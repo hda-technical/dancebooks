@@ -58,6 +58,13 @@ def get_candide(id):
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
 
 
+def get_inha(id):
+	# NB: inha.fr mandates checks for the real User-Agent
+	manifest_url = f"https://bibliotheque-numerique.inha.fr/iiif/{id}/manifest"
+	output_folder = utils.make_output_folder("inha", id)
+	iiif.download_book_fast(manifest_url, output_folder)
+
+
 def get_retronews(*, document_id, page):
 	metadata_url = f"https://pv5web.retronews.fr/api/document/{document_id}/page/{page}"
 	metadata = utils.get_json(metadata_url)

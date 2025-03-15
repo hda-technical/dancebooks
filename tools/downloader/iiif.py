@@ -129,7 +129,7 @@ def download_book_fast(manifest: dict | str, output_folder):
 
 def download_page_fast(manifest_url, output_folder, *, page):
 	"""
-	Downloads single page via IIIF protocol.
+	Downloads single page via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
 
 	API is documented here:
