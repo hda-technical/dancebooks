@@ -298,7 +298,7 @@ def is_url_valid(url, item):
 		return False
 
 	if re := const.URL_REGEXPS.get(host):
-		match = re.match(url)
+		match = re.fullmatch(url)
 		if not match:
 			logging.debug(f"URL {url} should match {re.pattern}")
 			return False

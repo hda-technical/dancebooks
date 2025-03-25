@@ -286,8 +286,9 @@ MAX_AUTHORS_IN_CITE_LABEL = 2
 SIZE_DELIMETER = "x"
 
 URL_REGEXPS = {
-	"nbn-resolving.de": re.compile(r"https://nbn-resolving.de/urn:nbn:de:[\w-]+"),
+	"nbn-resolving.de": re.compile(r"https://nbn-resolving.de/urn:nbn:de:[\w\-_/:]+"),
 	"polona.pl": re.compile(r"https://polona.pl/item-view/(?P<guid>[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"),
 	"tiaki.natlib.govt.nz": re.compile(r"https://tiaki.natlib.govt.nz/#details=ecatalogue.\d+"),
 	"www.itma.ie": re.compile(r"https://www.itma.ie/texts/[\w-]+/"),
+	"gallica.bnf.fr": re.compile(r"https://gallica.bnf.fr/ark:/12148/b[\d\w]+(/f\d+.image)?"),
 }
