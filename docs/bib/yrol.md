@@ -29,7 +29,8 @@
 | [BNE / R14649(4)]      |   |   |   |   |   |   |   | ? |
 | [BNE / R14659(2)]      |   |   |   | ? |   |   |   |   |
 | [BNE / VE/340/47(2)]   |   |   |   | ? |   |   |   |   |
-| [BNF / RESERVE KD-5-4] |   |   |   | ✓ |   |   |   |   |
+| [BNF / 8-RO-9939]      |   |   | ✓ | ✓ |   | ✓ |   | ✓ |
+| [BNF / KD-5-4]         |   |   |   | ✓ |   |   |   |   |
 | [BNP / RES-3717-P]     |   |   |   |   | ✓ |   |   |   |
 | [UBS / DdM 8000]       |   |   | ✓ | ✓ |   | ✓ |   |   |
 | ?? / ??                |   |   |   |   |   |   | ! |   |
@@ -39,7 +40,7 @@ NB:
 * `!` means that the source is not available online and could not be cross-verified.
 * `?` means that the source is listed in the library catalogue, but no digital copy is available.
 
-`BNE / R7862`: 
+`BNE / R7862`:
 
 1. https://bdh.bne.es/bnesearch/detalle/bdh0000161354
 2. https://bdh.bne.es/bnesearch/detalle/bdh0000175380
@@ -60,6 +61,7 @@ NB:
 [BNE / R14649(4)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017413679708606
 [BNE / R14659(2)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/
 [BNE / VE/340/47(2)]:   https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
-[BNF / RESERVE KD-5-4]: https://catalogue.bnf.fr/ark:/12148/cb40353581z
+[BNF / 8-RO-9939]:      https://gallica.bnf.fr/ark:/12148/bd6t5772666v
+[BNF / KD-5-4]:         https://gallica.bnf.fr/ark:/12148/bpt6k1913876f
 [BNP / RES-3717-P]:     https://purl.pt/26480
 [UBS / DdM 8000]:       https://ubsearch.sbg.ac.at/permalink/f/16hc907/USB_alma21100413960003341
