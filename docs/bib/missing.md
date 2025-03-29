@@ -565,6 +565,11 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1738 | Mart. (Hensel / Hansel)? | Des Schlüssels zur Erkenntniß und Verabscheuung des heydnischen Tantz- und Lust-Wesens in der Christenheit<br/>_Ander Theil_<br/>_Published in (Züllichau / Berlin)? by Waisenhaus_ | `[Шабалина, 2019]`<br/>`[Germanorum, 1914]` | |
 | 1738 | J. Seb. Renz | De religiosis saltationibus veterum Judaeorum<br/>_Published in Lipsiae_ | `[Germanorum, 1914]` | [Köln](https://primo.zbsport.dshs-koeln.de/permalink/49HBZ_ZBS/18h80sa/alma990000140260806478) |
 | 1745 | J. P. C. Sturm | Evangelisches Zeugnis Wider die Welt-übliche Sauff-, Tanz- und Spiel-Lust, als Dinge, welche bey dem wahren Christenthum nicht bestehen können<br/>_Published in Franckfurth am Mayn_ | `[Germanorum, 1914]`<br/>`[Шабалина, 2019]` | |
+| 1745? | Pablo Minguet e Yrol | Contradanzas nuevas, y alegres, dedicadas â las cinco letras vocales | `[Musicologie / Minguet]` | |
+| 1745–1766? | Pablo Minguet e Yrol | Explicación del danzar a la francesa | `[Musicologie / Minguet]` | |
+| 1745–1766? | Pablo Minguet e Yrol | Quadernillo de contradanzas curiosas, explicadas y demonstradas por choregraphia moderna, en 8 laminas finas | `[Musicologie / Minguet]` | |
+| 1745–1766? | Pablo Minguet e Yrol | Quadernillo de diferentes danzas y contradanzas q[ue] se estilan, demonstradas por media choregraphia: en 10 laminas finas | `[Musicologie / Minguet]` | |
+| 1745–1766? | Pablo Minguet e Yrol | Regala general para saber baylar qualquier contradanzas de las mascaras | `[Musicologie / Minguet]` | |
 | 1750 | Johann Beer | Der höllische Raien oder die unglückselige Freude der Täntzer | `[Germanorum, 1914]` | |
 | 1752 | Narren-Kurtzweil | oder Greul des Tantzens mit vielen bewärten Historien | `[Katalog, 1894]` | |
 | 1770 | | Gedanken vom Tanzen, in einem Sendschreiben an einem Freund<br/>_Publihed by Herold in Hamburg_ | `[Germanorum, 1914]` | |
@@ -752,6 +757,7 @@ _This part of the list is to joined with the general table_
 | 2007 | `[Russell, 2007]` | Tilden Russell, Dominique Bourassa | The minuet de la cour
 | 2008 | `[2. Rothenfelser]` | | 2. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2008 |
 | 2009 | `[Thielen, 2009]` | Lars Thielen | Musikalische Würfelspiele | https://studylibde.com/doc/12062765/musikalische-würfelspiele |
+| 2010-09-30 | `[Musicologie / Minguet]` | Jean-Marc Warszawski | | https://www.musicologie.org/Biographies/m/minguet_e_yrol_pablo.html |
 | 2012 | `[3. Rothenfelser]` | | 3. Rothenfelser Tanzsymposion. Tagungsband | https://bib.hda.org.ru/books/proceedings_rothenfelser_2012 |
 | 2012 | `[Yoko]` | Евгения Соленикова | | `Ancillary sources (not in bibliography)/Bibliographies of the others/Евгения Соленикова.ods` |
 | 2014 | `[Unfried, 2014]` | Hannelore Unfried | Der „freie, fessellose und fantastereiche Mazur” | https://bib.hda.org.ru/books/unfried_2014 |
