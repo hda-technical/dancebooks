@@ -229,10 +229,10 @@ def update_validation_data(
 	}
 	previous_data_exists = os.path.exists(DATA_JSON_FILENAME)
 	if previous_data_exists:
-		with open(DATA_JSON_FILENAME, "r") as validation_data_file:
+		with open(DATA_JSON_FILENAME, "r") as fp:
 			try:
-				validation_data = json.loads(validation_data_file.read())
-			except ValueError:
+				validation_data = json.load(fp)
+			except Exception:
 				#when no JSON object could be decoded,
 				#validation data shouldn't be updated
 				pass
@@ -272,8 +272,8 @@ def update_validation_data(
 		validation_data["ids"] = list(current_ids)
 	if (not previous_data_exists) or (new_errors and store_new_errors):
 		validation_data["errors"] = list(new_errors)
-	with open(DATA_JSON_FILENAME, "w") as validation_data_file:
-		validation_data_file.write(json.dumps(validation_data))
+	with open(DATA_JSON_FILENAME, "w") as fp:
+		json.dump(validation_data, fp, indent=4)
 
 
 def validate_periodical_filename(filename, item, errors):
@@ -950,8 +950,7 @@ def validate_backups():
 @click.option("--urls", "urls", is_flag=True, default=False, help="Validate url field accessibility (slow)")
 @click.option("--store-new-errors", "store_new_errors", is_flag=True, default=False, help="Store new errors and ignore them in the future")
 @click.option("--remove-missing-ids", "remove_missing_ids", is_flag=True, default=False, help="Remove lost ids from persistent storage")
-@click.option("--log", type=click.Choice(["all", "new"], case_sensitive=False), default="new", help="Whether to log all errors or only new ones")
-def main(*, backups, urls, log, store_new_errors, remove_missing_ids):
+def main(*, backups, urls, store_new_errors, remove_missing_ids):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
@@ -982,9 +981,6 @@ def main(*, backups, urls, log, store_new_errors, remove_missing_ids):
 			if not errors:
 				continue
 			erroneous_items[item.id] = errors
-			if log == "all":
-				for error in errors:
-					logging.debug(f"Errors for {item.id}: {error}")
 		except Exception as ex:
 			logging.exception(f"Exception while validating {item.id} ({item.source}): {ex}")
 
