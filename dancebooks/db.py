@@ -31,9 +31,9 @@ class SqlAlchemyEncoder(json.JSONEncoder):
 			return super().default(obj)
 
 
-class BackupType(enum.Enum):
-	nas = 1
-	s3 = 2
+class BackupType(enum.StrEnum):
+	nas = "nas"
+	s3 = "s3"
 
 
 class Backup(_Base):
