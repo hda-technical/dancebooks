@@ -869,7 +869,7 @@ def validate_note(item, errors):
 		errors.add(f"Item note does not end with the dot")
 
 
-def validate_item(item, git_added_on, make_extra_checks):
+def validate_item(item, git_added_on):
 	errors = set()
 	validate_id(item, errors)
 	validate_parser_generated_fields(item, errors)
@@ -894,17 +894,13 @@ def validate_item(item, git_added_on, make_extra_checks):
 	validate_source_file(item, errors)
 	validate_partial_fields(item, errors)
 	validate_added_on(item, git_added_on, errors)
-	#FIXME: this is a good validation, but it causes more then 1000 errors.
-	#validate_note(item, errors)
-	if make_extra_checks:
-		validate_url_accessibility(item, errors)
 	return errors
 
 
-def validate_items(items, git_added_on, make_extra_checks):
+def validate_items(items, git_added_on):
 	result = dict()
 	for item in items:
-		errors = validate_item(item, git_added_on, make_extra_checks)
+		errors = validate_item(item, git_added_on)
 		if errors:
 			result[item.id] = errors
 	return result
@@ -950,11 +946,12 @@ def validate_backups():
 
 
 @click.command()
-@click.option("--extra", "make_extra_checks", is_flag=True, default=False, help="Make extra validations (slow)")
+@click.option("--backups", "backups", is_flag=True, default=False, help="Validate backups (slow)")
+@click.option("--urls", "urls", is_flag=True, default=False, help="Validate url field accessibility (slow)")
 @click.option("--store-new-errors", "store_new_errors", is_flag=True, default=False, help="Store new errors and ignore them in the future")
 @click.option("--remove-missing-ids", "remove_missing_ids", is_flag=True, default=False, help="Remove lost ids from persistent storage")
 @click.option("--log", type=click.Choice(["all", "new"], case_sensitive=False), default="new", help="Whether to log all errors or only new ones")
-def main(*, make_extra_checks, log, store_new_errors, remove_missing_ids):
+def main(*, backups, urls, log, store_new_errors, remove_missing_ids):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
@@ -963,7 +960,7 @@ def main(*, make_extra_checks, log, store_new_errors, remove_missing_ids):
 	logging.info("Fetching list of pdf from filesystem")
 	physically_stored = fetch_filelist_from_fs()
 	logging.info(f"Found {len(physically_stored)} physically stored items")
-	if config.www.backup_dir and os.path.isdir(config.www.backup_dir):
+	if backups:
 		validate_backups()
 
 	for item in items:
@@ -979,7 +976,9 @@ def main(*, make_extra_checks, log, store_new_errors, remove_missing_ids):
 	erroneous_items = dict()
 	for item in items:
 		try:
-			errors = validate_item(item, git_added_on, make_extra_checks)
+			errors = validate_item(item, git_added_on)
+			if urls:
+				validate_url_accessibility(item, errors)
 			if not errors:
 				continue
 			erroneous_items[item.id] = errors
