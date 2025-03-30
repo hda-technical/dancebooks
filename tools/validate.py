@@ -186,29 +186,14 @@ def fetch_filelist_from_fs():
 	return set(stored_files)
 
 
-# FIXME: This method is similar to the previous one.
-#		 I should work on deduplicating them.
 def fetch_backups_from_fs():
-	if not os.path.isdir(config.www.backup_dir):
-		return []
-	FOLDERS_TO_VALIDATE = [
-		"Cooking",
-		"Fashion",
-		"Games",
-		"Images",
-		"Library",
-	]
+	assert os.path.isdir(config.www.backup_dir)
 	trim_root = lambda path: os.path.relpath(path, start=config.www.backup_dir)
 	filter = lambda path: const.FILENAME_REGEXP.match(os.path.basename(path))
-	backups = []
-	for basename in FOLDERS_TO_VALIDATE:
-		folder = os.path.join(config.www.backup_dir, basename)
-		backups += list(
-			map(
-				trim_root,
-				utils.search_in_folder(folder, filter)
-			)
-		)
+	backups = set(
+		trim_root(backup)
+		for backup in utils.search_in_folder(config.www.backup_dir, filter)
+	)
 	return set(backups)
 
 
@@ -914,6 +899,10 @@ def validate_backups():
 	logging.info(f"Fetching backup metadata from {config.www.backup_metadata_url}")
 	metadata = requests.get(config.www.backup_metadata_url).json()
 	logging.info(f"Fetched {len(metadata)} backups metadata")
+
+	# keep only backups with type=s3
+	# FIXME: upload remaining backups to s3
+	metadata = [item for item in metadata if item["type"] == "s3"]
 
 	for metadatum in metadata:
 		backup_id = metadatum["id"]
