@@ -151,6 +151,9 @@
 
             // Trove is an aggregator, use library-specific permalinks instead
             "trove.nla.gov.au",
+
+            // Use marble.nd.edu instead
+            "curate.nd.edu",
         ],
         "domains_allowed_http": [
             "chrisbrady.itgo.com",
