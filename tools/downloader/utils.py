@@ -47,20 +47,23 @@ def retry(try_count, delay=0, delay_backoff=1):
 
 # FIXME: retry decorator hides HTTPError raised by raise_for_status.
 # @retry(try_count=3)
-def make_request(*args, **kwargs):
+def make_request(rq: str | requests.Request, *args, **kwargs):
 	"""
 	Performs the request and returns requests.Response object.
 	Accepts both raw urls and prepared requests
 	"""
-	if isinstance(args[0], str):
-		url = args[0]
-		response = requests.get(*args, headers=HEADERS, timeout=TIMEOUT, **kwargs)
-	elif isinstance(args[0], requests.Request):
-		request = args[0].prepare()
-		url = request.url
-		args = args[1:]
-		request.headers = HEADERS
-		response = session.send(request, *args, timeout=TIMEOUT, **kwargs)
+	headers = HEADERS | kwargs.pop("headers", {})
+	method = kwargs.pop("method", "GET")
+	if isinstance(rq, str):
+		rq = requests.Request(
+			url=rq,
+			method=method,
+			headers=headers,
+		)
+	elif isinstance(rq, requests.Request):
+		rq.headers = headers
+	rq = rq.prepare()
+	response = session.send(rq, *args, timeout=TIMEOUT, **kwargs)
 	response.raise_for_status()
 	return response
 

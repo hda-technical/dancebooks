@@ -65,11 +65,22 @@ def get_inha(id):
 	iiif.download_book_fast(manifest_url, output_folder)
 
 
-def get_retronews(*, document_id, page):
-	metadata_url = f"https://pv5web.retronews.fr/api/document/{document_id}/page/{page}"
-	metadata = utils.get_json(metadata_url)
+def get_retronews(*, id, page):
+	raise NotImplementedError("Sorry, this downloader is currently broken")
+	token_url = "https://api.retronews.fr/security/token-auth"
+	token_headers = {
+		"Content-Type": "application/json",
+	}
+	token = utils.get_json(token_url, method="POST", headers=token_headers)["refreshToken"]
+	headers = {
+		"Authorization": f"Bearer {token}",
+	}
+	print("Got token")
 
-	output_folder = utils.make_output_folder("retronews", document_id)
+	metadata_url = f"https://api.retronews.fr/contentside/api/page/document/{id}/paragraphs/{page}"
+	metadata = utils.get_json(metadata_url, headers=headers)
+
+	output_folder = utils.make_output_folder("retronews", id[0:8])
 	output_filename = utils.make_output_filename(output_folder, page=page)
 
 	policy = utils.TileSewingPolicy.from_image_size(
@@ -77,6 +88,8 @@ def get_retronews(*, document_id, page):
 		height=metadata["height"],
 		tile_size=512,
 	)
+
+	# https://api.retronews.fr/contentside/api/page/publication/787/document/D4913300/page/8/dzi_files/9/0_1.jpg"
 	url_maker = lambda tile_x, tile_y: f"https://pv5web.retronews.fr/api/document/{document_id}/page/{page}/tile/{tile_x}/{tile_y}/0"
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
 

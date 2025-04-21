@@ -82,14 +82,14 @@ def fr_tolosana(id):
 
 
 @main.command()
-@click.option("--document-id", help="Id of the paper to be downloaded (e. g. `4466/5537594`)", required=True)
-@click.option("--page", type=int, help="Id of the page to be downloaded (e. g. `11`)", required=True)
-def fr_retronews(document_id, page):
+@click.option("--id", help="Id of the newspaper to be downloaded (e. g. `6b2d790b-a6c1-48bd-8c4a-0c65f1259b01`)", required=True)
+@click.option("--page", type=int, help="Id of the page to be downloaded (e. g. `8`)", required=True)
+def fr_retronews(id, page):
 	"""
 	single page from www.retronews.fr
 	"""
 	import fr
-	fr.get_retronews(document_id=document_id, page=page)
+	fr.get_retronews(id=id, page=page)
 
 
 
