@@ -285,10 +285,13 @@ MAX_AUTHORS_IN_CITE_LABEL = 2
 
 SIZE_DELIMETER = "x"
 
+_GUID = "[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}"
+
 URL_REGEXPS = {
 	"nbn-resolving.de": re.compile(r"https://nbn-resolving.de/urn:nbn:de:[\w\-_/:]+"),
-	"polona.pl": re.compile(r"https://polona.pl/item-view/(?P<guid>[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"),
+	"polona.pl": re.compile(rf"https://polona.pl/item-view/{_GUID}"),
 	"tiaki.natlib.govt.nz": re.compile(r"https://tiaki.natlib.govt.nz/#details=ecatalogue.\d+"),
 	"www.itma.ie": re.compile(r"https://www.itma.ie/texts/[\w-]+/"),
 	"gallica.bnf.fr": re.compile(r"https://gallica.bnf.fr/ark:/12148/b[\d\w]+(/f\d+.image)?"),
+	"www.retronews.fr": re.compile(rf"https://www.retronews.fr/journal/[\w\-]+/[\w\d\-]+/\d+/{_GUID}"),
 }
