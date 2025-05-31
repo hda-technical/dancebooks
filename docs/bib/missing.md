@@ -681,6 +681,7 @@ _This part of the list is to joined with the general table_
 | Date | Author | Title | References | Links | Comment |
 | ---- | ------ | ----- | ---------- | ----- | ------- |
 | 1636 | | La comédie italienne, boutade | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k1513869b) | Либретто без хореографии. |
+| 1668 | | Ballet de la Paix, dansé par le Prince d'Orange | | [UGent](https://lib.ugent.be/en/catalog/rug01:001706875) | Либретто без хореографии |
 | 168- | Jean-Baptiste Lully | aka _Airs de ballets et d'opéras_ | | [BNF](https://gallica.bnf.fr/ark:/12148/btv1b10508435s) | Только музыка, без хореографии. |
 | 1690 | Pierre Beauchamps et al. | Ballets des Iesuistes | | [BNF](https://gallica.bnf.fr/ark:/12148/bpt6k103668z) | Только музыка, без хореографии. |
 | 1705 | Johann Christoph Wagenseil | Von Erziehung Eines Jungen Printzen | | [BSB](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10687427-0) | Дневники о воспитании, без описания танцев. |
