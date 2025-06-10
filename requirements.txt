@@ -16,7 +16,7 @@ pyjson5==1.6.9
 pytest==8.3.5
 python-stdnum==2.0
 pytrovich==0.0.4
-requests==2.32.3
+requests==2.32.4
 SQLAlchemy==2.0.40
 Unidecode==1.4.0
 Werkzeug==3.1.3
