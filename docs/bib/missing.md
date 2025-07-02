@@ -66,7 +66,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1753 | William Hogarth | The Analysis of Beauty | [Wikipedia](https://en.wikipedia.org/wiki/The_Analysis_of_Beauty) | |
 | 1754? | John Walsh (compiler) | The Compleat Country Dancing Master, volume 5 | `[Mackler]` | |
 | 1757? | Johann Philipp Kirnberger | Der neue Menuetten- Trio- und Polonesen Compositor | `music: generator`<br/>`[Thielen, 2009]` | |
-| 1758 | Pablo Minguet e Yrol | Arte de danzar á la francesa, adornado con quarenta y tantas láminas que enseñan el modo de hacer todos los passos de las danzas de corte<br/>_Alternative copies_ | [[Yrol, 1758]](https://bib.hda.org.ru/books/yrol_1758_arte) | [BNF](http://catalogue.bnf.fr/ark:/12148/cb30950723j) |
 | 1758 | Thomas Cahusac | 24 Country Dances for the Year 1758 | [ABC notation](http://www.village-music-project.org.uk/?page_id=815) | |
 | 1759 | N. Gautier | XXIV contredances angloises mises à la porté de tout le monde | `[Wortelboer, 2004]`<br/>`[Leaflets]` | |
 | 1759 | Louis de Cahusac | Der alte und neue Tanz<br/>In: _Sammlung vermischter Schriften zur Beförderung der schönen Wissenschaften und der freyen Künste, bd. 1–2_ | `[Germanorum, 1914]` | [Worldcat]<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003237549) |
