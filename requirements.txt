@@ -17,6 +17,7 @@ pytest==8.4.1
 python-stdnum==2.1
 pytrovich==0.0.4
 requests==2.32.4
+s3cmd==2.4.0
 SQLAlchemy==2.0.41
 Unidecode==1.4.0
 Werkzeug==3.1.3
