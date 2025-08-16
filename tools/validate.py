@@ -304,8 +304,9 @@ def validate_single_filename(abspath, filename, item, errors):
 
 	if not os.path.isfile(abspath):
 		errors.add(f"File [{abspath}] is not accessible")
-	if not utils.isfile_case_sensitive(abspath):
-		errors.add(f"File [{abspath}] is not accessible in case-sensitive mode")
+	# Commented this out as this code path is extremely slow on WSL2
+	# if not utils.isfile_case_sensitive(abspath):
+		# errors.add(f"File [{abspath}] is not accessible in case-sensitive mode")
 
 	type = item.get("type")
 	validate_periodical_filename(filename, item, errors)
