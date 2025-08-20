@@ -267,7 +267,7 @@ class WrappedHashHeaderProcessor(markdown.blockprocessors.BlockProcessor):
 	"""
 	Process hash-prefixed headers,
 	but considers lines in the same paragraph
-	to be continue the header, rather than to begin a new paragraph.
+	to continue the header, rather than to begin a new paragraph.
 
 	Based on the original python-markdown implementation.
 	"""
@@ -281,13 +281,24 @@ class WrappedHashHeaderProcessor(markdown.blockprocessors.BlockProcessor):
 	def run(self, parent, blocks):
 		block = blocks.pop(0)
 		m = self.RE.search(block)
-		wrapped = block[m.end():]
 		# Create header using named groups from RE
-		h = xml.SubElement(parent, "h%d" % len(m.group("level")))
+		level = len(m.group("level"))
+		h = xml.SubElement(parent, f"h{level}")
 		h.text = m.group("header").strip()
-		if wrapped:
+		# Do not handle before and hope nobody actually needs it
+		after = block[m.end():]
+		if after.startswith("#"):
+			# The following header (if any and only header) in the same block should be rendered independently.
+			# Insert remaining lines as first block for future parsing.
+			if self.parser.state.isstate('looselist'):
+				# This is a weird edge case where a header is a child of a loose list
+				# and there is no blank line after the header. To ensure proper
+				# parsing, the line(s) after need to be detabbed. See #1443.
+				after = self.looseDetab(after)
+			blocks.insert(0, after)
+		elif after:
 			h.text += "\n"
-			h.text += wrapped
+			h.text += after
 
 
 class MarkdownNoteExtension(markdown.extensions.Extension):

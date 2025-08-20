@@ -18,6 +18,28 @@ def dedent(text):
 	return textwrap.dedent(text.strip())
 
 
+def test_header():
+	input = "## Level Two Heading"
+	assert render(input) == "<h2>Level Two Heading</h2>"
+
+	input = "\n".join([
+		"# Wrapped",
+		"Header",
+	])
+	assert render(input) == "<h1>Wrapped\nHeader</h1>"
+
+	input = "\n".join([
+		"# Header 1",
+		"## Header 2",
+		"### Header 3",
+	])
+	assert render(input) == '\n'.join([
+		"<h1>Header 1</h1>",
+		"<h2>Header 2</h2>",
+		"<h3>Header 3</h3>",
+	])
+
+
 def test_italic():
 	input = "_Italic_"
 	assert render(input) == '<p><em>Italic</em></p>'
