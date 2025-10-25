@@ -92,7 +92,6 @@ ANCILLARY_FIELDS = {
 ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 
 MULTIENTRY_ENTRY_TYPES = {
-	"article",
 	"proceedings",
 	"mvproceedings",
 	"inproceedings",
@@ -316,18 +315,9 @@ def validate_single_filename(abspath, filename, item, errors):
 	if type in MULTIENTRY_ENTRY_TYPES:
 		return
 	metadata = utils.extract_metadata_from_file(filename)
-	# These fields must be set in filename if specified in the item
-	mandatory_meta_fields = [
-		"edition",
-		"part",
-	]
 
-	for meta_field in mandatory_meta_fields:
-		if (
-			(item.has(meta_field)) and
-			(meta_field not in metadata)
-		):
-			errors.add(f"Field {meta_field} is not specified in filename [{filename}]")
+	if item.has("edition") and "edition" not in metadata:
+		errors.add(f"Field 'edition' is not specified in filename [{filename}]")
 
 	if metadata.incomplete and (item.get("note") is None):
 		errors.add("Incomplete entries must have lacunas described in the 'note' field")
