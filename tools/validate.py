@@ -788,14 +788,15 @@ def validate_filename(item, errors):
 	Checks filename against various tests
 	"""
 	NOT_DIGITIZED_KEYWORD = "not digitized"
-	filename = item.get("filename")
+	filename = item.get("filename") or []
+	crossref = item.get("crossref")
 
 	type = item.get("type")
 	if type in MULTIENTRY_ENTRY_TYPES:
 		return
 
 	keywords = set(item.get("keywords") or {})
-	if filename is None:
+	if not filename and not crossref:
 		if (NOT_DIGITIZED_KEYWORD not in keywords):
 			errors.add(f"Keyword {NOT_DIGITIZED_KEYWORD} should be specified")
 		return
