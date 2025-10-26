@@ -127,7 +127,7 @@ def fetch_added_on_from_git():
 		r"[\d:]+\s+"
 		#commit time zone
 		r"[+\d]+\s+"
-		#line numberq
+		#line number
 		r"\d+\)\s+"
 		#item id
 		r"(?P<id>[a-z_\d]+),\s*$"
@@ -628,9 +628,9 @@ def validate_url_accessibility(item, errors):
 	url = item.get("url")
 	if url is None:
 		return
-	for number, single_url in enumerate(url):
+	for idx, single_url in enumerate(url):
 		if not utils.is_url_accessible(single_url, item):
-			errors.add(f"Field url with value [{single_url}] and number {number} is unaccessible")
+			errors.add(f"url {single_url!r} at position {idx} is unaccessible")
 
 
 def validate_transcription(item, errors):
