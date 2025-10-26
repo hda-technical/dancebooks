@@ -29,7 +29,11 @@ SHORT_LANG_MAP = {
 	],
 	"fr": ["french", "latin"],
 	"ie": ["english"],
-	"it": ["italian", "french"],
+	"it": [
+		"english",
+		"italian",
+		"french",
+	],
 	"lt": [
 		"latvian",
 		"russian",
@@ -44,7 +48,12 @@ SHORT_LANG_MAP = {
 	"no": ["norwegian"],
 	"pl": ["french", "polish"],
 	"pt": ["portuguese"],
-	"ru": ["russian", "french", "german"],
+	"ru": [
+		"english",
+		"french",
+		"german",
+		"russian",
+	],
 	"sc": ["english"],
 	"si": ["slovenian", "english", "german"],
 	"se": ["swedish", "french"],
