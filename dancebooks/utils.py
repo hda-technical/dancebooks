@@ -126,24 +126,22 @@ def extract_metadata_from_file(path):
 	result["year_to"] = year_to
 	result["langid"] = const.SHORT_LANG_MAP[match.group("langid")]
 
-	PLAIN_PARAMS = {"volume", "edition", "part", "title"}
-	for param in PLAIN_PARAMS:
-		value = match.group(param)
-		if value is None:
-			continue
-		if param in config.parser.int_params:
-			result[param] = int(value)
-		else:
-			result[param] = value
-
-	if number := match.group("number1"):
-		result["number"] = number.lstrip("0")
-	if number := match.group("number2"):
-		result["number"] = number.lstrip("0")
-
-	author = match.group("author")
 	if author := match.group("author"):
 		result["author"] = strip_split_list(author, ",")
+
+	result["title"] = match.group("title")
+
+	if edition := match.group("edition"):
+		result["edition"] = int(edition)
+
+	if volume := match.group("volume1") or match.group("volume2"):
+		result["volume"] = int(volume)
+
+	if number := match.group("number1") or match.group("number2"):
+		result["number"] = number.lstrip("0")
+
+	if part := match.group("part"):
+		result["part"] = int(part)
 
 	if keywords := match.group("keywords"):
 		result["keywords"] = set()

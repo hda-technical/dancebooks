@@ -182,9 +182,9 @@ FILENAME_REGEXP = re.compile(
 	#   dots (N. Malpied),
 	#   commas (Louis Pecour, Jacques Dezais)
 	# (question mark at the end makes regexp non-greedy)
-	r"(?:(?P<author>[\w\s\.,'\-]+?) - )?"
-	# optional serial number which can be prefixed to a title
-	r"(?:(?P<number1>\d+)\. )?"
+	r"((?P<author>[\w\s\.,'\-]+?) - )?"
+	# number (either serial or logical) optionally prefixed by volume number
+	r"(((?P<volume1>\d+)\.)?(?P<number1>\d+)\. )?"
 	# title: sequence of words, digits, spaces, punctuation
 	# (question mark at the end makes regexp non-greedy)
 	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”“№!\?\(\);]+?)"
@@ -195,11 +195,11 @@ FILENAME_REGEXP = re.compile(
 	#	comma-separated list of METADATA_PATTERN in parentheses
 	#   (something copy) — for books with multiple different copies known
 	r"(?:"
-		r"(?:, tome (?P<volume>\d+))|"
-		r"(?:, number (?P<number2>[\w\- ]+))|"
-		r"(?:, édition (?P<edition>\d+))|"
-		r"(?:, partie (?P<part>\d+))|"
-		r"(?: \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"
+		r"(, tome (?P<volume2>\d+))|"
+		r"(, number (?P<number2>[\w\- ]+))|"
+		r"(, édition (?P<edition>\d+))|"
+		r"(, partie (?P<part>\d+))|"
+		r"( \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"
 	r")*"
 	#extension: .pdf (facsimiles) or .md (transcriptions) or empty (backup folders)
 	r"(\.pdf|\.md|)"
