@@ -196,7 +196,7 @@ FILENAME_REGEXP = re.compile(
 	r"(((?P<volume1>\d+)\.)?(?P<number1>\d+)\. )?"
 	# title: sequence of words, digits, spaces, punctuation
 	# (question mark at the end makes regexp non-greedy)
-	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”“№!\?\(\);]+?)"
+	r"(?P<title>[\w\d\s',\.\-–—&«»‹›„”“№!\?\(\);$]+?)"
 	# metadata: optional sequence of predefined values
 	#   tome (, tome 2)
 	#   edition (, edition 10)
