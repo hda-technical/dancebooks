@@ -221,16 +221,9 @@ def make_searches_from_metadata(metadata):
 			for synonym in synonym_keys
 		])
 
-	volume = metadata.get("volume")
-	if volume is not None:
-		search_for_volume = search.search_for_optional_eq(
-			"volume",
-			volume
-		)
-		search_for_volumes = search.search_for_integer_ge(
-			"volumes",
-			volume
-		)
+	if volume := metadata.get("volume"):
+		search_for_volume = search.search_for_optional_eq("volume",	volume)
+		search_for_volumes = search.search_for_integer_ge("volumes", volume)
 		result["volume"] = search.or_([search_for_volume, search_for_volumes])
 	return result
 
