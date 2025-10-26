@@ -209,16 +209,11 @@ def make_searches_from_metadata(metadata):
 			search_value
 		)
 
-	synonym_prefix_searches = ["title"]
-	for search_key in synonym_prefix_searches:
-		search_value = metadata.get(search_key)
-		if search_value is None:
-			continue
-		synonym_keys = config.www.search_synonyms.get(search_key) + [search_key]
-		regexp = re.compile("^" + re.escape(search_value))
-		result[search_key] = search.or_([
-			search.search_for_string_regexp(synonym, regexp)
-			for synonym in synonym_keys
+	if title := metadata.get("title"):
+		regexp = re.compile("^" + re.escape(title))
+		result["title"] = search.or_([
+			search.search_for_string_regexp("title", regexp),
+			search.search_for_string_regexp("incipit", regexp),
 		])
 
 	if volume := metadata.get("volume"):
