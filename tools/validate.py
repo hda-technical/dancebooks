@@ -91,12 +91,6 @@ ANCILLARY_FIELDS = {
 
 ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 
-MULTIENTRY_ENTRY_TYPES = {
-	"proceedings",
-	"mvproceedings",
-	"collection",
-}
-
 # Entry types that can be nested in the other bibliographed entries
 PARTIAL_ENTRY_TYPES = {
 	# article -> periodical
@@ -309,9 +303,6 @@ def validate_single_filename(abspath, filename, item, errors):
 	validate_short_desription_filename(filename, item, errors)
 	validate_etiquette_filename(filename, item, errors)
 
-
-	if type in MULTIENTRY_ENTRY_TYPES:
-		return
 	metadata = utils.extract_metadata_from_file(filename)
 
 	if item.has("edition") and "edition" not in metadata:
@@ -780,8 +771,6 @@ def validate_filename(item, errors):
 	crossref = item.get("crossref")
 
 	type = item.get("type")
-	if type in MULTIENTRY_ENTRY_TYPES:
-		return
 
 	keywords = set(item.get("keywords") or {})
 	if not filename and not crossref:
