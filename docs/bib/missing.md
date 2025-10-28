@@ -306,7 +306,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1846–1852? | Johann Raab<br/>F. W. Swoboda | Concordia Quadrille | [Advertisement](https://books.google.com/books?id=zLwzAQAAIAAJ&pg=PA199) | |
 | 1846 | Paul Bruno Bartholomay | Die Tanzkunst in Beziehung auf die Lehre und Bildung des wahren Anstandes und des gefälligen Aeußern | `[Unfried, 2014]` | |
 | 1847 | Henri Cellarius | 100 neueste Pariser Cotillontouren<br/>_Published by Gerhard in Leipzig_ | [Advertisement](https://books.google.com/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #06]` | |
-| 1847 | Eduard Georg Eichler | Die Quadrille-Stirienne (Steirischer-Nationaltanz) in der neuen Form | `[3. Rothenfelser]`<br/>[Advertisement](https://books.google.com/books?id=G0USAAAAIAAJ&pg=RA1-PA54&dq=die+quadrille-stirienne)<br/>[Advertisement](https://books.google.com/books?id=h_NIAAAAcAAJ&pg=PA156&lpg=PA156)<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1848 | August Bournonville | Mit teaterliv: erindringer og tidsbilleder | `[2. Rothenfelser]` | |
 | 1848 | Suinglé | Petits Secrets in Dancing for the Use of Pupils<br/>_Published in Edinburgh by Andrew Murray_ | `[Russell, 2007]` | |
 | 1850? | Е. Гендрикова | Матросская полька | | [NLB](http://unicat.nlb.by/opac/pls/pages.view_doc?off=0&siz=&qid=96856&format=full&nn=134) |
