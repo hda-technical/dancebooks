@@ -8,6 +8,7 @@ fpdf2==2.8.4
 ipython==9.6.0
 Markdown==3.9
 mkdocs==1.6.1
+pdfly==0.5.1
 pillow==12.0.0
 pipdeptree==2.29.0
 psycopg2-binary==2.9.11
