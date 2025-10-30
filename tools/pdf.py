@@ -16,9 +16,9 @@ def round_up(value, divisor):
 
 
 def validate_format(ctx, param, value):
+	if value is None:
+		return None
 	try:
-		if value == "unchanged":
-			return None
 		width, height = map(int, value.split('x'))
 
 		# round up to divisable of 16, as required by jpegtran
@@ -29,31 +29,6 @@ def validate_format(ctx, param, value):
 	except Exception as ex:
 		print(repr(ex))
 		raise click.BadParameter('format should be {width}x{height}')
-
-
-def convert_to_pdf(
-	img: pil.Image, 
-	output_path: pathlib.Path, 
-	*,
-	size=None,
-	position=(0, 0),
-):
-	if size is None:
-		size = img.size
-	x_dpi, y_dpi = img.info.get("dpi", (600, 600))
-	pdf = fpdf.FPDF(
-		unit="in",
-		format=(size[0] / x_dpi, size[1] / y_dpi)
-	)
-	pdf.add_page()
-	pdf.image(
-		img.filename, 
-		x=position[0] / x_dpi,
-		y=position[1] / y_dpi,
-		w=img.size[0] / x_dpi,
-		h=img.size[1] / y_dpi,
-	)
-	pdf.output(output_path)
 
 
 def is_path_valid(path):
@@ -100,7 +75,7 @@ def main():
 
 
 @main.command()
-@click.option("--output-size", callback=validate_format)
+@click.option("--output-size", callback=validate_format, default=None)
 def convert(output_size):
 	"""
 	Convert set of images from current directory into a set of pdf files.
@@ -112,29 +87,30 @@ def convert(output_size):
 		print(f"Will generate images of size {width}x{height}")
 
 	dir = pathlib.Path(".")
+
+	pdf = fpdf.FPDF(unit="in")
 	for idx, path in enumerate(dir.iterdir()):
 		if not is_path_valid(path):
-			print(f"Skipping non-image object at {path}")
-			continue
-		output_path = path.with_suffix(".pdf")
-		print(f"Converting {path} to {output_path}")
-		img = pil.Image.open(path)
-		if output_size is None:
-			convert_to_pdf(img, output_path)
+			print(f"Skip non-jpeg file at {path}")
 			continue
 
-		cropped_path = path.with_suffix(".tmp.jpg")
-		
-		img = crop_jpeg_image(
-			img,
-			output_size=output_size,
-			output_path=cropped_path,
+		img = pil.Image.open(path)
+		width, height = img.size
+		x_dpi, y_dpi = img.info.get("dpi", (600, 600))
+
+		# TODO: restore jpegtran cropping
+
+		pdf.add_page(
+			format=(width / x_dpi, heigh / y_dpi)
 		)
-		
-		x, y = get_position(img, output_size=output_size)
-		convert_to_pdf(img, output_path, size=output_size, position=(x, y))
-		if os.path.exists(cropped_path):
-			os.remove(cropped_path)
+		pdf.image(
+			img.filename,
+			x=0,
+			y=0,
+			w=width / x_dpi,
+			h=height / y_dpi,
+		)
+	pdf.output("output.pdf")
 
 
 if __name__ == "__main__":
