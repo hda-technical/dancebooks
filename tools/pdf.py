@@ -89,7 +89,8 @@ def convert(output_size):
 	dir = pathlib.Path(".")
 
 	pdf = fpdf.FPDF(unit="in")
-	for idx, path in enumerate(dir.iterdir()):
+	count = 0
+	for idx, path in enumerate(sorted(dir.iterdir())):
 		if not is_path_valid(path):
 			print(f"Skip non-jpeg file at {path}")
 			continue
@@ -100,8 +101,9 @@ def convert(output_size):
 
 		# TODO: restore jpegtran cropping
 
+		count += 1
 		pdf.add_page(
-			format=(width / x_dpi, heigh / y_dpi)
+			format=(width / x_dpi, height / y_dpi)
 		)
 		pdf.image(
 			img.filename,
@@ -110,7 +112,10 @@ def convert(output_size):
 			w=width / x_dpi,
 			h=height / y_dpi,
 		)
-	pdf.output("output.pdf")
+	if count:
+		pdf.output("output.pdf")
+	else:
+		print("No pages to merge")
 
 
 if __name__ == "__main__":
