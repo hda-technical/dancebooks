@@ -611,7 +611,7 @@ def	vwml(id):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `ABO_+Z178189508`)", required=True)
+@click.option("--id", help="Id of the book to be downloaded (e. g. `1033C4D4`)", required=True)
 def at_onb(id):
 	"""
 	book from onb.ac.at
