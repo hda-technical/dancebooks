@@ -42,7 +42,8 @@
             "volumes",
             "edition",
             "part",
-            "day"
+            "day",
+            "year_for",
         ],
         "year_params": [
             "year"

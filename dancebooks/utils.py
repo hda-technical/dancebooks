@@ -117,13 +117,8 @@ def extract_metadata_from_file(path):
 	if not match:
 		raise ValueError(f"Filename {basename} does not match FILENAME_REGEXP")
 
-	year = match.group("year")
-	year_from = int(year.replace("-", "0"))
-	year_to = int(year.replace("-", "9"))
-
 	result = FileMetadata()
-	result["year_from"] = year_from
-	result["year_to"] = year_to
+	result["year"] = match.group("year")
 	result["langid"] = const.SHORT_LANG_MAP[match.group("langid")]
 
 	if author := match.group("author"):
@@ -199,15 +194,20 @@ def make_searches_from_metadata(metadata):
 		synonym_keys = config.www.search_synonyms.get(search_key) + [search_key]
 		result[search_key] = search.search_for_synonyms(synonym_keys, search_value)
 
-	date_searches = ["year_from", "year_to"]
-	for search_key in date_searches:
-		search_value = metadata.get(search_key)
-		if search_value is None:
-			continue
-		result[search_key] = search.search_for(
-			search_key,
-			search_value
-		)
+
+	if year := metadata.get("year"):
+		year_from = int(year.replace("-", "0"))
+		year_to = int(year.replace("-", "9"))
+		srch = search.and_([
+			search.search_for("year_from", year_from),
+			search.search_for("year_to", year_to),
+		])
+		if year_from == year_to:
+			srch = search.or_([
+				srch,
+				search.search_for_eq("year_for", year_from),
+			])
+		result["year"] = srch
 
 	if title := metadata.get("title"):
 		regexp = re.compile("^" + re.escape(title))

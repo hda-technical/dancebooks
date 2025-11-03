@@ -76,6 +76,7 @@ DATA_FIELDS = {
 	"volume",
 	"volumes",
 	"year",
+	"year_for",
 }
 
 ANCILLARY_FIELDS = {
