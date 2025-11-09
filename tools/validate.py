@@ -216,6 +216,10 @@ def update_validation_data(
 	current_ids = set(item_index["id"].keys())
 	old_ids = set(validation_data["ids"])
 	changed_ids = old_ids - current_ids
+
+	for source, target in config.www.id_redirections.items():
+		if target and target not in current_ids:
+			logging.error(f"    Redirection of {source} refers to a non-existent id {target}")
 	known_redirections = set(config.www.id_redirections.keys())
 	#ids that were lost due to renaming
 	lost_ids = changed_ids - known_redirections
