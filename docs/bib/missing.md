@@ -511,7 +511,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1958 | Зоя Дмитриевна Жизневская | Опыт работы танцевального коллектива фабрики "Красный Перекоп" г. Ярославля | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS008531382) |
 | 1959 | Anthur Henry Franks | A pictorial manual of ballroom dancing | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS009309611) |
 | 1950–1970? | Eduard Reeser | Story of the Waltz | `[Richardson, 1960]` | |
-| 1960–1965 | Kurt Petermann | Tanzbibliographie | | [Hathitrust](https://catalog.hathitrust.org/Record/000198061) |
+| 1960–1965 | Kurt Petermann | Tanzbibliographie | | [HathiTrust](https://catalog.hathitrust.org/Record/000198061) |
 | 1972 | George S. Emmerson | A Social History of Scottish Dance: Ane Celestial Recreatioun | `[2.Rothenfelser]` | [jstor](http://www.jstor.org/stable/j.ctt1t88wt7) |
 | 1976 | | Documenta Choreologica. Catalogue of 16th–19th Century Sources | `[Mackler]` | |
 | 1982 | | Derra de Moroda Dance Archives. The Dance Library. Catalogue | | `[Sort]` |
