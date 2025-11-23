@@ -303,4 +303,5 @@ URL_REGEXPS = {
 	"www.itma.ie": re.compile(r"https://www.itma.ie/texts/[\w-]+/"),
 	"gallica.bnf.fr": re.compile(r"https://gallica.bnf.fr/ark:/12148/b[\d\w]+(/f\d+.image)?"),
 	"www.retronews.fr": re.compile(rf"https://www.retronews.fr/journal/[\w\-]+/[\w\d\-]+/\d+/{_GUID}"),
+	"data.onb.ac.at": re.compile(r"https://data.onb.ac.at/rep/[0-9A-F]{8,10}"),
 }
