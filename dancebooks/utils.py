@@ -283,6 +283,7 @@ def is_url_valid(url, item):
 		logging.debug(f"{host=} is blocked")
 		return False
 
+	host = host.removeprefix("www.")
 	if re := const.URL_REGEXPS.get(host):
 		match = re.fullmatch(url)
 		if not match:
