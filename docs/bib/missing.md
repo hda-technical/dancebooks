@@ -333,7 +333,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1857? | Johann Raab | L'Alliance<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [ÖNB](http://data.onb.ac.at/rec/AC09173622) |
 | 1857 | Mieczysław Hłasko | Die Mazur (Polnischer Nationaltanz); gründlich und für Jedermann leicht faßlich beschrieben, mit Abbildung der Figuren und einer Nationalmusikversehen | `[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1857 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_4. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
-| 1857 | Eduard Georg Eichler | Reichs-Quadrille im Rococco- Ecossaise- oder Polka-Tremblant-Schritte | [Title page](https://yadi.sk/i/yJTwI_8OlTDP0A) | [ÖNB #1](http://data.onb.ac.at/rec/AC09238594)<br/>[ÖNB #2](http://data.onb.ac.at/rec/AC09217669) |
+| 1857 | Eduard Georg Eichler | Reichs-Quadrille im Rococco- Ecossaise- oder Polka-Tremblant-Schritte | [Title page](https://yadi.sk/i/yJTwI_8OlTDP0A) | [ÖNB](http://data.onb.ac.at/rec/AC09217669) |
 | 1857? | Edward Georg Eichler<br/>Jules Martin (translator) | Empire Quadrilles | [Title page](https://yadi.sk/i/qZDhduHLCoxiYA) | |
 | 1857? | L. H. Stoige | Quadrille française und Lanciers, geordnet nach dem Bestimmungen der deutschen Academie der Tanzlehrkunst<br/>_Published in Aschersleben by Ernst Schlegel_ | `[Germanorum, 1914]` | |
 | 1857 | Fr. Bartholomaus (publisher) | Quadrille à la cour<br/>_Published in Erfurt_ | `[Germanorum, 1914]` | |
