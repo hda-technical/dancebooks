@@ -384,7 +384,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1880 | Allan Mozart (publisher?) | Guide to the Ballroom<br/>_Published in Glasgow_<br/>_Scottish country dances_ | `[Rogers, 1998]` | |
 | 1880 | Carl Haraschin | Unsere Gesellschaftstänze | `[Unfried, 2014]`<br/>`[3. Rothenfelser]`<br/>`[Germanorum, 1914]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01001590546)<br/>[SMB / Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=862955807)<br/>[UDK / Berlin](https://udk-berlin.hosted.exlibrisgroup.com/permalink/f/1b2jonm/UDK_ALMA_DS21538943440002884) |
 | 1880–1900? | A. Handt | Contredanse & Quadrille à la cour. Die Touren dieser Tänze in französischer Sprache mit deutschen Anmerkungen<br/>_Published in Erfurt by Fr. Bartholomaus_ | `[Germanorum, 1914]` | [Berlin](https://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=373054815) (desideratum) |
-| 1881 | Adam Reichert | Die moderne Tanzkunst vom ästetischen und theoretischen Standpunkte | | [ÖNB](http://data.onb.ac.at/rec/AC10237835) |
 | 1882 | Bernhard Klemm | Katechismus der Tanzkunst<br/>_4. Auflage_ | `[Unfried, 2014]` | |
 | 18-- | Bernhard Klemm | Katechismus der Tanzkunst<br/>_Ungarisch translation_ | `[Katalog, 1894]` | |
 | 1882 | Amint Freising | Der Tanz. Nach älteren Schriften bearbeitet | `[Germanorum, 1914]` | [Berlin](https://lhiai.gbv.de/DB=2/XMLPRS=N/PPN?PPN=844229881) |
