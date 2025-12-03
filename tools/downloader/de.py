@@ -8,10 +8,20 @@ import requests
 from requests.exceptions import HTTPError
 
 
-def get_bsb(*, id):
-	manifest_url = f"https://api.digitale-sammlungen.de/iiif/presentation/v2/{id}/manifest"
+def _bsb_manifest_url(id):
+	return f"https://api.digitale-sammlungen.de/iiif/presentation/v2/{id}/manifest"
+
+
+def get_bsb_book(*, id):
+	manifest_url = _bsb_manifest_url(id)
 	output_folder = utils.make_output_folder("bsb", id)
 	iiif.download_book_fast(manifest_url, output_folder)
+
+
+def get_bsb_page(*, id, page):
+	manifest_url = _bsb_manifest_url(id)
+	output_folder = utils.make_output_folder("bsb", id)
+	iiif.download_page_fast(manifest_url, output_folder, page=page)
 
 
 def get_darmstadt(*, id):
@@ -59,12 +69,12 @@ def get_haab(*, first_id, second_id):
 
 	for page in range(1, 1000):
 		base_url = f"https://haab-digital.klassik-stiftung.de/viewer/api/v1/records/{first_id}/files/images/{second_id}_{page:04d}.tif"
-		
+
 		output_filename = utils.make_output_filename(output_folder, page, extension="bmp")
 		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
-		
+
 		try:
 			manifest_url = f"{base_url}/info.json"
 			utils.get_text(manifest_url)
@@ -216,7 +226,7 @@ def get_slub(*, id):
 		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
-		
+
 		page_url = f"https://digital.slub-dresden.de/data/kitodo/{id}/{id}_tif/jpegs/{page:08d}.tif.original.jpg"
 		print(f"Downloading page #{page:04d} from {page_url}")
 		try:

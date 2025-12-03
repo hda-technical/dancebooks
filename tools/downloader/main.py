@@ -140,12 +140,17 @@ def cz_nkp(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)", required=True)
-def de_bsb(id):
+@click.option("--page", help="Zero based page number to be downloaded", required=False, default=None, type=int)
+def de_bsb(id, page):
 	"""
 	book from www.digitale-sammlungen.de
 	"""
 	import de
-	de.get_bsb(id=id)
+	if page:
+		de.get_bsb_page(id=id, page=page)
+	else:
+		de.get_bsb_book(id=id)
+
 
 
 @main.command()

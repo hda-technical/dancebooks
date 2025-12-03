@@ -5,18 +5,18 @@ import iiif
 import utils
 
 
-def _make_manifest_url(id):
+def _gallica_manifest_url(id):
 	return f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 
 
 def get_gallica_book(id):
-	manifest_url = _make_manifest_url(id)
+	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
 	iiif.download_book_fast(manifest_url, output_folder)
 
 
 def get_gallica_page(id, page):
-	manifest_url = _make_manifest_url(id)
+	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
 	iiif.download_page_fast(manifest_url, output_folder, page=page)
 
