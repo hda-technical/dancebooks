@@ -395,6 +395,8 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1885 | Joh. Irger | Neuchö Tanz<br/>_Published by Friedrich und Companie in Ried_ | `[Germanorum, 1914]` | |
 | 1886?<br/>1902 | David Anderson | Ball-room Guide. New and Complete Edition | `[Guillard, 1989]` | |
 | 1886 | Wilhelm Jerwitz | Quadrillen Wegweiser | | [Berlin](http://stabikat.de/DB=1/XMLPRS=N/PPN?PPN=411479504) |
+| 1886 | Léon Espinosa | Le Réveil du menuet sous forme de quadrille, sa théorie technique | | [BNF](https://catalogue.bnf.fr/ark:/12148/cb30406844b) |
+| 1887 | Nicolas Maurice | Menuet français du XIXe siècle | | [BNF](https://catalogue.bnf.fr/ark:/12148/cb31015867d) |
 | 1889 | Eduard Reisinger | Die Tanzkunst und die Tänze<br/>_3. Auflage_<br/>_Published in Wien_ | `[Germanorum, 1914]` | [kb.dk](https://soeg.kb.dk/permalink/45KBDK_KGL/1pioq0f/alma99122796989905763) |
 | 1889 | Désiré Vestris | Les danses d'autrefois, de la pavane à la gavotte | `[Russell, 2007]` | [BNF](https://catalogue.bnf.fr/ark:/12148/cb31567511b)<br/>[BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01003783504) |
 | 189- | A. Handrl | Quadrille und Contretanz | `[Katalog, 1894]` | |
