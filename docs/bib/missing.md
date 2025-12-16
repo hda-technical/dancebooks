@@ -287,6 +287,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1842 | P. Lahire | Das Non-plus-ultra der Tanzkunst | `[Germanorum, 1914]` | [Berlin](http://portal.kobv.de/uid.do?query=b3kat_BV023947798&index=internal&plv=2)<br/>[Frankfurt](https://lbsopac.rz.uni-frankfurt.de/DB=30/PPNSET?PPN=053488474) |
 | 1842? | Adam Rabel | Kleine Sammlung geselliger Tänze | `[Unfried, 2014]` | |
 | 1843 | | Листок для светских людей. Петербургские балы и маскарады<br/>_№5 за 1843 год_ | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004358933) |
+| 1843 | W. Bolton<br/>G. M. Bolton<br/>A. M. Bolton | The Assembly Guide Containing the Figures of the Most Fashionable Dances<br/>8th edition | | [Oxford](https://solo.bodleian.ox.ac.uk/permalink/44OXF_INST/ogbd98/alma990140182080107026)<br/>[abebooks.com](https://www.abebooks.com/servlet/BookDetailsPL?bi=31781866106) |
 | 1844 | Adam Rabel | Die Lance-Quadrille. Mit 4 Tafeln Abbildungen und einer neuen Musik<br/>_2. Auflage_<br/>_Published in Wien_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1844 | | The Ballroom Annual | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01010474492) |
 | 1844 | David Bogue (publisher) | The Ball-Room Preceptor; Comprising The Most Esteemed Quadrilles, Galopades, Mazourkas, & Other Fashionable Dances of the Season<br/>_4th edition_ | | [On sale, £180](https://www.abebooks.com/servlet/BookDetailsPL?bi=21804699530) |
