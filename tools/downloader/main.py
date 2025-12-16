@@ -574,6 +574,16 @@ def locMusdi(id, start):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `rbc0001.2021rosen1620A`)", required=True)
+def us_loc(id):
+	"""
+	book from www.loc.gov
+	"""
+	import us
+	us.get_loc(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)", required=True)
 @click.option("--from", "from_page", help="First page to be downloaded", type=int, default=None)
 @click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=None)

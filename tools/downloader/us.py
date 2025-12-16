@@ -24,6 +24,25 @@ def get_hathitrust(*, id, from_page, to_page):
 		utils.get_binary(output_filename, url)
 
 
+def get_loc(*, id):
+	# manifest_url = f"https://www.loc.gov/item/{id}/manifest.json"
+	output_folder = utils.make_output_folder("loc", id)
+	# manifest = utils.get_json(manifest_url)
+	# canvases = manifest["sequences"][0]["canvases"]
+	# turn id in from rbc0001.2021rosen1620A into rbc/rbc0001/2021/2021rosen1620A
+	# FIXME: most likely this does not scale
+	id1, id2 = id.split(".")
+	tif_id = f"{id1[0:3]}/{id1}/{id2[0:4]}/{id2}"
+	for page in range(1000):
+		tif_url = f"https://tile.loc.gov/storage-services/master/{tif_id}/{page + 1:04d}.tif"
+		output_filename = utils.make_output_filename(output_folder, page + 1, extension="tif")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:08d}")
+			continue
+		print(f"Downloading {output_filename} from {tif_url}")
+		utils.get_binary(output_filename, tif_url)
+
+
 def get_nypl(*, id):
 	metadata_url = f"https://digitalcollections.nypl.org/items/{id}/captures?page=1&per_page=1000"
 	metadata = utils.get_json(metadata_url)
