@@ -24,6 +24,12 @@ def get_hathitrust(*, id, from_page, to_page):
 		utils.get_binary(output_filename, url)
 
 
+def get_huntington(*, id):
+	manifest_url = f"https://hdl.huntington.org/iiif/2/{id}/manifest.json"
+	output_folder = utils.make_output_folder("huntington", id)
+	iiif.download_book_fast(manifest_url, output_folder)
+
+
 def get_loc(*, id):
 	# manifest_url = f"https://www.loc.gov/item/{id}/manifest.json"
 	output_folder = utils.make_output_folder("loc", id)

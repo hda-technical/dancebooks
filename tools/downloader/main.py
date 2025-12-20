@@ -596,6 +596,16 @@ def us_hathitrust(id, from_page, to_page):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `p15150coll3:15340`)", required=True)
+def us_huntington(id):
+	"""
+	book from hdl.huntington.org
+	"""
+	import us
+	us.get_huntington(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `Wilson1808`)", required=True)
 def	vwml(id):
 	"""
