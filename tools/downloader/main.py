@@ -597,12 +597,13 @@ def us_hathitrust(id, from_page, to_page):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `p15150coll3:15340`)", required=True)
-def us_huntington(id):
+@click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)
+def us_huntington(**kv):
 	"""
 	book from hdl.huntington.org
 	"""
 	import us
-	us.get_huntington(id=id)
+	us.get_huntington(**kv)
 
 
 @main.command()
