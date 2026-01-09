@@ -58,18 +58,41 @@ def get_candide(id):
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
 
 
+def _calvados_metadata_url(ark_name, uuid):
+	return f"https://archives.calvados.fr/visualizer/api?arkName={ark_name}&uuid={uuid}"
+
+
 def get_calvados(id):
 	ark_name, uuid = id.split('/')
-	metadata = utils.get_json(f"https://archives.calvados.fr/visualizer/api?arkName={ark_name}&uuid={uuid}")
 	output_folder = utils.make_output_folder("calvados", uuid[:8])
-	for page, meta in enumerate(metadata["media"], start=1):
-		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
-		if os.path.isfile(output_filename):
-			print(f"Skip downloading existing page #{page:04d}")
-			continue
-		url = meta["location"]["original"]
-		print(f"Downloading page #{page:04d} from {url}")
-		utils.get_binary(output_filename, url)
+	metadata_url = _calvados_metadata_url(ark_name, uuid)
+	metadata = utils.get_json(metadata_url)
+	print(f"Downloading initial metadata from {metadata_url}")
+	page = 0
+	while page < metadata["counts"]["media"]:
+		metadata_url = _calvados_metadata_url(ark_name, uuid)
+		print(f"Fetching metadata batch from {metadata_url}")
+		metadata = utils.get_json(metadata_url)
+		media = metadata["media"]
+		if isinstance(media, list):
+			pages = enumerate(media)
+		else:
+			pages = [(int(page), medium) for page, medium in media.items()]
+		for id, medium in pages:
+			uuid = medium["uuid"]
+			if id < page:
+				print(f"Skip page {id}")
+				continue
+			output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+			if os.path.isfile(output_filename):
+				print(f"Skip downloading existing page #{page:04d}")
+				page += 1
+				continue
+			url = medium["location"]["original"]
+			print(f"Downloading page #{page:04d} from {url}")
+			utils.get_binary(output_filename, url)
+			page += 1
+
 
 
 def get_inha(id):
