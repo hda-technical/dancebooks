@@ -37,6 +37,17 @@ def at_ubs(*, first, last):
 	at.get_ubs(first=first, last=last)
 
 
+
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `7dfr1tsbqn6c/7b47f7c3-8636-4007-a5bd-8c160401fa7f`)", required=True)
+def fr_calvados(id):
+	"""
+	book from archives.calvados.fr
+	"""
+	import fr
+	fr.get_calvados(id)
+
+
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `btv1b7200356s`)", required=True)
 @click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)

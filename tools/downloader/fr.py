@@ -58,6 +58,20 @@ def get_candide(id):
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
 
 
+def get_calvados(id):
+	ark_name, uuid = id.split('/')
+	metadata = utils.get_json(f"https://archives.calvados.fr/visualizer/api?arkName={ark_name}&uuid={uuid}")
+	output_folder = utils.make_output_folder("calvados", uuid[:8])
+	for page, meta in enumerate(metadata["media"], start=1):
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+		url = meta["location"]["original"]
+		print(f"Downloading page #{page:04d} from {url}")
+		utils.get_binary(output_filename, url)
+
+
 def get_inha(id):
 	# NB: inha.fr mandates checks for the real User-Agent
 	manifest_url = f"https://bibliotheque-numerique.inha.fr/iiif/{id}/manifest"
