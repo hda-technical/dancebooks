@@ -1,6 +1,7 @@
 site_name: Библиография исторического танца
 docs_dir: docs
 site_dir: ./www/static/docs
+
 nav:
   - index.md
   - Общая информация:
@@ -19,10 +20,19 @@ nav:
     - Устройство архива с музыкой: music.md
     - Альбомы для исторических танцев: music_cds.md
   - Резервные копии: backups.md
+
 plugins: []
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.gfm
+  - attr_list
+
 theme:
   name: mkdocs
   nav_style: dark
+
 extra_css:
   - style.css
+
 strict: true
