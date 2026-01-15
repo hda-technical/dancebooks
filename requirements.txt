@@ -14,6 +14,7 @@ pipdeptree==2.30.0
 psycopg2-binary==2.9.11
 pyflakes==3.4.0
 pyjson5==2.0.0
+pymdown-extensions==10.20
 pytest==9.0.2
 python-stdnum==2.2
 pytrovich==0.0.5
