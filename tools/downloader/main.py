@@ -83,6 +83,16 @@ def fr_inha(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `72006`)", required=True)
+def fr_inha_contredanse(id):
+	"""
+	contredanse collection from digital.inha.fr
+	"""
+	import fr
+	fr.get_inha_contredanse(id)
+
+
+@main.command()
 @click.option("--id", help="Id of the books to be downloaded (e. g. `098461435`)", required=True)
 def fr_tolosana(id):
 	"""

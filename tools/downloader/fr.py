@@ -1,4 +1,5 @@
 import os
+import re
 import requests
 
 import iiif
@@ -100,6 +101,32 @@ def get_inha(id):
 	manifest_url = f"https://bibliotheque-numerique.inha.fr/iiif/{id}/manifest"
 	output_folder = utils.make_output_folder("inha", id)
 	iiif.download_book_fast(manifest_url, output_folder)
+
+
+def get_inha_contredanse(id):
+	# digital.inha.fr uses buggy IIIF_v2 backend.
+	# Hence the custom code with bugs worked around
+	manifest_url = f"https://digital.inha.fr/contredanses/iiif/{id}/manifest"
+	output_folder = utils.make_output_folder("inhacd", id)
+	manifest = requests.get(manifest_url).json()
+	canvases = manifest["sequences"][0]["canvases"]
+	for page, metadata in enumerate(canvases):
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.isfile(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+		url = metadata["images"][-1]["resource"]["@id"]
+		# Replace third component of @id with full transforming
+		# https://digital.inha.fr/contredanses/iiif/2/10783/full/168,800/0/default.jpg
+		# into
+		# https://digital.inha.fr/contredanses/iiif/2/10783/full/full/0/default.jpg
+		url = re.sub(
+			r"/full/\d+,\d+/0/default.jpg",
+			r"/full/full/0/default.jpg",
+			url,
+		)
+		print(f"Downloading page #{page:04d} from {url}")
+		utils.get_binary(output_filename, url)
 
 
 def get_retronews(*, id, page):
