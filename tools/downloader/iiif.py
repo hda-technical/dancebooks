@@ -70,7 +70,8 @@ def download_book(manifest: str | dict, output_folder):
 	if isinstance(manifest, str):
 		manifest = utils.get_json(manifest)
 	canvases = manifest["sequences"][0]["canvases"]
-	for page, metadata in enumerate(canvases):
+	print(f"Will download {len(canvases)} pages")
+	for page, metadata in enumerate(canvases, start=1):
 		output_filename = utils.make_output_filename(output_folder, page)
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
@@ -115,7 +116,8 @@ def download_book_fast(manifest: dict | str, output_folder):
 	if isinstance(manifest, str):
 		manifest = utils.get_json(manifest)
 	canvases = manifest["sequences"][0]["canvases"]
-	for page, metadata in enumerate(canvases):
+	print(f"Will download {len(canvases)} pages")
+	for page, metadata in enumerate(canvases, start=1):
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
@@ -155,7 +157,9 @@ def download_book_fast_v3(manifest_url, output_folder):
 	"""
 	print(f"GET {manifest_url}")
 	manifest = utils.get_json(manifest_url)
-	for page, metadata in enumerate(manifest["items"]):
+	canvases = manifest["items"]
+	print(f"Will download {len(canvases)} pages")
+	for page, metadata in enumerate(canvases, start=1):
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
