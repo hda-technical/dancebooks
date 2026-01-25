@@ -646,7 +646,6 @@ _This part of the list is to joined with the general table_
 | 17-- | | English Country Dances | Turin, National Library | | [[Dradi, 2014]](https://bib.hda.org.ru/books/proceedings_spb_2014_dradi) | |
 | 17-- | | Recueil de contredanses transposées pour la viele | Paris, Bibliothèque nationale de France | `VM7-3643` | | [BNF](http://catalogue.bnf.fr/ark:/12148/cb43360196s) |
 | 1704 | André Lorin | Claim against Beauchamps on the primacy of inventing dance notation | Paris, Bibliothèque nationale de France | | | |
-| 1707 | Raoul-Auger Feuillet | Recüeil de danses ou sont contenues la poitevine, la modene, la bourree nouvelle, le charmant vanqueur, et la mattelotte | Archives dèpartementales du Calvados | `ad/2 E 697` | `Lancelot:Ms15.1` | |
 | 171- | | Recueil de dances | Unknown Private Collection in USA | | `Lancelot:Ms05.2` | |
 | 1717 | Raoul-Auger Feuillet<br/>Carlo Cesare Scaletta (translator) | Choregraphie ò vero l'arte di descrivere i balli per caratteri figure e segni demostrativi | Chicago, Newberry Library | `VAULT Case MS 5310` | [[Dradi, 2016]](https://bib.hda.org.ru/books/proceedings_rothenfelser_2016)<br/>`[Mackler]`<br/>`[4. Rothenfelser]` | [Chicago, Newberry Library](https://i-share-nby.primo.exlibrisgroup.com/permalink/01CARLI_NBY/i5mcb2/alma991835868805867) |
 | 1720? | Auguste W. Charpentier | Choréographie | Chicago, Newberry Library | `VAULT Case MS 5306` | | [Chicago, Newberry Library](https://i-share-nby.primo.exlibrisgroup.com/permalink/01CARLI_NBY/i5mcb2/alma991836218805867)
