@@ -606,8 +606,8 @@ def us_loc(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)", required=True)
-@click.option("--from", "from_page", help="First page to be downloaded", type=int, default=None)
-@click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=None)
+@click.option("--from", "from_page", help="First page to be downloaded", type=int, default=1)
+@click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=1000)
 def us_hathitrust(id, from_page, to_page):
 	"""
 	book from www.hathitrust.org

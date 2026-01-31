@@ -1,27 +1,18 @@
 import os
+import textwrap
 
 import iiif
 import utils
 
 
 def get_hathitrust(*, id, from_page, to_page):
-	raise RuntimeError("This downloader requires Cookies and JavaScript. Use DownThemAll! instead")
-	output_folder = utils.make_output_folder("hathitrust", id)
-	metadata_url = f"https://babel.hathitrust.org/cgi/imgsrv/meta?id={id}"
-	metadata = utils.get_json(metadata_url)
-	if from_page is None:
-		from_page = 1
-	if to_page is None:
-		to_page = metadata["total_items"]
-	print(f"Going to download {to_page - from_page + 1} pages to {output_folder}")
-	for page in range(from_page, to_page + 1):
-		url = f"https://babel.hathitrust.org/cgi/imgsrv/image?id={id}&format=image/tiff&size=ppi:600&seq={page}"
-		output_filename = utils.make_output_filename(output_folder, page, extension="tif")
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{page:08d}")
-			continue
-		print(f"Downloading page {page} to {output_filename}")
-		utils.get_binary(output_filename, url)
+	print(textwrap.dedent(f"""
+		This downloader requires Cookies and JavaScript to function.
+		Paste
+		https://babel.hathitrust.org/cgi/imgsrv/image?id={id}&attachment=1&tracker=D1&format=image%2Ftiff&size=full&seq=[{from_page}:{to_page}]
+		to Use DownThemAll! -> Add Download to get images
+		"""
+	))
 
 
 def get_huntington(*, id, page):
