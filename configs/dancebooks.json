@@ -155,6 +155,9 @@
 
             // Use marble.nd.edu instead
             "curate.nd.edu",
+
+            // Use data.onb.ac.at permalinks instead
+            "onb.digital",
         ],
         "domains_allowed_http": [
             "chrisbrady.itgo.com",
