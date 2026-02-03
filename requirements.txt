@@ -10,6 +10,7 @@ Markdown==3.10.1
 mkdocs==1.6.1
 pdfly==0.5.1
 pillow==12.1.0
+pip==26.0
 pipdeptree==2.30.0
 psycopg2-binary==2.9.11
 pyflakes==3.4.0
