@@ -114,6 +114,7 @@ def download_book_fast(manifest: dict | str, output_folder):
 	http://iiif.io/about/
 	"""
 	if isinstance(manifest, str):
+		print(f"GET {manifest}")
 		manifest = utils.get_json(manifest)
 	canvases = manifest["sequences"][0]["canvases"]
 	print(f"Will download {len(canvases)} pages")

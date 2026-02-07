@@ -1,5 +1,6 @@
 import http
 import os
+import textwrap
 
 import iiif
 import utils
@@ -158,6 +159,17 @@ def get_karlsruhe(*, id):
 	# Invoking download_book_fast will cause downloading of a lower-resolution copy of the image.
 	# Fallback to a tile-based downloader for the higher resolution.
 	iiif.download_book(manifest_url, output_folder)
+
+
+def get_kassel(*, id):
+	print(textwrap.dedent(f"""
+		This downloader requires Cookies and JavaScript to function.
+		Paste
+		https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/{id}/files/images/[00000001:00000017].tif/full/max/0/default.tif
+		to Use DownThemAll! -> Add Download to get images
+		"""
+	))
+
 
 
 def get_mv(*, id):

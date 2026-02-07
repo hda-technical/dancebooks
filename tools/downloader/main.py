@@ -173,6 +173,15 @@ def de_bsb(id, page):
 		de.get_bsb_book(id=id)
 
 
+@main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)", required=True)
+def de_kassel(id):
+	"""
+	book from orka.bibliothek.uni-kassel.de
+	"""
+	import de
+	de.get_kassel(id=id)
+
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `ppn1727545419`)", required=True)
