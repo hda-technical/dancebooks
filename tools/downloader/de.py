@@ -171,7 +171,6 @@ def get_kassel(*, id):
 	))
 
 
-
 def get_mv(*, id):
 	# it looks like Mecklenburg-Vorpommern does not use manifest.json
 	output_folder = utils.make_output_folder("mv", id)
@@ -227,6 +226,27 @@ def get_rosdok(*, id):
 			if ex.response.status_code == http.client.NOT_FOUND:
 				print("Got HTTP 404, stopping download")
 				break
+
+
+def get_sbb(*, id):
+	output_folder = utils.make_output_folder("sbb", id)
+	for page in range(1, 1000):
+		output_filename = utils.make_output_filename(output_folder, page, extension="tif")
+		if os.path.isfile(output_filename):
+			print(f"Skipping existing page {page}")
+			continue
+
+		try:
+			image_url = f"https://content.staatsbibliothek-berlin.de/dms/{id}/800/0/{page:08d}.tif?original=true"
+			#WARN:
+			#	it looks like there is no normal way
+			#	to get the number of pages in the book via http request
+			print(f"Downloading page #{page:04d} from {image_url}")
+			utils.get_binary(output_filename, image_url)
+		except ValueError:
+			print(f"No more images left. Last page was {page - 1:04d}")
+			break
+
 
 
 def get_slub(*, id):

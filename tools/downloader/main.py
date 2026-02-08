@@ -678,27 +678,12 @@ def at_onb(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `PPN670016500`)", required=True)
-def staats_berlin(id):
+def de_sbb(id):
 	"""
 	book from digital.staatsbibliothek-berlin.de
 	"""
-	output_folder = make_output_folder("staats_berlin", id)
-	page = 1
-	while True:
-		output_filename = make_output_filename(output_folder, page, extension="tif")
-		if os.path.isfile(output_filename):
-			print(f"Skipping existing page {page}")
-		else:
-			try:
-				image_url = f"https://content.staatsbibliothek-berlin.de/dms/{id}/800/0/{page:08d}.tif?original=true"
-				#WARN:
-				#	it looks like there is no normal way
-				#	to get the number of pages in the book via http request
-				get_binary(output_filename, image_url)
-			except ValueError:
-				print(f"No more images left. Last page was {page - 1:04d}")
-				break
-		page += 1
+	import de
+	de.get_sbb(id=id)
 
 
 @main.command()
