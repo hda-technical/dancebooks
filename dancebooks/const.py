@@ -301,7 +301,7 @@ URL_REGEXPS = {
 	"polona.pl": re.compile(rf"https://polona.pl/item-view/{_GUID}"),
 	"tiaki.natlib.govt.nz": re.compile(r"https://tiaki.natlib.govt.nz/#details=ecatalogue.\d+"),
 	"itma.ie": re.compile(r"https://www.itma.ie/texts/[\w-]+/"),
-	"gallica.bnf.fr": re.compile(r"https://gallica.bnf.fr/ark:/12148/b[\d\w]+(/f\d+.image)?"),
+	"gallica.bnf.fr": re.compile(r"https://gallica.bnf.fr/ark:/12148/b[\d\w]+(/f\d+)?"),
 	"retronews.fr": re.compile(rf"https://www.retronews.fr/journal/[\w\-]+/[\w\d\-]+/\d+/{_GUID}"),
 	"data.onb.ac.at": re.compile(r"https://data.onb.ac.at/rep/[0-9A-F]{8,10}"),
 	"musenalm.de": re.compile(r"https://musenalm.de/almanach/\d+/"),
