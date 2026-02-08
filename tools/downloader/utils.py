@@ -16,7 +16,7 @@ import requests
 #	In particularly, CloudFlare works well with curl.
 #
 # USER_AGENT = "curl/7.68.0"
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:62.0) Gecko/20100101 Firefox/137.0"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0"
 HEADERS = {
 	"User-Agent": USER_AGENT
 }

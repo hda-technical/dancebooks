@@ -92,7 +92,7 @@ def download_image_fast_v1(base_url, output_filename):
 	utils.get_binary(output_filename, img_url)
 
 
-def _download_image_fast_v2(metadata, page, output_filename):
+def _download_image_fast_v2(metadata, page, output_filename, **rq_kvargs):
 	url = None
 	if not url:
 		# Certain installations (only opendata.uni-halle.de so far)
@@ -105,7 +105,7 @@ def _download_image_fast_v2(metadata, page, output_filename):
 	utils.get_binary(output_filename, url)
 
 
-def download_book_fast_v2(manifest: dict | str, output_folder):
+def download_book_fast_v2(manifest: dict | str, output_folder, **rq_kvargs):
 	"""
 	Downloads entire book via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
@@ -115,7 +115,7 @@ def download_book_fast_v2(manifest: dict | str, output_folder):
 	"""
 	if isinstance(manifest, str):
 		print(f"GET {manifest}")
-		manifest = utils.get_json(manifest)
+		manifest = utils.get_json(manifest, **rq_kvargs)
 	canvases = manifest["sequences"][0]["canvases"]
 	print(f"Will download {len(canvases)} pages")
 	for page, metadata in enumerate(canvases, start=1):
@@ -127,10 +127,11 @@ def download_book_fast_v2(manifest: dict | str, output_folder):
 			metadata=metadata,
 			page=page,
 			output_filename=output_filename,
+			**rq_kvargs,
 		)
 
 
-def download_page_fast_v2(manifest_url, output_folder, *, page):
+def download_page_fast_v2(manifest_url, output_folder, *, page, **rq_kvargs):
 	"""
 	Downloads single page via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
@@ -138,7 +139,8 @@ def download_page_fast_v2(manifest_url, output_folder, *, page):
 	API is documented here:
 	http://iiif.io/about/
 	"""
-	manifest = utils.get_json(manifest_url)
+	print(f"GET {manifest}")
+	manifest = utils.get_json(manifest_url, **rq_kvargs)
 	canvases = manifest["sequences"][0]["canvases"]
 	output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
 	_download_image_fast_v2(

@@ -10,16 +10,31 @@ def _gallica_manifest_url(id):
 	return f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 
 
+BNF_HEADERS = {
+	"Referer": "https://api.bnf.fr/",
+	"Origin":  "https://api.bnf.fr",
+}
+
+
 def get_gallica_book(id):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	iiif.download_book_fast_v2(manifest_url, output_folder)
+	iiif.download_book_fast_v2(
+		manifest_url,
+		output_folder,
+		headers=BNF_HEADERS,
+	)
 
 
 def get_gallica_page(id, page):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	iiif.download_page_fast_v2(manifest_url, output_folder, page=page)
+	iiif.download_page_fast_v2(
+		manifest_url,
+		output_folder,
+		page=page,
+		headers=BNF_HEADERS,
+	)
 
 
 def get_candide(id):
