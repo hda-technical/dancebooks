@@ -165,7 +165,7 @@ def get_kassel(*, id):
 	print(textwrap.dedent(f"""
 		This downloader requires Cookies and JavaScript to function.
 		Paste
-		https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/{id}/files/images/[00000001:00000017].tif/full/max/0/default.tif
+		https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/{id}/files/images/[00000001:00000025].tif/full/max/0/default.tif
 		to Use DownThemAll! -> Add Download to get images
 		"""
 	))
