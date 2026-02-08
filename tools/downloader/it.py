@@ -33,7 +33,7 @@ def get_internet_culturale(*, id):
 def get_hertziana(*, id):
 	manifest_url = f"https://dlib.biblhertz.it/iiif/{id}/manifest2.json"
 	output_folder = utils.make_output_folder("hertziana", id)
-	iiif.download_book_fast(manifest_url, output_folder)
+	iiif.download_book_fast_v2(manifest_url, output_folder)
 
 
 def get_rovereto(*, id):
@@ -44,7 +44,7 @@ def get_rovereto(*, id):
 	manifest = json.loads(manifest_text.replace("\r\n", ""))
 	
 	output_folder = utils.make_output_folder("rovereto", id[0:8])
-	iiif.download_book_fast(manifest, output_folder)
+	iiif.download_book_fast_v2(manifest, output_folder)
 
 
 def get_sbn(id):

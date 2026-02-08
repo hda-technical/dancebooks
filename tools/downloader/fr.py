@@ -13,13 +13,13 @@ def _gallica_manifest_url(id):
 def get_gallica_book(id):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	iiif.download_book_fast(manifest_url, output_folder)
+	iiif.download_book_fast_v2(manifest_url, output_folder)
 
 
 def get_gallica_page(id, page):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	iiif.download_page_fast(manifest_url, output_folder, page=page)
+	iiif.download_page_fast_v2(manifest_url, output_folder, page=page)
 
 
 def get_candide(id):
@@ -100,7 +100,7 @@ def get_inha(id):
 	# NB: inha.fr mandates checks for the real User-Agent
 	manifest_url = f"https://bibliotheque-numerique.inha.fr/iiif/{id}/manifest"
 	output_folder = utils.make_output_folder("inha", id)
-	iiif.download_book_fast(manifest_url, output_folder)
+	iiif.download_book_fast_v2(manifest_url, output_folder)
 
 
 def get_inha_contredanse(id):

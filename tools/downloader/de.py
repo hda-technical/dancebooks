@@ -16,19 +16,19 @@ def _bsb_manifest_url(id):
 def get_bsb_book(*, id):
 	manifest_url = _bsb_manifest_url(id)
 	output_folder = utils.make_output_folder("bsb", id)
-	iiif.download_book_fast(manifest_url, output_folder)
+	iiif.download_book_fast_v2(manifest_url, output_folder)
 
 
 def get_bsb_page(*, id, page):
 	manifest_url = _bsb_manifest_url(id)
 	output_folder = utils.make_output_folder("bsb", id)
-	iiif.download_page_fast(manifest_url, output_folder, page=page)
+	iiif.download_page_fast_v2(manifest_url, output_folder, page=page)
 
 
 def get_darmstadt(*, id):
 	output_folder = utils.make_output_folder("darmstadt", id)
 	manifest_url = f"http://tudigit.ulb.tu-darmstadt.de/show/iiif/{id}/manifest.json"
-	iiif.download_book_fast(manifest_url, output_folder)
+	iiif.download_book_fast_v2(manifest_url, output_folder)
 
 
 def get_fulda(*, id):
@@ -156,7 +156,7 @@ def get_hab_image(*, id):
 def get_karlsruhe(*, id):
 	manifest_url = f"https://digital.blb-karlsruhe.de/i3f/v20/{id}/manifest"
 	output_folder = utils.make_output_folder("karlsruhe", id)
-	# Invoking download_book_fast will cause downloading of a lower-resolution copy of the image.
+	# Invoking download_book_fast_v2 will cause downloading of a lower-resolution copy of the image.
 	# Fallback to a tile-based downloader for the higher resolution.
 	iiif.download_book(manifest_url, output_folder)
 
@@ -252,4 +252,4 @@ def get_slub(*, id):
 def get_unihalle(*, id):
 	output_folder = utils.make_output_folder("halle", id.split('/')[0])
 	manifest_url = f"https://opendata.uni-halle.de/json/iiif/{id}/manifest"
-	iiif.download_book_fast(manifest_url, output_folder)
+	iiif.download_book_fast_v2(manifest_url, output_folder)

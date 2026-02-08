@@ -20,9 +20,9 @@ def get_huntington(*, id, page):
 	manifest_url = f"https://hdl.huntington.org/iiif/2/{id}/manifest.json"
 	output_folder = utils.make_output_folder("huntington", id)
 	if page:
-		iiif.download_page_fast(manifest_url, output_folder, page=page)
+		iiif.download_page_fast_v2(manifest_url, output_folder, page=page)
 	else:
-		iiif.download_book_fast(manifest_url, output_folder)
+		iiif.download_book_fast_v2(manifest_url, output_folder)
 
 
 def get_loc(*, id):
