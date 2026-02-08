@@ -7,7 +7,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | Date | Author | Title | References | Links |
 | ---- | ------ | ----- | ---------- | ----- |
 | 1521 | Robert Coplande | The Maner of Dauncynge of Bace Dauces | [[Coplande, 1521]](https://bib.hda.org.ru/books/coplande_1521) | BL |
-| 1529 | Pierre Attaignant (publisher) | Dixhuit basses dances garnies de recoupes et tordions avec dixneuf brãles, quatre sauterelles | | |
 | 1531 | Pierre Attaignant (publisher) | Quatorze gaillardes, neuf paven, sept branles et deux basses dances | | |
 | 154- | Pierre Attaignant (publisher) | Premier livre de dances | `[LOST?]` | |
 | 1551 | Tielman Susato | Het derde musyck boexken or Dansereye | `[2. Rothenfelser]` | |
