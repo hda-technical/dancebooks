@@ -1,4 +1,5 @@
 import os
+from string import Template
 import textwrap
 
 import iiif
@@ -30,18 +31,31 @@ def get_loc(*, id):
 	output_folder = utils.make_output_folder("loc", id)
 	# manifest = utils.get_json(manifest_url)
 	# canvases = manifest["sequences"][0]["canvases"]
-	# turn id in from rbc0001.2021rosen1620A into rbc/rbc0001/2021/2021rosen1620A
 	# FIXME: most likely this does not scale
-	id1, id2 = id.split(".")
-	tif_id = f"{id1[0:3]}/{id1}/{id2[0:4]}/{id2}"
+	if id.startswith("rbc"):
+		# turn rbc0001.2021rosen1620A into rbc/rbc0001/2021/2021rosen1620A
+		id1, id2 = id.split(".")
+		page_id = f"{id1[0:3]}/{id1}/{id2[0:4]}/{id2}"
+		ext = "tif"
+		page_template = f"https://tile.loc.gov/storage-services/master/{page_id}/" + "${page}" + f".{ext}"
+		page_template = Template(page_template)
+	elif id.startswith("music"):
+		# turn music.musrism-2020562476 into music/musrism-2020562476/musrism-2020562476
+		id1, id2 = id.split(".")
+		page_id = f"{id1}/{id2}/{id2}"
+		ext = "jp2"
+		page_template = f"https://tile.loc.gov/storage-services/public/{page_id}_" + "${page}" + f".{ext}"
+		page_template = Template(page_template)
+	else:
+		raise ValueError(f"id {id} does not belong to a known domain")
 	for page in range(1000):
-		tif_url = f"https://tile.loc.gov/storage-services/master/{tif_id}/{page + 1:04d}.tif"
-		output_filename = utils.make_output_filename(output_folder, page + 1, extension="tif")
+		output_filename = utils.make_output_filename(output_folder, page + 1, extension=ext)
 		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:08d}")
 			continue
-		print(f"Downloading {output_filename} from {tif_url}")
-		utils.get_binary(output_filename, tif_url)
+		url = page_template.substitute(page=f"{page + 1:04d}")
+		print(f"Downloading {output_filename} from {url}")
+		utils.get_binary(output_filename, url)
 
 
 def get_nypl(*, id):
