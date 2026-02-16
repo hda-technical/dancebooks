@@ -269,6 +269,23 @@ def get_slub(*, id):
 				break
 
 
+def get_wlb(*, id):
+	output_dir = utils.make_output_folder("wlb", id.rsplit("-", 1)[-1])
+	for page in range(1, 1000):
+		output_filename = utils.make_output_filename(output_dir, page, extension="jpg")
+		if os.path.exists(output_filename):
+			print(f"Skip downloading existing page #{page:04d}")
+			continue
+		page_url = f"https://digital.wlb-stuttgart.de/content/{id}/jpg/default/{page:08d}.jpg"
+		print(f"Downloading page #{page:04d} from {page_url}")
+		try:
+			utils.get_binary(output_filename, page_url)
+		except HTTPError as ex:
+			if ex.response.status_code == http.client.NOT_FOUND:
+				print("Got HTTP 404, stopping download")
+				break
+
+
 def get_unihalle(*, id):
 	output_folder = utils.make_output_folder("halle", id.split('/')[0])
 	manifest_url = f"https://opendata.uni-halle.de/json/iiif/{id}/manifest"

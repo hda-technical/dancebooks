@@ -194,6 +194,16 @@ def de_rosdok(id):
 
 
 @main.command()
+@click.option("--id", help="URN of the book to be downloaded (e. g. `urn:nbn:de:bsz:24-digibib-kxp18923320862`)", required=True)
+def de_wlb(id):
+	"""
+	book from digital.wlb-stuttgart.de
+	"""
+	import de
+	de.get_wlb(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `1981185920/49609/13562386-aa42-4089-921f-069524552928` (find manifest request to get it))", required=True)
 def de_unihalle(id):
 	"""
