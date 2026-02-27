@@ -314,7 +314,6 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1852 | A. Münchenberg | Das Ballet und sein Verhältniß zur darstellenden Kunst | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | Jean Jacques | Der Tanzmeister in der Westentasche<br/>_3. Auflage_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1852 | | Wiener Tanzschule. Gründliche und für jedermann leicht faßliche Darstellung der beliebtesten und modernsten Tänze | | [UB Salzburg](https://ubsearch.sbg.ac.at:443/USB:USB_local_data:USB_alma71184520410003341) (desideratum) |
-| 1854 | Julius Kurth | Der gewandte Ball- und Vortänzer | `[Unfried, 2014]` | |
 | 1854 | August Bournonville | Der Tanz | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1852–1854? | Ernst Buchey | Practische, leicht faßliche Tanzlehre. Anleitung zur Kunstgerechten und anstandsmäßigen Erlernung aller jetzt gebräuchlichen Tänze | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | |
 | 1854 | Louis Köhler | Volks Tänze aller Nationen der Erde ... für das Pianoforte<br/>_Published in Braunschweig by G. M. Meyer Jr._ | | [BL FIXME] |
