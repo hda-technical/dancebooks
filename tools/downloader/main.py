@@ -847,13 +847,14 @@ def ru_shpl(id):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `122cdc10-0032-0130-6561-58d385a7bc34`)", required=True)
-def us_nypl(id):
+@click.option("--first", help="First page to be downloaded (e. g. `58247465`)", type=int, required=True)
+@click.option("--last", help="Last page (inclusive) to be downloaded (e. g. `58247606`)", type=int, required=True)
+def us_nypl(first, last):
 	"""
 	image set from digitalcollections.nypl.org
 	"""
 	import us
-	us.get_nypl(id=id)
+	us.get_nypl(first=first, last=last)
 
 
 if __name__ == "__main__":

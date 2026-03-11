@@ -55,6 +55,7 @@ def make_request(rq: str | requests.Request, *args, **kwargs):
 	headers = HEADERS | kwargs.pop("headers", {})
 	method = kwargs.pop("method", "GET")
 	if isinstance(rq, str):
+		print(f"{method} {rq}")
 		rq = requests.Request(
 			url=rq,
 			method=method,
