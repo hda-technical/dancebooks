@@ -237,7 +237,7 @@ CATALOGUE_PATTERN = "|".join([
 	r"(Smith:[\[\]A-Za-z\d]+)",
 	r"(Gallo:[A-Za-z']{1,3})",
 	r"(Marrocco:[A-Z\d, ]+)",
-	r"(NLR[24J]:I{1,2}\.\d+[a-z]?)",
+	r"(NLR[24J]:I{1,3}\.\d+[a-z]?)",
 	r"(DdM:M?\d{2,5})",
 ])
 CATALOGUE_REGEXP = re.compile(CATALOGUE_PATTERN)
