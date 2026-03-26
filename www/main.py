@@ -13,6 +13,13 @@ import flask
 import flask_babel
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+import infopoisk_data_prep
+from infopoisk_search_sbert import (
+	load_model as load_sbert_model,
+	build_doc_vectors as build_sbert_doc_vectors,
+	search_sbert,
+)
 from dancebooks.config import config
 from dancebooks import bib_parser
 from dancebooks import const
@@ -24,12 +31,31 @@ from dancebooks import utils
 from dancebooks import utils_flask
 
 items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
-
 markdown_cache = markdown.MarkdownCache()
 note_renderer = markdown.make_note_renderer(item_index)
 
-debug_mode = False
+# --- SBERT index, built once at startup ---
+_SBERT_PARAM_LIST = [
+	"title", "author", "altauthor", "booktitle", "incipit",
+	"journaltitle", "keywords", "langid", "location",
+	"origauthor", "origlanguage", "pseudo_author", "translator", "type",
+]
+logging.info("Building SBERT corpus …")
+_folder_data = infopoisk_data_prep.parse_folder_into_json(
+	config.parser.bibdata_dir, _SBERT_PARAM_LIST
+)
+sbert_raw_corpus = {
+	doc_id: text
+	for file_data in _folder_data.values()
+	for doc_id, text in file_data.items()
+}
+logging.info("Loading SBERT model …")
+sbert_model = load_sbert_model()
+sbert_doc_vectors = build_sbert_doc_vectors(sbert_raw_corpus, sbert_model)
+logging.info(f"SBERT index ready: {len(sbert_doc_vectors)} documents")
+# ------------------------------------------
 
+debug_mode = False
 
 def get_locale():
 	"""
@@ -60,9 +86,6 @@ flask_app.config["USE_EVALEX"] = False
 flask_app.jinja_env.trim_blocks = True
 flask_app.jinja_env.lstrip_blocks = True
 flask_app.jinja_env.keep_trailing_newline = False
-
-utils_flask.fill_jinja_filters(flask_app.jinja_env.filters, item_index)
-
 
 def jinja_self_served_url_size(url, item):
 	file_name, file_size = utils.get_file_info_from_url(url, item)
@@ -213,6 +236,40 @@ def search_items(show_secrets):
 			f"Unsupported output format {format}"
 		)
 
+@flask_app.get("/semantic-search")
+@utils_flask.log_exceptions()
+def semantic_search():
+    query = flask.request.values.get("query", "").strip()
+
+    # No query yet — render the empty search form
+    if not query:
+        return flask.render_template(
+            "semantic_search.html",
+            results=None,
+            query="",
+        )
+
+    try:
+        k = int(flask.request.values.get("k", 20))
+        if k < 1 or k > 100:
+            raise ValueError
+    except ValueError:
+        flask.abort(http.client.BAD_REQUEST, "Parameter k must be an integer between 1 and 100")
+
+    raw_results = search_sbert(sbert_doc_vectors, query, sbert_model, k=k)
+
+    # Resolve doc_ids to full item objects via the existing index
+    found_items = []
+    for doc_id, score in raw_results:
+        matched = item_index["id"].get(doc_id)
+        if matched:
+            found_items.append((utils.first(matched), round(score, 4)))
+
+    return flask.render_template(
+        "semantic_search.html",
+        results=found_items,
+        query=query,
+    )
 
 @flask_app.get("/books/<string:book_id>")
 @utils_flask.check_id_redirections("book_id")
@@ -470,6 +527,7 @@ for code in (
 flask_app.errorhandler(Exception)(utils_flask.http_exception_handler)
 
 if __name__ == "__main__":
+	utils_flask.fill_jinja_filters(flask_app.jinja_env.filters, item_index)
 	debug_mode = True
 	flask_app.run(host="0.0.0.0")
 

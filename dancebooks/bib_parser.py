@@ -4,6 +4,7 @@ import datetime
 import enum
 import logging
 import multiprocessing
+import os
 import os.path
 
 from dancebooks.config import config
@@ -221,7 +222,7 @@ class BibParser:
 					if os.path.isfile(abspath):
 						filesize_value.append(os.path.getsize(abspath))
 					else:
-						logging.warn(f"File is not accessible: {abspath}")
+						# logging.warn(f"File is not accessible: {abspath}")
 						filesize_value.append(0)
 				item.set(const.FILE_SIZE_PARAM, filesize_value)
 			elif key in config.parser.keyword_list_params:
@@ -252,17 +253,29 @@ class BibParser:
 
 		parsed_items = []
 		files = utils.search_in_folder(path, lambda path: path.endswith(".bib"))
-		executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
+		# On Windows, `ProcessPoolExecutor` can be unstable for this project
+		# (workers may terminate abruptly with `BrokenProcessPool`).
+		# For local development we prefer threads to avoid multiprocessing spawn issues.
+		if os.name == "nt":
+			max_workers = min(32, multiprocessing.cpu_count() or 1)
+			executor = concurrent.futures.ThreadPoolExecutor(max_workers=max_workers)
+		else:
+			max_workers = multiprocessing.cpu_count() or 1
+			executor = concurrent.futures.ProcessPoolExecutor(max_workers=max_workers)
+
 		futures = [
 			executor.submit(
+				# Create a fresh parser instance per task because the parser keeps mutable state.
 				BibParser()._parse_file,
 				os.path.join(path, filename)
 			)
 			for filename in files
 		]
-		for future in futures:
-			parsed_items += future.result()
-		executor.shutdown()
+		try:
+			for future in futures:
+				parsed_items += future.result()
+		finally:
+			executor.shutdown()
 
 		item_index = search_index.Index(parsed_items)
 		for item in parsed_items:

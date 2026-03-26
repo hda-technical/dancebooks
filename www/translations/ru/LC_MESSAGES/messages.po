@@ -171,6 +171,9 @@ msgstr "Расширенный"
 msgid "search:type:all-fields"
 msgstr "По всем полям"
 
+msgid "search:type:semantic"
+msgstr "Семантический"
+
 # Search labels
 
 msgid "search:labels:author"
@@ -219,6 +222,9 @@ msgid "search:labels:transcription"
 msgstr "Транскрибированное издание"
 
 msgid "search:labels:all-fields"
+msgstr "Строка для поиска"
+
+msgid "search:labels:semantic-query"
 msgstr "Строка для поиска"
 
 msgid "search:labels:unavailable"

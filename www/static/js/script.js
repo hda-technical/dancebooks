@@ -6,13 +6,15 @@ var bib = {
 		Undefined: -1,
 		Basic: 0,
 		Advanced: 1,
-		AllFields: 2
+		AllFields: 2,
+		Semantic: 3,
 	},
 
 	SEARCH_PATHS: [
 		'/basic-search',
 		'/advanced-search',
-		'/all-fields-search'
+		'/all-fields-search',
+		'/semantic-search',
 	]
 };
 
@@ -262,10 +264,12 @@ bib.search = (function() {
 	var searchFormBasic = null;
 	var searchFormAdvanced = null;
 	var searchFormAllFields = null;
+	var searchFormSemantic = null;
 
 	var searchToggleBasic = null;
 	var searchToggleAdvanced = null;
 	var searchToggleAllFields = null;
+	var searchToggleSemantic = null;
 
 	var inputs = null;
 	var keywordsChooser = null;
@@ -312,6 +316,11 @@ bib.search = (function() {
 		switchSearchForms();
 	};
 
+	var switchToSemanticSearch = function() {
+		searchType = bib.SearchType.Semantic;
+		switchSearchForms();
+	};
+
 	/*
 	 * Switches between search forms, clears unused data
 	 */
@@ -325,32 +334,46 @@ bib.search = (function() {
 			return;
 		} else if (searchType === bib.SearchType.Basic) {
 			toShow = [searchFormBasic];
-			toHide = [searchFormAdvanced, searchFormAllFields];
-			toActivate = [searchToggleAdvanced, searchToggleAllFields];
+			toHide = [searchFormAdvanced, searchFormAllFields, searchFormSemantic];
+			// In "Basic" mode the "action" class means "not selected".
+			toActivate = [searchToggleAdvanced, searchToggleAllFields, searchToggleSemantic];
 			toDeactivate = [searchToggleBasic];
 
 			searchToggleBasic.off('click');
 			searchToggleAdvanced.click(switchToAdvancedSearch);
 			searchToggleAllFields.click(switchToAllFieldsSearch);
+			searchToggleSemantic.click(switchToSemanticSearch)
 		} else if (searchType === bib.SearchType.Advanced) {
 			//don't clear basic search form
 			toShow = [searchFormBasic, searchFormAdvanced];
-			toHide = [searchFormAllFields];
-			toActivate = [searchToggleBasic, searchToggleAllFields];
+			toHide = [searchFormAllFields, searchFormSemantic];
+			toActivate = [searchToggleBasic, searchToggleAllFields, searchToggleSemantic];
 			toDeactivate = [searchToggleAdvanced];
 
 			searchToggleAdvanced.off('click');
 			searchToggleBasic.click(switchToBasicSearch);
 			searchToggleAllFields.click(switchToAllFieldsSearch);
+			searchToggleSemantic.click(switchToSemanticSearch)
 		} else if (searchType === bib.SearchType.AllFields) {
 			toShow = [searchFormAllFields];
-			toHide = [searchFormBasic, searchFormAdvanced];
-			toActivate = [searchToggleBasic, searchToggleAdvanced];
+			toHide = [searchFormBasic, searchFormAdvanced, searchFormSemantic];
+			toActivate = [searchToggleBasic, searchToggleAdvanced, searchToggleSemantic];
 			toDeactivate = [searchToggleAllFields];
 
 			searchToggleAllFields.off('click');
 			searchToggleBasic.click(switchToBasicSearch);
 			searchToggleAdvanced.click(switchToAdvancedSearch);
+			searchToggleSemantic.click(switchToSemanticSearch);
+		} else if (searchType === bib.SearchType.Semantic) {
+			toShow = [searchFormSemantic];
+			toHide = [searchFormBasic, searchFormAdvanced, searchFormAllFields];
+			toActivate = [searchToggleBasic, searchToggleAdvanced, searchToggleAllFields];
+			toDeactivate = [searchToggleSemantic];
+
+			searchToggleSemantic.off('click');
+			searchToggleBasic.click(switchToBasicSearch);
+			searchToggleAdvanced.click(switchToAdvancedSearch);
+			searchToggleAllFields.click(switchToAllFieldsSearch);
 		}
 
 		toHide.forEach(clearForm);
@@ -558,10 +581,12 @@ bib.search = (function() {
 			searchFormBasic = $('#searchFormBasic');
 			searchFormAdvanced = $('#searchFormAdvanced');
 			searchFormAllFields = $('#searchFormAllFields');
+			searchFormSemantic = $('#searchFormSemantic');
 
 			searchToggleBasic = $('#searchToggleBasic');
 			searchToggleAdvanced = $('#searchToggleAdvanced');
 			searchToggleAllFields = $('#searchToggleAllFields');
+			searchToggleSemantic = $('#searchToggleSemantic');
 
 			keywordsInput = $('#keywords');
 			keywordsChooser = $('#keywordsChooser');
@@ -575,6 +600,7 @@ bib.search = (function() {
 				clearForm(searchFormBasic);
 				clearForm(searchFormAdvanced);
 				clearForm(searchFormAllFields);
+				clearForm(searchFormSemantic);
 			});
 
 			searchButton = $('#submitSearch');
@@ -590,6 +616,7 @@ bib.search = (function() {
 
 			searchToggleAdvanced.click(switchToAdvancedSearch);
 			searchToggleAllFields.click(switchToAllFieldsSearch);
+			searchToggleSemantic.click(switchToSemanticSearch);
 
 			inputs = $(
 				'#search input[type!="checkbox"], ' +

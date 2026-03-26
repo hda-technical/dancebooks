@@ -171,6 +171,9 @@ msgstr "Advanced"
 msgid "search:type:all-fields"
 msgstr "All Fields"
 
+msgid "search:type:semantic"
+msgstr "Semantic"
+
 # Search labels
 
 msgid "search:labels:author"
@@ -219,6 +222,9 @@ msgid "search:labels:transcription"
 msgstr "Transcribed edition"
 
 msgid "search:labels:all-fields"
+msgstr "Text to search for"
+
+msgid "search:labels:semantic-query"
 msgstr "Text to search for"
 
 msgid "search:labels:unavailable"

@@ -3,6 +3,7 @@
 				<span id="searchToggleBasic">{{ _("search:type:basic") }}</span>
 				<span id="searchToggleAdvanced" class="action">{{ _("search:type:advanced") }}</span>
 				<span id="searchToggleAllFields" class="action">{{ _("search:type:all-fields") }}</span>
+				<span id="searchToggleSemantic" class="action">{{ _("search:type:semantic") }}</span>
 			</div>
 
 			<form id="search" action="/basic-search">
@@ -176,6 +177,18 @@
 					</tr>
 				</table>
 
+				<!-- Semantic search form -->
+				<table id="searchFormSemantic" class="hidden">
+					<tr>
+						<th>
+							<label for="semantic_query">{{ _("search:labels:semantic-query") }}:</label>
+						</th>
+						<td>
+							<input id="semantic_query" type="text" name="query"/>
+						</td>
+					</tr>
+				</table>
+				
 				<!-- Order by block -->
 				<table>
 					<tr>

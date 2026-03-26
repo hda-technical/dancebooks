@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+	<head>
+		{% include "components/head-meta-common.html" %}
+		{% include "components/head-link.html" %}
+		{% include "components/head-script.html" %}
+		<meta name="og:title" content="Semantic search"/>
+		<meta name="og:type" content="website"/>
+		<meta name="og:description" content="Semantic search results"/>
+		<meta name="og:image" content="/images/icon/persimmon.032x032.png"/>
+		<meta name="og:url" content="{{ request.url }}"/>
+		<title>{{ _("interface:title") }}</title>
+	</head>
+	<body>
+		{% include "components/choose-lang.html" %}
+		{% include "components/header.html" %}
+
+		{% if results is none %}
+			<h2>{{ _("search:type:semantic") }}.</h2>
+		{% elif results %}
+			<h2>{{ ngettext("interface:found-entries", "interface:found-entries", results | length) }}.</h2>
+		{% else %}
+			<h2>{{ _("interface:found-none") }}.</h2>
+		{% endif %}
+
+		<div class="content">
+			{% include "components/search-form.html" %}
+
+			{% if results is not none %}
+				<hr/>
+				{% if results %}
+					{% for item, score in results %}
+						{% include "components/item.html" %}
+						<hr/>
+					{% endfor %}
+				{% endif %}
+			{% endif %}
+
+			{% include "components/footer.html" %}
+		</div>
+	</body>
+</html>
