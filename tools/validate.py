@@ -209,6 +209,7 @@ def update_validation_data(
 			try:
 				validation_data = json.load(fp)
 			except Exception:
+				logging.exception(f"Could not load {DATA_JSON_FILENAME}")
 				#when no JSON object could be decoded,
 				#validation data shouldn't be updated
 				pass
@@ -235,11 +236,15 @@ def update_validation_data(
 			logging.error("    " + str(erroneous_id))
 			for error_text in errors[erroneous_id]:
 				logging.error("        " + error_text)
+		logging.warning(f"Will not update {DATA_JSON_FILENAME}")
+		return
 
 	if len(found_ids) > 0:
 		logging.error("Following book ids are present in files and in id_redirections:")
 		for found_id in found_ids:
 			logging.error("    " + found_id)
+		logging.warning(f"Will not update {DATA_JSON_FILENAME}")
+		return
 
 	if len(lost_ids) > 0:
 		#some ids were lost
@@ -247,12 +252,13 @@ def update_validation_data(
 		logging.warning("Following book ids were lost")
 		for lost_id in lost_ids:
 			logging.warning("    " + lost_id)
+		logging.warning(f"Will not update {DATA_JSON_FILENAME}")
+		return
 
-	if (not previous_data_exists) or (lost_ids and remove_missing_ids):
-		validation_data["ids"] = list(current_ids)
-	if (not previous_data_exists) or (new_errors and store_new_errors):
-		validation_data["errors"] = list(new_errors)
+	validation_data["ids"] = sorted(current_ids)
+	validation_data["errors"] = sorted(new_errors)
 	with open(DATA_JSON_FILENAME, "w") as fp:
+		logging.info(f"Update {DATA_JSON_FILENAME} with new listings")
 		json.dump(validation_data, fp, indent=4)
 
 
