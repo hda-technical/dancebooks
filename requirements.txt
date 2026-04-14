@@ -16,7 +16,7 @@ psycopg2-binary==2.9.11
 pyflakes==3.4.0
 pyjson5==2.0.0
 pymdown-extensions==10.21
-pytest==9.0.2
+pytest==9.0.3
 python-stdnum==2.2
 pytrovich==0.0.5
 requests==2.33.0
