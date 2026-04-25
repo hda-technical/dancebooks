@@ -18,8 +18,6 @@ from dancebooks import const
 from dancebooks import bib_parser
 from dancebooks import utils
 
-items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
-
 #filename for storing previous validation state
 DATA_JSON_FILENAME = os.path.join(os.path.dirname(os.path.abspath(__file__)), "validate.json")
 DATA_FIELDS = {
@@ -192,7 +190,9 @@ def fetch_backups_from_fs():
 def update_validation_data(
 	errors,
 	remove_missing_ids,
-	store_new_errors
+	store_new_errors,
+	*,
+	item_index,
 ):
 	"""
 	Checks if no book_ids were lost since
@@ -333,7 +333,12 @@ def validate_single_filename(abspath, filename, item, errors):
 
 
 #single parameter group validations (executed once per entry)
-def validate_id(item, errors):
+def validate_id(
+	item,
+	errors,
+	*,
+	item_index
+):
 	"""
 	Checks item for id presence and validity
 	Raises ValueError if no id present
@@ -837,9 +842,14 @@ def validate_note(item, errors):
 		errors.add(f"Item note does not end with the dot")
 
 
-def validate_item(item, git_added_on):
+def validate_item(
+	item,
+	git_added_on,
+	*,
+	item_index,
+):
 	errors = set()
-	validate_id(item, errors)
+	validate_id(item, errors, item_index=item_index)
 	validate_parser_generated_fields(item, errors)
 	validate_obligatory_fields(item, errors)
 	validate_allowed_fields(item, errors)
@@ -926,6 +936,8 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
+	items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
+
 	logging.info("Fetching added_on from git")
 	git_added_on = fetch_added_on_from_git()
 	logging.info("Fetching list of pdf from filesystem")
@@ -933,6 +945,7 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 	logging.info(f"Found {len(physically_stored)} physically stored items")
 	if backups:
 		validate_backups()
+
 
 	for item in items:
 		filename = item.get("filename")
@@ -947,7 +960,11 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 	erroneous_items = dict()
 	for item in items:
 		try:
-			errors = validate_item(item, git_added_on)
+			errors = validate_item(
+				item,
+				git_added_on,
+				item_index=item_index,
+			)
 			if urls:
 				validate_url_accessibility(item, errors)
 			if not errors:
@@ -960,6 +977,7 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 		erroneous_items,
 		remove_missing_ids,
 		store_new_errors,
+		item_index=item_index,
 	)
 	if erroneous_items:
 		logging.warning(f"Found {len(erroneous_items)} erroneous items")
