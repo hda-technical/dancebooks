@@ -158,6 +158,9 @@
 
             // Use data.onb.ac.at permalinks instead
             "onb.digital",
+
+            // Use library.search.tulane.edu catalogue permalinks instead
+            "digitallibrary.tulane.edu",
         ],
         "domains_allowed_http": [
             "chrisbrady.itgo.com",
