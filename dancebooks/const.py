@@ -296,15 +296,17 @@ SIZE_DELIMETER = "x"
 
 _GUID = "[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}"
 
-URL_REGEXPS = {
-	"nbn-resolving.de": re.compile(r"https://nbn-resolving.de/urn:nbn:de:[\w\-_/:]+"),
-	"polona.pl": re.compile(rf"https://polona.pl/item-view/{_GUID}"),
-	"tiaki.natlib.govt.nz": re.compile(r"https://tiaki.natlib.govt.nz/#details=ecatalogue.\d+"),
-	"itma.ie": re.compile(r"https://www.itma.ie/texts/[\w-]+/"),
-	"gallica.bnf.fr": re.compile(r"https://gallica.bnf.fr/ark:/12148/b[\d\w]+(/f\d+)?"),
-	"retronews.fr": re.compile(rf"https://www.retronews.fr/journal/[\w\-]+/[\w\d\-]+/\d+/{_GUID}"),
-	"data.onb.ac.at": re.compile(r"https://data.onb.ac.at/rep/[0-9A-F]{8,10}"),
-	"musenalm.de": re.compile(r"https://musenalm.de/almanach/\d+/"),
-	"bdh.bne.es": re.compile(r"https://bnedigital.bne.es/bd/card\?oid=\d{10}"),
-	"library.search.tulane.edu": re.compile(r"https://library.search.tulane.edu/permalink/01TUL_INST/\w+/alma\d+"),
+_URL_PATTERNS = {
+	"nbn-resolving.de": r"https://nbn-resolving.de/urn:nbn:de:[\w\-_/:]+",
+	"polona.pl": rf"https://polona.pl/item-view/{_GUID}",
+	"tiaki.natlib.govt.nz": r"https://tiaki.natlib.govt.nz/#details=ecatalogue.\d+",
+	"itma.ie": r"https://www.itma.ie/texts/[\w-]+/",
+	"gallica.bnf.fr": r"https://gallica.bnf.fr/ark:/12148/b[\d\w]+(/f\d+)?",
+	"retronews.fr": rf"https://www.retronews.fr/journal/[\w\-]+/[\w\d\-]+/\d+/{_GUID}",
+	"data.onb.ac.at": r"https://data.onb.ac.at/rep/[0-9A-F]{8,10}",
+	"musenalm.de": r"https://musenalm.de/almanach/\d+/",
+	"bdh.bne.es": r"https://bnedigital.bne.es/bd/card\?oid=\d{10}",
+	"library.search.tulane.edu": r"https://library.search.tulane.edu/permalink/01TUL_INST/\w+/alma\d+",
 }
+
+URL_REGEXPS = {host: re.compile(pattern) for host, pattern in _URL_PATTERNS.items()}
