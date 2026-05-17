@@ -305,6 +305,6 @@ URL_REGEXPS = {
 	"retronews.fr": re.compile(rf"https://www.retronews.fr/journal/[\w\-]+/[\w\d\-]+/\d+/{_GUID}"),
 	"data.onb.ac.at": re.compile(r"https://data.onb.ac.at/rep/[0-9A-F]{8,10}"),
 	"musenalm.de": re.compile(r"https://musenalm.de/almanach/\d+/"),
-	"bdh.bne.es": re.compile(r"https://bdh.bne.es/bnesearch/detalle/bdh\d{10}"),
+	"bdh.bne.es": re.compile(r"https://bnedigital.bne.es/bd/card\?oid=\d{10}"),
 	"library.search.tulane.edu": re.compile(r"https://library.search.tulane.edu/permalink/01TUL_INST/\w+/alma\d+"),
 }

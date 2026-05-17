@@ -42,10 +42,10 @@ NB:
 
 `BNE / R7862`:
 
-1. https://bdh.bne.es/bnesearch/detalle/bdh0000161354
-2. https://bdh.bne.es/bnesearch/detalle/bdh0000175380
-3. https://bdh.bne.es/bnesearch/detalle/bdh0000061851
-4. https://bdh.bne.es/bnesearch/detalle/bdh0000061855
+1. https://bnedigital.bne.es/bd/card?oid=0000161354
+2. https://bnedigital.bne.es/bd/card?oid=0000175380
+3. https://bnedigital.bne.es/bd/card?oid=0000061851
+4. https://bnedigital.bne.es/bd/card?oid=0000061855
 
 
 [LOC / GV1590.M6]:      https://lccn.loc.gov/13019257
@@ -56,7 +56,7 @@ NB:
 [BNE / R14607(4)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017413679708606
 [BNE / R14620(2)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
 [BNE / R14631(2)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
-[BNE / R14636]:         https://bdh.bne.es/bnesearch/detalle/bdh0000161356
+[BNE / R14636]:         https://bnedigital.bne.es/bd/card?oid=0000161356
 [BNE / R14649(2)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017445589708606
 [BNE / R14649(4)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/alma991017413679708606
 [BNE / R14659(2)]:      https://catalogo.bne.es/permalink/34BNE_INST/f0qo1i/
