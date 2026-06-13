@@ -252,7 +252,10 @@ class BibParser:
 
 		parsed_items = []
 		files = utils.search_in_folder(path, lambda path: path.endswith(".bib"))
-		executor = concurrent.futures.ProcessPoolExecutor(max_workers=multiprocessing.cpu_count())
+		executor = concurrent.futures.ProcessPoolExecutor(
+			max_workers=multiprocessing.cpu_count(),
+			mp_context=multiprocessing.get_context("fork"),
+		)
 		futures = [
 			executor.submit(
 				BibParser()._parse_file,
