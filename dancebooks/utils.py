@@ -538,32 +538,21 @@ from pytrovich.maker import PetrovichDeclinationMaker
 
 PYTR_DETECTOR = PetrovichGenderDetector()
 PYTR_DECLINATOR = PetrovichDeclinationMaker()
-PREDEFINED_SURNAMES_PYTROVICH = {
-	("Бонч", Gender.MALE): "Бонч",
-	("Бонч", Gender.FEMALE): "Бонч",
-}
+
 
 def make_genitive(nominative):
 
 	def has_cyrillic(text):
 		return bool(re.search('[\u0400-\u04FF]', text))
 
-	def decline_first_name(name, *, gender):
-		return PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, name)
+	def decline_first_name(token, *, gender):
+		return PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, token)
 
-	def decline_middle_name(name, *, gender):
-		return PYTR_DECLINATOR.make(NamePart.MIDDLENAME, gender, Case.GENITIVE, name)
+	def decline_middle_name(token, *, gender):
+		return PYTR_DECLINATOR.make(NamePart.MIDDLENAME, gender, Case.GENITIVE, token)
 
-	def decline_last_name(last, *, gender):
-		parts = []
-		# handle doubled last-names
-		for part in last.split('-'):
-			if predefined := PREDEFINED_SURNAMES_PYTROVICH.get((part, gender)):
-				parts.append(predefined)
-			else:
-				declined = PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, part)
-				parts.append(declined)
-		return "-".join(parts)
+	def decline_last_name(token, *, gender):
+		return PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, token)
 
 	if not has_cyrillic(nominative):
 		return nominative
