@@ -406,6 +406,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1894 | Ardern Holt | The Cotillon. Details of All the Newest Figures with and without Accessories | `[Rogers, 1998]` | |
 | 1894 | Justino Dias Lima Soares | Manual de dança : methodo facil para aprender a dançar sem auxilio de professor<br/>_7th edition_ | | BNP |
 | 1895 | Enrico Pichetti | Il manuale di ballo<br/>_Published in Roma by Gregoriana_ | `[Corbella]` | |
+| 1895 | P. Bail<br/>G. Stilb | Guide du cotillon, et Les danses de salon | | [BNF](https://catalogue.bnf.fr/ark:/12148/cb31408134q)<br/>[Abebooks, €30](https://www.abebooks.com/servlet/BookDetailsPL?bi=31005549658)
 | 1897 | David Anderson | New, Enlarged, and Complete Ball-room Guide | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=974560) |
 | 1898 | | Бальный шёпот. Па де катр | | [NLR](https://yadi.sk/i/5D9OmCiPqbVLt) |
 | 1898 | Henri Cellarius | 100 neue Cotillon-Touren<br/>_6. Auflage_<br/>_Published by F. Bartholomäus in Erfurt_ | `[Germanorum, 1914]` | [Google](https://books.google.com/books?id=IjSUPgAACAAJ) |
