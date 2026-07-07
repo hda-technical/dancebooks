@@ -19,17 +19,17 @@
 | The New York Renaissance Band | Echoes Of Time | Переиздание с винила | `flac` | | |
 | Ulsamer Collegium, Collegium Terpsichore | Renaissance dance music | Сборник из двух альбомов (??) | `mp3` | | |
 | [Compagnie Outre mesure](https://www.compagnie-outre-mesure.com/) | Qui souhaitez... | | mp3, CD (Глорф) | | |
-| Compagnie Outre mesure | Orchésographie.com | | 3CD | mp3, CD (Глорф) | | |
+| Compagnie Outre mesure | Orchésographie.com | 3CD | mp3, CD (Глорф) | | |
 | Compagnie Outre mesure | Itinéraire d’un vielliste au 16e siècle | | mp3, CD (Глорф) | | |
 | Compagnie Outre mesure | Bal au Château de Chambord | | mp3, CD (Глорф) | | |
 | Compagnie Outre mesure | Voix de Ville & Voix des Champs | Вокальный альбом | нет | | |
 | Compagnie Outre mesure | Dansez Renaissance | Отсутствует на сайте | mp3, CD (Глорф) | | |
 | Westra Aros Pijpare, Ensemble Bourrasque | Praetorius. Dances from Terpsichore | | `CD` | | да |
 | Renaissonics | Carols for Dancing | | `CD` | | |
-| Renaissonics | Dance! | Renaissonics | | flac, CD (Ростик) | | да |
+| Renaissonics | Dance! | | flac, CD (Ростик) | | да |
 | [René Clemencic, Clemencic Consort](http://www.clemencic.at/dt/index_dt.html) | Danses de la Renaissanse | | `CD` | | да |
 | Ensemble La follia | Le gratie d'amore | | `CD` | | да |
-| Wolgemut | Tempus Saltandi | Wolgemut | | `CD` | | да |
+| Wolgemut | Tempus Saltandi | | `CD` | | да |
 | Ricercar Consort, La fenice | Terpsichore musarum | | flac (Partial) | | |
 | New London Consort | Dansereye | | `flac` | | да |
 | New London Consort | Dances from Terpsichore | | `flac` | | |
@@ -76,7 +76,7 @@
 | de kleine compagnie | [18th Century Flemish Dance Music](https://www.allmusic.com/album/18th-century-flemish-dance-music-mw0001820791) | | нет | | |
 | de kleine compagnie | [18th Century Airs and Dance from Flanders](https://www.allmusic.com/album/18th-century-airs-and-dances-from-flanders-mw0001826912) | | нет | | |
 | [Gloria Giordano](http://www.gloriagiordano.it/publications.html) | Gaetano Grossatesta. Balletti | | `mp3` | | |
-| Jordi Savall | La folia | | Да |
+| Jordi Savall | La folia | | Да | | |
 | Jordi Savall, Hespèrion XXI | Altre follie | | `CD` | | |
 | Jordi Savall, Le concert des nations | L'orchestre du Roi soleil | | `CD` | | |
 | Jordi Savall, Le concert des nations | L'orchestre de Louis XIII | | `CD` | | |
@@ -147,7 +147,7 @@
 | Naxos / Marci Polo | Hans Christian Lumbye: Orchestral Works | 11CD. [YouTube](https://www.youtube.com/channel/UCmdzb37FZA7-J0aE8kDos2Q/playlists). | нет | | |
 | Orchestre symphonique de la R. T. B. F. | Carnet de bal | | `mp3` | | |
 | Quatuor de Cuivres | Le bal du kiosque Е musique | | `mp3` | | |
-| D. C. Hall New Concert and Quadrille Band | Grand concert! | `CD` | да | да |
+| D. C. Hall New Concert and Quadrille Band | Grand concert! | | `CD` | да | да |
 | [Lexington Vintage Dance](http://www.lexingtonvintagedance.org/) | Lady Caroline's Regency Romp | | `CD` | да | |
 | Lexington Vintage Dance | A romantic revel in the Athens of the west | 2CD | `CD` | да | |
 | [Yvonne Vart, La montférine](http://www.reverences.org/documentation.html) | Saisons des bals. Premier Empire et Restauration | | `CD` | | |
@@ -254,7 +254,7 @@
 | Ensemble orchestral de Marseille | Le bal des citoyens | XVIII, XIX, CD из 1988 года | `CD` | | |
 | The Peascod Gatherers | Penta pentamere 2 | XVI, ECD, Диски не печатались (?) | `flac` | | |
 | [regencydances.org](https://www.regencydances.org/), Ensemble Musica Humana | Twelve Cotillions by Giovanni Gallini | XVIII | нет | | |
-| regencydances.org, , Ensemble Musica Humana | Country Dances by Thomas Skillern | ECD | нет | | |
+| regencydances.org, Ensemble Musica Humana | Country Dances by Thomas Skillern | ECD | нет | | |
 | regencydances.org, The Fortuna Trio | Country Dances by Thomas Wilson | ECD | нет | | |
 | regencydances.org, The Fortuna Trio | Three Quadrille Sets by Thomas Wilson | XIX | нет | | |
 | regencydances.org, The Birmingham Baroque Collective | Country Dances by Thomas Straight | ECD | нет | | |
