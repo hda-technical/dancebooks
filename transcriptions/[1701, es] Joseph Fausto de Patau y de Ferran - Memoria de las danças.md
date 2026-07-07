@@ -10,8 +10,8 @@
 10. Aurora.
 11. Garça.
 12. Filomela.
-12. El Serau.[[_Numbered 12. in the original text._]]
-13. Garça.[[_Numbered 13. in the original text._]]
+12. El Serau.[[Numbered 12. in the original text.]]
+13. Garça.[[Numbered 13. in the original text.]]
 
 ### {182} Los balls que he apres ab lo Mestre
     mateix son los seguents y son escrit de
