@@ -10,8 +10,8 @@
 10. Aurora.
 11. Garça.
 12. Filomela.
-12. El Serau.[[_Numbered 12. in the original text._]]
-13. Garça.[[_Numbered 13. in the original text._]]
+12. El Serau.[[Numbered 12. in the original text.]]
+13. Garça.[[Numbered 13. in the original text.]]
 
 ### {182} Los balls que he apres ab lo Mestre
     mateix son los seguents y son escrit de
@@ -254,7 +254,7 @@ cabriola, y dos passeos ab ~~es~~ dos quadrupe[-]
 ados y mitja, de cada peu luego [?]^a^ temps
 y tres carrerillas y un pas al mateix cap
 de sala, y rompra en lo ayre un quadru[-]
-peado, y mitja y dos quadru[p]e[a]dos, y mitja
+peado, y mitja y dos quadruedos[[Most likely "quadrupeados"]], y mitja
 de cada peu al mateix cap de sala, despues
 vuit passeos fent un carrerilla pas y rom[-]
 pra al un costat q[ue] val ~~p~~ un passeo, y altre
