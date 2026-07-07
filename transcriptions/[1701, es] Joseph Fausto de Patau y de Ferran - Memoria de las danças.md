@@ -254,7 +254,7 @@ cabriola, y dos passeos ab ~~es~~ dos quadrupe[-]
 ados y mitja, de cada peu luego [?]^a^ temps
 y tres carrerillas y un pas al mateix cap
 de sala, y rompra en lo ayre un quadru[-]
-peado, y mitja y dos quadru[p]e[a]dos, y mitja
+peado, y mitja y dos quadruedos[[_Most likely "quadrupeados"_]], y mitja
 de cada peu al mateix cap de sala, despues
 vuit passeos fent un carrerilla pas y rom[-]
 pra al un costat q[ue] val ~~p~~ un passeo, y altre
