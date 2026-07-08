@@ -93,7 +93,7 @@
 | `waltz: hesitation` |
 | `waltz: new trois temps` |
 | `waltz: sautese` | Любой прыгающий вальс | Any kind of sautese |
-| `waltz: trois temps` | Включает в себя медленный французский, медленный немецкий, также немецкие langsamer, rascher и geschwinder вальсы | Includes slow French, slow German, langsamer, rasher and geschwinder waltzes |
+| `waltz: trois temps` | Включает в себя медленный французский, медленный немецкий, также немецкие langsamer, rascher и geschwinder вальсы | Includes slow French, slow German, langsamer, rascher and geschwinder waltzes |
 | `animal dance` | Любой танец, подражающий движениям животных | Any animal dance |
 | `animal dance: grizzly bear` |
 | `animal dance: turkey trot` |

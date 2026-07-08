@@ -281,7 +281,7 @@ grant - the item was scanned for your use.
 > I am the author and maintainer of the world largest historical dance bibliography: https://bib.hda.org.ru/
 >
 > Along with thorough bibliographical information / links to the digital versions of the primary sources,
-> I am trying to provice (when it is possible links to the primary sources not yes available at the
+> I am trying to provide (when it is possible links to the primary sources not yet available at the
 > library website). All the content is licensed under CC-BY-NC-SA noncommercial license.
 >
 > I have got permission to put these books from various libraries including the Russian State Library,
