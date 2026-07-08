@@ -7,7 +7,8 @@
 тег `quadrille: first set` имплицирует тег `quadrille`.
 Единственным дочерним тегом, не имеющим родительских, является тег `cotillon`.
 
-Список тегов должен быть синхронизирован с [конфигурационным файлом библиографии](https://github.com/hda-technical/dancebooks/tree/master/configs).
+Список тегов должен быть синхронизирован с
+[конфигурационным файлом библиографии](https://github.com/hda-technical/dancebooks/tree/master/configs).
 
 Полный список меток приведён в таблице ниже:
 
@@ -32,7 +33,7 @@
 | `cotillon: douze` |
 | `cotillon: seize` |
 | `cotillon: vingt-quatre` |
-| `cotillon: 19th century` | Включает в себя котильон (в значении бальной игры) и танец “Waltz Cotillon” с фиксированной схемой | Includes cotillon (in the meaning of ballroom game) and the Waltz Cotillon (fixed sequence of figures) |
+| `cotillon: 19th century` | Включает в себя котильон (в значении бальной игры) и танец "Waltz Cotillon" с фиксированной схемой | Includes cotillon (in the meaning of ballroom game) and the Waltz Cotillon (fixed sequence of figures) |
 | `la boulangere` |
 | `le carillon de dunkerque` |
 | `longway` | Любой контрданс в колонну. Музыкальная форма контрданса не ведёт к добавлению тегов (то есть, вальсовый контрданс не означает наличие тега `waltz`) | Any dance for a line of couples. Musical form of the country dance is not counted in keywords (i. e. waltz longway doesn't generate `waltz` keyword) |
