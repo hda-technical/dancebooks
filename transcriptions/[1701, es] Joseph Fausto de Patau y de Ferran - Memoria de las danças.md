@@ -51,23 +51,23 @@ ab quatra ~~quadrupeados~~ passeos tres flore[-]
 tas, un salt, y dos passos enderrera al
 costat, y lo mateix al puesto, despues la
 mudança de la Señora y despues la mia
-com al principi. ~~cambia ab quatra
+com al principi. ~~cambiar ab quatra
 passeos y al puesto tres floretas, un salt
-y dos passos enderrera al costat y la
+y dos passos enderrera al costat y lo
 mateix al puesto quatra passeos al
 altre costat~~ y despues lo canari de la
-Señora y despues lo meu com a dat
+Señora y despres lo meu com a dat
 y cambiar ab los quatra passeos despues
 tres floretas un salt y dos passos enderre[-]
 ra y l rompra al costat y lo m[a?]teix al
-puesto despues campbiar ab quatra pas[-]
+puesto despues cam~~p~~biar ab quatra pas[-]
 seos per lo altre costat pero fe de ser
-per lo altre costat, y adverfint que en
-encontrar la Señora finch deseguir la
-fins al puesto y posarmaa ma esquer[-]
-ra al los matexos quatra passeos, y pon[-]
+per lo altre costat, y advertint que en
+encontrar la Señora tinch de seguir la
+fins al puesto y posarma a ma esquer[-]
+ra al los matexos quatra passeos, y pen[-]
 dra li la ma dreta y fer tres floretas
-{185} dretas y despues un salt[[y dos passos enderrera]] y rompra al costat
+{185} dretas y despues un salt[[y dos passos en derrera]] y rompra al costat
 ab lo altre peu y tres passos enderrera, y salt
 y dos passos enderrera y rompra y corte[-]
 sia de cara a la Señora y al seu costat
@@ -76,11 +76,11 @@ fini.
 ### Primavera
 
 Comença ab dos passon en devant y rompra
-y dos passos en derrera y rompra al puesto
-cortesia de cara a la señora despues dos salts
-y rompra, y altres dos salts y rompra despues
+y dos passos enderrera y rompra al puesto
+cortesia de cara a la señora despres dos salts
+y rompra, y altres dos salts y rompra despres
 dos passos y rompra llarc y dos passos llarcs
-al altre puesto cambiant y rompra, despues
+al altre puesto cambiant y rompra, despres
 dos floretas al costat ab rompra~~s~~ dos caidas
 y dos salts y dos floretas y rompra al puesto
 despues lo ~~ame~~ home la mudan~~a~~ça dos quadru[-]
@@ -94,18 +94,18 @@ dos floretas al altre puesto cambiant
 y rompra al puesto dos caidas dos
 salts y dos floretas al mateix cos[-]
 tat y rompra de cara a la Señora
-y cerca della despues cerdana prenent las
+y cerca della despues cerdaña prenent las
 dos mans de la Señora y fer un rompra
 al costat esquerra, y un altre al puesto
 y dos salts despues rua al ~~lo esquer~~ costat
 esquerra, y dos salts y rua pel mateix cos[-]
-tat al puesto, y dos passos en derrera
+tat al puesto, y dos passo~~n~~s en derrera
 un trencat acostanse a la Señora y
 fer la matexa serdana que antes per
 lo dret despues dos passos en derrera
 y rompra despues dos passos al cap
 de sala y rompra y altres dos passos
-y rompra en derrera, adverfint q[ue?]
+y rompra en derrera, advertint q[ue?]
 en lloc de fer dos passos en derrera
 se pot fer totas las vegadas dos quadru[-]
 peados {187} y rompra despues dos floretas
@@ -122,7 +122,7 @@ serdaña axi com antes y despues de aver
 fet lo ultim rompra acabada la serda[-]
 na girarse de cara al puesto que se a comen[-]
 çat la dança ~~y fer~~ anari ab dos passos
-y rompra despues un pas en devant y
+y rompra despres un pas en devant y
 girarse de cara a la Señora y fer un pas
 en derrera y rompra al costat de la Seño[-]
 ra, y perdrali la ma fent dos ~~f~~ flore[-]
@@ -144,11 +144,11 @@ alli fer dos quadrupeados y rompra, y al[-]
 tres dos quadrupe~~d~~ados y rompra y caida
 y salt de cada peu despues la mudança
 rompra de cada peu y dos quadrupeados,
-y rompra[[o sino llamada & topasillo & de cada peu]] y altre vegada rompra de
+y rompra[[o sino llamada & topasillo &. de cada peu]] y altre vegada rompra de
 cada peu y dos quadrupedos y rompra
 despues dos floretas y rompra al un
 costat de la sala y dos quadrupedos y rom[-]
-pra, y caida de cada peu al mateix lloc[[y en lloc de axo se pot fer llamada pas, y vasio, en lloc dels dos quadrupeados, y rompra llamada &. salto y encaje]]
+pra, y caida de cada peu al mateix lloc[[y en lloc de axo se pot fer ~~llamada~~ salto y encaje pas, y vasio, en lloc dels dos quadrupedos, y rompra llamada &.]]
 despues lo entremes fent dos passos llarcs
 y dos salts y ~~d~~ un trencat de cada peu
 y de costat al cap de sala que se a comen[-]
@@ -169,10 +169,10 @@ dana ab tres costadets y enser al puesto
 altre dos trencats un de cada costat despues
 dos floretas y rompra al cap de sala q[ue?] se ha comen[-]
 çat y dos quadrupeados y rompra caida y salt
-de cada peu al meteix cap, despues la mudança
+de cada peu al mateix cap, despues la mudança
 de la Señora despues la mia com antes un rompra
 de cada peu y dos quadrupedos y rompra, altre rom[-]
-pra de cada peu, dos quatrupeados y rompra[[o sino dos passos, y rompre al ayre al un costat y lo mateix anant al altre costat y luego sacudido al puesto.]] des[-]
+pra de cada peu, dos quadrupeados y rompra[[ô sino dos passos, y rompre al ayre al un costat y lo mateix anant al altre costat y luego sacudid~~d~~a al puesto.]] des[-]
 pues dos floretas y rompra al costat, y dos quadrupea[-]
 dos y rompra ~~ab~~ una~~[?]~~ caida y salt de cada ~~peu~~ peu
 y luego lo entremes dos passos, y dos salts y un tren[-]
@@ -227,7 +227,7 @@ mateix costat y altre en ves la Señora, y un pas al costat
 altre cap de sala y altre en ves la Señora y un
 pas al cap de sala, y rompra giranse, despues
 dos passos, y carrerilla al un costat de sa[-]
-la, y los matexos dos passos~~n~~ y una carre[-]
+la, y los matexos dos passo~~n~~s y una carre[-]
 rilla al puesto despues un carrerilla al
 mateix costat y altre en ves la Señora
 y un pas y rompra giranse al cos[-]
@@ -246,7 +246,7 @@ un quadrupeado y rompra, de cada peu.
 {193} despues lo canari de la Señora, y cam~~p~~biar
 ab un pas, y tres trencats com antes y lue[-]
 go enser al altre cap de sala un trencat
-de cada costat y un quadrupeado y rompra[[y luego canari de la Señora despues lo meu axi co[m] antes]]
+de cada costat y un quadrupeado y rompra[[y luego canari de la Señora despues lo meu axi co[m] antes.]]
 luego lo pas de la gallarda fent un ↄ^a^ temps
 y tres carrerillas[[y un pas]] al un costat de sala y rom[-]
 pra en lo ayre, y un quadrupeado, y mitja
@@ -270,7 +270,7 @@ manera se pot fer los passeos. despues tres
 passos al costat de sala ~~rom~~ un salt un pas
 enderrera y rompra y un trencat
 de cada costat al mateix costat de sala,
-y rua ab ~~d~~ tres costadets, un enser al altre
+y rua ab ~~d~~ tres costadets, y enser al altre
 costat un trencat de cada costat, y despues
 rua ab ~~dos~~ tres costadets, despues en ser
 al altre costat girarse de cara al puesto
@@ -279,9 +279,9 @@ la Señora ab tres passos y ~~d~~ enseri girar[-]
 se de cara â la Señora fent un salt y un
 pas en derrera ~~de cada costat~~ un rompra
 posantse al costat de la Señora y pendra[-]
-li la ma, y fer[[quatre ~~[?os?]~~ salts, y despues tres costadets, y una campanela, y despues quatre salts, ~~com~~ y tres costadets al puesto com al prin]] ~~tres~~ ~~passos~~ ~~enderrera~~
-~~devant y despues junta al dret, y luego~~
-~~tres~~ ~~passos~~ ~~enderrera~~ cipi de la dança, y
+li la ma, y fer[[quatre ~~cos~~ salts, y despues tres costadets, y una campanela, y despues quatre salts, ~~com~~ y tres costadets al puesto com al prin]] ~~tres~~ ~~passos~~ ~~en derrera~~
+~~devant, y despues junta al dret, y luego~~
+~~tres passos enderrera~~ cipi de la dança, y
 despues tres passos en devant, y junta al dret
 y tres passos en derrera y luego continensia
 del asquerre so es un pas dal costat de asquerre
@@ -299,7 +299,7 @@ dos floretas de cara al puesto que se
 ha començat y enseri fer un rompra
 dos quadrupeados y rompra una campa[-]
 nela, dos caidas, y un salt de cada peu, ad[-]
-verfint que en lloch de ~~un~~ dos floretas
+vertint que en lloch de ~~un~~ dos floretas
 se pot fer un sacudido y un pas, y
 despues lo rompra[[al ayre]], y en lloc de los dos
 quadrupeados y rompra se pot fer
@@ -350,15 +350,15 @@ y alli un salt y un trencat de cada cos[-]
 tat (y en lloc del salt y trencats se
 pot fer salt topasillo y mitja) y una
 retirada de cada costat luego las dos
-floretas ô altre cosa com â dalt he dit
+floretas o altre cosa com â dalt he dit
 y rompra al~~l~~ un cap de sala y alli
 dos quadrupeados, y mitja y dos caidas
 de cada peu, (en lloc de las caidas del
 {198} dret se pot fer rompre al ayre quadrupeado,
 y mitja despues la mudança de la Señora
 despues la del home, fent la com ha dalt he
-dit de una manera ô altre despues dos flo[-]
-retas ô altre cosa com he dit al un costat
+dit de una manera, ô altre despues dos flo[-]
+retas, ô altre cosa com he dit al un costat
 de sala, y rompra, y dos quadrupeados, y
 rompra, y dos caidas de cada peu, des[pues?]
 lo entremes com antes, y despues de aver
@@ -388,8 +388,8 @@ tres tres de ves la Señora, luego tres floretas
 dret al altre cap de sala y dos passos en derrera
 y mitx rompra, luego dexant la ma de la Seño[-]
 ra, travesa ab ma fent dos passeos, y luego al[-]
-tres dos al puesto ab començi, florejats so est rompra
-al ayre, quadrupeado, y mitja, re val un, y topasi[-]
+tres dos al puesto q[ue?] començi, florejats so est rompra
+al ayre, quadrupeado, y mitja, ne val un, y topasi[-]
 llo y dos vasios altre. luego la mia mudança car[-]
 rerilla, pas, y rompra al un costat de sala y lo
 mateix dret al puesto, y dos floretas dret â la
@@ -398,13 +398,13 @@ ja~~ rompra, y lo mateix del altre costat, despues
 la mudança de la Señora, y luego altre de mia
 ço es rompra al ayre quadrupeado y mitja de ca[-]
 da peu al mateix puesto luego llamada, pas
-crusado salto, y encaxe, vasio y topsasillo, vasio
+crusado salto, y encaxe, vasio y topasillo, vasio
 quadrupeado, y mitja, y altre vegada lo mateix
 despues la mudança de la Señora, y luego quatre pas[-]
 seos dret al altre cap, y en encontrant la Señora
 travesa ab ma, durant los quatre passeos y
-en ser devant del altre cap de sala feri dos qua[-?]
-{200} tre passeos com he dit a dalt. luego la mia mudança
+en ser devant del altre cap de sala feri ~~dos~~ qua[-?]
+tre {200} passeos com he dit a dalt. luego la mia mudança
 tres quadrupeados caminant de ves lo un cap de sala
 y alli salt y rompra, y luego carrerilla pas, y rom[-]
 pra de ves lo altre costat de sala, y ananti de
@@ -423,7 +423,7 @@ cap de sala feri tres passos florejats. luego
 la mia mudança sacudido en devant giranse
 de costat y possar lo un peu detras del altre
 y allargar laltre y de cara a la Señora dos cai[-]
-das y quadrupeado y mitja y llamada pas, cru[-]
+das, y quadrupeado y mitja y llamada pas, cru[-]
 sado salto, y encaxe y vasio, y ~~top~~ floreta dreta,
 y luego salta y vasio quadrupeado y mitja, y
 ~~lo~~ trobanse al mateix puesto, y lo mateix del al[-]
@@ -431,7 +431,7 @@ tre costat, aquestes o altres mudanças se po[-]
 den fer despues la mudança de la Señora y
 luego ab dos passeos ana al altre cap de sala
 {201} y posantse al costat de la Señor[a?] fer dret al al[-]
-tre cap dos passeos y altres dos giranse da
+tre cap dos passeos y altres dos ~~d~~ giranse de
 carra â la Señora per fer la gira, y cortesia
 y acabat.
 
@@ -444,7 +444,7 @@ de cada peu, y continensia en devant una,
 y altre en detras despues cortesia, pendre
 la ma de la Señora fer dos floretas pas[-]
 sadas dret y despues girar y fent un
-llas anar al altre costat de la sala absis
+llas anar al altre costat de sala absis
 daltras, despues sardana ab ~~dos~~ dos salts
 y dos retiradas al ~~puest~~ mateix costat
 y luego travesa ab dos floretas y rom[-]
@@ -465,7 +465,7 @@ encaje de cada costat y quadrupeado y mitja
 llamado pas en devant crusado salto, y
 encaje, y vasio, quadrupeado, y mitja. y
 lo mateix del dret, y luego dos floretas
-en devant, y ~~mitja~~, quadrupeado, y mitja,[[ô en lloc de las dos floretas [a?] fer un sacudido dret â la Señora giranse de costat, y un quadrupeado, y mitja, y]]
+en devant, y ~~mitja~~, quadrupeado, y mitja,[[ô en lloc de las dos floretas & fer un sacudido dret â la Señora giranse de costat, y un quadrupeado, y mitja, y]]
 y ↄ^a^ temps al puesto[[dos]] quadrupeados, y mitja,
 y altres dos floretas y salto y encaje y to[-]
 pasillo, mitja, quadrupeado, y mitja, y aca[-]
@@ -474,7 +474,8 @@ dos floretas passadas en devant, y despues
 gira al un costat de sala, y anansen al
 altre costat de sala, fent un llas, tot ab vuit
 floretas passadas, y sardana ab dos salt, y lue[-]
-gos dos retiradas, travesa ab dos floretas y
+gos dos retiradas, travesa ab dos floretas y ~~lue~~ rompra
+y dos retiradas, y altre travesa ab dos floretas y
 rompra[[posanse al costat de la Señora, y girar ab ~~un~~]] ~~y luego la mitja volta ab mitja flo[-]
 reta passada~~ una floreta passada y luego ~~an~~
 fer dos floretas en devant y girar, y anar seguint
@@ -501,14 +502,14 @@ puesto, y mitja, despues lo mateix al al[-]
 tre costat sols que lo rompre al puesto al
 tornar ~~e~~ no es al ayre. despues dos floretas
 en devant y mitja y ↄ^a^ temps al puesto
-quadrupeado [?] y mitja, ~~y altres dos flore[-]
+quadrupeado, y mitja, ~~y altres dos flore[-]
 tas~~ y rompra al ayre, y topasillo, y mitja,
 quadrupeado, y rompra, luego la mudan[-?]
-ça {204} de la Señora[[y despues lo entremes dos floretas fins a mitx puesto en devant dret â la Señora y posantse al seu costat tres salts de costa[t?] y dos retiradas, y rompra al puesto, y altres dos floretas com antes, y y caida y salt y voltar ab dos floretas pasadas y luego serdana ab quatre ~~tren~~ costadets y enser al altre costat bolta gran ab quatre floretas passadas y despues serdana, y anar en al puesto de com~~m~~ençaren la dança ab un bolta y aço tot ab vuit floretas passadas, y alli mi[tx?] rompra, y fer la altre part de entremes ab dos floretas, y tot lo de m[e?]s com antes, menos canarien al altre cap aca[b?]ada la serdana y bolta gran. _(A huge footnote consisting of several parts: (1) horizontally after the dance description; (2) vertically under the first part of the footnote; (3) vertically above the first part of the footnote; (4) vertically on the previous page.)_]], y despues rompra quadru[-]
+ça {204} de la Señora[[y despues lo entremes dos floretas fins a mitx puesto en devant dret â la Señora y posantse al seu costat tres salts de costa[t?] y dos retiradas, y rompra al puesto, y altres dos floretas com antes, y y caida y salt y voltar ab dos floretas pasadas y luego serdana ab quatre ~~tren~~ costadets y enser al altre costat bolta gran ab quatre floretas passadas y despues serdana, y anarsen al puesto de com~~m~~ençaren la dança ab un bolta y aço tot ab vuit floretas passadas, y alli mi[tx?] rompra, y fer la altre part de entremes ab dos floretas, y tot lo de m[a?]s com antes, menos anarsen al altre cap acapada la serdana y bolta gran. _(A huge footnote consisting of several parts: (1) horizontally after the dance description; (2) vertically under the first part of the footnote; (3) vertically above the first part of the footnote; (4) vertically on the previous page.)_]], y despues rompra quadru[-]
 peado, y mitja de cada peu, y topasillo vasio
-quadrupeado, y mitja y dos floretas al un
+quadrupeado, y mitja, y dos floretas al un
 costat de Sala, y rompra, y llamada, pas en
-devant crusado salto, y encaxe vasio quadru[-]
+devant crusado salto, y enca~~j~~xe vasio quadru[-]
 peado, y mitja y luego dos retiradas, y tra[-]
 vesa ab dos floretas y rompra ~~y luego dos~~
 ~~retiradas~~ ~~y~~ ~~travesa ab~~ y mitja volta ab
@@ -527,7 +528,7 @@ anat ab altres dos floretas al costat de ~~b~~ la Se[-]
 ñora, y luego rompra al seu costat, y continen[-]
 sia, una en devant, y altre en detras y
 cortesia, despues rompre y luego dos salts
-despues rompra, tres passos en devant, tenint
+despues rompra, tres passo~~n~~s en devant, tenint
 la ma de la Señora desde la cortesia fins
 ara, y dexarla, y en ~~ser~~ ~~aver~~ aver
 {205} fet los tres passos en devant que sera al
@@ -553,7 +554,7 @@ vesa ab dos floretas y rompra, y altres
 dos floretas y rompra al altre cap, y
 despues fer la altre mai[?]t axi mateix
 y enser al puesto que se comença lo en[-]
-tremes tres passos al un costat y salt
+tremes. tres passos al un costat y salt
 {206} y dos trencats de costat y luego topasillo
 crusado salto y encaje vasio quadrupeado
 y mitja, y despues dos floretas en devant.
@@ -572,7 +573,7 @@ go sacudido pas en devant y rompra
 al ayre quadrupeado, y mitja, y lo ma[-]
 teix del altre costat luego lo entremes axi
 com antes, y enser al puesto que comença
-lo entremes fer tres passos al un costat, 
+lo entremes fer tres passos al un costat,
 y despues salt y rompra y luego travesa
 ab dos floretas passadas, y altres dos
 seguint al[a] Señora fines aont comen[-]
@@ -583,7 +584,7 @@ seguint al[a] Señora fines aont comen[-]
 Comença la Señora al un cap de sala, y
 lo home al altre, y dos passos al un costat
 y dos salts, y rompre al ayre, y quadru[-]
-pe~~d~~ado y mitja, ~~despues dos retiradas~~
+pe~~d~~ado y mitja, ~~despues dos retiradas,~~
 y altres dos passos dos salts rompre al ayre,
 quadrupeado, y mitja[[al puesto]], y ~~dos retiradas~~
 ~~al puesto~~, despues dos floretas fins amitx
@@ -594,7 +595,7 @@ fins â mitx puesto dret â la Señora y
 en encontrarla travesa[[sens ma]] fins al altre
 cap ab tres costadets ~~l~~ y dos retiradas,
 despues[[cortesia de cara a la Señora y luego]] tres tren[c?]ats al costat y enseri
-un[[trencat]] de costat y topasillo crusado salto
+un[[trencat]] de~~l~~ costat y topasillo crusado salto
 y encaje vasio quadrupeado y mitja
 del altre[[y dos retiradas]] luego dos floretas en devant dret â la
 Señora fins a mitx puesto y posarse al seu
@@ -614,12 +615,12 @@ dana, fins al altre cap ab tres costadets y
 dos retiradas enseri, luego altres dos flore[-]
 tas, y serdana fins al altre cap com antes,
 y enseri mudança rompre al ayre qua[-]
-drupeado y mitja topasillo & y lo
-mateix del altre peu, luego dos floretas
+drupeado y mitja topasillo &. y lo
+mateix del altre peu. luego dos floretas
 al costat dos caidas rompre al ayre ~~q~~
 quadrupeado y mitja y lo mateix al pue[-]
 esto y alli dos trencats de costat topasillo
-q~~uad~~rupea & despues dret a la Señora
+q~~uad~~rupea &. despues dret a la Señora
 quatre trencats y en encontrarle seguir[-]
 la per costat fins al cap de sala q[ue?] ella
 comença, y alli prenentli la ma dos flore[-]
@@ -635,14 +636,14 @@ fin.
 
 ### Garça
 
-Comença al costat de la Señora y cortesia y
-prenent la ma tres costadets al esquerra y
+Comença al costat de la Señora y cortesia, y
+prenent la ma tres costadets al esquerra, y
 tres al dret y quatre trencats fins al al[-]
 tre cap anant al costat de la Señora ab
 la ma, y fent la gira ab los matexos quatre
-trencats, y se de anar un p[oc?] dapresa y
+trencats, y fe de anar un p[oc?] dapresa y
 enser al altre cap tres trencats ~~y~~ al esquer[-]
-ra y altres tres al dret y anar ab quatre
+ra, y altres tres al dret y anar ab quatre
 trencats al altre cap com antes y tres cos[-]
 t~~d~~adets al esquerra y altres al dret luego
 dexant la ma fer un mitja lluna ab quatre
@@ -655,7 +656,7 @@ tre cap, y alli tres costadets de cada costat y
 altres quatre trencats com antes al puesto y
 tres costadets, y despues ab tres passos al
 altre cap, y un pas y junta en devant, y al[-]
-tre pas y junta en devant, y altre pas y jun[-]
+tre pas y junta en devant y altre pas y jun[-]
 ta, y rompra, y retirarse ab altres tres pas[-]
 sos y iunta. y rompra, y lueg rua com
 antes ab quatre trencats y despues en ser
@@ -683,18 +684,18 @@ tra fa costadets, y luego alsarse, y fer
 altre cortesia, y rua com antes ab qua[-]
 tre trencats, y enser al puesto tres
 costadets, y ab tres passos anar al
-altre cap al costat de la de la Señora, y
+altre cap al costat de la Señora, y
 cortesia.
 fin.
 
-### Filomena
+### Filomena.
 
 Comença al costat de la Señora fent un pas,
 y un trencat dret, y luego rompa sens gi[-]
 rarse, y dos retiradas giranse â cada una
 del tot de esquena, y luego voltar ab dos flo[-]
 retas, y rompra al costat de la Señora, y lue[-]
-go[[continensia de cada peu y despues]] cortesia[?] y altre pas, y trencat en devant
+go[[continensia de cada peu y despres]] cortesia, y altre pas, y trencat en devant
 {Page} y rompra y un trencat de cada costat[[y campanela]] y tra[-]
 vesa ab tres costatadets, y al altre costat tren[-]
 cat de cada costat,[[campanela]] y altre travesa ab tres cos[-]
@@ -703,9 +704,9 @@ al puesto q[ue?] comença~~a~~ren, y dos floretas al al[-]
 tre costat de sala posansse al costat de la Se[-]
 ñora de cara al altre cap de sala y alli dos ca[-]
 idas y voltar ab ~~q~~ dos trencats y dos floretas
-al altre cap, y rompra ô sacudido pas rompra
+al altre cap, y rompra, ô sacudido pas rompra
 al ayre quadrupeado y mitja y un trencat
-de cada costat, y topasillo, quadrupeado, y mit[-]
+de cada costat, y topasillo, quadrupedo, y mit[-]
 ja, y luego la mudanç salto, y encaje de
 cada peu quadrupe[a]do carrerilla crusada
 y dos vasios, y lo mateix del altre peu
@@ -713,7 +714,7 @@ luego sacudido, giranse de costat, dret
 â la Señora, y quadrupeado y mit[-]
 ja, y ↄ^a^ temps quadrupeado y mitja,
 y topasillo, quadrupeado, y mitja, luego lo
-entremes dos floretas al costat de la Señora
+entremes dos floretas, al costat de la Señora
 anant en devant, y caida y salt, lueg seguir[-]
 la Señora ab altres dos floretas fins al al[-]
 tre costat, y caida, y salt, y luego voltar
@@ -728,7 +729,7 @@ lo entremes, luego un pas, un trencat y rom[-]
 pra al un costat, y un trencat de cada cos[-]
 tat, y rua com al principi, y al altre cos[-]
 tat un trencat de cada costat, y altre
-travesa, y se pot fer en lloc del costadets
+travesa, y se pot fer en lloc dels costadets
 sacudido, y luego la mitja lluna un tren[-]
 cat dret al cap que no se comença, y des[-]
 pues dos floretas al altre costat, de la Seño[-]
@@ -739,7 +740,7 @@ sacudido ~~pas crusado~~[[&]] y mitja, y la mudan[-]
 ça de la Señora, y lo entremes axi mateix
 {Page} com antes
 
-### El Sarau
+### El Sarau.
 
 Comença ab tres passos en devant y un salt
 y dos retiradas tornant al puesto y voltar
@@ -753,13 +754,13 @@ rompre al ayre quadrupeado y mitja
 al cap q[ue?] no se comença, y topasillo, quadru[-]
 peado y mitja. y mudança carrerilla pas y
 rompra al un costat y lo mateix al puesto
-luego dos floretas en devant y quadrupeado y
+luego dos floretas en devant y quadrupeado, y
 mitja y ↄ^a^ temps al puesto quadrupeado, y mit[-]
 ja,[[y lo mateix del altre costat]] {215} y topasillo, quadrupeado y mitja, luego
 lo entremes dos passos cuitats y caida al
-un costat y alli rompra de cara luego, ~~los~~ al[-]
+un costat y alli rompra de cara, luego, ~~los~~ al[-]
 tres dos passos, y caida, y rompra al puesto
-luego dos floretas al costa de la Señora
+luegos dos floretas al costa de la Señora
 y dos salts prenent la ma y travesa
 ab tres costadets, y salt enser al altre
 cap y retirada, y acabada la mitja
@@ -767,7 +768,7 @@ part, y la altre axi mateix tornant
 al puesto q[ue?] comença la primera part.
 lueg tres costadets al un costat, y salt, y dos
 retiradas, y luego dos floretas dret â la
-Señora, y dos salts, ~~y~~[[ab]] serdana, y travesa ab
+Señora, y dos salts, ~~y~~ab serdana, y travesa ab
 tres costadets, y dos retiradas, luego altres dos
 floretas, dos salts serdana, y travesa, com an[-]
 tes, y dos retiradas, luego voltar ab sis
