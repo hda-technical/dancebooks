@@ -178,6 +178,7 @@
 | `🙰` | [Лигатура et](https://gallica.bnf.fr/ark:/12148/bpt6k1070584h/f281) | Раскрывается в `et` |
 | ![](img/tironischer-et.png) | [⁊, тиронов знак](https://ru.wikipedia.org/wiki/Эт_(тиронов_знак)) | Набирается как `⁊с.` | [[Gaspari, 1713, стр. 12]](https://bib.hda.org.ru/books/texte_1713) |
 | `yͤ` или `yᵉ` | Артикль `þe` (подробнее [тут](https://en.wikipedia.org/wiki/Thorn_(letter))) или местоимение `ye` (подробнее [тут](https://en.wikipedia.org/wiki/Ye_(pronoun))) | `þᵉ` или `yᵉ` в зависимости от контекста |
+| `ↄ` | Перевёрнутая латинская c (подробнее [тут](https://en.wikipedia.org/wiki/Scribal_abbreviation#Marks_with_independent_meaning)) | Набирается как есть | [[Patau, 1701]](https://bib.hda.org.ru/books/patau_1701_memoria) |
 
 Некоторые встречающиеся в книгах символы отсутствуют в Юникоде, например, `p̃ ` и `t̃ `.
 Их придётся набирать, используя комбинируемые символы.
