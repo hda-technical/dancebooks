@@ -78,7 +78,7 @@ fini.
 Comença ab dos passon en devant y rompra
 y dos passos enderrera y rompra al puesto
 cortesia de cara a la señora despres dos salts
-y rompra, y altres dos salts y rompra despres
+y rompra, y altres dos sals y rompra despres
 dos passos y rompra llarc y dos passos llarcs
 al altre puesto cambiant y rompra, despres
 dos floretas al costat ab rompra~~s~~ dos caidas
@@ -181,7 +181,7 @@ cat de cada costat al cap de sala, y lo mateixa l
 dets y mitx~~j~~ rompra y enser al altre costat un
 trencat de cada costat y luego travesa ab ma ab
 tres costadets y enser al puesto un trencat de
-cada costat, despues dos passos, dos salts y un
+cada costat, despues dos pasos, dos salts y un
 trencat de cada costat al cap de sala y lo
 mateix al costat q[ue?] se ha començat la ul[-]
 tima vegada lo entremes, y luego serdana
@@ -239,7 +239,7 @@ pues acabada aquexa part de entremes un pas
 y tres trencats com una mitja lluna y cam[-]
 biant de puesto, despues al cap de sala trencat
 de cada costat y un quadrupeado y rompra luego
-lo entremes axis com antes y en ser altre ve[-]
+lo entremes axis com antes y en ser alte ve[-]
 gada al puesto aont ha començat la ultima
 part del entremes canari un ↄ^a^[[Abbreviation for _contra_]] temps y
 un quadrupeado y rompra, de cada peu.
@@ -566,7 +566,7 @@ peada, y mitja, y despues lo trencat de
 costat del altre peu y topasillo & del
 altre, despues la mudança de la Señora,
 y luego la mia ↄ^a^ temps tres carrerillas pas
-en devant y vasio al un costat y dos pas[-]
+en devant y vasio al un cotat y dos pas[-]
 sos y rompra al ayre al altre costat
 fent alli quadrupeado y mitja y lue[-]
 go sacudido pas en devant y rompra
@@ -708,7 +708,7 @@ al altre cap, y rompra, ô sacudido pas rompra
 al ayre quadrupeado y mitja y un trencat
 de cada costat, y topasillo, quadrupedo, y mit[-]
 ja, y luego la mudanç salto, y encaje de
-cada peu quadrupe[a]do carrerilla crusada
+cada peu quadrupeado carrerilla crusada
 y dos vasios, y lo mateix del altre peu
 luego sacudido, giranse de costat, dret
 â la Señora, y quadrupeado y mit[-]
@@ -755,7 +755,7 @@ al cap q[ue?] no se comença, y topasillo, quadru[-]
 peado y mitja. y mudança carrerilla pas y
 rompra al un costat y lo mateix al puesto
 luego dos floretas en devant y quadrupeado, y
-mitja y ↄ^a^ temps al puesto quadrupeado, y mit[-]
+mitja y ↄ^a^ temps al pusto quadrupeado, y mit[-]
 ja,[[y lo mateix del altre costat]] {215} y topasillo, quadrupeado y mitja, luego
 lo entremes dos passos cuitats y caida al
 un costat y alli rompra de cara, luego, ~~los~~ al[-]
