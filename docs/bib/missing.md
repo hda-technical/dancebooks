@@ -715,7 +715,7 @@ _This part of the list is to joined with the general table_
 | 1929 | André Levinson | La danse d'aujourd'hui. Etudes - Notes - Portraits<br/>_Published in Paris_ | `DdM:345` | [UBS](https://eplus.uni-salzburg.at/obvusboa/content/titleinfo/6646514) | Книга про современный сценический (а не социальный) танец. |
 
 
-## Bibliographies already consulted
+## Bibliographies already consulted { #consulted }
 
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
@@ -768,7 +768,7 @@ _This part of the list is to joined with the general table_
 | 2023-02-26 | `[Wiki: Tanz]` | | Wikisource on Tanz | [Listing page](https://de.wikisource.org/wiki/Tanz), [Changelog](https://de.wikisource.org/w/index.php?title=Tanz&action=history) |
 | 2024-09-16 | `[Powers Free]` | Richard Powers | Freely available primary source scans | [Download page](https://www.richardpowers.com/free-downloads), [archive.org Wayback Machine](https://web.archive.org/web/20230000000000*/https://www.richardpowers.com/free-downloads) |
 
-## Bibliographies not yet consulted / consulted partially
+## Bibliographies not yet consulted / consulted partially { #unconsulted }
 
 | Date | Nickname | Author | Title | Links |
 | ---- | -------- | ------ | ----- | ----- |
