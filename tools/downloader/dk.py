@@ -1,4 +1,3 @@
-import json
 import re
 
 import bs4
@@ -7,20 +6,25 @@ import iiif
 import utils
 
 
-URL_REGEXP = re.compile(r'var jsonurl = (\[.*\]);')
+JSONURL_REGEXP = re.compile(r"var\s*jsonurl\s*=")
+STRING_LITERAL_REGEXP = re.compile(r'"((?:[^"\\]|\\.)*)"')
 
 
 def get_kb(*, id):
-	html_url = f"http://www5.kb.dk/manus/musman/2010/dec/viser/{id}/en/"
+	html_url = f"http://digitalesamlinger.kb.dk/manus/musman/2010/dec/viser/{id}/en/"
 	html = bs4.BeautifulSoup(
 		utils.get_text(html_url),
 		features="html.parser",
 	)
 	for script in html.find_all("script"):
-		if match := URL_REGEXP.search(script.text):
-			urls = json.loads(match.group(1))
+		if match := JSONURL_REGEXP.search(script.text):
+			body = script.text[match.end():]
+			end = body.find("];")
+			if end != -1:
+				body = body[:end]
+			urls = STRING_LITERAL_REGEXP.findall(body)
 			break
-	
+
 	output_folder = utils.make_output_folder("kb_dk", id)
 	for page, info_url in enumerate(urls):
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
