@@ -792,3 +792,12 @@ fin
 ~~ça, y rompra giranse, posantse al costat~~
 ~~de la Señora, y cortesia.~~
 ~~fin.~~
+
+{219} A 3 de Abril de 1709 Empeçe â tomar
+licion de Espada â la Italiana del [?] Placido[[Pages 220–222 are blank.]]
+
+### {223} Balls Catalans ó ballets aont son
+    dos parels
+Burea comença ab una cortesia de cara
+y altre dret á la balladora, luego en devant
+quatre floretas, y altres quatre al puesto, y
