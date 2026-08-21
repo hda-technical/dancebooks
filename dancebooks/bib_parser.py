@@ -184,7 +184,8 @@ class ParserState(enum.Enum):
 	WaitingForEq = 7
 	WaitingForParenthesis = 8
 	ReadingValue = 9
-	DoneReadingValue = 10
+	SkippingIndentation = 10
+	DoneReadingValue = 11
 
 
 class BibParser:
@@ -199,12 +200,25 @@ class BibParser:
 		self.state = ParserState.NoItem
 		self.key = ""
 		self.lexeme = ""
+		self.trim_lines = False
 
 	def raise_error(self):
 		"""
 		Raises human-readable Exception based on parser state and current file position
 		"""
 		raise ValueError(f"In state={self.state}: wrong syntax at (line {self.line}, #{self.char})")
+
+	def finish_value(self, item):
+		"""
+		Stores the value read so far, dropping spaces trailing the wrapped markdown values
+		"""
+		#WARN: value can be empty here in case of "key = {}" syntax
+		value = self.lexeme.rstrip() if self.trim_lines else self.lexeme
+		self.set_item_param(item, self.key, value)
+		self.state = ParserState.DoneReadingValue
+		self.key = ""
+		self.lexeme = ""
+		self.trim_lines = False
 
 	def set_item_param(self, item, key, value):
 		"""
@@ -389,19 +403,41 @@ class BibParser:
 				if c.isspace():
 					continue
 				elif c == '{':
-					self.state = ParserState.ReadingValue
+					#markdown values may be wrapped across several lines:
+					#their line breaks are kept as is, letting the note author decide
+					#whether the value should be wrapped when rendered,
+					#while the indentation of every line is dropped
+					self.trim_lines = (self.key in config.parser.markdown_params)
+					if self.trim_lines:
+						#spaces leading the value are dropped as well
+						self.state = ParserState.SkippingIndentation
+					else:
+						self.state = ParserState.ReadingValue
 				else:
 					self.raise_error()
 
 			elif self.state == ParserState.ReadingValue:
 				if c == '}':
-					#WARN: value can be empty here in case of "key = {}" syntax
-					self.set_item_param(item, self.key, self.lexeme)
-					self.state = ParserState.DoneReadingValue
-					self.key = ""
-					self.lexeme = ""
+					self.finish_value(item)
+				elif self.trim_lines and (c in const.LINE_BREAKS):
+					self.lexeme += c
+					self.state = ParserState.SkippingIndentation
 				else:
 					self.lexeme += c
+
+			elif self.state == ParserState.SkippingIndentation:
+				if c == '}':
+					self.finish_value(item)
+				elif c in const.LINE_BREAKS:
+					#empty lines are kept as is (unless they lead the value),
+					#allowing the note author to start a new markdown paragraph
+					if self.lexeme:
+						self.lexeme += c
+				elif c.isspace():
+					continue
+				else:
+					self.lexeme += c
+					self.state = ParserState.ReadingValue
 
 			elif self.state == ParserState.DoneReadingValue:
 				if c.isspace():

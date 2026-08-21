@@ -37,6 +37,7 @@ class ParserConfig:
 		self.year_params = set(params["year_params"])
 		self.date_params = set(params["date_params"])
 		self.bool_params = set(params["bool_params"])
+		self.markdown_params = set(params["markdown_params"])
 
 		#other values
 		self.list_sep = params["list_sep"]

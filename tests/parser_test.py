@@ -94,6 +94,35 @@ def test_parsing():
 	assert MAYAK_1924.get("crossref") == "pravda_1924"
 
 
+def test_parsing_multiline_note():
+	items = bib_parser.BibParser()._parse_string(
+r"""
+@book(
+	wrapped_1900,
+	title = {	Multiline  note	},
+	year = {1900},
+	note = {
+		This note is wrapped across multiple lines.
+		Line breaks are kept as is,
+
+		so the author can make a paragraph.
+	}
+)
+"""
+	)
+	item = items[0]
+	#indentation of every line of the markdown value is dropped,
+	#as well as the spaces surrounding the value itself,
+	#while other values are kept as is
+	assert item.note == (
+		"This note is wrapped across multiple lines.\n"
+		"Line breaks are kept as is,\n"
+		"\n"
+		"so the author can make a paragraph."
+	)
+	assert item.title == "\tMultiline  note\t"
+
+
 def test_html_rendering():
 	# FIXME: TODO
 	pass
