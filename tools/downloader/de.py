@@ -64,40 +64,27 @@ def get_goettingen(*, id):
 			print(f"Skip existing page #{page:08d}")
 
 
-def get_haab(*, first_id, second_id):
-	output_folder = utils.make_output_folder("haab", first_id)
-	first_found = False
-
-	for page in range(1, 1000):
-		base_url = f"https://haab-digital.klassik-stiftung.de/viewer/api/v1/records/{first_id}/files/images/{second_id}_{page:04d}.tif"
-
-		output_filename = utils.make_output_filename(output_folder, page, extension="bmp")
+def get_haab(*, id):
+	manifest_url = f"https://haab-digital.klassik-stiftung.de/viewer/api/v1/records/{id}/manifest/"
+	output_folder = utils.make_output_folder("haab", id)
+	# Image ids can not be guessed: numbering does not necessarily start with 0001,
+	# and restricted pages are answered with HTTP 403 rather than HTTP 404.
+	manifest = utils.get_json(manifest_url)
+	canvases = manifest["sequences"][0]["canvases"]
+	print(f"Will download {len(canvases)} pages")
+	for page, canvas in enumerate(canvases, start=1):
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
 		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
-
-		try:
-			manifest_url = f"{base_url}/info.json"
-			utils.get_text(manifest_url)
-			first_found = True
-			# Proceed to download
-		except HTTPError as ex:
-			if ex.response.status_code == http.client.NOT_FOUND:
-				if first_found:
-					# There is no way to get the number of the last page in the document.
-					# Exit on first HTTP 404 response received.
-					break
-				else:
-					# There is no way to get the number of the first page in the document.
-					# Continue catching HTTP 404 until we find one.
-					print(f"Got HTTP 404 while trying to get page {page:04d}")
-					continue
-			raise
-
-		iiif.download_image(
-			base_url=base_url,
-			output_filename=output_filename,
-		)
+		# download_book_fast_v2 reuses the url baked into the manifest, which is
+		# a 283x400 thumbnail here (canvas resource @id), or even an Anubis-protected
+		# html page (canvas rendering @id, the one _download_image_fast_v2 prefers).
+		# Only the Image API service can be asked for the full size,
+		# which is exactly what download_image_fast_v1 does.
+		base_url = canvas["images"][-1]["resource"]["service"]["@id"]
+		print(f"Downloading page #{page:04d} from {base_url}")
+		iiif.download_image_fast_v1(base_url, output_filename)
 
 
 def get_hab_book(*, id):

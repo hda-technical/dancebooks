@@ -766,14 +766,13 @@ def de_karlsruhe(*, id):
 	de.get_karlsruhe(id=id)
 
 @main.command()
-@click.option("--first-id", help="Id of the book to be downloaded (e. g. `86571696X`)", required=True)
-@click.option("--second-id", help="Id of the book to be downloaded (e. g. `EPN_390287636`)", required=True)
-def de_haab(*, first_id, second_id):
+@click.option("--id", help="Id of the book to be downloaded (e. g. `86571696X`)", required=True)
+def de_haab(*, id):
 	"""
 	book from haab-digital.klassik-stiftung.de
 	"""
 	import de
-	de.get_haab(first_id=first_id, second_id=second_id)
+	de.get_haab(id=id)
 
 
 @main.command()
