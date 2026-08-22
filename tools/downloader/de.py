@@ -80,11 +80,16 @@ def get_haab(*, id):
 		# download_book_fast_v2 reuses the url baked into the manifest, which is
 		# a 283x400 thumbnail here (canvas resource @id), or even an Anubis-protected
 		# html page (canvas rendering @id, the one _download_image_fast_v2 prefers).
-		# Only the Image API service can be asked for the full size,
-		# which is exactly what download_image_fast_v1 does.
+		# Only the Image API service can be asked for the full size.
 		base_url = canvas["images"][-1]["resource"]["service"]["@id"]
 		print(f"Downloading page #{page:04d} from {base_url}")
-		iiif.download_image_fast_v1(base_url, output_filename)
+		# Canvas size matches the one info.json reports, making the extra request redundant
+		iiif.download_image_fast_v1(
+			base_url,
+			output_filename,
+			width=canvas["width"],
+			height=canvas["height"],
+		)
 
 
 def get_hab_book(*, id):
