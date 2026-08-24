@@ -835,11 +835,14 @@ def validate_added_on(item, git_added_on, errors):
 
 
 def validate_note(item, errors):
+	"""
+	Checks that note is a complete sentence (i. e. ends with a dot)
+	"""
 	note = item.get("note")
 	if note is None:
 		return
-	if note[-1] != '.':
-		errors.add(f"Item note does not end with the dot")
+	if not note.endswith("."):
+		errors.add(f"Item note is not a complete sentence: {note!r} doesn't end with a dot")
 
 
 def validate_item(
@@ -872,6 +875,8 @@ def validate_item(
 	validate_source_file(item, errors)
 	validate_partial_fields(item, errors)
 	validate_added_on(item, git_added_on, errors)
+	# enabling validate_note brings in about 800 new erroneours entries
+	# validate_note(item, errors)
 	return errors
 
 
