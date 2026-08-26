@@ -19,6 +19,7 @@ pymdown-extensions==11.0.1
 pytest==9.1.1
 python-stdnum==2.2
 pytrovich==0.2.0
+PyTurboJPEG==1.8.3
 requests==2.34.2
 s3cmd==2.4.0
 SQLAlchemy==2.0.51
