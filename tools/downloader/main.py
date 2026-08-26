@@ -786,6 +786,16 @@ def de_fulda(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `bittler1890`)", required=True)
+def de_freiburg(id):
+	"""
+	book from dl.ub.uni-freiburg.de
+	"""
+	import de
+	de.get_freiburg(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the image to be downloaded (e. g. `PR-INC-00000-A-00007-00002-00888-000-00420`)", required=True)
 def uk_cambridge(id):
 	"""

@@ -1,10 +1,12 @@
 import http
 import os
 import textwrap
+import urllib.parse
 
 import iiif
 import utils
 
+import bs4
 import requests
 from requests.exceptions import HTTPError
 
@@ -45,6 +47,78 @@ def get_fulda(*, id):
 			utils.get_binary(output_filename, image_url)
 		except ValueError:
 			break
+
+
+def get_freiburg(*, id):
+	"""
+	freiburg does not use IIIF or any other well-known protocol,
+	and image filenames are not guessable (`00000Vorderdeckel.jpg`, `za_Farbkeil.jpg`).
+	The only way to enumerate the pages is to parse the html of the viewer
+	and to follow the `next page` button until it starts pointing to the current page.
+	"""
+	ROOT = "https://dl.ub.uni-freiburg.de"
+
+	def get_image_url(soup):
+		image = soup.find("img", attrs={"id": "image"})
+		if image is None:
+			raise RuntimeError("Failed to find page image in the html")
+		return urllib.parse.urljoin(ROOT, image.attrs["src"])
+
+	def get_next_page_path(soup):
+		"""
+		Returns path of the page the `next page` button points to.
+
+		The button is never disabled: on the last page it points to the page itself.
+		Buttons are matched by their image rather than by their (localized) title.
+		"""
+		for anchor in soup.find_all("a", href=True):
+			for image in anchor.find_all("img", src=True):
+				if image.attrs["src"].endswith("bt_vor.png"):
+					return urllib.parse.urlparse(anchor.attrs["href"]).path
+		raise RuntimeError("Failed to find `next page` button in the html")
+
+	def guess_zoom(first_page_path):
+		"""
+		Zoom level is a directory in the image url (.../image/{id}/{zoom}/{image}.jpg).
+		Requesting a zoomlevel greater than the maximum one available for the book
+		silently falls back to zoomlevel=1 rather than returning an error.
+		"""
+		MAX_ZOOM = 10
+		zoom = 1
+		for test_zoom in range(2, MAX_ZOOM + 1):
+			url = f"{ROOT}{first_page_path}?zoomlevel={test_zoom}"
+			html = utils.get_text(url)
+			soup = bs4.BeautifulSoup(html, features="html.parser")
+			image_url = get_image_url(soup)
+			# the second to last path component is the zoom level of the image being served
+			if urllib.parse.urlparse(image_url).path.split("/")[-2] != str(test_zoom):
+				break
+			zoom = test_zoom
+		return zoom
+
+	output_folder = utils.make_output_folder("freiburg", id)
+	page_path = f"/diglit/{id}/0001"
+
+	zoom = guess_zoom(page_path)
+	print(f"Guessed max zoomlevel={zoom}")
+
+	for page in range(1, 1000):
+		url = f"{ROOT}{page_path}?zoomlevel={zoom}"
+		html = utils.get_text(url)
+		soup = bs4.BeautifulSoup(html, features="html.parser")
+		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		if os.path.exists(output_filename):
+			utils.notify_skip(page)
+		else:
+			image_url = get_image_url(soup)
+			print(f"Downloading page #{page:04d} from {image_url}")
+			utils.get_binary(output_filename, image_url)
+
+		next_page_path = get_next_page_path(soup)
+		if next_page_path == page_path:
+			print(f"The `next page` button points to the current page. Considering download as complete")
+			break
+		page_path = next_page_path
 
 
 def get_goettingen(*, id):
