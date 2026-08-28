@@ -1,12 +1,15 @@
 import functools
+import hashlib
 import json
 import os
 import io
 import math
 import shutil
 import time
+import urllib.parse
 from xml.etree import ElementTree
 
+import bs4
 import PIL.Image
 import requests
 
@@ -37,12 +40,102 @@ def retry(try_count, delay=0, delay_backoff=1):
 				try:
 					return func(*args, **kwargs)
 				except Exception as ex:
+					# 4xx responses (i. e. the HTTP 404 marking the end of the book)
+					# won't get any better upon retrying.
+					# Reraise HTTPError as is, letting the caller handle it
+					if (
+						isinstance(ex, requests.exceptions.HTTPError)
+						and ex.response is not None
+						and 400 <= ex.response.status_code < 500
+					):
+						raise
 					print(f"Got exception: {ex}, will retry in {current_delay} seconds")
 					time.sleep(current_delay)
 					current_delay *= delay_backoff
 			raise RuntimeError(f"Failed to get results after {try_number} retries")
 		return do_retry
 	return actual_decorator
+
+
+# Anubis (https://anubis.techaro.lol) protects the website by replying
+# with HTTP 200 and a proof-of-work challenge page instead of the requested content.
+# Solving the challenge yields an authorization cookie valid for several hours,
+# hence a single challenge is solved per session.
+ANUBIS_PASS_CHALLENGE_PATH = "/.within.website/x/cmd/anubis/api/pass-challenge"
+
+
+def _get_anubis_json(soup: bs4.BeautifulSoup, element_id: str):
+	"""
+	Anubis embeds challenge parameters into <script type="application/json"> tags
+	"""
+	script = soup.find("script", attrs={"id": element_id})
+	if script is None:
+		return None
+	return json.loads(script.text)
+
+
+def is_anubis_challenge(response: requests.Response) -> bool:
+	# short-circuiting keeps us from fetching the body of a (possibly streamed) binary response
+	return (
+		response.headers.get("Content-Type", "").startswith("text/html")
+		and b"anubis_challenge" in response.content
+	)
+
+
+def solve_anubis_challenge(response: requests.Response):
+	"""
+	Solves the proof-of-work challenge found in the response
+	and stores the resulting authorization cookie in the session.
+	"""
+	soup = bs4.BeautifulSoup(response.text, features="html.parser")
+	challenge = _get_anubis_json(soup, "anubis_challenge")
+	if challenge is None:
+		raise RuntimeError("Failed to extract Anubis challenge from the response")
+	base_prefix = _get_anubis_json(soup, "anubis_base_prefix") or ""
+
+	algorithm = challenge["rules"]["algorithm"]
+	if algorithm not in ("fast", "slow"):
+		raise NotImplementedError(f"Unsupported Anubis algorithm: {algorithm}")
+
+	# Anubis asks for a nonce making sha256(random_data + nonce)
+	# start with `difficulty` zero hex digits
+	random_data = challenge["challenge"]["randomData"]
+	difficulty = challenge["rules"]["difficulty"]
+	expected_prefix = "0" * difficulty
+	print(f"Solving Anubis challenge (difficulty {difficulty})")
+	start_time = time.monotonic()
+	nonce = 0
+	while True:
+		digest = hashlib.sha256(f"{random_data}{nonce}".encode()).hexdigest()
+		if digest.startswith(expected_prefix):
+			break
+		nonce += 1
+	elapsed_ms = int((time.monotonic() - start_time) * 1000)
+	print(f"Solved Anubis challenge in {nonce + 1} hashes ({elapsed_ms} ms)")
+
+	url = urllib.parse.urlsplit(response.url)
+	query = urllib.parse.urlencode({
+		"id": challenge["challenge"]["id"],
+		"response": digest,
+		"nonce": nonce,
+		"redir": response.url,
+		"elapsedTime": elapsed_ms,
+	})
+	pass_challenge_url = urllib.parse.urlunsplit((
+		url.scheme,
+		url.netloc,
+		base_prefix + ANUBIS_PASS_CHALLENGE_PATH,
+		query,
+		"",
+	))
+	# not following the redirect to response.url: the caller reissues the request anyway
+	pass_response = session.get(
+		pass_challenge_url,
+		headers=HEADERS,
+		timeout=TIMEOUT,
+		allow_redirects=False,
+	)
+	pass_response.raise_for_status()
 
 
 # FIXME: retry decorator hides HTTPError raised by raise_for_status.
@@ -63,8 +156,14 @@ def make_request(rq: str | requests.Request, *args, **kwargs):
 		)
 	elif isinstance(rq, requests.Request):
 		rq.headers = headers
-	rq = rq.prepare()
-	response = session.send(rq, *args, timeout=TIMEOUT, **kwargs)
+	# session.prepare_request (unlike requests.Request.prepare)
+	# applies cookies stored in the session
+	response = session.send(session.prepare_request(rq), *args, timeout=TIMEOUT, **kwargs)
+	if is_anubis_challenge(response):
+		solve_anubis_challenge(response)
+		response = session.send(session.prepare_request(rq), *args, timeout=TIMEOUT, **kwargs)
+		if is_anubis_challenge(response):
+			raise RuntimeError("Failed to pass Anubis challenge")
 	response.raise_for_status()
 	return response
 
@@ -197,7 +296,7 @@ def guess_tiles_zoom(url_maker_maker):
 	zoom = 0
 	for test_zoom in range(MAX_ZOOM):
 		probable_url = url_maker_maker(test_zoom)(0, 0)
-		head_response = requests.head(probable_url, headers=HEADERS)
+		head_response = session.head(probable_url, headers=HEADERS)
 		if head_response.status_code != 200:
 			break
 		zoom = test_zoom
@@ -212,7 +311,7 @@ def guess_tiles_number_x(url_maker, min_file_size=None):
 		probable_url = url_maker(test_x, 0)
 		if probable_url is None:
 			break
-		head_response = requests.head(probable_url, headers=HEADERS)
+		head_response = session.head(probable_url, headers=HEADERS)
 		if head_response.status_code != 200:
 			break
 		if min_file_size is not None:
@@ -231,7 +330,7 @@ def guess_tiles_number_y(url_maker, min_file_size=None):
 		probable_url = url_maker(0, test_y)
 		if probable_url is None:
 			break
-		head_response = requests.head(probable_url, headers=HEADERS)
+		head_response = session.head(probable_url, headers=HEADERS)
 		if head_response.status_code != 200:
 			break
 		if min_file_size is not None:
