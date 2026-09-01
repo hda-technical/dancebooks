@@ -145,32 +145,30 @@ def get_inha_contredanse(id):
 
 
 def get_retronews(*, id, page):
-	raise NotImplementedError("Sorry, this downloader is currently broken")
-	token_url = "https://api.retronews.fr/security/token-auth"
-	token_headers = {
-		"Content-Type": "application/json",
-	}
-	token = utils.get_json(token_url, method="POST", headers=token_headers)["refreshToken"]
+	API = "https://api.retronews.fr"
+	# The `crop` endpoint clamps the requested size down to the native page resolution,
+	# hence asking for an unreasonably large image yields the full-resolution scan
+	# and no tile sewing is needed at all.
+	MAX_SIZE = 10000
+
+	# Anonymous authentication is enough to get full-resolution pages
+	token_url = f"{API}/security/anonymous-auth"
+	token = utils.get_json(token_url, method="POST")["accessToken"]
 	headers = {
 		"Authorization": f"Bearer {token}",
 	}
 	print("Got token")
 
-	metadata_url = f"https://api.retronews.fr/contentside/api/page/document/{id}/paragraphs/{page}"
-	metadata = utils.get_json(metadata_url, headers=headers)
-
 	output_folder = utils.make_output_folder("retronews", id[0:8])
-	output_filename = utils.make_output_filename(output_folder, page=page)
+	output_filename = utils.make_output_filename(output_folder, page=page, extension="jpg")
 
-	policy = utils.TileSewingPolicy.from_image_size(
-		width=metadata["width"],
-		height=metadata["height"],
-		tile_size=512,
+	# The last path component is the zoom level, which is ignored by the backend
+	url = (
+		f"{API}/contentside/api/page/document/{id}/page/{page}"
+		f"/crop/{MAX_SIZE}/{MAX_SIZE}/11"
 	)
-
-	# https://api.retronews.fr/contentside/api/page/publication/787/document/D4913300/page/8/dzi_files/9/0_1.jpg"
-	url_maker = lambda tile_x, tile_y: f"https://pv5web.retronews.fr/api/document/{document_id}/page/{page}/tile/{tile_x}/{tile_y}/0"
-	utils.download_and_sew_tiles(output_filename, url_maker, policy)
+	print(f"Downloading page #{page:04d} from {url}")
+	utils.get_binary(output_filename, url, headers=headers)
 
 
 def get_tolosana(*, id):
