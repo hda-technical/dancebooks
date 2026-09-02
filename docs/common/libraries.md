@@ -3,7 +3,11 @@
 Ниже приводятся фрагменты переписки с представителями библиотек касательно возможности
 выкладывания материалов, полученных из библиотек на сайте библиографии.
 
-## Российская государственная библиотека, Москва
+## 🇷🇺 Российская государственная библиотека, Москва
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| RSL | ✅ |
 
 _Из переписки на портале udo.rsl.ru._
 
@@ -19,7 +23,11 @@ _Из переписки на портале udo.rsl.ru._
 
 > Возможно с указанием источника – РГБ и без коммерческого использования
 
-## Российская национальная библиотека, Санкт-Петербург
+## 🇷🇺 Российская национальная библиотека, Санкт-Петербург
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| NLR | ✅ |
 
 > Здравствуйте!
 >
@@ -49,7 +57,11 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Российская национальная библиотека
 
-## Библиотека российской академии наук, Санкт-Петербург
+## 🇷🇺 Библиотека российской академии наук, Санкт-Петербург
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| RASL | ✅ |
 
 > Здравствуйте!
 >
@@ -80,7 +92,11 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Зав. читальными залами ОФО.
 
-## Российская государственная историческая библиотека:
+## 🇷🇺 Российская государственная историческая библиотека:
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| SHPL | ✅ |
 
 > Здравствуйте!
 >
@@ -97,7 +113,11 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Служба электронной доставки  ГПИБ России.
 
-## Bibliothèque nationale de France, Paris
+## 🇫🇷 Bibliothèque nationale de France, Paris
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| BNF | ✅ |
 
 _From an email forwarded by Dmitry Filimonov._
 
@@ -139,7 +159,11 @@ _From an email forwarded by Dmitry Filimonov._
 >
 > 75706 Paris Cedex 13, France
 
-## University of North Carolina at Greensboro
+## 🇺🇸 University of North Carolina at Greensboro
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| UNC Greensboro | ✅ |
 
 _From an email forwarded by Susan de Guardiola._
 
@@ -156,7 +180,11 @@ _From an email forwarded by Susan de Guardiola._
 physical item, not the copyright. There are no permissions for me to
 grant - the item was scanned for your use.
 
-## Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland
+## 🇺🇸 Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| Lester S. Levy | ✅ |
 
 > Dear Jim.
 >
@@ -213,7 +241,11 @@ grant - the item was scanned for your use.
 >
 > Senior Reference Archivist
 
-## Royal College of Music, London
+## 🇬🇧 Royal College of Music, London
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| RCM | ✅ |
 
 ---
 
@@ -228,7 +260,11 @@ grant - the item was scanned for your use.
 >
 > Michael Mullen
 
-## The National Library of Scotland, Edinburgh
+## 🇬🇧 The National Library of Scotland, Edinburgh
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| NLS | ✅ |
 
 > Dear Sir / Madam,
 >
@@ -276,7 +312,48 @@ grant - the item was scanned for your use.
 >
 > Curator (Gaelic, Early Modern & Music Manuscripts) | Archives & Manuscript Collections
 
-## Univertätsbibliothek Salzburg / Derra de Moroda Tanzarchiv, Salzburg
+## 🇬🇧 Newcastle University Library
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| NCL | ✅ |
+
+Excerpts from
+[Copyright, Permission, Acknowledgements and Data Protection](https://www.ncl.ac.uk/library/special-collections/using/copyright.php)
+and [Copy and Re-Use Service](https://www.ncl.ac.uk/library/special-collections/using/scanning-photocopying.php)
+pages provided by the library.
+
+> **Re-Use**
+>
+> The library has no additional charges for commercial and non-commercial reuse. However you must:
+>
+> * Seek copyright permission from the creator or designated third party where copyright exemptions do not apply.
+> * Acknowledge the University Library appropriately.
+>
+> For specific guidance on copyright and acknowledgements, please see our Copyright, Permission,
+> Acknowledgements and Data Protection page.
+
+> **Copyright in Special Collections and Archives**
+>
+> Although we may physically hold material in our collections for research purposes,
+> UK legislation may not allow ourselves or others to copy because the intellectual property still
+> belongs to the creator or a designated third party.
+>
+> Exceptions to this do apply, including:
+>
+> * Where copyright covering the material has expired
+> * Where copying is covered by 'fair dealing' exemptions (this is where the copy is for the purpose
+>   of research or private study only)
+> * Where copying is for educational use within a teaching environment
+>
+> Where none of these apply copyright permission must be obtained from the copyright owner before any
+> copying from our rare books and archives takes place.
+
+## 🇦🇹 Univertätsbibliothek Salzburg / Derra de Moroda Tanzarchiv, Salzburg
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| UBS | ✅ |
 
 > I am the author and maintainer of the world largest historical dance bibliography: https://bib.hda.org.ru/
 >
@@ -324,40 +401,11 @@ grant - the item was scanned for your use.
 >
 > Linda Ohrtmann
 
-## Newcastle University Library
+## 🇨🇦 York University in Toronto, Canada
 
-Excerpts from
-[Copyright, Permission, Acknowledgements and Data Protection](https://www.ncl.ac.uk/library/special-collections/using/copyright.php)
-and [Copy and Re-Use Service](https://www.ncl.ac.uk/library/special-collections/using/scanning-photocopying.php)
-pages provided by the library.
-
-> **Re-Use**
->
-> The library has no additional charges for commercial and non-commercial reuse. However you must:
->
-> * Seek copyright permission from the creator or designated third party where copyright exemptions do not apply.
-> * Acknowledge the University Library appropriately.
->
-> For specific guidance on copyright and acknowledgements, please see our Copyright, Permission,
-> Acknowledgements and Data Protection page.
-
-> **Copyright in Special Collections and Archives**
->
-> Although we may physically hold material in our collections for research purposes,
-> UK legislation may not allow ourselves or others to copy because the intellectual property still
-> belongs to the creator or a designated third party.
->
-> Exceptions to this do apply, including:
->
-> * Where copyright covering the material has expired
-> * Where copying is covered by 'fair dealing' exemptions (this is where the copy is for the purpose
->   of research or private study only)
-> * Where copying is for educational use within a teaching environment
->
-> Where none of these apply copyright permission must be obtained from the copyright owner before any
-> copying from our rare books and archives takes place.
-
-## York University in Toronto, Canada
+| Alias | Можно выкладывать |
+| --- | --- |
+| — | 🚫 |
 
 > Hello Mary
 >
@@ -387,7 +435,11 @@ pages provided by the library.
 >
 > York University Libraries
 
-## Latvijas Nacionālā bibliotēka
+## 🇱🇻 Latvijas Nacionālā bibliotēka
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| LNB | ✅ |
 
 Excerpts from [Digitization on Request] rules of the library and the
 [Copyright Law](https://likumi.lv/ta/en/en/id/5138-copyright-law) of the Republic.
@@ -400,7 +452,11 @@ Excerpts from [Digitization on Request] rules of the library and the
 > Copyright shall be in effect for the entire lifetime of an author and for 70 years after the death
 > of an author, except for the cases specified in Section 37 of this Law.
 
-## Biblioteca civica del comune del Rovereto
+## 🇮🇹 Biblioteca civica del comune del Rovereto
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| — | 🚫 |
 
 **FREE DOWNLOADS WERE NOT PERMITTED.**
 
