@@ -486,3 +486,28 @@ Excerpts from [Digitization on Request] rules of the library and the
 > With best wishes,
 >
 > Thomas DC
+
+## 🇩🇪 Universitätsbibliothek der Universität der Künste Berlin
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| UDK | ✅ |
+
+Excerpts from the [Digitization request](https://www.udk-berlin.de/en/service/university-library/how-do-i-use-the-library/copying-scanning-printing/tdigitization-request/) page provided by the library and from the [section 60c](https://www.gesetze-im-internet.de/englisch_urhg/englisch_urhg.html#p0479) of the German Copyright Act (UrhG) it refers to.
+
+> **Costs and delivery**
+>
+> The service is free of charge until further notice.
+>
+> You will receive an e-mail with a download link upon completion.
+> This can take up to 14 days.
+
+> The university library reserves the right to cancel requests due to legal or conservational reasons.
+> Please note — requests within the scope of UrhG § 60c can be fulfilled for UdK members only.
+
+The service is limited to the non-loan items kept in the closed, the external and the rare book stacks.
+Neither the digitization request page nor the general library rules grant or withhold the right to republish the scans:
+the library claims no rights of its own over the digitized public domain material and
+leaves the user responsible for the compliance with the copyright law.
+Scans of the public domain books can therefore be put online,
+while the items provided under UrhG § 60c (fulfilled for the UdK members only) can not.
