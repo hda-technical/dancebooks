@@ -458,8 +458,6 @@ Excerpts from [Digitization on Request] rules of the library and the
 | --- | --- |
 | — | 🚫 |
 
-**FREE DOWNLOADS WERE NOT PERMITTED.**
-
 > Dear Chiara,
 >
 > thanks a lot for the scans.
