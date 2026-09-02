@@ -30,6 +30,11 @@ TIMEOUT = 30
 session = requests.Session()
 
 
+# 408 Request Timeout and 429 Too Many Requests are transient,
+# unlike the rest of the 4xx family
+RETRIABLE_STATUS_CODES = {408, 429}
+
+
 def retry(try_count, delay=0, delay_backoff=1):
 	def actual_decorator(func):
 		@functools.wraps(func)
@@ -40,13 +45,14 @@ def retry(try_count, delay=0, delay_backoff=1):
 				try:
 					return func(*args, **kwargs)
 				except Exception as ex:
-					# 4xx responses (i. e. the HTTP 404 marking the end of the book)
+					# Most 4xx responses (i. e. the HTTP 404 marking the end of the book)
 					# won't get any better upon retrying.
 					# Reraise HTTPError as is, letting the caller handle it
 					if (
 						isinstance(ex, requests.exceptions.HTTPError)
 						and ex.response is not None
 						and 400 <= ex.response.status_code < 500
+						and ex.response.status_code not in RETRIABLE_STATUS_CODES
 					):
 						raise
 					print(f"Got exception: {ex}, will retry in {current_delay} seconds")
