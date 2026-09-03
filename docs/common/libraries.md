@@ -3,7 +3,7 @@
 Ниже приводятся фрагменты переписки с представителями библиотек касательно возможности
 выкладывания материалов, полученных из библиотек на сайте библиографии.
 
-## 🇷🇺 Российская государственная библиотека, Москва
+## 🇷🇺 Российская государственная библиотека, Москва { #RSL }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -23,7 +23,7 @@ _Из переписки на портале udo.rsl.ru._
 
 > Возможно с указанием источника – РГБ и без коммерческого использования
 
-## 🇷🇺 Российская национальная библиотека, Санкт-Петербург
+## 🇷🇺 Российская национальная библиотека, Санкт-Петербург { #NLR }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -57,7 +57,7 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Российская национальная библиотека
 
-## 🇷🇺 Библиотека российской академии наук, Санкт-Петербург
+## 🇷🇺 Библиотека российской академии наук, Санкт-Петербург { #RASL }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -92,7 +92,7 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Зав. читальными залами ОФО.
 
-## 🇷🇺 Российская государственная историческая библиотека:
+## 🇷🇺 Российская государственная историческая библиотека: { #SHPL }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -113,7 +113,7 @@ _Из переписки на портале udo.rsl.ru._
 >
 > Служба электронной доставки  ГПИБ России.
 
-## 🇫🇷 Bibliothèque nationale de France, Paris
+## 🇫🇷 Bibliothèque nationale de France, Paris { #BNF }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -159,7 +159,7 @@ _From an email forwarded by Dmitry Filimonov._
 >
 > 75706 Paris Cedex 13, France
 
-## 🇺🇸 University of North Carolina at Greensboro
+## 🇺🇸 University of North Carolina at Greensboro { #UNC-Greensboro }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -180,7 +180,7 @@ _From an email forwarded by Susan de Guardiola._
 physical item, not the copyright. There are no permissions for me to
 grant - the item was scanned for your use.
 
-## 🇺🇸 Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland
+## 🇺🇸 Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland { #Lester-S.-Levy }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -241,7 +241,7 @@ grant - the item was scanned for your use.
 >
 > Senior Reference Archivist
 
-## 🇬🇧 Royal College of Music, London
+## 🇬🇧 Royal College of Music, London { #RCM }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -260,7 +260,7 @@ grant - the item was scanned for your use.
 >
 > Michael Mullen
 
-## 🇬🇧 The National Library of Scotland, Edinburgh
+## 🇬🇧 The National Library of Scotland, Edinburgh { #NLS }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -312,7 +312,7 @@ grant - the item was scanned for your use.
 >
 > Curator (Gaelic, Early Modern & Music Manuscripts) | Archives & Manuscript Collections
 
-## 🇬🇧 Newcastle University Library
+## 🇬🇧 Newcastle University Library { #NCL }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -349,7 +349,7 @@ pages provided by the library.
 > Where none of these apply copyright permission must be obtained from the copyright owner before any
 > copying from our rare books and archives takes place.
 
-## 🇦🇹 Univertätsbibliothek Salzburg / Derra de Moroda Tanzarchiv, Salzburg
+## 🇦🇹 Univertätsbibliothek Salzburg / Derra de Moroda Tanzarchiv, Salzburg { #UBS }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -435,7 +435,7 @@ pages provided by the library.
 >
 > York University Libraries
 
-## 🇱🇻 Latvijas Nacionālā bibliotēka
+## 🇱🇻 Latvijas Nacionālā bibliotēka { #LNB }
 
 | Alias | Можно выкладывать |
 | --- | --- |
@@ -487,7 +487,7 @@ Excerpts from [Digitization on Request] rules of the library and the
 >
 > Thomas DC
 
-## 🇩🇪 Universitätsbibliothek der Universität der Künste Berlin
+## 🇩🇪 Universitätsbibliothek der Universität der Künste Berlin { #UDK }
 
 | Alias | Можно выкладывать |
 | --- | --- |
