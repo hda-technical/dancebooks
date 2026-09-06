@@ -207,7 +207,7 @@ class BibParser:
 		"""
 		Raises human-readable Exception based on parser state and current file position
 		"""
-		raise ValueError(f"In state={self.state}: wrong syntax at (line {self.line}, #{self.char})")
+		raise ValueError(f"In state={self.state}: wrong syntax at line {self.line}")
 
 	def finish_value(self, item):
 		"""
@@ -321,13 +321,9 @@ class BibParser:
 		item = BibItem()
 		items = []
 		self.line = 1
-		self.char = 1
 		for c in data:
 			if c == os.linesep:
 				self.line += 1
-				self.char = 0
-			else:
-				self.char += 1
 
 			if self.state == ParserState.NoItem:
 				if c == "@":
