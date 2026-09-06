@@ -5,6 +5,7 @@ import enum
 import logging
 import multiprocessing
 import os.path
+import stat
 
 from dancebooks.config import config
 from dancebooks import const
@@ -169,7 +170,7 @@ class BibItem:
 	def finalize(self):
 		"""
 		Method to be called once after parsing every entries.
-		Renders note from 
+		Renders note from
 		"""
 		self.set("cite_label", utils.make_cite_label(self))
 
@@ -232,10 +233,17 @@ class BibParser:
 				filesize_value = []
 				for single_filename in value:
 					abspath = os.path.join(config.www.elibrary_dir, single_filename)
-					if os.path.isfile(abspath):
-						filesize_value.append(os.path.getsize(abspath))
+					# a single stat() instead of isfile() + getsize():
+					# these calls dominate the parsing time under WSL2
+					# when elibrary_dir resides on NTFS filesystem
+					try:
+						stat_result = os.stat(abspath)
+					except OSError:
+						stat_result = None
+					if (stat_result is not None) and stat.S_ISREG(stat_result.st_mode):
+						filesize_value.append(stat_result.st_size)
 					else:
-						logging.warn(f"File is not accessible: {abspath}")
+						logging.warning(f"File is not accessible: {abspath}")
 						filesize_value.append(0)
 				item.set(const.FILE_SIZE_PARAM, filesize_value)
 			elif key in config.parser.keyword_list_params:
