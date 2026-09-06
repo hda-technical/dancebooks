@@ -221,6 +221,18 @@ class BibParser:
 		self.lexeme = ""
 		self.trim_lines = False
 
+	def skip_to(self, data, delimiter, pos):
+		"""
+		Skips everything up to and including the next delimiter occurence,
+		advancing the line counter.
+		Returns the position of the delimiter itself (or the end of data)
+		"""
+		end = data.find(delimiter, pos)
+		if end < 0:
+			end = len(data)
+		self.line += data.count(os.linesep, pos, end)
+		return end
+
 	def set_item_param(self, item, key, value):
 		"""
 		Sets item param, applying additional conversion if needed.
@@ -321,14 +333,21 @@ class BibParser:
 		item = BibItem()
 		items = []
 		self.line = 1
-		for c in data:
+		data_len = len(data)
+		pos = 0
+		while pos < data_len:
+			c = data[pos]
+			pos += 1
 			if c == os.linesep:
 				self.line += 1
 
 			if self.state == ParserState.NoItem:
-				if c == "@":
-					self.state = ParserState.WaitingForType
-				#anything else is a comment
+				if c != "@":
+					# anything else is a comment:
+					# no state can be entered before the next '@',
+					# hence the whole comment is skipped in a single scan
+					pos = self.skip_to(data, "@", pos) + 1
+				self.state = ParserState.WaitingForType
 
 			elif self.state == ParserState.WaitingForType:
 				if c.isspace():
@@ -423,11 +442,20 @@ class BibParser:
 			elif self.state == ParserState.ReadingValue:
 				if c == '}':
 					self.finish_value(item)
-				elif self.trim_lines and (c in const.LINE_BREAKS):
+				elif self.trim_lines:
+					# line breaks are meaningful for the markdown values,
+					# such values are still read char by char
 					self.lexeme += c
-					self.state = ParserState.SkippingIndentation
+					if c in const.LINE_BREAKS:
+						self.state = ParserState.SkippingIndentation
 				else:
-					self.lexeme += c
+					# no escaping is supported inside the value,
+					# hence the very first '}' always terminates it
+					# (just like it does in the branch above)
+					end = self.skip_to(data, '}', pos)
+					self.lexeme += data[pos - 1:end]
+					pos = end + 1
+					self.finish_value(item)
 
 			elif self.state == ParserState.SkippingIndentation:
 				if c == '}':
