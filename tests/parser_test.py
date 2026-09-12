@@ -5,6 +5,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from dancebooks import bib_parser
+from dancebooks.config import config
 from dancebooks import const
 from dancebooks import index
 from dancebooks import search
@@ -206,3 +207,47 @@ def test_html_cite_formatting():
 		"1896. "
 		'<a href="/books/raevsky_1896">https://bib.hda.org.ru/books/raevsky_1896</a>'
 	)
+
+
+def test_elibrary_filesize(tmp_path, monkeypatch):
+	"""
+	Sizes should be the very same no matter whether an elibrary was given
+	"""
+	ITEM = r"""
+@book(
+	sized_1900,
+	title = {Sized book},
+	year = {1900},
+	filename = {Library/book.pdf | Library/missing.pdf}
+)
+"""
+	(tmp_path / "Library").mkdir()
+	(tmp_path / "Library" / "book.pdf").write_bytes(b"12345")
+	# WARN: built before os.stat gets patched (ScannedDir uses DirEntry.stat())
+	elibrary = utils.ScannedDir(tmp_path)
+
+	stat_calls = []
+	real_stat = os.stat
+	def counting_stat(path, *args, **kwargs):
+		stat_calls.append(path)
+		return real_stat(path, *args, **kwargs)
+
+	# the globals are only patched for the parsing itself
+	with monkeypatch.context() as patched:
+		patched.setattr(config.www, "elibrary_dir", tmp_path)
+		patched.setattr(os, "stat", counting_stat)
+
+		# this is the way www parses the bibliography: the sizes are stat()ed
+		# one by one, and should not silently become zeroes.
+		# _parse_string() touches no file on its own,
+		# hence every call counted below is a size lookup
+		item = bib_parser.BibParser()._parse_string(ITEM)[0]
+		# the missing file is reported as a zero
+		assert item.get("filesize") == [5, 0]
+		assert len(stat_calls) == 2
+
+		# an elibrary yields exactly the same sizes, issuing no stat() at all
+		stat_calls.clear()
+		item = bib_parser.BibParser(elibrary)._parse_string(ITEM)[0]
+		assert item.get("filesize") == [5, 0]
+		assert stat_calls == []

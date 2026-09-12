@@ -94,21 +94,24 @@ class ScannedDir:
 	for the folders that do not change while the program is running
 	"""
 
-	#scanning is I/O bound (and releases the GIL),
-	#hence it is worth running in several threads
+	# scanning is I/O bound (and releases the GIL),
+	# hence it is worth running in several threads
 	SCAN_WORKERS = 8
 
 	def __init__(self, root, excludes={}, *, max_workers=SCAN_WORKERS):
-		self.root = root
-		#{folder abspath: {name of the file stored in it: its size}}
+		# WARN: the lookups split str paths, hence the keys should be str too.
+		# os.path.join() of a PathLike yields a str anyway, so mixing the two
+		# would silently hide the files stored in the root itself
+		self.root = os.fspath(root)
+		# {folder abspath: {name of the file stored in it: its size}}
 		self._listings = dict()
-		#WARN: the executor is shut down before the ctor returns:
-		#no thread should be left running when the caller forks
+		# WARN: the executor is shut down before the ctor returns:
+		# no thread should be left running when the caller forks
 		with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-			futures = {executor.submit(self._scan_folder, root)}
+			futures = {executor.submit(self._scan_folder, self.root)}
 			while futures:
-				#subfolders are submitted as soon as their parent is scanned,
-				#hence the scans of the different tree levels do overlap
+				# subfolders are submitted as soon as their parent is scanned,
+				# hence the scans of the different tree levels do overlap
 				done, futures = concurrent.futures.wait(
 					futures,
 					return_when=concurrent.futures.FIRST_COMPLETED

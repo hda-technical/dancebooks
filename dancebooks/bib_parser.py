@@ -5,6 +5,7 @@ import enum
 import logging
 import multiprocessing
 import os.path
+import stat
 
 from dancebooks.config import config
 from dancebooks import const
@@ -205,6 +206,18 @@ class BibParser:
 		self.lexeme = ""
 		self.trim_lines = False
 
+	def get_file_size(self, abspath):
+		"""
+		Returns the size of the file, or None when it is not accessible.
+		"""
+		if self.elibrary is not None:
+			return self.elibrary.getsize(abspath)
+		try:
+			stat_result = os.stat(abspath)
+		except OSError:
+			return None
+		return stat_result.st_size if stat.S_ISREG(stat_result.st_mode) else None
+
 	def raise_error(self):
 		"""
 		Raises human-readable Exception based on parser state and current file position
@@ -247,12 +260,8 @@ class BibParser:
 				filesize_value = []
 				for single_filename in value:
 					abspath = os.path.join(config.www.elibrary_dir, single_filename)
-					#WARN: no syscall is issued here (a per-file stat() takes about
-					#8 ms under WSL2 when elibrary_dir resides on NTFS filesystem),
-					#hence the sizes are unknown unless an elibrary was given to the ctor
-					if self.elibrary is None:
-						filesize = 0
-					elif (filesize := self.elibrary.getsize(abspath)) is None:
+					filesize = self.get_file_size(abspath)
+					if filesize is None:
 						logging.warning(f"File is not accessible: {abspath}")
 						filesize = 0
 					filesize_value.append(filesize)
