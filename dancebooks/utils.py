@@ -1,4 +1,5 @@
 import codecs
+import concurrent.futures
 import copy
 import cProfile
 import csv
@@ -79,17 +80,105 @@ def profile(sort="time", limits=50):
 	return profile_decorator
 
 
+class ScannedDir:
+	"""
+	Lists the files stored in the folder (and in all of its subfolders).
+
+	The folder is scanned once, on construction: a single scandir() call returns
+	both the names and the sizes of the whole folder content at once, while
+	a per-file stat() takes about 8 ms on a WSL2 drvfs mount. An instance of
+	this class thus answers "is this file there" and "how big is it" questions
+	without issuing a single syscall.
+
+	WARN: the content is never refreshed, hence the class is only suitable
+	for the folders that do not change while the program is running
+	"""
+
+	#scanning is I/O bound (and releases the GIL),
+	#hence it is worth running in several threads
+	SCAN_WORKERS = 8
+
+	def __init__(self, root, excludes={}, *, max_workers=SCAN_WORKERS):
+		self.root = root
+		#{folder abspath: {name of the file stored in it: its size}}
+		self._listings = dict()
+		#WARN: the executor is shut down before the ctor returns:
+		#no thread should be left running when the caller forks
+		with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+			futures = {executor.submit(self._scan_folder, root)}
+			while futures:
+				#subfolders are submitted as soon as their parent is scanned,
+				#hence the scans of the different tree levels do overlap
+				done, futures = concurrent.futures.wait(
+					futures,
+					return_when=concurrent.futures.FIRST_COMPLETED
+				)
+				for future in done:
+					folder, listing, subfolders = future.result()
+					self._listings[folder] = listing
+					futures |= {
+						executor.submit(self._scan_folder, subfolder)
+						for subfolder in subfolders
+						if os.path.basename(subfolder) not in excludes
+					}
+
+	@staticmethod
+	def _scan_folder(folder):
+		"""
+		Returns (folder, {name: size} of the files it holds, list of its subfolders)
+		"""
+		listing = dict()
+		subfolders = []
+		try:
+			for entry in os.scandir(folder):
+				if entry.is_dir():
+					subfolders.append(os.path.join(folder, entry.name))
+				else:
+					listing[entry.name] = entry.stat().st_size
+		except OSError:
+			logging.warning(f"Could not scan folder {folder}")
+		return (folder, listing, subfolders)
+
+	def __contains__(self, abspath):
+		"""
+		Checks if the file is stored in the folder.
+		WARN: unlike os.path.isfile() on a drvfs mount, the check is case-sensitive
+		"""
+		folder, basename = os.path.split(abspath)
+		return basename in self._listings.get(folder, {})
+
+	def getsize(self, abspath):
+		"""
+		Returns the size of the file, or None when it isn't stored in the folder
+		"""
+		folder, basename = os.path.split(abspath)
+		return self._listings.get(folder, {}).get(basename)
+
+	def files(self):
+		"""
+		Returns the list of abspaths of all files found
+		"""
+		return [
+			os.path.join(folder, name)
+			for folder, listing in self._listings.items()
+			for name in listing
+		]
+
+
 def search_in_folder(path, filter, excludes={}):
 	"""
-	Iterates over folder yielding files matching pattern
+	Iterates over folder yielding files matching pattern.
+	filter is only applied to the files (folders are recursed into)
 	"""
 	results = []
 	for entry in os.scandir(path):
 		abspath = os.path.join(path, entry.name)
+		if entry.is_dir():
+			if entry.name not in excludes:
+				results += search_in_folder(abspath, filter, excludes)
+			continue
 		if filter(abspath):
 			results.append(abspath)
-		elif entry.is_dir() and entry.name not in excludes:
-			results += search_in_folder(abspath, filter, excludes)
 	return results
 
 

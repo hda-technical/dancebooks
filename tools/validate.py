@@ -151,28 +151,31 @@ def fetch_added_on_from_git():
 	return result
 
 
-def fetch_filelist_from_fs():
-	if not os.path.isdir(config.www.elibrary_dir):
-		return []
-	FOLDERS_TO_VALIDATE = [
-		"Library"
-	]
-	EXCLUDED_FOLDERS = {
-		"Ancillary sources (not in bibliography)",
-		"Leaflets (not in bibliography)",
-	}
+FOLDER_TO_VALIDATE = "Library"
+EXCLUDED_FOLDERS = {
+	"Ancillary sources (not in bibliography)",
+	"Leaflets (not in bibliography)",
+}
+
+
+def scan_elibrary():
+	"""
+	Returns utils.ScannedDir over the validated part of the elibrary
+	"""
+	folder = os.path.join(config.www.elibrary_dir, FOLDER_TO_VALIDATE)
+	return utils.ScannedDir(folder, excludes=EXCLUDED_FOLDERS)
+
+
+def fetch_filelist_from_fs(elibrary):
+	"""
+	Returns the set of the stored pdf paths (relative to elibrary_dir)
+	"""
 	trim_root = lambda path: os.path.relpath(path, start=config.www.elibrary_dir)
-	filter = lambda path: os.path.isfile(path) and path.endswith(".pdf")
-	stored_files = []
-	for basename in FOLDERS_TO_VALIDATE:
-		folder = os.path.join(config.www.elibrary_dir, basename)
-		stored_files += list(
-			map(
-				trim_root,
-				utils.search_in_folder(folder, filter, excludes=EXCLUDED_FOLDERS)
-			)
-		)
-	return set(stored_files)
+	return {
+		trim_root(path)
+		for path in elibrary.files()
+		if path.endswith(".pdf")
+	}
 
 
 def fetch_backups_from_fs():
@@ -300,16 +303,21 @@ def validate_etiquette_filename(filename, item, errors):
 			errors.add("Only 'etiquette' tagged items should be stored in '/Etiquette' subfolder")
 
 
-def validate_single_filename(abspath, filename, item, errors):
+def validate_single_filename(abspath, filename, item, errors, scanned_dir=None):
 	"""
-	Checks if file is accessible and matches item metadata
+	Checks if file is accessible and matches item metadata.
+	scanned_dir is only worth passing for the folders residing on a slow
+	filesystem: a per-file stat() takes about 8 ms on the WSL2 drvfs mount,
+	while the whole folder listing is fetched by a single scandir() call
 	"""
 
-	if not os.path.isfile(abspath):
+	is_accessible = (
+		os.path.isfile(abspath)
+		if scanned_dir is None else
+		abspath in scanned_dir
+	)
+	if not is_accessible:
 		errors.add(f"File [{abspath}] is not accessible")
-	# Commented this out as this code path is extremely slow on WSL2
-	# if not utils.isfile_case_sensitive(abspath):
-		# errors.add(f"File [{abspath}] is not accessible in case-sensitive mode")
 
 	type = item.get("type")
 	validate_periodical_filename(filename, item, errors)
@@ -780,7 +788,7 @@ def validate_keywords(item, errors):
 		errors.add("Keyword [useless] can't be combined with other keywords")
 
 
-def validate_filename(item, errors):
+def validate_filename(item, errors, elibrary):
 	"""
 	Checks filename against various tests
 	"""
@@ -800,7 +808,7 @@ def validate_filename(item, errors):
 			errors.add(f"Keyword {NOT_DIGITIZED_KEYWORD} shouldn't be specified")
 	for single_filename in filename:
 		abspath = os.path.join(config.www.elibrary_dir, single_filename)
-		validate_single_filename(abspath, single_filename, item, errors)
+		validate_single_filename(abspath, single_filename, item, errors, elibrary)
 
 
 def validate_source_file(item, errors):
@@ -852,6 +860,7 @@ def validate_item(
 	git_added_on,
 	*,
 	item_index,
+	elibrary,
 ):
 	errors = set()
 	validate_id(item, errors, item_index=item_index)
@@ -873,7 +882,7 @@ def validate_item(
 	validate_pages(item, errors)
 	validate_series(item, errors)
 	validate_keywords(item, errors)
-	validate_filename(item, errors)
+	validate_filename(item, errors, elibrary)
 	validate_source_file(item, errors)
 	validate_partial_fields(item, errors)
 	validate_added_on(item, git_added_on, errors)
@@ -943,12 +952,16 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
-	items, item_index = bib_parser.BibParser().parse_folder(config.parser.bibdata_dir)
+	elibrary = scan_elibrary()
+	items, item_index = bib_parser.BibParser().parse_folder(
+		config.parser.bibdata_dir,
+		elibrary=elibrary,
+	)
 
 	logging.info("Fetching added_on from git")
 	git_added_on = fetch_added_on_from_git()
 	logging.info("Fetching list of pdf from filesystem")
-	physically_stored = fetch_filelist_from_fs()
+	physically_stored = fetch_filelist_from_fs(elibrary)
 	logging.info(f"Found {len(physically_stored)} physically stored items")
 	if backups:
 		validate_backups()
@@ -971,6 +984,7 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 				item,
 				git_added_on,
 				item_index=item_index,
+				elibrary=elibrary,
 			)
 			if urls:
 				validate_url_accessibility(item, errors)

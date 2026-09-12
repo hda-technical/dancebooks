@@ -5,7 +5,6 @@ import enum
 import logging
 import multiprocessing
 import os.path
-import stat
 
 from dancebooks.config import config
 from dancebooks import const
@@ -194,10 +193,13 @@ class BibParser:
 	Class for parsing .bib files, folders and multiline strings
 	"""
 
-	def __init__(self):
+	def __init__(self, elibrary=None):
 		"""
-		Default ctor
+		Default ctor.
+		elibrary is an optional utils.ScannedDir over config.www.elibrary_dir,
+		used to look the sizes of the referenced files up
 		"""
+		self.elibrary = elibrary
 		self.state = ParserState.NoItem
 		self.key = ""
 		self.lexeme = ""
@@ -245,18 +247,15 @@ class BibParser:
 				filesize_value = []
 				for single_filename in value:
 					abspath = os.path.join(config.www.elibrary_dir, single_filename)
-					# a single stat() instead of isfile() + getsize():
-					# these calls dominate the parsing time under WSL2
-					# when elibrary_dir resides on NTFS filesystem
-					try:
-						stat_result = os.stat(abspath)
-					except OSError:
-						stat_result = None
-					if (stat_result is not None) and stat.S_ISREG(stat_result.st_mode):
-						filesize_value.append(stat_result.st_size)
-					else:
+					#WARN: no syscall is issued here (a per-file stat() takes about
+					#8 ms under WSL2 when elibrary_dir resides on NTFS filesystem),
+					#hence the sizes are unknown unless an elibrary was given to the ctor
+					if self.elibrary is None:
+						filesize = 0
+					elif (filesize := self.elibrary.getsize(abspath)) is None:
 						logging.warning(f"File is not accessible: {abspath}")
-						filesize_value.append(0)
+						filesize = 0
+					filesize_value.append(filesize)
 				item.set(const.FILE_SIZE_PARAM, filesize_value)
 			elif key in config.parser.keyword_list_params:
 				value = utils.strip_split_list(value, config.parser.list_sep)
@@ -276,10 +275,11 @@ class BibParser:
 		item.set(key, value)
 
 	@staticmethod
-	def parse_folder(path):
+	def parse_folder(path, *, elibrary=None):
 		"""
 		Parses all .bib files in given folder.
-		Returns a tuple (parsed_items, search_index) containing all items found
+		Returns a tuple (parsed_items, search_index) containing all items found.
+		elibrary is passed over to the parsers doing the job
 		"""
 		if not os.path.isdir(path):
 			raise Exception("Path to folder expected")
@@ -292,7 +292,7 @@ class BibParser:
 		)
 		futures = [
 			executor.submit(
-				BibParser()._parse_file,
+				BibParser(elibrary)._parse_file,
 				os.path.join(path, filename)
 			)
 			for filename in files
