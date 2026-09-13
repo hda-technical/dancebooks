@@ -700,9 +700,20 @@
             "aid_mus_395_1900": "fonta_1895_peres",
             "giraudet_1885_maintien": "giraudet_1900_maintien",
             // These entries were removed from the database
+            "apponyi_1913": "",
+            "bassompierre_1819": "",
+            "bassompierre_1870": "",
+            "berhgolz_1902": "",
+            "dolgoruky_1817_vol2": "",
+            "dolgoruky_1818_vol4": "",
+            "egan_1819": "",
+            "ferrari_1708": "",
             "harpe_1823_no01": "",
             "harpe_1823_no06": "",
-            "egan_1819": "",
+            "heroard_1609": "",
+            "marolles_1656": "",
+            "pepys_1891": "",
+            "pepys_1921": "",
             "ware_1909": "",
         }
     }
