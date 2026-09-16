@@ -836,6 +836,16 @@ def no_nb(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `ecatalogue.20015`, as it is written in the tiaki url, or `IE3353866`)", required=True)
+def nz_tiaki(id):
+	"""
+	book from tiaki.natlib.govt.nz
+	"""
+	import nz
+	nz.get_tiaki(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `object125610`)", required=True)
 def dk_kb(id):
 	"""
