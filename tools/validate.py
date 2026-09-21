@@ -200,7 +200,8 @@ def update_validation_data(
 	"""
 	Checks if no book_ids were lost since
 	the last validation run on this machine.
-	Overwrites known ids if no losses were detected
+	Overwrites known ids if no losses were detected,
+	or if remove_missing_ids was requested explicitly
 	"""
 	validation_data = {
 		"ids": set(),
@@ -253,12 +254,14 @@ def update_validation_data(
 
 	if len(lost_ids) > 0:
 		#some ids were lost
-		#printing them without updating validation_data_file
 		logging.warning("Following book ids were lost")
 		for lost_id in lost_ids:
 			logging.warning("    " + lost_id)
-		logging.warning(f"Will not update {DATA_JSON_FILENAME}")
-		return
+		if not remove_missing_ids:
+			#printing them without updating validation_data_file
+			logging.warning(f"Will not update {DATA_JSON_FILENAME} (pass --remove-missing-ids to drop lost ids)")
+			return
+		logging.warning(f"Lost ids will be removed from {DATA_JSON_FILENAME}")
 
 	validation_data["ids"] = sorted(current_ids)
 	validation_data["errors"] = sorted(new_errors)
