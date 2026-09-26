@@ -511,3 +511,45 @@ the library claims no rights of its own over the digitized public domain materia
 leaves the user responsible for the compliance with the copyright law.
 Scans of the public domain books can therefore be put online,
 while the items provided under UrhG § 60c (fulfilled for the UdK members only) can not.
+
+## 🇺🇸 Houston Public Library, Houston, Texas { #HPL }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| HPL | ✅ |
+
+> Dear Sir / Madam,
+>
+> thank you for your response.
+>
+> I am maintaining an online bibliography (that is, a secondary source) dedicated to historical social dance.
+> It is believed to be the largest bibliography on the subject, which is freely available to the public and is hosted at bib.hda.org.ru.
+>
+> In particular, I have an entry for The Walla Walla Man here: https://bib.hda.org.ru/books/bennett_1914_walla.
+> At the moment it refers to an entry which is not available neither on your website nor anywhere in the internet.
+>
+> Is it possible for you to bring the entry back online in any form?
+> If not, could you, please, clarify the licensing status for the entry?
+> I can host it myself and mention the owning library as per CC-BY license or a similar one.
+>
+> Thanks in advance for clarifying the details.
+>
+> Regards,
+> Yuriy.
+
+---
+
+> Dear Mr. Chernyshov -
+>
+> We talked to the Digital Strategies Team. Our digital archive is going to, yet again, migrate to a new system around November of this year. We are told the sheet music for The Walla Walla Man will be on our digital archive again after that migration takes place.
+> The piece of music is no longer under copyright.  So, if you were to find a useable copy online, you could download it and post it as you like.
+>
+> Houston History Research Center
+>
+> Houston Public Library
+>
+> 500 McKinney St
+
+The rights statement of the record itself reads
+"This material is in the public domain. Please credit the Houston Metropolitan Research Center, Houston, Texas"
+(the Houston Metropolitan Research Center is nowadays known as the Houston History Research Center).
