@@ -93,6 +93,17 @@ def fr_inha_contredanse(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `pf0000553549/1905/n06`)", required=True)
+@click.option("--page", help="One-based number of the page to be downloaded", required=True, type=int)
+def fr_paris(id, page):
+	"""
+	book from bibliotheques-specialisees.paris.fr
+	"""
+	import fr
+	fr.get_paris(id=id, page=page)
+
+
+@main.command()
 @click.option("--id", help="Id of the books to be downloaded (e. g. `098461435`)", required=True)
 def fr_tolosana(id):
 	"""

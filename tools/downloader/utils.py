@@ -261,18 +261,32 @@ class TileSewingPolicy:
 
 
 def download_and_sew_tiles(output_filename, url_maker, policy):
-	if policy.overlap is not None:
-		raise NotImplementedError("TODO: support overlap in this code")
 	if policy.reverse_axis_y:
 		raise NotImplementedError("TODO: support reverse_axis_y in this code")
 
+	# DeepZoom-like tilings pad every inner tile edge
+	# with `overlap` pixels duplicating the neighbour tile
+	overlap = policy.overlap or 0
 	result = PIL.Image.new("RGB", (policy.image_width, policy.image_height))
 	print(f"Downloading {policy.tiles_number_x}x{policy.tiles_number_y} tiled image ({policy.image_width}x{policy.image_height}) to {output_filename}")
 	for tile_x in range(policy.tiles_number_x):
 		for tile_y in range(policy.tiles_number_y):
 			url = url_maker(tile_x, tile_y)
 			tile_image = get_image(url)
-			result.paste(tile_image, (tile_x * policy.tile_size, tile_y * policy.tile_size))
+			left = tile_x * policy.tile_size
+			top = tile_y * policy.tile_size
+			if overlap:
+				# only the leading padding shifts the tile content,
+				# hence it is the only one to be dropped before pasting
+				crop_left = overlap if tile_x > 0 else 0
+				crop_top = overlap if tile_y > 0 else 0
+				tile_image = tile_image.crop((
+					crop_left,
+					crop_top,
+					crop_left + min(policy.tile_size, policy.image_width - left),
+					crop_top + min(policy.tile_size, policy.image_height - top),
+				))
+			result.paste(tile_image, (left, top))
 
 	if policy.trim:
 		result = result.crop(result.getbbox())

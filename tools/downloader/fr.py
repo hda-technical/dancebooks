@@ -1,7 +1,9 @@
+import json
 import os
 import re
 import requests
 
+import deep_zoom
 import iiif
 import utils
 
@@ -188,3 +190,38 @@ def get_tolosana(*, id):
 			# Not found indicates the end of the sequences
 			print(f"Got HTTP 404, considering job done")
 			break
+
+
+# bibliotheques-specialisees.paris.fr is a React application talking to a signed REST API,
+# but the legacy JSF image reader it embeds in an iframe still resolves bare arks
+# and inlines the whole page list into its markup.
+PARIS_IID_REGEXP = re.compile(r'var iid = "(.*?)";')
+PARIS_PICTURE_LIST_REGEXP = re.compile(r"var pictureList = (\[.*?\]);\s*$", re.MULTILINE | re.DOTALL)
+
+
+def get_paris(*, id, page):
+	base_url = "https://bibliotheques-specialisees.paris.fr"
+	ark = f"ark:/73873/{id}"
+
+	print(f"Fetching page list of {ark}")
+	reader_page = utils.get_text(requests.Request(
+		"GET",
+		f"{base_url}/in/imageReader.xhtml",
+		params={"ark": f"/{ark}"},
+	))
+	picture_list_match = PARIS_PICTURE_LIST_REGEXP.search(reader_page)
+	if picture_list_match is None:
+		raise ValueError(f"Failed to extract page list for {ark}")
+	picture_list = json.loads(picture_list_match.group(1))
+
+	# The reader reports the ark of the item actually holding the scans,
+	# with the page-selecting qualifiers of the requested ark stripped off
+	iid = PARIS_IID_REGEXP.search(reader_page).group(1)
+	book_id = iid.rpartition("ark:/73873/")[2]
+	print(f"Item {book_id} consists of {len(picture_list)} pages")
+
+	output_folder = utils.make_output_folder("paris", book_id)
+	output_filename = utils.make_output_filename(output_folder, page)
+	metadata_url = f"{base_url}{picture_list[page - 1]['deepZoomManifest']}"
+	print(f"Downloading page #{page:04d} from {metadata_url}")
+	deep_zoom.download_image(output_filename, metadata_url)
