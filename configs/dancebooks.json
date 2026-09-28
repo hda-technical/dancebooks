@@ -90,6 +90,9 @@
 
             "dhds.org.uk",
 
+            // use efdss.org instead
+            "vwml.org",
+
             // use search.rsl.ru permalinks instead
             "dlib.rsl.ru",
 

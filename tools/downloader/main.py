@@ -658,29 +658,27 @@ def us_huntington(**kv):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. `Wilson1808`)", required=True)
-def	vwml(id):
+@click.option("--id", help="Id of the book to be downloaded (e. g. `13001-wilson1808`)", required=True)
+def vwml(id):
 	"""
-	book from www.vwml.org/topics/historic-dance-and-tune-books
+	book from www.efdss.org/vwml-digitised-resources/historic-dance-and-tune-books
 	"""
-	main_url = f"https://www.vwml.org/topics/historic-dance-and-tune-books/{id}"
+	main_url = f"https://www.efdss.org/vwml-digitised-resources/historic-dance-and-tune-books/{id}"
 
 	soup = bs4.BeautifulSoup(
 		get_text(main_url),
 		features="html.parser",
 	)
 	output_folder = make_output_folder("vwml", id)
-	for page, thumbnail in enumerate(soup.find_all("img", attrs={"class": "image_thumb"})):
-		thumbnail_url = thumbnail.attrs["src"]
-		#IT'S MAGIC!
-		full_url = thumbnail_url.replace("thumbnails", "web")
-		output_filename = make_output_filename(output_folder, page, extension="jpg")
+	for page, image in enumerate(soup.find_all("div", attrs={"class": "grid-block-image"})):
+		full_url = "https://www.efdss.org" + image.attrs["data-image"]
+		output_filename = make_output_filename(output_folder, page, extension="webp")
 		if os.path.exists(output_filename):
 			print(f"Skip downloading existing page #{page:08d}")
 			continue
 		print(f"Saving {full_url} to {output_filename}")
 		try:
-			get_binary(output_filename, full_url, verify=False)
+			get_binary(output_filename, full_url)
 		except ValueError:
 			#VWML is known to have missing pages listed in this table.
 			#Ignoring such pages

@@ -309,6 +309,7 @@ _URL_PATTERNS = {
 	"musenalm.de": r"https://musenalm.de/almanach/\d+/",
 	"bdh.bne.es": r"https://bnedigital.bne.es/bd/card\?oid=\d{10}",
 	"library.search.tulane.edu": r"https://library.search.tulane.edu/permalink/01TUL_INST/\w+/alma\d+",
+	"efdss.org": r"https://www.efdss.org/vwml-digitised-resources/historic-dance-and-tune-books/\d+-[a-z0-9]+",
 }
 
 URL_REGEXPS = {host: re.compile(pattern) for host, pattern in _URL_PATTERNS.items()}
