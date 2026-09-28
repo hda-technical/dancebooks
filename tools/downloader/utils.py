@@ -35,6 +35,19 @@ session = requests.Session()
 RETRIABLE_STATUS_CODES = {408, 429}
 
 
+def _get_retry_after(ex):
+	"""
+	Returns delay (in seconds) requested by the server via Retry-After header, 0 if none.
+
+	Only delay-seconds form of the header (as sent by Cloudflare) is supported,
+	HTTP-date form is ignored, falling back to the regular backoff.
+	"""
+	if not isinstance(ex, requests.exceptions.HTTPError) or ex.response is None:
+		return 0
+	retry_after = ex.response.headers.get("Retry-After", "")
+	return int(retry_after) if retry_after.isdigit() else 0
+
+
 def retry(try_count, delay=0, delay_backoff=1):
 	def actual_decorator(func):
 		@functools.wraps(func)
@@ -55,8 +68,9 @@ def retry(try_count, delay=0, delay_backoff=1):
 						and ex.response.status_code not in RETRIABLE_STATUS_CODES
 					):
 						raise
-					print(f"Got exception: {ex}, will retry in {current_delay} seconds")
-					time.sleep(current_delay)
+					sleep_for = max(current_delay, _get_retry_after(ex))
+					print(f"Got exception: {ex}, will retry in {sleep_for} seconds")
+					time.sleep(sleep_for)
 					current_delay *= delay_backoff
 			raise RuntimeError(f"Failed to get results after {try_number} retries")
 		return do_retry

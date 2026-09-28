@@ -637,13 +637,18 @@ def us_loc(id):
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)", required=True)
 @click.option("--from", "from_page", help="First page to be downloaded", type=int, default=1)
-@click.option("--to", "to_page", help="Last page to be downloaded", type=int, default=1000)
-def us_hathitrust(id, from_page, to_page):
+@click.option("--to", "to_page", help="Last page to be downloaded (defaults to the last page of the book)", type=int, default=None)
+@click.option("--har", help="HAR file with requests to babel.hathitrust.org saved by the browser", type=click.Path(exists=True, dir_okay=False), required=True)
+def us_hathitrust(id, from_page, to_page, har):
 	"""
 	book from www.hathitrust.org
+
+	\b
+	Open the book in the browser and save the network log
+	via Developer Tools -> Network -> Save All As HAR.
 	"""
 	import us
-	us.get_hathitrust(id=id, from_page=from_page, to_page=to_page)
+	us.get_hathitrust(id=id, from_page=from_page, to_page=to_page, har=har)
 
 
 @main.command()
