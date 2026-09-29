@@ -787,8 +787,6 @@ def validate_keywords(item, errors):
 		parent_keyword = utils.extract_parent_keyword(keyword)
 		if parent_keyword not in keywords:
 			errors.add(f"Parent keyword [{parent_keyword} is missing for keyword [{keyword}]")
-	if ("useless" in keywords) and (len(keywords) != 1):
-		errors.add("Keyword [useless] can't be combined with other keywords")
 
 
 def validate_filename(item, errors, elibrary):
