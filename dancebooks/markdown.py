@@ -6,6 +6,7 @@ from urllib import parse as urlparse
 
 import markdown
 
+from dancebooks.config import config
 from dancebooks import const
 from dancebooks import utils
 
@@ -68,6 +69,7 @@ def make_note_renderer(index):
 		output_format="xhtml5"
 	)
 	renderer.inlinePatterns.register(MarkdownCite(index), name="cite", priority=-1)
+	renderer.inlinePatterns.register(MarkdownLibrary(), name="library", priority=-2)
 	return _MtRenderer(renderer)
 
 
@@ -128,6 +130,31 @@ class MarkdownCite(markdown.inlinepatterns.Pattern):
 		except StopIteration:
 			raise ValueError(f"Could not find index entry for id={id}") from None
 		a.text = item.get("cite_label")
+		return a
+
+
+class MarkdownLibrary(markdown.inlinepatterns.Pattern):
+	"""
+	Renders `:BNF:` as a link to the section of libraries.md with the similar anchor.
+	Only bookkeepers with known fullname are handled,
+	allowing urls like `URN:NBN:fi-...` to be left as is.
+	"""
+	LIBRARY_DOCS_URL = "/docs/common/libraries/"
+
+	def __init__(self):
+		owners = "|".join(
+			re.escape(owner)
+			for owner, fullname in config.parser.bookkeepers.items()
+			if fullname is not None
+		)
+		super().__init__(f":(?P<owner>{owners}):")
+
+	def handleMatch(self, m):
+		a = xml.Element("a")
+		owner = m.group("owner")
+		anchor = owner.replace(" ", "-")
+		a.set("href", f"{self.LIBRARY_DOCS_URL}#{anchor}")
+		a.text = owner
 		return a
 
 

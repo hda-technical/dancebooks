@@ -130,3 +130,13 @@ def test_combinations():
     line header with multi-lingual gu[es?]ses
 """
 	assert render(input) == '<h3>Hyphenated multiline header with multi-lingual gu[es]ses</h3>'
+
+
+def test_library():
+	rd = md.make_note_renderer({"id": {}})
+	output = rd.convert("Courtesy of the :BNF:")
+	assert output == '<p>Courtesy of the <a href="/docs/common/libraries/#BNF">BNF</a></p>'
+
+	# unknown anchors and urls containing colons are kept intact
+	input = "See https://urn.fi/URN:NBN:fi-fe2019111840065 or :UNKNOWN:"
+	assert rd.convert(input) == f"<p>{input}</p>"
