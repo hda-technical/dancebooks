@@ -1,7 +1,5 @@
-import json
 import os
 from string import Template
-import urllib.parse
 
 import requests
 
@@ -9,46 +7,13 @@ import iiif
 import utils
 
 
-def _load_hathitrust_session(har_filename):
-	"""
-	Extracts cookies and User-Agent of the last request to babel.hathitrust.org
-	found in HAR file saved by browser developer tools.
-
-	Returns headers to be sent along with every request.
-	"""
-	with open(har_filename) as har_file:
-		entries = json.load(har_file)["log"]["entries"]
-	requests_to_babel = [
-		entry["request"]
-		for entry in entries
-		if urllib.parse.urlsplit(entry["request"]["url"]).hostname == "babel.hathitrust.org"
-	]
-	if not requests_to_babel:
-		raise ValueError(f"{har_filename} contains no requests to babel.hathitrust.org")
-	request = requests_to_babel[-1]
-	# HTTP/2 header names are lowercase
-	headers = {header["name"].lower(): header["value"] for header in request["headers"]}
-	cookies = [(cookie["name"], cookie["value"]) for cookie in request["cookies"]]
-	if not cookies:
-		raise ValueError(
-			f"{har_filename} contains no cookies. "
-			"Chromium-based browsers strip them by default, "
-			"use `Export HAR (with sensitive data)` or switch to Firefox"
-		)
-	for name, value in cookies:
-		utils.session.cookies.set(name, value, domain=".hathitrust.org", path="/")
-	print(f"Loaded {len(cookies)} cookies from {har_filename}")
-	return {
-		"User-Agent": headers["user-agent"],
-	}
-
-
 def get_hathitrust(*, id, from_page, to_page, har):
-	# babel.hathitrust.org is guarded by Cloudflare which blocks requests
-	# lacking the clearance obtained by a real browser.
-	# Hence we act as DownThemAll! does: reuse the cookies and the User-Agent of the browser
-	# (the clearance is bound to both of them and to the IP address).
-	headers = _load_hathitrust_session(har) | {
+	# babel.hathitrust.org is guarded by Cloudflare
+	headers = utils.load_har_session(
+		har,
+		hostname="babel.hathitrust.org",
+		cookie_domain=".hathitrust.org",
+	) | {
 		"Referer": f"https://babel.hathitrust.org/cgi/pt?id={id}",
 	}
 
@@ -70,9 +35,7 @@ def get_hathitrust(*, id, from_page, to_page, har):
 			# get_binary retries these just like it does for Gallica
 			utils.get_binary(output_filename, url, headers=headers)
 		except requests.exceptions.HTTPError as ex:
-			if ex.response.status_code == 403:
-				raise RuntimeError("Got HTTP 403 from Cloudflare, reload the book in the browser and save HAR file again") from ex
-			raise
+			utils.raise_on_cloudflare(ex)
 		except BaseException:
 			# do not leave truncated pages behind as they will be skipped upon restart
 			if os.path.exists(output_filename):

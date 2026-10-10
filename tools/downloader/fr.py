@@ -12,31 +12,47 @@ def _gallica_manifest_url(id):
 	return f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 
 
-BNF_HEADERS = {
-	"Referer": "https://api.bnf.fr/",
-	"Origin":  "https://api.bnf.fr",
-}
-
-
-def get_gallica_book(id):
+def get_gallica_book(id, *, har=None):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	iiif.download_book_fast_v2(
-		manifest_url,
-		output_folder,
-		headers=BNF_HEADERS,
-	)
+	headers = {}
+	if har is not None:
+		# gallica.bnf.fr might be guarded by Cloudflare
+		headers = utils.load_har_session(
+			har,
+			hostname="gallica.bnf.fr",
+			cookie_domain=".bnf.fr",
+		)
+	try:
+		iiif.download_book_fast_v2(
+			manifest_url,
+			output_folder,
+			headers=headers,
+		)
+	except requests.exceptions.HTTPError as ex:
+		utils.raise_on_cloudflare(ex)
 
 
-def get_gallica_page(id, page):
+def get_gallica_page(id, page, *, har=None):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	iiif.download_page_fast_v2(
-		manifest_url,
-		output_folder,
-		page=page,
-		headers=BNF_HEADERS,
-	)
+	headers = {}
+	if har is not None:
+		# gallica.bnf.fr might be guarded by Cloudflare
+		headers = utils.load_har_session(
+			har,
+			hostname="gallica.bnf.fr",
+			cookie_domain=".bnf.fr",
+		)
+	try:
+		iiif.download_page_fast_v2(
+			manifest_url,
+			output_folder,
+			page=page,
+			headers=headers,
+		)
+	except requests.exceptions.HTTPError as ex:
+		utils.raise_on_cloudflare(ex)
 
 
 def get_candide(id):

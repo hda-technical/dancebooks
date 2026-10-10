@@ -105,7 +105,7 @@ def _download_image_fast_v2(metadata, page, output_filename, **rq_kvargs):
 		url = metadata["images"][-1]["resource"]["@id"]
 
 	print(f"Downloading page #{page:04d} from {url}")
-	utils.get_binary(output_filename, url)
+	utils.get_binary(output_filename, url, **rq_kvargs)
 
 
 def download_book_fast_v2(manifest: dict | str, output_folder, **rq_kvargs):
@@ -117,7 +117,6 @@ def download_book_fast_v2(manifest: dict | str, output_folder, **rq_kvargs):
 	http://iiif.io/about/
 	"""
 	if isinstance(manifest, str):
-		print(f"GET {manifest}")
 		manifest = utils.get_json(manifest, **rq_kvargs)
 	canvases = manifest["sequences"][0]["canvases"]
 	print(f"Will download {len(canvases)} pages")
@@ -142,7 +141,6 @@ def download_page_fast_v2(manifest_url, output_folder, *, page, **rq_kvargs):
 	API is documented here:
 	http://iiif.io/about/
 	"""
-	print(f"GET {manifest}")
 	manifest = utils.get_json(manifest_url, **rq_kvargs)
 	canvases = manifest["sequences"][0]["canvases"]
 	output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
@@ -150,6 +148,7 @@ def download_page_fast_v2(manifest_url, output_folder, *, page, **rq_kvargs):
 		metadata=canvases[page],
 		page=page,
 		output_filename=output_filename,
+		**rq_kvargs,
 	)
 
 
@@ -161,7 +160,6 @@ def download_book_fast_v3(manifest_url, output_folder):
 	API is documented here:
 	http://iiif.io/about/
 	"""
-	print(f"GET {manifest_url}")
 	manifest = utils.get_json(manifest_url)
 	canvases = manifest["items"]
 	print(f"Will download {len(canvases)} pages")

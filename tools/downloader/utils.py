@@ -30,6 +30,58 @@ TIMEOUT = 30
 session = requests.Session()
 
 
+def load_har_session(har_filename, *, hostname, cookie_domain):
+	"""
+	Extracts cookies and User-Agent of the last request to the hostname
+	found in HAR file saved by browser developer tools.
+	Cookies are stored in the session and set for the cookie_domain.
+
+	Websites guarded by Cloudflare block requests lacking the clearance obtained by a real browser.
+	Hence we act as DownThemAll! does: reuse the cookies and the User-Agent of the browser
+	(the clearance is bound to both of them and to the IP address).
+
+	Returns headers to be sent along with every request.
+	"""
+	with open(har_filename) as har_file:
+		entries = json.load(har_file)["log"]["entries"]
+	matching_requests = [
+		entry["request"]
+		for entry in entries
+		if urllib.parse.urlsplit(entry["request"]["url"]).hostname == hostname
+	]
+	if not matching_requests:
+		raise ValueError(f"{har_filename} contains no requests to {hostname}")
+	request = matching_requests[-1]
+	# HTTP/2 header names are lowercase
+	headers = {header["name"].lower(): header["value"] for header in request["headers"]}
+	cookies = [(cookie["name"], cookie["value"]) for cookie in request["cookies"]]
+	if not cookies:
+		raise ValueError(
+			f"{har_filename} contains no cookies. "
+			"Chromium-based browsers strip them by default, "
+			"use `Export HAR (with sensitive data)` or switch to Firefox"
+		)
+	for name, value in cookies:
+		session.cookies.set(name, value, domain=cookie_domain, path="/")
+	print(f"Loaded {len(cookies)} cookies from {har_filename}")
+	return {
+		"User-Agent": headers["user-agent"],
+	}
+
+
+def raise_on_cloudflare(ex: requests.exceptions.HTTPError):
+	"""
+	Reraises HTTP 403 (sent by Cloudflare upon missing or expired clearance)
+	with a hint on obtaining the clearance, reraises other errors as is.
+	"""
+	if ex.response is not None and ex.response.status_code == 403:
+		raise RuntimeError(
+			"Got HTTP 403 from Cloudflare, "
+			"open the book in the browser and pass the freshly saved HAR file via --har"
+		) from ex
+	raise ex
+
+
 # 408 Request Timeout and 429 Too Many Requests are transient,
 # unlike the rest of the 4xx family
 RETRIABLE_STATUS_CODES = {408, 429}

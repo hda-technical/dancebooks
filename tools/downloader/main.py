@@ -51,15 +51,20 @@ def fr_calvados(id):
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `btv1b7200356s`)", required=True)
 @click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)
-def fr_gallica(id, page):
+@click.option("--har", help="HAR file with requests to gallica.bnf.fr saved by the browser", type=click.Path(exists=True, dir_okay=False), default=None)
+def fr_gallica(id, page, har):
 	"""
 	book from gallica.bnf.fr
+
+	\b
+	If Cloudflare blocks the downloads, open the book in the browser
+	and save the network log via Developer Tools -> Network -> Save All As HAR.
 	"""
 	import fr
 	if page:
-		fr.get_gallica_page(id, page)
+		fr.get_gallica_page(id, page, har=har)
 	else:
-		fr.get_gallica_book(id)
+		fr.get_gallica_book(id, har=har)
 
 
 @main.command()
