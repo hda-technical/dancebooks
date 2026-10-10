@@ -16,6 +16,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks.config import config
 from dancebooks import const
 from dancebooks import bib_parser
+from dancebooks import markdown
 from dancebooks import utils
 
 #filename for storing previous validation state
@@ -856,12 +857,27 @@ def validate_note(item, errors):
 		errors.add(f"Item note is not a complete sentence: {note!r} doesn't end with a dot")
 
 
+def validate_note_rendering(item, errors, *, note_renderer):
+	"""
+	Checks that markdown fields can be rendered to HTML
+	"""
+	for field in ("note", "transcription_note"):
+		value = item.get(field)
+		if value is None:
+			continue
+		try:
+			note_renderer.convert(value)
+		except Exception as ex:
+			errors.add(f"Field {field} can not be rendered: {ex!r}")
+
+
 def validate_item(
 	item,
 	git_added_on,
 	*,
 	item_index,
 	elibrary,
+	note_renderer,
 ):
 	errors = set()
 	validate_id(item, errors, item_index=item_index)
@@ -887,6 +903,7 @@ def validate_item(
 	validate_source_file(item, errors)
 	validate_partial_fields(item, errors)
 	validate_added_on(item, git_added_on, errors)
+	validate_note_rendering(item, errors, note_renderer=note_renderer)
 	# enabling validate_note brings in about 800 new erroneours entries
 	# validate_note(item, errors)
 	return errors
@@ -977,6 +994,7 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 	for path in physically_stored:
 		logging.warning(f"Unreferenced file found in {config.www.elibrary_dir}: {path}")
 
+	note_renderer = markdown.make_note_renderer(item_index)
 	logging.info(f"Going to process {len(items)} items")
 	erroneous_items = dict()
 	for item in items:
@@ -986,6 +1004,7 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 				git_added_on,
 				item_index=item_index,
 				elibrary=elibrary,
+				note_renderer=note_renderer,
 			)
 			if urls:
 				validate_url_accessibility(item, errors)

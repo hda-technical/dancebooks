@@ -1,4 +1,3 @@
-import logging
 import os.path
 import re
 import threading
@@ -127,8 +126,7 @@ class MarkdownCite(markdown.inlinepatterns.Pattern):
 		try:
 			item = utils.first(self._index["id"][id])
 		except StopIteration:
-			logging.error(f"Could not find index entry for id={id}")
-			raise
+			raise ValueError(f"Could not find index entry for id={id}") from None
 		a.text = item.get("cite_label")
 		return a
 
