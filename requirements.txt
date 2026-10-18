@@ -24,5 +24,5 @@ requests==2.34.2
 s3cmd==2.4.0
 SQLAlchemy==2.0.52
 Unidecode==1.4.0
-Werkzeug==3.1.8
+Werkzeug==3.1.9
 yandex-pgmigrate==1.0.13
