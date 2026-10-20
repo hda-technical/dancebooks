@@ -204,6 +204,7 @@ def test_post_bug_handler(client):
 	assert "message" in data
 
 
+@pytest.mark.skip(reason="Requires local copy of the downloadable book")
 def test_pdf_handlers(client):
 	rq = client.get(
 		"/books/" + DOWNLOADABLE_BOOK_ID + "/pdf/1",
