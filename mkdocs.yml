@@ -25,7 +25,7 @@ plugins: []
 markdown_extensions:
   - toc:
       permalink: true
-      slugify: !!python/name:pymdownx.slugs.gfm
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
   - attr_list
 
 theme:
