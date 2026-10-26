@@ -764,8 +764,9 @@ _This part of the list is to joined with the general table_
 | 2014-08-06 | `[Cooper]` | Paul Cooper | Research papers contributed by Paul Cooper, #01–06 + #25 | https://www.regencydances.org/paper000.php |
 | 2019-11-01 | `[Swaine]` | Andrew Swaine | List of historical sources | https://andrewswaine.uk/sources |
 | 2020-04-09 | `[Corbella]` | Maurizio Corbella | Brevi note sulla riproposta dei ballabili del "Carnevalone" ottocentesco a Milano | http://www.mauriziocorbella.it/carmi/800ballabili.html |
-| 2023-02-26 | `[Wiki: Tanz]` | | Wikisource on Tanz | [Listing page](https://de.wikisource.org/wiki/Tanz), [Changelog](https://de.wikisource.org/w/index.php?title=Tanz&action=history) |
+| 2023-02-26 | `[Wiki: Tanz]` | | Wikisource on _Tanz_ | [Listing page](https://de.wikisource.org/wiki/Tanz), [Changelog](https://de.wikisource.org/w/index.php?title=Tanz&action=history) |
 | 2026-04-18 | `[Powers Free]` | Richard Powers | Freely available primary source scans | [Download page](https://www.richardpowers.com/free-downloads), [archive.org Wayback Machine](https://web.archive.org/web/20260418110455/https://www.richardpowers.com/free-downloads) |
+| 2026-09-28 | `[Wiki: Becker]` | | Wikisource on _Taschenbuch zum geselligen Vergnügen_ | [Listing page](https://de.wikisource.org/wiki/Taschenbuch_zum_geselligen_Vergnügen), [Changelog](https://de.wikisource.org/w/index.php?title=Taschenbuch_zum_geselligen_Vergnügen&action=history) |
 
 ## Bibliographies not yet consulted / consulted partially { #unconsulted }
 
