@@ -118,6 +118,9 @@
             "stimmbuecher.digitale-sammlungen.de",
             "opus4.kobv.de",
             "portal.kobv.de",
+            "collections.thulb.uni-jena.de",
+            "dhb.thulb.uni-jena.de",
+            "zs.thulb.uni-jena.de",
 
             // use modern www.nypl.org permalinks instead
             "catalog.nypl.org",
