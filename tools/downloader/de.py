@@ -1,5 +1,6 @@
 import http
 import os
+import re
 import textwrap
 import urllib.parse
 
@@ -217,6 +218,64 @@ def get_hab_image(*, id):
 	policy = utils.TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
 	output_filename = utils.make_output_filename(id.replace("/", "."))
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
+
+
+def get_jena(*, id):
+	"""
+	zs.thulb.uni-jena.de, dhb.thulb.uni-jena.de and collections.thulb.uni-jena.de run MyCoRe,
+	which lists the pages of the derivate in METS and serves the original tiffs as is.
+	"""
+	HOSTS = {
+		"jportal": "https://zs.thulb.uni-jena.de",
+		"ufb": "https://dhb.thulb.uni-jena.de",
+		"HisBest": "https://collections.thulb.uni-jena.de",
+	}
+	METS_NS = {
+		"mets": "http://www.loc.gov/METS/",
+		"xlink": "http://www.w3.org/1999/xlink",
+	}
+
+	# Accept both derivate id and object id (as in /receive/{id})
+	match = re.match(r"([A-Za-z]+)_[a-z]+_\d+", id)
+	if match is None:
+		raise ValueError(f"Unexpected MyCoRe id {id}")
+	prefix = match.group(1)
+	if prefix not in HOSTS:
+		raise ValueError(f"Unsupported id {match.group(0)}: expected one of {', '.join(HOSTS)} prefixes")
+	root = HOSTS[prefix]
+	id = match.group(0)
+
+	if "_derivate_" not in id:
+		# METS servlet only accepts derivate ids, hence derivates of the object have to be looked up
+		# REST API responds with xml unless .json suffix is given
+		derivates = [
+			derobject["href"]
+			for derobject in utils.get_json(f"{root}/api/v2/objects/{id}/derivates.json")
+		]
+		if len(derivates) != 1:
+			raise ValueError(f"Expected exactly one derivate in {id}, got {derivates}. Specify derivate id explicitly")
+		id = derivates[0]
+		print(f"Using derivate {id}")
+
+	mets = utils.get_xml(f"{root}/servlets/MCRMETSServlet/{id}")
+	hrefs = {
+		file.attrib["ID"]: file.find("mets:FLocat", METS_NS).attrib["{http://www.w3.org/1999/xlink}href"]
+		for file in mets.findall(".//mets:fileGrp[@USE='MASTER']/mets:file", METS_NS)
+	}
+	# physical structMap defines the page order
+	fptrs = mets.findall(".//mets:structMap[@TYPE='PHYSICAL']//mets:div[@TYPE='page']/mets:fptr", METS_NS)
+	page_hrefs = [hrefs[fptr.attrib["FILEID"]] for fptr in fptrs if fptr.attrib["FILEID"] in hrefs]
+	print(f"Will download {len(page_hrefs)} pages")
+
+	output_folder = utils.make_output_folder("jena", id)
+	for page, href in enumerate(page_hrefs, start=1):
+		output_filename = utils.make_output_filename(output_folder, page, extension="tif")
+		if os.path.exists(output_filename):
+			utils.notify_skip(page)
+			continue
+		page_url = f"{root}/servlets/MCRFileNodeServlet/{id}/{urllib.parse.quote(href)}"
+		print(f"Downloading page #{page:04d} from {page_url}")
+		utils.get_binary(output_filename, page_url)
 
 
 def get_karlsruhe(*, id):

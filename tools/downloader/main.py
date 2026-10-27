@@ -402,6 +402,16 @@ def de_hab_book(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the derivate (e. g. `HisBest_derivate_00000416`), or id of the object (e. g. `HisBest_cbu_00006830`)", required=True)
+def de_jena(id):
+	"""
+	book from {collections,dhb,zs}.thulb.uni-jena.de
+	"""
+	import de
+	de.get_jena(id=id)
+
+
+@main.command()
 @click.option("--id", help="Book id to be downloaded (e. g. `Mus-Ms-1827`)", required=True)
 def de_darmstadt(id):
 	"""
@@ -537,42 +547,6 @@ def uk_npg(id):
 	"""
 	import uk
 	uk.get_npg(id=id)
-
-
-@main.command()
-@click.option("--id", help="Id of the image to be downloaded, including document id (e. g. `00108217/JLM_1787_H002_0003_a`)", required=True)
-def uniJena(id):
-	"""
-	single image from zs.thulb.uni-jena.de
-	"""
-	class UrlMaker:
-		def __init__(self, zoom):
-			self.zoom = zoom
-
-		def __call__(self, tile_x, tile_y):
-			return f"https://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/{self.zoom}/{tile_y}/{tile_x}.jpg"
-
-	metadata_url = f"https://zs.thulb.uni-jena.de/servlets/MCRTileServlet/jportal_derivate_{id}.tif/imageinfo.xml"
-	metadata = get_xml(metadata_url)
-
-	output_filename = make_output_filename("", os.path.basename(id))
-
-	width = int(metadata.attrib["width"])
-	height = int(metadata.attrib["height"])
-	zoom = int(metadata.attrib["zoomLevel"])
-
-	TILE_SIZE = 256
-	policy = TileSewingPolicy.from_image_size(width, height, TILE_SIZE)
-
-	url_maker = UrlMaker(zoom)
-	download_and_sew_tiles(output_filename, url_maker, policy)
-
-	subprocess.check_call([
-		"convert",
-		output_filename,
-		"-crop", f"{width}x{height}+0+0",
-		output_filename
-	])
 
 
 ###################
