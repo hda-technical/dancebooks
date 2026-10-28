@@ -16,7 +16,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1578 | Giorgio Mainerio | Il primo libro de balli | | |
 | 1587 | Prospero Lutij | Opera bellissima nella quale si contengono molte partite et passeggi di gagliarda<br/>_Published in Perugia_ | [[Luti, 1589]](https://bib.hda.org.ru/books/luti_1589)<br/>`[Lehner, 1997]`<br/>`[LOST?]` | |
 | 1600 | Livio Lupi | Mutanze di gagliarda, tordiglione, passo e mezzo, canario e passegi | `[Lehner, 1997]` | [Roma / Alessandrina](http://id.sbn.it/bid/RMLE037763) |
-| 1607 | Livio Lupi | Libro di gagliarda, tordiglione, passo è mezzo canares è passeggi | [[Lupi, 1607]](https://bib.hda.org.ru/books/lupi_1607) | `Unidentified private collection` |
+| 1607 | Livio Lupi | Libro di gagliarda, tordiglione, passo è mezzo canares è passeggi<br/>_Complete good quality copy needed_ | [[Lupi, 1607]](https://bib.hda.org.ru/books/lupi_1607) | `Unidentified private collection` |
 | 1608 | Jacques Mangeant (publisher) | Airs nouveaux accompagnes des plus belles chansons a danser | `[3. Rothenfelser]` | |
 | 1616 | Pietro Paolo Melli da Reggio | Intavolatura di liuto attiorbato<br/>_Mutlivolume book_ | `[4. Rothenfelser]`<br/>[Naxos](https://www.naxos.com/catalogue/item.asp?item_code=TC600002) | |
 | 1620 | Filippo degli Alessandri | Discorso sopra il ballo et le buone creanze necessarie ad un gentil’huomo & ad una gentildonna | `[Sparti,1996]` | |
@@ -450,7 +450,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1925 | Max von Boehn | Der Tanz | [Modern edition](https://books.google.com/books?id=qZOj-PRgKcEC) | |
 | 1925 | Thoinot Arbeau<br/>Cyril W. Beaumont (translator) | Orchesography<br/>_English translation_ | | [Amazon, 1966 reprint](http://a.co/5H5ZyY7) |
 | 1925, №4 | | Деревенский театр<br/>_Содержит описания танцев «Петли», «Деревенская кадриль» от Анны Михайловны Зеленко_ | [[Зеленко, Шитик, 1927]](https://bib.hda.org.ru/books/zelenko_1927_promenade) | |
-| 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS006725710)<br/>`SPTL: В 399` |
+| 1927 | Анна Михайловна Зеленко<br/>_и другие_ | Вечера самодеятельности<br/>_Complete copy needed_ | [[Зеленко, 1927]](https://bib.hda.org.ru/books/zelenko_1927_initiative) | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS006725710)<br/>`SPTL: В 399` |
 | 1927 | Т. Бабаджан<br/>Агния Барто | Ритмические игры и постановки к 10 годовщине Октября | | [On sale, ₽5500](http://www.alib.ru/5_barto_agniya_ritmicheskie_igry_i_postanovki_k_10_godovwine_oktyabrya_w1t1986151614fd8beb7fbf7fa890a1e8efc33a.html) |
 | 1927–1929? | S. (Selma?) Jaffé | Der Tanz im Selbstunterricht | [Inhaltsverzeichnis](https://d-nb.info/580985733/04)<br/>`[Russell, 2007]` | [Worldcat] |
 | 1928 | Е. Малая<br/>В. Костюк | Танцевальные шаги и гимнастические танцы | `[Жбанкова, 2016]` | |
