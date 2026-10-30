@@ -1,4 +1,4 @@
-﻿# Historical Dance Association activities
+# Historical Dance Association activities
 
 ## Common
 * [License](common/license.md)

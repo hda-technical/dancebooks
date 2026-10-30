@@ -1,4 +1,4 @@
-﻿# _Pablo Minguet et Yrol_ known publications
+# _Pablo Minguet et Yrol_ known publications
 
 1. `[yrol_1737_arte_1st]`:     [Arte de danzar a la francesa](https://bib.hda.org.ru/books/yrol_1737_arte_1st)
 1. `[yrol_1740_arte_3rd]`:     [Arte de danzar a la francesa (3rd edition, undated)](https://bib.hda.org.ru/books/yrol_1740_arte_3rd)

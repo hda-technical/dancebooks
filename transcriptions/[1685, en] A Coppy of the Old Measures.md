@@ -1,4 +1,4 @@
-﻿### {1r} A Coppy of the old Measures in þ^e^[[A shorthand for "the".]]
+### {1r} A Coppy of the old Measures in þ^e^[[A shorthand for "the".]]
     Inner Temple.[[This folio has empty musical staves on both sides. The names of the dances are written to the left of the staves before the descriptions. The descriptions are written between the musical staves.]]
 
 ### 1^st^:

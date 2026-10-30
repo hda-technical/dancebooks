@@ -1,4 +1,4 @@
-﻿# Historical dance bibliography: Entries known to be missing
+# Historical dance bibliography: Entries known to be missing
 
 _This table is intended to be accurate, yet sometimes it is slightly outdated._
 
