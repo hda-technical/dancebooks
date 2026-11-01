@@ -1,4 +1,35 @@
 # Names of pdf files which can not be optimized, ignored by `pdf.py optimize-suggest`.
-#
-# One filename per line, lines starting with # are comments, blank lines are ignored,
-# hence entries might be grouped.
+
+# Честная обработка оригинальной копии увеличивает размер до неприемлемых 1 Гб +.
+# Обработанная копия уменьшена до 3000x4550.
+[1750, fr] Nicolas Arnoult - Recueil des modes, tome 2.pdf
+[1750, fr] Nicolas Arnoult - Recueil des modes, tome 2e supplement.pdf
+[1750, fr] Nicolas Arnoult - Recueil des modes, tome 3.pdf
+[1750, fr] Nicolas Arnoult - Recueil des modes, tome 4.pdf
+[1750, fr] Nicolas Arnoult - Recueil des modes, tome 5.pdf
+[1750, fr] Nicolas Arnoult - Recueil des modes, tome 7.pdf
+
+# Уже оптимизированы
+[1630, it] Fabritio Caroso - Raccolta di varij balli (BNF copy).pdf
+[1778, fr] Nicolas Dupin - Galerie des modes et costumes français.pdf
+[1892, en] Edward Scott - Dancing as an Art and Pastime.pdf
+
+# Копия имеет меньшее разрешение, чем оригинал с archive.org.
+# При переобработке и оптимизации размер оказывается выше, чем у имеющегося файла.
+[1581, it] Fabritio Caroso - Il ballarino (archive.org GRI copy).pdf
+
+# Дальнейшая оптимизация невозможна ввиду перезернённых чёрно-белых сканов с оригинального манускрипта.
+[2021, sc] Frederick Hill - Frederick Hill's Book of Quadrilles & Country Dances, édition 2.pdf
+
+# Дальнейшая оптимизация без потери разрешения невозможна из-за сильного jpeg-рингинга в оригинальных изображениях.
+
+[1913, ru] Сергей Николаевич Худеков - История танцев, tome 1 (SPTL copy).pdf
+[1914, ru] Сергей Николаевич Худеков - История танцев, tome 2 (SPTL copy).pdf
+[1915, ru] Сергей Николаевич Худеков - История танцев, tome 3 (SPTL copy).pdf
+[1918, ru] Сергей Николаевич Худеков - История танцев, tome 4 (SPTL copy).pdf
+
+# Переобработка в цвете увеличивает размер файла до 900 мегабайт.
+[1915, us] Louis Harvy Chalif - Dances, tome 1.pdf
+
+# Для переобработки требуется доступ к бэкапам в цвете
+[1938, ee] R. Põldmäe, H. Tampere - Valimik eesti rahvaltantse.pdf
