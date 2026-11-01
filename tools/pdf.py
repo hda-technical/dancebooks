@@ -3,11 +3,14 @@
 import io
 import pathlib
 import os
+import subprocess
 import sys
+import tempfile
 
 import click
 import fpdf
 import PIL as pil
+import pypdf
 
 from dancebooks.img import Geometry, TurboJpeg
 
@@ -51,26 +54,25 @@ def main():
 	pass
 
 
-@main.command()
-@click.option("--output-size", callback=Geometry.from_click, default=None)
-def convert(output_size: Geometry | None) -> None:
+def _assemble(
+	paths: list[pathlib.Path],
+	output: pathlib.Path,
+	*,
+	output_size: Geometry | None = None,
+) -> None:
 	"""
-	Convert set of images from current directory into a set of pdf files.
+	Assemble jpeg images into a pdf file, an image per page.
+
+	Page size is either the image size, or output_size, if the latter is set,
+	the image being losslessly cropped to fit the page.
 	"""
 	if output_size is None:
 		print("Will not change image size during generation")
 	else:
 		print(f"Will generate images of geometry {output_size}")
 
-	dir = pathlib.Path(".")
-
 	pdf = fpdf.FPDF(unit="in")
-	count = 0
-	for idx, path in enumerate(sorted(dir.iterdir())):
-		if not is_path_valid(path):
-			print(f"Skip non-jpeg file at {path}")
-			continue
-
+	for idx, path in enumerate(paths):
 		img = pil.Image.open(path)
 		x_dpi, y_dpi = img.info.get("dpi", (600, 600))
 
@@ -88,9 +90,8 @@ def convert(output_size: Geometry | None) -> None:
 		x: float = (page_size[0] - image.width) / 2
 		y: float = (page_size[1] - image.height) / 2
 
-		count += 1
 		print(
-			f"Page {count}: {path} ({Geometry(*img.size)}) -> {image}, "
+			f"Page {idx + 1}: {path} ({Geometry(*img.size)}) -> {image}, "
 			f"{page_size[0] / x_dpi:.2f}x{page_size[1] / y_dpi:.2f} in "
 			f"at {x_dpi}x{y_dpi} dpi"
 		)
@@ -104,11 +105,61 @@ def convert(output_size: Geometry | None) -> None:
 			w=image.width / x_dpi,
 			h=image.height / y_dpi,
 		)
-	if count:
-		print(f"Merging {count} pages into output.pdf")
-		pdf.output("output.pdf")
+	print(f"Merging {len(paths)} pages into {output}")
+	pdf.output(str(output))
+
+
+@main.command()
+@click.option("--output-size", callback=Geometry.from_click, default=None)
+def assemble(output_size: Geometry | None) -> None:
+	"""
+	Assemble jpeg images from current directory into output.pdf, an image per page.
+	"""
+	paths = []
+	for path in sorted(pathlib.Path(".").iterdir()):
+		if is_path_valid(path):
+			paths.append(path)
+		else:
+			print(f"Skip non-jpeg file at {path}")
+
+	if paths:
+		_assemble(paths, pathlib.Path("output.pdf"), output_size=output_size)
 	else:
 		print("No pages to merge")
+
+
+@main.command()
+@click.argument("path", type=click.Path(exists=True, dir_okay=False, path_type=pathlib.Path))
+def optimize(path: pathlib.Path) -> None:
+	"""
+	Re-assemble pdf file made of jpeg images (one per page) with images optimized via JPEGmini.
+
+	The result is saved next to the source file, bearing -optimal suffix.
+	"""
+	output = path.with_name(f"{path.stem}-optimal.pdf")
+	page_count = len(pypdf.PdfReader(path).pages)
+
+	with tempfile.TemporaryDirectory(prefix=f"{path.stem}.", dir=path.parent) as tmp:
+		tmp_dir = pathlib.Path(tmp)
+		print(f"Extracting images from {path} into {tmp_dir}")
+		# images are named page-{number}.{ext}, non-jpeg images are extracted in other formats
+		subprocess.check_call(["pdfimages", "-j", str(path), str(tmp_dir / "page")])
+
+		# check everything beforehand, as JPEGmini run takes quite a while
+		paths = []
+		for p in tmp_dir.iterdir():
+			if p.suffix != ".jpg":
+				raise click.ClickException(f"Only jpeg images are supported, got {p.name}")
+			paths.append(p)
+		if len(paths) != page_count:
+			raise click.ClickException(f"Exactly one image per page is expected, got {len(paths)} images at {page_count} pages")
+		# number is zero-padded to 3 digits only, hence it should be sorted numerically
+		paths.sort(key=lambda p: int(p.stem.removeprefix("page-")))
+
+		click.pause(f"Optimize {len(paths)} images at {tmp_dir} via JPEGmini, then press any key to continue")
+
+		_assemble(paths, output)
+	print(f"Saved optimized file to {output}, {path.stat().st_size} -> {output.stat().st_size} bytes")
 
 
 if __name__ == "__main__":
