@@ -527,6 +527,26 @@ def pretty_print_file_size(size):
 	return f"{size:0.1f} {unit}"
 
 
+def parse_file_size(value: str) -> int:
+	"""
+	Parses file size, either in bytes or with a unit suffix (e. g. 1.5MB or 800 KB),
+	i. e. the inverse of pretty_print_file_size.
+	"""
+	# the number ends with the last digit, the unit (if any) follows it
+	end = len(value)
+	while end > 0 and not value[end - 1].isdigit():
+		end -= 1
+	unit = value[end:].strip().upper() or const.FILE_SIZE_UNITS[0]
+	try:
+		size = float(value[:end])
+		exponent = const.FILE_SIZE_UNITS.index(unit)
+	except ValueError:
+		raise ValueError(f"{value} is not a valid file size") from None
+	if size < 0:
+		raise ValueError(f"{value} is not a valid file size")
+	return round(size * const.FILE_SIZE_EXPONENT ** exponent)
+
+
 def isfile_case_sensitive(abspath):
 	"""
 	Checks if file exists using case-sensitive path.

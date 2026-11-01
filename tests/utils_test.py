@@ -30,3 +30,16 @@ def test_making_genitive():
 	# firstname + middle name + hyphened lastname
 	assert utils.make_genitive("Владимир Дмитриевич Бонч-Бруевич") == "Владимира Дмитриевича Бонч-Бруевича"
 	assert utils.make_genitive("Евгения Владимировна Еремина-Соленикова") == "Евгении Владимировны Ереминой-Солениковой"
+
+
+def test_parse_file_size():
+	assert utils.parse_file_size("100") == 100
+	assert utils.parse_file_size("100B") == 100
+	assert utils.parse_file_size("1.5 MB") == 1.5 * 1024 * 1024
+	assert utils.parse_file_size("800kb") == 800 * 1024
+	assert utils.parse_file_size("2GB") == 2 * 1024 ** 3
+	# inverse of pretty printing
+	assert utils.parse_file_size(utils.pretty_print_file_size(5 * 1024 * 1024)) == 5 * 1024 * 1024
+	for value in ["", "MB", "1.5 parsecs", "-1MB"]:
+		with pytest.raises(ValueError):
+			utils.parse_file_size(value)
