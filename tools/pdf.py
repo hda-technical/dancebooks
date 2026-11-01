@@ -11,6 +11,7 @@ import statistics
 import subprocess
 import sys
 import tempfile
+import time
 import typing
 
 import click
@@ -393,6 +394,13 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 
 	Files listed in exceptions are never suggested.
 	"""
+	PROGRESS_INTERVAL = 5
+
+	def format_duration(seconds: float) -> str:
+		minutes, seconds = divmod(round(seconds), 60)
+		return f"{minutes}:{seconds:02d}"
+
+	started = time.monotonic()
 	excluded = _read_exceptions(exceptions)
 	paths = []
 	skipped = 0
@@ -401,23 +409,42 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 			skipped += 1
 			continue
 		paths.append(path)
-	print(f"Inspecting {len(paths)} pdf files at {directory}, skipped {skipped} excluded ones")
+	print(
+		f"Listed {len(paths)} pdf files at {directory} in {format_duration(time.monotonic() - started)}, "
+		f"skipped {skipped} excluded ones"
+	)
 
 	candidates: list[PdfStats] = []
 	get_pdf_stats = functools.partial(_get_pdf_stats, threshold=threshold)
+	inspection_started = reported = time.monotonic()
 	with concurrent.futures.ProcessPoolExecutor() as executor:
-		for path, stats in zip(paths, executor.map(get_pdf_stats, paths, chunksize=16)):
+		results = zip(paths, executor.map(get_pdf_stats, paths, chunksize=16))
+		for inspected, (path, stats) in enumerate(results, start=1):
 			if isinstance(stats, str):
 				print(f"Skip {path.relative_to(directory)}: {stats}", file=sys.stderr)
 			elif stats is not None:
 				candidates.append(stats)
 
+			now = time.monotonic()
+			if now - reported >= PROGRESS_INTERVAL:
+				reported = now
+				elapsed = now - inspection_started
+				left = elapsed / inspected * (len(paths) - inspected)
+				print(
+					f"Inspected {inspected}/{len(paths)} files ({inspected / elapsed:.1f} files/s), "
+					f"{len(candidates)} matching so far, "
+					f"elapsed {format_duration(elapsed)}, left {format_duration(left)}",
+					file=sys.stderr,
+				)
+	print(
+		f"Inspected {len(paths)} files in {format_duration(time.monotonic() - inspection_started)}, "
+		f"{len(candidates)} of them are colored jpeg-based ones not yet optimized by JPEGmini"
+		+ (f" above {utils.pretty_print_file_size(threshold)} per page" if threshold is not None else "")
+	)
+
 	if threshold is None and candidates:
 		threshold = statistics.median(stats.bytes_per_page for stats in candidates)
-		print(
-			f"Median of {len(candidates)} colored jpeg-based files not yet optimized by JPEGmini "
-			f"is {utils.pretty_print_file_size(threshold)} per page"
-		)
+		print(f"Their median is {utils.pretty_print_file_size(threshold)} per page")
 		candidates = [stats for stats in candidates if stats.bytes_per_page > threshold]
 	candidates.sort(key=lambda stats: stats.bytes_per_page, reverse=True)
 	print(f"Found {len(candidates)} candidates above {utils.pretty_print_file_size(threshold or 0)} per page:")
@@ -427,6 +454,7 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 			f"{utils.pretty_print_file_size(stats.size):>10} "
 			f"{stats.pages:6d} pages  {stats.path.relative_to(directory)}"
 		)
+	print(f"Done in {format_duration(time.monotonic() - started)}", file=sys.stderr)
 
 
 if __name__ == "__main__":
