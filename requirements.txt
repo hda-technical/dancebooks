@@ -12,7 +12,7 @@ pdfly==0.5.1
 pillow==13.0.0
 pip==26.2.2
 pipdeptree==4.2.13
-psycopg2-binary==2.9.13
+psycopg==3.3.6
 pyflakes==4.1.0
 pyjson5==2.0.1
 pymdown-extensions==12.3
