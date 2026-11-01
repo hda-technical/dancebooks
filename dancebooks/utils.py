@@ -625,11 +625,16 @@ def make_html_cite(item):
 
 
 from pytrovich.detector import PetrovichGenderDetector
-from pytrovich.enums import Case, Gender, NamePart
+from pytrovich.enums import Case, NamePart
 from pytrovich.maker import PetrovichDeclinationMaker
 
-PYTR_DETECTOR = PetrovichGenderDetector()
-PYTR_DECLINATOR = PetrovichDeclinationMaker()
+@functools.cache
+def _get_pytrovich():
+	"""
+	Lazily load pytrovich rules, as it takes a while and spams the log,
+	whilst most of the importers of this module never need them.
+	"""
+	return PetrovichGenderDetector(), PetrovichDeclinationMaker()
 
 
 def make_genitive(nominative):
@@ -638,32 +643,34 @@ def make_genitive(nominative):
 		return bool(re.search('[\u0400-\u04FF]', text))
 
 	def decline_first_name(token, *, gender):
-		return PYTR_DECLINATOR.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, token)
+		return declinator.make(NamePart.FIRSTNAME, gender, Case.GENITIVE, token)
 
 	def decline_middle_name(token, *, gender):
-		return PYTR_DECLINATOR.make(NamePart.MIDDLENAME, gender, Case.GENITIVE, token)
+		return declinator.make(NamePart.MIDDLENAME, gender, Case.GENITIVE, token)
 
 	def decline_last_name(token, *, gender):
-		return PYTR_DECLINATOR.make(NamePart.LASTNAME, gender, Case.GENITIVE, token)
+		return declinator.make(NamePart.LASTNAME, gender, Case.GENITIVE, token)
 
 	if not has_cyrillic(nominative):
 		return nominative
 
+	detector, declinator = _get_pytrovich()
+
 	lexemes = nominative.split()
 	if len(lexemes) == 1:
 		# only {lastname}
-		gender = PYTR_DETECTOR.detect(lastname=lexemes[0])
+		gender = detector.detect(lastname=lexemes[0])
 		last = decline_last_name(lexemes[0], gender=gender)
 		return last
 	elif len(lexemes) == 2:
 		# {firstname} {lastname}
-		gender = PYTR_DETECTOR.detect(firstname=lexemes[0])
+		gender = detector.detect(firstname=lexemes[0])
 		first = decline_first_name(lexemes[0], gender=gender)
 		last = decline_last_name(lexemes[1], gender=gender)
 		return f"{first} {last}"
 	elif len(lexemes) == 3:
 		# {firstname} {middlename} {lastname}
-		gender = PYTR_DETECTOR.detect(firstname=lexemes[0])
+		gender = detector.detect(firstname=lexemes[0])
 		first = decline_first_name(lexemes[0], gender=gender)
 		middle = decline_middle_name(lexemes[1], gender=gender)
 		last = decline_last_name(lexemes[2], gender=gender)
