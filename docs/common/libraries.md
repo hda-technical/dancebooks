@@ -553,3 +553,11 @@ while the items provided under UrhG § 60c (fulfilled for the UdK members only) 
 The rights statement of the record itself reads
 "This material is in the public domain. Please credit the Houston Metropolitan Research Center, Houston, Texas"
 (the Houston Metropolitan Research Center is nowadays known as the Houston History Research Center).
+
+## 🇺🇸 Harold B. Lee Library, Brigham Young University, Provo, Utah { #BYU }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| BYU | ✅ |
+
+The library digitizes its public domain holdings and makes them freely available via the [Internet Archive](https://archive.org/details/brighamyounguniversity).
