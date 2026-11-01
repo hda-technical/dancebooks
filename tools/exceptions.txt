@@ -1,0 +1,4 @@
+# Names of pdf files which can not be optimized, ignored by `pdf.py optimize-suggest`.
+#
+# One filename per line, lines starting with # are comments, blank lines are ignored,
+# hence entries might be grouped.
