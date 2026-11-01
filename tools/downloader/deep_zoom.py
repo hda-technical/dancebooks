@@ -1,5 +1,7 @@
 import math
 
+from dancebooks import img
+
 import utils
 
 
@@ -23,9 +25,7 @@ def make_tile_policy(metadata_url):
 	width = int(size_metadata.attrib["Width"])
 	height = int(size_metadata.attrib["Height"])
 
-	policy = utils.TileSewingPolicy.from_image_size(width, height, tile_size)
-	policy.overlap = overlap
-	return policy
+	return img.TiledGeometry(width, height, tile_size=tile_size, overlap=overlap)
 
 
 def download_image(output_filename, metadata_url, url_maker=None):
@@ -33,6 +33,6 @@ def download_image(output_filename, metadata_url, url_maker=None):
 	if url_maker is None:
 		# `<name>.xml` manifest is accompanied by the `<name>_files` tile folder,
 		# holding a zoom level per halving of the image, the topmost one being a single pixel
-		max_zoom = math.ceil(math.log2(max(policy.image_width, policy.image_height)))
+		max_zoom = math.ceil(math.log2(max(policy.size)))
 		url_maker = UrlMaker(metadata_url.rpartition(".")[0] + "_files", max_zoom)
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)

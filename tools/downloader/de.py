@@ -4,6 +4,8 @@ import re
 import textwrap
 import urllib.parse
 
+from dancebooks import img
+
 import iiif
 import utils
 
@@ -215,7 +217,7 @@ def get_hab_image(*, id):
 	tiles_number_y = utils.guess_tiles_number_y(url_maker)
 	print(f"Guessed tiles_number_y={tiles_number_y}")
 
-	policy = utils.TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
+	policy = img.TiledGeometry.from_tiles_number(tiles_number_x, tiles_number_y, TILE_SIZE)
 	output_filename = utils.make_output_filename(id.replace("/", "."))
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
 

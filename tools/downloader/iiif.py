@@ -1,5 +1,7 @@
 import os
 
+from dancebooks import img
+
 import utils
 
 
@@ -14,12 +16,8 @@ def download_image(base_url, output_filename):
 
 	class UrlMaker:
 		def __call__(self, tile_x, tile_y):
-			left = tile_size * tile_x
-			top = tile_size * tile_y
-			tile_width = min(width - left, tile_size)
-			tile_height = min(height - top, tile_size)
-			tile_url = f"{base_url}/{left},{top},{tile_width},{tile_height}/{tile_width},{tile_height}/0/{desired_quality}.{desired_format}"
-			return tile_url
+			tile = policy.tile(tile_x, tile_y)
+			return f"{base_url}/{tile.x},{tile.y},{tile.width},{tile.height}/{tile.width},{tile.height}/0/{desired_quality}.{desired_format}"
 
 	metadata_url = f"{base_url}/info.json"
 	metadata = utils.get_json(metadata_url)
@@ -57,7 +55,7 @@ def download_image(base_url, output_filename):
 			else:
 				raise RuntimeError(f"Can not choose desired image format. Available formats: {available_formats!r}")
 
-	policy = utils.TileSewingPolicy.from_image_size(width, height, tile_size)
+	policy = img.TiledGeometry(width, height, tile_size=tile_size)
 	utils.download_and_sew_tiles(output_filename, UrlMaker(), policy)
 
 

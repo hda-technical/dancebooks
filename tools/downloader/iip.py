@@ -1,6 +1,8 @@
 import os
 import requests
 
+from dancebooks import img
+
 import utils
 
 
@@ -47,7 +49,7 @@ class Metadata:
 
 
 def download_image(fastcgi_url, remote_filename, metadata, output_filename):
-	policy = utils.TileSewingPolicy.from_image_size(metadata.width, metadata.height, metadata.tile_size)
+	policy = img.TiledGeometry(metadata.width, metadata.height, tile_size=metadata.tile_size)
 	utils.download_and_sew_tiles(
 		output_filename,
 		lambda tile_x, tile_y: requests.Request(

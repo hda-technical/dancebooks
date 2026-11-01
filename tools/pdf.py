@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
-import dataclasses
 import functools
 import io
 import pathlib
 import os
-import re
 import sys
 
 import click
@@ -13,62 +11,7 @@ import fpdf
 import PIL as pil
 import turbojpeg
 
-
-@dataclasses.dataclass(frozen=True)
-class Geometry:
-	"""
-	Region size with an optional offset, spelled the ImageMagick way:
-	{width}x{height} or {width}x{height}+{x}+{y}.
-
-	Missing offset means the region is to be centered.
-	"""
-
-	width: int
-	height: int
-	x: int | None = None
-	y: int | None = None
-
-	REGEXP = re.compile(r"(?P<width>\d+)x(?P<height>\d+)(?:\+(?P<x>\d+)\+(?P<y>\d+))?")
-
-	@classmethod
-	def parse(cls, value: str) -> "Geometry":
-		match = cls.REGEXP.fullmatch(value)
-		if match is None:
-			raise ValueError(f"{value} is not a valid geometry")
-		width, height, x, y = match.group("width", "height", "x", "y")
-		return cls(
-			width=int(width),
-			height=int(height),
-			x=int(x) if x is not None else None,
-			y=int(y) if y is not None else None,
-		)
-
-	@classmethod
-	def from_click(cls, ctx, param, value: str | None) -> "Geometry | None":
-		"""
-		click option callback, turning the option value into a Geometry.
-		"""
-		if value is None:
-			return None
-		try:
-			return cls.parse(value)
-		except Exception as ex:
-			print(repr(ex))
-			raise click.BadParameter("geometry should be {width}x{height} or {width}x{height}+{x}+{y}")
-
-	@property
-	def size(self) -> tuple[int, int]:
-		return (self.width, self.height)
-
-	@property
-	def offset(self) -> tuple[int | None, int | None]:
-		return (self.x, self.y)
-
-	def __str__(self) -> str:
-		result = f"{self.width}x{self.height}"
-		if self.x is not None:
-			result += f"+{self.x}+{self.y}"
-		return result
+from dancebooks.img import Geometry
 
 
 def round_down(value: int, divisor: int) -> int:

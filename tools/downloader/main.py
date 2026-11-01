@@ -11,6 +11,8 @@ import bs4
 import click
 import requests
 
+from dancebooks.img import TiledGeometry
+
 from utils import *  # TODO: fix imports
 import deep_zoom
 import iiif
@@ -318,9 +320,13 @@ def uniDuesseldorf(first, last):
 		print(f"Guessed tiles_number_x={tiles_number_x}")
 		tiles_number_y = guess_tiles_number_y(url_maker, min_file_size=5120)
 		print(f"Guessed tiles_number_y={tiles_number_y}")
-		policy = TileSewingPolicy(tiles_number_x, tiles_number_y, TILE_SIZE)
-		policy.trim = True
-		policy.reverse_axis_y = True
+		policy = TiledGeometry.from_tiles_number(
+			tiles_number_x,
+			tiles_number_y,
+			TILE_SIZE,
+			trim=True,
+			reverse_axis_y=True,
+		)
 		download_and_sew_tiles(output_filename, url_maker, policy)
 
 
@@ -447,7 +453,7 @@ def yaleImage(id):
 	width = int(metadata.attrib["WIDTH"])
 	height = int(metadata.attrib["HEIGHT"])
 	tile_size = int(metadata.attrib["TILESIZE"])
-	policy = TileSewingPolicy.from_image_size(width, height, tile_size)
+	policy = TiledGeometry(width, height, tile_size=tile_size)
 
 	output_filename = make_output_filename(id)
 	download_and_sew_tiles(output_filename, UrlMaker(MAX_ZOOM), policy)
@@ -500,7 +506,7 @@ def leidenCollection(id):
 	print(f"Guessed tiles_number_x={tiles_number_x}")
 	tiles_number_y = guess_tiles_number_y(url_maker)
 	print(f"Guessed tiles_number_y={tiles_number_y}")
-	policy = TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size=None, overlap=None)
+	policy = TiledGeometry.from_tiles_number(tiles_number_x, tiles_number_y, tile_size=None)
 
 	output_filename = make_output_filename("", id)
 	download_and_sew_tiles(output_filename, url_maker, policy)

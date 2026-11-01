@@ -1,5 +1,7 @@
 import os
 
+from dancebooks import img
+
 import iiif
 import utils
 
@@ -49,8 +51,7 @@ def get_kbr_page(*, id, volume, page):
 	tiles_number_y = utils.guess_tiles_number_y(url_maker)
 	print(f"Guessed tiles_number_y={tiles_number_y}")
 
-	policy = utils.TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size=768)
-	policy.trim = True
+	policy = img.TiledGeometry.from_tiles_number(tiles_number_x, tiles_number_y, 768, trim=True)
 	utils.download_and_sew_tiles(output_filename, url_maker, policy)
 
 
@@ -72,8 +73,7 @@ def get_kbr_book(*, id, volume):
 	tiles_number_y = utils.guess_tiles_number_y(url_maker)
 	print(f"Guessed tiles_number_y={tiles_number_y}")
 
-	policy = utils.TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size=768)
-	policy.trim = True
+	policy = img.TiledGeometry.from_tiles_number(tiles_number_x, tiles_number_y, 768, trim=True)
 
 	page = 1
 	while True:

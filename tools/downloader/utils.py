@@ -3,7 +3,6 @@ import hashlib
 import json
 import os
 import io
-import math
 import shutil
 import time
 import urllib.parse
@@ -308,39 +307,18 @@ def make_output_filename(base, page=None, extension="bmp"):
 	return result
 
 
-class TileSewingPolicy:
-	def __init__(self, tiles_number_x, tiles_number_y, tile_size, image_width=None, image_height=None, overlap=None):
-		self.tiles_number_x = tiles_number_x
-		self.tiles_number_y = tiles_number_y
-		self.tile_size = tile_size
-		self.image_width = image_width or self.tiles_number_x * self.tile_size
-		self.image_height = image_height or self.tiles_number_y * self.tile_size
-		self.overlap = overlap
-		self.trim = False
-		self.reverse_axis_y = False
-
-	@staticmethod
-	def from_image_size(width, height, tile_size):
-		tiles_number_x = math.ceil(width / tile_size)
-		tiles_number_y = math.ceil(height / tile_size)
-		return TileSewingPolicy(tiles_number_x, tiles_number_y, tile_size, image_width=width, image_height=height)
-
-
 def download_and_sew_tiles(output_filename, url_maker, policy):
 	if policy.reverse_axis_y:
 		raise NotImplementedError("TODO: support reverse_axis_y in this code")
 
-	# DeepZoom-like tilings pad every inner tile edge
-	# with `overlap` pixels duplicating the neighbour tile
-	overlap = policy.overlap or 0
-	result = PIL.Image.new("RGB", (policy.image_width, policy.image_height))
-	print(f"Downloading {policy.tiles_number_x}x{policy.tiles_number_y} tiled image ({policy.image_width}x{policy.image_height}) to {output_filename}")
+	overlap = policy.overlap
+	result = PIL.Image.new("RGB", policy.size)
+	print(f"Downloading {policy.tiles_number_x}x{policy.tiles_number_y} tiled image ({policy}) to {output_filename}")
 	for tile_x in range(policy.tiles_number_x):
 		for tile_y in range(policy.tiles_number_y):
 			url = url_maker(tile_x, tile_y)
 			tile_image = get_image(url)
-			left = tile_x * policy.tile_size
-			top = tile_y * policy.tile_size
+			tile = policy.tile(tile_x, tile_y)
 			if overlap:
 				# only the leading padding shifts the tile content,
 				# hence it is the only one to be dropped before pasting
@@ -349,10 +327,10 @@ def download_and_sew_tiles(output_filename, url_maker, policy):
 				tile_image = tile_image.crop((
 					crop_left,
 					crop_top,
-					crop_left + min(policy.tile_size, policy.image_width - left),
-					crop_top + min(policy.tile_size, policy.image_height - top),
+					crop_left + tile.width,
+					crop_top + tile.height,
 				))
-			result.paste(tile_image, (left, top))
+			result.paste(tile_image, tile.offset)
 
 	if policy.trim:
 		result = result.crop(result.getbbox())
