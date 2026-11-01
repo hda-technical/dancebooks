@@ -142,12 +142,12 @@ def optimize(path: pathlib.Path) -> None:
 	"""
 	Re-assemble pdf file made of jpeg images (one per page) with images optimized via JPEGmini.
 
-	The result is saved next to the source file, bearing -optimal suffix.
+	The result is saved next to the source file overwriting it.
 	"""
-	output = path.with_name(f"{path.stem}-optimal.pdf")
+	original_size = path.stat().st_size
 	page_count = len(pypdf.PdfReader(path).pages)
 
-	with tempfile.TemporaryDirectory(prefix=f"{path.stem}.", dir=path.parent) as tmp:
+	with tempfile.TemporaryDirectory(prefix=f"optimize.", dir=path.parent) as tmp:
 		tmp_dir = pathlib.Path(tmp)
 		print(f"Extracting images from {path} into {tmp_dir}")
 		# images are named page-{number}.{ext}, non-jpeg images are extracted in other formats
@@ -187,8 +187,8 @@ def optimize(path: pathlib.Path) -> None:
 			)
 			prompt = "Optimize them via JPEGmini, then press any key to continue"
 
-		_assemble(paths, output)
-	print(f"Saved optimized file to {output}, {path.stat().st_size} -> {output.stat().st_size} bytes")
+		_assemble(paths, path)
+	print(f"Optimized file to {original_size} -> {path.stat().st_size} bytes")
 
 
 @dataclasses.dataclass(frozen=True)
