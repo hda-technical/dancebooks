@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import functools
 import io
 import pathlib
 import os
@@ -9,64 +8,12 @@ import sys
 import click
 import fpdf
 import PIL as pil
-import turbojpeg
 
-from dancebooks.img import Geometry
-
-
-def round_down(value: int, divisor: int) -> int:
-	return value // divisor * divisor
+from dancebooks.img import Geometry, TurboJpeg
 
 
 def is_path_valid(path):
 	return path.is_file() and path.suffix in [".jpg"]
-
-
-@functools.cache
-def get_jpegtran() -> turbojpeg.TurboJPEG:
-	"""
-	libjpeg-turbo handle, performing the very same lossless transforms
-	the jpegtran binary does (which is a part of the same library).
-	"""
-	return turbojpeg.TurboJPEG()
-
-
-def get_crop_offset(
-	data: bytes,
-	*,
-	output: Geometry,
-) -> tuple[int, int]:
-	"""
-	Offset of the crop region: either the requested one, or the centering one.
-
-	Only the crop origin is bound to the MCU (minimum coded unit) grid,
-	the region size is arbitrary: the trailing partial MCUs are stored,
-	yet are never shown by the decoder.
-
-	MCU size depends on the chroma subsampling of the very file being cropped:
-	8x8 for 4:4:4 and grayscale, 16x8 for 4:2:2, 16x16 for 4:2:0, 32x8 for 4:1:1.
-	"""
-
-	def align(
-		offset: int | None,
-		image_size: int,
-		region_size: int,
-		grid: int,
-	) -> int:
-		limit = image_size - region_size
-		if limit <= 0:
-			return 0
-		if offset is None:
-			# center the region, rounding to the nearest grid node
-			offset = limit // 2 + grid // 2
-		# round to the grid node, keeping the whole region inside the image
-		return min(round_down(offset, grid), round_down(limit, grid))
-
-	iw, ih, subsampling, _ = get_jpegtran().decode_header(data)
-	return (
-		align(output.x, iw, output.width, turbojpeg.tjMCUWidth[subsampling]),
-		align(output.y, ih, output.height, turbojpeg.tjMCUHeight[subsampling]),
-	)
 
 
 def crop_jpeg_image(
@@ -77,34 +24,24 @@ def crop_jpeg_image(
 	"""
 	Losslessly crop given jpeg image, just like `jpegtran -crop` would do.
 
+	Only the crop origin is bound to the MCU (minimum coded unit) grid,
+	the region size is arbitrary: the trailing partial MCUs are stored,
+	yet are never shown by the decoder.
+
 	Returns (image data, cropped region) tuple, image data being either
 	the untouched source path, or an in-memory jpeg file.
 	"""
 
-	iw, ih = img.size
 	with open(img.filename, "rb") as fobj:
 		data: bytes = fobj.read()
 
-	x, y = get_crop_offset(data, output=output)
-	region = Geometry(
-		width=min(output.width, iw - x),
-		height=min(output.height, ih - y),
-		x=x,
-		y=y,
-	)
-	if region.size == img.size:
+	image, mcu = TurboJpeg().decode_header(data)
+	region = output.align(image, mcu)
+	if region.size == image.size:
 		# nothing to crop, pass the source file through
 		return (img.filename, region)
 
-	cropped: bytes = get_jpegtran().crop_multiple(
-		jpeg_buf=data,
-		crop_parameters=[(
-			region.x,		 # region origin x
-			region.y,		 # region origin y
-			region.width,	 # region width
-			region.height,	 # region height
-		)],
-	)[0]
+	cropped: bytes = TurboJpeg().crop(data, region)
 
 	return (io.BytesIO(cropped), region)
 
