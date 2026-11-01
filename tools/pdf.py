@@ -6,6 +6,7 @@ import functools
 import io
 import logging
 import pathlib
+import random
 import statistics
 import subprocess
 import sys
@@ -162,7 +163,28 @@ def optimize(path: pathlib.Path) -> None:
 		# number is zero-padded to 3 digits only, hence it should be sorted numerically
 		paths.sort(key=lambda p: int(p.stem.removeprefix("page-")))
 
-		click.pause(f"Optimize {len(paths)} images at {tmp_dir} via JPEGmini, then press any key to continue")
+		# checking every image is slow, hence a few random ones are checked
+		SAMPLE_SIZE = 5
+
+		def get_not_optimized() -> list[pathlib.Path]:
+			sample = random.sample(paths, min(SAMPLE_SIZE, len(paths)))
+			return sorted(p for p in sample if not _is_jpegmini_optimized(p.read_bytes()))
+
+		if not get_not_optimized():
+			raise click.ClickException(f"Images of {path} are optimized by JPEGmini already")
+
+		# guard against accidental key presses (and unfinished JPEGmini runs)
+		prompt = f"Optimize {len(paths)} images at {tmp_dir} via JPEGmini, then press any key to continue"
+		while True:
+			click.pause(prompt)
+			not_optimized = get_not_optimized()
+			if not not_optimized:
+				break
+			print(
+				f"Some images are not optimized by JPEGmini yet, e. g. "
+				f"{', '.join(p.name for p in not_optimized)}"
+			)
+			prompt = "Optimize them via JPEGmini, then press any key to continue"
 
 		_assemble(paths, output)
 	print(f"Saved optimized file to {output}, {path.stat().st_size} -> {output.stat().st_size} bytes")
