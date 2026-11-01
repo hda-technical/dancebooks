@@ -410,8 +410,8 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 			continue
 		paths.append(path)
 	print(
-		f"Listed {len(paths)} pdf files at {directory} in {format_duration(time.monotonic() - started)}, "
-		f"skipped {skipped} excluded ones"
+		f"Listed {len(paths)} files at {directory} in {format_duration(time.monotonic() - started)}, skipped {skipped} excluded ones",
+		file=sys.stderr,
 	)
 
 	candidates: list[PdfStats] = []
