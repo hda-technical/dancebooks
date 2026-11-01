@@ -5,14 +5,12 @@ import logging
 import os
 import re
 import subprocess
-import sys
 
 import click
 import requests
 from stdnum import isbn
 from stdnum import issn
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks.config import config
 from dancebooks import const
 from dancebooks import bib_parser

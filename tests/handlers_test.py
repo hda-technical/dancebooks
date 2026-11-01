@@ -4,12 +4,9 @@
 import http.client
 import json
 import logging
-import os
-import sys
 
 import pytest
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from www import main
 
 #normal book id, available for downloading pdf file of it

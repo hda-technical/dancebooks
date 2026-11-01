@@ -1,0 +1,14 @@
+[project]
+name = "dancebooks"
+version = "0"
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["dancebooks"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

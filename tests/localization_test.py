@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
 import os
-import sys
 
 from babel.messages import pofile
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 LOCALIZATION_BASEDIR = "www/translations"
 

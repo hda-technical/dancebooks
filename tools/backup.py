@@ -7,7 +7,6 @@ import sys
 
 import click
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dancebooks.config import config
 from dancebooks import const
 from dancebooks import db

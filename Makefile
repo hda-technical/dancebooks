@@ -7,6 +7,10 @@ DHPARAM_TESTING := /etc/nginx/conf/bib-test.hda.org.ru/dh_param.pem
 DHPARAM_PRODUCTION := /etc/nginx/conf/bib.hda.org.ru/dh_param.pem
 
 
+init:
+	pip install -r requirements.txt
+	pip install -e .
+
 debug: translations
 	python www/main.py \
 
@@ -87,4 +91,7 @@ requirements.txt:
 
 # Ancillary targets
 
-.PHONY: requirements.txt docs
+.PHONY: \
+    docs \
+    init \
+    requirements.txt
