@@ -167,5 +167,16 @@ def download_book_fast_v3(manifest_url, output_folder):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
 		image_url = metadata["items"][0]["items"][0]["body"]["id"]
+		# Image url has the following structure:
+		#
+		#     {base}/{region}/{size}/{rotation}/{quality}.{format}
+		#             full     max
+		#
+		# Region `full` (uncropped image) is valid in all versions of IIIF Image API.
+		# Size `full` (native resolution) was deprecated in Image API v2.1 and removed in v3.0,
+		# where `max` should be used instead.
+		# Certain manifests (e. g. polona.pl ones) still provide `full/full` urls,
+		# which are rejected by their v3 image servers with HTTP 400.
+		image_url = image_url.replace("/full/full/", "/full/max/")
 		print(f"Downloading page #{page:04d} from {image_url}")
 		utils.get_binary(output_filename, image_url)
