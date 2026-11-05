@@ -446,7 +446,10 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 		threshold = statistics.median(stats.bytes_per_page for stats in candidates)
 		print(f"Their median is {utils.pretty_print_file_size(threshold)} per page")
 		candidates = [stats for stats in candidates if stats.bytes_per_page > threshold]
-	candidates.sort(key=lambda stats: stats.bytes_per_page, reverse=True)
+	# group candidates by directory, then sort by name (i. e. by year),
+	# plain character comparison places [190-, ...] after [1899, ...] and before [1900, ...]
+	# since "-" precedes the digits
+	candidates.sort(key=lambda stats: (stats.path.parent.parts, stats.path.name))
 	print(f"Found {len(candidates)} candidates above {utils.pretty_print_file_size(threshold or 0)} per page:")
 	for stats in candidates:
 		print(
