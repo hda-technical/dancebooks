@@ -12,6 +12,7 @@
 # Уже оптимизированы
 [1630, it] Fabritio Caroso - Raccolta di varij balli (BNF copy).pdf
 [1778, fr] Nicolas Dupin - Galerie des modes et costumes français.pdf
+[1864, fr] Gustave Desrat - Méthode de danse de salon (Powers copy).pdf
 [1892, en] Edward Scott - Dancing as an Art and Pastime.pdf
 
 # Копия имеет меньшее разрешение, чем оригинал с archive.org.
@@ -32,13 +33,20 @@
 [1915, us] Louis Harvy Chalif - Dances, tome 1.pdf
 
 # Для переобработки требуется доступ к бэкапам в цвете
+[1847, pl] Karol Czerniawski - Charakterystyka tańców.pdf
+[1853, fr] Eugène Guérard Laborde - Le cotillon
 [1860, pl] Karol Czerniawski - O tańcach narodowych.pdf
+[1899, ru] Александр Алексеевич Горский, Владимир Иванович Степанов - Таблица знаков для записывания движений (RSL copy).pdf
 [190-, ru] Николай Николаевич Яковлев, М. Мишин - Ки-ка-пу (Bodhi copy).pdf
 [1900, ru] Николай Николаевич Яковлев, Джон Филипп Суса - Washington Post (RSL copy).pdf
 [1900, ru] Николай Николаевич Яковлев, К. Тидеман - „Красавица шалунья”. Новый салонный танец Помпадур, édition 3 (Georg copy).pdf
+[1901, ru] Борис Фёдорович Кейль - Le bal moderne, number 1 (Georg copy).pdf
+[1901, ru] Борис Фёдорович Кейль - Le bal moderne, number 2 (Georg copy).pdf
+[1901, ru] К. В. Фельдман, Петер Людвиг Гертель - Menuet-Walzer (Georg copy).pdf
+[1901, ru] К. В. Фельдман, Петер Людвиг Гертель - Menuet-Walzer (RSL copy).pdf
 [1901, ru] Николай Николаевич Яковлев - Nouvelle danse de salon „Soirée à Madrid”. Pas d'Espagne (RSL copy).pdf
+[1902, ru] Сергей Яковлевич Холачёв - Объяснение французской кадрили.pdf
+[1903, ru] Лев Игнатьевич Праусс - Турбилион (RSL copy).pdf
+[1906, ru] Иван Зотович Борисов - Новый бальный танец «Крестьяночка» (Georg copy).pdf
 [1912, ru] Александр Александрович Царман - Хавтайм футбол (RSL copy).pdf
 [1938, ee] R. Põldmäe, H. Tampere - Valimik eesti rahvaltantse.pdf
-
-# Для переобработки требуется пересканирование оригинала
-[188-, ru] Премия от парфюмерной фабрики «А. Ралле и компания» (Georg copy).pdf
