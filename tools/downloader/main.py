@@ -19,6 +19,31 @@ import iiif
 import iip
 
 
+def support_page_ranges():
+	"""
+	Adds `--page`, `--from` and `--to` options (all 1-based) to a command.
+	The command receives `from_page` and `to_page` arguments,
+	`--page N` is translated into `--from N --to N`.
+	"""
+	def page_to_range(ctx, param, value):
+		if value is None:
+			return
+		for name in ("from_page", "to_page"):
+			if ctx.get_parameter_source(name) == click.core.ParameterSource.COMMANDLINE:
+				raise click.BadParameter("can not be used together with --from or --to", ctx=ctx, param=param)
+		ctx.params["from_page"] = ctx.params["to_page"] = value
+
+	def decorator(func):
+		# options are listed in --help in reverse order of application.
+		# --from and --to are eager so they are processed before --page regardless of their order in the command line
+		func = click.option("--to", "to_page", help="1-based number of the last page to be downloaded (defaults to the last page of the book)", type=int, default=None, is_eager=True)(func)
+		func = click.option("--from", "from_page", help="1-based number of the first page to be downloaded", type=int, default=1, is_eager=True)(func)
+		func = click.option("--page", help="1-based number of a single page to be downloaded", type=int, default=None, expose_value=False, callback=page_to_range)(func)
+		return func
+
+	return decorator
+
+
 @click.group()
 def main():
 	"""
@@ -52,9 +77,9 @@ def fr_calvados(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `btv1b7200356s`)", required=True)
-@click.option("--page", help="Zero based page number to be downloaded", required=False, default=0)
+@support_page_ranges()
 @click.option("--har", help="HAR file with requests to gallica.bnf.fr saved by the browser", type=click.Path(exists=True, dir_okay=False), default=None)
-def fr_gallica(id, page, har):
+def fr_gallica(id, from_page, to_page, har):
 	"""
 	book from gallica.bnf.fr
 
@@ -63,10 +88,7 @@ def fr_gallica(id, page, har):
 	and save the network log via Developer Tools -> Network -> Save All As HAR.
 	"""
 	import fr
-	if page:
-		fr.get_gallica_page(id, page, har=har)
-	else:
-		fr.get_gallica_book(id, har=har)
+	fr.get_gallica_book(id, from_page=from_page, to_page=to_page, har=har)
 
 
 @main.command()
@@ -179,16 +201,13 @@ def cz_nkp(id):
 
 @main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)", required=True)
-@click.option("--page", help="Zero based page number to be downloaded", required=False, default=None, type=int)
-def de_bsb(id, page):
+@support_page_ranges()
+def de_bsb(id, from_page, to_page):
 	"""
 	book from www.digitale-sammlungen.de
 	"""
 	import de
-	if page:
-		de.get_bsb_page(id=id, page=page)
-	else:
-		de.get_bsb_book(id=id)
+	de.get_bsb_book(id=id, from_page=from_page, to_page=to_page)
 
 
 @main.command()

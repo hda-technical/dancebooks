@@ -106,19 +106,27 @@ def _download_image_fast_v2(metadata, page, output_filename, **rq_kvargs):
 	utils.get_binary(output_filename, url, **rq_kvargs)
 
 
-def download_book_fast_v2(manifest: dict | str, output_folder, **rq_kvargs):
+def download_book_fast_v2(manifest: dict | str, output_folder, *, from_page=1, to_page=None, **rq_kvargs):
 	"""
 	Downloads entire book via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
 
 	API is documented here:
 	http://iiif.io/about/
+
+	`from_page` and `to_page` limit the download to a 1-based inclusive range of pages
+	(`to_page` defaults to the last page of the book).
 	"""
 	if isinstance(manifest, str):
 		manifest = utils.get_json(manifest, **rq_kvargs)
 	canvases = manifest["sequences"][0]["canvases"]
-	print(f"Will download {len(canvases)} pages")
-	for page, metadata in enumerate(canvases, start=1):
+	if to_page is None:
+		to_page = len(canvases)
+	if not (1 <= from_page <= to_page <= len(canvases)):
+		raise ValueError(f"Invalid page range {from_page}-{to_page} for a book of {len(canvases)} pages")
+	print(f"Will download {to_page - from_page + 1} pages")
+	for page in range(from_page, to_page + 1):
+		metadata = canvases[page - 1]
 		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")

@@ -18,16 +18,10 @@ def _bsb_manifest_url(id):
 	return f"https://api.digitale-sammlungen.de/iiif/presentation/v2/{id}/manifest"
 
 
-def get_bsb_book(*, id):
+def get_bsb_book(*, id, from_page=1, to_page=None):
 	manifest_url = _bsb_manifest_url(id)
 	output_folder = utils.make_output_folder("bsb", id)
-	iiif.download_book_fast_v2(manifest_url, output_folder)
-
-
-def get_bsb_page(*, id, page):
-	manifest_url = _bsb_manifest_url(id)
-	output_folder = utils.make_output_folder("bsb", id)
-	iiif.download_page_fast_v2(manifest_url, output_folder, page=page)
+	iiif.download_book_fast_v2(manifest_url, output_folder, from_page=from_page, to_page=to_page)
 
 
 def get_darmstadt(*, id):
