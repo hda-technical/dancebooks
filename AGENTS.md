@@ -125,6 +125,20 @@ then touch the uwsgi reload file and ping `/ping`.
   Follow them when editing entries.
   Year ranges use en dash (`year = {1803–1804}`),
   while `pages` uses a plain hyphen (`pages = {37-43}`, enforced by `tools/validate.py`).
+- Library courtesy refers to the corresponding entry in `docs/common/libraries.md`.
+  Scans obtained from a library are hosted only with its permission:
+  - The correspondence granting the permission goes to `docs/common/libraries.md`
+    under the `{ #ALIAS }` anchor.
+    `ALIAS` is a short uppercase abbreviation of the library name (`BNF`, `NLS`, `RCM`).
+  - The library is listed in `parser.bookkeepers` in `configs/dancebooks.json`
+    as `"ALIAS": "the :ALIAS:"` (e.g. `"BNF": "the :BNF:"`).
+    Private owners have `null` instead and need no courtesy.
+  - The filename ends with `(ALIAS copy)` or `(Incomplete ALIAS copy)`.
+  - The `note` contains `Courtesy of the :ALIAS:.`,
+    rendered as a link to the library section.
+    `tools/validate.py` checks the fullname is present in `note` for every self-served url,
+    so changing a fullname requires updating all such notes.
+  - Mentions of a library in entries whose copies are hosted elsewhere stay plain text.
 - Docs are primarily Russian.
   The site UI is multilingual (`config.www.languages`, translated via `www/translations/`).
 
