@@ -14,27 +14,17 @@ def _gallica_manifest_url(id):
 	return f"https://gallica.bnf.fr/iiif/ark:/12148/{id}/manifest.json"
 
 
-def get_gallica_book(id, *, from_page=1, to_page=None, har=None):
+def get_gallica_book(id, *, from_page=1, to_page=None):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	headers = {}
-	if har is not None:
-		# gallica.bnf.fr might be guarded by Cloudflare
-		headers = utils.load_har_session(
-			har,
-			hostname="gallica.bnf.fr",
-			cookie_domain=".bnf.fr",
-		)
-	try:
-		iiif.download_book_fast_v2(
-			manifest_url,
-			output_folder,
-			from_page=from_page,
-			to_page=to_page,
-			headers=headers,
-		)
-	except requests.exceptions.HTTPError as ex:
-		utils.raise_on_cloudflare(ex)
+	# gallica.bnf.fr is guarded by Cloudflare which blocks non-browser clients
+	iiif.download_book_fast_v2(
+		manifest_url,
+		output_folder,
+		from_page=from_page,
+		to_page=to_page,
+		impersonate="firefox",
+	)
 
 
 def get_candide(id):

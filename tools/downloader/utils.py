@@ -9,6 +9,7 @@ import urllib.parse
 from xml.etree import ElementTree
 
 import bs4
+import curl_cffi.requests
 import PIL.Image
 import requests
 
@@ -27,6 +28,10 @@ TIMEOUT = 30
 
 #using single session for all requests
 session = requests.Session()
+
+
+# Raised by raise_for_status() of requests and curl_cffi respectively
+HTTP_ERRORS = (requests.exceptions.HTTPError, curl_cffi.requests.exceptions.HTTPError)
 
 
 def load_har_session(har_filename, *, hostname, cookie_domain):
@@ -93,7 +98,7 @@ def _get_retry_after(ex):
 	Only delay-seconds form of the header (as sent by Cloudflare) is supported,
 	HTTP-date form is ignored, falling back to the regular backoff.
 	"""
-	if not isinstance(ex, requests.exceptions.HTTPError) or ex.response is None:
+	if not isinstance(ex, HTTP_ERRORS) or ex.response is None:
 		return 0
 	retry_after = ex.response.headers.get("Retry-After", "")
 	return int(retry_after) if retry_after.isdigit() else 0
@@ -113,7 +118,7 @@ def retry(try_count, delay=0, delay_backoff=1):
 					# won't get any better upon retrying.
 					# Reraise HTTPError as is, letting the caller handle it
 					if (
-						isinstance(ex, requests.exceptions.HTTPError)
+						isinstance(ex, HTTP_ERRORS)
 						and ex.response is not None
 						and 400 <= ex.response.status_code < 500
 						and ex.response.status_code not in RETRIABLE_STATUS_CODES
@@ -211,13 +216,20 @@ def solve_anubis_challenge(response: requests.Response):
 
 # FIXME: retry decorator hides HTTPError raised by raise_for_status.
 # @retry(try_count=3)
-def make_request(rq: str | requests.Request, *args, **kwargs):
+def make_request(rq: str | requests.Request, *args, impersonate: str | None = None, **kwargs):
 	"""
 	Performs the request and returns requests.Response object.
 	Accepts both raw urls and prepared requests
+
+	If `impersonate` is set to a browser name (e. g. `firefox`),
+	the request is sent via curl_cffi which mimics the network fingerprints of that browser
+	(see _make_impersonating_request).
+	Only raw urls are accepted in this case.
 	"""
-	headers = HEADERS | kwargs.pop("headers", {})
 	method = kwargs.pop("method", "GET")
+	if impersonate is not None:
+		return _make_impersonating_request(rq, *args, browser=impersonate, method=method, **kwargs)
+	headers = HEADERS | kwargs.pop("headers", {})
 	if isinstance(rq, str):
 		print(f"{method} {rq}")
 		rq = requests.Request(
@@ -235,6 +247,31 @@ def make_request(rq: str | requests.Request, *args, **kwargs):
 		response = session.send(session.prepare_request(rq), *args, timeout=TIMEOUT, **kwargs)
 		if is_anubis_challenge(response):
 			raise RuntimeError("Failed to pass Anubis challenge")
+	response.raise_for_status()
+	return response
+
+
+@functools.cache
+def _get_impersonating_session(browser: str):
+	return curl_cffi.requests.Session(impersonate=browser)
+
+
+def _make_impersonating_request(url: str, *args, browser: str, method: str, **kwargs):
+	"""
+	Websites guarded by Cloudflare Bot Management (e. g. gallica.bnf.fr)
+	might block every request whose TLS and HTTP/2 fingerprints do not belong to a real browser,
+	no matter which User-Agent and cookies are sent.
+	curl_cffi reproduces these fingerprints of the given browser.
+
+	Returns curl_cffi.requests.Response, which mostly mimics requests.Response API.
+	"""
+	if not isinstance(url, str):
+		raise TypeError(f"Only raw urls are supported when impersonating a browser, got {url!r}")
+	# Not sending HEADERS: curl_cffi sets User-Agent and other headers matching the browser,
+	# while a mismatching User-Agent might get the request blocked again
+	print(f"{method} {url}")
+	session = _get_impersonating_session(browser)
+	response = session.request(method, url, *args, timeout=TIMEOUT, **kwargs)
 	response.raise_for_status()
 	return response
 
