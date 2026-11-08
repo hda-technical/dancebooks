@@ -312,6 +312,9 @@ msgstr "Article in a collection"
 msgid "search:type:mvproceedings"
 msgstr "Multivolume conference proceedings"
 
+msgid "search:type:inreference"
+msgstr "Article in an encyclopaedia or dictionary"
+
 msgid "search:type:mvreference"
 msgstr "Multivolume encyclopaedia"
 

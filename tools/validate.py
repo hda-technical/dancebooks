@@ -93,12 +93,10 @@ ALLOWED_FIELDS = (ANCILLARY_FIELDS | DATA_FIELDS)
 PARTIAL_ENTRY_TYPES = {
 	# article -> periodical
 	"article",
-	# inproceeding -> proceedings
 	"inproceedings",
-	# incollection -> collection
 	"incollection",
-	# inbook -> book
 	"inbook",
+	"inreference",
 }
 
 def fetch_added_on_from_git():
@@ -498,6 +496,7 @@ def validate_type(item, errors):
 
 		"reference",
 		"mvreference",
+		"inreference",
 
 		"collection",
 		"incollection",
@@ -522,7 +521,7 @@ def validate_type(item, errors):
 		pages = item.get("pages")
 		if pages is None:
 			errors.add(f"Field pages expected for type {type}")
-	if (type in ("inproceedings", "inbook")):
+	if (type in ("inproceedings", "inbook", "inreference")):
 		booktitle = item.get("booktitle")
 		if booktitle is None:
 			errors.add(f"Field booktitle expected for entry type {type}")
