@@ -1,3 +1,4 @@
+import enum
 import os
 
 from dancebooks import img
@@ -93,20 +94,62 @@ def download_image_fast_v1(base_url, output_filename, *, width=None, height=None
 	utils.get_binary(output_filename, img_url)
 
 
-def _download_image_fast_v2(metadata, page, output_filename, **rq_kvargs):
-	url = None
-	if not url:
-		# Certain installations (only opendata.uni-halle.de so far)
-		# provide higher resolution images in 'rendering' section
-		url = metadata.get("rendering", [{}])[-1].get("@id", "")
-	if not url:
-		url = metadata["images"][-1]["resource"]["@id"]
+class ImageKind(enum.Enum):
+	"""
+	Kind of the page image to be downloaded,
+	defining the part of IIIF v2 canvas its url is taken from
+	"""
+	# Image resource url as is.
+	# Normally it requests the full-sized image from the image service
+	# (e. g. `{service}/full/full/0/default.jpg`).
+	RESOURCE = enum.auto()
 
+	# Full-sized image re-encoded by the image service, i. e. `{service}/full/max/0/default.jpg`.
+	# Certain installations (e. g. digi-hub.de) link downscaled thumbnails as image resources.
+	SERVICE = enum.auto()
+
+	# Original source file linked from `rendering` section of the canvas, served without re-encoding.
+	# Provided by certain installations (e. g. opendata.uni-halle.de),
+	# while others put PDFs, OCR results or links to the viewer here.
+	RENDERING = enum.auto()
+
+
+def _get_image_url_v2(canvas, kind: ImageKind):
+	resource = canvas["images"][-1]["resource"]
+	match kind:
+		case ImageKind.RESOURCE:
+			return resource["@id"]
+		case ImageKind.SERVICE:
+			return f"{resource['service']['@id']}/full/max/0/default.jpg"
+		case ImageKind.RENDERING:
+			for rendering in canvas.get("rendering", []):
+				if rendering.get("format", "").startswith("image/"):
+					return rendering["@id"]
+			raise ValueError(f"Canvas {canvas['@id']} has no image in rendering section")
+
+
+def _download_image_fast_v2(
+	metadata,
+	page,
+	output_filename,
+	*,
+	kind=ImageKind.RESOURCE,
+	**rq_kvargs,
+):
+	url = _get_image_url_v2(metadata, kind)
 	print(f"Downloading page #{page:04d} from {url}")
 	utils.get_binary(output_filename, url, **rq_kvargs)
 
 
-def download_book_fast_v2(manifest: dict | str, output_folder, *, from_page=1, to_page=None, **rq_kvargs):
+def download_book_fast_v2(
+	manifest: dict | str,
+	output_folder,
+	*,
+	from_page=1,
+	to_page=None,
+	kind=ImageKind.RESOURCE,
+	**rq_kvargs,
+):
 	"""
 	Downloads entire book via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
@@ -116,6 +159,8 @@ def download_book_fast_v2(manifest: dict | str, output_folder, *, from_page=1, t
 
 	`from_page` and `to_page` limit the download to a 1-based inclusive range of pages
 	(`to_page` defaults to the last page of the book).
+
+	`kind` selects the url each page is downloaded from (see ImageKind).
 	"""
 	if isinstance(manifest, str):
 		manifest = utils.get_json(manifest, **rq_kvargs)
@@ -135,11 +180,19 @@ def download_book_fast_v2(manifest: dict | str, output_folder, *, from_page=1, t
 			metadata=metadata,
 			page=page,
 			output_filename=output_filename,
+			kind=kind,
 			**rq_kvargs,
 		)
 
 
-def download_page_fast_v2(manifest_url, output_folder, *, page, **rq_kvargs):
+def download_page_fast_v2(
+	manifest_url,
+	output_folder,
+	*,
+	page,
+	kind=ImageKind.RESOURCE,
+	**rq_kvargs,
+):
 	"""
 	Downloads single page via IIIF protocol (v2).
 	Issues single request per image, but might be unsupported by certain backends.
@@ -154,6 +207,7 @@ def download_page_fast_v2(manifest_url, output_folder, *, page, **rq_kvargs):
 		metadata=canvases[page],
 		page=page,
 		output_filename=output_filename,
+		kind=kind,
 		**rq_kvargs,
 	)
 

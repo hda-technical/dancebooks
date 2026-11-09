@@ -24,6 +24,20 @@ def get_bsb_book(*, id, from_page=1, to_page=None):
 	iiif.download_book_fast_v2(manifest_url, output_folder, from_page=from_page, to_page=to_page)
 
 
+def get_hub(*, id, from_page=1, to_page=None):
+	manifest_url = f"https://www.digi-hub.de/viewer/api/v1/records/{id}/manifest/"
+	output_folder = utils.make_output_folder("hub", id)
+	# The manifest links 300px thumbnails as image resources,
+	# while PDF download provides images downscaled to roughly half of the native resolution.
+	iiif.download_book_fast_v2(
+		manifest_url,
+		output_folder,
+		from_page=from_page,
+		to_page=to_page,
+		kind=iiif.ImageKind.SERVICE,
+	)
+
+
 def get_darmstadt(*, id):
 	output_folder = utils.make_output_folder("darmstadt", id)
 	manifest_url = f"http://tudigit.ulb.tu-darmstadt.de/show/iiif/{id}/manifest.json"
@@ -410,4 +424,9 @@ def get_wlb(*, id):
 def get_unihalle(*, id):
 	output_folder = utils.make_output_folder("halle", id.split('/')[0])
 	manifest_url = f"https://opendata.uni-halle.de/json/iiif/{id}/manifest"
-	iiif.download_book_fast_v2(manifest_url, output_folder)
+	# The manifest links 400px thumbnails as image resources
+	iiif.download_book_fast_v2(
+		manifest_url,
+		output_folder,
+		kind=iiif.ImageKind.RENDERING,
+	)

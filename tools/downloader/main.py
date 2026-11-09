@@ -206,6 +206,17 @@ def de_bsb(id, from_page, to_page):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `BV049840573`)", required=True)
+@support_page_ranges()
+def de_hub(id, from_page, to_page):
+	"""
+	book from www.digi-hub.de
+	"""
+	import de
+	de.get_hub(id=id, from_page=from_page, to_page=to_page)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `bsb10029940`)", required=True)
 def de_kassel(id):
 	"""
