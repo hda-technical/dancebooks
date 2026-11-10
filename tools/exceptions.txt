@@ -34,7 +34,7 @@
 
 # Для переобработки требуется доступ к бэкапам в цвете
 [1847, pl] Karol Czerniawski - Charakterystyka tańców.pdf
-[1853, fr] Eugène Guérard Laborde - Le cotillon
+[1853, fr] Eugène Guérard Laborde - Le cotillon.pdf
 [1860, pl] Karol Czerniawski - O tańcach narodowych.pdf
 [1895, fr] F. Bayrou, Jean Darquier - La moscovite.pdf
 [1895, ru] А. Горяинова - Danse noble (Pas de quatre) (Georg copy).pdf
