@@ -64,6 +64,7 @@
         "blocked_domains": [
             // use hdl.handle.net permalinks instead
             "babel.hathitrust.org",
+            "dspace.ut.ee",
 
             // use root-relative links instead
             "bib.hda.org.ru",
