@@ -435,6 +435,14 @@ pages provided by the library.
 >
 > York University Libraries
 
+## 🇩🇪 Forschungsbibliothek Gotha { #FBG }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| FBG | ❓ |
+
+_Hosting capability was not evaluated yet._
+
 ## 🇩🇪 Humboldt-Universität zu Berlin { #HUB }
 
 | Alias | Можно выкладывать |
