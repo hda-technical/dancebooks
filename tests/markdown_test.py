@@ -134,6 +134,13 @@ def test_library():
 	output = rd.convert("Courtesy of the :BNF:")
 	assert output == '<p>Courtesy of the <a href="/docs/common/libraries/#BNF">BNF</a></p>'
 
-	# unknown anchors and urls containing colons are kept intact
-	input = "See https://urn.fi/URN:NBN:fi-fe2019111840065 or :UNKNOWN:"
+	# any uppercase alias is rendered, even if it is not a bookkeeper
+	output = rd.convert("In the :HUB: copy, see :RSCDS:.")
+	assert output == (
+		'<p>In the <a href="/docs/common/libraries/#HUB">HUB</a> copy, '
+		'see <a href="/docs/common/libraries/#RSCDS">RSCDS</a>.</p>'
+	)
+
+	# urls containing colons are kept intact
+	input = "See https://urn.fi/URN:NBN:fi-fe2019111840065 or https://www.dlib.si/?URN=URN:NBN:SI:doc-AX59XVDZ"
 	assert rd.convert(input) == f"<p>{input}</p>"

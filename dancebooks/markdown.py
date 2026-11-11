@@ -6,7 +6,6 @@ from urllib import parse as urlparse
 
 import markdown
 
-from dancebooks.config import config
 from dancebooks import const
 from dancebooks import utils
 
@@ -136,24 +135,19 @@ class MarkdownCite(markdown.inlinepatterns.Pattern):
 class MarkdownLibrary(markdown.inlinepatterns.Pattern):
 	"""
 	Renders `:BNF:` as a link to the section of libraries.md with the similar anchor.
-	Only bookkeepers with known fullname are handled,
+	Any uppercase alias is handled, so new libraries need no code changes.
+	Aliases glued to surrounding words are ignored,
 	allowing urls like `URN:NBN:fi-...` to be left as is.
 	"""
 	LIBRARY_DOCS_URL = "/docs/common/libraries/"
 
 	def __init__(self):
-		owners = "|".join(
-			re.escape(owner)
-			for owner, fullname in config.parser.bookkeepers.items()
-			if fullname is not None
-		)
-		super().__init__(f":(?P<owner>{owners}):")
+		super().__init__(r"\B:(?P<owner>[A-Z]+):\B")
 
 	def handleMatch(self, m):
 		a = xml.Element("a")
 		owner = m.group("owner")
-		anchor = owner.replace(" ", "-")
-		a.set("href", f"{self.LIBRARY_DOCS_URL}#{anchor}")
+		a.set("href", f"{self.LIBRARY_DOCS_URL}#{owner}")
 		a.text = owner
 		return a
 

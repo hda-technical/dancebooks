@@ -119,6 +119,11 @@ then touch the uwsgi reload file and ping `/ping`.
   `Library/.../[year, lang] Author - Title[, tome NN][ (incomplete|X copy)].pdf`
   (see `const.FILENAME_REGEXP`).
   `transcription` points into `transcriptions/`.
+- Never rename, move or delete files in the e-library on disk (`config.www.elibrary_dir`).
+  Editing `filename` fields in `.bib` files is fine,
+  but the matching rename on disk is left to the user.
+  Until then `tools/validate.py` reports the file as inaccessible / unreferenced,
+  which is expected.
 - Bibliographic conventions are documented in Russian in `docs/bib/index.md`
   (dating like `1890?` / `1700–1705?`, `altauthor` / `origauthor` / `pseudo_author`,
   what goes into `publisher`, multiple URLs).

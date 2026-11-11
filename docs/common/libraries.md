@@ -159,11 +159,11 @@ _From an email forwarded by Dmitry Filimonov._
 >
 > 75706 Paris Cedex 13, France
 
-## 🇺🇸 University of North Carolina at Greensboro { #UNC-Greensboro }
+## 🇺🇸 University of North Carolina at Greensboro { #UNCG }
 
 | Alias | Можно выкладывать |
 | --- | --- |
-| UNC Greensboro | ✅ |
+| UNCG | ✅ |
 
 _From an email forwarded by Susan de Guardiola._
 
