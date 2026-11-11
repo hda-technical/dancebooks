@@ -88,21 +88,25 @@ end function
 
 function urlDecode(str)
 	str = EncodeUTF8(str) 'Fucking Firefox doesn't encode its address strings into UTF8
-    set list = CreateObject("System.Collections.ArrayList")
+    redim bytes(len(str))
+    n = 0
     strLen = len(str)
     for i = 1 to strLen
         sT = mid(str, i, 1)
         if sT = "%" then
             if i + 2 <= strLen then
-                list.add cbyte("&H" & mid(str, i + 1, 2))
+                bytes(n) = cbyte("&H" & mid(str, i + 1, 2))
+                n = n + 1
                 i = i + 2
             end if
         else
-            list.add asc(sT)
+            bytes(n) = asc(sT)
+            n = n + 1
         end if
     next
     depth = 0
-    for each by in list.toArray()
+    for k = 0 to n - 1
+        by = bytes(k)
         if by and &h80 then
             if (by and &h40) = 0 then
                 if depth = 0 then Err.Raise 5
