@@ -167,6 +167,10 @@
 
             // Use library.search.tulane.edu catalogue permalinks instead
             "digitallibrary.tulane.edu",
+
+            // Use search.nls.uk catalogue permalinks instead
+            "deriv.nls.uk",
+            "digital.nls.uk",
         ],
         "domains_allowed_http": [
             "chrisbrady.itgo.com",

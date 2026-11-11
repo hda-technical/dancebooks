@@ -309,6 +309,7 @@ _URL_PATTERNS = {
 	"musenalm.de": r"https://musenalm.de/almanach/\d+/",
 	"bdh.bne.es": r"https://bnedigital.bne.es/bd/card\?oid=\d{10}",
 	"library.search.tulane.edu": r"https://library.search.tulane.edu/permalink/01TUL_INST/\w+/alma\d+",
+	"search.nls.uk": r"https://search.nls.uk/permalink/44NLS_INST/j9lfge/alma\d+",
 	"efdss.org": r"https://www.efdss.org/vwml-digitised-resources/historic-dance-and-tune-books/\d+-[a-z0-9]+",
 	"zs.thulb.uni-jena.de": r"https://zs.thulb.uni-jena.de/receive/jportal_jpvolume_\d+",
 }
