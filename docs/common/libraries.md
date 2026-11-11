@@ -435,6 +435,22 @@ pages provided by the library.
 >
 > York University Libraries
 
+## 🇩🇪 Humboldt-Universität zu Berlin { #HUB }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| HUB | ❓ |
+
+_Hosting capability was not evaluated yet._
+
+## 🇬🇧 Royal Scottish Country Dance Society, Edinburgh { #RSCDS }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| RSCDS | ❓ |
+
+_Hosting capability was not evaluated yet._
+
 ## 🇱🇻 Latvijas Nacionālā bibliotēka { #LNB }
 
 | Alias | Можно выкладывать |
