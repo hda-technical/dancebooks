@@ -240,7 +240,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1827 | А. Верстовский (compiler)<br/>Венцель (publisher) | Музыкальный альбом, изданный А. Верстовским на 1828 год | | [RSL](https://search.rsl.ru/ru/record/01001957800) |
 | 1828 | Carl Friedrich Förster | Der Tanzlehrer oder Anweisung zur gründlichen Erlernung der Tanzkunst<br/>_Published in Breslau_ | [Advertisement](https://books.google.com/books?id=IssVAQAAIAAJ&pg=PA536) | |
 | 1828? | Thomas Wilson | _A Dramatic Piece, also a New Work on Dancing_<br/>_It is unclear if this work was ever published_ | [[Cooper, #06]](https://www.regencydances.org/paper006.php)<br/>[Advertisement](https://books.google.com/books?id=468CAAAAIAAJ&pg=PA756) | |
-| 1820–1830? | J. S. Pollock<br/>R. W. Evans | The Mid Lothians, a New Set of Quadrilles | | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=3598310) |
+| 1820–1830? | J. S. Pollock<br/>R. W. Evans | The Mid Lothians, a New Set of Quadrilles | | [NLS](https://search.nls.uk/permalink/44NLS_INST/j9lfge/alma9935983103804341) |
 | 1829 | Carl Friedrich Förster | Der Tanzlehrer oder Anweisung zur gründlichen Erlernung der Tanzkunst<br/>_Published in Leipzig_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]` | |
 | 1829 | Johann Christian Traub | Über den Tanz-Unterricht nebst Bemerkungen über Kleidung, Haltung und Verhaltungs-Regeln beim Tanzen<br/>_Published in Stuttgart_ | `[Klemm #02]`<br/>`[Klemm #03]`<br/>`[Klemm #06]`<br/>`[Germanorum, 1914]` | [Dillingen Donau](https://opac.studienbibliothek-dillingen.de/InfoGuideClient.sdlsis/start.do?Query=10="BV013660012")<br/>[Württemberg](https://wlb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKSWB-IdNr043356494) |
 | 1830 | C. F. Richter. | Album musical dedie tres respectueusement sa majeste l'Imperatrice de toutes les Russies Alexandra Feodorowna | | [RSL](https://search.rsl.ru/ru/record/01008120252) |
@@ -395,14 +395,14 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1894 | Justino Dias Lima Soares | Manual de dança : methodo facil para aprender a dançar sem auxilio de professor<br/>_7th edition_ | | BNP |
 | 1895 | Enrico Pichetti | Il manuale di ballo<br/>_Published in Roma by Gregoriana_ | `[Corbella]` | |
 | 1895 | P. Bail<br/>G. Stilb | Guide du cotillon, et Les danses de salon | [Other copy?](https://bib.hda.org.ru/books/bail_1895_guide) | [BNF](https://catalogue.bnf.fr/ark:/12148/cb31408134q)<br/>[Abebooks, €1980](https://www.abebooks.com/servlet/BookDetailsPL?bi=32463984549)
-| 1897 | David Anderson | New, Enlarged, and Complete Ball-room Guide | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=974560) |
+| 1897 | David Anderson | New, Enlarged, and Complete Ball-room Guide | `[Guillard, 1989]` | [NLS](https://search.nls.uk/permalink/44NLS_INST/j9lfge/alma999745603804341) |
 | 1898 | | Бальный шёпот. Па де катр | | [NLR](https://yadi.sk/i/5D9OmCiPqbVLt) |
 | 1898 | Henri Cellarius | 100 neue Cotillon-Touren<br/>_6. Auflage_<br/>_Published by F. Bartholomäus in Erfurt_ | `[Germanorum, 1914]` | [Google](https://books.google.com/books?id=IjSUPgAACAAJ) |
 | 1899 | Александр Алексеевич Горский | Хореография. Примеры для чтения | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS001284446) |
 | 1899 | Vincenzo Tesi | Manuale completo per i balli di società<br/>_Published in Catanzaro by Tipografia del Giornale Il Sud_ | `[Corbella]` | |
 | 1900? | Edmund Wallner | Edmund Wallner's Taschen-Tanz-Album. 15 Tänze mit Tanz-Commando der Contretänze | | [BSB](https://opacplus.bsb-muenchen.de/title/BV007789457) |
 | 1900 | Graham MacNeilage | How to Dance the Eightsome Reel, Scotch Reel, Reel of Tulloch, Strathspey and Reel Steps | `[Guillard, 1989]` | [BL](http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01002331353) |
-| 1900 | J. G. Atkinson, junior | Scottish National Dances | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=978495) |
+| 1900 | J. G. Atkinson, junior | Scottish National Dances | `[Guillard, 1989]` | [NLS](https://search.nls.uk/permalink/44NLS_INST/j9lfge/alma999784953804341) |
 | 1900? | Gustav Engelhardt | Contredanse und Quadrille à la cour Anordnungen derselben, nebst Entwurf zu einem kurzen deutschen Commando | | [Leipzig](https://katalog.ub.uni-leipzig.de/Record/0-1568624832) |
 | 190- | Н. Ширяев | Pas d'Espagne | | [RSL](https://search.rsl.ru/ru/record/01002066571) |
 | 190- | А. Д. Кулеша | Чары красоты. Pas d'espagne. Danse nouvelle pour le piano | | [RSL](https://search.rsl.ru/ru/record/01002057435) |
@@ -410,7 +410,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 190- | Борис Фёдорович Кейль | Пахита. Nouveau Pas d'Espagne | | [RSL](https://search.rsl.ru/ru/record/01001930835) |
 | 190- | К. В. Фельдман | Новый русско-славянский | | [NLR](https://yadi.sk/i/0otSlk7kqbVKJ) |
 | 1901 | Pietro Onorati | Manuale dei balli di società con l'aggiunta dei lancieri e del cotillon<br/>_Published in Napoli by “Libreria editrice internazionale”_ | | [NYPL](https://www.nypl.org/research/research-catalog/bib/b12276555) |
-| 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=784912) |
+| 1902 | J. J. Sheehan | A Guide to Irish Dancing | `[Guillard, 1989]` | [NLS](https://search.nls.uk/permalink/44NLS_INST/j9lfge/alma997849123804341) |
 | 1902 | И. И. Иванов | Новейший самоучитель бальных танцев | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004849373)<br/>`SPTL: Н 727(А)` |
 | 1903 | Melvin Balou Gilbert | Dancing | [Cite](https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.c2898858;seq=9;width=10000) |
 | 1906 | А. А. Кондаков | Дирижерство танцев: вальса, мазурки, кадрили и котильона | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS005127283) (desideratum) |
@@ -420,7 +420,7 @@ _This table is intended to be accurate, yet sometimes it is slightly outdated._
 | 1908? | Peter Müller | Anstands- und Tanzlehre Kommando d. Contre-danse, Norddeutsche Française, Quadrille à la cour | | [Berlin](http://stabikat.de/DB=1/LNG=EN/CLK?IKT=12&TRM=390745111) |
 | 1909 | | Толкучка : Бальный листок, выходящий раз в год | | [NLR](https://primo.nlr.ru/permalink/f/df0lai/07NLR_LMS004956353) |
 | 1910 | Jean-Jacques Olivier<br/>W. Norbert | Une étoile de la danse au XVIIIe siècle, Barbara Campanini | `[4. Rothenfelser]` | |
-| 1910 | Donald Richard MacKenzie | Illustrated Guide to the National Dances of Scotland | [[MacKenzie, 1870]](https://bib.hda.org.ru/books/mackenzie_1870)<br/>[[MacKenzie, 1939]](https://bib.hda.org.ru/books/mackenzie_1939_highland)<br/>`[Guillard, 1989]` | [NLS](http://main-cat.nls.uk/vwebv/holdingsInfo?bibId=581090) |
+| 1910 | Donald Richard MacKenzie | Illustrated Guide to the National Dances of Scotland | [[MacKenzie, 1870]](https://bib.hda.org.ru/books/mackenzie_1870)<br/>[[MacKenzie, 1939]](https://bib.hda.org.ru/books/mackenzie_1939_highland)<br/>`[Guillard, 1989]` | [NLS](https://search.nls.uk/permalink/44NLS_INST/j9lfge/alma995810903804341) |
 | 1910 | | Little Dandy. Новый aнглийский танец. Из оперы Шалунья | `[Yoko]` | |
 | 1910 | А. de Lerdo | Би-ба-бо. Новый танец | `[Yoko]` | |
 | 1911 | Шарль Борель-Клерк | Танец замбезов | `[Yoko]` | |

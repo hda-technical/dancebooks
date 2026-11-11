@@ -262,9 +262,9 @@ grant - the item was scanned for your use.
 
 ## 🇬🇧 The National Library of Scotland, Edinburgh { #NLS }
 
-| Alias | Можно выкладывать |
-| --- | --- |
-| NLS | ✅ |
+| Alias | Можно выкладывать | Каталог |
+| --- | --- | --- |
+| NLS | ✅ | [search.nls.uk](https://search.nls.uk) |
 
 > Dear Sir / Madam,
 >
