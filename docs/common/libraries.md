@@ -3,352 +3,6 @@
 Ниже приводятся фрагменты переписки с представителями библиотек касательно возможности
 выкладывания материалов, полученных из библиотек на сайте библиографии.
 
-## 🇷🇺 Российская государственная библиотека, Москва { #RSL }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| RSL | ✅ |
-
-_Из переписки на портале udo.rsl.ru._
-
-> Здравствуйте!
->
-> Скажите, могу ли я выложить эту и другие заказанные у вас книги на личном сайте в открытый доступ?
->
-> Насколько мне известно, в иностранных библиотеках такое ограничение действует. Есть ли оно у РГБ?
->
-> Спасибо за разъяснение.
-
----
-
-> Возможно с указанием источника – РГБ и без коммерческого использования
-
-## 🇷🇺 Российская национальная библиотека, Санкт-Петербург { #NLR }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| NLR | ✅ |
-
-> Здравствуйте!
->
-> <...>
->
-> Скажите, пожалуйста, могу ли я выложить посканированную книгу на своём персональном некоммерческом сайте для открытого доступа?
->
->
-> Юрий
-
----
-
-> Здравствуйте, Юрий!
->
-> Согласно нашим правилам, электронные копии, предоставленный Службой ЭДД РНБ,
-> не подлежат воспроизведению, тиражированию и распространению с целью извлечения прибыли.
->
-> При соблюдении этих условий, полученная копия может быть размещена на Вашем персональном сайте
-> для общего доступа, так как заказанный Вами документ является произведением общественного достояния
-> и на него не распространяется авторское право.
->
-> С уважением,
->
-> Валерия Николаевна Дворецкова,
->
-> заведующая Службой электронной доставки документов
->
-> Российская национальная библиотека
-
-## 🇷🇺 Библиотека российской академии наук, Санкт-Петербург { #RASL }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| RASL | ✅ |
-
-> Здравствуйте!
->
-> Подскажите, пожалуйста (на сайте БАН информации не нашёл), есть ли какие-то ограничения на копии
-> документов, полученных из фондов БАН (такие ограничения практикуют европейские библиотеки,
-> в российских с такими практиками я не сталкивался).
-> Интересуют ограничения за исключением авторских прав
-> (документы, о которых идёт речь, опубликованы давно и не подпадают под действие закона об авторском праве).
->
-> Могу ли я выложить полученные копии на личном некоммерческом сайте для свободного скачивания?
->
-> Спасибо за информацию.
->
-> Юрий.
-
----
-
-> Добрый день, Юрий!
->
-> Размещение информации на сайте Вашей организации находится не в нашей юрисдикции.
->
-> Копия книги, полученная в нашей библиотеке, действительно не подпадает под действие закона
-> об авторском праве.
->
-> И размещение на сайте не преследует коммерческие цели.
->
-> С уважением, Марина Павловна.
->
-> Зав. читальными залами ОФО.
-
-## 🇷🇺 Российская государственная историческая библиотека: { #SHPL }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| SHPL | ✅ |
-
-> Здравствуйте!
->
-> Могу ли я выложить сканы этой книги у себя на сайте (https://bib.hda.org.ru/) для некоммерческого использования?
->
-> Юрий.
-
----
-
-> На данное издание (полученное по каналам ЭДД, но не из электронной библиотеки) не распространяется
-> действие авторского права, Вы можете размещать его свободно.
->
-> С уважением,
->
-> Служба электронной доставки  ГПИБ России.
-
-## 🇫🇷 Bibliothèque nationale de France, Paris { #BNF }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| BNF | ✅ |
-
-_From an email forwarded by Dmitry Filimonov._
-
-> Bonjour!
->
-> J'ai les copies des certaines documents de la BNF de deux types: j'ai pris les copies moi-mêmes
-> (ou bien prenant le photo ou bien scannant le microforme) ou j'ai demander la reproduction.
-> Toutes les document sont dans le domaine publique.
->
-> Je fais une recherche et projet non-commerciale en faisant le bibliographie des sources de la danse
-> ici : bib.hda.org.ru et je voudrais demander est-ce que c'est possible de mettre en ligne les documents
-> de domaine publique que j'ai reçu de la BNF?
-> J'ai déjà obtenu la permission des certaines bibliothèques.
-> Bien sur qu'on va ajouter la provenance de BNF et utilisation non-commerciale.
->
-> Dmitry
-
----
-
-> Bonjour,
->
-> Suite à votre mail, je vous informe que la Bibliothèque nationale de France vous autorise à mettre
-> sur votre site web les documents qui vous interessent.
-> Puisqu'il n'y a pas d'utilisation commerciale vous n'aurez pas de redevance à payer.
->
-> La mention cliché "Bibliothèque nationale de France ou BNF" devra figurer comme source.
->
-> Cordialement
->
-> Danet Nadège
->
-> Pôle redevance
->
-> Bibliothèque nationale de France
->
-> Département de la reproduction
->
-> Quai François Mauriac
->
-> 75706 Paris Cedex 13, France
-
-## 🇺🇸 University of North Carolina at Greensboro { #UNCG }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| UNCG | ✅ |
-
-_From an email forwarded by Susan de Guardiola._
-
-> Me:
->
-> A quick question: my Russian colleagues are very excited by the scan and would like permission
-> to post it online on a public site (not behind a passworded wall).  Would this be okay with you?
-
----
-
-> UNCG:
->
-> I am glad that you and your colleagues are pleased. UNCG owns the
-physical item, not the copyright. There are no permissions for me to
-grant - the item was scanned for your use.
-
-## 🇺🇸 Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland { #Lester-S.-Levy }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| Lester S. Levy | ✅ |
-
-> Dear Jim.
->
-> I've began to work with the images you've provided.
->
-> Actually, I'm running an online dance bibliography project located here:
->
-> https://bib.hda.org.ru/bib
->
->
-> I'd like to put some url to the items you've provided.
-> As you know, most of them are erroneously marked as copyrighted on your website. Here is an example:
-> http://levysheetmusic.mse.jhu.edu/catalog/levy:041.012
->
-> I wonder if it's okey for me to provide a link for downloading pdf obtained from Lester S. Levy collection.
-> Here is an example of such item (Lester S. Levy collection will be mentioned in the filename
-> of the downloaded item):
-> https://bib.hda.org.ru/bib/books/lindrot_1864
->
-> With best regards,
->
-> Yuriy.
-
----
-
-> Yuriy,
->
-> Please feel free to add any links you wish.
-> Since those pieces are in the public domain, they may be used in any way you wish.
->
-> The problem with the erroneously copyright-protected music is a serious one, especially for me since
-> I'm the one who gets to field indignant inquiries asking if I understand anything at all about copyright
-> (and no, your inquiry was not one of those).
-> Yes, I do have an understanding of copyright as it applies to our holdings (though I am not a lawyer),
-> but I had nothing to do with the redesign of the Levy site a couple years ago that resulted in
-> this problem.
-> I wish it could be corrected soon but, unfortunately, that will probably not happen since it would
-> require a programmer to locate the source of the problem, and then a "search and destroy" project
-> to eliminate all of the individual places where it occurs.
-> I've been told there is no money for such a clean-up project and it's a low priority in the overall
-> scheme of things.
->
-> So if you want to add these pieces to your site, please go right ahead.
-> We would appreciate a citation to the Lester S. Levy Collection of Sheet Music, Sheridan Libraries,
-> Johns Hopkins University, as the source of the original, but links to our screwed up pages would
-> probably not be needed.
-> I should note that the JScholarship version of the Levy site
-> (https://jscholarship.library.jhu.edu/handle/1774.2/2085) does not include these false copyright issues.
-> It's not as visually appealing as the main Levy site, but feel free to link to the JScholarship pages
-> where the main site is screwed up.  Best wishes.
->
->
-> James Stimpert
->
-> Senior Reference Archivist
-
-## 🇬🇧 Royal College of Music, London { #RCM }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| RCM | ✅ |
-
----
-
-> Dear Yuriy,
->
-> I've spoken to our chief librarian about the possibility of your posting an image from MS 1119
-> on a non-commercial website, and it looks as though that should be ok!
->
-> No license needed. Could you kindly attribute the image 'by permission of the Royal College of Music, London'.
->
-> All best,
->
-> Michael Mullen
-
-## 🇬🇧 The National Library of Scotland, Edinburgh { #NLS }
-
-| Alias | Можно выкладывать | Каталог |
-| --- | --- | --- |
-| NLS | ✅ | [search.nls.uk](https://search.nls.uk) |
-
-> Dear Sir / Madam,
->
-> my name is Yuriy, I am a dance historian from Moscow, Russia.
->
-> I am the author and maintainer of historical dance bibliography database: https://bib.hda.org.ru/
->
-> Along with bibliographical information, I am trying to provide digital versions of the primary sources
-> related to historical dance.
->
-> I have received the permission to make such sources available online on a non-commercial basis
-> from various institutions and libraries: Bibliothèque nationale de France, Russian State Library
-> and The Royal College of Music and others.
->
-> During my recent trip to Edinburgh I took photos of the manuscript "Contre-danse à Paris 1818"
-> which is being held at the National Library of Scotland under call number MS 3860.
->
-> I would like to kindly ask the library for permission to make this manuscript available online.
-> I will cite the National Library of Scotland in the same way as the other libraries:
-> https://bib.hda.org.ru/advanced-search?availability=available-here. Is it possible for me to do this?
->
-> Thanks in advance.
->
-> Best regards,
->
-> Yuriy.
-
----
-
-> Dear Mr Chernyshov,
->
-> Thank you very much for your message, and please accept my apologies for this late response.
-> We are happy to give permission for you to mount your images of MS.3860 online,
-> but would be grateful for an acknowledgement to the National Library of Scotland.
->
-> Since the images are your own, we would not have to issue you with a licence.
-> However, please note that – with no known author – this manuscript may fall into the category
-> of "orphan works" and may therefore still be in copyright in spite of its age.
->
-> If convenient to you, I would be grateful for a link to the images, once they are online.
->
-> With best wishes,
->
-> Dr Ulrike Hogg
->
-> Curator (Gaelic, Early Modern & Music Manuscripts) | Archives & Manuscript Collections
-
-## 🇬🇧 Newcastle University Library { #NCL }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| NCL | ✅ |
-
-Excerpts from
-[Copyright, Permission, Acknowledgements and Data Protection](https://www.ncl.ac.uk/library/special-collections/using/copyright.php)
-and [Copy and Re-Use Service](https://www.ncl.ac.uk/library/special-collections/using/scanning-photocopying.php)
-pages provided by the library.
-
-> **Re-Use**
->
-> The library has no additional charges for commercial and non-commercial reuse. However you must:
->
-> * Seek copyright permission from the creator or designated third party where copyright exemptions do not apply.
-> * Acknowledge the University Library appropriately.
->
-> For specific guidance on copyright and acknowledgements, please see our Copyright, Permission,
-> Acknowledgements and Data Protection page.
-
-> **Copyright in Special Collections and Archives**
->
-> Although we may physically hold material in our collections for research purposes,
-> UK legislation may not allow ourselves or others to copy because the intellectual property still
-> belongs to the creator or a designated third party.
->
-> Exceptions to this do apply, including:
->
-> * Where copyright covering the material has expired
-> * Where copying is covered by 'fair dealing' exemptions (this is where the copy is for the purpose
->   of research or private study only)
-> * Where copying is for educational use within a teaching environment
->
-> Where none of these apply copyright permission must be obtained from the copyright owner before any
-> copying from our rare books and archives takes place.
-
 ## 🇦🇹 Univertätsbibliothek Salzburg / Derra de Moroda Tanzarchiv, Salzburg { #UBS }
 
 | Alias | Можно выкладывать |
@@ -451,6 +105,185 @@ _Hosting capability was not evaluated yet._
 
 _Hosting capability was not evaluated yet._
 
+## 🇩🇪 Universitätsbibliothek der Universität der Künste Berlin { #UDK }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| UDK | ✅ |
+
+Excerpts from the [Digitization request](https://www.udk-berlin.de/en/service/university-library/how-do-i-use-the-library/copying-scanning-printing/tdigitization-request/) page provided by the library and from the [section 60c](https://www.gesetze-im-internet.de/englisch_urhg/englisch_urhg.html#p0479) of the German Copyright Act (UrhG) it refers to.
+
+> **Costs and delivery**
+>
+> The service is free of charge until further notice.
+>
+> You will receive an e-mail with a download link upon completion.
+> This can take up to 14 days.
+
+> The university library reserves the right to cancel requests due to legal or conservational reasons.
+> Please note — requests within the scope of UrhG § 60c can be fulfilled for UdK members only.
+
+The service is limited to the non-loan items kept in the closed, the external and the rare book stacks.
+Neither the digitization request page nor the general library rules grant or withhold the right to republish the scans:
+the library claims no rights of its own over the digitized public domain material and
+leaves the user responsible for the compliance with the copyright law.
+Scans of the public domain books can therefore be put online,
+while the items provided under UrhG § 60c (fulfilled for the UdK members only) can not.
+
+## 🇫🇷 Bibliothèque nationale de France, Paris { #BNF }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| BNF | ✅ |
+
+_From an email forwarded by Dmitry Filimonov._
+
+> Bonjour!
+>
+> J'ai les copies des certaines documents de la BNF de deux types: j'ai pris les copies moi-mêmes
+> (ou bien prenant le photo ou bien scannant le microforme) ou j'ai demander la reproduction.
+> Toutes les document sont dans le domaine publique.
+>
+> Je fais une recherche et projet non-commerciale en faisant le bibliographie des sources de la danse
+> ici : bib.hda.org.ru et je voudrais demander est-ce que c'est possible de mettre en ligne les documents
+> de domaine publique que j'ai reçu de la BNF?
+> J'ai déjà obtenu la permission des certaines bibliothèques.
+> Bien sur qu'on va ajouter la provenance de BNF et utilisation non-commerciale.
+>
+> Dmitry
+
+---
+
+> Bonjour,
+>
+> Suite à votre mail, je vous informe que la Bibliothèque nationale de France vous autorise à mettre
+> sur votre site web les documents qui vous interessent.
+> Puisqu'il n'y a pas d'utilisation commerciale vous n'aurez pas de redevance à payer.
+>
+> La mention cliché "Bibliothèque nationale de France ou BNF" devra figurer comme source.
+>
+> Cordialement
+>
+> Danet Nadège
+>
+> Pôle redevance
+>
+> Bibliothèque nationale de France
+>
+> Département de la reproduction
+>
+> Quai François Mauriac
+>
+> 75706 Paris Cedex 13, France
+
+## 🇬🇧 Newcastle University Library { #NCL }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| NCL | ✅ |
+
+Excerpts from
+[Copyright, Permission, Acknowledgements and Data Protection](https://www.ncl.ac.uk/library/special-collections/using/copyright.php)
+and [Copy and Re-Use Service](https://www.ncl.ac.uk/library/special-collections/using/scanning-photocopying.php)
+pages provided by the library.
+
+> **Re-Use**
+>
+> The library has no additional charges for commercial and non-commercial reuse. However you must:
+>
+> * Seek copyright permission from the creator or designated third party where copyright exemptions do not apply.
+> * Acknowledge the University Library appropriately.
+>
+> For specific guidance on copyright and acknowledgements, please see our Copyright, Permission,
+> Acknowledgements and Data Protection page.
+
+> **Copyright in Special Collections and Archives**
+>
+> Although we may physically hold material in our collections for research purposes,
+> UK legislation may not allow ourselves or others to copy because the intellectual property still
+> belongs to the creator or a designated third party.
+>
+> Exceptions to this do apply, including:
+>
+> * Where copyright covering the material has expired
+> * Where copying is covered by 'fair dealing' exemptions (this is where the copy is for the purpose
+>   of research or private study only)
+> * Where copying is for educational use within a teaching environment
+>
+> Where none of these apply copyright permission must be obtained from the copyright owner before any
+> copying from our rare books and archives takes place.
+
+## 🇬🇧 The National Library of Scotland, Edinburgh { #NLS }
+
+| Alias | Можно выкладывать | Каталог |
+| --- | --- | --- |
+| NLS | ✅ | [search.nls.uk](https://search.nls.uk) |
+
+> Dear Sir / Madam,
+>
+> my name is Yuriy, I am a dance historian from Moscow, Russia.
+>
+> I am the author and maintainer of historical dance bibliography database: https://bib.hda.org.ru/
+>
+> Along with bibliographical information, I am trying to provide digital versions of the primary sources
+> related to historical dance.
+>
+> I have received the permission to make such sources available online on a non-commercial basis
+> from various institutions and libraries: Bibliothèque nationale de France, Russian State Library
+> and The Royal College of Music and others.
+>
+> During my recent trip to Edinburgh I took photos of the manuscript "Contre-danse à Paris 1818"
+> which is being held at the National Library of Scotland under call number MS 3860.
+>
+> I would like to kindly ask the library for permission to make this manuscript available online.
+> I will cite the National Library of Scotland in the same way as the other libraries:
+> https://bib.hda.org.ru/advanced-search?availability=available-here. Is it possible for me to do this?
+>
+> Thanks in advance.
+>
+> Best regards,
+>
+> Yuriy.
+
+---
+
+> Dear Mr Chernyshov,
+>
+> Thank you very much for your message, and please accept my apologies for this late response.
+> We are happy to give permission for you to mount your images of MS.3860 online,
+> but would be grateful for an acknowledgement to the National Library of Scotland.
+>
+> Since the images are your own, we would not have to issue you with a licence.
+> However, please note that – with no known author – this manuscript may fall into the category
+> of "orphan works" and may therefore still be in copyright in spite of its age.
+>
+> If convenient to you, I would be grateful for a link to the images, once they are online.
+>
+> With best wishes,
+>
+> Dr Ulrike Hogg
+>
+> Curator (Gaelic, Early Modern & Music Manuscripts) | Archives & Manuscript Collections
+
+## 🇬🇧 Royal College of Music, London { #RCM }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| RCM | ✅ |
+
+---
+
+> Dear Yuriy,
+>
+> I've spoken to our chief librarian about the possibility of your posting an image from MS 1119
+> on a non-commercial website, and it looks as though that should be ok!
+>
+> No license needed. Could you kindly attribute the image 'by permission of the Royal College of Music, London'.
+>
+> All best,
+>
+> Michael Mullen
+
 ## 🇬🇧 Royal Scottish Country Dance Society, Edinburgh { #RSCDS }
 
 | Alias | Можно выкладывать |
@@ -458,23 +291,6 @@ _Hosting capability was not evaluated yet._
 | RSCDS | ❓ |
 
 _Hosting capability was not evaluated yet._
-
-## 🇱🇻 Latvijas Nacionālā bibliotēka { #LNB }
-
-| Alias | Можно выкладывать |
-| --- | --- |
-| LNB | ✅ |
-
-Excerpts from [Digitization on Request] rules of the library and the
-[Copyright Law](https://likumi.lv/ta/en/en/id/5138-copyright-law) of the Republic.
-
-> Lietotajam ir tiesības saņemt darba digitālo kopiju no LNB krājuma materiāliem un lietot to,
-> ievērojot Latvijas Republikā spēkā esošos normatīvos aktus un Autortiesību likumu.
-
----
-
-> Copyright shall be in effect for the entire lifetime of an author and for 70 years after the death
-> of an author, except for the cases specified in Section 37 of this Law.
 
 ## 🇮🇹 Biblioteca civica del comune del Rovereto
 
@@ -511,30 +327,140 @@ Excerpts from [Digitization on Request] rules of the library and the
 >
 > Thomas DC
 
-## 🇩🇪 Universitätsbibliothek der Universität der Künste Berlin { #UDK }
+## 🇱🇻 Latvijas Nacionālā bibliotēka { #LNB }
 
 | Alias | Можно выкладывать |
 | --- | --- |
-| UDK | ✅ |
+| LNB | ✅ |
 
-Excerpts from the [Digitization request](https://www.udk-berlin.de/en/service/university-library/how-do-i-use-the-library/copying-scanning-printing/tdigitization-request/) page provided by the library and from the [section 60c](https://www.gesetze-im-internet.de/englisch_urhg/englisch_urhg.html#p0479) of the German Copyright Act (UrhG) it refers to.
+Excerpts from [Digitization on Request] rules of the library and the
+[Copyright Law](https://likumi.lv/ta/en/en/id/5138-copyright-law) of the Republic.
 
-> **Costs and delivery**
+> Lietotajam ir tiesības saņemt darba digitālo kopiju no LNB krājuma materiāliem un lietot to,
+> ievērojot Latvijas Republikā spēkā esošos normatīvos aktus un Autortiesību likumu.
+
+---
+
+> Copyright shall be in effect for the entire lifetime of an author and for 70 years after the death
+> of an author, except for the cases specified in Section 37 of this Law.
+
+## 🇷🇺 Российская национальная библиотека, Санкт-Петербург { #NLR }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| NLR | ✅ |
+
+> Здравствуйте!
 >
-> The service is free of charge until further notice.
+> <...>
 >
-> You will receive an e-mail with a download link upon completion.
-> This can take up to 14 days.
+> Скажите, пожалуйста, могу ли я выложить посканированную книгу на своём персональном некоммерческом сайте для открытого доступа?
+>
+>
+> Юрий
 
-> The university library reserves the right to cancel requests due to legal or conservational reasons.
-> Please note — requests within the scope of UrhG § 60c can be fulfilled for UdK members only.
+---
 
-The service is limited to the non-loan items kept in the closed, the external and the rare book stacks.
-Neither the digitization request page nor the general library rules grant or withhold the right to republish the scans:
-the library claims no rights of its own over the digitized public domain material and
-leaves the user responsible for the compliance with the copyright law.
-Scans of the public domain books can therefore be put online,
-while the items provided under UrhG § 60c (fulfilled for the UdK members only) can not.
+> Здравствуйте, Юрий!
+>
+> Согласно нашим правилам, электронные копии, предоставленный Службой ЭДД РНБ,
+> не подлежат воспроизведению, тиражированию и распространению с целью извлечения прибыли.
+>
+> При соблюдении этих условий, полученная копия может быть размещена на Вашем персональном сайте
+> для общего доступа, так как заказанный Вами документ является произведением общественного достояния
+> и на него не распространяется авторское право.
+>
+> С уважением,
+>
+> Валерия Николаевна Дворецкова,
+>
+> заведующая Службой электронной доставки документов
+>
+> Российская национальная библиотека
+
+## 🇷🇺 Библиотека российской академии наук, Санкт-Петербург { #RASL }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| RASL | ✅ |
+
+> Здравствуйте!
+>
+> Подскажите, пожалуйста (на сайте БАН информации не нашёл), есть ли какие-то ограничения на копии
+> документов, полученных из фондов БАН (такие ограничения практикуют европейские библиотеки,
+> в российских с такими практиками я не сталкивался).
+> Интересуют ограничения за исключением авторских прав
+> (документы, о которых идёт речь, опубликованы давно и не подпадают под действие закона об авторском праве).
+>
+> Могу ли я выложить полученные копии на личном некоммерческом сайте для свободного скачивания?
+>
+> Спасибо за информацию.
+>
+> Юрий.
+
+---
+
+> Добрый день, Юрий!
+>
+> Размещение информации на сайте Вашей организации находится не в нашей юрисдикции.
+>
+> Копия книги, полученная в нашей библиотеке, действительно не подпадает под действие закона
+> об авторском праве.
+>
+> И размещение на сайте не преследует коммерческие цели.
+>
+> С уважением, Марина Павловна.
+>
+> Зав. читальными залами ОФО.
+
+## 🇷🇺 Российская государственная библиотека, Москва { #RSL }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| RSL | ✅ |
+
+_Из переписки на портале udo.rsl.ru._
+
+> Здравствуйте!
+>
+> Скажите, могу ли я выложить эту и другие заказанные у вас книги на личном сайте в открытый доступ?
+>
+> Насколько мне известно, в иностранных библиотеках такое ограничение действует. Есть ли оно у РГБ?
+>
+> Спасибо за разъяснение.
+
+---
+
+> Возможно с указанием источника – РГБ и без коммерческого использования
+
+## 🇷🇺 Российская государственная историческая библиотека: { #SHPL }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| SHPL | ✅ |
+
+> Здравствуйте!
+>
+> Могу ли я выложить сканы этой книги у себя на сайте (https://bib.hda.org.ru/) для некоммерческого использования?
+>
+> Юрий.
+
+---
+
+> На данное издание (полученное по каналам ЭДД, но не из электронной библиотеки) не распространяется
+> действие авторского права, Вы можете размещать его свободно.
+>
+> С уважением,
+>
+> Служба электронной доставки  ГПИБ России.
+
+## 🇺🇸 Harold B. Lee Library, Brigham Young University, Provo, Utah { #BYU }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| BYU | ✅ |
+
+The library digitizes its public domain holdings and makes them freely available via the [Internet Archive](https://archive.org/details/brighamyounguniversity).
 
 ## 🇺🇸 Houston Public Library, Houston, Texas { #HPL }
 
@@ -578,10 +504,84 @@ The rights statement of the record itself reads
 "This material is in the public domain. Please credit the Houston Metropolitan Research Center, Houston, Texas"
 (the Houston Metropolitan Research Center is nowadays known as the Houston History Research Center).
 
-## 🇺🇸 Harold B. Lee Library, Brigham Young University, Provo, Utah { #BYU }
+## 🇺🇸 Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland { #Lester-S.-Levy }
 
 | Alias | Можно выкладывать |
 | --- | --- |
-| BYU | ✅ |
+| Lester S. Levy | ✅ |
 
-The library digitizes its public domain holdings and makes them freely available via the [Internet Archive](https://archive.org/details/brighamyounguniversity).
+> Dear Jim.
+>
+> I've began to work with the images you've provided.
+>
+> Actually, I'm running an online dance bibliography project located here:
+>
+> https://bib.hda.org.ru/bib
+>
+>
+> I'd like to put some url to the items you've provided.
+> As you know, most of them are erroneously marked as copyrighted on your website. Here is an example:
+> http://levysheetmusic.mse.jhu.edu/catalog/levy:041.012
+>
+> I wonder if it's okey for me to provide a link for downloading pdf obtained from Lester S. Levy collection.
+> Here is an example of such item (Lester S. Levy collection will be mentioned in the filename
+> of the downloaded item):
+> https://bib.hda.org.ru/bib/books/lindrot_1864
+>
+> With best regards,
+>
+> Yuriy.
+
+---
+
+> Yuriy,
+>
+> Please feel free to add any links you wish.
+> Since those pieces are in the public domain, they may be used in any way you wish.
+>
+> The problem with the erroneously copyright-protected music is a serious one, especially for me since
+> I'm the one who gets to field indignant inquiries asking if I understand anything at all about copyright
+> (and no, your inquiry was not one of those).
+> Yes, I do have an understanding of copyright as it applies to our holdings (though I am not a lawyer),
+> but I had nothing to do with the redesign of the Levy site a couple years ago that resulted in
+> this problem.
+> I wish it could be corrected soon but, unfortunately, that will probably not happen since it would
+> require a programmer to locate the source of the problem, and then a "search and destroy" project
+> to eliminate all of the individual places where it occurs.
+> I've been told there is no money for such a clean-up project and it's a low priority in the overall
+> scheme of things.
+>
+> So if you want to add these pieces to your site, please go right ahead.
+> We would appreciate a citation to the Lester S. Levy Collection of Sheet Music, Sheridan Libraries,
+> Johns Hopkins University, as the source of the original, but links to our screwed up pages would
+> probably not be needed.
+> I should note that the JScholarship version of the Levy site
+> (https://jscholarship.library.jhu.edu/handle/1774.2/2085) does not include these false copyright issues.
+> It's not as visually appealing as the main Levy site, but feel free to link to the JScholarship pages
+> where the main site is screwed up.  Best wishes.
+>
+>
+> James Stimpert
+>
+> Senior Reference Archivist
+
+## 🇺🇸 University of North Carolina at Greensboro { #UNCG }
+
+| Alias | Можно выкладывать |
+| --- | --- |
+| UNCG | ✅ |
+
+_From an email forwarded by Susan de Guardiola._
+
+> Me:
+>
+> A quick question: my Russian colleagues are very excited by the scan and would like permission
+> to post it online on a public site (not behind a passworded wall).  Would this be okay with you?
+
+---
+
+> UNCG:
+>
+> I am glad that you and your colleagues are pleased. UNCG owns the
+physical item, not the copyright. There are no permissions for me to
+grant - the item was scanned for your use.

@@ -144,9 +144,9 @@ then touch the uwsgi reload file and ping `/ping`.
     `tools/validate.py` checks the fullname is present in `note` for every self-served url,
     so changing a fullname requires updating all such notes.
   - Mentions of a library in entries whose copies are hosted elsewhere stay plain text.
-  - Sections in `docs/common/libraries.md` are not sorted yet.
-    Insert a new section into the longest run of consecutive sections
-    already sorted by country (ISO code of the flag), then by alias.
+  - Sections in `docs/common/libraries.md` are sorted by country (ISO code of the flag),
+    then by alias.
+    Keep this order when inserting a new section.
     Hosting status is ✅ (allowed), 🚫 (denied) or ❓
     (`_Hosting capability was not evaluated yet._`).
 - Docs are primarily Russian.
