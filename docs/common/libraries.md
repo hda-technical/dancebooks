@@ -504,11 +504,11 @@ The rights statement of the record itself reads
 "This material is in the public domain. Please credit the Houston Metropolitan Research Center, Houston, Texas"
 (the Houston Metropolitan Research Center is nowadays known as the Houston History Research Center).
 
-## 🇺🇸 Lester S. Levy Sheet Music Collection, John Hopkins' University, Baltimore, Maryland { #Lester-S.-Levy }
+## 🇺🇸 Lester S. Levy Sheet Music Collection, Johns Hopkins University, Baltimore, Maryland { #JHU }
 
 | Alias | Можно выкладывать |
 | --- | --- |
-| Lester S. Levy | ✅ |
+| JHU | ✅ |
 
 > Dear Jim.
 >
