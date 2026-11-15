@@ -17,13 +17,14 @@ def _gallica_manifest_url(id):
 def get_gallica_book(id, *, from_page=1, to_page=None):
 	manifest_url = _gallica_manifest_url(id)
 	output_folder = utils.make_output_folder("gallica", id)
-	# gallica.bnf.fr is guarded by Cloudflare which blocks non-browser clients
+	# gallica.bnf.fr is guarded by Cloudflare which blocks non-browser clients.
+	# Since 2026-11 it blocks the fingerprint of curl_cffi Firefox impersonation too.
 	iiif.download_book_fast_v2(
 		manifest_url,
 		output_folder,
 		from_page=from_page,
 		to_page=to_page,
-		impersonate="firefox",
+		impersonate="chrome",
 	)
 
 
