@@ -33,6 +33,9 @@
 [1915, us] Louis Harvy Chalif - Dances, tome 1.pdf
 
 # Для переобработки требуется доступ к бэкапам в цвете
+[1700, fr] Louis Pécour - La seconde nouvelle mariée.pdf
+[1703, de] Samuel Rudolph Behr - Maitre de danse (SLUB copy).pdf
+[1778, fr] Les plaisirs du bal de Mannheim.pdf
 [1847, pl] Karol Czerniawski - Charakterystyka tańców.pdf
 [1853, fr] Eugène Guérard Laborde - Le cotillon.pdf
 [1860, pl] Karol Czerniawski - O tańcach narodowych.pdf
