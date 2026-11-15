@@ -35,6 +35,8 @@
 # Для переобработки требуется доступ к бэкапам в цвете
 [1700, fr] Louis Pécour - La seconde nouvelle mariée.pdf
 [1703, de] Samuel Rudolph Behr - Maitre de danse (SLUB copy).pdf
+[177-, fr] Mons dances sur les hörmeaux contredance (UBS copy).pdf
+[1770, en] Giovanni Battista Gherardi - Twelve New Allemandes and Twelve New Minuets (UBS copy).pdf
 [1778, fr] Les plaisirs du bal de Mannheim.pdf
 [1847, pl] Karol Czerniawski - Charakterystyka tańców.pdf
 [1853, fr] Eugène Guérard Laborde - Le cotillon.pdf
@@ -56,6 +58,7 @@
 [1903, ru] Лев Игнатьевич Праусс - Турбилион (RSL copy).pdf
 [1906, ru] Иван Зотович Борисов - Новый бальный танец «Крестьяночка» (Georg copy).pdf
 [1912, ru] Александр Александрович Царман - Хавтайм футбол (RSL copy).pdf
+[1936, ru] Массовые и бальные танцы (RSL copy).pdf
 [1938, ee] R. Põldmäe, H. Tampere - Valimik eesti rahvaltantse.pdf
 
 # Для переобработки требуется пересканирование в цвете
