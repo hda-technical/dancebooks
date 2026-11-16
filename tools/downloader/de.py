@@ -152,29 +152,12 @@ def get_goettingen(*, id):
 def get_haab(*, id):
 	manifest_url = f"https://haab-digital.klassik-stiftung.de/viewer/api/v1/records/{id}/manifest/"
 	output_folder = utils.make_output_folder("haab", id)
-	# Image ids can not be guessed: numbering does not necessarily start with 0001,
-	# and restricted pages are answered with HTTP 403 rather than HTTP 404.
-	manifest = utils.get_json(manifest_url)
-	canvases = manifest["sequences"][0]["canvases"]
-	print(f"Will download {len(canvases)} pages")
-	for page, canvas in enumerate(canvases, start=1):
-		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
-		if os.path.exists(output_filename):
-			print(f"Skip downloading existing page #{page:04d}")
-			continue
-		# download_book_fast_v2 reuses the url baked into the manifest, which is
-		# a 283x400 thumbnail here (canvas resource @id), or even an Anubis-protected
-		# html page (canvas rendering @id, the one _download_image_fast_v2 prefers).
-		# Only the Image API service can be asked for the full size.
-		base_url = canvas["images"][-1]["resource"]["service"]["@id"]
-		print(f"Downloading page #{page:04d} from {base_url}")
-		# Canvas size matches the one info.json reports, making the extra request redundant
-		iiif.download_image_fast_v1(
-			base_url,
-			output_filename,
-			width=canvas["width"],
-			height=canvas["height"],
-		)
+	iiif.download_book_fast_v2(
+		manifest_url,
+		output_folder,
+		# canvas resources are 283x400 thumbnails
+		kind=iiif.ImageKind.SERVICE,
+	)
 
 
 def get_hab_book(*, id):

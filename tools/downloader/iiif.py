@@ -79,17 +79,14 @@ def download_book(manifest: str | dict, output_folder):
 		download_image(base_url, output_filename)
 
 
-def download_image_fast_v1(base_url, output_filename, *, width=None, height=None):
+def download_image_fast_v1(base_url, output_filename):
 	"""
 	Download image as a single tile.
-	Image size is requested from info.json unless it is known by the caller
-	(certain manifests, e. g. haab ones, state it for every canvas).
 	"""
-	if (width is None) or (height is None):
-		info_url = f"{base_url}/info.json"
-		info = utils.get_json(info_url)
-		width = info["width"]
-		height = info["height"]
+	info_url = f"{base_url}/info.json"
+	info = utils.get_json(info_url)
+	width = info["width"]
+	height = info["height"]
 	img_url = f"{base_url}/0,0,{width},{height}/{width},{height}/0/default.jpg"
 	utils.get_binary(output_filename, img_url)
 
