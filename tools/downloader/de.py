@@ -307,19 +307,16 @@ def get_kassel(*, id):
 
 
 def get_mv(*, id):
-	# it looks like Mecklenburg-Vorpommern does not use manifest.json
+	manifest_url = f"https://www.digitale-bibliothek-mv.de/viewer/api/v1/records/{id}/manifest/"
 	output_folder = utils.make_output_folder("mv", id)
-	for page in range(1, 1000):
-		output_filename = utils.make_output_filename(output_folder, page)
-		if os.path.isfile(output_filename):
-			print(f"Skipping existing page {page}")
-			continue
-		try:
-			base_url = f"http://www.digitale-bibliothek-mv.de/viewer/api/v1/records/{id}/files/images/{page:08d}.tif"
-			iiif.download_image(base_url, output_filename)
-		except ValueError:
-			# stop upon first HTTP 404 response
-			break
+	iiif.download_book_fast_v2(
+		manifest_url,
+		output_folder,
+		# canvas resources are 400px thumbnails
+		kind=iiif.ImageKind.SERVICE,
+		# the stored master file is sent as is, unlike the re-encoded jpg
+		extension="tif",
+	)
 
 
 def get_gwlb(*, id):

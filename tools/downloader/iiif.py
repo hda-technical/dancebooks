@@ -114,13 +114,13 @@ class ImageKind(enum.Enum):
 	RENDERING = enum.auto()
 
 
-def _get_image_url_v2(canvas, kind: ImageKind):
+def _get_image_url_v2(canvas, kind: ImageKind, *, extension):
 	resource = canvas["images"][-1]["resource"]
 	match kind:
 		case ImageKind.RESOURCE:
 			return resource["@id"]
 		case ImageKind.SERVICE:
-			return f"{resource['service']['@id']}/full/max/0/default.jpg"
+			return f"{resource['service']['@id']}/full/max/0/default.{extension}"
 		case ImageKind.RENDERING:
 			for rendering in canvas.get("rendering", []):
 				if rendering.get("format", "").startswith("image/"):
@@ -133,10 +133,11 @@ def _download_image_fast_v2(
 	page,
 	output_filename,
 	*,
-	kind=ImageKind.RESOURCE,
+	kind,
+	extension,
 	**rq_kvargs,
 ):
-	url = _get_image_url_v2(metadata, kind)
+	url = _get_image_url_v2(metadata, kind, extension=extension)
 	print(f"Downloading page #{page:04d} from {url}")
 	utils.get_binary(output_filename, url, **rq_kvargs)
 
@@ -148,6 +149,7 @@ def download_book_fast_v2(
 	from_page=1,
 	to_page=None,
 	kind=ImageKind.RESOURCE,
+	extension="jpg",
 	**rq_kvargs,
 ):
 	"""
@@ -161,6 +163,9 @@ def download_book_fast_v2(
 	(`to_page` defaults to the last page of the book).
 
 	`kind` selects the url each page is downloaded from (see ImageKind).
+
+	`extension` is the format requested from the image service for ImageKind.SERVICE.
+	Supported formats are listed in `formats` / `extraFormats` field of `{service}/info.json`.
 	"""
 	if isinstance(manifest, str):
 		manifest = utils.get_json(manifest, **rq_kvargs)
@@ -172,7 +177,7 @@ def download_book_fast_v2(
 	print(f"Will download {to_page - from_page + 1} pages")
 	for page in range(from_page, to_page + 1):
 		metadata = canvases[page - 1]
-		output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+		output_filename = utils.make_output_filename(output_folder, page, extension=extension)
 		if os.path.isfile(output_filename):
 			print(f"Skip downloading existing page #{page:04d}")
 			continue
@@ -181,6 +186,7 @@ def download_book_fast_v2(
 			page=page,
 			output_filename=output_filename,
 			kind=kind,
+			extension=extension,
 			**rq_kvargs,
 		)
 
@@ -191,6 +197,7 @@ def download_page_fast_v2(
 	*,
 	page,
 	kind=ImageKind.RESOURCE,
+	extension="jpg",
 	**rq_kvargs,
 ):
 	"""
@@ -202,12 +209,13 @@ def download_page_fast_v2(
 	"""
 	manifest = utils.get_json(manifest_url, **rq_kvargs)
 	canvases = manifest["sequences"][0]["canvases"]
-	output_filename = utils.make_output_filename(output_folder, page, extension="jpg")
+	output_filename = utils.make_output_filename(output_folder, page, extension=extension)
 	_download_image_fast_v2(
 		metadata=canvases[page],
 		page=page,
 		output_filename=output_filename,
 		kind=kind,
+		extension=extension,
 		**rq_kvargs,
 	)
 
