@@ -105,6 +105,11 @@ def _get_retry_after(ex):
 
 
 def retry(try_count, delay=0, delay_backoff=1):
+	"""
+	Retries the decorated function, which passes its kwargs to make_request.
+
+	HTTP 404 is retried if `retry_not_found` is passed (see make_request).
+	"""
 	def actual_decorator(func):
 		@functools.wraps(func)
 		def do_retry(*args, **kwargs):
@@ -117,11 +122,14 @@ def retry(try_count, delay=0, delay_backoff=1):
 					# Most 4xx responses (i. e. the HTTP 404 marking the end of the book)
 					# won't get any better upon retrying.
 					# Reraise HTTPError as is, letting the caller handle it
+					retriable_status_codes = RETRIABLE_STATUS_CODES
+					if kwargs.get("retry_not_found"):
+						retriable_status_codes = retriable_status_codes | {404}
 					if (
 						isinstance(ex, HTTP_ERRORS)
 						and ex.response is not None
 						and 400 <= ex.response.status_code < 500
-						and ex.response.status_code not in RETRIABLE_STATUS_CODES
+						and ex.response.status_code not in retriable_status_codes
 					):
 						raise
 					sleep_for = max(current_delay, _get_retry_after(ex))
@@ -216,7 +224,13 @@ def solve_anubis_challenge(response: requests.Response):
 
 # FIXME: retry decorator hides HTTPError raised by raise_for_status.
 # @retry(try_count=3)
-def make_request(rq: str | requests.Request, *args, impersonate: str | None = None, **kwargs):
+def make_request(
+	rq: str | requests.Request,
+	*args,
+	impersonate: str | None = None,
+	retry_not_found: bool = False,
+	**kwargs,
+):
 	"""
 	Performs the request and returns requests.Response object.
 	Accepts both raw urls and prepared requests
@@ -226,6 +240,11 @@ def make_request(rq: str | requests.Request, *args, impersonate: str | None = No
 	(see _make_impersonating_request).
 	Only raw urls are accepted in this case.
 	"""
+	if retry_not_found:
+		if not isinstance(rq, str):
+			raise TypeError(f"Only raw urls are supported when retrying HTTP 404, got {rq!r}")
+		separator = "&" if "?" in rq else "?"
+		rq = f"{rq}{separator}t={time.time_ns()}"
 	method = kwargs.pop("method", "GET")
 	if impersonate is not None:
 		return _make_impersonating_request(rq, *args, browser=impersonate, method=method, **kwargs)
