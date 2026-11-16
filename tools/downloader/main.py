@@ -372,7 +372,7 @@ def encyclopedie(volume, page):
 
 
 @main.command()
-@click.option("--id", help="Id of the book to be downloaded (e. g. 'PPN880809493')", required=True)
+@click.option("--id", help="Id of the book to be downloaded (e. g. `PPN880809493`)", required=True)
 def de_mv(id):
 	"""
 	book from www.digitale-bibliothek-mv.de
