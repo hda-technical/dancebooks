@@ -79,18 +79,6 @@ def download_book(manifest: str | dict, output_folder):
 		download_image(base_url, output_filename)
 
 
-def download_image_fast_v1(base_url, output_filename):
-	"""
-	Download image as a single tile.
-	"""
-	info_url = f"{base_url}/info.json"
-	info = utils.get_json(info_url)
-	width = info["width"]
-	height = info["height"]
-	img_url = f"{base_url}/0,0,{width},{height}/{width},{height}/0/default.jpg"
-	utils.get_binary(output_filename, img_url)
-
-
 class ImageKind(enum.Enum):
 	"""
 	Kind of the page image to be downloaded,
