@@ -359,6 +359,10 @@ def _read_exceptions(path: pathlib.Path) -> set[str]:
 	return result
 
 
+def _log(*args) -> None:
+	print(*args, file=sys.stderr)
+
+
 def _parse_threshold(ctx, param, value: str | None) -> int | None:
 	"""
 	click option callback, turning the option value into the size in bytes.
@@ -393,6 +397,8 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 	having more bytes per page than the threshold (the median one, unless set explicitly).
 
 	Files listed in exceptions are never suggested.
+
+	Candidates are printed to stdout, one per line, everything else goes to stderr.
 	"""
 	PROGRESS_INTERVAL = 5
 
@@ -409,9 +415,9 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 			skipped += 1
 			continue
 		paths.append(path)
-	print(
-		f"Listed {len(paths)} files at {directory} in {format_duration(time.monotonic() - started)}, skipped {skipped} excluded ones",
-		file=sys.stderr,
+	_log(
+		f"Listed {len(paths)} files at {directory} in {format_duration(time.monotonic() - started)}, "
+		f"skipped {skipped} excluded ones"
 	)
 
 	candidates: list[PdfStats] = []
@@ -421,7 +427,7 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 		results = zip(paths, executor.map(get_pdf_stats, paths, chunksize=16))
 		for inspected, (path, stats) in enumerate(results, start=1):
 			if isinstance(stats, str):
-				print(f"Skip {path.relative_to(directory)}: {stats}", file=sys.stderr)
+				_log(f"Skip {path.relative_to(directory)}: {stats}")
 			elif stats is not None:
 				candidates.append(stats)
 
@@ -430,13 +436,12 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 				reported = now
 				elapsed = now - inspection_started
 				left = elapsed / inspected * (len(paths) - inspected)
-				print(
+				_log(
 					f"Inspected {inspected}/{len(paths)} files ({inspected / elapsed:.1f} files/s), "
 					f"{len(candidates)} matching so far, "
-					f"elapsed {format_duration(elapsed)}, left {format_duration(left)}",
-					file=sys.stderr,
+					f"elapsed {format_duration(elapsed)}, left {format_duration(left)}"
 				)
-	print(
+	_log(
 		f"Inspected {len(paths)} files in {format_duration(time.monotonic() - inspection_started)}, "
 		f"{len(candidates)} of them are colored jpeg-based ones not yet optimized by JPEGmini"
 		+ (f" above {utils.pretty_print_file_size(threshold)} per page" if threshold is not None else "")
@@ -444,20 +449,25 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 
 	if threshold is None and candidates:
 		threshold = statistics.median(stats.bytes_per_page for stats in candidates)
-		print(f"Their median is {utils.pretty_print_file_size(threshold)} per page")
+		_log(f"Their median is {utils.pretty_print_file_size(threshold)} per page")
 		candidates = [stats for stats in candidates if stats.bytes_per_page > threshold]
+	if not candidates:
+		_log(f"No candidates found at {directory}, nothing to optimize")
+		_log(f"Done in {format_duration(time.monotonic() - started)}")
+		return
+
 	# group candidates by directory, then sort by name (i. e. by year),
 	# plain character comparison places [190-, ...] after [1899, ...] and before [1900, ...]
 	# since "-" precedes the digits
 	candidates.sort(key=lambda stats: (stats.path.parent.parts, stats.path.name))
-	print(f"Found {len(candidates)} candidates above {utils.pretty_print_file_size(threshold or 0)} per page:")
+	_log(f"Found {len(candidates)} candidates above {utils.pretty_print_file_size(threshold)} per page")
 	for stats in candidates:
 		print(
 			f"{utils.pretty_print_file_size(stats.bytes_per_page):>10}/page "
 			f"{utils.pretty_print_file_size(stats.size):>10} "
 			f"{stats.pages:6d} pages  {stats.path.relative_to(directory)}"
 		)
-	print(f"Done in {format_duration(time.monotonic() - started)}", file=sys.stderr)
+	_log(f"Done in {format_duration(time.monotonic() - started)}")
 
 
 if __name__ == "__main__":
