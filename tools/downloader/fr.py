@@ -22,6 +22,9 @@ def get_gallica_book(id, *, from_page=1, to_page=None):
 		output_folder,
 		from_page=from_page,
 		to_page=to_page,
+		# Gallica serves images from jp2, everything else is a transcode
+		kind=iiif.ImageKind.SERVICE,
+		extension="jp2",
 		# Gallica sporadically answers HTTP 404 for existing pages, Cloudflare caches it for 4 hours
 		retry_not_found=True,
 		# Cloudflare blocks non-browser clients, including curl_cffi Firefox impersonation
