@@ -53,4 +53,9 @@ def get_npg(*, id):
 	metadata_url = f"{base_url}.dzi"
 	output_filename = utils.make_output_filename(".", f"npg_{id}", extension="bmp")
 	deep_zoom.download_image(output_filename, metadata_url, url_maker)
-	
+
+
+def get_vam(*, id):
+	output_folder = utils.make_output_folder("vam", id)
+	manifest_url = f"https://iiif.vam.ac.uk/collections/{id}/manifest.json"
+	iiif.download_book_fast_v2(manifest_url, output_folder)

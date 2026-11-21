@@ -580,6 +580,16 @@ def uk_npg(id):
 	uk.get_npg(id=id)
 
 
+@main.command()
+@click.option("--id", help="Id of the item to be downloaded (e. g. `O1158186`)", required=True)
+def uk_vam(id):
+	"""
+	item from collections.vam.ac.uk
+	"""
+	import uk
+	uk.get_vam(id=id)
+
+
 ###################
 #PAGE BASED DOWNLOADERS
 ###################
