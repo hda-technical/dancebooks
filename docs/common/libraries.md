@@ -565,6 +565,14 @@ The rights statement of the record itself reads
 >
 > Senior Reference Archivist
 
+## 🇺🇸 University of North Carolina at Chapel Hill { #UNC }
+
+| Alias | Можно выкладывать | Каталог |
+| --- | --- | --- |
+| UNC | ❓ | [library.unc.edu](https://library.unc.edu/) |
+
+_Hosting capability was not evaluated yet._
+
 ## 🇺🇸 University of North Carolina at Greensboro { #UNCG }
 
 | Alias | Можно выкладывать |
