@@ -9,42 +9,45 @@
 | Gaita | Whatsoever ye wyll | | `flac` | | да |
 | Ensemble Micrologus | Maggio Valente | Live | `flac` | | да |
 
-## XVI
+## XVI–XVII
 
-| Исполнитель | Название | Примечание | Наличие | HDA/Music | Буклет оцифрован |
-| ----------- | -------- | ---------- | ------- | --------- | ---------------- |
-| The New York Renaissance Band | Arbeau. Orchesographie | Переиздание с винила | `CD` | | да |
-| The New York Renaissance Band | Country Capers | Переиздание с винила | `flac` | | |
-| The New York Renaissance Band | Praetorius. Excerpts from Terpsichore | Переиздание с винила | `flac` | | |
-| The New York Renaissance Band | Echoes Of Time | Переиздание с винила | `flac` | | |
-| Ulsamer Collegium, Collegium Terpsichore | Renaissance dance music | Сборник из двух альбомов (??) | `mp3` | | |
-| [Compagnie Outre mesure](https://www.compagnie-outre-mesure.com/) | Qui souhaitez... | | mp3, CD (Глорф) | | |
-| Compagnie Outre mesure | Orchésographie.com | 3CD | mp3, CD (Глорф) | | |
-| Compagnie Outre mesure | Itinéraire d’un vielliste au 16e siècle | | mp3, CD (Глорф) | | |
-| Compagnie Outre mesure | Bal au Château de Chambord | | mp3, CD (Глорф) | | |
-| Compagnie Outre mesure | Voix de Ville & Voix des Champs | Вокальный альбом | нет | | |
-| Compagnie Outre mesure | Dansez Renaissance | Отсутствует на сайте | mp3, CD (Глорф) | | |
-| Westra Aros Pijpare, Ensemble Bourrasque | Praetorius. Dances from Terpsichore | | `CD` | | да |
-| Renaissonics | Carols for Dancing | | `CD` | | |
-| Renaissonics | Dance! | | flac, CD (Ростик) | | да |
-| [René Clemencic, Clemencic Consort](http://www.clemencic.at/dt/index_dt.html) | Danses de la Renaissanse | | `CD` | | да |
-| Ensemble La follia | Le gratie d'amore | | `CD` | | да |
-| Wolgemut | Tempus Saltandi | | `CD` | | да |
-| Ricercar Consort, La fenice | Terpsichore musarum | | flac (Partial) | | |
-| New London Consort | Dansereye | | `flac` | | да |
-| New London Consort | Dances from Terpsichore | | `flac` | | |
-| New London Consort | Sinners & saints | | `flac` | | да |
-| The Early Music Consort of London | Renaissance dance | 2CD, переиздание с винила | `flac` | | да |
-| The Early Music Consort of London | Instruments of the Middle Ages and Renaissance | 2CD, переиздание с винила | `flac` | | да |
-| Compagnie maitre Guillaume | Musiques a danser de la Renaissance française | | `mp3` | | |
-| [Ensemble Braccio](http://www.ensemblebraccio.com/) | Petrus Phalesius. Premier livre de danseries | | `flac` | | |
-| [La rossignol](https://larossignol.com/index.php/en/) | Alla Piffaresca | | `mp3` | | |
-| La rossignol | L'amor mi fa cantar | | `mp3` | | |
-| [Doulce mémoire](http://www.doulcememoire.com/) | L'Italie Renaissance | 3CD | `mp3` | | |
-| Balli e balletti da ballare | Danses de la Renaissance italienne | | `mp3` | | |
-| Jouissance | Dances from the Inns of Court | | `mp3` | | |
-| Jouissance | Courtly dances of Western Europe | | `mp3` | | |
-| [Chairé](http://chaire.cz/en/discography/) | I Dance I Sing | | `mp3` | | |
+| Исполнитель | Год | Название | Примечание | Наличие | HDA/Music | Буклет оцифрован |
+| ----------- | --- | -------- | ---------- | ------- | --------- | ---------------- |
+| The New York Renaissance Band | | Arbeau. Orchesographie | Переиздание с винила | `CD` | | да |
+| The New York Renaissance Band | | Country Capers | Переиздание с винила | `flac` | | |
+| The New York Renaissance Band | | Praetorius. Excerpts from Terpsichore | Переиздание с винила | `flac` | | |
+| The New York Renaissance Band | | Echoes Of Time | Переиздание с винила | `flac` | | |
+| Ulsamer Collegium, Collegium Terpsichore | | Renaissance dance music | Сборник из двух альбомов (??) | `mp3` | | |
+| [Compagnie Outre mesure] | | Qui souhaitez... | | mp3, CD (Глорф) | | |
+|  Compagnie Outre mesure  | | Orchésographie.com | 3CD | mp3, CD (Глорф) | | |
+|  Compagnie Outre mesure  | | Itinéraire d’un vielliste au 16e siècle | | mp3, CD (Глорф) | | |
+|  Compagnie Outre mesure  | | Bal au Château de Chambord | | mp3, CD (Глорф) | | |
+|  Compagnie Outre mesure  | | Voix de Ville & Voix des Champs | Вокальный альбом | нет | | |
+|  Compagnie Outre mesure  | | Dansez Renaissance | Отсутствует на сайте | mp3, CD (Глорф) | | |
+|  Compagnie Outre mesure  | 2022 | Harmonie universelle | 2CD | `flac + CD@@5c87` | | да |
+| Westra Aros Pijpare, Ensemble Bourrasque | | Praetorius. Dances from Terpsichore | | `CD` | | да |
+| Renaissonics | | Carols for Dancing | | `CD` | | |
+| Renaissonics | | Dance! | | flac, CD (Ростик) | | да |
+| [René Clemencic, Clemencic Consort](http://www.clemencic.at/dt/index_dt.html) | | Danses de la Renaissanse | | `CD` | | да |
+| Ensemble La follia | | Le gratie d'amore | | `CD` | | да |
+| Wolgemut | | Tempus Saltandi | | `CD` | | да |
+| Ricercar Consort, La fenice | | Terpsichore musarum | | flac (Partial) | | |
+| New London Consort | | Dansereye | | `flac` | | да |
+| New London Consort | | Dances from Terpsichore | | `flac` | | |
+| New London Consort | | Sinners & saints | | `flac` | | да |
+| The Early Music Consort of London | | Renaissance dance | 2CD, переиздание с винила | `flac` | | да |
+| The Early Music Consort of London | | Instruments of the Middle Ages and Renaissance | 2CD, переиздание с винила | `flac` | | да |
+| Compagnie maitre Guillaume | | Musiques a danser de la Renaissance française | | `mp3` | | |
+| [Ensemble Braccio](http://www.ensemblebraccio.com/) | | Petrus Phalesius. Premier livre de danseries | | `flac` | | |
+| [La rossignol](https://larossignol.com/index.php/en/) | | Alla Piffaresca | | `mp3` | | |
+| La rossignol | | L'amor mi fa cantar | | `mp3` | | |
+| [Doulce mémoire](http://www.doulcememoire.com/) | | L'Italie Renaissance | 3CD | `mp3` | | |
+| Balli e balletti da ballare | | Danses de la Renaissance italienne | | `mp3` | | |
+| Jouissance | | Dances from the Inns of Court | | `mp3` | | |
+| Jouissance | | Courtly dances of Western Europe | | `mp3` | | |
+| [Chairé](http://chaire.cz/en/discography/) | | I Dance I Sing | | `mp3` | | |
+
+[Compagnie Outre mesure]: https://www.compagnie-outre-mesure.com
 
 ## Baroque + Rococo
 
@@ -119,7 +122,8 @@
 | Chris Dewhurst, Sue Stapledon | | Playford pops | Аккордеон | `flac` | | да |
 | Paul Hutchinson, John Hymas | | Emperor of the Moon | Аккордеон | `flac` | | да |
 | [The York Waits](http://www.theyorkwaits.org.uk/) | | Punk's Delight | Not listed on the website | `flac` | | |
-| Playford Consort | | [Altenglische Country Dances](https://musicbrainz.org/release/122f3cf9-9a36-42e2-9f14-599a63ed1653) | | `mp3` | | |
+| [Playford Consort] | 2005 | Altenglische Country Dances, Band 1 | | `flac + CD@5c87` | | да |
+|  Playford Consort  | 2005 | Altenglische Country Dances, Band 2 | | нет | | |
 | [Ferdinand Grüneis, Roswitha Busch-Hofer](http://www.altenglische-country-dances.de/) | | Altenglische Country Dances | 2CD | нет | | |
 | [Lautten Compagney](https://www.lauttencompagney.de/) | | Chirping of the Nightingale | | `mp3` | | |
 | Social Musick | | The Lovers Luck | 2CD | `mp3` | | |
@@ -135,6 +139,8 @@
 | Roguery | | [Impropriety, Volume IV](https://www.youtube.com/playlist?list=OLAK5uy_mYQ01gXliii1nfXm5YeU_fC_rjgckAOhI) | Modern ECD | `aac` | | |
 | Roguery | | [Minding the Gap](https://www.youtube.com/playlist?list=OLAK5uy_nLQ2lJfxhd0_RZL0TsceBwwJowjcx_XZw) | Modern ECD | `aac` | | |
 | Roguery | | [A New Leaf](https://www.youtube.com/playlist?list=OLAK5uy_kAUGMlGqN7cP4wQvb9zo5KquYaGq1gUz4) | Modern ECD | `aac` | | |
+
+[Playford Consort]: http://www.country-dances.com/
 
 ## XIX
 
