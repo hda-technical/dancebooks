@@ -292,6 +292,14 @@ pages provided by the library.
 
 _Hosting capability was not evaluated yet._
 
+## 🇬🇧 Victoria and Albert Museum, London { #VAM }
+
+| Alias | Можно выкладывать | Каталог |
+| --- | --- | --- |
+| VAM | ❓ | [collections.vam.ac.uk](https://collections.vam.ac.uk/) |
+
+_Hosting capability was not evaluated yet._
+
 ## 🇮🇹 Biblioteca civica del comune del Rovereto
 
 | Alias | Можно выкладывать |
