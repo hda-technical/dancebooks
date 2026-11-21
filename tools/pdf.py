@@ -8,7 +8,6 @@ import logging
 import pathlib
 import random
 import statistics
-import subprocess
 import sys
 import tempfile
 import time
@@ -145,24 +144,33 @@ def optimize(path: pathlib.Path) -> None:
 	The result is saved next to the source file overwriting it.
 	"""
 	original_size = path.stat().st_size
-	page_count = len(pypdf.PdfReader(path).pages)
+	reader = pypdf.PdfReader(path)
+
+	# check everything beforehand, as JPEGmini run takes quite a while
+	images = []
+	for idx, page in enumerate(reader.pages, start=1):
+		xobjects = list(_iter_xobject_images(page.get("/Resources")))
+		if len(xobjects) != 1:
+			raise click.ClickException(f"Exactly one image per page is expected, got {len(xobjects)} images at page {idx}")
+		xobject = xobjects[0]
+		image = _Image.from_settings(xobject, xobject.get_data)
+		if not image.jpeg:
+			raise click.ClickException(f"Only jpeg images are supported, got {image.filters} at page {idx}")
+		# these would be lost upon re-assembling
+		if (key := next((k for k in ("/Decode", "/SMask", "/Mask") if k in xobject), None)) is not None:
+			raise click.ClickException(f"Images with {key} are not supported, got one at page {idx}")
+		images.append(image)
 
 	with tempfile.TemporaryDirectory(prefix=f"optimize.", dir=path.parent) as tmp:
 		tmp_dir = pathlib.Path(tmp)
 		print(f"Extracting images from {path} into {tmp_dir}")
-		# images are named page-{number}.{ext}, non-jpeg images are extracted in other formats
-		subprocess.check_call(["pdfimages", "-j", str(path), str(tmp_dir / "page")])
-
-		# check everything beforehand, as JPEGmini run takes quite a while
+		# DCTDecode-encoded data is written as is, without transcoding,
+		# each image is written in a single call, which matters a lot on WSL-mounted Windows drives
 		paths = []
-		for p in tmp_dir.iterdir():
-			if p.suffix != ".jpg":
-				raise click.ClickException(f"Only jpeg images are supported, got {p.name}")
+		for idx, image in enumerate(images, start=1):
+			p = tmp_dir / f"page-{idx:04}.jpg"
+			p.write_bytes(image.get_data())
 			paths.append(p)
-		if len(paths) != page_count:
-			raise click.ClickException(f"Exactly one image per page is expected, got {len(paths)} images at {page_count} pages")
-		# number is zero-padded to 3 digits only, hence it should be sorted numerically
-		paths.sort(key=lambda p: int(p.stem.removeprefix("page-")))
 
 		# checking every image is slow, hence a few random ones are checked
 		SAMPLE_SIZE = 5
@@ -265,30 +273,36 @@ def _is_jpegmini_optimized(data: bytes) -> bool:
 	return data.find(b"Optimized by JPEGmini") != -1
 
 
-def _find_xobject_image(resources, depth: int = 0) -> _Image | None:
+def _iter_xobject_images(resources, depth: int = 0) -> typing.Iterator[pypdf.generic.StreamObject]:
 	"""
-	Find image XObject in the given resources,
+	Iterate over image XObjects in the given resources,
 	descending into form XObjects, as some scans wrap page images into these.
+	Images of the given resources go first, images of the forms follow.
 	"""
 	MAX_DEPTH = 3
 	if resources is None or depth > MAX_DEPTH:
-		return None
+		return
 	xobjects = resources.get_object().get("/XObject")
 	if xobjects is None:
-		return None
+		return
 	forms = []
 	for xobject in xobjects.get_object().values():
 		xobject = xobject.get_object()
 		subtype = xobject.get("/Subtype")
 		if subtype == "/Image":
-			# pypdf leaves DCTDecode-encoded data intact
-			return _Image.from_settings(xobject, xobject.get_data)
-		if subtype == "/Form":
+			yield xobject
+		elif subtype == "/Form":
 			forms.append(xobject)
 	for form in forms:
-		if (image := _find_xobject_image(form.get("/Resources"), depth + 1)) is not None:
-			return image
-	return None
+		yield from _iter_xobject_images(form.get("/Resources"), depth + 1)
+
+
+def _find_xobject_image(resources) -> _Image | None:
+	xobject = next(_iter_xobject_images(resources), None)
+	if xobject is None:
+		return None
+	# pypdf leaves DCTDecode-encoded data intact
+	return _Image.from_settings(xobject, xobject.get_data)
 
 
 def _find_image(page: pypdf.PageObject) -> _Image | None:
