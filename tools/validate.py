@@ -967,7 +967,11 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 	"""
 	Validates bibliography over a bunch of rules
 	"""
+	logging.info("Fetching list of pdf from filesystem")
 	elibrary = scan_elibrary()
+	physically_stored = fetch_filelist_from_fs(elibrary)
+
+	logging.info("Parsing bib files directory")
 	items, item_index = bib_parser.BibParser().parse_folder(
 		config.parser.bibdata_dir,
 		elibrary=elibrary,
@@ -975,8 +979,6 @@ def main(*, backups, urls, store_new_errors, remove_missing_ids):
 
 	logging.info("Fetching added_on from git")
 	git_added_on = fetch_added_on_from_git()
-	logging.info("Fetching list of pdf from filesystem")
-	physically_stored = fetch_filelist_from_fs(elibrary)
 	logging.info(f"Found {len(physically_stored)} physically stored items")
 	if backups:
 		validate_backups()
