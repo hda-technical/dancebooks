@@ -65,3 +65,11 @@
 
 # Для переобработки требуется пересканирование в цвете
 [188-, ru] Премия от парфюмерной фабрики «А. Ралле и компания» (Georg copy).pdf
+
+# Нужно написать письмо в BL
+Library/Antidance/16th century/[1526, de] Caspar Gruner - Ein Ratschlag wider die Gotlosen Tentz.pdf
+Library/18th century/[1769, en] Thomas Hurst - The Cotillons, Made Plain and Easy.pdf
+Library/18th century/[1770, en] Siret - A Set of Cotillions.pdf
+Library/Short descriptions/19th century/Joseph Binns Hart/[1829, en] Joseph Binns Hart - Hart's Royal Gallopades.pdf
+Library/Short descriptions/19th century/Joseph Binns Hart/[1831, en] Joseph Binns Hart - Hart's Grenadier Quadrilles.pdf
+Library/Short descriptions/19th century/Joseph Binns Hart/[1831, en] Joseph Binns Hart - Hart's Second Set of Royal Gallopades.pdf

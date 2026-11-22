@@ -359,9 +359,9 @@ def _get_pdf_stats(path: pathlib.Path, threshold: int | None) -> PdfStats | str 
 		return repr(ex)
 
 
-def _read_exceptions(path: pathlib.Path) -> set[str]:
+def _read_exceptions(path: pathlib.Path) -> set[pathlib.Path]:
 	"""
-	Read the list of filenames which are not to be optimized, one per line.
+	Read the list of files which are not to be optimized, one per line.
 
 	Just like in yaml, lines starting with # are comments, blank lines (used for grouping) are ignored.
 	Unlike yaml, there are no trailing comments, as # might be a part of the filename.
@@ -370,7 +370,7 @@ def _read_exceptions(path: pathlib.Path) -> set[str]:
 	for line in path.read_text(encoding="utf-8").splitlines():
 		line = line.strip()
 		if line and not line.startswith("#"):
-			result.add(line)
+			result.add(pathlib.Path(line))
 	return result
 
 
@@ -397,7 +397,7 @@ def _parse_threshold(ctx, param, value: str | None) -> int | None:
 	type=click.Path(exists=True, dir_okay=False, path_type=pathlib.Path),
 	default=pathlib.Path(__file__).resolve().parent / "exceptions.txt",
 	show_default=True,
-	help="File listing names of pdf files which can not be optimized, one per line, lines starting with # are comments",
+	help="Listing of non-optimizable files",
 )
 @click.option(
 	"--threshold",
@@ -411,7 +411,7 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 	colored jpeg-based files not yet optimized by JPEGmini,
 	having more bytes per page than the threshold (the median one, unless set explicitly).
 
-	Files listed in exceptions are never suggested.
+	Files listed in exceptions (by name or by path relative to the elibrary root) are never suggested.
 
 	Candidates are printed to stdout, one per line, everything else goes to stderr.
 	"""
@@ -429,7 +429,7 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 	paths = []
 	skipped = 0
 	for path in sorted(directory.rglob("*.pdf", case_sensitive=False)):
-		if path.name in excluded:
+		if pathlib.Path(path.name) in excluded or elibrary.relative_of(path) in excluded:
 			skipped += 1
 			continue
 		paths.append(path)
