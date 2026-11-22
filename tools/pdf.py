@@ -138,6 +138,19 @@ def _write_output(data: bytes, output: pathlib.Path) -> pathlib.Path:
 	return tmp_path
 
 
+def _pause(prompt: str) -> None:
+	"""
+	Wait for any key to be pressed.
+
+	Unlike click.pause, which swallows them, Ctrl+C and Ctrl+D abort the command.
+	"""
+	click.echo(prompt, nl=False)
+	try:
+		click.getchar()
+	finally:
+		click.echo()
+
+
 @main.command()
 @click.option("--output-size", callback=Geometry.from_click, default=None)
 def assemble(output_size: Geometry | None) -> None:
@@ -207,7 +220,7 @@ def optimize(path: pathlib.Path) -> None:
 		# guard against accidental key presses (and unfinished JPEGmini runs)
 		prompt = f"Optimize {len(paths)} images at {tmp_dir} via JPEGmini, then press any key to continue"
 		while True:
-			click.pause(prompt)
+			_pause(prompt)
 			not_optimized = get_not_optimized()
 			if not not_optimized:
 				break
