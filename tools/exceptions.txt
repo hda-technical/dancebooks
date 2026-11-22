@@ -73,3 +73,41 @@ Library/18th century/[1770, en] Siret - A Set of Cotillions.pdf
 Library/Short descriptions/19th century/Joseph Binns Hart/[1829, en] Joseph Binns Hart - Hart's Royal Gallopades.pdf
 Library/Short descriptions/19th century/Joseph Binns Hart/[1831, en] Joseph Binns Hart - Hart's Grenadier Quadrilles.pdf
 Library/Short descriptions/19th century/Joseph Binns Hart/[1831, en] Joseph Binns Hart - Hart's Second Set of Royal Gallopades.pdf
+
+# Нужно запрашивать мастер-сканы у Goucher College
+Library/19th century/[1894, us] T. George Dodworth, P. Hertel - Gavotte der Kaiserin.pdf
+Library/19th century/Allen Dodworth/[1850, us] Allen Dodworth - Bolero, or the Dodworth Schottisch (Goucher copy).pdf
+Library/19th century/Allen Dodworth/[1857, us] Allen Dodworth, F. B. Helmsmuller - Dodworth's Lancers.pdf
+Library/19th century/Allen Dodworth/[1859, us] Allen Dodworth - Court Quadrilles.pdf
+Library/19th century/Allen Dodworth/[1859, us] The Caledonians (Goucher copy).pdf
+Library/19th century/G. M. S. Chivers/[1821, en] G. M. S. Chivers - The Original Caledonians.pdf
+Library/19th century/Septimus Winner/[1872, us] Septimus Winner - Black Diamond Cotillions.pdf
+Library/19th century/Septimus Winner/[1876, us] Septimus Winner - Eagle Quadrilles.pdf
+Library/19th century/Sequences/[1890, us] Horace W. Beek - Oxford Minuet.pdf
+Library/19th century/Sequences/[1891, us] Robert Metcalfe - Harvard Gavotte.pdf
+Library/19th century/Sequences/[1892, us] Robert Alexander Campbell - The Vassar.pdf
+Library/19th century/Sequences/[1894, us] A. C. Wirth, William Wirth - Cream City Minuet.pdf
+Library/19th century/Sequences/[1894, us] Joseph Gearen - The Chicago Glide.pdf
+Library/19th century/Sequences/[1894, us] Laurence de Garmo Brookes, Eduard Holst - The Washington Two Step.pdf
+Library/19th century/Sequences/[1895, us] Robert Metcalfe - Dorado paso.pdf
+
+Library/19th century/Allen Dodworth/[184-, us] Allen Dodworth - Amilie Quadrilles, number 1.pdfs
+Library/Short descriptions/19th century/[1814, sc] Finlay Dun - Up with the Orange.pdf
+Library/Short descriptions/19th century/[182-, ie] J. D. Kirchner - The Brighton Almacks Quadrilles.pdf
+Library/Short descriptions/19th century/[182-, us] Cole's Selection of Favorite Cotillions, number 1 (Goucher first copy).pdf
+Library/Short descriptions/19th century/[182-, us] Cole's Selection of Favorite Cotillions, number 1 (Goucher second copy).pdf
+Library/Short descriptions/19th century/[182-, us] Oh 'tis Love.pdf
+Library/Short descriptions/19th century/[1828, en] James McEwen - The First Sett of Fashionable Quadrilles.pdf
+Library/Short descriptions/19th century/Louis-Antoine Jullien/[1843, en] Louis-Antoine Jullien - The Original Polka (Goucher 10th copy).pdf
+Library/Short descriptions/19th century/Louis-Antoine Jullien/[1843, en] Louis-Antoine Jullien - The Original Polka (Goucher 06th copy).
+Library/Short descriptions/19th century/Stephen Glover/[1846, us] Stephen Glover - The London Polka Quadrilles (Fiot copy).pdf
+Library/Short descriptions/Country dances/[1817, us] Charles Christmas - Chrismas's Selection of the Most Fashionable Country Dances.pdf
+Library/Short descriptions/Country dances/[1843, en] J. Cronin - The Old English Country Dances.pdf
+Library/Short descriptions/Country dances/[1854, us] Hunter - Pop Goes the Weasel (Goucher copy).pdf
+
+# unc.edu - сломанные ссылки. То ли сайт умер, то ли что
+Library/Short descriptions/19th century/[1818, us] Francis Johnson - A Collection of New Cotillions Published by Setts.pdf
+Library/Short descriptions/19th century/Stephen Glover/[1845, us] Charles Coote, Stephen Glover - Les russes (UNC Chapel Hill copy).pdf
+
+# Нужно починить детект оптимизированности
+Library/Short descriptions/19th century/[1821, fr] Fabre Poirier - Les soirées de carneval.pdf
