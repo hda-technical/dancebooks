@@ -92,20 +92,27 @@ Library/19th century/Sequences/[1894, us] Laurence de Garmo Brookes, Eduard Hols
 Library/19th century/Sequences/[1895, us] Robert Metcalfe - Dorado paso.pdf
 
 Library/19th century/Allen Dodworth/[184-, us] Allen Dodworth - Amilie Quadrilles, number 1.pdf
+Library/Short descriptions/19th century/Louis-Antoine Jullien/[1843, en] Louis-Antoine Jullien - The Original Polka (Goucher 06th copy).pdf
+Library/Short descriptions/19th century/Louis-Antoine Jullien/[1843, en] Louis-Antoine Jullien - The Original Polka (Goucher 10th copy).pdf
+Library/Short descriptions/19th century/Stephen Glover/[1846, us] Stephen Glover - The London Polka Quadrilles (Fiot copy).pdf
+Library/Short descriptions/19th century/William Dressler/[1862, us] William Dressler - United States Lancers.pdf
+Library/Short descriptions/19th century/William Dressler/[1863, us] William Dressler - La fille du regiment.pdf
 Library/Short descriptions/19th century/[1814, sc] Finlay Dun - Up with the Orange.pdf
 Library/Short descriptions/19th century/[182-, ie] J. D. Kirchner - The Brighton Almacks Quadrilles.pdf
 Library/Short descriptions/19th century/[182-, us] Cole's Selection of Favorite Cotillions, number 1 (Goucher first copy).pdf
 Library/Short descriptions/19th century/[182-, us] Cole's Selection of Favorite Cotillions, number 1 (Goucher second copy).pdf
 Library/Short descriptions/19th century/[182-, us] Oh 'tis Love.pdf
 Library/Short descriptions/19th century/[1828, en] James McEwen - The First Sett of Fashionable Quadrilles.pdf
-Library/Short descriptions/19th century/Louis-Antoine Jullien/[1843, en] Louis-Antoine Jullien - The Original Polka (Goucher 06th copy).pdf
-Library/Short descriptions/19th century/Louis-Antoine Jullien/[1843, en] Louis-Antoine Jullien - The Original Polka (Goucher 10th copy).pdf
-Library/Short descriptions/19th century/Stephen Glover/[1846, us] Stephen Glover - The London Polka Quadrilles (Fiot copy).pdf
+Library/Short descriptions/19th century/[1840, us] Francis Weiland - The Set of Fashionable Quadrilles (Goucher copy).pdf
+Library/Short descriptions/19th century/[1848, us] Friedrich Burgmuller - The Redowa Waltz (Goucher copy).pdf
+Library/Short descriptions/19th century/[1850, us] Frederick, George Loder - The Serious Family Polka, édition 3 (Goucher copy).pdf
+Library/Short descriptions/19th century/[1856, us] Edward L. Walker - Walker's Plain Sett of Parlor Cotillions, number 1 (Goucher copy).pdf
+Library/Short descriptions/19th century/[1856, us] Edward L. Walker - Walker's Plain Sett of Parlor Cotillions, number 2 (Goucher copy).pdf
+Library/Short descriptions/19th century/[1857, us] J. S. Knight - The Original Lancer's Quadrilles (Goucher copy).pdf
+Library/Short descriptions/19th century/[1858, us] J. S. Knight - The Celebrated Varsovienne (Goucher copy).pdf
 Library/Short descriptions/Country dances/[1817, us] Charles Christmas - Chrismas's Selection of the Most Fashionable Country Dances.pdf
 Library/Short descriptions/Country dances/[1843, en] J. Cronin - The Old English Country Dances.pdf
 Library/Short descriptions/Country dances/[1854, us] Hunter - Pop Goes the Weasel (Goucher copy).pdf
-Library/Short descriptions/19th century/William Dressler/[1862, us] William Dressler - United States Lancers.pdf
-Library/Short descriptions/19th century/William Dressler/[1863, us] William Dressler - La fille du regiment.pdf
 
 # unc.edu - сломанные ссылки. То ли сайт умер, то ли что
 Library/Short descriptions/19th century/[1818, us] Francis Johnson - A Collection of New Cotillions Published by Setts.pdf
