@@ -655,6 +655,16 @@ def us_loc(id):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `hasm/a3712`)", required=True)
+def us_duke(id):
+	"""
+	book from repository.duke.edu
+	"""
+	import us
+	us.get_duke(id=id)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `wu.89005529961`)", required=True)
 @click.option("--from", "from_page", help="First page to be downloaded", type=int, default=1)
 @click.option("--to", "to_page", help="Last page to be downloaded (defaults to the last page of the book)", type=int, default=None)

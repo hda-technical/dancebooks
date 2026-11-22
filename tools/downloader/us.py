@@ -1,10 +1,22 @@
 import os
 from string import Template
 
+import bs4
 import requests
 
 import iiif
 import utils
+
+
+def get_duke(*, id):
+	# Manifest is named after the ARK of the item, which is only found on its page
+	soup = bs4.BeautifulSoup(
+		utils.get_text(f"https://repository.duke.edu/dc/{id}"),
+		features="html.parser",
+	)
+	manifest_url = soup.find(attrs={"data-manifest-url": True})["data-manifest-url"]
+	output_folder = utils.make_output_folder("duke", id)
+	iiif.download_book_fast_v3(manifest_url, output_folder)
 
 
 def get_hathitrust(*, id, from_page, to_page, har):
