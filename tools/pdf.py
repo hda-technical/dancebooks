@@ -67,12 +67,15 @@ def _assemble(
 	output: pathlib.Path,
 	*,
 	output_size: Geometry | None = None,
-) -> None:
+) -> pathlib.Path:
 	"""
 	Assemble jpeg images into a pdf file, an image per page.
 
 	Page size is either the image size, or output_size, if the latter is set,
 	the image being losslessly cropped to fit the page.
+
+	Returns the path the pdf was actually written to,
+	which differs from output if the latter is not writable (see _write_output).
 	"""
 	if output_size is None:
 		print("Will not change image size during generation")
@@ -114,7 +117,25 @@ def _assemble(
 			h=image.height / y_dpi,
 		)
 	print(f"Merging {len(paths)} pages into {output}")
-	pdf.output(str(output))
+	return _write_output(pdf.output(), output)
+
+
+def _write_output(data: bytes, output: pathlib.Path) -> pathlib.Path:
+	"""
+	Write data to output, or to output-tmp.pdf if the former is not writable.
+
+	Returns the path data was written to.
+	"""
+	try:
+		output.write_bytes(data)
+		return output
+	except OSError as ex:
+		_log(f"Failed to write {output}: {ex!r}")
+
+	tmp_path = output.with_stem(f"{output.stem}-tmp")
+	tmp_path.write_bytes(data)
+	_log(f"Saved the result to {tmp_path} instead")
+	return tmp_path
 
 
 @main.command()
@@ -196,8 +217,8 @@ def optimize(path: pathlib.Path) -> None:
 			)
 			prompt = "Optimize them via JPEGmini, then press any key to continue"
 
-		_assemble(paths, path)
-	print(f"Optimized file to {original_size} -> {path.stat().st_size} bytes")
+		result = _assemble(paths, path)
+	print(f"Optimized file to {original_size} -> {result.stat().st_size} bytes")
 
 
 @dataclasses.dataclass(frozen=True)
