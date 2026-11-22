@@ -10,6 +10,7 @@ import itertools
 import logging
 import os
 import os.path
+import pathlib
 import pstats
 import re
 from urllib import parse as urlparse
@@ -98,13 +99,19 @@ class ScannedDir:
 	# hence it is worth running in several threads
 	SCAN_WORKERS = 8
 
-	def __init__(self, root, excludes={}, *, max_workers=SCAN_WORKERS):
-		# WARN: the lookups split str paths, hence the keys should be str too.
-		# os.path.join() of a PathLike yields a str anyway, so mixing the two
-		# would silently hide the files stored in the root itself
-		self.root = os.fspath(root)
+	def __init__(
+		self,
+		root: str | os.PathLike,
+		*,
+		excludes={},
+		scan=True,
+		max_workers=SCAN_WORKERS,
+	):
+		self.root = pathlib.Path(root).absolute()
 		# {folder abspath: {name of the file stored in it: its size}}
 		self._listings = dict()
+		if not scan:
+			return
 		# WARN: the executor is shut down before the ctor returns:
 		# no thread should be left running when the caller forks
 		with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -130,6 +137,10 @@ class ScannedDir:
 		"""
 		Returns (folder, {name: size} of the files it holds, list of its subfolders)
 		"""
+		# WARN: the lookups split str paths, hence the keys should be str too.
+		# os.path.join() of a PathLike yields a str anyway, so mixing the two
+		# would silently hide the files stored in the root itself
+		folder = os.fspath(folder)
 		listing = dict()
 		subfolders = []
 		try:
@@ -156,6 +167,17 @@ class ScannedDir:
 		"""
 		folder, basename = os.path.split(abspath)
 		return self._listings.get(folder, {}).get(basename)
+
+	def relative_of(self, path: pathlib.Path) -> pathlib.Path | None:
+		"""
+		Returns the path relative to the root,
+		or None when the path is located outside of it.
+		WARN: neither symlinks nor ".." components are resolved
+		"""
+		path = path.absolute()
+		if not path.is_relative_to(self.root):
+			return None
+		return path.relative_to(self.root)
 
 	def files(self):
 		"""

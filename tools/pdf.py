@@ -19,6 +19,7 @@ import PIL as pil
 import pypdf
 
 from dancebooks import utils
+from dancebooks.config import config
 from dancebooks.img import Geometry, TurboJpeg
 
 
@@ -420,6 +421,9 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 		minutes, seconds = divmod(round(seconds), 60)
 		return f"{minutes}:{seconds:02d}"
 
+	elibrary = utils.ScannedDir(config.www.elibrary_dir, scan=False)
+	assert elibrary.relative_of(directory) is not None, f"{directory} is not located in {elibrary.root}"
+
 	started = time.monotonic()
 	excluded = _read_exceptions(exceptions)
 	paths = []
@@ -441,7 +445,7 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 		results = zip(paths, executor.map(get_pdf_stats, paths, chunksize=16))
 		for inspected, (path, stats) in enumerate(results, start=1):
 			if isinstance(stats, str):
-				_log(f"Skip {path.relative_to(directory)}: {stats}")
+				_log(f"Skip {elibrary.relative_of(path)}: {stats}")
 			elif stats is not None:
 				candidates.append(stats)
 
@@ -479,7 +483,7 @@ def optimize_suggest(directory: pathlib.Path, exceptions: pathlib.Path, threshol
 		print(
 			f"{utils.pretty_print_file_size(stats.bytes_per_page):>10}/page "
 			f"{utils.pretty_print_file_size(stats.size):>10} "
-			f"{stats.pages:6d} pages  {stats.path.relative_to(directory)}"
+			f"{stats.pages:6d} pages  {elibrary.relative_of(stats.path)}"
 		)
 	_log(f"Done in {format_duration(time.monotonic() - started)}")
 
