@@ -104,6 +104,8 @@ Library/Short descriptions/19th century/Stephen Glover/[1846, us] Stephen Glover
 Library/Short descriptions/Country dances/[1817, us] Charles Christmas - Chrismas's Selection of the Most Fashionable Country Dances.pdf
 Library/Short descriptions/Country dances/[1843, en] J. Cronin - The Old English Country Dances.pdf
 Library/Short descriptions/Country dances/[1854, us] Hunter - Pop Goes the Weasel (Goucher copy).pdf
+Library/Short descriptions/19th century/William Dressler/[1862, us] William Dressler - United States Lancers.pdf
+Library/Short descriptions/19th century/William Dressler/[1863, us] William Dressler - La fille du regiment.pdf
 
 # unc.edu - сломанные ссылки. То ли сайт умер, то ли что
 Library/Short descriptions/19th century/[1818, us] Francis Johnson - A Collection of New Cotillions Published by Setts.pdf
