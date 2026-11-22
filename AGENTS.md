@@ -161,4 +161,6 @@ then touch the uwsgi reload file and ping `/ping`.
   as in `docs/bib/index.md`.
   Do not hard-wrap mid-phrase at a fixed width.
 - Continuation lines inside list items are indented to stay within the item.
+- Keep code comments and docstrings short: one line stating the point,
+  without restating what the code does or explaining obvious consequences.
 - Agent instructions live in `AGENTS.md`, not `CLAUDE.md`.

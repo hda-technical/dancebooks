@@ -683,6 +683,17 @@ def us_huntington(**kv):
 
 
 @main.command()
+@click.option("--id", help="Id of the book to be downloaded (e. g. `99110108123506421`)", required=True)
+@support_page_ranges()
+def us_princeton(id, from_page, to_page):
+	"""
+	book from catalog.princeton.edu
+	"""
+	import us
+	us.get_princeton(id=id, from_page=from_page, to_page=to_page)
+
+
+@main.command()
 @click.option("--id", help="Id of the book to be downloaded (e. g. `13001-wilson1808`)", required=True)
 def vwml(id):
 	"""

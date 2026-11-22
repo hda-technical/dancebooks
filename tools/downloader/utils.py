@@ -320,16 +320,14 @@ def get_binary(output_filename, url_or_request, *args, **kwargs):
 	Writes binary data received via HTTP GET request to output_filename
 	Accepts both url as string and request.Requests.
 
+	The file is written only after the download completes, so it is never truncated.
+
 	Returns size of the data that was downloaded.
 	"""
-	total_size = 0
-	BLOCK_SIZE = 4096
-	response = make_request(url_or_request, *args, stream=True, **kwargs)
+	content = make_request(url_or_request, *args, **kwargs).content
 	with open(output_filename, "wb") as file:
-		for chunk in response.iter_content(BLOCK_SIZE):
-			total_size += len(chunk)
-			file.write(chunk)
-	return total_size
+		file.write(content)
+	return len(content)
 
 
 @retry(try_count=5, delay=30, delay_backoff=1.5)

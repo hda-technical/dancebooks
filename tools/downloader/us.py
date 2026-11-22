@@ -36,11 +36,6 @@ def get_hathitrust(*, id, from_page, to_page, har):
 			utils.get_binary(output_filename, url, headers=headers)
 		except requests.exceptions.HTTPError as ex:
 			utils.raise_on_cloudflare(ex)
-		except BaseException:
-			# do not leave truncated pages behind as they will be skipped upon restart
-			if os.path.exists(output_filename):
-				os.remove(output_filename)
-			raise
 
 
 def get_huntington(*, id, page):
@@ -102,3 +97,56 @@ def get_yale_book(*, id):
 	manifest_url = f"https://collections.library.yale.edu/manifests/{id}"
 	output_folder = utils.make_output_folder("yale", id)
 	iiif.download_book_fast_v3(manifest_url, output_folder)
+
+
+def get_princeton(*, id, from_page, to_page):
+	# catalog.princeton.edu does not reference the scans directly,
+	# its viewer looks them up in figgy.princeton.edu via GraphQL
+	query = requests.Request(
+		method="POST",
+		url="https://figgy.princeton.edu/graphql",
+		json={
+			"query": """
+				query GetResources($ids: [String!]!) {
+					resourcesByOrangelightIds(ids: $ids) {
+						... on ScannedResource { manifestUrl }
+					}
+				}
+			""",
+			"variables": {"ids": [id]},
+		},
+	)
+	resources = utils.make_request(query).json()["data"]["resourcesByOrangelightIds"]
+	manifest_urls = [resource["manifestUrl"] for resource in resources if resource.get("manifestUrl")]
+	if len(manifest_urls) != 1:
+		raise ValueError(f"Expected exactly one scanned resource for {id}, got {manifest_urls}")
+	manifest = utils.get_json(manifest_urls[0])
+	if manifest["@type"] != "sc:Manifest":
+		members = [member["@id"] for member in manifest.get("manifests", [])]
+		raise NotImplementedError(f"Expected sc:Manifest, got {manifest['@type']} with members {members}")
+
+	canvases = manifest["sequences"][0]["canvases"]
+	if to_page is None:
+		to_page = len(canvases)
+	output_folder = utils.make_output_folder("princeton", id)
+	print(f"Going to download {to_page - from_page + 1} pages to {output_folder}")
+	for page in range(from_page, to_page + 1):
+		canvas = canvases[page - 1]
+		# Each canvas offers the original scan via `rendering`,
+		# which the viewer shows as `Download the original file` link
+		url = next(
+			(
+				rendering["@id"]
+				for rendering in canvas.get("rendering", [])
+				if rendering.get("format") == "image/tiff"
+			),
+			None,
+		)
+		if url is None:
+			raise ValueError(f"No TIFF rendering found for page {page}")
+		output_filename = utils.make_output_filename(output_folder, page, extension="tif")
+		if os.path.exists(output_filename):
+			utils.notify_skip(page)
+			continue
+		print(f"Downloading page {page:04d} to {output_filename}")
+		utils.get_binary(output_filename, url)
