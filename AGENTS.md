@@ -95,6 +95,8 @@ Tiled sources are sewn together with `utils.download_and_sew_tiles` and `dancebo
 and Cloudflare / Anubis challenge handling.
 Pages are written to `<source>_<id>/NNNN.<ext>` in the current directory.
 Existing pages are skipped, so interrupted downloads can be resumed.
+Some sources need no downloader, since saving images by hand yields the same files.
+For example, britishmuseum.org serves its largest version (`max`, 2500px) via the _Use this image_ option.
 
 **Other tools:**
 `tools/pdf.py` (click CLI: `assemble` scans into PDF, `optimize`, `optimize-suggest`).
