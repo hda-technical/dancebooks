@@ -62,6 +62,36 @@
 [1912, ru] Александр Александрович Царман - Хавтайм футбол (RSL copy).pdf
 [1936, ru] Массовые и бальные танцы (RSL copy).pdf
 [1938, ee] R. Põldmäe, H. Tampere - Valimik eesti rahvaltantse.pdf
+Library/Music/19th century/[1853, ru] Le bal (RSL copy).pdf
+Library/Music/19th century/[1868, ru] Матвей Иванович Бернард - Детский бал (RSL copy).pdf
+Library/Music/19th century/[190-, ru] O. Crémieux - Quand l'amour meurt... Valse boston (Georg copy).pdf
+Library/Music/19th century/[190-, ru] А. А. Розенберг - Шаляпин. Вальс, édition 2 (RSL copy).pdf
+Library/Music/19th century/Sequences/[190-, ru] К. В. Фельдман - „Pas de grâce” (Georg copy).pdf
+Library/Music/19th century/Sequences/[1901, ru] Борис Фёдорович Кейль - Ритка. Венгерка (Georg copy).pdf
+Library/Music/19th century/Viktor Kaźyński/[1849, fr] Viktor Kaźyński - L'yllyrienne.pdf
+Library/Music/19th century/Viktor Kaźyński/[1849, fr] Viktor Kaźyński - La bohême.pdf
+Library/Music/19th century/Viktor Kaźyński/[1849, fr] Viktor Kaźyński - La cracovienne.pdf
+Library/Music/19th century/Viktor Kaźyński/[1849, fr] Viktor Kaźyński - La fantasie.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Adèle polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Alexandre polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Hongroise polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - La giocosa polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - La lithuanienne polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Maria-mazourka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Martinoff polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Mazurka & Valse mélodieuse.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Militaire polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Mouhammed polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Polka tremblante.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Polka-mazurka Pensée fugitive.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Poëme polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Rubini polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Stanislas polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Ukrainienne polka.pdf
+Library/Music/19th century/Viktor Kaźyński/[1850, fr] Viktor Kaźyński - Zéphir polka.pdf
+Library/Music/20th century/[190-, ru] Шарль Борель-Клерк - Матчиш (Georg copy).pdf
+Library/Music/20th century/[192-, ru] Владимир Трахимович - Tango poétique (Georg copy).pdf
+Library/Music/20th century/[1927, ru] И. Сторони - Амапа. Оригинальный бразильский танго (Georg copy).pdf
 
 # Для переобработки требуется пересканирование в цвете
 [188-, ru] Премия от парфюмерной фабрики «А. Ралле и компания» (Georg copy).pdf
