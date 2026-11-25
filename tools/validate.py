@@ -729,7 +729,7 @@ def validate_month(item, errors):
 #	[mancini_1620_ballo] uses folio numeration, thus recto and verso suffixes are legal.
 #	[wilson_1914_hesitation] and [wilson_1914_one_step] are taken from _The Atlanta Constitution_,
 #	which uses block-based numeration. Thus capital letter suffixes are legal too.
-PAGES_REGEXP = re.compile(r"(?P<start>\d+)[rvMF]?(-(?P<end>\d+)[rv]?)?")
+PAGES_REGEXP = re.compile(r"(?P<start>\d+)[rvMF]?(–(?P<end>\d+)[rv]?)?")
 def validate_pages(item, errors):
 	pages = item.get("pages")
 	if pages is None:

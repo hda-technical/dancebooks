@@ -238,11 +238,6 @@ def translate_month(month):
 	return translate_one(bounds[0])
 
 
-def format_pages(pages):
-	# change dash to ndash
-	return pages.replace('-', '–')
-
-
 def format_number(number):
 	# change dash to ndash
 	return number.replace('-', '–')
@@ -421,7 +416,6 @@ def fill_jinja_filters(filters, item_index):
 	filters["translate_keyword_ref"] = translate_keyword_ref
 	filters["is_url_self_served"] = utils.is_url_self_served
 	filters["format_date"] = format_date
-	filters["format_pages"] = format_pages
 	filters["format_number"] = format_number
 	filters["format_catalogue_code"] = format_catalogue_code
 	filters["format_item_id"] = format_item_id
