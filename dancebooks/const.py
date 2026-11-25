@@ -205,7 +205,7 @@ FILENAME_REGEXP = re.compile(
 	#   (something copy) — for books with multiple different copies known
 	r"(?:"
 		r"(, tome (?P<volume2>\d+))|"
-		r"(, number (?P<number2>[\w\- ]+))|"
+		r"(, number (?P<number2>[\w– ]+))|"
 		r"(, édition (?P<edition>\d+))|"
 		r"(, partie (?P<part>\d+))|"
 		r"( \((?P<keywords>" + METADATA_PATTERN + r"(?:, " + METADATA_PATTERN + r")*)\))"

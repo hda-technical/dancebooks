@@ -95,8 +95,6 @@
 				{{ value | translate_type }}
 			{% elif param == "date" %}
 				{{ item | format_date }}
-			{% elif param == "number" or param == "serial_number" %}
-				{{ value | format_number }}
 			{% else %}
 				{{ value }}
 			{% endif %}
